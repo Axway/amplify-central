@@ -18,5 +18,5 @@ Browse all documentation for Amplify Central under the top-level [Amplify Centra
 
 Here are some suggestions to get started:
 
-* [Get started with Amplify Central](/docs/getting_started/)
-* [Get started with Axway Central CLI](/docs/cli_central/_index.md)
+* [Get started with Amplify Central](/docs/getting-started/)
+* [Get started with Axway Central CLI](/docs/cli_central/)

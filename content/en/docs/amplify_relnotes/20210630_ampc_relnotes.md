@@ -20,7 +20,7 @@ The CLI extension is compatible with the Axway CLI **version 2.1** (<https://www
 
 The Axway CLI includes the following enhancements:
 
-* New commands to manage organization, users and teams: `axway org <subCommand>`, `axway user <subCommand>` and `axway teams <subCommand>`. See [Axway CLI](https://docs.axway.com/bundle/Axway_CLI_allOS_en/page/axway_cli_organization___user_management__oum_.html) for details.
+* New commands to manage organization, users and teams: `axway org <subCommand>`, `axway user <subCommand>` and `axway teams <subCommand>`. See [Axway CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/organization__user_management_oum/index.html) for details.
 
 The Axway Central CLI includes the following enhancements:
 

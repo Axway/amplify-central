@@ -43,7 +43,7 @@ To provide better visibility into your multi-type gateway eco system, two sets o
 
 The agents include the following enhancements:
 
-* Traceability Agent redaction. The redaction feature can be applied at the agent level. By default, the redaction feature is on. This means that no path/headers or query parameters are sent to Amplify Central, and only the transaction summary information is sent. For more information, refer to [Trace redaction](/docs/connected_agent_common_reference/trace_redaction).
+* Traceability Agent redaction. The redaction feature can be applied at the agent level. By default, the redaction feature is on. This means that no path/headers or query parameters are sent to Amplify Central, and only the transaction summary information is sent. For more information, refer to [Trace redaction](/docs/connected-agent-common-reference/trace_redaction).
 * v7 Discovery Agent can now publish Catalog items even if their inbound security is not managed in Amplify. The status badge of the Catalog item will contain an **Unidentified inbound policy** that will be highlighted in orange.
 * API Manager CLI integration (aka Swagger-Promote): in order to work in a CI/CD process, the v7 Discovery Agent is now relying on the vhost / path and routing key to uniquely identify an API.
 * Azure Discovery Agent can now read the tags associated to an Azure API and then add those tags to the published API Service and Catalog item.
