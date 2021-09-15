@@ -8,13 +8,13 @@ description: Learn how to install the Axway CLI core package and Axway Central C
   pipeline.
 ---
 
->Note: This page details installation instructions for the 'Axway Central CLI' package, which replaced the deprecated 'Amplify Central CLI' package.
->
-> If you are a current user of the deprecated 'Amplify Central CLI' package, you can uninstall that package by running:
->
-> ```
->   axway pm uninstall @axway/amplify-central-cli
->```
+{{< alert title="Note" color="primary" >}}This page details installation instructions for the 'Axway Central CLI' package, which replaced the deprecated 'Amplify Central CLI' package.{{< /alert >}}
+
+If you are a current user of the deprecated 'Amplify Central CLI' package, you can uninstall that package by running:
+
+```
+axway pm uninstall @axway/amplify-central-cli
+```
 
 ## Before you start
 

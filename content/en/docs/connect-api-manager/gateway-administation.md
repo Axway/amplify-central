@@ -9,7 +9,7 @@ description: Learn how to deploy your Discovery Agent and Traceability Agent so
 ## Before you start
 
 * Read [Amplify Central and Axway API Manager connected overview](/docs/connect-api-manager/)
-* Be sure you have [Prepared Amplify Central](/docs/connect-api-manager/#pre-requisites)
+* Be sure you have [Prepared Amplify Central](/docs/connect-api-manager/#prerequisites)
 * You will need a basic knowledge of Axway API Management solution:
 
   * Where the solution is running (host / port / path to the logs / users)
@@ -107,7 +107,7 @@ This section connects the agent to API Manager and determines which APIs should 
 
 `APIMANAGER_FILTER` (optional): Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect-api-manager/filtering-apis-to-be-discovered/). Leaving this field empty tells the agent to discover all published APIs (REST / SOAP).
 
-`APIMANAGER_SUBSCRIPTIONAPPLICATIONFIELD` (optional): The field name used to store Amplify Central subscription identifier inside the API Manager application securing the front end proxy. Default value is **subscriptions**. If you do not intend to change it, comment this property. Be aware that the field will not be visible in the API Manager application, as it is a specific configuration. If you want to see that field or customize it, refer to Add a custom property to applications in [Customize API Manager](/docs/apim_administration/apimgr_admin/api_mgmt_custom/#customize-api-manager-data/) documentation.
+`APIMANAGER_SUBSCRIPTIONAPPLICATIONFIELD` (optional): The field name used to store Amplify Central subscription identifier inside the API Manager application securing the front end proxy. Default value is **subscriptions**. If you do not intend to change it, comment this property. Be aware that the field will not be visible in the API Manager application, as it is a specific configuration. If you want to see that field or customize it, refer to Add a custom property to applications in [Customize API Manager](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#customize-api-manager-data) documentation.
 
 `APIMANAGER_POLLINTERVAL`: The frequency in which API Manager is polled for new endpoints. Default value is 30s.
 
@@ -356,7 +356,7 @@ To stop your binary agent, press Ctrl+C within the shell.
 
 #### Execute binary Discovery Agent in Background
 
-When executing in the background, it is best to save your logging to a file rather than the console output. See [Customizing log section (log)](#customizing-log-section-log) above.
+When executing in the background, it is best to save your logging to a file rather than the console output. See [Customizing logging variables](#customizing-discovery-agent-logging-variables) above.
 
 Open a shell and run the following command to start your agent:
 
@@ -383,7 +383,7 @@ kill 13186
 
 The agent can be installed as a Linux service with systemd. The following commands will help you utilize the service. These commands install the service abilities and must be run as a root user.
 
-When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing log section (log)](#customizing-log-section-log) above.
+When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing logging variables](#customizing-discovery-agent-logging-variables) above.
 
 **`install`** - To install the service and have it execute as user axway and group axway:
 
@@ -580,13 +580,13 @@ The `ta_env_vars.env` configuration file contain six sections to customize: the 
 
 This section describes where the API Gateway logs are located on the machine so the beat can read them.
 
-The agent can work either with the Gateway event logs (**default**) or the Gateway open traffic log. To configure the open traffic log from the Axway Gateway, you must turn it on using Policy Studio. Refer to this [page](/docs/apim_administration/apigtw_admin/admin_open_logging) for more information.
+The agent can work either with the Gateway event logs (**default**) or the Gateway open traffic log. To configure the open traffic log from the Axway Gateway, you must turn it on using Policy Studio. Refer to this [page](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apigtw_admin/admin_open_logging/index.htm) for more information.
 
 ##### Sourcing Gateway traffic from event log file(s)
 
 This section describes how to use Gateway event logs for traceability reporting.
 
-`EVENT_LOG_INPUT`: Used to turn on or off the event log input for the Traceability Agent. Defaulted is `true`, set to false when using [open traffic](#sourcing-gateway-traffic-from-open-traffic-files).
+`EVENT_LOG_INPUT`: Used to turn on or off the event log input for the Traceability Agent. Defaulted is `true`, set to false when using [open traffic](#sourcing-gateway-traffic-from-open-traffic-file-s).
 `EVENT_LOG_PATHS`: List all API Gateway event log files (absolute path) the beat will listen to. It could be a single file if there is only one Gateway installed on the machine, or multiple files if several Gateways are installed on the same machine.
 
 Single Gateway - explicit file name:
@@ -844,7 +844,7 @@ To stop your agent, press Ctrl+C within the shell.
 
 #### Execute binary Traceability Agent in Background
 
-When executing in the background, it is best to save your logging to a file rather than the console output. See [Customizing log section (logging)](#customizing-log-section-logging) above.
+When executing in the background, it is best to save your logging to a file rather than the console output. See [Customizing logging variables](#customizing-traceability-agent-logging-variables) above.
 
 Open a shell and run the following command to start your agent:
 
@@ -871,7 +871,7 @@ kill 13186
 
 The agent can be installed as a Linux service, with systemd. The following commands will help you utilize the service. These commands install the service abilities and must be run as a root user.
 
-When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing log section (logging)](#customizing-log-section-logging) above.
+When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing logging variables](#customizing-traceability-agent-logging-variables) above.
 
 **`install`** - To install the service and have it execute as user axway and group axway:
 

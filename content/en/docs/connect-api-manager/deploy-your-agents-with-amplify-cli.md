@@ -19,7 +19,7 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
 Learn how to quickly install and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
 
-## Axway Central CLI pre-requisites
+## Axway Central CLI prerequisites
 
 * [Node.js](https://nodejs.org/en/download/) version 10.13.0 or later
 * Access to npm package (for installing Axway CLI)

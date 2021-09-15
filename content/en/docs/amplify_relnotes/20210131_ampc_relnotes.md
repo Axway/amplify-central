@@ -62,7 +62,7 @@ Mesh governance includes the following enhancements:
 * Both of these Traceability agent options are applied using the mesh agent helm deployment step and are documented in Step 4 of the full mesh client and cluster setup instructions here: [https://github.com/Axway/Setup-Amplify-Mesh-Governance/wiki/Step-4.-Create-an-Amplify-Central-environment-and-connect-your-Kubernetes-cluster-to-it](https://github.com/Axway/Setup-Amplify-Mesh-Governance/wiki/Step-4.-Create-an-Amplify-Central-environment-and-connect-your-Kubernetes-cluster-to-it). Redeploying with helm to change either of the two options above will cause the mesh agent to restart.
 
 * The alpha Mesh Governance Discovery Agent can be installed with the CLI option: `amplify central install agents` using the new **Kubernetes** option. Note that the alpha Mesh Governance agent capabilities are separate from the existing beta agents, and are available for preview and feedback.
-* The alpha agent installation is documented here: [https://docs.axway.com/bundle/amplify-central/page/docs/mesh_management/deploy-your-agents-with-the-amplify-cli/index.html](/docs/mesh_management/deploy-your-agents-with-the-amplify-cli/).
+* The alpha agent installation is documented here: [https://docs.axway.com/bundle/amplify-central/page/docs/mesh_management/deploy-your-agents-with-the-axway-cli/index.html](/docs/mesh_management/deploy-your-agents-with-the-amplify-cli/).
 * The alpha agent usage and configuration is documented here: [https://docs.axway.com/bundle/amplify-central/page/docs/mesh_management/discover-apis-and-services/index.html](/docs/mesh_management/discover-apis-and-services/).
 * The alpha Mesh Discovery agent limitations are noted below.
 

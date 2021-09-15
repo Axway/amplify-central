@@ -236,7 +236,7 @@ If the API provider does not allow an API consumer to create his Application (Ax
 
 ### Axway API Gateway custom field
 
-A custom field track the Amplify Central subscription can be added to the API. Refer to `<API_Gateway_install_dir>/apigateway/webapps//apiportal/vordel/apiportal/app/app.config file` in the **customPropertiesConfig** section. For more details, see [Customize API Manager](/docs/apim_administration/apimgr_admin/api_mgmt_custom/).
+A custom field track the Amplify Central subscription can be added to the API. Refer to `<API_Gateway_install_dir>/apigateway/webapps//apiportal/vordel/apiportal/app/app.config file` in the **customPropertiesConfig** section. For more details, see [Customize API Manager](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html).
 
 Sample application:
 

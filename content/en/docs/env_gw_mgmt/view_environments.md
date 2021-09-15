@@ -64,7 +64,7 @@ The following information is displayed for environments created using the API se
 For more information about other types of environments, see:
 
 * [Mesh Environment Management](/docs/mesh_management/)
-* [Axway Cloud SaaS: Get Started](/docs/quickstart/)
+* [Axway Cloud SaaS: Get Started](/docs/saas_api_gateway/quickstart/)
 
 ### Delete an API Service
 

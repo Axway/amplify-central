@@ -23,7 +23,7 @@ The Traceability Agent is attached to a Gateway and monitors the traffic crossin
 
 {{< alert title="Disabling transacation report" color="warning" >}}To use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file to disable the transaction report. Restart the Traceability Agent to use the new configuration.{{< /alert >}}
 
-## Network pre-requisites
+## Network prerequisites
 
 All outbound traffic is sent over SSL via TCP / UDP.
 

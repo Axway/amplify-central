@@ -23,7 +23,7 @@ Filter by type has been enhanced to enable users to view their filter selections
 
 #### Enable consumers of assets to make changes to their subscriptions
 
-Subscription management in Amplify Unified Catalog has been enhanced to enable consumers to make changes to their subscription contracts, whether they are correcting mistakes or making changes to subscription parameters. See [Subscribe to an API](/docs/catalog/discover-and-consume-catalog-assets/) for details.
+Subscription management in Amplify Unified Catalog has been enhanced to enable consumers to make changes to their subscription contracts, whether they are correcting mistakes or making changes to subscription parameters. 
 
 #### Simplify flow for promoting API assets from Unified Catalog to Integration Builder
 
@@ -167,8 +167,6 @@ The agent waits for the subscription to be approved in order to:
 3. Send the credentials notification either using an SMTP server (`CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_*`) or a webhook url (`CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_URL`).
 
 4. Set the subscription as active.
-
-For information, see [Manage API Gateway Subscription workflow](/docs/connect-api-manager/subscription-for-the-consumer) / [Manage AWS Gateway Subscription workflow](/docs/connect-aws-gateway/subscription-for-the-consumer).
 
 #### Traceability Agent
 

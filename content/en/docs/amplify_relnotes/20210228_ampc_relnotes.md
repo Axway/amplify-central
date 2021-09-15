@@ -59,7 +59,7 @@ Mesh governance includes the following enhancements:
   * Default - only the HTTP headers needed for minimal transaction details of the source, destination and transaction span linkage are published.
   * Verbose - all HTTP request/response headers are published.
 * Note: The Istio Traceability Agent header sanitization rules for filtering and redaction may still be applied to further limit the headers that appear in the API Observer.
-* The alpha Istio Discovery and Traceability Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/mesh_management/deploy-your-agents-with-the-amplify-cli/).
+* The alpha Istio Discovery and Traceability Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/mesh_management/deploy-your-agents-with-the-axway-cli/).
 
 ## Fixed issues
 
