@@ -8,7 +8,7 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 ---
 ## Before you start
 
-* Read [Amplify Central AWS API Gateway connected overview](/docs/central/connect-aws-gateway/)
+* Read [Amplify Central AWS API Gateway connected overview](/docs/connect-aws-gateway/)
 * You will need information on AWS
 
   * The region that the AWS API Gateway resources are hosted in
@@ -28,7 +28,7 @@ Learn how to quickly install and run your Discovery and Traceability agents with
 * Access to login.axway.com on port 443
 * Minimum Axway Central CLI version: 0.5.0 (check version using `axway central --version`)
 
-For more information, see [Install Axway Central CLI](/docs/central/cli_central/cli_install/).
+For more information, see [Install Axway Central CLI](/docs/cli_central/cli_install/).
 
 ## Installing the agents
 
@@ -224,4 +224,4 @@ To complete the install, run the following AWS CLI command:
 
 Once the Cloud formation template creation is completed, the agents should be running in the chosen infrastructure.
 
-See [Administer AWS Gateway cloud](/docs/central/connect-aws-gateway/cloud-administration-operation/) for additional information about agent features.
+See [Administer AWS Gateway cloud](/docs/connect-aws-gateway/cloud-administration-operation/) for additional information about agent features.

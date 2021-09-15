@@ -8,7 +8,7 @@ description: Learn how your DevOps process can use Axway Central CLI to build
 
 ## Before you start
 
-* You must [authorize your DevOps service to use the DevOps API](/docs/central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
+* You must [authorize your DevOps service to use the DevOps API](/docs/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
 * Verify the @axway/axway-central-cli version is at minimum 2.2.0.
 
 ## Objectives

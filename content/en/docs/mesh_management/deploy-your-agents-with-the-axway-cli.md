@@ -21,9 +21,9 @@ Ensure you have the following tools installed:
 
 **Note:** The most recently validated Kubernetes version was 1.19.8.
 
-For more information about installing the CLI, see [Install Axway Central CLI](/docs/central/cli_central/cli_install/).
+For more information about installing the CLI, see [Install Axway Central CLI](/docs/cli_central/cli_install/).
 
-**Note:** Istio agents are compatible with RedHat OpenShift 4.7 and later. For more information see [Using RedHat OpenShift](/docs/central/mesh_management/using_redhat_openshift/).
+**Note:** Istio agents are compatible with RedHat OpenShift 4.7 and later. For more information see [Using RedHat OpenShift](/docs/mesh_management/using_redhat_openshift/).
 
 Run the following command to log into the Axway CLI with your Amplify Platform credentials:
 
@@ -167,7 +167,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
 
     If you choose to deploy Traceability agent, select the mode in which you want the Traceability Agent to run.
 
-    The Amplify Istio Traceability Agent has two modes, default and verbose. The default mode captures only the headers specified in the EnvoyFilter. The verbose mode captures all the headers in the request and response flows. Once selected, you will be able to switch modes if required. Refer to [Monitor APIs and Services - Toggling the Traceability Agent](/docs/central/mesh_management/traceability_agent_configuration/#toggling-the-traceability-agent).
+    The Amplify Istio Traceability Agent has two modes, default and verbose. The default mode captures only the headers specified in the EnvoyFilter. The verbose mode captures all the headers in the request and response flows. Once selected, you will be able to switch modes if required. Refer to [Monitor APIs and Services - Toggling the Traceability Agent](/docs/mesh_management/traceability_agent_configuration/#toggling-the-traceability-agent).
 
    ```bash
     Select Traceability Agent HTTP header publishing mode:  (Use arrow keys)
@@ -372,6 +372,6 @@ helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid 
 
 ## Where to go next
 
-For more information on the details of the resources and how the discovery process works, see [Discover APIs and services](/docs/central/mesh_management/discover-apis-and-services/).
+For more information on the details of the resources and how the discovery process works, see [Discover APIs and services](/docs/mesh_management/discover-apis-and-services/).
 
-For more information on monitoring APIs and services, see [Monitor APIs and Services](/docs/central/mesh_management/traceability_agent_configuration/).
+For more information on monitoring APIs and services, see [Monitor APIs and Services](/docs/mesh_management/traceability_agent_configuration/).

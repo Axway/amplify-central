@@ -7,8 +7,8 @@ description: Creating and fetch different Amplify Central resources using the CL
 ---
 ## Before You Start
 
-* [Install and authenticate yourself via the Axway Central CLI](/docs/central/cli_central/cli_install/).
-* Familiarize yourself with the [most commonly used Axway Central CLI commands](/docs/central/cli_central/cli_command_reference/).
+* [Install and authenticate yourself via the Axway Central CLI](/docs/cli_central/cli_install/).
+* Familiarize yourself with the [most commonly used Axway Central CLI commands](/docs/cli_central/cli_command_reference/).
 
 ## Objectives
 

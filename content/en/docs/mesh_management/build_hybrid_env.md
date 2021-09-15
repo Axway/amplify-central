@@ -10,7 +10,7 @@ description: Learn how to build a basic Amazon EC2 private cloud hybrid
 
 ## Before you start
 
-* Read [Amplify Central mesh governance overview](/docs/central/mesh_management/).
+* Read [Amplify Central mesh governance overview](/docs/mesh_management/).
 * You will need a basic knowledge of Amazon Web Services (AWS), Amazon EC2 instances, and associated tools.
 * You will need to be familiar with Kubernetes and Helm, including running Helm, kubectl, and kops commands.
 
@@ -120,4 +120,4 @@ Your cluster kubernetes-cluster.example.com is ready
 
 ## Review and next steps
 
-You have learned how to build a basic Amazon EC2 hybrid environment and have added the required tools to access and manage your cluster. Next, read [Deploy your agents with Axway CLI](/docs/central/mesh_management/deploy-your-agents-with-the-axway-cli/) to learn how to add your environment to Amplify Central and to deploy the Amplify Istio Agents.
+You have learned how to build a basic Amazon EC2 hybrid environment and have added the required tools to access and manage your cluster. Next, read [Deploy your agents with Axway CLI](/docs/mesh_management/deploy-your-agents-with-the-axway-cli/) to learn how to add your environment to Amplify Central and to deploy the Amplify Istio Agents.

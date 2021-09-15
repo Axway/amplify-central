@@ -54,12 +54,12 @@ Amplify Central mesh governance enables you to govern and manage your APIs, publ
 Mesh governance includes the following enhancements:
 
 * Amplify CLI updates (version 0.10 and later) now provision the CLI resources needed for Istio agent Kubernetes discovery and promotion to a selected environment in Amplify Central.
-* The alpha Istio Discovery Agent usage and configuration changes to associate target promotion **Environment** with a **K8SCluster** and with a new **Mesh** scoped resource. They are documented here: [Discover APIs and services](/docs/central/mesh_management/discover-apis-and-services/index.html).
+* The alpha Istio Discovery Agent usage and configuration changes to associate target promotion **Environment** with a **K8SCluster** and with a new **Mesh** scoped resource. They are documented here: [Discover APIs and services](/docs/mesh_management/discover-apis-and-services/).
 * The Istio Traceability Agent has been updated to provide two HTTP request/response header logging verbosity modes. The logging mode may be set via the Amplify CLI or by changing the generated Istio and apicHybrid override files used to update Istio and install the Istio agents, respectively.
   * Default - only the HTTP headers needed for minimal transaction details of the source, destination and transaction span linkage are published.
   * Verbose - all HTTP request/response headers are published.
 * Note: The Istio Traceability Agent header sanitization rules for filtering and redaction may still be applied to further limit the headers that appear in the API Observer.
-* The alpha Istio Discovery and Traceability Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/central/mesh_management/deploy-your-agents-with-the-amplify-cli/index.html).
+* The alpha Istio Discovery and Traceability Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/mesh_management/deploy-your-agents-with-the-amplify-cli/).
 
 ## Fixed issues
 
@@ -70,7 +70,7 @@ The following issues were fixed in this version of Amplify Central:
 * **The Central CLI instructions after an agent installation are not clear**. Previously, the instructions informed user to copy public and private keys even when reusing an existing service account. Now, the instructions are clearer and inform the user to not forget to copy existing keys along with the generated files.
 * **Consumer is unable to consume v7 discovered APIs from Amplify Central WebUI**. Previously, V7 Discovery Agent created an application without cors enabled. Now, the Discovery Agent creates the application with '*' in javascript origin which allows the API to be consumed from any location.
 * **V7 Traceability Agent Linux service mode broken**. Previously, the traceability service mode was broken. The service mode has been restored and the Traceability Agent service can now be installed, started and stopped.
-* **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Static IP addresses have been assigned to now help with setting up the firewall rules. More information can be found [here](/docs/central/connect-api-manager/network-traffic-apimanager/index.html#communication-ports).
+* **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Static IP addresses have been assigned to now help with setting up the firewall rules. More information can be found [here](/docs/connect-api-manager/network-traffic-apimanager/index.html#communication-ports).
 
 ## Known limitations
 
@@ -96,4 +96,3 @@ This version of Amplify Central has the following limitations:
 * Azure agents:
 
   * Discovery Agent does not manage revision and version.
-  

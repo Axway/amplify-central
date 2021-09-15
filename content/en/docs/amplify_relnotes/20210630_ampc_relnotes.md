@@ -24,7 +24,7 @@ The Axway CLI includes the following enhancements:
 
 The Axway Central CLI includes the following enhancements:
 
-* New command `axway central create agent-resources` will help you to visualize the Agent Status in Central WebUI. See [Create agent resource](/docs/central/env_gw_mgmt/environment_agent_resources#step-3-create-the-agent-resources) for details.
+* New command `axway central create agent-resources` will help you to visualize the Agent Status in Central WebUI. See [Create agent resource](/docs/env_gw_mgmt/environment_agent_resources#step-3-create-the-agent-resources) for details.
 
 ### Amplify Central WebUI
 
@@ -32,7 +32,7 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 
 The Amplify Central WebUI includes the following enhancements:  
 
-* **Dependency Analysis**: The Dependency Analysis view displays details about the relationships to the selected API Service version. The relationship details enable the API provider to make informed decisions and take actions on any of the dependencies. See [Dependency Analysis](/docs/central/env_gw_mgmt/view-dependency-analysis) for details.
+* **Dependency Analysis**: The Dependency Analysis view displays details about the relationships to the selected API Service version. The relationship details enable the API provider to make informed decisions and take actions on any of the dependencies. See [Dependency Analysis](/docs/env_gw_mgmt/view-dependency-analysis) for details.
 
 ### Axway APIM Gateway / AWS / Azure agents
 
@@ -47,7 +47,7 @@ The agents include the following enhancements:
   * For Azure Traceability Agent, the usage report is no longer based on Azure transactions but on Azure metrics to ensure better accuracy.
 * **API Service revision title**: This new variable `CENTRAL_APISERVICEREVISIONPATTERN` is used to define the pattern for each time the Discovery Agent publishes a new revision of an API Service. By default, its value is `{{APIServiceName}} - {{date:YYYY/MM/DD}} - r {{revision}}`. APIServiceName, YYYY/MM/DD and revision will be set by the agent.
 * **Unhealthy status**: A new status is available for the agent to report when a connectivity issue occurs while the agent is running. This unhealthy status does not prevent the agent from continuing to work. The agent will attempt to recover on regular intervals. The status is visible in the Central UI > Topology. If an unhealthy status is raised, the environment status linked to the agent will become "Partially connected."
-* **Open traffic**: The v7 Traceability Agent can now source either the APIM event log or the APIM open logs. New variables have been introduced to select one input or the other: `EVENT_LOG_INPUT=true` (default) and `OPENTRAFFIC_LOG_INPUT=false` (default). `OPENTRAFFIC_LOG_PATHS` variable will contain the path and file name where the open traffic is written on the file system. See [Customizing beat input variables](/docs/central/connect-api-manager/gateway-administation/#customizing-traceability-agent-beat-input-variables) for details.
+* **Open traffic**: The v7 Traceability Agent can now source either the APIM event log or the APIM open logs. New variables have been introduced to select one input or the other: `EVENT_LOG_INPUT=true` (default) and `OPENTRAFFIC_LOG_INPUT=false` (default). `OPENTRAFFIC_LOG_PATHS` variable will contain the path and file name where the open traffic is written on the file system. See [Customizing beat input variables](/docs/connect-api-manager/gateway-administation/#customizing-traceability-agent-beat-input-variables) for details.
 
 ### Mesh governance / Istio agent
 

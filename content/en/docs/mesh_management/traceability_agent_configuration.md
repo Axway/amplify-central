@@ -8,9 +8,9 @@ description: Observe transactions in mesh.
 
 ## Before you begin
 
-Before you start, see [Deploy your agents with the Axway CLI](/docs/central/mesh_management/deploy-your-agents-with-the-axway-cli/) to learn how to use the CLI to install the Istio agents into your Kubernetes cluster.
+Before you start, see [Deploy your agents with the Axway CLI](/docs/mesh_management/deploy-your-agents-with-the-axway-cli/) to learn how to use the CLI to install the Istio agents into your Kubernetes cluster.
 
-This page will reference the resources created from the [Deploy your agents with the Axway CLI](/docs/central/mesh_management/deploy-your-agents-with-the-axway-cli/) procedure.
+This page will reference the resources created from the [Deploy your agents with the Axway CLI](/docs/mesh_management/deploy-your-agents-with-the-axway-cli/) procedure.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ These prerequisites are required by the Axway Central CLI, which you will use to
 * Node.js >= 10.13.0 and <= 12.14.1
 * Minimum Axway Central CLI version: 1.7.0 or later
 
-For more information, see [Install Axway Central CLI](/docs/central/cli_central/cli_install/).
+For more information, see [Install Axway Central CLI](/docs/cli_central/cli_install/).
 
 ## Overview
 
@@ -144,7 +144,7 @@ axway central apply -f <fileName>.yaml
 
 First, create a Gateway in the namespace in which the Istio agents were installed. If you already have a Gateway CRD, you can skip to [Virtual Service](#virtual-service) and specify that Gateway in the Virtual Service.
 
-In the example below, the selector is specified as the "istio-apic-ingress" (the Ingress gateway that is installed during the Istio installation step in [Deploy your agents with the Axway CLI](/docs/central/mesh_management/deploy-your-agents-with-the-axway-cli/)). If you have a separate Ingress gateway that you would like to use, change the spec.selector.istio field to the label of that Ingress gateway instead.
+In the example below, the selector is specified as the "istio-apic-ingress" (the Ingress gateway that is installed during the Istio installation step in [Deploy your agents with the Axway CLI](/docs/mesh_management/deploy-your-agents-with-the-axway-cli/)). If you have a separate Ingress gateway that you would like to use, change the spec.selector.istio field to the label of that Ingress gateway instead.
 
 {{% alert title="Note" %}}
 For more information about Gateway CRD, please refer to [Istio documentation](https://istio.io/latest/docs/reference/config/networking/gateway/).
@@ -307,7 +307,7 @@ curl -v http://demo.sandbox.axwaytest.net:8080/mylist/list
 
 ## Toggling the Traceability Agent
 
-After deploying the `ampc-hybrid` helm chart to your Kubernetes cluster, you can see the Amplify Istio Traceability Agent running. The service is called `ampc-hybrid-als`. During the step [Deploy your agents with the Axway CLI](/docs/central/mesh_management/deploy-your-agents-with-the-axway-cli/), you were able to select the mode for the Amplify Istio Traceability Agent. If you want to switch the mode, use the following procedure.
+After deploying the `ampc-hybrid` helm chart to your Kubernetes cluster, you can see the Amplify Istio Traceability Agent running. The service is called `ampc-hybrid-als`. During the step [Deploy your agents with the Axway CLI](/docs/mesh_management/deploy-your-agents-with-the-axway-cli/), you were able to select the mode for the Amplify Istio Traceability Agent. If you want to switch the mode, use the following procedure.
 
 **From default to verbose**:
 
@@ -403,7 +403,7 @@ To exclude any headers, remove them from "additional_request_headers_to_log" and
 
 ## Transaction Redaction
 
-The Traceability Agent enforces redaction by default. The agent can be configured to show certain paths, query parameters, and header information based on redaction environment variables provided to it. For instructions on how to set the redaction configuration, see [Trace Redaction](/docs/central/connected_agent_common_reference/trace_redaction.md).
+The Traceability Agent enforces redaction by default. The agent can be configured to show certain paths, query parameters, and header information based on redaction environment variables provided to it. For instructions on how to set the redaction configuration, see [Trace Redaction](/docs/connected_agent_common_reference/trace_redaction.md).
 
 Once the environment variables are set, put them in a helm override configuration:
 

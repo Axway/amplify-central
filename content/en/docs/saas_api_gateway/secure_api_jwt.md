@@ -10,7 +10,7 @@ description: Learn how to secure your API using a JWT token.
 
 * You will need a basic understanding of JWT ([RFC 7523](https://tools.ietf.org/html/rfc7523))
 * You will need a user account for Amplify Central
-* Import your API as an API proxy in Amplify Central (see [Register an API](/docs/central/saas_api_gateway/quickstart/#register-an-api))
+* Import your API as an API proxy in Amplify Central (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
 
 ## Objectives
 

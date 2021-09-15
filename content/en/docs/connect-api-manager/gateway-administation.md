@@ -8,8 +8,8 @@ description: Learn how to deploy your Discovery Agent and Traceability Agent so
 ---
 ## Before you start
 
-* Read [Amplify Central and Axway API Manager connected overview](/docs/central/connect-api-manager/)
-* Be sure you have [Prepared Amplify Central](/docs/central/connect-api-manager/#pre-requisites)
+* Read [Amplify Central and Axway API Manager connected overview](/docs/connect-api-manager/)
+* Be sure you have [Prepared Amplify Central](/docs/connect-api-manager/#pre-requisites)
 * You will need a basic knowledge of Axway API Management solution:
 
   * Where the solution is running (host / port / path to the logs / users)
@@ -28,12 +28,12 @@ The Discovery Agent is used to discover new published APIs or any updated APIs. 
 * **Environment / API Service publication**: Customers publish their APIs to the Amplify platform.
 * **Environment / API Service publication / Catalog item publication** (default mode): Same as previous plus automatically expose the APIS to the consumer via the Amplify Catalog.
 
-The Discovery Agent only discovers APIs that have tags defined in the agent configuration file. See [Discover APIs](/docs/central/connect-api-manager/filtering-apis-to-be-discovered/). By default, the filter is empty and thus the agent will discover all APIs.
+The Discovery Agent only discovers APIs that have tags defined in the agent configuration file. See [Discover APIs](/docs/connect-api-manager/filtering-apis-to-be-discovered/). By default, the filter is empty and thus the agent will discover all APIs.
 
 The binary agent can run in the following mode:
 
 * Default: With a yaml configuration file having the same name as the agent binary - `discovery_agent.yml`. Some values (Central url / authentication url) are defaulted to avoid mistake and will not be visible in the provided discovery_agent.yml file.
-* **Recommended**: With an environment variable file `da_env_vars.env`. All values in the `discovery_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./discovery_agent --envFile /home/config/da_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Discovery Agent variables](/docs/central/connect-api-manager/agent-variables/) section.
+* **Recommended**: With an environment variable file `da_env_vars.env`. All values in the `discovery_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./discovery_agent --envFile /home/config/da_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Discovery Agent variables](/docs/connect-api-manager/agent-variables/) section.
 
 The containerized agent can run in the following mode:
 
@@ -57,11 +57,11 @@ unzip discovery_agent-latest.zip
 
 **Step 3**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
 
-**Step 4**: Move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key.pem` comes from Steps 3 or 4 of [Create a Service Account](/docs/central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis) depending if you choose to use the `der` format or not.
+**Step 4**: Move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key.pem` comes from Steps 3 or 4 of [Create a Service Account](/docs/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis) depending if you choose to use the `der` format or not.
 
 #### To install the Dockerized Discovery Agent
 
-Create your Discovery Agent environment file, `da_env_vars.env`. See [Discovery Agent variables](/docs/central/connect-api-manager/agent-variables/) for a reference to variable descriptions.
+Create your Discovery Agent environment file, `da_env_vars.env`. See [Discovery Agent variables](/docs/connect-api-manager/agent-variables/) for a reference to variable descriptions.
 After customizing all the sections, your `da_env_vars.env` file should look like this example file:
 
 ```shell
@@ -83,7 +83,7 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 
 * The value for *team* can be found in [Amplify Central > Access > Team Assets](https://apicentral.axway.com/access/teams/).
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
-* The value for *clientId* can be found in Service Account. See [Create a service account](/docs/central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
+* The value for *clientId* can be found in Service Account. See [Create a service account](/docs/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
 Pull the latest image of the Discovery Agent:
 
@@ -105,7 +105,7 @@ This section connects the agent to API Manager and determines which APIs should 
 
 `APIMANAGER_DISCOVERYIGNORETAGS` (optional): Comma-separated blacklist of tags. If an API has one or several of these blacklist tags, the agent ignores this API and will not publish it to Amplify Central. This property takes precedence over the filter property below. The default value is empty, which means no API is ignored.
 
-`APIMANAGER_FILTER` (optional): Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/central/connect-api-manager/filtering-apis-to-be-discovered/). Leaving this field empty tells the agent to discover all published APIs (REST / SOAP).
+`APIMANAGER_FILTER` (optional): Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect-api-manager/filtering-apis-to-be-discovered/). Leaving this field empty tells the agent to discover all published APIs (REST / SOAP).
 
 `APIMANAGER_SUBSCRIPTIONAPPLICATIONFIELD` (optional): The field name used to store Amplify Central subscription identifier inside the API Manager application securing the front end proxy. Default value is **subscriptions**. If you do not intend to change it, comment this property. Be aware that the field will not be visible in the API Manager application, as it is a specific configuration. If you want to see that field or customize it, refer to Add a custom property to applications in [Customize API Manager](/docs/apim_administration/apimgr_admin/api_mgmt_custom/#customize-api-manager-data/) documentation.
 
@@ -145,7 +145,7 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_ORGANIZATIONID`: The Organization ID from Amplify Central. Locate this at Platform > User > Organization > Org ID field.
 
-`CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify Central](/docs/central/cli_central/cli_install/).
+`CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify Central](/docs/cli_central/cli_install/).
 
 `CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.
 
@@ -155,11 +155,11 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_AUTH_REALM`: The Realm used to authenticate for Amplify Central. Default value is **Broker**.
 
-`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify Central](/docs/central/cli_central/cli_install/). Locate this at Amplify Central > Access > Service Accounts.
+`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify Central](/docs/cli_central/cli_install/). Locate this at Amplify Central > Access > Service Accounts.
 
-`CENTRAL_AUTH_PRIVATEKEY`: The location of the private key file you created when [preparing Amplify Central](/docs/central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.
+`CENTRAL_AUTH_PRIVATEKEY`: The location of the private key file you created when [preparing Amplify Central](/docs/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.
 
-`CENTRAL_AUTH_PUBLICKEY`:  The location of the public key file you created when [preparing Amplify Central](/docs/central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.  
+`CENTRAL_AUTH_PUBLICKEY`:  The location of the public key file you created when [preparing Amplify Central](/docs/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.  
 
 `CENTRAL_AUTH_KEYPASSWORD`: The key password to open the key. None set up by default.
 
@@ -191,7 +191,7 @@ Various use cases are supported to approve a subscription using the `CENTRAL_SUB
 * auto: all subscription are automatically approved
 * webhook: a webhook can be added to the agent configuration. The webhook endpoint will be trigger each time the subscription state is updated. For this, there are 2 additional variables required: `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL` and `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS`.
 
-More information can be found in [Supported use cases for subscription approval](/docs/central/connected_agent_common_reference/manage_subscription_workflow/#supported-use-case-for-issuing-consumer-credentials) section.
+More information can be found in [Supported use cases for subscription approval](/docs/connected_agent_common_reference/manage_subscription_workflow/#supported-use-case-for-issuing-consumer-credentials) section.
 
 We also support two use cases to send API credentials to the subscriber:
 
@@ -200,7 +200,7 @@ We also support two use cases to send API credentials to the subscriber:
 
 These options are mutually exclusive.
 
-More information can be found in [Supported use cases for receiving API credentials](/docs/central/connected_agent_common_reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials) section.
+More information can be found in [Supported use cases for receiving API credentials](/docs/connected_agent_common_reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials) section.
 
 Once all data is gathered, this subscription section should look like this:
 
@@ -511,7 +511,7 @@ The Traceability Agent is used to prepare the transaction events that are sent t
 The binary agent can run in the following mode:
 
 * Default: With a yaml configuration file having the same name as the agent binary - `traceability_agent.yml`. Some values (Central url / authentication url) are defaulted to avoid mistake and will not be visible in the provided traceability_agent.yml file.
-* **Recommended**: With an environment variable file `ta_env_vars.env`. All values in the `traceability_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./traceability_agent --envFile /home/config/ta_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Traceability Agent variables](/docs/central/connect-api-manager/agent-variables/) section.
+* **Recommended**: With an environment variable file `ta_env_vars.env`. All values in the `traceability_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./traceability_agent --envFile /home/config/ta_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Traceability Agent variables](/docs/connect-api-manager/agent-variables/) section.
 
 The containerized agent can run in the following mode:
 
@@ -535,11 +535,11 @@ unzip traceability_agent-latest.zip
 
 **Step 3**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
 
-**Step 4**: If not done yet, move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key` comes from Steps 3 or 4 of [Create a Service Account](/docs/central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis), depending on whether you choose to use the `der` format.
+**Step 4**: If not done yet, move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key` comes from Steps 3 or 4 of [Create a Service Account](/docs/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis), depending on whether you choose to use the `der` format.
 
 #### To install the Dockerized Traceability Agent
 
-Create your Traceability Agent environment file, `ta_env_vars.env`. See [Traceability Agent variables](/docs/central/connect-api-manager/agent-variables/) for a reference to variable descriptions.
+Create your Traceability Agent environment file, `ta_env_vars.env`. See [Traceability Agent variables](/docs/connect-api-manager/agent-variables/) for a reference to variable descriptions.
 After customizing all the sections, your `ta_env_vars.env` file should look like this example file:
 
 ```shell
@@ -564,7 +564,7 @@ CENTRAL_ENVIRONMENT=<Environment>
 
 * The value for *team* can be found in [Amplify Central > Access > Team Assets](https://apicentral.axway.com/access/teams/).
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
-* The value for *clientId* can be found in Service Account. See [Create a service account](/docs/central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
+* The value for *clientId* can be found in Service Account. See [Create a service account](/docs/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
 Pull the latest Docker image of the Traceability Agent:
 
@@ -638,7 +638,7 @@ When using the open traffic logs, it is not required to configure the Gateway co
 
 #### Customizing Traceability Agent API Manager connectivity variables
 
-This section is exactly the same as the [Discovery Agent - API Manager](/docs/central/connect-api-manager/gateway-administation/#customizing-discovery-agent-api-manager-connectivity-variables).
+This section is exactly the same as the [Discovery Agent - API Manager](/docs/connect-api-manager/gateway-administation/#customizing-discovery-agent-api-manager-connectivity-variables).
 
 Once all data is gathered, this section should look like:
 
@@ -670,7 +670,7 @@ This section helps the agent to collect the request/response headers from the AP
 
 `APIGATEWAY_AUTH_PASSWORD`: The Axway API Gateway username password in clear text.
 
-Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer API Manager agent security](/docs/central/connect-api-manager/agent-security-api-manager/) section for changing this behavior.
+Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer API Manager agent security](/docs/connect-api-manager/agent-security-api-manager/) section for changing this behavior.
 
 Once all data is gathered, this section should look like:
 
@@ -688,7 +688,7 @@ APIGATEWAY_SENDALLTRAFFIC=false
 #### Customizing Traceability Agent Central connectivity variables
 
 This section connects the agent to Amplify Central.
-This section is exactly the same as the [Discovery Agent - Central connectivity](/docs/central/connect-api-manager/gateway-administation/#customizing-discovery-agent-central-connectivity-variables).
+This section is exactly the same as the [Discovery Agent - Central connectivity](/docs/connect-api-manager/gateway-administation/#customizing-discovery-agent-central-connectivity-variables).
 
 Once all data is gathered, the variable list should look like:
 
@@ -727,7 +727,7 @@ This section describes where the logs should be sent on Amplify Central.
 
 `TRACEABILITY_WORKER`: The number of workers in the Traceability agent making connections to the TRACEABILITY_HOST. It is recommended to change this for high volume machine. Default value is **2**.
 
-Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer API Manager agent security](/docs/central/connect-api-manager/agent-security-api-manager/) section for changing this behavior.
+Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer API Manager agent security](/docs/connect-api-manager/agent-security-api-manager/) section for changing this behavior.
 
 Once all data is gathered, the section should look like this if you do not use a proxy:
 
@@ -762,7 +762,7 @@ Once all data is gathered, this section should look like:
 
 #### Customizing Traceability Agent logging variables
 
-The log section defines how the agent manages its logs. This section is similar to the one defined for the [Discovery Agent](/docs/central/connect-api-manager/gateway-administation/#customizing-discovery-agent-logging-variables).
+The log section defines how the agent manages its logs. This section is similar to the one defined for the [Discovery Agent](/docs/connect-api-manager/gateway-administation/#customizing-discovery-agent-logging-variables).
 
 Once all data is gathered, this section should look like this for standard output logging:
 

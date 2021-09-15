@@ -110,7 +110,7 @@ spec:
 
 The following steps will guide you in defining the require agent resources in order to display the agent status associated to an environment.
 
-You must access the Axway Central CLI. See [Install Axway Central CLI](/docs/central/cli_central/cli_install).
+You must access the Axway Central CLI. See [Install Axway Central CLI](/docs/cli_central/cli_install).
 
 ### Step 1: Authenticate yourself with Axway Central CLI
 

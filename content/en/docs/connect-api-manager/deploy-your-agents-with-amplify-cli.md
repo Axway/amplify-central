@@ -8,7 +8,7 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 ---
 ## Before you start
 
-* Read [Amplify Central and Axway API Manager connected overview](/docs/central/connect-api-manager/)
+* Read [Amplify Central and Axway API Manager connected overview](/docs/connect-api-manager/)
 * You will need a basic knowledge of Axway API Management installation
 
   * Where the API Gateway is running (host / port / path to event logs)
@@ -27,7 +27,7 @@ Learn how to quickly install and run your Discovery and Traceability agents with
 * Minimum Axway Central CLI version: 1.24.0 (check version using `axway central --version`)
 * Kubernetes 1.19 (Helm install only)
 
-More information is available at [Install Axway Central CLI](/docs/central/cli_central/cli_install/).
+More information is available at [Install Axway Central CLI](/docs/cli_central/cli_install/).
 
 ## Install the agents
 
@@ -193,7 +193,7 @@ helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/v7-tra
 
 The agent can be installed as a Linux service with systemd. The following commands will help you utilize the service. These commands install the service abilities and must be run as a root user.
 
-When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing log section (log)](/docs/central/connect-api-manager/gateway-administation/#customizing-log-section-logging).
+When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing log section (log)](/docs/connect-api-manager/gateway-administation/#customizing-log-section-logging).
 
 * Install the services and execute it as user axway and group axway:
 
@@ -375,4 +375,4 @@ EdgeTraceabilityAgent/cli-1607014956731          started  30 minutes ago  Enviro
 EdgeTraceabilityAgent/lbean018-traceability      stopped  2 months ago    Environment  prod
 ```
 
-See [Administer API Gateway](/docs/central/connect-api-manager/gateway-administation/) for additional information about agent features.
+See [Administer API Gateway](/docs/connect-api-manager/gateway-administation/) for additional information about agent features.

@@ -9,7 +9,7 @@ description: Learn how your DevOps service can use Axway Central CLI to manage y
 ## Before you start
 
 * If you are applying security to your Axway SaaS Gateway API proxy, you will need a basic understanding of Basic Authentication ([RFC 7617](https://tools.ietf.org/html/rfc7617)).
-* You must [authorize your DevOps service to use the DevOps API](/docs/central/cli_central/cli_install).
+* You must [authorize your DevOps service to use the DevOps API](/docs/cli_central/cli_install).
 
 ## Objectives
 

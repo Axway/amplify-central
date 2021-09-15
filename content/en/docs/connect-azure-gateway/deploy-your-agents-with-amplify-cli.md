@@ -8,7 +8,7 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 ---
 ## Before you start
 
-* Read [Amplify Central Azure Gateway connected overview](/docs/central/connect-azure-gateway/)
+* Read [Amplify Central Azure Gateway connected overview](/docs/connect-azure-gateway/)
 * You will need information on Azure:
 
   * where the API Service management is located (resource group name / API Management service name)
@@ -28,7 +28,7 @@ Learn how to quickly install and run your Discovery and Traceability agents with
 * Access to login.axway.com on port 443
 * Minimum Axway Central CLI version: 0.7.0 (check version using `axway central --version`)
 
-For more information, see [Install Axway Central CLI](/docs/central/cli_central/cli_install/).
+For more information, see [Install Axway Central CLI](/docs/cli_central/cli_install/).
 
 ## Azure prerequisites
 
@@ -142,4 +142,4 @@ run them using the appropriate supplied environment files, (da_env_vars.env & ta
 
 Once the pull and run commands are completed, the agents should be running in the Docker infrastructure.
 
-See [Connect Azure Gateway](/docs/central/connect-azure-gateway/) for additional information about connecting Azure API Management Services to Amplify Central.
+See [Connect Azure Gateway](/docs/connect-azure-gateway/) for additional information about connecting Azure API Management Services to Amplify Central.

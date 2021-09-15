@@ -21,7 +21,7 @@ When creating an API Service, you can assign an owner. However, the API Service 
 
 #### How to assign an owner?
 
-Currently, you can assign an owner by using the Amplify Central CLI. To learn how to create an environment using the CLI, see [Build an environment](https://docs.axway.com/bundle/axway-open-docs/page/docs/central/cli_central/cli_environments/index.html).
+Currently, you can assign an owner by using the Amplify Central CLI. To learn how to create an environment using the CLI, see [Build an environment](https://docs.axway.com/bundle/axway-open-docs/page/docs/cli_central/cli_environments/index.html).
 
 Sample of an environment that has an owning team:
 

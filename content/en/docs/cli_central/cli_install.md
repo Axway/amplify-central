@@ -96,8 +96,8 @@ Before using the Amplify Central APIs you must first authorize your CLI, so you 
 
 You can use the following options to authorize your CLI:
 
-1. [Use your Amplify Platform login credentials](/docs/central/cli_central/cli_install/#option-1---log-in-with-your-amplify-platform-credentials).
-2. [Use a service account](/docs/central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account).
+1. [Use your Amplify Platform login credentials](/docs/cli_central/cli_install/#option-1---log-in-with-your-amplify-platform-credentials).
+2. [Use a service account](/docs/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account).
 
 ### Option 1 - Log in with your Amplify Platform credentials
 

@@ -32,7 +32,7 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 The following enhancements are available in this Amplify Central WebUI update:
 
 * The Topology Environments list page performance has been improved by using a paginated table.
-* Service Mesh v1 support has been removed. It is now replaced by [Amplify ISTIO agents](/docs/central/mesh_management).
+* Service Mesh v1 support has been removed. It is now replaced by [Amplify ISTIO agents](/docs/mesh_management).
 
 ## Fixed issues
 

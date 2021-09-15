@@ -40,11 +40,11 @@ The Traceability Agent sends log information about APIs in API Gateway and publi
 ## Pre-requisites
 
 * An Axway Amplify Central subscription in the Amplify platform
-* (Optional) An Amplify Central Service Account (see [Create a service account](/docs/central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)) or a Platform Service Account (see [Managing service accounts](https://docs.axway.com/bundle/Amplify_Platform_Management_allOS_en/page/managing_organizations.html#ManagingOrganizations-service_accountsManagingserviceaccounts)).
+* (Optional) An Amplify Central Service Account (see [Create a service account](/docs/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)) or a Platform Service Account (see [Managing service accounts](https://docs.axway.com/bundle/Amplify_Platform_Management_allOS_en/page/managing_organizations.html#ManagingOrganizations-service_accountsManagingserviceaccounts)).
 
 {{< alert title="Note" color="primary" >}}Although both service account types are currently supported, the Amplify Central Service Account will soon be retired. For this reason, it is recommended that you use the Platform Service Account.{{< /alert >}}
 
-* (Optional) An Amplify Central environment. See [Create an environment](/docs/central/cli_central/cli_environments)
+* (Optional) An Amplify Central environment. See [Create an environment](/docs/cli_central/cli_environments)
 * An API Manager user having the role of API Manager administrator for the Discovery / Traceability agent to connect to API Manager
 * An API Gateway user having the role of API Gateway operator for Traceability Agent to connect to API Gateway
 
@@ -77,7 +77,7 @@ The following is a high-level overview of the required steps to connect an API M
 * Create an environment to group the APIs
 * Deploy the agent to the gateway: one Discovery Agent per Node Manager and one Traceability Agent per gateway
 
-You will be guided through this procedure using Axway Central CLI. See [Deploy your agent with Axway CLI](/docs/central/connect-api-manager/deploy-your-agents-with-amplify-cli/).
+You will be guided through this procedure using Axway Central CLI. See [Deploy your agent with Axway CLI](/docs/connect-api-manager/deploy-your-agents-with-amplify-cli/).
 
 ## Connect Axway API Manager to Amplify Central manually
 
@@ -89,8 +89,8 @@ The following demonstrates how to connect an Axway API-Gateway V7 to Amplify-Cen
 
 Some of the content in the Connect API Manager documentation is of interest to a wide range of development and administrator professions. The following topics are organized by professional role and common task scenarios:
 
-* [Administer API Manager Gateway](/docs/central/connect-api-manager/gateway-administation/)
+* [Administer API Manager Gateway](/docs/connect-api-manager/gateway-administation/)
 
-* [Administer API Manager agent security](/docs/central/connect-api-manager/agent-security-api-manager/)
+* [Administer API Manager agent security](/docs/connect-api-manager/agent-security-api-manager/)
 
-* [Administer API Manager network traffic](/docs/central/connect-api-manager/network-traffic-apimanager/)
+* [Administer API Manager network traffic](/docs/connect-api-manager/network-traffic-apimanager/)

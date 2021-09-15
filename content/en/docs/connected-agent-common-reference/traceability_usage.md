@@ -19,7 +19,7 @@ Learn how to install and set up the Traceability Agent to automatically report t
 The Traceability Agent is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
 * **Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.
-* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). If your API calls JMS endpoints, the JMS properties are also reported. To reduce the number of transactions sent to the platform, use the [sampling feature](/docs/central/connected_agent_common_reference/trace_sampling).
+* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). If your API calls JMS endpoints, the JMS properties are also reported. To reduce the number of transactions sent to the platform, use the [sampling feature](/docs/connected_agent_common_reference/trace_sampling).
 
 {{< alert title="Disabling transacation report" color="warning" >}}To use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file to disable the transaction report. Restart the Traceability Agent to use the new configuration.{{< /alert >}}
 
@@ -78,7 +78,7 @@ To report usage to Amplify platform, the traceability Agent must be installed an
    * Install Axway Central CLI: `axway pm install @axway/axway-central-cli`
    * Download and install OpenSSL, if not already present on the machine. This will help you generate a public/private key pair to secure the connection between Traceability Agent and Amplify platform.
 
-      More information regarding the CLI installation is available [here](/docs/central/cli_central/cli_install/)
+      More information regarding the CLI installation is available [here](/docs/cli_central/cli_install/)
 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
 3. Install the Traceability Agent using Axway Central CLI: `axway central install agents`
 
@@ -87,7 +87,7 @@ To report usage to Amplify platform, the traceability Agent must be installed an
    * CLI creates appropriate resources in Amplify platform / local files based on the answers.
    * CLI output next steps: copy files on the Gateway machine / start the agent.
 
-      For more information regarding agents installation, see [Axway Gateway agents](/docs/central/connect-api-manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/central/connect-aws-gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/central/connect-azure-gateway/deploy-your-agents-with-amplify-cli).
+      For more information regarding agents installation, see [Axway Gateway agents](/docs/connect-api-manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect-aws-gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect-azure-gateway/deploy-your-agents-with-amplify-cli).
 
 ## Reporting Gateway usage event
 
@@ -123,7 +123,7 @@ If the Traceability Agent is stopped while there are still remaining usage event
 
 When offline usage reporting is on, `CENTRAL_USAGEREPORTING_OFFLINE=true` (default = false), the `CENTRAL_USAGEREPORTING_SCHEDULE` variable determines how often usage numbers are saved (default and minimum = "@hourly"). For additional cron schedules information, see [Scheduled jobs](https://github.com/Axway/agent-sdk/blob/main/pkg/jobs/README.md#scheduled-jobs). Note that offline ignores the `CENTRAL_USAGEREPORTING_INTERVAL` value that is only used for online reporting.
 
-In addition to setting `CENTRAL_USAGEREPORTING_OFFLINE=true`, the `CENTRAL_ENVIRONMENTID` variable must be set.  The usage report requires a valid Environment ID and cannot retrieve it in Offline mode.  This can be retrieved with the axway cli, see [Retrieve a list of all available environments](/docs/central/cli_central/cli_environments#retrieve-a-list-of-all-available-environments).
+In addition to setting `CENTRAL_USAGEREPORTING_OFFLINE=true`, the `CENTRAL_ENVIRONMENTID` variable must be set.  The usage report requires a valid Environment ID and cannot retrieve it in Offline mode.  This can be retrieved with the axway cli, see [Retrieve a list of all available environments](/docs/cli_central/cli_environments#retrieve-a-list-of-all-available-environments).
 
 The offline report is generated every month and saved to the [agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
 

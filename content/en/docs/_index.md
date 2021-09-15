@@ -14,9 +14,9 @@ This website contains the entire documentation set for Amplify Central.
 
 ## Amplify Central documentation
 
-Browse all documentation for Amplify Central under the top-level [Amplify Central](/docs/central/) item in the left navigation menu.
+Browse all documentation for Amplify Central under the top-level [Amplify Central](/docs/) item in the left navigation menu.
 
 Here are some suggestions to get started:
 
-* [Get started with Amplify Central](/docs/central/quickstart/)
-* [Get started with Axway Central CLI](/docs/central/cli_central/)
+* [Get started with Amplify Central](/docs/getting_started/)
+* [Get started with Axway Central CLI](/docs/cli_central/_index.md)

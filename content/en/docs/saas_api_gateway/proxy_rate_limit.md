@@ -9,8 +9,8 @@ description: Learn how to apply a rate limit configuration to your API.
 ## Before you start
 
 * You will need an administrator account for Amplify Central
-* Learn how to import your API as an API proxy in Amplify Central (see [Register an API](/docs/central/saas_api_gateway/quickstart/#register-an-api))
-* Learn how to use the Axway CLI to manage an API proxy (see [Manage an API proxy using Axway Central CLI](/docs/central/cli_central/cli_proxy_flow))
+* Learn how to import your API as an API proxy in Amplify Central (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
+* Learn how to use the Axway CLI to manage an API proxy (see [Manage an API proxy using Axway Central CLI](/docs/cli_central/cli_proxy_flow))
 
 ## Objectives
 
@@ -39,7 +39,7 @@ You can enforce one or both levels together.
 
 ## Use the Amplify Central UI to configure rate limiting
 
-To begin, [register an api proxy](/docs/central/saas_api_gateway/quickstart/#register-an-api).
+To begin, [register an api proxy](/docs/saas_api_gateway/quickstart/#register-an-api).
 
 ### Set a proxy rate limit on your API
 

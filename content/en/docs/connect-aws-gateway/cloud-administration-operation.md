@@ -37,7 +37,7 @@ In order for the Discovery Agent to receive the API details, the following AWS s
 
 The AWS Discovery Agent discovers newly created, previously undiscovered REST APIs, as well as changes to the API's stages, which then updates the logging that enables the Traceability Agent (see below).
 
-The agent only publishes APIs that pass the tagging criteria that is configured in the agent configuration file, see [Discover APIs](/docs/central/connect-aws-gateway/filtering-apis-to-be-discovered-1/). The agent will use the tags which are associated with the stage that is associated with the API.
+The agent only publishes APIs that pass the tagging criteria that is configured in the agent configuration file, see [Discover APIs](/docs/connect-aws-gateway/filtering-apis-to-be-discovered-1/). The agent will use the tags which are associated with the stage that is associated with the API.
 
 #### Synchronous Discovery Overview
 
@@ -68,7 +68,7 @@ The AWS service usage cost for the agents is explain below.
 
 ### Minimum requirements
 
-* [Amplify Central Service Account](/docs/central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
+* [Amplify Central Service Account](/docs/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
 * [API Key credentials on AWS](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html). Allowing for CLI access.
 * [Amazon CloudWatch Service](https://aws.amazon.com/cloudwatch/)
 * [Amazon Simple Queue Service](https://aws.amazon.com/sqs/)
@@ -99,7 +99,7 @@ If deploying the EC2 instance within these templates, additionally create the fo
     |    ta_env_vars.env
 ```
 
-For the values in these **\*_env_var.env** files, see [Reference - Agent configuration](/docs/central/connect-aws-gateway/deploy-your-agents-1).
+For the values in these **\*_env_var.env** files, see [Reference - Agent configuration](/docs/connect-aws-gateway/deploy-your-agents-1).
 
 For the list of minimum access rights for these CloudFormation templates, see [Minimum rights for CloudFormation deployment](#minimum-rights-for-cloudformation-deployment).
 
@@ -442,7 +442,7 @@ These outputs will be used as inputs for running both the Discovery and Traceabi
 
 ### Connecting AWS API Gateway to Amplify Central
 
-* [Deploy agents](/docs/central/connect-aws-gateway/deploy-your-agents-1/)
+* [Deploy agents](/docs/connect-aws-gateway/deploy-your-agents-1/)
 
 ### Agents AWS Cost
 
@@ -568,7 +568,7 @@ Note that these privileges do not include those necessary for rollback, if the s
 
 | Question                                        | Answer                                                                                                                                                                                              |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Why isn’t my API discovered?                    | Check that the tag set on the stage has a correct name and value based on the AWS_FILTER variable. See [Discover APIs](/docs/central/connect-aws-gateway/filtering-apis-to-be-discovered-1/).       |
+| Why isn’t my API discovered?                    | Check that the tag set on the stage has a correct name and value based on the AWS_FILTER variable. See [Discover APIs](/docs/connect-aws-gateway/filtering-apis-to-be-discovered-1/).       |
 | Why can’t my agents connect to AWS API Gateway? | Go to AWS console / IAM service and make sure that `AWS_REGION`, `AWS_AUTH_ACCESSKEY` and `AWS_AUTH_SECRETKEY` are valid and not inactivated.                                                       |
 | Why can’t my agents connect to Amplify Central? | Go to **Amplify Central UI > Access > Service Accounts** and make sure that the Service Account is correctly named and valid. Make sure that the organizationID and team configuration are correct. |
 | Why don’t I see traffic in Amplify Central?     | Make sure that the Condor URL is accessible from the machine where Traceability Agent is installed.                                                                                                 |

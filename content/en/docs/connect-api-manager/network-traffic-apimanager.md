@@ -28,7 +28,7 @@ The destination for:
 
 ### Discovery Agent
 
-Use variable `apimanager.filter` to select which API should be sent to Axway Amplify platform. Only the matching APIs are transferred to Axway Amplify platform. See [Discover APIs](/docs/central/connect-api-manager/filtering-apis-to-be-discovered/). The Discovery Agent sends the following information to the Axway Amplify platform:
+Use variable `apimanager.filter` to select which API should be sent to Axway Amplify platform. Only the matching APIs are transferred to Axway Amplify platform. See [Discover APIs](/docs/connect-api-manager/filtering-apis-to-be-discovered/). The Discovery Agent sends the following information to the Axway Amplify platform:
 
 * API definition using Swagger or WSDL depending on the API type (REST vs SOAP)
 * API documentation
@@ -42,7 +42,7 @@ The Traceability Agent reports two sets of data to Amplify platform:
 
 #### Usage data
 
-The usage data represent the total number of APIs called during a certain period of time. This usage is automatically reported every 15 minutes by default to Amplify platform and cannot be inactivated. See [Reporting Gateway usage event](/docs/central/connected_agent_common_reference/traceability_usage/#reporting-gateway-usage-event).
+The usage data represent the total number of APIs called during a certain period of time. This usage is automatically reported every 15 minutes by default to Amplify platform and cannot be inactivated. See [Reporting Gateway usage event](/docs/connected_agent_common_reference/traceability_usage/#reporting-gateway-usage-event).
 
 It contains the following information:
 
@@ -61,9 +61,9 @@ Data Fields:
 
 #### Transactions data
 
-The transaction data represent the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Sampling](/docs/central/connected_agent_common_reference/trace_sampling/#sampling).
+The transaction data represent the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Sampling](/docs/connected_agent_common_reference/trace_sampling/#sampling).
 
-The transactions can be redacted (by default) and/or sanitized, according to your need, before sending the information to Amplify platform. See [Trace redaction](/docs/central/connected_agent_common_reference/trace_redaction/).
+The transactions can be redacted (by default) and/or sanitized, according to your need, before sending the information to Amplify platform. See [Trace redaction](/docs/connected_agent_common_reference/trace_redaction/).
 
 It contains the following information:
 
@@ -142,7 +142,7 @@ Other ports which may need to be opened so that the Agent may monitor API Gatewa
 | Host             | Port           | Protocol | Data                                                                                                                                                    |
 |------------------|----------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | API Manager Host | 8075 (default) | HTTPS    | API Discovery                                                                                                                                           |
-| API Gateway Host | 8090 (default) | HTTPS    | API Transaction Header data (see [APIGATEWAY GETHEADERS](/docs/central/connect-api-manager/agent-variables/#specific-variables-for-traceability-agent)) |
+| API Gateway Host | 8090 (default) | HTTPS    | API Transaction Header data (see [APIGATEWAY GETHEADERS](/docs/connect-api-manager/agent-variables/#specific-variables-for-traceability-agent)) |
 
 **Inbound (used for the agent status server)**:
 
@@ -152,7 +152,7 @@ Other ports which may need to be opened so that the Agent may monitor API Gatewa
 
 ## Subscription notifications
 
-SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.  You can find the configuration to set up the SMTP or webhook URL at [Deploy your agents](/docs/central/connect-api-manager/deploy-your-agents-with-amplify-cli/).
+SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.  You can find the configuration to set up the SMTP or webhook URL at [Deploy your agents](/docs/connect-api-manager/deploy-your-agents-with-amplify-cli/).
 
 ## Using proxies
 
@@ -160,11 +160,11 @@ If your network policy restricts outbound traffic such that outbound traffic mus
 
 ### HTTP/HTTPS Proxy
 
-Use a HTTP/HTTPS Proxy for communication to the Amplify Platform.  This configuration is set for both the [Discovery](/docs/central/connect-api-manager/agent-variables/) and [Traceability Agents](/docs/central/connect-api-manager/agent-variables/).
+Use a HTTP/HTTPS Proxy for communication to the Amplify Platform.  This configuration is set for both the [Discovery](/docs/connect-api-manager/agent-variables/) and [Traceability Agents](/docs/connect-api-manager/agent-variables/).
 
 ### SOCKS5 Proxy
 
-Use a SOCKS5 Proxy for communication to the Amplify Platform when sending API Traffic Events.  This configuration is set only for [Traceability Agents](/docs/central/connect-api-manager/agent-variables/#specific-variables-for-traceability-agent).
+Use a SOCKS5 Proxy for communication to the Amplify Platform when sending API Traffic Events.  This configuration is set only for [Traceability Agents](/docs/connect-api-manager/agent-variables/#specific-variables-for-traceability-agent).
 
 ### Proxy authentication
 

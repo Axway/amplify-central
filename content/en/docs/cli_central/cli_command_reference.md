@@ -73,7 +73,7 @@ axway central get envs, apisvc
 axway central get env,apisvc commonname -s env1 -o json
 ```
 
-For more examples, see [Create and fetch resources via the Axway Central CLI](/docs/central/cli_central/cli_create_fetch_resources/).
+For more examples, see [Create and fetch resources via the Axway Central CLI](/docs/cli_central/cli_create_fetch_resources/).
 
 ## create
 

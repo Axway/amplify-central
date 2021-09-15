@@ -8,9 +8,9 @@ description: Learn how to configure the Amplify Istio Agent to discover your API
 
 ## Before you begin
 
-Before you start, see [Deploy your agents with the Axway CLI](/docs/central/mesh_management/deploy-your-agents-with-the-amplify-cli/) to learn how to use the CLI to install the Istio agents into your Kubernetes cluster and to create default resources to discover the demo service that gets deployed.
+Before you start, see [Deploy your agents with the Axway CLI](/docs/mesh_management/deploy-your-agents-with-the-amplify-cli/) to learn how to use the CLI to install the Istio agents into your Kubernetes cluster and to create default resources to discover the demo service that gets deployed.
 
-This page references the resources created from the [Deploy your agents with the Axway CLI](/docs/central/mesh_management/deploy-your-agents-with-the-amplify-cli/) procedure.
+This page references the resources created from the [Deploy your agents with the Axway CLI](/docs/mesh_management/deploy-your-agents-with-the-amplify-cli/) procedure.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ These prerequisites are required by the Axway Central CLI, which you will use to
 * Node.js >= 10.13.0 and <= 12.14.1
 * Axway Central CLI 1.7.0 or later
 
-For more information, see [Install Axway Central CLI](/docs/central/cli_central/cli_install/).
+For more information, see [Install Axway Central CLI](/docs/cli_central/cli_install/).
 
 ## Overview
 
@@ -92,7 +92,7 @@ If you are a member of multiple Amplify organizations, select an organization an
 
 The Environment resource is a representation of your Kubernetes cluster. In order for resources to be discovered, the agents must be connected to an Environment and a K8SCluster.
 
-If you previously followed [Deploy the service mesh and Amplify Istio Agents](/docs/central/mesh_management/add_env/#deploy-the-service-mesh-and-axway-mesh-agents), then the ADA and RDA will already be configured with your selected Environment and K8SCluster, and you can skip to [Configure the API Discovery Agent](#configure-the-api-discovery-agent).
+If you previously followed [Deploy the service mesh and Amplify Istio Agents](/docs/mesh_management/add_env/#deploy-the-service-mesh-and-axway-mesh-agents), then the ADA and RDA will already be configured with your selected Environment and K8SCluster, and you can skip to [Configure the API Discovery Agent](#configure-the-api-discovery-agent).
 
 If you do not have the ADA and RDA configured, or if you would like the agents to use a different Environment, follow the steps below:
 
