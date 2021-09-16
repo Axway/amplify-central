@@ -53,7 +53,7 @@ To provide better visibility into your multi-type gateway eco system, two sets o
 
 The agents include the following enhancements:
 
-* When subscribing, the default behavior is now to create unique credentials for each consumer (API Key / oauth credentials). 
+* When subscribing, the default behavior is now to create unique credentials for each consumer (API Key / oauth credentials).
 * Discovery Agent now handles log rotation/retention. Refer to [logging variables](/docs/connect-api-manager/agent-variables/).
 
 ### Mesh governance

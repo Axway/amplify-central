@@ -23,7 +23,7 @@ Filter by type has been enhanced to enable users to view their filter selections
 
 #### Enable consumers of assets to make changes to their subscriptions
 
-Subscription management in Amplify Unified Catalog has been enhanced to enable consumers to make changes to their subscription contracts, whether they are correcting mistakes or making changes to subscription parameters. 
+Subscription management in Amplify Unified Catalog has been enhanced to enable consumers to make changes to their subscription contracts, whether they are correcting mistakes or making changes to subscription parameters.
 
 #### Simplify flow for promoting API assets from Unified Catalog to Integration Builder
 
