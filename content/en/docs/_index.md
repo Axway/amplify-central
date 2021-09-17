@@ -1,16 +1,22 @@
 ---
-title: "Documentation"
-linkTitle: "Documentation"
-weight: 20
+title: "Welcome to Amplify Central Documentation"
+linkTitle: "Welcome to Amplify Central Documentation"
+weight: 03
+no_list: true
 menu:
   main:
     weight: 20
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+Amplify Central is the new home for the product documentation that has been migrated to Markdown format and is available in a [public GitHub repository](https://github.com/Axway/amplify-central) to enable collaboration using an open source model.
 
-This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project.
+This website contains the entire documentation set for Amplify Central.
 
-For large documentation sets we recommend adding content under the headings in this section, though if some or all of them don’t apply to your project feel free to remove them or add your own.
+## Amplify Central documentation
+
+Browse all documentation for Amplify Central under the left navigation menu.
+
+Here are some suggestions to get started:
+
+* [Get started with Amplify Central](/docs/getting-started/)
+* [Get started with Axway Central CLI](/docs/cli_central/)
