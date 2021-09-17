@@ -1,6 +1,6 @@
 ---
-title: "Welcome to Amplify Central"
-linkTitle: "Documentation"
+title: "Welcome to Amplify Central Documentation"
+linkTitle: "Welcome to Amplify Central Documentation"
 weight: 03
 no_list: true
 menu:
@@ -14,7 +14,7 @@ This website contains the entire documentation set for Amplify Central.
 
 ## Amplify Central documentation
 
-Browse all documentation for Amplify Central under the top-level [Amplify Central](/docs/) item in the left navigation menu.
+Browse all documentation for Amplify Central under the left navigation menu.
 
 Here are some suggestions to get started:
 
