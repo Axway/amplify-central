@@ -1,7 +1,7 @@
 ---
 title: Set up integrations through Webhooks
 linkTitle: Set up integrations through Webhooks
-weight: 25
+weight: 100
 date: 2019-07-30
 description: Learn how you can configure webhooks to receive notifications from
   Amplify Central and Amplify Unified Catalog, and enable a seamless integration
@@ -9,8 +9,8 @@ description: Learn how you can configure webhooks to receive notifications from
 ---
 ## Before you start
 
-* You know how to [create a representation of an environment and API Service using the Axway Central CLI](/docs/cli_central/cli_apiservices/).
-* You know how to [create and publish other resource types to the Amplify Unified Catalog](/docs/cli_central/cli_publish/).
+* You know how to [create a representation of an environment and API Service using the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_apiservices/).
+* You know how to [create and publish other resource types to the Amplify Unified Catalog](/docs/integrate_with_central/cli_central/cli_publish/).
 
 ## Objectives
 
@@ -60,7 +60,7 @@ You can use webhooks to define a custom approval flow, set up a policy, or deplo
 
 A webhook is a combination of a URL and any custom parameters (for example, a secret) needed to set up your integration.
 
-To configure a webhook, see [Axway Central CLI](/docs/cli_central/cli_publish/). Alternatively, you can use the example provided in our [Postman Collection](https://documenter.getpostman.com/view/2125605/SzKbLaVV?version=latest#44df18e7-2802-4786-bd60-7efb7cf5e63a), using our REST APIs.
+To configure a webhook, see [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_publish/). Alternatively, you can use the example provided in our [Postman Collection](https://documenter.getpostman.com/view/2125605/SzKbLaVV?version=latest#44df18e7-2802-4786-bd60-7efb7cf5e63a), using our REST APIs.
 
 ### Secret
 
@@ -342,7 +342,7 @@ To publish an asset to the Amplify Unified Catalog with a custom subscription fl
 * Create a custom subscription definition that references the webhook.
 * Create a consumer instance that references the subscription definition for publishing the asset to the Amplify Unified Catalog.
 
-To configure the resources listed above, see [Axway Central CLI](/docs/cli_central/cli_publish/). Alternatively, you can use the example provided in our [Postman Collection](https://documenter.getpostman.com/view/2125605/SzKbLaVV?version=latest#44df18e7-2802-4786-bd60-7efb7cf5e63a).
+To configure the resources listed above, see [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_publish/). Alternatively, you can use the example provided in our [Postman Collection](https://documenter.getpostman.com/view/2125605/SzKbLaVV?version=latest#44df18e7-2802-4786-bd60-7efb7cf5e63a).
 
 The following is an example of a consumer instance with a custom subscription that will trigger a webhook on any subscription change.
 

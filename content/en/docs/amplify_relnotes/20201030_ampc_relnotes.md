@@ -52,9 +52,9 @@ The Amplify Central CLI includes the following enhancements:
 * Window 10 support using the Command Prompt and Powershell  
 * Support for an https self-signed proxy server. Refer to the readme on the NPM repository, section Proxy configuration.
 * Creation of Amplify Central Service Accounts: `amplify central create service-account`
-* Installation of the Axway Edge Discovery and Traceability Agents: `amplify central install agents`. Refer to [Deploy your agent with Amplify CLI](/docs/connect-api-manager/deploy-your-agents-with-amplify-cli) for details
-* Installation of the AWS Discovery and Traceability Agents: `amplify central install agents`. Refer to [Deploy your agent with Amplify CLI](/docs/connect-aws-gateway/deploy-your-agents-with-amplify-cli) for details
-* Installation of the Mesh discovery agent in a Kubernetes cluster: `amplify central install agents`. Refer to [Build your hybrid environment](/docs/mesh_management/build_hybrid_env) for details
+* Installation of the Axway Edge Discovery and Traceability Agents: `amplify central install agents`. Refer to [Deploy your agent with Amplify CLI](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli) for details
+* Installation of the AWS Discovery and Traceability Agents: `amplify central install agents`. Refer to [Deploy your agent with Amplify CLI](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli) for details
+* Installation of the Mesh discovery agent in a Kubernetes cluster: `amplify central install agents`. Refer to [Build your hybrid environment](/docs/connect_manage_environ/mesh_management/build_hybrid_env) for details
 
 ### Amplify Central WebUI
 
@@ -117,7 +117,7 @@ By default, Discovery Agent discovers all APIs matching the following filters:
 * **API type filter**: only REST and SOAP API definitions are visible to the agent.
 * **API Status filter**: only Published/UnPublished/Deprecated are visible to the agent.
 * **API tag exclusion filter**: a Discovery Agent parameter (`APIMANAGER_DISCOVERYIGNORETAGS`) helps the agent to exclude APIs having one or more particular tags. It allows the publishing of all APIs except the one that matches this filter.
-* **API tag filter**: this filter `APIMANAGER_FILTER` helps the Discovery Agent to determine which API needs to be send to Amplify Central by using conditional expression based on the tag name/value of the API present in API Management system. Filters can be based on tag name only, tag value only or a combination of both. It allows the publishing of APIs that match certain criteria. Some filter samples are available at [Filtering APIs](/docs/connect-api-manager/filtering-apis-to-be-discovered/).
+* **API tag filter**: this filter `APIMANAGER_FILTER` helps the Discovery Agent to determine which API needs to be send to Amplify Central by using conditional expression based on the tag name/value of the API present in API Management system. Filters can be based on tag name only, tag value only or a combination of both. It allows the publishing of APIs that match certain criteria. Some filter samples are available at [Filtering APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/).
 
 ##### Expose APIs in Amplify Central
 
@@ -183,7 +183,7 @@ If the Amplify platform url is not accessible from the machine where the agents 
 * Discovery Agent requires an HTTP proxy
 * Traceability Agent requires an HTTP proxy and a SOCKS5 proxy
 
-For information, see [Using proxies](/docs/connect-api-manager/network-traffic-apimanager/#using-proxies).
+For information, see [Using proxies](/docs/connect_manage_environ/connect_api_manager/network-traffic-apimanager/#using-proxies).
 
 #### Fixed issues
 
@@ -230,7 +230,7 @@ The Amplify Central mesh governance includes the following enhancements:
   * **specdisc**: this resource (SpecDiscovery) represents the configuration used by the Mesh Discovery Agent to inspect endpoints found in this connected Kubernetes cluster.  It holds resource and namespace filters that define the searching and matching logic for what will be reported back to Central in the apispec instances. It also includes the endpoint searching rules for direct and indirect paths to use trying to resolve a bundled specification for a reported k8sres instance.
   * **More detailed documentation and examples for these Mesh Agent resources will be coming soon**.
 
-* See the updated Mesh Governance documentation at: [Mesh management](/docs/mesh_management)
+* See the updated Mesh Governance documentation at: [Mesh management](/docs/connect_manage_environ/mesh_management)
 * See the updated step-by-step deployment details at: <https://github.com/Axway/Setup-Amplify-Mesh-Governance>
 
 ### Known limitations

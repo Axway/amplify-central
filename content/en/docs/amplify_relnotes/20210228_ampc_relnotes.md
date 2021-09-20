@@ -54,12 +54,12 @@ Amplify Central mesh governance enables you to govern and manage your APIs, publ
 Mesh governance includes the following enhancements:
 
 * Amplify CLI updates (version 0.10 and later) now provision the CLI resources needed for Istio agent Kubernetes discovery and promotion to a selected environment in Amplify Central.
-* The alpha Istio Discovery Agent usage and configuration changes to associate target promotion **Environment** with a **K8SCluster** and with a new **Mesh** scoped resource. They are documented here: [Discover APIs and services](/docs/mesh_management/discover-apis-and-services/).
+* The alpha Istio Discovery Agent usage and configuration changes to associate target promotion **Environment** with a **K8SCluster** and with a new **Mesh** scoped resource. They are documented here: [Discover APIs and services](/docs/connect_manage_environ/mesh_management/discover-apis-and-services/).
 * The Istio Traceability Agent has been updated to provide two HTTP request/response header logging verbosity modes. The logging mode may be set via the Amplify CLI or by changing the generated Istio and apicHybrid override files used to update Istio and install the Istio agents, respectively.
   * Default - only the HTTP headers needed for minimal transaction details of the source, destination and transaction span linkage are published.
   * Verbose - all HTTP request/response headers are published.
 * Note: The Istio Traceability Agent header sanitization rules for filtering and redaction may still be applied to further limit the headers that appear in the API Observer.
-* The alpha Istio Discovery and Traceability Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/mesh_management/deploy-your-agents-with-the-axway-cli/).
+* The alpha Istio Discovery and Traceability Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/).
 
 ## Fixed issues
 

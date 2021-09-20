@@ -19,4 +19,4 @@ Browse all documentation for Amplify Central under the left navigation menu.
 Here are some suggestions to get started:
 
 * [Get started with Amplify Central](/docs/getting-started/)
-* [Get started with Axway Central CLI](/docs/cli_central/)
+* [Get started with Axway Central CLI](/docs/integrate_with_central/cli_central/)

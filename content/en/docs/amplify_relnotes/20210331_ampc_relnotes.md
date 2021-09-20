@@ -59,7 +59,7 @@ Mesh Governance includes the following enhancements:
 * The preview Istio agents now support Istio 1.8.2 when using Kubernetes 1.18-1.20.
 * The preview Istio agents now support Red Hat OpenShift 4.7 managed clusters.
 * The preview Istio agent CLI installation options now provides a “Use existing Istio” option for a customer to use an existing Istio control plane already in place on their target Kubernetes environment.
-* Details for these changes are documented in [Mesh management](/docs/mesh_management/) pages.
+* Details for these changes are documented in [Mesh management](/docs/connect_manage_environ/mesh_management/) pages.
 
 ## Fixed issues
 

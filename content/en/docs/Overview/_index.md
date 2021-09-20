@@ -1,7 +1,7 @@
 ---
 title: Amplify Central overview
 linkTitle: Amplify Central overview
-weight: 05
+weight: 150
 date: 2019-07-30
 hide_readingtime: true
 description: Learn how to manage and secure your APIs in Amplify Central, how to integrate Amplify Central in your existing DevOps infrastructure, and how to take advantage of the mesh governance capability of Amplify Central to centrally manage APIs and microservices across multiple cloud and on-premise environments.
