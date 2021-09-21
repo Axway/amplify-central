@@ -1,7 +1,7 @@
 ---
 title: Manage your asset catalog
 linkTitle: Manage your asset catalog
-weight: 20
+weight: 400
 description: 
 ---
 

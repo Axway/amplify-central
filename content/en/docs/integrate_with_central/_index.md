@@ -1,7 +1,7 @@
 ---
 title: Integrate with Amplify Central
 linkTitle: Integrate with Amplify Central
-weight: 20
+weight: 300
 description: What you need to know to try Amplify Central.
 ---
 
