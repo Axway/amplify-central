@@ -42,7 +42,7 @@ The Traceability Agent reports two sets of data to Amplify platform:
 
 #### Usage data
 
-The usage data represent the total number of APIs called during a certain period of time. This usage is automatically reported every 15 minutes by default to Amplify platform and cannot be inactivated. See [Reporting Gateway usage event](/docs/connected-agent-common-reference/traceability_usage/#reporting-gateway-usage-event).
+The usage data represent the total number of APIs called during a certain period of time. This usage is automatically reported every 15 minutes by default to Amplify platform and cannot be inactivated. See [Reporting Gateway usage event](/docs/connect_manage_environ/connected-agent-common-reference/traceability_usage/#reporting-gateway-usage-event).
 
 It contains the following information:
 
@@ -61,9 +61,9 @@ Data Fields:
 
 #### Transactions data
 
-The transaction data represent the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Sampling](/docs/connected-agent-common-reference/trace_sampling/#sampling).
+The transaction data represent the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Sampling](/docs/connect_manage_environ/connected-agent-common-reference/trace_sampling/#sampling).
 
-The transactions can be redacted (by default) and/or sanitized, according to your need, before sending the information to Amplify platform. See [Trace redaction](/docs/connected-agent-common-reference/trace_redaction/).
+The transactions can be redacted (by default) and/or sanitized, according to your need, before sending the information to Amplify platform. See [Trace redaction](/docs/connect_manage_environ/connected-agent-common-reference/trace_redaction/).
 
 It contains the following information:
 
@@ -242,9 +242,9 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
   curl: (6) Could not resolve host: ingestion-lumberjack.datasearch.axway.com
   ```
 
-  * **Cause:** The host making the call can’t resolve the ingestion-lumberjack DNS name.
+    * **Cause:** The host making the call can’t resolve the ingestion-lumberjack DNS name.
 
-  * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
+    * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
 
     ```shell
     curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion-lumberjack.datasearch.axway.com
@@ -256,9 +256,9 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
   curl: (7) No authentication method was acceptable.
   ```
 
-  * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
+    * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
 
-  * **Possible Resolution:** Provide authentication to the proxy:
+    * **Possible Resolution:** Provide authentication to the proxy:
 
     ```shell
     socks5://{{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
