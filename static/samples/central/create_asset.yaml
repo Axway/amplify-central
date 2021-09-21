@@ -1,0 +1,80 @@
+---
+apiVersion: v1alpha1
+kind: Stage
+name: production  ## create stage name
+title: Production deployment Stage
+tags:
+  - axway
+  - saas
+spec:
+  description: Group of production apis
+---
+apiVersion: v1alpha1
+kind: Category
+name: billing ## create category name
+title: billing
+tags:
+  - axway
+spec:
+  description: Billing Category
+---
+apiVersion: v1alpha1
+kind: AssetMappingTemplate  ## Template to evaluate Asset Mappings which populate an asset
+name: assettemplate  ## create name of asset template
+title: music
+tags: []
+metadata:
+  scope:
+    kind: Environment
+    name: env1
+spec:
+  filters: []
+---
+apiVersion: v1alpha1
+kind: AssetMapping  ## Details to map/populate an asset
+name: testmapping  ## create name of asset mapping
+title: Test Mapping
+tags: []
+metadata:
+  scope:
+    kind: Environment
+    name: env1
+spec:
+  inputs:
+    apiService: apisvc1  ## api service name
+    apiServiceRevision: apisvcrev1  ## api service revision name
+    apiServiceInstance: apisvcinst1 ## api service instance name
+    stage: production
+    asset: testasset
+  assetMappingTemplate: assettemplate
+---
+apiVersion: v1alpha1
+kind: AssetMappingTemplate
+name: assettemplate2  ## Optional: add services from a different environment to your asset
+title: music
+tags: []
+metadata:
+  scope:
+    kind: Environment
+    name: env2
+spec:
+  filters: []
+---
+apiVersion: v1alpha1
+kind: AssetMapping
+name: testmapping2
+title: Test Mapping 2
+tags: []
+metadata:
+  scope:
+    kind: Environment
+    name: env2
+spec:
+  inputs:
+    apiService: apisvc2
+    apiServiceRevision: apisvcrev2
+    apiServiceInstance: apisvcinst2
+    stage: production
+    asset: testasset
+  assetMappingTemplate: assettemplate
+

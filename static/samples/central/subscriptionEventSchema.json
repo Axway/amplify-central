@@ -1,0 +1,230 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "correlationId": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "type": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "consumerInstance": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "group": {
+              "type": "string"
+            },
+            "metadata": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "audit": {
+                  "type": "object",
+                  "properties": {
+                    "createUserId": {
+                      "type": "string"
+                    },
+                    "modifyUserId": {
+                      "type": "string"
+                    },
+                    "createTimestamp": {
+                      "type": "string"
+                    },
+                    "modifyTimestamp": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "scope": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "kind": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "references": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "kind": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["id", "kind", "name", "type"]
+                  }
+                },
+                "resourceVersion": {
+                  "type": "string"
+                }
+              }
+            },
+            "apiVersion": {
+              "type": "string"
+            },
+            "attributes": {
+              "type": "object",
+              "properties": {
+                "release": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "subscription": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "userId": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object",
+              "additionalProperties": true
+            },
+            "metadata": {
+              "type": "object",
+              "properties": {
+                "createUserId": {
+                  "type": "string"
+                }
+              }
+            },
+            "currentState": {
+              "type": "string"
+            },
+            "owningTeamId": {
+              "type": "string"
+            },
+            "relationships": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "spec": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": ["key", "path", "spec", "type", "value"]
+              }
+            },
+            "nextPossibleStates": {
+              "type": "array"
+            },
+            "currentStateDescription": {
+              "type": "string"
+            }
+          }
+        },
+        "catalogItem": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "owningTeamId": {
+              "type": "string"
+            },
+            "relationships": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "spec": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": ["key", "path", "spec", "type", "value"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+    "id": "8a4dfc03-df66-4f1f-8868-479d9fa2edf3",
+    "time": "2020-04-17T20:41:52.256+0000",
+    "version": "v1",
+    "product": "AmplifyCentral",
+    "correlationId": "1OC2YtqfsIReABA4FvxU",
+    "organization": {
+        "id": "123456789"
+    },
+    "type": "SubscriptionUpdatedEvent",
+    "payload": {
+        "consumerInstance": {
+            "kind": "ConsumerInstance",
+            "name": "cataloginstance",
+            "tags": [
+                "prod",
+                "axway",
+                "saas"
+            ],
+            "group": "management",
+            "metadata": {
+                "id": "e4e084d27185504801718559d9be0024",
+                "audit": {
+                    "createUserId": "901c7571-4c16-4d36-b02c-38d999b45740",
+                    "modifyUserId": "901c7571-4c16-4d36-b02c-38d999b45740",
+                    "createTimestamp": "2020-04-16T23:36:30.404+0000",
+                    "modifyTimestamp": "2020-04-16T23:38:02.441+0000"
+                },
+                "scope": {
+                    "id": "e4e084d271855048017185599ce10000",
+                    "kind": "Environment",
+                    "name": "teams"
+                },
+                "references": [
+                    {
+                        "id": "e4e084d27185504801718559d123001e",
+                        "kind": "ConsumerSubscriptionDefinition",
+                        "name": "subscriptiondef",
+                        "type": "soft"
+                    },
+                    {
+                        "id": "e4e084d27185504801718559b65e000e",
+                        "kind": "APIServiceInstance",
+                        "name": "instance1",
+                        "type": "hard"
+                    }
+                ],
+                "resourceVersion": "275"
+            },
+            "apiVersion": "v1alpha1",
+            "attributes": {
+                "release": "1.0.0"
+            }
+        },
+        "subscription": {
+            "id": "e4e082d17189c9a9017189e02e4f0008",
+            "name": "my-subscription-def",
+            "metadata": {
+                "createUserId": "901c7571-4c16-4d36-b02c-38d999b45740"
+            },
+            "properties": {
+                "profile": {}
+            },
+            "currentState": "REQUESTED",
+            "owningTeamId": "9d0c2978-7fc3-4cdd-85f2-7781e9efd139",
+            "relationships": [
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['consumerInstance']['id']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_CONSUMER_INSTANCE_ID",
+                    "value": "e4e084d27185504801718559d9be0024"
+                },
+                {
+                    "key": "accessInfo",
+                    "path": "$['url']",
+                    "spec": "catalogItem",
+                    "type": "TARGET_ENDPOINT_URL",
+                    "value": "https://mycollsite.com:443"
+                },
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['consumerInstance']['name']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_CONSUMER_INSTANCE_NAME",
+                    "value": "cataloginstance"
+                },
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['environment']['name']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_ENVIRONMENT_NAME",
+                    "value": "msteams"
+                },
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['environment']['id']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_ENVIRONMENT_ID",
+                    "value": "e4e084d271855048017185599ce10000"
+                }
+            ],
+            "nextPossibleStates": [
+                "APPROVED",
+                "REJECTED"
+            ],
+            "currentStateDescription": "Need access asap."
+        },
+        "catalogItem": {
+            "id": "e4e0813e718551d501718559e24c0000",
+            "name": "petstore",
+            "owningTeamId": "9d0c2978-7fc3-4cdd-85f2-7781e9efd139",
+            "relationships": [
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['consumerInstance']['name']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_CONSUMER_INSTANCE_NAME",
+                    "value": "cataloginstance"
+                },
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['consumerInstance']['id']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_CONSUMER_INSTANCE_ID",
+                    "value": "e4e084d27185504801718559d9be0024"
+                },
+                {
+                    "key": "accessInfo",
+                    "path": "$['url']",
+                    "spec": "catalogItem",
+                    "type": "TARGET_ENDPOINT_URL",
+                    "value": "https://mycollsite.com:443"
+                },
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['environment']['name']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_ENVIRONMENT_NAME",
+                    "value": "msteams"
+                },
+                {
+                    "key": "apiServerInfo",
+                    "path": "$['environment']['id']",
+                    "spec": "catalogItem",
+                    "type": "API_SERVER_ENVIRONMENT_ID",
+                    "value": "e4e084d271855048017185599ce10000"
+                }
+            ]
+        }
+    }
+}
