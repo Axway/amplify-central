@@ -265,7 +265,7 @@ customPropertiesConfig: {
 
    1. Open an Amplify Catalog item.
    2. Click **Subscribe**.
-   3. Select the Team and API Manager Application name / Usage Plan for which you want to subscribe. For additional information, see [Manage Amplify Catalog subscriptions.](/docs/catalog/manage_subscriptions/)
+   3. Select the Team and API Manager Application name / Usage Plan for which you want to subscribe. For additional information, see [Manage Amplify Catalog subscriptions.](/docs/catalog/manage_subscriptions/) --BrokenLink
 
 2. Based on the API subscription approval (manual vs. automatic), an API provider has to approve the subscription.
 
@@ -299,7 +299,7 @@ customPropertiesConfig: {
 1. A consumer initiates unsubscribe:
 
    1. Open the Amplify Catalog and navigate to the **Subscription** tab.
-   2. Unsubscribe from the active subscription. For additional information, see [Manage Amplify Catalog subscriptions](/docs/catalog/manage_subscriptions/).
+   2. Unsubscribe from the active subscription. For additional information, see [Manage Amplify Catalog subscriptions](/docs/catalog/manage_subscriptions/).--BrokenLink
 
 2. The Discovery Agent receives the Unsubscribe event:
 
@@ -388,4 +388,4 @@ The agent can mark a subscription as **Failed to subscribe** or **Failed to unsu
 |---|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | The agent fails to communicate to API Gateway Manager.                                                                                                                                 | Check your internet connection. API Gateway Manager requires an HTTPS connection.                                                                                                               |
 
-For additional information, see [Manage Amplify Catalog subscriptions](/docs/catalog/manage_subscriptions/).
+For additional information, see [Manage Amplify Catalog subscriptions](/docs/catalog/manage_subscriptions/).--BrokenLink

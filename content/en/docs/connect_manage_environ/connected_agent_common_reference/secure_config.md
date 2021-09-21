@@ -20,7 +20,7 @@ While the agent configuration allows setting up credential-based configuration a
 
 * Create a yaml file with a resource definition for secret in environment scope:
 
-```yml
+```yaml
 group: management
 apiVersion: v1alpha1
 kind: Secret

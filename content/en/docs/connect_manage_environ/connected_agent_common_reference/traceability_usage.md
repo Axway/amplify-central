@@ -19,7 +19,7 @@ Learn how to install and set up the Traceability Agent to automatically report t
 The Traceability Agent is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
 * **Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.
-* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). If your API calls JMS endpoints, the JMS properties are also reported. To reduce the number of transactions sent to the platform, use the [sampling feature](/docs/connected-agent-common-reference/trace_sampling).
+* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). If your API calls JMS endpoints, the JMS properties are also reported. To reduce the number of transactions sent to the platform, use the [sampling feature](/docs/connect_manage_environ/connected-agent-common-reference/trace_sampling).
 
 {{< alert title="Disabling transacation report" color="warning" >}}To use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file to disable the transaction report. Restart the Traceability Agent to use the new configuration.{{< /alert >}}
 
@@ -87,7 +87,7 @@ To report usage to Amplify platform, the traceability Agent must be installed an
    * CLI creates appropriate resources in Amplify platform / local files based on the answers.
    * CLI output next steps: copy files on the Gateway machine / start the agent.
 
-      For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli).
+      For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-amplify-cli)
 
 ## Reporting Gateway usage event
 
@@ -143,8 +143,8 @@ Based on the frequency you choose, the Traceability Agent reports to the platfor
 
 * Select a Usage data report tab:
 
-  * **Monthly Usage** to visualize your monthly data. Filter either by month (to get a specific month's values), or products (if you have multiple product entitlements).
-  * **Report History** to view and download the usage report history. Filter the data per reporting period and/or per file name, environment name or status.
+    * **Monthly Usage** to visualize your monthly data. Filter either by month (to get a specific month's values), or products (if you have multiple product entitlements).
+    * **Report History** to view and download the usage report history. Filter the data per reporting period and/or per file name, environment name or status.
 
 ![Usage report page](/Images/central/connected_agent_common_reference/usage_report_screen.png)
 
