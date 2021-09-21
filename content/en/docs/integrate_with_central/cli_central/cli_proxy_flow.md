@@ -24,7 +24,7 @@ Learn how to use Axway Central CLI to manage your Amplify SaaS Gateway API proxi
 
 Amplify Central DevOps APIs require a YAML configuration file describing your API (the service you are proxying through Amplify Central) in terms of the API name, base path, Swagger, client authentication, and so on. For example:
 
-```
+```yaml
 version: v1 # Version of the file format
 apiVersion: v1 # This version ensures backward compatibility and would not mandate a frequent update from a client side
 proxy:
@@ -54,7 +54,7 @@ When scopes are specified, they will be applied to the proxy at the base level. 
 
 You can specify additional applications and their profiles in the `apps` section of the proxy. The `app` field under `clientAuth` can be omitted. If you specify `api-key` as the client authentication policy, the apps are created, if needed, and are allowed to consume the proxy. For example:
 
-```
+```yaml
 version: v1 # Version of the file format
 apiVersion: v1 # This version ensures backward compatibility and would not mandate a frequent update from a client side
 proxy:
@@ -79,7 +79,7 @@ proxy:
 
 If you set `oauth` as the client authentication policy, you must specify `clientId`, `issuer`, and `metadataPath` in the application profile to allow this application to consume your proxy. The type of client authentication policy specified under `clientApp` must match the type of application profile. If scopes are specified, any token request for the client must request all of the scopes. For example:
 
-```
+```yaml
 version: v1 # Version of the file format
 apiVersion: v1 # This version ensures backward compatibility and would not mandate a frequent update from a client side
 proxy:
@@ -121,7 +121,7 @@ The `create` command _creates_ an API proxy if none already exists for this API,
 
 To create an API proxy, run the following command. You must specify the full path to the YAML configuration file that describes your API:
 
-```
+```bash
 axway central proxies create /myservices/my_service_config.yaml
 ```
 
@@ -139,13 +139,13 @@ The `promote` command deploys the latest revision of the API proxy to a target r
 
 To promote the latest revision of an API proxy to the `Prod Runtime`, run the following command. You must specify the full path to the YAML configuration file that describes your API and the target runtime group where the API proxy revision is to be deployed:
 
-```
+```bash
 axway central proxies promote /myservices/my_service_config.yaml --target="Prod Runtime"
 ```
 
 To promote a specific revision of an API proxy that is already deployed on a runtime group, you can optionally specify a source runtime group. To promote the API proxy revision deployed on `Test Runtime` to the `Prod Runtime`:
 
-```
+```bash
 axway central proxies promote /myservices/my_service_config.yaml --source="Test Runtime" --target="Prod Runtime"
 ```
 

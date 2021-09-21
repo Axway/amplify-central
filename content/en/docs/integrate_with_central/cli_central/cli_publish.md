@@ -33,7 +33,7 @@ An API service version represents a version of an API. It comprises of the int
 
 The following is an example of how to create an API service version for `apisvc1` by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource  (APIServiceRevision in the Amplify data model):
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -45,31 +45,31 @@ In the `apirevisions1.json` file, the API definition of the Musical Instruments 
 
 To get a list, displayed in a table format (name, age, title), of all the API service versions for the scope of `env1`, run this command:
 
-```
+```bash
 axway central get apisvcrev -s env1
 ```
 
 To get all the API service versions for the scope of `env1` displayed in YAML format, run this command. (Use `-o json` for JSON format):
 
-```
+```bash
 axway central get apisvcrev -s env1 -o yaml
 ```
 
 You can modify the `apirevisions1.json` file to make changes to the API service version, for example:
 
-```
+```bash
 axway central apply -f <filepath>  # Update the API Service version using a JSON or YAML file
 ```
 
 You can delete a specific API service version or multiple versions in an environment, for example:
 
-```
+```bash
 axway central delete -f <filepath>   # Delete an API service version using a JSON or YAML file
 ```
 
 Use the `--scope` option to delete an API service version within an environment (The additional `--wait` option is recommended for delete operations).
 
-```
+```bash
 axway central delete apisvcrev apisvcrev1 --scope env1 --wait   # Delete API Service version named apisvcrev1 within the scope of environment env1
 ```
 
@@ -79,7 +79,7 @@ An endpoint (Service Instance in the Amplify data model) represents where an API
 
 The following is an example of how to create an endpoint for `apisvcrev1` of `apisvc1` by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (endpoint):
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -87,26 +87,26 @@ Try out this procedure using the [apiendpoint.json](https://axway-open-docs.netl
 
 To view the API service endpoint (API service instance) created in the environment `env1`, run this command:
 
-```
+```bash
 axway central get apisvcinst -s env1            # Get a list displayed in a table format (name, age, title) of all the API Service endpoints for the scope of env1
 axway central get apisvcinst -s env1 -o yaml    # Get all the API Service endpoints for the scope of env1 displayed in YAML format (use -o json for JSON format)
 ```
 
 To modify the `apiendpoint.json` file to make changes to the API service endpoint, run this command:
 
-```
+```bash
 axway central apply -f <filepath>  # Update the API Service endpoint using a JSON or YAML file
 ```
 
 To delete a specific API service endpoint or multiple endpoints in an environment, run this command:
 
-```
+```bash
 axway central delete -f <filepath>   # Delete an API service endpoint using a JSON or YAML file
 ```
 
 Use the `--scope` option to delete an API service endpoint within an environment (The additional `--wait` option is recommended for delete operations).
 
-```
+```bash
 axway central delete apisvcinst apisvcinst1 --scope env1 --wait   ## Delete API Service endpoint named apisvcinst1 within the scope of environment env1
 ```
 
@@ -116,7 +116,7 @@ A secret is a key value pair associated with a webhook to secure your API servic
 
 The following is an example of how to create a secret for an environment by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (Secret in the Amplify data model).
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -124,26 +124,26 @@ Try out this procedure using the [apisecret.json](https://axway-open-docs.netlif
 
 To view the secret created in the environment `env1`, run this command:
 
-```
+```bash
 axway central get secret -s env1            # Get a list displayed in a table format (name, age, title) of all the Secrets for the scope of env1
 axway central get secret -s env1 -o yaml    # Get all the Secrets for the scope of env1 displayed in YAML format (use -o json for JSON format)
 ```
 
 To modify the `apisecret.json` file to make changes to the secret, run this command:
 
-```
+```bash
 axway central apply -f <filepath>   # Update the Secret using a JSON or YAML file
 ```
 
 To delete a specific secret or multiple secrets in an environment, run this command:
 
-```
+```bash
 axway central delete -f <filepath>   # Delete a secret using a JSON or YAML file
 ```
 
 Use the `--scope` option to delete a secret within an environment (The additional `--wait` option is recommended for delete operations).
 
-```
+```bash
 axway central delete secret secret1 --scope env1 --wait   ## Delete secret named secret1 within the scope of environment env1
 ```
 
@@ -153,7 +153,7 @@ A webhook defines a webhook URL to communicate events (for example, subscription
 
 The following is an example of how to create a webhook for an environment by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (Webhook in the Amplify data model).
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -161,31 +161,31 @@ Try out this procedure using the [apiwebhook.json](https://axway-open-docs.netli
 
 To get a list, in a table format (name, age, title), of all the Webhooks for the scope of `env1`, run this command:
 
-```
+```bash
 axway central get webhook -s env1
 ```
 
 To get all the Webhooks for the scope of `env1` in YAML format, , run this command. (Use `-o json` for JSON format):
 
-```
+```bash
 axway central get webhook -s env1 -o yaml
 ```
 
 To modify the `apiwebhook.json` file to make changes to the Webhook, run this command:
 
-```
+```bash
 axway central apply -f <filepath>    # Update the webhook using a JSON or YAML file
 ```
 
 To delete a specific webhook or multiple webhooks in an environment, run this command:
 
-```
+```bash
 axway central delete -f <filepath>   # Delete a webhook using a JSON or YAML file
 ```
 
 Use the `--scope` option to delete a webhook within an environment (The additional `--wait` option is recommended for delete operations).
 
-```
+```bash
 axway central delete webhook webhook1 --scope env1 --wait   ## Delete webhook named webhook1 within the scope of environment env1
 ```
 
@@ -195,7 +195,7 @@ A subscription definition allows the configuration of the data needed from a con
 
 The following is an example of how to create a subscription definition for an environment by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (ConsumerSubscriptionDefinition).
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -205,31 +205,31 @@ To view the subscription created in the environment `env1`, run this command:
 
 To get a list, in a table format (name, age, title), of all the Subscriptions for the scope of `env1`, run this command:
 
-```
+```bash
 axway central get consumersubscriptiondef -s env1
 ```
 
 To get all the Subscriptions for the scope of `env1` in YAML format, run this command. (Use `-o json` for JSON format):
 
-```
+```bash
 axway central get consumersubscriptiondef -s env1 -o yaml
 ```
 
 To modify the `apisubscription.json` file to make changes to the subscription definition, run this command:
 
-```
+```bash
 axway central apply -f <filepath>    # Update the Subscription using a JSON or YAML file
 ```
 
 To delete a specific subscription definition or multiple subscription definitions in an environment, run this command:
 
-```
+```bash
 axway central delete -f <filepath>   # Delete a subscription definition using a JSON or YAML file
 ```
 
 Use the `--scope` option to delete a subscription definition within an environment (The additional `--wait` option is recommended for delete operations).
 
-```
+```bash
 axway central delete consumersubscriptiondef consumersubdef1 --scope env1 --wait   ## Delete subscriptiondefintion named consumersubdef1 within the scope of environment env1
 ```
 
@@ -239,7 +239,7 @@ The Catalog item is a reference to an API service endpoint, and it contains all 
 
 The following is an example of how to create a Catalog item for an API service and publish it to the Unified Catalog by providing a path to a valid .yaml, .yml, or .json file that defines the specific resource:
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -254,31 +254,31 @@ On the `apiconsumerinstance.json` file:
 
 To get a list, in a table format (name, age, title), of all the Catalog items for the scope of `env1`, run this command:
 
-```
+```bash
 axway central get consumerinstance -s env1
 ```
 
 To get all the Catalog items for the scope of `env1` in YAML format, run this command. (Use `-o json` for JSON format):
 
-```
+```bash
 axway central get consumerinstance -s env1 -o yaml
 ```
 
 To modify the `apiconsumerinstance.json` file to make changes to the Catalog item, run this command:
 
-```
+```bash
 axway central apply -f <filepath>   # Update the Catalog Item using a JSON or YAML file
 ```
 
 To delete a specific Catalog item or multiple Catalog items in an environment, run this command:
 
-```
+```bash
 axway central delete -f <filepath>   # Delete a subscription definition using a JSON or YAML file
 ```
 
 Use the `--scope` option to delete a Catalog item within an environment (The additional `--wait` option is recommended for delete operations).
 
-```
+```bash
 axway central delete consumerinstance consumerinst1 --scope env1 --wait   ## Delete Catalog item named consumerinst1 within the scope of environment env1
 ```
 
@@ -286,7 +286,7 @@ axway central delete consumerinstance consumerinst1 --scope env1 --wait   ## Del
 
 You can create an API service within environment `env1` by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource. In this case, only one API Service called `apisvc1` is created from the resource file and published to the Unified Catalog:
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -303,7 +303,7 @@ You can use the Axway Central CLI to create a Catalog item (ConsumerInstance) fo
 
 You can create a Catalog item for SDK documentation in a zip file and publish it to the Unified Catalog by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (ConsumerInstance). No Endpoint (ServiceInstance) or subscription definition is required to exist before you create a Catalog item.
 
-```
+```bash
 axway central create -f <filepath>
 ```
 
@@ -335,5 +335,5 @@ You have learned how to publish your API Service to Unified Catalog using the Ax
 
 ## For Further information
 
-* See [Amplify Unified Catalog](/docs/catalog/).
+* See [Amplify Unified Catalog](/docs/catalog/). --BrokenLink
 * See more examples of [Unified Catalog Integrations](https://github.com/Axway/unified-catalog-integrations).

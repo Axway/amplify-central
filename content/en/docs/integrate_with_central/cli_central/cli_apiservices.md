@@ -30,13 +30,13 @@ To automate the creation of an API service in your environment:
 
 1. Create an environment by providing the environment name argument, for example, `env1`:
 
-    ```json
+    ```bash
     axway central create env env1
     ```
 
 2. Create an API service within environment `env1` by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (for example, `apiservice.yaml`).  In this example, only one API service called `apisvc1` is created from the resource file:
 
-    ```json
+    ```bash
     axway central create -f <filepath>
     ```
 
@@ -46,19 +46,19 @@ Try out this procedure using the [apiservice.json](https://axway-open-docs.netli
 
 Get a list of all API services in all environments:
 
-```json
+```bash
 axway central get apiservices
 ```
 
 Alternatively, you can use the short name, `apis`:
 
-```json
+```bash
 axway central get apis
 ```
 
 This command outputs a list of all API services in all environments, with information about the API service name, age, title, and environment scope:
 
-```
+```bash
 NAME                                  AGE           TITLE                   RESOURCE KIND  SCOPE KIND   SCOPE NAME         RESOURCE GROUP
 7841311a-3338-11eb-b6eb-0242ac110002  a month ago   PetStore-Secured        APIService     Environment  awsgtw-us-east-2   management
 2f754bb3-34b2-11eb-986d-000c29b55428  a month ago   Stockquote (V7)         APIService     Environment  cca-m2020-apim     management
@@ -70,13 +70,13 @@ ably-rest-api                         5 days ago    ably-rest-api           APIS
 
 To get help with a list of supported resource types, run:
 
-```json
+```bash
 axway central get
 ```
 
 This command outputs a table of supported resources, along with their resource kinds, short names, scopes, and resource groups:
 
-```
+```bash
 The server supports the following resources:
 
 RESOURCE                  SHORT NAMES    RESOURCE KIND                   SCOPED  SCOPE KIND    RESOURCE GROUP
@@ -126,13 +126,13 @@ webhooks                  webh           Webhook                         true   
 
 Get the details of a specific API service in an environment by providing the environment name and the API service name:
 
-```json
+```bash
 axway central get apisvc <name> --scope env1 -o yaml  # Get API service <name> details of `env1` in YAML format
 ```
 
 This command outputs the details of that specific service in YAML format:
 
-```json
+```yaml
 ---
 group: management
 apiVersion: v1alpha1
@@ -169,7 +169,7 @@ spec:
 
 To output the information in JSON format, change the `-o` flag from YAML to JSON:
 
-```json
+```bash
 axway central get apisvc <name> -s env1 -o json       # Get API service <name> details of `env1` in JSON format
 ```
 
@@ -177,11 +177,11 @@ axway central get apisvc <name> -s env1 -o json       # Get API service <name> d
 
 Update the details of a specific API service by providing a path to the configuration file:
 
-```json
+```bash
 axway central apply -f apiservice.yaml   # Update API service in YAML format
 ```
 
-```json
+```bash
 axway central apply -f apiservice.json   # Update API service in JSON format
 ```
 
@@ -193,23 +193,23 @@ This action will delete all API services and resources in the environment specif
 
 To delete a specific API service in an environment, provide a path to the configuration file:
 
-```json
+```bash
 axway central delete -f apiservice.yaml   # Delete an API service using a file in YAML format
 ```
 
-```json
+```bash
 axway central delete -f apiservice.json   # Delete an API service using a file in JSON format
 ```
 
 Use `--wait` to delete an API service using a YAML file while waiting for resource deletion confirmation. The `--wait` option will check for resource deletion for up to 10 seconds.
 
-```json
+```bash
 axway central delete -f apiservice.yaml --wait
 ```
 
 Use `--scope` to delete an API service within the scope of and environment named env1.
 
-```json
+```bash
 axway central delete apiservice apisvc1 -scope env1 --wait
 ```
 
