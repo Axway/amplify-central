@@ -70,4 +70,4 @@ To retrieve the team id:
 
 The table below describes the Amplify Central roles and the resources they have access to.
 
-![Resource Access by Role](/Images/central/env_gw_mgmt/resourcepermissionsbyrole.png)
+![Resource Access by Role](/Images/central/connect_manage_environ/resourcepermissionsbyrole.png)

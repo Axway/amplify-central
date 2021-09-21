@@ -36,7 +36,7 @@ The following samples describe the resources for:
 
 Environment sample:
 
-```yml
+```yaml
 group: management
 apiVersion: v1alpha1
 kind: Environment
