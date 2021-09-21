@@ -45,7 +45,7 @@ The following are examples of how you can use Amplify Central samples to create 
 
 ### Consumer instances
 
-You can use the [sdkconsumerinstance.json](https://axway-open-docs.netlify.app/samples/central/sdkconsumerinstance.json) sample to create a consumer instance. Then, you can fetch information about your consumer instances as follows:
+You can use the [sdkconsumerinstance.json](/samples/central/sdkconsumerinstance.json) sample to create a consumer instance. Then, you can fetch information about your consumer instances as follows:
 
 ```bash
 axway central get consumerinstances
@@ -66,7 +66,7 @@ consumerinst1  a month ago   consumerinst1 title  ConsumerInstance Environment  
 
 ### Consumer subscription definitions
 
-You can use the [apisubscription.json](https://axway-open-docs.netlify.app/samples/central/apisubscription.json) sample to create a consumer subscription definition. Then, you can fetch information about your consumer subscription definitions as follows:
+You can use the [apisubscription.json](/samples/central/apisubscription.json) sample to create a consumer subscription definition. Then, you can fetch information about your consumer subscription definitions as follows:
 
 ```bash
 axway central get consumersubscriptiondefs
@@ -87,7 +87,7 @@ consumersubdef1  a month ago   consumersubdef1 title ConsumerSubscriptionDefinit
 
 ### Secrets
 
-You can use the [apisecret.json](https://axway-open-docs.netlify.app/samples/central/apisecret.json) sample to create a secret. Then, you can fetch information about your secrets as follows:
+You can use the [apisecret.json](/samples/central/apisecret.json) sample to create a secret. Then, you can fetch information about your secrets as follows:
 
 ```bash
 axway central get secret
@@ -108,7 +108,7 @@ secretname  4 months ago  secrettitle Secret         Environment  apigtw-v77    
 
 ### Webhooks
 
-You can use the [apiwebhook.json](https://axway-open-docs.netlify.app/samples/central/apiwebhook.json) sample to create a Webhook. Then, you can then fetch information about your Webhooks as follows:
+You can use the [apiwebhook.json](/samples/central/apiwebhook.json) sample to create a Webhook. Then, you can then fetch information about your Webhooks as follows:
 
 ```bash
 axway central get webhooks
