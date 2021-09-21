@@ -11,10 +11,10 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 * Read [Amplify Central AWS API Gateway connected overview](/docs/connect_manage_environ/connect_aws_gateway/)
 * You will need information on AWS
 
-  * The region that the AWS API Gateway resources are hosted in
-  * The bucket that the Resources will be uploaded to
-  * The logging configuration setup on AWS API Gateway
-  * The configuration of AWS Config Service
+    * The region that the AWS API Gateway resources are hosted in
+    * The bucket that the Resources will be uploaded to
+    * The logging configuration setup on AWS API Gateway
+    * The configuration of AWS Config Service
 * It is recommended that you have access to the AWS CLI command line to run the necessary setup commands
 
 ## Objectives
@@ -163,15 +163,15 @@ To complete the install, run the following AWS CLI command:
 ```
 
 * Create, if necessary, and upload all files to your S3 bucket:
-  * These commands create the bucket, if needed, then uploads all resources to the bucket.
+    * These commands create the bucket, if needed, then uploads all resources to the bucket.
 * If necessary, create EC2 KeyPair, for EC2 login:
-  * This command creates the EC2 Key Pair, if necessary, and saves the private key to MyKeyPair.pem.
+    * This command creates the EC2 Key Pair, if necessary, and saves the private key to MyKeyPair.pem.
 * Create the SSM parameter:
-  * These commands save the Amplify Private and Public Keys to the AWS SSM Parameter Store.
+    * These commands save the Amplify Private and Public Keys to the AWS SSM Parameter Store.
 * Deploy the CloudFormation Stack:
-  * This command deploys the CloudFormation template using all the resources uploaded to S3. The end result will be a running EC2 instance with the agents installed and logging to CloudWatch.
+    * This command deploys the CloudFormation template using all the resources uploaded to S3. The end result will be a running EC2 instance with the agents installed and logging to CloudWatch.
 * Check the CloudFormation Stack:
-  * This command returns the stack name and its deployment status.
+    * This command returns the stack name and its deployment status.
 
 ### Step 4b: Deploy the agent in Docker Container Only infrastructure
 
@@ -213,14 +213,14 @@ To complete the install, run the following AWS CLI command:
 ```
 
 * Create, if necessary, and upload all files to your S3 bucket:
-  * These commands create the bucket, if needed, then uploads all resources to the bucket.
+    * These commands create the bucket, if needed, then uploads all resources to the bucket.
 * Create AWS Access and Secret Keys and copy results:
-  * This command creates the Access and Secret Key Pair.
+    * This command creates the Access and Secret Key Pair.
 * Add the results from the Key Pair creation above into the environment files, da_env_vars.env & ta_env_vars.env, after the appropriate variables, `AWS_AUTH_ACCESSKEY=` and `AWS_AUTH_SECRETKEY=`.
 * Pull the latest images of the Discovery/Traceability Agents:
-  * These two commands pull the latest released agents from axway.jfrog.io/ampc-public-docker-release/agent.
+    * These two commands pull the latest released agents from axway.jfrog.io/ampc-public-docker-release/agent.
 * Run the latest images of the Discovery/Traceability Agents:
-  * These two commands run the Docker Containers using the created environment files, and mounting the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
+    * These two commands run the Docker Containers using the created environment files, and mounting the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
 
 Once the Cloud formation template creation is completed, the agents should be running in the chosen infrastructure.
 

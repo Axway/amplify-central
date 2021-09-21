@@ -118,7 +118,7 @@ The configuration of the AWS_QUEUENAME is not used in this mode.
 
 The `host`, which represents the email server, can be configured with minimal setup. This section represents the email servers that have been currently tested. Please note that all testing has been set up on port 587 signifying TLS support.
 
-```
+```yaml
 # Google/Gmail server
 CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_HOST=smtp.gmail.com
 CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PORT=587
@@ -216,7 +216,7 @@ Create a configuration file using the above variables. See the variable descript
 
 For example:
 
-```
+```yaml
 # AWS connectivity
 AWS_REGION=us-east-2
 AWS_QUEUENAME=aws-apigw-discovery-us-east-2
@@ -251,7 +251,7 @@ LOG_PATH=logs
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment. Note that the `public_key.pem` comes from Steps 3 and 4 of [Prepare AWS Gateway to deploy the Discovery Agent AWS config setup](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/).
 2. Pull the latest image of the Discovery Agent:
 
-   ```
+   ```bash
    docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest
    ```
 
@@ -259,7 +259,7 @@ LOG_PATH=logs
 
     * Continuous Discovery mode:
 
-        ```
+        ```bash
        docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest
         ```
 
@@ -267,7 +267,7 @@ LOG_PATH=logs
 
     * Synchronous Discovery mode:
   
-        ```
+        ```bash
         docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest --synchronize
         ```
 
@@ -275,7 +275,7 @@ LOG_PATH=logs
 
 4. Run the following health check command to ensure the agent is up and running (continuous mode):
 
-   ```
+   ```bash
    docker inspect --format='{{json .State.Health}}' <container>
    ```
 
@@ -346,7 +346,7 @@ Create a configuration file using the above variables. See the variable descript
 
 For example:
 
-```
+```yaml
 # AWS connectivity
 AWS_REGION=us-east-2
 AWS_QUEUENAME=aws-apigw-traceability-us-east-2
@@ -376,18 +376,18 @@ LOG_PATH=logs
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Pull the latest image of the Traceability Agent:
 
-   ```
+   ```bash
    docker pull docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest/aws-apigw-traceability-agent:latest
    ```
 
 3. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-   ```
+   ```bash
    docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-traceability-agent:latest
    ```
 
 4. Run the following health check command to ensure the agent is up and running:
 
-   ```
+   ```bash
    docker inspect --format='{{json .State.Health}}' <container>
    ```
