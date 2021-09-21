@@ -11,9 +11,9 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 * Read [Amplify Central Azure Gateway connected overview](/docs/connect_azure_gateway/)
 * You will need information on Azure:
 
-  * where the API Service management is located (resource group name / API Management service name)
-  * service principal for using to Azure APIs
-  * event hub definition (namespace / name / policy).
+    * where the API Service management is located (resource group name / API Management service name)
+    * service principal for using to Azure APIs
+    * event hub definition (namespace / name / policy).
 
 * It is recommended that you have access to the Azure CLI command line to run the necessary setup commands
 
@@ -136,9 +136,9 @@ run them using the appropriate supplied environment files, (da_env_vars.env & ta
 ```
 
 * Pull the latest images of the Discovery/Traceability Agents:
-  * These two commands pull the latest released agents from docker pull axway.jfrog.io/ampc-public-docker-release/agent.
+    * These two commands pull the latest released agents from docker pull axway.jfrog.io/ampc-public-docker-release/agent.
 * Run the latest images of the Discovery/Traceability Agents:
-  * These two commands run the Docker Containers using the created environment files, and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
+    * These two commands run the Docker Containers using the created environment files, and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
 
 Once the pull and run commands are completed, the agents should be running in the Docker infrastructure.
 
