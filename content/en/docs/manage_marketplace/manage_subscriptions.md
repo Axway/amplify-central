@@ -123,5 +123,6 @@ Watch this quick animation to delete your subscription.
 
 ## Further information
 
-* [Manage subscription workflow for V7 Manager](/docs/central/connect_manage_environ/connect_api_manager/subscription-for-the-consumer/)
-* [Manage subscription workflow for AWS](/docs/central/connect_manage_environ/connect_aws_gateway/subscription-for-the-consumer/)
+* [Manage subscription workflow for V7 Manager](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/)
+* [Manage subscription workflow for AWS](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/)
+* [Manage subscription workflow for Azure](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/)
