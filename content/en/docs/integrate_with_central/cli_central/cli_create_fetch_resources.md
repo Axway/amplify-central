@@ -135,9 +135,9 @@ subscriptionwebhook        4 months ago  subscriptionwebhook               Webho
 
 You can practice the above pattern of creating and fetching resources using our sample files:
 
-* API services: [apiservice.json](https://axway-open-docs.netlify.app/samples/central/apiservice.json) --BrokenLink
-* API service instances: [apiendpoint.json](https://axway-open-docs.netlify.app/samples/central/apiendpoint.json) --BrokenLink
-* API service revisions: [apirevisions1.json](https://axway-open-docs.netlify.app/samples/central/apirevisions1.json) --BrokenLink
-* Environments: [create_environments.json](https://axway-open-docs.netlify.app/samples/central/create_environments.json) --BrokenLink
+* API services: [apiservice.json](/samples/central/apiservice.json)
+* API service instances: [apiendpoint.json](/samples/central/apiendpoint.json)
+* API service revisions: [apirevisions1.json](/samples/central/apirevisions1.json)
+* Environments: [create_environments.json](/samples/central/create_environments.json)
 
 Run `axway central get` to see the entire list of resources supported by the Axway Central CLI.
