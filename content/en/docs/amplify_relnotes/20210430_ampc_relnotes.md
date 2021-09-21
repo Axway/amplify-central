@@ -23,7 +23,7 @@ The CLI extension is compatible with the Axway CLI **version 2.0** (<https://www
 The Axway Central CLI includes the following enhancements:
 
 * When installing the agents, you can now select the name of your agent you want to appear in the Topology view.
-* Environment and API Services can now be segmented by team. As soon as ownership is assigned to a team, only members of the team can manage the environment and the API Service attached to it. Refer to [Assign an environment owner](/docs/env_gw_mgmt/manage_environments_ownership).
+* Environment and API Services can now be segmented by team. As soon as ownership is assigned to a team, only members of the team can manage the environment and the API Service attached to it. Refer to [Assign an environment owner](/docs/connect_manage_environ//manage_environments_ownership).
 
 ### Amplify Central WebUI
 
@@ -31,7 +31,7 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 
 The Amplify Central WebUI includes the following enhancements:  
 
-* Environment Status is now based on the Discovery Agent and Traceability Agent statuses of Connected, Not Connected and Partially Connected. Refer to [Agent status environment](/docs/env_gw_mgmt/view_environments#agent-environment-status).
+* Environment Status is now based on the Discovery Agent and Traceability Agent statuses of Connected, Not Connected and Partially Connected. Refer to [Agent status environment](/docs/connect_manage_environ//view_environments#agent-environment-status).
 * Environment details page now displays the date and time activity that was last reported between the Discovery and Traceability agents and Amplify Central under Service synchronization.
 * Refresh buttons have been added to both the Environment details and the Service details pages.
 * The tags and attributes from the service and version levels have been added to the Service details page.
