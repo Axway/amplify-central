@@ -335,5 +335,5 @@ You have learned how to publish your API Service to Unified Catalog using the Ax
 
 ## For Further information
 
-* See [Amplify Unified Catalog](/docs/catalog/). --BrokenLink
+* See [Amplify Unified Catalog](/docs/manage_marketplace/).
 * See more examples of [Unified Catalog Integrations](https://github.com/Axway/unified-catalog-integrations).
