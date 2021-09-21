@@ -38,7 +38,7 @@ In order to better filter transactions related to the services in the mesh, cert
 
 The format of externalAPIID is:
 
-```
+```bash
 clustername-httproutename
 ```
 
