@@ -12,7 +12,10 @@ description: Understand how the Traceability Agent reports the Gateway usage to
 
 ## Objectives
 
-Learn how to install and set up the Traceability Agent to automatically report the Gateway usage data to Amplify platform. Gateway usage data counts all API calls going through the Gateway.
+Learn how to install and set up the Traceability Agent, using either the online or offline mode, to report the Gateway usage data to Amplify platform. Gateway usage data counts all API calls going through the Gateway.
+
+* Online mode - Automatic (connected): The agent produces the report and sends it to the Amplify platform at regular intervals
+* Offline mode - Manual (offline): The agent produces the report locally, but it must be manually uploaded to the Amplify platform
 
 ## Traceability Agent overview
 
@@ -23,7 +26,11 @@ The Traceability Agent is attached to a Gateway and monitors the traffic crossin
 
 {{< alert title="Disabling transacation report" color="warning" >}}To use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file to disable the transaction report. Restart the Traceability Agent to use the new configuration.{{< /alert >}}
 
-## Network prerequisites
+## Set up usage reporting in online mode
+
+Use the following instructions to set up usage reporting in online mode.
+
+### Network prerequisites for online mode
 
 All outbound traffic is sent over SSL via TCP / UDP.
 
@@ -68,7 +75,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 _Region_ column represents the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. You must use the corresponding _Host_/_Port_ for your agents to operate correctly.
 {{< /alert >}}
 
-## Install Traceability Agent
+### Install Traceability Agent for online mode
 
 To report usage to Amplify platform, the traceability Agent must be installed and connected to the Gateway to be monitored:
 
@@ -89,16 +96,9 @@ To report usage to Amplify platform, the traceability Agent must be installed an
 
       For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
 
-## Reporting Gateway usage event
+### Reporting Gateway usage event - automatic reporting for online mode
 
 You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
-
-Use of of the following methods to report usage from the Traceability Agent to the Amplify platform:
-
-* Automatic (connected) - the agent produces the report and sends it to the Amplify platform at regular intervals
-* Manual (offline) - the agent produces the report locally, but must be manually uploaded to the Amplify platform
-
-### Automatic reporting
 
 Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. On a regular basis (default is 15 minutes), the Traceability Agent sends the usage counter to the platform.
 
@@ -119,7 +119,15 @@ If for any reason the usage report cannot be uploaded to Amplify platform, the d
 
 If the Traceability Agent is stopped while there are still remaining usage events to be sent, the report is saved on the disk where the Traceability Agent is located. The data will be sent to Amplify platform at the next Traceability Agent startup.
 
-### Manual reporting
+## Set up usage reporting in offline mode
+
+Use the following instructions to set up usage reporting in offline mode.
+
+### Install Traceability Agent for offline mode
+
+### Reporting Gateway usage event - manual reporting for offline mode
+
+You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
 When offline usage reporting is on, `CENTRAL_USAGEREPORTING_OFFLINE=true` (default = false), the `CENTRAL_USAGEREPORTING_SCHEDULE` variable determines how often usage numbers are saved (default and minimum = "@hourly"). For additional cron schedules information, see [Scheduled jobs](https://github.com/Axway/agent-sdk/blob/main/pkg/jobs/README.md#scheduled-jobs). Note that offline ignores the `CENTRAL_USAGEREPORTING_INTERVAL` value that is only used for online reporting.
 
