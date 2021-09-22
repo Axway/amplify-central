@@ -125,6 +125,32 @@ Use the following instructions to set up usage reporting in offline mode.
 
 ### Install Traceability Agent for offline mode
 
+To report usage to Amplify platform, the traceability Agent must be installed and connected to the Gateway to be monitored:
+
+1. Install Axway CLI and Axway Central CLI
+
+   * Install Axway CLI: `npm install -g axway`
+   * Install Axway Central CLI: `axway pm install @axway/axway-central-cli`
+
+2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
+3. Install the Traceability Agent using Axway Central CLI: `axway central install agents`
+
+Be sure to select to select Traceability offline mode when it comes to select the type of agent as shown below: 
+
+```shell
+? Select the type of agent(s) you want to install:
+  All Agents
+  Discovery
+  Traceability
+> Traceability offline mode
+```
+
+   * Answer ALL questions when prompted (environment / team / connectivity with Gateway).
+   * CLI creates appropriate resources in Amplify platform / local files based on the answers.
+   * CLI output next steps: copy files on the Gateway machine / start the agent.
+
+      For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
+
 ### Reporting Gateway usage event - manual reporting for offline mode
 
 You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
