@@ -40,7 +40,7 @@ The Traceability Agent sends log information about APIs that have been discovere
 ## Prerequisites
 
 * An Axway Amplify Central subscription in the Amplify Platform
-* (Optional) A Platform Service Account (see [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
+* (Optional) A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
 
 {{< alert title="Note" color="primary" >}}Although both service account types are currently supported, the Amplify Central Service Account will soon be retired. For this reason, it is recommended that you use the Platform Service Account.{{< /alert >}}
 

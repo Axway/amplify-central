@@ -25,7 +25,7 @@ You can search the environments by their logical name, title, or any tags that a
 
 Each environment in the list contains some basic information:
 
-![Environment Results Details](/Images/central/connect_manage_environ//environmentlistresultupdate.png)
+![Environment Results Details](/Images/central/env_gw_mgmt/environmentlistresultupdate.png)
 
 1. Title
 2. Logical name
@@ -49,7 +49,7 @@ The following information is displayed for environments created using the API se
 * The status of any connected discovery and traceability agents
 * Sections **Environment Information**, **Activity Report**, and **Services**
 
-![Environment Details Page](/Images/central/connect_manage_environ//environmentdetailspage2.png)
+![Environment Details Page](/Images/central/env_gw_mgmt/environmentdetailspage2.png)
 
 * **Environment Information**: This section contains general information and any tags or attributes that are specific to the environment asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third-party systems.
 * **Activity Report**: Dashboard, which shows the aggregated values for how your environment assets are distributed and how many subscriptions exist across all of those assets:
@@ -74,11 +74,11 @@ To delete an API service:
 
 | STATUS              | BADGE                                                                 | SCENARIOS                                                                                                                                           |
 | ------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Connected           | ![Connected](/Images/central/connect_manage_environ/statusconnected.png)         | All agents are running                                                                                                                              |
-| Connection Error    | ![Connection Error](/Images/central/connect_manage_environ/statuserror.png)      | One or more agents have failed                                                                                                                      |
-| Disconnected        | ![Disconnected](/Images/central/connect_manage_environ/statusdisconnected.png)   | All agents are stopped                                                                                                                              |
-| Manual Sync         | ![Manual Sync](/Images/central/connect_manage_environ/statusmanual.png)          | No reported agent status resource values, **or** one or more agents have been stopped and one or more agents have never been started (no status)  |
-| Partially Connected | ![Partially Connected](/Images/central/connect_manage_environ/statuspartial.png) | One or more agents are stopped and the other agents are running, **or** one or more agents are running and the other agents have never been started |
+| Connected           | ![Connected](/Images/central/env_gw_mgmt/statusconnected.png)         | All agents are running                                                                                                                              |
+| Connection Error    | ![Connection Error](/Images/central/env_gw_mgmt/statuserror.png)      | One or more agents have failed                                                                                                                      |
+| Disconnected        | ![Disconnected](/Images/central/env_gw_mgmt/statusdisconnected.png)   | All agents are stopped                                                                                                                              |
+| Manual Sync         | ![Manual Sync](/Images/central/env_gw_mgmt/statusmanual.png)          | No reported agent status resource values, **or** one or more agents have been stopped and one or more agents have never been started (no status)  |
+| Partially Connected | ![Partially Connected](/Images/central/env_gw_mgmt/statuspartial.png) | One or more agents are stopped and the other agents are running, **or** one or more agents are running and the other agents have never been started |
 
 ### View the details of an API Service
 

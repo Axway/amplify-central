@@ -87,7 +87,7 @@ To report usage to Amplify platform, the traceability Agent must be installed an
    * CLI creates appropriate resources in Amplify platform / local files based on the answers.
    * CLI output next steps: copy files on the Gateway machine / start the agent.
 
-      For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-amplify-cli)
+      For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
 
 ## Reporting Gateway usage event
 
