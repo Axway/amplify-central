@@ -135,7 +135,7 @@ To report usage to Amplify platform, the traceability Agent must be installed an
 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
 3. Install the Traceability Agent using Axway Central CLI: `axway central install agents`
 
-Be sure to select to select Traceability offline mode when it comes to select the type of agent as shown below: 
+Be sure to select `Traceability offline mode` when it comes to select the type of agent as shown below: 
 
 ```shell
 ? Select the type of agent(s) you want to install:
