@@ -170,6 +170,13 @@ The offline report is generated every month and saved to the [agent_dir]/data/re
 
 When the agent restarts, any usage reports that had been previously generated are saved to a file in the reports directory and the agent starts a new report. If necessary, the agent will add an index to the usage report name (`YYYY_MM_DD_{INDEX}_usage_report.json`). The first usage in the new report contains all events that occurred while the agent was not running.
 
+To visualize your reports in Amplify platorm, you have to upload the generated reports into the platform.
+
+Log in to platform.axway.com and navigate to Organization. Then open the Usage menu.
+On the top right corner click the 3 dots and the Upload Usage. A popup screen will ask you to select the file and validate your entry. Repeat these steps for all the reports the agent has generated in case of multiple files.
+
+Then you can view your data under the usage menu screen. More information for viewing data in the next section.
+
 ## View the usage data from Amplify platform
 
 Based on the frequency you choose, the Traceability Agent reports to the platform the number of transactions that happen during each period. To view the data:
