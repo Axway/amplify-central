@@ -90,6 +90,17 @@ To report usage to Amplify platform, the traceability Agent must be installed an
 3. Install the Traceability Agent using Axway Central CLI: `axway central install agents`
 
    * For usage tracking, only the Traceability Agent is required.
+
+Be sure to select `Traceability` if you only want to report your usage tracking as shown below: 
+
+```shell
+? Select the type of agent(s) you want to install:
+  All Agents
+  Discovery
+> Traceability
+  Traceability offline mode
+```
+
    * Answer ALL questions when prompted (environment / team / connectivity with Gateway).
    * CLI creates appropriate resources in Amplify platform / local files based on the answers.
    * CLI output next steps: copy files on the Gateway machine / start the agent.
@@ -154,10 +165,6 @@ Be sure to select `Traceability offline mode` when it comes to select the type o
 ### Reporting Gateway usage event - manual reporting for offline mode
 
 You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
-
-When offline usage reporting is on, `CENTRAL_USAGEREPORTING_OFFLINE=true` (default = false), the `CENTRAL_USAGEREPORTING_SCHEDULE` variable determines how often usage numbers are saved (default and minimum = "@hourly"). For additional cron schedules information, see [Scheduled jobs](https://github.com/Axway/agent-sdk/blob/main/pkg/jobs/README.md#scheduled-jobs). Note that offline ignores the `CENTRAL_USAGEREPORTING_INTERVAL` value that is only used for online reporting.
-
-In addition to setting `CENTRAL_USAGEREPORTING_OFFLINE=true`, the `CENTRAL_ENVIRONMENTID` variable must be set.  The usage report requires a valid Environment ID and cannot retrieve it in Offline mode.  This can be retrieved with the axway cli, see [Retrieve a list of all available environments](/docs/integrate_with_central/cli_central/cli_environments#retrieve-a-list-of-all-available-environments).
 
 The offline report is generated every month and saved to the [agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
 
