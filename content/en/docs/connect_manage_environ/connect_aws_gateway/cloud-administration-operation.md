@@ -108,12 +108,12 @@ For the list of minimum access rights for these CloudFormation templates, see [M
 The Cloud formation templates are designed to be as flexible as possible. They provide different options to customize the installation the way that suits your company standard.
 
 * IAM Resources options:
-  * Manually create the IAM resources [CloudFormation (without IAM)](#cloudformation-without-iam)
-  * Allow the CloudFormation the ability to create the resources on your behalf. The resources created vary depending on the agent deployment type. [Resources (IAM and Resources)](#resources-iam-and-resources)
+    * Manually create the IAM resources [CloudFormation (without IAM)](#cloudformation-without-iam)
+    * Allow the CloudFormation the ability to create the resources on your behalf. The resources created vary depending on the agent deployment type. [Resources (IAM and Resources)](#resources-iam-and-resources)
 * Agents deployment options:
-  * **EC2** - optionally creates the entire infrastructure around the EC2 instance or specify the VPC, Subnet, and Security Group for the instance
-  * **ECS Fargate** - requires an ECS Fargate cluster and EC2 Subnet and Security Group for deployment. [ECS Fargate Cluster](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create_cluster.html)
-  * **Other** - creates an IAM Group and User, access and secret keys must be generated, for the agents to run with. The agent must be installed manually in a Docker container.
+    * **EC2** - optionally creates the entire infrastructure around the EC2 instance or specify the VPC, Subnet, and Security Group for the instance
+    * **ECS Fargate** - requires an ECS Fargate cluster and EC2 Subnet and Security Group for deployment. [ECS Fargate Cluster](https://docs.aws.amazon.com/AmazonECS/latest/userguide/create_cluster.html)
+    * **Other** - creates an IAM Group and User, access and secret keys must be generated, for the agents to run with. The agent must be installed manually in a Docker container.
 
 #### Parameters (IAM and Resources)
 
@@ -461,11 +461,11 @@ The following are the costs of the AWS services the Agents rely on:
   You are charged based on the number of requests for your functions and the duration (the time it takes for your code to execute). The AWS Lambda free usage tier includes 1M free requests per month and 400,000 GB-seconds of compute time per month. Our traceability lambda is called each time one of the discovered APIs is consumed. The amount of allocated memory for the lambda is set to 128Mo. The lambda runs on average within .5 second.</br>
   Lambda cost is based on following formulas:
 
-  * Monthly cost charge: (# lambda call \* lambda execution time \* (lambda memory / 1024) - 400,000freeGB-s) * **0.0000166667**
-  * Monthly request charge: ((# lambda call - 1M free request) * **0.0000002**)</br>
-  * Samples:</br>
-    * 2 million calls: monthly cost ($0) + monthly request charge ($0.20) = $0.20</br>
-    * 10 million calls: monthly cost ($10.42) + monthly request charge ($1.80) = $12.22</br>
+    * Monthly cost charge: (# lambda call \* lambda execution time \* (lambda memory / 1024) - 400,000freeGB-s) * **0.0000166667**
+    * Monthly request charge: ((# lambda call - 1M free request) * **0.0000002**)</br>
+    * Samples:</br>
+        * 2 million calls: monthly cost ($0) + monthly request charge ($0.20) = $0.20</br>
+        * 10 million calls: monthly cost ($10.42) + monthly request charge ($1.80) = $12.22</br>
 * AWS [CloudWatch pricing](https://aws.amazon.com/cloudwatch/pricing/)</br>
   You should be able to operate with the free tier, as the agent requires only one monitoring metrics (APIGW_Traceability_Logs).
 * AWS [Simple Queue Service pricing](https://aws.amazon.com/sqs/pricing/)</br>

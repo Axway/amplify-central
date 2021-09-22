@@ -39,6 +39,7 @@ For more information about the agents, see:
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
 * [Discovery and Traceability Agents for AWS API Gateway](/docs/connect-aws-gateway/).
 * [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_azure_gateway/).
+* [Discovery and Traceability Agents for Istio Gateway](/docs/mesh_management/).
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_apiservices) or the [Amplify Central APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify Central.
 

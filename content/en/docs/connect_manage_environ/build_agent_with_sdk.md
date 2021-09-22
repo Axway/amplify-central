@@ -1,6 +1,6 @@
 ---
 title: Build an Agent with the SDK
-linkTitle: Administer API Manager agent security
+linkTitle: Build an Agent with the SDK
 draft: false
 weight: 140
 description: 

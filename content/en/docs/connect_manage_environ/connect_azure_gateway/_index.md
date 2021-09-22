@@ -40,7 +40,7 @@ The Traceability Agent sends log information about APIs that have been discovere
 ## Prerequisites
 
 * An Axway Amplify Central subscription in the Amplify Platform
-* (Optional) An Amplify Central Service Account (see [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)) or a Platform Service Account (see [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
+* (Optional) A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
 
 {{< alert title="Note" color="primary" >}}Although both service account types are currently supported, the Amplify Central Service Account will soon be retired. For this reason, it is recommended that you use the Platform Service Account.{{< /alert >}}
 
@@ -112,7 +112,7 @@ The following is a high-level overview of the required steps to connect Azure AP
 
 ### Creating an Azure service principal for the Traceability Agent
 
-To install an Azure Traceability Agent only, you must create an Azure service principal.  See [Creating an Azure service principal for Discovery Agent](#creating-an-azure-service-principal-for-discovery-agent). To install both an Azure Discovery Agent and an Azure Traceability Agent, use the service principal configuration created in the [Creating an Azure service principal for Discovery Agent](#creating-an-azure-service-principal-for-discovery-agent) section.
+To install an Azure Traceability Agent only, you must create an Azure service principal. See [Creating an Azure service principal for Discovery Agent](#creating-an-azure-service-principal-for-discovery-agent).
 
 ### Creating Azure Event Hubs namespace and Event Hub
 

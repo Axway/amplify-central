@@ -20,15 +20,15 @@ Learn how to upgrade an existing agent installation.
 
 * If your agent uses a YAML file, to simplify the upgrades going forward, it is recommended to convert the YAML file values into the corresponding environment variables. The variables are described in the "Reference - Agent Configuration" section of the corresponding gateway:
 
-  * [Axway gateway](/docs/connect_manage_environ/connect_api_manager/agent-variables/)
-  * [AWS gateway](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1)
-  * [Azure gateway](/docs/connect_manage_environ/connect_azure_gateway/agent-variables)
+    * [Axway gateway](/docs/connect_manage_environ/connect_api_manager/agent-variables/)
+    * [AWS gateway](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1)
+    * [Azure gateway](/docs/connect_manage_environ/connect_azure_gateway/agent-variables)
 
 For converting a YAML entry into an environment variable entry, all the YAML paths you traverse to reach a value should become part of the environment variable name. The name of the environment variable is compose of each capitalized path separated by an underscore.
 
 Original YAML file:
 
-```yml
+```yaml
 main:
   subsection:
     entry: value
@@ -190,7 +190,7 @@ This typically happens when an agent is installed but the agent resources do not
 
 In this situation, you must create the appropriate resources in the Amplify platform. The resources will represent the agent in Amplify platform. Once the resources are created, you must link the agent with with the resources using the environment variable `CENTRAL_AGENTNAME=yourCreatedResourceName`.
 
-The resource creation procedure is explained [here](/docs/env_gw_mgmt/environment_agent_resources).
+The resource creation procedure is explained [here](/docs/connect_manage_environ/environment_agent_resources).
 
 ### After upgrading, I cannot see my headers & path in API Observer?
 

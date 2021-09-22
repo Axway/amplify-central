@@ -12,7 +12,7 @@ description: Learn how to install the Axway CLI core package and Axway Central C
 
 If you are a current user of the deprecated 'Amplify Central CLI' package, you can uninstall that package by running:
 
-```
+```bash
 axway pm uninstall @axway/amplify-central-cli
 ```
 
@@ -37,7 +37,7 @@ The following table describes the operating system supported configurations that
 2. Install `npm 6.12.0` or later.
 3. Run the following command to install Axway CLI:
 
-   ```
+   ```bash
    [sudo] npm install -g axway
    ```
 
@@ -45,19 +45,19 @@ The following table describes the operating system supported configurations that
 
 4. Run Axway package manager to install Axway Central CLI:
 
-   ```
+   ```bash
    axway pm install @axway/axway-central-cli
    ```
 
 5. Run Axway package manager list command to view available packages:
 
-   ```
+   ```bash
    axway pm list
    ```
 
    Expected response:
 
-   ```
+   ```bash
    Axway CLI, version 3.0.0
    Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
 
@@ -69,7 +69,7 @@ The following table describes the operating system supported configurations that
 
 All the development versions of Axway Central CLI can be found at [NPM install of Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli). To install a specific development version, run the following command:
 
-```
+```bash
 axway pm install @axway/axway-central-cli@2.0.0
 ```
 
@@ -86,7 +86,7 @@ Install OpenSSL if not installed already:
 
 3. Verify that OpenSSL is installed and configured correctly.
 
-   ```
+   ```bash
    openssl version
    ```
 
@@ -143,7 +143,7 @@ You can use the following options to create your service account:
 
 To create a service account from the CLI, run the following command (You must have OpenSSL installed to run this command):
 
-```
+```bash
 axway central create service-account
 ```
 
@@ -161,13 +161,13 @@ Watch the animation to learn how to do this in Amplify Central UI.
 
 After you create a service account your must authorize it with Amplify platform, and log in to Axway CLI using the following command:
 
-```
+```bash
 axway auth login --client-id DOSA_105cf15d051c432c8cd2e1313f54c2da --secret-file ~/test/private_key.pem
 ```
 
 Expected response:
 
-```
+```bash
 AXWAY CLI, version 3.0.0
 Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
 
@@ -179,19 +179,19 @@ This account has been set as the default.
 
 To set the service account client identifier for future operations:
 
-```
+```bash
 axway central config set --client-id DOSA_105cf15d051c432c8cd2e1313f54c2da
 ```
 
 To view the saved configuration, run:
 
-```
+```bash
 axway central config list
 ```
 
 Expected response:
 
-```
+```bash
 { 'client-id': 'DOSA_105cf15d051c432c8cd2e1313f54c2da' }
 ```
 

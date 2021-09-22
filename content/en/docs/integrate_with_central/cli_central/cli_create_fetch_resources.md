@@ -19,7 +19,7 @@ description: Creating and fetch different Amplify Central resources using the CL
 
 Axway Central CLI supports creating several resources from either a YAML or JSON file, or Stdin. For example:
 
-```json
+```bash
 axway central create -f <path_to_file>  # Create resources defined in a YAML or JSON file.
 ```
 
@@ -27,15 +27,15 @@ axway central create -f <path_to_file>  # Create resources defined in a YAML or 
 
 You can query for a singular resource or multiple resources, and the CLI will display a table of the most important information about the specified resource.
 
-```json
+```bash
 axway central get <Resource> # Get a list of the resources
 ```
 
-```json
+```bash
 axway central get <Resource1>,<Resource2>,...,<ResourceN> # Get a list of multiple resources
 ```
 
-```json
+```bash
 axway central get <Resource> <Name> -s/--scope <Scope Name> # Get a specific resource by name
 ```
 
@@ -45,78 +45,78 @@ The following are examples of how you can use Amplify Central samples to create 
 
 ### Consumer instances
 
-You can use the [sdkconsumerinstance.json](https://axway-open-docs.netlify.app/samples/central/sdkconsumerinstance.json) sample to create a consumer instance. Then, you can fetch information about your consumer instances as follows:
+You can use the [sdkconsumerinstance.json](/samples/central/sdkconsumerinstance.json) sample to create a consumer instance. Then, you can fetch information about your consumer instances as follows:
 
-```json
+```bash
 axway central get consumerinstances
 ```
 
 Alternatively, you can use a short name:
 
-```json
+```bash
 axway central get consumeri
 ```
 
 Resource(s) successfully retrieved:
 
-```json
+```bash
 NAME           AGE           TITLE                RESOURCE KIND    SCOPE KIND   SCOPE NAME          RESOURCE GROUP
 consumerinst1  a month ago   consumerinst1 title  ConsumerInstance Environment  awsgtw-us-east-2    management
 ```
 
 ### Consumer subscription definitions
 
-You can use the [apisubscription.json](https://axway-open-docs.netlify.app/samples/central/apisubscription.json) sample to create a consumer subscription definition. Then, you can fetch information about your consumer subscription definitions as follows:
+You can use the [apisubscription.json](/samples/central/apisubscription.json) sample to create a consumer subscription definition. Then, you can fetch information about your consumer subscription definitions as follows:
 
-```json
+```bash
 axway central get consumersubscriptiondefs
 ```
 
 Alternatively, you can use a short name:
 
-```json
+```bash
 axway central get consumersd
 ```
 
 Resource(s) successfully retrieved:
 
-```json
+```bash
 NAME             AGE           TITLE                 RESOURCE KIND                  SCOPE KIND   SCOPE NAME         RESOURCE GROUP
 consumersubdef1  a month ago   consumersubdef1 title ConsumerSubscriptionDefinition Environment  awsgtw-us-east-2   management
 ```
 
 ### Secrets
 
-You can use the [apisecret.json](https://axway-open-docs.netlify.app/samples/central/apisecret.json) sample to create a secret. Then, you can fetch information about your secrets as follows:
+You can use the [apisecret.json](/samples/central/apisecret.json) sample to create a secret. Then, you can fetch information about your secrets as follows:
 
-```json
+```bash
 axway central get secret
 ```
 
 Alternatively, you can use a short name:
 
-```json
+```bash
 axway central get secrets
 ```
 
 Resource(s) successfully retrieved:
 
-```json
+```bash
 NAME        AGE           TITLE       RESOURCE KIND  SCOPE KIND   SCOPE NAME    RESOURCE GROUP
 secretname  4 months ago  secrettitle Secret         Environment  apigtw-v77    management
 ```
 
 ### Webhooks
 
-You can use the [apiwebhook.json](https://axway-open-docs.netlify.app/samples/central/apiwebhook.json) sample to create a Webhook. Then, you can then fetch information about your Webhooks as follows:
+You can use the [apiwebhook.json](/samples/central/apiwebhook.json) sample to create a Webhook. Then, you can then fetch information about your Webhooks as follows:
 
-```json
+```bash
 axway central get webhooks
 ```
 
 Alternatively, you can use a short name:
 
-```json
+```bash
 axway central get wh
 ```
 
@@ -135,9 +135,9 @@ subscriptionwebhook        4 months ago  subscriptionwebhook               Webho
 
 You can practice the above pattern of creating and fetching resources using our sample files:
 
-* API services: [apiservice.json](https://axway-open-docs.netlify.app/samples/central/apiservice.json)
-* API service instances: [apiendpoint.json](https://axway-open-docs.netlify.app/samples/central/apiendpoint.json)
-* API service revisions: [apirevisions1.json](https://axway-open-docs.netlify.app/samples/central/apirevisions1.json)
-* Environments: [create_environments.json](https://axway-open-docs.netlify.app/samples/central/create_environments.json)
+* API services: [apiservice.json](/samples/central/apiservice.json)
+* API service instances: [apiendpoint.json](/samples/central/apiendpoint.json)
+* API service revisions: [apirevisions1.json](/samples/central/apirevisions1.json)
+* Environments: [create_environments.json](/samples/central/create_environments.json)
 
 Run `axway central get` to see the entire list of resources supported by the Axway Central CLI.

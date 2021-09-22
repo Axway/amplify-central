@@ -30,25 +30,25 @@ The following are examples of how a DevOps user can run CLI commands to create a
 
 Create an environment by providing the environment name:
 
- ```
+ ```bash
  axway central create env <name>
  ```
 
 Create an environment by providing the environment name and the output in JSON format. (Use `-o yaml` to display the output in YAML format):
 
- ```
+ ```bash
  axway central create env <name> -o json
  ```
 
 Create an environment by providing the path to a valid .yaml, .yml, or .json file that defines a specific resource:
 
- ```
+ ```bash
  axway central create -f <filepath>
  ```
 
 Create an environment by providing the environment name (`env3`) and a path to a valid .yaml, .yml, or .json file that defines a specific resource:
 
-```
+```bash
 axway central create environment env3 -f <filepath>
 ```
 
@@ -59,19 +59,19 @@ Optional flags:
 -f, --file = (filename.yml, filename.yaml, filename.json)
 ```
 
-Try out the [create_environments.json](https://axway-open-docs.netlify.app/samples/central/create_environments.json) or [create_environments.yaml](https://axway-open-docs.netlify.app/samples/central/create_environments.yaml) samples to create an environment.
+Try out the [create_environments.json](/samples/central/create_environments.json) or [create_environments.yaml](/samples/central/create_environments.yaml) samples to create an environment.
 
 ## Retrieve a list of all available environments
 
 The following example shows how to get a list of all environments (names, ages, and titles) for my tenant/organization:
 
-```
+```bash
 axway central get environments
 ```
 
 To get a list of all environments details displayed in JSON format. (Use `-o yaml` to display the output in YAML format):
 
-```
+```bash
 axway central get envs -o json
 ```
 
@@ -79,13 +79,13 @@ axway central get envs -o json
 
 The following example shows how to get details (name, age, and title) on a specific environment by providing the environment name:
 
-```
+```bash
 axway central get environment <name>
 ```
 
 To get details on a specific environment displayed in JSON format. (Use `-o yaml` to display the output in YAML format):
 
-```
+```bash
 axway central get env <name> -o json
 ```
 
@@ -93,13 +93,13 @@ axway central get env <name> -o json
 
 The following example shows how to edit the details of a specific environment by providing the environment name:
 
-```
+```bash
 axway central edit environment <name>
 ```
 
 To edit the details of a specific environment, displayed in YAML format in the editor, run:
 
-```
+```bash
 axway central edit env <name> -o yaml
 ```
 
@@ -111,13 +111,13 @@ This action will delete all API services and resources in the environment specif
 
 To delete all resources in an environment:
 
-```
+```bash
 axway central delete env <name>
 ```
 
 Use `--wait` to delete resources from an environment while waiting for resource deletion confirmation. The `--wait` option will check for resource deletion for up to 10 seconds.
 
-```
+```bash
 axway central delete env <name> --wait
 ```
 

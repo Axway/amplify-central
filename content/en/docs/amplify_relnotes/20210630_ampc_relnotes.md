@@ -24,7 +24,7 @@ The Axway CLI includes the following enhancements:
 
 The Axway Central CLI includes the following enhancements:
 
-* New command `axway central create agent-resources` will help you to visualize the Agent Status in Central WebUI. See [Create agent resource](/docs/env_gw_mgmt/environment_agent_resources#step-3-create-the-agent-resources) for details.
+* New command `axway central create agent-resources` will help you to visualize the Agent Status in Central WebUI. See [Create agent resource](/docs/connect_manage_environ//environment_agent_resources#step-3-create-the-agent-resources) for details.
 
 ### Amplify Central WebUI
 
@@ -32,7 +32,7 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 
 The Amplify Central WebUI includes the following enhancements:  
 
-* **Dependency Analysis**: The Dependency Analysis view displays details about the relationships to the selected API Service version. The relationship details enable the API provider to make informed decisions and take actions on any of the dependencies. See [Dependency Analysis](/docs/env_gw_mgmt/view-dependency-analysis) for details.
+* **Dependency Analysis**: The Dependency Analysis view displays details about the relationships to the selected API Service version. The relationship details enable the API provider to make informed decisions and take actions on any of the dependencies. See [Dependency Analysis](/docs/connect_manage_environ//view-dependency-analysis) for details.
 
 ### Axway APIM Gateway / AWS / Azure agents
 

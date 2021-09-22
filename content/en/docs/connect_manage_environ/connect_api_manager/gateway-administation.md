@@ -12,9 +12,9 @@ description: Learn how to deploy your Discovery Agent and Traceability Agent so
 * Be sure you have [Prepared Amplify Central](/docs/connect_manage_environ/connect_api_manager/#prerequisites)
 * You will need a basic knowledge of Axway API Management solution:
 
-  * Where the solution is running (host / port / path to the logs / users)
-  * How to create / publish an API
-  * How to call an API
+    * Where the solution is running (host / port / path to the logs / users)
+    * How to create / publish an API
+    * How to call an API
 * For containerized agents, Docker must be installed and you will need a basic understanding of Docker commands
 
 ## Objectives
@@ -191,7 +191,7 @@ Various use cases are supported to approve a subscription using the `CENTRAL_SUB
 * auto: all subscription are automatically approved
 * webhook: a webhook can be added to the agent configuration. The webhook endpoint will be trigger each time the subscription state is updated. For this, there are 2 additional variables required: `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL` and `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS`.
 
-More information can be found in [Supported use cases for subscription approval](/docs/connected-agent-common-reference/manage_subscription_workflow/#supported-use-case-for-issuing-consumer-credentials) section.
+More information can be found in [Supported use cases for subscription approval](/docs/connect_manage_environ/connected-agent-common-reference/manage_subscription_workflow/#supported-use-case-for-issuing-consumer-credentials) section.
 
 We also support two use cases to send API credentials to the subscriber:
 
@@ -200,7 +200,7 @@ We also support two use cases to send API credentials to the subscriber:
 
 These options are mutually exclusive.
 
-More information can be found in [Supported use cases for receiving API credentials](/docs/connected-agent-common-reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials) section.
+More information can be found in [Supported use cases for receiving API credentials](/docs/connect_manage_environ/connected-agent-common-reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials) section.
 
 Once all data is gathered, this subscription section should look like this:
 

@@ -62,7 +62,7 @@ Follow these steps to subscribe to an MFT asset that enables Account-to-Account 
 5. Choose an **Application** for the target App.
 6. Select a **Profile** for the target App.
 7. Choose an **Application** for the source application.
-8. Select a **Profile** for the source application. For more information, see [Create a CFT profile](/docs/central/cft_profile/).
+8. Select a **Profile** for the source application. For more information, see [Create a CFT profile](/docs/manage_marketplace/cft_profile/).
 9. Click **Subscribe**.
 
 {{< alert title="Note" color="" >}}After the subscription request has been submitted, a subscription entry is automatically created in Flow Manager and a flow will be deployed that enables the transfer files between the registered applications. For more information, see [Flow Manager](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/welcome_to_flow_manager.html).{{< /alert >}}

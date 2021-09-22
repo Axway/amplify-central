@@ -9,7 +9,7 @@ The information in section helps you to get started using Amplify Central.
 
 ## Prerequisites
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+Placeholder. Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
 
 ## Installation
 
