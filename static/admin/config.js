@@ -46,19 +46,117 @@ const postDefaults = {
  * Add new collections here.
  */
 const collections = [{
-  ...docsDefaults('', ''), // content directory, image directory
+  ...docsDefaults('', 'docbook/images/general'), // content directory, image directory
   name: 'docs',
   label: 'Documentation',
   description: 'Top level pages in documentation.',
   format: 'frontmatter',
   create: false,
 }, {
-    ...docsDefaults('Overview', ''),
-    name: 'overview',
-    label: 'Overview',
-    label_singular: 'page in Overview section',
-    description: 'All pages relating to Overview',
+    ...docsDefaults('amplify_relnotes', 'amplify_relnotes'),
+    name: 'amplify_relnotes',
+    label: 'Release Notes',
+    label_singular: 'page in Release Notes section',
+    description: 'Release Notes for Amplify Central',
     format: 'frontmatter',
+}, {
+  ...docsDefaults('Overview', 'Overview'),
+  name: 'Overview',
+  label: 'Amplify Central overview',
+  label_singular: 'page in Amplify Central overview section',
+  description: 'All pages related to Amplify Central overview',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('getting-started', 'getting-started'),
+  name: 'getting-started',
+  label: 'Amplify Central getting started',
+  label_singular: 'page in Amplify Central getting started section',
+  description: 'All pages related to Amplify Central getting started',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('integrate_with_central', 'integrate_with_central'),
+  name: 'integrate_with_central',
+  label: 'Integrate with Amplify Central',
+  label_singular: 'page in Integrate with Amplify Central section',
+  description: 'All pages related to Integrate with Amplify Central',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('integrate_with_central/cli_central', 'integrate_with_central'),
+  name: 'cli_cental',
+  label: 'Axway Central CLI',
+  label_singular: 'page in Axway Central CLI section',
+  description: 'All pages related to Axway Central CLI',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('connect_manage_environ', 'connect_manage_environ'),
+  name: 'connect_manage_environ',
+  label: 'Connect and manage your environment',
+  label_singular: 'page in Connect and manage your environment section',
+  description: 'All pages related to Connect and manage your environment',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('connect_manage_environ/connect_api_manager', 'connect_manage_environ'),
+  name: 'connect_api_manager',
+  label: 'Connect API Manager',
+  label_singular: 'page in Connect API Manager section',
+  description: 'All pages related to Connect API Manager',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('connect_manage_environ/connect_aws_gateway', 'connect_manage_environ'),
+  name: 'connect_aws_gateway',
+  label: 'Connect AWS Gateway',
+  label_singular: 'page in Connect AWS Gateway section',
+  description: 'All pages related to Connect AWS Gateway',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('connect_manage_environ/connect_azure_gateway', 'connect_manage_environ'),
+  name: 'connect_azure_gateway',
+  label: 'Connect Azure Gateway',
+  label_singular: 'page in Connect Azure Gateway section',
+  description: 'All pages related to Connect Azure Gateway',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('connect_manage_environ/connected_agent_common_reference', 'connect_manage_environ'),
+  name: 'connected_agent_common_reference',
+  label: 'Connected agent - Common reference',
+  label_singular: 'page in Connected agent - Common reference section',
+  description: 'All pages related to Connected agent - Common reference',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('connect_manage_environ/mesh_management', 'connect_manage_environment'),
+  name: 'mesh_management',
+  label: 'Connect Istio Gateway',
+  label_singular: 'page in Connect Istio Gateway section',
+  description: 'All pages related to Connect Istio Gateway',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('manage_asset_catalog', 'manage_asset_catalog'),
+  name: 'manage_asset_catalog',
+  label: 'Manage your asset catalog',
+  label_singular: 'page in Manage your asset catalog section',
+  description: 'All pages related to Manage your asset catalog',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('manage_product_catalog', 'manage_product_catalog'),
+  name: 'manage_product_catalog',
+  label: 'Manage your product catalog',
+  label_singular: 'page in Manage your product catalog section',
+  description: 'All pages related to Manage your product catalog',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('manage_marketplace', 'manage_marketplace'),
+  name: 'manage_marketplace',
+  label: 'Manage your marketplace',
+  label_singular: 'page in Manage your marketplace section',
+  description: 'All pages related to Manage your marketplace',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('saas_api_gateway', 'saas_api_gateway'),
+  name: 'saas_api_gateway',
+  label: 'SaaS API Gateway Management',
+  label_singular: 'page in SaaS API Gateway Management section',
+  description: 'All pages related to SaaS API Gateway Management',
+  format: 'frontmatter',
 }];
 
 const cms_branch = window.location.hostname.includes('develop') ? 'develop' : 'master'; // Additional config for a develop branch and develop site
