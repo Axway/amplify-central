@@ -78,7 +78,8 @@ This procedure will help you to configure and install the traceability agent:
 
       More information regarding the CLI installation is available [here](/docs/integrate_with_central/cli_central/cli_install/)
 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
-3. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
+3. Create an empty directory and go in that directory to run the next command
+4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
    * For usage tracking, only the Traceability Agent is required.
 ```shell
@@ -89,7 +90,7 @@ This procedure will help you to configure and install the traceability agent:
   Traceability offline mode
 ```
 Answer ALL questions when prompted (environment / team / connectivity with Gateway) to get the correct agent configuration.
-4. Install the agent
+5. Install the agent
 
 Once you answered all questions, the Axway central CLI will create an Amplify platform environment that will host the usage report as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration / the public-private key to manage the communication from the agent to the Platform) based on the provided answers.
 
@@ -142,7 +143,8 @@ This procedure will help you to configure and install the traceability agent:
    * Install Axway Central CLI: `axway pm install @axway/axway-central-cli`
 
 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
-3. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
+3. Create an empty directory and go in that directory to run the next command
+4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
    * Be sure to select `Traceability offline mode` when it comes to select the type of agent as shown below:
 ```shell
@@ -153,9 +155,9 @@ This procedure will help you to configure and install the traceability agent:
 > Traceability offline mode
 ```
 Answer ALL questions when prompted (environment / team / connectivity with Gateway) to get the correct agent configuration
-4. Install the agent
+5. Install the agent
 
-Once you answered all questions, the Axway central CLI will create an Amplify platform environment that will host the usage report as well as local files (binaries / envrionment variables) based on the provided answers.
+Once you answered all questions, the Axway central CLI will create an Amplify platform environment that will host the usage report as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration) based on the provided answers.
 
 The local files need to be copied on the Gateway machine as mentioned in the CLI output.
 
