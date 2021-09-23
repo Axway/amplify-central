@@ -55,7 +55,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                                                                                           | 13.36.52.216   |            |              |                                    |
 |        |                                                                                           | 15.236.7.112   |            |              |                                    |
 |        |                                                                                           |                |            |              |                                    |
-| EU/US  | lighthouse.admin.axway.com                                                                |                | 443        | HTTPS        | API usage event for onlie mode only                    |
+| EU/US  | lighthouse.admin.axway.com                                                                |                | 443        | HTTPS        | API usage event for online mode only                    |
 |        |                                                                                           |                |            |              |                                    |
 
 {{< alert title="Note" color="primary" >}}
@@ -81,9 +81,6 @@ This procedure will help you to configure and install the traceability agent:
 3. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
    * For usage tracking, only the Traceability Agent is required.
-
-Be sure to select `Traceability` if you only want to report your usage tracking as shown below:
-
 ```shell
 ? Select the type of agent(s) you want to install:
   All Agents
@@ -92,7 +89,6 @@ Be sure to select `Traceability` if you only want to report your usage tracking 
   Traceability offline mode
 ```
 Answer ALL questions when prompted (environment / team / connectivity with Gateway) to get the correct agent configuration.
-
 4. Install the agent
 
 Once you answered all questions, the Axway central CLI will create an Amplify platform environment that will host the usage report as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration / the public-private key to manage the communication from the agent to the Platform) based on the provided answers.
@@ -148,8 +144,7 @@ This procedure will help you to configure and install the traceability agent:
 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
 3. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
-Be sure to select `Traceability offline mode` when it comes to select the type of agent as shown below:
-
+   * Be sure to select `Traceability offline mode` when it comes to select the type of agent as shown below:
 ```shell
 ? Select the type of agent(s) you want to install:
   All Agents
@@ -158,7 +153,6 @@ Be sure to select `Traceability offline mode` when it comes to select the type o
 > Traceability offline mode
 ```
 Answer ALL questions when prompted (environment / team / connectivity with Gateway) to get the correct agent configuration
-
 4. Install the agent
 
 Once you answered all questions, the Axway central CLI will create an Amplify platform environment that will host the usage report as well as local files (binaries / envrionment variables) based on the provided answers.
