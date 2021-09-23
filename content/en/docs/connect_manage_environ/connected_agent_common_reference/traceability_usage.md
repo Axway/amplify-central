@@ -24,7 +24,7 @@ The Traceability Agent is attached to a Gateway and monitors the traffic crossin
 * **Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.
 * **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). If your API calls JMS endpoints, the JMS properties are also reported. To reduce the number of transactions sent to the platform, use the [sampling feature](/docs/connect_manage_environ/connected-agent-common-reference/trace_sampling).
 
-{{< alert title="Disabling transacation report" color="warning" >}}To use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file to disable the transaction report. Restart the Traceability Agent to use the new configuration.{{< /alert >}}
+{{< alert title="Disabling transaction report" color="warning" >}}To use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file to disable the transaction report. Restart the Traceability Agent to use the new configuration.{{< /alert >}}
 
 ## Set up usage reporting in online mode
 
@@ -91,7 +91,7 @@ To report usage to Amplify platform, the traceability Agent must be installed an
 
    * For usage tracking, only the Traceability Agent is required.
 
-Be sure to select `Traceability` if you only want to report your usage tracking as shown below: 
+Be sure to select `Traceability` if you only want to report your usage tracking as shown below:
 
 ```shell
 ? Select the type of agent(s) you want to install:
@@ -146,7 +146,7 @@ To report usage to Amplify platform, the traceability Agent must be installed an
 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
 3. Install the Traceability Agent using Axway Central CLI: `axway central install agents`
 
-Be sure to select `Traceability offline mode` when it comes to select the type of agent as shown below: 
+Be sure to select `Traceability offline mode` when it comes to select the type of agent as shown below:
 
 ```shell
 ? Select the type of agent(s) you want to install:
@@ -170,12 +170,14 @@ The offline report is generated every month and saved to the [agent_dir]/data/re
 
 When the agent restarts, any usage reports that had been previously generated are saved to a file in the reports directory and the agent starts a new report. If necessary, the agent will add an index to the usage report name (`YYYY_MM_DD_{INDEX}_usage_report.json`). The first usage in the new report contains all events that occurred while the agent was not running.
 
-To visualize your reports in Amplify platorm, you have to upload the generated reports into the platform.
+To visualize your reports in Amplify platform, you must upload the generated reports to the platform.
 
-Log in to platform.axway.com and navigate to Organization. Then open the Usage menu.
-On the top right corner click the 3 dots and the Upload Usage. A popup screen will ask you to select the file and validate your entry. Repeat these steps for all the reports the agent has generated in case of multiple files.
+1. Log into platform.axway.com and navigate to **Organization**.
+2. Open the Usage menu. Click **...**, located at the top right corner, and then click **Upload Usage**.
+3. Select the file and validate your entry on the pop-up window.
+4. Repeat these steps for all the reports the agent has generated in case of multiple files.
 
-Then you can view your data under the usage menu screen. More information for viewing data in the next section.
+You can now view your data with the **Usage** menu. See the next section for more information.
 
 ## View the usage data from Amplify platform
 
