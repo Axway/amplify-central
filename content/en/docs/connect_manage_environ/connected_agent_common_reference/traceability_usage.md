@@ -12,18 +12,23 @@ description: Understand how the Traceability Agent reports the Gateway usage to
 
 ## Objectives
 
-Learn how to install and set up the Traceability Agent to automatically report the Gateway usage data to Amplify platform. Gateway usage data counts all API calls going through the Gateway.
+Learn how to install and set up the Traceability Agent, using either the online or offline mode, to report the Gateway usage data to Amplify platform. Gateway usage data counts all API calls going through the Gateway.
+
+* Online mode - Automatic (connected): The agent produces the report and sends it to the Amplify platform at regular intervals
+* Offline mode - Manual (offline): The agent produces the report locally, but it must be manually uploaded to the Amplify platform
 
 ## Traceability Agent overview
 
 The Traceability Agent is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
 * **Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.
-* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). If your API calls JMS endpoints, the JMS properties are also reported. To reduce the number of transactions sent to the platform, use the [sampling feature](/docs/connect_manage_environ/connected-agent-common-reference/trace_sampling).
+* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API).
 
-{{< alert title="Disabling transacation report" color="warning" >}}To use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file to disable the transaction report. Restart the Traceability Agent to use the new configuration.{{< /alert >}}
+## Set up usage reporting in online mode
 
-## Network prerequisites
+Use the following instructions to set up usage reporting in online mode.
+
+### Network prerequisites for online mode
 
 All outbound traffic is sent over SSL via TCP / UDP.
 
@@ -50,57 +55,61 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                                                                                           | 13.36.52.216   |            |              |                                    |
 |        |                                                                                           | 15.236.7.112   |            |              |                                    |
 |        |                                                                                           |                |            |              |                                    |
-| EU/US  | lighthouse.admin.axway.com                                                                |                | 443        | HTTPS        | API usage event                    |
+| EU/US  | lighthouse.admin.axway.com                                                                |                | 443        | HTTPS        | API usage event for online mode only                    |
 |        |                                                                                           |                |            |              |                                    |
-| US     | ingestion.datasearch.axway.com                                                            | 54.225.171.111 | 5044 or 443 | TCP or HTTPS | API transaction event              |
-|        |                                                                                           | 54.225.2.221   |            |              |                                    |
-|        |                                                                                           | 54.146.97.250  |            |              |                                    |
-|        |                                                                                           | 54.147.98.128  |            |              |                                    |
-|        |                                                                                           | 52.206.193.184 |            |              |                                    |
-|        |                                                                                           | 54.225.92.97   |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| EU     | ingestion.visibility.eu-fr.axway.com                                                      | 15.236.125.123 | 5044 or 443 | TCP or HTTPS | API transaction event              |
-|        |                                                                                           | 35.180.77.202  |            |              |                                    |
-|        |                                                                                           | 13.36.27.97    |            |              |                                    |
-|        |                                                                                           | 13.36.33.229   |            |              |                                    |
 
 {{< alert title="Note" color="primary" >}}
 _Region_ column represents the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. You must use the corresponding _Host_/_Port_ for your agents to operate correctly.
 {{< /alert >}}
 
-## Install Traceability Agent
+### Install Traceability Agent for online mode
 
-To report usage to Amplify platform, the traceability Agent must be installed and connected to the Gateway to be monitored:
+To report usage to Amplify platform, the Traceability Agent must be configured, installed and connected to the Gateway to be monitored.
 
-1. Install Axway CLI and Axway Central CLI
+To configure the agent, Amplify platform connectivity is required and can be performed from any machine having the correct Amplify platform access (refer to above urls and IPs). Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
+
+This procedure will help you to configure and install the Traceability Agent:
+
+1. Install Axway CLI and Axway Central CLI:
 
    * Install Axway CLI: `npm install -g axway`
    * Install Axway Central CLI: `axway pm install @axway/axway-central-cli`
    * Download and install OpenSSL, if not already present on the machine. This will help you generate a public/private key pair to secure the connection between Traceability Agent and Amplify platform.
 
-      More information regarding the CLI installation is available [here](/docs/integrate_with_central/cli_central/cli_install/)
+      More information regarding the CLI installation is available [here](/docs/integrate_with_central/cli_central/cli_install/).
 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
-3. Install the Traceability Agent using Axway Central CLI: `axway central install agents`
+3. Create an empty directory and go in that directory to run the next command.
+4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
    * For usage tracking, only the Traceability Agent is required.
-   * Answer ALL questions when prompted (environment / team / connectivity with Gateway).
-   * CLI creates appropriate resources in Amplify platform / local files based on the answers.
-   * CLI output next steps: copy files on the Gateway machine / start the agent.
 
-      For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
+```shell
+? Select the type of agent(s) you want to install:
+  All Agents
+  Discovery
+> Traceability
+  Traceability offline mode
+```
 
-## Reporting Gateway usage event
+   * Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure.
+
+5. Install the agent.
+
+After all questions are answered, the Axway Central CLI will create an Amplify platform environment that will host the usage report, as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration / the public-private key to manage the communication from the agent to the Platform), based on the provided answers.
+
+{{< alert title="Disabling transaction report" color="warning" >}}If you plan to use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file produced by the CLI to disable the transaction report.{{< /alert >}}
+
+The local files must be copied to the Gateway machine, as mentioned in the CLI output.
+
+After all files are copied, start Traceability Agent: `./traceability_agent ./ta_env_vars.env`
+
+For more information regarding agents' installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
+
+### Reporting Gateway usage event - automatic reporting for online mode
 
 You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
-Use of of the following methods to report usage from the Traceability Agent to the Amplify platform:
-
-* Automatic (connected) - the agent produces the report and sends it to the Amplify platform at regular intervals
-* Manual (offline) - the agent produces the report locally, but must be manually uploaded to the Amplify platform
-
-### Automatic reporting
-
-Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. On a regular basis (default is 15 minutes), the Traceability Agent sends the usage counter to the platform.
+Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. The Traceability Agent sends the usage counter to the platform on a regular basis (default is 15 minutes).
 
 To change the reporting interval, use the `CENTRAL_USAGEREPORTING_INTERVAL` variable with either a second, minute or hour notation:
 
@@ -119,15 +128,65 @@ If for any reason the usage report cannot be uploaded to Amplify platform, the d
 
 If the Traceability Agent is stopped while there are still remaining usage events to be sent, the report is saved on the disk where the Traceability Agent is located. The data will be sent to Amplify platform at the next Traceability Agent startup.
 
-### Manual reporting
+## Set up usage reporting in offline mode
 
-When offline usage reporting is on, `CENTRAL_USAGEREPORTING_OFFLINE=true` (default = false), the `CENTRAL_USAGEREPORTING_SCHEDULE` variable determines how often usage numbers are saved (default and minimum = "@hourly"). For additional cron schedules information, see [Scheduled jobs](https://github.com/Axway/agent-sdk/blob/main/pkg/jobs/README.md#scheduled-jobs). Note that offline ignores the `CENTRAL_USAGEREPORTING_INTERVAL` value that is only used for online reporting.
+Use the following instructions to set up usage reporting in offline mode.
 
-In addition to setting `CENTRAL_USAGEREPORTING_OFFLINE=true`, the `CENTRAL_ENVIRONMENTID` variable must be set.  The usage report requires a valid Environment ID and cannot retrieve it in Offline mode.  This can be retrieved with the axway cli, see [Retrieve a list of all available environments](/docs/integrate_with_central/cli_central/cli_environments#retrieve-a-list-of-all-available-environments).
+### Install Traceability Agent for offline mode
+
+To report usage to Amplify platform, the Traceability Agent must be configured, installed and connected to the Gateway to be monitored.
+
+To configure the agent, Amplify platform connectivity is required and can be performed from any machine having a correct Amplify platform access (refer to above urls and IPs). The lighthouse url is not required for this mode. Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
+
+This procedure will help you to configure and install the traceability agent:
+
+1. Install Axway CLI and Axway Central CLI:
+
+   * Install Axway CLI: `npm install -g axway`
+   * Install Axway Central CLI: `axway pm install @axway/axway-central-cli`
+
+2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
+3. Create an empty directory and go in that directory to run the next command.
+4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
+
+   * Be sure to select `Traceability offline mode` when prompted to select the type of agent:
+
+```shell
+? Select the type of agent(s) you want to install:
+  All Agents
+  Discovery
+  Traceability
+> Traceability offline mode
+```
+
+   * Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure the agent.
+
+5. Install the agent
+
+After all questions are answered, the Axway Central CLI will create an Amplify platform environment that will host the usage report, as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration), based on the provided answers.
+
+The local files must be copied to the Gateway machine, as mentioned in the CLI output.
+
+After all files are copied, start the Traceability Agent: `./traceability_agent ./ta_env_vars.env`
+
+For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
+
+### Reporting Gateway usage event - manual reporting for offline mode
+
+You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
 The offline report is generated every month and saved to the [agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
 
 When the agent restarts, any usage reports that had been previously generated are saved to a file in the reports directory and the agent starts a new report. If necessary, the agent will add an index to the usage report name (`YYYY_MM_DD_{INDEX}_usage_report.json`). The first usage in the new report contains all events that occurred while the agent was not running.
+
+To visualize your reports in Amplify platform, you must upload the generated reports to the platform.
+
+1. Log into platform.axway.com and navigate to **Organization**.
+2. Open the Usage menu. Click **...**, located at the top right corner, and then click **Upload Usage**.
+3. Select the file and validate your entry on the pop-up window.
+4. Repeat these steps for all the reports the agent has generated in case of multiple files.
+
+You can now view your data with the **Usage** menu. See the next section for more information.
 
 ## View the usage data from Amplify platform
 
