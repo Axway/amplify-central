@@ -67,8 +67,8 @@ const collections = [{
   description: 'All pages related to Amplify Central overview',
   format: 'frontmatter',
 }, {
-  ...docsDefaults('getting-started', 'getting-started'),
-  name: 'getting-started',
+  ...docsDefaults('Getting started', 'Getting started'),
+  name: 'Getting started',
   label: 'Amplify Central getting started',
   label_singular: 'page in Amplify Central getting started section',
   description: 'All pages related to Amplify Central getting started',
@@ -82,7 +82,7 @@ const collections = [{
   format: 'frontmatter',
 }, {
   ...docsDefaults('integrate_with_central/cli_central', 'integrate_with_central'),
-  name: 'cli_cental',
+  name: 'cli_central',
   label: 'Axway Central CLI',
   label_singular: 'page in Axway Central CLI section',
   description: 'All pages related to Axway Central CLI',
