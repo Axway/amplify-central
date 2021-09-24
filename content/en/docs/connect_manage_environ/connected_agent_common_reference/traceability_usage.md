@@ -66,7 +66,6 @@ _Region_ column represents the region where your Amplify organization is deploye
 OPTIONAL - To monitor transactions additional ports need to be opened. They are not mentioned in the table above and can be found in the Network Traffic section of the documentation of each agent.
 {{< /alert >}}
 
-
 ### Install Traceability Agent for online mode
 
 To report usage to Amplify platform, the Traceability Agent must be configured, installed and connected to the Gateway to be monitored.
