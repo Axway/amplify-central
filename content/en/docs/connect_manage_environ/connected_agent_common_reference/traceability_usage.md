@@ -22,7 +22,7 @@ Learn how to install and set up the Traceability Agent, using either the online 
 The Traceability Agent is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
 * **Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.
-* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API).
+* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report Gateway usage.
 
 ## Set up usage reporting in online mode
 
@@ -61,6 +61,11 @@ Open the following ports so that agents can communicate to the Amplify platform:
 {{< alert title="Note" color="primary" >}}
 _Region_ column represents the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. You must use the corresponding _Host_/_Port_ for your agents to operate correctly.
 {{< /alert >}}
+
+{{< alert title="Note" color="primary" >}}
+OPTIONAL - To monitor transactions additional ports need to be opened. They are not mentioned in the table above and can be found in the Network Traffic section of the documentation of each agent.
+{{< /alert >}}
+
 
 ### Install Traceability Agent for online mode
 
