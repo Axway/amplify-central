@@ -30,16 +30,16 @@ To view Dependency Analysis details:
 
 * Click on the **Endpoint** node to focus on the API Service dependent endpoints. Click **view info** to display a list of endpoints where you can:
 
-  * view the number of dependent Catalog items to each endpoint
-  * add or delete more endpoints
-  * publish an endpoint to the Unified Catalog
+    * view the number of dependent Catalog items to each endpoint
+    * add or delete more endpoints
+    * publish an endpoint to the Unified Catalog
 
 * Click on the **Catalog Items** node to focus on the API Service dependent Catalog items. Click **view info** to display a list of Catalog items where you can:
 
-  * view the number of dependent Catalog items and each state (e.g. Published, Unpublished, Failed)
-  * deleting a Catalog item
+    * view the number of dependent Catalog items and each state (e.g. Published, Unpublished, Failed)
+    * deleting a Catalog item
 
 * Click on the **Subscriptions** node to focus on the API Service dependent subscriptions. Click **view info** to display a list of subscriptions where you can:
 
-  * manage subscriptions. For example, the approval of a subscription request can be done while remaining in the Dependency Analysis view.
-  * view the quantity of dependent subscriptions in various states. For example, the number of Cancelled subscriptions would give an indication of the subscriber satisfaction with an API Service.
+    * manage subscriptions. For example, the approval of a subscription request can be done while remaining in the Dependency Analysis view.
+    * view the quantity of dependent subscriptions in various states. For example, the number of Cancelled subscriptions would give an indication of the subscriber satisfaction with an API Service.

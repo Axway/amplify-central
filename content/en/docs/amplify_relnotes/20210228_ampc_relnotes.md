@@ -33,8 +33,8 @@ The Amplify Central WebUI includes the following enhancements:
 * Providers can publish an API Service to the Unified Catalog after API Service registration.
 * Providers can register an AsyncAPI under an environment in Amplify Central and publish it up to the Unified Catalog for consumption.
 * Amplify Central WebUI can now be accessed using static IP address:
-  * apicentral.axway.com (US region): 3.94.245.118 / 54.208.199.251 / 3.212.78.217 / 52.202.95.208 / 107.23.176.64 / 3.225.16.120.
-  * central.eu-fr.axway.com (EU region): 52.47.84.198 / 13.36.25.69 / 35.181.21.87 / 13.36.2.143 / 13.36.52.216 / 15.236.7.112.
+    * apicentral.axway.com (US region): 3.94.245.118 / 54.208.199.251 / 3.212.78.217 / 52.202.95.208 / 107.23.176.64 / 3.225.16.120.
+    * central.eu-fr.axway.com (EU region): 52.47.84.198 / 13.36.25.69 / 35.181.21.87 / 13.36.2.143 / 13.36.52.216 / 15.236.7.112.
 
 ### Axway Edge Gateway / AWS / Azure agents
 
@@ -56,8 +56,8 @@ Mesh governance includes the following enhancements:
 * Amplify CLI updates (version 0.10 and later) now provision the CLI resources needed for Istio agent Kubernetes discovery and promotion to a selected environment in Amplify Central.
 * The alpha Istio Discovery Agent usage and configuration changes to associate target promotion **Environment** with a **K8SCluster** and with a new **Mesh** scoped resource. They are documented here: [Discover APIs and services](/docs/connect_manage_environ/mesh_management/discover-apis-and-services/).
 * The Istio Traceability Agent has been updated to provide two HTTP request/response header logging verbosity modes. The logging mode may be set via the Amplify CLI or by changing the generated Istio and apicHybrid override files used to update Istio and install the Istio agents, respectively.
-  * Default - only the HTTP headers needed for minimal transaction details of the source, destination and transaction span linkage are published.
-  * Verbose - all HTTP request/response headers are published.
+    * Default - only the HTTP headers needed for minimal transaction details of the source, destination and transaction span linkage are published.
+    * Verbose - all HTTP request/response headers are published.
 * Note: The Istio Traceability Agent header sanitization rules for filtering and redaction may still be applied to further limit the headers that appear in the API Observer.
 * The alpha Istio Discovery and Traceability Agent installation changes are documented here: [Deploy your agents with Amplify CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/).
 
@@ -78,21 +78,21 @@ This version of Amplify Central has the following limitations:
 
 * API Observer:
 
-  * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.  
+    * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.  
 
 * Axway Edge Gateway agents:
 
-  * Discovery Agent only discovers APIs having PassThrough, API Key and Oauth security.
-  * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within appropriate teams.
-  * When an API is renamed on the API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
-  * Traceability Agent is not working in an externally managed topology deployment.
+    * Discovery Agent only discovers APIs having PassThrough, API Key and Oauth security.
+    * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within appropriate teams.
+    * When an API is renamed on the API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
+    * Traceability Agent is not working in an externally managed topology deployment.
 
 * AWS Gateway agents:
 
-  * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
-  * Discovery Agent can discover APIs having ANY method only, but consumer will not be able to subscribe to it from Unified Catalog.
-  * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
+    * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
+    * Discovery Agent can discover APIs having ANY method only, but consumer will not be able to subscribe to it from Unified Catalog.
+    * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
 
 * Azure agents:
 
-  * Discovery Agent does not manage revision and version.
+    * Discovery Agent does not manage revision and version.

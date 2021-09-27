@@ -47,4 +47,4 @@ This following limitations exist in this version of Amplify Central:
 
 * API Observer:
 
-  * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.
+    * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.

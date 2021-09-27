@@ -11,9 +11,9 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 * Read [Amplify Central and Axway API Manager connected overview](/docs/connect_manage_environ/connect_api_manager/)
 * You will need a basic knowledge of Axway API Management installation
 
-  * Where the API Gateway is running (host / port / path to event logs)
-  * Where the Admin node manager is running (host / port)
-  * What users are available for the agent to use. It is recommended to have one API Manager user for Discovery Agent and one API Gateway operator user for Traceability Agent.
+    * Where the API Gateway is running (host / port / path to event logs)
+    * Where the Admin node manager is running (host / port)
+    * What users are available for the agent to use. It is recommended to have one API Manager user for Discovery Agent and one API Gateway operator user for Traceability Agent.
 
 ## Objectives
 

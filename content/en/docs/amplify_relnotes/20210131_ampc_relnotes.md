@@ -37,9 +37,9 @@ The Amplify Central WebUI includes the following enhancements:
 * View the agents connected to an environment in the Environment Detail page
 * Improved Provider UX of API Service List and Details page:
 
-  * Providers can view the user who made the last modification from the list of API Service versions
-  * Providers can search/sort on the Endpoints and Catalog Item list tables
-  * Providers can add new API Services from the UI
+    * Providers can view the user who made the last modification from the list of API Service versions
+    * Providers can search/sort on the Endpoints and Catalog Item list tables
+    * Providers can add new API Services from the UI
 
 ### Axway Edge Gateway / AWS / Azure Agents
 
@@ -80,25 +80,25 @@ This version of Amplify Central has the following limitations:
 
 * API Observer:
 
-  * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.  
+    * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.  
 
 * Axway Edge Gateway Agents:
 
-  * Discovery Agent only discovers APIs having PassThrough, API Key and Oauth security.
-  * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify Platform and share the API within appropriate teams.
-  * When an API is renamed on the API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
-  * Traceability Agent is not working in an externally managed topology deployment.
+    * Discovery Agent only discovers APIs having PassThrough, API Key and Oauth security.
+    * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify Platform and share the API within appropriate teams.
+    * When an API is renamed on the API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
+    * Traceability Agent is not working in an externally managed topology deployment.
 
 * AWS Gateway agents:
 
-  * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
-  * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
+    * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
+    * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
 
 * Azure agents:
 
-  * Discovery Agent is not managing revision and version yet.
-  * Traceability agent is not reporting the App usage traffic.
+    * Discovery Agent is not managing revision and version yet.
+    * Traceability agent is not reporting the App usage traffic.
 
 * Mesh governance alpha Discovery Agents:
 
-  * The alpha Discovery Agents do not work with the Mesh Traceability Agent.
+    * The alpha Discovery Agents do not work with the Mesh Traceability Agent.

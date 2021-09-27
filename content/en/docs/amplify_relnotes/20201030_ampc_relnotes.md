@@ -199,36 +199,36 @@ The Amplify Central mesh governance includes the following enhancements:
 
 * The validated service mesh version has been updated to Istio 1.6.8
 
-  * Istio deployment now uses the **istioctl** tool which needs to be added to your client
-  * See the documentation links at the end of this section for details
+    * Istio deployment now uses the **istioctl** tool which needs to be added to your client
+    * See the documentation links at the end of this section for details
 
 * A new Mesh Traceability Agent is available
 
-  * A new Mesh Traceability ALS Agent that automatically logs HTTP headers replaces the previous agent
-  * This updated mesh agent shares logging logic with the Central SaaS Gateway Access Logging Service (or ALS)
-  * The new agent is installed using a new helm agent deployment option: `--set als.enabled=true`
+    * A new Mesh Traceability ALS Agent that automatically logs HTTP headers replaces the previous agent
+    * This updated mesh agent shares logging logic with the Central SaaS Gateway Access Logging Service (or ALS)
+    * The new agent is installed using a new helm agent deployment option: `--set als.enabled=true`
 
 * A new Traceability ALS Agent deployment option to turn HTTP header logging on or off
 
-  * Header logging can be disabled using new helm agent deployment option: `--set als.publishHeaders=false`
+    * Header logging can be disabled using new helm agent deployment option: `--set als.publishHeaders=false`
 
 * Amplify CLI can now deploy new alpha Mesh Discovery Agents
 
-  * A future version of Amplify Central CLI will include additional support for Mesh Agent installation
+    * A future version of Amplify Central CLI will include additional support for Mesh Agent installation
 
-  * `amplify central install agents` command will include new **Kubernetes** option
+    * `amplify central install agents` command will include new **Kubernetes** option
 
-  * **Note**: This new option will preview upcoming changes and does not replace the existing mesh deployment commands for full mesh governance and policy management.
+    * **Note**: This new option will preview upcoming changes and does not replace the existing mesh deployment commands for full mesh governance and policy management.
 
 * The alpha Mesh Discovery Agent support provides a new set of agent resources within Amplify Central CLI:
 
-  * **mesh**: this resource (Mesh) represents the connected Kubernetes cluster and its related resources. It provides a bridge from the connected Kubernetes cluster to the Central environment.
-  * k8s: this resource (K8sCluster) represents the details of the Kubernetes cluster and provides a reference to the Mesh discovery resources listed below.
-  * **k8sres**: this resource (K8SResource) represents Discovery Agent reported raw resources from the Kubernetes cluster. This is controlled by the resdisc resource that defines the configuration of the Mesh Discovery Agent.
-  * **resdisc**: this resource (ResourceDiscovery) represents the configuration used by the Mesh Discovery Agent to monitor this connected Kubernetes cluster.  It holds resource and namespace filters that define the matching logic for what will be reported back to Central in the k8sres instances. It also contains configuration for the tags, labels and attributes to be filtered or added to the published k8sres instances.
-  * **apispec**: this resource (APISpec) represents Discovery Agent reported API specifications (Swagger2, OAS3, or other) from the Kubernetes cluster. This is controlled by the specdisc resource that defines the configuration of the Mesh Discovery Agent.
-  * **specdisc**: this resource (SpecDiscovery) represents the configuration used by the Mesh Discovery Agent to inspect endpoints found in this connected Kubernetes cluster.  It holds resource and namespace filters that define the searching and matching logic for what will be reported back to Central in the apispec instances. It also includes the endpoint searching rules for direct and indirect paths to use trying to resolve a bundled specification for a reported k8sres instance.
-  * **More detailed documentation and examples for these Mesh Agent resources will be coming soon**.
+    * **mesh**: this resource (Mesh) represents the connected Kubernetes cluster and its related resources. It provides a bridge from the connected Kubernetes cluster to the Central environment.
+    * k8s: this resource (K8sCluster) represents the details of the Kubernetes cluster and provides a reference to the Mesh discovery resources listed below.
+    * **k8sres**: this resource (K8SResource) represents Discovery Agent reported raw resources from the Kubernetes cluster. This is controlled by the resdisc resource that defines the configuration of the Mesh Discovery Agent.
+    * **resdisc**: this resource (ResourceDiscovery) represents the configuration used by the Mesh Discovery Agent to monitor this connected Kubernetes cluster.  It holds resource and namespace filters that define the matching logic for what will be reported back to Central in the k8sres instances. It also contains configuration for the tags, labels and attributes to be filtered or added to the published k8sres instances.
+    * **apispec**: this resource (APISpec) represents Discovery Agent reported API specifications (Swagger2, OAS3, or other) from the Kubernetes cluster. This is controlled by the specdisc resource that defines the configuration of the Mesh Discovery Agent.
+    * **specdisc**: this resource (SpecDiscovery) represents the configuration used by the Mesh Discovery Agent to inspect endpoints found in this connected Kubernetes cluster.  It holds resource and namespace filters that define the searching and matching logic for what will be reported back to Central in the apispec instances. It also includes the endpoint searching rules for direct and indirect paths to use trying to resolve a bundled specification for a reported k8sres instance.
+    * **More detailed documentation and examples for these Mesh Agent resources will be coming soon**.
 
 * See the updated Mesh Governance documentation at: [Mesh management](/docs/connect_manage_environ/mesh_management)
 * See the updated step-by-step deployment details at: <https://github.com/Axway/Setup-Amplify-Mesh-Governance>
@@ -240,17 +240,17 @@ This version of Amplify Central has the following limitations:
 * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.  
 * Axway Edge Gateway Agents:
 
-  * Discovery Agent can only discover APIs having PassThrough, API Key and Oauth security.
-  * Discovery Agent cannot expose discovered APIs in multiple teams, meaning that the Organization structure on API Manager is lost in Central. The API provider has to create the team in Amplify Platform and share the API within appropriate teams.
-  * Discovery Agent is not able to detect that an API has been renamed. Consequently, on the Amplify Central side, you will see two APIs: the old one and the new one.
-  * Discovery Agent does not handle frontend API deletion. Consequently, Unified Catalog API is out of sync.
-  * Traceability Agent is not working in an Externally Managed Topology deployment.
+    * Discovery Agent can only discover APIs having PassThrough, API Key and Oauth security.
+    * Discovery Agent cannot expose discovered APIs in multiple teams, meaning that the Organization structure on API Manager is lost in Central. The API provider has to create the team in Amplify Platform and share the API within appropriate teams.
+    * Discovery Agent is not able to detect that an API has been renamed. Consequently, on the Amplify Central side, you will see two APIs: the old one and the new one.
+    * Discovery Agent does not handle frontend API deletion. Consequently, Unified Catalog API is out of sync.
+    * Traceability Agent is not working in an Externally Managed Topology deployment.
 
 * AWS Gateway agents:
 
-  * Discovery Agent is working with one AWS Region only (the one used when installing the agent).
-  * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
+    * Discovery Agent is working with one AWS Region only (the one used when installing the agent).
+    * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
 
 * Mesh Governance alpha Discovery Agents:
 
-  * The alpha Discovery Agents do not work with the Mesh Traceability Agent.
+    * The alpha Discovery Agents do not work with the Mesh Traceability Agent.
