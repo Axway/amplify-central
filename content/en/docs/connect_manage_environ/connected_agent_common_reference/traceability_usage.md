@@ -80,7 +80,7 @@ Step 1. Install Axway CLI and Axway Central CLI:
 * Install Axway Central CLI: `axway pm install @axway/axway-central-cli`
 * Download and install OpenSSL, if not already present on the machine. This will help you generate a public/private key pair to secure the connection between Traceability Agent and Amplify platform.
 
-      More information regarding the CLI installation is available [here](/docs/integrate_with_central/cli_central/cli_install/).
+   More information regarding the CLI installation is available [here](/docs/integrate_with_central/cli_central/cli_install/).
 
 Step 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
 
