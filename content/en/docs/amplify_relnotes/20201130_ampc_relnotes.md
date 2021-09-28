@@ -26,9 +26,9 @@ The Amplify Central CLI includes the following enhancements:
 * During the installation of AWS Agent, it outputs the AWS CLI command used to install the agent in AWS environment (EC2 instance or ECS-fargate instance).
 * Amplify CLI login using `amplify auth login` eliminates the need for the  "--client-id" parameter.  The defaults is to use the Amplify Central credentials ("--client-id=apicentral").
 * The ability to get resources by name where the name of the resource can exist across multiple scopes. To improve readability, the result of the command has been enhanced to display multiple tables with the resource type prefixed to the name of the resource.
-  * Example 1:  "amplify central get secret test" will return secret resources named "test" from all environments or integration root scopes.
-  * Example 2:  "amplify central get secret –s test" will return secret resources from an environment and/or integration named "test".
-  * Example 3:  "amplify central get webhook,secret –s test" will return webhook/secret resources from an environment and/or integration named "test".
+    * Example 1:  "amplify central get secret test" will return secret resources named "test" from all environments or integration root scopes.
+    * Example 2:  "amplify central get secret –s test" will return secret resources from an environment and/or integration named "test".
+    * Example 3:  "amplify central get webhook,secret –s test" will return webhook/secret resources from an environment and/or integration named "test".
 
 ### Amplify Central WebUI
 
@@ -37,15 +37,15 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 The Amplify Central WebUI includes the following enhancements:
 
 * View if a discovery agent is connected to an environment. The `Manual Sync.` badge is replace by:
-  * `CONNECTED` when Discovery Agent is up and running.
-  * `CONNECTION ERROR` when the Discovery Agent is not able to connect to the Gateway.
-  * `DISCONNECTED` when the Discovery Agent is down.
+    * `CONNECTED` when Discovery Agent is up and running.
+    * `CONNECTION ERROR` when the Discovery Agent is not able to connect to the Gateway.
+    * `DISCONNECTED` when the Discovery Agent is down.
 * Improved Provider UX for the Environment details page:
-  * Activity report metrics of the aggregated count of API Services, Catalog Items and Subscriptions for the selected Environment.  
+    * Activity report metrics of the aggregated count of API Services, Catalog Items and Subscriptions for the selected Environment.  
 * Improved Provider UX of the API Service details page:
-  * View of multiple API Service versions.
-  * Activity report metrics of the related Endpoints, Catalog Items and Subscriptions for the selected API Service version.  
-  * Rendering of WSDL and PROTOBUF specifications in addition to OAS2/OAS3.
+    * View of multiple API Service versions.
+    * Activity report metrics of the related Endpoints, Catalog Items and Subscriptions for the selected API Service version.  
+    * Rendering of WSDL and PROTOBUF specifications in addition to OAS2/OAS3.
 
 ### Axway Edge Gateway / AWS Agents
 
@@ -77,21 +77,21 @@ This version of Amplify Central has the following limitations:
 
 * API Observer:
 
-  * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.  
+    * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.  
 
 * Axway Edge Gateway Agents:
 
-  * Discovery Agent only discovers APIs having PassThrough, API Key and Oauth security.
-  * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Central. As a result, the API provider must create the team in Amplify Platform and share the API within appropriate teams.
-  * Discovery Agent cannot detect that an API has been renamed. Consequently, you will see both the old API and the new API on Amplify Central.
-  * Discovery Agent does not handle frontend API deletion. Consequently, the Unified Catalog API is out of sync.
-  * Traceability Agent is not working in an externally managed topology deployment.
+    * Discovery Agent only discovers APIs having PassThrough, API Key and Oauth security.
+    * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Central. As a result, the API provider must create the team in Amplify Platform and share the API within appropriate teams.
+    * Discovery Agent cannot detect that an API has been renamed. Consequently, you will see both the old API and the new API on Amplify Central.
+    * Discovery Agent does not handle frontend API deletion. Consequently, the Unified Catalog API is out of sync.
+    * Traceability Agent is not working in an externally managed topology deployment.
 
 * AWS Gateway agents:
 
-  * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
-  * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
+    * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
+    * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
 
 * Mesh governance alpha Discovery Agents:
 
-  * The alpha Discovery Agents do not work with the Mesh Traceability Agent.
+    * The alpha Discovery Agents do not work with the Mesh Traceability Agent.

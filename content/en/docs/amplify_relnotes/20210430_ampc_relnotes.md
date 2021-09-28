@@ -73,22 +73,22 @@ This version of Amplify Central has the following limitations:
 
 * API Observer:
 
-  * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.
+    * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.
 
 * Axway APIM Gateway agents:
 
-  * When starting the agent, if the API Gateway and/or API Manager is not ready, the Discovery and Traceability agents will stop. When using Linux service mode, it is possible that the agent fails to start because API Manager/Gateway are not started yet. This can lead to a bad status display in the corresponding environment in Central UI > Topology.
-  * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
-  * When an API is renamed on the API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
-  * Traceability Agent is working in an externally managed topology deployment only if you deactivate the headers details (`APIGATEWAY_GETHEADERS=false`).
+    * When starting the agent, if the API Gateway and/or API Manager is not ready, the Discovery and Traceability agents will stop. When using Linux service mode, it is possible that the agent fails to start because API Manager/Gateway are not started yet. This can lead to a bad status display in the corresponding environment in Central UI > Topology.
+    * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
+    * When an API is renamed on the API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
+    * Traceability Agent is working in an externally managed topology deployment only if you deactivate the headers details (`APIGATEWAY_GETHEADERS=false`).
 
 * AWS Gateway agents:
 
-  * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
-  * Discovery Agent can discover APIs having ANY method only, but consumers will not be able to subscribe to it from Unified Catalog.
-  * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
+    * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
+    * Discovery Agent can discover APIs having ANY method only, but consumers will not be able to subscribe to it from Unified Catalog.
+    * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
 
 * Azure agents:
 
-  * Discovery Agent does not manage revision and version.
-  * Discovery agent does not remove API Service and Catalog item when Azure API is removed.
+    * Discovery Agent does not manage revision and version.
+    * Discovery agent does not remove API Service and Catalog item when Azure API is removed.

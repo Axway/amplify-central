@@ -29,9 +29,9 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 The Amplify Central WebUI includes the following enhancements:  
 
 * The Developer role has access to the environment (read-only) and API services (create/read/update/delete), and can:
-  * View environments that are owned by the teams of which they are a member.
-  * View the services that are registered in the environment by their team members.
-  * Register services in an environment that is owned by their team.
+    * View environments that are owned by the teams of which they are a member.
+    * View the services that are registered in the environment by their team members.
+    * Register services in an environment that is owned by their team.
 * The Central Administrator can edit the environment details and update the image, title, tags and attributes.
 
 ### Axway APIM Gateway / AWS / Azure agents
@@ -70,22 +70,22 @@ This version of Amplify Central has the following limitations:
 
 * API Observer:
 
-  * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.
+    * Users that are assigned the Consumer role cannot see their subscription usage on the API Observer screen.
 
 * Axway APIM Gateway agents:
 
-  * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
-  * When an API is renamed in API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
-  * Traceability Agent is working in an Externally Managed Topology (EMT) deployment but it is not able to report the transaction request/response headers, as the APIs that collect them are not accessible in EMT mode.
+    * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
+    * When an API is renamed in API Manager, the Discovery Agent is not able to recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
+    * Traceability Agent is working in an Externally Managed Topology (EMT) deployment but it is not able to report the transaction request/response headers, as the APIs that collect them are not accessible in EMT mode.
 
 * AWS Gateway agents:
 
-  * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
-  * Discovery Agent can discover APIs having ANY method only, but consumers will not be able to subscribe to it from Unified Catalog.
-  * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
-  * The Usage report is not scalable, as the agent relies on AWS Simple Queue Service and cannot have more than 10 consumers per queue. It is possible to increase the number of workers on the agent side.
+    * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
+    * Discovery Agent can discover APIs having ANY method only, but consumers will not be able to subscribe to it from Unified Catalog.
+    * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
+    * The Usage report is not scalable, as the agent relies on AWS Simple Queue Service and cannot have more than 10 consumers per queue. It is possible to increase the number of workers on the agent side.
 
 * Azure agents:
 
-  * Discovery Agent does not manage revision and version.
-  * Discovery agent does not remove API Service and Catalog item when Azure API is removed.
+    * Discovery Agent does not manage revision and version.
+    * Discovery agent does not remove API Service and Catalog item when Azure API is removed.
