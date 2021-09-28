@@ -2,6 +2,7 @@
 title: Amplify Central getting started
 linkTitle: Amplify Central getting started
 weight: 250
+draft: yes
 description: What you need to know to try Amplify Central.
 ---
 
