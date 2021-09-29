@@ -1,6 +1,6 @@
 ---
-title: "Welcome to Amplify Central Documentation"
-linkTitle: "Welcome to Amplify Central Documentation"
+title: "Welcome to Amplify Central"
+linkTitle: "Welcome to Amplify Central"
 weight: 03
 no_list: true
 menu:
@@ -21,3 +21,4 @@ Here are some suggestions to get started:
 * [Amplify Central overview](/docs/overview/)
 * [Integrate with Amplify Central](/docs/integrate_with_central/)
 * [Connect and manage your environment](/docs/connect_manage_environ/)
+* [Manage your marketplace](/docs/manage_marketplace)
