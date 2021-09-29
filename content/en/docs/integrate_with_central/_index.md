@@ -9,7 +9,7 @@ description: "What you need to know to try Amplify Central APIs and build you
 
 Amplify Central is built using API first pattern then CLI and lastly UI.
 
-Because of that Amplify Central offers the possibility to use its own APIs to build your own integration patterns. 
+Because of that Amplify Central offers the possibility to use its own APIs to build your own integration patterns.
 
 ## Amplify Central APis definition and usage
 
@@ -32,11 +32,11 @@ Once you get your token you can start manipulating the Amplify Central resources
 When using APIs programmatically, some headers are required:
 
 * **X-Axway-Tenant-Id**: should contain your organization identifier. Refer to <https://platform.axway.com> and navigate to Organization tile to find the Organization ID.
-* **authentication**: contains your JWT token obtained previously. 
+* **authentication**: contains your JWT token obtained previously.
 
 ## What you can do?
 
-It all depends on what you want to accomplish with the platform. 
+It all depends on what you want to accomplish with the platform.
 
 If you want to manipulate Amplify Central resources, the APIs or [Axway Central CLI](/docs/integrate_with_central/cli_central/a) can be used to add/update/remove resources.
 
