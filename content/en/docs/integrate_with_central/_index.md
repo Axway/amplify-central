@@ -25,15 +25,15 @@ All APIs are secured using a JSON Web Token (JWT).
     * Auth URL: <https://login.axway.com/auth/realms/Broker/protocol/openid-connect/auth>
     * Grant Type: Implicit
     * Client ID: apicentral
-    * Enter your username / password to validate your credentials.
+    * Enter your username / password to validate your credentials
 
 * When using the Axway Central CLI, this token is automatically retrieved when connected to Amplify using the `axway auth login` command.
 
-Once you get your token you can start manipulating the Amplify Central resources.
+Once you get your token, you can start manipulating the Amplify Central resources.
 
 When using APIs programmatically, the following headers are required:
 
-* **X-Axway-Tenant-Id**: should contain your organization identifier. Refer to <https://platform.axway.com> and navigate to Organization tile to find the Organization ID.
+* **X-Axway-Tenant-Id**: contains your organization identifier. Go to <https://platform.axway.com> and navigate to the **Organization** tile to find the Organization ID.
 * **authentication**: contains your JWT token obtained previously.
 
 ## What can you do once you integrate with Amplify Central
