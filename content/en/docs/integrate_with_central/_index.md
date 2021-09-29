@@ -13,12 +13,12 @@ Amplify Central is built using the API-first pattern, then CLI, and lastly UI. B
 
 Amplify Central APIs are described in the OAS 3.0 specification:
 
-* (US region) <https://apicentral.axway.com/apis/docs> 
+* (US region) <https://apicentral.axway.com/apis/docs>
 * (EU region) <https://central.eu-fr.axway.com/apis/docs>
 
 The APIs can be used either programmatically or using the [Axway Central CLI](/docs/integrate_with_central/cli_central/).
 
-All APIs are secured using a JSON Web Token (JWT). 
+All APIs are secured using a JSON Web Token (JWT).
 
 * When using the APIs, you must use the following url / parameters to get your token:
 
