@@ -43,7 +43,13 @@ APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.Exists()",categories:"Ca
 Multiple mappings maybe used in the environment variable by separating each mapping by a comma.
 
 ```bash
-APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.Exists()",categories:"CategoryA, CategoryB"},{conditions:"tag.API_TYPE.Contains(\"API\")",categories:"API Category"}]
+APIMANAGER_CATEGORY_MAPPINGS=[{mapping1}, {mapping2}, {mapping3}, ...]
+```
+
+Example:
+
+```bash
+APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.Exists()",categories:"CategoryA, CategoryB"}, {conditions:"tag.API_TYPE.Contains(\"API\")",categories:"API Category"}]
 ```
 
 ## Conditionals
@@ -57,6 +63,7 @@ tag.<tagName>.Exists()
 ```
 
 Sample to categorize APIs having a tag name API_TYPE: ```conditions: tag.API_TYPE.Exists()```
+
 Sample to categorize APIs that do not not having a tag name API_TYPE: ```conditions: tag.API_TYPE.Exists() == false```
 
 ### Categorize based on tag value
@@ -65,8 +72,9 @@ Sample to categorize APIs that do not not having a tag name API_TYPE: ```conditi
 tag.<tagName> == | != <tagValue>
 ```
 
-Sample to categorize APIs having a tag name API_TYPE and has 'Finance' as its value: ```filter: tag.API_TYPE == Finance```  
-Sample to categorize APIs having a tag name API_TYPE and does not have 'Finance' as its value: ```filter: tag.API_TYPE !=  Finance```  
+Sample to categorize APIs having a tag name API_TYPE and has 'Finance' as its value: ```filter: tag.API_TYPE == Finance```
+
+Sample to categorize APIs having a tag name API_TYPE and does not have 'Finance' as its value: ```filter: tag.API_TYPE !=  Finance```
 
 ### Categorize based on partial value
 
@@ -74,8 +82,9 @@ Sample to categorize APIs having a tag name API_TYPE and does not have 'Finance'
 tag.<tagName>.contains(<value>)
 ```
 
-Sample to categorize APIs having a tag name API_TYPE with a value containing API: ```tag.API_TYPE.contains(API)```  
-Sample to categorize APIs having a tag name API_TYPE with a value not containing API: ```tag.API_TYPE.contains(API) == false```  
+Sample to categorize APIs having a tag name API_TYPE with a value containing API: ```tag.API_TYPE.contains(API)```
+
+Sample to categorize APIs having a tag name API_TYPE with a value not containing API: ```tag.API_TYPE.contains(API) == false```
 
 ### Categorize using MatchRegEx
 
