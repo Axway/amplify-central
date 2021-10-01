@@ -121,6 +121,8 @@ The `APIMANAGER_` prefix below will be different depending on the gateway the ag
 APIMANAGER_CATEGORY_AUTOCREATION=true
 ```
 
+When auto creating categories the name of all categories will be processed prior to creating the category on Amplify Central.  Since categories may only contain letters, numbers, spaces, [], and () any other characters will be removed automatically.
+
 ### Tag value as category
 
 In addition to static category names the category mapping may reference a tags value as a category to add.  To do this the categories list needs to add a value such as `tag.TagA.Value`.  This will have the affect of the value of TagA becoming a category.
