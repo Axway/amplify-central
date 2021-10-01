@@ -101,16 +101,10 @@ Open the following ports so that agents can communicate to the Amplify platform:
 | US     | apicentral.axway.com                                                                      | 3.94.245.118   | 443        | HTTPS        | API definitions, Subscription info |
 |        |                                                                                           | 54.208.199.251 |            |              |                                    |
 |        |                                                                                           | 3.212.78.217   |            |              |                                    |
-|        |                                                                                           | 52.202.95.208  |            |              |                                    |
-|        |                                                                                           | 107.23.176.64  |            |              |                                    |
-|        |                                                                                           | 3.225.16.120   |            |              |                                    |
 |        |                                                                                           |                |            |              |                                    |
 | EU     | central.eu-fr.axway.com                                                                   | 52.47.84.198   | 443        | HTTPS        | API definitions, Subscription info |
 |        |                                                                                           | 13.36.25.69    |            |              |                                    |
 |        |                                                                                           | 35.181.21.87   |            |              |                                    |
-|        |                                                                                           | 13.36.2.143    |            |              |                                    |
-|        |                                                                                           | 13.36.52.216   |            |              |                                    |
-|        |                                                                                           | 15.236.7.112   |            |              |                                    |
 |        |                                                                                           |                |            |              |                                    |
 | US     | ingestion.datasearch.axway.com                                                            | 54.225.171.111 | 5044 or 443 | TCP or HTTPS | API event data                     |
 |        |                                                                                           | 54.225.2.221   |            |              |                                    |
