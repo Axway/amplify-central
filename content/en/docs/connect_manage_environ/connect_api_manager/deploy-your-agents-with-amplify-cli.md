@@ -67,7 +67,7 @@ axway central install agents --region=EU
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (V7 gateway in this scenario).
-2. Select the agents you want to install: Discovery / Traceability / all.
+2. Select the agents you want to install: Discovery / Traceability / Traceability offline mode / all.
 3. Platform connectivity:
    * **environment**: can be an existing environment or a new one that will be created by the installation procedure
    * **team**: the default team the agent will assign when no team corresponds to the API Manager organization that the API belongs to. If the value is left empty, "Default team" will be used by the agent when no team correspond to the API organization.
