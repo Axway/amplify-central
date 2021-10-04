@@ -64,8 +64,8 @@ id = "UA-56643615-3"
 
 [languages]
 [languages.en]
-title = "Axway Open Documentation"
-description = "Axway Open Documentation"
+title = "Axway Documentation"
+description = "Axway Documentation"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
