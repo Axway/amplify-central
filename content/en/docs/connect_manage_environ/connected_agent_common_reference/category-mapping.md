@@ -49,7 +49,7 @@ APIMANAGER_CATEGORY_MAPPINGS=[{mapping1}, {mapping2}, {mapping3}, ...]
 Example:
 
 ```bash
-APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.Exists()",categories:"CategoryA, CategoryB"}, {conditions:"tag.API_TYPE.Contains(\"API\")",categories:"API Category"}]
+APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.Exists()",categories:"CategoryA, CategoryB"}, {conditions:"tag.API_TYPE.contains(\"API\")",categories:"API Category"}]
 ```
 
 ## Conditionals
@@ -82,14 +82,23 @@ Sample to categorize APIs having a tag name API_TYPE and does not have 'Finance'
 tag.<tagName>.contains(<value>)
 ```
 
-Sample to categorize APIs having a tag name API_TYPE with a value containing API: ```tag.API_TYPE.contains(API)```
+Sample to categorize APIs having a tag name API_TYPE with a value containing API: ```tag.API_TYPE.contains(\"API\")```
 
-Sample to categorize APIs having a tag name API_TYPE with a value not containing API: ```tag.API_TYPE.contains(API) == false```
+Sample to categorize APIs having a tag name API_TYPE with a value not containing API: ```tag.API_TYPE.contains(\"API\") == false```
+
+
+```bash
+APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.contains(\"API\")",categories:"API Category"}]
+```
 
 ### Categorize using MatchRegEx
 
 ```
 tag.<tagName>.matchRegEx(<regularExpression>)
+```
+
+```bash
+APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.matchRegEx(\"API\")",categories:"API Category"}]
 ```
 
 ### Logical operators
