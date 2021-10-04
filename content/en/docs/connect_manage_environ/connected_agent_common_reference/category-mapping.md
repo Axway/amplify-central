@@ -86,7 +86,6 @@ Sample to categorize APIs having a tag name API_TYPE with a value containing API
 
 Sample to categorize APIs having a tag name API_TYPE with a value not containing API: ```tag.API_TYPE.contains(\"API\") == false```
 
-
 ```bash
 APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.contains(\"API\")",categories:"API Category"}]
 ```
