@@ -1,6 +1,6 @@
 ---
-title: Automatic categorization
-linkTitle: Automatic categorization
+title: Use discovery agent to categorize your APIs
+linkTitle: Use discovery agent to categorize your APIs
 draft: false
 weight: 10
 description: Understand how the Discovery Agent can automatically categorize 
