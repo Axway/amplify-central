@@ -50,7 +50,7 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * **Amplify Central WebUI**:
     * Delete Resources using a name scope parameter Environments list page
     * Service Mesh v1 support has been removed. It is now replaced by Amplify ISTIO
-    
+
 **Bug fixes**:
 
 * Amplify Central CLI could not create a service account when the path contained a space
@@ -167,7 +167,7 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * **Amplify Azure Agent**:
     * Amplify Azure Agent is publicly available
     * Amplify Azure Traceability Agent reports subscription usage
-    * Amplify Azure Traceability Agent reports APIs usage 
+    * Amplify Azure Traceability Agent reports APIs usage
 
 * **Mesh governance**: Amplify CLI for Istio agent Kubernetes discovery
 
