@@ -136,7 +136,7 @@ When auto creating categories, the name of all categories will be processed prio
 
 In addition to static category names, the category mapping may reference a tags value as a category to add.  To do this, the categories list must add a value such as `tag.TagA.Value`.  This will have the affect of the value of TagA becoming a category.
 
-Sample of using TagA's value as a category on the API: 
+Sample of using TagA's value as a category on the API:
 
 ```
 APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.TagA.Exists()",categories:"CategoryA,tag.TagA.Value"}]
