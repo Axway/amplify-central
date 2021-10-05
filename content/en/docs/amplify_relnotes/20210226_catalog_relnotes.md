@@ -1,6 +1,6 @@
 ---
 title: Unified Catalog February 2021 Release Notes
-linkTitle: February 2021 Release Notes
+linkTitle: Unified Catalog February 2021
 weight: 90
 date: 2021-02-26
 description: The Unified Catalog is the Marketplace of all integration assets in

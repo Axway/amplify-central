@@ -1,6 +1,6 @@
 ---
 title: Use Discovery Agent to categorize your APIs
-linkTitle: Use Discovery aAgent to categorize your APIs
+linkTitle: Use Discovery Agent to categorize your APIs
 draft: false
 weight: 10
 description: Understand how the Discovery Agent can automatically categorize 
