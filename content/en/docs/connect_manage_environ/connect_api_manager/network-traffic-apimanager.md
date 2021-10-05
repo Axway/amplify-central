@@ -95,37 +95,40 @@ Open the following ports so that agents can communicate to the Amplify platform:
 
 **Outbound**:
 
-| Region | Host                                                                                      | IP             | port       | Protocol     | data                               |
-|--------|-------------------------------------------------------------------------------------------|----------------|------------|--------------|------------------------------------|
-| EU/US  | platform.axway.com                                                                        | 34.211.114.227 | 443        | HTTPS        |                                    |
-|        |                                                                                           | 54.201.86.113  |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| EU/US  | lighthouse.admin.axway.com                                                                |                | 443        | HTTPS        | API usage statics                  |
-|        |                                                                                           |                |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| EU/US  | login.axway.com                                                                           | 52.58.132.2    | 443        | HTTPS        |                                    |
-|        |                                                                                           | 52.29.4.35     |            |              |                                    |
-|        |                                                                                           | 54.93.140.145  |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| US     | apicentral.axway.com                                                                      | 3.94.245.118   | 443        | HTTPS        | API definitions, Subscription info |
-|        |                                                                                           | 54.208.199.251 |            |              |                                    |
-|        |                                                                                           | 3.212.78.217   |            |              |                                    ||                                    |
-|        |                                                                                           |                |            |              |                                    |
-| EU     | central.eu-fr.axway.com                                                                   | 52.47.84.198   | 443        | HTTPS        | API definitions, Subscription info |
-|        |                                                                                           | 13.36.25.69    |            |              |                                    |
-|        |                                                                                           | 35.181.21.87   |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| US     | ingestion.datasearch.axway.com                                                            | 54.225.171.111 | 5044 or 443 | TCP or HTTPS | API event data                     |
-|        |                                                                                           | 54.225.2.221   |            |              |                                    |
-|        |                                                                                           | 54.146.97.250  |            |              |                                    |
-|        |                                                                                           | 54.147.98.128  |            |              |                                    |
-|        |                                                                                           | 52.206.193.184 |            |              |                                    |
-|        |                                                                                           | 54.225.92.97   |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| EU     | ingestion.visibility.eu-fr.axway.com                                                      | 15.236.125.123 | 5044 or 443 | TCP or HTTPS | API event data                     |
-|        |                                                                                           | 35.180.77.202  |            |              |                                    |
-|        |                                                                                           | 13.36.27.97    |            |              |                                    |
-|        |                                                                                           | 13.36.33.229   |            |              |                                    |
+| Region | Host                                 | IP             | port        | Protocol     | data                               |
+|--------|--------------------------------------|----------------|-------------|--------------|------------------------------------|
+| EU/US  | platform.axway.com                   | 34.211.114.227 | 443         | HTTPS        |                                    |
+|        |                                      | 54.201.86.113  |             |              |                                    |
+|        |                                      |                |             |              |                                    |
+| EU/US  | lighthouse.admin.axway.com           |                | 443         | HTTPS        | API usage statics                  |
+|        |                                      |                |             |              |                                    |
+|        |                                      |                |             |              |                                    |
+| EU/US  | login.axway.com                      | 52.58.132.2    | 443         | HTTPS        |                                    |
+|        |                                      | 52.29.4.35     |             |              |                                    |
+|        |                                      | 54.93.140.145  |             |              |                                    |
+|        |                                      |                |             |              |                                    |
+| EU/US  | axway.jfrog.io                       |                | 443         | HTTPS        | Version check for new releases     |
+|        |                                      |                |             |              |                                    |
+|        |                                      |                |             |              |                                    |
+| US     | apicentral.axway.com                 | 3.94.245.118   | 443         | HTTPS        | API definitions, Subscription info |
+|        |                                      | 54.208.199.251 |             |              |                                    |
+|        |                                      | 3.212.78.217   |             |              |                                    |
+|        |                                      |                |             |              |                                    |
+| EU     | central.eu-fr.axway.com              | 52.47.84.198   | 443         | HTTPS        | API definitions, Subscription info |
+|        |                                      | 13.36.25.69    |             |              |                                    |
+|        |                                      | 35.181.21.87   |             |              |                                    |
+|        |                                      |                |             |              |                                    |
+| US     | ingestion.datasearch.axway.com       | 54.225.171.111 | 5044 or 443 | TCP or HTTPS | API event data                     |
+|        |                                      | 54.225.2.221   |             |              |                                    |
+|        |                                      | 54.146.97.250  |             |              |                                    |
+|        |                                      | 54.147.98.128  |             |              |                                    |
+|        |                                      | 52.206.193.184 |             |              |                                    |
+|        |                                      | 54.225.92.97   |             |              |                                    |
+|        |                                      |                |             |              |                                    |
+| EU     | ingestion.visibility.eu-fr.axway.com | 15.236.125.123 | 5044 or 443 | TCP or HTTPS | API event data                     |
+|        |                                      | 35.180.77.202  |             |              |                                    |
+|        |                                      | 13.36.27.97    |             |              |                                    |
+|        |                                      | 13.36.33.229   |             |              |                                    |
 
 Note: _Region_ column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding _Host_/_Port_ for your agents to operate correctly.
 
@@ -133,9 +136,9 @@ Other ports which may need to be opened so that the Agent may monitor API Gatewa
 
 **Internal**:
 
-| Host             | Port           | Protocol | Data                                                                                                                                                    |
-|------------------|----------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| API Manager Host | 8075 (default) | HTTPS    | API Discovery                                                                                                                                           |
+| Host             | Port           | Protocol | Data                                                                                                                                                                   |
+|------------------|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| API Manager Host | 8075 (default) | HTTPS    | API Discovery                                                                                                                                                          |
 | API Gateway Host | 8090 (default) | HTTPS    | API Transaction Header data (see [APIGATEWAY GETHEADERS](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent)) |
 
 **Inbound (used for the agent status server)**:

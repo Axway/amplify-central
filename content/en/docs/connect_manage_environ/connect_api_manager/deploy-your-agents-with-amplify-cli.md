@@ -67,11 +67,11 @@ axway central install agents --region=EU
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (V7 gateway in this scenario).
-2. Platform connectivity:
+2. Select the agents you want to install: Discovery / Traceability / Traceability offline mode / all.
+3. Platform connectivity:
    * **environment**: can be an existing environment or a new one that will be created by the installation procedure
    * **team**: the default team the agent will assign when no team corresponds to the API Manager organization that the API belongs to. If the value is left empty, "Default team" will be used by the agent when no team correspond to the API organization.
    * **service account**: can be an existing service account (from platform or Central). The installation procedure creates only a Central service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify Platform. If you choose to create a new one, the generated private and public keys will be provided.
-3. Select the agents you want to install: Discovery / Traceability / all.
 4. Select the agent deployment mode: binary / Docker image / Helm.
 5. API Manager connectivity:
    * **hostname** of the API Manager (localhost by default - use the api manager service name `apimgr` when deploying via helm charts)
@@ -137,7 +137,7 @@ docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys axway.jfrog.io/
 Traceability Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:latest
+docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:latest
 ```
 
 ### Helm deployment

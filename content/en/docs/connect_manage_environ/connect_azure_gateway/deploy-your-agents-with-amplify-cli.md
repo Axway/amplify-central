@@ -76,11 +76,11 @@ axway central install agents --region=EU
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (Azure API Gateway in this scenario).
-2. Platform connectivity:
+2. Select the agents you want to install: Discovery / Traceability / All Agents. **Note**: If you select Traceability **ONLY**, you must provide configurations for both Steps 4 and 5.
+3. Platform connectivity:
    * **Environment**: can be an existing environment or a new one that will be created by the installation procedure
    * **Team**: can be an existing team or a new one that will be created by the installation procedure
    * **Service account**: can be an existing service account (from platform or Central). The installation procedure creates only a Central service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify Platform. If you choose to create a new one, the generated private and public keys will be provided.
-3. Select the agents you want to install: Discovery / Traceability / All Agents. **Note**: If you select Traceability **ONLY**, you must provide configurations for both Steps 4 and 5.
 4. Azure Discovery Agent Configuration Setup options:
    * **Tenant ID** can be found in the *Directory ID* box on the Properties page
    * **Subscription ID** is a GUID that uniquely identifies your subscription to use Azure services
