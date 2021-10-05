@@ -5,35 +5,35 @@ draft: false
 weight: 10
 description: Understand how the Discovery Agent can automatically categorize 
   discovered APIs when publishing to Amplify Central. Learn how you can add
-  conditions and associated categories when those conditions are met
+  conditions and associated categories when those conditions are met.
 ---
 
 {{% alert title="Note" %}}
-The automatic categorization filter is only available in the Axway API Manager Discovery agent. Support in the other agents is coming soon!
+The automatic categorization filter is only available in the Axway API Manager Discovery Agent. Support in the other agents is coming soon!
 {{% /alert %}}
 
 ## Before you start
 
-* Review Logical operators and Comparative operators
+* Review Logical operators and Comparative operators.
 
 ## Objectives
 
-Learn how to set conditions based on tag name and tag value to automatically categorize discover APIs in Amplify Central.
+Learn how to set conditions based on tag name and tag value to automatically categorize discovered APIs in Amplify Central.
 
 ## Category mapping
 
 Category mapping provides a way for your agent to determine how to map discoverd APIs to categories for viewing in Amplify Central.
 
 {{% alert title="Note" %}}
-When any category mapping is defined any manual categories will be removed from an API when the agent performs an update
+When any category mapping is defined, manual categories will be removed from an API when the agent performs an update
 {{% /alert %}}
 
 ## Mapping sample
 
-Each mapping definition will include the `conditions` key as well as the `categories` key.  When the condition returns true the comma separated list of categories will be applied to the API.
+Each mapping definition will include both the `conditions` key and the `categories` key.  When the condition returns true, the comma separated list of categories will be applied to the API.
 
 {{% alert title="Note" %}}
-The `APIMANAGER_` prefix below will be different depending on the gateway the agent is for.
+The `APIMANAGER_` prefix below will be different depending on which gateway the agent is for.
 {{% /alert %}}
 
 ```bash
@@ -54,7 +54,7 @@ APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.Exists()",categories:"Ca
 
 ## Conditionals
 
-The conditionals here use the same format and operators that the Discovery agent filter feature uses.
+Conditionals use the same format and operators that the Discovery Agent filter feature uses.
 
 ### Categorize based on tag name
 
@@ -122,29 +122,29 @@ Sample of a composite expression to categorize APIs having Math as a tag name OR
 
 ## Categorizing
 
-When an entire conditional is met the categories defined with that condition are added to the list of categories that will be applied to the API in Amplify Central.
+When an entire conditional is met, the categories defined with that condition are added to the list of categories that will be applied to the API in Amplify Central.
 
-When multiple mapping conditions evaluate to true all categories from all mappings are added to the list with duplicates removed.
+When multiple mapping conditions evaluate to true, all categories from all mappings are added to the list with duplicates removed.
 
 ### Category auto creation
 
-An additional switch (default: `false`) is provided to tell the Agent to create any category that does not already exist in Amplify Central. When this switch is off the agent will not apply non-existent categories to the API.
+An additional switch (default: `false`) is provided to tell the Agent to create any category that does not already exist in Amplify Central. When this switch is off, the agent will not apply non-existent categories to the API.
 
 {{% alert title="Note" %}}
-The `APIMANAGER_` prefix below will be different depending on the gateway the agent is for.
+The `APIMANAGER_` prefix below will be different depending on which gateway the agent is for.
 {{% /alert %}}
 
 ```
 APIMANAGER_CATEGORY_AUTOCREATION=true
 ```
 
-When auto creating categories the name of all categories will be processed prior to creating the category on Amplify Central.  Since categories may only contain letters, numbers, spaces, [], and () any other characters will be removed automatically.
+When auto creating categories, the name of all categories will be processed prior to creating the category on Amplify Central.  Since categories may only contain letters, numbers, spaces, [], and () any other characters will be removed automatically.
 
 ### Tag value as category
 
-In addition to static category names the category mapping may reference a tags value as a category to add.  To do this the categories list needs to add a value such as `tag.TagA.Value`.  This will have the affect of the value of TagA becoming a category.
+In addition to static category names, the category mapping may reference a tags value as a category to add.  To do this, the categories list must add a value such as `tag.TagA.Value`.  This will have the affect of the value of TagA becoming a category.
 
-Here is a sample of using TagA's value as a category ont eh API.
+Sample of using TagA's value as a category on the API:
 
 ```
 APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.TagA.Exists()",categories:"CategoryA,tag.TagA.Value"}]
