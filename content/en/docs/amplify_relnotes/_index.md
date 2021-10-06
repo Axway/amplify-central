@@ -31,6 +31,8 @@ description: Provides a list of release notes for Amplify Central, Amplify
 * Helm deployment for agent installation
 * Central assets can be filtered with the use of RSQL
 
+**Bug fixes**: None
+
 ## [Amplify agents July 2021](/docs/amplify_relnotes/20210731_ampc_agents_relnotes/)
 
 **What's new for**:
@@ -117,7 +119,6 @@ description: Provides a list of release notes for Amplify Central, Amplify
 **What's new for**:
 
 * **Amplify Central WebUI**: Use markdown formatting for Environment and API Service descriptions
-
 * **Amplify agents general**: Traceability Agent data redaction
 
 **Bug fixes**:
