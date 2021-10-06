@@ -5,9 +5,11 @@ no_list: true
 weight: 100
 date: 2020-10-28
 hide_readingtime: true
-description: Provides a list of release notes for Amplify Central, Amplify agents, and Unified Catalog; along with enhancement overviews and bug fixes for each release. For more details, click on the release note title to go to the corresponding release note. 
+description: Provides a list of release notes for Amplify Central, Amplify
+  agents, and Unified Catalog; along with enhancement overviews and bug fixes
+  for each release. For more details, click on the release note title to go to
+  the corresponding release note.
 ---
-
 ## [Amplify agents August 2021](/docs/amplify_relnotes/20210831_ampc_agents_relnotes/)
 
 **What's new for**:
@@ -28,6 +30,8 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Transaction configuration during installation
 * Helm deployment for agent installation
 * Central assets can be filtered with the use of RSQL
+
+**Bug fixes**: None
 
 ## [Amplify agents July 2021](/docs/amplify_relnotes/20210731_ampc_agents_relnotes/)
 
@@ -61,6 +65,7 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 **What's new for**:
 
 * **Axway CLI**: Manage organization, users and teams
+
 * **Amplify Central WebUI**:
     * Visualize the Agent Status in Central WebUI
     * Dependency Analysis View
@@ -74,9 +79,12 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 ## [Unified Catalog June 2021](/docs/amplify_relnotes/20210631_catalog_relnotes/)
 
-**What's new**:
+**What's new**: Managing categories and assigning them to catalog items when publishing an API Service
 
 **Bug fixes**:
+
+* The protocol dropdown on the API Service Endpoint screen did not allow for selection of protocols other than http/http for AsyncAPI services
+* Developers could no longer access an environment owned by their team
 
 ## [Amplify Central May 2021](/docs/amplify_relnotes/20210531_ampc_relnotes/)
 
@@ -102,16 +110,15 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 ## [Unified Catalog May 2021](/docs/amplify_relnotes/20210531_catalog_relnotes/)
 
-**What's new**:
+**What's new**: Discovery and publishing of GraphQL APIs
 
-**Bug fixes**:
+**Bug fixes**: None
 
 ## [Amplify Central April 2021](/docs/amplify_relnotes/20210430_ampc_relnotes/)
 
 **What's new for**:
 
 * **Amplify Central WebUI**: Use markdown formatting for Environment and API Service descriptions
-
 * **Amplify agents general**: Traceability Agent data redaction
 
 **Bug fixes**:
@@ -124,9 +131,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 ## [Unified Catalog April 2021](/docs/amplify_relnotes/20210431_catalog_relnotes/)
 
-**What's new**:
+**What's new**: None
 
 **Bug fixes**:
+
+* API catalog item is not created for API with large swagger files (3000 methods)
+* Users that are assigned the Platform Consumer role and Team Consumer role are not able to access Unified Catalog
+* Loading the subscriptions details screen fails with a CORS error on Safari
 
 ## [Amplify Central March 2021](/docs/amplify_relnotes/20210331_ampc_relnotes/)
 
@@ -150,9 +161,12 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 ## [Unified Catalog March 2021](/docs/amplify_relnotes/20210331_catalog_relnotes/)
 
-**What's new**:
+**What's new**: None
 
 **Bug fixes**:
+
+* Removing an environment with duplicate attributes could get stuck in deleting state
+* The Unified Catalog could not display the full schema definition in the embedded Swagger UI
 
 ## [Amplify Central February 2021](/docs/amplify_relnotes/20210228_ampc_relnotes/)
 
@@ -184,7 +198,15 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 **What's new**:
 
+* Event-based APIs can now be registered in the Unified Catalog as AsyncAPI type
+* Catalog Subscription enhancements
+
 **Bug fixes**:
+
+* Team names no longer visible on catalog asset
+* Logging with a user that was assigned the Consumer role, does not allow viewing the subscription details
+* Failure publishing to the Unified Catalog using the Amplify Apigee extension for APIs with long description
+* Filter by category pagination issue
 
 ## [Amplify Central January 2021](/docs/amplify_relnotes/20210131_ampc_relnotes/)
 
@@ -206,18 +228,19 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 ## [Unified Catalog January 2021](/docs/amplify_relnotes/20210130_catalog_relnotes/)
 
-**What's new**:
+**What's new**: Improve searching and browsing in the Unified Catalog
 
 **Bug fixes**:
+
+* Name of an active subscription could not be updated without changing the subscription status
+* Long category names, descriptions, or tags were not properly displayed
 
 ## [Amplify Central November 2020](/docs/amplify_relnotes/20201130_ampc_relnotes/)
 
 **What's new for**:
 
 * **Amplify Central CLI**: The EU region is now supported while installing agents
-
 * **Amplify Central WebUI**: View if a Discovery Agent is connected to an environment
-
 * **Amplify agents general**: Discovery Agent now handles log rotation/retention
 
 **Bug fixes**:
@@ -231,7 +254,15 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 **What's new**:
 
+* Categories management through the Unified Catalog UI
+* Improved searching and browsing in the Unified Catalog
+* Enable integration with Bitbucket for manual discovery and publishing of APIs
+* Enable integration with Layer7 for manual discovery and publishing of APIs
+
 **Bug fixes**:
+
+* Users assigned the Developer role could not push an API asset from the Unified Catalog to Integration Builder as a connector
+* When no app was required with a subscription, the Approve and Reject dialog screen would display “App has been deleted”
 
 ## [Amplify Central October 2020](/docs/amplify_relnotes/20201030_ampc_relnotes/)
 
