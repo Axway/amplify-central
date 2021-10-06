@@ -64,7 +64,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
 **What's new for**:
 
 * **Axway CLI** (version 2.1): Manage organization, users and teams
-* **Axway Central CLI** (version 1.16.0): 
+* **Axway Central CLI** (version 1.16.0):
     * New commands to manage organization, users and teams
     * New command to create agent resource
 * **Amplify Central WebUI**:
