@@ -14,8 +14,8 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Amplify Gateway Agent**: Offline usage report and volume usage report
-* **Amplify agents general**: Usage report contains the agent name
+* **Amplify Gateway Agent** (version 1.1.2): Offline usage report and volume usage report
+* **Amplify agents general** (version 1.1.2): Usage report contains the agent name
 
 **Bug fixes**:
 
@@ -25,7 +25,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 ## [Amplify Central August 2021](/docs/amplify_relnotes/20210831_ampc_relnotes/)
 
-**What's new for Axway CLI**:
+**What's new for Axway Central CLI** (version 1.25.0):
 
 * Transaction configuration during installation
 * Helm deployment for agent installation
@@ -37,9 +37,9 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Amplify Gateway Agent**: Report traffic for API Gateway only scenario
-* **Amplify AWS Gateway Agent**: Encrypted queues
-* **Amplify Istio Agent**: Alignment with the latest Amplify Agents SDK
+* **Amplify Gateway Agent** (version 1.1.0): Report traffic for API Gateway only scenario
+* **Amplify AWS Gateway Agent** (version 1.1.0): Encrypted queues
+* **Amplify Istio Agent** (version 1.1.0): Alignment with the latest Amplify Agents SDK
 
 **Bug fixes**: Catalog item’s categories are lost when a consumer instance is updated
 
@@ -47,10 +47,9 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Axway CLI**:
+* **Axway Central CLI** (version 1.21.0):
     * Group API Services in Assets
     * Delete Resources using a name scope parameter
-
 * **Amplify Central WebUI**:
     * Delete Resources using a name scope parameter Environments list page
     * Service Mesh v1 support has been removed. It is now replaced by Amplify ISTIO
@@ -64,8 +63,8 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Axway CLI**: Manage organization, users and teams
-
+* **Axway CLI** (version 2.1): Manage organization, users and teams
+* **Axway Central CLI** (version 1.16.0): Visualize Agent Status in Central WebUI
 * **Amplify Central WebUI**:
     * Visualize the Agent Status in Central WebUI
     * Dependency Analysis View
@@ -90,10 +89,10 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
+* **Amplify Central CLI** (version 1.10.0): None
 * **Amplify Central WebUI**:
     * The Developer role has access to the environment and API services
     * The Central Administrator can edit the environment details
-
 * **Amplify agents general**:
     * Transaction sampling
     * Transaction redaction
@@ -118,6 +117,9 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
+* **Axway Central CLI** (version 1.9.0):
+    * Select the name of your agent you want to appear in the Topology view
+    * Environment and API Services can be segmented by team
 * **Amplify Central WebUI**: Use markdown formatting for Environment and API Service descriptions
 * **Amplify agents general**: Traceability Agent data redaction
 
@@ -143,8 +145,8 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
+* **Axway Central CLI** (version 1.0.0): None
 * **Amplify Central WebUI**: JSON or YAML to create API service / Catalog item
-
 * **Mesh governance**:
     * Support for Istio 1.8.2
     * Support for Red Hat OpenShift 4.7 managed clusters
@@ -172,17 +174,14 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Amplify Central CLI**: Download the Azure agents from the public artifactory
-
+* **Amplify Central CLI** (version 0.12.0): Download the Azure agents from the public artifactory
 * **Amplify Central WebUI**:
     * Providers can publish an API Service to the Unified Catalog
     * Providers can register an AsyncAPI
-
 * **Amplify Azure Agent**:
     * Amplify Azure Agent is publicly available
     * Amplify Azure Traceability Agent reports subscription usage
     * Amplify Azure Traceability Agent reports APIs usage
-
 * **Mesh governance**: Amplify CLI for Istio agent Kubernetes discovery
 
 **Bug fixes**:
@@ -212,12 +211,10 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Amplify Central CLI**:
+* **Amplify Central CLI** (version 0.7.0):
     * Installation of Azure agents
     * Installation of the alpha Mesh Governance Discovery Agent
-
 * **Amplify Central WebUI**: View the agents connected to an environment in the Environment Detail page
-
 * **Mesh governance**: The alpha Mesh Governance Discovery Agent can be installed with the CLI option
 
 **Bug fixes**:
@@ -239,7 +236,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Amplify Central CLI**: The EU region is now supported while installing agents
+* **Amplify Central CLI** (version 0.1.19): The EU region is now supported while installing agents
 * **Amplify Central WebUI**: View if a Discovery Agent is connected to an environment
 * **Amplify agents general**: Discovery Agent now handles log rotation/retention
 
@@ -272,20 +269,16 @@ description: Provides a list of release notes for Amplify Central, Amplify
     * Filter asset by type
     * Enable consumers to make changes to their subscriptions
     * Catalog asset Categorization
-
-* **Amplify Central CLI**:
+* **Amplify Central CLI** (version 0.1.15):
     * Window 10 support using the Command Prompt and Powershell
     * Creation of Amplify Central Service Accounts
     * Installation of the Axway Edge Discovery and Traceability Agents
     * Installation of the AWS Discovery and Traceability Agents
     * Installation of the Mesh discovery agent in a Kubernetes cluster
-
 * **Amplify Central WebUI**: Amplify Central is now available in an EU Data Region
-
 * **Amplify Edge Gateway / AWS Agents**:
     * Axway Edge Gateway agents are available either as a Linux binary or a Docker image
     * AWS API Gateway agents are available as a Docker image
-
 * **Mesh governance**: The validated service mesh version has been updated to Istio 1.6.8
 
 **Bug fixes**:
