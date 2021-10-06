@@ -8,7 +8,7 @@ hide_readingtime: true
 description: Provides a list of release notes for Amplify Central, Amplify agents, and Unified Catalog; along with enhancement overviews and bug fixes for each release. For more details, click on the release note title to go to the corresponding release note. 
 ---
 
-## [Amplify agents August 2021](20210831_ampc_agents_relnotes.md)
+## [Amplify agents August 2021](/docs/amplify_relnotes/20210831_ampc_agents_relnotes/)
 
 **What's new for**:
 
@@ -21,7 +21,7 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Discovered API added to wrong team
 * Discovery Agent panic while discovering
 
-## [Amplify Central August 2021](20210831_ampc_relnotes.md)
+## [Amplify Central August 2021](/docs/amplify_relnotes/20210831_ampc_relnotes/)
 
 **What's new for Axway CLI**:
 
@@ -29,7 +29,7 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Helm deployment for agent installation
 * Central assets can be filtered with the use of RSQL
 
-## [Amplify agents July 2021](20210731_ampc_agents_relnotes.md)
+## [Amplify agents July 2021](/docs/amplify_relnotes/20210731_ampc_agents_relnotes/)
 
 **What's new for**:
 
@@ -39,7 +39,7 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 **Bug fixes**: Catalog item’s categories are lost when a consumer instance is updated
 
-## [Amplify Central July 2021](20210731_ampc_relnotes.md)
+## [Amplify Central July 2021](/docs/amplify_relnotes/20210731_ampc_relnotes/)
 
 **What's new for**:
 
@@ -56,7 +56,7 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Amplify Central CLI could not create a service account when the path contained a space
 * Long endpoint names that contained a period could not be created
 
-## [Amplify Central June 2021](20210630_ampc_relnotes.md)
+## [Amplify Central June 2021](/docs/amplify_relnotes/20210630_ampc_relnotes/)
 
 **What's new for**:
 
@@ -72,13 +72,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * A page error is displayed when adding the first API Service to an environment in the WebUI
 * Traceability Agent working in an Externally Managed Topology (EMT) deployment cannot report the transaction request/response headers
 
-## [Unified Catalog June 2021](20210631_catalog_relnotes.md)
+## [Unified Catalog June 2021](/docs/amplify_relnotes/20210631_catalog_relnotes/)
 
 **What's new**:
 
 **Bug fixes**:
 
-## [Amplify Central May 2021](20210531_ampc_relnotes.md)
+## [Amplify Central May 2021](/docs/amplify_relnotes/20210531_ampc_relnotes/)
 
 **What's new for**:
 
@@ -100,13 +100,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Prevent running multiple instances of an agent on the same machine
 * Installing Traceability Agent only for v7 asks you for disco agent name
 
-## [Unified Catalog May 2021](20210531_catalog_relnotes.md)
+## [Unified Catalog May 2021](/docs/amplify_relnotes/20210531_catalog_relnotes/)
 
 **What's new**:
 
 **Bug fixes**:
 
-## [Amplify Central April 2021](20210430_ampc_relnotes.md)
+## [Amplify Central April 2021](/docs/amplify_relnotes/20210430_ampc_relnotes/)
 
 **What's new for**:
 
@@ -122,13 +122,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Base path is not displayed in service endpoint
 * API Observer is not always showing the correct number of spans
 
-## [Unified Catalog April 2021](20210431_catalog_relnotes.md)
+## [Unified Catalog April 2021](/docs/amplify_relnotes/20210431_catalog_relnotes/)
 
 **What's new**:
 
 **Bug fixes**:
 
-## [Amplify Central March 2021](20210331_ampc_relnotes.md)
+## [Amplify Central March 2021](/docs/amplify_relnotes/20210331_ampc_relnotes/)
 
 **What's new for**:
 
@@ -148,13 +148,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Incorrect URL for Traceability Agent running in EU organization
 * Amplify Central WebUI Observer traffic display is incomplete
 
-## [Unified Catalog March 2021](20210331_catalog_relnotes.md)
+## [Unified Catalog March 2021](/docs/amplify_relnotes/20210331_catalog_relnotes/)
 
 **What's new**:
 
 **Bug fixes**:
 
-## [Amplify Central February 2021](20210228_ampc_relnotes.md)
+## [Amplify Central February 2021](/docs/amplify_relnotes/20210228_ampc_relnotes/)
 
 **What's new for**:
 
@@ -180,13 +180,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * V7 Traceability Agent Linux service mode broken
 * Fixed IP addresses
 
-## [Unified Catalog February 2021](20210226_catalog_relnotes.md)
+## [Unified Catalog February 2021](/docs/amplify_relnotes/20210226_catalog_relnotes/)
 
 **What's new**:
 
 **Bug fixes**:
 
-## [Amplify Central January 2021](20210130_ampc_relnotes.md)
+## [Amplify Central January 2021](/docs/amplify_relnotes/20210131_ampc_relnotes/)
 
 **What's new for**:
 
@@ -204,13 +204,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * Some Amplify Central CLI results from the amplify central get xxx commands did not correctly return their RESOURCE KIND and SCOPE KIND columns
 * The environment name was not reported for API transactions shown in the Amplify Platform Visibility Dashboard
 
-## [Unified Catalog January 2021](20210131_catalog_relnotes.md)
+## [Unified Catalog January 2021](/docs/amplify_relnotes/20210130_catalog_relnotes/)
 
 **What's new**:
 
 **Bug fixes**:
 
-## [Amplify Central November 2020](20201130_ampc_relnotes.md)
+## [Amplify Central November 2020](/docs/amplify_relnotes/20201130_ampc_relnotes/)
 
 **What's new for**:
 
@@ -227,13 +227,13 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 * When an API was not in PUBLISHED status, a consumer could still start the subscription
 * The Central CLI results listing for the Mesh Discovery resources now indicates the correct SCOPE and SCOPE NAME the resources are related to
 
-## [Unified Catalog November 2021](20201130_catalog_relnotes.md)
+## [Unified Catalog November 2021](/docs/amplify_relnotes/20201130_catalog_relnotes/)
 
 **What's new**:
 
 **Bug fixes**:
 
-## [Amplify Central October 2020](20201030_ampc_relnotes.md)
+## [Amplify Central October 2020](/docs/amplify_relnotes/20201030_ampc_relnotes/)
 
 **What's new for**:
 
@@ -264,4 +264,4 @@ description: Provides a list of release notes for Amplify Central, Amplify agent
 
 ## Support Policy for Amplify Agents and Amplify Agent SDK
 
-See [Support Policy](agent_agentsdk_support_policy.md).
+See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).

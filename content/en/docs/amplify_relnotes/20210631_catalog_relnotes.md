@@ -1,8 +1,8 @@
 ---
-title: Unified Catalog June Release Notes
-linkTitle: June 2021 Release Notes
+title: Unified Catalog June 2021 Release Notes
+linkTitle: Unified Catalog June 2021
 weight: 90
-date: 2021-06-29
+date: 2021-06-21
 description: The Unified Catalog is the Marketplace of all integration assets in
   the enterprise, that can range from APIs to Managed File Transfer Flows, and
   caters to both providers and consumers.
