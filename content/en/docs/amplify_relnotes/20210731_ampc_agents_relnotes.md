@@ -26,7 +26,7 @@ The following new features and enhancements are available in this update.
     * `TRACEABILITY_REDACTION_JMSPROPERTIES_SHOW`
     * `TRACEABILITY_REDACTION_JMSPROPERTIES_SANITIZE`
 
-    Refer to [JMS Trace redaction](/docs/connected-agent-common-reference/trace_redaction/#jms-properties-show-rules) and [JMS property sanitization](/docs/connected-agent-common-reference/trace_redaction/#jms-properties-value-sanitization-rules) topics.
+    Refer to [JMS Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/#jms-properties-show-rules) and [JMS property sanitization](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/#jms-properties-value-sanitization-rules) topics.
 * Last activity time is now reported to the platform each time an agent sends data to the Platform and each time an agent health check is triggered.
 
 ### Amplify AWS Gateway agents enhancements

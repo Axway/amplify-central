@@ -10,7 +10,7 @@ description: Learn how to publish an API service endpoint to Unified Catalog.
 
 API service endpoints are an optional component of an API Service published to Unified Catalog, to make them available to developers and consumers to consume within the team or across the organization.
 
-Before you publish an endpoint to catalog, you must [add an endpoint to the API service](/docs/connect_manager_environ/add_endpoints).
+* Before you publish an endpoint to catalog, you must [add an endpoint to the API service](/docs/connect_manage_environ/add_endpoints/).
 
 1. From the details page of your service, within the **Endpoints** tab select the **Publish** button from the actions menu of the endpoint you wish to publish.
 2. Manage your endpoint to be published to Unified Catalog:

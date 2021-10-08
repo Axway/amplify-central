@@ -392,7 +392,7 @@ The following is an example of a consumer instance with a custom subscription th
 ```
 
 * **$spec.webhooks**: Array of references to webhook resources, which will be invoked when on subscriptions to a catalog asset that references this subscription definition.
-* **$spec.schema**: Any valid JSON schema specifying the information required during subscription from the consumers. Amplify Unified Catalog currently only supports JSON schema `draft-04`, so the provided schema in the subscription definition must be [draft-04](http://json-schema.org/draft-04/schema#).
+* **$spec.schema**: Any valid JSON schema specifying the information required during subscription from the consumers. Amplify Unified Catalog currently only supports JSON schema `draft-04`, so the provided schema in the subscription definition must be [draft-04](http://json-schema.org/).
 
 The following is an example of a consumer instance payload referencing a subscription definition:
 
@@ -449,7 +449,7 @@ For the example provided, the following information will be required when a cons
 
 A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog.
 
-Click [subscriptionEventSchema.json](/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
+Click [subscriptionEventSchema.json](https://amplify-central.netlify.app/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
 
 * **type**: The type of the event, declared as a string. Accepts `SubscriptionUpdatedEvent` value.
 * **consumerInstance**: The referenced consumer instance object created to publish the asset to the Amplify Unified Catalog.
@@ -464,7 +464,7 @@ Click [subscriptionEventSchema.json](/samples/central/subscriptionEventSchema.js
 * **$subscription.name**: Friendly name of the subscription.
 * **catalogItem**: Catalog asset object, which the user subscribed to.
 
-Click [subscriptionEventPayload.json](/samples/central/subscriptionEventPayload.json) to download a sample event payload that is sent to a webhook referenced in a subscription definition.
+Click [subscriptionEventPayload.json](https://amplify-central.netlify.app/samples/central/subscriptionEventPayload.json) to download a sample event payload that is sent to a webhook referenced in a subscription definition.
 
 ## Further information
 

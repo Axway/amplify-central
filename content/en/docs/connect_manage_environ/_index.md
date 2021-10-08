@@ -37,7 +37,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 For more information about the agents, see:
 
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
-* [Discovery and Traceability Agents for AWS API Gateway](/docs/connect-aws-gateway/).
+* [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_aws_gateway/).
 * [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_azure_gateway/).
 * [Discovery and Traceability Agents for Istio Gateway](/docs/mesh_management/).
 
