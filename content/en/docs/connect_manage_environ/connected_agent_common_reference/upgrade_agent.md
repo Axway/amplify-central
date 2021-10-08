@@ -211,4 +211,4 @@ TRACEABILITY_REDACTION_RESPONSEHEADER_SHOW=[{keyMatch:".*"}]
 TRACEABILITY_REDACTION_JMSPROPERTIES_SHOW=[{keyMatch:".*"}]
 ```
 
-See [Trace redaction](/docs/connected-agent-common-reference/trace_redaction) for more information.
+See [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction) for more information.

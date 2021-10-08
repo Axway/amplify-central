@@ -9,7 +9,7 @@ description: Learn how to register your first SaaS API in Amplify Central.
 ## Before you start
 
 * Read [Amplify Central overview](/docs/overview)
-* Read [Understand Amplify Central concepts](/docs/saas_api_gateway/fundamental_concepts)
+* Read [Understand Amplify Central concepts](/docs/saas_api_gateway/fundamental_concepts/)
 * Sign up for a free trial of Amplify Central at [Amplify platform](https://platform.axway.com/)
 
 ## Objectives

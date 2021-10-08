@@ -15,7 +15,7 @@ Unified Catalog has an built-in testing tool that allows you to explore the list
 Before you start:
 
 * You will need to create an application with an API key
-* You will need to subscribe to an API with your application. See [Subscribe to an API](/docs/catalog/discover-and-consume-catalog-assets/#subscribe-to-an-api).
+* You will need to subscribe to an API with your application. See [Subscribe to an API](/docs/manage_marketplace/discover-and-consume-catalog-assets/#subscribe-to-an-api).
 
 To test an API that has been registered in Amplify Central and secured with an API key:
 
@@ -36,7 +36,7 @@ Before you start:
 
 * You will need to create an application within your third-party OAuth server.
 * You must create an OAuth profile in your app.
-* You will need to subscribe to the API with your created app. See [Subscribe to an API](/docs/catalog/discover-and-consume-catalog-assets/#subscribe-to-an-api).
+* You will need to subscribe to the API with your created app. See [Subscribe to an API](/docs/manage_marketplace/discover-and-consume-catalog-assets/#subscribe-to-an-api).
 
 To test an API that has been registered in Amplify Central and secured with OAuth:
 
@@ -58,8 +58,8 @@ Watch the animation to learn how to authenticate with an OAuth token.
 
 Before you start:
 
-* You will need to create an application with a JWT token.  See [Create a JWT token](/docs/central/secure_api_jwt/#create-a-jwt-token).
-* You will need to subscribe to an API with your application. See [Subscribe to an API](/docs/catalog/discover-and-consume-catalog-assets/#subscribe-to-an-api).
+* You will need to create an application with a JWT token.  See [Create a JWT token](/docs/saas_api_gateway/secure_api_jwt/#create-a-jwt-token).
+* You will need to subscribe to an API with your application. See [Subscribe to an API](/docs/manage_marketplace/discover-and-consume-catalog-assets/#subscribe-to-an-api).
 
 To test your API that has been registered in Amplify Central and secured with a JWT token:
 
@@ -73,7 +73,3 @@ To test your API that has been registered in Amplify Central and secured with a 
 Watch the animation to learn how to authenticate with a JWT token.
 
 ![Authenticate with JWT](/Images/central/catalog/test_catalog_jwt_key.gif)
-
-## Further information
-
-* [Authenticate an external API secured with OAuth](/docs/catalog/authenticate-an-external-gateway-api/)

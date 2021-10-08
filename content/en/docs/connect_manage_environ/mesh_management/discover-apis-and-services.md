@@ -92,7 +92,7 @@ If you are a member of multiple Amplify organizations, select an organization an
 
 The Environment resource is a representation of your Kubernetes cluster. In order for resources to be discovered, the agents must be connected to an Environment and a K8SCluster.
 
-If you previously followed [Deploy your agents](docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/), then the ADA and RDA will already be configured with your selected Environment and K8SCluster, and you can skip to [Configure the API Discovery Agent](#configure-the-api-discovery-agent).
+If you previously followed [Deploy your agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/), then the ADA and RDA will already be configured with your selected Environment and K8SCluster, and you can skip to [Configure the API Discovery Agent](#configure-the-api-discovery-agent).
 
 If you do not have the ADA and RDA configured, or if you would like the agents to use a different Environment, follow the steps below:
 
@@ -313,7 +313,7 @@ Read through the descriptions of the fields below, and update the `SpecDiscovery
 * `spec.targets.exactPaths.path`: The endpoint where the documentation can be found. The full host name is not needed because the discovery agent will have already matched the pod, and it will use the pod's IP address and this path to find the documentation. The ADA will make one request to this endpoint for every exposed port found in the pod.
 * `spec.targets.exactPaths.headers`: The headers to send with the request.
 * `spec.targets.exactPaths.fromAnnotations`: A list of annotations that the `SpecDiscovery` might use to make a request to a pod to fetch documentation. If this field is provided, and if the ADA finds a pod with a matching annotation found in this list, then the ADA will make a request to the pod based on the value of the pod annotation.
-* `spec.targets.exactPaths.fromAnnotations.template`: A string template that matches an annotation found on a pod. To learn more about this field, see [Defining a pod annotation](#defining-a-pod-annotation)
+* `spec.targets.exactPaths.fromAnnotations.template`: A string template that matches an annotation found on a pod. To learn more about this field, see [Defining a pod annotation](#defining-a-pod-annotation).
 
 ### Discover your APIs
 

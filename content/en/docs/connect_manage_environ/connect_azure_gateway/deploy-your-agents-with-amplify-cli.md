@@ -8,7 +8,7 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 ---
 ## Before you start
 
-* Read [Amplify Central Azure Gateway connected overview](/docs/connect_azure_gateway/)
+* Read [Amplify Central Azure Gateway connected overview](/docs/connect_manage_environ/connect_azure_gateway/)
 * You will need information on Azure:
 
     * where the API Service management is located (resource group name / API Management service name)

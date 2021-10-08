@@ -403,7 +403,7 @@ To exclude any headers, remove them from "additional_request_headers_to_log" and
 
 ## Transaction Redaction
 
-The Traceability Agent enforces redaction by default. The agent can be configured to show certain paths, query parameters, and header information based on redaction environment variables provided to it. For instructions on how to set the redaction configuration, see [Trace Redaction](/docs/connected-agent-common-reference/trace_redaction/).
+The Traceability Agent enforces redaction by default. The agent can be configured to show certain paths, query parameters, and header information based on redaction environment variables provided to it. For instructions on how to set the redaction configuration, see [Trace Redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/).
 
 Once the environment variables are set, put them in a helm override configuration:
 
