@@ -27,7 +27,6 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
-* **exclude api path from traffic**. The traceability agent configuration enables to disregard certain API path from being reported to the Platform. This feature is useful to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_environ/connect_api_manager/agent-variables)
 * Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command is no more referring to "latest" tag but the latest official release tag.
 
 ### Amplify AWS Gateway agents enhancements
