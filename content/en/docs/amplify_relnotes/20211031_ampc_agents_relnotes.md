@@ -27,9 +27,9 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
-* **Categorization of your API**. The discovery agent can be configured to map the API Tags to a Category on the Platform. An option allow the discovery agetn to create the missing category. For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_enviro/coonected_agent_common_reference/category_mapping)
-* **exclude api path from traffic**. The traceability agent configuration enables to disregard certain API path from being reported to the Platform. This feature is useful to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_enviro/connect_api_manager/agent-variables)
-* Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command as well as the EC2 instance start script are no more referring to "latest" tag but the latest official release tag.
+* **Categorization of your API**. The discovery agent can be configured to map the API Tags to a Category on the Platform. An option allow the discovery agetn to create the missing category. For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_environ/connected_agent_common_reference/category_mapping)
+* **exclude api path from traffic**. The traceability agent configuration enables to disregard certain API path from being reported to the Platform. This feature is useful to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_environ/connect_api_manager/agent-variables)
+* Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command is no more referring to "latest" tag but the latest official release tag.
 
 ### Amplify AWS Gateway agents enhancements
 
@@ -37,7 +37,7 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Azure agents enhancements
 
-* Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command as well as the EC2 instance start script are no more referring to "latest" tag but the latest official release tag.
+* Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command is no more referring to "latest" tag but the latest official release tag.
 
 ### Amplify Istio agents enhancements
 
