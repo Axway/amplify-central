@@ -12,7 +12,7 @@ description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
 
 ## Versioning
 
-Currently, version 1.1.2 is available. It is based on Amplify Agents SDK v1.1.2.
+Currently, version 1.1.4 is available. It is based on Amplify Agents SDK v1.1.7.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -27,15 +27,25 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
+* **Categorization of your API**. The discovery agent can be configured to map the API Tags to a Category on the Platform. An option allow the discovery agetn to create the missing category. For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_environ/connected_agent_common_reference/category_mapping)
+
 ### Amplify AWS Gateway agents enhancements
+
+None.
 
 ### Amplify Azure agents enhancements
 
+None.
+
 ### Amplify Istio agents enhancements
+
+None.
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
+
+* **Agent cannot contact JFrog**. Previously when agent try to reach out the service for checking the latest available release, it did not take advantage of the proxy configuration. Now any outside connectivity is going thought the proxy if configured.
 
 ## Known limitations
 
@@ -45,7 +55,6 @@ The following limitations exist in this update.
 
 * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
 * When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
-* When using the Gateway only capability without API Manager, Traceability Agent does not report the traffic.
 
 ### Amplify AWS Gateway agents
 
