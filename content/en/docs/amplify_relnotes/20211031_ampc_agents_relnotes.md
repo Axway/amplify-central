@@ -12,7 +12,7 @@ description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
 
 ## Versioning
 
-Currently, version 1.1.2 is available. It is based on Amplify Agents SDK v1.1.2.
+Currently, version 1.1.5 is available. It is based on Amplify Agents SDK v1.1.8.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -27,15 +27,27 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
+* **Categorization of your API**. The discovery agent can be configured to map the API Tags to a Category on the Platform. An option allow the discovery agetn to create the missing category. For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_enviro/coonected_agent_common_reference/category_mapping)
+* **exclude api path from traffic**. The traceability agent configuration enables to disregard certain API path from being reported to the Platform. This feature is useful to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_enviro/connect_api_manager/agent-variables)
+* Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command as well as the EC2 instance start script are no more referring to "latest" tag but the latest official release tag.
+
 ### Amplify AWS Gateway agents enhancements
+
+* Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command as well as the EC2 instance start script are no more referring to "latest" tag but the latest official release tag.
 
 ### Amplify Azure agents enhancements
 
+* Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command as well as the EC2 instance start script are no more referring to "latest" tag but the latest official release tag.
+
 ### Amplify Istio agents enhancements
+
+* None
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
+
+* **Traceability connectivity connection failed, too many colons in address**. Previously when using a proxy to send transaction to platform, the agent was not able to parse properly the proxy url (`TRACEABILITY_PROXYURL`). Now the traceability agent can correctly connect to the Amplify platform using a proxy.
 
 ## Known limitations
 
@@ -45,7 +57,6 @@ The following limitations exist in this update.
 
 * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
 * When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
-* When using the Gateway only capability without API Manager, Traceability Agent does not report the traffic.
 
 ### Amplify AWS Gateway agents
 
