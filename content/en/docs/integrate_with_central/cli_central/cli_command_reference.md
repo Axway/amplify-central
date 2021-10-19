@@ -42,8 +42,23 @@ The following table describes the usage, options, and arguments for the `get` co
 |`--client-id=<value>`                                          |Override your DevOps account's client ID |
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
 |`-s,--scope=<name>`                                            |Scope name for scoped resources          |
+|`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters|
+|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match.|
+|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.|
+|`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.|
+|`--no-cache`                                                    |Do not use cache when communicating with the server|
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
+
+### Fetching, Filtering and Querying
+
+You can fetch resources by Resource, by Short Name, or by the specific Resource Name.
+
+You can "simple filter" resources by title, tag, and attribute (see examples below). These simple filters can be used independently or in combination, i.e. you can filter by title AND tag AND attribute. However, they only support -singular- filters: you can only filter by *one* tag, *one* title, or *one* attribute ata  time.
+
+For more complex filtering and fetching(e.g. filtering by *multiple* tags, titles, attributes, and other filters), you can also query for resources that match [RSQL-formatted](https://github.com/jirutka/rsql-parser#grammar-and-semantic) query parameters you pass in. See the linked documentation for example of RSQL query syntax, and the "get examples" below for sample usage.
+
+Note: Using the --query flag will override any --title, --tag or --attribute flags you use.
 
 The following examples show how to use the `get` command:
 
@@ -71,6 +86,42 @@ axway central get envs, apisvc
 
 # To get an environment and an API service, which matches a resource in a specified scope in JSON format. In the following example, 'env1' is scope, and it is required after the `-s` flag):
 axway central get env,apisvc commonname -s env1 -o json
+
+# To get apiservice with name "testsvc" in the scope "Environment" with name "testenv"
+axway central get apisvc testsvc -s Environment/testenv
+
+# To get assets with titles that start with "a"
+axway central get assets -q "title==a*"
+
+# To get assets with titles that start with a or i
+axway central get assets -q "title==a* or title==i*"
+
+# To get assets with tags that match tag1 or tag2
+axway central get assets -q "tags=in=(tag1,tag2)"
+
+# To get assets with logical names that start with 'i'
+axway central get assets -q "name==i*"
+
+# To get assets whose logical names start with 'a' OR 'i'
+axway central get assets -q "name==a* or name==i*"
+
+# To get assets whose logical names start with 'i' AND are tagged with 'test123'
+axway central get assets -q "name=='i*';tags==test123"
+
+# To get assets whose logical names start with 'i' or 'a' AND are tagged with 'test' or 'prod'
+axway central get assets -q "name=='i*' or name=='a*';tags=in=(test,prod)"
+
+# To get assets and filter the list to assets that have a specific title "test123"
+axway central get assets --title test123
+
+# To get assets and filter the list to assets that have a specific tag "tag1"
+axway central get assets --tag tag1
+
+# To get assets and filter the list to assets that have a specific attribute "location=arizona"
+axway central get assets --attribute location=arizona
+
+# To get assets and filter the list with a combination of title, tag and attribute filters
+axway central get assets --title test123 --tag tag1 --attribute location=arizona
 ```
 
 For more examples, see [Create and fetch resources via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_create_fetch_resources/).
