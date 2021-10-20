@@ -46,3 +46,5 @@ The following issues are fixed in this Amplify Central update:
 ## Known limitations
 
 This following limitations exist in this version of Amplify Central:
+
+* Only an OAS2 API specification file is supported for the autopopulation.  Additional API Specification file types will be support soon.
