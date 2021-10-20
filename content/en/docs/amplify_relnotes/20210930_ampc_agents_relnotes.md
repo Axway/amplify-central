@@ -27,11 +27,7 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
-* **Categorization of your API**:
-    * The Discovery Agent can be configured to map API tags to a category on the platform.
-    * The Discovery Agent can be configured to create a missing category. By default, missing catagories are not created.
-
-    For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_environ/connected_agent_common_reference/category_mapping).
+* **Categorization of your API**: To facilitate the API search in the Unified Catalog using the API grouping per category, the discovery agent has been enhanced to take advantage of the tagging done on the API Manager. The configuration of the agent allows to map a tag from API Manager to one category or multiple in Unified Catalog. If the category is not yet existing, another configuration allow the agent to automatically create it (by default missing category are not created). For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_environ/connected_agent_common_reference/category_mapping).
 * **Exclude API path from traffic**. The Traceability Agent configuration allows you to disregard certain API paths from being reported to the Platform. This option is useful if you want to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_environ/connect_api_manager/agent-variables).
 
 ### Amplify AWS Gateway agents enhancements
