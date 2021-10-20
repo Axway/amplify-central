@@ -27,8 +27,8 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
-* **Categorization of your API**. The discovery agent can be configured to map the API Tags to a Category on the Platform. An option allow the discovery agetn to create the missing category. For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_environ/connected_agent_common_reference/category_mapping)
-* **exclude api path from traffic**. The traceability agent configuration enables to disregard certain API path from being reported to the Platform. This feature is useful to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_environ/connect_api_manager/agent-variables)
+* **Categorization of your API**. The Discovery Agent can be configured to map API tags to a category on the platform. This option allows the Discovery Agent to create a missing category. For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_environ/connected_agent_common_reference/category_mapping).
+* **Exclude API path from traffic**. The Traceability Agent configuration allows you to disregard certain API paths from being reported to the Platform. This option is useful if you want to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_environ/connect_api_manager/agent-variables).
 
 ### Amplify AWS Gateway agents enhancements
 
@@ -46,7 +46,7 @@ None.
 
 The following agent issues are fixed in this update:
 
-* **Agent cannot contact JFrog**. Previously when agent try to reach out the service for checking the latest available release, it did not take advantage of the proxy configuration. Now any outside connectivity is going thought the proxy if configured.
+* **Agent cannot contact JFrog**. Previously, when the agent contacted the service to check for the latest available release, it did not take advantage of the proxy configuration. Now, all outside connectivity goes through the proxy, if configured.
 
 ## Known limitations
 
