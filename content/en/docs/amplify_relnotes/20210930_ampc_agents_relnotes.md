@@ -56,7 +56,7 @@ The following limitations exist in this update.
 
 * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
 * When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
-* Traceability agent cannot report the transaction headers when using the Gateway in EMT mode and Transaction Event logging turned on (default configuration). Switch to Open Traffic log if you want to report the transaction headers.
+* Traceability Agent cannot report the transaction headers when using the Gateway in EMT mode and Transaction Event logging turned on (default configuration). Switch to Open Traffic log if you want to report the transaction headers.
 
 ### Amplify AWS Gateway agents
 
