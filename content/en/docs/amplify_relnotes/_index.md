@@ -19,7 +19,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
     * Traceability Agent configuration to disregard API paths from being reported to the Platform
 * **Amplify agents general** (version 1.1.4): None
 
-**Bug fixes**: Agent cannot contact JFrog
+**Bug fixes**: Agent cannot contact the version service check
 
 ## [Amplify Central September 2021](/docs/amplify_relnotes/20210930_ampc_relnotes/)
 
