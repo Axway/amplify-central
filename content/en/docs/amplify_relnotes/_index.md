@@ -10,7 +10,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
   for each release. For more details, click on the release note title to go to
   the corresponding release note.
 ---
-## [Amplify agents September 2021](/docs/amplify_relnotes/202109310_ampc_agents_relnotes/)
+## [Amplify agents September 2021](/docs/amplify_relnotes/20210930_ampc_agents_relnotes/)
 
 **What's new for**:
 
