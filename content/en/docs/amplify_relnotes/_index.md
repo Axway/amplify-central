@@ -10,6 +10,31 @@ description: Provides a list of release notes for Amplify Central, Amplify
   for each release. For more details, click on the release note title to go to
   the corresponding release note.
 ---
+## [Amplify agents September 2021](/docs/amplify_relnotes/202109310_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.4):
+    * Discovery Agent configuration to map a tag to one or more categories in API Manager, and to automatically create a category if one does not exist
+    * Traceability Agent configuration to disregard API paths from being reported to the Platform
+* **Amplify agents general** (version 1.1.4): None
+
+**Bug fixes**: Agent cannot contact the version service check
+
+## [Amplify Central September 2021](/docs/amplify_relnotes/20210930_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.0.0):
+    * Search/filter resources with either a simple query or an advanced RSQL query
+    * Create and manage service accounts
+    * Display organization activity and usage for a selected date range
+    * Support for Node.js version 12.13.0 or later
+
+* **Amplify Central WebUI**: API provider can add an API Service without specifying an endpoint
+
+**Bug fixes**: Activity report on the Environment details page does not display an error message if an API Service encounters an error while publishing to the Unified Catalog
+
 ## [Amplify agents August 2021](/docs/amplify_relnotes/20210831_ampc_agents_relnotes/)
 
 **What's new for**:
