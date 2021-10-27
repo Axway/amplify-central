@@ -94,7 +94,7 @@ The agents are configured to use a TLS-encrypted HTTP connection by default. Cus
 
 The agents use HTTPS connections to its API servers for communication between a running agent, the API Manager, AWS API Gateway, or Amplify Central. The Traceability Agents also use the Lumberjack protocol over TCP to communicate to the Amplify search logs service.
 
-Authentication to the servers is enforced through tokens, username/password, or public/private keys, depending upon what is required by the particular server. All JWT tokens and private keys and secrets stay within the environment of the agent. Public keys are registered in Amplify Central. Configuration details for these settings can be found at [Discovery Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/) and [Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/). For the AWS API Gateway Discovery and Traceability agents, the configuration details are at [Deploy agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/).
+Authentication to the servers is enforced through tokens, username/password, or public/private keys, depending upon what is required by the particular server. All JWT tokens and private keys and secrets stay within the environment of the agent. Public keys are registered in Amplify Central. Configuration details for these settings can be found at [Discovery Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/) and [Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/). For the API Gateway Discovery and Traceability agents, the configuration details are at [Administer API Manager Gateway](/docs/connect_manage_environ/connect_api_gateway/gateway-administation/).
 
 ## Agent configuration file: securing the user passwords
 
@@ -110,11 +110,9 @@ The agents are implemented in Golang. The following security tools are run again
 
 * Golint - scans the code for possible coding errors or inconsistencies
 
-* Sonar cube - looks for code reliability issues, security vulnerabilities, and unit test coverage
+* SonarQube - looks for code reliability issues, security vulnerabilities, and unit test coverage
 
-* Gosec - specific to Golang, and checks the code for security vulnerabilities
-
-* DependencyCheck - scans all library dependencies for security vulnerabilities
+* Whitesource - scans all library dependencies for security vulnerabilities and compliance issues
 
 * Twistlock - for the agents that run in docker containers, scans the container for security protection within the infrastructure
 

@@ -109,11 +109,9 @@ The agents are implemented in Golang. The following security tools are run again
 
 * Golint - scans the code for possible coding errors or inconsistencies
 
-* Sonar cube - looks for code reliability issues, security vulnerabilities, and unit test coverage
+* SonarQube - looks for code reliability issues, security vulnerabilities, and unit test coverage
 
-* Gosec - specific to Golang, and checks the code for security vulnerabilities
-
-* DependencyCheck - scans all library dependencies for security vulnerabilities
+* Whitesource - scans all library dependencies for security vulnerabilities and compliance issues
 
 * Twistlock - for the agents that run in docker containers, scans the container for security protection within the infrastructure
 
