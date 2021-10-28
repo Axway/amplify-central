@@ -162,7 +162,7 @@ Step 4. Configure the Traceability Agent using Axway Central CLI: `axway central
 > Traceability offline mode
 ```
 
-* Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure the agent. By Default, passwords of the API Gateway and API Manager are stored in clear in a configuration file in the agent installation folder. For a procedure on how to secure your passwords, see [Use Secure Credentials in Configuration](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/secure_config/index.html).
+* Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure the agent. By Default, passwords of the API Gateway and API Manager are stored in clear in a configuration file in the agent installation folder. For a procedure on how to secure your passwords, see [Administer API Manager Agent Security](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/agent-security-api-manager/index.html).
 
 Step 5. Install the agent
 
