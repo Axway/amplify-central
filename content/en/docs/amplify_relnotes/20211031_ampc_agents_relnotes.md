@@ -25,6 +25,8 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update.
 
+* Agent resource status contain the previous and current status. Refer to `axway central get dat,ta -o yaml`
+
 ### Amplify Gateway agents enhancements
 
 * Amplify central CLI has been updated to configure the agent with the proper "latest release". The Docker command is no more referring to "latest" tag but the latest official release tag.
@@ -46,6 +48,8 @@ The following new features and enhancements are available in this update.
 The following agent issues are fixed in this update:
 
 * **Traceability connectivity connection failed, too many colons in address**. Previously when using a proxy to send transaction to platform, the agent was not able to parse properly the proxy url (`TRACEABILITY_PROXYURL`). Now the traceability agent can correctly connect to the Amplify platform using a proxy.
+* **Discovery agent fail when using environment owned by team**. Previously when an environment associated to discovery agent is owned by a team, the agent was not able to unmarshall it. Now the Discovery agent can use both owned environment or not owned environment.
+* **Amplify Gateway helm installation Private key and Public key transposed in amplify-agents-keys secret**. Previously when installing the Amplify Gateway agents with the helm charts, public and private key were intervened. Now public and private key are correctly stored in the secret storage.
 
 ## Known limitations
 
