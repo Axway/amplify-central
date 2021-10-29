@@ -205,8 +205,8 @@ Based on the frequency you choose, the Traceability Agent reports to the platfor
 
 * Select a Usage data report tab:
 
-  * **Monthly Usage** to visualize your monthly data. Filter either by month (to get a specific month's values), or products (if you have multiple product entitlements).
-  * **Report History** to view and download the usage report history. Filter the data per reporting period and/or per file name, environment name or status.
+    * **Monthly Usage** to visualize your monthly data. Filter either by month (to get a specific month's values), or products (if you have multiple product entitlements).
+    * **Report History** to view and download the usage report history. Filter the data per reporting period and/or per file name, environment name or status.
 
 ![Usage report page](/Images/central/connected_agent_common_reference/usage_report_screen.png)
 
