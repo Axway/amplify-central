@@ -10,6 +10,33 @@ description: Provides a list of release notes for Amplify Central, Amplify
   for each release. For more details, click on the release note title to go to
   the corresponding release note.
 ---
+## [Amplify agents October 2021](/docs/amplify_relnotes/20211031_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.5): Agent resource status contains the previous and current status
+* **Amplify agents general** (version 1.1.5): Amplify Central CLI configures the agent with the proper "latest release"
+
+**Bug fixes**:
+* Traceability connectivity connection failed, too many colons in address
+* Discovery Agent fails when using an environment owned by a team
+* Amplify Gateway helm installation Private key and Public key transposed in amplify-agents-keys secret
+
+## [Amplify Central October 2021](/docs/amplify_relnotes/20211031_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.2.0): Amplify Central CLI configures the agent with the proper "latest release"
+* **Amplify Central WebUI**: 
+    * A Trial Experience is available to new free trail users to experience the features of Amplify Central
+    * Developer role can access the API Observer and see the traffic associated to APIs belonging to the teams he is part of
+
+**Bug fixes**: 
+* Private key and Public key transposed in amplify-agents-keys secret
+* CLI - Incorrect cloudformation_properties.json generated for AWS Agent
+* CLI - Authentication timeout
+
+
 ## [Amplify agents September 2021](/docs/amplify_relnotes/20210930_ampc_agents_relnotes/)
 
 **What's new for**:
@@ -30,7 +57,6 @@ description: Provides a list of release notes for Amplify Central, Amplify
     * Create and manage service accounts
     * Display organization activity and usage for a selected date range
     * Support for Node.js version 12.13.0 or later
-
 * **Amplify Central WebUI**: API provider can add an API Service without specifying an endpoint
 
 **Bug fixes**: Activity report on the Environment details page does not display an error message if an API Service encounters an error while publishing to the Unified Catalog
