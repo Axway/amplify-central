@@ -37,7 +37,7 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Azure agents enhancements
 
-* Amplify Central CLI has been updated to configure the agent with the proper "latest release." The Docker command no longer refers to "latest" tag. Instread, it refers to the latest official release tag.
+* Amplify Central CLI has been updated to configure the agent with the proper "latest release." The Docker command no longer refers to "latest" tag. Instead, it refers to the latest official release tag.
 
 ### Amplify Istio agents enhancements
 
