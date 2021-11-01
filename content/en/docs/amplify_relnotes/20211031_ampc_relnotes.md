@@ -31,6 +31,7 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 The following enhancements are available in this Amplify Central WebUI update:
 
 * A Trial Experience is available to new free trail users to experience the features of Amplify Central.
+* Developer role is able to access the API Observer and sees the traffic associated to APIs belonging to the teams he is part of.
 
 ## Fixed issues
 
