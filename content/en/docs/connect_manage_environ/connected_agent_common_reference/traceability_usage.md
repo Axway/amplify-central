@@ -34,23 +34,23 @@ All outbound traffic is sent over SSL via TCP / UDP.
 
 Open the following ports so that agents can communicate to the Amplify platform:
 
-| Region | Host                                                                                      | IP             | port       | Protocol     | data                               |
-|--------|-------------------------------------------------------------------------------------------|----------------|------------|--------------|------------------------------------|
-|        |                                                                                           |                |            |              |                                    |
-| EU/US  | login.axway.com                                                                           | 52.58.132.2    | 443        | HTTPS        | Platform authentication            |
-|        |                                                                                           | 52.29.4.35     |            |              |                                    |
-|        |                                                                                           | 54.93.140.145  |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| US     | apicentral.axway.com                                                                      | 3.94.245.118   | 443        | HTTPS        | API definitions, Subscription info |
-|        |                                                                                           | 54.208.199.251 |            |              |                                    |
-|        |                                                                                           | 3.212.78.217   |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| EU     | central.eu-fr.axway.com                                                                   | 52.47.84.198   | 443        | HTTPS        | API definitions, Subscription info |
-|        |                                                                                           | 13.36.25.69    |            |              |                                    |
-|        |                                                                                           | 35.181.21.87   |            |              |                                    |
-|        |                                                                                           |                |            |              |                                    |
-| EU/US  | lighthouse.admin.axway.com                                                                |                | 443        | HTTPS        | API usage event for online mode only                    |
-|        |                                                                                           |                |            |              |                                    |
+| Region | Host                       | IP             | port | Protocol | data                                 |
+| ------ | -------------------------- | -------------- | ---- | -------- | ------------------------------------ |
+|        |                            |                |      |          |                                      |
+| EU/US  | login.axway.com            | 52.58.132.2    | 443  | HTTPS    | Platform authentication              |
+|        |                            | 52.29.4.35     |      |          |                                      |
+|        |                            | 54.93.140.145  |      |          |                                      |
+|        |                            |                |      |          |                                      |
+| US     | apicentral.axway.com       | 3.94.245.118   | 443  | HTTPS    | API definitions, Subscription info   |
+|        |                            | 54.208.199.251 |      |          |                                      |
+|        |                            | 3.212.78.217   |      |          |                                      |
+|        |                            |                |      |          |                                      |
+| EU     | central.eu-fr.axway.com    | 52.47.84.198   | 443  | HTTPS    | API definitions, Subscription info   |
+|        |                            | 13.36.25.69    |      |          |                                      |
+|        |                            | 35.181.21.87   |      |          |                                      |
+|        |                            |                |      |          |                                      |
+| EU/US  | lighthouse.admin.axway.com |                | 443  | HTTPS    | API usage event for online mode only |
+|        |                            |                |      |          |                                      |
 
 {{< alert title="Note" color="primary" >}}
 _Region_ column represents the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. You must use the corresponding _Host_/_Port_ for your agents to operate correctly.
@@ -62,9 +62,9 @@ OPTIONAL - To monitor transactions additional ports need to be opened. They are 
 
 ### Install Traceability Agent for online mode
 
-To report usage to Amplify platform, the Traceability Agent must be configured, installed and connected to the Gateway to be monitored.
+To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the Gateway to be monitored.
 
-To configure the agent, Amplify platform connectivity is required and can be performed from any machine having the correct Amplify platform access (refer to above urls and IPs). Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
+To configure the agent, Amplify platform connectivity is required and can be performed from any machine having the correct Amplify platform access (refer to above URLs and IPs). Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
 
 This procedure will help you to configure and install the Traceability Agent:
 
@@ -82,12 +82,11 @@ Step 3. Create an empty directory and go in that directory to run the next comma
 
 Step 4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
-* For usage tracking, only the Traceability Agent is required.
+* For usage tracking, only the Traceability Agent is required. API Gateway Manager access is not required.
 
 ```shell
+? Do you want to use API Manager with the API Gateway:  No
 ? Select the type of agent(s) you want to install:
-  All Agents
-  Discovery
 > Traceability
   Traceability offline mode
 ```
@@ -127,7 +126,7 @@ CENTRAL_USAGEREPORTING_INTERVAL=1h
 
 If for any reason the usage report cannot be uploaded to Amplify platform, the data are kept in memory and will be pushed at the next trigger interval.
 
-If the Traceability Agent is stopped while there are still remaining usage events to be sent, the report is saved on the disk where the Traceability Agent is located. The data will be sent to Amplify platform at the next Traceability Agent startup.
+If the Traceability Agent is stopped while there are remaining usage events to be sent, the report is saved on the disk where the Traceability Agent is located. The data will be sent to Amplify platform at the next Traceability Agent startup.
 
 ## Set up usage reporting in offline mode
 
@@ -135,9 +134,9 @@ Use the following instructions to set up usage reporting in offline mode.
 
 ### Install Traceability Agent for offline mode
 
-To report usage to Amplify platform, the Traceability Agent must be configured, installed and connected to the Gateway to be monitored.
+To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the Gateway to be monitored.
 
-To configure the agent, Amplify platform connectivity is required and can be performed from any machine having a correct Amplify platform access (refer to above urls and IPs). The lighthouse url is not required for this mode. Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
+To configure the agent, Amplify platform connectivity is required for creating the installables. This action can be performed from any machine that has the correct Amplify platform access (refer to above urls and IPs). The installables can be copied to a machine with no external connections and the agents can be used without connectivity to the Amplify platform. The Lighthouse URL is not required for this mode. Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
 
 This procedure will help you to configure and install the traceability agent:
 
@@ -152,17 +151,16 @@ Step 3. Create an empty directory and go in that directory to run the next comma
 
 Step 4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
-* Be sure to select `Traceability offline mode` when prompted to select the type of agent:
+* For usage tracking, only the Traceability Agent offline mode is required. API Gateway Manager access is not required.
 
 ```shell
+? Do you want to use API Manager with the API Gateway:  No
 ? Select the type of agent(s) you want to install:
-  All Agents
-  Discovery
   Traceability
 > Traceability offline mode
 ```
 
-* Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure the agent.
+* Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure the agent. By Default, the API Gateway and API Manager passwords are stored in cleartext in a configuration file in the agent installation folder. To secure your passwords, see [Administer API Manager Agent Security](/docs/connect_manage_environ/connect_api_manager/agent-security-api-manager/).
 
 Step 5. Install the agent
 
@@ -178,7 +176,7 @@ For more information regarding agents installation, see [Axway Gateway agents](/
 
 You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
-The offline report is generated every month and saved to the [agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
+The offline report is generated every month and saved to the \[agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
 
 When the agent restarts, any usage reports that had been previously generated are saved to a file in the reports directory and the agent starts a new report. If necessary, the agent will add an index to the usage report name (`YYYY_MM_DD_{INDEX}_usage_report.json`). The first usage in the new report contains all events that occurred while the agent was not running.
 
@@ -222,7 +220,7 @@ The usage report is based on the transactions the Traceability Agent monitors. I
 
 ### Axway API Gateway
 
-In the case of high demand, Axway recommends to turn off the trace event logging of the Gateway. In this situation, the Traceability Agent will not be able to monitor the transactions or report the corresponding traffic.
+In the case of high demand, Axway recommends turning off the trace event logging of the Gateway. In this situation, the Traceability Agent will not be able to monitor the transactions or report the corresponding traffic.
 
 ### AWS API Gateway
 
