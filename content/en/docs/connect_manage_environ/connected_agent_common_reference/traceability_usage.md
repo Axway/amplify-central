@@ -82,12 +82,11 @@ Step 3. Create an empty directory and go in that directory to run the next comma
 
 Step 4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
-* For usage tracking, only the Traceability Agent is required.
+* For usage tracking, there is no need to acces API Gateway Manager and only the Traceability Agent is required.
 
 ```shell
+? Do you want to use API Manager with the API Gateway:  No
 ? Select the type of agent(s) you want to install:
-  All Agents
-  Discovery
 > Traceability
   Traceability offline mode
 ```
@@ -152,12 +151,11 @@ Step 3. Create an empty directory and go in that directory to run the next comma
 
 Step 4. Configure the Traceability Agent using Axway Central CLI: `axway central install agents`
 
-* Be sure to select `Traceability offline mode` when prompted to select the type of agent:
+* For usage tracking, there is no need to acces API Gateway Manager and only the Traceability Agent offline mode is required.
 
 ```shell
+? Do you want to use API Manager with the API Gateway:  No
 ? Select the type of agent(s) you want to install:
-  All Agents
-  Discovery
   Traceability
 > Traceability offline mode
 ```
