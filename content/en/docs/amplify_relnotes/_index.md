@@ -34,7 +34,6 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **Bug fixes**:
 
-* Private key and Public key transposed in amplify-agents-keys secret
 * CLI - Incorrect cloudformation_properties.json generated for AWS Agent
 * CLI - Authentication timeout
 
