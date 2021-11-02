@@ -18,6 +18,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
 * **Amplify agents general** (version 1.1.5): Amplify Central CLI configures the agent with the proper "latest release"
 
 **Bug fixes**:
+
 * Traceability connectivity connection failed, too many colons in address
 * Discovery Agent fails when using an environment owned by a team
 * Amplify Gateway helm installation Private key and Public key transposed in amplify-agents-keys secret
@@ -27,15 +28,15 @@ description: Provides a list of release notes for Amplify Central, Amplify
 **What's new for**:
 
 * **Axway Central CLI** (version 2.2.0): Amplify Central CLI configures the agent with the proper "latest release"
-* **Amplify Central WebUI**: 
+* **Amplify Central WebUI**:
     * A Trial Experience is available to new free trail users to experience the features of Amplify Central
     * Developer role can access the API Observer and see the traffic associated to APIs belonging to the teams he is part of
 
-**Bug fixes**: 
+**Bug fixes**:
+
 * Private key and Public key transposed in amplify-agents-keys secret
 * CLI - Incorrect cloudformation_properties.json generated for AWS Agent
 * CLI - Authentication timeout
-
 
 ## [Amplify agents September 2021](/docs/amplify_relnotes/20210930_ampc_agents_relnotes/)
 
