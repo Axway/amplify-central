@@ -54,7 +54,7 @@ The following table describes the usage, options, and arguments for the `get` co
 
 You can fetch resources by Resource, by Short Name, or by the specific Resource Name.
 
-You can "simple filter" resources by title, tag, and attribute (see examples below). These simple filters can be used independently or in combination, i.e. you can filter by title AND tag AND attribute. However, they only support -singular- filters: you can only filter by *one* tag, *one* title, or *one* attribute ata  time.
+You can "simple filter" resources by title, tag, and attribute (see examples below). These simple filters can be used independently or in combination, i.e. you can filter by title AND tag AND attribute. However, they only support -singular- filters: you can only filter by *one* tag, *one* title, or *one* attribute at a time.
 
 For more complex filtering and fetching(e.g. filtering by *multiple* tags, titles, attributes, and other filters), you can also query for resources that match [RSQL-formatted](https://github.com/jirutka/rsql-parser#grammar-and-semantic) query parameters you pass in. See the linked documentation for example of RSQL query syntax, and the "get examples" below for sample usage.
 
