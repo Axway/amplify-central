@@ -89,7 +89,11 @@ axway central get env,apisvc commonname -s env1 -o json
 
 # To get apiservice with name "testsvc" in the scope "Environment" with name "testenv"
 axway central get apisvc testsvc -s Environment/testenv
+```
 
+The following are examples on how to use the get command with RSQL queries using the -q flag:
+
+```bash
 # To get assets with titles that start with "a"
 axway central get assets -q "title==a*"
 
@@ -110,7 +114,11 @@ axway central get assets -q "name=='i*';tags==test123"
 
 # To get assets whose logical names start with 'i' or 'a' AND are tagged with 'test' or 'prod'
 axway central get assets -q "name=='i*' or name=='a*';tags=in=(test,prod)"
+```
 
+The following are examples on how to use the get command with simple filters:
+
+```bash
 # To get assets and filter the list to assets that have a specific title "test123"
 axway central get assets --title test123
 
@@ -122,6 +130,7 @@ axway central get assets --attribute location=arizona
 
 # To get assets and filter the list with a combination of title, tag and attribute filters
 axway central get assets --title test123 --tag tag1 --attribute location=arizona
+
 ```
 
 For more examples, see [Create and fetch resources via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_create_fetch_resources/).
