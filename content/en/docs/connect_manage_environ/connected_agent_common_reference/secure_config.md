@@ -16,6 +16,8 @@ Learn how to secure credentials in the agent configuration by referencing data k
 
 While the agent configuration allows setting up credential-based configuration as environment variables with clear text, it doesn't provide the necessary security.
 
+Note : If you are running your agent in [offline mode](docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), securing password with @Secret will not be possible.
+
 ## Creating secret resource in Central
 
 * Create a yaml file with a resource definition for secret in environment scope:
