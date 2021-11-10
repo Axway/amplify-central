@@ -17,25 +17,36 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
 ## Objectives
 
-Learn how to quickly install and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
+Learn how to quickly configure, install and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
 
-## Axway Central CLI prerequisites
+To configure the agent, Axway Central CLI and Amplify platform connectivity are required. The configuration of the agent can be performed from any machine having access to Amplify platform (<https://platform.axway.com>) and a graphical environment. Once the configuration is complete, the agents and its configuration must be copied to the Gateway machine so that it can use the API Manager APIs and access the event logs or open traffic logs.
 
-* [Node.js](https://nodejs.org/en/download/) version 10.13.0 or later
-* Access to npm package (for installing Axway CLI)
-* Access to login.axway.com on port 443
-* Minimum Axway Central CLI version: 1.24.0 (check version using `axway central --version`)
-* Kubernetes 1.19 (Helm install only)
+## Agent configuration pre-requisites
 
-More information is available at [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+* any machine where:
+    * you can access platform.axway.com and login.axway.com on port 443
+    * you can install and run Axway Central CLI (node.js module)
+    * you can Access npm package (for installing Axway CLI)
+    * you can install OpenSSL
+    * there is a graphical environment
+    * you can use Kubernetes 1.19 (Helm install only)
+* an Amplify platform user account that have the **Platform Administrator** and **Central Admin** roles.
 
-## Install the agents
+## Configure the agents with Axway Central CLI
 
-### Step 1: Folder preparation
+To configure the agents, we will use Axway Central CLI. This CLI will ask you questions about your Gateway installation, the service account that need to be used to ensure the connectivity from the agent to Amplify platform and where to store the discovered API in the Amplify Platform
+
+### Step 1: install Axway Central CLI
+
+Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+
+You can validate your installation is correct by running: `axway central --version`
+
+### Step 2: Folder preparation
 
 Create an empty directory where Axway CLI will generate files. Run all Axway Central CLI from this directory.
 
-### Step 2: Identify yourself to Amplify Platform with Axway CLI
+### Step 3: Identify yourself to Amplify Platform with Axway CLI
 
 To use Central CLI to log in with your Amplify Platform credentials, run the following command:
 
@@ -48,11 +59,12 @@ Enter your valid credentials (email address and password). Once the “Authoriza
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
 
-{{< alert title="Note" color="primary" >}}If you do not have a graphical environment, forward the display to an X11 server (Xming or similar tools) using the `export DISPLAY=myLaptop:0.0` command .{{< /alert >}}
+### Step 4: Run the agents' configure procedure
 
-### Step 3: Run the agents' install procedure
+Agents will be configured in the directory from where the CLI runs. You can configure the agent from anywhere, but then you must transfer the agent and its configuration to the API Management system machine for the agent to operate correctly.
 
-Agents will be installed in the directory from where the CLI runs. You can install the agent from anywhere, but then you must transfer the agent and its configuration to the API Management system machine for the agent to operate correctly.
+{{< alert title="Note" color="primary" >}}The configure procedure can configure a Discovery Agent and a Traceability agent at the same time. If you need multiple traceability agents, you are required to run the configuration procedure as many times as many Traceability agent you want to use. For instance if you have a cluster of 3 Gateways, you need 1 discovery agent and 3 traceability agents (one for each gateway). To configure all the agents, you will need to execute the configure procedure 3 times (first time for the discovery and traceability agents and 2 more times for the 2 other traceability agents).
+{{< /alert >}}
 
 ```shell
 axway central install agents
@@ -71,7 +83,7 @@ The installation procedure will prompt for the following:
 3. Platform connectivity:
    * **environment**: can be an existing environment or a new one that will be created by the installation procedure
    * **team**: the default team the agent will assign when no team corresponds to the API Manager organization that the API belongs to. If the value is left empty, "Default team" will be used by the agent when no team correspond to the API organization.
-   * **service account**: can be an existing service account (from platform or Central). The installation procedure creates only a Central service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify Platform. If you choose to create a new one, the generated private and public keys will be provided.
+   * **service account**: can be an existing service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify Platform. If you choose to create a new one, the generated private and public keys will be provided (Opensll is required for this step).
 4. Select the agent deployment mode: binary / Docker image / Helm.
 5. API Manager connectivity:
    * **hostname** of the API Manager (localhost by default - use the api manager service name `apimgr` when deploying via helm charts)
@@ -85,7 +97,7 @@ The installation procedure will prompt for the following:
 7. Traceability module connectivity:
    * Traceability Agent protocol (**Lumberjack** (tcp) by default recommended for production environment or **HTTPs** recommended for testing purpose)
 
-Once you have answered all questions, the agents are downloaded, the configuration files are updated, the Amplify Central resources are created and the key pair is generated (if you chose to create a new service account).
+Once you have answered all questions, the agents are downloaded, the configuration files are created, the Amplify Central resources are created and the key pair is generated (if you chose to create a new service account).
 
 The current directory should contain the following files:
 
@@ -105,6 +117,10 @@ public_key.pem            *only present if a new service account is created
 `discovery_agent.yml` and `traceability_agent.yml` contain the default minimum agent configuration.
 
 `private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify Platform (if you choose to let the installation generate them).
+
+## Install the agent on the Gateway machine(s)
+
+For installing the agent, just follow the instruction provided by the Axway Central CLI to your Gateway environment.
 
 ## Start the agents
 
