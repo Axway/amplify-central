@@ -22,8 +22,8 @@ If you are a current user of the deprecated 'Amplify Central CLI' package, you c
 
 ## Before you start
 
-* You will need an administrator account for Amplify Central ([Managing Accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
-* You will need [Node.js](https://nodejs.org/en/download/) version 12.13.0 or later.
+- You will need an administrator account for Amplify Central ([Managing Accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
+- You will need [Node.js](https://nodejs.org/en/download/) version 12.13.0 or later.
 
 ### Operating system supported configurations
 
@@ -98,10 +98,7 @@ Install OpenSSL if not installed already:
 
 Before using the Amplify Central APIs you must first authorize your CLI, so you can use it, for example, as part of your DevOps pipeline.
 
-You can use the following options to authorize your CLI:
-
-1. [Use your Amplify Platform login credentials](/docs/integrate_with_central/cli_central/cli_install/#option-1---log-in-with-your-amplify-platform-credentials).
-2. [Use a service account](/docs/integrate_with_central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account).
+You can use the following two options to authorize your CLI:
 
 ### Option 1 - Log in with your Amplify Platform credentials
 
@@ -113,91 +110,56 @@ axway auth login
 
 If you are a member of multiple Amplify organizations, you might have to choose an organization. After logging in, you may return to the terminal.
 
-If you have used the `client-id` configuration to authorize with the CLI, you must remove it. To verify that you have used `client-id`, run:
-
-```bash
-axway central config list
-```
-
-Expected response:
-
-```bash
-{
-   ...
-   'client-id': 'apicentral',
-   ...
-}
-# OR if used a "DOSA" account before
-{
-   ...
-   'client-id': 'DOSA_105cf15d051c432c8cd2e1313f54c2da',
-   ...
-}
-```
-
-To remove `client-id`, you must manually edit the configuration file `~/.axway/central.json` and remove the `client-id` value from it.
-
 ### Option 2 - Authenticate and authorize your service account
 
 To use the Central CLI, your service account must authenticate with Amplify Platform and it must be authorized to use the Amplify Central APIs.
 
 You can use the following options to create your service account:
 
-#### 2.1 Create a service account using the CLI
-
-To create a service account from the CLI, run the following command (You must have OpenSSL installed to run this command):
-
-```bash
-axway central create service-account
-```
-
-You will be prompted to provide a name for the service account. A public and private key pair in RSA format will be generated for you.
-
-#### 2.2 Create a service account using the Amplify Central UI
-
-To create a service account from the UI, log in to Amplify Central UI as an administrator, and create a service account for your CLI. Add the public key that you created earlier. When the account is created, copy the client identifier from the **Client ID** field.
-
-Watch the animation to learn how to do this in Amplify Central UI.
-
-![Create service account in Amplify Central UI](/Images/central/service_account_animation.gif)
+1. [Create a service account using the CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/service_accounts/index.html#create)
+2. [Create a service account using the Platform UI](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 
 #### Authorize the service account with Amplify platform
 
 After you create a service account you must authorize it with Amplify platform, and log into Axway CLI using the following command:
 
 ```bash
-axway auth login --client-id DOSA_xxxxxxxxxxxxxxxxxxxxxxxx --secret-file /path/to/private_key.pem
+# if using a "pem" file
+axway auth login --client-id service-account-id-xxxxxxxxxxxxxxxxxxxxxxxx --secret-file /path/to/private_key.pem
+# or if account is using a client secret
+axway auth login --client-id service-account-id-xxxxxxxxxxxxxxxxxxxxxxxx --client-secret xxxxxxxx
 ```
 
 Expected response:
 
 ```bash
-AXWAY CLI, version 3.0.0
+AXWAY CLI, version 3.0.1
 Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
 
-You are logged in as DOSA_xxxxxxxxxxxxxxxxxxxxxxxx.
-This account has been set as the default.
+You are logged in as service-account-id-xxxxxxxxxxxxxxxxxxxxxxxx.
 ```
 
-#### Set the active service account
+After logging in, you are ready to use Axway Central CLI with a service account.
 
-To set the service account client identifier for future operations:
+## Note on multi-account use
 
-```bash
-axway central config set --client-id DOSA_xxxxxxxxxxxxxxxxxxxxxxxx
-```
+If you are using Axway Central CLI with multiple authenticated accounts **simultaneously** please be aware that by default, Axway Central CLI relies on the `auth.defaultAccount` configuration. You can check its value by running `axway config list` or `axway config get auth.defaultAccount`.
 
-To view the saved configuration, run:
+In this case, you have a few options on how to instruct the CLI to use a correct account:
 
-```bash
-axway central config list
-```
+- By providing the `--account=<desired account name>` param as part of Axway Central CLI command (you can attain an account name by running some auth commands, for example: `axway auth list`):
 
-Expected response:
+  ```bash
+  axway central get environments --account=<desired account name>
+  # for example:
+  axway central get environments --account=amplify-cli:johndoe@axway.com
+  ```
 
-```bash
-{ 'client-id': 'DOSA_xxxxxxxxxxxxxxxxxxxxxxxx' }
-```
+- By setting the desired account name in `auth.defaultAccount` config (so `--account` param will not be needed):
+
+  ```bash
+  axway config set auth.defaultAccount amplify-cli:johndoe@axway.com
+  ```
 
 ## Review
 
