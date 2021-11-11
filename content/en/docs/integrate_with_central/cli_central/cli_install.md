@@ -22,8 +22,8 @@ If you are a current user of the deprecated 'Amplify Central CLI' package, you c
 
 ## Before you start
 
-- You will need an administrator account for Amplify Central ([Managing Accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
-- You will need [Node.js](https://nodejs.org/en/download/) version 12.13.0 or later.
+* You will need an administrator account for Amplify Central ([Managing Accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
+* You will need [Node.js](https://nodejs.org/en/download/) version 12.13.0 or later.
 
 ### Operating system supported configurations
 
@@ -147,7 +147,7 @@ If you are using Axway Central CLI with multiple authenticated accounts **simult
 
 In this case, you have a few options on how to instruct the CLI to use a correct account:
 
-- By providing the `--account=<desired account name>` param as part of Axway Central CLI command (you can attain an account name by running some auth commands, for example: `axway auth list`):
+* By providing the `--account=<desired account name>` param as part of Axway Central CLI command (you can attain an account name by running some auth commands, for example: `axway auth list`):
 
   ```bash
   axway central get environments --account=<desired account name>
@@ -155,7 +155,7 @@ In this case, you have a few options on how to instruct the CLI to use a correct
   axway central get environments --account=amplify-cli:johndoe@axway.com
   ```
 
-- By setting the desired account name in `auth.defaultAccount` config (so `--account` param will not be needed):
+* By setting the desired account name in `auth.defaultAccount` config (so `--account` param will not be needed):
 
   ```bash
   axway config set auth.defaultAccount amplify-cli:johndoe@axway.com
