@@ -28,7 +28,7 @@ The [API](https://apicentral.axway.com/apis/docs) exposes a standard CRUD interf
 
 The following tables decribe the API style in terms of GET, PUT, POST etc. and the URL format to locate resources.
 
-#### Unscoped resources:
+#### Unscoped resources
 
 | Operation | URL                                                                       | Description                                                                                               |
 |-----------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -39,7 +39,8 @@ The following tables decribe the API style in terms of GET, PUT, POST etc. and t
 | PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name                                                                   |
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name                                                     |
 | PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name                                                        |
-#### Unscoped Resources:
+
+#### Unscoped Resources
 
 | Operation | URL                                                                                                                        | Description                                                                                            |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
@@ -125,7 +126,7 @@ spec:
 
 API Server supports **scoped** and **unscoped** types of resources. The resources are defined under a group, which is part of the API's endpoints path. Each endpoint is tagged with the resource group name.
 
-* **Scoped**: A **scope** refers to the lifetime and accessibility of the resource. A scoped resource is a resource defined under another scope. For example, an **API Service** can only be defined under the **Environment** scope. In the example above the webhook 'JIRA approval webhook' is scoped under an environment whose name is 'azure-apiman-service' 
+* **Scoped**: A **scope** refers to the lifetime and accessibility of the resource. A scoped resource is a resource defined under another scope. For example, an **API Service** can only be defined under the **Environment** scope. In the example above the webhook 'JIRA approval webhook' is scoped under an environment whose name is 'azure-apiman-service'
 * **Unscoped**: Top level resources that can group a set of other resources. **Environments** and **Integrations** are unscoped resource types.
 
 ### Metadata
@@ -178,7 +179,7 @@ spec:
 
 Metadata fields:
 
-* **id**: unique **id** for the resource in the entire system 
+* **id**: unique **id** for the resource in the entire system
 * **audit**: create/modify timestamp and user ids
 * **references**: An API Server resource can **refer** other resource(s) withing their spec or sub resource (for example an APIServiceInstance refers an APIServiceRevision by it's name). The metadata references provides more information about the reffered resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard.
 * **scope**: only present for the scoped resources. Provides information about the scope in which the resource is defined
@@ -280,7 +281,7 @@ Each event payload that your webhook server will receive will be structured simi
 }
 ```
 
-#### Anatomy of a webhook event:
+#### Anatomy of a webhook event
 
 Each event payload that your webhook server will receive will be structured similar to the example above which has the following format:
 
@@ -294,6 +295,7 @@ Each event payload that your webhook server will receive will be structured simi
 ## Setting up a webhook
 
 If you wish to recieve Webhook event notifications from the API Server you need to complete the following steps:
+
 1. Create a webhook which will be called on a particular event
 2. Create the tigger which will invoke the webhook URL defined in step 1.
 
@@ -474,7 +476,7 @@ The following is an example which suggests "When resource type of kind `APIServi
 }
 ```
 
-## Advanced setup. 
+## Advanced setup
 
 ### Using a secret
 
