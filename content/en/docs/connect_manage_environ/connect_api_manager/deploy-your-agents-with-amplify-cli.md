@@ -36,9 +36,9 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
 
 The agents are running on the same machine as the Gateway or API Manager are when the Gateway is deployed in a classic mode.
 
-The agents are running on the same Docker environment as the Gateway or API Manager when the Gateway is deployed in EMT mode. Note that traceability agent need to use the same volume where the event logs or open traffic logs are written.
+The agents are running on the same Docker environment as the Gateway or API Manager when the Gateway is deployed in EMT mode. Note that traceability agent needs to use the same volume where the event logs or open traffic logs are written by the Gateway (refer to `anm` container)
 
-There is no pre-requisites for the agent. The agents only need access to the platform urls described here: [Administer API Manager network traffic](/docs/connect_manage_environ/connect_api_manager/network-traffic-apimanager).
+The agents need access to the platform urls described here: [Administer API Manager network traffic](/docs/connect_manage_environ/connect_api_manager/network-traffic-apimanager) either directly or via a proxy.
 
 ## Configure the agents with Axway Central CLI
 
@@ -128,7 +128,7 @@ public_key.pem            *only present if a new service account is created
 
 ## Install the agent on the Gateway machine(s)
 
-For installing the agent, just Copy the configuration files, public/private keys and the binaries as mentioned by the instruction provided by the Axway Central CLI to your Gateway environment.
+For installing the agent, just copy the configuration files, public/private keys and the binaries to your Gateway machine as mentioned by the instruction provided by the Axway Central CLI.
 
 ## Start the agents
 
