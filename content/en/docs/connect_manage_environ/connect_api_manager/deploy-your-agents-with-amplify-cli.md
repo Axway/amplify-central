@@ -34,7 +34,7 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
 
 ## Agent runner machine pre-requisites
 
-The agents are running on the same machine as the Gateway or API MAnager are when the Gateway is deployed in a classic mode.
+The agents are running on the same machine as the Gateway or API Manager are when the Gateway is deployed in a classic mode.
 
 The agents are running on the same Docker environment as the Gateway or API Manager when the Gateway is deployed in EMT mode. Note that traceability agent need to use the same volume where the event logs or open traffic logs are written.
 
@@ -128,7 +128,7 @@ public_key.pem            *only present if a new service account is created
 
 ## Install the agent on the Gateway machine(s)
 
-For installing the agent, just follow the instruction provided by the Axway Central CLI to your Gateway environment.
+For installing the agent, just Copy the configuration files, public/private keys and the binaries as mentioned by the instruction provided by the Axway Central CLI to your Gateway environment.
 
 ## Start the agents
 
@@ -216,6 +216,8 @@ helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/v7-tra
 ### Linux Service mode for binary agent
 
 The agent can be installed as a Linux service with systemd. The following commands will help you utilize the service. These commands install the service abilities and must be run as a root user.
+
+When running as a service, it is recommended to update the key path in the environment variables files (`da_env_vars.env` and `ta_env_vars.env`) with an absolute path for the service to find the appropriate key files.
 
 When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing log section (log)](/docs/connect_manage_environ/connect_api_manager/gateway-administation/#customizing-log-section-logging).
 
