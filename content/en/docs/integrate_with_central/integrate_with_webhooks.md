@@ -25,7 +25,33 @@ Most operations can be performed through the Axway Central command-line interfac
 
 The [API](https://apicentral.axway.com/apis/docs) exposes a standard CRUD interface for all resources available in Amplify Central, these resources model the governance for different data planes which Amplify Central is managing. 
 
-TODO describe the API style in terms of GET, PUT, POST etc. and the URL format to locate resources. 
+ 
+### REST requests for resources
+The following tables decribe the API style in terms of GET, PUT, POST etc. and the URL format to locate resources.
+
+#### Unscoped resources:
+| Operation | URL                                                                       | Description                                                                                               |
+|-----------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}                          | Lists all resources of the kind related to the resourceNamesPlural and the specified group and version    |
+| POST      | /apis/{group}/{apiVersion}/{resourceNamesPlural}                          | Creates a new resource of the kind related to the resourceNamesPlural and the specified group and version |
+| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name                                                                   |
+| DELETE    | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name                                                                   |
+| PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name                                                                   |
+| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name                                                     |
+| PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name                                                        |
+#### Unscoped Resources:
+
+| Operation | URL                                                                                                                        | Description                                                                                            |
+|-----------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}                                                                           | Lists all resources of the kind related to the resourceNamesPlural and the specified group and version |
+| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Lists all the resources under their defined scope.                                                     |
+| POST      | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Creates a new resources under its defined scope.                                                       |
+| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name under the spcified scope name.                                 |
+| DELETE    | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name under the spcified scope name                                  |
+| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name under the spcified scope name                                  |
+| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name under the specified scope.                       |
+| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name under the specified scope.                          |
+
 
 All operations on the API Server can be performed via the Axway CLI and the Amplify Central command-line interface. For example if you want to view all resources types which are available in the system you would run the following 'get' command with providing an argument as to which type to get:
 ```sh
@@ -100,7 +126,7 @@ API Server supports **scoped** and **unscoped** types of resources. The resource
 * **Unscoped**: Top level resources that can group a set of other resources. **Environments** and **Integrations** are unscoped resource types.
 
 ### Metadata
-When you retrieve a resource from the API Server you will note that it has a 'metadata' field. Metadata are server side generated resource information. You can retrieve a resource using the 'get' CLI command. For example here is a definition of an environment showing it's metadata.
+When you retrieve a resource from the API Server you will note that it has a 'metadata' field. Metadata are server side generated resource information. You can retrieve a resource using the 'get' CLI command. For example here is a definition of an environment showing its metadata.
 The command to run to get an environment named 'apigtw-v77' and out the result in yaml:
 ```sh
 axway central get env apigtw-v77 -o yaml
@@ -145,7 +171,7 @@ spec:
 Metadata fields
 * **id**: unique **id** for the resource in the entire system 
 * **audit**: create/modify timestamp and user ids
-* **references**: An API Server resource can **refer** other resource(s) withing their spec or sub resource (for example an APIServiceInstance refers an APIServiceRevision by it's name). The metadat.references provides more information about the reffered resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard. (more info here: https://git.ecd.axway.org/apigov/api-server/#resource-references)
+* **references**: An API Server resource can **refer** other resource(s) withing their spec or sub resource (for example an APIServiceInstance refers an APIServiceRevision by it's name). The metadata references provides more information about the reffered resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard.
 * **scope**: only present for the scoped resources. Provides information about the scope in which the resource is defined
 * **resourceVersion**: indicates how many times a resource was updated. The metadata.resourceVersion can be used to detect if the resource has been changed on the server side. If sent in the put request and it's not the same value as what's on the server side, a 428 http error code is returned. If not sent in the request, the put request will override what's present on the server side no matter if the resource has been changed since it was read by the client doing the update.
 * **selfLink**: The api path with which the current resource can be accessed. Resources can be accessed within their scopes or across scopes. The selfLink provides an easy way to get access to a specific resource and mutate the data. For example if you look at API Services under an environment you will note that the self link will contain the environment name and the name of the API Server.
@@ -178,7 +204,7 @@ finalizers: []
 ```
 
 ## Webhooks
-Webhooks are used to automatically receive notifications of events that happen to resources in the API Server. For example, when an new asset is discovered in a environment or when an item is subcribed to in the marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those event is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as you need.
+Webhooks are used to automatically receive notifications of events that happen to resources in the API Server. For example, when an new asset is discovered in a environment or when an item is subcribed to in the marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those events is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as you need.
 
 You can use webhooks to define a custom approval flow, set up a policy to validate discovered APIs or deploy to your production server.
 
