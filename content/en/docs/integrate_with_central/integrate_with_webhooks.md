@@ -20,16 +20,16 @@ Learn how to create and configure webhooks in Amplify Central, as well as the ev
 
 The core of the Amplify management plane is the API Server. The API Server exposes a HTTP API that allows you to configure different parts of management plane. The API Server's API lets you query and manipulate the state of resources in Amplify Central (for example: Environments, API Services, Secrets, Webhooks).
 
-
 Most operations can be performed through the Axway Central command-line interface which in turn uses the API. However, you can also access the API directly using REST calls. The REST documentation is publically available [Axway API Server](https://apicentral.axway.com/apis/docs).
 
-The [API](https://apicentral.axway.com/apis/docs) exposes a standard CRUD interface for all resources available in Amplify Central, these resources model the governance for different data planes which Amplify Central is managing. 
+The [API](https://apicentral.axway.com/apis/docs) exposes a standard CRUD interface for all resources available in Amplify Central, these resources model the governance for different data planes which Amplify Central is managing.
 
- 
 ### REST requests for resources
+
 The following tables decribe the API style in terms of GET, PUT, POST etc. and the URL format to locate resources.
 
 #### Unscoped resources:
+
 | Operation | URL                                                                       | Description                                                                                               |
 |-----------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}                          | Lists all resources of the kind related to the resourceNamesPlural and the specified group and version    |
@@ -52,8 +52,8 @@ The following tables decribe the API style in terms of GET, PUT, POST etc. and t
 | GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name under the specified scope.                       |
 | PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name under the specified scope.                          |
 
-
 All operations on the API Server can be performed via the Axway CLI and the Amplify Central command-line interface. For example if you want to view all resources types which are available in the system you would run the following 'get' command with providing an argument as to which type to get:
+
 ```sh
 axway central get
 .....
@@ -82,6 +82,7 @@ governanceagents          ga                   GovernanceAgent                 t
 webhooks                  webh                 Webhook                         true    Environment        management    
 webhooks                  webh                 Webhook                         true    Integration        management    
 ```
+
 Below is an explanation for some of the types in the system:
 
 * **Environment**: A logical group of API assets within a user or customer defined context. For example, you can create an environment to represent your remote gateway environment, such as AWS or Amplify API Manager.
@@ -92,14 +93,15 @@ Below is an explanation for some of the types in the system:
 * **Consumer Instance:** Contains all the configuration for publishing an asset in the Amplify Unified Catalog for consumption.
 * **Webhook**: Defines the webhook URL that will be invoked on certain events.
 * **Integrations:** Logical grouping of webhook integrations.
-* **Resource Hook**: Allows you to configure webhooks for resources (environments, API Service) in Amplify 
+* **Resource Hook**: Allows you to configure webhooks for resources (environments, API Service) in Amplify
 
 ## Anatomy of an resource in API Server
+
 Each resource in your configuration has a 'name' field. The name is optional, if not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. See below for explaination of scoped and unscoped resources. For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment) the name is unique inside that Environment.
 
 group - resources are defined under a group, which is part of the API's endpoints path
 apiVersion - Which version of the API Server API you're using to create this object
-kind - What type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook 
+kind - What type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook
 metadata - ????
 spec - What state you desire for the object
 
@@ -127,12 +129,16 @@ API Server supports **scoped** and **unscoped** types of resources. The resource
 * **Unscoped**: Top level resources that can group a set of other resources. **Environments** and **Integrations** are unscoped resource types.
 
 ### Metadata
+
 When you retrieve a resource from the API Server you will note that it has a 'metadata' field. Metadata are server side generated resource information. You can retrieve a resource using the 'get' CLI command. For example here is a definition of an environment showing its metadata.
 The command to run to get an environment named 'apigtw-v77' and out the result in yaml:
+
 ```sh
 axway central get env apigtw-v77 -o yaml
 ```
+
 Will result in the following output:
+
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -169,6 +175,7 @@ spec:
     machine.
   axwayManaged: false
 ```
+
 Metadata fields:
 
 * **id**: unique **id** for the resource in the entire system 
@@ -178,10 +185,13 @@ Metadata fields:
 * **resourceVersion**: indicates how many times a resource was updated. The metadata.resourceVersion can be used to detect if the resource has been changed on the server side. If sent in the put request and it's not the same value as what's on the server side, a 428 http error code is returned. If not sent in the request, the put request will override what's present on the server side no matter if the resource has been changed since it was read by the client doing the update.
 * **selfLink**: The api path with which the current resource can be accessed. Resources can be accessed within their scopes or across scopes. The selfLink provides an easy way to get access to a specific resource and mutate the data. For example if you look at API Services under an environment you will note that the self link will contain the environment name and the name of the API Server.
 To view the apis under an environment call 'apigtw-v77' run the following command:
+
 ```sh
 axway central get apis -s apigtw-v77 -o yaml
 ```
+
 You will note that the **selfLink** contains the environment name and the name of the API service:
+
 ```yaml
 metadata:
   id: e4e8e508720d14080172381e0fa554a3
@@ -202,15 +212,16 @@ attributes:
   createdBy: EnterpriseEdgeGatewayAgent
   externalAPIID: ace84b76-2207-4bd8-a78e-44d170302a77
 finalizers: []
-
 ```
 
 ## Webhooks
+
 Webhooks are used to automatically receive notifications of events that happen to resources in the API Server. For example, when an new asset is discovered in a environment or when an item is subcribed to in the marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those events is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as you need.
 
 You can use webhooks to define a custom approval flow, set up a policy to validate discovered APIs or deploy to your production server.
 
 Each event payload that your webhook server will receive will be structured similar to the example below, which is for when a new API is discovered in an environment:
+
 ```json
 {
     "id": "af7cd036-e57a-4275-9ab3-2bf1d04757ce",
@@ -268,9 +279,11 @@ Each event payload that your webhook server will receive will be structured simi
     }
 }
 ```
+
 #### Anatomy of a webhook event:
 
 Each event payload that your webhook server will receive will be structured similar to the example above which has the following format:
+
 * **id**: A uid for the webhook event
 * **time**: Indicates the time when the webhook was triggered by a change in resource
 * **correlationId:** Each API request is tagged with an id once it recieved by Amplify Central. The correlationId is the id of the orginating request which updated the system. Please note, that an API call into Amplify Central may result in a number of changes to resources in Central. For example, consider the result of deleting an enviornment request which will result in cascade delete of all the resources and subresources of that environment.
@@ -279,12 +292,15 @@ Each event payload that your webhook server will receive will be structured simi
 * **payload:** This contains the contents of the resource which changed and resulted in the webhook being triggered
 
 ## Setting up a webhook
+
 If you wish to recieve Webhook event notifications from the API Server you need to complete the following steps:
 1. Create a webhook which will be called on a particular event
 2. Create the tigger which will invoke the webhook URL defined in step 1.
 
 ### 1. Create a webhook
+
 To start receiving notifications of events, you'll need to create a webhook that details the server that will receive the notifications. This can be achieved by creating a Webhook resource in the API Server, here is an example of yaml for a webhook:
+
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -302,18 +318,23 @@ spec:
   headers:
     Content-Type: application/json
 ```
+
 Some key fields in the Webhook resource:
+
 * **$name**: Webhook unique identifier.
 * **$title**: Webhook friendly name.
 * **$spec.url**: URL of the server that will receive the webhook `POST`requests.
 * **$spec.enabled**: When enabled will invoke the webhook.
 
 You can create the webhook resource using the CLI:
+
 ```sh
 axway central apply -f webhook.yaml
 ✔ "Webhook/invoke-jira-webhook" in the scope "Environment/azure-apiman-service" has successfully been updated.
 ```
+
 ### 2. Create the trigger
+
 Now that the webhook has been created you need to say when the webhook will be invoked. You can setup a webhook on any resource in Amplify Central by configuring a **Resource hook**. An event will be published on any CRUD operation. When the resource hook trigger conditions match, the resource hook referenced webhooks will be invoked, and an HTTP `POST` payload will be sent to the webhook's URL. For example, the webhook can be invoked when a new API asset is created.
 
 The following are examples of the **Resource Hook** payload.
@@ -454,6 +475,7 @@ The following is an example which suggests "When resource type of kind `APIServi
 ```
 
 ## Advanced setup. 
+
 ### Using a secret
 
 A secret is a key-value pair associated with a webhook to secure it. By setting the secret, you ensure that the `POST` request sent to the payload URL is from Axway.
