@@ -281,7 +281,7 @@ Each event payload that your webhook server will receive will be structured simi
 }
 ```
 
-#### Anatomy of a webhook event
+### Anatomy of a webhook event
 
 Each event payload that your webhook server will receive will be structured similar to the example above which has the following format:
 
