@@ -83,6 +83,7 @@ webhooks                  webh                 Webhook                         t
 webhooks                  webh                 Webhook                         true    Integration        management    
 ```
 Below is an explanation for some of the types in the system:
+
 * **Environment**: A logical group of API assets within a user or customer defined context. For example, you can create an environment to represent your remote gateway environment, such as AWS or Amplify API Manager.
 * **API Service**: An API asset, including all its revisions and deployed endpoints, and additional information to represent your API. For example, description, environment scope, image encoded in base64.
 * **API Service Revision:** Indicates incremental changes to an API asset. It comprises of the interface (contract), implementation, and instance of the API. An API can have multiple revisions. A client can call different versions of an API to realize different behaviors.
@@ -168,7 +169,8 @@ spec:
     machine.
   axwayManaged: false
 ```
-Metadata fields
+Metadata fields:
+
 * **id**: unique **id** for the resource in the entire system 
 * **audit**: create/modify timestamp and user ids
 * **references**: An API Server resource can **refer** other resource(s) withing their spec or sub resource (for example an APIServiceInstance refers an APIServiceRevision by it's name). The metadata references provides more information about the reffered resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard.
