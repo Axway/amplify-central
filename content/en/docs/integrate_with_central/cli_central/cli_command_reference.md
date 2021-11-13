@@ -43,22 +43,22 @@ The following table describes the usage, options, and arguments for the `get` co
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
 |`-s,--scope=<name>`                                            |Scope name for scoped resources          |
 |`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters|
-|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match.|
-|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.|
-|`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.|
+|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match|
+|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match|
+|`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match|
 |`--no-cache`                                                    |Do not use cache when communicating with the server|
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
 
 ### Fetching, Filtering and Querying
 
-You can fetch resources by Resource, by Short Name, or by the specific Resource Name.
+You can fetch resources by either Resource, Short Name, or the specific Resource Name.
 
-You can "simple filter" resources by title, tag, and attribute (see examples below). These simple filters can be used independently or in combination, i.e. you can filter by title AND tag AND attribute. However, they only support -singular- filters: you can only filter by *one* tag, *one* title, or *one* attribute at a time.
+You can "simple filter" resources by title, tag, and attribute (see examples below). These simple filters can be used independently or in combination (i.e., you can filter by title AND tag AND attribute). However, they only support -singular- filters; you can only filter by *one* tag, *one* title, or *one* attribute at a time.
 
-For more complex filtering and fetching(e.g. filtering by *multiple* tags, titles, attributes, and other filters), you can also query for resources that match [RSQL-formatted](https://github.com/jirutka/rsql-parser#grammar-and-semantic) query parameters you pass in. See the linked documentation for example of RSQL query syntax, and the "get examples" below for sample usage.
+For more complex filtering and fetching (e.g., filtering by *multiple* tags, titles, attributes, and other filters), you can also query for resources that match [RSQL-formatted](https://github.com/jirutka/rsql-parser#grammar-and-semantic) query parameters you pass in. See the linked documentation for an example of RSQL query syntax, and the "get examples" below for sample usage.
 
-Note: Using the --query flag will override any --title, --tag or --attribute flags you use.
+{{< alert title="Note" color="primary" >}}Using the --query flag will override any --title, --tag or --attribute flags you use.{{< /alert >}}
 
 The following examples show how to use the `get` command:
 
