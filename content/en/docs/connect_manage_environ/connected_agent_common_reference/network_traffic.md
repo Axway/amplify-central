@@ -36,7 +36,7 @@ It is also possible to filter the API to be discover using the filter capabiliti
 | Gateway type | Variable name      | Description                                                                                                            | Reference       |
 |--------------|--------------------|------------------------------------------------------------------------------------------------------------------------|-----------------|
 | API MAnager | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)|
-| AWS         | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered/)|
+| AWS         | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/)|
 | Azure       | `AZURE_FILTER`      | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` |                 |
 
 ### Traceability Agent
@@ -168,7 +168,7 @@ The docker container does not expose any ports outside of the container. Within 
 
 ## Subscription notifications
 
-SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.  You can find the configuration to set up the SMTP or webhook URL at [Deploy your agents](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials).
+SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.  You can find the configuration to set up the SMTP or webhook URL at [Subscription supported use cases for receiving API credentials](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials).
 
 The SMTP server address or the webhook url needs to be accessible from the Gateway machine for the agent to use them.
 
