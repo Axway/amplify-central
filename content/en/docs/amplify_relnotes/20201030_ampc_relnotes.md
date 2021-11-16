@@ -183,7 +183,7 @@ If the Amplify platform url is not accessible from the machine where the agents 
 * Discovery Agent requires an HTTP proxy
 * Traceability Agent requires an HTTP proxy and a SOCKS5 proxy
 
-For information, see [Using proxies](/docs/connect_manage_environ/connect_api_manager/network-traffic-apimanager/#using-proxies).
+For information, see [Using proxies](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#using-proxies-api-manager-only).
 
 #### Fixed issues
 
