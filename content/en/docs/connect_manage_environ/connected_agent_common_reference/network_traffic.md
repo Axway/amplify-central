@@ -33,11 +33,11 @@ The Discovery Agent sends the following information to the Axway Amplify platfor
 
 It is also possible to filter the API to be discover using the filter capabilities of the agent:
 
-|Gateway type | Variable name | Description | Reference |
-|--|--|--|--|
-|API MAnager| `APIMANAGER_FILTER` | filter APIs based on the API tags | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)|
-|AWS| `AWS_FILTER` | filter APIs based on the Stage tags | [Discover APIs](/docs/connect_manage_environ/connect_aws_manager/filtering-apis-to-be-discovered/)|
-|Azure| `AZURE_FILTER` | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` | |
+| Gateway type | Variable name      | Description                                                                                                            | Reference       |
+|--------------|--------------------|------------------------------------------------------------------------------------------------------------------------|-----------------|
+| API MAnager | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)|
+| AWS         | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered/)|
+| Azure       | `AZURE_FILTER`      | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` |                 |
 
 ### Traceability Agent
 
@@ -67,7 +67,7 @@ Data Fields:
 
 #### Transactions data
 
-The transaction data represent the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling/#sampling).
+The transaction data represent the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Trace Sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling/#sampling).
 
 The transactions can be redacted (by default) and/or sanitized, according to your need, before sending the information to Amplify platform. See [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/).
 
