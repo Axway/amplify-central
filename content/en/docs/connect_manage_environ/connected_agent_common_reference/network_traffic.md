@@ -14,32 +14,30 @@ All communications are initiated by the agents so there are no requirements to c
 
 ## Data destinations
 
-API Manager and Azure Gateway - destination for:
+The destination for:
 
 * Agent Authentication data is `login.axway.com`
 * API definition (Swagger or WSDL) and API documentation data is `apicentral.axway.com`
-* API Event data, the transaction summary and headers, is `ingestion-lumberjack.datasearch.axway.com`
-* Subscription notification for getting platform user information is `platform.axway.com`
-* API usage statistics, the number of calls placed to, is `https://lighthouse.admin.axway.com`
-
-AWS Gateway - destination for:
-
-* Agent Authentication data is `login.axway.com`
-* AWS API Gateway data is  `apicentral.axway.com`
-* API Event data is `ingestion-lumberjack.datasearch.axway.com`, `ingestion.datasearch.axway.com`, `ingestion-lumberjack.visibility.eu-fr.axway.com` or `ingestion.visibility.eu-fr.axway.com`
+* API Event data, the transaction summary and headers, is `ingestion.datasearch.axway.com` or `ingestion.visibility.eu-fr.axway.com`
 * Subscription notification for getting platform user information is `platform.axway.com`
 * API usage statistics, the number of calls placed to, is `https://lighthouse.admin.axway.com`
 
 ## Data exchanged
 
-### Discovery Agent - API Manager and Azure only
+### Discovery Agent
 
 The Discovery Agent sends the following information to the Axway Amplify platform:
 
 * API definition using Swagger or WSDL depending on the API type (REST vs SOAP)
 * API documentation
 
-For API Manager only, use variable `apimanager.filter` to select which API should be sent to Axway Amplify platform. Only the matching APIs are transferred to Axway Amplify platform. See [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/). 
+It is also possible to filter the API to be discover using the filter capabilities of the agent:
+
+|Gateway type | Variable name | Description | Reference |
+|--|--|--|--|
+|API MAnager| `APIMANAGER_FILTER` | filter APIs based on the API tags | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)|
+|AWS| `AWS_FILTER` | filter APIs based on the Stage tags | [Discover APIs](/docs/connect_manage_environ/connect_aws_manager/filtering-apis-to-be-discovered/)|
+|Azure| `AZURE_FILTER` | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` | |
 
 ### Traceability Agent
 
@@ -133,8 +131,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                                      | 52.206.193.184 |             |              |                                    |
 |        |                                      | 54.225.92.97   |             |              |                                    |
 |        |                                      |                |             |              |                                    |
-| EU     | ingestion.visibility.eu-fr.axway.com | 15.236.125.123 | 5044 or 443 | TCP or HTTPS | API event data                     |
-|        |                                      | 35.180.77.202  |             |              |                                    |
+| EU     | ingestion.visibility.eu-fr.axway.com | 35.180.77.202  | 5044 or 443 | TCP or HTTPS | API event data                     |
 |        |                                      | 13.36.27.97    |             |              |                                    |
 |        |                                      | 13.36.33.229   |             |              |                                    |
 
@@ -169,25 +166,37 @@ The docker container does not expose any ports outside of the container. Within 
 |------------------|----------------|----------|--------------------------------------------------------------------|
 | Docker Container | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
-## Subscription notifications - API Manager only
+## Subscription notifications
 
-SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.  You can find the configuration to set up the SMTP or webhook URL at [Deploy your agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli/).
+SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.  You can find the configuration to set up the SMTP or webhook URL at [Deploy your agents](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials).
+
+The SMTP server address or the webhook url needs to be accessible from the Gateway machine for the agent to use them.
 
 ## Using proxies - API Manager only
 
 If your network policy restricts outbound traffic such that outbound traffic must pass through a proxy. A proxy can be configured in the configuration file of the agents.
 
-### HTTP/HTTPS Proxy
+### HTTP/HTTPS Proxy for Discovery and Traceability Agent
 
-Use a HTTP/HTTPS Proxy for communication to the Amplify Platform.  This configuration is set for both the [Discovery](/docs/connect_manage_environ/connect_api_manager/agent-variables/) and [Traceability Agents](/docs/connect_manage_environ/connect_api_manager/agent-variables/).
+Use a HTTP/HTTPS Proxy for communication to the Amplify Platform.  This configuration is set for both the [Discovery](/docs/connect_manage_environ/connect_api_manager/agent-variables/) and [Traceability](/docs/connect_manage_environ/connect_api_manager/agent-variables/) Agents.
 
-### SOCKS5 Proxy
+Associated agent variables are:
 
-Use a SOCKS5 Proxy for communication to the Amplify Platform when sending API Traffic Events.  This configuration is set only for [Traceability Agents](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent).
+* APIMANAGER_PROXYURL: connection to API Manager
+* APIGATEWAY_PROXYURL: connection to API Gateway
+* CENTRAL_PROXYURL: connection to Amplify platform
+
+### SOCKS5 Proxy for Traceability Agent
+
+Use a SOCKS5 Proxy for communication to the Amplify Platform when sending API Traffic Events.  This configuration is set only for [Traceability](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent) Agents.
+
+Associated agent variable is:
+
+* TRACEABILITY_PROXYURL: connection to the transaction service endpoint
 
 ### Proxy authentication
 
-Both proxy types will use one of two authentication mechanisms, none or username/password authentication. The username authentication is specified within the URL `http://{user}:{pass}@{proxy}:{port}`.
+Both proxy types will use one of two authentication mechanisms, none or username/password authentication. The username authentication is specified within the URL `http://{userName}:{password}@{proxyHost}:{proxyPort}`.
 
 ## Validation
 
@@ -196,7 +205,11 @@ Both proxy types will use one of two authentication mechanisms, none or username
 **Connecting to Amplify Central and Login hosts:**
 
 ```shell
+# US region
 curl -s -o /dev/null -w "%{http_code}"  https://apicentral.axway.com
+or
+# EU region
+curl -s -o /dev/null -w "%{http_code}"  https://central.eu-fr.axway.com
 ```
 
 ```shell
@@ -208,7 +221,11 @@ A return of **"200"** validates the connection was established.
 **Connecting to Amplify Central Event Traffic host, HTTPS:**
 
 ```shell
+# US region
 curl -s -o /dev/null -w "%{http_code}" https://ingestion.datasearch.axway.com
+or
+# EU region
+curl -s -o /dev/null -w "%{http_code}" https://ingestion.visibility.eu-fr.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
@@ -216,7 +233,11 @@ A return of **"200"** validates the connection was established.
 **Connecting to Amplify Central Event Traffic host, Lumberjack:**
 
 ```shell
-curl ingestion-lumberjack.datasearch.axway.com:453
+# US region
+curl ingestion.datasearch.axway.com:5044
+or
+#EU region
+curl ingestion.visibility.eu-fr.axway.com:5044
 ```
 
 A return of **"curl: (52) Empty reply from server"** validates the connection was established.
@@ -226,7 +247,10 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
 **Connecting to Amplify Central and Login hosts:**
 
 ```shell
+# US region
 curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://apicentral.axway.com
+# EU region
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://central.eu-fr.axway.com
 ```
 
 ```shell
@@ -238,7 +262,11 @@ A return of **"200"** validates the connection was established.
 **Connecting to Amplify Central Event Traffic host, HTTPS:**
 
 ```shell
+# US region
 curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}" https://ingestion.datasearch.axway.com
+or
+# EU region
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}" https://ingestion.visibility.eu-fr.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
@@ -246,27 +274,31 @@ A return of **"200"** validates the connection was established.
 **Connecting to Amplify Central Event Traffic host, Lumberjack:**
 
 ```shell
-curl -x socks5://{{proxy_host}}:{{proxy_port}} ingestion-lumberjack.datasearch.axway.com:453
+# US region
+curl -x socks5://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com:5044
+or
+# EU region
+curl -x socks5://{{proxy_host}}:{{proxy_port}} ingestion.visibility.eu-fr.axway.com:5044
 ```
 
 A return of **"curl: (52) Empty reply from server"** validates the connection was established.
 
 ## Troubleshooting
 
-### Curl connection to ingestion-lumberjack.datasearch.axway.com
+### Curl connection to ingestion.datasearch.axway.com
 
 * **Error:**
 
   ```shell
-  curl: (6) Could not resolve host: ingestion-lumberjack.datasearch.axway.com
+  curl: (6) Could not resolve host: ingestion.datasearch.axway.com
   ```
 
-    * **Cause:** The host making the call can’t resolve the ingestion-lumberjack DNS name.
+    * **Cause:** The host making the call can’t resolve the ingestion.datasearch.axway.com DNS name.
 
     * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
 
     ```shell
-    curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion-lumberjack.datasearch.axway.com
+    curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com
     ```
 
 * **Error:**
