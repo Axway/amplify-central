@@ -2,9 +2,7 @@
 title: Administer network traffic
 linkTitle: Administer network traffic
 weight: 40
-description: Traffic is always initiated by the Agent to the data plane (API Manager, AWS Gateway, Azure Gateway, Istio Gateway), API
-  Gateway, and Amplify Central. No sessions are ever initiated back to the
-  Agent.
+description: Traffic is always initiated by the Agent to the data plane, API Gateway, and Amplify Central. No sessions are ever initiated back to the Agent.
 ---
 ## Overview
 
