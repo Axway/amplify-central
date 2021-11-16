@@ -70,7 +70,7 @@ The following issues were fixed in this version of Amplify Central:
 * **The Central CLI instructions after an agent installation are not clear**. Previously, the instructions informed user to copy public and private keys even when reusing an existing service account. Now, the instructions are clearer and inform the user to not forget to copy existing keys along with the generated files.
 * **Consumer is unable to consume v7 discovered APIs from Amplify Central WebUI**. Previously, V7 Discovery Agent created an application without cors enabled. Now, the Discovery Agent creates the application with '*' in javascript origin which allows the API to be consumed from any location.
 * **V7 Traceability Agent Linux service mode broken**. Previously, the traceability service mode was broken. The service mode has been restored and the Traceability Agent service can now be installed, started and stopped.
-* **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Static IP addresses have been assigned to now help with setting up the firewall rules. More information can be found [here](/docs/connect-api-manager/network-traffic-apimanager/index.html#communication-ports).
+* **Fixed IP addresses**. Previously, to access Amplify platform or Central, IP addresses were dynamic. Static IP addresses have been assigned to now help with setting up the firewall rules. More information can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/index.html#communication-ports).
 
 ## Known limitations
 
