@@ -147,7 +147,7 @@ If you are using Axway Central CLI with multiple authenticated accounts **simult
 
 In this case, you have a few options on how to instruct the CLI to use a correct account:
 
-* By providing the `--account=<desired account name>` param as part of Axway Central CLI command (you can attain an account name by running some auth commands, for example: `axway auth list`):
+* By providing the `--account=<desired account name>` param as part of Axway Central CLI command (you can obtain the list of authenticated accounts by running 'axway auth list'):
 
   ```bash
   axway central get environments --account=<desired account name>
