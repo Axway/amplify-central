@@ -20,7 +20,7 @@ Learn how to create and configure webhooks in Amplify Central, as well as the ev
 
 The core of the Amplify management plane is the API Server. The API Server exposes a HTTP API that allows you to configure different parts of management plane. The API Server's API lets you query and manipulate the state of resources in Amplify Central (for example: Environments, API Services, Secrets, Webhooks).
 
-Most operations can be performed through the Axway Central command-line interface which in turn uses the API. However, you can also access the API directly using REST calls. The REST documentation is publically available [Axway API Server](https://apicentral.axway.com/apis/docs).
+Most operations can be performed through the Axway Central command-line interface which in turn uses the API. However, you can also access the API directly using REST calls. The REST documentation is publicly available [Axway API Server](https://apicentral.axway.com/apis/docs).
 
 The [API](https://apicentral.axway.com/apis/docs) exposes a standard CRUD interface for all resources available in Amplify Central, these resources model the governance for different data planes which Amplify Central is managing.
 
@@ -37,7 +37,7 @@ The following tables describe the API style in terms of GET, PUT, POST etc. and 
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name                                                                   |
 | DELETE    | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name                                                                   |
 | PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name                                                                   |
-| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name                                                     |
+| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a subresource with the specified spec name                                                     |
 | PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name                                                        |
 
 #### Scoped resources
@@ -50,7 +50,7 @@ The following tables describe the API style in terms of GET, PUT, POST etc. and 
 | GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name under the specified scope name.                                 |
 | DELETE    | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name under the specified scope name                                  |
 | PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name under the specified scope name                                  |
-| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name under the specified scope.                       |
+| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a subresource with the specified spec name under the specified scope.                       |
 | PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name under the specified scope.                          |
 
 All operations on the API Server can be performed via the Axway CLI and the Amplify Central command-line interface. For example, to view all resource types that are available in the system, run the following 'get' command and provide an argument as to which type to get:
@@ -99,12 +99,6 @@ Types in the system:
 ## Anatomy of a resource in API Server
 
 Each resource in your configuration has a 'name' field; however, the name is optional. If not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. For details, see the following Scoped and unscoped resources section. For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment) the name is unique inside that Environment.
-
-group - resources are defined under a group, which is part of the API's endpoints path
-apiVersion - the version of the API Server API you're using to create this object
-kind - the type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook
-metadata - resource information
-spec - the state you desire for the object
 
 The following is an example of .yaml file that shows the fields for defining a webhook in the system:
 
@@ -187,7 +181,7 @@ Metadata fields:
 
 * **id**: unique **id** for the resource in the entire system
 * **audit**: create/modify timestamp and user ids
-* **references**: an API Server resource can **refer** other resource(s) withing their spec or sub resource (for example, an APIServiceInstance refers an APIServiceRevision by its name). The metadata references provide additional information about the referred resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard
+* **references**: an API Server resource can **refer** other resource(s) withing their spec or subresource (for example, an APIServiceInstance refers an APIServiceRevision by its name). The metadata references provide additional information about the referred resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard
 * **scope**: only present for the scoped resources. Provides information about the scope in which the resource is defined
 * **resourceVersion**: indicates how many times a resource was updated. The metadata.resourceVersion can be used to detect if the resource has been changed on the server side. If sent in the put request and it's not the same value as what's on the server side, a 428 HTTP error code is returned. If not sent in the request, the put request will override what's present on the server side no matter if the resource has been changed since it was read by the client doing the update
 * **selfLink**: The api path with which the current resource can be accessed. Resources can be accessed within their scopes or across scopes. The selfLink provides an easy way to get access to a specific resource and mutate the data. For example, if you look at API Services under an environment you will notice that the selfLink contains the environment name and the name of the API Server
