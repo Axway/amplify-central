@@ -116,14 +116,14 @@ All of Axway’s software is developed under a Secure Software Development Lifec
 
 The agents are implemented in Golang. The following security tools are run against the agents and the findings are remediated:
 
-* Golint - scans the code for possible coding errors or inconsistencies
+* [Golint](https://github.com/golang/lint) - scans the code for possible coding errors or inconsistencies
 
-* Fortify - static code analyzer that searches for violations of security-specific coding rules and guidelines
+* [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/software-security-center) - static code analyzer that searches for violations of security-specific coding rules and guidelines
 
-* SonarQube - looks for code reliability issues, security vulnerabilities, and unit test coverage
+* [SonarQube](https://www.sonarqube.org/) - looks for code reliability issues, security vulnerabilities, and unit test coverage
 
-* Whitesource - scans all library dependencies for security vulnerabilities and compliance issues
+* [Whitesource](https://www.whitesourcesoftware.com/) - scans all library dependencies for security vulnerabilities and compliance issues
 
-* Twistlock - for the agents that run in docker containers, scans the container for security protection within the infrastructure
+* [Twistlock](https://www.infoguard.ch/en/partners/twistlock-container-security) - for the agents that run in docker containers, scans the container for security protection within the infrastructure
 
-* IriusRisk - this is the manual creation of threat models of the system by the system architects to identify and mitigate architectural security risks
+* [IriusRisk](https://www.iriusrisk.com/) - this is the manual creation of threat models of the system by the system architects to identify and mitigate architectural security risks
