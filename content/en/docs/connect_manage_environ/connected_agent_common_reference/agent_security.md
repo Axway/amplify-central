@@ -80,7 +80,7 @@ TLS_AES_256_GCM_SHA384
 
 TLS_CHACHA20_POLY1305_SHA256
 
-The Traceability Agents also communicate to the Amplify search logs service using the Lumberjack protocol over a TCP connection. The connection host and port can be configured by changing the TRACEABILITY_HOST in your configuration file. For additional information, see [API Manager's Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent) and [AWS Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#traceability-agent).
+The Traceability Agents also communicate to the Amplify search logs service using the Lumberjack protocol over a TCP connection. The connection host and port can be configured by changing the TRACEABILITY_HOST in your configuration file. For additional information, see [API Manager's Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent), [AWS Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#traceability-agent) and  [Azure Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_azure_gateway/agent-variables/#traceability-agent).
 
 ## Proxying
 
@@ -88,7 +88,7 @@ The agents are configured to use a TLS-encrypted HTTP connection by default. Cus
 
 ## Agent client/server
 
-The agents use HTTPS connections to its API servers for communication between a running agent, the API Manager, AWS API Gateway, or Amplify Central. The Traceability Agents also use the Lumberjack protocol over TCP to communicate to the Amplify search logs service.
+The agents use HTTPS connections to its API servers for communication between a running agent, the API Manager, AWS API Gateway, Azure API Gateway or Amplify Central. The Traceability Agents also use the Lumberjack protocol over TCP to communicate to the Amplify search logs service.
 
 Authentication to the servers is enforced through tokens, username/password, or public/private keys, depending upon what is required by the particular server. All JWT tokens and private keys and secrets stay within the environment of the agent. Public keys are registered in Amplify Central. Configuration details for these settings can be found in the **Deploy your agent** documentation for your specific agent.
 
