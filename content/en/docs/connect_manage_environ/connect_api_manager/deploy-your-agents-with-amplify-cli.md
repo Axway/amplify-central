@@ -19,11 +19,14 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
 Learn how to quickly configure, install and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
 
-To configure the agent, Axway Central CLI and Amplify platform connectivity are required. The configuration of the agent can be performed from any machine having access to Amplify platform (<https://platform.axway.com>) and a graphical environment. Once the configuration is complete, the agents and its configuration must be copied to the Gateway machine so that it can use the API Manager APIs and access the event logs or open traffic logs.
+To configure the agent, Axway Central CLI and Amplify platform connectivity are required.
+
+1. The configuration of the agent can be performed from any machine having access to Amplify platform (<https://platform.axway.com>) and a graphical environment.
+2. Once the configuration is complete, the agents and its configuration must be copied to the Gateway machine so that it can use the API Manager APIs and access the event logs or open traffic logs.
 
 ## Agent configuration machine pre-requisites
 
-* any machine where:
+* any machine (Windows / Linux / Mac) where:
     * you can access platform.axway.com and login.axway.com on port 443
     * you can install and run Axway Central CLI (node.js module)
     * you can Access npm package (for installing Axway CLI)
@@ -124,11 +127,13 @@ public_key.pem            *only present if a new service account is created
 
 `discovery_agent.yml` and `traceability_agent.yml` contain the default minimum agent configuration.
 
-`private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify Platform (if you choose to let the installation generate them).
+`private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify Platform (if you choose to let the installation generate them). In case you are re-using an existing service account, the public key can be retrieved from the service account itself (go to platform.axway.com > Service accounts and search for the correct one). Regarding the private key, it is somewhere in your secured storage.
 
 ## Install the agent on the Gateway machine(s)
 
 For installing the agent, just copy the configuration files, public/private keys and the binaries to your Gateway machine as mentioned by the instruction provided by the Axway Central CLI.
+
+Once everything is copied, add the execution rights to the binaries (`chmod +x discovery_agent traceability_agent`). Traceability agent configuration file should be writtable only by the owner of the file (`chmod u+rw,og+r ./traceability_agent.yml`).
 
 ## Start the agents
 
@@ -378,27 +383,27 @@ An empty result means the agent is not running; otherwise, you should receive th
 
 After being authenticated to the platform with `axway auth login` command, run the following:
 
-* `axway central get edgeda` to get all discovery agent information.
-* `axway central get edgeta` to get all traceability agent information.
+* `axway central get da` to get all discovery agent information.
+* `axway central get ta` to get all traceability agent information.
 
 The STATUS column will help you identify which agent is running.
 
 ```shell
-C:\Demos>axway central get edgeda
+C:\Demos>axway central get da
 √ Resource(s) successfully retrieved
 
-NAME                                       STATUS   AGE             SCOPE KIND   SCOPE NAME
-EdgeDiscoveryAgent/cli-1607014956109       started  26 minutes ago  Environment  pre-prod
-EdgeDiscoveryAgent/lbean018-discovery      stopped  2 months ago    Environment  prod
+NAME                      DATAPLANE TYPE  STATUS     RESOURCE KIND   SCOPE KIND   SCOPE NAME        RESOURCE GROUP
+lbean018-discovery        Edge            running    DiscoveryAgent  Environment  apigtw-v77        management
+ec2-da                    AWS             stopped    DiscoveryAgent  Environment  awsgtw-us-west-1  management
 ```
 
 ```shell
-C:\Demos>axway central get edgeta
+C:\Demos>axway central get ta
 √ Resource(s) successfully retrieved
 
-NAME                                             STATUS   AGE             SCOPE KIND   SCOPE NAME
-EdgeTraceabilityAgent/cli-1607014956731          started  30 minutes ago  Environment  pre-prod
-EdgeTraceabilityAgent/lbean018-traceability      stopped  2 months ago    Environment  prod
+NAME                         DATAPLANE TYPE  STATUS   RESOURCE KIND      SCOPE KIND   SCOPE NAME        RESOURCE GROUP
+lbean018-traceability        Edge            running  TraceabilityAgent  Environment  apigtw-v77        management
+ec2-ta                       AWS             stopped  TraceabilityAgent  Environment  awsgtw-us-west-1  management
 ```
 
 See [Administer API Gateway](/docs/connect_manage_environ/connect_api_manager/gateway-administation/) for additional information about agent features.
