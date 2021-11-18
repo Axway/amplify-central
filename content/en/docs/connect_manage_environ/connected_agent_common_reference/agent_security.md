@@ -80,11 +80,15 @@ TLS_AES_256_GCM_SHA384
 
 TLS_CHACHA20_POLY1305_SHA256
 
-The Traceability Agents also communicate to the Amplify search logs service using the Lumberjack protocol over a TCP connection. The connection host and port can be configured by changing the TRACEABILITY_HOST in your configuration file. For additional information, see [API Manager's Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent), [AWS Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#traceability-agent) and  [Azure Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_azure_gateway/agent-variables/#traceability-agent).
+The Traceability Agents also communicate to the Amplify search logs service using the Lumberjack protocol over a TCP connection. The connection host and port can be configured by changing the TRACEABILITY_HOST in your configuration file. For additional information, see [API Manager's Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent), [AWS Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#traceability-agent) and  [Azure Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_azure_gateway/agent-variables/#specific-variables-for-traceability-agent).
 
-## Proxying
+## Proxying - API Manager only
 
-The agents are configured to use a TLS-encrypted HTTP connection by default. Customers can also configure the agents to use a proxy. HTTP, HTTPS, and SOCKS5 proxies are supported. For general information on proxying see [Connection via proxy](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/). For specific proxy configuration, consult the documentation for your proxy.
+The agents are configured to use a TLS-encrypted HTTP connection by default.
+
+When using the on-premise installation of API Manager/Gateway, it is possible that the machine where the gateway and API Manager are running cannot access internet. For securing the outgoing connectivity, it is possible to use a proxy to open only the required port and urls the agents will use to communicate with Amplify platform. HTTP, HTTPS, and SOCKS5 proxies are supported. Refer to [communication port list](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#communication-ports) to view the url/port to open.
+
+ For general information on proxying see [Connection via proxy](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#using-proxies-api-manager-only). For specific proxy configuration, consult the documentation for your proxy.
 
 ## Agent client/server
 
