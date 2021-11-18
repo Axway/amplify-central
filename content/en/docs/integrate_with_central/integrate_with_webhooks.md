@@ -26,7 +26,7 @@ The [API](https://apicentral.axway.com/apis/docs) exposes a standard CRUD interf
 
 ### REST requests for resources
 
-The following tables decribe the API style in terms of GET, PUT, POST etc. and the URL format to locate resources.
+The following tables describe the API style in terms of GET, PUT, POST etc. and the URL format to locate resources.
 
 #### Unscoped resources
 
@@ -40,20 +40,20 @@ The following tables decribe the API style in terms of GET, PUT, POST etc. and t
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name                                                     |
 | PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name                                                        |
 
-#### Unscoped Resources
+#### Scoped resources
 
 | Operation | URL                                                                                                                        | Description                                                                                            |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}                                                                           | Lists all resources of the kind related to the resourceNamesPlural and the specified group and version |
 | GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Lists all the resources under their defined scope.                                                     |
 | POST      | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Creates a new resources under its defined scope.                                                       |
-| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name under the spcified scope name.                                 |
-| DELETE    | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name under the spcified scope name                                  |
-| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name under the spcified scope name                                  |
+| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name under the specified scope name.                                 |
+| DELETE    | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name under the specified scope name                                  |
+| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name under the specified scope name                                  |
 | GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a sub resource with the specified spec name under the specified scope.                       |
 | PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name under the specified scope.                          |
 
-All operations on the API Server can be performed via the Axway CLI and the Amplify Central command-line interface. For example if you want to view all resources types which are available in the system you would run the following 'get' command with providing an argument as to which type to get:
+All operations on the API Server can be performed via the Axway CLI and the Amplify Central command-line interface. For example, to view all resource types that are available in the system, run the following 'get' command and provide an argument as to which type to get:
 
 ```sh
 axway central get
@@ -84,7 +84,7 @@ webhooks                  webh                 Webhook                         t
 webhooks                  webh                 Webhook                         true    Integration        management    
 ```
 
-Below is an explanation for some of the types in the system:
+Types in the system:
 
 * **Environment**: A logical group of API assets within a user or customer defined context. For example, you can create an environment to represent your remote gateway environment, such as AWS or Amplify API Manager.
 * **API Service**: An API asset, including all its revisions and deployed endpoints, and additional information to represent your API. For example, description, environment scope, image encoded in base64.
@@ -96,17 +96,17 @@ Below is an explanation for some of the types in the system:
 * **Integrations:** Logical grouping of webhook integrations.
 * **Resource Hook**: Allows you to configure webhooks for resources (environments, API Service) in Amplify
 
-## Anatomy of an resource in API Server
+## Anatomy of a resource in API Server
 
-Each resource in your configuration has a 'name' field. The name is optional, if not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. See below for explaination of scoped and unscoped resources. For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment) the name is unique inside that Environment.
+Each resource in your configuration has a 'name' field; however, the name is optional. If not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. For details, see the following Scoped and unscoped resources section. For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment) the name is unique inside that Environment.
 
 group - resources are defined under a group, which is part of the API's endpoints path
-apiVersion - Which version of the API Server API you're using to create this object
-kind - What type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook
-metadata - ????
-spec - What state you desire for the object
+apiVersion - the version of the API Server API you're using to create this object
+kind - the type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook
+metadata - resource information
+spec - the state you desire for the object
 
-Here's an example .yaml file that shows the fields for defining a webhook in the system:
+The following is an example of .yaml file that shows the fields for defining a webhook in the system:
 
 ```yaml
 group: management
@@ -122,23 +122,29 @@ spec:
     Content-Type: application/json
 ```
 
+* **group**: resources are defined under a group, which is part of the API's endpoints path
+* **apiVersion**: the version of the API Server API you're using to create this object
+* **kind**: the type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook
+* **metadata**: resource information
+* **spec**: the state you desire for the object
+
 ### Scoped and unscoped resources
 
 API Server supports **scoped** and **unscoped** types of resources. The resources are defined under a group, which is part of the API's endpoints path. Each endpoint is tagged with the resource group name.
 
-* **Scoped**: A **scope** refers to the lifetime and accessibility of the resource. A scoped resource is a resource defined under another scope. For example, an **API Service** can only be defined under the **Environment** scope. In the example above the webhook 'JIRA approval webhook' is scoped under an environment whose name is 'azure-apiman-service'
-* **Unscoped**: Top level resources that can group a set of other resources. **Environments** and **Integrations** are unscoped resource types.
+* **Scoped**: a **scope** refers to the lifetime and accessibility of the resource. A scoped resource is a resource defined under another scope. For example, an **API Service** can only be defined under the **Environment** scope. In the example above the webhook 'JIRA approval webhook' is scoped under an environment whose name is 'azure-apiman-service'
+* **Unscoped**: Top-level resources that can group a set of other resources. **Environments** and **Integrations** are unscoped resource types
 
 ### Metadata
 
-When you retrieve a resource from the API Server you will note that it has a 'metadata' field. Metadata are server side generated resource information. You can retrieve a resource using the 'get' CLI command. For example here is a definition of an environment showing its metadata.
-The command to run to get an environment named 'apigtw-v77' and out the result in yaml:
+When you retrieve a resource from the API Server, notice that it has a 'metadata' field. Metadata is server-side generated resource information. You can retrieve a resource using the 'get' CLI command. The following example is a definition of an environment showing its metadata.
+The command to run to get an environment named 'apigtw-v77' and output the result in yaml:
 
 ```sh
 axway central get env apigtw-v77 -o yaml
 ```
 
-Will result in the following output:
+Results in the following output:
 
 ```yaml
 group: management
@@ -181,17 +187,18 @@ Metadata fields:
 
 * **id**: unique **id** for the resource in the entire system
 * **audit**: create/modify timestamp and user ids
-* **references**: An API Server resource can **refer** other resource(s) withing their spec or sub resource (for example an APIServiceInstance refers an APIServiceRevision by it's name). The metadata references provides more information about the reffered resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard.
+* **references**: an API Server resource can **refer** other resource(s) withing their spec or sub resource (for example, an APIServiceInstance refers an APIServiceRevision by its name). The metadata references provide additional information about the referred resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types: soft and hard
 * **scope**: only present for the scoped resources. Provides information about the scope in which the resource is defined
-* **resourceVersion**: indicates how many times a resource was updated. The metadata.resourceVersion can be used to detect if the resource has been changed on the server side. If sent in the put request and it's not the same value as what's on the server side, a 428 http error code is returned. If not sent in the request, the put request will override what's present on the server side no matter if the resource has been changed since it was read by the client doing the update.
-* **selfLink**: The api path with which the current resource can be accessed. Resources can be accessed within their scopes or across scopes. The selfLink provides an easy way to get access to a specific resource and mutate the data. For example if you look at API Services under an environment you will note that the self link will contain the environment name and the name of the API Server.
-To view the apis under an environment call 'apigtw-v77' run the following command:
+* **resourceVersion**: indicates how many times a resource was updated. The metadata.resourceVersion can be used to detect if the resource has been changed on the server side. If sent in the put request and it's not the same value as what's on the server side, a 428 HTTP error code is returned. If not sent in the request, the put request will override what's present on the server side no matter if the resource has been changed since it was read by the client doing the update
+* **selfLink**: The api path with which the current resource can be accessed. Resources can be accessed within their scopes or across scopes. The selfLink provides an easy way to get access to a specific resource and mutate the data. For example, if you look at API Services under an environment you will notice that the selfLink contains the environment name and the name of the API Server
+
+To view the APIs under an environment named 'apigtw-v77', run the following command:
 
 ```sh
 axway central get apis -s apigtw-v77 -o yaml
 ```
 
-You will note that the **selfLink** contains the environment name and the name of the API service:
+Note that the **selfLink** contains the environment name and the name of the API service:
 
 ```yaml
 metadata:
@@ -217,11 +224,11 @@ finalizers: []
 
 ## Webhooks
 
-Webhooks are used to automatically receive notifications of events that happen to resources in the API Server. For example, when an new asset is discovered in a environment or when an item is subcribed to in the marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those events is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as you need.
+Webhooks are used to automatically receive notifications of events that happen to resources in the API Server. For example, when a new asset is discovered in a environment or when an item is subscribed to in the marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those events is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as needed.
 
 You can use webhooks to define a custom approval flow, set up a policy to validate discovered APIs or deploy to your production server.
 
-Each event payload that your webhook server will receive will be structured similar to the example below, which is for when a new API is discovered in an environment:
+Each event payload that your webhook server receives is structured similar to the example below, which is for when a new API is discovered in an environment:
 
 ```json
 {
@@ -283,25 +290,25 @@ Each event payload that your webhook server will receive will be structured simi
 
 ### Anatomy of a webhook event
 
-Each event payload that your webhook server will receive will be structured similar to the example above which has the following format:
+Each event payload that your webhook server receives is structured similar to the example above which has the following format:
 
-* **id**: A uid for the webhook event
-* **time**: Indicates the time when the webhook was triggered by a change in resource
-* **correlationId:** Each API request is tagged with an id once it recieved by Amplify Central. The correlationId is the id of the orginating request which updated the system. Please note, that an API call into Amplify Central may result in a number of changes to resources in Central. For example, consider the result of deleting an enviornment request which will result in cascade delete of all the resources and subresources of that environment.
-* **organization:** Indicates the organization id which the resource belongs to
-* **type:** Indicates if this is an create, update or delete event. Supported types: ResourceCreated/ResourceUpdated/ResourceDeleted/SubResourceUpdated
-* **payload:** This contains the contents of the resource which changed and resulted in the webhook being triggered
+* **id**: a uid for the webhook event
+* **time**: indicates the time when the webhook was triggered by a change in resource
+* **correlationId:** each API request is tagged with an id once it received by Amplify Central. The correlationId is the id of the originating request which updated the system. Note that an API call into Amplify Central may result in a number of changes to resources in Central. For example, consider the result of deleting an environment request which will result in a cascade delete of all the resources and subresources of that environment.
+* **organization:** indicates the organization id that the resource belongs to
+* **type:** indicates if this is a create, update or delete event. Supported types: ResourceCreated/ResourceUpdated/ResourceDeleted/SubResourceUpdated
+* **payload:** contains the contents of the resource that changed and resulted in the webhook being triggered
 
 ## Setting up a webhook
 
-If you wish to recieve Webhook event notifications from the API Server you need to complete the following steps:
+To receive webhook event notifications from the API Server, you must complete the following steps:
 
-1. Create a webhook which will be called on a particular event
-2. Create the tigger which will invoke the webhook URL defined in step 1.
+1. Create a webhook which will be called on a particular event.
+2. Create the trigger which will invoke the webhook URL defined in step 1.
 
 ### 1. Create a webhook
 
-To start receiving notifications of events, you'll need to create a webhook that details the server that will receive the notifications. This can be achieved by creating a Webhook resource in the API Server, here is an example of yaml for a webhook:
+To receive notifications of events, you must create a webhook that details the server that will receive the notifications. Creating the webhook resource in the API Server:
 
 ```yaml
 group: management
@@ -321,12 +328,12 @@ spec:
     Content-Type: application/json
 ```
 
-Some key fields in the Webhook resource:
+Key fields in the Webhook resource:
 
-* **$name**: Webhook unique identifier.
-* **$title**: Webhook friendly name.
-* **$spec.url**: URL of the server that will receive the webhook `POST`requests.
-* **$spec.enabled**: When enabled will invoke the webhook.
+* **$name**: webhook unique identifier
+* **$title**: webhook friendly name
+* **$spec.url**: URL of the server that will receive the webhook `POST`requests
+* **$spec.enabled**: when enabled will invoke the webhook
 
 You can create the webhook resource using the CLI:
 
@@ -337,11 +344,11 @@ axway central apply -f webhook.yaml
 
 ### 2. Create the trigger
 
-Now that the webhook has been created you need to say when the webhook will be invoked. You can setup a webhook on any resource in Amplify Central by configuring a **Resource hook**. An event will be published on any CRUD operation. When the resource hook trigger conditions match, the resource hook referenced webhooks will be invoked, and an HTTP `POST` payload will be sent to the webhook's URL. For example, the webhook can be invoked when a new API asset is created.
+After the webhook has been created, you must specify when the webhook will be invoked. You can set up a webhook on any resource in Amplify Central by configuring a **Resource hook**. An event will be published on any CRUD operation. When the resource hook trigger conditions match, the resource hook referenced webhooks will be invoked, and an HTTP `POST` payload will be sent to the webhook's URL. For example, the webhook can be invoked when a new API asset is created.
 
 The following are examples of the **Resource Hook** payload.
 
-Monitor all API service revisions changes in *invoke-jira-webhook* environment:
+Monitor all API service revisions in *invoke-jira-webhook* environment:
 
 ```json
 {
@@ -446,18 +453,18 @@ Monitor changes in a specific environment 'azure-apiman-service' and on all its 
 }
 ```
 
-* **$name**: Resource hook unique name.
-* **$title**: Resource hook friendly name.
-* **$spec.triggers.group**: Value for the group of the resource.
-* **$spec.triggers.scope**: Resource scope trigger details.
-* **$spec.triggers.scope.kind**: The type of the resource. For example, the wehbook will be invoked on any events on resources of type **Environment**.
-* **$spec.triggers.scope.name**: The name of the resource of the type specified. "*" represents any. When you specify a name, the webhook will be invoked on any resource in the environment with that name.
-* **$spec.triggers.kind**: The resource in the scope defined via `$spec.triggers.scope.kind`. "*" represents any. For example, APIService under the **Environment** type. Instead of a wildcard, you can provide specific names to set up a trigger to invoke the webhooks.
-* **$spec.triggers.name**: The name of the trigger of the type specified. "*" represents any. When you specify a name, the webhook will be invoked on any resource in the environment with that name.
-* **$spec.triggers.type**: The type of the event. Accept values: **created**, **updated**, **deleted**.
-* **$spec.webhooks**: A list of webhook names that determine which webhooks will be invoked on matching triggers.
+* **$name**: resource hook unique name
+* **$title**: resource hook friendly name
+* **$spec.triggers.group**: value for the group of the resource
+* **$spec.triggers.scope**: resource scope trigger details
+* **$spec.triggers.scope.kind**: the type of the resource. For example, the webhook will be invoked on any events on resources of type **Environment**.
+* **$spec.triggers.scope.name**: the name of the resource of the type specified. "*" represents any. When you specify a name, the webhook will be invoked on any resource in the environment with that name
+* **$spec.triggers.kind**: the resource in the scope defined via `$spec.triggers.scope.kind`. "*" represents any. For example, APIService under the **Environment** type. Instead of a wildcard, you can provide specific names to set up a trigger to invoke the webhooks
+* **$spec.triggers.name**: the name of the trigger of the type specified. "*" represents any. When you specify a name, the webhook will be invoked on any resource in the environment with that name
+* **$spec.triggers.type**: the type of the event. Accepted values: **created**, **updated**, **deleted**
+* **$spec.webhooks**: a list of webhook names that determine which webhooks will be invoked on matching triggers
 
-The following is an example which suggests "When resource type of kind `APIService` with any name is created, updated, or deleted in any group, with any scope kind and name", the webhooks defined in the resource hook will be invoked.
+The following is an example of "When resource type of kind `APIService` with any name is created, updated, or deleted in any group, with any scope kind and name", the webhooks defined in the resource hook will be invoked:
 
 ```json
 {
@@ -496,9 +503,9 @@ Example of a payload:
 }
 ```
 
-* **$name**: The secret unique name.
-* **$title**: The secret friendly name.
-* **$spec.data**: Key value pairs.
+* **$name**: the secret unique name
+* **$title**: the secret friendly name
+* **$spec.data**: key value pairs
 
 Example of a webhook payload referencing a secret:
 
@@ -519,19 +526,19 @@ Example of a webhook payload referencing a secret:
 }
 ```
 
-* **$name**: Webhook unique identifier.
-* **$title**: Webhook friendly name.
-* **$spec.url**: URL of the server that will receive the webhook `POST`requests.
-* **$spec.auth.secret**: Use when the webhook is secured and needs a secret to invoke.
-* **$spec.auth.secret.name**: Name of the secret, as defined in the payload.
-* **$spec.auth.secret.key**: Key to the secret, which will be used to invoke the webhook.
-* **$spec.enabled**: When enabled will invoke the webhook.
+* **$name**: webhook unique identifier
+* **$title**: webhook friendly name
+* **$spec.url**: URL of the server that will receive the webhook `POST`requests
+* **$spec.auth.secret**: use when the webhook is secured and needs a secret to invoke
+* **$spec.auth.secret.name**: name of the secret, as defined in the payload
+* **$spec.auth.secret.key**: key to the secret, which will be used to invoke the webhook
+* **$spec.enabled**: when enabled, will invoke the webhook
 
 ## Configure webhooks on catalog asset subscriptions
 
 Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify Central, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
 
-To publish an asset to the Amplify Unified Catalog with a custom subscription flow that will be triggered on any subscription events, you will need to:
+To publish an asset to the Amplify Unified Catalog with a custom subscription flow that will be triggered on any subscription events, you must:
 
 * Create an environment in Amplify Central.
 * Create an API service, API service instance, and API service revision.
@@ -541,7 +548,7 @@ To publish an asset to the Amplify Unified Catalog with a custom subscription fl
 
 To configure the resources listed above, see [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_publish/). Alternatively, you can use the example provided in our [Postman Collection](https://documenter.getpostman.com/view/2125605/SzKbLaVV?version=latest#44df18e7-2802-4786-bd60-7efb7cf5e63a).
 
-The following is an example of a consumer instance with a custom subscription that will trigger a webhook on any subscription change.
+The following is an example of a consumer instance with a custom subscription that will trigger a webhook on any subscription change:
 
 ```json
 {
@@ -588,8 +595,8 @@ The following is an example of a consumer instance with a custom subscription th
 }
 ```
 
-* **$spec.webhooks**: Array of references to webhook resources, which will be invoked when on subscriptions to a catalog asset that references this subscription definition.
-* **$spec.schema**: Any valid JSON schema specifying the information required during subscription from the consumers. Amplify Unified Catalog currently only supports JSON schema `draft-04`, so the provided schema in the subscription definition must be [draft-04](http://json-schema.org/).
+* **$spec.webhooks**: array of references to webhook resources, which will be invoked when on subscriptions to a catalog asset that references this subscription definition
+* **$spec.schema**: any valid JSON schema specifying the information required during subscription from the consumers. Amplify Unified Catalog currently only supports JSON schema `draft-04`, so the provided schema in the subscription definition must be [draft-04](http://json-schema.org/)
 
 The following is an example of a consumer instance payload referencing a subscription definition:
 
@@ -648,18 +655,18 @@ A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a sub
 
 Click [subscriptionEventSchema.json](https://amplify-central.netlify.app/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
 
-* **type**: The type of the event, declared as a string. Accepts `SubscriptionUpdatedEvent` value.
-* **consumerInstance**: The referenced consumer instance object created to publish the asset to the Amplify Unified Catalog.
-* **subscription**: The payload contains the subscription object to a catalog asset.
-* **$subscription.currentState**: The state of the subscription. Accepted values: REQUESTED, APPROVED, ACTIVE, REJECTED, UNSUBSCRIBED, UNSUBSCRIBE_INITIATED, FAILED_TO_SUBSCRIBE, FAILED_TO_UNSUBSCRIBE.
-* **$subscription.currentStateDescription**: Description of the state. You can use it to provide a reason for rejection, a message to the provider when subscribing or unsubscribing, or a reason for a failure.
-* **$subscription.nextPossibleStates**: Indicates the allowed states the subscription can transition to. Declared as an array.
-* **$subscription.userId**: ID of the user that initiated the action. Declared as a string.
-* **$subscription.owningTeamId**: ID of the team, which the user that initiated the action belongs to.
-* **$subscription.properties**: The object contains the subscription request details.
-* **$subscription.id**: ID of the subscription.
-* **$subscription.name**: Friendly name of the subscription.
-* **catalogItem**: Catalog asset object, which the user subscribed to.
+* **type**: the type of the event, declared as a string. Accepts `SubscriptionUpdatedEvent` value
+* **consumerInstance**: the referenced consumer instance object created to publish the asset to the Amplify Unified Catalog
+* **subscription**: the payload contains the subscription object to a catalog asset
+* **$subscription.currentState**: the state of the subscription. Accepted values: REQUESTED, APPROVED, ACTIVE, REJECTED, UNSUBSCRIBED, UNSUBSCRIBE_INITIATED, FAILED_TO_SUBSCRIBE, FAILED_TO_UNSUBSCRIBE
+* **$subscription.currentStateDescription**: description of the state. You can use it to provide a reason for rejection, a message to the provider when subscribing or unsubscribing, or a reason for a failure
+* **$subscription.nextPossibleStates**: indicates the allowed states the subscription can transition to. Declared as an array
+* **$subscription.userId**: ID of the user that initiated the action. Declared as a string
+* **$subscription.owningTeamId**: ID of the team, which the user that initiated the action belongs to
+* **$subscription.properties**: the object contains the subscription request details
+* **$subscription.id**: ID of the subscription
+* **$subscription.name**: friendly name of the subscription
+* **catalogItem**: Catalog asset object, which the user subscribed to
 
 Click [subscriptionEventPayload.json](https://amplify-central.netlify.app/samples/central/subscriptionEventPayload.json) to download a sample event payload that is sent to a webhook referenced in a subscription definition.
 
