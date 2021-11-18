@@ -12,9 +12,7 @@ This section contains the basic commands for creating, fetching, updating, and d
 
 Resources can be *scoped* or *unscoped*.
 
-The scope of a resource refers to the accessibility of the resource. A scoped resource type will be deleted when its scoped, or related, resource is deleted. For example, an API Service resource is scoped to a corresponding Environment resource. When that Environment is deleted, the scoped API Service resource will be deleted as well.
-
-The accessibility, or availability, of an unscoped resource is independent of the accessibility of other resources, meaning that deleting an unscoped resource only deletes that specific resource. For example, deleting a Webhook, which is an unscoped resource type, only deletes that specific Webhook, and does not delete other resources.
+The scope refers to the lifetime and accessibility of a resource. Unscoped resource are top-level resources which act as groups. Scoped resource are grouped under unscoped resources. For example, an API Service resource is scoped to a corresponding Environment resource. When that Environment is deleted, the scoped API Service resource (as well as any other scoped resource belonging to it) will also be deleted. Versus deleting the API Service resource, which will only delete that one resource.
 
 If the desired resource type is scoped, you must specify the scope name by providing the `-s, --scope <name>` flag.
 
@@ -214,11 +212,12 @@ The following table describes the usage, options, and arguments for the `delete`
 |`axway central delete [options] [<args...>]`             |                                    |
 |**Options**                                              |                   |
 |`--client-id=<value>`                                    |Override your DevOps account's client ID |
-|`-f,--file=<path>`                                       |Filename to use to create the resource  |
-|`-s,--scope=<name>`                                    |Scope name for scoped resources.|
-|`--wait`                                               |Wait for the resources to be completely deleted          |
+|`-f,--file=<path>`                                       |Filename to use to delete the resource   |
+|`-s,--scope=<name>`                                      |Scope name for scoped resources |
+|`--wait`                                                 |Wait for the resources to be completely deleted          |
+|`-y,--yes`                                               |Automatically reply `yes` to any command prompts         |
 |**Arguments**                                            |                   |
-|`args...`                                                  |Command arguments, run `axway central delete` to see the examples |
+|`args...`                                                |Command arguments, run `axway central delete` to see the examples |
 
 The following examples show how to use the `delete` command:
 
