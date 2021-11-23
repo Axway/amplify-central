@@ -147,7 +147,7 @@ The following table describes the usage, options, and arguments for the `create`
 |`axway central create agent-resources`                 |Create the mandatory information for connecting agents to Amplify environment|
 |**Commands**                                             |          |
 |`environment`                                            |Create an environment with the specified name  |
-|`service-account`                                        |Create a service account.<br/>*(Removed in v2.5.0. Use [axway service-account](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/service_accounts/index.html) command instead.)* |
+|`service-account`                                        |Create a service account.<br />*(Removed in v2.5.0. Use [axway service-account](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/service_accounts/index.html) command instead.)* |
 |`agent-resources`                                        |Create the mandatory information for connecting agents to Amplify environment|
 |**Options**                                              |                   |
 |`--client-id=<value>`                                    |Override your DevOps account's client ID |
