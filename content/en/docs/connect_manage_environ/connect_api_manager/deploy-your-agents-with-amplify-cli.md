@@ -39,7 +39,7 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
 
 The agents run on the same machine as the gateway or API Manager when the gateway is deployed in a classic mode.
 
-The agents run on the same Docker environment as the Gateway or API Manager when the gateway is deployed in EMT mode. 
+The agents run on the same Docker environment as the Gateway or API Manager when the gateway is deployed in EMT mode.
 
 {{< alert title="Note" color="primary" >}}The Traceability Agent must use the same volume where the event logs or open traffic logs are written by the Gateway (refer to `anm` container).
 {{< /alert >}}
