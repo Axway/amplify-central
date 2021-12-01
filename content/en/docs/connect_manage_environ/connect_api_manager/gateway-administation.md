@@ -670,7 +670,7 @@ This section helps the agent to collect the request/response headers from the AP
 
 `APIGATEWAY_AUTH_PASSWORD`: The Axway API Gateway username password in clear text.
 
-Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer API Manager agent security](/docs/connect_manage_environ/connect_api_manager/agent-security-api-manager/) section for changing this behavior.
+Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer agent security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/) section for changing this behavior.
 
 Once all data is gathered, this section should look like:
 
@@ -727,7 +727,7 @@ This section describes where the logs should be sent on Amplify Central.
 
 `TRACEABILITY_WORKER`: The number of workers in the Traceability agent making connections to the TRACEABILITY_HOST. It is recommended to change this for high volume machine. Default value is **2**.
 
-Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer API Manager agent security](/docs/connect_manage_environ/connect_api_manager/agent-security-api-manager/) section for changing this behavior.
+Security connection settings: By default, for connecting to API Gateway, the agent uses TLS 1.2 with a predefined list of cipher suites. Refer to [Administer agent security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/) section for changing this behavior.
 
 Once all data is gathered, the section should look like this if you do not use a proxy:
 
