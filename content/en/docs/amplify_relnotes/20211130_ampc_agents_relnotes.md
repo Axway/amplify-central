@@ -27,7 +27,7 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
-* None
+* A warning is raised when using @secret for password configuration when using the Traceability Agent offline mode
 
 ### Amplify AWS Gateway agents enhancements
 
