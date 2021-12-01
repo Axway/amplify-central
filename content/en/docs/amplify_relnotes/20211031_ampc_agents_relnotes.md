@@ -25,7 +25,7 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update.
 
-* Agent resource status contains the previous and current status. Refer to `axway central get dat,ta -o yaml`.
+* Agent resource status contains the previous and current status. Refer to `axway central get da,ta -o yaml`.
 
 ### Amplify Gateway agents enhancements
 
