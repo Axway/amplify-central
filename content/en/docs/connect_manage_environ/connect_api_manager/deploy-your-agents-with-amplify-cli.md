@@ -44,7 +44,7 @@ The agents run on the same Docker environment as the Gateway or API Manager when
 {{< alert title="Note" color="primary" >}}The Traceability Agent must use the same volume where the event logs or open traffic logs are written by the Gateway (refer to `anm` container).
 {{< /alert >}}
 
-The agents must have access to the platform URLs described in [Administer API Manager network traffic](/docs/connect_manage_environ/connect_api_manager/network-traffic-apimanager) either directly or via a proxy.
+The agents must have access to the platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy.
 
 ## Configure the agents with Axway Central CLI
 
