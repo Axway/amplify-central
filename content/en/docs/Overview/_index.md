@@ -30,9 +30,9 @@ Amplify manages the complexity and sprawl of a diverse, distributed IT architect
 
 ## Functional capability
 
-![Amplify functionality](/Images/Overview/amplify-hub-overview.png)
+![Amplify functionality](/Images/Overview/amplify-platform-overview.jpg)
 
-Amplify can be split into two components, the SaaS-based management plane (shown in the top of the diagram in blue) called the Amplify Hub and the data planes (shown at the bottom). The terms management (or control) plane and data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
+Amplify can be split into two components, the SaaS-based management plane (shown in the top of the diagram in blue) called the Amplify Management Plane and the data planes (shown at the bottom). The terms management (or control) plane and data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
 
 Mapping this analogy back to Amplify:
 
@@ -41,7 +41,7 @@ Mapping this analogy back to Amplify:
 
 {{< alert title="Note" color="primary" >}}The integration of data planes is also available through API or CLI, for integration with existing CI/CD tooling and processes. Axway also offers an Amplify Agent SDK for creating agents for platforms not yet supported.{{< /alert >}}
 
-### Amplify Hub
+### Amplify Management Plane
 
 #### Catalog
 
@@ -71,7 +71,6 @@ Amplify agents are lightweight software applications that run on your data plane
 Axway offer the following federate data planes, each with offering specific capabilities:
 
 * **[API Gateway](https://docs.axway.com/category/apim)** is a runtime gateway that proxies the REST APIs registered in API Manager, and that enforces configured policies on client requests and responses.
-
 * **[Streams](https://docs.axway.com/bundle/streams-open-docs/page/docs/index.html)** is a publish/subscribe messaging service where the senders of messages are decoupled from the receivers of messages.
 * **[API Builder](https://docs.axway.com/bundle/api-builder/page/docs/index.html)** is an integration orchestration layer between existing service providers and the API management system, or governance layer, that allows you to quickly implement integration use cases.
 * **[Integration Builder](https://docs.axway.com/bundle/AMPLIFY_Integration_Builder_allOS_en/page/amplify_integration_builder.html)** is an integration tool that allows you to easily build flows, mappings, and connectors between virtually any endpoint. Robust integrations can be built rapidly by using the prebuilt connectors.
