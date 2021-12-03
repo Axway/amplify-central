@@ -68,7 +68,7 @@ Amplify agents are lightweight software applications that run on your data plane
 
 #### Federate data planes
 
-Axway offer the following federate data planes, each with offering specific capabilities:
+Axway offers the following federate data planes, with each offering specific capabilities:
 
 * **[API Gateway](https://docs.axway.com/category/apim)** is a runtime gateway that proxies the REST APIs registered in API Manager, and that enforces configured policies on client requests and responses.
 * **[Streams](https://docs.axway.com/bundle/streams-open-docs/page/docs/index.html)** is a publish/subscribe messaging service where the senders of messages are decoupled from the receivers of messages.
