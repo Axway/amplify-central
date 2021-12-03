@@ -63,7 +63,7 @@ Amplify provides you with a centralized view of the API usage and consumption ac
 
 Amplify agents are lightweight software applications that run on your data plane host. These agents are responsible for gathering information that is happening in your data plane and sending it to the Amplify platform:
 
-* **Discovery Agents** automate the process of finding assets deployed in a Gateway (for example, OAS 3.0, WSDL, etc.), and sending them to the Amplify platform where they are made available in the Catalog for people to find and use. Consumers can subscribe to use the discovered assets, at which point the agent helps to natively provision this subscription in the Gateway.
+* **Discovery Agents** automate the process of finding assets deployed in a Gateway (for example, OAS 3.0, WSDL, etc.), and sending them to the Amplify platform where they are made available in the Catalog. Consumers can subscribe to use the discovered assets, at which point the agent helps to natively provision this subscription in the Gateway.
 * **Traceability Agents** collect usage, metrics, and data plane transaction metadata and send them to the Amplify platform for additional insights. In the platform, API consumers and API providers gain visibility into the performance and behavior of the assets discovered in the data plane.
 
 #### Federate data planes
