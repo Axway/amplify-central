@@ -41,6 +41,7 @@ The following table describes the usage, options, and arguments for the `get` co
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
 |`-s,--scope=<name>`                                            |Scope name for scoped resources          |
 |`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters|
+|`--team <name\|guid>`                                           |The team name or guid to use |
 |`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match|
 |`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match|
 |`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match|
@@ -129,6 +130,8 @@ axway central get assets --attribute location=arizona
 # To get assets and filter the list with a combination of title, tag and attribute filters
 axway central get assets --title test123 --tag tag1 --attribute location=arizona
 
+# To get environments and filter by team
+axway central get env --team <name|guid>
 ```
 
 For more examples, see [Create and fetch resources via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_create_fetch_resources/).
