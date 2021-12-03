@@ -50,10 +50,7 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 ## Prerequisites
 
 * An Axway Amplify Central subscription in the Amplify platform
-* (Optional) A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
-
-{{< alert title="Note" color="primary" >}}Although both service account types are currently supported, the Amplify Central Service Account will soon be retired. For this reason, it is recommended that you use the Platform Service Account.{{< /alert >}}
-
+* A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
 * (Optional) An Amplify Central environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * API Key credentials on AWS. Allow for CLI access
 * Amazon CloudWatch Service

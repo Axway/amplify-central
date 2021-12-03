@@ -68,7 +68,7 @@ The AWS service usage cost for the agents is explain below.
 
 ### Minimum requirements
 
-* [Amplify Central Service Account](/docs/integrate_with_central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
+* [Amplify Platform Service Account](/docs/integrate_with_central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
 * [API Key credentials on AWS](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html). Allowing for CLI access.
 * [Amazon CloudWatch Service](https://aws.amazon.com/cloudwatch/)
 * [Amazon Simple Queue Service](https://aws.amazon.com/sqs/)
