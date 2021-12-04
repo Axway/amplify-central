@@ -5,9 +5,9 @@ draft: false
 weight: 10
 description: A set of best practices for using teams in the Amplify platform, which will help you to have a global and centralized approach of managing your APIs.
 ---
-Use this information as a guide for setting up your teams in the Amplify platform. 
+Use this information as a guide for setting up your teams in the Amplify platform.
 
-{{< alert title="Note" color="primary" >}}Please note that the team concept is flexible, it can be used for your specific use case. 
+{{< alert title="Note" color="primary" >}}Please note that the team concept is flexible, it can be used for your specific use case.
 {{< /alert >}}
 
 A team is a concept in the Amplify platform that is used to group users and assets. This ensures that assets can be governed and consumed by a specific group of users.
@@ -25,7 +25,7 @@ A team is linked to multiple components in the Amplify platform:
     * **Catalog Manager** - has full control of the assets of the team, but cannot manage the users of the team.
     * **Developer** - edits and consumes assets of the team, but cannot manage the users of the team.
     * **Consumer** - can only consume the assets of the team.
-*  **Unified Catalog**:
+* **Unified Catalog**:
     * Every item in the Unified Catalog, which represents an API, is owned by a specific team. That team has full control over their APIs.
     * An API can be shared with another team. The other team can only consume the API and has no other rights.
     * The team can consume the API by subscribing to it. An approval step can be configured, but the owning team must approve the subscription.
@@ -60,6 +60,4 @@ A global and centralized API team strategy consists of:
             * **Automated** - an agent can automatically create API Catalog items with the following restrictions:<br /> For Azure and AWS, all APIs that are discovered by a certain agent are added to the same team.<br /> For the Axway API Gateway, the Agent can either put all APIs in a single team, or the agent can put the APIs from API Manager organization X in team X.
             * **Scripted** - use the APIs or CLI to put the APIs in the correct team.
             * **Manual** - use the APIs or CLI to put the APIs in the correct team.
-        * **Consuming** - one Global team where all members have the Consumer role. Users can browse the catalog to have a view of all the APIs that are offered by the company, and they can also subscribe to the APIs. The approval of the subscription is handled by the provider team that owns the API. A user from a consuming team can choose to create a composite API on top of different APIs that are found in this Global team. That API will then be hosted in the data plane, pushed to the team of that user, and become a new API in the Global team. One limitation is that all users of the Global team have access to all subscriptions created in the Global team. 
-
-
+        * **Consuming** - one Global team where all members have the Consumer role. Users can browse the catalog to have a view of all the APIs that are offered by the company, and they can also subscribe to the APIs. The approval of the subscription is handled by the provider team that owns the API. A user from a consuming team can choose to create a composite API on top of different APIs that are found in this Global team. That API will then be hosted in the data plane, pushed to the team of that user, and become a new API in the Global team. One limitation is that all users of the Global team have access to all subscriptions created in the Global team.
