@@ -34,6 +34,7 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
     * There is a graphical environment
     * You can use Kubernetes 1.19 (Helm install only)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
+* (optional) An Amplify platform service account to run the configuration in headless mode.
 
 ## Agent runner machine pre-requisites
 
@@ -62,6 +63,13 @@ Create an empty directory where Axway CLI will generate files. Run all Axway Cen
 
 ### Step 3: Identify yourself to Amplify platform with Axway CLI
 
+There are two ways to authenticate with Axway CLI:
+
+* with an administrator username/password via a browser
+* with a platform service account and a username/password via a prompt
+
+#### Default mode with browser authentication
+
 Run the following command to use Central CLI to log in with your Amplify platform credentials:
 
 ```shell
@@ -72,6 +80,32 @@ A browser will automatically open.
 Enter your valid credentials (email address and password). Once the “Authorization Successful” message is displayed, go back to Axway CLI.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
+
+#### Headless mode authentication with service account
+
+For the headless mode, it is required to have a platform service account as well as a regular administrator account. The permissions of the service account will be overridden by the permission of the administrator account.
+
+```shell
+# command syntax: Log into a service account with platform tooling credentials:
+axway auth login --client-id <id> --secret-file <path> --username <email>
+
+# the command will prompt you to enter your username password
+```
+
+Sample:
+
+```shell
+axway auth login --client-id plsa_a1d6e0a8-XXXXX --secret-file C:\SAKeysPlatformSA\PLSA\private_key.pem --username admin@mail.com
+AXWAY CLI, version 3.1.0
+Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
+
+√ Password: · **********
+
+You are logged into a platform account in organization Axway (a1d6e0a8-XXXXX) as admin@mail.com.
+The current region is set to US.
+```
+
+If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
 
 ### Step 4: Run the agents' configure procedure
 
