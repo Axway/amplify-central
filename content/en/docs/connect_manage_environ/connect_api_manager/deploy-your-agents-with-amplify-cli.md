@@ -95,7 +95,7 @@ axway auth login --client-id <id> --secret-file <path> --username <email>
 Sample:
 
 ```shell
-axway auth login --client-id plsa_a1d6e0a8-XXXXX --secret-file C:\SAKeysPlatformSA\PLSA\private_key.pem --username admin@mail.com
+axway auth login --client-id plsa_a1d6e0a8-XXXXX --secret-file /home/user/axway/SAKeysPlatformSA/private_key.pem --username admin@mail.com
 AXWAY CLI, version 3.1.0
 Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
 
