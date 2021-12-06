@@ -82,7 +82,7 @@ TLS_CHACHA20_POLY1305_SHA256
 
 The Traceability Agents also communicate to the Amplify search logs service using the Lumberjack protocol over a TCP connection. The connection host and port can be configured by changing the TRACEABILITY_HOST in your configuration file. For additional information, see [API Manager's Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent), [AWS Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#traceability-agent) and  [Azure Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_azure_gateway/agent-variables/#specific-variables-for-traceability-agent).
 
-## Proxying - API Manager only
+## Proxying - Axway API Gateway only
 
 The agents are configured to use a TLS-encrypted HTTP connection by default.
 
@@ -98,7 +98,7 @@ Authentication to the servers is enforced through tokens, username/password, or 
 
 ## Agent configuration file
 
-### Securing the user passwords
+### Securing Axway API Gateway passwords
 
 The agents are using credentials (username/password) to access the API Manager system. By default, the username and password are stored in clear text inside the agent configuration files.</br>
 
