@@ -19,46 +19,101 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
 ## Objectives
 
-Learn how to quickly install and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
+Learn how to quickly configure, install, and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
 
-## Axway Central CLI prerequisites
+To configure the agent, Axway Central CLI and Amplify platform connectivity are required.
 
-* [Node.js](https://nodejs.org/en/download/) version 10.13.0 or later
-* Access to npm package (for installing Axway CLI)
-* Access to login.axway.com on port 443
-* Minimum Axway Central CLI version: 0.7.0 (check version using `axway central --version`)
+1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
+2. Once the configuration is complete, the agent(s) and its configuration must be copied to the Gateway machine so that it can use the API Manager API's and access the event logs or open traffic logs.
 
-For more information, see [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+## Agent configuration machine pre-requisites
+
+* Any machine (Windows / Linux / Mac) where:
+    * You can access platform.axway.com and login.axway.com on port 443
+    * You can install and run Axway Central CLI (node.js module)
+    * You can access the npm package (for installing Axway CLI)
+    * You can install OpenSSL
+    * There is a graphical environment (optional)
+    * You can use Kubernetes 1.19 (Helm install only)
+* An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
+* (optional) An Amplify platform service account to run the configuration in headless mode.
 
 ## Azure prerequisites
 
 * An Azure Service principal
 * An Azure Event Hub
 
-## Installing the agents
+## Agent runner machine pre-requisites
 
-### Step 1: Folder preparation
+Azure agents are delivered in a Docker image provided by Axway. You can run them from any Docker container.
+
+The agents must have access to:
+
+* the platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy.
+* Azure Gateway
+
+## Configure the agents with Axway Central CLI
+
+To configure the agents, use Axway Central CLI. This CLI will prompt you for answers regarding your Gateway installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
+
+### Step 1: Install Axway Central CLI
+
+Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+
+You can validate that your installation is correct by running: `axway central --version`
+
+### Step 2: Folder preparation
 
 Create an empty directory where Axway CLI will generate files. Run all Axway Central CLI from this directory.
 
-### Step 2: Identify yourself to Amplify Platform with Axway CLI
+### Step 3: Identify yourself to Amplify Platform with Axway CLI
 
-To use Central CLI to log in with your Amplify Platform credentials, run the following command:
+There are two ways to authenticate with Axway CLI:
+
+* with an administrator username/password via a browser
+* with a platform service account and a username/password via a prompt
+
+#### Default mode with browser authentication
+
+Run the following command to use Central CLI to log in with your Amplify platform credentials:
 
 ```shell
 axway auth login
 ```
 
-A browser automatically opens.
-Enter your valid credentials (email address and password). Once the “Authorization Successful” message is displayed, go back to Axway CLI. The browser may be closed at this point.
+A browser will automatically open.
+Enter your valid credentials (email address and password). Once the “Authorization Successful” message is displayed, go back to Axway CLI.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
 
-{{< alert title="Note" color="primary" >}}If you do not have a graphical environment, forward the display to an X11 server (Xming or similar tools) using the `export DISPLAY=myLaptop:0.0` command.{{< /alert >}}
+#### Headless mode authentication with service account
 
-### Step 3: Run the agents' install procedure
+For the headless mode, it is required to have a platform service account as well as a regular administrator account. The permissions of the service account will be overridden by the permission of the administrator account.
 
-Azure agents are delivered in a Docker image provided by Axway. You can run them from any Docker container that can access the Amplify Platform and Azure Gateway.
+```shell
+# command syntax: Log into a service account with platform tooling credentials:
+axway auth login --client-id <id> --secret-file <path> --username <email>
+
+# the command will prompt you to enter your username password
+```
+
+Sample:
+
+```shell
+axway auth login --client-id plsa_a1d6e0a8-XXXXX --secret-file /home/user/axway/SAKeysPlatformSA/private_key.pem --username admin@mail.com
+AXWAY CLI, version 3.1.0
+Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
+
+√ Password: · **********
+
+You are logged into a platform account in organization Axway (a1d6e0a8-XXXXX) as admin@mail.com.
+The current region is set to US.
+```
+
+If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
+
+### Step 4: Run the agents' configure procedure
+
 The Axway Central CLI will guide you through the configuration of the agents.
 
 Agents configuration will be installed in the directory from where the CLI runs.
@@ -112,34 +167,69 @@ public_key.pem           *newly created service account only
 
 `private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify Platform (if you choose to let the installation generate them).
 
-### Step 4: Deploy the agent in Docker Container
+### Step 5: Deploy the agent in Docker Container
 
 The installation summary contains the Docker commands needed to finish the installation.
 
-Example:
+By default the Docker commands are configured to use the latest available agents version. If you want to use a different version, please verify the available version in the agent release note.
+
+Sample:
 
 ```shell
 To utilize the agents, pull the latest Docker images and
 run them using the appropriate supplied environment files, (da_env_vars.env & ta_env_vars.env):
 
-  - Pull the latest Discovery Agent:
-    docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-discovery-agent:latest
-  - Pull the latest Traceability Agent:
-    docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:latest
+  - Pull the latest image of the Discovery Agent:
+    docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-discovery-agent:1.1.6
 
-  - Run the latest Discovery Agent:
+  - Start the Discovery Agent:
     docker run --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
-        axway.jfrog.io/ampc-public-docker-release/agent/azure-discovery-agent:latest
-  - Run the latest Traceability Agent:
+        axway.jfrog.io/ampc-public-docker-release/agent/azure-discovery-agent:1.1.6
+
+  - Pull the latest image of the Traceability Agent:
+    docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:1.1.6
+
+  - Start the Traceability Agent:
     docker run --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
-        axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:latest
+        axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:1.1.6
 ```
 
 * Pull the latest images of the Discovery/Traceability Agents:
-    * These two commands pull the latest released agents from docker pull axway.jfrog.io/ampc-public-docker-release/agent.
+    * These two commands pull the most recent released agents from docker pull axway.jfrog.io/ampc-public-docker-release/agent.
 * Run the latest images of the Discovery/Traceability Agents:
     * These two commands run the Docker Containers using the created environment files, and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
 
 Once the pull and run commands are completed, the agents should be running in the Docker infrastructure.
+
+See [Connect Azure Gateway](/docs/connect_manage_environ/connect_azure_gateway/) for additional information about connecting Azure API Management Services to Amplify Central.
+
+## Check that agents are running with Axway Central CLI
+
+After being authenticated to the platform with `axway auth login` command, run the following:
+
+* `axway central get da` to get all Discovery Agent information.
+* `axway central get ta` to get all Traceability Agent information.
+
+The STATUS column will help you identify which agent is running.
+
+```shell
+C:\Demos>axway central get da
+√ Resource(s) successfully retrieved
+
+NAME                      DATAPLANE TYPE  STATUS     RESOURCE KIND   SCOPE KIND   SCOPE NAME        RESOURCE GROUP
+lbean018-discovery        Edge            running    DiscoveryAgent  Environment  apigtw-v77        management
+ec2-da                    AWS             stopped    DiscoveryAgent  Environment  awsgtw-us-west-1  management
+azure-da                  Azure           running    DiscoveryAgent  Environment  azure-dev         management
+```
+
+```shell
+C:\Demos>axway central get ta
+√ Resource(s) successfully retrieved
+
+NAME                         DATAPLANE TYPE  STATUS   RESOURCE KIND      SCOPE KIND   SCOPE NAME        RESOURCE GROUP
+lbean018-traceability        Edge            running  TraceabilityAgent  Environment  apigtw-v77        management
+ec2-ta                       AWS             stopped  TraceabilityAgent  Environment  awsgtw-us-west-1  management
+azure-ta                     Azure           running  TraceabilityAgent  Environment  azure-dev         management
+```
 
 See [Connect Azure Gateway](/docs/connect_manage_environ/connect_azure_gateway/) for additional information about connecting Azure API Management Services to Amplify Central.
