@@ -59,7 +59,7 @@ Optional flags:
 -f, --file = (filename.yml, filename.yaml, filename.json)
 ```
 
-Try out the [create_environments.json](https://amplify-central.netlify.app/samples/central/create_environments.json) or [create_environments.yaml](https://amplify-central.netlify.app/samples/central/create_environments.yaml) samples to create an environment.
+Try out the [create_environments.json](/samples/central/create_environments.json) or [create_environments.yaml](/samples/central/create_environments.yaml) samples to create an environment.
 
 ## Retrieve a list of all available environments
 
