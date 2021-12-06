@@ -35,7 +35,7 @@ It is also possible to filter the API to be discover using the filter capabiliti
 
 | Gateway type | Variable name      | Description                                                                                                            | Reference       |
 |--------------|--------------------|------------------------------------------------------------------------------------------------------------------------|-----------------|
-| API MAnager | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)|
+| Axway API Gateway | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)|
 | AWS         | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/)|
 | Azure       | `AZURE_FILTER`      | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` |                 |
 
@@ -139,7 +139,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 _Region_ column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding _Host_/_Port_ for your agents to operate correctly.
 {{% /alert %}}
 
-### API Manager - other ports
+### Axway API Gateway - other ports
 
 Other ports which may need to be opened so that the Agent may monitor API Gateway / Manager are:
 
@@ -172,7 +172,7 @@ SMTP and/or a webhook URL can be set up to send subscription notifications on bo
 
 The SMTP server address or the webhook url needs to be accessible from the Gateway machine for the agent to use them.
 
-## Using proxies - API Manager only
+## Using proxies - Axway API Gateway
 
 If your network policy restricts outbound traffic such that outbound traffic must pass through a proxy. A proxy can be configured in the configuration file of the agents.
 
