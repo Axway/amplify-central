@@ -21,7 +21,7 @@ Learn how to quickly configure, install, and run your Discovery and Traceability
 
 To configure the agent, Axway Central CLI and Amplify platform connectivity are required.
 
-1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment.
+1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
 2. Once the configuration is complete, the agent(s) and its configuration must be copied to the Gateway machine so that it can use the API Manager API's and access the event logs or open traffic logs.
 
 ## Agent configuration machine pre-requisites
@@ -31,7 +31,7 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
-    * There is a graphical environment
+    * There is a graphical environment (optional)
     * You can use Kubernetes 1.19 (Helm install only)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
 * (optional) An Amplify platform service account to run the configuration in headless mode.
