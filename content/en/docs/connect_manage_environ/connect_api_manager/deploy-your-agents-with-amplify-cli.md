@@ -34,7 +34,7 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
     * There is a graphical environment (optional)
     * You can use Kubernetes 1.19 (Helm install only)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
-* (optional) An Amplify platform service account to run the configuration in headless mode.
+* An Amplify platform service account to run the configuration in headless mode (optional)
 
 ## Agent runner machine pre-requisites
 
@@ -65,8 +65,8 @@ Create an empty directory where Axway CLI will generate files. Run all Axway Cen
 
 There are two ways to authenticate with Axway CLI:
 
-* with an administrator username/password via a browser
-* with a platform service account and a username/password via a prompt
+* With an administrator username/password via a browser
+* With a platform service account and a username/password via a prompt
 
 #### Default mode with browser authentication
 
@@ -81,9 +81,9 @@ Enter your valid credentials (email address and password). Once the “Authoriza
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
 
-#### Headless mode authentication with service account
+#### Headless mode authentication with Service Account
 
-For the headless mode, it is required to have a platform service account as well as a regular administrator account. The permissions of the service account will be overridden by the permission of the administrator account.
+You must have a platform service account and a regular administrator account for the headless mode. The permissions of the service account will be overridden by the permission of the administrator account.
 
 ```shell
 # command syntax: Log into a service account with platform tooling credentials:
