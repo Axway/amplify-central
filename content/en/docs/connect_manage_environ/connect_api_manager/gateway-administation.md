@@ -713,7 +713,7 @@ CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 
 This section describes where the logs should be sent on Amplify Central.
 
-`TRACEABILITY_HOST`: The host and port of the ingestion service to forward the transaction log entries. Default value is **ingestion-lumberjack.datasearch.axway.com:453**.
+`TRACEABILITY_HOST`: The host and port of the ingestion service to forward the transaction log entries. Default value is **ingestion.datasearch.axway.com:5044**.
 
 `TRACEABILITY_PROTOCOL`: The protocol (https or tcp) to be used for communicating with ingestion service. Default value is **tcp**.
 
@@ -733,7 +733,7 @@ Once all data is gathered, the section should look like this if you do not use a
 
 ```shell
 # Send output to Central Database
-TRACEABILITY_HOST=ingestion-lumberjack.datasearch.axway.com:453
+TRACEABILITY_HOST=ingestion.datasearch.axway.com:5044
 TRACEABILITY_PROTOCOL=tcp
 #TRACEABILITY_PROXYURL=socks5://username:password@hostname:port
 #TRACEABILITY_COMPRESSIONLEVEL=3
@@ -813,7 +813,7 @@ CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 #CENTRAL_AUTH_TIMEOUT=10s
 
 # Send output to Central Database
-TRACEABILITY_HOST=ingestion-lumberjack.datasearch.axway.com:453
+TRACEABILITY_HOST=ingestion.datasearch.axway.com:5044
 TRACEABILITY_PROTOCOL=tcp
 #TRACEABILITY_PROXYURL=socks5://username:password@hostname:port
 #TRACEABILITY_COMPRESSIONLEVEL=3

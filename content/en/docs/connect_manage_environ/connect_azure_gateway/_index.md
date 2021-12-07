@@ -65,7 +65,7 @@ Update the following variables to move data to the EU region:
 
 * `CENTRAL_DEPLOYMENT`= **prod-eu**
 * `CENTRAL_URL`= **<https://central.eu-fr.axway.com>**
-* `TRACEABILITY_HOST`= **ingestion-lumberjack.visibility.eu-fr.axway.com:453**
+* `TRACEABILITY_HOST`= **ingestion.visibility.eu-fr.axway.com:5044**
 
 ## Creating an Azure service principal for Discovery Agent
 
