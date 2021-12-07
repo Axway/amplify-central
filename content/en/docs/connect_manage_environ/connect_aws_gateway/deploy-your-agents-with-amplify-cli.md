@@ -21,10 +21,10 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
 Learn how to quickly configure, install, and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
 
-To configure the agent, Axway Central CLI and Amplify platform connectivity are required.
+Axway Central CLI and Amplify platform connectivity are required to configure the agent.
 
 1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
-2. Once the configuration is complete, the configuration procedure will output all the AWS CLI commands to run the agents in the selected infrastructure (EC2 or ECS fargate cluster).
+2. Once the configuration is complete, the configuration procedure will output all AWS CLI commands to run the agents in the selected infrastructure (EC2 or ECS fargate cluster).
 
 ## Agent configuration machine pre-requisites
 
@@ -36,26 +36,26 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
     * There is a graphical environment (optional)
     * You can use AWS CLI to run commands (creating bucket / creating SSM parameter / run Cloud formation template)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
-* (optional) An Amplify platform service account to run the configuration in headless mode.
+* An Amplify platform service account to run the configuration in headless mode (optional)
 
 ## Agent runner machine pre-requisites
 
-The agents run on an EC2 instance, ECS Fargate cluster or directly on a Docker container.
+The agents run on an EC2 instance, ECS Fargate cluster, or directly on a Docker container.
 
 The agents must have access to:
 
-* the platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy.
+* The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
 * AWS API Gateway / AWS CloudWatch / AWS SQS
 
 ## Configure the agents with Axway Central CLI
 
-To configure the agents, use Axway Central CLI. This CLI will prompt you for answers regarding your Gateway installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
+Use Axway Central CLI to configure the agents. This CLI will prompt you for answers regarding your Gateway installation, the service account used to ensure the connectivity from the agent to the Amplify platform, and where to store the discovered APIs in the Amplify platform.
 
 ### Step 1: Install Axway Central CLI
 
 Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
-You can validate that your installation is correct by running: `axway central --version`
+You can validate that your installation by running: `axway central --version`.
 
 ### Step 2: Folder preparation
 
@@ -65,8 +65,8 @@ Create an empty directory where Axway CLI will generate files. Run all Axway Cen
 
 There are two ways to authenticate with Axway CLI:
 
-* with an administrator username/password via a browser
-* with a platform service account and a username/password via a prompt
+* With an administrator username/password via a browser
+* With a platform service account and a username/password via a prompt
 
 #### Default mode with browser authentication
 
@@ -77,13 +77,13 @@ axway auth login
 ```
 
 A browser will automatically open.
-Enter your valid credentials (email address and password). Once the “Authorization Successful” message is displayed, go back to Axway CLI.
+Enter your valid credentials (email address and password). Once the *Authorization Successful* message is displayed, go back to Axway CLI.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
 
 #### Headless mode authentication with service account
 
-For the headless mode, it is required to have a platform service account as well as a regular administrator account. The permissions of the service account will be overridden by the permission of the administrator account.
+You must have a platform service account and a regular administrator account for the headless mode. The permissions of the service account will be overridden by the permission of the administrator account.
 
 ```shell
 # command syntax: Log into a service account with platform tooling credentials:
@@ -284,10 +284,10 @@ See [Administer AWS Gateway cloud](/docs/connect_manage_environ/connect_aws_gate
 
 ## Check that agents are running with Axway Central CLI
 
-After being authenticated to the platform with `axway auth login` command, run the following:
+After being authenticated to the platform with the `axway auth login` command, run the following:
 
-* `axway central get da` to get all Discovery Agent information.
-* `axway central get ta` to get all Traceability Agent information.
+* `axway central get da` to get all Discovery Agent information
+* `axway central get ta` to get all Traceability Agent information
 
 The STATUS column will help you identify which agent is running.
 
