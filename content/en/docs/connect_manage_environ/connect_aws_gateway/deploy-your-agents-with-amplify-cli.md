@@ -40,14 +40,12 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
 
 ## Agent runner machine pre-requisites
 
-The agents run on the same machine as the gateway or API Manager when the gateway is deployed in a classic mode.
+The agents run on an EC2 instance, ECS Fargate cluster or directly on a Docker container.
 
-The agents run on the same Docker environment as the Gateway or API Manager when the gateway is deployed in EMT mode.
+The agents must have access to:
 
-{{< alert title="Note" color="primary" >}}The Traceability Agent must use the same volume where the event logs or open traffic logs are written by the Gateway (refer to `anm` container).
-{{< /alert >}}
-
-The agents must have access to the platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy.
+* the platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy.
+* AWS API Gateway / AWS CloudWatch / AWS SQS
 
 ## Configure the agents with Axway Central CLI
 
