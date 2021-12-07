@@ -21,10 +21,10 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
 Learn how to quickly configure, install, and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
 
-To configure the agent, Axway Central CLI and Amplify platform connectivity are required.
+Axway Central CLI and Amplify platform connectivity are required to configure the agent.
 
 1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
-2. Once the configuration is complete, the agent configuration must be copied to Docker machine so that the Docker runner will find them.
+2. Once the configuration is complete, the agent configuration must be copied to a Docker machine so that the Docker runner will find them.
 
 ## Agent configuration machine pre-requisites
 
@@ -36,7 +36,7 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
     * There is a graphical environment (optional)
     * You can use Kubernetes 1.19 (Helm install only)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
-* (optional) An Amplify platform service account to run the configuration in headless mode.
+* An Amplify platform service account to run the configuration in headless mode (optional)
 
 ## Azure prerequisites
 
@@ -49,18 +49,18 @@ Azure agents are delivered in a Docker image provided by Axway. You can run them
 
 The agents must have access to:
 
-* the platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy.
+* The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
 * Azure Gateway
 
 ## Configure the agents with Axway Central CLI
 
-To configure the agents, use Axway Central CLI. This CLI will prompt you for answers regarding your Gateway installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
+Use Axway Central CLI to configure the agents. This CLI will prompt you for answers regarding your Gateway installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
 
 ### Step 1: Install Axway Central CLI
 
 Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
-You can validate that your installation is correct by running: `axway central --version`
+You can validate that your installation is correct by running: `axway central --version`.
 
 ### Step 2: Folder preparation
 
@@ -70,8 +70,8 @@ Create an empty directory where Axway CLI will generate files. Run all Axway Cen
 
 There are two ways to authenticate with Axway CLI:
 
-* with an administrator username/password via a browser
-* with a platform service account and a username/password via a prompt
+* With an administrator username/password via a browser
+* With a platform service account and a username/password via a prompt
 
 #### Default mode with browser authentication
 
@@ -82,13 +82,13 @@ axway auth login
 ```
 
 A browser will automatically open.
-Enter your valid credentials (email address and password). Once the “Authorization Successful” message is displayed, go back to Axway CLI.
+Enter your valid credentials (email address and password). Once the *Authorization Successful* message is displayed, go back to Axway CLI.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
 
 #### Headless mode authentication with service account
 
-For the headless mode, it is required to have a platform service account as well as a regular administrator account. The permissions of the service account will be overridden by the permission of the administrator account.
+You must have a platform service account and a regular administrator account for the headless mode. The permissions of the service account will be overridden by the permission of the administrator account.
 
 ```shell
 # command syntax: Log into a service account with platform tooling credentials:
@@ -171,7 +171,7 @@ public_key.pem           *newly created service account only
 
 The installation summary contains the Docker commands needed to finish the installation.
 
-By default the Docker commands are configured to use the latest available agents version. If you want to use a different version, please verify the available version in the agent release note.
+By default, the Docker commands are configured to use the latest available agents version. If you want to use a different version, verify the available version in the agent release note.
 
 Sample:
 
@@ -207,8 +207,8 @@ See [Connect Azure Gateway](/docs/connect_manage_environ/connect_azure_gateway/)
 
 After being authenticated to the platform with `axway auth login` command, run the following:
 
-* `axway central get da` to get all Discovery Agent information.
-* `axway central get ta` to get all Traceability Agent information.
+* `axway central get da` to get all Discovery Agent information
+* `axway central get ta` to get all Traceability Agent information
 
 The STATUS column will help you identify which agent is running.
 
