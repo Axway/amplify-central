@@ -19,9 +19,9 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
 Learn how to quickly configure, install, and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
 
-To configure the agent, Axway Central CLI and Amplify platform connectivity are required.
+Axway Central CLI and Amplify platform connectivity are required to configure the agent.
 
-1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment.
+1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
 2. Once the configuration is complete, the agent(s) and its configuration must be copied to the Gateway machine so that it can use the API Manager API's and access the event logs or open traffic logs.
 
 ## Agent configuration machine pre-requisites
@@ -31,9 +31,10 @@ To configure the agent, Axway Central CLI and Amplify platform connectivity are 
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
-    * There is a graphical environment
+    * There is a graphical environment (optional)
     * You can use Kubernetes 1.19 (Helm install only)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
+* An Amplify platform service account to run the configuration in headless mode (optional)
 
 ## Agent runner machine pre-requisites
 
@@ -62,6 +63,13 @@ Create an empty directory where Axway CLI will generate files. Run all Axway Cen
 
 ### Step 3: Identify yourself to Amplify platform with Axway CLI
 
+There are two ways to authenticate with Axway CLI:
+
+* With an administrator username/password via a browser
+* With a platform service account and a username/password via a prompt
+
+#### Default mode with browser authentication
+
 Run the following command to use Central CLI to log in with your Amplify platform credentials:
 
 ```shell
@@ -72,6 +80,32 @@ A browser will automatically open.
 Enter your valid credentials (email address and password). Once the “Authorization Successful” message is displayed, go back to Axway CLI.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
+
+#### Headless mode authentication with Service Account
+
+You must have a platform service account and a regular administrator account for the headless mode. The permissions of the service account will be overridden by the permission of the administrator account.
+
+```shell
+# command syntax: Log into a service account with platform tooling credentials:
+axway auth login --client-id <id> --secret-file <path> --username <email>
+
+# the command will prompt you to enter your username password
+```
+
+Sample:
+
+```shell
+axway auth login --client-id plsa_a1d6e0a8-XXXXX --secret-file /home/user/axway/SAKeysPlatformSA/private_key.pem --username admin@mail.com
+AXWAY CLI, version 3.1.0
+Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
+
+√ Password: · **********
+
+You are logged into a platform account in organization Axway (a1d6e0a8-XXXXX) as admin@mail.com.
+The current region is set to US.
+```
+
+If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
 
 ### Step 4: Run the agents' configure procedure
 
