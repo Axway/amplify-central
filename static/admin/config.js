@@ -150,6 +150,13 @@ const collections = [{
   label_singular: 'page in Manage your marketplace section',
   description: 'All pages related to Manage your marketplace',
   format: 'frontmatter',
+}, { 
+  ...docsDefaults('best_practices', 'best_practices'),
+  name: 'best_practices',
+  label: 'Best practices',
+  label_singular: 'page in Best practices section',
+  description: 'All pages related to Best practices',
+  format: 'frontmatter',
 }, {
   ...docsDefaults('saas_api_gateway', 'saas_api_gateway'),
   name: 'saas_api_gateway',
