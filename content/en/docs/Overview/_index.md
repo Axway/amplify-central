@@ -49,7 +49,7 @@ API providers have visibility over the environments that have been connected to 
 
 #### Administration
 
-The management plane allows platform admins and API providers to administer users, teams, agents, and other related entities in support of managing your distributed environments and organizations. Providers can manage onboarding of developers, assign permissions, and oversee the environments. As consumers create apps and subscribe to assets, providers can grant access and manage those subscriptions.
+API providers can manage onboarding of developers, assign permissions, and oversee the environments. As consumers create apps and subscribe to assets, API providers can grant access and manage those subscriptions.
 
 #### Analytics
 
