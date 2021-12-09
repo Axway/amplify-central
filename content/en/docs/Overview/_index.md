@@ -43,6 +43,8 @@ Mapping this analogy back to Amplify:
 
 ### Amplify Management Plane
 
+The management plane allows platform admins and API providers to administer users, teams, agents, and other related entities in support of managing your distributed environments and organizations.
+
 #### Catalog
 
 API providers have visibility over the environments that have been connected to the Amplify platform, including services within those environments. Discovery Agents automate the retrieval of information from these systems, but services can also be added manually or via API or CLI. APIs and other assets are curated and published to the Amplify Catalog, which becomes the marketplace for all integration assets in your enterprise, ranging from APIs to Managed File Transfer Flows to mobile SDKs. The Catalog caters to both providers and consumers, and enables enterprises to deliver digital experiences with great speed and control by offering a centralized location for discovery and collaboration around assets, maximizing reuse across the enterprise.
