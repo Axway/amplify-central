@@ -28,7 +28,7 @@ The following enhancements are available in this Axway CLI update:
 The following enhancements are available in this Axway Central CLI update:
 
 * Amplify Central CLI can manage team ownership of Environments and API Services.
-* Amplify Central CLI has added a simple '--team' filter for users to only Get Environments and API Services for a specific team which they are a member of. 
+* Amplify Central CLI has added a simple '--team' filter for users to only Get Environments and API Services for a specific team which they are a member of.
 * Amplify Central CLI can auto-generate a logical name for resources without a logical name provide with a 'create' and 'apply' command.  
 * Amplify Central CLI has deprecated the "axway central create service-account" command as of Central CLI version 2.5.0 or later.  The management of service accounts is included in the Axway CLI.
 
@@ -40,8 +40,8 @@ The following enhancements are available in this Axway Central CLI update:
 
 The following issues are fixed in this Amplify Central update:
 
-*  Amplify Central CLI has be updated to enable the use of "install agents" command in a headless mode with a service account and tooling credentials of a platform admin account.
-*  WebUI defect fixed when creating an Environment with the name 'add'.
+* Amplify Central CLI has be updated to enable the use of "install agents" command in a headless mode with a service account and tooling credentials of a platform admin account.
+* WebUI defect fixed when creating an Environment with the name 'add'.
 
 ## Known limitations
 
