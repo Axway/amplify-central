@@ -72,6 +72,4 @@ The following limitations exist in this update.
 
 ### Amplify Istio agents
 
-* Discovery Agent cannot display its status in Central topology since is it not integrated with Amplify Agents SDK.
 * Discovery Agent requires manual set up to report APIs correctly.
-* Traceability Agent cannot leverage Amplify agents SDK sampling feature.
