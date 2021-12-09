@@ -7,7 +7,7 @@ hide_readingtime: true
 description: Amplify Central enables you to provide universal API Management
   across your enterprise. It allows you to manage and govern APIs and
   integration assets across all environments, clouds and API Gateways (Axway and
-  non-Axway) through a [central management plane](#management-plane).
+  non-Axway) through a [central management plane](#amplify-management-plane).
 ---
 With Amplify, enterprise teams have a centralized hub for discovering existing APIs, curating and sharing their APIs, onboarding consumers, and subscribing to APIs for consumption. Amplify Central enables you to increase the visibility and consumption of your APIs by engaging across your internal and partner ecosystem. You will gain insights into your API ecosystem in how it’s being utilized and how it adheres to your corporate standards.
 
