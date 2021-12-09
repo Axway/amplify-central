@@ -32,7 +32,7 @@ Amplify manages the complexity and sprawl of a diverse, distributed IT architect
 
 ![Amplify functionality](/Images/Overview/amplify-platform-overview.jpg)
 
-Amplify can be split into two components, the SaaS-based management plane (shown in the top of the diagram in blue) called the Amplify Management Plane and the data planes (shown at the bottom). The terms management (or control) plane and data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
+Amplify consists of a SaaS-based Amplify Management Plane (shown in the top of the diagram in blue), data planes (shown at the bottom), and Amplify agents (shown in the middle). The terms management (or control) plane and data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
 
 Mapping this analogy back to Amplify:
 
