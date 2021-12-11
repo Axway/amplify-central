@@ -41,11 +41,13 @@ The following table describes the usage, options, and arguments for the `get` co
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
 |`-s,--scope=<name>`                                            |Scope name for scoped resources          |
 |`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters|
-|`--team <name&#124;guid>`                                      |The team name or guid to use |
+|`--team <name \| guid>`                                      |The team name or guid to use |
 |`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match|
 |`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match|
 |`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match|
 |`--no-cache`                                                    |Do not use cache when communicating with the server|
+|`--test1 <name`\|`guid>`                                      |Escape outside back-ticks. |
+|`--test1 <name⎮guid>`                                      |Use unicode pipe. |
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
 
