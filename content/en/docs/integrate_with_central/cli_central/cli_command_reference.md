@@ -47,7 +47,9 @@ The following table describes the usage, options, and arguments for the `get` co
 |`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match|
 |`--no-cache`                                                    |Do not use cache when communicating with the server|
 |`--test1 <name`\|`guid>`                                      |Escape outside back-ticks. |
-|`--test1 <name⎮guid>`                                      |Use unicode pipe. |
+|`--test2 <name⎮guid>`                                      |Use unicode pipe. |
+|`--test3 <name&#124;guid>`                                      |Use HTML code for pipe. |
+|`--test4 <name&#92;|guid>`                                      |Use HTML code for backslash. |
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
 
