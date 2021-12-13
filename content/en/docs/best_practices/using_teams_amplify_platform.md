@@ -62,7 +62,7 @@ A global and centralized API team strategy consists of:
 * **Amplify platform**:
 
     * **Amplify Central** - hosts the environments which represent the different gateways in the data planes. It also contains the definitions of the APIs that were discovered by the agents.
-    * **Unified Catalog** - use to view and consume APIs. Use provider and consuming teams with Unified Catalog:
+    * **Unified Catalog** - use to view and consume APIs. Use provider and consumer teams with Unified Catalog:
 
         * **Provider** - these teams can, for example, be linked to a department or a project and are used for all APIs that the provider team owns. The members of the provider team are the users of the project or the department.<br /> An API in a provider team can either be shared with other provider teams or  with the Global team. If it is shared with the Global team, then it becomes part of the global catalog and everyone has access to the API.<br /> There are three approaches to add APIs to a provider team:
 
