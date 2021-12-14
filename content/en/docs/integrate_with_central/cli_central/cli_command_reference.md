@@ -50,6 +50,7 @@ The following table describes the usage, options, and arguments for the `get` co
 |`--test2 <name⎮guid>`                                      |Use unicode pipe. |
 |`--test3 <name&#124;guid>`                                      |Use HTML code for pipe. |
 |`--test4 <name&#92;|guid>`                                      |Use HTML code for backslash. |
+|`--test5 <name``\|``guid>`                                      |Escape at start of code block. |
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
 
