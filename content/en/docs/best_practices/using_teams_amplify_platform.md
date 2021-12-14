@@ -14,7 +14,7 @@ Use this information as a guide for setting up your teams in the Amplify platfor
 
 A team is a concept in the Amplify platform that is used to group users and assets. This ensures that assets can be governed and consumed by a specific group of users.
 
-![Teams strategy](/Images/central/best_practices/teams_strategy.png)
+![Using teams](/Images/central/best_practices/using_teams.png)
 
 A team is linked to multiple components in the Amplify platform:
 
@@ -51,7 +51,7 @@ Although you can choose how you set up and use your teams, Axway provides the fo
 
 ## Use teams to support a global and centralized API strategy
 
-![Using teams](/Images/central/best_practices/using_teams.png)
+![Teams strategy](/Images/central/best_practices/teams_strategy.png)
 
 A global and centralized API team strategy consists of:
 
