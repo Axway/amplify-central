@@ -104,6 +104,8 @@ The agents are using credentials (username/password) to access the API Manager s
 
 In order to remove them from the agent configuration file, you can export environment variables (`APIMANAGER_AUTH_USERNAME` / `APIMANAGER_AUTH_PASSWORD` for connecting API Manager, `APIGATEWAY_AUTH_USERNAME` / `APIGATEWAY_AUTH_PASSWORD` for connecting Node Manager) with their respective values and remove them from the agent configuration file. When starting the agent, it will look for these environment variables instead of the value in the file. The environment variables take precedence over any values present in configuration file.
 
+You can secure the password either by using the Central secret or openssl. Refer to [Use secure credentials in configuration](/docs/connect_manage_environ/connected_agent_common_reference/secure_config).
+
 ### Securing AWS access
 
 The agents are using an AWS access key and an AWS secret key to execute AWS APIs. The values for these keys are stored in clear in the configuration file used to run the agent Docker image.</br>
