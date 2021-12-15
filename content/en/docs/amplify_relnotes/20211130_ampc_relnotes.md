@@ -23,7 +23,7 @@ More information about Axway CLI can be found here: [Axway CLI release note](htt
 The following enhancements are available in this Axway CLI update:
 
 * Axway CLI has added the current team/role to the 'auth list', 'auth login', and 'auth whoami' commands.
-* Axway CLI has added an 'axway auth swtich --team name' command to switch your current team to another team which you are a member of.
+* Axway CLI has added an 'axway auth switch --team name' command to switch your current team to another team which you are a member of.
 
 The following enhancements are available in this Axway Central CLI update:
 
