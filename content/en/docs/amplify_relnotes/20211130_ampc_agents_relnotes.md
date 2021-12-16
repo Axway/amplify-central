@@ -27,27 +27,27 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
-* A warning is raised when using @secret for password configuration when using the Traceability Agent offline mode
+* A warning is raised when using @secret for password configuration in the Traceability Agent offline mode.
 
 ### Amplify AWS Gateway agents enhancements
 
-* None
+* None.
 
 ### Amplify Azure agents enhancements
 
-* None
+* None.
 
 ### Amplify Istio agents enhancements
 
-* Add text
+* None.
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
 
-* **Error getting authentication token from AxwayId**. Previously, when the clock of the machine where the agent is running was out of sync, when agent tried to issued a new token, the following error was raised: "Amplify Central - FAIL ([Error Code 1130] - error getting authentication token. Check Amplify Central auth configuration (CENTRAL_AUTH_*) and network configuration for agent on docs.axway.com: **bad response from AxwayId: 400 Bad Request**". Now a better message is displayed: "_Amplify Central - FAIL (error creating request header. bad response from AxwayId: 400 Bad Request: Client authentication with signed JWT failed: Token is not active. Could not get platform token._" and a possible remediation is available in the [troubleshooting guide](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations)
-* **AWS Discovery Agent goes stale after a while**. Previously, it was possible that a deadlock happen when some of the agent jobs try to stop after a connectivity issue and the agent is no more ale to process the information. Now, a new variable `CENTRAL_JOBTIMEOUT` helps to define the timeout of the job (default is 5 minutes).
-* **logger adds additional rotate file hooks on config change**. Previously the logger could be initialize multiple times resulting in logs being duplicated. Now the logger is initialized only once and no log are duplicated.
+* **Error getting authentication token from AxwayId**. Previously, when the clock of the machine where the agent was running was out of sync, the following error was raised when the agent tried to issue a new token: "Amplify Central - FAIL ([Error Code 1130] - error getting authentication token. Check Amplify Central auth configuration (CENTRAL_AUTH_*) and network configuration for agent on docs.axway.com: **bad response from AxwayId: 400 Bad Request**". Now, this message is displayed: "_Amplify Central - FAIL (error creating request header. bad response from AxwayId: 400 Bad Request: Client authentication with signed JWT failed: Token is not active. Could not get platform token._" and a possible remediation is available in the [troubleshooting documentation](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations).
+* **AWS Discovery Agent goes stale after a while**. Previously, a deadlock could occur if some of the agent jobs tried to stop after a connectivity issue and the agent could no longer process the information. Now, a new variable `CENTRAL_JOBTIMEOUT` helps to define the timeout of the job (default is 5 minutes).
+* **Logger adds additional rotate file hooks on config change**. Previously, the logger could be initialized multiple times, resulting in duplicated logs. Now, the logger is initialized only once, and no log are duplicated.
 
 ## Known limitations
 
@@ -72,4 +72,4 @@ The following limitations exist in this update.
 
 ### Amplify Istio agents
 
-* Discovery Agent requires manual set up to report APIs correctly.
+* Discovery Agent requires manual setup to report APIs correctly.
