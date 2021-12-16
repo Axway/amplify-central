@@ -1,8 +1,8 @@
 ---
-title: Amplify agents October 2021 Release Notes
-linkTitle: Amplify agents October 2021
+title: Amplify agents November 2021 Release Notes
+linkTitle: Amplify agents November 2021
 weight: 90
-date: 2021-10-13
+date: 2021-11-30
 description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
   / Istio provide better visibility into your multi-type gateway eco system.
   These agents collect data from the Gateway (API / traffic) and expose it in
@@ -12,7 +12,7 @@ description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
 
 ## Versioning
 
-Currently, version 1.1.5 is available. It is based on Amplify Agents SDK v1.1.8.
+Currently, version 1.1.7 is available. It is based on Amplify Agents SDK v1.2.0.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -25,31 +25,29 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update.
 
-* Agent resource status contains the previous and current status. Refer to `axway central get da,ta -o yaml`.
-
 ### Amplify Gateway agents enhancements
 
-* Amplify Central CLI has been updated to configure the agent with the proper "latest release." The Docker command no longer refers to the "latest" tag. Instead, it now refers to the latest official release tag.
+* A warning is raised when using @secret for password configuration in the Traceability Agent offline mode.
 
 ### Amplify AWS Gateway agents enhancements
 
-* Amplify Central CLI has been updated to configure the agent with the proper "latest release." The Docker command, as well as the EC2 instance start script, no longer refer to "latest" tag. Instead, they refer to the latest official release tag.
+* None.
 
 ### Amplify Azure agents enhancements
 
-* Amplify Central CLI has been updated to configure the agent with the proper "latest release." The Docker command no longer refers to "latest" tag. Instead, it refers to the latest official release tag.
+* None.
 
 ### Amplify Istio agents enhancements
 
-* None
+* None.
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
 
-* **Traceability connectivity connection failed, too many colons in address**. Previously, when using a proxy to send a transaction to the platform, the agent was not able to parse the proxy url (`TRACEABILITY_PROXYURL`) properly. Now, the Traceability Agent can correctly connect to the Amplify platform using a proxy.
-* **Discovery Agent fails when using an environment owned by a team**. Previously, when an environment associated to Discovery Agent is owned by a team, the agent was not able to unmarshall it. Now, the Discovery Agent can use both an owned environment and a not owned environment.
-* **Amplify Gateway helm installation Private key and Public key transposed in amplify-agents-keys secret**. Previously, when installing the Amplify Gateway agents with the helm charts, public and private keys were intervened. Now public and private key are correctly stored in the secret storage.
+* **Error getting authentication token from AxwayId**. Previously, when the clock of the machine where the agent was running was out of sync, the following error was raised when the agent tried to issue a new token: "Amplify Central - FAIL ([Error Code 1130] - error getting authentication token. Check Amplify Central auth configuration (CENTRAL_AUTH_*) and network configuration for agent on docs.axway.com: **bad response from AxwayId: 400 Bad Request**". Now, this message is displayed: "_Amplify Central - FAIL (error creating request header. bad response from AxwayId: 400 Bad Request: Client authentication with signed JWT failed: Token is not active. Could not get platform token._" and a possible remediation is available in the [troubleshooting documentation](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations).
+* **AWS Discovery Agent goes stale after a while**. Previously, a deadlock could occur if some of the agent jobs tried to stop after a connectivity issue and the agent could no longer process the information. Now, a new variable `CENTRAL_JOBTIMEOUT` helps to define the timeout of the job (default is 5 minutes).
+* **Logger adds additional rotate file hooks on config change**. Previously, the logger could be initialized multiple times, resulting in duplicated logs. Now, the logger is initialized only once, and no log are duplicated.
 
 ## Known limitations
 
@@ -74,6 +72,4 @@ The following limitations exist in this update.
 
 ### Amplify Istio agents
 
-* Discovery Agent cannot display its status in Central topology since is it not integrated with Amplify Agents SDK.
-* Discovery Agent requires manual set up to report APIs correctly.
-* Traceability Agent cannot leverage Amplify agents SDK sampling feature.
+* Discovery Agent requires manual setup to report APIs correctly.

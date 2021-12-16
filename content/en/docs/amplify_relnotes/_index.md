@@ -10,6 +10,35 @@ description: Provides a list of release notes for Amplify Central, Amplify
   for each release. For more details, click on the release note title to go to
   the corresponding release note.
 ---
+## [Amplify agents November 2021](/docs/amplify_relnotes/20211130_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.7): A warning is raised when using @secret for password configuration in the Traceability Agent offline mode
+
+**Bug fixes**:
+
+* Error getting authentication token from AxwayId
+* AWS Discovery Agent goes stale after a while
+* logger adds additional rotate file hooks on config change
+
+## [Amplify Central November 2021](/docs/amplify_relnotes/20211130_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.6.0):
+    * Manages team ownership of Environments and API Services
+    * Added a simple ‘–team’ filter for users to only Get Environments and API Services for a specific team that they are a member of
+    * Auto-generates a logical name for resources when a logical name is not provided with a ‘create’ and ‘apply’ command
+    * Deprecated the “axway central create service-account” command as of Central CLI version 2.5.0 or later
+* **Amplify Central WebUI**:
+    * When adding an API Service using an API Specification file (OAS2/OAS3), the title, description and endpoints are auto-populated
+
+**Bug fixes**:
+
+* CLI - The use of “install agents” command in a headless mode with a service account and tooling credentials of a platform admin account
+* WebUI - Creating an Environment with the name ‘add’
+
 ## [Amplify agents October 2021](/docs/amplify_relnotes/20211031_ampc_agents_relnotes/)
 
 **What's new for**:
