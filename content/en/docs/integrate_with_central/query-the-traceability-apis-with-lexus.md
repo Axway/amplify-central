@@ -286,8 +286,8 @@ With this data, you now should be able to query details out of the APIs
 
 ## Sample Queries
 
-*  replace {{ }} with actual values, or use one of the substitution methods above.
-*  timestamps are milliseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
+* replace {{ }} with actual values, or use one of the substitution methods above.
+* timestamps are milliseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
 
 ### Received bytes per environment
 
