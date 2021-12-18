@@ -11,8 +11,8 @@ The core of the Lexus language and how to use it are described [in this document
 
 ## API Authorization
 
-1.  ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
-2.  ***Authorize the CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html)
+1. ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
+2. ***Authorize the CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html)
 
 Note: If you are querying against Amplify Central APIs, ensure your account is assigned the "Central Admin" role in the Amplify Platform dashboard.
 
@@ -30,9 +30,9 @@ For quicker execution, you may prefer to use the postman collection containing s
 
 Alternately, you may use cURL. An example of calling via cURL is shown below.
 
-1.  Paste the following document into a file, i.e. 'amplify\_api.sh'
-2.  Change the file to be executable, i.e 'chmod a+x amplify.sh'
-3.  Call the file, i.e. './amplify\_api.sh'
+1. Paste the following document into a file, i.e. 'amplify\_api.sh'
+2. Change the file to be executable, i.e 'chmod a+x amplify.sh'
+3. Call the file, i.e. './amplify\_api.sh'
 
 **Note**: In the script below, environment variables are assumed to have been set using the information specified under the API Authorization header above:
 
@@ -286,8 +286,8 @@ With this data, you now should be able to query details out of the APIs
 
 ## Sample Queries
 
-*   replace {{ }} with actual values, or use one of the substitution methods above.
-*   timestamps are milliseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
+*  replace {{ }} with actual values, or use one of the substitution methods above.
+*  timestamps are milliseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
 
 ### Received bytes per environment
 
@@ -556,8 +556,6 @@ Similar to the previous one, but now for all environments, grouped by environmen
     "version": "0.2"
 }
 ```
-
-  
 
 ### Environments - Number of calls grouped by source/destination/path/status code
 
