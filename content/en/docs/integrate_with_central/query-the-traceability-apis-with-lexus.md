@@ -1,7 +1,7 @@
 ---
 title: Query the Traceability APIs with Lexus
 description: Learn how you can query data about API specifics and aggregate
-  performance using the Traceability APIs.
+  performance using the Amplify Central Traceability APIs.
 ---
 ## Core Concepts
 
