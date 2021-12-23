@@ -3,45 +3,45 @@ title: Query the Traceability APIs with Lexus
 description: Learn how you can query data about API specifics and aggregate
   performance using the Amplify Central Traceability APIs.
 ---
-## Core Concepts
+## Core concepts
 
-Lexus is a small [JSON](http://www.json.org/) language used for querying multiple different types of data storage systems. With Lexus you can query for a set of specific documents using filters that match them, or for counts of the documents that match. You can also ask for basic histograms or group by field values in the documents. Other aggregations such as sums and averages are also possible. Lexus is used as the query language against the analytics store inside the Amplify Platform and these Lexus-based queries can be passed to APIs. This cookbook covers some specific examples of Lexus queries that will help you to form more complex examples.
+Lexus is a small [JSON](http://www.json.org/) language used for querying multiple different types of data storage systems. With Lexus you can query for a set of specific documents using filters that match them, or for counts of the documents that match. You can also ask for basic histograms or group by field values in the documents. Other aggregations, such as sums and averages, are also possible. Lexus is used as the query language against the analytics store inside the Amplify platform and these Lexus-based queries can be passed to APIs. This cookbook covers some specific examples of Lexus queries that will help you to form more complex examples.
 
 The core of the Lexus language and how to use it are described [in this document](https://github.com/appcelerator/lexus/blob/c8b4049ed91c19f722d55e4fbb3aa0ed61b65add/docs/getting-started.md).
 
-## API Authorization
+## API authorization
 
 1. ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
 2. ***Authorize the CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html)
 
-Note: If you are querying against Amplify Central APIs, ensure your account is assigned the "Central Admin" role in the Amplify Platform dashboard.
+{{< alert title="Note" color="primary" >}}If you are querying against Amplify Central APIs, ensure your account is assigned the **Central Admin** role in the Amplify platform dashboard.{{< /alert >}}
 
 ## Amplify Central
 
-One common use case is to call the various APIs inside Amplify Central to retrieve summaries of transactions or event individual transaction events including here: [https://docs.axway.com/category/api](https://docs.axway.com/category/api) > Amplify Platform > Traceability Connector API
+One common use case is to call the various APIs inside Amplify Central to retrieve summaries of transactions, events, or an individual transaction or event. See [https://docs.axway.com/category/api](https://docs.axway.com/category/api) > Amplify Platform > Traceability Connector API.
 
 ### Postman Collection
 
-For quicker execution, you may prefer to use the postman collection containing some of the below examples.: [https://documenter.getpostman.com/view/2125605/TWDanGAu](https://documenter.getpostman.com/view/2125605/TWDanGAu)
+For quicker execution, you may prefer to use the postman collection containing some of the examples below.: [https://documenter.getpostman.com/view/2125605/TWDanGAu](https://documenter.getpostman.com/view/2125605/TWDanGAu).
 
-**Note**: The Postman Collection requires the **_X-Axway-Tenant-Id_** and _**Authorization**_ headers to be set, in order to POST to the backend service.
+{{< alert title="Note" color="primary" >}}The Postman Collection requires the **_X-Axway-Tenant-Id_** and _**Authorization**_ headers to be set to POST to the backend service.{{< /alert >}}
 
 ### cURL
 
-Alternately, you may use cURL. An example of calling via cURL is shown below.
+Alternatively, you can use cURL. An example of calling via cURL is shown below.
 
-1. Paste the following document into a file, i.e. 'amplify\_api.sh'
-2. Change the file to be executable, i.e 'chmod a+x amplify.sh'
-3. Call the file, i.e. './amplify\_api.sh'
+1. Paste the following document into a file: 'amplify\_api.sh'
+2. Change the file to be executable: 'chmod a+x amplify.sh'
+3. Call the file: './amplify\_api.sh'
 
-**Note**: In the script below, environment variables are assumed to have been set using the information specified under the API Authorization header above:
+{{< alert title="Note" color="primary" >}}In this script, environment variables are assumed to have been set using the information specified under [API Authorization](#api-authorization):{{< /alert >}}
 
 ```sh
 export $CLIENT_ID=<clientId>
 export $SECRET_FILE=<secretFile>
 ```
 
-You may use whatever mechanism you feel most comfortable with to call the APIs. This script shows an example of exercising the API calls directly from the command line.
+You may use whatever mechanism you feel most comfortable with to call the APIs. This script shows an example of exercising the API calls directly from the command line:
 
 ```js
 #!/bin/bash
@@ -85,9 +85,11 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 }'
 ```
 
-## Transaction Events
+## Transaction events
 
-Last 100 events, both summaries and events.
+You now should be able to query details out of the APIs using the following data.
+
+Last 100 events, both summaries and events:
 
 ```js
 // Replace "lt" with the current time in ms
@@ -115,7 +117,7 @@ Last 100 events, both summaries and events.
 }
 ```
 
-Otherwise, you can show just transactionSummary or transactionEvent events
+Otherwise, you can show just transactionSummary or transactionEvent events:
 
 ```js
 // This extends the previous example to filter on the type of "transactionSummary"
@@ -284,10 +286,12 @@ A transaction event looks like:
 
 With this data, you now should be able to query details out of the APIs
 
-## Sample Queries
+## Sample queries
 
-* replace {{ }} with actual values, or use one of the substitution methods above.
-* timestamps are milliseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
+When using the sample queries:
+
+* Replace {{ }} with actual values, or use one of the substitution methods above.
+* Timestamps are milliseconds since the [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).
 
 ### Received bytes per environment
 
@@ -386,7 +390,7 @@ Find all inbound transaction events between the two timestamps, and count the nu
 
 ### 404 response codes per environment
 
-Note that the "404" can be replaced with a new response code, or extended to include other error codes by adding additional elements to the array. This query also shows all environments. See the following query to specify a specific environment by adding another "$match" clause.
+{{< alert title="Note" color="primary" >}}The "404" can be replaced with a new response code, or extended to include other error codes by adding additional elements to the array. This query also shows all environments. See the following query to specify a specific environment by adding another "$match" clause.{{< /alert >}}
 
 ```js
 {
@@ -662,7 +666,7 @@ The count of transactionSummaries for a particular environment, grouped by statu
 
 ### Transactions by Method and Path
 
-The count of transactionSummaries across all environments, grouped by method and path
+The count of transactionSummaries across all environments, grouped by method and path.
 
 ```js
 {
@@ -703,7 +707,7 @@ The count of transactionSummaries across all environments, grouped by method and
 
 ### Transactions by Method and Path for api calls that start with /apis
 
-The count of transactionSummaries across all environments, grouped by method and path, but only paths that start with the phrase "/apis"
+The count of transactionSummaries across all environments, grouped by method and path, but only paths that start with the phrase "/apis".
 
 ```js
 {
