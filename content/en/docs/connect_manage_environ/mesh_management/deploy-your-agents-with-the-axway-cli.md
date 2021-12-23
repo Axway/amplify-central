@@ -37,13 +37,13 @@ If you are a member of multiple Amplify organizations, select an organization an
 
 ## Install Amplify Istio Agents
 
-1. Run the `install` command to begin the installation of the Amplify Istio Agents. The first section of the installation collects information about the Istio deployment.
+1. Run the `install` command to begin the installation of the Amplify Istio Agents. The first section of the installation collects information about the Istio deployment:
 
     ```bash
     axway central install agents
     ```
 
-    The installation displays the following prompts.
+    The installation displays the following prompts:
 
     ```bash
     Select the type of gateway you want to connect:
@@ -56,7 +56,7 @@ If you are a member of multiple Amplify organizations, select an organization an
 
 ### If Istio is already installed
 
-1. If Istio is already installed in your cluster, select 'Yes'.
+1. If Istio is already installed in your cluster, select 'Yes':
 
     ```bash
     ? Use existing Istio installation?:  (Use arrow keys)
@@ -64,7 +64,7 @@ If you are a member of multiple Amplify organizations, select an organization an
       No
     ```
 
-2. Select from the list the namespace that the ingress-gateway is running in.
+2. Select from the list the namespace that the ingress-gateway is running in:
 
     ```bash
     ? Select the namespace where the Istio ingress gateway is running:
@@ -76,7 +76,7 @@ The rest of the prompts relate to the Istio agents. Continue on with the section
 
 ### If Istio is not installed
 
-1. If Istio is not installed, select No.
+1. If Istio is not installed, select No:
 
     ```bash
     ? Use existing Istio installation?:  (Use arrow keys)
@@ -118,7 +118,7 @@ The rest of the prompts relate to the Istio agents. Continue on with the section
 
 1. Select `Generate self signed certificate`.
 
-2. Press `enter`.
+2. Press `enter`:
 
     ```bash
     Would you like to generate a self signed certificate, or provide your own?: (Use arrow keys)
@@ -126,7 +126,7 @@ The rest of the prompts relate to the Istio agents. Continue on with the section
     Provide certificate
     ```
 
-The console displays two lines of text indicating that the certificate and key were created and that a Kubernetes secret was created in the `istio-system` namespace.
+The console displays two lines of text indicating that the certificate and key were created and that a Kubernetes secret was created in the `istio-system` namespace:
 
 ```bash
 Would you like to generate a self signed certificate, or provide your own?: Generate self signed certificate
@@ -185,7 +185,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
     kube-node-lease
     ```
 
-    In this example we will create a new namespace.
+    In this example we will create a new namespace:
 
     ```bash
     Enter a new namespace name: (amplify-agents)
@@ -205,7 +205,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
 
 ### Create a new DOSA account
 
-1. Select `Create a new account` and press `enter`.
+1. Select `Create a new account` and press `enter`:
 
     ```bash
     Select a service account (DOSA): (Use arrow keys)
@@ -223,7 +223,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
     Enter a new service account name:  mesh-dosa
     ```
 
-    After you enter the name of the account and press `enter`, an output is shown with the client ID of the account and the directory where the keys were placed.
+    After you enter the name of the account and press `enter`, an output is shown with the client ID of the account and the directory where the keys were placed:
 
     ```bash
     Enter a new service account name: mesh-dosa
@@ -235,7 +235,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
 
 ### Use an existing DOSA account
 
-1. Select the DOSA account from the list and press `enter`.
+1. Select the DOSA account from the list and press `enter`:
 
     ```bash
     Select a service account (DOSA):  (Use arrow keys)
@@ -265,7 +265,7 @@ mesh-env
 ──────────────
 ```
 
-If you chose to create a new environment, enter a name and press `enter`.
+If you chose to create a new environment, enter a name and press `enter`:
 
 ```bash
 Enter a new Environment name:  mesh-demo
@@ -273,9 +273,9 @@ Creating a new Environment
 New environment "mesh-demo" has been successfully created.
 ```
 
-A message indicating that the new environment has been created is shown.
+A message indicating that the new environment has been created is displayed.
 
-Add a name for your Kubernetes cluster. This unique name will be used by the Istio agents. Enter a name and press 'enter'.
+Add a name for your Kubernetes cluster. This unique name will be used by the Istio agents. Enter a name and press 'enter':
 
 ```bash
 Enter a new k8s Cluster name:  test-cluster
@@ -283,7 +283,7 @@ Creating a new k8s Cluster
 New k8scluster "test-cluster" has been successfully created.
 ```
 
-A message indicating that the new k8s cluster has been created is shown.
+A message indicating that the new k8s cluster has been created is displayed.
 
 After the new environment is created, the CLI creates the following:
 
@@ -294,13 +294,13 @@ The demo service is packaged along with the `ampc-hybrid` helm chart.
 
 ## Install Istio
 
-If Istio is not yet installed the final output of the install prompts will provide the command below to install Istio.
+If Istio is not yet installed, the final output of the install prompts will provide the following command to install Istio:
 
 ```bash
 istioctl install --set profile=demo -f istio-override.yaml
 ```
 
-If Istio is already installed then no install command will be provided. Instead, the CLI will provide instructions for you to merge the provided `istio-override.yaml` file with your own Istio configuration.
+If Istio is already installed, then no install command will be provided. Instead, the CLI will provide instructions for you to merge the provided `istio-override.yaml` file with your own Istio configuration:
 
 ```bash
 Istio override file has been placed at /Users/Axway/istio-override.yaml
@@ -311,16 +311,29 @@ If you want to install Istio in an Openshift Cluster, there are additional steps
 
 ## Finish the installation of the agents
 
-After the Istio installation is complete, run the following command to finish the installation of the agents:
+After the Istio installation is complete, edit the `hybrid-override.yaml` file, using an editor of your choice, and add a new key `istioGatewayNamespaces` under the `als` key:
+
+```yaml
+als:
+   istioGatewayNamespaces:
+    - namespace1
+    - namespace2
+    ..
+    - namespaceN    
+```
+
+where namespaces 1 through N is a list of all the namespaces on your cluster that have an Istio ingress gateway running.
+
+Once you save the `hybrid-override.yaml` file with the changes made above, run the following command to finish the installation of the agents:
 
 ```bash
 helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
 ```
 
-Note that the Amplify Istio Discovery Agent polls every 20 seconds for the discovery resources by default. To change this, you must pass a helm override in the form of `--set ada.poll.interval` or `--set rda.poll.interval` accordingly with the desired agents.
+{{< alert title="Note">}}By default, the Amplify Istio Discovery Agent polls every 20 seconds for the discovery resources. To change this, you must pass a helm override in the form of `--set ada.poll.interval` or `--set rda.poll.interval` accordingly with the desired agents.{{< /alert >}}
 
-For example, if you want the API Discovery agent to poll every 2 seconds for the discovery resources, you must run the following command to install the agents:
+For example, if you want the API Discovery agent to poll every 2 seconds for the discovery resources, run the following command to install the agents:
 
 ```bash
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set ada.poll.interval=2s
@@ -328,7 +341,7 @@ helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid 
 
 ## Verify that the pods are running
 
-1. After the installation is complete, run the command below with the namespace you selected for the Istio agent location and confirm that the pods are all in a running status.
+1. After the installation is complete, run the following command with the namespace you selected for the Istio agent location and confirm that the pods are all in a running status:
 
     ```bash
     kgp -n amplify-agents
@@ -339,7 +352,7 @@ helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid 
     ampc-hybrid-rda-64cfdb558b-7kz2s   1/1     Running   0          17s
     ```
 
-2. If you opted to install the optional demo service, the `ampc-hybrid` helm installation creates a namespace named `ampc-demo` and deploys a service called `ampc-hybrid-list`. Run the following command to verify this demo service is running.
+2. If you opted to install the optional demo service, the `ampc-hybrid` helm installation creates a namespace named `ampc-demo` and deploys a service called `ampc-hybrid-list`. Run the following command to verify this demo service is running:
 
     ```bash
     kgp -n ampc-demo
@@ -347,7 +360,7 @@ helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid 
     ampc-hybrid-list-598f8f9b4b-9wsc6   2/2     Running   0          90s
     ```
 
-3. The installation creates resources, which provide configuration to the API Discovery Agent and the Resource Discovery Agent. You can use the Axway CLI to verify the agents are configured and running, and to list the resources that are expect to exist as a result of the agents discovering the `ampc-hybrid-list` service.
+3. The installation creates resources, which provide configuration to the API Discovery Agent and the Resource Discovery Agent. You can use the Axway CLI to verify the agents are configured and running, and to list the resources that are expect to exist as a result of the agents discovering the `ampc-hybrid-list` service:
 
     ```bash
     axway central get apispecs -s mesh-demo
