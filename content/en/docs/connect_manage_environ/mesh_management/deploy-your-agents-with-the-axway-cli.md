@@ -312,6 +312,7 @@ If you want to install Istio in an Openshift Cluster, there are additional steps
 ## Finish the installation of the agents
 
 After the Istio installation is complete, edit `hybrid-override.yaml` file using an editor of your choice and add a new key `istioGatewayNamespaces` under the `als` key as shown below:
+
 ```yaml
 als:
    istioGatewayNamespaces:
@@ -320,6 +321,7 @@ als:
     ..
     - namespaceN    
 ```
+
 where namespaces 1 through N is a list of all the namespaces on your cluster that have an Istio ingress gateway running.
 
 Once you save the `hybrid-override.yaml` file with the changes made above, run the following command to finish the installation of the agents:
