@@ -89,7 +89,7 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 }'
 ```
 
-## Transaction events
+## Transaction event examples
 
 Use the following data to query details out of the APIs.
 
