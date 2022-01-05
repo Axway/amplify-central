@@ -16,7 +16,7 @@ The core of the Lexus language and how to use it are described [in this document
 
 {{< alert title="Note" color="primary" >}}If you are querying against Amplify Central APIs, ensure your account is assigned the **Central Admin** role in the Amplify platform dashboard.{{< /alert >}}
 
-## Amplify Central
+## Amplify Central use case
 
 One common use case is to call the various APIs inside Amplify Central to retrieve summaries of transactions, events, or an individual transaction or event. See [https://docs.axway.com/category/api](https://docs.axway.com/category/api) > Amplify Platform > Traceability Connector API.
 
