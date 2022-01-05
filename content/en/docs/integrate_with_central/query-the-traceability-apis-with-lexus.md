@@ -121,7 +121,7 @@ Use the following data to query details out of the APIs.
 }
 ```
 
-Otherwise, you can show just transactionSummary or transactionEvent events:
+### Show only transactionSummary or transactionEvent events
 
 ```js
 // This extends the previous example to filter on the type of "transactionSummary"
