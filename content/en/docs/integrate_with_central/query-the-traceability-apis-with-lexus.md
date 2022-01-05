@@ -20,6 +20,8 @@ The core of the Lexus language and how to use it are described [in this document
 
 One common use case is to call the various APIs inside Amplify Central to retrieve summaries of transactions, events, or an individual transaction or event. See [https://docs.axway.com/category/api](https://docs.axway.com/category/api) > Amplify Platform > Traceability Connector API.
 
+You can use whichever of the following methods you feel the most comfortable with to call the APIs. 
+
 ### Postman Collection
 
 For quicker execution, you may prefer to use the postman collection containing some of the examples shown below in the sample queries: [https://documenter.getpostman.com/view/2125605/TWDanGAu](https://documenter.getpostman.com/view/2125605/TWDanGAu).
