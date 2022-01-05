@@ -153,7 +153,7 @@ Use the following data to query details out of the APIs.
 }
 ```
 
-A transaction summary event looks like:
+Transaction summary event
 
 ```js
 {
