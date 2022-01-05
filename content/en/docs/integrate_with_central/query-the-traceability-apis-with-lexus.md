@@ -213,7 +213,7 @@ Transaction summary event
 }
 ```
 
-A transaction event looks like:
+### Transaction event
 
 ```js
 {
