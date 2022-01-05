@@ -22,7 +22,7 @@ One common use case is to call the various APIs inside Amplify Central to retrie
 
 ### Postman Collection
 
-For quicker execution, you may prefer to use the postman collection containing some of the examples below.: [https://documenter.getpostman.com/view/2125605/TWDanGAu](https://documenter.getpostman.com/view/2125605/TWDanGAu).
+For quicker execution, you may prefer to use the postman collection containing some of the examples shown below in the sample queries: [https://documenter.getpostman.com/view/2125605/TWDanGAu](https://documenter.getpostman.com/view/2125605/TWDanGAu).
 
 {{< alert title="Note" color="primary" >}}The Postman Collection requires the **_X-Axway-Tenant-Id_** and _**Authorization**_ headers to be set to POST to the backend service.{{< /alert >}}
 
@@ -30,9 +30,9 @@ For quicker execution, you may prefer to use the postman collection containing s
 
 Alternatively, you can use cURL. An example of calling via cURL is shown below.
 
-1. Paste the following document into a file: 'amplify\_api.sh'
-2. Change the file to be executable: 'chmod a+x amplify.sh'
-3. Call the file: './amplify\_api.sh'
+1. Paste the following document into a file: `amplify\_api.sh`
+2. Change the file to be executable: `chmod a+x amplify.sh`
+3. Call the file: `./amplify\_api.sh`
 
 {{< alert title="Note" color="primary" >}}In this script, environment variables are assumed to have been set using the information specified under [API Authorization](#api-authorization):{{< /alert >}}
 
