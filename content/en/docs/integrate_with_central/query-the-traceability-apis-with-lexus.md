@@ -91,7 +91,6 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 
 ## Transaction event examples
 
-Use the following data to query details out of the APIs.
 
 ### Last 100 events, both summaries and events
 
