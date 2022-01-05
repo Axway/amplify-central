@@ -30,7 +30,7 @@ For quicker execution, you may prefer to use the postman collection containing s
 
 ### cURL
 
-Alternatively, you can use cURL. An example of calling via cURL is shown below.
+To call APIs via cURL:
 
 1. Paste the following document into a file: `amplify\_api.sh`
 2. Change the file to be executable: `chmod a+x amplify.sh`
