@@ -9,7 +9,7 @@ Lexus is a small [JSON](http://www.json.org/) language used for querying multipl
 
 The core of the Lexus language and how to use it are described [in this document](https://github.com/appcelerator/lexus/blob/c8b4049ed91c19f722d55e4fbb3aa0ed61b65add/docs/getting-started.md).
 
-## API authorization
+## Prerequisite - API authorization
 
 1. ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
 2. ***Authorize the CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html)
