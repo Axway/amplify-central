@@ -87,7 +87,7 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 
 ## Transaction events
 
-You now should be able to query details out of the APIs using the following data.
+Use the following data to query details out of the APIs.
 
 Last 100 events, both summaries and events:
 
@@ -283,8 +283,6 @@ A transaction event looks like:
    "@source_id":1
 }
 ```
-
-With this data, you now should be able to query details out of the APIs
 
 ## Sample queries
 
