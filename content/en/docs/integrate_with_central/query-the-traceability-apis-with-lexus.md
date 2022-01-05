@@ -43,7 +43,9 @@ export $CLIENT_ID=<clientId>
 export $SECRET_FILE=<secretFile>
 ```
 
-You may use whatever mechanism you feel most comfortable with to call the APIs. This script shows an example of exercising the API calls directly from the command line:
+### Command line
+
+This script shows an example of exercising the API calls directly from the command line:
 
 ```js
 #!/bin/bash
