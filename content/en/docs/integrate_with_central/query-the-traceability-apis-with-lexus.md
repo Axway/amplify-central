@@ -5,7 +5,7 @@ description: Learn how you can query data about API specifics and aggregate
 ---
 ## Core concepts
 
-Lexus is a small [JSON](http://www.json.org/) language used for querying multiple different types of data storage systems. With Lexus you can query for a set of specific documents using filters that match them, or for counts of the documents that match. You can also ask for basic histograms or group by field values in the documents. Other aggregations, such as sums and averages, are also possible. Lexus is used as the query language against the analytics store inside the Amplify platform and these Lexus-based queries can be passed to APIs. This cookbook covers some specific examples of Lexus queries that will help you to form more complex examples.
+Lexus is a small [JSON](http://www.json.org/) language used for querying multiple types of data storage systems. With Lexus you can query for a set of specific documents using filters that match them, or for counts of the documents that match. You can also ask for basic histograms or group by field values in the documents. Other aggregations, such as sums and averages, are also possible. Lexus is used as the query language against the analytics store inside the Amplify platform and these Lexus-based queries can be passed to APIs. This cookbook covers some specific examples of Lexus queries that will help you to form more complex examples.
 
 The core of the Lexus language and how to use it are described [in this document](https://github.com/appcelerator/lexus/blob/c8b4049ed91c19f722d55e4fbb3aa0ed61b65add/docs/getting-started.md).
 
