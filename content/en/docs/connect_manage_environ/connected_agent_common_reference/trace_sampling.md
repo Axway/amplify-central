@@ -21,7 +21,7 @@ The following settings can be used to control the sampling.  A percentage can be
 
 #### Percentage
 
-The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to `100`, may be set to any value between 0 and 100.  
+The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to `10`, may be set to any value between 0 and 100.  
 
 * A value of `0` results in no transactions sent to Amplify Central
 * A value of `100` results in all transactions sent to Amplify Central
