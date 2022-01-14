@@ -10,6 +10,34 @@ description: Provides a list of release notes for Amplify Central, Amplify
   for each release. For more details, click on the release note title to go to
   the corresponding release note.
 ---
+## [Amplify agents January 2022](/docs/amplify_relnotes/20220131_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version x.x.x): Add text
+
+**Bug fixes**:
+
+* Add text
+* Add text
+* Add text
+
+## [Amplify Central November 2022](/docs/amplify_relnotes/20220131_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version x.x.x):
+    * Add text
+    * Add text
+    * Add text
+* **Amplify Central WebUI**:
+    * Add text
+
+**Bug fixes**:
+
+* CLI - Add text
+* WebUI - Add text
+
 ## [Amplify agents November 2021](/docs/amplify_relnotes/20211130_ampc_agents_relnotes/)
 
 **What's new for**:
