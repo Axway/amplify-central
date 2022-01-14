@@ -12,7 +12,7 @@ description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
 
 ## Versioning
 
-Currently, version x.x.x is available. It is based on Amplify Agents SDK vx.x.x.
+Currently, version 1.1.9 is available. It is based on Amplify Agents SDK v1.1.13.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
