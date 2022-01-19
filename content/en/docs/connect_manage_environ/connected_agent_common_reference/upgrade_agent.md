@@ -50,7 +50,7 @@ The following steps will guide your through the upgrade procedure:
 4. Replace the binary with the new one contained in the zip file that was downloaded from Step 1.
 5. Start the agent or the agent service.
 
-{{< alert title="Note" color="primary" >}}Starting version 1.1.9 of the Discovery Agent when CENTRAL_TEAM variable is not set, blank, the agent will attempt to match an Axway gateway organization to an Amplify platform team, assigning resources appropriately. No match will have the previous behavior.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}For Discovery Agent version 1.1.9 and later, when the `CENTRAL_TEAM variable` is not set (default = blank), the agent will attempt to match an Axway gateway organization to an Amplify platform team, assigning resources appropriately. No match will have the previous behavior.{{< /alert >}}
 
 ### Axway gateway agents Docker mode upgrade
 
@@ -67,7 +67,7 @@ The following steps will guide you through the upgrade procedure:
     * Discovery Agent: `docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:latest`
     * Traceability Agent: `docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:latest`
 
-{{< alert title="Note" color="primary" >}}Starting version 1.1.9 of the Discovery Agent when CENTRAL_TEAM variable is not set, blank, the agent will attempt to match an Axway gateway organization to an Amplify platform team, assigning resources appropriately. No match will have the previous behavior.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}For Discovery Agent version 1.1.9 and later, when the `CENTRAL_TEAM variable` is not set (default = blank), the agent will attempt to match an Axway gateway organization to an Amplify platform team, assigning resources appropriately. No match will have the previous behavior.{{< /alert >}}
 
 ### AWS agents
 
