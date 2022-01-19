@@ -141,7 +141,7 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_URL`: The Amplify Central url. Default value is **<https://apicentral.axway.com>**.
 
-`CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVRIONMENT to that team. When blank, default, the agent will attempt to match API Manager Organizations to existing Teams, when no match is found the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or Default team when blank.                                                                                                                                                                                                                   |
+`CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVRIONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.                                                                                                                                                                                                                   |
 
 `CENTRAL_ORGANIZATIONID`: The Organization ID from Amplify Central. Locate this at Platform > User > Organization > Org ID field.
 
