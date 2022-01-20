@@ -38,7 +38,37 @@ Correspond to this entry in environment variables: `MAIN_SUBSECTION_ENTRY=value`
 
 This [blog article](https://devblog.axway.com/dev-insights/amplify-central-agent-configuration-yaml-and-env-files/) contains another transformation sample related to the subscription section.
 
-### Axway gateway agents binary mode upgrade
+### Axway gateway agents upgrade
+
+Starting with version 1.1.9, the agent is able to set the owner team of an API Service based on the organization name the API belongs to. If an organization name matches a team name, the ownership of the API will be assign to this team. Then, only users belongings to this team will be able to manage the APIs. For that, it is no more necessary to have the `CENTRAL_TEAM` variable set in discovery agent variable nor the owningTeam set in discovery agent resource.
+
+To remove the owningTeam from the agent resource, follow these instructions:
+
+* get existing resource : `axway central get da -s <environmentName> -o yaml > da.yaml`
+* edit the `da.yaml` file and replace:
+
+```yaml
+...
+spec:
+  config:
+    owningTeam: valueHere
+...
+```
+
+by
+
+```yaml
+...
+spec:
+  config: {}
+...
+```
+
+* apply the updated file: `axway central apply -f da.yaml`
+
+Now, when you restart your agent, the API services ownership will be set according to your v7 organization setup. APIs belongings to one organization will be owned by the matching team in Amplify platform. Only users from that team will be able to manage this API.
+
+#### Axway gateway agents binary mode upgrade
 
 The following steps will guide your through the upgrade procedure:
 
@@ -52,7 +82,7 @@ The following steps will guide your through the upgrade procedure:
 
 {{< alert title="Note" color="primary" >}}For Discovery Agent version 1.1.9 and later, when the `CENTRAL_TEAM variable` is not set (default = blank), the agent will attempt to match an Axway gateway organization to an Amplify platform team, assigning resources appropriately. No match will have the previous behavior.{{< /alert >}}
 
-### Axway gateway agents Docker mode upgrade
+#### Axway gateway agents Docker mode upgrade
 
 The following steps will guide you through the upgrade procedure:
 

@@ -41,7 +41,6 @@ APIGATEWAY_AUTH_PASSWORD=AnApiGatewayOperatorUserPassword
 CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
 CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
-CENTRAL_TEAM=AmplifyCentralTeamName
 ```
 
 If you are either struggling with a variable value or you want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes all the variables the agents (discovery / traceability) rely on.
