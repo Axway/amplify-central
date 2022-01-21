@@ -31,6 +31,8 @@ If the Discovery Agent discovers an API where the inbound security is not set to
 
 The related APIs are published to Amplify Central either as an API Service in environment or an API Service in environment and optionally as Catalog item (default behavior).
 
+If the default owner of the discovered APIs is not set in the agent configuration, the ownership is assigned to the team whose name matches the Organization name that the APIs belong to.
+
 ![Service Discovery](/Images/central/connect-api-manager/servicediscoveryapim.png)
 
 ### Traceability Agent

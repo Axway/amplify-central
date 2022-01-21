@@ -38,13 +38,43 @@ Correspond to this entry in environment variables: `MAIN_SUBSECTION_ENTRY=value`
 
 This [blog article](https://devblog.axway.com/dev-insights/amplify-central-agent-configuration-yaml-and-env-files/) contains another transformation sample related to the subscription section.
 
-### Axway gateway agents binary mode upgrade
+### Axway gateway agents upgrade
+
+For version 1.1.9 and later, the agent sets the owner team of an API Service based on the organization name the API belongs to. If an organization name matches a team name, the ownership of the API is assign to this team, and only the users belongings to this team can manage the APIs. It is no longer necessary to set `CENTRAL_TEAM` in the Discovery Agent configuration and `owningTeam` in the Discovery Agent resource.
+
+To remove the owningTeam from the agent resource:
+
+* Get existing resource: `axway central get da -s <environmentName> -o yaml > da.yaml`
+* Edit the `da.yaml` file and replace:
+
+```yaml
+...
+spec:
+  config:
+    owningTeam: valueHere
+...
+```
+
+by
+
+```yaml
+...
+spec:
+  config: {}
+...
+```
+
+* Apply the updated file: `axway central apply -f da.yaml`
+
+When you restart your agent, the API services ownership will be set according to your v7 organization setup. APIs belongings to one organization will be owned by the matching team in Amplify platform. Only users from that team will be able to manage this API.
+
+#### Axway gateway agents binary mode upgrade
 
 The following steps will guide your through the upgrade procedure:
 
 1. Download the agent binary:
-    * discovery agent: `curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/latest/discovery_agent-latest.zip" -o discovery_agent-latest.zip`
-    * traceability agent: `curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/latest/traceability_agent-latest.zip" -o traceability_agent-latest.zip`
+    * Discovery Agent: `curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/latest/discovery_agent-latest.zip" -o discovery_agent-latest.zip`
+    * Traceability Agent: `curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/latest/traceability_agent-latest.zip" -o traceability_agent-latest.zip`
 2. Stop the agent or the agent service.
 3. Archive the previous agent binary in case you need to revert back to the previous version.
 4. Replace the binary with the new one contained in the zip file that was downloaded from Step 1.
@@ -52,7 +82,7 @@ The following steps will guide your through the upgrade procedure:
 
 {{< alert title="Note" color="primary" >}}For Discovery Agent version 1.1.9 and later, when the `CENTRAL_TEAM variable` is not set (default = blank), the agent will attempt to match an Axway gateway organization to an Amplify platform team, assigning resources appropriately. No match will have the previous behavior.{{< /alert >}}
 
-### Axway gateway agents Docker mode upgrade
+#### Axway gateway agents Docker mode upgrade
 
 The following steps will guide you through the upgrade procedure:
 
