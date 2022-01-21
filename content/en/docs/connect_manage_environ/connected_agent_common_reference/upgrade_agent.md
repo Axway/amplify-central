@@ -40,7 +40,7 @@ This [blog article](https://devblog.axway.com/dev-insights/amplify-central-agent
 
 ### Axway gateway agents upgrade
 
-For version 1.1.9 and later, the agent sets the owner team of an API Service based on the organization name the API belongs to. If an organization name matches a team name, the ownership of the API is assign to this team, and only the users belongings to this team can manage the APIs. It is no longer necessary to set `CENTRAL_TEAM` in the Discovery Agent variable and `owningTeam` in the Discovery Agent resource.
+For version 1.1.9 and later, the agent sets the owner team of an API Service based on the organization name the API belongs to. If an organization name matches a team name, the ownership of the API is assign to this team, and only the users belongings to this team can manage the APIs. It is no longer necessary to set `CENTRAL_TEAM` in the Discovery Agent configuration and `owningTeam` in the Discovery Agent resource.
 
 To remove the owningTeam from the agent resource:
 
