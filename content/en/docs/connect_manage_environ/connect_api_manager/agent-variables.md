@@ -7,6 +7,7 @@ description: Use the following environment variables to control your Discovery
   and Traceability agents
 ---
 The Discovery and Traceability agents share many parameters, which are located in:
+
 * `da_env_vars.env` (Discovery Agent)
 * `ta_env_vars.env` (Traceability Agent)
 
