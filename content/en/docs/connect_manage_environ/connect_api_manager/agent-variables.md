@@ -41,7 +41,7 @@ CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
 CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
 ```
 
-#### Traceability Agent
+### Traceability Agent
 
 ```
 #
