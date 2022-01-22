@@ -6,19 +6,42 @@ weight: 50
 description: Use the following environment variables to control your Discovery
   and Traceability agents
 ---
-As the Discovery and Traceability agents share many parameters, it is more efficient to use environment variables and reference these parameters, instead of declaring parameters twice.
+The Discovery and Traceability agents share many parameters, which are located in:
 
-To maintain a shareable collection of environment files, you can create a `da_env_vars.env` (Discovery Agent) and `ta_env_vars.env` (Traceability Agent) file per environment, which contains simple key value pairs.  By default, agent configuration files are looking for corresponding environment variables before looking on the configuration file property. This file can be used for both modes of the agent (binary VS Docker container).
+* `da_env_vars.env` (Discovery Agent)
+* `ta_env_vars.env` (Traceability Agent)
 
-{{< alert title="Note" color="primary" >}}The agent (binary mode) will accept an argument pointing to the environment variables file, which you can point to the `da_env_vars.env` or `ta_env_vars.env` file. Use the --envFile `da_env_vars.env` argument with either agent, pointing to the file for that agent.{{< /alert >}}
+The agent (binary mode) will accept an argument pointing to the environment variables file, which you can point to either `da_env_vars.env` or `ta_env_vars.env`. Use the --envFile `da_env_vars.env` argument with either agent, pointing to the file for that agent.
 
-{{< alert title="Note" color="primary" >}}The Docker image of the agent is expecting this `da_env_vars.env` or `ta_env_vars.env` as an argument of the Docker runner `docker run --env-file <PATH>/da_env_vars.env...`{{< /alert >}}
+The Docker image of the agent expects either `da_env_vars.env` or `ta_env_vars.env` as an argument of the Docker runner `docker run --env-file <PATH>/da_env_vars.env...`
 
-Some variables/properties have a default known value so that there is no need to parameter them.
+Some variables/properties have known default values, so it is not necessary to parameterize them.
 
 ## Minimum recommended variables
 
-In order to be able to switch easily from one environment to another, the following environment variables list is a good starting point:
+Use the following environment variables as a starting point to easily switch from one environment to another.
+
+### Discovery Agent
+
+```
+#
+#API Manager connectivity
+#
+APIMANAGER_HOST=ApiManagerHostName (localhost by default)
+APIMANAGER_PORT=ApiManagerPortNumber (8075 by default)
+APIMANAGER_AUTH_USERNAME=AnApiManagerUserName
+APIMANAGER_AUTH_PASSWORD=AnApiManagerUserPassword
+#
+#API Central connectivity
+#
+CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
+CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
+CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
+CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
+CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
+```
+
+#### Traceability Agent
 
 ```
 #
@@ -39,11 +62,13 @@ APIGATEWAY_AUTH_PASSWORD=AnApiGatewayOperatorUserPassword
 #API Central connectivity
 #
 CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
+CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
+CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
 CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
 ```
 
-If you are either struggling with a variable value or you want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes all the variables the agents (discovery / traceability) rely on.
+If you are either struggling with a variable value or want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes the variables the agents (Discovery / Traceability) rely on.
 
 ## Complete variable list for advanced features
 
@@ -139,7 +164,7 @@ You can extend the previous minimum variable list with the following variables. 
 | LOG_FILE_KEEPFILES                                                 | The max number of log file backups to keep.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | LOG_FILE_CLEANBACKUPS                                              | The max age of a backup file, in days.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-{{< alert title="Note" color="primary" >}}For logging, it is recommended to set it up in the agent configuration file to keep the log separated for each agent.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}It is recommended to set up logging in the agent configuration file to keep the logs separated for each agent.{{< /alert >}}
 
 ### Specific variables for Discovery Agent
 
