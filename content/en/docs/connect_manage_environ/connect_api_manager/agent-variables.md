@@ -35,6 +35,8 @@ APIMANAGER_AUTH_PASSWORD=AnApiManagerUserPassword
 #API Central connectivity
 #
 CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
+CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
+CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
 CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
 ```
@@ -60,6 +62,8 @@ APIGATEWAY_AUTH_PASSWORD=AnApiGatewayOperatorUserPassword
 #API Central connectivity
 #
 CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
+CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
+CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
 CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
 ```
