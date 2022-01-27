@@ -49,9 +49,9 @@ The following variables below may be used in the naming template.
 
 The following date formats may be added along with the .Date variable, ex. `{{.Date:YYYY/MM/DD}}`
 
-| Format               | Example for April 13th 2010 |
-|----------------------|-----------------------------|
-| YYYY/MM/DD (default) | 2010/04/13                  |
-| YYYY-MM-DD           | 2010-04-13                  |
-| MM/DD/YYYY           | 04/13/2010                  |
-| MM-DD-YYYY           | 04-13-2010                  |
+| Format               | Example for April 13 2010 |
+|----------------------|---------------------------|
+| YYYY/MM/DD (default) | 2010/04/13                |
+| YYYY-MM-DD           | 2010-04-13                |
+| MM/DD/YYYY           | 04/13/2010                |
+| MM-DD-YYYY           | 04-13-2010                |
