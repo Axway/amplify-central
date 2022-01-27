@@ -8,7 +8,7 @@ description: This section describes, in more detail, variables common to all age
 
 ## Variables on this page
 
-[CENTRAL_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
+* [CENTRAL_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
 
 ### CENTRAL_APISERVICEREVISIONPATTERN
 
