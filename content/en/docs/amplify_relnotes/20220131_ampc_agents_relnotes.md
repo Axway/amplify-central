@@ -29,7 +29,7 @@ All traceability agents are now reporting 3 different data to the platform:
 
 * **Transaction data**:  represent the number and details of transactions processed by the Gateway during a period of time (timestamp / header / return code / origin and destination urls / service name / method name). These transaction data are sampled (10% by default) and redacted. Refer to [sampling page](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling) and [redaction page](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction).
 * **Usage data**: represent the total number of APIs called during a certain period of time.
-* (NEW) **Metrics data**: represent an aggregation of the transaction data happening in the Gateway. Previously, this aggregation was done using the transaction data after being pushed to Amplify. Now it is directly computed by the agent and send to the platform on regular interval. The API Observer leverage this new information in API Usage screen.
+* (NEW) **Metrics data**: represent an aggregation of the transaction data happening in the Gateway. Previously, this aggregation was done using the transaction data after being pushed to Amplify. Now it is directly aggregated by the agent and send to the platform on regular interval (5 minutes by default). The Analytics screen leverage this new information in Analytics > API Usage screen. Since the information is sent on regular basis, the information is not immediately visible in the Analytics screen.
 
 ### Amplify Gateway agents enhancements
 
