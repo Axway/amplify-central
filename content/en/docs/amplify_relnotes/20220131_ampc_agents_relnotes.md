@@ -33,7 +33,9 @@ All traceability agents are now reporting 3 different data to the platform:
 
 ### Amplify Gateway agents enhancements
 
-* API can be shared across teams in the same environment: the discovery agent associates the team ownership of an API based on the organization the API belongs to. If a team name in AMplify matches an organization name in API Manager, then this API will be owned by this team, otherwise no team will own the API and only a Central administrator user will be able to see it. Refer to [Upgrade and agent - TODO LINK](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent#) for more information about the agent setup for this feature.
+* API can be spread across teams in the same Amplify environment: the discovery agent associates the team ownership of an API based on the organization the API belongs to. If a team name in Amplify matches an organization name in API Manager, then this API will be owned by this team, otherwise no team will own the API and only a Central administrator user will be able to see it. The discovery agent does not need anymore the `CENTRAL_TEAM` variable unless you want all APIs be managed by a single team.
+
+Refer to [Upgrade and agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent#axway-gateway-agents-upgrade) for more information about the agent setup for this feature.
 
 ### Amplify AWS Gateway agents enhancements
 
