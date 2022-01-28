@@ -53,7 +53,12 @@ A new release (0.0.4) of the Amplify Apigee agent has been promoted. This releas
 
 * Discover portal and products exposed in Apigee Edge. Optionally you can apply filters to discover only a subset of products.
 * Manage your consumer subscription from Amplify platform
-* report the API Usage to Amplify Analytics
+* report the API Usage to Amplify Analytics.
+
+Known limitations:
+
+* No traffic is reported as other agents to Amplify Analytics. A third party library such as Loggly is required for that.
+* The API Usage will appear with the proxy name and not with the product name in Amplify analytics.
 
 More information are available on [Axway github](https://github.com/Axway/agents-apigee) repository.
 
