@@ -3,9 +3,10 @@ title: Administer network traffic
 linkTitle: Administer network traffic
 draft: false
 weight: 40
-description: Traffic is always initiated by the Agent to the data plane, API Gateway, and Amplify Central. No sessions are ever initiated back to the Agent.
+description: Traffic is always initiated by the Agent to the data plane, API
+  Gateway, and Amplify Central. No sessions are ever initiated back to the
+  Agent.
 ---
-
 ## Overview
 
 ![Agent networking](/Images/central/connect-api-manager/agents-proxy2.png "Agent networking")
@@ -33,11 +34,11 @@ The Discovery Agent sends the following information to the Axway Amplify platfor
 
 It is also possible to filter the API to be discover using the filter capabilities of the agent:
 
-| Gateway type | Variable name      | Description                                                                                                            | Reference       |
-|--------------|--------------------|------------------------------------------------------------------------------------------------------------------------|-----------------|
-| Axway API Gateway | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)|
-| AWS         | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/)|
-| Azure       | `AZURE_FILTER`      | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` |                 |
+| Gateway type      | Variable name       | Description                                                                                                            | Reference                                                                                            |
+| ----------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Axway API Gateway | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)   |
+| AWS               | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/) |
+| Azure             | `AZURE_FILTER`      | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` |                                                                                                      |
 
 ### Traceability Agent
 
@@ -102,7 +103,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 **Outbound**:
 
 | Region | Host                                 | IP             | port        | Protocol     | data                               |
-|--------|--------------------------------------|----------------|-------------|--------------|------------------------------------|
+| ------ | ------------------------------------ | -------------- | ----------- | ------------ | ---------------------------------- |
 | EU/US  | platform.axway.com                   | 34.211.114.227 | 443         | HTTPS        |                                    |
 |        |                                      | 54.201.86.113  |             |              |                                    |
 |        |                                      |                |             |              |                                    |
@@ -113,7 +114,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                                      | 52.29.4.35     |             |              |                                    |
 |        |                                      | 54.93.140.145  |             |              |                                    |
 |        |                                      |                |             |              |                                    |
-| EU/US  | axway.jfrog.io                       |                | 443         | HTTPS        | Version check for new releases     |
+| EU/US  | axway.jfrog.io *                     |                | 443         | HTTPS        | Version check for new releases     |
 |        |                                      |                |             |              |                                    |
 |        |                                      |                |             |              |                                    |
 | US     | apicentral.axway.com                 | 3.94.245.118   | 443         | HTTPS        | API definitions, Subscription info |
@@ -135,9 +136,11 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                                      | 13.36.27.97    |             |              |                                    |
 |        |                                      | 13.36.33.229   |             |              |                                    |
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 _Region_ column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding _Host_/_Port_ for your agents to operate correctly.
-{{% /alert %}}
+{{< /alert >}}
+
+\* The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent will not be able to check for new versions of the agent. But besides this the agent will function correctly. 
 
 ### Axway API Gateway - other ports
 
@@ -146,14 +149,14 @@ Other ports which may need to be opened so that the Agent may monitor API Gatewa
 **Internal**:
 
 | Host             | Port           | Protocol | Data                                                                                                                                                                   |
-|------------------|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------- | -------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | API Manager Host | 8075 (default) | HTTPS    | API Discovery                                                                                                                                                          |
 | API Gateway Host | 8090 (default) | HTTPS    | API Transaction Header data (see [APIGATEWAY GETHEADERS](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent)) |
 
 **Inbound (used for the agent status server)**:
 
 | Host          | Port           | Protocol | Data                                                               |
-|---------------|----------------|----------|--------------------------------------------------------------------|
+| ------------- | -------------- | -------- | ------------------------------------------------------------------ |
 | Agent Host(s) | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
 ### AWS Gateway and Azure Gateway - other ports
@@ -163,7 +166,7 @@ The docker container does not expose any ports outside of the container. Within 
 **Inbound**:
 
 | Host             | Port           | Protocol | Data                                                               |
-|------------------|----------------|----------|--------------------------------------------------------------------|
+| ---------------- | -------------- | -------- | ------------------------------------------------------------------ |
 | Docker Container | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
 ## Subscription notifications
@@ -293,26 +296,23 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
   curl: (6) Could not resolve host: ingestion.datasearch.axway.com
   ```
 
-    * **Cause:** The host making the call can’t resolve the ingestion.datasearch.axway.com DNS name.
+  * **Cause:** The host making the call can’t resolve the ingestion.datasearch.axway.com DNS name.
+  * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
 
-    * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
-
-    ```shell
-    curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com
-    ```
-
+  ```shell
+  curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com
+  ```
 * **Error:**
 
   ```shell
   curl: (7) No authentication method was acceptable.
   ```
 
-    * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
+  * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
+  * **Possible Resolution:** Provide authentication to the proxy:
 
-    * **Possible Resolution:** Provide authentication to the proxy:
-
-    ```shell
-    socks5://{{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
-    ```
+  ```shell
+  socks5://{{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
+  ```
 
     The Agents only support the use of username/password authentication method for SOCKS connections.
