@@ -84,7 +84,7 @@ Data Fields:
 * Count of call
 * API name
 * Response code / status
-* Respons emin/max/avg time
+* Response min/max/avg time
 * Observation Window (start / end)
 
 #### Transactions data
