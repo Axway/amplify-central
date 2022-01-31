@@ -45,6 +45,7 @@ It is also possible to filter the API to be discover using the filter capabiliti
 The Traceability Agent reports two sets of data to Amplify platform:
 
 * Usage data
+* Metrics data
 * Transactions data
 
 #### Usage data
@@ -59,11 +60,31 @@ Structural Fields:
 * Timestamp
 * Event Identifier
 * Environment Identifier
-* Event version
+* Event name and version
 
 Data Fields:
 
 * Count
+* Observation Window (start / end)
+
+#### Metrics data
+
+The metrics data represent an aggregation of the transaction data made during a certain period of time. The aggregation is based on the API name and API response code. This metrics are automatically reported every 15 minutes by default to Amplify platform and cannot be inactivated. These data are presented in Amplify platform > Analytics > API Usage sreen.
+
+It contains the following information:
+
+Structural Fields:
+
+* Timestamp
+* Organization Identifier
+* Event name and version
+
+Data Fields:
+
+* Count of call
+* API name
+* Response code / status
+* Respons emin/max/avg time
 * Observation Window (start / end)
 
 #### Transactions data
@@ -81,7 +102,7 @@ Structural Fields:
 * Event Identifier
 * App Identifier (v7 Gateway application or AWS Usage plan or Azure subscription)
 * Amplify Central environment Identifier
-* Event version
+* Event name and version
 
 Data Fields:
 
