@@ -140,7 +140,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 _Region_ column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding _Host_/_Port_ for your agents to operate correctly.
 {{< /alert >}}
 
-\* The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent will not be able to check for new versions of the agent. But besides this the agent will function correctly. 
+\* The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent will not be able to check for new versions of the agent. But besides this the agent will function correctly.
 
 ### Axway API Gateway - other ports
 
@@ -296,8 +296,8 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
   curl: (6) Could not resolve host: ingestion.datasearch.axway.com
   ```
 
-  * **Cause:** The host making the call can’t resolve the ingestion.datasearch.axway.com DNS name.
-  * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
+    * **Cause:** The host making the call can’t resolve the ingestion.datasearch.axway.com DNS name.
+    * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
 
   ```shell
   curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com
@@ -308,8 +308,8 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
   curl: (7) No authentication method was acceptable.
   ```
 
-  * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
-  * **Possible Resolution:** Provide authentication to the proxy:
+    * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
+    * **Possible Resolution:** Provide authentication to the proxy:
 
   ```shell
   socks5://{{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
