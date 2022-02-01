@@ -69,9 +69,7 @@ Data Fields:
 
 #### Metrics data
 
-The metrics data represent an aggregation of the transaction data made during a certain period of time. The aggregation is based on the API name and API response code. This metrics are automatically reported every 15 minutes by default to Amplify platform and cannot be inactivated. These data are presented in Amplify platform > Analytics > API Usage sreen.
-
-It contains the following information:
+The metrics data represent an aggregation of the transaction data made during a certain period of time. The aggregation is based on the API name and API response code. The metrics are automatically reported every 15 minutes, by default, to Amplify platform and cannot be inactivated. The data can be viewed at **Amplify platform > Analytics > API Usage**, and includes:
 
 Structural Fields:
 
@@ -161,7 +159,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 _Region_ column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding _Host_/_Port_ for your agents to operate correctly.
 {{< /alert >}}
 
-\* The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent will not be able to check for new versions of the agent. But besides this the agent will function correctly.
+\* The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
 
 ### Axway API Gateway - other ports
 
