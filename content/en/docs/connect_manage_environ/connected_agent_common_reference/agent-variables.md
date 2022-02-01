@@ -6,21 +6,21 @@ weight: 40
 description: This section describes, in more detail, variables common to all agents.
 ---
 
-## Variables on this page
+This common agent variable is explained in detail:
 
 * [CENTRAL_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
 
-### CENTRAL_APISERVICEREVISIONPATTERN
+## CENTRAL_APISERVICEREVISIONPATTERN
 
 This variable sets the pattern used when creating API Service Revisions on Amplify Central.  The default pattern is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
 
-#### Default pattern explained
+### Default pattern
 
-As shown above the default pattern for this variable is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
+As shown above, the default pattern for this variable is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
 
 Each variable is surrounded by two sets of curly braces `{{ }}` and prepended with a period `.`.
 
-In this template there is also a conditional checking that the Stage variable is not equal to `ne` to an empty string `""`, `{{if ne .Stage ""}}`. When that condition is true everything up to the `{{end}}` portion is added to the title, `({{.StageLabel}}: {{.Stage}})`.
+In this template there is also a conditional check that the Stage variable is not equal to `ne` to an empty string `""`, `{{if ne .Stage ""}}`. When that condition is true, everything up to the `{{end}}` portion is added to the title, `({{.StageLabel}}: {{.Stage}})`.
 
 Examples:
 
@@ -31,23 +31,23 @@ Examples:
 | YourAPI         | test       | Portal      | December 23 2015  | 5         | YourAPI (Portal: test) - 2015/12/23 - r 5      |
 | LastAPI         |            | Stage       | January 11 2018   | 2         | LastAPI - 2018/01/11 - r 2                     |
 
-More information about these templates can be found here [https://pkg.go.dev/text/template](https://pkg.go.dev/text/template).
+More information about these templates can be found at [https://pkg.go.dev/text/template](https://pkg.go.dev/text/template).
 
-#### Available variables
+### Available variables
 
-The following variables below may be used in the naming template.
+These variables can be used in the naming template:
 
 | Variable Name   | Description                                                                                                                                                          |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | .APIServiceName | The friendly name of the API Service that this revision is being added too                                                                                           |
 | .Stage          | The name of the stage, if applicable, that this API Service Revision is linked to on the dataplane                                                                   |
-| .StageLabel     | The descriptor of the stage for the linked dataplane, ex. AWS stage descriptor is Stage or Apigee stage descriptor is Portal                                         |
-| .Date           | The [date](#date-formats) that this API Service Revision is being created on. This is when the resource is created on Amplify not when the dataplane created the API |
+| .StageLabel     | The descriptor of the stage for the linked dataplane. For example, AWS stage descriptor is Stage or Apigee stage descriptor is Portal                                         |
+| .Date           | The [date](#date-formats) that this API Service Revision is being created. This is when the resource is created on Amplify, not when the dataplane created the API |
 | .Revision       | The revision number, according to what is on Amplify, for this API Service Revision                                                                                  |
 
-#### Date Formats
+### Date Formats
 
-The following date formats may be added along with the .Date variable, ex. `{{.Date:YYYY/MM/DD}}`
+These date formats can added with the .Date variable: 
 
 | Format               | Example for April 13 2010 |
 |----------------------|---------------------------|
@@ -55,3 +55,5 @@ The following date formats may be added along with the .Date variable, ex. `{{.D
 | YYYY-MM-DD           | 2010-04-13                |
 | MM/DD/YYYY           | 04/13/2010                |
 | MM-DD-YYYY           | 04-13-2010                |
+
+For example, `{{.Date:YYYY/MM/DD}}`
