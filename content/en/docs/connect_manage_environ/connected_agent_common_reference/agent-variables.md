@@ -47,7 +47,7 @@ These variables can be used in the naming template:
 
 ### Date Formats
 
-These date formats can added with the .Date variable: 
+These date formats can added with the .Date variable:
 
 | Format               | Example for April 13 2010 |
 |----------------------|---------------------------|
