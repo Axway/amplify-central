@@ -23,7 +23,7 @@ For more information, see [Axway CLI release note](https://docs.axway.com/bundle
 The following enhancements are available in this Axway CLI update:
 
 * Added the ability to view or update the team ownership of an environment or an API Service.
-* A Central Admin can add an existing service account to a team with "axway team user add <org> <team> <user_guid> --role <role>' command.
+* A Central Admin can add an existing service account to a team with `axway team user add <org> <team> <user_guid> --role <role>` command.
 
 The following enhancements are available in this Axway Central CLI update:
 
@@ -32,7 +32,7 @@ The following enhancements are available in this Axway Central CLI update:
 ### Amplify Central WebUI
 
 * Tean ownership of Environments and API Services is now displayed on the WebUI.
-* API Providers can now have a team of individual consumers which have no visibility of the Unified Catalog subscriptions of the other consumers on the same team on the WebUI.   The Central Admin role can see all members of the team and can enable this with a tag name 'x-private' set for the individual consumer team.   
+* Consumers from a same teams are not able to manipulate subscription from other team members. Although the Central Admin role will be able to see subscription from every member of the team. For that, API Provider needs to add the tag 'x-private' on the corresponding team.
 * API Providers can now publish APIs faster to the Unified Catalog because we have relaxed the validation of API Specification files on the WebUI.
 
 ## Fixed issues
