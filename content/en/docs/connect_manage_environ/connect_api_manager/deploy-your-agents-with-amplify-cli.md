@@ -192,18 +192,18 @@ Traceability Agent:
 
 ### Docker mode
 
-As mentioned in the installation procedure, agents can be started with the following commands:
+As mentioned in the installation procedure, agents can be started with the following commands (installation procedure will replace <agentVersion> below with the most recent version available):
 
 Discovery Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:latest
+docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:<agentVersion>
 ```
 
 Traceability Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:latest
+docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:<agentVersion>
 ```
 
 ### Helm deployment
