@@ -32,7 +32,8 @@ The following enhancements are available in this Axway Central CLI update:
 ### Amplify Central WebUI
 
 * Tean ownership of Environments and API Services is now displayed on the WebUI.
-* API Providers can now publish APIs faster to the Unified Catalog because we have relaxed the validation of API Specification files.
+* API Providers can now have a team of individual consumers which have no visibility of the Unified Catalog subscriptions of the other consumers on the same team on the WebUI.   The Central Admin role can see all members of the team and can enable this with a tag name 'x-private' set for the individual consumer team.   
+* API Providers can now publish APIs faster to the Unified Catalog because we have relaxed the validation of API Specification files on the WebUI.
 
 ## Fixed issues
 
