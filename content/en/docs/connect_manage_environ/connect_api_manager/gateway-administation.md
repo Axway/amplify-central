@@ -43,18 +43,18 @@ The containerized agent can run in the following mode:
 
 #### To install the Binary Discovery Agent
 
-**Step 1**: Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `<agentVersion>` in the command displayed in following sections.
+**Step 1**: Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
 
 **Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
 
 ```shell
-curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/<agentVersion>/discovery_agent-<agentVersion>.zip" -o discovery_agent-<agentVersion>.zip
+curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/{agentVersion}/discovery_agent-{agentVersion}.zip" -o discovery_agent-{agentVersion}.zip
 ```
 
-**Step 3**: Unzip the file discovery_agent-<agentVersion>.zip to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
+**Step 3**: Unzip the file discovery_agent-{agentVersion}.zip to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
 
 ```shell
-unzip discovery_agent-<agentVersion>.zip
+unzip discovery_agent-{agentVersion}.zip
 ```
 
 **Step 4**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
@@ -86,12 +86,12 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
-Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `<agentVersion>` in the command displayed in following sections.
+Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
 
 Pull the Docker image of the Discovery Agent:
 
 ```shell
-docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:<agentVersion>
+docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
 ```
 
 ### Customizing the Discovery Agent environment variable file
@@ -498,7 +498,7 @@ cd /home/APIC-agents
 2. Start the Docker Discovery Agent pointing to the `da_env_vars.env` file and the keys directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
-   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:<agentVersion>
+   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
    ```
 
 3. Run the following health check command to ensure the agent is up and running:
@@ -524,18 +524,18 @@ The containerized agent can run in the following mode:
 
 #### To install the binary Traceability Agent
 
-**Step 1**: Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `<agentVersion>` in the command displayed in following sections.
+**Step 1**: Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
 
 **Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
 
 ```shell
-curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/<agentVersion>/traceability_agent-<agentVersion>.zip" -o traceability_agent-<agentVersion>.zip
+curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/{agentVersion}/traceability_agent-{agentVersion}.zip" -o traceability_agent-{agentVersion}.zip
 ```
 
-**Step 3**: Unzip the file traceability_agent-<agentVersion>.zip to get the agent binary (traceability_agent) and a template configuration file (traceability_agent.yml):
+**Step 3**: Unzip the file traceability_agent-{agentVersion}.zip to get the agent binary (traceability_agent) and a template configuration file (traceability_agent.yml):
 
 ```shell
-unzip traceability_agent-<agentVersion>.zip
+unzip traceability_agent-{agentVersion}.zip
 ```
 
 **Step 4**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
@@ -571,12 +571,12 @@ CENTRAL_ENVIRONMENT=<Environment>
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
-Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `<agentVersion>` in the command displayed in following sections.
+Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
 
 Pull the Docker image of the Traceability Agent:
 
 ```shell
-docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability-agent:<agentVersion>
+docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability-agent:{agentVersion}
 ```
 
 ### Customizing the Traceability Agent environment variable file
@@ -970,7 +970,7 @@ See "To install the Dockerized Discovery Agent" section above for the `ta_env_va
 2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
-   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v <pwd>/data:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:<agentVersion>
+   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v <pwd>/data:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:{agentVersion}
    ```
 
    * See [Create and start API Gateway Docker container](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_installation/apigw_containers/docker_script_gwimage/index.html#mount-volumes-to-persist-logs-outside-the-api-gateway-container) for more  information regarding the persistent API Gateway trace and event logs to a directory on your host machine.
