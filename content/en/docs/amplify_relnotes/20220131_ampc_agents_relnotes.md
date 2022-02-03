@@ -47,7 +47,16 @@ Refer to [Upgrade and agent](/docs/connect_manage_environ/connected_agent_common
 
 ### Amplify Istio agents enhancements
 
-* None.
+* The traceability agent is now able to track multiple ISTIO namespaces. The `envoyFilterNamespace` property in hybrid-override.yaml file has been deprecated and replaced by `istioGatewayNamespaces`. This new variable accepts multiple namespaces values the agent will monitor.
+
+```yml
+# sample to monitor multiple namespaces
+
+als:
+  istioGatewayNamespaces: 
+   - istio-system
+   - namespace2
+```
 
 ### Amplify Apigee agents
 
