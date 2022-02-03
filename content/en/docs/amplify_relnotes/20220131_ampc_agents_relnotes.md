@@ -47,6 +47,9 @@ Refer to [Upgrade and agent](/docs/connect_manage_environ/connected_agent_common
 
 ### Amplify Istio agents enhancements
 
+Latest helm chart version: 0.62.0
+Latest agent version: 2.0.23
+
 * The traceability agent is now able to track multiple ISTIO namespaces. The `envoyFilterNamespace` property in hybrid-override.yaml file has been deprecated and replaced by `istioGatewayNamespaces`. This new variable accepts multiple namespaces values the agent will monitor.
 
 ```yml
