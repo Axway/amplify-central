@@ -48,7 +48,22 @@ Refer to [Upgrade and agent](/docs/connect_manage_environ/connected_agent_common
 ### Amplify Istio agents enhancements
 
 Latest helm chart version: 0.62.0
+
 Latest agent version: 2.0.23
+
+* The traceability agent inherit the sampling feature from Agents SDK. Refer to [Agent sampling](/docs/connet_manage_environ/connected_agent_common_reference/trace-sampling).
+
+Sample configuration
+
+```yaml
+# configures the ALS Traceability agent
+als:
+# sampling configuration
+  sampling:
+    percentage: 100
+    per_api: true
+    reportAllErrors: true
+```
 
 * The traceability agent is now able to track multiple ISTIO namespaces. The `envoyFilterNamespace` property in hybrid-override.yaml file has been deprecated and replaced by `istioGatewayNamespaces`. This new variable accepts multiple namespaces values the agent will monitor.
 
