@@ -52,9 +52,10 @@ Latest agent version: 2.0.23
 
 * The traceability agent is now able to track multiple ISTIO namespaces. The `envoyFilterNamespace` property in hybrid-override.yaml file has been deprecated and replaced by `istioGatewayNamespaces`. This new variable accepts multiple namespaces values the agent will monitor.
 
-```yml
-# sample to monitor multiple namespaces
+Sample to monitor multiple namespaces:
 
+```yaml
+# configures the ALS Traceability agent
 als:
   istioGatewayNamespaces: 
    - istio-system
