@@ -42,12 +42,12 @@ This [blog article](https://devblog.axway.com/dev-insights/amplify-central-agent
 
 ### Axway gateway agents upgrade
 
-Starting with version 1.1.9, the agent is able to set the owner team of an API Service based on the organization name the API belongs to. If an organization name matches a team name, the ownership of the API will be assign to this team. Then, only users belongings to this team will be able to manage the APIs. For that, it is no more necessary to have the `CENTRAL_TEAM` variable set in discovery agent variable nor the owningTeam set in discovery agent resource.
+For version 1.1.9 and later, the agent sets the owner team of an API Service based on the organization name the API belongs to. If an organization name matches a team name, the ownership of the API is assign to this team, and only the users belongings to this team can manage the APIs. It is no longer necessary to set `CENTRAL_TEAM` in the Discovery Agent configuration and `owningTeam` in the Discovery Agent resource.
 
-To remove the owningTeam from the agent resource, follow these instructions:
+To remove the owningTeam from the agent resource:
 
-* get existing resource : `axway central get da -s <environmentName> -o yaml > da.yaml`
-* edit the `da.yaml` file and replace:
+* Get existing resource: `axway central get da -s <environmentName> -o yaml > da.yaml`
+* Edit the `da.yaml` file and replace:
 
 ```yaml
 ...
@@ -66,9 +66,9 @@ spec:
 ...
 ```
 
-* apply the updated file: `axway central apply -f da.yaml`
+* Apply the updated file: `axway central apply -f da.yaml`
 
-Now, when you restart your agent, the API services ownership will be set according to your v7 organization setup. APIs belongings to one organization will be owned by the matching team in Amplify platform. Only users from that team will be able to manage this API.
+When you restart your agent, the API services ownership will be set according to your v7 organization setup. APIs belongings to one organization will be owned by the matching team in Amplify platform. Only users from that team will be able to manage this API.
 
 #### Axway gateway agents binary mode upgrade
 

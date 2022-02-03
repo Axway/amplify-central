@@ -6,19 +6,42 @@ weight: 50
 description: Use the following environment variables to control your Discovery
   and Traceability agents
 ---
-As the Discovery and Traceability agents share many parameters, it is more efficient to use environment variables and reference these parameters, instead of declaring parameters twice.
+The Discovery and Traceability agents share many parameters, which are located in:
 
-To maintain a shareable collection of environment files, you can create a `da_env_vars.env` (Discovery Agent) and `ta_env_vars.env` (Traceability Agent) file per environment, which contains simple key value pairs.  By default, agent configuration files are looking for corresponding environment variables before looking on the configuration file property. This file can be used for both modes of the agent (binary VS Docker container).
+* `da_env_vars.env` (Discovery Agent)
+* `ta_env_vars.env` (Traceability Agent)
 
-Note that the agent (binary mode) will accept an argument pointing to the environment variables file, which you can point to the `da_env_vars.env` or `ta_env_vars.env` file. Use the --envFile `da_env_vars.env` argument with either agent, pointing to the file for that agent.
+The agent (binary mode) will accept an argument pointing to the environment variables file, which you can point to either `da_env_vars.env` or `ta_env_vars.env`. Use the --envFile `da_env_vars.env` argument with either agent, pointing to the file for that agent.
 
-Note that the Docker image of the agent is expecting this `da_env_vars.env` or `ta_env_vars.env` as an argument of the Docker runner `docker run --env-file <PATH>/da_env_vars.env...`
+The Docker image of the agent expects either `da_env_vars.env` or `ta_env_vars.env` as an argument of the Docker runner `docker run --env-file <PATH>/da_env_vars.env...`
 
-Some variables/properties have a default known value so that there is no need to parameter them.
+Some variables/properties have known default values, so it is not necessary to parameterize them.
 
 ## Minimum recommended variables
 
-In order to be able to switch easily from one environment to another, the following environment variables list is a good starting point:
+Use the following environment variables as a starting point to easily switch from one environment to another.
+
+### Discovery Agent
+
+```
+#
+#API Manager connectivity
+#
+APIMANAGER_HOST=ApiManagerHostName (localhost by default)
+APIMANAGER_PORT=ApiManagerPortNumber (8075 by default)
+APIMANAGER_AUTH_USERNAME=AnApiManagerUserName
+APIMANAGER_AUTH_PASSWORD=AnApiManagerUserPassword
+#
+#API Central connectivity
+#
+CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
+CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
+CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
+CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
+CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
+```
+
+### Traceability Agent
 
 ```
 #
@@ -39,11 +62,13 @@ APIGATEWAY_AUTH_PASSWORD=AnApiGatewayOperatorUserPassword
 #API Central connectivity
 #
 CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
+CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
+CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyCentral
 CENTRAL_ENVIRONMENT=AmplifyCentralEnvironmentName
 ```
 
-If you are either struggling with a variable value or you want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes all the variables the agents (discovery / traceability) rely on.
+If you are either struggling with a variable value or want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes the variables the agents (Discovery / Traceability) rely on.
 
 ## Complete variable list for advanced features
 
@@ -77,7 +102,7 @@ You can extend the previous minimum variable list with the following variables. 
 | CENTRAL_DEPLOYMENT                                                 | Specifies region (default: US = `prod` / EU = `prod-eu`).                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | CENTRAL_URL                                                        | The URL to the Amplify Central instance being used for Agents (default value: US =  `<https://apicentral.axway.com>` / EU = `https://central.eu-fr.axway.com`).                                                                                                                                                                                                                                                                                                                                             |
 | CENTRAL_ORGANIZATIONID                                             | The Organization ID from Amplify Central. Locate this at Platform > User > Organization.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| CENTRAL_TEAM                                                       | Set to assign an owner of all API resources in the CENTRAL_ENVRIONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.                                                                                                                                                                |
+| CENTRAL_TEAM                                                       | Set to assign an owner of all API resources in the CENTRAL_ENVRIONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.                                                                                                                                                               |
 | CENTRAL_MODE                                                       | Method to send endpoints back to Central. (`publishToEnvironment` = API Service, `publishToEnvironmentAndCatalog` = API Service and Catalog asset).                                                                                                                                                                                                                                                                                                                                                         |
 | CENTRAL_AGENTNAME                                                  | The agent name of this agent on Amplify Central.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | CENTRAL_APPENDENVIRONMENTTOTITLE                                   | Set to false to skip adding the environment name to the title and description of the API.                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -95,7 +120,7 @@ You can extend the previous minimum variable list with the following variables. 
 | CENTRAL_APISERVERVERSION                                           | Version of the API Server that the agent will communicate with.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | CENTRAL_CLIENTTIMEOUT                                              | The time interval at which the HTTP client times out making HTTP requests and processing the response (ns - default, us, ms, s, m, h). Set to 60s.                                                                                                                                                                                                                                                                                                                                                          |
 | CENTRAL_JOBTIMEOUT                                                 | The longest duration interval or scheduled jobs are allowed to run before being canceled (default: `5m`).                                                                                                                                                                                                                                                                                                                                                                                                   |
-| CENTRAL_APISERVICEREVISIONPATTERN                                  | The naming pattern for APIServiceRevision Title. Date formats can be `{{.Date:YYYY/MM/DD}}, {{.Date:YYYY-MM-DD}}, {{.Date:MM/DD/YYYY}}, or {{.Date:MM-DD-YYYY}}`. Current default set to `{{.APIServiceName}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.                                                                                                                                                                                                                                                    |
+| CENTRAL_APISERVICEREVISIONPATTERN                                  | Refer to [CENTRAL_APISERVICEREVISIONPATTERN](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#CENTRAL_APISERVICEREVISIONPATTERN).                                                                                                                                                                                                                                                                                                                                               |
 | CENTRAL_SSL_MINVERSION                                             | String value for the minimum SSL/TLS version that is acceptable. If zero, empty TLS 1.0 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                                                                                                                                                                                        |
 | CENTRAL_SSL_MAXVERSION                                             | String value for the maximum SSL/TLS version that is acceptable. If empty, then the maximum version supported by this package is used, which is currently TLS 1.3. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                                                                                                                                      |
 | CENTRAL_SSL_CIPHERSUITES                                           | An array of strings. It is a list of supported cipher suites for TLS versions up to TLS 1.2. If CipherSuites is nil, a default list of secure cipher suites is used, with a preference order based on hardware performance. See [Supported Cipher Suites](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/).                                                                                                                                                                   |
@@ -139,7 +164,7 @@ You can extend the previous minimum variable list with the following variables. 
 | LOG_FILE_KEEPFILES                                                 | The max number of log file backups to keep.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | LOG_FILE_CLEANBACKUPS                                              | The max age of a backup file, in days.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
-Note: For logging, it is recommended to set it up in the agent configuration file to keep the log separated for each agent.
+{{< alert title="Note" color="primary" >}}It is recommended to set up logging in the agent configuration file to keep the logs separated for each agent.{{< /alert >}}
 
 ### Specific variables for Discovery Agent
 
@@ -177,7 +202,7 @@ Note: For logging, it is recommended to set it up in the agent configuration fil
 | TRACEABILITY_REDACTION_MASKING_CHARACTERS      | Determines what characters are displayed as the sanitized response header values on Amplify (default value `{*}`).                                                                                                                                                                                                                         |
 | TRACEABILITY_SAMPLING_PERCENTAGE               | The percentage of all transactions that are sent to Amplify. A value of `0` reports no traffic (default value `10`).                                                                                                                                                                                                                       |
 | TRACEABILITY_SAMPLING_PER_API                  | When true, the percentage of API transactions sent will be based on each API ID in the transaction (default value: `true`).                                                                                                                                                                                                                |
-| TRACEABILITY_EXCEPTION_LIST                    | Determines what API paths the agent will dismiss and not process for usage or transaction reporting. Example: `["/my/first/path","/my/second/path"]`                                                                                                                                                                                       |
+| TRACEABILITY_EXCEPTION_LIST                    | Determines what API paths the agent will dismiss and not process for usage or transaction reporting. Valid regular expressions can be configured. Example: `["/my/first/path*","/my/second?/path","/my/third/path]`                                                                                                                        |
 | QUEUE_MEM_EVENTS                               | The size of the internal queue used for storing consumed events before publishing them (default value: `2048`).                                                                                                                                                                                                                            |
 | QUEUE_MEM_FLUSH_MINEVENTS                      | The minimum number of events in queue required for publishing (default value: `100`).                                                                                                                                                                                                                                                      |
 | QUEUE_MEM_FLUSH_TIMEOUT                        | The maximum time to wait for min_events to be fulfilled (default value: `1s`).                                                                                                                                                                                                                                                             |
