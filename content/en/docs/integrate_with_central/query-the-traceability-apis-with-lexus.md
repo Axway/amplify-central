@@ -26,7 +26,7 @@ You can use whichever of the following methods you feel the most comfortable wit
 
 For quicker execution, you may prefer to use the postman collection containing some of the examples shown below in the sample queries: [https://documenter.getpostman.com/view/2125605/TWDanGAu](https://documenter.getpostman.com/view/2125605/TWDanGAu).
 
-{{< alert title="Note" color="primary" >}}The Postman Collection requires the **_X-Axway-Tenant-Id_** and _**Authorization**_ headers to be set to POST to the backend service.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The Postman Collection requires the ***X-Axway-Tenant-Id*** and ***Authorization*** headers to be set to POST to the backend service.{{< /alert >}}
 
 ### cURL
 
