@@ -17,23 +17,27 @@ Access to the API Observer menu and dashboards is based on your role and permiss
 
 From the [Amplify platform](https://platform.axway.com) home page click **Dashboard**, and then click **API Observer** from the left navigation. You are directed to the dashboards in Amplify Central.
 
+Filter options are provided on each dashboard.
+
 ## API Usage
 
 Click **API Usage** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
   ![Example of API usage](/Images/central/api_usage.png)
 
-The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected). Click the **Compare to previous period** option to compare the current selected time range to the previous time range.
+The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected) in the tiles across the top below the filter options. Click the **Compare to previous period** option to compare the current selected time range to the previous time range. You can compare the current week, month, or year to the previous week, month, or year to understand how your API usage is changing over time.
 
-Click an item in the list to view the traffic information.
+Each item in the list also provides the average duration, maximum duration, and minimum duration.
+
+Click an individual item to see the usage data of individual transactions of that API over time.
 
 ## App Usage
 
 Click **App Usage** to see an aggregated view of API usage in your organization grouped by app over time.
   ![Example of App usage](/Images/central/app_usage.png)
 
-The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected). Click the **Compare to previous period** option to compare the current selected time range to the previous time range.
+{{% getactionableinsights/api_app_usage %}}
 
-Click an item in the list to view the traffic information.
+Click an individual item to see the usage of APIs by that app over time.
 
 ## API Traffic
 
@@ -42,7 +46,27 @@ Click **API Traffic** to view the traffic information for the API or App. This v
 
 {{% alert title="Note" color="primary" %}} The API traffic view provides details for up to a maximum of 1000 transactions based on your search. You might need to further restrict the search by time range or other filter criteria to view all results.{{% /alert %}}
 
-Click an item in the API traffic list to view transaction details including the number of spans.
+The total number of items displayed below the filters are based on the configuration of agents and my not represent 100% of transactions. Each individual item provides the following data:
+
+* Status
+* Method
+* URI
+* Name
+* Enviroment
+* Duration
+* Timestamp
+
+Click an item in the API traffic list to view its transaction details, including number of spans:
+
+* Type
+* Status
+* Source
+* Destination
+* Method
+* URI Path
+* Duration
+* Timestamp
+
   ![Example of API traffic details](/Images/central/api_traffic_details.png)
 
  For each span you can view the request and response header details.
