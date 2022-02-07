@@ -24,7 +24,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
     * Portal and products exposed in Apigee Edge can be discovered
     * Consumer subscriptions can be managed from Amplify platform
     * API Usage is reported to Amplify Analytics
-* **Amplify agent general** (version 1.1.10): Traceability Agents now report three types of data to the platform: Transaction, Usage and Metrics (new)        
+* **Amplify agent general** (version 1.1.10): Traceability Agents now report three types of data to the platform: Transaction, Usage and Metrics (new)
 
 **Bug fixes**:
 
