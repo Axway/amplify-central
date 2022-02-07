@@ -22,27 +22,27 @@ For more information, see [Axway CLI release note](https://docs.axway.com/bundle
 
 The following enhancements are available in this Axway CLI update:
 
-* Added the ability to view or update the team ownership of an environment or an API Service.
-* A Central Admin can add an existing service account to a team with `axway team user add <org> <team> <user_guid> --role <role>` command.
+* The ability to view or update the team ownership of an environment or an API Service.
+* A Central Administrator can add an existing service account to a team with `axway team user add <org> <team> <user_guid> --role <role>` command.
 
 The following enhancements are available in this Axway Central CLI update:
 
-* A developer on a team, can access Environments and API Services owned by teams which the developer is a member of.  Access is denied to Environments and API Services owned by teams which the developer is not a member of.
+* A developer on a team can access Environments and API Services owned by teams that the developer is a member of. Access is denied to Environments and API Services owned by teams that the developer is not a member of.
 
 ### Amplify Central WebUI
 
-* Tean ownership of Environments and API Services is now displayed on the WebUI.
-* Consumers from the same team are not able to manipulate/view subscriptions from other team members in the Unified Catalog. Although the Central Admin role will be able to see subscriptions from every member of the team. For that, API Provider needs to add the tag 'x-private' on the corresponding team.
-* API Providers can now publish APIs faster to the Unified Catalog because we have relaxed the validation of API Specification files on the WebUI.
+* Team ownership of Environments and API Services is now displayed on the WebUI.
+* Consumers from the same team are not able to manipulate/view subscriptions from other team members in the Unified Catalog. However, the Central Administrator role can see subscriptions from every member of the team. For this enhancement, the API Provider must add the tag `x-private` on the corresponding team.
+* API Providers can now publish APIs faster to the Unified Catalog because the validation of API Specification files on the WebUI has been relaxed.
 
 ## Fixed issues
 
 The following issues are fixed in this Amplify Central update:
 
-* Fixed a Central CLI issue where a Service account can now be used in a headless environment with the 'install agents' command.
-* Fixed a Central CLI issue with the 'get' command with '--team' option support all teams which you have access to as a Central Admin (not just the teams you are a member of).
-* Fixed a Central CLI issue where the CLI command 'axway central config' does not execute with telemetry enabled.
-* Fixed a Central CLI issue where the CLI command to add a service account user to a team does not execute.
+* Fixed a Central CLI issue where a Service account can now be used in a headless environment with the `install agents` command.
+* Fixed a Central CLI issue with the `get` command with `--team` option which now support all teams that you have access to as a Central Administrator (not just the teams you are a member of).
+* Fixed a Central CLI issue where the CLI command `axway central config` did not execute with telemetry enabled.
+* Fixed a Central CLI issue where the CLI command to add a service account user to a team did not execute.
 
 ## Known limitations
 

@@ -25,17 +25,17 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update.
 
-All traceability agents are now reporting 3 different data to the platform:
+The Traceability Agents now report three types of data to the platform:
 
-* **Transaction data**:  represent the number and details of transactions processed by the Gateway during a period of time (timestamp / header / return code / origin and destination urls / service name / method name). These transaction data are sampled (10% by default) and redacted. Refer to [sampling page](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling) and [redaction page](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction).
-* **Usage data**: represent the total number of APIs called during a certain period of time.
-* (NEW) **Metrics data**: represent an aggregation of the transaction data happening in the Gateway. Previously, this aggregation was done using the transaction data after being pushed to Amplify. Now it is directly aggregated by the agent and send to the platform on regular interval (5 minutes by default). The Analytics screen leverage this new information in Analytics > API Usage screen. Since the information is sent on regular basis, the information is not immediately visible in the Analytics screen.
+* **Transaction data**:  represent the number and details of transactions processed by the Gateway during a period (timestamp / header / return code / origin and destination urls / service name / method name). These transaction data are sampled (10% by default) and redacted. See [sampling page](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling) and [redaction page](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction).
+* **Usage data**: represent the total number of APIs called during a certain period.
+* (NEW) **Metrics data**: represent an aggregation of the transaction data in the Gateway. Previously, this aggregation was done using the transaction data after it was pushed to Amplify. Now, it is directly aggregated by the agent and sent to the platform on regular intervals (5 minutes by default). The Analytics screen leverages this new information in Analytics > API Usage screen. Since the information is sent on a regular basis, the information is not immediately visible in the Analytics screen.
 
 ### Amplify Gateway agents enhancements
 
-* API can be spread across teams in the same Amplify environment: the discovery agent associates the team ownership of an API based on the organization the API belongs to. If a team name in Amplify matches an organization name in API Manager, then this API will be owned by this team, otherwise no team will own the API and only a Central administrator user will be able to see it. The discovery agent does not need anymore the `CENTRAL_TEAM` variable unless you want all APIs be managed by a single team.
+* APIs can be spread across teams in the same Amplify environment: the Discovery Agent associates the team ownership of an API based on the organization the API belongs to. If a team name in Amplify matches an organization name in API Manager, then this API will be owned by this team; otherwise, no team will own the API and only a Central administrator user will be able to see it. The Discovery agent no longer requires the `CENTRAL_TEAM` variable unless all APIs are being managed by a single team.
 
-Refer to [Upgrade and agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent#axway-gateway-agents-upgrade) for more information about the agent setup for this feature.
+See [Upgrade an agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent#axway-gateway-agents-upgrade) for more information about the agent setup for this feature.
 
 ### Amplify AWS Gateway agents enhancements
 
@@ -51,9 +51,9 @@ Latest helm chart version: 0.62.0
 
 Latest agent version: 2.0.23
 
-* The traceability agent inherit the sampling feature from Agents SDK. Refer to [Agent sampling](/docs/connet_manage_environ/connected_agent_common_reference/trace-sampling).
+* The Traceability Agent inherits the sampling feature from Agents SDK. See [Agent sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling).
 
-Sample configuration
+    Sample configuration:
 
 ```yaml
 # configures the ALS Traceability agent
@@ -65,9 +65,9 @@ als:
     reportAllErrors: true
 ```
 
-* The traceability agent is now able to track multiple ISTIO namespaces. The `envoyFilterNamespace` property in hybrid-override.yaml file has been deprecated and replaced by `istioGatewayNamespaces`. This new variable accepts multiple namespaces values the agent will monitor.
+* The Traceability Agent can now track multiple ISTIO namespaces. The `envoyFilterNamespace` property in the hybrid-override.yaml file has been deprecated and replaced by `istioGatewayNamespaces`. This new variable accepts multiple namespaces values that the agent will monitor.
 
-Sample to monitor multiple namespaces:
+    Sample to monitor multiple namespaces:
 
 ```yaml
 # configures the ALS Traceability agent
@@ -79,26 +79,26 @@ als:
 
 ### Amplify Apigee agents
 
-A new release (0.0.4) of the Amplify Apigee agent has been promoted. This release enable you to:
+A new release (0.0.4) of the Amplify Apigee agent has been promoted. This release enables you to:
 
-* Discover portal and products exposed in Apigee Edge. Optionally you can apply filters to discover only a subset of products.
-* Manage your consumer subscription from Amplify platform
-* report the API Usage to Amplify Analytics.
+* Discover portal and products exposed in Apigee Edge. Optionally, you can apply filters to discover only a subset of products.
+* Manage your consumer subscription from Amplify platform.
+* Report the API Usage to Amplify Analytics.
 
 Known limitations:
 
-* No traffic is reported as other agents to Amplify Analytics. A third party library such as Loggly is required for that.
-* The API Usage will appear with the proxy name and not with the product name in Amplify analytics.
+* No traffic is reported as other agents to Amplify Analytics. A third-party library, such as Loggly, is required to do this.
+* The API Usage will appear with the proxy name, not with the product name, in Amplify Analytics.
 
-More information are available on [Axway github](https://github.com/Axway/agents-apigee) repository.
+For more information, see the [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
 
-* **Custom webhook for subscription is override by the agent**. Previously, when changing manually the webhook to be call for the subscription approval process, the agent keeps on overriding it. Now, the agent manage only the subscription definition and let the webhook as is when updating the subscription schema definition.
-* **Traceability agent fails to connect to transaction service via proxy**. Previously, when using a proxy via the `TRACEABILITY_PROXYURL` variable, the traceability agent cannot connect correctly to the `TRACEABILITY_HOST` url dur to a paring issue of the variable value. Now, the parsing is corrected and the agent can connect correcly using a proxy.
-* **Changing discovery filter does not always update the discovered APIs**. Previously, after updating the discovery filter (`APIMANAGER_FILTER`), the discovery agent did applied correctly the new filter value. Now the filter is always read at agent startup and correctly applied.
+* **Custom webhook for subscription is overriden by the agent**. Previously, when manually changing the webhook to be called for the subscription approval process, the agent would override it. Now, the agent manages only the subscription definition and leaves the webhook as is when updating the subscription schema definition.
+* **Traceability Agent fails to connect to transaction service via proxy**. Previously, when using a proxy via the `TRACEABILITY_PROXYURL` variable, the Traceability Agent could not correctly connect to the `TRACEABILITY_HOST` URL due to a paring issue of the variable value. Now, the parsing is corrected, and the agent can connect using a proxy.
+* **Changing discovery filter does not always update the discovered APIs**. Previously, after updating the discovery filter (`APIMANAGER_FILTER`), the Discovery Agent didn't correctly apply the new filter value. Now, the filter is always read at agent startup and correctly applied.
 
 ## Known limitations
 

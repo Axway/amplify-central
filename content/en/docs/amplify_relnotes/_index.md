@@ -14,29 +14,41 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **What's new for**:
 
-* **Amplify Gateway Agent** (version x.x.x): Add text
+* **Amplify Gateway Agent** (version 1.1.10): APIs can be spread across teams in the same Amplify environment
+* **Amplify AWS Gateway Agent** (version 1.1.10): Technical information for consumer subscription (AWS usage plan ID) are now stored with the subscription object on Amplify
+* **Amplify Azure Agent** (version 1.1.10): Technical information for consumer subscription (Azure subscription ID) are now stored with the subscription object on Amplify
+* **Amplify Istio Agent** (helm chart version 0.62.0, Agent version 2.0.23):
+    * The Traceability Agent inherits the sampling feature from Agents SDK
+    * The Traceability Agent can now track multiple ISTIO namespaces
+* **Amplify Apigee Agent** (version 0.0.4):
+    * Portal and products exposed in Apigee Edge can be discovered
+    * Consumer subscriptions can be managed from Amplify platform
+    * API Usage is reported to Amplify Analytics
+* **Amplify agent general** (version 1.1.10): Traceability Agents now report three types of data to the platform: Transaction, Usage and Metrics (new)        
 
 **Bug fixes**:
 
-* Add text
-* Add text
-* Add text
+* Custom webhook for subscription is overridden by the agent
+* Traceability Agent fails to connect to transaction service via proxy
+* Changing discovery filter does not always update the discovered APIs
 
-## [Amplify Central November 2022](/docs/amplify_relnotes/20220131_ampc_relnotes/)
+## [Amplify Central January 2022](/docs/amplify_relnotes/20220131_ampc_relnotes/)
 
 **What's new for**:
 
-* **Axway Central CLI** (version x.x.x):
-    * Add text
-    * Add text
-    * Add text
+* **Axway Central CLI** (version 2.7.1):
+    * A developer on a team can access Environments and API Services owned by teams that the developer is a member of
 * **Amplify Central WebUI**:
-    * Add text
+    * Team ownership of Environments and API Services is now displayed on the WebUI
+    * Consumers from the same team are not able to manipulate/view subscriptions from other team members in the Unified Catalog
+    * API Providers can now publish APIs to the Unified Catalog faster with the relaxed validation of API Specification files on the WebUI
 
 **Bug fixes**:
 
-* CLI - Add text
-* WebUI - Add text
+* A Service account cannot be used in a headless environment with the install agents command
+* The `get` command with `--team` option does not support all teams that you have access to as a Central Administrator
+* The CLI command `axway central config` does not execute with telemetry enabled
+* The CLI command to add a service account user to a team does not execute
 
 ## [Amplify agents November 2021](/docs/amplify_relnotes/20211130_ampc_agents_relnotes/)
 
