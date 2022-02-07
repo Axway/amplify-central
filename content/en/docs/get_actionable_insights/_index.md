@@ -47,7 +47,7 @@ Click an item in the API traffic list to view transaction details including the 
 
  For each span you can view the request and response header details.
   ![Example of API traffic request and response](/Images/central/api_traffic_request_response.png)
- 
+
  Headers can be redacted and sanitized based on the agent configuration reporting the data. Refer to [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/) for details.
 
 ## Leaderboard
