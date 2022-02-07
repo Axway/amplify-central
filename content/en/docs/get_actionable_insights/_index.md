@@ -22,17 +22,33 @@ From the [Amplify platform](https://platform.axway.com) home page click **Dashbo
 Click **API Usage** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
   ![Example of API usage](/Images/central/api_usage.png)
 
+The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected). Click the **Compare to previous period** option to compare the current selected time range to the previous time range.
+
+Click an item in the list to view the traffic information.
+
 ## App Usage
 
-Click **App Usage** to view usage of APIs in your organization grouped by app over time.
+Click **App Usage** to see an aggregated view of API usage in your organization grouped by app over time.
   ![Example of App usage](/Images/central/app_usage.png)
+
+The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected). Click the **Compare to previous period** option to compare the current selected time range to the previous time range.
+
+Click an item in the list to view the traffic information.
 
 ## API Traffic
 
-Click **API Traffic** to view the traffic information. This view is useful for finding and troubleshooting failed transactions.
+Click **API Traffic** to view the traffic information for the API or App. This view is useful for finding and troubleshooting failed transactions.
   ![Example of API traffic](/Images/central/api_traffic.png)
 
 {{% alert title="Note" color="primary" %}} The API traffic view provides details for up to a maximum of 1000 transactions based on your search. You might need to further restrict the search by time range or other filter criteria to view all results.{{% /alert %}}
+
+Click an item in the API traffic list to view transaction details including the number of spans.
+  ![Example of API traffic details](/Images/central/api_traffic_details.png)
+
+ For each span you can view the request and response header details.
+  ![Example of API traffic request and response](/Images/central/api_traffic_request_response.png)
+ 
+ Headers can be redacted and sanitized based on the agent configuration reporting the data. Refer to [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/) for details.
 
 ## Leaderboard
 
