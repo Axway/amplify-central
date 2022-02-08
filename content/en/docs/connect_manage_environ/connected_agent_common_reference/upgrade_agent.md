@@ -16,7 +16,7 @@ Learn how to upgrade an existing agent installation.
 
 ## Standard upgrade procedure
 
-* Finding the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
+* Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
 * If your agent uses environment variables, replace the existing [binary](#axway-gateway-agents-binary-mode-upgrade)/[Docker](#axway-gateway-agents-docker-mode-upgrade) image with the new one.
 
@@ -74,7 +74,7 @@ When you restart your agent, the API services ownership will be set according to
 
 The following steps will guide your through the upgrade procedure:
 
-1. Finding the current agent release, refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed below.
+1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release, below.
 2. Download the agent binary:
     * discovery agent: `curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/{agentVersion}/discovery_agent-{agentVersion}.zip" -o discovery_agent-{agentVersion}.zip`
     * traceability agent: `curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/{agentVersion}/traceability_agent-{agentVersion}.zip" -o traceability_agent-{agentVersion}.zip`
@@ -89,7 +89,7 @@ The following steps will guide your through the upgrade procedure:
 
 The following steps will guide you through the upgrade procedure:
 
-1. Finding the current agent release, refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed below.
+1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release, below.
 2. Pull the current image:
     * Discovery Agent: `docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}`
     * Traceability Agent: `docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability-agent:{agentVersion}`
@@ -119,12 +119,12 @@ echo "Removing current docker containers to update env_vars"
 #docker rm discovery-agent | true
 ```
 
-Otherwise, if the command does not show latest but a real version, restarting the instance will not download any new version. You have to decide when you want to install a more recent version. Refer to [Agent release note](/dosc/amplify_relnotes) to find the current available version. When you are ready to upgrade, simply replace existing version number above with the new one and restart the instance. The images will be automatically pulled and started.
+Otherwise, if the command shows an actual version and not `latest`, then restarting the instance will not download a new version. You will then have to decide when to install a more recent version. Refer to [Agent release note](/dosc/amplify_relnotes) to find the current available version. When you are ready to upgrade, simply replace the existing version number with the new one and restart the instance. The images will be automatically pulled and started.
 {{< /alert >}}
 
 * If your AWS agents are running in a Docker container, use the following upgrade procedure:
 
-    1. Finding the current agent release, refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed below.
+    1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release, below.
     2. Pull the current image:
         * Discovery Agent: `docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:{agentVersion}`
         * Traceability Agent: `docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-traceability-agent:{agentVersion}`
@@ -140,7 +140,7 @@ Otherwise, if the command does not show latest but a real version, restarting th
 
 The following steps will guide you through the upgrade procedure:
 
-1. Finding the current agent release, refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed below.
+1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release, below.
 2. Pull the current image:
     * Discovery Agent: `docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-discovery-agent:{agentVersion}`
     * traceability agent: `docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:{agentVersion}`
