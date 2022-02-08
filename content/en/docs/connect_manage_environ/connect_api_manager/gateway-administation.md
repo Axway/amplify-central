@@ -43,7 +43,7 @@ The containerized agent can run in the following mode:
 
 #### To install the Binary Discovery Agent
 
-**Step 1**: Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
+**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
 **Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
 
@@ -86,7 +86,7 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
-Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
+Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
 Pull the Docker image of the Discovery Agent:
 
@@ -524,7 +524,7 @@ The containerized agent can run in the following mode:
 
 #### To install the binary Traceability Agent
 
-**Step 1**: Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
+**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
 **Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
 
@@ -571,7 +571,7 @@ CENTRAL_ENVIRONMENT=<Environment>
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
-Find the current agent release, please refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed in following sections.
+Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
 Pull the Docker image of the Traceability Agent:
 
