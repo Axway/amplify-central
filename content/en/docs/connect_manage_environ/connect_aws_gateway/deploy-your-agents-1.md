@@ -252,7 +252,7 @@ LOG_PATH=logs
 ### Install and run Discovery Agent
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment. Note that the `public_key.pem` comes from Steps 3 and 4 of [Prepare AWS Gateway to deploy the Discovery Agent AWS config setup](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/).
-2. Find the current agent release, refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed below.
+2. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 3. Pull the current image of the Discovery Agent:
 
    ```bash
@@ -382,7 +382,7 @@ LOG_PATH=logs
 ### Install and run Traceability Agent
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Find the current agent release, refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed below.
+2. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 3. Pull the current image of the Traceability Agent:
 
    ```bash
