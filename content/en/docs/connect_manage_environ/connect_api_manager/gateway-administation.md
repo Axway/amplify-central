@@ -43,21 +43,23 @@ The containerized agent can run in the following mode:
 
 #### To install the Binary Discovery Agent
 
-**Step 1**: Download the latest version of the zip file from the Axway public repository using the following command:
+**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+
+**Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
 
 ```shell
-curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/latest/discovery_agent-latest.zip" -o discovery_agent-latest.zip
+curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/{agentVersion}/discovery_agent-{agentVersion}.zip" -o discovery_agent-{agentVersion}.zip
 ```
 
-**Step 2**: Unzip the file discovery_agent-latest.zip to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
+**Step 3**: Unzip the file discovery_agent-{agentVersion}.zip to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
 
 ```shell
-unzip discovery_agent-latest.zip
+unzip discovery_agent-{agentVersion}.zip
 ```
 
-**Step 3**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
+**Step 4**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
 
-**Step 4**: Move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key.pem` comes from Steps 3 or 4 of [Create a Service Account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis) depending if you choose to use the `der` format or not.
+**Step 5**: Move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key.pem` comes from Steps 3 or 4 of [Create a Service Account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis) depending if you choose to use the `der` format or not.
 
 #### To install the Dockerized Discovery Agent
 
@@ -84,10 +86,12 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
-Pull the latest image of the Discovery Agent:
+Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+
+Pull the Docker image of the Discovery Agent:
 
 ```shell
-docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:latest
+docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
 ```
 
 ### Customizing the Discovery Agent environment variable file
@@ -494,7 +498,7 @@ cd /home/APIC-agents
 2. Start the Docker Discovery Agent pointing to the `da_env_vars.env` file and the keys directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
-   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:latest
+   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
    ```
 
 3. Run the following health check command to ensure the agent is up and running:
@@ -520,21 +524,23 @@ The containerized agent can run in the following mode:
 
 #### To install the binary Traceability Agent
 
-**Step 1**: Download the latest version of the zip file from the Axway public repository using the following command:
+**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+
+**Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
 
 ```shell
-curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/latest/traceability_agent-latest.zip" -o traceability_agent-latest.zip
+curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/{agentVersion}/traceability_agent-{agentVersion}.zip" -o traceability_agent-{agentVersion}.zip
 ```
 
-**Step 2**: Unzip the file traceability_agent-latest.zip to get the agent binary (traceability_agent) and a template configuration file (traceability_agent.yml):
+**Step 3**: Unzip the file traceability_agent-{agentVersion}.zip to get the agent binary (traceability_agent) and a template configuration file (traceability_agent.yml):
 
 ```shell
-unzip traceability_agent-latest.zip
+unzip traceability_agent-{agentVersion}.zip
 ```
 
-**Step 3**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
+**Step 4**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
 
-**Step 4**: If not done yet, move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key` comes from Steps 3 or 4 of [Create a Service Account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis), depending on whether you choose to use the `der` format.
+**Step 5**: If not done yet, move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key` comes from Steps 3 or 4 of [Create a Service Account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis), depending on whether you choose to use the `der` format.
 
 #### To install the Dockerized Traceability Agent
 
@@ -565,10 +571,12 @@ CENTRAL_ENVIRONMENT=<Environment>
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
-Pull the latest Docker image of the Traceability Agent:
+Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+
+Pull the Docker image of the Traceability Agent:
 
 ```shell
-docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability-agent:latest
+docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability-agent:{agentVersion}
 ```
 
 ### Customizing the Traceability Agent environment variable file
@@ -954,7 +962,7 @@ cd /home/APIC-agents
 ./traceability_agent status
 ```
 
-##### Install and run Dockerized Traceability Agent
+##### Run the Dockerized Traceability Agent
 
 See "To install the Dockerized Discovery Agent" section above for the `ta_env_vars.env` configuration.
 
@@ -962,7 +970,7 @@ See "To install the Dockerized Discovery Agent" section above for the `ta_env_va
 2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
-   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v <pwd>/data:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:latest
+   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v <pwd>/data:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:{agentVersion}
    ```
 
    * See [Create and start API Gateway Docker container](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_installation/apigw_containers/docker_script_gwimage/index.html#mount-volumes-to-persist-logs-outside-the-api-gateway-container) for more  information regarding the persistent API Gateway trace and event logs to a directory on your host machine.

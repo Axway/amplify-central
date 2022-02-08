@@ -252,18 +252,19 @@ LOG_PATH=logs
 ### Install and run Discovery Agent
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment. Note that the `public_key.pem` comes from Steps 3 and 4 of [Prepare AWS Gateway to deploy the Discovery Agent AWS config setup](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/).
-2. Pull the latest image of the Discovery Agent:
+2. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+3. Pull the current image of the Discovery Agent:
 
    ```bash
-   docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest
+   docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:{agentVersion}
    ```
 
-3. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
+4. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
 
     * Continuous Discovery mode:
 
         ```bash
-       docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest
+       docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:{agentVersion}
         ```
 
         `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
@@ -271,12 +272,12 @@ LOG_PATH=logs
     * Synchronous Discovery mode:
   
         ```bash
-        docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest --synchronize
+        docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:{agentVersion} --synchronize
         ```
 
         `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-4. Run the following health check command to ensure the agent is up and running (continuous mode):
+5. Run the following health check command to ensure the agent is up and running (continuous mode):
 
    ```bash
    docker inspect --format='{{json .State.Health}}' <container>
@@ -381,19 +382,20 @@ LOG_PATH=logs
 ### Install and run Traceability Agent
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Pull the latest image of the Traceability Agent:
+2. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+3. Pull the current image of the Traceability Agent:
 
    ```bash
-   docker pull docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:latest/aws-apigw-traceability-agent:latest
+   docker pull docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-traceability-agent:{agentVersion}
    ```
 
-3. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
+4. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```bash
-   docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-traceability-agent:latest
+   docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-traceability-agent:{agentVersion}
    ```
 
-4. Run the following health check command to ensure the agent is up and running:
+5. Run the following health check command to ensure the agent is up and running:
 
    ```bash
    docker inspect --format='{{json .State.Health}}' <container>

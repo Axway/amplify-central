@@ -74,7 +74,7 @@ The AWS service usage cost for the agents is explain below.
 * [Amazon Simple Queue Service](https://aws.amazon.com/sqs/)
 * [AWS Lambda](https://aws.amazon.com/lambda/)
 * [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
-* Agent Config Package [downloaded](<https://axway.jfrog.io/artifactory/ampc-public-generic-release/aws-agents/aws_apigw_agent_config/latest/aws_apigw_agent_config-latest.zip>)
+* Agent Config Package [downloaded](<https://axway.jfrog.io/artifactory/ampc-public-generic-release/aws-agents/aws_apigw_agent_config/1.1.15/aws_apigw_agent_config-1.1.15.zip>)
 
 ### CloudFormation templates
 
