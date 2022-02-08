@@ -268,14 +268,14 @@ To complete the install, run the following AWS CLI command:
         axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-traceability-agent:{agentVersion}
 ```
 
-In the sample above, installation procedure will replace {agentVersion} with the most recent version available)
+In the sample above, installation procedure will replace {agentVersion} with the most recent version available.
 
 * Create, if necessary, and upload all files to your S3 bucket:
     * These commands create the bucket, if needed, then uploads all resources to the bucket.
 * Create AWS Access and Secret Keys and copy results:
     * This command creates the Access and Secret Key Pair.
 * Add the results from the Key Pair creation above into the environment files, da_env_vars.env & ta_env_vars.env, after the appropriate variables, `AWS_AUTH_ACCESSKEY=` and `AWS_AUTH_SECRETKEY=`.
-* Find the current agent release, refer to the [agent release note](/docs/amplify_relnotes). Then this release number can be use to replace `{agentVersion}` in the command displayed below.
+* Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 * Pull the current images of the Discovery/Traceability Agents:
     * These two commands pull the latest released agents from axway.jfrog.io/ampc-public-docker-release/agent.
 * Run the current images of the Discovery/Traceability Agents:
