@@ -29,7 +29,7 @@ The Discovery Agent is used to discover new published APIs. The Discovery Agent 
 
 The related APIs are published to Amplify Central either as an API Service in environment or an API Service in environment and optionally as Catalog item (default behavior).
 
-![Service Discovery](/Images/central/connect_azure_gateway/discoveryagent.png)
+![Service Discovery](/Images/central/connect-azure-gateway/discoveryagent.png)
 
 ### Traceability Agent
 
