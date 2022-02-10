@@ -10,7 +10,7 @@ description: Get insights about your API program, API environments, and APIs.
 
 Access to the API Observer menu and dashboards is based on your role and permissions and your organization's subscriptions. Users must have one of the following [team roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the API Observer dashboards:
 
-* Administrator
+* Central Administrator
 * Catalog Manager
 * Consumer
 * Developer
@@ -33,7 +33,17 @@ Click an individual item to see the usage data of individual transactions of tha
 ## App Usage
 
 Click **App Usage** to see an aggregated view of API usage in your organization grouped by app over time.
+
   ![Example of App usage](/Images/central/app_usage.png)
+
+App or Application refers to:
+
+* Axway SaaS Gateway application
+* API Gateway application
+* AWS Gateway usage plan
+* Azure Gateway subscription
+
+{{% alert title="Note" color="primary" %}} The application filter is for SaaS Gateway only. The filter is not populated with external Gateway applications (that is, API Gateway application, AWS Gateway usage plan, or Azure Gateway subscription).{{% /alert %}}
 
 {{% getactionableinsights/api_app_usage %}}
 
@@ -52,7 +62,7 @@ The total number of items displayed below the filters are based on the configura
 * Method
 * URI
 * Name
-* Enviroment
+* Environment
 * Duration
 * Timestamp
 
