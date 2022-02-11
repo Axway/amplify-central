@@ -8,12 +8,10 @@ description: Get insights about your API program, API environments, and APIs.
 
 ## API Observer dashboards
 
-Access to the API Observer menu and dashboards is based on your role and permissions and your organization's subscriptions. Users must have one of the following [team roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the API Observer dashboards:
+Access to the API Observer menu and dashboards is based on your role and permissions and your organization's subscriptions. Users must have one of the following [roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html) to access the API Observer dashboards:
 
 * Central Administrator
-* Catalog Manager
-* Consumer
-* Developer
+* Developer (with a team role)
 
 From the [Amplify platform](https://platform.axway.com) home page click **Dashboard**, and then click **API Observer** from the left navigation. You are directed to the dashboards in Amplify Central.
 
