@@ -28,6 +28,10 @@ Each item in the list also provides the average duration, maximum duration, and 
 
 Click an individual item to see the usage data of individual transactions of that API over time.
 
+{{% alert title="Note" color="primary" %}} The API Usage is based on either the aggregated metrics the Traceability Agent is sending (agent using Agents SDK version higher than 1.1.14) or the aggregation of transactions sent by Traceability Agent (agent using Agents SDK version lower than 1.1.14). 
+Depending on the Agent version you are using, the API Usage reporting for transactions on the dataplane may not be in real time. This is because metrics are aggregated on the agent side and sent to the platform on regular intervals (15 min by default). 
+See the agent variable CENTRAL_USAGEREPORTING_INTERVAL if you want to lower the interval value.{{% /alert %}}
+
 ## App Usage
 
 Click **App Usage** to see an aggregated view of API usage in your organization grouped by app over time.

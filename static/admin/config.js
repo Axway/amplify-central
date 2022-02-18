@@ -150,6 +150,13 @@ const collections = [{
   label_singular: 'page in Manage your marketplace section',
   description: 'All pages related to Manage your marketplace',
   format: 'frontmatter',
+}, {
+  ...docsDefaults('get_actionable_insights', 'get_actionable_insights'),
+  name: 'get_actionable_insights',
+  label: 'Get actionable insights',
+  label_singular: 'Get actionable insights',
+  description: 'All pages related to Get actionable insights',
+  format: 'frontmatter',
 }, { 
   ...docsDefaults('best_practices', 'best_practices'),
   name: 'best_practices',
