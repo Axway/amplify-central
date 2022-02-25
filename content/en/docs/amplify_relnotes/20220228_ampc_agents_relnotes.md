@@ -12,7 +12,7 @@ description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
 
 ## Versioning
 
-Currently, version 1.1.xx is available. It is based on Amplify Agents SDK v1.1.xx.
+Currently, version 1.1.12 is available. It is based on Amplify Agents SDK v1.1.15.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -25,17 +25,20 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update.
 
+* Agent technical tags and attributes are now stored under `x-agent-details` sub-resources on the APIService / APIService revision and are no more visible in Central WebUI.
+* `TRACEABILITY_EXCEPTION_LIST` is now supporting regex expression based on [RE2 Syntax](https://github.com/google/re2/wiki/Syntax).
+
 ### Amplify Gateway agents enhancements
 
-* Add here
+* None
 
 ### Amplify AWS Gateway agents enhancements
 
-* Add here
+* None
 
 ### Amplify Azure agents enhancements
 
-* Add here
+* None
 
 ### Amplify Istio agents enhancements
 
@@ -43,17 +46,16 @@ Latest helm chart version: 0.62.0
 
 Latest agent version: 2.0.23
 
-* Add here
+* None
 
 ### Amplify Apigee agents
 
-A new release (add version here) of the Amplify Apigee agent has been promoted. This release enables you to:
-
-* Add here
+Current release (0.0.4) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
 Known limitations:
 
-* Add here
+* No traffic is reported as other agents to Amplify Analytics. A third-party library, such as Loggly, is required to do this.
+* The API Usage will appear with the proxy name, not with the product name, in Amplify Analytics.
 
 For more information, see the [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
@@ -61,7 +63,7 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-api
 
 The following agent issues are fixed in this update:
 
-* **add here**. Previously,
+* None
 
 ## Known limitations
 
