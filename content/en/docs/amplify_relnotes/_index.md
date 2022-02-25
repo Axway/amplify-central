@@ -5,11 +5,95 @@ no_list: true
 weight: 100
 date: 2020-10-28
 hide_readingtime: true
-description: Provides a list of release notes for Amplify Central, Amplify
+description: A list of release notes for Amplify Central, Amplify
   agents, and Unified Catalog; along with enhancement overviews and bug fixes
-  for each release. For more details, click on the release note title to go to
+  for each release is provided. For more details, click on the release note title to go to
   the corresponding release note.
 ---
+## [Amplify agents February 2022](/docs/amplify_relnotes/20220228_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.10):
+* **Amplify AWS Gateway Agent** (version 1.1.10):
+* **Amplify Azure Agent** (version 1.1.10):
+* **Amplify Istio Agent** (helm chart version 0.62.0, Agent version 2.0.23):
+    * Add here
+    * Add here
+* **Amplify Apigee Agent** (version 0.0.4):
+    * Add here
+    * Add here
+    * Add here
+* **Amplify agent general** (version 1.1.10):
+
+**Bug fixes**:
+
+* Add here
+
+## [Amplify Central February 2022](/docs/amplify_relnotes/20220228_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.7.1):
+    * Add here
+* **Amplify Central WebUI**:
+    * Add here
+
+**Bug fixes**:
+
+* Add here
+
+## [Analytics February 2022](/docs/amplify_relnotes/20220228_analytics_relnotes/)
+
+**What's new for**:
+
+* Add text
+
+**Bug fixes**:
+
+* Add here
+
+## [Asset Catalog February 2022](/docs/amplify_relnotes/20220228_catalog_relnotes/)
+
+**What's new for**:
+
+* Add text
+
+**Bug fixes**:
+
+* Add here
+
+## [Marketplace February 2022](/docs/amplify_relnotes/20220228_marketplace_relnotes/)
+
+**What's new for**:
+
+* Add text
+
+**Bug fixes**:
+
+* Add here
+
+## [Product Foundry February 2022](/docs/amplify_relnotes/20220228_foundry_relnotes/)
+
+**What's new for**:
+
+* Add text
+
+**Bug fixes**:
+
+* Add here
+
+## [Amplify Platform Management February 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+**Bug fixes**:
+
+* Org Activity view events for updating a team member’s roles or removing a member from a team may not state which member was affected
+* Amplify Runtime Services app Overview view may not render for unpublished apps
+
+## [Axway CLI February 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
+**Security update**. Migrated from the outdated `listr` package to the actively maintained `listr2` package to resolves moderate security vulnerability warnings during installation
+
 ## [Amplify agents January 2022](/docs/amplify_relnotes/20220131_ampc_agents_relnotes/)
 
 **What's new for**:
