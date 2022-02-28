@@ -8,7 +8,7 @@ description: Learn how to add endpoints to an API service.
 
 ## Add an endpoint to an API service
 
-Before adding an endpoint, you must [add a service](/docs/connect_manage_environ/add_api_service). While adding a service, you are prompted to create an endpoint, or you can optionally move past this step and add an endpoint later. To add an endpoint to an existing service, visit the details page of your service, then click **+ Add Endpoint** (located at the top right of the **Endpoints** tab).
+Before adding an endpoint, you must [add a service](/docs/connect_manage_environ/manage_services/add_api_service). While adding a service, you are prompted to create an endpoint, or you can optionally move past this step and add an endpoint later. To add an endpoint to an existing service, visit the details page of your service, then click **+ Add Endpoint** (located at the top right of the **Endpoints** tab).
 
 1. Enter a **Title** and **Logical Name** for your API service endpoint.
 2. Click **+ Create API Endpoint(s)** to expand the optional form where you can add one or more endpoints.

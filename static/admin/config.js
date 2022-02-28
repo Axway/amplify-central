@@ -116,6 +116,13 @@ const collections = [{
   description: 'All pages related to Connect Azure Gateway',
   format: 'frontmatter',
 }, {
+...docsDefaults('connect_manage_environ/manage_services', 'connect_manage_environ'),
+name: 'manage_services',
+label: 'Manage your services',
+label_singular: 'page in Manage your services section',
+description: 'All pages related to Manage your services',
+format: 'frontmatter',
+}, {
   ...docsDefaults('connect_manage_environ/connected_agent_common_reference', 'connect_manage_environ'),
   name: 'connected_agent_common_reference',
   label: 'Connected agent - Common reference',
