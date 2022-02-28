@@ -9,16 +9,20 @@ description: Add description
 
 The following new features and enhancements are available in this update:
 
-* Add here
+* Marketplace settings:
+    * user can defined the marketplace sub-domain
+    * user can design the look & feel of the marketplace (logo, favorite icon, colors, button, text founts). Refer to <https://platform.axway.com/org/marketplace/settings>
+* Marketplace:
+    * view published product list
 
 ## Fixed issues
 
 The following issues have been fixed in this release:
 
-* **Add here.** Previously,
+* None
 
 ## Known limitations
 
 The following limitations exist in this update:
 
-* Add here
+* Product details (overview / documentation) is hardcoded and does not reflect what has been done in Product foundry.
