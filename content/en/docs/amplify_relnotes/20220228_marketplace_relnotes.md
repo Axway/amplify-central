@@ -12,8 +12,8 @@ The following new features and enhancements are available in this update:
 * Marketplace settings:
     * user can defined the marketplace sub-domain
     * user can design the look & feel of the marketplace (logo, favorite icon, colors, button, text founts). Refer to <https://platform.axway.com/org/marketplace/settings>
-* Marketplace:
-    * view published product list
+* Marketplace UI:
+    * user (connected or not) can view the published product list
 
 ## Fixed issues
 

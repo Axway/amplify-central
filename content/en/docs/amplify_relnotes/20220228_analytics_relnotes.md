@@ -10,7 +10,7 @@ description: Analytics provide insights into your API program, API environments,
 The following new features and enhancements are available in this update:
 
 * Rebranded screen: the UI has been rebranded to match other Amplify screens.
-* comparing insights: each screen has a compare capability to visualize the trend with the previous period.
+* Comparing insights: each screen has a compare capability to visualize the trend with the previous period.
 * Leaderboard view: help to verify your API performance: the most/least used, the most/least performant.
 
 More information can be found [here](/docs/get_actionable_insights)

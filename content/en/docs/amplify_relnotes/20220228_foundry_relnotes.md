@@ -22,7 +22,7 @@ The following new features and enhancements are available in this update:
 
 The following issues have been fixed in this release:
 
-* **Add here.** Previously,
+* None
 
 ## Known limitations
 
