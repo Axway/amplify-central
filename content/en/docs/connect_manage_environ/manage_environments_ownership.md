@@ -13,7 +13,7 @@ Users that are assigned the Platform Administrator role in combination with the 
 
 #### Environment ownership
 
-Environments can be created without configuring the ownership, so setting an owner is OPTIONAL. That means only Central Administrators can view and manage that environment and the API Services within that scope. No other members in the organization will be able to view or access those resources, until an owner is assigned. When owner is assigned, only member of the owner team can view/edit/delete the environment and manipulate resources scoped to this environment.
+Environments can be created without configuring the ownership, so setting an owner is OPTIONAL. If ownership is not configured, then only Central Administrators can view and manage the environment and the API Services within the scope. No other members in the organization will be able to view or access the resources until an owner is assigned. When an owner is assigned, only members of the owner's team can view/edit/delete the environment and manipulate resources scoped to the environment.
 
 #### API Service ownership
 
@@ -21,7 +21,7 @@ When creating an API Service, you can assign an owner. However, the API Service 
 
 #### How to assign an owner?
 
-{{< alert title="" color="warning" >}}This feature is not available yet in the Central UI: you can see the owner of a service/environment but you cannot change it.{{< /alert >}}
+{{< alert title="" color="warning" >}}This feature is not yet available in the Central UI; you can see the owner of a service/environment, but you cannot change it.{{< /alert >}}
 
 Currently, you can assign an owner by using the Amplify Central CLI. To learn how to create an environment using the CLI, see [Build an environment](/docs/integrate_with_central/cli_central/cli_environments/).
 
@@ -74,15 +74,15 @@ The table below describes the Amplify Central roles and the resources they have 
 
 #### Environment sharing
 
-{{< alert title="" color="warning" >}}This feature is not available yet in the Central UI.{{< /alert >}}
+{{< alert title="" color="warning" >}}This feature is not yet available in the Central UI.{{< /alert >}}
 
-If you want to use the same environment (owned or not) with multiple teams, you will need to share the environment with the appropriate teams. For that we are using an Access Control List or ACL to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. But, they will not see other team work: you only see the work done inside your team. There is no restriction on the number of teams included in the ACL.
+If you want to use the same environment (owned or not) with multiple teams, you must share the environment with the appropriate teams. Use an Access Control List (ACL) to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. However, they will not see other teams' work; members can only see the work done inside their team. There is no restriction on the number of teams included in the ACL.
 
-API Service owners can be set to any team that is not the environment owner. It is recommended to share the environment with all teams that own one or more API Services in this environment.
+API Service owners can be set to any team that is not the environment owner. It is recommended to share the environment with all teams that own one or more API Services in the environment.
 
-The ACL is associated or scoped to one environment and reference the teamID that can access the environment. You need to know the teamId to create the ACL (see above "To retrieve the team id").
+The ACL is associated or scoped to one environment and references the teamID that can access the environment. You must know the teamId to create the ACL (see "To retrieve the team id," above).
 
-In the following sample, we want to share `env1` defined previously with 2 teams (teamA and teamB):
+In the following sample, `env1`, which was defined previously, is shared with two teams (teamA and teamB):
 
 ```yml
 {
@@ -121,8 +121,8 @@ In the following sample, we want to share `env1` defined previously with 2 teams
 }
 ```
 
-Save this configuration into a file (`acl.yaml`) after finding teamID corresponding to your configuration. Then use axway central CLI to import this ACL: `axway central apply -f acl.yaml`
+Save this configuration into a file (`acl.yaml`) after finding the teamID that corresponds to your configuration. Then use axway central CLI to import this ACL: `axway central apply -f acl.yaml`
 
-Currently, there is no check validating the correctness of the team identifier.
+{{< alert title="" color="warning" >}}Currently, there is no check validating the correctness of the team identifier.{{< /alert >}}
 
-Once everything is correctly setup, each developer from teamA or teamB are able to see the environment `env1` and add their respective services without noticing work done by other teams. They will only see the work done by their team mates. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction: you only see what your team(s) own. If by mistake the API Service owner is not set, only a Central administrator will be able to view and update the ownership of the API service.
+Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API Service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API Service owner is not set, only a Central administrator will be able to view and update the ownership of the API service.
