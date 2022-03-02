@@ -78,6 +78,8 @@ The table below describes the Amplify Central roles and the resources they have 
 
 If you want to use the same environment (owned or not) with multiple teams, you will need to share the environment with the appropriate teams. For that we are using an Access Control List or ACL to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. But, they will not see other team work: you only see the work done inside your team. There is no restriction on the number of teams included in the ACL.
 
+API Service owners can be set to any team that is not the environment owner. It is recommended that the Environment be shared with all teams that own API Services in the Environment.
+
 The ACL is associated or scoped to one environment and reference the teamID that can access the environment. You need to know the teamId to create the ACL (see above "To retrieve the team id").
 
 In the following sample, we want to share `env1` defined previously with 2 teams (teamA and teamB):
