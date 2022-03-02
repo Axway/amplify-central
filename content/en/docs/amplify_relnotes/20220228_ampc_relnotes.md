@@ -20,11 +20,10 @@ The Axway Central CLI is a package for managing Amplify Central resources with a
 The Axway Central CLI extension is compatible with the Axway CLI **version 3.2.3** (<https://www.npmjs.com/package/axway/v/3.2.3>).
 For more information, see [Axway CLI release note](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/3_2_3_20220216_relnote/index.html).
 
-The following enhancements are available in this Axway CLI update: **Robert, we are no longer going document this information in these Release Notes. Instead, we will include a link to the Axwxay CLI from the index page.**
-
 The following enhancements are available in this Axway Central CLI update:
 
-* Add text
+* The "axway central install agents" command has the option to replicate your organizational structure as auto-associated team ownership of API Services.
+*  
 
 ### Amplify Central WebUI
 
