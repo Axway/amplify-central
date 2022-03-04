@@ -3,12 +3,9 @@ title: Amplify agents February 2022 Release Notes
 linkTitle: Amplify agents February 2022
 weight: 90
 date: 2022-02-25
-description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
-  / Istio provide better visibility into your multi-type gateway eco system.
-  These agents collect data from the Gateway (API / traffic) and expose it in
-  Amplify Central, providing you with a global vision of your eco system from a
-  single interface.
 ---
+
+Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio provide better visibility into your multi-type gateway eco system. These agents collect data from the Gateway (API / traffic) and expose it in Amplify Central, providing you with a global vision of your eco system from a single interface.
 
 ## Versioning
 
@@ -25,8 +22,8 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update.
 
-* Agent technical tags and attributes are now stored under `x-agent-details` sub-resources on the APIService / APIService revision and are no more visible in Central WebUI.
-* `TRACEABILITY_EXCEPTION_LIST` is now supporting regex expression based on [RE2 Syntax](https://github.com/google/re2/wiki/Syntax).
+* Agent technical tags and attributes are now stored under `x-agent-details` sub-resources on the APIService / APIService revision and are no longer visible in Central WebUI.
+* `TRACEABILITY_EXCEPTION_LIST` now supports regex expression based on [RE2 Syntax](https://github.com/google/re2/wiki/Syntax).
 
 ### Amplify Gateway agents enhancements
 
