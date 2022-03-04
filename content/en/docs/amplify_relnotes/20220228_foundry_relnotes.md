@@ -30,5 +30,5 @@ The following issues have been fixed in this release:
 
 The following limitations exist in this update:
 
-* Documentation update is not yet available.
+* Documentation update is not yet available from WebUI.
 * Plan update is not yet available.
