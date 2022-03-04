@@ -17,7 +17,7 @@ The following new features and enhancements are available in this update:
 * When an asset version is released; a Major, Minor, or Patch release type can be selected.
 * Changes can be made to an asset after it has been released by using the **Create new version** button. This allows users to make changes to the asset in DRAFT mode, without affecting previous assets versions.
 * An asset can have multiple active versions and only one DRAFT.
-* Assets that are packaged with a product cannot be archived. Attempts to remove an asset that is used in a product, will result in a WebUI error message stating that the asset is used in a product and the delete is not permitted.
+* Assets that are packaged with a product cannot be archived. Attempts to remove an asset that is used in a product will result in a WebUI error message stating that the asset is used in a product and the delete is not permitted.
 
 ## Fixed issues
 
