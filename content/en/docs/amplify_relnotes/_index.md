@@ -7,7 +7,7 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-The following is a list of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI; along with enhancement overviews and bug fixes for each release is provided. 
+The following is a list of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI; along with enhancement overviews and bug fixes for each release is provided.
 
 For more details, click on the release note title to go to the corresponding release note.
 
@@ -22,7 +22,7 @@ For more details, click on the release note title to go to the corresponding rel
 * **Amplify Apigee Agent** (version 0.0.4): None
 * **Amplify agent general** (version 1.1.10):
     * Agent technical tags and attributes are now stored under `x-agent-details` sub-resources on the APIService / APIService revision and are no longer visible in Central WebUI
-    * `TRACEABILITY_EXCEPTION_LIST` now supports regex expression based on RE2 Syntax. 
+    * `TRACEABILITY_EXCEPTION_LIST` now supports regex expression based on RE2 Syntax.
 
 **Bug fixes**: None
 
