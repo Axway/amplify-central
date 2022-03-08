@@ -56,7 +56,6 @@ Known limitations:
 
 * No traffic is reported as other agents to Amplify Analytics. A third-party library, such as Loggly, is required to do this.
 * The API Usage will appear with the proxy name, not with the product name, in Amplify Analytics.
-* Mulesoft agents are based on an older version of the Amplify Agents SDK (1.1.4) and may not benefit from all the new features.
 
 For more information, see the [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
@@ -67,6 +66,8 @@ Current release (1.1.3) of the Amplify Mulesoft agent is available on [Axway Git
 Known limitations:
 
 * Mulesoft agents are based on an older version of the Amplify Agents SDK (1.1.4) and may not benefit from all the new features.
+
+For more information, see the [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
 ## Fixed issues
 
