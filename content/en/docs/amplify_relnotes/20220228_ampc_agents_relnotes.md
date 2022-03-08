@@ -9,7 +9,7 @@ Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio prov
 
 ## Versioning
 
-Currently, version 1.1.12 is available. It is based on Amplify Agents SDK v1.1.15.
+Currently, version 1.1.12 is available. It is based on Amplify Agents SDK v1.1.16.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -17,6 +17,9 @@ This version is compatible with:
 * Axway API Management 7.6.2 SPx and 7.7 SPx
 * AWS Gateway using SDK 2.0
 * Azure latest release
+* ISTIO 1.9.5
+* Apigee Edge
+* Mulesoft Anypoint platform v3.0
 
 ## New features and enhancements
 
@@ -47,12 +50,17 @@ Latest agent version: 2.0.23
 
 ### Amplify Apigee agents
 
-Current release (0.0.4) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
+Current release (0.0.5) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
+
+### Amplify Mulesoft agents
+
+Current release (1.1.3) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
 Known limitations:
 
 * No traffic is reported as other agents to Amplify Analytics. A third-party library, such as Loggly, is required to do this.
 * The API Usage will appear with the proxy name, not with the product name, in Amplify Analytics.
+* Mulesoft agents are based on an older version of the Amplify Agents SDK (1.1.4) and may not benefit all the new features.
 
 For more information, see the [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
