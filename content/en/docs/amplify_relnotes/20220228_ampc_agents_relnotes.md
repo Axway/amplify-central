@@ -52,10 +52,6 @@ Latest agent version: 2.0.23
 
 Current release (0.0.5) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
-### Amplify Mulesoft agents
-
-Current release (1.1.3) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
-
 Known limitations:
 
 * No traffic is reported as other agents to Amplify Analytics. A third-party library, such as Loggly, is required to do this.
@@ -63,6 +59,14 @@ Known limitations:
 * Mulesoft agents are based on an older version of the Amplify Agents SDK (1.1.4) and may not benefit from all the new features.
 
 For more information, see the [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
+
+### Amplify Mulesoft agents
+
+Current release (1.1.3) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
+
+Known limitations:
+
+* Mulesoft agents are based on an older version of the Amplify Agents SDK (1.1.4) and may not benefit from all the new features.
 
 ## Fixed issues
 
