@@ -233,11 +233,11 @@ In this situation, you must create the appropriate resources in the Amplify plat
 
 The resource creation procedure is explained [here](/docs/connect_manage_environ/environment_agent_resources).
 
-### After upgrading, I cannot see my headers & path in API Observer?
+### After upgrading, I cannot see my headers & path in Business Insights?
 
 As of release 1.0.20210421, the agent SDK includes a tracing redaction/sanitizing feature, which is turned on by default.
 
-Previously, users were able to see the headers/path in API Observer. Now, everything is replace with the '*' character.  For the same experience as before, add the following to `ta_env_vars.env`:
+Previously, users were able to see the headers/path in Business Insights. Now, everything is replace with the '*' character.  For the same experience as before, add the following to `ta_env_vars.env`:
 
 ```shell
 # path

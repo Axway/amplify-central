@@ -285,7 +285,7 @@ LOG_PATH=logs
 
 ## Traceability Agent
 
-The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Central and is visible in API Observer.
+The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Central and is visible in Business Insights.
 
 ### Create your Traceability Agent configuration
 

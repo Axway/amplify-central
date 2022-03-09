@@ -32,15 +32,15 @@ The agent uses a counter to apply the sampling. When a value (other than 0 and 1
 
 The `TRACEABILITY_SAMPLING_PER_API` variable, defaulted to `true`, may be changed to determine how the percentage variable is applied.
 
-* A value of `true` means that the percentage is applied to each API ID within the transaction. In this case, regardless of usage, all APIs will have transaction representation in API Observer.
-* A value of `false` means that the percentage is applied globally to all APIs. In this case, APIs with lower utilization may never be seen in API Observer, as the sampling is always the first x of each 100 transactions.
+* A value of `true` means that the percentage is applied to each API ID within the transaction. In this case, regardless of usage, all APIs will have transaction representation in Business Insights.
+* A value of `false` means that the percentage is applied globally to all APIs. In this case, APIs with lower utilization may never be seen in Business Insights, as the sampling is always the first x of each 100 transactions.
 
 #### Report All Errors
 
 The `TRACEABILITY_SAMPLING_REPORTALLERRORS` variable, defaulted to `true`, may be changed to send all error transaction events to Condor.
 
-* A value of `true` means that all transaction events with a transaction status of *Failure* are sent to Condor and may be seen in API Observer, regardless of the sampling percentage.
-* A value of `false` means that transaction events with a transaction status of *Failure* will follow the sampling percentage and may or may not not be seen in API Observer, as the sampling is always the first x of each 100 transactions.
+* A value of `true` means that all transaction events with a transaction status of *Failure* are sent to Condor and may be seen in Business Insights, regardless of the sampling percentage.
+* A value of `false` means that transaction events with a transaction status of *Failure* will follow the sampling percentage and may or may not not be seen in Business Insights, as the sampling is always the first x of each 100 transactions.
 
 ### Preparing Traceability Agent
 

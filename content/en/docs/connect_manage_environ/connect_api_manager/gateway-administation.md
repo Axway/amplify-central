@@ -509,7 +509,7 @@ cd /home/APIC-agents
 
 ## Traceability Agent
 
-The Traceability Agent is used to prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Central and is visible in API Observer.
+The Traceability Agent is used to prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Central and is visible in Business Insights.
 
 The binary agent can run in the following mode:
 

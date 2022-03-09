@@ -6,21 +6,21 @@ date: 2022-02-04
 description: Get insights about your API program, API environments, and APIs.
 ---
 
-## API Observer dashboards
+## Business Insights dashboards
 
-Access to the API Observer menu and dashboards is based on your role and permissions and your organization's subscriptions. Users must have one of the following [roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html) to access the API Observer dashboards:
+Access to the Business Insights menu and dashboards is based on your role and permissions and your organization's subscriptions. Users must have one of the following [roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html) to access the Business Insights dashboards:
 
 * Central Administrator
 * Developer (with a team role)
 
-From the [Amplify platform](https://platform.axway.com) home page click **Dashboard**, and then click **API Observer** from the left navigation. You are directed to the dashboards in Amplify Central.
+From the [Amplify platform](https://platform.axway.com) home page click **Overview**, and then click **Business Insights** from the left navigation. You are directed to the dashboards in Amplify Central.
 
 Filter options are provided on each dashboard.
 
-## API Usage
+## API Health
 
-Click **API Usage** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
-  ![Example of API usage](/Images/central/api_usage.png)
+Click **API Health** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
+  ![Example of API Health](/Images/central/api_usage.png)
 
 The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected) in the tiles across the top below the filter options. Click the **Compare to previous period** option to compare the current selected time range to the previous time range. You can compare the current week, month, or year to the previous week, month, or year to understand how your API usage is changing over time.
 
@@ -98,6 +98,6 @@ Click **Leaderboard** to view the following aspects about the APIs in your organ
 This view is useful for improving your API program and focusing your efforts based on your program goals and current state of different APIs. The first 100 most used APIs are displayed only.  
   ![Example of Leaderboard](/Images/central/leaderboard.png)
 
-## Engagement
+## Overview
 
-Click **Engagement** to redirect you to the [Amplify Platform Dashboard](https://docs.axway.com/bundle/platform-management/page/docs/dashboard_guide/the_dashboards/platform_dashboard/index.html).
+Click **Overview** to redirect you to the [Amplify Platform Dashboard](https://docs.axway.com/bundle/platform-management/page/docs/dashboard_guide/the_dashboards/platform_dashboard/index.html).
