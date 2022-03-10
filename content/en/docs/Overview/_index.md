@@ -75,7 +75,7 @@ Federated data planes are data planes that are connected to the Amplify platform
 * **[API Gateway](https://docs.axway.com/category/apim)** is a runtime gateway that proxies the REST APIs registered in API Manager and enforces configured policies on client requests and responses.
 * **[Streams](https://docs.axway.com/bundle/streams-open-docs/page/docs/index.html)** is a publish/subscribe messaging service where the senders of messages are decoupled from the receivers of messages.
 * **[API Builder](https://docs.axway.com/bundle/api-builder/page/docs/index.html)** is an integration orchestration layer between existing service providers and the API management system, or governance layer, that allows you to quickly implement integration use cases.
-* **[Integration Builder](https://docs.axway.com/bundle/AMPLIFY_Integration_Builder_allOS_en/page/amplify_integration_builder.html)** is an integration tool that allows you to easily build flows, mappings, and connectors between virtually any endpoint. Robust integrations can be built rapidly by using the prebuilt connectors.
+* **[Integration Builder](https://docs.axway.com/bundle/Amplify_Integration_Builder_allOS_en/page/amplify_integration_builder.html)** is an integration tool that allows you to easily build flows, mappings, and connectors between virtually any endpoint. Robust integrations can be built rapidly by using the prebuilt connectors.
 
 ## Try Amplify Central for free
 
