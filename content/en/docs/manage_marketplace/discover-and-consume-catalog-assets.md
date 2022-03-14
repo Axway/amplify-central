@@ -117,7 +117,7 @@ Follow these steps to download an asset from the catalog:
 
 ## Promote an API to Integration Builder
 
-If you are leveraging the Amplify iPaaS to create integrations between different applications, you can promote an API from the Unified Catalog to Integration Builder as a custom connector with a click of a button. This saves you the trouble of exporting the swagger file and manually import it in Integration Builder. To lean more, see [Amplify Integration Builder](https://docs.axway.com/bundle/AMPLIFY_Integration_Builder_allOS_en/page/amplify_integration_builder.html).
+If you are leveraging the Amplify iPaaS to create integrations between different applications, you can promote an API from the Unified Catalog to Integration Builder as a custom connector with a click of a button. This saves you the trouble of exporting the swagger file and manually import it in Integration Builder. To lean more, see [Amplify Integration Builder](https://docs.axway.com/bundle/Amplify_Integration_Builder_allOS_en/page/amplify_integration_builder.html).
 
 You can promote an API published in the Unified Catalog to Integration Builder as a custom connector. Before you start, ensure that you have access to Integration Builder, and that have your API secured, as well as a valid subscription. For details, see [Subscribe to an API](#subscribe-to-an-api).
 
