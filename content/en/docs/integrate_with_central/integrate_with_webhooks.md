@@ -119,7 +119,7 @@ spec:
 * **group**: resources are defined under a group, which is part of the API's endpoints path
 * **apiVersion**: the version of the API Server API you're using to create this object
 * **kind**: the type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook
-* **name**: a name that uniquely identifies this resource. Names must be unique, that is, only one resource of a given kind in a given scope can have a given name at a time. Names are either client-provided or auto-generate string that refers to an object in a resource URL, for example such as /management/v1alpha1/environments/mesh, where mesh is the name of an environment resource. 
+* **name**: a name that uniquely identifies this resource. Names must be unique, that is, only one resource of a given kind in a given scope can have a given name at a time. Names are either client-provided or auto-generate string that refers to an object in a resource URL, for example such as /management/v1alpha1/environments/mesh, where mesh is the name of an environment resource.
 * **title**: a display name for the resource when it is shown in the UI
 * **metadata**: resource information
 * **spec**: the state you desire for the object
