@@ -98,7 +98,7 @@ Types in the system:
 
 ## Anatomy of a resource in API Server
 
-Each resource in your configuration has a 'name' field; however, the name is optional. If not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. For details, see the following Scoped and unscoped resources section. For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment) the name is unique inside that Environment.
+Each resource in your configuration has a **name** field; however, the name is optional. If not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. For details, see [Scoped and unscoped resources](/docs/integrate_with_central/integrate_with_webhooks/#scoped-and-unscoped-resources). For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment), the name is unique inside that Environment.
 
 The following is an example of .yaml file that shows the fields for defining a webhook in the system:
 
@@ -119,6 +119,8 @@ spec:
 * **group**: resources are defined under a group, which is part of the API's endpoints path
 * **apiVersion**: the version of the API Server API you're using to create this object
 * **kind**: the type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook
+* **name**: uniquely identifies this resource. Only one resource of a given kind in a given scope can have a given name at a time. A name is either client-provided or an auto-generate string that refers to an object in a resource URL. Example: /management/v1alpha1/environments/mesh where 'mesh' is the name of an environment resource
+* **title**: a display name for the resource when it is shown in the UI
 * **metadata**: resource information
 * **spec**: the state you desire for the object
 
