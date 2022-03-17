@@ -19,4 +19,4 @@ The lifecycle of an asset is linked to the lifecycle of the API Services that an
 
 Version management tracks all historical changes and controls what will be bundled into a product.
 
-Asset versions are immutable, so direct changes are not allowed. All changes, such as adding / removing an resource, requires that the asset be in Draft state. To make changes in an existing asset definition that is not in Draft state, a new version must be created.
+Asset versions are immutable, so direct changes are not allowed. All changes, such as adding / removing an resource, require that the asset be in Draft state. To make changes in an existing asset definition that is not in Draft state, a new version must be created.
