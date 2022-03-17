@@ -1,6 +1,6 @@
 ---
-title: Manage your asset catalog
-linkTitle: Manage your asset catalog
+title: Manage your Asset Catalog
+linkTitle: Manage your Asset Catalog
 weight: 400
 hide_readingtime: true
 ---
@@ -21,6 +21,6 @@ An asset is a grouping of API Services that:
 
 The asset model is flexible, so APIs can be group to suit individual needs.
 
-Once the Asset Catalog has been used to manage and group API Services into assets, they are deploy as products in the [Product Catalog](/docs/manage_product_catalog) where they can be attached to subscription plans and consumed from the [Marketplace](/docs/manage_marketplace).
+Once the Asset Catalog has been used to manage and group API Services into assets, they are deploy as products in the [Product Foundry](/docs/manage_product_foundry) where they can be attached to subscription plans and consumed from the [Marketplace](/docs/manage_marketplace).
 
 For information on the lifecycle of an asset, see [Asset lifecycle](/docs/manage_asset_catalog/asset_lifecycle/).
