@@ -9,14 +9,146 @@ description: Getting started with the Axway Central CLI to support a DevOps appr
 
 ## What is the Axway Central CLI
 
-The Axway Central CLI is a package for managing Amplify Central resources with a DevOps approach to API Management. This is an external CLI add-on package to the Axway CLI. For more information, see [Axway CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/index.html).
+Axway Central CLI is an add on package to the [Axway CLI tool](https://www.npmjs.com/package/axway).  The Central CLI provides a command line tool for communicating with Amplify Central’s management plane, using the API Server’s API. The CLI is a client of the API and can get and set resources on the management plane to facilitate universal API Management. The API Server’s API lets you query and manipulate the state of resources in Amplify Central (for example: Environments, API Services, Assets, Products, Secrets, Webhooks etc.). All resources in the API Server can be manipulated in the same way by fetching, updating, creating, deleting as outlined below.
 
-## How does the Axway Central CLI support a DevOps approach
+If you need help on any of the Axway Central CLI commands then providing the “--help” argument to the command will output the help
 
-The Axway Central CLI enables DevOps to perform API Management tasks on Amplify Central, such as the delivery of new API service to your customers. A DevOps Amplify Central supports your DevOps processes by providing an API and a CLI for you to automate your configuration and deployments.
+ ```bash
+> axway central --help
+ ```
 
-In the case of the Axway SaaS Gateway, you can create API proxies and deploy them to runtime groups using the Axway Central CLI. You can test the API proxies and view the traffic monitoring results through the Amplify Central UI.
+## Authentication to the Amplify platform
 
-You can also create representations of your environments and API services, which are not synchronized with Amplify Central, using the Axway Central CLI. These are shown as Manual Sync in Amplify Central and these API Services can be published to the Unified Catalog for your customers to consume.
+* Before you start you need to have credentials or service account to use the CLI. Please follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
 
-This DevOps-friendly approach can be accomplished using scripts of CLI commands with configuration files in YAML or JSON format. As a result, you can automate, deploy, and integrate services faster into your DevOps lifecycle process.
+## Overview of the Axway Central CLI capabilities
+
+### Fetching resources
+
+To view all resource types that are available in the system, run the following ‘get’ command and provide an argument as to which type to get:
+
+```bash
+axway central get 
+```
+
+The result from the ‘get’ command lists all of the available types in the API Server, the results are displayed in a table with the following columns:
+
+| Name      | Description |
+| ----------- | ----------- |
+| RESOURCE      | The long hand name for the resource to identify the resource kind. For example, to get a list of all environments the following command would be run: ```axway central get environments```. Where “environments” is the resource type to get.         |
+| SHORT NAMES   | The shorthand name for the resource which can be used instead of typing in the entire resource kind name. For example, to get the list of environments the following shorthand can be used: ```axway central get envs```.        |
+| RESOURCE KIND   | The type of object this represents        |
+| SCOPED   | Resources are scoped to prevent naming collisions and to re-enforce the relationship between the resources in the scope. This column indicates if the resource is scoped or not.         |
+| SCOPE KIND   | The resource kind which the type is scope to. For example, API Services are scoped to Environments.         |
+| RESOURCE GROUP  | These will represent separate business domains, e.g. ‘management’ encompasses our API and Dataplane management businesses for the API Provider side of the platform. ‘catalog’ represents the API Consumer side of the platform.  |
+
+You can query for a singular resource or multiple resources, and the CLI will display a table of the most important information about the specified resource.
+
+```bash
+axway central get <Resource> # Get a list of the resources
+```
+
+```bash
+axway central get <Resource1>,<Resource2>,...,<ResourceN> # Get a list of multiple resources
+```
+
+```bash
+axway central get <Resource> <Name> -s/--scope <Scope Name> # Get a specific resource by name in a named scope
+```
+
+### Fetching all the details of a resource
+
+By default results of ```get``` command are outputted in table format. You can see additional information for the resource if you use the ```-output``` argument and request for the result to be rendered in yaml or json.
+Here is a command to see the details of an environment named 'Azure' in yaml format:
+
+```bash
+> axway central get environments azure -o yaml
+group: management
+apiVersion: v1alpha1
+kind: Environment
+name: azure
+title: Azure Environment
+metadata:
+  id: e4f37c79728174c901728804244e051a
+  audit:
+    createTimestamp: 2020-06-06T05:04:32.335+0000
+    createUserId: DOSA_6c81495138a743d29e9b4ae6704c2d39
+    modifyTimestamp: 2021-04-16T03:09:45.572+0000
+    modifyUserId: 6563ef56-bbab-48a9-bc4a-e564cb3fa148
+  acl: []
+  resourceVersion: '14742'
+  references: []
+  selfLink: /management/v1alpha1/environments/azure
+attributes:
+  dept: Innovation Lab
+finalizers: []
+tags:
+  - cli
+  - axway
+spec:
+  icon:
+    data: >-
+      iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEX///
+      ..........
+      pOYT5PX
+    contentType: image/png
+  description: Azure Environment
+```
+
+### Creating resources
+
+Resources can be created using the ```create``` command. You can create a resource by provided the ```create``` a resource definition in a file. json and yaml formats are accepted. Note, multiple resources can be in a single file if each resource is seperated by three dashes ```---```.
+Alternatively, an empty resource can be created by providing only a value for the resource's name.
+
+Example of creating a resource that represents an environment resource type using a file with the create command:
+
+```bash
+axway central create -f environment.yaml
+```
+
+Where, the ```environment.yaml``` file contains the definition of the environment to be created:
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: Environment
+name: helloworld
+title: Hello World
+spec:
+  icon:
+    data: iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR42mMAAQAABQABoIJXOQAAAABJRU5ErkJggg==
+    contentType: image/png
+  production: true
+  description: The description for this environment
+  axwayManaged: false
+```
+
+To create an empty resource that represents an environment resource type with a name of “helloworld”, run this command:
+
+```bash
+axway central create environment helloworld
+```
+
+### Updating resources
+
+Resources can be updated by using the ```apply``` command. The apply command accepts a file containing the resource(s) to be updated. json and yaml formats are accepted.
+
+```bash
+axway central apply -f delete.yaml
+```
+
+### Deleting resources
+
+Delete resources from the API Server using the delete command. Delete command can accept resource name or file name containing the resource definition (json and yaml formats are accepted)
+
+Deleting a resource that represents an environment type using a file containing the resource definition:
+
+```bash
+axway central delete -f delete.yaml
+```
+
+Deleting a resource that represents an environment type with a name “helloworld”:
+
+```bash
+axway central delete environment helloworld
+```
