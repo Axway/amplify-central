@@ -10,9 +10,9 @@ The lifecycle of an asset is linked to the lifecycle of the API Services that an
 
 | State          | Description                                                                |
 |----------------|----------------------------------------------------------------------------|
-| **Draft**      | The asset cannot be released and is not available in the Product Catalog.  The API Provider continues to work on the asset to reach a point where it is ready to be approved for release to the Product Catalog.<br><br><ul><li>The asset version can be edited or deleted.</li><li>The asset version can be moved to the **Active** state.</li>|
-| **Active**     | The asset is available in the Product Catalog to create products from.<br><br><ul><li>The asset version cannot be edited or deleted.</li><li>The asset version can be moved to the **Deprecated** or **Draft** states.</li>|
-| **Deprecated** | The asset version is marked with a future date for an **Archived** state.  This allows time to adopt a newer version of the asset or to update the product with a new asset version.<br><br><ul><li>The asset version can be un-deprecated prior to the **Archived** date, moving the asset version back to an **Active** or **Draft** state.</li><li>The asset version cannot be be edited or deleted.</li><li>The asset version is available in the Product Catalog (appearing as an **Active** state).</li>|
+| **Draft**      | The asset cannot be released and is not available in the Product Catalog. The API Provider continues to work on the asset to reach a point where it is ready to be approved for release to the Product Catalog. The asset version can be edited or deleted. The asset version can be moved to the **Active** state.|
+| **Active**     | The asset is available in the Product Catalog to create products from. The asset version cannot be edited or deleted. The asset version can be moved to the **Deprecated** or **Draft** states.|
+| **Deprecated** | The asset version is marked with a future date for an **Archived** state. This allows time to adopt a newer version of the asset or to update the product with a new asset version. The asset version can be un-deprecated prior to the **Archived** date, moving the asset version back to an **Active** or **Draft** state. The asset version cannot be be edited or deleted. The asset version is available in the Product Catalog (appearing as an **Active** state).|
 | **Archived**   | The Asset version is archived / inactive and no longer available in the Product Catalog.|
 
 ## Version management
