@@ -32,7 +32,7 @@ The Discovery Agent is used to discover new deployments and stage updates to exi
 
 ### Traceability Agent
 
-The Traceability Agent is used to filter the AWS CloudWatch logs and prepare the transaction events that are sent to Amplify Central and visible in the API Observer. Viewing your traffic helps you to identify the bottleneck and errors. The traffic can be filtered by environment in case multiples are involved in your topography. As part of the deployment package, you can use cloud formation scripts to set up the following agent-dependent AWS Services:
+The Traceability Agent is used to filter the AWS CloudWatch logs and prepare the transaction events that are sent to Amplify Central and visible in Business Insights. Viewing your traffic helps you to identify the bottleneck and errors. The traffic can be filtered by environment in case multiples are involved in your topography. As part of the deployment package, you can use cloud formation scripts to set up the following agent-dependent AWS Services:
 
 * AWS CloudWatch - Monitors resources and AWS applications in real time. Receives and routes supported AWS Service events.
 * AWS Lamda - Runs code in response to events and automatically manages the computing resources required by that code.

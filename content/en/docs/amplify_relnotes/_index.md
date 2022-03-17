@@ -5,11 +5,108 @@ no_list: true
 weight: 100
 date: 2020-10-28
 hide_readingtime: true
-description: Provides a list of release notes for Amplify Central, Amplify
-  agents, and Unified Catalog; along with enhancement overviews and bug fixes
-  for each release. For more details, click on the release note title to go to
-  the corresponding release note.
 ---
+
+The following is a list of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI. Enhancement overviews and bug fixes for each release are also provided.
+
+For more details, click on the release note title to go to the corresponding release note.
+
+## [Amplify agents February 2022](/docs/amplify_relnotes/20220228_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.12): None
+* **Amplify AWS Gateway Agent** (version 1.1.12): None
+* **Amplify Azure Agent** (version 1.1.12): None
+* **Amplify Istio Agent** (helm chart version 0.62.0, Agent version 2.0.23): None
+* **Amplify Apigee Agent** (version 0.0.4): None
+* **Amplify agent general** (version 1.1.10):
+    * Agent technical tags and attributes are now stored under `x-agent-details` sub-resources on the APIService / APIService revision and are no longer visible in Central WebUI
+    * `TRACEABILITY_EXCEPTION_LIST` now supports regex expression based on RE2 Syntax.
+
+**Bug fixes**: None
+
+## [Amplify Central February 2022](/docs/amplify_relnotes/20220228_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.8.0):
+    * The `install agents` command has the option to replicate your organizational structure by auto-associating the team ownership of API Services
+    * The Central Admin role can share environments with other teams using an Access Control List
+    * The Central Admin role can view / set the team ownership of an Environment or an API Service
+    * The logical names of resources are now more friendly
+* **Amplify Central WebUI**:
+    * New API Services can be published faster to the Unified Catalog
+    * Async API specification version 2.3.0 is now supported with six additional Async protocols: IBMMQ, JMS SECURE, MECURE, SOLACE, SOLACE SECURE, and SOLACE COMPRESSED
+    * The UX display of many tags / attributes and long text names has been improved
+
+**Bug fixes**:
+
+* The Axway Central CLI `install agents` command outputs an error message indicating the required platform roles to access the teams
+* The Axway Central CLI `get` command can support retrieving thousands of resources without a timeout
+
+## [Analytics February 2022](/docs/amplify_relnotes/20220228_analytics_relnotes/)
+
+**What's new**:
+
+* The UI has been rebranded to match other Amplify screens
+* Each screen has a compare capability to visualize the trend with the previous period
+* Leaderboard view to help verify your API performance
+
+**Bug fixes**: Application usage is not visible
+
+## [Asset Catalog February 2022](/docs/amplify_relnotes/20220228_catalog_relnotes/)
+
+**What's new**:
+
+* Developers can create, view, edit, and delete an asset
+* Lifecycle management covers the release, deprecate, and archive stages
+* The asset logical name can be computed from the asset title or auto-generated
+* An asset version can be released as a Major, Minor, or Patch release type
+* Changes can be made to an asset after it has been released by using the `Create new version` button
+* An asset can have multiple active versions, but only one Draft
+* Assets that are packaged with a product cannot be archived
+
+**Bug fixes**: None
+
+## [Marketplace February 2022](/docs/amplify_relnotes/20220228_marketplace_relnotes/)
+
+**What's new**:
+
+* Platform administrators can define the marketplace sub-domain from the *Marketplace Settings* page
+* Platform administrators can change the look and feel of their Marketplace from the *Marketplace Appearance* page
+* Marketplace is available in public mode
+
+**Bug fixes**: None
+
+## [Product Foundry February 2022](/docs/amplify_relnotes/20220228_foundry_relnotes/)
+
+**What's new**:
+
+* A user can view, create, edit, release, deprecate, archive, and delete a product
+* A product is automatically created with a free plan
+* The product logical name is derived from the product title
+* Multiple assets can be included in a product
+* A product can be documented using markdown content
+* A product can be released with a Major, Minor or Patch version
+* Changes can be made to a product by using the **Create Draft** button
+* A product supports multiple active versions and only one draft
+
+**Bug fixes**: None
+
+## [Amplify Platform Management February 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+**What's new**: None
+
+**Bug fixes**:
+
+* Org Activity view events for updating a team member’s roles or removing a member from a team may not state which member was affected
+* Amplify Runtime Services app Overview view may not render for unpublished apps
+
+## [Axway CLI February 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
+**Security update**. Migrated from the outdated `listr` package to the actively maintained `listr2` package to resolves moderate security vulnerability warnings during installation
+
 ## [Amplify agents January 2022](/docs/amplify_relnotes/20220131_ampc_agents_relnotes/)
 
 **What's new for**:
@@ -341,7 +438,7 @@ description: Provides a list of release notes for Amplify Central, Amplify
 
 **Bug fixes**:
 
-* Mesh Governance helm apic-hybrid chart installation step would not accept an alternate target namespace
+* Mesh Governance helm APIC-hybrid chart installation step would not accept an alternate target namespace
 * Some Amplify Central CLI results from the amplify central get xxx commands did not correctly return their RESOURCE KIND and SCOPE KIND columns
 * The environment name was not reported for API transactions shown in the Amplify Platform Visibility Dashboard
 

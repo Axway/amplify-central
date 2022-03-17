@@ -114,7 +114,7 @@ This section connects the agent to API Manager and determines which APIs should 
 
 `APIMANAGER_POLLINTERVAL`: The frequency in which API Manager is polled for new endpoints. Default value is 30s.
 
-`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Amplify Central, setting this value to true will enable a selection in the App name dropdown for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create a new application in API Manager. The new application in API Manager will be given the name of the subscription ID from Amplify Central. A value of false will cause 'Create an application' to not be shown in the dropdown. Default value is **false**.
+`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Amplify Central, setting this value to true will enable a selection in the App name dropdown for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create a new application in API Manager. The new application in API Manager will be given the name of the subscription ID from Amplify Central. A value of false will cause 'Create an application' to not be shown in the dropdown. Default value is **true**.
 
 `APIMANAGER_AUTH_USERNAME`: An API Manager user the agent will use to connect to the API Manager. This user must have either the “API Manager Administrator” or “Organization administrator” role. Based on the role of this user, the agent is able to:
 
@@ -509,7 +509,7 @@ cd /home/APIC-agents
 
 ## Traceability Agent
 
-The Traceability Agent is used to prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Central and is visible in API Observer.
+The Traceability Agent is used to prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Central and is visible in Business Insights.
 
 The binary agent can run in the following mode:
 

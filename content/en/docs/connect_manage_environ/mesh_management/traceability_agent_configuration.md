@@ -24,7 +24,7 @@ For more information, see [Install Axway Central CLI](/docs/integrate_with_centr
 ## Overview
 
 The Amplify Istio Traceability Agent is installed into your Kubernetes cluster as part of deploying the `ampc-hybrid` helm chart. The Traceability Agent (TA) sends metrics and logs for API activity back to Amplify Central so that you can monitor service activity and troubleshoot your services.
-The agent publishes a summary of the transaction which can be seen in the API Observer. Once the transaction summary is expanded, you can see all the related spans within a transaction including the request and response headers for each.
+The agent publishes a summary of the transaction which can be seen in Business Insights. Once the transaction summary is expanded, you can see all the related spans within a transaction including the request and response headers for each.
 
 The Amplify Istio Traceability Agent has two modes; default and verbose. The default mode captures only the headers specified in the EnvoyFilter and the verbose mode captures all the headers in request and response flows.
 
@@ -297,7 +297,7 @@ spec:
   resolution: DNS
 ```
 
-The setup is complete for observability in the mesh. To view transactions in API Observer, generate some traffic for the Hybrid List demo service:
+The setup is complete for observability in the mesh. To view transactions in Business Insights, generate some traffic for the Hybrid List demo service:
 
 ```bash
 curl -v http://demo.sandbox.axwaytest.net:8080/mylist/list

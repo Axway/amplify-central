@@ -49,7 +49,7 @@ This operating mode does not utilize the AWS Config, SQS, or CloudWatch services
 
 The Traceability Agent sends summaries to Amplify Central of the API traffic that has passed through the AWS API Gateway. The agent only sends a traffic summary for APIs that have been discovered.
 
-The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify Central. API Observer provides a view of the traffic and API usage of APIs deployed to the Gateway.
+The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify Central. Business Insights provides a view of the traffic and API usage of APIs deployed to the Gateway.
 
 In order for the Traceability Agent to monitor API traffic, the following AWS services are used:
 

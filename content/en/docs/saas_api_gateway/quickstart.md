@@ -33,19 +33,6 @@ Watch this video to learn how to secure your API with a client authentication po
 
 {{< youtube WmuhKoPFF4k >}}
 
-## Monitor API traffic
-
-To monitor API usage and troubleshoot API traffic in Amplify Central UI, click **API Observer** in the left navigation bar.
-
-* Click **API Usage** to see an aggregated view of the recent usage of your API. This view is useful for monitoring traffic patterns, and successes or failures over time.
-  ![Example of API usage](/Images/central/apiobserver_usage.png)
-* Click **API Traffic** to view the traffic information. This view is useful for finding and troubleshooting any failed transactions.
-  ![Example of API traffic](/Images/central/apiobserver_traffic.png)
-
-{{% alert title="Note" %}}
-The API Observer API traffic view provides details for up to a maximum of 1000 transactions based on your search. You might need to further restrict the search by time range, or other filter criteria, to view all results.
-{{% /alert %}}
-
 ## Publish API to Amplify Catalog
 
 To publish and share your API endpoints in the Amplify Catalog, so that consumers can discover and reuse your service easily, select **API Proxies** in the left navigation bar, click the appropriate API proxy in the list, and click **Add to Catalog** on the **Deployments** tab.

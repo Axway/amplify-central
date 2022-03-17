@@ -116,6 +116,13 @@ const collections = [{
   description: 'All pages related to Connect Azure Gateway',
   format: 'frontmatter',
 }, {
+...docsDefaults('connect_manage_environ/manage_services', 'connect_manage_environ'),
+name: 'manage_services',
+label: 'Manage your services',
+label_singular: 'page in Manage your services section',
+description: 'All pages related to Manage your services',
+format: 'frontmatter',
+}, {
   ...docsDefaults('connect_manage_environ/connected_agent_common_reference', 'connect_manage_environ'),
   name: 'connected_agent_common_reference',
   label: 'Connected agent - Common reference',
@@ -149,6 +156,13 @@ const collections = [{
   label: 'Manage your marketplace',
   label_singular: 'page in Manage your marketplace section',
   description: 'All pages related to Manage your marketplace',
+  format: 'frontmatter',
+}, {
+  ...docsDefaults('get_actionable_insights', 'get_actionable_insights'),
+  name: 'get_actionable_insights',
+  label: 'Get actionable insights',
+  label_singular: 'Get actionable insights',
+  description: 'All pages related to Get actionable insights',
   format: 'frontmatter',
 }, { 
   ...docsDefaults('best_practices', 'best_practices'),
