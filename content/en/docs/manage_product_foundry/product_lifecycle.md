@@ -4,7 +4,7 @@ linkTitle: Product lifecycle
 weight: 10
 ---
 
-The product lifecycle reflects the state of the product from conception to retirement.   
+The product lifecycle reflects the state of the product from conception to retirement.
 
 Lifecycle management provides control of the product's states as it progresses through different lifecycle stages.
 

@@ -23,7 +23,7 @@ To view assets:
 6. Select a Usage Plan. Click **Next**.
 7. Add documentation elements. Click **Next**.
 8. Provide the Tags, Attribute and Category details for the product.
-7. Click **Save**.
+9. Click **Save**.
 
 The product is created in **Draft** state. To publish this product in the Marketplace, you must move the product to an **Active** state by activating the product.
 
@@ -94,9 +94,9 @@ You can offer multiple free and paid consumption options for your product. As a 
     * Select the **Request Approval** type:
 
         * **Manual** - Subscription request are manually approved by the product owner.
-        * **Automatic** - Subscription requests are automatically approved by the system. 
+        * **Automatic** - Subscription requests are automatically approved by the system.
 
-6. Click **Save Draft and Exit** to save the plan in **Draft** status. The plan is now visible in the Product Foundry, but not in the Marketplace.
+10. Click **Save Draft and Exit** to save the plan in **Draft** status. The plan is now visible in the Product Foundry, but not in the Marketplace.
 
 ## Deprecate a product
 
