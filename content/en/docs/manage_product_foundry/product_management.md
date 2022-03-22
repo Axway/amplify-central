@@ -1,14 +1,12 @@
 ---
-title: Product management
-linkTitle: Product management
+title: Product management from WebUI
+linkTitle: Product management from WebUI
 weight: 20
 ---
 
 Use the Product Foundry UI to manage your products, including: create, activate, edit, delete, monetize, deprecate and archive products.
 
 ## Create a product
-
-To view assets:
 
 1. Navigate to the *Product Foundry*.
 2. Select **Products > All Products**.
