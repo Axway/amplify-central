@@ -4,4 +4,4 @@ linkTitle: Tags, Attributes and Categories
 weight: 40
 ---
 
-Please provide information
+Content coming soon.

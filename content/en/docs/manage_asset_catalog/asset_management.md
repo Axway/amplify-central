@@ -4,7 +4,15 @@ linkTitle: Asset management
 weight: 20
 ---
 
-Use the Asset Catalog UI to manage your assets, including: view, create, edit, activate, deprecate and archive assets.
+Use the Asset Catalog UI to manage your assets, including: view, create, activate, deprecate and archive assets.
+
+## Before you start
+
+* You must have credentials (provide content)
+
+## Objectives
+
+Learn how to use the Asset Catalog WebUI to create and manage assets.
 
 ## View assets
 
@@ -79,12 +87,6 @@ The asset must be in **Draft** state.
 4. Click **Activate**.
 5. Select a Release Type of either **Major**, **Minor**, or **Patch**.
 6. Click **Update**.
-
-## Edit an asset
-
-The asset must be in **Draft** state.
-
-Add instructions
 
 ## Delete an Asset
 
