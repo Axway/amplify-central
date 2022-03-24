@@ -49,9 +49,9 @@ axway central get stg -o json > stages.json
 
 ### Use a stage that already exists
 
-If the stage you want to use already exists, you can still use it if you find its logical name and update the asset to use it. 
+If the stage you want to use already exists, you can still use it if you find its logical name and update the asset to use it.
 
-Query the API Server to get the resource details of the stage you want to assign to the asset. In this example, the stage we want to use has the ```title``` called ```production```. 
+Query the API Server to get the resource details of the stage you want to assign to the asset. In this example, the stage we want to use has the ```title``` called ```production```.
 
 Use this command to get the stage resource and store it to disk:
 
@@ -199,7 +199,7 @@ Once your assets hae been created, use the Axway Central CLI to help organize an
 
 ### Tag an asset
 
-Use tags to organize and filter assets in the Asset catalog. To tag an asset, update the ```tags``` field of an asset resource. The ```tags``` field is a string array. 
+Use tags to organize and filter assets in the Asset catalog. To tag an asset, update the ```tags``` field of an asset resource. The ```tags``` field is a string array.
 
 To update ```tags``` with a value of ```experimental```, run the following commands:
 
@@ -212,7 +212,7 @@ axway central apply -f asset-updated.json
 
 ### Create a category
 
-Categories help in the management of the number of assets in the Asset Catalog.To create a new category, use the ```Category``` resource type. 
+Categories help in the management of the number of assets in the Asset Catalog.To create a new category, use the ```Category``` resource type.
 
 Run the following command to create a new category with the title ```Finance``` and the description: ```Finance APIs```:
 
@@ -248,9 +248,9 @@ axway central apply -f asset-updated.json
 
 ### Use a category that already exists
 
-If the category you want to use already exists, you can still use it if you find its logical name and update the asset to use it. 
+If the category you want to use already exists, you can still use it if you find its logical name and update the asset to use it.
 
-Query the API Server to get the resource details of the category to assign to assigned to the asset. In this example, the category we want to use has the ```title``` called ```OpenBanking```. 
+Query the API Server to get the resource details of the category to assign to assigned to the asset. In this example, the category we want to use has the ```title``` called ```OpenBanking```.
 
 Use this command to get the category resource and store it to disk:
 
@@ -274,7 +274,6 @@ Before an asset's state can be set to ```archived```, it must first be set to th
 
 To deprecate an asset named ```my-asset```, run the following command the named asset, and change the ```state``` field:
 
-
 ```bash
 axway central get asset my-asset -o json | jq '.state = "deprecated"' > asset-changed.json
 axway central apply -f asset-changed.json
@@ -282,7 +281,7 @@ axway central apply -f asset-changed.json
 
 ### Archive an asset
 
-Before an asset can be deleted it's state must be set to ```archived```. 
+Before an asset can be deleted it's state must be set to ```archived```.
 
 To archive an asset named ```my-asset```, run the following commands to get the named asset, and change the ```state``` field.
 
