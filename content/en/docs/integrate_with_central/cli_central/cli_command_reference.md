@@ -41,7 +41,7 @@ The following table describes the usage, options, and arguments for the `get` co
 |`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.<br/>*(Added: v1.28.0)*|
 |`--client-id=<value>`                                          |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
 |`--no-cache`                                                   |Refresh system definition cache.<br/>*(Added: v1.8.0)*|
-|`--no-owner`                                                   |Filter results that have an owner.<br/>*(Added: v2.10.0)
+|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
 |`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters.<br/>*(Added: v1.23.0)*|
 |`--region=<value>`                                             |Override region configuration. Set to `US` or `EU`.|
