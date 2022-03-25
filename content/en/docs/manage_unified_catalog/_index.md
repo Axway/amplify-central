@@ -1,6 +1,6 @@
 ---
-title: Manage your marketplace
-linkTitle: Manage your marketplace
+title: Manage your Unified Catalog
+linkTitle: Manage your Unified Catalog
 weight: 500
 description: "Normalize discovery for APIs from multiple gateways, classify your
   services to support multiple audiences (partners, IT, business), control
