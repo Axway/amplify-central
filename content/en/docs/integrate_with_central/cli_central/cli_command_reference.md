@@ -38,16 +38,17 @@ The following table describes the usage, options, and arguments for the `get` co
 |`axway central get <Resource> <Name> -s/--scope <Scope Name>`|Get a specific resource by name |
 |**Options**                                                    |                 |
 |`--account=<value>`                                            |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--client-id=<value>`                                          |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
-|`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
-|`-s,--scope=<name>`                                            |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
-|`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters.<br/>*(Added: v1.23.0)*|
-|`--team <name`\|`guid>`                                        |The team name or guid to use.<br/>*(Added: v2.6.0)*|
-|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match.<br/>*(Added: v1.28.0)*|
-|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.<br/>*(Added: v1.28.0)*|
 |`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.<br/>*(Added: v1.28.0)*|
-|`--no-cache`                                                   |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
+|`--client-id=<value>`                                          |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
+|`--no-cache`                                                   |Refresh system definition cache.<br/>*(Added: v1.8.0)*|
+|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)
+|`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
+|`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters.<br/>*(Added: v1.23.0)*|
 |`--region=<value>`                                             |Override region configuration. Set to `US` or `EU`.|
+|`-s,--scope=<name>`                                            |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
+|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.<br/>*(Added: v1.28.0)*|
+|`--team <name`\|`guid>`                                        |Filter results by owner using team name or team guid. Overrides `--no-owner`.<br/>*(Added: v2.6.0)*|
+|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match.<br/>*(Added: v1.28.0)*|
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
 
@@ -132,8 +133,14 @@ axway central get assets --attribute location=arizona
 # To get assets and filter the list with a combination of title, tag and attribute filters
 axway central get assets --title test123 --tag tag1 --attribute location=arizona
 
-# To get environments and filter by team
+# To get environments owned by a specific team
 axway central get env --team <name|guid>
+
+# To get API services owned by a specific team or implicitly owned by the environments owning team
+axway central get apis --team <name|guid>
+
+# To get API services that are not owned by a team
+axway central get apis --no-owner
 ```
 
 For more examples, see [Create and fetch resources via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_create_fetch_resources/).
