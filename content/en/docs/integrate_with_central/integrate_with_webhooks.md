@@ -98,7 +98,7 @@ Types in the system:
 
 ## Anatomy of a resource in API Server
 
-Each resource in your configuration has a **name** field; however, the name is optional. If not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. For details, see [Scoped and unscoped resources](/docs/integrate_with_central/integrate_with_webhooks/#scoped-and-unscoped-resources). For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment), the name is unique inside that Environment.
+Each resource in your configuration has a **name** field; however, the name is optional. If not provided, API Server will generate one. A value provided for a name must be unique with a scope of a resource. For details, see [Scoped and unscoped resources](#scoped-and-unscoped-resources). For example, Environment (unscoped resource) name is unique across all Environments. For APIService (scoped to the Environment), the name is unique inside that Environment.
 
 The following is an example of .yaml file that shows the fields for defining a webhook in the system:
 
