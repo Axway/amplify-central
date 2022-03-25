@@ -45,13 +45,13 @@ To get the details of the stages, including their logical names, run the followi
 axway central get stg -o json > stages.json
 ```
 
-```stages.json``` contains all information of the stages.
+`stages.json` contains all information of the stages.
 
 ### Use a stage that already exists
 
 If the stage you want to use already exists, you can still use it if you find its logical name and update the asset to use it.
 
-Query the API Server to get the resource details of the stage you want to assign to the asset. In this example, the stage we want to use has the ```title``` called ```production```.
+Query the API Server to get the resource details of the stage you want to assign to the asset. In this example, the stage we want to use has the `title` called `production`.
 
 Use this command to get the stage resource and store it to disk:
 
@@ -67,7 +67,7 @@ To create a new stage that doesn't exist in the system, run the following comman
 axway central create -f stage.json -o json -y > stage-details.json
 ```
 
-Where ```stage.json``` contains the following content:
+Where `stage.json` contains the following content:
 
 ```json
 {
@@ -91,7 +91,7 @@ To create an asset run the following command:
 axway central create -f asset.json -o json -y > asset-created.json
 ```
 
-Where ```asset.json``` contains the following content:
+Where `asset.json` contains the following content:
 
 ```json
 {
@@ -119,7 +119,7 @@ jq --slurp -f asset-resource.jq asset-created.json api-service-revision-created.
 axway central create -f asset-resource.json -o json -y > asset-resource-created.json
 ```
 
-Where ```asset-resource.jq``` has the following content:
+Where `asset-resource.jq` has the following content:
 
 ```json
 # Creates the API Service Instance from OAS and the created service revision
@@ -144,9 +144,9 @@ Where ```asset-resource.jq``` has the following content:
 
 ### Activate the asset to make it available in the Product Foundry
 
-Only assets that are in an ```active``` state and marked as released are available in the Product Foundry, where the assets are productized to be made available in the Marketplace.
+Only assets that are in an `active` state and marked as released are available in the Product Foundry, where the assets are productized to be made available in the Marketplace.
 
-To mark an asset as ```active``` run the following commands:
+To mark an asset as `active` run the following commands:
 
 ```bash
 #!/bin/bash
@@ -157,7 +157,7 @@ axway central apply -f asset-changed.json
 
 ### Create a release tag
 
-To release an asset, you must create a release tag for the asset. The Asset Catalog enforces sematic versioning, so when you create a release tag you must specify whether it is a major, minor or patch update. The Amplify platform will automatically calculate the semantic version of the asset based on historic release times that have been applied. You can select how the release version number is incremented by selected one of the following values: ```major```, ```minor```, or ```patch```. If the current version number is 1.0.1, then the version is incremented to:
+To release an asset, you must create a release tag for the asset. The Asset Catalog enforces sematic versioning, so when you create a release tag you must specify whether it is a major, minor or patch update. The Amplify platform will automatically calculate the semantic version of the asset based on historic release times that have been applied. You can select how the release version number is incremented by selected one of the following values: `major`, `minor`, or `patch`. If the current version number is 1.0.1, then the version is incremented to:
 
 | Value provided      | Result |
 | ----------- | ----------- |
@@ -172,7 +172,7 @@ jq --slurp -f asset-release-tag.jq asset-created.json > asset-release-tag.json
 axway central create -f asset-release-tag.json -o json -y > asset-release-tag-created.json
 ```
 
-Where ```asset-release-tag.jq``` has the following content:
+Where `asset-release-tag.jq` has the following content:
 
 ```json
 {
@@ -199,9 +199,9 @@ Once your assets hae been created, use the Axway Central CLI to help organize an
 
 ### Tag an asset
 
-Use tags to organize and filter assets in the Asset catalog. To tag an asset, update the ```tags``` field of an asset resource. The ```tags``` field is a string array.
+Use tags to organize and filter assets in the Asset catalog. To tag an asset, update the `tags` field of an asset resource. The `tags` field is a string array.
 
-To update ```tags``` with a value of ```experimental```, run the following commands:
+To update `tags` with a value of `experimental`, run the following commands:
 
 ```bash
 #!/bin/bash
@@ -212,9 +212,9 @@ axway central apply -f asset-updated.json
 
 ### Create a category
 
-Categories help in the management of the number of assets in the Asset Catalog.To create a new category, use the ```Category``` resource type.
+Categories help in the management of the number of assets in the Asset Catalog.To create a new category, use the `Category` resource type.
 
-Run the following command to create a new category with the title ```Finance``` and the description: ```Finance APIs```:
+Run the following command to create a new category with the title `Finance` and the description: `Finance APIs`:
 
 ```bash
 axway central create -f category.json -o json -y > category-created.json
@@ -250,7 +250,7 @@ axway central apply -f asset-updated.json
 
 If the category you want to use already exists, you can still use it if you find its logical name and update the asset to use it.
 
-Query the API Server to get the resource details of the category to assign to assigned to the asset. In this example, the category we want to use has the ```title``` called ```OpenBanking```.
+Query the API Server to get the resource details of the category to assign to assigned to the asset. In this example, the category we want to use has the `title` called `OpenBanking`.
 
 Use this command to get the category resource and store it to disk:
 
@@ -270,9 +270,9 @@ axway central apply -f asset-updated.json
 
 ### Deprecate an asset
 
-Before an asset's state can be set to ```archived```, it must first be set to the state ```deprecated```.
+Before an asset's state can be set to `archived`, it must first be set to the state `deprecated`.
 
-To deprecate an asset named ```my-asset```, run the following command the named asset, and change the ```state``` field:
+To deprecate an asset named `my-asset`, run the following command the named asset, and change the `state` field:
 
 ```bash
 axway central get asset my-asset -o json | jq '.state = "deprecated"' > asset-changed.json
@@ -281,9 +281,9 @@ axway central apply -f asset-changed.json
 
 ### Archive an asset
 
-Before an asset can be deleted it's state must be set to ```archived```.
+Before an asset can be deleted it's state must be set to `archived`.
 
-To archive an asset named ```my-asset```, run the following commands to get the named asset, and change the ```state``` field.
+To archive an asset named `my-asset`, run the following commands to get the named asset, and change the `state` field.
 
 ```bash
 axway central get asset my-asset -o json | jq '.state = "archived"' > asset-changed.json
