@@ -151,7 +151,7 @@ format: 'frontmatter',
   description: 'All pages related to Manage your product catalog',
   format: 'frontmatter',
 }, {
-  ...docsDefaults('manage_unified_catalog', 'manage_unified catalog'),
+  ...docsDefaults('manage_unified_catalog', 'manage_unified_catalog'),
   name: 'manage_unified_catalog',
   label: 'Manage your Unified Catalog',
   label_singular: 'page in Manage your Unified Catalog section',
