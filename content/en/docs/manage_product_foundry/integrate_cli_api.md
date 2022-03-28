@@ -133,6 +133,7 @@ export docContent=$(cat README.md)
 jq -f article.jq product-created.json > article.json
 axway central create -f article.json -o json -y 
 ```
+
 #### Get a list of the created articles
 
 Once each article is created, get a list of the articles to assemble in the document. the following command queries for all articles in the scope of the product name:
@@ -142,6 +143,7 @@ Once each article is created, get a list of the articles to assemble in the docu
 export productName=`jq -r .[0].name product-created.json`
 axway central get  resources -s $productName -o json 
 ```
+
 To get a list of all articles available for the product and store them in a file:
 
 ```bash
@@ -230,7 +232,7 @@ axway central apply -f product-updated.json
 
 Categorize a product to help API Providers organize them in the Marketplace so that are easily accessible.
 
-To query the API Server to get the resource details of the category to be assigned to the product and store it to disk, run the following command. In this example, the category `title` is called `OpenBanking`: 
+To query the API Server to get the resource details of the category to be assigned to the product and store it to disk, run the following command. In this example, the category `title` is called `OpenBanking`:
 
 ```bash
 axway central get category -q "title==OpenBanking" -o json > category-details.json
@@ -247,12 +249,12 @@ export categoryName=`jq -r .[0].name category-details.json`
 axway central get product $productName -o json | jq '.spec.categories |= . + [env.categoryName]' > product-updated.json
 axway central apply -f product-updated.json
 ```
+
 ### Tag a product
 
-Use tags to organize and filter products in the marketplace. To tag a product you update the `tags` field of a product resource. The `tags` field is a string array. 
+Use tags to organize and filter products in the marketplace. To tag a product you update the `tags` field of a product resource. The `tags` field is a string array.
 
 To update `tags` with a value of ```experimental``` to indicate to the API consumer that the API they are subscribing to is in a experimental state, run the following commands:
-
 
 ```bash
 #!/bin/bash
@@ -265,9 +267,9 @@ axway central apply -f product-updated.json
 
 Plans define the limitations and subscription details of how API Consumers can use your products. A plan:
 
-* Defines quota limits that indicate how many transactions an API consumer can use. 
+* Defines quota limits that indicate how many transactions an API consumer can use.
 * Indicates which assets resources in the product that the quota is applicable to.
-* Determines whether the plan is free or paid 
+* Determines whether the plan is free or paid.
 
 This example creates a free plan for the product:
 
