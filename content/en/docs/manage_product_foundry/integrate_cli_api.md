@@ -428,7 +428,7 @@ Your product is now available in the Marketplace for API consumers to subscribe 
 
 ## Remove a product
 
-Before a product can be deleted its state must first be marked as ```archived```. 
+Before a product can be deleted its state must first be marked as ```archived```.
 
 ### Archive the product
 
@@ -440,7 +440,6 @@ axway central apply -f product-changed.json
 ```
 
 {{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
-
 
 ### Delete the product
 
