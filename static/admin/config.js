@@ -139,9 +139,9 @@ format: 'frontmatter',
 }, {
   ...docsDefaults('manage_asset_catalog', 'manage_asset_catalog'),
   name: 'manage_asset_catalog',
-  label: 'Manage your Asset Catalog',
-  label_singular: 'page in Manage your Asset Catalog section',
-  description: 'All pages related to Manage your Asset Catalog',
+  label: 'Manage your asset catalog',
+  label_singular: 'page in Manage your asset Ccatalog section',
+  description: 'All pages related to Manage your asset catalog',
   format: 'frontmatter',
 }, {
   ...docsDefaults('manage_product_foundry', 'manage_product_foundry'),
