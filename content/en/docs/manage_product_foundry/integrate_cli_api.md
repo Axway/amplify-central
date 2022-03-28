@@ -43,7 +43,7 @@ axway central get assets
 
 From the resulting response from the platform, above, select the names of the assets that you want to bundle in your product. This example will use `petstore-asset`.
 
-To create an basic product YAML or JSON file, populate the product with a single asset, namely ````petstore-asset```.
+To create a basic product YAML or JSON file, populate the product with a single asset, namely `petstore-asset`.
 A `.yaml`, `.yml`, or `.json` file can be used to define a specific resource, but this example uses `.json`:
 
 ```json
@@ -63,9 +63,9 @@ A `.yaml`, `.yml`, or `.json` file can be used to define a specific resource, bu
 }
 ```
 
-### Save the file as `product.json`
+### Save the file as product.json
 
-Create the product on the server (`-f` is the filename to use to create the resource, ```-y``` as we haven't given the product a local name then the server will automatically create one, providing ```-y``` means we will accept the auto generated name)
+Create the product on the server (`-f` is the filename to use to create the resource, `-y` as we haven't given the product a local name then the server will automatically create one, providing `-y` means we will accept the auto generated name)
 
 ```bash
 axway central create -f product.json -y -o json > product-created.json
@@ -79,7 +79,7 @@ Follow these steps to make your newly created product ready to be consumed.
 
 ### Add documentation to your product
 
-Product documentation consists of a number of articles. Articles are created by adding resources of kind `Resource` to the API Server. Each `Resource` contains markdown content that will be rendered with the product in the Marketplace.
+Product documentation consists of articles, which are created by adding resources of kind `Resource` to the API Server. Each `Resource` contains markdown content that will be rendered with the product in the Marketplace.
 
 In the following example, three articles are added to the product:
 
@@ -218,7 +218,7 @@ axway central delete -f delete-articles.json
 
 ### Add an image to the product
 
-To supply the product with with an image / avatar to make the product more attractive and recognizable to the API Consumer, run the following command:
+To supply the product with an image / avatar to make the product more attractive and recognizable to the API Consumer, run the following command:
 
 ```bash
 #!/bin/bash
@@ -238,7 +238,7 @@ To query the API Server to get the resource details of the category to be assign
 axway central get category -q "title==OpenBanking" -o json > category-details.json
 ```
 
-{{< alert title="Note" color="primary" >}}If the the category does not exist, see [Create a category](/docs/manage_asset_catalog/asset_integrate_api_cli/#create-a-category).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If the category does not exist, see [Create a category](/docs/manage_asset_catalog/asset_integrate_api_cli/#create-a-category).{{< /alert >}}
 
 To update the product with the category, run the following command:
 
@@ -254,7 +254,7 @@ axway central apply -f product-updated.json
 
 Use tags to organize and filter products in the marketplace. To tag a product you update the `tags` field of a product resource. The `tags` field is a string array.
 
-To update `tags` with a value of ```experimental``` to indicate to the API consumer that the API they are subscribing to is in a experimental state, run the following commands:
+To update `tags` with a value of `experimental` to indicate to the API consumer that the API they are subscribing to is in an experimental state, run the following commands:
 
 ```bash
 #!/bin/bash
@@ -278,7 +278,7 @@ jq -f product-plan.jq product-created.json > product-plan.json
 axway central create -f product-plan.json -o json -y > product-plan-created.json
 ```
 
-Where ```product-plan.jq``` has the following content:
+Where `product-plan.jq` has the following content:
 
 ```json
 {
@@ -333,7 +333,7 @@ Only products that are in an `active` state and marked as released are available
 
 #### Mark the product as Active state
 
-To mark an product as `active`, run the following commands:
+To mark a product as `active`, run the following commands:
 
 ```bash
 #!/bin/bash
@@ -359,7 +359,7 @@ jq -f product-release-tag.jq product-created.json > product-release-tag.json
 axway central create -f product-release-tag.json -o json -y > product-release-tag-created.json
 ```
 
-Where ```product-release-tag.jq``` has the following content:
+Where `product-release-tag.jq` has the following content:
 
 ```json
 {
@@ -392,18 +392,18 @@ To get the name, run the following command:
 axway central get marketplaces -o json > marketplace.json
 ```
 
-{< alert title="Note" color="primary" >}}If no marketplace resources are returned, save the Marketplace settings on the platform and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings), then check the output again for the previous command.{{< /alert >}}
+{< alert title="Note" color="primary" >}}If no marketplace resources are returned, save the Marketplace settings on the platform, and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings), then check the output again for the previous command.{{< /alert >}}
 
 ### Get the details of your marketplace and create a PublishedProduct event for the API Server
 
-To get the details and create a PublishProduct event, run the following commands:
+To get the details and create a PublishedProduct event, run the following commands:
 
 ```bash
 jq --slurp -f publish-product.jq marketplace.json product-created.json  > publish-product.json
 axway central create -f publish-product.json -o json -y > publish-product-created.json
 ```
 
-Where ```publish-product.jq``` has the following content:
+Where `publish-product.jq` has the following content:
 
 ```json
 {
@@ -428,7 +428,7 @@ Your product is now available in the Marketplace for API consumers to subscribe 
 
 ## Remove a product
 
-Before a product can be deleted its state must first be marked as ```archived```.
+Before a product can be deleted its state must first be marked as `archived`.
 
 ### Archive the product
 
