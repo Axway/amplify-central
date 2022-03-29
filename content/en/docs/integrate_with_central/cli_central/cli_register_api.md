@@ -157,14 +157,14 @@ Make a breaking change the OpenAPI Specification by removing a method. For this 
 jq '. | .info.version = "2.0.0" | del(.paths."/pet")' openapi.json > openapi-v2.json
 ```
 
-There is already an existing API Service, so a new API Service revision must be created with the new API definition. Use the steps in [Create an API Revision](#Create-API-Service-Revision):
+There is already an existing API Service, so a new API Service revision must be created with the new API definition. Use the steps in [Create an API Revision](#create-api-service-revision):
 
 ```bash
 jq --slurp -f api-service-revision.jq openapi-v2.json api-service-created.json > api-service-revision-v2.json
 axway central create -f api-service-revision-v2.json -o json -y > api-service-revision-v2-created.json
 ```
 
-Provide the instance (where the API is available) by using the same steps to [Create the API Service instance](#Create-API-Service-Instance):
+Provide the instance (where the API is available) by using the same steps in [Create the API Service instance](#create-api-service-instance):
 
 ```bash
 jq --slurp -f api-service-instance.jq openapi-v2.json api-service-revision-v2-created.json > api-service-instance-v2.json
