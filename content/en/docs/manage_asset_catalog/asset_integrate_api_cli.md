@@ -61,7 +61,7 @@ axway central get stage -q "title==production" -o json > stage-details.json
 
 ### Create a new stage
 
-To create a new stage that doesn't exist in the system, run the following command and repeat the previous step to assign the asset to a stage:
+To create a new stage that doesn't exist in the system, run the following command, and repeat the previous step to assign the asset to a stage:
 
 ```bash
 axway central create -f stage.json -o json -y > stage-details.json
@@ -112,7 +112,7 @@ The asset is created in **Draft** state. To use this asset in a product definiti
 
 To link an API to an asset, create an `AssetResource`. AssetResources are the business value that the asset is wrapping and can be SDKs, scripts, APIs, etc. Similar to an `APIServiceRevision`, the API Server is not opinionated about what the AssetResource is.
 
-Create the AssetResource in the scope of the previously created Asset. In this example, the asset will be grouped in the stage that was created previously:
+Create the AssetResource in the scope of the previously created asset. In this example, the asset will be grouped in the stage that was created previously:
 
 ```bash
 jq --slurp -f asset-resource.jq asset-created.json api-service-revision-created.json stage-details.json > asset-resource.json
@@ -195,7 +195,7 @@ The asset is now available to be used in the Product Foundry.
 
 ## Manage assets
 
-Once your assets hae been created, use the Axway Central CLI to help organize and manage them.
+Once your assets have been created, use the Axway Central CLI to help organize and manage them.
 
 ### Tag an asset
 
@@ -212,7 +212,7 @@ axway central apply -f asset-updated.json
 
 ### Create a category
 
-Categories help in the management of the number of assets in the Asset Catalog.To create a new category, use the `Category` resource type.
+Categories help in the management of the number of assets in the Asset Catalog. To create a new category, use the `Category` resource type.
 
 Run the following command to create a new category with the title `Finance` and the description: `Finance APIs`:
 
@@ -281,7 +281,7 @@ axway central apply -f asset-changed.json
 
 ### Archive an asset
 
-Before an asset can be deleted it's state must be set to `archived`.
+Before an asset can be deleted its state must be set to `archived`.
 
 To archive an asset named `my-asset`, run the following commands to get the named asset, and change the `state` field.
 
