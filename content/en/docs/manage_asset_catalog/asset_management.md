@@ -51,13 +51,13 @@ View the following detailed information for a specific asset in any state (Draft
 * Logical Name - Uniquely identifies the asset
 * Asset Type - API Service or other resource types (e.g. PDF and video files). Functionality coming soon
 * Asset State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
-* Modified On - Date, Time, and Username of who last modified this Asset
+* Modified On - Date, Time, and Username of who last modified this asset
 * Modified By - The user who last modified the asset
-* Created On - Date, Time, and Username of who created this Asset
+* Created On - Date, Time, and Username of who created this asset
 * Description - A short description of the asset
-* Resources - API Services or other resource types that are linked to this Asset
+* Resources - API Services or other resource types that are linked to this asset
 * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
-* Category - Categories to help classify assets into groups and find the Asset by filtering on the Category
+* Category - Categories to help classify assets into groups and find the asset by filtering on the Category
 * Tags - Labels to help find assets in the catalog
 * Attributes - Key and value pair to allow customers to attach/query for custom information
 
@@ -73,8 +73,8 @@ To create an asset:
 4. Add the following and then click **Next**:
 
     * Asset Name - The display name for the asset in the WebUI
-    * Description - A short description of the Asset
-    * Image - An icon or image to be associated with the Asset
+    * Description - A short description of the asset
+    * Image - An icon or image to be associated with the asset
 
 5. At the Group Resources stop, select the API resources, and click on the Link icon that will be part of this asset. For each resource, select the appropriate version. Default is **Latest**.
 6. Provide the Category, Tags, and Attribute details for the asset.
@@ -104,7 +104,7 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 3. From the list view, select the asset to edit.
 4. Select an asset version in a **Draft**, **Active** or **Deprecated** state.
 5. Click **Edit Asset** or **Create Draft**.
-6. The Edit Asset wizard is displayed. You to edit the Asset Name, Description, Image, Access Rights, Categories, Tags and Attributes.
+6. The Edit Asset wizard is displayed. You can edit the Asset Name, Description, Image, Access Rights, Categories, Tags and Attributes.
 7. Click **Save Draft * Exit**.
 
 The asset is created in **Draft** state.
