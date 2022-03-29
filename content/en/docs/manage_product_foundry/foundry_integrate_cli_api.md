@@ -428,18 +428,23 @@ Your product is now available in the Marketplace for API consumers to subscribe 
 
 ## Remove a product
 
-Before a product can be deleted its state must first be marked as `archived`.
+Before an active product can be deleted its state must first transition to `deprecated` and then to `archived`.
 
-### Archive the product
+### Changing a product state
 
-To archive a product named `petstore`, run the following commands to get the product details from the API Server and change the `state` field in the result. The modified result is written to file and this file is applied to the resource as its state is changed:
+To change the state of a product named `petstore`, run the following commands to get the product details from the API Server and change the `state` field in the result. The modified result is written to file and this file is applied to the resource as its state is changed:
 
 ```bash
-axway central get products petstore -o json | jq '.state = "archived"' > product-changed.json
+axway central get products petstore -o json | jq '.state = "NEW STATE"' > product-changed.json
 axway central apply -f product-changed.json
 ```
 
 {{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+
+In order to prepare the product for removall, you should run the previous command 2 times:
+
+* first time: replace NEW STATE with `deprecated`
+* second time: replace NEW STATE with `archived`
 
 ### Delete the product
 
