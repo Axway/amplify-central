@@ -35,7 +35,7 @@ View the following information for all assets in any state (Draft, Active, Depre
 * State - Current state of an asset - Draft, Active, Deprecated, Active. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
 * Type - API Service or other resource types (e.g., PDF and video files). Functionality coming soon
 
-You can also filter the assets by the current category, stage, state and type using the **Filter By** controls.
+You can also filter the assets by the current category / stage / state, and type using the **Filter By** controls.
 
 ## View asset details
 
@@ -74,9 +74,9 @@ To create an asset:
 
     * Asset Name - The display name for the asset in the WebUI
     * Description - A short description of the Asset
-    * Image - DescriptionAn icon or image to be associated with the Asset
+    * Image - An icon or image to be associated with the Asset
 
-5. At the Group Resources stop, select the API resources and click on the Link icon that will be part of this asset. For each resource, select the appropriate version. Default is **Latest**.
+5. At the Group Resources stop, select the API resources, and click on the Link icon that will be part of this asset. For each resource, select the appropriate version. Default is **Latest**.
 6. Provide the Category, Tags, and Attribute details for the asset.
 7. Add the Access Rights for the asset.
 8. Click **Save Draft * Exit**.
