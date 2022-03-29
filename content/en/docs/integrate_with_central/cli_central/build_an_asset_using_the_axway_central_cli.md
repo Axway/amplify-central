@@ -2,6 +2,7 @@
 title: Build an Asset using the Axway Central CLI
 linkTitle: Build an Asset using the Axway Central CLI
 weight: 125
+draft: yes
 description: Learn how your DevOps process can use Axway Central CLI to build
   and manage your assets.
 ---
