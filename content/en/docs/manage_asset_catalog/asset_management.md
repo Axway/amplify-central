@@ -103,7 +103,7 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 2. Select **Catalog > Asset Catalog > All Assets**.
 3. From the list view, select the asset to edit.
 4. Select an asset version in a **Draft**, **Active** or **Deprecated** state.
-5. Click **Edit Asset** or **Create Draft**.   
+5. Click **Edit Asset** or **Create Draft**.
 6. The Edit Asset wizard is displayed. You to edit the Asset Name, Description, Image, Access Rights, Categories, Tags and Attributes.
 7. Click **Save Draft * Exit**.
 
