@@ -2,7 +2,7 @@
 title: Manage your Product Foundry
 linkTitle: Manage your Product Foundry
 weight: 450
-date: 2022-03-28T00:00:00.000Z
+date: 2022-03-28
 hide_readingtime: true
 ---
 
