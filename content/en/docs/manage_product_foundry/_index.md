@@ -2,7 +2,9 @@
 title: Manage your Product Foundry
 linkTitle: Manage your Product Foundry
 weight: 450
+date: 2022-03-28T00:00:00.000Z
 hide_readingtime: true
+description: Build API products
 ---
 
 The Product Foundry is part of the Marketplace experience. Use the Product Foundry to build API products by linking multiple assets to create a business capability and then monetize them by defining subscription plans with different charging models.  
