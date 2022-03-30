@@ -5,4 +5,4 @@ weight: 510
 hide_readingtime: true
 ---
 
-Content coming soon
+Content coming soon.
