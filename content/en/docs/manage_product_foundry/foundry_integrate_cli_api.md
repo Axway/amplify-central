@@ -304,23 +304,7 @@ Where `product-plan.jq` has the following content:
         length: 1
       },
       renewal: "automatic",
-      approval: "manual",
-      setup: {
-        form: {
-          type: "object",
-          "$schema": "http://json-schema.org/draft-07/schema#",
-          required: [
-            "departmentName"
-          ],
-          properties: {
-            departmentName: {
-              type: "string",
-              description: "Name of the department."
-            }
-          },
-          description: "Required information for allowing access."
-        }
-      }
+      approval: "manual"
     }
   },
   state: "draft"
@@ -388,7 +372,7 @@ To publish your product to the Marketplace, you must find the name of the Market
 
 To get the name, run the following command:
 
-```js
+```json
 axway central get marketplaces -o json > marketplace.json
 ```
 
@@ -408,7 +392,7 @@ Where `publish-product.jq` has the following content:
 ```json
 {
     group: "catalog",
-    apiVersion: "v1",
+    apiVersion: "v1alpha1",
     kind: "PublishedProduct",
     metadata: {
         scope: {
@@ -418,7 +402,7 @@ Where `publish-product.jq` has the following content:
     },
     spec: {
         product: {
-            title: .[1][0].name
+            name: .[1][0].name
         }
     }
 }
@@ -428,9 +412,9 @@ Your product is now available in the Marketplace for API consumers to subscribe 
 
 ## Remove a product
 
-Before an active product can be deleted its state must first transition to `deprecated` and then to `archived`.
+Before an active product can be deleted, its state must first transition to `deprecated` and then to `archived`.
 
-### Changing a product state
+### Change a product state
 
 To change the state of a product named `petstore`, run the following commands to get the product details from the API Server and change the `state` field in the result. The modified result is written to file and this file is applied to the resource as its state is changed:
 
@@ -441,7 +425,7 @@ axway central apply -f product-changed.json
 
 {{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
 
-In order to prepare the product for removall, you should run the previous command 2 times:
+To prepare the product for removal, run the previous command two times:
 
 * first time: replace NEW STATE with `deprecated`
 * second time: replace NEW STATE with `archived`
