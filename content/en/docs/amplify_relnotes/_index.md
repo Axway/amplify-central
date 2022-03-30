@@ -11,6 +11,85 @@ The following is a list of release notes for Amplify Central, Amplify agents, An
 
 For more details, click on the release note title to go to the corresponding release note.
 
+## [Amplify agents March 2022](/docs/amplify_relnotes/20220330_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.12): None
+* **Amplify AWS Gateway Agent** (version 1.1.12): None
+* **Amplify Azure Agent** (version 1.1.12): None
+* **Amplify Istio Agent** (helm chart version 0.62.0, Agent version 2.0.23): None
+* **Amplify Apigee Agent** (version 0.0.4): None
+* **Amplify agent general** (version 1.1.10):
+    * Add text.
+
+**Bug fixes**: None
+
+## [Amplify Central March 2022](/docs/amplify_relnotes/20220330_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.8.0):
+    * Add text
+* **Amplify Central WebUI**:
+    * Add text
+
+**Bug fixes**:
+
+* Add text
+
+## [Analytics March 2022](/docs/amplify_relnotes/20220330_analytics_relnotes/)
+
+**What's new**:
+
+* Add text
+
+**Bug fixes**: Add text
+
+## [Asset Catalog March 2022](/docs/amplify_relnotes/20220330_catalog_relnotes/)
+
+**What's new**:
+
+* Add text
+
+**Bug fixes**: None
+
+## [Marketplace March 2022](/docs/amplify_relnotes/20220330_marketplace_relnotes/)
+
+**What's new**:
+
+* Add text
+
+**Bug fixes**: None
+
+## [Product Foundry March 2022](/docs/amplify_relnotes/20220330_foundry_relnotes/)
+
+**What's new**:
+
+* Add text
+
+**Bug fixes**: None
+
+## [Service Registry March 2022](/docs/amplify_relnotes/20220330_serviceregistry_relnotes/)
+
+**What's new**:
+
+* Add text
+
+**Bug fixes**: None
+
+## [Amplify Platform Management March 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+**What's new**: None
+
+**Bug fixes**:
+
+* Add text
+
+## [Axway CLI March 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
+**What's new**: Add text
+
 ## [Amplify agents February 2022](/docs/amplify_relnotes/20220228_ampc_agents_relnotes/)
 
 **What's new for**:
