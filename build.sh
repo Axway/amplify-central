@@ -172,7 +172,7 @@ echo "==========================================="
 which hugo
 hugo version
 uptime
-hugo mode clean --all
+hugo mod clean --all
 echo "==========================================="
 }
 
