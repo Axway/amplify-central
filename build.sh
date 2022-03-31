@@ -167,6 +167,16 @@ function fRunHugo() {
     esac
 }
 
+function fDebugInfo() {
+echo "==========================================="
+which hugo
+hugo version
+uptime
+hugo mode clean --all
+echo "==========================================="
+}
+
+fDebugInfo
 fCheckoutSubmodule
 fMergeContent
 fRunHugo
