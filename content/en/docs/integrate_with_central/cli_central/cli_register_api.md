@@ -40,7 +40,7 @@ Create an API Service to represent your API. Everything related to your Petstore
 The API Service belongs to an environment, so an environment called "tutorial" must be created using the following command:
 
 ```bash
-axway central create env tutorial > env.json
+axway central create env tutorial -o json > env.json
 ```
 
 Use jq to create the API Service resource from the content in the OAS. Use jq's `-f` argument to read the filter to be applied to the input from file(s) rather than from a command line. Use the `-slurp` argument to read each file into a large array and run the filter just once, instead of running the filter in the jq file for each JSON file in the input. This way, the resource file is generated for the API Service while parsing the OAS file and running the jq filter found in a file.
