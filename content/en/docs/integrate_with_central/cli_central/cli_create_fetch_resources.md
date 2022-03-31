@@ -2,6 +2,7 @@
 title: Create and fetch resources with Axway Central CLI
 linkTitle: Create and fetch resources with the CLI
 weight: 120
+draft: yes
 date: 2021-01-13T00:00:00.000Z
 description: Creating and fetch different Amplify Central resources using the CLI.
 ---

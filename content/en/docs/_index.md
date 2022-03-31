@@ -21,4 +21,4 @@ Here are some suggestions to get started:
 * [Amplify Central overview](/docs/overview/)
 * [Integrate with Amplify Central](/docs/integrate_with_central/)
 * [Connect and manage your environment](/docs/connect_manage_environ/)
-* [Manage your marketplace](/docs/manage_marketplace)
+* [Manage your Unified Catalog](/docs/manage_unified_catalog)
