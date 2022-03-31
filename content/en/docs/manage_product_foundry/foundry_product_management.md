@@ -131,7 +131,7 @@ The product must be in **Draft** state.
 
 ## Create a plan
 
-Functionality coming soon.
+{{< alert title="Note" color="primary" >}}Functionality coming soon.{{< /alert >}}
 
 The product must be in **Active** state.
 
