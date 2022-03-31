@@ -376,7 +376,7 @@ To get the name, run the following command:
 axway central get marketplaces -o json > marketplace.json
 ```
 
-{< alert title="Note" color="primary" >}}If no marketplace resources are returned, save the Marketplace settings on the platform, and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings), then check the output again for the previous command.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If no marketplace resources are returned, save the Marketplace settings on the platform, and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings), then check the output again for the previous command.{{< /alert >}}
 
 ### Get the details of your marketplace and create a PublishedProduct event for the API Server
 
