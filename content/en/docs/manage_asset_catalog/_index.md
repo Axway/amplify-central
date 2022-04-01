@@ -5,7 +5,7 @@ weight: 400
 hide_readingtime: true
 ---
 
-The Asset Catalog is part of the Marketplace experience. The UI is used to organize, manage, and group your APIs, so they can be productized in the Marketplace to be consumed by customers, partners, and internal developers. See [Asset management](/docs/manage_asset_catalog/asset_management/) for additional information.
+The Asset Catalog allows users to organize, curate and group APIs, so they can be packaged into a product to ultimately be consumed by customers, partners, and internal developers from the Marketplace See [Asset management](/docs/manage_asset_catalog/asset_management/) for additional information.
 
 The targeted user of the Asset Catalog is typically someone who has knowledge of the different APIs, knows which APIs belong together, and which APIs are relevant for consumption in the Marketplace.
 
