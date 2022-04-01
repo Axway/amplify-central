@@ -11,7 +11,8 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* API Providers can set/change the Categories in the an Asset
+* API Providers can set/change the team ownership of an Asset
 
 ## Fixed issues
 
