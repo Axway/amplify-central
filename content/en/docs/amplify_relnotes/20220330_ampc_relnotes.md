@@ -15,10 +15,10 @@ The following new features and enhancements are available in this update.
 
 The Axway Central CLI is a package for managing Amplify Central resources with a DevOps approach to API Management.
 
-**Axway Central CLI** version 2.8.0 is now available on NPM (<https://www.npmjs.com/package/@axway/axway-central-cli/v/2.8.0>).
+**Axway Central CLI** version 2.10.0 is now available on NPM (<https://www.npmjs.com/package/@axway/axway-central-cli/v/2.10.0>).
 
-The Axway Central CLI extension is compatible with the Axway CLI **version 3.2.3** (<https://www.npmjs.com/package/axway/v/3.2.3>).
-For more information, see [Axway CLI release note](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/3_2_3_20220216_relnote/index.html).
+The Axway Central CLI extension is compatible with the Axway CLI **version 3.2.4** (<https://www.npmjs.com/package/axway/v/3.2.4>).
+For more information, see [Axway CLI release note](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/3_2_4_20220328_relnote/index.html).
 
 The following enhancements are available in this Axway Central CLI update:
 
