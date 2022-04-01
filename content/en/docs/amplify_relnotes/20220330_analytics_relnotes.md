@@ -11,7 +11,7 @@ Analytics provide insights into your API program, API environments, and APIs.
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* None.
 
 See [Get actionable insights](/docs/get_actionable_insights) for more information.
 
@@ -19,7 +19,7 @@ See [Get actionable insights](/docs/get_actionable_insights) for more informatio
 
 The following issues have been fixed in this release:
 
-* Add text.
+* **API Health and API Traffic cannot be filtered by API**. Previously with some changes on the agent internal information, the API filter was not able to identified the traffic corresponding to the selected API. Now the filter is managed previous and new version of the agent configuration that enable a user to filter the traffic based on the selected API.
 
 ## Known limitations
 
