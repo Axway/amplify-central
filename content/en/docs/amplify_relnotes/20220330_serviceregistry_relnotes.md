@@ -12,7 +12,7 @@ The Service Registry is part of the Provider experience.  The UI is an easy way 
 The following new features and enhancements are available in this update:
 
 * API Services across all environments can be viewed along with the API Service details.
-* API Services can be Filetered by Environment/Owner and Searched by Service Name across all environments. 
+* API Services can be Filetered by Environment/Owner and Searched by Service Name across all environments.
 
 ## Fixed issues
 
