@@ -7,5 +7,3 @@ This repository contains all files for building and deploying the site. The Mark
 ## Contribute
 
 We welcome your contributions! To get started, go to https://amplify-central.netlify.com/ and click Documentation in the top menu. Browse the documentation and use the options in the right navigation to edit any page using GitHub or Netlify CMS.
-
-Before you start contributing, please read the [contribution guidelines](https://confluence.axway.com/display/RIE/Contribution+guidelines).
