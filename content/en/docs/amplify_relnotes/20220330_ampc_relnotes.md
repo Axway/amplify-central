@@ -23,7 +23,7 @@ For more information, see [Axway CLI release note](https://docs.axway.com/bundle
 The following enhancements are available in this Axway Central CLI update:
 
 * The Central CLI displays the friendly team name which owns an Environment.
-* The Central CLI can filter Environments and API Services by team ownership or no ownership. 
+* The Central CLI can filter Environments and API Services by team ownership or no ownership.
 
 ### Amplify Central WebUI
 
