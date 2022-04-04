@@ -11,17 +11,18 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 
 The following new features and enhancements are available in this update:
 
-* API Providers can set/change the Categories in the an Asset
-* API Providers can set/change the team ownership of an Asset
+* API Providers can set/change the Categories with the WebUI.
+* API Providers can set/change the team ownership of an Asset with the WebUI. 
 
 ## Fixed issues
 
 The following issues have been fixed in this release:
 
-* None
+* Fixed an issue with the display of all Asset Stages for filtering.
+* Improved the warning message when attempting to Archive an Asset release being used by a Product.
 
 ## Known limitations
 
 The following limitations exist in this update:
 
-* None
+* Editing of an Asset with the UI does not support the linking/un-linking of API Services.
