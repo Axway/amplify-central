@@ -63,7 +63,7 @@ To create an API service:
     * Image - An icon or image to be associated with the service
 
 5. (add text)
-8. Click **Save Draft * Exit**.
+6. Click **Save Draft * Exit**.
 
 The service is created in **Draft** state. To use this service in a product definition, you must move the service to an **Active** state by activating the service.
 
