@@ -9,4 +9,4 @@ The Service Registry allows users to view their API Services (auto-discovered an
 
 ## What is a service
 
-A service is a representaion of all items related to an API that belongs to an Environment.  Services can be auto-discovered with agents or manually registered in an environment.  
+A service is a representation of all items related to an API that belongs to an Environment.  Services can be auto-discovered with agents or manually registered in an environment.  
