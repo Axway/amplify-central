@@ -49,7 +49,7 @@ For more details, click on the release note title to go to the corresponding rel
 * API Providers can set/change the Categories with the WebUI
 * API Providers can set/change the team ownership of an Asset with the WebUI
 
-**Bug fixes**: 
+**Bug fixes**:
 
 * Display of all asset stages for filtering
 * Improved warning message when attempting to archive an asset release being used by a product
@@ -93,7 +93,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 ## [Axway CLI March 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
 
-**Improvements**: 
+**Improvements**:
 
 * auth: When logging out, direct browser to correct sign out page
 * telemetry: Resolved issue where CLI would hang if telemetry is enabled and an error occurred
