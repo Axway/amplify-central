@@ -11,6 +11,93 @@ The following is a list of release notes for Amplify Central, Amplify agents, An
 
 For more details, click on the release note title to go to the corresponding release note.
 
+## [Amplify agents March 2022](/docs/amplify_relnotes/20220330_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.13): Discovery Agent adds a status message to the API Service when the API Service cannot be assigned to a team
+* **Amplify AWS Gateway Agent** (version 1.1.13): None
+* **Amplify Azure Agent** (version 1.1.13): None
+* **Amplify Istio Agent** (helm chart version 0.62.0, Agent version 2.0.23): None
+* **Amplify Apigee Agent** (version 0.0.5): None
+* **Amplify agent general** (version 1.1.13): Agents can manage teams better when they are added to the Access Control List (ACL) and share environments across multiple teams: only required teams are part of the ACL
+
+**Bug fixes**: None
+
+## [Amplify Central March 2022](/docs/amplify_relnotes/20220330_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.8.0):
+    * Displays the friendly team name that owns an environment
+    * Filter environments and API Services by team ownership or no ownership
+* **Amplify Central WebUI**:
+    * Refer to the Asset Catalog March 2022 Release notes
+
+**Bug fixes**: None
+
+## [Analytics March 2022](/docs/amplify_relnotes/20220330_analytics_relnotes/)
+
+**What's new**: None
+
+**Bug fixes**: API Health and API Traffic cannot be filtered by API
+
+## [Asset Catalog March 2022](/docs/amplify_relnotes/20220330_catalog_relnotes/)
+
+**What's new**:
+
+* API Providers can set/change the Categories with the WebUI
+* API Providers can set/change the team ownership of an Asset with the WebUI
+
+**Bug fixes**:
+
+* Display of all asset stages for filtering
+* Improved warning message when attempting to archive an asset release being used by a product
+
+## [Marketplace March 2022](/docs/amplify_relnotes/20220330_marketplace_relnotes/)
+
+**What's new**:
+
+* Consumers can accept the Marketplace Terms & Conditions the first time they navigate to the Marketplace
+* Consumer will see only active product versions
+* Consumers can download the API swagger definition from the Marketplace product
+* Consumers can explore the product documents and articles from the Documentation tab of a product
+
+**Bug fixes**: None
+
+## [Product Foundry March 2022](/docs/amplify_relnotes/20220330_foundry_relnotes/)
+
+**What's new**:
+
+* Product documentation appears in a document folder structure
+* Documentation articles can be renamed
+* Documentation can be added
+* Catalog manager role added
+
+**Bug fixes**: None
+
+## [Service Registry March 2022](/docs/amplify_relnotes/20220330_serviceregistry_relnotes/)
+
+**What's new**:
+
+* API Services across all environments can be viewed
+* API Services can be filtered by Environment / Owner and searched by Service Name across all environments
+
+**Bug fixes**: None
+
+## [Amplify Platform Management March 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+**What's new**: None
+
+**Bug fixes**: None
+
+## [Axway CLI March 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
+**Improvements**:
+
+* auth: When logging out, direct browser to correct sign out page
+* telemetry: Resolved issue where CLI would hang if telemetry is enabled and an error occurred
+
 ## [Amplify agents February 2022](/docs/amplify_relnotes/20220228_ampc_agents_relnotes/)
 
 **What's new for**:
