@@ -182,7 +182,7 @@ Try out this procedure using the [apiservice.json](https://amplify-central.netli
 
 ## Update an API service
 
-To update the details of a API service, providing a path to the configuration file:
+To update the details of an API service, providing a path to the configuration file:
 
 ```bash
 axway central apply -f apiservice.yaml   # Update API service in YAML format
