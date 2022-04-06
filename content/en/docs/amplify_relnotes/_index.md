@@ -15,7 +15,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 **What's new for**:
 
-* **Amplify Gateway Agent** (version 1.1.13): Discovery Agent adds a status message to the API Service when the API Service cannot be assigned to a team
+* **Amplify Gateway Agent** (version 1.1.13): Discovery Agent adds a status message to the API Service when the API Service cannot be assigned to a team: only required teams are part of the ACL
 * **Amplify AWS Gateway Agent** (version 1.1.13): None
 * **Amplify Azure Agent** (version 1.1.13): None
 * **Amplify Istio Agent** (helm chart version 0.62.0, Agent version 2.0.23): None
