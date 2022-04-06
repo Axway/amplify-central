@@ -176,7 +176,7 @@ Where `asset-release-tag.jq` has the following content:
 
 ```json
 {
-    group: catalog,
+    group: "catalog",
     apiVersion: "v1alpha1",
     kind: "ReleaseTag",
     metadata: {
@@ -186,7 +186,7 @@ Where `asset-release-tag.jq` has the following content:
         }
     },
     spec: {
-        releaseType: major
+        releaseType: "major"
     }
 }
 ```
