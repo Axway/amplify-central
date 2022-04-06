@@ -11,8 +11,8 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
-* Show product documentation in a document folder structure as they get added to a product during creation or edit
-* Product edition:
+* Product documentation appears in a document folder structure as it is added to a product during creation / edit.
+* Product editions:
     * Documentation articles can be renamed.
     * Documentation can be added.
 * Catalog manager role added. A catalog manager can manipulate the entire product lifecycle from its creation to its marketplace publication.

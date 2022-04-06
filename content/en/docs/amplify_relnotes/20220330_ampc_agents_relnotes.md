@@ -23,13 +23,13 @@ This version is compatible with:
 
 ## New features and enhancements
 
-The following new features and enhancements are available in this update.
+The following new features and enhancements are available in this update:
 
-* Agent have a better management of the team added to the Access Control List (ACL) when sharing environment across multiple teams: only the required teams are part of the ACL.
+* Agents can manage teams better when they are added to the Access Control List (ACL) and share environments across multiple teams: only the required teams are part of the ACL.
 
 ### Amplify Gateway agents enhancements
 
-* Discovery agent put a status message on the API Service when the API Service cannot be assigned to a team. Refer to status sub-resource of the APIService. This information will be soon visible in the UI under the Service registry.
+* Discovery Agent adds a status message to the API Service when the API Service cannot be assigned to a team. Refer to status sub-resource of the APIService. This functionality is coming soon to the WebUI under the Service Registry.
 
 ### Amplify AWS Gateway agents enhancements
 

@@ -11,10 +11,10 @@ The Marketplace is the storefront into all products exposed for discovery and co
 
 The following new features and enhancements are available in this update:
 
-* Consumers can accept the Marketplace Terms & Conditions the first time they navigate to the Marketplace
-* Consumer will see only active product versions
-* Consumers can download the API swagger definition from the Marketplace product
-* Consumers can explore the product documents and articles from the Documentation tab of a product
+* Consumers can accept the Marketplace Terms & Conditions the first time they navigate to the Marketplace.
+* Consumer will see only active product versions.
+* Consumers can download the API swagger definition from the Marketplace product.
+* Consumers can explore the product documents and articles from the Documentation tab of a product.
 
 ## Fixed issues
 

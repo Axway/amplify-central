@@ -22,8 +22,8 @@ For more information, see [Axway CLI release note](https://docs.axway.com/bundle
 
 The following enhancements are available in this Axway Central CLI update:
 
-* The Central CLI displays the friendly team name which owns an Environment.
-* The Central CLI can filter Environments and API Services by team ownership or no ownership.
+* The Central CLI displays the friendly team name that owns an environment.
+* The Central CLI can filter environments and API Services by team ownership or no ownership.
 
 ### Amplify Central WebUI
 
@@ -33,7 +33,7 @@ The following enhancements are available in this Axway Central CLI update:
 
 The following issues are fixed in this Amplify Central update:
 
-* None.
+* None
 
 ## Known limitations
 
