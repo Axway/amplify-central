@@ -6,7 +6,8 @@ weight: 20
 
 An API service represents an API, including all its versions and deployed endpoints, and additional information to represent your API, for example, description, environment scope, image encoded in base64.
 
-Use the Service Registry WebUI to manage your API services, including: view, create, update and delete
+Use the Service Registry WebUI to view all your API services across all environments.
+Use the Topology WebUI to select an environment and then manage your API services, including: view, create, update and delete
 
 ## Before you start
 
@@ -19,7 +20,6 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 * List all API services in an environment
 * View details for an API service
 * Create a new API service
-* Update an API service
 * Delete an API service
 
 ## List API services
@@ -27,68 +27,56 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 To list API services:
 
 1. Navigate to *Service Registry*.
-2. Select **Services > Service Registry > All Services**.
+2. Select **Select Catalog > Service Registry**.
 
-View the following information for all services in any state (Draft, Active, Deprecated, Active):
+View the following information for all services:
 
-* Add text
+* Environment, Owner, Tags and the Create/Updated date by User.
 
-You can also filter the services by the current category / stage / state, and type using the **Filter By** controls.
+You can also filter the services by the Environment and Team Ownership using the **Filter By** controls.  Search by the Service Name with the search bar
 
 ## View API service details
 
 To view service details:
 
 1. Navigate to *Service Registry*.
-2. Select **Services > Service Registry > All Services**.
-3. From the list view, select a service.
+2. Select **Catalog > Service Registry**.
+3. From the list view, select a service to open Service details in a new browser tab.
 
 View the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* (add content)
-
-{{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the service details view.{{< /alert >}}
+* Service Name, Description, Owning Team, Tags, Attributes and the Create/Updated date by User.
+* Per Service Version tags and Attributes.
+* The API Specification and Methods
+* Endpoints listening for requests to the Service
 
 ## Create an API service
 
 To create an API service:
 
-1. Navigate to *Service Registry*.
-2. Select **Services > Service Registry > All Services**.
-3. Click **+ Add New Service** to add a new service.
-4. Add the following and then click **Next**:
+1. Navigate to *Topology* and select an "Environment".
+2. Click **+ Add API Service** to add a new service.
+3. Upload an API Specification file.
+4. Some information will be read from the API Specification file and pre-populated.  Add/Edit information where applicable and then click **Next**:
 
     * Service Name - The display name for the service in the WebUI
     * Description - A short description of the service
     * Image - An icon or image to be associated with the service
 
-5. (add text)
-6. Click **Save Draft * Exit**.
+5. Add/Edit Enpoint information if available and then click **Next**:
+6. Click **Save**.
 
-The service is created in **Draft** state. To use this service in a product definition, you must move the service to an **Active** state by activating the service.
 
-## Update an API service
-
-The API service can be in **Draft**, **Active**, or **Deprecated** state.
-
-1. Navigate to *Service Registry*.
-2. Select **Services > Service Registry > All Services**.
-3. From the list view, select the service to edit.
-4. Select a service version in a **Draft**, **Active** or **Deprecated** state.
-5. Click **Edit Service** or **Create Draft**.
-6. The Edit Service wizard is displayed. You can edit the Service Name, Description, Image, Access Rights, Categories, Tags and Attributes.
-7. Click **Save Draft * Exit**.
-
-The service is created in **Draft** state.
 
 ## Delete an API service
 
-The API service (all versions) must be in **Draft**  or **Archived** state.
+To delete the service (all versions):  
+1.	Navigate to Service Registry.
+2.	Select **Catalog > Service Registry**.
+3.	From the list view, select a service to open Service details in a new browser tab.
+4.	From the new browser tab, click on the environment name breadcrumb at the top of the page (i.e. the name to the right of “ENVIRONMENTS / NAME“).
+5.	In the Services tab at the bottom of the page, click on the Trashcan icon to the right of the Service you want to delete.
+6.	Type name of the Service and click on the confirmation button that “I understand this is a permanent and irreversible action.  Delete”
 
-1. Navigate to *Service Registry*.
-2. Select **Services > Service Registry > All Services**.
-3. From the list view, use the checkboxes to select the service(s) to delete.
-4. Click **Delete Service**.
-5. Type "Delete" and click to confirm that you understand this is a permanent and irreversible action.
 
-{{< alert title="Note" color="primary" >}}Services that are part of an active product definition cannot be deleted.{{< /alert >}}
+
