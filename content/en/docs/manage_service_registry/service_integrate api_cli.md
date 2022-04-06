@@ -9,7 +9,7 @@ Use the Amplify Central CLI to create and manage API services in your environmen
 ## Before you start
 
 * You must [authorize your DevOps service to use the DevOps API](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Verify that the @axway/amplify-central-cli version is at minimum 0.1.3
+* Verify that the @axway/amplify-central-cli version is at minimum 2.10.1
 
 ## Objectives
 
