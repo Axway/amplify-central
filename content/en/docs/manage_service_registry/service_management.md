@@ -32,7 +32,7 @@ To list API Services:
 
 View the following information for all services:
 
-* Environment, Owner, Tags, and the Create / Updated date by User.
+* Environment, Owner, Tags, and the Create / Updated date by User
 
 You can also filter the services by the Environment and Team Ownership using the **Filter By** controls. Search by the Service Name with the search bar.
 
@@ -55,7 +55,7 @@ View the following detailed information for a specific service in any state (Dra
 
 To create an API Service:
 
-1. Navigate to *Topology* and select an "Environment".
+1. Navigate to *Topology* and select an environment.
 2. Click **+ Add API Service** to add a new service.
 3. Upload an API Specification file.
 4. Some information will be read from the API Specification file and pre-populated. Add / Edit information where applicable and then click **Next**:
@@ -64,7 +64,7 @@ To create an API Service:
     * Description - A short description of the service
     * Image - An icon or image to be associated with the service
 
-5. Add / Edit Endpoint information, if available, and then click **Next**.
+5. Add / edit Endpoint information, if available, and then click **Next**.
 6. Click **Save**.
 
 ## Delete an API Service
