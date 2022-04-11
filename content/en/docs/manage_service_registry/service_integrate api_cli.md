@@ -4,7 +4,7 @@ linkTitle: Integrate with API / CLI
 weight: 30
 ---
 
-Learn how to register an API with the Amplify management plane using an existing OpenAPI Specification.
+Learn how to manually register an API with the Amplify Management Plane using an existing OpenAPI Specification so that it appears in the Service Registry.
 
 ## Before you start
 
@@ -147,7 +147,7 @@ Where `api-service-instance.jq` has the following content:
 }
 ```
 
-The API Service is now registered with its associated API definition in Amplify Central.
+The API Service is now registered with its associated API definition in Amplify Central and can be viewed in the Service Registry.
 
 ### Update with a new version of the API
 
