@@ -4,218 +4,219 @@ linkTitle: Integrate with API / CLI
 weight: 30
 ---
 
-Use the Amplify Central CLI to create and manage API services in your environment.
+Learn how to register an API with the Amplify management plane using an existing OpenAPI Specification.
 
 ## Before you start
 
-* You must [authorize your DevOps service to use the DevOps API](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Verify that the @axway/amplify-central-cli version is at minimum 2.10.1
+* You must have credentials or a service account to use the CLI. Please follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
+* Understand the concepts of the Axway Central CLI presented in the overview
+* Make sure [curl](https://curl.se/) is installed on the system
+* Make sure [jq](https://stedolan.github.io/jq/) is installed on the system
 
 ## Objectives
 
-Learn how to create and manage your API services to represent your distributed cloud and on-premise environments using the Axway Central CLI.
+Register an API in Amplify Central using the Axway Central CLI, including:
 
-* Retrieve a list of all API services in an environment
-* Retrieve details for an API service
-* Create new API service in an environment
-* Update an API service
-* Delete an API service
+* Create a new API service in an environment
+* Register an API to the service
+* Publish the API to the Unified Catalog
 
-## List API services
+## Steps
 
-To get a list of all API services in all environments, run the following command:
+### Download API
 
-```bash
-axway central get apiservices
-```
+The Petstore OpenAPI Specification is used in this tutorial and is available at:
+[https://petstore3.swagger.io/api/v3/openapi.json](https://petstore3.swagger.io/api/v3/openapi.json)
 
-Alternatively, you can use the short name, `apis`:
+Download the specification and save it to disk as `openapi.json`:
 
-```bash
-axway central get apis
-```
+ ```bash
+curl https://petstore3.swagger.io/api/v3/openapi.json >> openapi.json
+ ```
 
-This command outputs a list of all API services in all environments, with information about the API service name, age, title, and environment scope:
+### Create API Service
 
-```bash
-NAME                                  AGE           TITLE                   RESOURCE KIND  SCOPE KIND   SCOPE NAME         RESOURCE GROUP
-7841311a-3338-11eb-b6eb-0242ac110002  a month ago   PetStore-Secured        APIService     Environment  awsgtw-us-east-2   management
-2f754bb3-34b2-11eb-986d-000c29b55428  a month ago   Stockquote (V7)         APIService     Environment  cca-m2020-apim     management
-govuk-pay                             23 days ago   GOV.UK Pay              APIService     Environment  mulesoft           management
-lyft                                  23 days ago   Lyft                    APIService     Environment  mulesoft           management
-swagger-petstore-raml                 23 days ago   Swagger Petstore RAML   APIService     Environment  mulesoft           management
-ably-rest-api                         5 days ago    ably-rest-api           APIService     Environment  apig33             management
-```
-
-### Help listing supported resource types
-
-To get help with a list of supported resource types, run the following command:
+Create an API Service to represent your API. Everything related to your Petstore is parented to the API Service.
+The API Service belongs to an environment, so an environment called "tutorial" must be created using the following command:
 
 ```bash
-axway central get
+axway central create env tutorial -o json > env.json
 ```
 
-This command outputs a table of supported resources, along with their resource kinds, short names, scopes, and resource groups:
+Use jq to create the API Service resource from the content in the OAS. Use jq's `-f` argument to read the filter to be applied to the input from file(s) rather than from a command line. Use the `-slurp` argument to read each file into a large array and run the filter just once, instead of running the filter in the jq file for each JSON file in the input. This way, the resource file is generated for the API Service while parsing the OAS file and running the jq filter found in a file.
 
 ```bash
-The server supports the following resources:
-
-RESOURCE                  SHORT NAMES    RESOURCE KIND                   SCOPED  SCOPE KIND    RESOURCE GROUP
-accessrequestdefinitions  accreqdef      AccessRequestDefinition         true    Environment   management
-accessrequests            accreq         AccessRequest                   true    Environment   management
-apiserviceinstances       apisi          APIServiceInstance              true    Environment   management
-apiservicerevisions       apisr          APIServiceRevision              true    Environment   management
-apiservices               apis           APIService                      true    Environment   management
-apispecs                  apisp          APISpec                         true    K8SCluster    management
-assetmappings             assetmpng      AssetMapping                    true    Environment   management
-assetmappingtemplates     assetmpngtmpl  AssetMappingTemplate            true    Environment   management
-assetreleases             assetrelease   AssetRelease                    false                 catalog
-assetrequestdefinitions   assetreqdef    AssetRequestDefinition          true    Asset         catalog
-assetrequestdefinitions   assetreqdef    AssetRequestDefinition          true    AssetRelease  catalog
-assetrequests             assetreq       AssetRequest                    true    Asset         catalog
-assetrequests             assetreq       AssetRequest                    true    AssetRelease  catalog
-assetresources            assetres       AssetResource                   true    Asset         catalog
-assetresources            assetres       AssetResource                   true    AssetRelease  catalog
-assets                    asset          Asset                           false                 catalog
-consumerinstances         consumeri      ConsumerInstance                true    Environment   management
-consumersubscriptiondefs  consumersd     ConsumerSubscriptionDefinition  true    Environment   management
-discoveryagents           da             DiscoveryAgent                  true    Environment   management
-documents                 docs           Document                        true    Asset         catalog
-documents                 docs           Document                        true    AssetRelease  catalog
-environments              env            Environment                     false                 management
-integrations              integ          Integration                     false                 management
-k8sclusters               k8sc           K8SCluster                      false                 management
-k8sresources              k8sr           K8SResource                     true    K8SCluster    management
-meshdiscoveries           meshd          MeshDiscovery                   true    Mesh          management
-meshes                    mesh           Mesh                            false                 management
-meshservices              meshsvc        MeshService                     true    Mesh          management
-meshworkloads             meshwrk        MeshWorkload                    true    Mesh          management
-releasetags               releasetag     ReleaseTag                      true    Asset         catalog
-resourcediscoveries       resourced      ResourceDiscovery               true    K8SCluster    management
-resourcehooks             resourceh      ResourceHook                    true    Integration   management
-secrets                   secret         Secret                          true    Integration   management
-secrets                   secret         Secret                          true    Environment   management
-specdiscoveries           specd          SpecDiscovery                   true    K8SCluster    management
-stages                    stg            Stage                           false                 catalog
-traceabilityagents        ta             TraceabilityAgent               true    Environment   management
-webhooks                  webh           Webhook                         true    Integration   management
-webhooks                  webh           Webhook                         true    Environment   management
-
+jq --slurp -f api-service.jq openapi.json env.json > api-service.json
+axway central create -f api-service.json -o json -y > api-service-created.json
 ```
 
-## Get details
+Where `api-service.jq` contains the following content:
 
-To get the details of an API service in an environment, provide the environment name and the API service name.
+```json
+# Creates the API Server object using parts of OAS and env file
+{
+    apiVersion: "v1alpha1",
+    kind: "APIService",
+    title: .[0].info.title,
+    metadata: {
+        scope: {
+            kind: "Environment",
+            name: .[1].name,
+        }
+    },
+    spec: {
+        description: .[0].info.description
+    }
+}
+```
 
-### YAML output
+### Create API Service Revision
 
-To output the information in JSON format, run the follow command:
+An API Service may contain multiple revisions of the API (for example, Petstore V1 and Petstore V2). The API Service Revision can represent any API definition / interface (GraphQL, protobuf, OAS, etc.). Create the API Service Revision by filtering the combined OAS and result of creating the API Server previously:
 
 ```bash
-axway central get apisvc <name> --scope env1 -o yaml  # Get API service <name> details of `env1` in YAML format
+jq --slurp -f api-service-revision.jq openapi.json api-service-created.json > api-service-revision.json
+axway central create -f api-service-revision.json -o json -y > api-service-revision-created.json
 ```
 
-This command outputs the details of that specific service:
+Where `api-service-revision.jq` has the following content:
 
-```yaml
----
-group: management
-apiVersion: v1alpha1
-kind: APIService
-name: apisvc1
-title: apisvc1 title
-metadata:
-  id: e4e540a975678cb901757ae1436562c2
-  audit:
-    createTimestamp: '2020-10-30T18:59:44.613+0000'
-    createUserId: bd45cb77-e09f-440d-9a09-37f8812420b4
-    modifyTimestamp: '2020-10-30T18:59:44.613+0000'
-    modifyUserId: bd45cb77-e09f-440d-9a09-37f8812420b4
-  scope:
-    id: e4e87a1675678dc001757ae1417d483b
-    kind: Environment
-    name: env1
-    selfLink: /management/v1alpha1/environments/env1
-  resourceVersion: '46171'
-  references: []
-  selfLink: /management/v1alpha1/environments/env1/apiservices/apisvc1
-attributes:
-  createdBy: yaml
-finalizers: []
-tags:
-  - apisvc
-  - cli
-  - axway
-spec:
-  description: api service 1 description
-
----
+```json
+# Creates the API Service Revision from OAS and from the created API Service
+{
+    apiVersion: "v1alpha1",
+    kind: "APIServiceRevision",
+    title: .[0].info.title,
+    metadata: {
+        scope: {
+            kind: "Environment",
+            name: .[1][0].metadata.scope.name,
+        }
+    },
+    spec: {
+        apiService: .[1][0].name,
+        definition: {
+            type: "oas3",
+            value: .[0] | @base64
+        }
+    }
+}
 ```
 
-### JSON output
-
-To output the information in JSON format, change the `-o` flag from YAML to JSON:
+To remove the API Service revision created above, run the following command:
 
 ```bash
-axway central get apisvc <name> -s env1 -o json       # Get API service <name> details of `env1` in JSON format
+axway central delete apisr <name of created service revision> --scope tutorial
 ```
 
-## Create an API service in your environment
+## Create API Service Instance
 
-An API service represents an API, including its versions and deployed endpoints, and additional information to represent your API. For example, description, environment scope, image encoded in base64.
-
-To automate the creation of an API service in your environment:
-
-1. Create an environment by providing the environment name argument. For example, `env1`:
-
-    ```bash
-    axway central create env env1
-    ```
-
-2. Create an API service within environment `env1` by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (for example, `apiservice.yaml`).  In this example, only one API service called `apisvc1` is created from the resource file:
-
-    ```bash
-    axway central create -f <filepath>
-    ```
-
-Try out this procedure using the [apiservice.json](https://amplify-central.netlify.app/samples/central/apiservice.json) or [apiservice.yaml](https://amplify-central.netlify.app/samples/central/apiservice.yaml) samples.
-
-## Update an API service
-
-To update the details of an API service, providing a path to the configuration file:
+The API Service Instance represents the details of where the API Service is currently available, i.e., the endpoint that is listening for requests for the API. Create the API Service Instance by filtering the combined OAS and result of creating the API Service Revision previously:
 
 ```bash
-axway central apply -f apiservice.yaml   # Update API service in YAML format
+jq --slurp -f api-service-instance.jq openapi.json api-service-revision-created.json > api-service-instance.json
+axway central create -f api-service-instance.json -o json -y > api-service-instance-created.json
 ```
 
-```bash
-axway central apply -f apiservice.json   # Update API service in JSON format
+Where `api-service-instance.jq` has the following content:
+
+```json
+# Creates the API Service Instance from OAS and the created service revision
+{
+    apiVersion: "v1alpha1",
+    kind: "APIServiceInstance",
+    title: .[0].info.title,
+    metadata: {
+        scope: {
+            kind: "Environment",
+            name: .[1][0].metadata.scope.name,
+        }
+    },
+    spec: {
+        apiServiceRevision: .[1][0].name,
+        "endpoint" : [ 
+            {
+                "host" : "petstore3.swagger.io",
+                "routing" : {
+                    "basePath" : .[0].servers[0].url
+                },
+                "protocol" : "https"
+            } 
+        ],
+    }
+}
 ```
 
-## Delete an API service in an environment
+The API Service is now registered with its associated API definition in Amplify Central.
 
-This action will delete all API services and resources in the environment specified. The CLI command can take a few seconds to finish depending on the number of resources represented in the environment.
+### Update with a new version of the API
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
-
-To delete a specific API service in an environment, provide a path to the configuration file:
+Make a breaking change the OpenAPI Specification by removing a method. For this OAS example, remove the `/pets` path and, as this is a breaking change, increase the API version to `3.0.0`:
 
 ```bash
-axway central delete -f apiservice.yaml   # Delete an API service using a file in YAML format
+jq '. | .info.version = "2.0.0" | del(.paths."/pet")' openapi.json > openapi-v2.json
 ```
 
+There is already an existing API Service, so a new API Service revision must be created with the new API definition. Use the steps in [Create an API Revision](#create-api-service-revision):
+
 ```bash
-axway central delete -f apiservice.json   # Delete an API service using a file in JSON format
+jq --slurp -f api-service-revision.jq openapi-v2.json api-service-created.json > api-service-revision-v2.json
+axway central create -f api-service-revision-v2.json -o json -y > api-service-revision-v2-created.json
 ```
 
-Use `--wait` to delete an API service using a YAML file while waiting for resource deletion confirmation. The `--wait` option will check for resource deletion for up to 10 seconds.
+Provide the instance (where the API is available) by using the same steps in [Create the API Service instance](#create-api-service-instance):
 
 ```bash
-axway central delete -f apiservice.yaml --wait
+jq --slurp -f api-service-instance.jq openapi-v2.json api-service-revision-v2-created.json > api-service-instance-v2.json
 ```
 
-Use `--scope` to delete an API service within the scope of and environment named env1.
+### Give the API Service an icon
+
+Provide the API Service with an image / avatar, making it visually appealling to the API consumer. The following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedImage`. It will query the API Server for the API Service resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the API Service has an image attached.
 
 ```bash
-axway central delete apiservice apisvc1 -scope env1 --wait
+#!/bin/bash
+export serviceName=`jq -r .[0].name api-service-created.json`
+export envName=`jq -r .[0].metadata.scope.name api-service-created.json`
+export encodedImage=`base64 -i api.png`
+axway central get apis $serviceName --scope $envName -o json | jq '.spec.icon.data = $ENV.encodedImage' | jq '.spec.icon.contentType = "image/png"'  > upload.json
+axway central apply -f upload.json
+```
+
+### Publish the API to the Unified Catalog
+
+Now that the API has been registered in Amplify, make it available to API consumers in the Unified Catalog. To do this, create a resource of kind `ConsumerInstance`:
+
+```bash
+jq --slurp -f consumer-instance.jq openapi.json api-service-instance-created.json > consumer-instance.json
+axway central create -f consumer-instance.json -o json -y > consumer-instance-created.json
+```
+
+Where `api-service-instance.jq` has the following content:
+
+```json
+# Creates the API Service Instance from OAS and the created service revision
+{
+    apiVersion: "v1alpha1",
+    kind: "ConsumerInstance",
+    title: .[0].info.title,
+    metadata: {
+        scope: {
+            kind: "Environment",
+            name: .[1][0].metadata.scope.name,
+        }
+    },
+    spec: {
+        apiServiceRevision: .[1][0].name,
+        "endpoint" : [ 
+            {
+                "host" : "petstore3.swagger.io",
+                "routing" : {
+                    "basePath" : .[0].servers[0].url
+                },
+                "protocol" : "https"
+            } 
+        ],
+    }
+}
 ```
