@@ -23,7 +23,7 @@ Learn how to create Marketplace subscription and request access/credentials to r
 * A subscription manager: this persona is responsible for creating/updating the subscription
 * A developer: this persona is responsible for designing application(s) that are using subscription and accessing services that belongs to a product
 
-**Product**: group of linked assets that create a business capability
+**Product**: group of linked assets that create a business capability.
 
 **Subscription**: authorization to manipulate a product under a plan condition. Based on the subscription plan, fees might apply and the subscription manager is required to pay these fees.
 
@@ -47,7 +47,7 @@ To be able to consume APIs from Marketplace, severals steps are needed:
 Anyone can subscribe to a product with the following role restrictions:
 
 | Persona               | Subscribe to a paid plan | subscribe to a free plan |
-|-----------------------|:------------------------:|:------------------------:|
+|-----------------------|--------------------------|--------------------------|
 | Subscription manager  | Authorized               | Authorized               |
 | Central administrator | Authorized               | Authorized               |
 | Developer             | Forbidden                | Authorized               |
