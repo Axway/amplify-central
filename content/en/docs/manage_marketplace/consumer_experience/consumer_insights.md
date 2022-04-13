@@ -83,7 +83,7 @@ Click an item in the API traffic list to view its transaction details:
 * Duration
 * Timestamp
 
-<!---  ![Example of API traffic details example](/Images/central/ci_api_traffic_details.png) --->
+<!---  ![API traffic details example](/Images/central/ci_api_traffic_details.png) --->
 
  You can view the request and response header details.
 
