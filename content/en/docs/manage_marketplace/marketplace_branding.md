@@ -73,21 +73,17 @@ Under **Elements Colors**, you can customize and preview:
 
 ### Change the fonts
 
-From the *Appearance* page, click **Configure** in the Fonts section to change and preview the Marketplace fonts.
+From the *Appearance* page, click **Configure** in the Fonts section to change and preview the Marketplace fonts. The font settings are displayed:
 
-The font settings are displayed and you can configure and preview:
-
-* **Font family** - the font set to display text. You can choose an existing font from the drop down or add you own font
+* **Font family** - the font set to display text. You can choose an existing font or add you own font
 * **Kerning** - adjust the spacing between characters
 
 ### Change the buttons appearance
 
-From the *Appearance* page, click **Configure** in the Buttons section to change and preview the Marketplace buttons.
+From the *Appearance* page, click **Configure** in the Buttons section to change and preview the Marketplace buttons. The buttons settings are displayed:
 
-The Buttons settings are displayed and you can configure and preview:
-
-* **Button format** - the fornat of the button: solid or Outline
-* **Button radius** - the buton radius: Square, Rounded or Round
+* **Button format** - the format of the button: solid or Outline
+* **Button radius** - the button radius: Square, Rounded or Round
 
 ### Use a custom banner
 
