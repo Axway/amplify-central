@@ -17,7 +17,7 @@ Standard custom branding capabilities include:
 
 All Marketplace branding changes are made from the Marketplace *Appearance* page:
 
-1. Navigate to *Organization > Marketplace*. 
+1. Navigate to *Organization > Marketplace*.
 2. Select **Appearance**. *The Appearance page is displayed*:
 
     ![Marketplace appearance](/Images/marketplace/marketplace_appearance.png)
@@ -29,9 +29,9 @@ To revert branding changes, select either:
 
 ### Change the logo and favicon
 
-From the *Appearance* page, click **Choose file** in either the Logo or the Favicon section to upload an icon from your local computer. 
+From the *Appearance* page, click **Choose file** in either the Logo or the Favicon section to upload an icon from your local computer.
 
-* Acceptable file formats include JPEG, PNG and GIF 
+* Acceptable file formats include JPEG, PNG and GIF
 * The file must be less than 500MB
 
 A preview of the selected logo / favicon is displayed:
@@ -52,7 +52,7 @@ Under **Default Colors**, you can configure and preview:
 * **Background** - color of the main Marketplace screens. This setting does not apply to the Product Card elements.
 * **Link** - color applied to clickable text on the Marketplace screens
 
-Under **Elements Colors**, you can customize and preview: 
+Under **Elements Colors**, you can customize and preview:
 
 * Product Cards:
 
