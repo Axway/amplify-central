@@ -71,7 +71,7 @@ Under **Elements Colors**, you can customize and preview:
 
     * **Icon** - color of the default icons
 
-### Change the Fonts
+### Change the fonts
 
 From the *Appearance* page, click **Configure** in the Fonts section to change and preview the Marketplace fonts.
 
