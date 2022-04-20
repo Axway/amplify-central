@@ -6,43 +6,45 @@ weight: 20
 
 ## Before you start
 
-You must have a published product to a marketplace. Refer to [Publish to marketplace](/docs/manage_marketplace/publish_to_marketplace/).
+You must have a published product in the Marketplace. Refer to [Publish to Marketplace](/docs/manage_marketplace/publish_to_marketplace/).
 
 ## Objectives
 
-Learn how to create Marketplace subscription and request access/credentials to resources, including:
+Learn how to create a Marketplace subscription and request access / credentials to resources, including:
 
-* Subscribing to a product
-* Requesting access to a product resource
-* Requesting product resource credentials
+* Subscribe to a product
+* Request access to a product resource
+* Request product resource credentials
 
 ## Concepts
 
-2 personas are identified:
+Two personas are identified:
 
-* A subscription manager: this persona is responsible for creating/updating the subscription
-* A developer: this persona is responsible for designing application(s) that are using subscription and accessing services that belongs to a product
+* Subscription manager: responsible for creating /updating the subscription
+* Developer: responsible for designing application(s) that use subscriptions and access services that belongs to a product
+
+### Terminology
 
 **Product**: group of linked assets that create a business capability.
 
-**Subscription**: authorization to manipulate a product under a plan condition. Based on the subscription plan, fees might apply and the subscription manager is required to pay these fees.
+**Subscription**: authorization to manipulate a product under a plan condition. Based on the subscription plan, fees might apply, which are required to be paid by the subscription manager.
 
-**Application**: represents one or multiple business facet of a products that a consumer will use.
+**Application**: represents one (or multiple) business facet of a product that a consumer will use.
 
 **Access request**: represents an authorization to use certain services for an application under the constraint of a subscription plan.
 
-**Credentials**: API Key or Oauth client credential/secret to allow the access to a service.
+**Credentials**: API Key or Oauth client credential / secret to allow access to a service.
 
-## Flow overview to get access to a product service
+## Get access to a product service
 
-To be able to consume APIs from Marketplace, severals steps are needed:
+To consume APIs from the Marketplace, you must:
 
-* Step 1: subscribing to a product
-* Step 2: creating an application
-* Step 2: requesting access to a resource
-* Step 4: requesting credentials that will allow an application to consume a resource
+* Step 1: subscribe to a product
+* Step 2: create an application
+* Step 2: requeste access to a resource
+* Step 4: requeste credentials that will allow an application to consume a resource
 
-### Subscribing to a product
+### Step 1: Subscribe to a product
 
 Anyone can subscribe to a product with the following role restrictions:
 
@@ -52,92 +54,89 @@ Anyone can subscribe to a product with the following role restrictions:
 | Central administrator | Authorized               | Authorized               |
 | Developer             | Forbidden                | Authorized               |
 
-#### Subscribing from UI
+#### Subscribe from the UI
 
-Log into the marketplace UI. Browse for the product you want to subscribe to. Open the product detail by clicking the product name. On the product details page clicks the Subscribe button to start the subscription process.
+1. Log into the Marketplace WebUI. 
+2. Browse for the product you want to subscribe to, and click on the product name. The product details page is displayed. 
+3. Click **Subscribe** to start the subscription process. A side panel is displayed asking you to:
 
-A side panel appears asking you to:
+    * enter a subscription name
+    * select a subscription plan 
+    * select the owning team of the subscription
 
-* enter a subscription name
-* select a subscription plan
-* select the owning team of this subscription
+4. Click **Save** to create the subscription.
 
-Then click save to create the subscription.
+The subscription is auto approved and a green subscribed ribbon is displayed across the product image.
 
-At the moment, the subscription is auto-approved and a green subscribed ribbon is displayed across the product image.
+You can view your subscription by navigating to the **Subscription** menu.
 
-You can view your subscription by navigating to the subscription menu.
+### Step 2: Create an application
 
-### Creating an application
+1. Navigate to the **Application** menu.
+2. Click **+ Create application** to start creating an application. A side panel is displayed asking you to:
 
-Once a subscription is created, a developer will need an application to proceed to next step.
+    * enter the application name
+    * optionally, enter a short description that can help to retrieve the application
+    * select the owning team of this application
+    * optionally, select an icon
 
-To create an application, navigate to the application menu.
-
-Click "+ Create application" button to start creating an application.
-
-A side panel appears asking you to:
-
-* enter the application name
-* optionally, enter a short description that can help to retrieve the application
-* select the owning team of this application
-* optionally, select an icon
-
-Then click Create to create the application.
+3. Click **Create** to create the application.
 
 The newly created application is visible on the page. You can view its details by clicking on the application name.
 
-### Requesting access to a resource
+### Step 3: Request access to a resource
 
-Now that a subscription and an application are ready to be used, you can request access to the product resources.
+1. Open a subscribed product and navigate to the **product resources** section.
+2. Click the key icon related to the resource you want to access. A side panel is displayed, asking you to:
 
-Open a subscribed product and navigate to the product resources section.
+    * enter the access name
+    * select the subscription (only subscriptions associated to the product are visible)
+    * select the application
 
-Click the key icon related to the resource you want to access.
+3. Click **Request Access** to validate your choice.
 
-A side panel appears, asking you to:
+The access request is auto approved by the provider.
 
-* enter the access name
-* select the subscription. Only subscription associated to the product are visible in the combo box.
-* select the application.
+### Step 4: Request credentials
 
-Click Request Access button to validate your choice.
+There are two options for requesting credentials:
 
-At the moment, the access request is auto-approved by the provider.
+* Option 1: just after requesting access. See [Request access to a resource](#request-access-to-a-resource)
+* Option 2: by navigating to the application details page, finding the correct access request, and requesting new credentials.
 
-### Requesting credentials
+#### Option 1: just after requesting access
 
-There are 2 ways of requesting credentials:
+A **Create credentials** side panel is displayed, which allows you to request credentials. After you name your credentials and click **Save**, an event is triggered for the provider.
 
-* option 1: just after requesting access (Refer to previous section)
-* option 2: by navigating to the application details page, finding the correct access request and asking a new credentials there.
+The credentials are issued on the dataplane by the provider, encrypted with the public key associated to the Marketplace organization, sent back and attached to the application.
 
-Option 1: just after requesting access:
+All sensitive data (API Key or Oauth client secret) coming from the dataplane are encrypted using the public key assigned to the consumer organization. The encrypted data is store in the Marketplace database for three days, after which the encrypted data is deleted and no longer available.
 
-A new side panel "Create credentials" is replacing the previous one and alow you to request credentials. You can named your credentials and click the "Save" button. This will trigger an event the provider will answer.
+#### Option 2: browsing the application details:
 
-A new credentials will be issued on the dataplane by the provider, encrypted with the public key associated to the marketplace organization and sent back and attached to the application.
+Navigate to the application details, open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials. Click **Create Credential** to request new credentials.
 
-All sensitive data (APIKey or oauth client secret) coming from the dataplane are encrypted using the public key assigned to the consumer organization. The encrypted date is store in the marketplace database for 3 days. After those 3 days, the encrypted data is deleted and no more available.
+### View credentials
 
-Option 2: browsing the application details:
+1. Navigate to the application details
+2. Open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials.
+3. Click the eye icon to see the clear value of the credentials. Be aware that this value is displayed only once and a warning message informs you about it. 
 
-Navigate to the application details, open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials and use the "Create Credential" button to ask for new credentials
+After viewing your credentials, the Marketplace deletes them from its internal database. However, the credentials are still available on the dataplane side.
 
-### Viewing credentials
+You can request new credentials by clicking the **Create Credentials** button.
 
-Navigate to the application details, open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials
+## Delete an application
 
-The eye icon allows you to see the clear value of the credentials. Be aware this value will be displayed only once and a warning message inform you about it. After viewing your credentials, the marketplace will delete it from its internal database. But the credentials are still available on the dataplane side.
+1. Navigate to the *Application* page.
+2. Click the bin icon associated with the application you want to delete. 
+ 
+An event is triggered for the provider (or the Discovery Agent if provider is using Amplify agents), who processes the event and deletes the corresponding application on the dataplane. All associated credentials on the Marketplace are removed.
 
-You can request new credentials by clicking the "Create Credentials" button.
+## Unsubscribe to a product
 
-## Deleting an application
+1. Navigate to the *Subscription* page. 
+2. Select the product you want to unsubscribe to. The details page is displayed, listing all the plans you subscribe to. 
+3. Click the icon on the right side of the plan to trigger the unsubscribing process.
 
-Navigate the the application page, and click the bin icon on he application you want to delete. An event will be triggered. The provider (or the discovery agent if provider is using Amplify agents) will process that event by deleting the corresponding application on the dataplane. All associated credentials on the marketplace will also be removed.
-
-## Unsubscribing to a product
-
-To unsubscribe to a product, navigate to the subscription page , select the product you want to unsubscribe to. On the details page, all the plan you subscribe to are displayed. The icon on the right side of the plan will trigger the unsubscribing process.
-
-The triggered event will be handled by the provider.
+The triggered event is processed by the provider.
