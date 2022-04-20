@@ -56,12 +56,12 @@ Anyone can subscribe to a product with the following role restrictions:
 
 #### Subscribe from the UI
 
-1. Log into the Marketplace WebUI. 
+1. Log into the Marketplace WebUI.
 2. Browse for the product you want to subscribe to, and click on the product name. The product details page is displayed. 
 3. Click **Subscribe** to start the subscription process. A side panel is displayed asking you to:
 
     * enter a subscription name
-    * select a subscription plan 
+    * select a subscription plan
     * select the owning team of the subscription
 
 4. Click **Save** to create the subscription.
@@ -112,7 +112,7 @@ The credentials are issued on the dataplane by the provider, encrypted with the 
 
 All sensitive data (API Key or Oauth client secret) coming from the dataplane are encrypted using the public key assigned to the consumer organization. The encrypted data is store in the Marketplace database for three days, after which the encrypted data is deleted and no longer available.
 
-#### Option 2: browsing the application details:
+#### Option 2: browsing the application details
 
 Navigate to the application details, open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials. Click **Create Credential** to request new credentials.
 
@@ -120,7 +120,7 @@ Navigate to the application details, open the corresponding subscription to see 
 
 1. Navigate to the application details
 2. Open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials.
-3. Click the eye icon to see the clear value of the credentials. Be aware that this value is displayed only once and a warning message informs you about it. 
+3. Click the eye icon to see the clear value of the credentials. Be aware that this value is displayed only once and a warning message informs you about it.
 
 After viewing your credentials, the Marketplace deletes them from its internal database. However, the credentials are still available on the dataplane side.
 
@@ -129,14 +129,14 @@ You can request new credentials by clicking the **Create Credentials** button.
 ## Delete an application
 
 1. Navigate to the *Application* page.
-2. Click the bin icon associated with the application you want to delete. 
- 
+2. Click the bin icon associated with the application you want to delete.
+
 An event is triggered for the provider (or the Discovery Agent if provider is using Amplify agents), who processes the event and deletes the corresponding application on the dataplane. All associated credentials on the Marketplace are removed.
 
 ## Unsubscribe to a product
 
-1. Navigate to the *Subscription* page. 
-2. Select the product you want to unsubscribe to. The details page is displayed, listing all the plans you subscribe to. 
+1. Navigate to the *Subscription* page.
+2. Select the product you want to unsubscribe to. The details page is displayed, listing all the plans you subscribe to.
 3. Click the icon on the right side of the plan to trigger the unsubscribing process.
 
 The triggered event is processed by the provider.
