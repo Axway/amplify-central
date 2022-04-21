@@ -41,8 +41,8 @@ To consume APIs from the Marketplace, you must:
 
 * Step 1: subscribe to a product
 * Step 2: create an application
-* Step 2: requeste access to a resource
-* Step 4: requeste credentials that will allow an application to consume a resource
+* Step 2: request access to a resource
+* Step 4: request credentials that will allow an application to consume a resource
 
 ### Step 1: Subscribe to a product
 
@@ -73,7 +73,7 @@ You can view your subscription by navigating to the **Subscription** menu.
 ### Step 2: Create an application
 
 1. Navigate to the **Application** menu.
-2. Click **+ Create application** to start creating an application. A side panel is displayed asking you to:
+2. Click **Create application** to start creating an application. A side panel is displayed asking you to:
 
     * enter the application name
     * optionally, enter a short description that can help to retrieve the application
