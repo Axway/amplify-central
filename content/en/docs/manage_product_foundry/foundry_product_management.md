@@ -1,6 +1,6 @@
 ---
-title: Product management from WebUI
-linkTitle: Product management from WebUI
+title: Product management
+linkTitle: Product management
 weight: 20
 ---
 
