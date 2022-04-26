@@ -117,7 +117,7 @@ It is recommended to keep the YAML configuration file in the same source control
 
 ## Create an Amplify SaaS Gateway API proxy
 
-The `create` command _creates_ an API proxy if none already exists for this API, or _updates_ the existing API proxy. It returns the name of the API proxy created.
+The `create` command *creates* an API proxy if none already exists for this API, or *updates* the existing API proxy. It returns the name of the API proxy created.
 
 To create an API proxy, run the following command. You must specify the full path to the YAML configuration file that describes your API:
 

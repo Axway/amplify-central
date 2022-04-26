@@ -14,7 +14,7 @@ description: Understand why you would connect Axway API Manager to Amplify
 
 Connect your API Management system (v7.6.2 or above) to Amplify Central by using two agents: Discovery and Traceability.
 
-{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version _(running version)_ to version _(latest version)_.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
 These two agents will help you to represent and expose your API Management eco-system in Amplify Central:
 

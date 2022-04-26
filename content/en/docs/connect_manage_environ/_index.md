@@ -32,7 +32,7 @@ You can combine assets within an environment to create catalog items that consum
 
 Using agents is the recommended way to add API services to your environment. When a Discovery Agent is installed on your gateway, the agent will automatically discover API service assets and add them to your environment in Amplify Central. The Traceability Agent will send API traffic logs from your gateway to Amplify Central, where you can then view and analyze the logs.
 
-{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version _(running version)_ to version _(latest version)_.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
 For more information about the agents, see:
 

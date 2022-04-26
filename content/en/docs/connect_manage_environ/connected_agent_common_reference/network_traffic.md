@@ -158,7 +158,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                                      | 13.36.33.229   |             |              |                                    |
 
 {{< alert title="Note" color="primary" >}}
-_Region_ column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding _Host_/_Port_ for your agents to operate correctly.
+*Region* column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding *Host*/*Port* for your agents to operate correctly.
 {{< /alert >}}
 
 \* The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
