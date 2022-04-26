@@ -115,9 +115,9 @@ Much like the show rules, the sanitization rules have a keyMatch that is used to
 
 You can change the masking characters with the environment variable `TRACEABILITY_REDACTION_MASKING_CHARACTERS`. Acceptable characters are alphanumeric, between 1-5 characters, and can contain '-' (hyphen), '*' (star), '#' (sharp), '^' (caret), '~' (tilde), '.' (dot), '{' (open curly bracket), and '}' (closing curly bracket) only.
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 For Docker run agents, the environment variable must be in double-quotes to correctly parse the characters *only if* the character string begins with a bracket. For example, `TRACEABILITY_REDACTION_MASKING_CHARACTERS="{*^*}"`. For binary run agents, the environment variable must be in double double-quotes to correctly parse the characters *only if* the character string begins with a bracket. For example, `TRACEABILITY_REDACTION_MASKING_CHARACTERS=""{~}""`.
-{{% /alert %}}
+{{< /alert >}}
 
 ### Example: Sanitize the whole value of the 'id' query argument
 

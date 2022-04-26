@@ -81,7 +81,7 @@ After deploying a new revision, you can test the rate limit configuration by cli
 
 5. Click **Save** to save the policy.
 
-{{< alert title="Note" color="" >}}This will only affect the app rate limit policy.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This will only affect the app rate limit policy.{{< /alert >}}
 
 ### Remove an app rate limit from your API
 

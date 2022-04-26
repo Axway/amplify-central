@@ -8,9 +8,9 @@ description: Understand how the Discovery Agent can automatically categorize
   conditions and associated categories when those conditions are met.
 ---
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 The automatic categorization filter is only available in the Axway API Manager Discovery Agent. Support in the other agents is coming soon!
-{{% /alert %}}
+{{< /alert >}}
 
 ## Before you start
 
@@ -24,17 +24,17 @@ Learn how to set conditions based on tag name and tag value to automatically cat
 
 Category mapping provides a way for your agent to determine how to map discovered APIs to categories for viewing in Amplify Central.
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 When any category mapping is defined, manual categories will be removed from an API when the agent performs an update
-{{% /alert %}}
+{{< /alert >}}
 
 ## Mapping sample
 
 Each mapping definition will include both the `conditions` key and the `categories` key.  When the condition returns true, the comma separated list of categories will be applied to the API.
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 The `APIMANAGER_` prefix, below, will be different depending on which gateway the agent is for.
-{{% /alert %}}
+{{< /alert >}}
 
 ```bash
 APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.API_TYPE.Exists()",categories:"CategoryA,CategoryB"}]
@@ -122,9 +122,9 @@ When multiple mapping conditions evaluate to true, all categories from all mappi
 
 An additional switch (default: `false`) is provided to tell the Agent to create any category that does not already exist in Amplify Central. When this switch is off the agent will not apply non-existent categories to the API.
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 The `APIMANAGER_` prefix, below, will be different depending on which gateway the agent is for.
-{{% /alert %}}
+{{< /alert >}}
 
 ```
 APIMANAGER_CATEGORY_AUTOCREATION=true

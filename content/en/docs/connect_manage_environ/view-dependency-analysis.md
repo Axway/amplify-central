@@ -9,9 +9,9 @@ description: "An API Service can be selected from the list on the Environment
 ---
 The *Dependency Analysis* view displays details about the relationships to the selected API Service version. The relationship details enable the API Provider to make informed decisions and take actions on any of the dependencies.
 
-{{% alert title="Note" %}}
+{{< alert title="Warning" color="primary" >}}
 The Dependency Analysis view is not supported for Axway Cloud and Service Mesh environments.
-{{% /alert %}}
+{{< /alert >}}
 
 The *API Service* details page has multiple tabs to view:
 

@@ -107,7 +107,7 @@ CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PASSWORD=user secret key (see note belo
 CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_AUTHTYPE=PLAIN
 ```
 
-**Note**: You will be required to use an application generated password instead of the actual user email password for the following email servers. Follow the links for application generated passwords.
+You will be required to use an application generated password instead of the actual user email password for the following email servers. Follow the links for application generated passwords.
 
 * Gmail - [Application generated gmail password](https://support.google.com/accounts/answer/185833?hl=en). Use this password in place of your actual password in the agent configuration `password:` field.
 * Yahoo - [Application generated yahoo password](https://help.yahoo.com/kb/generate-third-party-passwords-sln15241.html). Use this password in place of your actual password in the agent configuration `password:` field.
