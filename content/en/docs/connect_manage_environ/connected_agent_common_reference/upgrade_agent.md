@@ -223,7 +223,7 @@ C:\>axway central get ta -s azure
 No resources found.
 ```
 
-{{< alert title="Note">}}`yourEnvironmentName` is the name of the environment where the agent is supposed to be attached to (azure in the samples above). If you do not find any resources, please proceed to [Agent resources do not exist](#agent-resources-do-not-exist).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}`yourEnvironmentName` is the name of the environment where the agent is supposed to be attached to (azure in the samples above). If you do not find any resources, please proceed to [Agent resources do not exist](#agent-resources-do-not-exist).{{< /alert >}}
 
 #### Agent resources do not exist
 

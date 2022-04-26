@@ -65,7 +65,7 @@ Follow these steps to subscribe to an MFT asset that enables Account-to-Account 
 8. Select a **Profile** for the source application. For more information, see [Create a CFT profile](/docs/manage_unified_catalog/discover-and-consume-catalog-assets/#add-cft-profile-to-an-application).
 9. Click **Subscribe**.
 
-{{< alert title="Note" color="" >}}After the subscription request has been submitted, a subscription entry is automatically created in Flow Manager and a flow will be deployed that enables the transfer files between the registered applications. For more information, see [Flow Manager](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/welcome_to_flow_manager.html).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}After the subscription request has been submitted, a subscription entry is automatically created in Flow Manager and a flow will be deployed that enables the transfer files between the registered applications. For more information, see [Flow Manager](https://docs.axway.com/bundle/FlowManager_20_allOS_en_HTML5/page/welcome_to_flow_manager.html).{{< /alert >}}
 
 A subscription is created in **Requested** state. When its status changes to **Active**, the flow is deployed successfully.
 

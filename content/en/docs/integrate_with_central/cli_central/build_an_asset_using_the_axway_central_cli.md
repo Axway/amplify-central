@@ -75,7 +75,7 @@ axway central apply -f <filename>
 
 ## Delete a specific asset
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Warning" color="warning" >}}This action cannot be reversed.{{< /alert >}}
 
 To delete an asset:
 

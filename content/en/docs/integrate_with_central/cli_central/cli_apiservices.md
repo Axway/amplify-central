@@ -190,7 +190,7 @@ axway central apply -f apiservice.json   # Update API service in JSON format
 
 This action will delete all API services and resources in the environment specified. The CLI command can take a few seconds to finish depending on the number of resources represented in the environment.
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Warning" color="warning" >}}This action cannot be reversed.{{< /alert >}}
 
 To delete a specific API service in an environment, provide a path to the configuration file:
 

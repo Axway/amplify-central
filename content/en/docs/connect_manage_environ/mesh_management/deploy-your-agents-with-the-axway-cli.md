@@ -201,7 +201,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
 
 4. Select either an exisiting DevOps Service Account (DOSA), or create a new DOSA account, so the agents can authenticate with Amplify Central.
 
-{{< alert title="Note">}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify Central.{{< /alert >}}
+{{< alert title="Note" color="primary" >}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify Central.{{< /alert >}}
 
 ### Create a new DOSA account
 
@@ -331,7 +331,7 @@ helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
 ```
 
-{{< alert title="Note">}}By default, the Amplify Istio Discovery Agent polls every 20 seconds for the discovery resources. To change this, you must pass a helm override in the form of `--set ada.poll.interval` or `--set rda.poll.interval` accordingly with the desired agents.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}By default, the Amplify Istio Discovery Agent polls every 20 seconds for the discovery resources. To change this, you must pass a helm override in the form of `--set ada.poll.interval` or `--set rda.poll.interval` accordingly with the desired agents.{{< /alert >}}
 
 For example, if you want the API Discovery agent to poll every 2 seconds for the discovery resources, run the following command to install the agents:
 

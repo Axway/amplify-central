@@ -395,11 +395,11 @@ When running as a service, it is best to save your logging to a file rather than
   sudo ./discovery_agent service install -u axway -g axway --envFile /path/to/da_env_file.env
   ```
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 If you are not in the agent directory while installing the service, it is mandatory to add `--pathConfig /home/APIC-agents` to the previous command. Otherwise, pathConfig will be automatically set with current directory.
 
 For the service to start correctly, ensure that the variables `CENTRAL_AUTH_PUBLICKEY` and `CENTRAL_AUTH_PRIVATEKEY` are referencing an absolute path to the file.
-{{% /alert %}}
+{{< /alert >}}
 
 **`update`** - The service definition may need to be updated for the following reasons:
 
@@ -414,9 +414,9 @@ For the service to start correctly, ensure that the variables `CENTRAL_AUTH_PUBL
   sudo ./discovery_agent service update -u axway -g axway --envFile /path/to/da_env_file.env
   ```
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 When using the update command, the current service definition will be removed and a new one will be created.  Therefore, it is required to supply all of the necessary values, such as the user and group arguments.
-{{% /alert %}}
+{{< /alert >}}
 
 **`start`** - To start the service:
 
@@ -638,7 +638,7 @@ OPENTRAFFIC_LOG_INPUT=true
 OPENTRAFFIC_LOG_PATHS=/events/DefaultGroup_*.log
 ```
 
-{{< alert title="Notes" color="" >}}Be careful when entering the file name in `OPENTRAFFIC_LOG_PATHS` variable, as based on the Gateway deployment (standard VS EMT mode). The default name **group-\*_instance-\*.log** might not be accurate if any customization occurred!
+{{< alert title="Warning" color="warning" >}}Be careful when entering the file name in `OPENTRAFFIC_LOG_PATHS` variable, as based on the Gateway deployment (standard VS EMT mode). The default name **group-\*_instance-\*.log** might not be accurate if any customization occurred!
 
 When using the open traffic logs, it is not required to configure the Gateway connectivity (`APIGATEWAY_*` variables), as all information the Traceability Agent needs to report is present in the open traffic log.
 {{< /alert >}}
@@ -887,11 +887,11 @@ When running as a service, it is best to save your logging to a file rather than
   sudo ./traceability_agent service install -u axway -g axway --envFile /path/to/ta_env_file.env
   ```
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 If you are not in the agent directory while installing the service, it is mandatory to add `--pathConfig /home/APIC-agents` to the previous command. Otherwise, pathConfig will be automatically set with current directory
 
 For the service to start correctly, ensure that the variable `CENTRAL_AUTH_PUBLICKEY` and `CENTRAL_AUTH_PRIVATEKEY` are referencing an absolute path to the file.
-{{% /alert %}}
+{{< /alert >}}
 
 **`update`** - The service definition may need to be updated for the following reasons:
 
@@ -906,9 +906,9 @@ To update the service definition and have the agent execute as user axway and gr
   sudo ./traceability_agent service update -u axway -g axway --envFile /path/to/ta_env_file.env
   ```
 
-{{% alert title="Note" %}}
+{{< alert title="Note" color="primary" >}}
 When using the update command, the current service definition will be removed and a new one will be created. Therefore, it is required to supply all of the necessary values, such as the user and group arguments.
-{{% /alert %}}
+{{< /alert >}}
 
 **`start`** - To start the service:
 

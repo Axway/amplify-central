@@ -36,7 +36,7 @@ Watch the animation to learn how to do this in Amplify Central UI.
 
 To use the proxy, the provider must first set up a third-party OAuth server with a valid application. A single application from the third-party server's application will directly relate to a single Amplify Central application.
 
-{{< alert title="Note" >}}The Amplify Central OAuth proxy support is RFC 7662 compliant and it should work with any standard OAuth 2.0 authorization server. At this time, Okta is the only verified supported third-party OAuth provider. See more detailed configuration examples showing Okta as an integrated (external) authorization server in [Okta documentation](https://developer.okta.com/docs/guides/customize-authz-server/overview/).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The Amplify Central OAuth proxy support is RFC 7662 compliant and it should work with any standard OAuth 2.0 authorization server. At this time, Okta is the only verified supported third-party OAuth provider. See more detailed configuration examples showing Okta as an integrated (external) authorization server in [Okta documentation](https://developer.okta.com/docs/guides/customize-authz-server/overview/).{{< /alert >}}
 
 ### Create an application profile
 
@@ -56,7 +56,7 @@ When you select a valid OAuth profile, you will see your Client ID displayed in 
 
 After your third-party OAuth server has generated a valid OAuth token, paste that token into the **OAuth token** field. You can now attempt to make valid API calls with your proxy.
 
-{{< alert title="Note" >}}If your token is invalid, expired, or empty, the API call will result in a `403: Unauthorized` response.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If your token is invalid, expired, or empty, the API call will result in a `403: Unauthorized` response.{{< /alert >}}
 
 ## Review
 
