@@ -14,7 +14,7 @@ description: Understand why you would connect Azure API Management Services to
 
 Connect your Azure Management Services to Amplify Central by using two agents: Discovery and Traceability.
 
-{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version _(running version)_ to version _(latest version)_.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
 These two agents will help you to represent and expose your API Management eco-system in Amplify Central:
 
@@ -92,7 +92,7 @@ Creating a role assignment under the scope of "/subscriptions/0fb0f691-*********
 }
 ```
 
-When you create the Azure principal, the return gives you information you need later to configure the agents. If you lose this information, you can retrieve it again with the following command: `az ad sp list --filter "displayname eq 'service-principal'`, where _service-principal_ is the name of the principal you created. Be careful, as this command will not return the service principal password. It is preferable to store the information safely.
+When you create the Azure principal, the return gives you information you need later to configure the agents. If you lose this information, you can retrieve it again with the following command: `az ad sp list --filter "displayname eq 'service-principal'`, where *service-principal* is the name of the principal you created. Be careful, as this command will not return the service principal password. It is preferable to store the information safely.
 
 Notes:
 

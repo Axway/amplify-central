@@ -18,7 +18,7 @@ Each AWS Gateway can be represented by an Amplify Central environment allowing y
 * Detect changes to AWS API Gateway stages and deployments using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published as a catalog item to be used by consumers to subscribe to the service.
 * Filter the AWS Cloudwatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform.
 
-{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version _(running version)_ to version _(latest version)_.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
 ### Discovery Agent
 
