@@ -11,7 +11,7 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* Ownership and sharing. When creating or editing a product, it is now possible to assign one owner team of the product and share it with other teams. The owning team is the sole that can edit/updated/delete the product. The shared with team will have a read access of the product.
 
 ## Fixed issues
 

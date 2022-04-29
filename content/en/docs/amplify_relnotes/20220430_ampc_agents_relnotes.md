@@ -9,7 +9,7 @@ Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio prov
 
 ## Versioning
 
-Currently, version 1.1.13 is available. It is based on Amplify Agents SDK v1.1.17.
+Currently, version 1.1.16 is available. It is based on Amplify Agents SDK v1.1.20.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -25,31 +25,43 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* Managing marketplace subscription provisioning on the dataplane. When consumer subscribe and request access to an API using the Marketplace, the agent is able to handle the request and provision the appropriate application (Axway / Apigee), Usage plan (AWS), subscription (Azure) and create corresponding credentials (apiKey / oauth clientID,clientSecret).
+
+* Managing marketplace subscription deprovisioning on the dataplane. When consumer remove a marketplace application, the agent will remove the corresponding object (application, Usage plan or subscription) and the associated credentials from the dataplane.
+
+To activate the marketplace provisioning/deprovisioning, the following variables need to be added to the discovery agent configuration:
+
+* `CENTRAL_GRPC_ENABLED=true` : allow the agent to communicate to the platform over http/2 protocol
+* `AGENTFEATURES_MARKETPLACEPROVISIONING=true` : inform the agent to manage the marketplace subscription
+* `AGENTFEATURES_PERSISTCACHE=true` : inform the agent to use the filesystem to persist the cache. This will help the agent to process any missed request while the agent is down.
+
+* Docker volume is added to the discovery agent to store persisted data.
 
 ### Amplify Gateway agents enhancements
 
-* Add text.
+* See the common enhancement section.
 
 ### Amplify AWS Gateway agents enhancements
 
-* Add text
+* See the common enhancement section
 
 ### Amplify Azure agents enhancements
 
-* Add text
+* See the common enhancement section
 
 ### Amplify Istio agents enhancements
 
-Latest helm chart version: 0.62.0
+Latest helm chart version: 0.69.0
 
-Latest agent version: 2.0.23
+Latest agent version: 2.0.28
 
-* Add text
+* multiple istio namespace support.
 
 ### Amplify Apigee agents
 
-Current release (0.0.5) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
+Current release (0.0.6) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
+
+* Marketplace provisioning / deprovisioning (refer to the common enhancement section)
 
 Known limitations:
 
@@ -60,11 +72,9 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-api
 
 ### Amplify Mulesoft agents
 
-Current release (1.1.3) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
+Current release (1.1.5) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
-Known limitations:
-
-* Mulesoft agents are based on an older version of the Amplify Agents SDK (1.1.4) and may not benefit from all the new features.
+* Marketplace provisioning / deprovisioning (refer to the common enhancement section)
 
 For more information, see the [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
@@ -72,7 +82,7 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-mul
 
 The following agent issues are fixed in this update:
 
-* Add text
+* **ISTIO agents: unable to update**. Previously when updating ISTIO agents using helm update command, the procedure failed because existing pod was not terminated prior to start the new pods. Now, the existing pods is terminated before starting the new one and the agents can be updated using `helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml` command.
 
 ## Known limitations
 

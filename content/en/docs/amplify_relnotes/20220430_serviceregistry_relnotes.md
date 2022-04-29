@@ -11,13 +11,13 @@ The Service Registry is part of the Provider experience.  The WebUI is an easy w
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* None.
 
 ## Fixed issues
 
 The following issues have been fixed in this release:
 
-* Add text.
+* None.
 
 ## Known limitations
 

@@ -11,7 +11,7 @@ Analytics provide insights into your API program, API environments, and APIs.
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* None.
 
 See [Get actionable insights](/docs/get_actionable_insights) for more information.
 
@@ -19,10 +19,10 @@ See [Get actionable insights](/docs/get_actionable_insights) for more informatio
 
 The following issues have been fixed in this release:
 
-* Add text.
+* None.
 
 ## Known limitations
 
 The following limitations exist in this update:
 
-* Add text.
+* None.
