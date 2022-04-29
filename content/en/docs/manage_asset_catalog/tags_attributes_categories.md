@@ -16,7 +16,7 @@ Attributes are keyword and value pairs that can be assigned to assets and used t
 
 ## Manage categories
 
-Searching through an unordered list of assets can become a dauting tasks and make assets less organized. Central Admin and Product Manager users can create categories to group assets in the Amplify Asset Catalog to make searching for assets more effective and more organized. Examples of categories are `Finance` or `Medicine`. 
+Searching through an unordered list of assets can become a dauting tasks and make assets less organized. Central Admin and Product Manager users can create categories to group assets in the Amplify Asset Catalog to make searching for assets more effective and more organized. Examples of categories are `Finance` or `Medicine`.
 
 Categories allow for a broader grouping of assets into different topics or themes. They are created once, and multiple assets can be assigned to them. One asset can be in multiple categories.
 
