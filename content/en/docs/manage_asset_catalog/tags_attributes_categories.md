@@ -2,21 +2,21 @@
 title: Tags, Attributes and Categories
 linkTitle: Tags, Attributes and Categories
 weight: 40
-description: Learn how to edit the details of your assets with tags, attributes
-  and categories.   This can make the curation and organization of assets more
-  valuable.
 ---
+
+Use tags, attributes, and categories to edit the details of your assets. This can make the curation and organization of assets more valuable.
+
 ## Add or remove tags
 
-Tags are keywords that you can assign to catalog assets and use them in the search for assets. You can create tags using with any special characters.   For example, You can also use the `_ - & () \ []` and all types of special language characters to create your tags.
+Tags are keywords that can assigned to catalog assets and used to search for assets. You can create tags with any special characters. For example, `_ - & () \ []` and all types of special language characters can be used to create tags.
 
 ## Add or remove attributes
 
-Attributes are keyword and value pairs that you can assign to assets and use them in the search for assets.  You can create attributes using both lowercase and uppercase.  An example of useful attributes are `state = France`  or `city = Paris`.
+Attributes are keyword and value pairs that can be assigned to assets and used to search for assets. You can create attributes using both lowercase and uppercase.  An example of useful attributes are `state = France` or `city = Paris`.
 
 ## Manage categories
 
-Searching through an unordered list of assets can become a dauting tasks and make assets less organized. Central Admin and Product Manager users can create categories to group assets in the Amplify Asset Catalog to make searching for assets more effective and more organized.  Examples of categories are  ` Finance ` or ` Medicine ` . 
+Searching through an unordered list of assets can become a dauting tasks and make assets less organized. Central Admin and Product Manager users can create categories to group assets in the Amplify Asset Catalog to make searching for assets more effective and more organized. Examples of categories are `Finance` or `Medicine`. 
 
 Categories allow for a broader grouping of assets into different topics or themes. They are created once, and multiple assets can be assigned to them. One asset can be in multiple categories.
 
