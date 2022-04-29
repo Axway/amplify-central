@@ -2,7 +2,7 @@
 title: Amplify agents April 2022 Release Notes
 linkTitle: Amplify agents April 2022
 weight: 90
-date: 2022-04-30
+date: 2022-04-29
 ---
 
 Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio provide better visibility into your multi-type gateway eco system. These agents collect data from the Gateway (API / traffic) and expose it in Amplify Central, providing you with a global vision of your eco system from a single interface.

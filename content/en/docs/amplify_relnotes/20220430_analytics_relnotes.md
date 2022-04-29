@@ -2,7 +2,7 @@
 title: Analytics April 2022 Release Notes
 linkTitle: Analytics April 2022
 weight: 90
-date: 2022-04-30
+date: 2022-04-29
 ---
 
 Analytics provide insights into your API program, API environments, and APIs.

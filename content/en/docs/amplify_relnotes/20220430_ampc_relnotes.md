@@ -2,7 +2,7 @@
 title: Amplify Central April 2022 Release Notes
 linkTitle: Amplify Central April 2022
 weight: 90
-date: 2022-04-30
+date: 2022-04-29
 ---
 
 Amplify Central enables the user to manage their provider / consumer view.

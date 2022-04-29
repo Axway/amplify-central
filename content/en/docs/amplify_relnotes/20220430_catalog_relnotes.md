@@ -2,7 +2,7 @@
 title: Asset Catalog April 2022 Release Notes
 linkTitle: Asset Catalog April 2022
 weight: 90
-date: 2022-04-30
+date: 2022-04-29
 ---
 
 The Asset Catalog is used to organize your APIs, group them together, and make them ready to productize.
