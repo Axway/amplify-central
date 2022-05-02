@@ -17,7 +17,7 @@ The following new features and enhancements are available in this update:
 
 The following issues have been fixed in this release:
 
-* Add text.
+* The Product (Catalog) Manager role can manage products.   This inlucdes the setting of team ownership/sharing and the management of the lifecycle of a product.
 
 ## Known limitations
 
