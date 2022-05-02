@@ -22,7 +22,7 @@ The following new features and enhancements are available in this update:
 The following issues have been fixed in this release:
 
 * An issue preventing the deletion of an asset with multiple asset versions has been fixed.
-* The Product (Catalog) Manager role can manage assets and products.   This inlucdes the setting of team ownership/sharing and the management of the lifecycle of an asset/product.
+* The Product (Catalog) Manager role can manage assets.   This inlucdes the setting of team ownership/sharing and the management of the lifecycle of an asset.
 * The team developer role is limited to read only permissions to the access rights step of the asset wizard.
 
 ## Known limitations
