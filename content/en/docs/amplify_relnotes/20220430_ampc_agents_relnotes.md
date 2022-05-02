@@ -21,34 +21,34 @@ This version is compatible with:
 * Apigee Edge
 * Mulesoft Anypoint platform v3.0
 
-## New features and enhancements
+## Common enhancements and features
 
 The following new features and enhancements are available in this update:
 
-* Managing marketplace subscription provisioning on the dataplane. When consumer subscribe and request access to an API using the Marketplace, the agent is able to handle the request and provision the appropriate application (Axway / Apigee), Usage plan (AWS), subscription (Azure) and create corresponding credentials (apiKey / oauth clientID,clientSecret).
+* Manage Marketplace subscription provisioning on the dataplane. When a consumer subscribes and requests access to an API using the Marketplace, the agent handles the request and provisions the appropriate application (Axway / Apigee), Usage plan (AWS), subscription (Azure), and creates corresponding credentials (apiKey / oauth clientID,clientSecret).
 
-* Managing marketplace subscription deprovisioning on the dataplane. When consumer remove a marketplace application, the agent will remove the corresponding object (application, Usage plan or subscription) and the associated credentials from the dataplane.
+* Manage Marketplace subscription deprovisioning on the dataplane. When a consumer removes a marketplace application, the agent removes the corresponding object (application, Usage plan, or subscription) and the associated credentials from the dataplane.
 
-To activate the marketplace provisioning/deprovisioning, the following variables need to be added to the discovery agent configuration:
+To activate the marketplace provisioning/deprovisioning, the following variables must be added to the Discovery Agent configuration:
 
-* `CENTRAL_GRPC_ENABLED=true` : allow the agent to communicate to the platform over http/2 protocol
-* `AGENTFEATURES_MARKETPLACEPROVISIONING=true` : inform the agent to manage the marketplace subscription
-* `AGENTFEATURES_PERSISTCACHE=true` : inform the agent to use the filesystem to persist the cache. This will help the agent to process any missed request while the agent is down.
-* Also be sure to replace the DOSA service account by a platform service account. You can create a new platform service account using your existing public key.
+* `CENTRAL_GRPC_ENABLED=true`: allow the agent to communicate to the platform over http/2 protocol
+* `AGENTFEATURES_MARKETPLACEPROVISIONING=true`: inform the agent to manage the Marketplace subscription
+* `AGENTFEATURES_PERSISTCACHE=true`: inform the agent to use the filesystem to persist the cache. This will help the agent to process any missed requests while the agent is down.
+* You must also replace the DOSA service account with a platform service account. You can create a new platform service account using your existing public key.
 
-* Docker volume is added to the discovery agent to store persisted data.
+* Docker volume added to the Discovery Agent to store persisted data.
 
 ### Amplify Gateway agents enhancements
 
-* See the common enhancement section.
+* See Common enhancements and features.
 
 ### Amplify AWS Gateway agents enhancements
 
-* See the common enhancement section
+* See Common enhancements and features.
 
 ### Amplify Azure agents enhancements
 
-* See the common enhancement section
+* See Common enhancements and features.
 
 ### Amplify Istio agents enhancements
 
@@ -56,13 +56,13 @@ Latest helm chart version: 0.69.0
 
 Latest agent version: 2.0.28
 
-* multiple istio namespace support.
+* Multiple istio namespace support.
 
 ### Amplify Apigee agents
 
 Current release (0.0.6) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
-* Marketplace provisioning / deprovisioning (refer to the common enhancement section)
+* Marketplace provisioning / deprovisioning (See Common enhancements and features).
 
 Known limitations:
 
@@ -75,7 +75,7 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-api
 
 Current release (1.1.5) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
-* Marketplace provisioning / deprovisioning (refer to the common enhancement section)
+* Marketplace provisioning / deprovisioning (See Common enhancements and features).
 
 For more information, see the [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
@@ -83,7 +83,7 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-mul
 
 The following agent issues are fixed in this update:
 
-* **ISTIO agents: unable to update**. Previously when updating ISTIO agents using helm update command, the procedure failed because existing pod was not terminated prior to start the new pods. Now, the existing pods is terminated before starting the new one and the agents can be updated using `helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml` command.
+* **ISTIO agents: unable to update**. Previously when updating ISTIO agents using the helm update command, the procedure failed because the existing pods were not terminated prior to starting the new pods. Now, the existing pods are terminated before starting the new ones and the agents can be updated using `helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml` command.
 
 ## Known limitations
 

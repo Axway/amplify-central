@@ -11,16 +11,17 @@ The Marketplace is the storefront into all products exposed for discovery and co
 
 The following new features and enhancements are available in this update:
 
-* Product details view:
-    * ability to view the list of active plans assigned to the product
-    * consumer can subscribe from the plan directly. The subscribe button change to subscribed and the number of subscription associated to the selected plan. Clicking subscribed will redirect you to the subscription list details.
-    * ability to view the OS2/OAS3 resource details. On each resource, consumer can click the resource name and he will be redirected to the resource details page.
+* **Product details** view:
+    * Lists active plans assigned to the product
+    * Consumer can subscribe from the plan directly: 
+        * Click **Subscribe** to display the number of subscriptions associated to the selected plan. Click **Subscribed**"** to be  redirected to the subscription list details.
+    * Provides OS2/OAS3 resource details. On each resource, click the resource name to be redirected to the **Resource details** page.
 
 ## Fixed issues
 
-The following issues have been fixed in this release:
+The following issues have been fixed in this update:
 
-* Add text.
+* None.
 
 ## Known limitations
 
