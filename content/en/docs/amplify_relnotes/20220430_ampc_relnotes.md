@@ -15,14 +15,17 @@ The following new features and enhancements are available in this update.
 
 The Axway Central CLI is a package for managing Amplify Central resources with a DevOps approach to API Management.
 
-**Axway Central CLI** version 2.10.1 is now available on NPM (<https://www.npmjs.com/package/@axway/axway-central-cli/v/2.10.1>).
+**Axway Central CLI** version 2.10.2 is now available on NPM (<https://www.npmjs.com/package/@axway/axway-central-cli/v/2.10.2>).
 
 The Axway Central CLI extension is compatible with the Axway CLI **version 3.2.4** (<https://www.npmjs.com/package/axway/v/3.2.4>).
 For more information, see [Axway CLI release note](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/3_2_4_20220328_relnote/index.html).
 
 The following enhancements are available in this Axway Central CLI update:
 
-* Add text.
+* Fixed the Edge Agent agent Helm install template to use the correct override syntax and organization ID instead of the team name.
+* Fixed an Istio agent install issue error when a Kubernetes warning is encountered.
+* Added istioGtaewayNamspaces configuration in the hybrid-override.yaml file.
+* NPM dependencies were updated.
 
 ### Amplify Central WebUI
 
@@ -32,10 +35,10 @@ The following enhancements are available in this Axway Central CLI update:
 
 The following issues are fixed in this Amplify Central update:
 
-* Add text.
+* None.
 
 ## Known limitations
 
 This following limitation exists in this update of Amplify Central:
 
-* Add text.
+* None.
