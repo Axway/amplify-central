@@ -22,10 +22,15 @@ For more information, see [Axway CLI release note](https://docs.axway.com/bundle
 
 The following enhancements are available in this Axway Central CLI update:
 
+* * Added istioGtaewayNamspaces configuration in the hybrid-override.yaml file.
+* NPM dependencies were updated.
+
+## Fixed issues
+
+The following issues are fixed in this Amplify Central CLI update:
+
 * Fixed the Edge Agent agent Helm install template to use the correct override syntax and organization ID instead of the team name.
 * Fixed an Istio agent install issue error when a Kubernetes warning is encountered.
-* Added istioGtaewayNamspaces configuration in the hybrid-override.yaml file.
-* NPM dependencies were updated.
 
 ### Amplify Central WebUI
 
