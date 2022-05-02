@@ -22,10 +22,10 @@ For more information, see [Axway CLI release note](https://docs.axway.com/bundle
 
 The following enhancements are available in this Axway Central CLI update:
 
-* * Added istioGtaewayNamspaces configuration in the hybrid-override.yaml file.
+* Added istioGtaewayNamspaces configuration in the hybrid-override.yaml file.
 * NPM dependencies were updated.
 
-## Fixed issues
+#### Fixed issues
 
 The following issues are fixed in this Amplify Central CLI update:
 
@@ -36,7 +36,7 @@ The following issues are fixed in this Amplify Central CLI update:
 
 * Refer to the Asset Catalog April 2022 Release notes.
 
-## Fixed issues
+#### Fixed issues
 
 The following issues are fixed in this Amplify Central update:
 
