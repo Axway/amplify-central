@@ -11,7 +11,7 @@ The Service Registry is part of the Provider experience.  The WebUI is an easy w
 
 The following new features and enhancements are available in this update:
 
-* None.
+* The Service Registry view has a column indicating the number of assets which are linked to each API Service.  API Providers can use this information to make a more informed decisions.
 
 ## Fixed issues
 
