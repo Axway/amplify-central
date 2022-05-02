@@ -23,9 +23,9 @@ Subscriptions are free or paid consumption options to access certain API from re
     * Click **Submit**
 
 5. Track the status of your subscription from the *Subscription overview* page. For additional information on states, see [Subscription approval states](#subsrcitopn-approval-states).
-6. Once the subscription request is approved, navigate to the subscription and request access to the underlying resources: 
+6. Once the subscription request is approved, navigate to the subscription and request access to the underlying resources:
 
-    * Click **Request access from the subscription**. A wizard is displayed. 
+    * Click **Request access from the subscription**. A wizard is displayed.
     * Either pick an existing application or create a new application. For information, see [Create a new application](/docs/manage_marketplace/consumer_experience/application_management#create-a-new-application) for more details.
 
 ### Subscription approval states
