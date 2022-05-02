@@ -34,6 +34,7 @@ To activate the marketplace provisioning/deprovisioning, the following variables
 * `CENTRAL_GRPC_ENABLED=true` : allow the agent to communicate to the platform over http/2 protocol
 * `AGENTFEATURES_MARKETPLACEPROVISIONING=true` : inform the agent to manage the marketplace subscription
 * `AGENTFEATURES_PERSISTCACHE=true` : inform the agent to use the filesystem to persist the cache. This will help the agent to process any missed request while the agent is down.
+* Also be sure to replace the DOSA service account by a platform service account. You can create a new platform service account using your existing public key.
 
 * Docker volume is added to the discovery agent to store persisted data.
 
