@@ -36,7 +36,7 @@ The following issues are fixed in this Amplify Central CLI update:
 
 * Refer to the Asset Catalog April 2022 Release notes.
 * Refer to Product foundry April 2022 Release notes.
-* * refer to Service Registry April 2022 Release notes.
+* Refer to Service Registry April 2022 Release notes.
 
 ## Known limitations
 
