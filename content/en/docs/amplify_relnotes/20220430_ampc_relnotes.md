@@ -34,9 +34,9 @@ The following issues are fixed in this Amplify Central CLI update:
 
 ### Amplify Central WebUI
 
-* Refer to the Asset Catalog April 2022 Release notes.
-* Refer to Product foundry April 2022 Release notes.
-* Refer to Service Registry April 2022 Release notes.
+* Refer to the [Asset Catalog April 2022 Release notes](/docs/amplify_relnotes/20220430_catalog_relnotes).
+* Refer to [Product foundry April 2022 Release notes](/docs/amplify_relnotes/20220430_foundry_relnotes).
+* Refer to [Service Registry April 2022 Release notes](/docs/amplify_relnotes/20220430_serviceregistry_relnotes).
 
 ## Known limitations
 
