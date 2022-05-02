@@ -13,7 +13,7 @@ The following new features and enhancements are available in this update:
 
 * **Product details** view:
     * Lists active plans assigned to the product
-    * Consumer can subscribe from the plan directly: 
+    * Consumer can subscribe from the plan directly:
         * Click **Subscribe** to display the number of subscriptions associated to the selected plan. Click **Subscribed**"** to be  redirected to the subscription list details.
     * Provides OS2/OAS3 resource details. On each resource, click the resource name to be redirected to the **Resource details** page.
 
