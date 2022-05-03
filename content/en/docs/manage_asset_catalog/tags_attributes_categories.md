@@ -3,12 +3,18 @@ title: Tags, Attributes and Categories
 linkTitle: Tags, Attributes and Categories
 weight: 40
 ---
-
 Use tags, attributes, and categories to edit the details of your assets. This can make the curation and organization of assets more valuable.
 
 ## Add or remove tags
 
 Tags are keywords that can assigned to catalog assets and used to search for assets. You can create tags with any special characters. For example, `_ - & () \ []` and all types of special language characters can be used to create tags.
+
+1. Select an asset in the **Asset Catalog.**
+2. Either select a asset version in the Draft state or click on <Create Draft> or <Edit Asset> buttons on the right-side details.  \
+   If a draft version was selected, then in the right-side details panel, click on the Tags field and enter your new tag to be added.  To remove a tag, click on the X next to the tag name.\
+   If you selected <Create Draft> or <Edit Asset>, the wizard will appear and click on <Categories, Tags, & Attributes>.  Then click on the Tags field and enter your new tag to be added.  To remove a tag, click on the X next to the tag name.
+3. Press `Enter` or click on the + sign to add the new tag you have typed to the list of tags.
+4. Click **Save** or **Save Draft & Exit.**
 
 ## Add or remove attributes
 
