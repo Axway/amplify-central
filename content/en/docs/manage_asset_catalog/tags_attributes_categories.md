@@ -9,27 +9,27 @@ Use tags, attributes, and categories to edit the details of your assets. This ca
 
 Tags are keywords that can assigned to catalog assets and used to search for assets. You can create tags with any special characters. For example, `_ - & () \ []` and all types of special language characters can be used to create tags.
 
-1. Select an asset in the **Asset Catalog.**
-2. Either select a asset version in the Draft state or click on <Create Draft> or <Edit Asset> buttons on the right-side details.
+1. Select an asset in the *Asset Catalog*.
+2. Either select a asset version in the Draft state or click either **Create Draft** or **Edit Asset>** on the right-side details.
 
-    * If a draft version was selected, then in the right-side details panel, click on the Tags field and enter your new tag to be added.  To remove a tag, click on the X next to the tag name.
-    * If you selected <Create Draft> or <Edit Asset>, the wizard will appear and click on <Categories, Tags, & Attributes>.  Then click on the Tags field and enter your new tag to be added.  To remove a tag, click on the X next to the tag name.
+    * If a draft version was selected, then in the right-side details panel, click on the Tags field and enter your new tag to be added. To remove a tag, click the **X** next to the tag name.
+    * If you selected **Create Draft** or **Edit Asset**, the wizard will appear and click **Categories, Tags, & Attributes**. Then click on the Tags field and enter your new tag to be added. To remove a tag, click the **X** next to the tag name.
 
-3. Press `Enter` or click on the + sign to add the new tag you have typed to the list of tags.
-4. Click **Save** or **Save Draft & Exit.**
+3. Press **Enter** or click **+** to add the new tag you have typed to the list of tags.
+4. Click **Save** or **Save Draft & Exit**.
 
 ## Add or remove attributes
 
-Attributes are keyword and value pairs that can be assigned to assets and used to search for assets. You can create attributes using both lowercase and uppercase.  An example of useful attributes are `state = France` or `city = Paris`.
+Attributes are keyword and value pairs that can be assigned to assets and used to search for assets. You can create attributes using both lowercase and uppercase. An example of useful attributes are `state = France` or `city = Paris`.
 
-1. Select an asset in the **Asset Catalog.**
-2. Either select a asset version in the Draft state or click on <Create Draft> or <Edit Asset> buttons on the right-side details.
+1. Select an asset in the *Asset Catalog*.
+2. Either select a asset version in the Draft state or click either **Create Draft** or **Edit Asset** on the right-side details.
 
-    * If a draft version was selected, then in the right-side details panel, click on the Attributes field and enter your new attribute and value to be added.  To remove an attribute, click on the X next to the attribute key=value.
-    * If you selected <Create Draft> or <Edit Asset>, the wizard will appear and click on <Categories, Tags, & Attributes>.  Then click on the Attribute field and enter your new attribute Key and Value to be added.  To remove a category, click on the X next to the attribute key=value.
+    * If a draft version was selected, then in the right-side details panel, click on the Attributes field and enter your new attribute and value to be added. To remove an attribute, click the **X** next to the attribute key=value.
+    * If you selected **Create Draft** or **Edit Asset**, the wizard will appear and click **Categories, Tags, & Attributes**. Then click on the Attribute field and enter your new attribute Key and Value to be added.  To remove a category, click the **X** next to the attribute key=value.
 
-3. Press `Enter` or click on the + sign to add the new attribute you have typed to the list of attributes.
-4. Click **Save** or **Save Draft & Exit.**
+3. Press **Enter** or click **+** to add the new attribute you have typed to the list of attributes.
+4. Click **Save** or **Save Draft & Exit**.
 
 ## Manage categories
 
@@ -39,11 +39,11 @@ Categories allow for a broader grouping of assets into different topics or theme
 
 Only users that are assigned the **Central Admin** or **Product Manager** role can create, edit and delete categories. Categories are created at the Organization level and available to all teams to apply them to their assets.
 
-1. Select an asset in the **Asset Catalog.**
-2. Either select a asset version in the Draft state or click on <Create Draft> or <Edit Asset> buttons on the right-side details.
-   
-    * If a draft version was selected, then in the right-side details panel, click on the Categories field and enter your new category to be added.  To remove a Category, click on the X next to the Category name.
-    * If you selected <Create Draft> or <Edit Asset>, the wizard will appear and click on <Categories, Tags, & Attributes>.  Then click on the Category field and enter your new Category to be added.  To remove a category, click on the X next to the category name.
+1. Select an asset in the *Asset Catalog*.
+2. Either select a asset version in the Draft state or click either **Create Draft** or **Edit Asset** on the right-side details.
 
-3. Press `Enter` or click on the + sign to add the new category you have typed to the list of categories.
-4. Click **Save** or **Save Draft & Exit.**
+    * If a draft version was selected, then in the right-side details panel, click on the Categories field and enter your new category to be added. To remove a Category, click **X** next to the Category name.
+    * If you selected **Create Draft** or **Edit Asset**, the wizard will appear and click **Categories, Tags, & Attributes**. Then click on the Category field and enter your new Category to be added. To remove a category, click **X** next to the category name.
+
+3. Press **Enter** or click **+** to add the new category you have typed to the list of categories.
+4. Click **Save** or **Save Draft & Exit**.
