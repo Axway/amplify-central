@@ -27,3 +27,10 @@ Searching through an unordered list of assets can become a dauting tasks and mak
 Categories allow for a broader grouping of assets into different topics or themes. They are created once, and multiple assets can be assigned to them. One asset can be in multiple categories.
 
 Only users that are assigned the **Central Admin** or **Product Manager** role can create, edit and delete categories. Categories are created at the Organization level and available to all teams to apply them to their assets.
+
+1. Select an asset in the **Asset Catalog.**
+2. Either select a asset version in the Draft state or click on <Create Draft> or <Edit Asset> buttons on the right-side details.  \
+   If a draft version was selected, then in the right-side details panel, click on the Categories field and enter your new category to be added.  To remove a Category, click on the X next to the Category name.\
+   If you selected <Create Draft> or <Edit Asset>, the wizard will appear and click on <Categories, Tags, & Attributes>.  Then click on the Category field and enter your new Category to be added.  To remove a category, click on the X next to the category name.
+3. Press `Enter` or click on the + sign to add the new category you have typed to the list of categories.
+4. Click **Save** or **Save Draft & Exit.**
