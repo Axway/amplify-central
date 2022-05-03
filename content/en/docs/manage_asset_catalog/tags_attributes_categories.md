@@ -10,7 +10,7 @@ Use tags, attributes, and categories to edit the details of your assets. This ca
 Tags are keywords that can assigned to catalog assets and used to search for assets. You can create tags with any special characters. For example, `_ - & () \ []` and all types of special language characters can be used to create tags.
 
 1. Select an asset in the *Asset Catalog*.
-2. Either select a asset version in the Draft state or click either **Create Draft** or **Edit Asset>** on the right-side details.
+2. Either select a asset version in the Draft state or click either **Create Draft** or **Edit Asset** on the right-side details.
 
     * If a draft version was selected, then in the right-side details panel, click on the Tags field and enter your new tag to be added. To remove a tag, click the **X** next to the tag name.
     * If you selected **Create Draft** or **Edit Asset**, the wizard will appear and click **Categories, Tags, & Attributes**. Then click on the Tags field and enter your new tag to be added. To remove a tag, click the **X** next to the tag name.
@@ -42,7 +42,7 @@ Only users that are assigned the **Central Admin** or **Product Manager** role
 1. Select an asset in the *Asset Catalog*.
 2. Either select a asset version in the Draft state or click either **Create Draft** or **Edit Asset** on the right-side details.
 
-    * If a draft version was selected, then in the right-side details panel, click on the Categories field and enter your new category to be added. To remove a Category, click **X** next to the Category name.
+    * If a draft version was selected, then in the right-side details panel, click on the Categories field and enter your new category to be added. To remove a Category, click the **X** next to the Category name.
     * If you selected **Create Draft** or **Edit Asset**, the wizard will appear and click **Categories, Tags, & Attributes**. Then click on the Category field and enter your new Category to be added. To remove a category, click **X** next to the category name.
 
 3. Press **Enter** or click **+** to add the new category you have typed to the list of categories.
