@@ -20,6 +20,13 @@ Tags are keywords that can assigned to catalog assets and used to search for ass
 
 Attributes are keyword and value pairs that can be assigned to assets and used to search for assets. You can create attributes using both lowercase and uppercase.  An example of useful attributes are `state = France` or `city = Paris`.
 
+1. Select an asset in the **Asset Catalog.**
+2. Either select a asset version in the Draft state or click on <Create Draft> or <Edit Asset> buttons on the right-side details.  \
+   If a draft version was selected, then in the right-side details panel, click on the Attributes field and enter your new attribute and value to be added.  To remove an attribute, click on the X next to the attribute key=value.\
+   If you selected <Create Draft> or <Edit Asset>, the wizard will appear and click on <Categories, Tags, & Attributes>.  Then click on the Attribute field and enter your new attribute Key and Value to be added.  To remove a category, click on the X next to the attribute key=value.
+3. Press `Enter` or click on the + sign to add the new attribute you have typed to the list of attributes.
+4. Click **Save** or **Save Draft & Exit.**
+
 ## Manage categories
 
 Searching through an unordered list of assets can become a dauting tasks and make assets less organized. Central Admin and Product Manager users can create categories to group assets in the Amplify Asset Catalog to make searching for assets more effective and more organized. Examples of categories are `Finance` or `Medicine`.
