@@ -11,6 +11,14 @@ Consumers can create new subscriptions and manage existing subscriptions from th
 
 Subscriptions are free or paid consumption options to access certain API from resources in products to help provide business case solutions. Consumers browse browse products, but must subscribe, request access, and be approved before products can be consumed with an application.
 
+## Before you start
+
+Browse the product offerings in the Marketplace.
+
+## Objectives
+
+As a consumer, learn how to create a free or paid subscription and manage existing subscriptions in the Marketplace. 
+
 ## Create a new subscription
 
 1. Navigate to the *Marketplace*.
