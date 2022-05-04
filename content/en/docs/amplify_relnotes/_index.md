@@ -11,6 +11,83 @@ The following is a list of release notes for Amplify Central, Amplify agents, An
 
 For more details, click on the release note title to go to the corresponding release note.
 
+## [Amplify agents April 2022](/docs/amplify_relnotes/20220430_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.16): See Amplify agent general
+* **Amplify AWS Gateway Agent** (version 1.1.16): See Amplify agent general
+* **Amplify Azure Agent** (version 1.1.16): See Amplify agent general
+* **Amplify Istio Agent** (helm chart version 0.69.0, Agent version 2.0.28): Multiple Istio namespace support
+* **Amplify Apigee Agent** (version 0.0.6): Marketplace provisioning / deprovisioning
+* **Amplify Mulesoft Agent** (version 1.1.5): Marketplace provisioning / deprovisioning
+* **Amplify agent general** (version 1.1.16): Marketplace subscription provisioning and deprovisioning on the dataplane
+
+**Bug fixes**: Unable to update Istio agents using the helm update command
+
+## [Amplify Central April 2022](/docs/amplify_relnotes/20220430_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.10.2):
+    * istioGatewayNamespaces configuration in the hybrid-override.yaml file
+    * Updated NPM dependencies
+* **Amplify Central WebUI**:
+    * See Asset Catalog, Product Foundry, and Service Registry Release Notes
+
+**Bug fixes**:
+
+* Edge agent Helm install template uses the Team name instead of the correct override syntax and organization ID
+* Istio agent install errors when a Kubernetes warning is encountered
+
+## [Analytics April 2022](/docs/amplify_relnotes/20220430_analytics_relnotes/)
+
+**What's new**: None
+
+**Bug fixes**: None
+
+## [Asset Catalog April 2022](/docs/amplify_relnotes/20220430_catalog_relnotes/)
+
+**What's new**:
+
+* Link / unlink the API Services when editing an asset with the WebUI Group Resources step
+* Access Rights to an asset/product reflect the limitations of the Amplify Central role
+* Tags for an asset now support all special characters
+* Asset details page lists products that are consuming/using the currently displayed asset version
+* When creating or editing an asset, assign one owning team of the asset and share it with other teams
+
+**Bug fixes**:
+
+* Cannot delete an asset with multiple asset versions
+* The Product (Catalog) Manager role cannot manage assets
+* The team developer role is not limited to read only permissions in the access rights step of the asset wizard
+
+## [Marketplace April 2022](/docs/amplify_relnotes/20220430_marketplace_relnotes/)
+
+**What's new**:
+
+* Product details view lists active plans assigned to product
+* Consumers can subscribe from the plan directly
+* Product details view provides OS2/OAS3 resource details
+
+**Bug fixes**: None
+
+## [Product Foundry April 2022](/docs/amplify_relnotes/20220430_foundry_relnotes/)
+
+**What's new**: When creating or editing a product, assign one owning team of the product and share it with other teams
+
+**Bug fixes**: The Product (Catalog) Manager role cannot manage products (team ownership/sharing and the management of the lifecycle of a product)
+
+## [Service Registry April 2022](/docs/amplify_relnotes/20220430_serviceregistry_relnotes/)
+
+**What's new**: Service Registry view has a column indicating the number of assets that are linked to each API Service
+
+**Bug fixes**: None
+
+## [Amplify Platform Management April 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+## [Axway CLI April 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
 ## [Amplify agents March 2022](/docs/amplify_relnotes/20220330_ampc_agents_relnotes/)
 
 **What's new for**:
