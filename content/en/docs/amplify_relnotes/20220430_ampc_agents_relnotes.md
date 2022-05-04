@@ -56,7 +56,7 @@ Latest helm chart version: 0.69.0
 
 Latest agent version: 2.0.28
 
-* Multiple istio namespace support.
+* Multiple Istio namespace support.
 
 ### Amplify Apigee agents
 

@@ -29,13 +29,13 @@ The following enhancements are available in this Axway Central CLI update:
 
 The following issues are fixed in this Amplify Central CLI update:
 
-* The Edge Agent agent Helm install template now uses the correct override syntax and organization ID instead of the team name.
+* The Edge agent Helm install template now uses the correct override syntax and organization ID instead of the team name.
 * The Istio agent install no longer errors when a Kubernetes warning is encountered.
 
 ### Amplify Central WebUI
 
 * Refer to [Asset Catalog April 2022 Release notes](/docs/amplify_relnotes/20220430_catalog_relnotes).
-* Refer to [Product foundry April 2022 Release notes](/docs/amplify_relnotes/20220430_foundry_relnotes).
+* Refer to [Product Foundry April 2022 Release notes](/docs/amplify_relnotes/20220430_foundry_relnotes).
 * Refer to [Service Registry April 2022 Release notes](/docs/amplify_relnotes/20220430_serviceregistry_relnotes).
 
 ## Known limitations
