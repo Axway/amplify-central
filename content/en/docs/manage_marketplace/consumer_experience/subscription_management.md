@@ -17,7 +17,7 @@ Browse the product offerings in the Marketplace.
 
 ## Objectives
 
-As a consumer, learn how to create a free or paid subscription and manage existing subscriptions in the Marketplace. 
+As a consumer, learn how to create a free or paid subscription and manage existing subscriptions in the Marketplace.
 
 ## Create a new subscription
 
