@@ -35,7 +35,8 @@ For more details, click on the release note title to go to the corresponding rel
 * **Amplify Central WebUI**:
     * See Asset Catalog, Product Foundry, and Service Registry Release Notes
 
-**Bug fixes**: 
+**Bug fixes**:
+
     * Edge agent Helm install template uses the Team name instead of the correct override syntax and organization ID
     * Istio agent install errors when a Kubernetes warning is encountered
 
