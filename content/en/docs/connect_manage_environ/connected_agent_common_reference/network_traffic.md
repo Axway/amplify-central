@@ -35,7 +35,7 @@ The Discovery Agent sends the following information to the Axway Amplify platfor
 It is also possible to filter the API to be discover using the filter capabilities of the agent:
 
 | Gateway type      | Variable name       | Description                                                                                                            | Reference                                                                                            |
-| ----------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+|-------------------|---------------------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | Axway API Gateway | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)   |
 | AWS               | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/) |
 | Azure             | `AZURE_FILTER`      | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` |                                                                                                      |
@@ -121,10 +121,20 @@ All outbound traffic is sent over SSL via TCP / UDP.
 
 Open the following ports so that agents can communicate to the Amplify platform:
 
+**Single Entry Point**:
+
+| Region | Host                            | IP             | port | Protocol | data |
+|--------|---------------------------------|----------------|------|----------|------|
+| US     | ingestion.platform.axway.com    | 35.71.150.229  | 443  | HTTPS    |      |
+|        |                                 | 52.223.61.108  |      |          |      |
+|        |                                 |                |      |          |      |
+| EU     | ingestion-eu.platform.axway.com | 76.223.107.214 | 443  | HTTPS    |      |
+|        |                                 | 13.248.240.123 |      |          |      |
+
 **Outbound**:
 
 | Region | Host                                 | IP             | port        | Protocol     | data                               |
-| ------ | ------------------------------------ | -------------- | ----------- | ------------ | ---------------------------------- |
+|--------|--------------------------------------|----------------|-------------|--------------|------------------------------------|
 | EU/US  | platform.axway.com                   | 34.211.114.227 | 443         | HTTPS        |                                    |
 |        |                                      | 54.201.86.113  |             |              |                                    |
 |        |                                      |                |             |              |                                    |
@@ -170,14 +180,14 @@ Other ports which may need to be opened so that the Agent may monitor API Gatewa
 **Internal**:
 
 | Host             | Port           | Protocol | Data                                                                                                                                                                   |
-| ---------------- | -------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | API Manager Host | 8075 (default) | HTTPS    | API Discovery                                                                                                                                                          |
 | API Gateway Host | 8090 (default) | HTTPS    | API Transaction Header data (see [APIGATEWAY GETHEADERS](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent)) |
 
 **Inbound (used for the agent status server)**:
 
 | Host          | Port           | Protocol | Data                                                               |
-| ------------- | -------------- | -------- | ------------------------------------------------------------------ |
+|---------------|----------------|----------|--------------------------------------------------------------------|
 | Agent Host(s) | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
 ### AWS Gateway and Azure Gateway - other ports
@@ -187,7 +197,7 @@ The docker container does not expose any ports outside of the container. Within 
 **Inbound**:
 
 | Host             | Port           | Protocol | Data                                                               |
-| ---------------- | -------------- | -------- | ------------------------------------------------------------------ |
+|------------------|----------------|----------|--------------------------------------------------------------------|
 | Docker Container | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
 ## Subscription notifications

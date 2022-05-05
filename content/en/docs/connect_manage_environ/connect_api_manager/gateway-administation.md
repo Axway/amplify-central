@@ -144,7 +144,7 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_URL`: The Amplify Central url. Default value is **<https://apicentral.axway.com>**.
 
-`CENTRAL_SINGLEURL`: Alternate Amplify Central url connection if using a static IP. Default value is **<https://ingestion.platform.axway.com>**.
+`CENTRAL_SINGLEURL`: Alternate Amplify Central url connection if using a static IP. Default value for US is **<https://ingestion.platform.axway.com>**, and for EU is **<http://ingestion-eu.platform.axway.com>**.
 
 `CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVRIONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.                                                                                                                                                                                                                   |
 
