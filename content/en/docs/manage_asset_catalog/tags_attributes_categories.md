@@ -7,7 +7,7 @@ Use tags, attributes, and categories to edit the details of your assets. This ca
 
 ## Add or remove tags
 
-Tags are keywords that can assigned to catalog assets and used to search for assets. You can create tags with any special characters. For example, `_ - & () \ []` and all types of special language characters can be used to create tags.
+Tags are keywords that can be assigned to catalog assets and used to search for assets. You can create tags with any special characters. For example, `_ - & () \ []` and all types of special language characters can be used to create tags.
 
 1. Select an asset in the *Asset Catalog*.
 2. Either select a asset version in the Draft state or click either **Create Draft** or **Edit Asset** on the right-side details.
