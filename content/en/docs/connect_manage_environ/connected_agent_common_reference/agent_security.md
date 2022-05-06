@@ -157,7 +157,7 @@ By specifying the prefix `@Secret.`, the agent configuration parser must resolve
 
 ### Add openSSL script to start the Axway API Gateway agents
 
-The agent only accept environment variables and clear value, but you can add scripting around the agent startup to decrypt a password using openSSL.
+The agent only accepts environment variables and clear value, but you can add scripting around the agent startup to decrypt a password using openSSL.
 
 #### Password encryption with openSSL
 
@@ -169,7 +169,7 @@ To use openSLL to encrypt / decrypt your password, a secret key is required to a
 #!/bin/bash
 
 # the encrypt program rely on openssl
-# You will be prompt to enter your password in clear as well as a key to encrypt the password. Be sure to remember the key you use as it is needed for the decrypting process.
+# You will be prompted to enter your password in clear as well as a key to encrypt the password. Be sure to remember the key you use as it is needed for the decrypting process.
 
 #encrypt: ask password and then ask for a passphrase
 read -s -p "Enter the password to encrypt: " CLEAR_PASSWORD
@@ -199,7 +199,7 @@ This is your encrypted password. Keep it secured as well as the key that was use
 
 To start the agent, you must first decrypt the password and then place the decrypted value in the corresponding environment variable that the agent is using.
 
-This script below shows how to decrypt an encrypted password and place the value in the environment given as an argument of the script. You will be prompt to enter the encryption key that have used during the encryption phase. If you don't supply the correct key, the password will not be decrypted.
+This script below shows how to decrypt an encrypted password and place the value in the environment given as an argument of the script. You will be prompted to enter the encryption key that was used during the encryption phase. If you don't supply the correct key, the password will not be decrypted.
 
 **decrypt.sh script content**:
 
