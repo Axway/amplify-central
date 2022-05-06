@@ -98,21 +98,19 @@ Authentication to the servers is enforced through tokens, username/password, or 
 
 ## Agent configuration file
 
-While the agent configuration allows setting up credential-based configuration as environment variables with clear text, it doesn't provide the necessary security.
+Although the agent configuration allows setting up credential-based configuration as environment variables with clear text, it doesn't provide the necessary security. Instead, you can do one of the following:
 
-To overcome that, 2 technics can be used:
+* Reference data keys within `@secret` resource created in Central
+* Script the agent startup with openSSL
+* Use Docker secret for the Dockerized agents
 
-* referencing data keys within `@secret` resource created in Central.
-* scripting the agent startup with openSSL
-* using Docker secret for the Dockerized agents
+{{< alert title="Warning" color="warning" >}}If you are running your Traceability Agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
 
-{{< alert title="Warning" color="warning" >}}If you are running your traceability agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
+### Use the @Secret resources in Central
 
-### Using the @Secret resources in Central
+This will help you store your password or any sensitive information inside Amplify Central directly. This will work only when the agent is "connected" to Amplify Central.
 
-This first technic will help you to store your password or any sensitive information inside Amplify Central directly. This will work only when the agent is "connected" to Amplify Central.
-
-#### Creating secret resource in Central
+#### Create secret resource in Central
 
 * Create a yaml file with a resource definition for secret in environment scope:
 
@@ -144,7 +142,7 @@ axway auth login
 axway central create -f ./secret.yaml
 ```
 
-#### Referencing the secret in the agent configuration
+#### Reference the secret in the agent configuration
 
 The agents' configurations support referencing data keys in secret resource for their values in all string-based configuration properties. When referencing secret, the configuration property value must begin with `@Secret.`, followed by a dot-separated name of the secret resource and the data key name:
 
@@ -157,13 +155,13 @@ AZURE_SHAREDACCESSKEYVALUE=@Secret.example-azure-secret.accessKeyValue
 
 By specifying the prefix `@Secret.`, the agent configuration parser must resolve the value of the configuration property using the specified secret resource and data key. While resolving the value, if the configuration parser successfully resolves the referenced secret, then the value of the secret data key is set as the configuration property value. Otherwise, the agent logs the error in resolving the secret and the configuration property value is set as empty string.
 
-### Adding openSSL script to start the Axway API Gateway agents
+### Add openSSL script to start the Axway API Gateway agents
 
-The agent only accept environment variables and clear value. But you can add scripting around the agent startup to decrypt a password using openSSL.
+The agent only accept environment variables and clear value, but you can add scripting around the agent startup to decrypt a password using openSSL.
 
 #### Password encryption with openSSL
 
-We can rely on openSLL to encrypt / decrypt your password. For that you will also required a secret key to add complexity to the encryption. The password as well as the secret key will be prompt during the password encryption script below.
+To use openSLL to encrypt / decrypt your password, a secret key is required to add complexity to the encryption. The password, as well as the secret key, will be prompted for during the password encryption script:
 
 **encrypt.sh script content**:
 
@@ -184,7 +182,7 @@ echo "This is your encrypted password. Keep it secured as well as the key that w
 echo ""
 ```
 
-The above script is using `aes-256-cbc` (AES 256 cypher). You can select the one that suits you based on your security requirements. Refer to <https://www.openssl.org/docs/manmaster/man1/openssl.html> for other cypher.
+The above script uses `aes-256-cbc` (AES 256 cypher). You can select the one that best suits your security requirements. Refer to <https://www.openssl.org/docs/manmaster/man1/openssl.html> for other cypher.
 
 Sample of execution:
 
@@ -199,9 +197,9 @@ This is your encrypted password. Keep it secured as well as the key that was use
 
 #### Agent startup with password decryption
 
-In order to start the agent, you have first to decrypt the password and then place the decrypted value in the corresponding environment variable the agent is using.
+To start the agent, you must first decrypt the password and then place the decrypted value in the corresponding environment variable that the agent is using.
 
-The script below shows how to decrypt an encrypted password and place the value in the environment given as an argument of the script. Note that you will be prompt to enter the encryption key that have been used during the encryption phase. If you don't supply the correct key, the password will not be decrypted.
+This script below shows how to decrypt an encrypted password and place the value in the environment given as an argument of the script. You will be prompt to enter the encryption key that have used during the encryption phase. If you don't supply the correct key, the password will not be decrypted.
 
 **decrypt.sh script content**:
 
@@ -221,9 +219,9 @@ else
 fi
 ```
 
-Note that decryption algorithm should be the same as the one use to encrypt otherwise it will not work.
+The decryption algorithm must be the same as the one use to encrypt; otherwise, it will not work.
 
-Sample of script starting the Axway API Gateway discovery Agent. This script will ask you first to enter the API Gateway password along with its secret key and secondly the API Manager password along with its secret key. Then it will start the agent.
+Sample of script starting the Axway API Gateway Discovery Agent. The script will prompt for the API Gateway password and its secret key, and the API Manager password and its secret key. Then it will start the agent.
 
 **startDiscoveryAgent.sh script content**:
 
@@ -274,23 +272,23 @@ starting Discovery agent
 
 ```
 
-### Using Docker secret
+### Use Docker secret
 
-The agents that are running within Docker container, can leverage the Docker secret to get their configuration.
+The agents that are running within a Docker container can leverage the Docker secret to get their configuration.
 
-In order to remove the clear value from the agent configuration file, you can create a corresponding Docker secret and reference it in the corresponding variable.
+To remove the clear value from the agent configuration file, create a corresponding Docker secret and reference it in the corresponding variable.
 
-### Securing Axway API Gateway passwords
+### Secure Axway API Gateway passwords
 
-The agents are using credentials (username/password) to access the API Manager system. By default, the username and password are stored in clear text inside the agent configuration files.</br>
+The agents use credentials (username/password) to access the API Manager system. By default, the username and password are stored in clear text inside the agent configuration files.
 
-In order to remove them from the agent configuration file, you can export environment variables (`APIMANAGER_AUTH_USERNAME` / `APIMANAGER_AUTH_PASSWORD` for connecting API Manager, `APIGATEWAY_AUTH_USERNAME` / `APIGATEWAY_AUTH_PASSWORD` for connecting Node Manager) with their respective values and remove them from the agent configuration file. When starting the agent, it will look for these environment variables instead of the value in the file. The environment variables take precedence over any values present in configuration file.
+To remove the credentials from the agent configuration file, export environment variables (`APIMANAGER_AUTH_USERNAME` / `APIMANAGER_AUTH_PASSWORD` for connecting API Manager, `APIGATEWAY_AUTH_USERNAME` / `APIGATEWAY_AUTH_PASSWORD` for connecting Node Manager) with their respective values and remove them from the agent configuration file. When starting the agent, it will look for these environment variables instead of the value in the file. The environment variables take precedence over any values present in configuration file.
 
 ## Agent security scans
 
-All of Axway’s software is developed under a Secure Software Development Lifecycle; therefore, the agents undergo regular security analysis.
+All Axway software is developed under a Secure Software Development Lifecycle; therefore, the agents undergo regular security analysis.
 
-The agents are implemented in Golang. The following security tools are run against the agents and the findings are remediated:
+The agents are implemented in Golang. These security tools are run against the agents and the findings are remediated:
 
 * [Golint](https://github.com/golang/lint) - scans the code for possible coding errors or inconsistencies
 
