@@ -14,7 +14,7 @@ Learn how to create and configure the product plan using the Product Foundry Web
 
 **Plan** - contains the details about how to charge consumers, how often and how much.
 
-**Quotas** - describes the itemized units per resource or group of resources in product, and how much of those units they are entitled to use over a period.
+**Quotas** - describes the itemized units per resource or group of resources in product, and how much of those units they are entitled to use over a billing period.
 
 **Units** - defines the billable units. For example: Transactions, Seats, Messages. Used with the quotas to describe the pricing and how many units a consumer is entitled to use.
 
@@ -24,8 +24,8 @@ Learn how to create and configure the product plan using the Product Foundry Web
 |------------|---------------------------------------------------------------------------------------------------------------|
 | Draft      | Indicates that the plan is not listed in the Marketplace. Changes can be made to the plan.                |
 | Active     | Indicates that the plan is listed in the Marketplace. Allows new subscriptions.                               |
-| Deprecated | Indicates that the plan is listed in the marketplace, but new subscriptions are not allowed. Plan is not visible on the plan page.                                                                                                            |
-| Archived   | All associated subscriptions to this plan will be expired and the plan will be removed from the Marketplace.  |
+| Deprecated | Indicates that new subscriptions on this plan are not allowed. Consumers with an existing subscription can continue to stay on this plan until their subscription expires.                                                                                                            |
+| Archived   | After a plan is deprecated with an auto-expiration date, the plan will automatically move to Archived when the last subscription moves to expired.  |
 
 ## Create a free product plan
 
