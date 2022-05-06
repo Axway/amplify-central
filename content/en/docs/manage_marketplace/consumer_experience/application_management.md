@@ -23,12 +23,12 @@ As a consumer, learn how to create and manage your applications from the Marketp
 1. Navigate to the *Marketplace*.
 2. Select **Applications**.
 3. Click **Create Application**. *The Create Applications side panel is displayed*.
-3. Provide the following:
+4. Provide the following:
 
     * **Name**
     * **Description**
 
-4. Select the products you would like to access.
-5. Select the scope for the resources.
-6. Provide Security details.
-7. Click **Save**.
+5. Select the products you would like to access.
+6. Select the scope for the resources.
+7. Provide Security details.
+8. Click **Save**.
