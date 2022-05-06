@@ -14,18 +14,18 @@ description: Understand how to secure credentials in the agent configuration by 
 
 While the agent configuration allows setting up credential-based configuration as environment variables with clear text, it doesn't provide the necessary security.
 
-Learn how to secure credentials in the agent configuration using 2 different technics:
+Learn how to secure credentials in the agent configuration with one of the following methods:
 
-* by referencing data keys within secret resource created in Central.
-* by scripting the agent startup with openSSL
+* Reference data keys within secret resource created in Central
+* Script the agent startup with openSSL
 
 {{< alert title="Warning" color="warning" >}}If you are running your agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
 
-## Using the Secret resources in Central
+## Use the Secret resources in Central
 
-This first technic will help you to store your password or any sensitive information inside Amplify Central directly. This will work only when the agent is "connected" to Amplify Central.
+This will help you to store your password or any sensitive information inside Amplify Central directly. This will work only when the agent is "connected" to Amplify Central.
 
-### Creating secret resource in Central
+### Create secret resource in Central
 
 * Create a yaml file with a resource definition for secret in environment scope:
 
@@ -57,7 +57,7 @@ axway auth login
 axway central create -f ./secret.yaml
 ```
 
-### Referencing the secret in the agent configuration
+### Reference the secret in the agent configuration
 
 The agents' configurations support referencing data keys in secret resource for their values in all string-based configuration properties. When referencing secret, the configuration property value must begin with `@Secret.`, followed by a dot-separated name of the secret resource and the data key name:
 
@@ -70,13 +70,13 @@ AZURE_SHAREDACCESSKEYVALUE=@Secret.example-azure-secret.accessKeyValue
 
 By specifying the prefix `@Secret.`, the agent configuration parser must resolve the value of the configuration property using the specified secret resource and data key. While resolving the value, if the configuration parser successfully resolves the referenced secret, then the value of the secret data key is set as the configuration property value. Otherwise, the agent logs the error in resolving the secret and the configuration property value is set as empty string.
 
-## Adding openSSL script to start the agents
+## Add openSSL script to start the agents
 
-The agent only accept environment variables and clear value. But you can add scripting around the agent startup to decrypt a password using openSSL.
+The agent only accepts environment variables and clear value, but you can add scripting around the agent startup to decrypt a password using openSSL.
 
 ### Password encryption with openSSL
 
-We can rely on openSLL to encrypt / decrypt your password. For that you will also required a secret key to add complexity to the encryption. The password as well as the secret key will be prompt during the password encryption script below.
+To use openSLL to encrypt / decrypt your password, a secret key is required to add complexity to the encryption. The password, as well as the secret key, will be prompted for during the password encryption script:
 
 **encrypt.sh script content**:
 
@@ -97,7 +97,7 @@ echo "This is your encrypted password. Keep it secured as well as the key that w
 echo ""
 ```
 
-The above script is using `aes-256-cbc` (AES 256 cypher). You can select the one that suits you based on your security requirements. Refer to <https://www.openssl.org/docs/manmaster/man1/openssl.html> for other cypher.
+The above script uses `aes-256-cbc` (AES 256 cypher). You can select the one that best suits your security requirements. Refer to <https://www.openssl.org/docs/manmaster/man1/openssl.html> for other cypher.
 
 Sample of execution:
 
@@ -112,9 +112,9 @@ This is your encrypted password. Keep it secured as well as the key that was use
 
 ### Agent startup with password decryption
 
-In order to start the agent, you have first to decrypt the password and then place the decrypted value in the corresponding environment variable the agent is using.
+To start the agent, you must first decrypt the password and then place the decrypted value in the corresponding environment variable that the agent is using.
 
-The script below shows how to decrypt an encrypted password and place the value in the environment given as an argument of the script. Note that you will be prompt to enter the encryption key that have been used during the encryption phase. If you don't supply the correct key, the password will not be decrypted.
+The script below shows how to decrypt an encrypted password and place the value in the environment given as an argument of the script. You will be prompted to enter the encryption key that was used during the encryption phase. If you don't supply the correct key, the password will not be decrypted.
 
 **decrypt.sh script content**:
 
@@ -134,9 +134,9 @@ else
 fi
 ```
 
-Note that decryption algorithm should be the same as the one use to encrypt otherwise it will not work.
+The decryption algorithm must be the same as the one use to encrypt; otherwise, it will not work.
 
-Sample of script starting the Axway API Gateway discovery Agent. This script will ask you first to enter the API Gateway password along with its secret key and secondly the API Manager password along with its secret key. Then it will start the agent.
+Sample of script starting the Axway API Gateway discovery Agent. This script will prompt for the API Gateway password along and its secret key, and the API Manager password and its secret key. Then it will start the agent.
 
 **startDiscoveryAgent.sh script content**:
 
