@@ -8,7 +8,7 @@
 #*       @global-owner1 @global-owner2
 
 # Global reviewers for this project
-* @microsite-owner @doc-owner
+* @lbadenhop
 
 # Order is important; the last matching pattern takes the most
 # precedence. When someone opens a pull request that only
@@ -17,11 +17,11 @@
 #*.js @js-owner
 
 # Config files
-*.html @microsite-owner
-*.js    @microsite-owner
-*.toml @microsite-owner
-*.yml @microsite-owner
-*.json @microsite-owner
+*.html @lbadenhop @winghonlai
+*.js    @lbadenhop @winghonlai
+*.toml @lbadenhop @winghonlai
+*.yml @lbadenhop @winghonlai
+*.json @lbadenhop @winghonlai
 
 # You can also use email addresses if you prefer. They'll be
 # used to look up users just like we do for commit author
@@ -34,11 +34,38 @@
 #/build/logs/ @doctocat
 
 # Theme and CMS config files
-/layouts/ @microsite-owner
-/static/admin/ @microsite-owner
+/layouts/ @lbadenhop @winghonlai
+/static/admin/ @lbadenhop @winghonlai
 
-# Documentation files
-/content/en/docs/ @doc-owner
+# Documentation files for Actionable Insights
+/content/en/docs/get_actionable_insights/ @sallylanda6
+
+# Documentation files for Consumer Insights
+/content/en/docs/manage_marketplace/consumer_experience/get_actionable_insights/consumer_insights/ @sallylanda6
+
+# Documentation files for Integrate with Central
+/content/en/docs/integrate_with_central/ @lbadenhop @robertengaxway
+
+# Documentation files for Asset Catalog
+/content/en/docs/manage_asset_catalog/ @lbadenhop @robertengaxway
+
+# Documentation files for Unified Catalog
+/content/en/docs/manage_unified_catalog/ @lbadenhop @robertengaxway
+
+# Documentation files for SAAS
+/content/en/docs/saas_api_gateway/ @lbadenhop @robertengaxway
+
+# Documentation files for Marketplace
+/content/en/docs/manage_marketplace/ @lbadenhop @cbordier
+
+# Documentation files for Product Foundry
+/content/en/docs/manage_product_foundry/ @lbadenhop @cbordier
+
+# Documentation files for Service Registry
+/content/en/docs/manage_service_registry/ @lbadenhop @robertengaxway
+
+# Documentation files for Connect and Manage environments
+/content/en/docs/connect_manage_environ/ @lbadenhop @mpatiaxway
 
 # The `docs/*` pattern will match files like
 # `docs/getting-started.md` but not further nested files like
