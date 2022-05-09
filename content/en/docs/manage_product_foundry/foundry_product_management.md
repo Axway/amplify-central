@@ -144,8 +144,8 @@ You can offer multiple free and paid consumption options for your product. As a 
 5. Click **Add product plan +**.
 6. Add the following and then click **Next**:
 
-    * Plan Name - Display name of the plan
-    * Logical Name - A unique name for the plan. If no value is entered, a logical name will be generated
+    * Plan title - Display name of the plan that will be listed in the Marketplace to identify the plan
+    * Logical name - A unique name for the plan. If no value is entered, a logical name will be generated
     * Description - Short description of the plan.
 
 7. Select a Plan Type of either **Free** or **Paid** and click **Next**.
