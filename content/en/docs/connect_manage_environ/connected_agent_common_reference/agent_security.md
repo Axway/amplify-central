@@ -98,7 +98,11 @@ Authentication to the servers is enforced through tokens, username/password, or 
 
 ## Agent configuration file
 
-Although the agent configuration allows setting up credential-based configuration as environment variables with clear text, it doesn't provide the necessary security. Instead, you can do one of the following:
+The agents use credentials (username/password) to access the API Manager system. By default, the username and password are stored in clear text inside the agent configuration files.
+
+To remove the credentials from the agent configuration file, export environment variables (`APIMANAGER_AUTH_USERNAME` / `APIMANAGER_AUTH_PASSWORD` for connecting API Manager, `APIGATEWAY_AUTH_USERNAME` / `APIGATEWAY_AUTH_PASSWORD` for connecting Node Manager) with their respective values and remove them from the agent configuration file. When starting the agent, it will look for these environment variables instead of the value in the file. The environment variables take precedence over any values present in configuration file.
+
+Although the agent configuration allows setting up credential-based configuration as environment variables with clear text, it still doesn't provide the necessary security. Instead, you can do one of the following:
 
 * Reference data keys within `@secret` resource created in Central
 * Script the agent startup with openSSL
@@ -277,12 +281,6 @@ starting Discovery agent
 The agents that are running within a Docker container can leverage the Docker secret to get their configuration.
 
 To remove the clear value from the agent configuration file, create a corresponding Docker secret and reference it in the corresponding variable.
-
-### Secure Axway API Gateway passwords
-
-The agents use credentials (username/password) to access the API Manager system. By default, the username and password are stored in clear text inside the agent configuration files.
-
-To remove the credentials from the agent configuration file, export environment variables (`APIMANAGER_AUTH_USERNAME` / `APIMANAGER_AUTH_PASSWORD` for connecting API Manager, `APIGATEWAY_AUTH_USERNAME` / `APIGATEWAY_AUTH_PASSWORD` for connecting Node Manager) with their respective values and remove them from the agent configuration file. When starting the agent, it will look for these environment variables instead of the value in the file. The environment variables take precedence over any values present in configuration file.
 
 ## Agent security scans
 
