@@ -144,7 +144,9 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_URL`: The Amplify Central url. Default value is **<https://apicentral.axway.com>**.
 
-`CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVRIONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.                                                                                                                                                                                                                   |
+`CENTRAL_SINGLEURL`: Alternate Amplify Central url connection if using a static IP. Default value for US is **<https://ingestion.platform.axway.com>**, and for EU is **<http://ingestion-eu.platform.axway.com>**.
+
+`CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVRIONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.
 
 `CENTRAL_ORGANIZATIONID`: The Organization ID from Amplify Central. Locate this at Platform > User > Organization > Org ID field.
 
@@ -172,6 +174,7 @@ Once all data is gathered, this section should look like:
 
 ```shell
 #CENTRAL_URL=https://apicentral.axway.com
+CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
@@ -291,7 +294,7 @@ APIMANAGER_FILTER=tag.APITAG==value
 
 # Central connectivity 
 #CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_TEAM=Dev
+CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
@@ -702,6 +705,7 @@ Once all data is gathered, the variable list should look like:
 ```shell
 # Central connectivity
 #CENTRAL_URL=https://apicentral.axway.com
+CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
@@ -806,6 +810,7 @@ APIGATEWAY_SENDALLTRAFFIC=true
 
 # Central connectivity
 #CENTRAL_URL=https://apicentral.axway.com
+CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
