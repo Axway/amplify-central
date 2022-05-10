@@ -1,6 +1,6 @@
 ---
-title: Consumer experience
-linkTitle: Consumer experience
+title: Subscription management
+linkTitle: Subscription management
 weight: 10
 hide_readingtime: true
 ---
