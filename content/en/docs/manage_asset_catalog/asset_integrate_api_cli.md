@@ -9,8 +9,8 @@ Use the Amplify Central API / CLI to create and manage your assets.
 ## Before you start
 
 * You must have credentials or a user account to use the CLI. Please follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/_index)  
-* Be familiar with the steps in [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api)
+* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/cli_command_reference)
+* Be familiar with the steps in [Register APIs using the CLI](/docs/manage_service_registry/service_integrate%20api_cli)
 * Make sure [jq](https://stedolan.github.io/jq/) is installed on the system
 
 ## Objectives
@@ -71,13 +71,13 @@ Where `stage.json` contains the following content:
 
 ```json
 {
-    "group": "catalog",
-    "apiVersion": "v1alpha1",
-    "kind": "Stage",
-    "title": "production",
-    "spec": {
-        "description": "All APIs hosted in production"
-    }
+  "group": "catalog",
+  "apiVersion": "v1alpha1",
+  "kind": "Stage",
+  "title": "production",
+  "spec": {
+    "description": "All APIs hosted in production"
+  }
 }
 ```
 
@@ -95,14 +95,14 @@ Where `asset.json` contains the following content:
 
 ```json
 {
-    "group": "catalog",
-    "apiVersion": "v1alpha1",
-    "kind": "Asset",
-    "title": "Asset from tutorial",
-    "spec": {
-        "type": "API"
-    },
-    "state": "draft"
+  "group": "catalog",
+  "apiVersion": "v1alpha1",
+  "kind": "Asset",
+  "title": "Asset from tutorial",
+  "spec": {
+    "type": "API"
+  },
+  "state": "draft"
 }
 ```
 
@@ -110,34 +110,39 @@ The asset is created in **Draft** state. To use this asset in a product definiti
 
 ### Link an existing API to the created asset
 
-To link an API to an asset, create an `AssetResource`. AssetResources are the business value that the asset is wrapping and can be SDKs, scripts, APIs, etc. Similar to an `APIServiceRevision`, the API Server is not opinionated about what the AssetResource is.
+`AssetResources` are the business value that the asset is wrapping and can be SDKs, scripts, APIs, etc. Similar to an `APIServiceRevision`, the API Server is not opinionated about what the AssetResource is. There are two ways to create an `AssetResource`:
 
-Create the AssetResource in the scope of the previously created asset. In this example, the asset will be grouped in the stage that was created previously:
+* Manual, by creating a new `AssetResource` in the `Asset` scope directly
+* Automated **(preferred)**, by creating an `AssetMapping` that contains links to the desired resources. Creating an `AssetMapping` will trigger the creation of a new `AssetResource` in the `Asset` scope.
+
+In this example, we will create an `AssetMapping` in the scope of the previously created `Asset`. The asset will be grouped in the stage created previously. Also, assuming you are using resources and corresponding files (`api-service-created.json`, `api-service-revision-created.json`, `api-service-instance-created.json`) generated in the previous step ([Register APIs using the CLI](/docs/manage_service_registry/service_integrate%20api_cli)):
 
 ```bash
-jq --slurp -f asset-resource.jq asset-created.json api-service-revision-created.json stage-details.json > asset-resource.json
-axway central create -f asset-resource.json -o json -y > asset-resource-created.json
+jq --slurp -f asset-mapping.jq env.json asset-created.json stage-details.json api-service-created.json api-service-revision-created.json api-service-instance-created.json > asset-mapping.json
+axway central create -f asset-mapping.json -y -o json > asset-mapping-created.json
 ```
 
-Where `asset-resource.jq` has the following content:
+Where `asset-mapping.jq` has the following content:
 
 ```json
-# Creates the API Service Instance from OAS and the created service revision
+# Creates AssetMapping linking existing APIService, APIServiceRevision and APIServiceInstance
+# note that APIServiceInstance ("apiServiceInstance") is an optional field.
 {
     apiVersion: "v1alpha1",
-    kind: "AssetResource",
-    title: .[1][0].title,
+    kind: "AssetMapping",
     metadata: {
         scope: {
             kind: "Asset",
-            name: .[0][0].name,
+            name: .[1][0].name,
         }
     },
     spec: {
-        type: .[1][0].spec.definition.type,
-        definition: .[1][0].spec.definition.value,
-        stage: .[2][0].name,
-        status: "active"
+        inputs: {
+          stage: .[2][0].name,
+          apiService: "management/\(.[0].name)/\(.[3][0].name)",
+          apiServiceRevision: "management/\(.[0].name)/\(.[4][0].name)",
+          apiServiceInstance: "management/\(.[0].name)/\(.[5][0].name)",
+        }
     }
 }
 ```
@@ -159,11 +164,11 @@ axway central apply -f asset-changed.json
 
 To release an asset, you must create a release tag for the asset. The Asset Catalog enforces sematic versioning, so when you create a release tag you must specify whether it is a major, minor or patch update. The Amplify platform will automatically calculate the semantic version of the asset based on historic release times that have been applied. You can select how the release version number is incremented by selected one of the following values: `major`, `minor`, or `patch`. If the current version number is 1.0.1, then the version is incremented to:
 
-| Value provided      | Result |
-| ----------- | ----------- |
-|major|2.0.1|
-|minor|1.1.1|
-|patch|1.0.2|
+| Value provided | Result |
+| -------------- | ------ |
+| major          | 2.0.1  |
+| minor          | 1.1.1  |
+| patch          | 1.0.2  |
 
 To make a release tag, run the following command:
 
@@ -220,17 +225,17 @@ Run the following command to create a new category with the title `Finance` and 
 axway central create -f category.json -o json -y > category-created.json
 ```
 
-Where ```category.json``` contains the following content:
+Where `category.json` contains the following content:
 
 ```json
 {
-    "group": "catalog",
-    "apiVersion": "v1alpha1",
-    "kind": "Category",
-    "title": "Finance",
-    "spec": {
-        "description": "Finance APIs"
-    }
+  "group": "catalog",
+  "apiVersion": "v1alpha1",
+  "kind": "Category",
+  "title": "Finance",
+  "spec": {
+    "description": "Finance APIs"
+  }
 }
 ```
 
