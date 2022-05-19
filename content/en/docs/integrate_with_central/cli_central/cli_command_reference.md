@@ -156,11 +156,11 @@ The following table describes the usage, options, and arguments for the `create`
 |`axway central create <command> [options]`             |                                    |
 |`axway central create -f <path_to_file>`               |Create multiple resources from a file|
 |`axway central create environment [options] <name>`    |Create an environment with the specified name. Only environments are currently available for this command|
-|`axway central create agent-resources`                 |Create the mandatory information for connecting agents to Amplify environment|
+|`axway central create agent-resource`                 |Create the mandatory information for connecting agents to Amplify environment|
 |**Commands**                                             |          |
 |`environment`                                            |Create an environment with the specified name  |
 |`service-account`                                        |Create a service account<br />*(Removed in v2.5.0. Use [axway service-account](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/service_accounts/index.html) command instead.)* |
-|`agent-resources`                                        |Create the mandatory information for connecting agents to Amplify environment|
+|`agent-resource`                                        |Create the mandatory information for connecting agents to Amplify environment|
 |**Options**                                              |                   |
 |`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
 |`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
@@ -185,7 +185,7 @@ axway central create environment newenv -o yaml
 axway central create -f ./some/folder/resources.yaml
 
 # create agent resources
-axway central create agent-resources
+axway central create agent-resource
 ```
 
 ## apply
