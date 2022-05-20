@@ -140,7 +140,7 @@ my-amplify-central-environment  a few seconds ago  My beautiful environment titl
 Create agent resources using one of these methods:
 
 * Manually use a file containing the content explained in the above [Resources descriptions](#resources-descriptions) section.
-* Use the Axway Central CLI: `axway central create agent-resources`. You will be prompt to select the type of agent (Discovery | Traceability | both), the name of these agents and the type of Gateway (free text).
+* Use the Axway Central CLI: `axway central create agent-resource`. You will be prompt to select the type of agent (Discovery | Traceability | both), the name of these agents and the type of Gateway (free text).
 
 Reference the CLI output name `CENTRAL_AGENTNAME` variable in your agent configuration file.
 
