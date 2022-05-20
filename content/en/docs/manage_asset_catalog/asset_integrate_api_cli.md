@@ -8,20 +8,20 @@ Use the Amplify Central API / CLI to create and manage your assets.
 
 ## Before you start
 
-- You must have credentials or a user account to use the CLI. Please follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-- Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/cli_command_reference)
-- Be familiar with the steps in [Register APIs using the CLI](/docs/manage_service_registry/service_integrate-api_cli)
-- Make sure [jq](https://stedolan.github.io/jq/) is installed on the system
+* You must have credentials or a user account to use the CLI. Please follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
+* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/cli_command_reference)
+* Be familiar with the steps in [Register APIs using the CLI](/docs/manage_service_registry/service_integrate-api_cli)
+* Make sure [jq](https://stedolan.github.io/jq/) is installed on the system
 
 ## Objectives
 
 Learn how to use the Axway Central CLI to create and manage assets in the Asset Catalog.
 
-- Create an asset
-- Link an existing API to the created asset
-- Activate the asset to make it available to the Product Foundry
-- Organize your assets
-- Archive and delete an asset
+* Create an asset
+* Link an existing API to the created asset
+* Activate the asset to make it available to the Product Foundry
+* Organize your assets
+* Archive and delete an asset
 
 {{< alert title="Note" color="primary" >}}For consistency and readability, the same asset is used throughout the code examples in this topic.{{< /alert >}}
 
@@ -112,8 +112,8 @@ The asset is created in **Draft** state. To use this asset in a product definiti
 
 `AssetResources` are the business value that the asset is wrapping and can be SDKs, scripts, APIs, etc. Similar to an `APIServiceRevision`, the API Server is not opinionated about what the AssetResource is. There are two ways to create an `AssetResource`:
 
-- Manual, by creating a new `AssetResource` in the `Asset` scope directly
-- Automated **(preferred)**, by creating an `AssetMapping` that contains links to the desired resources. Creating an `AssetMapping` will trigger the creation of a new `AssetResource` in the `Asset` scope.
+* Manual, by creating a new `AssetResource` in the `Asset` scope directly
+* Automated **(preferred)**, by creating an `AssetMapping` that contains links to the desired resources. Creating an `AssetMapping` will trigger the creation of a new `AssetResource` in the `Asset` scope.
 
 In this example, we will create an `AssetMapping` in the scope of the previously created `Asset`. The asset can be optionally grouped in a stage which was created previously. Also, assuming you are using resources and corresponding files (`api-service-created.json`, `api-service-revision-created.json`, `api-service-instance-created.json`) generated in the previous step ([Register APIs using the CLI](/docs/manage_service_registry/service_integrate-api_cli)):
 
