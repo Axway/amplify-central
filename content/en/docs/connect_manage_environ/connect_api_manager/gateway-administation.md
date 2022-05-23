@@ -152,9 +152,7 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify Central](/docs/integrate_with_central/cli_central/cli_install/).
 
-`CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.
-
-`CENTRAL_MODE`: The method to send endpoints back to Central. (publishToEnvironment = API Service, publishToEnvironmentAndCatalog = API Service and Catalog asset).  
+`CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.ß
 
 `CENTRAL_AUTH_URL`: The Amplify login URL. Default value is **<https://login.axway.com/auth>**.
 
@@ -179,7 +177,6 @@ CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_MODE=publishToEnvironmentAndCatalog
 #CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
@@ -298,7 +295,6 @@ CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_MODE=publishToEnvironmentAndCatalog
 #CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
@@ -710,7 +706,6 @@ CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_MODE=publishToEnvironmmentAndCatalog
 #CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
@@ -815,7 +810,6 @@ CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_MODE=publishToEnvironmmentAndCatalog
 #CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
