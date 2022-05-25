@@ -53,3 +53,10 @@ Use the *Account settings* page to manage existing subscriptions:
 
 1. Navigate to the *Marketplace*.
 2. Select **Account** > **Subscriptions**. A list of Marketplace subscriptions is displayed.
+
+### Delete a subscription
+
+1. Navigate to the *Marketplace*.
+2. Select **Account** > **Subscriptions**. A list of Marketplace subscriptions is displayed.
+3. Select the subscription you want to delete. The details page is displayed.
+4. Click the icon next to the subscription to trigger the unsubscribing process.
