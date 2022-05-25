@@ -23,12 +23,12 @@ As a consumer, learn how to create a free or paid subscription and manage existi
 
 1. Navigate to the *Marketplace*.
 2. Select the product you would like to subscribe to.
-3. Click **Subscribe**. *The Subscription request form is displayed*.
-4. Complete the form:
+3. Click **Subscribe**. *The Subscription Request form is displayed*.
+4. Complete the form. Note that the Subscription Name is automatically populated.
 
-    * Select the usage plan
-    * Agree to the Terms and Conditions for the product
-    * Click **Submit**
+    * Select the Usage Plan
+    * Select the Owner
+    * Click **Save**
 
 5. Track the status of your subscription from the *Subscription overview* page. For additional information on states, see [Subscription approval states](#subsrcitopn-approval-states).
 6. Once the subscription request is approved, navigate to the subscription and request access to the underlying resources:
@@ -52,11 +52,10 @@ Once submitted, a subscription request goes through an approval process:
 Use the *Account settings* page to manage existing subscriptions:
 
 1. Navigate to the *Marketplace*.
-2. Select **Account** > **Subscriptions**. A list of Marketplace subscriptions is displayed.
+2. Select **Subscriptions**. A list of Marketplace subscriptions is displayed.
 
 ### Delete a subscription
 
 1. Navigate to the *Marketplace*.
-2. Select **Account** > **Subscriptions**. A list of Marketplace subscriptions is displayed.
-3. Select the subscription you want to delete. The details page is displayed.
-4. Click the icon next to the subscription to trigger the unsubscribing process.
+2. Select **Subscriptions**. A list of Marketplace subscriptions is displayed.
+3. Click the bin icon next to the subscription to trigger the unsubscribing process.
