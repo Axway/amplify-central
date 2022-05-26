@@ -23,7 +23,7 @@ Learn how to use the Marketplace WebUI to configure your organization's settings
 
     {{% alert title="Note" color="warning"%}}Users with the appropriate rights can configure General Settings for the Marketplace, such as the name of the Marketplace (that will appear in the Marketplace URL) and the Access mode, by using the Organization settings in the user menu.{{% /alert %}}
 
-3. Select **Marketplace > Settings**. *The Marketplace Settings page displays*.
+3. Select **Marketplace > Settings**. *The Marketplace Settings page is displayed*.
 4. Set the values for:
 
     * **Marketplace URL** - enter the address of your Marketplace. This is required to make your Marketplace available for product publication.
