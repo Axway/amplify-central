@@ -15,7 +15,7 @@ From the Marketplace left navigation click **Consumer Insights**. You are direct
 
 Click **API Health** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
 
-![API Health example](/Images/central/consumer_experience/insights_api_health.png)
+![API Health example](/Images/marketplace/consumer_experience/insights_api_health.png)
 
 The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected) in the tiles across the top below the filter options. Click the **Compare to previous period** option to compare the current selected time range to the previous time range. You can compare the current week, month, or year to the previous week, month, or year to understand how your API usage is changing over time.
 
