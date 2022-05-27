@@ -7,7 +7,7 @@ date: 2022-05-26
 
 Get insights about your API consumption in the Marketplace.
 
-Access to the Consumer Insights menu is based on your role and permissions and your organization's subscriptions to the Marketplace. Users must have one of the following [roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html) to access the API Health dashboards.
+Access to the Consumer Insights menu is based on your role and permissions and your organization's subscriptions to the Marketplace. Users must have a Consumer or Subscription Admin [role](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the API Health dashboards.
 
 From the Marketplace left navigation click **Consumer Insights**. You are directed to the Consumer Insights dashboards within the Marketplace.
 
