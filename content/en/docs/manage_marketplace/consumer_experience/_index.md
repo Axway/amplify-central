@@ -5,7 +5,7 @@ weight: 100
 hide_readingtime: true
 ---
 
-Consumers can navigate the marketplace anonymously by navigating to the configured Marketplace URL, example: http://acme.marketplace.axway.com, assuming the Marketplace has been set to be publicly accessible in the Marketplace Settings.
+Consumers can navigate the marketplace anonymously by navigating to the configured Marketplace URL, for example: *http://acme.marketplace.axway.com*, assuming the Marketplace has been set to be publicly accessible in the Marketplace Settings.
 
 As long as a user hasn’t logged in, they can freely explore the published products in the Marketplace, but won’t have the ability to subscribe, or any other actions, until they have logged in.
 
