@@ -11,7 +11,7 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 
 The following new features and enhancements are available in this update:
 
-* The creation or edit of an asset with the WebUI Group Resources step allows for the selection of multiple API Service versions. 
+* The creation or edit of an asset with the WebUI Group Resources step allows for the selection of multiple API Service versions.
 * The Asset and Product details page of the WebUI have an 'Access Rights' tab to visualize only the teams which the item is shared with.
 * The Asset details page of the WebUI have an 'Products' tab to visualize Products consuming the asset version.
 
