@@ -9,7 +9,7 @@ Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio prov
 
 ## Versioning
 
-Currently, version 1.1.16 is available. It is based on Amplify Agents SDK v1.1.20.
+Current agent version are based on Amplify Agents SDK v1.1.24.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -25,33 +25,45 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* Single communication point for the agent: `CENTRAL_SINGLEURL=https://ingestion-eu.platform.axway.com` (EU region) or `CENTRAL_SINGLEURL=https://ingestion.platform.axway.com` (US region) can be use to ensure the agent connectivity to the platform. From here the request will be forwarded to the appropriate services. From a customer perspective, using this url will ease their firewall configuration as only one url needs to be opened.
+This new variable is enforced by Axway central CLI with version 2.10.3 or above.
+* Marketplace subscription: Turning on the marketplace subscription provisioning `AGENTFEATURES_MARKETPLACEPROVISIONING=true` has 2 consequences to encourage everybody to move to the Marketplace:
+
+    1- the discovery agent will no longer listen to unified catalog subscription.
+
+    2- when discovery agent discover APIs, no catalog item will be created but only API Service.
+
+    In a nutshell, either your agent manage the Unified Catalog subscription or the Marketplace subscription but not both at the same time.
+* Single polling entry point: with the introduction of event based agent for managing the marketplace subscription, we also switch the existing various polling (API, Unified Catalog subscription...) to a single source of truth: harvester service where all events the agent is interested are available.
 
 ### Amplify Gateway agents enhancements
 
+* Agent version: 1.1.18
 * See Common enhancements and features.
 
 ### Amplify AWS Gateway agents enhancements
 
+* Agent version: 1.1.18
 * See Common enhancements and features.
 
 ### Amplify Azure agents enhancements
 
+* Agent version: 1.1.16
 * See Common enhancements and features.
 
 ### Amplify Istio agents enhancements
 
-Latest helm chart version: 0.69.0
+Latest helm chart version: 0.71.0
 
-Latest agent version: 2.0.28
+Latest agent version: 2.0.33
 
 * Add text.
 
 ### Amplify Apigee agents
 
-Current release (0.0.6) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
+Current release (0.0.7) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
-* Add text.
+* See Common enhancements and features.
 
 Known limitations:
 
@@ -64,13 +76,15 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-api
 
 Current release (1.1.5) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
-* Add text.
+* No new updates
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
 
-* Add text.
+* **Istio TA does not receive expected log entries from istio**. For the traceability agent to work properly, it requires that the envoy filters are deployed in each namespace that logs need to be gathered from.
+* **Istio TA does not record all hops**.
+* **OAS3 spec parser does not set the auth policies within the service body**. Previously, the agent was not able to parse correctly an OAS3 specification to discover the type of security. Now, agent discover correctly the type of security defined in the specification (swagger2 / OAS3).
 
 ## Known limitations
 
