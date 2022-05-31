@@ -22,13 +22,13 @@ For more information, see [Axway CLI release note]([https://docs.axway.com/bundl
 
 The following enhancements are available in this Axway Central CLI update:
 
-* Add text.
+* The agent installation supports the single entry point URL defined by the region where the agent is installed.
 
 #### Fixed issues
 
 The following issues are fixed in this Amplify Central CLI update:
 
-* Add text.
+* Amplify Tooling packages have been updated to use a newer version of an 'ejs' dependency to resolved a security issue with template injection.
 
 ### Amplify Central WebUI
 
