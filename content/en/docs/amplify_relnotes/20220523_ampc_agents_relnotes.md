@@ -25,16 +25,16 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* Single communication point for the agent: `CENTRAL_SINGLEURL=https://ingestion-eu.platform.axway.com` (EU region) or `CENTRAL_SINGLEURL=https://ingestion.platform.axway.com` (US region) can be use to ensure the agent connectivity to the platform. From here the request will be forwarded to the appropriate services. From a customer perspective, using this url will ease their firewall configuration as only one url needs to be opened.
+* **Single communication point for the agent**: `CENTRAL_SINGLEURL=https://ingestion-eu.platform.axway.com` (EU region) or `CENTRAL_SINGLEURL=https://ingestion.platform.axway.com` (US region) can be use to ensure the agent connectivity to the platform. From here the request will be forwarded to the appropriate services. From a customer perspective, using this url will ease their firewall configuration as only one url needs to be opened.
 This new variable is enforced by Axway central CLI with version 2.10.3 or above.
-* Marketplace subscription: Turning on the marketplace subscription provisioning `AGENTFEATURES_MARKETPLACEPROVISIONING=true` has 2 consequences to encourage everybody to move to the Marketplace:
+* **Marketplace subscription**: Turning on the marketplace subscription provisioning `AGENTFEATURES_MARKETPLACEPROVISIONING=true` has 2 consequences to encourage everybody to move to the Marketplace:
 
     1- the discovery agent will no longer listen to unified catalog subscription.
 
     2- when discovery agent discover APIs, no catalog item will be created but only API Service.
 
     In a nutshell, either your agent manage the Unified Catalog subscription or the Marketplace subscription but not both at the same time.
-* Single polling entry point: with the introduction of event based agent for managing the marketplace subscription, we also switch the existing various polling (API, Unified Catalog subscription...) to a single source of truth: harvester service where all events the agent is interested are available.
+* **Single polling entry point**: with the introduction of event based agent for managing the marketplace subscription, we also switch the existing various polling (API, Unified Catalog subscription...) to a single source of truth: harvester service where all events the agent is interested are available.
 
 ### Amplify Gateway agents enhancements
 
