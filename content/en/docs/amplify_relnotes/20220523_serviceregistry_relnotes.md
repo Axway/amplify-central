@@ -11,13 +11,13 @@ The Service Registry is part of the Provider experience. The WebUI is an easy wa
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* Filtering the Service Registry by API Service Type (OAS2, OAS3, WSDL, AsyncAPI, and GraphQL) is supported.
 
 ## Fixed issues
 
 The following issues have been fixed in this update:
 
-* Add text.
+* None.
 
 ## Known limitations
 
