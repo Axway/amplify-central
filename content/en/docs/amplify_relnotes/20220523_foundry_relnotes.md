@@ -11,17 +11,23 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* Providers can now add more than one quota groups on the default product plan from the Product Foundry UI.
+* A product plan can be activated from the Product Foundry UI which will result in the publication of that plan to the Marketplace. 
+* Product documentation management has been enhanced to allow: 
+** Renaming a document
+** Renaming a section
+** Renaming an article
+** Editing an article. 
 
 ## Fixed issues
 
 The following issues have been fixed in this update:
 
-* Add text.
+* None. 
 
 ## Known limitations
 
 The following limitations exist in this update:
 
-* Documentation update is not yet available from WebUI.
-* Plan update is not yet available.
+* Deleting a document / section / article is not currently possible from the Product Foundry UI. 
+* Adding a new product plan is currently now avaiable in the Product Foundry UI.
