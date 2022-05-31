@@ -43,7 +43,7 @@ This new variable is enforced by Axway central CLI with version 2.10.3 or above.
 
 ### Amplify AWS Gateway agents enhancements
 
-* Agent version: 1.1.18
+* Agent version: 1.1.16
 * See Common enhancements and features.
 
 ### Amplify Azure agents enhancements
