@@ -11,7 +11,6 @@ Standard custom branding capabilities include:
 * Customize the logo
 * Modify the WebUI color scheme / theme
 * Alter font colors with organization's branding colors
-* Replace standard banner with organization’s custom banner
 * Change the contents of the help menu displayed in the navigation bar
 
 ## Before you start
@@ -93,10 +92,6 @@ From the *Appearance* page, click **Configure** in the Buttons section to change
 
 * **Button format** - the format of the button: Solid or Outline.
 * **Button radius** - the button radius: Square, Rounded or Round.
-
-### Use a custom banner
-
-From the *Appearance* page, click **Choose File** to upload a banner from your local computer.
 
 ### Customize the help menu
 
