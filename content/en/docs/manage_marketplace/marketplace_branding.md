@@ -1,17 +1,18 @@
 ---
-title: Marketplace branding
-linkTitle: Marketplace branding
+title: Marketplace appearance
+linkTitle: Marketplace appearance
 weight: 40
 ---
 
 Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The platform administrator may choose to use the Marketplace WebUI or API to change the settings.
 
-Standard custom branding capabilities include:
+Customizing the Marketplace appearance includes:
 
-* Customize logo
+* Customize the logo
 * Modify the WebUI color scheme / theme
 * Alter font colors with organization's branding colors
 * Replace standard banner with organization’s custom banner
+* Change the contents of the help menu displayed in the navigation bar
 
 ## Before you start
 
@@ -21,9 +22,9 @@ You must have platform administrator credentials.
 
 Learn how to change the appearance of the Marketplace by using either the WebUI or API.
 
-## Customize the Marketplace branding in the WebUI
+## Customize the Marketplace appearance in the WebUI
 
-All Marketplace branding changes are made from the Marketplace *Appearance* page:
+All Marketplace appearance changes are made from the Marketplace *Appearance* page:
 
 1. Navigate to *Organization > Marketplace*.
 2. Select **Appearance**. *The Appearance page is displayed*:
@@ -39,7 +40,7 @@ To revert branding changes, select either:
 
 From the *Appearance* page, click **Choose file** in either the Logo or the Favicon section to upload an icon from your local computer.
 
-* Acceptable file formats include JPEG, PNG and GIF
+* Acceptable file formats include JPEG, PNG and GIF.
 * The file must be less than 500MB.
 
 A preview of the selected logo / favicon is displayed:
@@ -65,7 +66,7 @@ Under **Elements Colors**, you can customize and preview:
 * Product Cards:
 
     * **Card Title** - color of the card title.
-    * **Card Background** - color applied to all card elements in the Marketplace
+    * **Card Background** - color applied to all card elements in the Marketplace.
     * **Card Boarders** - color applied to card boarders of all card elements in the Marketplace.
 
 * Product Details banner and Call to Actions buttons:
@@ -77,25 +78,36 @@ Under **Elements Colors**, you can customize and preview:
 
 * Default icons:
 
-    * **Icon** - color of the default icons
+    * **Icon** - color of the default icons.
 
 ### Change the fonts
 
 From the *Appearance* page, click **Configure** in the Fonts section to change and preview the Marketplace fonts. The font settings are displayed:
 
-* **Font family** - the font set to display text. You can choose an existing font or add you own font.
+* **Font family** - the font set to display text. You can choose an existing font or add your own font.
 * **Kerning** - adjust the spacing between characters.
 
 ### Change the buttons appearance
 
 From the *Appearance* page, click **Configure** in the Buttons section to change and preview the Marketplace buttons. The buttons settings are displayed:
 
-* **Button format** - the format of the button: solid or Outline.
+* **Button format** - the format of the button: Solid or Outline.
 * **Button radius** - the button radius: Square, Rounded or Round.
 
 ### Use a custom banner
 
 From the *Appearance* page, click **Choose File** to upload a banner from your local computer.
+
+### Customize the help menu
+
+From the *Appearance* page, click **Configure** in the Help Menu section to change the contents of the help menu displayed in the navigation bar. Click **Add menu item** to configure a Help menu. Do the following to configure menu items:
+
+* Click the question mark icon to select an icon from the drop down menu to use for the help item image.
+* Type a label for the menu item.
+* Type a link to the menu item.
+* Use the up and down arrow keys to arrange the menu items.
+* Click the delete icon to remove a menu item.
+* Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
 
 ## Customize the Marketplace branding with APIs
 
