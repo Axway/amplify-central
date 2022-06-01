@@ -6,7 +6,7 @@ weight: 40
 
 Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The platform administrator may choose to use the Marketplace WebUI or API to change the settings.
 
-Customizing the Marketplace appearance includes:
+Standard custom branding capabilities include:
 
 * Customize the logo
 * Modify the WebUI color scheme / theme
@@ -24,7 +24,7 @@ Learn how to change the appearance of the Marketplace by using either the WebUI 
 
 ## Customize the Marketplace appearance in the WebUI
 
-All Marketplace appearance changes are made from the Marketplace *Appearance* page:
+All Marketplace branding changes are made from the Marketplace *Appearance* page:
 
 1. Navigate to *Organization > Marketplace*.
 2. Select **Appearance**. *The Appearance page is displayed*:
@@ -109,9 +109,9 @@ From the *Appearance* page, click **Configure** in the Help Menu section to chan
 * Click the delete icon to remove a menu item.
 * Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
 
-## Customize the Marketplace branding with APIs
+## Customize the Marketplace appearance with APIs
 
-The following APIs provide the equivalent functionality of what is provided throughout the WebUI.
+The following APIs provide the equivalent functionality of what is provided throughout the WebUI to brand your Marketplace.
 
 See [APIs](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=AmplifyPlatform&productversion=1.0.0&filename=swagger.json&disabletry=true#/).
 
