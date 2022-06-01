@@ -100,7 +100,7 @@ From the *Appearance* page, click **Configure** in the Help Menu section to chan
 1. Click the question mark icon to select an icon from the drop down menu to use for the help item image.
 2. Type a label for the menu item.
 3. Type a link to the menu item.
-4. Use the up and down arrow keys to arrange the menu items.
+4. Click the up or down arrow keys to move the menu item's position.
 5. Click the delete icon to remove a menu item.
 6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
 
@@ -108,7 +108,7 @@ From the *Appearance* page, click **Configure** in the Help Menu section to chan
 
 The following APIs provide the equivalent functionality of what is provided throughout the WebUI to brand your Marketplace.
 
-See [APIs](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=AmplifyPlatform&productversion=1.0.0&filename=swagger.json&disabletry=true#/).
+See [APIs](https://platform.axway.com/api-docs.html#operation/provider_providerFindGroups).
 
 | Function                    |                  |
 |-----------------------------|------------------|
