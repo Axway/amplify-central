@@ -102,12 +102,12 @@ From the *Appearance* page, click **Choose File** to upload a banner from your l
 
 From the *Appearance* page, click **Configure** in the Help Menu section to change the contents of the help menu displayed in the navigation bar. Click **Add menu item** to configure a Help menu. Do the following to configure menu items:
 
-* Click the question mark icon to select an icon from the drop down menu to use for the help item image.
-* Type a label for the menu item.
-* Type a link to the menu item.
-* Use the up and down arrow keys to arrange the menu items.
-* Click the delete icon to remove a menu item.
-* Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
+1. Click the question mark icon to select an icon from the drop down menu to use for the help item image.
+2. Type a label for the menu item.
+3. Type a link to the menu item.
+4. Use the up and down arrow keys to arrange the menu items.
+5. Click the delete icon to remove a menu item.
+6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
 
 ## Customize the Marketplace branding with APIs
 
