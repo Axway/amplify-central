@@ -20,7 +20,7 @@ The following new features and enhancements are available in this update:
 * An enforcements has been added so that consumers can subscribe only one to a free plan with same product and team owner.
 * Subscription name and request access names are now autofilled by the system so that consumers are no longer required to enter a name.
 * Intercom chat bubble is now disabled and no longer showing in the Marketplace
-* Consumer can see his API Health (MArketplace > Consumer Insights).
+* Consumer can see his API Health (Marketplace > Consumer Insights).
 
 ## Fixed issues
 

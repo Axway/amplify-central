@@ -11,18 +11,17 @@ Analytics provide insights into your API program, API environments, and APIs.
 
 The following new features and enhancements are available in this update:
 
-* Add text.
-
-See [Get actionable insights](/docs/get_actionable_insights) for more information.
+* Consumer can see his API Health and filter per product / subscription / application the presented metrics data. Go to Marketplace home page > Consumer Insights menu.
 
 ## Fixed issues
 
 The following issues have been fixed in this release:
 
-* Add text.
+* None
 
 ## Known limitations
 
 The following limitations exist in this update:
 
 * Add text.
+* Business insights / App usage: filtering per application is not working as the application listed only reference the SaaS gateway application and not any other dataplane application (usage plan for AWS / Application for v7 / subscription for Azure)
