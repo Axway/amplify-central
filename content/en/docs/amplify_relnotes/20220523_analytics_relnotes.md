@@ -23,5 +23,4 @@ The following issues have been fixed in this release:
 
 The following limitations exist in this update:
 
-* Add text.
 * Business insights / App usage: filtering per application is not working as the application listed only reference the SaaS gateway application and not any other dataplane application (usage plan for AWS / Application for v7 / subscription for Azure)
