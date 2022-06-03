@@ -196,12 +196,12 @@ The product must be in any state.
 
 ## Delete a product
 
-The product must be in **Archive** state and not published to a marketplace
+The product must be in **Archive** state and no release published to a marketplace
 
 1. Navigate to *Product Foundry*.
 2. Select **Products > All Products**.
 3. From the list view, select the product to delete.
-4. Click **Bin icon**.
+4. Click the **Bin icon**.
 5. Confirm that the selected product is the one you want to delete.
 6. Click **Update**.
 
