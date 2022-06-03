@@ -70,7 +70,7 @@ View the following detailed information for a specific product in any state (Dra
 * Tags - Labels to help find product in the catalog
 * Attributes - Key and value pair to allow customers to attach / query for custom information
 
-{{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the product details view without impacting the product lifecycle{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Tags, Attributes, Categories and plans can be added or removed in the product details view without impacting the product lifecycle{{< /alert >}}
 
 ## Create a product
 
