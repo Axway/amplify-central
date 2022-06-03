@@ -4,7 +4,7 @@ linkTitle: Product management
 weight: 20
 ---
 
-Use the Product Foundry UI to manage your products, including: create, activate, edit, delete, monetize, deprecate, and archive products.
+Use the Product Foundry UI to manage your products, including: create, activate a release, edit, delete, monetize, deprecate, and archive products.
 
 ## Before you start
 
@@ -17,7 +17,8 @@ Learn how to use the Product Catalog WebUI to create and manage products, includ
 * Create a product
 * Link an existing asset to the created product
 * Activate the product to make it available to the Product Foundry
-* Organize your products
+* Organize your products and releases
+* Archive and delete a product release
 * Archive and delete a product
 
 ## View products
@@ -69,7 +70,7 @@ View the following detailed information for a specific product in any state (Dra
 * Tags - Labels to help find product in the catalog
 * Attributes - Key and value pair to allow customers to attach / query for custom information
 
-{{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the product details view.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the product details view without impacting the product lifecycle{{< /alert >}}
 
 ## Create a product
 
@@ -83,11 +84,13 @@ View the following detailed information for a specific product in any state (Dra
     * Description - A short description of the asset
     * Image - An icon or image to be associated with the product
 
-5. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. Click **Next**.
+5. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
 6. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
-7. Add documentation elements. Add the document title and content and then click **Save**. Repeat this step for all documents you are adding to the product. Once all documents are added, click **Next**.
-8. Provide the Tags, Attribute and Category details for the product.
-9. Click **Save**.
+7. Add the quota to the plan. By default one quota is added and you can assigned as many resource to a quota. Each resource can be part of one quota only. You can add a quota using the "+ Add Quota" button and then select the resources and the limit for the quota. Click **Next**.
+8. Add documentation elements: sections and articles. By default an empty document is created. Update the document name and description. From the icon bar the folder enables to add a new section at the end of the document and the file icon allows to add articles in current section if one is selected or in the last section if the document is selected. A section has a name and a description. An article is a markdown text. The markdown editor helps you to format your text and a preview is available to validate the final rendering. What you enter is automatically saved. Repeat these steps for all sections and article you are adding to the product. Once your documentation is ready, click **Next**.
+9. Select the team the product can be shared with. By default a product is not shared and only Central admin will have access it. If you shared your product with specific(s) team, each member of these teams will be able to see your product. Click **Next**.
+10. Provide the Tags, Attribute and Category details for the product.
+11. Click **Save**.
 
 The product is created in **Draft** state. To publish this product in the Marketplace, you must move the product to an **Active** state by activating the product.
 
@@ -114,26 +117,13 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 6. The Edit Product wizard is displayed. You can edit the Product Name, Description, Image, Asset link, documentation, Categories, Tags, and Attributes.
 7. Click **Save Draft * Exit**.
 
-The asset is created in **Draft** state.
-
-## Delete a product
-
-The product must be in **Draft** state.
-
-1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**.
-3. From the list view, select the product to delete.
-4. Click **Delete Product**.
-5. Confirm that the selected product is the one you want to delete.
-6. Click **Update**.
-
-{{< alert title="Note" color="primary" >}}Products that are part of an active subscription and are not in an **Archive** state cannot be deleted.{{< /alert >}}
+A new product release is created in **Draft** state.
 
 ## Create a plan
 
 {{< alert title="Note" color="primary" >}}Functionality coming soon.{{< /alert >}}
 
-The product must be in **Active** state.
+The product must be in any state.
 
 You can offer multiple free and paid consumption options for your product. As a provider, you can define one or more subscription plans free of charge, or paid, with optional quota limits.
 
@@ -172,18 +162,17 @@ You can offer multiple free and paid consumption options for your product. As a 
 
 10. Click **Save Draft and Exit** to save the plan in **Draft** status. The plan is now visible in the Product Foundry, but not in the Marketplace.
 
-## Deprecate a product
+## Deprecate a product release
 
-The product must be in **Active** state.
+The product must have at least one **Active** version.
 
 1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**.
-3. From the list view, select the product to deprecate.
-4. Click **Deprecate Product**.
-5. Confirm that the selected product is the one you want to deprecate.
-6. Click **Update**.
+2. Select **Products > All Products**. And open the product details.
+3. Click **Deprecate Product**.
+4. Confirm that the selected product is the one you want to deprecate.
+5. Click **Update**.
 
-## Archive a product
+## Archive a product release
 
 The product must be in **Deprecated** state.
 
@@ -193,3 +182,27 @@ The product must be in **Deprecated** state.
 4. Click **Archive Product**.
 5. Confirm that the selected product is the one you want to Archive.
 6. Click **Update**.
+
+## Archive a product
+
+The product must be in any state.
+
+1. Navigate to *Product Foundry*.
+2. Select **Products > All Products**.
+3. From the list view, select the product to Archive.
+4. Click **Archive** from the ellipsis menu on the product tile.
+5. Confirm that the selected product is the one you want to Archive.
+6. Click **Update**.
+
+## Delete a product
+
+The product must be in **Archive** state and not published to a marketplace
+
+1. Navigate to *Product Foundry*.
+2. Select **Products > All Products**.
+3. From the list view, select the product to delete.
+4. Click **Bin icon**.
+5. Confirm that the selected product is the one you want to delete.
+6. Click **Update**.
+
+{{< alert title="Note" color="primary" >}}Products that are part of an active subscription and are not in an **Archive** state cannot be deleted.{{< /alert >}}
