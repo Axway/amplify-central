@@ -26,7 +26,7 @@ A product is a group of linked assets that create a business capability. A produ
     * Product Foundry provides support for markdown format, which provides control over the presentation of the information without having to resort to full HTML tagging.
     * Product Foundry provides easy organization of content with articles and sections.
 
-* A subscription plan.
+* One or more subscription plans.
 
     * Product Foundry provides plans that allow users to define consumption plans for their products.
     * A plan allow to define quota for limiting the associated resource consumption.
