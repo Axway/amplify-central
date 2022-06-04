@@ -13,12 +13,12 @@ The following new features and enhancements are available in this update:
 
 * Providers can now add more than one quota groups on the default product plan from the Product Foundry UI.
 * A product plan can be activated from the Product Foundry UI which will result in the publication of that plan to the Marketplace.
-* An 'Access Rights' tab has been added to the product details screen to show the teams which the asset is shared with.
+* An 'Access Rights' tab has been added to the product details screen to show the teams that the asset is shared with.
 * Product documentation management has been enhanced to allow:
     * Renaming a document
     * Renaming a section
     * Renaming an article
-    * Editing an article.
+    * Editing an article
 
 ## Fixed issues
 
@@ -31,4 +31,4 @@ The following issues have been fixed in this update:
 The following limitations exist in this update:
 
 * Deleting a document / section / article is not currently possible from the Product Foundry UI.
-* Adding a new product plan is currently now avaiable in the Product Foundry UI.
+* Adding a new product plan is only available in the Product Foundry UI.

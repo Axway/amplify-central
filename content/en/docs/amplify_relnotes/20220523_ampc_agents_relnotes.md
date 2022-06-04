@@ -9,7 +9,7 @@ Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio prov
 
 ## Versioning
 
-Current agent version are based on Amplify Agents SDK v1.1.24.
+Current agent versions are based on Amplify Agents SDK v1.1.24.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -25,16 +25,16 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* **Single communication point for the agent**: `CENTRAL_SINGLEURL=https://ingestion-eu.platform.axway.com` (EU region) or `CENTRAL_SINGLEURL=https://ingestion.platform.axway.com` (US region) can be use to ensure the agent connectivity to the platform. From here the request will be forwarded to the appropriate services. From a customer perspective, using this url will ease their firewall configuration as only one url needs to be opened.
-This new variable is enforced by Axway central CLI with version 2.10.3 or above.
-* **Marketplace subscription**: Turning on the marketplace subscription provisioning `AGENTFEATURES_MARKETPLACEPROVISIONING=true` has 2 consequences to encourage everybody to move to the Marketplace:
+* **Single communication point for the agent**: `CENTRAL_SINGLEURL=https://ingestion-eu.platform.axway.com` (EU region) or `CENTRAL_SINGLEURL=https://ingestion.platform.axway.com` (US region) can be used to ensure the agent connectivity to the platform. The request will then be forwarded to the appropriate services. From a customer perspective, using this URL will simplify their firewall configuration, as only one URL needs to be opened.
+This new variable is enforced by Axway Central CLI with version 2.10.3 or above.
+* **Marketplace subscription**: Turning on the Marketplace subscription provisioning `AGENTFEATURES_MARKETPLACEPROVISIONING=true` has two consequences that encourages moving to the Marketplace:
 
-    1- the discovery agent will no longer listen to unified catalog subscription.
+    * The Discovery Agent will no longer listen to the Unified Catalog subscription.
 
-    2- when discovery agent discover APIs, no catalog item will be created but only API Service.
+    * When the Discovery Agent discovers APIs, a catalog item will be created -- only an API Service.
 
-    In a nutshell, either your agent manage the Unified Catalog subscription or the Marketplace subscription but not both at the same time.
-* **Single polling entry point**: with the introduction of event based agent for managing the marketplace subscription, we also switch the existing various polling (API, Unified Catalog subscription...) to a single source of truth: harvester service where all events the agent is interested are available.
+    In short, either your agent manages the Unified Catalog subscription or the Marketplace subscription, but not at the same time.
+* **Single polling entry point**: With the introduction of the event-based agent for managing the Marketplace subscription, the existing polling (API, Unified Catalog subscription...) was also switch to a single source of truth: harvester service where all events that the agent is interested in are available.
 
 ### Amplify Gateway agents enhancements
 
@@ -57,7 +57,7 @@ Latest helm chart version: 0.71.0
 
 Latest agent version: 2.0.33
 
-* Add text.
+* See Common enhancements and features.
 
 ### Amplify Apigee agents
 
@@ -76,15 +76,15 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-api
 
 Current release (1.1.5) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
-* No new updates
+* No new updates.
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
 
-* **Istio TA does not receive expected log entries from istio**. For the traceability agent to work properly, it requires that the envoy filters are deployed in each namespace that logs need to be gathered from.
+* **Istio TA does not receive expected log entries from Istio**. For the Traceability Agent to work properly, it requires that the Envoy filters be deployed in each namespace that logs need to be gathered from.
 * **Istio TA does not record all hops**.
-* **OAS3 spec parser does not set the auth policies within the service body**. Previously, the agent was not able to parse correctly an OAS3 specification to discover the type of security. Now, agent discover correctly the type of security defined in the specification (swagger2 / OAS3).
+* **OAS3 spec parser does not set the auth policies within the service body**. Previously, the agent was not able to correctly parse an OAS3 specification to discover the type of security. Now, the agent correctly discovers the type of security defined in the specification (swagger2 / OAS3).
 
 ## Known limitations
 
@@ -104,7 +104,7 @@ The following limitations exist in this update.
 ### Amplify Azure agents
 
 * Discovery Agent does not manage revision and version.
-* Discovery Agent does not remove API Service and Catalog item when Azure API is removed.
+* Discovery Agent does not remove the API Service and the Catalog item when the Azure API is removed.
 
 ### Amplify Istio agents
 

@@ -20,15 +20,15 @@ The Axway Central CLI is a package for managing Amplify Central resources with a
 The Axway Central CLI extension is compatible with the Axway CLI **version 3.2.5** (<https://www.npmjs.com/package/axway/v/3.2.5>).
 For more information, see [Axway CLI release note]([https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/3_2_5_20220511_relnote/index.html]).
 
-The following enhancements are available in this Axway Central CLI update:
+The following enhancement is available in this Axway Central CLI update:
 
-* The agent installation supports the single entry point URL defined by the region where the agent is installed.
+* The agent installation supports the single-entry point URL defined by the region where the agent is installed.
 
 #### Fixed issues
 
-The following issues are fixed in this Amplify Central CLI update:
+The following issue is fixed in this Amplify Central CLI update:
 
-* Amplify Tooling packages have been updated to use a newer version of an 'ejs' dependency to resolved a security issue with template injection.
+* Amplify Tooling packages have been updated to use a newer version of an 'ejs' dependency to resolve a security issue with template injection.
 
 ### Amplify Central WebUI
 

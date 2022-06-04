@@ -12,14 +12,14 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 The following new features and enhancements are available in this update:
 
 * The creation or edit of an asset allows for the selection of multiple API Service versions.
-* An 'Access Rights' tab has been added to the asset details screen to show the teams which the asset is shared with.
-* A 'Products' tab has been added to the asset details screen to show the all products that contains the asset.
+* An 'Access Rights' tab has been added to the asset details screen to show the teams which that the asset is shared with.
+* A 'Products' tab has been added to the asset details screen to show all products that contains the asset.
 
 ## Fixed issues
 
-The following issues have been fixed in this update:
+The following issue has been fixed in this update:
 
-* An API Developer role is only able to view assets which are owned/shared with a team which they are a member of.
+* An API Developer role can only view assets that are owned/shared with a team that they are a member of.
 
 ## Known limitations
 

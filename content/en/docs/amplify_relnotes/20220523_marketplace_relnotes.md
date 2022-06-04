@@ -18,19 +18,19 @@ The following new features and enhancements are available in this update:
 * Consumer can log into the marketplace and visualize the resources associated to the credentials.
 * An enforcements has been added so that consumers can request access only to APIs included in the subscribed plan.
 * An enforcements has been added so that consumers can subscribe only one to a free plan with same product and team owner.
-* Subscription name and request access names are now autofilled by the system so that consumers are no longer required to enter a name.
-* Intercom chat bubble is now disabled and no longer showing in the Marketplace
+* Subscription name and request access names are now auto filled by the system. Consumers are no longer required to enter a name.
+* Intercom chat bubble has been disabled and is no longer in the Marketplace
 * Consumer can see his API Health (Marketplace > Consumer Insights).
 
 ## Fixed issues
 
 The following issues have been fixed in this update:
 
-* Active Products with description longer than 250 characters are now published correctly into the Marketplace.
-* When a published product is renamed, the change is now reflected in the Marketplace.
+* Active Products with descriptions longer than 250 characters are now published correctly into the Marketplace.
+* When a published product that has been renamed, the change is now reflected in the Marketplace.
 
 ## Known limitations
 
-The following limitations exist in this update:
+The following limitation exists in this update:
 
-* Highlighted documents displayed on the overview screen of the product details can be currently configured using the product foundry apis.
+* Highlighted documents displayed on the overview screen of the product details can be configured using the Product Foundry APIs.
