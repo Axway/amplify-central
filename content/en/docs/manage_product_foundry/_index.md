@@ -29,6 +29,6 @@ A product is a group of linked assets that create a business capability. A produ
 * One or more subscription plans.
 
     * Product Foundry provides plans that allow users to define consumption plans for their products.
-    * A plan allow to define quota for limiting the associated resource consumption.
+    * A plan allows users to define quota for limiting the associated resource consumption.
 
 To make a product available for consumption by subscribers, the product is published into the Marketplace, which is the storefront into all products exposed for discovery and consumption by internal and / or external consumers. For additional information, see [Manage your Marketplace](/docs/manage_marketplace/).
