@@ -11,9 +11,9 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
-* Providers can now add more than one quota groups on the default product plan from the Product Foundry UI.
+* Providers can now add more than one quota group on the default product plan from the Product Foundry UI.
 * A product plan can be activated from the Product Foundry UI which will result in the publication of that plan to the Marketplace.
-* An 'Access Rights' tab has been added to the product details screen to show the teams that the asset is shared with.
+* An 'Access Rights' tab has been added to the product details page to show the teams that the asset is shared with.
 * Product documentation management has been enhanced to allow:
     * Renaming a document
     * Renaming a section
