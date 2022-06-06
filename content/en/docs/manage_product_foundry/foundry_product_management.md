@@ -4,7 +4,7 @@ linkTitle: Product management
 weight: 20
 ---
 
-Use the Product Foundry UI to manage your products, including: create, activate a release, edit, delete, monetize, deprecate, and archive products.
+Use the Product Foundry UI to manage your products, including create, activate a release, edit, delete, monetize, deprecate, and archive products.
 
 ## Before you start
 
@@ -34,7 +34,7 @@ View the following information for all products in any state (Draft, Active, Dep
 * Product Name - The display name for the product in the WebUI
 * Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
 * State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
-* Current version - The most recent version number. Could be `---` if the product has not been released
+* Current version - The most recent version number. Can be `---` if the product is not released
 * Asset Name - The asset(s) linked to the product
 * Trash icon - Activated only when the product can be deleted
 * Marketplace icon - Enable to publish the product to the Marketplace. Disable to not publish
@@ -53,7 +53,7 @@ View the following detailed information for a specific product in any state (Dra
 
 * Product Name - The display name for the product in the WebUI
 * Product state of the selected version
-* Product version - The most recent version available. Could be empty if product has not been released
+* Product version - The most recent version available. Coan be empty if product is not released
 * Product icon - The icon / image representing the product, if any
 * Logical Name - Uniquely identifies the product
 * Owner - The team owner of the product
@@ -62,7 +62,7 @@ View the following detailed information for a specific product in any state (Dra
 * Created On - Date, Time, and Username of who created this product
 * Created By - The user who last modified the product
 * Description - A short description of the product
-* Resources - List of assets that are linked to the product
+* Resources - List of assets linked to the product
 * Plans - Plan list associated to the product
 * Documentation - Documentation associated with the product
 * Version State - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
@@ -70,7 +70,7 @@ View the following detailed information for a specific product in any state (Dra
 * Tags - Labels to help find product in the catalog
 * Attributes - Key and value pair to allow customers to attach / query for custom information
 
-{{< alert title="Note" color="primary" >}}Tags, Attributes, Categories and plans can be added or removed in the product details view without impacting the product lifecycle{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Tags, Attributes, Categories, and plans can be added or removed in the product details view without impacting the product lifecycle.{{< /alert >}}
 
 ## Create a product
 
@@ -86,9 +86,16 @@ View the following detailed information for a specific product in any state (Dra
 
 5. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
 6. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
-7. Add the quota to the plan. By default one quota is added and you can assigned as many resource to a quota. Each resource can be part of one quota only. You can add a quota using the "+ Add Quota" button and then select the resources and the limit for the quota. Click **Next**.
-8. Add documentation elements: sections and articles. By default an empty document is created. Update the document name and description. From the icon bar the folder enables to add a new section at the end of the document and the file icon allows to add articles in current section if one is selected or in the last section if the document is selected. A section has a name and a description. An article is a markdown text. The markdown editor helps you to format your text and a preview is available to validate the final rendering. What you enter is automatically saved. Repeat these steps for all sections and article you are adding to the product. Once your documentation is ready, click **Next**.
-9. Select the team the product can be shared with. By default a product is not shared and only Central admin will have access it. If you shared your product with specific(s) team, each member of these teams will be able to see your product. Click **Next**.
+7. Add the quota to the plan. By default, one quota is added. You can assign multiple resource to the quota, but each resource can be part of only one quota. To add a quota, click **+ Add Quota** and select the resources and the limit for the quota. Click **Next**.
+8. Add documentation elements (sections and articles). By default, an empty document is created.
+
+    * Update the document name and description. 
+    * Click the folder icon to add a new section at the end of the document. 
+    * Click the file icon to add an article to the current section (if one is selected); otherwise, it will be added in the last section of the selected document. Note that each section has a name and a description.
+    * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
+    * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
+
+9. Select the team(s) the product can be shared with. By default, a product is not shared and only the Central Admin will have access to it. If you shared your product with specific team(s), each member of these teams will be able to see your product. Click **Next**.
 10. Provide the Tags, Attribute and Category details for the product.
 11. Click **Save**.
 
@@ -123,7 +130,7 @@ A new product release is created in **Draft** state.
 
 {{< alert title="Note" color="primary" >}}Functionality coming soon.{{< /alert >}}
 
-The product must be in any state.
+The product can be in any state.
 
 You can offer multiple free and paid consumption options for your product. As a provider, you can define one or more subscription plans free of charge, or paid, with optional quota limits.
 
@@ -185,7 +192,7 @@ The product must be in **Deprecated** state.
 
 ## Archive a product
 
-The product must be in any state.
+The product can be in any state.
 
 1. Navigate to *Product Foundry*.
 2. Select **Products > All Products**.
