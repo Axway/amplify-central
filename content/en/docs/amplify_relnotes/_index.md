@@ -11,6 +11,96 @@ The following is a list of release notes for Amplify Central, Amplify agents, An
 
 For more details, click on the release note title to go to the corresponding release note.
 
+## [Amplify agents May 2022](/docs/amplify_relnotes/20220523_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.18): See Amplify agent general
+* **Amplify AWS Gateway Agent** (version 1.1.16): See Amplify agent general
+* **Amplify Azure Agent** (version 1.1.16): See Amplify agent general
+* **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
+* **Amplify Apigee Agent** (version 0.0.7): See Amplify agent general
+* **Amplify Mulesoft Agent** (version 1.1.5): No new updates
+* **Amplify agent general** (version 1.1.16):
+
+    * **Single communication point for the agent** - `CENTRAL_SINGLEURL=https://ingestion-eu.platform.axway.com` (EU region) or `CENTRAL_SINGLEURL=https://ingestion.platform.axway.com` (US region) can be used to ensure the agent connectivity to the platform
+    * **Marketplace subscription provisioning** - `AGENTFEATURES_MARKETPLACEPROVISIONING=true`
+    * **Single polling entry point** - polling uses harvester service. All events are available to the agent
+
+**Bug fixes**:
+
+* Istio TA does not receive expected log entries from Istio
+* Istio TA does not record all hops
+* OAS3 spec parser does not set the auth policies within the service body
+
+## [Amplify Central May 2022](/docs/amplify_relnotes/20220523_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.10.3):
+    * The agent installation supports the single-entry point URL defined by the region where the agent is installed
+* **Amplify Central WebUI**:
+    * See the Release Notes for Asset Catalog, Product foundry, and Service Registry
+
+**Bug fixes**: Amplify Tooling packages use an older version of an ‘ejs’ dependency causing a security issue with template injection
+
+## [Analytics May 2022](/docs/amplify_relnotes/20220523_analytics_relnotes/)
+
+**What's new**: Consumers can see API Health and filter per product / subscription / application the presented metrics data
+
+**Bug fixes**: None
+
+## [Asset Catalog May 2022](/docs/amplify_relnotes/20220523_catalog_relnotes/)
+
+**What's new**:
+
+* The creation or edit of an asset allows for the selection of multiple API Service versions
+* An **Access Rights** tab has been added to the asset details screen to show all teams that the asset is shared with
+* A **Products** tab has been added to the asset details screen to show all products that contain the asset
+
+**Bug fixes**: An API Developer role can view assets that are owned/shared with a team that they are not a member of
+
+## [Marketplace May 2022](/docs/amplify_relnotes/20220523_marketplace_relnotes/)
+
+**What's new**:
+
+* Consumer can create an application directly from the request access screen
+* Consumers can see the plan quotas
+* Redesign of the Application page so that credentials can be viewed per resource
+* Consumers can visualize the Async and graphQL API documentation
+* Consumers can log into the marketplace and visualize the resources associated to the credentials
+* Consumers can request access only to APIs included in the subscribed plan
+* consumers can subscribe to only one free plan with the same product and team owner
+* Subscription name and request access names are auto filled by the system
+* Intercom chat bubble has been removed from the Marketplace
+* Consumers can view API Health
+
+**Bug fixes**:
+
+* Active Products with descriptions longer than 250 characters are not published correctly into the Marketplace
+* When a published product has been renamed, the change is not reflected in the Marketplace
+
+## [Product Foundry May 2022](/docs/amplify_relnotes/20220523_foundry_relnotes/)
+
+**What's new**:
+
+* Providers can add more than one quota group on the default product plan from the Product Foundry UI
+* A product plan can be activated from the Product Foundry UI
+* An 'Access Rights' tab has been added to the product details page
+* Product documentation management has been enhanced
+
+**Bug fixes**: None
+
+## [Service Registry May 2022](/docs/amplify_relnotes/20220523_serviceregistry_relnotes/)
+
+**What's new**: Filtering the Service Registry by API Service Type
+
+**Bug fixes**: None
+
+## [Amplify Platform Management May 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+## [Axway CLI May 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
 ## [Amplify agents April 2022](/docs/amplify_relnotes/20220430_ampc_agents_relnotes/)
 
 **What's new for**:
