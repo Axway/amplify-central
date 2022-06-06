@@ -42,7 +42,7 @@ For more details, click on the release note title to go to the corresponding rel
 * **Amplify Central WebUI**:
     * See the Release Notes for Asset Catalog, Product foundry, and Service Registry
 
-**Bug fixes**: * Amplify Tooling packages use an older version of an ‘ejs’ dependency causing a security issue with template injection
+**Bug fixes**: Amplify Tooling packages use an older version of an ‘ejs’ dependency causing a security issue with template injection
 
 ## [Analytics May 2022](/docs/amplify_relnotes/20220523_analytics_relnotes/)
 
@@ -55,8 +55,8 @@ For more details, click on the release note title to go to the corresponding rel
 **What's new**:
 
 * The creation or edit of an asset allows for the selection of multiple API Service versions
-* An ‘Access Rights’ tab has been added to the asset details screen to show all teams that the asset is shared with
-* A 'Products' tab has been added to the asset details screen to show all products that contain the asset
+* An **Access Rights** tab has been added to the asset details screen to show all teams that the asset is shared with
+* A **Products** tab has been added to the asset details screen to show all products that contain the asset
 
 **Bug fixes**: An API Developer role can view assets that are owned/shared with a team that they are not a member of
 
