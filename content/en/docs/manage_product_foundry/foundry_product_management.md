@@ -89,14 +89,14 @@ View the following detailed information for a specific product in any state (Dra
 7. Add the quota to the plan. By default, one quota is added. You can assign multiple resource to the quota, but each resource can be part of only one quota. To add a quota, click **+ Add Quota** and select the resources and the limit for the quota. Click **Next**.
 8. Add documentation elements (sections and articles). By default, an empty document is created.
 
-    * Update the document name and description. 
-    * Click the folder icon to add a new section at the end of the document. 
+    * Update the document name and description.
+    * Click the folder icon to add a new section at the end of the document.
     * Click the file icon to add an article to the current section (if one is selected); otherwise, it will be added in the last section of the selected document. Note that each section has a name and a description.
     * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
     * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
 
-9. Select the team(s) the product can be shared with. By default, a product is not shared and only the Central Admin will have access to it. If you shared your product with specific team(s), each member of these teams will be able to see your product. Click **Next**.
-10. Provide the Tags, Attribute and Category details for the product.
+9. Select the team(s) the product can be shared with. By default, a product is not shared and only the Central Admin will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
+10. Provide the Tags, Attribute, and Category details for the product.
 11. Click **Save**.
 
 The product is created in **Draft** state. To publish this product in the Marketplace, you must move the product to an **Active** state by activating the product.
