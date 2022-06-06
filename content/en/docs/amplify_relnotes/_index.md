@@ -52,7 +52,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 ## [Asset Catalog May 2022](/docs/amplify_relnotes/20220523_catalog_relnotes/)
 
-**What's new**: 
+**What's new**:
 
 * The creation or edit of an asset allows for the selection of multiple API Service versions
 * An ‘Access Rights’ tab has been added to the asset details screen to show all teams that the asset is shared with
@@ -62,7 +62,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 ## [Marketplace May 2022](/docs/amplify_relnotes/20220523_marketplace_relnotes/)
 
-**What's new**: 
+**What's new**:
 
 * Consumer can create an application directly from the request access screen
 * Consumers can see the plan quotas
@@ -75,14 +75,14 @@ For more details, click on the release note title to go to the corresponding rel
 * Intercom chat bubble has been removed from the Marketplace
 * Consumers can view API Health
 
-**Bug fixes**: 
+**Bug fixes**:
 
 * Active Products with descriptions longer than 250 characters are not published correctly into the Marketplace
 * When a published product has been renamed, the change is not reflected in the Marketplace
 
 ## [Product Foundry May 2022](/docs/amplify_relnotes/20220523_foundry_relnotes/)
 
-**What's new**: 
+**What's new**:
 
 * Providers can add more than one quota group on the default product plan from the Product Foundry UI
 * A product plan can be activated from the Product Foundry UI
