@@ -196,8 +196,8 @@ The product can be in any state.
 
 1. Navigate to *Product Foundry*.
 2. Select **Products > All Products**.
-3. From the list view, select the product to Archive.
-4. Click **Archive** from the ellipsis menu on the product tile.
+3. From the list view, find the product to Archive.
+4. Click **Archive** from the more options (ellipsis) menu.
 5. Confirm that the selected product is the one you want to Archive.
 6. Click **Update**.
 
