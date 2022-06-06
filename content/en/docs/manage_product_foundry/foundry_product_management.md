@@ -53,7 +53,7 @@ View the following detailed information for a specific product in any state (Dra
 
 * Product Name - The display name for the product in the WebUI
 * Product state of the selected version
-* Product version - The most recent version available. Coan be empty if product is not released
+* Product version - The most recent version available. Can be empty if product is not released
 * Product icon - The icon / image representing the product, if any
 * Logical Name - Uniquely identifies the product
 * Owner - The team owner of the product
@@ -207,7 +207,7 @@ The product must be in **Archive** state and no release published to a marketpla
 
 1. Navigate to *Product Foundry*.
 2. Select **Products > All Products**.
-3. From the list view, select the product to delete.
+3. From the list view, find the product to delete.
 4. Click the **Bin icon**.
 5. Confirm that the selected product is the one you want to delete.
 6. Click **Update**.
