@@ -42,6 +42,16 @@ And some time later when there is no more need of the asset, you can [deprecate]
 
 ## Productize product
 
-## Publish
+The [product foundry](/docs/manage_product_foundry) enables providers to build API Products by linking multiple assets to create a business capability and monetize them by defining subscription plans with different charging models.
+
+The journeys start by [creating a product](/docs/manage_product_foundry/foundry_product_management/#create-a-product).
+
+Then the product needs to be [released](/docs/manage_product_foundry/foundry_product_management/#activate-a-product).
+
+And some time later when there is no more need of the product, you can [deprecate](/docs/manage_asset_catalog/asset_management/#deprecate-an-asset) and then [archive](/docs/manage_asset_catalog/asset_management/#archive-an-asset) the asset.
+
+## Publish / Monetize product
+
+Once a product is release and plan activated, you are ready to [publish](/docs/manage_marketplace/publish_to_marketplace) it to the marketplace.
 
 ## Manage your consumer subscription
