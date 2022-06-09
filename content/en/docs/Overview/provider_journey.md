@@ -52,6 +52,8 @@ And some time later when there is no more need of the product, you can [deprecat
 
 ## Publish / Monetize product
 
-Once a product is release and plan activated, you are ready to [publish](/docs/manage_marketplace/publish_to_marketplace) it to the marketplace.
+Once a product is release and [plan activated](/docs/manage_product_foundry/manage_product_plans/#publish-a-product-plan-in-the-marketplace), you are ready to [publish the product](/docs/manage_marketplace/publish_to_marketplace) to the marketplace.
 
 ## Manage your consumer subscription
+
+You consumer will start consuming your publish product from the marketplace. For that they are required to subscribe to a product. Depending how you set up the subscription approval (automatic VS manual), you will need to [approve the subscription](comingsoon)
