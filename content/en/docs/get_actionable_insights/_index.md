@@ -100,4 +100,4 @@ This view is useful for improving your API program and focusing your efforts bas
 
 ## Overview
 
-Click **Overview** to redirect you to the [Amplify Platform Dashboard](https://docs.axway.com/bundle/platform-management/page/docs/dashboard_guide/the_dashboards/platform_dashboard/index.html).
+Click **Overview** to redirect you to the [Amplify Platform Overview](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/overview/index.html).
