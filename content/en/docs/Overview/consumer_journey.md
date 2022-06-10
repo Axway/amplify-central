@@ -10,7 +10,7 @@ The consumer journey within the marketplace can be summarized through a number o
 * Finding a product
 * Subscribing to a product
 * Requesting access to a product resource
-* Requesting credentials for a product resources
+* Requesting credentials for a product resource
 * Getting insights of the consumption
 
 ## Browsing the marketplace
@@ -43,17 +43,17 @@ You can [view your subscription status](/docs/manage_marketplace/consumer_experi
 
 Once the subscription is approved, you can start requesting access to the product resource. Each access can be automatically approved or manually approved by the provider. Manual approval will be longer depending on the provider procedure.
 
-For requesting access, you must provide an approved subscription, an application ([existing one](/docs/manage_marketplace/consumer_experience/application_management/#create-a-new-application) or created during the process) and the team who will owns the application.
+For requesting access, you must provide an approved subscription, an application ([existing](/docs/manage_marketplace/consumer_experience/application_management/#create-a-new-application) one or created during the process) and the team who will owns the application.
 
-## Requesting credentials for a product resources
+## Requesting credential for a product resource
 
-In case the product resource is protected by an API Key or an OAuth credentials, it is required to create credentials once the product resource access is granted. The credential request can be done from several places:
+In case the product resource is protected by an API Key or an OAuth credential, it is required to create credential once the product resource access is granted. The credential request can be done from several places:
 
 * from the application - Marketplace > Application > navigate to the appropriate resource > Create credential
 * from the resource - Marketplace > Product > Resource > Access > navigate to the appropriate application > Create credential
-* immediately after the request access if auto approved
+* immediately after the request access if auto approved - the Create credential screen is automatically displayed.
 
-The create credential action ask you to select the credentials type you need and any required information to get those credentials provisioned.
+The create credential action ask you to select the credential type you need and any required information to get those credentials provisioned.
 
 Once the credential is provisioned, you will be able to see it, only once from the Marketplace UI. The credential are immediately deleted after the consumer view it for security purpose but it is still part of the Dataplane.
 
