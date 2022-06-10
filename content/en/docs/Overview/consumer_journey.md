@@ -4,26 +4,26 @@ linkTitle: Consumer journey
 weight: 20
 ---
 
-The consumer journey within the marketplace can be summarized through a number of steps:
+The consumer journey within the Marketplace can be summarized through a number of steps:
 
-* Browsing the marketplace
-* Finding a product
-* Subscribing to a product
-* Requesting access to a product resource
-* Requesting credentials for a product resource
-* Getting insights of the consumption
+* Browse the Marketplace
+* Find a product
+* Subscribe to a product
+* Request access to a product resource
+* Request credentials for a product resource
+* Get insights of the consumption
 
-## Browsing the marketplace
+## Browse the marketplace
 
-Consumers can navigate the marketplace anonymously by navigating to the configured Marketplace URL, e.g. <http://acme.marketplace.axway.com>, assuming the marketplace has been set to be publicly accessible in the Marketplace Settings.
+Consumers can [navigate the Marketplace](/docs/manage_marketplace/consumer_experience/browse_marketplace) anonymously by navigating to the configured Marketplace URL, e.g., `<http://acme.marketplace.axway.com>`, assuming the Marketplace has been set to be publicly accessible.
 
-As long as the user hasn’t logged in, they can freely explore the published products in the marketplace, but won’t have the ability to subscribe or any other actions until they have logged in.
+As long as the user hasn’t logged in, they can freely explore the published products in the Marketplace, but won’t be able to subscribe or any other actions until they have logged in.
 
-When you are invited to a private marketplace, you will be required to login to the marketplace by providing your credentials.
+When the consumer is invited to a private Marketplace, [credentials](/docs/manage_marketplace/consumer_experience/credential_management) are required to log into to the marketplace.
 
-## Finding a product
+## Find a product
 
-First things is to find the product you need by browsing the product catalog. This catalog is paginated. Using the marketplace filter, you can refine the search with product name and product description.
+Find the product you need by browsing the paginated product catalog. Use the marketplace filter to refine the search with product name and product description.
 
 Each product can be opened to see their details:
 
