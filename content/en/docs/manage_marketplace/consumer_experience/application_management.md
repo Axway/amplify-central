@@ -27,7 +27,7 @@ As a consumer, learn how to create and manage your applications from the Marketp
 
     * **Name** - the application name
     * **Description** - the application description
-    * **Owner** - the team that owns this application. This dropdown is only available if you are part of multiple teams. In case you belong to one team only, the owner will be set automatically to the team you belong to.
+    * **Owner** - the team that owns this application. This dropdown is only available if you belong to multiple teams. If you belong to only one team, then the owner will be set automatically to the team you belong to.
     * **icon** - The icon / image representing the application, if any
 
 5. Click **Create**.
