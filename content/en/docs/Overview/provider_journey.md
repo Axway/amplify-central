@@ -8,9 +8,9 @@ The provider journey within the Amplify API Management Platform can be summarize
 
 * Discovering APIS from existing dataplane
 * Organizing / Curate APIS
-* Productize product (Product Foundry)
-* Publish / Monetize product (Product Foundry / Marketplace)
-* Manage your consumer subscription
+* Productize product
+* Publish / Monetize product
+* Manage your consumer subscriptions
 
 ## Discovering APIS
 
@@ -54,6 +54,6 @@ And some time later when there is no more need of the product, you can [deprecat
 
 Once a product is release and [plan activated](/docs/manage_product_foundry/manage_product_plans/#publish-a-product-plan-in-the-marketplace), you are ready to [publish the product](/docs/manage_marketplace/publish_to_marketplace) to the marketplace.
 
-## Manage your consumer subscription
+## Manage your consumer subscriptions
 
 You consumer will start consuming your publish product from the marketplace. For that they are required to subscribe to a product. Depending how you set up the subscription approval (automatic VS manual), you will need to [approve the subscription](comingsoon)
