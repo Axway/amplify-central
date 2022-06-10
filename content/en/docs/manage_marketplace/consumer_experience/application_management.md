@@ -27,7 +27,7 @@ As a consumer, learn how to create and manage your applications from the Marketp
 
     * **Name** - the application name
     * **Description** - the application description
-    * **Owner** - the team that owns this application. This dropdown is only available if you are part of multiple teams. In case you belong to one team only, the owner will be set automatically to the team you belong to. (**Cyrille**, this is not true. The dropdown is still available with only the "default team" option)
+    * **Owner** - the team that owns this application. This dropdown is only available if you are part of multiple teams. In case you belong to one team only, the owner will be set automatically to the team you belong to.
     * **icon** - The icon / image representing the application, if any
 
 5. Click **Create**.
@@ -42,9 +42,9 @@ View the following product information associated with the application:
 
 * The subscription and plan names
 * For each subscription/plan, all resources that are accessible with the subscription
-* For each resource, all credentials requested by the consumers along and the statuses (Pending / Approved / Error)
+* For each resource, all credentials requested by the consumers and their statuses (Pending / Approved / Error)
 
-    * Open the resource details to see the detail of each credential. **Important**: The value of a credential can be viewed only once, so be sure to store it in a secure place. Once the credential has been viewed, it is no longer available for view. **Maybe we should explain why they need to store/know this value**
+    * Open the resource details to see the detail of each credential that enables you to consume the resource. **Important**: The value of a credential can be viewed only once inside the marketplace for safety reason, so be sure to store it in a secure place to be able to use it anytime. Once the credential has been viewed, it is no longer available for view although it will remain on the dataplane.
     * Click **Create Credential** to request new credentials. Once the credential (apiKey / oauth) is provisioned by the provider, you can view its value once. Be sure to store it in a secure place.
     * Click the bin icon to delete existing credentials.
 
