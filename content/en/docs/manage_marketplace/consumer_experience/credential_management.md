@@ -29,6 +29,6 @@ The credential request can be done from several places in the Marketplace:
 
 To create a credential, select the credential type and enter the required information.
 
-Once the credential is provisioned, you can view the value of a credential only once inside the marketplace, but it will remain on the datatplane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, click **Create Credential** to create a new one.
+Once the credential is provisioned by the provider of the resource, you can view the value of a credential only once inside the marketplace, but it will remain on the datatplane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, click **Create Credential** to create a new one.
 
 To delete the existing credential, click the trash bin icon.
