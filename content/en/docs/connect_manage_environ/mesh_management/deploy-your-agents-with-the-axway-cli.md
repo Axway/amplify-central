@@ -311,7 +311,7 @@ If you want to install Istio in an Openshift Cluster, there are additional steps
 
 ## Finish the installation of the agents
 
-After the Istio installation is complete, edit the `hybrid-override.yaml` file, using an editor of your choice, and add a new key `istioGatewayNamespaces` under the `als` key:
+After the Istio installation is complete, edit the `hybrid-override.yaml` file, since the CLI allows to enter only one nanespace, using an editor of your choice, you can add additional namespaces for the envoy filters in the value of `istioGatewayNamespaces` under the `als` key:
 
 ```yaml
 als:
@@ -322,7 +322,7 @@ als:
     - namespaceN    
 ```
 
-where namespaces 1 through N is a list of all the namespaces on your cluster that have an Istio ingress gateway running.
+where namespaces 1 through N is a list of all the namespaces on your cluster that have an Istio ingress gateway running and where you want the envoy filter to be deployed to monitor the traffic.
 
 Once you save the `hybrid-override.yaml` file with the changes made above, run the following command to finish the installation of the agents:
 
