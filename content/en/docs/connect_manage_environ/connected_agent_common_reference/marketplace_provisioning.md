@@ -11,7 +11,7 @@ description: >-
 ---
 ## Supported use cases
 
-### Provision dataplane when consumer request access to to a product resource
+### Provision dataplane when consumer request access to a product resource
 
 From the marketplace, a consumer will request access to a resource and then request credential. These 2 actions will generate events the discovery agent is listening to. Once the events are received by the agent, the agent will convert them based on the dataplane it is connected to:
 
@@ -56,7 +56,7 @@ AGENTFEATURES_PERSISTCACHE=true
 
 Be sure to restart your agent once the variables are updated.
 
-{{< alert title="Note" color="primary" >}}Enabling the marketplace provisioning feature disable the unified catalog subscription workflow.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Enabling the marketplace provisioning feature disable the unified catalog subscription workflow and the creation of unified catalog item{{< /alert >}}
 
 ## Traceability Agent configuration for reporting the traffic to Consumer Insights
 
