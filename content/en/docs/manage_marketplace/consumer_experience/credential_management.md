@@ -24,7 +24,7 @@ The credential request can be done from several places in the Marketplace:
 
 * From the application: *Marketplace* > Application > navigate to the appropriate resource > **Create Credential** button
 * From the resource: *Marketplace* > Product > Resource > Access > navigate to the appropriate application > **Create Credential** button
-* While requesting access to the product resource: If access is auto approved, then the Create Credential screen is displayed
+* While requesting access to the product resource: if access is auto approved, then the Create Credential screen is displayed
 
 To create a credential, select the credential type and enter the required information.
 
