@@ -13,4 +13,4 @@ A *Private marketplace* can be browsed by navigating to the configured Marketpla
 
 Once consumers are logged in, they can browse products, subscribe to products, request access and credentials for resource they wants to use, and get [insight](/docs/manage_marketplace/consumer_experience/consumer_insights/) into their API consumption.
 
-{{< alert title="Note" color="primary" >}}In case consumer is part of multiple organization, It is preferable to configure the user account to always being ask for the organization selection. Refer to Platform home > Account > Settings > Org login Rule : Always ask for Org option{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Because a consumer can belong to multiple organizations, it is preferable to configure the user account to always ask for the organization. Refer to Platform home > Account > Settings > Org login Rule : Always ask for Org option{{< /alert >}}
