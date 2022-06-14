@@ -2,7 +2,6 @@
 title: Subscription management
 linkTitle: Subscription management
 weight: 10
-hide_readingtime: true
 ---
 
 Consumers can create new subscriptions and manage existing subscriptions from the Marketplace.
