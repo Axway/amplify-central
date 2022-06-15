@@ -33,7 +33,6 @@ To request access to an API:
     * Fill out any other fields that are displayed on the form.
     * Click **Request Access**.
 
-
 * Once access is approved, you will be directed to the *Create Credential* screen.
 
 ## Track access requests to an API
