@@ -25,7 +25,7 @@ Organizations provide the means to control which teams / consumers can view and 
 
 As an admin, manage the team members in your consumer organization:
 
-1. Navigate to https://platform.axway.com/org.
+1. Navigate to `https://platform.axway.com/org`.
 2. Select the **Users** menu option.
 3. Click **+** to add a new user.
 4. Provide the following details:
@@ -58,7 +58,7 @@ As a consumer, edit / view your account settings:
     * **Account** menu option
         * Timezone
     * **Orgs & Roles** menu option
-        * View the organizations you are in and what roles are assigned to you in those organizations 
+        * View the organizations you are in and what roles are assigned to you in those organizations
     * **Credentials** menu option
         * Password - Tooling credential only
     * **Settings** menu option
@@ -69,4 +69,3 @@ As a consumer, edit / view your account settings:
         * Activity Preferences - Inactivity Logout and Restore Page on Next Login
     * **Activity** menu option
         * View event types by period / range
-     
