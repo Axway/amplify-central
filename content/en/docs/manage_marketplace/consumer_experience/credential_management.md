@@ -16,7 +16,31 @@ Browse and find a product in the Marketplace, subscribe to the product.
 
 ## Objectives
 
-As a consumer, learn how to create / delete your Marketplace credential.
+As a consumer, learn how to request access to an API to be issued credentials, and then manage those credentials.
+
+## Request access to an API
+
+You must request access to the API before you can use an API resource in a product that you have an approved subscription on. Access requests are approved by the provider. Note that an API can not be used if it is not included in a usage plan associated with an active subscription.
+
+To request access to an API:
+
+1. From the Marketplace *Home* screen, open a product and select the **Resources** tab.
+2. Click the **Key** icon that is displayed next to the resource.
+3. Complete the Request access form. Note that **Request access name** is auto-populated.
+
+    * Select a subscription.
+    * Select an application. If you are a member in multiple teams, the subscriptions and the application must be owned by the same team.
+    * Fill out any other fields that are displayed on the form.
+    * Click **Request Access**.
+
+Once access is approved, you will be directed to the *Create Credential* screen.
+
+## Track access requests to an API
+
+View and track the status of the access requests:
+
+* From the application: *Marketplace* > Application > navigate to the appropriate resource.
+* From the product: *Marketplace* > Product > Resource > Access > navigate to the appropriate application.
 
 ## Create credentials
 
