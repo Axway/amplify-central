@@ -164,7 +164,7 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_AUTH_PUBLICKEY`:  The location of the public key file you created when [preparing Amplify Central](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.  
 
-`CENTRAL_AUTH_KEYPASSWORD`: The key password to open the key. None set up by default.
+`CENTRAL_AUTH_KEYPASSWORD`: The location of the key password file to open the key. None set up by default.
 
 `CENTRAL_AUTH_TIMEOUT`: Timeout for the authentication. Default value is **10s**.
 
