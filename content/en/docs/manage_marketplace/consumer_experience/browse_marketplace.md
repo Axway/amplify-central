@@ -7,18 +7,31 @@ hide_readingtime: true
 
 ## Browse the marketplace
 
-Consumers can [navigate the Marketplace](/docs/manage_marketplace/consumer_experience/browse_marketplace) anonymously by navigating to the configured Marketplace URL, e.g., `<http://acme.marketplace.axway.com>`, assuming the Marketplace has been set to be publicly accessible.
+Consumers can use the Marketplace to:
 
-As long as the user hasn’t logged in, they can freely explore the published products in the Marketplace, but won’t be able to subscribe or any other actions until they have logged in.
+* Discover what products are available
+* Subscribe to a product and apply for access
+* Genereate credentials to use with API products
 
-When the consumer is invited to a private Marketplace, consumer credentials are required to log into to the marketplace.
+Anonymous users can freely browse the catalog of products in a public Marketplace, but won't be able to subscribe, or perform any other actions until they have logged in.
+When the Marketplace is set up for private acccess, consumers are required to log in to browse and subscribe.
 
 ## Find a product
 
-Find the product you need by browsing the paginated product catalog. Use the marketplace filter to refine the search with product name and product description.
+Find the product you need, by browsing the paginated product catalog. Use the marketplace search bar to refine the catalog by product name, description or tags.
 
-Each product can be opened to see their details:
+On the product screen you can find:
 
-* product documentation
-* product resources
-* product plans
+* a short overview of the product
+* the product resources
+* the product plans
+
+## Explore product resources
+
+Find the product resouces by navigating to the Resources tab on the product screen. You will see a list of all the resources the product has to offer.
+Click the resource name to access the resource documentation.
+
+## Explore API resources
+
+A product can contain resources of different types, including APIs.
+To view the API reference documentation and explore the endpoints, you need to navigate to the Resource tab on the product screen and click the resource name.
