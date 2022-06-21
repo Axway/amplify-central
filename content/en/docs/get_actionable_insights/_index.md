@@ -22,6 +22,8 @@ Filter options are provided on each dashboard.
 Click **API Health** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
   ![Example of API Health](/Images/central/api_usage.png)
 
+Consuming Team and Subscription filters are available when a Marketplace is enabled for the current org.
+
 The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected) in the tiles across the top below the filter options. Click the **Compare to previous period** option to compare the current selected time range to the previous time range. You can compare the current week, month, or year to the previous week, month, or year to understand how your API usage is changing over time.
 
 Each item in the list also provides the average duration, maximum duration, and minimum duration.
