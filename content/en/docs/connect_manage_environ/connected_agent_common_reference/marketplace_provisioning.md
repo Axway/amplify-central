@@ -73,9 +73,6 @@ AGENTFEATURES_PERSISTCACHE=true
 
 Be sure to restart your agent once the variables are updated.
 
-
-
-
 ## Troubleshooting
 
 This section describes the common error cases you can encounter when using agents for the first time. If your error is not listed, please check the [Understand the agent log](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations/#understand-the-agent-logs) and [Error Codes and Mitigations](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations/#error-codes-and-mitigations) sections.
