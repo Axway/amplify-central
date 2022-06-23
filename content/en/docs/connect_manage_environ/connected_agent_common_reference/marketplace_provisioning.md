@@ -24,7 +24,7 @@ Provisioning use cases include:
 * Deprovision data plane when a consumer deletes an application or credentials
 * Report traffic to Consumer Insights
 
-### Provision data plane when consumer request access to a product resource
+### Provision data plane when consumer requests access to a product resource
 
 From the Marketplace, a consumer first requests access to a resource and then request credentials. These two actions generate events that the Discovery Agent is listening to. Once the events are received by the agent, the agent converts them based on the data plane it is connected to:
 
