@@ -14,7 +14,7 @@ The security material and/or quota to access an API is configured inside the gat
 Learn how to configure:
 
 * Discovery Agent for Marketplace provisioning /deprovisioning
-* Traceability Agent for reporting traffic to 
+* Traceability Agent for reporting traffic to Consumer Insights
 
 ## Supported use cases
 
@@ -56,7 +56,7 @@ If no correlationis found, then the traffic will only be visible in [Business In
 
 ## Discovery Agent configuration for Marketplace provisioning and deprovisioning
 
-1. Add Discovery Agent variables to the agent configuration:
+Add the following Discovery Agent variables to the agent configuration:
 
 ```powershell
 # enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
@@ -67,13 +67,13 @@ AGENTFEATURES_MARKETPLACEPROVISIONING=true
 AGENTFEATURES_PERSISTCACHE=true
 ```
 
-2. Restart your agent once the variables are updated.
+Restart your agent once the variables are updated.
 
 {{< alert title="Note" color="primary" >}}Enabling the Marketplace provisioning feature disables the Unified Catalog subscription workflow and the creation of Unified Catalog item{{< /alert >}}
 
 ## Traceability Agent configuration for reporting the traffic to Consumer Insights
 
-1. Add Traceability Agent variables to the agent configuration:
+Add the following Traceability Agent variables to the agent configuration:
 
 ```powershell
 # enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
@@ -84,7 +84,7 @@ AGENTFEATURES_MARKETPLACEPROVISIONING=true
 AGENTFEATURES_PERSISTCACHE=true
 ```
 
-2. Restart your agent once the variables are updated.
+Restart your agent once the variables are updated.
 
 ## Troubleshooting
 
