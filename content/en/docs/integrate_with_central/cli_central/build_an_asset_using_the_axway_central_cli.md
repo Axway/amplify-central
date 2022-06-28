@@ -88,7 +88,3 @@ To delete an asset and all other resources defined in a provided .yaml, .yml, or
 ```bash
 axway central delete -f <filepath>
 ```
-
-## Review
-
-You have learned how to use the Axway Central CLI to build and manage your assets.

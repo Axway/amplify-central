@@ -88,6 +88,13 @@ const collections = [{
   description: 'All pages related to Axway Central CLI',
   format: 'frontmatter',
 }, {
+  ...docsDefaults('integrate_with_central/webhook', 'integrate_with_central'),
+  name: 'webhook',
+  label: 'Events and webhooks',
+  label_singular: 'page in Events and webhooks',
+  description: 'All pages related to Events and webhooks',
+  format: 'frontmatter',  
+}, {
   ...docsDefaults('connect_manage_environ', 'connect_manage_environ'),
   name: 'connect_manage_environ',
   label: 'Connect and manage your environment',
