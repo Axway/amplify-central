@@ -133,6 +133,7 @@ You can create the webhook resource using the CLI:
 axway central apply -f webhook.yaml
 ✔ "Webhook/invoke-jira-webhook" in the scope "Environment/azure-apiman-service" has successfully been updated.
 ```
+
 ### Create the trigger
 
 After the webhook has been created, you must specify when the webhook will be invoked. You can set up a webhook on any resource in Amplify Central by configuring a **Resource hook**. An event will be published on any CRUD operation. When the resource hook trigger conditions match, the resource hook referenced webhooks will be invoked, and an HTTP `POST` payload will be sent to the webhook's URL. For example, the webhook can be invoked when a new API asset is created.

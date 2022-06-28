@@ -189,13 +189,13 @@ The subscription webhook listener will receive the following JSON payload:
 
 ## Considerations when processing the event in your webhook
 
-A Subscription has three subresources: marketplace, approval and status, which means you'll receive a number of webhook call backs as they are updating. You'll receive events for: 
+A Subscription has three subresources: marketplace, approval and status, which means you'll receive a number of webhook call backs as they are updating. You'll receive events for:
 
 * subscription created
 * status set to Pending
 * Marketplace subresource set
 * approval set to pending
-* status set to success 
+* status set to success
 
 To ensure you're processing the need to approve once, your webhook processor should check that the following are true:
 
@@ -224,7 +224,7 @@ The content of the HTTP PUT request should be of the following format, where the
 }
 ```
 
-Here is an example of an rejected HTTP PUT request: 
+Here is an example of an rejected HTTP PUT request:
 
 ```json
 {
