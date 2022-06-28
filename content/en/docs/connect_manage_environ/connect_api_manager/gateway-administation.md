@@ -193,7 +193,7 @@ When virtualizing a REST API in API Manager you can configure inbound security o
 
 When using OAuth (External) inbound security, API Manager requires a custom OAuth token information policy to be setup to extract the token information from the request and perform verification. For details on how to add OAuth token information policies, see [Configure API Manager settings in Policy Studio](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_config_ps/index.html).
 
-When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Amplify Central that allows marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/connected_agent_common_reference/marketplace_provisioning/#provisioning_oauth_credential_to_an_identity_provider)
+When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Amplify Central that allows marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/connected_agent_common_reference/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider)
 
 #### Customizing Discovery Agent to manage subscription approval and notifications
 
