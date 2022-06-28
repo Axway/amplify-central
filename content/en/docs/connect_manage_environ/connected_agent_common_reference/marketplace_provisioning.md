@@ -38,8 +38,8 @@ From the Marketplace, a consumer first requests access to a resource and then re
 
 #### Provisioning OAuth credential to an identity provider
 
-The Discovery Agent provides capability to provision credentials to OAuth identity provider based OAuth dynamic client registration protocol(https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated dataplane. The Discovery agent requires following configuration to register the OAuth identity providers.
-* Name: The name of the OAuth identity provider    
+The Discovery Agent provides capability to provision credentials to OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated dataplane. The Discovery agent requires following configuration to register the OAuth identity providers.
+* Name: The name of the OAuth identity provider
 * Type: The type of OAuth identity provider ("generic", "keycloak" or "okta")
 * Metadata URL: The URL exposed by OAuth authorization server to provide metadata information
 * Authentication Config: Used by the agent to communicate with OAuth identity provider
