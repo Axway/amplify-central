@@ -116,6 +116,8 @@ CENTRAL_GRPC_ENABLED=true
 AGENTFEATURES_MARKETPLACEPROVISIONING=true
 # enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
 AGENTFEATURES_PERSISTCACHE=true
+# enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
+TRACEABILITY_PER_SUBSCRIPTION=true
 ```
 
 Restart your agent once the variables are updated.
@@ -124,8 +126,8 @@ Restart your agent once the variables are updated.
 
 These are the more common error cases you can encounter when using agents for the first time. If your error is not listed, see [Understand the agent log](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations/#understand-the-agent-logs) and [Error Codes and Mitigations](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations/#error-codes-and-mitigations).
 
-| Question | Answer                                                   |
-|----------|----------------------------------------------------------|
-| Why doesn't agent provitioning work? | Make sure the marketplace provisioning feature (`AGENTFEATURES_MARKETPLACEPROVISIONING`) is enabled.          |
+| Question                                                  | Answer                                                                                                                                                                                                                                                                                                                                          |
+|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Why doesn't agent provitioning work?                      | Make sure the marketplace provisioning feature (`AGENTFEATURES_MARKETPLACEPROVISIONING`) is enabled.                                                                                                                                                                                                                                            |
 | Why can't Traceability Agent connect to Amplify platform? | Make sure the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any.  Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) to check the http/2 connectivity.     |
-| Why can't Discovery Agent connect to Amplify platform?  | Make sure that the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) to check the http/2 connectivity.      |
+| Why can't Discovery Agent connect to Amplify platform?    | Make sure that the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) to check the http/2 connectivity. |
