@@ -30,7 +30,7 @@ In this tutorial, you'll create a product with documentation, version it, and th
 
 3. Create a plan
 4. Mark the product ready to publish
-4. Publish the product to the Marketplace
+5. Publish the product to the Marketplace
 
 ### Create Product YAML
 
@@ -235,7 +235,7 @@ axway central apply -f product-updated.json
 
 ##### Assign a product a category
 
-Products are categorized to help API providers organize products in the Marketplace, making it easy for API consumers to quickly find them. To assign a product a category, first find it's logical name and then update the product to use it. 
+Products are categorized to help API providers organize products in the Marketplace, making it easy for API consumers to quickly find them. To assign a product a category, first find it's logical name and then update the product to use it.
 
 Run the following command to query the API Server to get the resource details of the category to be assigned to the product, in this case the category we want to use has the `title` called `OpenBanking`, and store it to disk:
 
@@ -255,7 +255,7 @@ axway central apply -f product-updated.json
 
 ##### Tagging a product
 
-Tags are used to organize and filter products in the Marketplace. To tag a product, update the `tags` field (string array) of a product resource. 
+Tags are used to organize and filter products in the Marketplace. To tag a product, update the `tags` field (string array) of a product resource.
 
 Run the following command to update the `tags` field with a tag value of `experimental` to indicate to the API consumer that the API they are subscribing to is in a experimental state:
 
@@ -365,7 +365,7 @@ If you want to update the version number further, then create more `ReleaseTag` 
 
 ### Publish to Market
 
-To publish your product to the Marketplace, you must first know the name of the Marketplace. 
+To publish your product to the Marketplace, you must first know the name of the Marketplace.
 
 Run the following command get the details of your Marketplace:
 

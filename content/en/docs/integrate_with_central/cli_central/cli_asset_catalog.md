@@ -195,7 +195,7 @@ axway central apply -f asset-updated.json
 
 ##### Tag an asset
 
-Tags are a way to organize and filter assets in the Asset catalog. To tag an asset, update the `tags` field (string array) of an asset resource. 
+Tags are a way to organize and filter assets in the Asset catalog. To tag an asset, update the `tags` field (string array) of an asset resource.
 
 Run the following commands to update the `tags` with a tag value of `experimental`:
 
@@ -208,8 +208,8 @@ axway central apply -f asset-updated.json
 
 ##### Assign an asset a category
 
-To help manage the number of assets in the Asset Catalog, you can assign an asset to a category. 
-If the category you wish to assign to the asset does not exist, then create the category using the `Category` resource type. 
+To help manage the number of assets in the Asset Catalog, you can assign an asset to a category.
+If the category you wish to assign to the asset does not exist, then create the category using the `Category` resource type.
 
 Run the following command to create a new category with the titled `Finance` and the description `Finance APIs`:
 
@@ -241,7 +241,7 @@ axway central get asset $assetName -o json | jq '.spec.categories |= . + [env.ca
 axway central apply -f asset-updated.json
 ```
 
-If the category that you want to use already exists as a category in the API Server, then find its logical name and update the asset to use it. Query the API Server to get the resource details of the category to be assigned to the asset. In this case, the has the `title` called `OpenBanking`. 
+If the category that you want to use already exists as a category in the API Server, then find its logical name and update the asset to use it. Query the API Server to get the resource details of the category to be assigned to the asset. In this case, the has the `title` called `OpenBanking`.
 
 Run the following command to get the category resource and store it to disk:
 
