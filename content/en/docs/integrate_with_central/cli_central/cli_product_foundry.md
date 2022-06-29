@@ -34,18 +34,18 @@ In this tutorial, you'll create a product with documentation, version it, and th
 
 ### Create Product YAML
 
-You can create a product to address a particular use cases that solve specific needs. You create a product in order to make it available to API Consumers in the market place. Products are created with one or more assets available in the Asset Catalog.
+You can create a product to address particular use cases that solve specific needs. A product is created to make it available to API consumers in the market place. Products are created with one or more assets available in the Asset Catalog.
 
-To find the list of available assets which have been marked as ```active``` and released to the Marketplace run the following command:
+Run the following command to find the list of available assets, which have been marked as `active` and released to the Marketplace:
 
 ```bash
 axway central get assets
 ```
 
-From the resulting response from the platform select the name or names of the assets that you want to bundle in your product. In the scenario we will select the asset with the name ````petstore-asset```.
+From the resulting platform response, select the names of the assets you want to bundle in your product. In this scenario, select the asset with the name `petstore-asset`.
 
-To create a new product we will first create an basic product YAML or JSON file. We will populate the product with a single asset, namely ````petstore-asset```.
-A `.yaml`, `.yml`, or `.json` file can be used to define a specific resource for these examples we will be using `.json`
+To create a new product, first create a basic product YAML or JSON file. Populate the product with a single asset named `petstore-asset`.
+A `.yaml`, `.yml`, or `.json` file can be used to define a specific resource. This tutorial uses `.json`.
 
 ```json
 {
@@ -66,7 +66,7 @@ A `.yaml`, `.yml`, or `.json` file can be used to define a specific resource for
 
 Save file as `product.json`
 
-Run the follow command to create the product on the server  where `-f` is the filename to use to create the resource, `-y` indicates that you'll accept the name for the product that the server auto generates (since a local name hasn't already been created):
+Run the follow command to create the product on the server where `-f` is the filename used to create the resource, `-y` indicates that you'll accept the name for the product that the server auto generates (since a local name hasn't already been created):
 
 ```bash
 axway central create -f product.json -y -o json > product-created.json
@@ -78,15 +78,15 @@ Perform the following tasks to make your newly created product ready to be consu
 
 ##### Add documentation to your product
 
-You can associate documentation with your product. Documentation consists of a number of articles. Articles are created by adding resources of kind ```Resource``` to the API Server. Each ```Resource``` will contain markdown content which will be rendered with the product in the Marketplace.
+Documentation consists of a number of articles, and can be associated to your product. Articles are created by adding resources of kind `Resource` to the API Server. Each `Resource` contains markdown content that is rendered with the product in the Marketplace.
 
-We will create some three articles for our product:
+In this tutorial you'll create three articles for the product:
 
 * Overview
 * Authentication
 * Trouble shooting
 
-This will create a document resource within the product. You can upload documents then organize and reference them.
+Run the following commands to create a document resource within the product. Then upload the documents, organize, and reference them.
 
 ```bash
 export docTitle='Overview'
@@ -120,7 +120,7 @@ Where ```article.jq``` has the following content:
 }
 ```
 
-Repeat the above step for ```Authentication``` article:
+Repeat the above step for `Authentication` article:
 
 ```bash
 export docTitle='Authentication'
@@ -129,7 +129,7 @@ jq -f article.jq product-created.json > article.json
 axway central create -f article.json -o json -y 
 ```
 
-And for the ```Trouble shooting``` article:
+Repeat the step again for the `Trouble shooting` article:
 
 ```bash
 export docTitle='Trouble shooting'
@@ -138,7 +138,7 @@ jq -f article.jq product-created.json > article.json
 axway central create -f article.json -o json -y 
 ```
 
- Note that if you already have the documentation as markdown file on disk then you could load the content with the following script:
+If you already have the documentation as a markdown file on disk, then you can load the content with the following script:
 
 ```bash
 export docTitle='readme'
@@ -147,7 +147,7 @@ jq -f article.jq product-created.json > article.json
 axway central create -f article.json -o json -y 
 ```
 
-Now that each article is created we need to assemble these into a document. We can get the list of created articles by running the following command which is querying for all articles in the scope of the product name:
+Now that each article is created, assemble them into a document. Run the following command to querying for all articles in the scope of the product name:
 
 ```bash
 #!/bin/bash
@@ -155,7 +155,7 @@ export productName=`jq -r .[0].name product-created.json`
 axway central get  resources -s $productName -o json 
 ```
 
-To get the list of all articles available for the product and store them in a file:
+Run the following command to get the list of all articles available for the product and store them in a file:
 
 ```bash
 #!/bin/bash
@@ -163,7 +163,7 @@ export productName=`jq -r .[0].name product-created.json`
 axway central get resources -s $productName -o json > available-articles.json
 ```
 
-We will now create a document from the all the articles that have been created:
+Run the following command to create a document from the articles that have been created:
 
 ```bash
 #!/bin/bash
@@ -203,7 +203,7 @@ Where ```document.jq``` has the following content:
 }
 ```
 
-You can delete product documentation by running the following command:
+Run the following command to delete the documentation:
 
 ```bash
 #!/bin/bash
@@ -221,9 +221,9 @@ axway central get resources -s $productName -o json > delete-articles.json
 axway central delete -f delete-articles.json
 ```
 
-##### Adding an image a product
+##### Add an image to a product
 
-It is possible to supply the product with with an image / avatar to make the product more attractive and recognizable to the API Consumer. The script below will query the created resources on disk using ```jq``` and store the result in environment variables. It will based64 encode the content of a png file and store this in an environment variable called ```encodedImage```. It will query the API Server for the product resource and update the responding JSON with the values from the environment variables. Finally it pushes the updates json content back to the API Server so that the product has an image attached.
+An image / avatar makes the product more attractive and recognizable to the API Consumer. Run the following script to query the created resources on disk using `jq` and store the result in environment variables. It will based64 encode the content of a png file and store it in an `encodedImage` environment variable. It will query the API Server for the product resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the product has an image attached.
 
 ```bash
 #!/bin/bash
@@ -235,17 +235,15 @@ axway central apply -f product-updated.json
 
 ##### Assign a product a category
 
-You can categorize a product in order to help API Providers organize products in the Marketplace so that API Consumers can quickly find them.
+Products are categorized to help API providers organize products in the Marketplace, making it easy for API consumers to quickly find them. To assign a product a category, first find it's logical name and then update the product to use it. 
 
-We will assume that the category that you want to assign a product already exists. If it doesn't then see the section ~~~~ REF TO "Assigned an asset a category" in the asset catalog ~~~~.
-
-You can find a category by finding it's logical name and updating the product to use it. First we will query the API Server to get the resource details of the category to be assigned to the product, in this case the category we want to use has the ```title``` called ```OpenBanking```. Use this command to get the category resource and store it to disk:
+Run the following command to query the API Server to get the resource details of the category to be assigned to the product, in this case the category we want to use has the `title` called `OpenBanking`, and store it to disk:
 
 ```bash
 axway central get category -q "title==OpenBanking" -o json > category-details.json
 ```
 
-Now that we have the category we can update the product using the following commands:
+Run the following command to update the product:
 
 ```bash
 #!/bin/bash
@@ -257,7 +255,9 @@ axway central apply -f product-updated.json
 
 ##### Tagging a product
 
-Tags are a way to organize and filter products in the marketplace. To tag a product you update the ```tags``` field of a product resource. The ```tags``` field is a string array. To update the ```tags``` with a tag value of ```experimental``` to indicate ot the API consumer that the API they are subscribing to is in a experimental state, you run the following commands:
+Tags are used to organize and filter products in the Marketplace. To tag a product, update the `tags` field (string array) of a product resource. 
+
+Run the following command to update the `tags` field with a tag value of `experimental` to indicate to the API consumer that the API they are subscribing to is in a experimental state:
 
 ```bash
 #!/bin/bash
@@ -268,9 +268,9 @@ axway central apply -f product-updated.json
 
 ### Create Plan
 
-Define Plans to specify the limitations and subscription details of how API Consumers can use your products. A plan includes quota limit that indicates how many transactions that an API consumer can use. The plan an indicate which assets resources in the product that the quota is applicable to. Plans can be free or paid.
+Plans define the limitations and subscription details of how API Consumers can use your products. A plan includes a quota limit that indicates how many transactions an API consumer can use, and which assets resources in the product that the quota is applicable to. Plans can be free or paid.
 
-In this example we will configure a free plan for the product.
+Run the following command to configure a free plan for the product:
 
 ```bash
 jq -f product-plan.jq product-created.json > product-plan.json
@@ -314,9 +314,9 @@ The product plan has now been associated with the product.
 
 ### Mark the product ready to be published to the Marketplace
 
-Only products which are in an ```active``` state and marked as released are made available to be published to the Marketplace.
+Only products that are in an `active` state and marked as released are made available to be published to the Marketplace.
 
-To mark an product as ```active``` run the following commands which will update the asset created in the first step to ```active```:
+Run the following commands to update the product you created in step 1 to `active`:
 
 ```bash
 #!/bin/bash
@@ -325,7 +325,7 @@ axway central get product $productName -o json  | jq '.state = "active"' > produ
 axway central apply -f product-updated.json
 ```
 
-To release an product you need to create a Release Tag for the product. The Product Foundry Catalog is enforcing sematic versioning. So when you create a release tag you need to specify if you are releasing a major, minor or patch update. The Amplify platform will automatically calculate the semantic version of the asset based on historic release version that have been applied. You can select how the release version number should be incremented by selecting one of the following values ```major```, ```minor```, or ```patch``` for the ```releaseType``` field in the ```ReleaseTag```. If you the current version number is 1.0.1 then the version will become the following:
+A product must have a Release Tag before it can be released. The Product Foundry Catalog enforces sematic versioning, so you must specify how the release version number should be incremented by entering a `releaseType` of either `major`, `minor` or `patch`. The Amplify platform automatically calculates the semantic version of the product based on the historic release version that has been applied. If the current version number is 1.0.1, then the version will become:
 
 | Value provided      | Result | Used when
 | ----------- | ----------- | ----------- |
@@ -333,7 +333,7 @@ To release an product you need to create a Release Tag for the product. The Prod
 |minor|1.1.1| New feature introduced to the product which does not break existing capabilities being consumed by API Consumers |
 |patch|1.0.2| Bug fixes |
 
-To make a release tag for the product created earlier run the following command:
+Run the following command to make a release tag for the product:
 
 ```bash
 jq -f product-release-tag.jq product-created.json > product-release-tag.json
@@ -359,21 +359,23 @@ Where ```product-release-tag.jq``` has the following content:
 }
 ```
 
-After making a product ```active``` and versioning it via a ```release tag``` the asset is now available to be published to the Marketplace.
+After making a product `active` and versioning it with a `release tag` the asset is now available to be published to the Marketplace.
 
-Note, if you want to update the version number further then you create more ```ReleaseTag``` resources and change the field ```releaseType``` to the either ```major```, ```minor```, ```patch``` depending on the changes that you have made to the product.
+If you want to update the version number further, then create more `ReleaseTag` resources and change the field `releaseType` to either `major`, `minor`, or `patch` depending on the changes that you have made to the product.
 
 ### Publish to Market
 
-In order to publish your product to the market place you will need the name of the market. To acquire this use the following command.
+To publish your product to the Marketplace, you must first know the name of the Marketplace. 
+
+Run the following command get the details of your Marketplace:
 
 ```js
 axway central get marketplaces -o json > marketplace.json
 ```
 
-This will retrieve the details of your marketplace and we will use this to create a PublishedProduct event for the API Server.
+If no marketplace resources are returned, make sure to save the Marketplace settings on platform and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings) and check the output again for the previous command.
 
-Note: if no marketplace resources are returned, make sure to save the Marketplace settings on platform and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings) and check again the output for the previous command.
+Run the following command to create a PublishedProduct event for the API Server:
 
 ```bash
 jq --slurp -f publish-product.jq marketplace.json product-created.json  > publish-product.json
@@ -405,7 +407,7 @@ Your product is now available in the Marketplace for API consumers to find and s
 
 ### Remove a product
 
-Before a product can be deleted, its state must first be marked as `archived`. To archive a product named ```petstore``` run the following commands where first we get the product details from the API Server, we change the ```state``` field in the result. The modified result is written to file and then this file is applied to the resource as it's state is changed:
+Before a product can be deleted, its state must first be marked as `archived`. Run the following command to archive a product named `petstore`, where you get the product details from the API Server, and change the ```state``` field in the result. The modified result is written to file and then this file is applied to the resource as its state is changed.
 
 ```bash
 axway central get products petstore -o json | jq '.state = "archived"' > product-changed.json
@@ -414,7 +416,7 @@ axway central apply -f product-changed.json
 
 {{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
 
-Now that the product state is set to ```archived``` we can delete the asset by running the following command:
+Once the product state is set to `archived`, the asset can be deleted. Run the following command to delete the asset:
 
 ```bash
 axway central delete products petstore -y
