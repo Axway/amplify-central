@@ -133,7 +133,7 @@ For the example provided, the following information will be required when a cons
 
 A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog.
 
-Click [subscriptionEventSchema.json](https://amplify-central.netlify.app/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
+Click [subscriptionEventSchema.json](/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
 
 * **type**: the type of the event, declared as a string. Accepts `SubscriptionUpdatedEvent` value.
 * **consumerInstance**: the referenced consumer instance object created to publish the asset to the Amplify Unified Catalog.
@@ -148,7 +148,7 @@ Click [subscriptionEventSchema.json](https://amplify-central.netlify.app/samples
 * **$subscription.name**: friendly name of the subscription.
 * **catalogItem**: Catalog asset object, which the user subscribed to.
 
-Click [subscriptionEventPayload.json](https://amplify-central.netlify.app/samples/central/subscriptionEventPayload.json) to download a sample event payload that is sent to a webhook referenced in a subscription definition.
+Click [subscriptionEventPayload.json](/samples/central/subscriptionEventPayload.json) to download a sample event payload that is sent to a webhook referenced in a subscription definition.
 
 ## Additional information
 
