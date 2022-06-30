@@ -186,6 +186,15 @@ CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 #CENTRAL_AUTH_TIMEOUT=10s
 ```
 
+#### Configure API Manager and Discovery Agent to manage OAuth External credentials
+
+When virtualizing a REST API in API Manager, you can configure inbound security of OAuth (External) type that allows clients to use credentials using an external OAuth identity provider to authenticate the requests. For details on how to setup OAuth (External) inbound security, see OAuth (External) section under [Inbound security settings
+](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html#oauth-external).
+
+When using OAuth (External) inbound security, API Manager requires a custom OAuth token information policy to extract the token information from the request and perform verification. For an example on how to add OAuth token information policies, see [Configure OAuth (External) security for a front-end API](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/example_oauth_external/index.html).
+
+When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Amplify Central that allows Marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/connected_agent_common_reference/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider)
+
 #### Customizing Discovery Agent to manage subscription approval and notifications
 
 Various use cases are supported to approve a subscription using the `CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE` variable:
