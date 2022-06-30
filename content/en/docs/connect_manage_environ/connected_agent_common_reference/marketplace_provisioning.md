@@ -38,18 +38,18 @@ From the Marketplace, a consumer first requests access to a resource and then re
 
 #### Provisioning OAuth credential to an identity provider
 
-The Discovery Agent provides capability to provision credentials to OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated dataplane. The Discovery agent requires following configuration to register the OAuth identity providers.
+The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated dataplane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
 * Name: The name of the OAuth identity provider
 * Type: The type of OAuth identity provider ("generic", "keycloak" or "okta")
-* Metadata URL: The URL exposed by OAuth authorization server to provide metadata information
-* Authentication Config: Used by the agent to communicate with OAuth identity provider
+* Metadata URL: The URL exposed by the OAuth authorization server to provide metadata information
+* Authentication Config: Used by the agent to communicate with the OAuth identity provider
     * Type: The type of authentication mechanism to be used ("accessToken" or "client")
-    * Access Token: The token(initial access token/Admin API Token etc) to be used by Agent SDK to authenticate with OAuth identity provider. The config is required if type set to "accessToken"
-    * Client ID: The identifier of the client in OAuth identity provider that can used to create new OAuth clients. The config is required if type set to "client"
-    * Client Secret: The secret for the client in OAuth identity provider. The config is required if type set to "client"
+    * Access Token: The token (initial access token, Admin API Token, etc.) to be used by the Agent SDK to authenticate with the OAuth identity provider. The config is required if type is set to "accessToken"
+    * Client ID: The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is set to "client"
+    * Client Secret: The secret for the client in the OAuth identity provider. The config is required if the type is set to "client"
 
-The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable based configuration. The environment variable based config need to be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
+The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable based configuration. The environment variable based config must to be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
 ```shell
 # IDP configuration with client type authentication
