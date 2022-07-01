@@ -9,7 +9,7 @@ Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio prov
 
 ## Versioning
 
-Current agent versions are based on Amplify Agents SDK v1.1.24.
+Current agent versions are based on Amplify Agents SDK v1.1.27.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -25,21 +25,22 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* **Feature**: Add text.
+* **Consumer insights**: traffic and metrics events are enriched with marketplace information (Product / subscription / plan / application) to help consumer filtering their traffic.
+* **Traffic sampling improvement**: Traceability agent sample traffic based on marketplace subscription and API.
 
 ### Amplify Gateway agents enhancements
 
-* Agent version: 1.1.18
+* Agent version: 1.1.21
 * See Common enhancements and features.
 
 ### Amplify AWS Gateway agents enhancements
 
-* Agent version: 1.1.16
+* Agent version: 1.1.19
 * See Common enhancements and features.
 
 ### Amplify Azure agents enhancements
 
-* Agent version: 1.1.16
+* Agent version: 1.1.19
 * See Common enhancements and features.
 
 ### Amplify Istio agents enhancements
@@ -52,7 +53,7 @@ Latest agent version: 2.0.33
 
 ### Amplify Apigee agents
 
-Current release (0.0.7) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
+Current release (0.0.8) of the Amplify Apigee agent is available on [Axway GitHub](https://github.com/Axway/agents-apigee) repository.
 
 * See Common enhancements and features.
 
@@ -69,11 +70,21 @@ Current release (1.1.5) of the Amplify Mulesoft agent is available on [Axway Git
 
 * No new updates.
 
+### Other available community agents
+
+The following agents are open source and everybody can contribute:
+
+* Mulesoft : <https://github.com/Axway/agents-mulesoft>
+* WSO2: <https://github.com/Axway/agents-wso2>
+* Kong: <https://github.com/Axway/agents-kong>
+
 ## Fixed issues
 
 The following agent issues are fixed in this update:
 
-* **Issue**. Add text.
+* **Agigee agent status remains unhealthy**. Previously, when Apigee agents becomes unhealthy due to connectivity issue, the agent was not able to change back its status to connected. Now, the agent recovers itself correctly.
+
+*
 
 ## Known limitations
 
