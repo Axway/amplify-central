@@ -1,8 +1,9 @@
 ---
-title: Amplify agents November 2021 Release Notes
-linkTitle: Amplify agents November 2021
+title: Amplify agents September 2021 Release Notes
+linkTitle: Amplify agents September 2021
 weight: 90
-date: 2021-11-30
+draft: yes
+date: 2021-09-30
 description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
   / Istio provide better visibility into your multi-type gateway eco system.
   These agents collect data from the Gateway (API / traffic) and expose it in
@@ -12,7 +13,7 @@ description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
 
 ## Versioning
 
-Currently, version 1.1.7 is available. It is based on Amplify Agents SDK v1.2.0.
+Currently, version 1.1.4 is available. It is based on Amplify Agents SDK v1.1.7.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -27,27 +28,26 @@ The following new features and enhancements are available in this update.
 
 ### Amplify Gateway agents enhancements
 
-* A warning is raised when using @secret for password configuration in the Traceability Agent offline mode.
+* **Categorization of your API**: To facilitate the API search in the Unified Catalog using the API grouping per category, the Discovery Agent has been enhanced to take advantage of the tagging done in the API Manager. The configuration of the agent allows mapping a tag from API Manager to one or multiple categories in Unified Catalog. If a category does not exist, the agent can be configured to automatically create it (by default, missing categories are not created). For more information, go to [Use Discovery Agent to categorize your APIs](/docs/connect_manage_environ/connected_agent_common_reference/category_mapping).
+* **Exclude API path from traffic**. The Traceability Agent configuration allows you to disregard certain API paths from being reported to the Platform. This option is useful if you want to exclude health checker APIs. For more information, refer to `TRACEABILITY_EXCEPTION_LIST` [variable definition](/docs/connect_manage_environ/connect_api_manager/agent-variables).
 
 ### Amplify AWS Gateway agents enhancements
 
-* None.
+None.
 
 ### Amplify Azure agents enhancements
 
-* None.
+None.
 
 ### Amplify Istio agents enhancements
 
-* None.
+None.
 
 ## Fixed issues
 
 The following agent issues are fixed in this update:
 
-* **Error getting authentication token from AxwayId**. Previously, when the clock of the machine where the agent was running was out of sync, the following error was raised when the agent tried to issue a new token: "Amplify Central - FAIL ([Error Code 1130] - error getting authentication token. Check Amplify Central auth configuration (CENTRAL_AUTH_*) and network configuration for agent on docs.axway.com: **bad response from AxwayId: 400 Bad Request**". Now, this message is displayed: "_Amplify Central - FAIL (error creating request header. bad response from AxwayId: 400 Bad Request: Client authentication with signed JWT failed: Token is not active. Could not get platform token._" and a possible remediation is available in the [troubleshooting documentation](/docs/connect_manage_environ/connect_api_manager/tips-troubleshooting-and-limitations).
-* **AWS Discovery Agent goes stale after a while**. Previously, a deadlock could occur if some of the agent jobs tried to stop after a connectivity issue and the agent could no longer process the information. Now, a new variable `CENTRAL_JOBTIMEOUT` helps to define the timeout of the job (default is 5 minutes).
-* **Logger adds additional rotate file hooks on config change**. Previously, the logger could be initialized multiple times, resulting in duplicated logs. Now, the logger is initialized only once, and no log are duplicated.
+* **Agent cannot contact JFrog**. Previously, when the agent contacted the service to check for the latest available release, it did not take advantage of the proxy configuration. Now, all outside connectivity goes through the proxy, if configured.
 
 ## Known limitations
 
@@ -57,6 +57,7 @@ The following limitations exist in this update.
 
 * Discovery Agent cannot expose discovered APIs in multiple teams, so the organization structure on API Manager is lost in Amplify Central. As a result, the API provider must create the team in Amplify platform and share the API within the appropriate teams.
 * When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
+* Traceability Agent cannot report the transaction headers when using the Gateway in EMT mode and Transaction Event logging turned on (default configuration). Switch to Open Traffic log if you want to report the transaction headers.
 
 ### Amplify AWS Gateway agents
 
@@ -72,4 +73,6 @@ The following limitations exist in this update.
 
 ### Amplify Istio agents
 
-* Discovery Agent requires manual setup to report APIs correctly.
+* Discovery Agent cannot display its status in Central topology since is it not integrated with Amplify Agents SDK.
+* Discovery Agent requires manual set up to report APIs correctly.
+* Traceability Agent cannot leverage Amplify agents SDK sampling feature.
