@@ -27,6 +27,7 @@ The following new features and enhancements are available in this update:
 
 * **Consumer insights**: traffic and metrics events are enriched with marketplace information (Product / subscription / plan / application) to help consumer filtering their traffic.
 * **Traffic sampling improvement**: Traceability agent sample traffic based on marketplace subscription and API.
+* **External IDP connectivity**: based on the Oauth 2.0 specification, the discovery agent can be configure to delegate the credential provisioning to an external IDP of type keycloack or Okta.
 
 ### Amplify Gateway agents enhancements
 
