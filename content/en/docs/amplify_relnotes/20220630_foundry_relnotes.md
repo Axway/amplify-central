@@ -11,17 +11,28 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* **Product plan management**:
+    * provider can add multiple plans to a product
+    * provider can select the plan type: Free / Paid
+    * provider can define the subscription plan approval: Automatic (default) / Manual
+    * provider can edit a draft plan
+    * provider cannot edit an active plan
+* **Product publication**: provider is able to activate plan(s) during the marketplace product publication
+* **Marketplace product visibility**: provider can define which team is able to see and subscribe to a product in the marketplace. By default, everyone can view a product.
+* **Product documentation management**: provider can now add multiple documents and re-arrange them using the drag&drop
+* **Catalog Manager role**: this role enables to create product for a particular team. It also enables the subscription approval
+* **Archiving product**: the product archive action will also terminate any associated subscription. A warning message with the number of subscription is displayed before the user validates the action.
 
 ## Fixed issues
 
 The following issues have been fixed in this update:
 
-* None.
+* Updating Categories on the Product is not reflected on marketplace product details page
+* Product fails to be created when I skip configurating an usage plan with quota
+* Catalog manager is not able to create a product when adding pln/quotas.
 
 ## Known limitations
 
 The following limitations exist in this update:
 
-* Deleting a document / section / article is not currently possible from the Product Foundry UI.
-* Adding a new product plan is only available in the Product Foundry UI.
+* None
