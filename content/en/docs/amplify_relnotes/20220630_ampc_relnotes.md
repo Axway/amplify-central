@@ -1,6 +1,6 @@
 ---
 title: Amplify Central June 2022 Release Notes
-linkTitle: Amplify June May 2022
+linkTitle: Amplify June 2022
 weight: 90
 date: 2022-06-30
 ---
