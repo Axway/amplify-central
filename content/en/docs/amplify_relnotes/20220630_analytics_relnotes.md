@@ -11,7 +11,7 @@ Analytics provide insights into your API program, API environments, and APIs.
 
 The following new features is available in this update:
 
-* Add text.
+* **Business Insights**: provider is now able to filter the API Health metrics with the consumer teams and/or the consumer subscription. Be sure to have the latest traceability agent version to leverage that feature.
 
 ## Fixed issues
 
