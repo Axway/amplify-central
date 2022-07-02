@@ -11,6 +11,7 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
+* **Product filtering**: the product list can be filter using the Owning Team filtering widget 
 * **Product plan management**:
     * provider can add multiple plans to a product
     * provider can select the plan type: Free / Paid
