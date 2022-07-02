@@ -11,16 +11,22 @@ The Marketplace is the storefront into all products exposed for discovery and co
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* **Paid plan**: consumer can see the paid plan and their associated cost
+* **Application**: consumer can now edit the application (name / description / image)
+* **Subscription**: by default subscription are owned by a team. Adding 'x-private' tag on a team allows user to not share the subscription with their team. In that case the subscription is private to the user and no other consumer can see/use it.
+* **Product visibility**: based on what the provider has defined, a consumer will only see the product(s) that are visible to the team(s) he is part of.
+* **Access request**: the consumer is now able to see the access request provisioned data that a provider want him to see or use
+* **Error management**: when an error occurred during provisioning access or credentials from the provider side, the consumer can see the error
 
 ## Fixed issues
 
 The following issues have been fixed in this update:
 
-* Add text.
+* Security fixes have been applied to this release.
+* subscription buttons styling
 
 ## Known limitations
 
 The following limitation exists in this update:
 
-* Highlighted documents displayed on the overview screen of the product details can be configured using the Product Foundry APIs.
+* Highlighted documents displayed on the overview screen of the product details cannot be configured using the Product Foundry APIs. The CLI needs to be use to add star documents.
