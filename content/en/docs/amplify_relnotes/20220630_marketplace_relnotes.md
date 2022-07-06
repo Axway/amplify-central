@@ -17,6 +17,7 @@ The following new features and enhancements are available in this update:
 * **Product visibility**: based on what the provider has defined, a consumer will only see the product(s) that are visible to the team(s) he is part of.
 * **Access request**: the consumer is now able to see the access request provisioned data that a provider want him to see or use
 * **Error management**: when an error occurred during provisioning access or credentials from the provider side, the consumer can see the error
+* **Subscription approval**: provider can set the type of approval for subscription plans (Automatic - default / Manual). The list of subscription is available under the Amplify Central > Marketplace > Subscriptions menu. From this page, the provider can approve/decline/revoke the subscription. Similarly, the provider can see the the access request list and their details from Amplify Central > Marketplace > Access Requests menu.
 
 ## Fixed issues
 
