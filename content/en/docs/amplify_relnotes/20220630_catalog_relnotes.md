@@ -21,7 +21,7 @@ The following issue has been fixed in this update:
 * Fixed a display issue with the asset icon was not visible when shared with another team.
 * Fixed an issue with the items per page was not reflected in the table view of Asset details.
 * Reduced the query string length when selecting Asset filters.
-* Catalog Managers who are a member of the owning team of an asset can edit the asset and its ownership access rights. 
+* Catalog Managers who are a member of the owning team of an asset can edit the asset and its ownership access rights.
 
 ## Known limitations
 
