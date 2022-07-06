@@ -11,13 +11,17 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 
 The following new features and enhancements are available in this update:
 
-* Add text.
+* The warning message when deleting an API now includes the number/name of the affected assets.
 
 ## Fixed issues
 
 The following issue has been fixed in this update:
 
-* Add text.
+* An API developer role can delete an Asset which is owned by the team which the developer is a member of.
+* Fixed a display issue with the asset icon was not visible when shared with another team.
+* Fixed an issue with the items per page was not reflected in the table view of Asset details.
+* Reduced the query string length when selecting Asset filters.
+* Catalog Managers who are a member of the owning team of an asset can edit the asset and its ownership access rights. 
 
 ## Known limitations
 

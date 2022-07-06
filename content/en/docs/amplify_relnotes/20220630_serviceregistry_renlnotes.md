@@ -11,7 +11,7 @@ The Service Registry is part of the Provider experience. The WebUI is an easy wa
 
 The following new feature is available in this update:
 
-* Add text.
+* None.
 
 ## Fixed issues
 
