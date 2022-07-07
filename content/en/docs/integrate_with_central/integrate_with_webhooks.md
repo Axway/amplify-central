@@ -16,7 +16,7 @@ Learn how to create and configure webhooks in Amplify Central, as well as the ev
 
 ## Webhooks
 
-Webhooks are used to automatically receive notifications of events that happen to resources in the API Server. For example, when a new asset is discovered in a environment or when an item is subscribed to in the marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those events is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as needed.
+A webhook is an HTTP callback: an HTTP POST that occurs when something happens. Webhooks are used to automatically receive notifications that something happened to any resources on the API Server. For example, when a new asset is discovered in a environment or when an item is subscribed to in the Marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those events is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as needed.
 
 You can use webhooks to define a custom approval flow, set up a policy to validate discovered APIs or deploy to your production server.
 
