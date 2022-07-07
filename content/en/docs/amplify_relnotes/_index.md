@@ -7,9 +7,110 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-The following is a list of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI. Enhancement overviews and bug fixes for each release are also provided.
+This page displays the link to the Support Policy for Amplify Agents/SDK, and brief summaries of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI. Enhancement overviews and bug fixes for each release are provided.
 
 For more details, click on the release note title to go to the corresponding release note.
+
+## Support Policy for Amplify Agents and Amplify Agent SDK
+
+See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
+
+## [Amplify agents June 2022](/docs/amplify_relnotes/20220630_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.21): See Amplify agent general
+* **Amplify AWS Gateway Agent** (version 1.1.19): See Amplify agent general
+* **Amplify Azure Agent** (version 1.1.19): See Amplify agent general
+* **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
+* **Amplify Apigee Agent** (version 0.0.8): See Amplify agent general
+* **Amplify Mulesoft Agent** (version 1.1.5): No new updates
+* **Amplify agent general** (version 1.1.21):
+
+    * **Consumer insights**: traffic and metrics events are enriched with Marketplace information (product / subscription / plan / application) to help consumers filtering their traffic
+    * **Traffic sampling improvement**: Traceability Agent sample traffic based on Marketplace subscription and API
+    * **External IDP connectivity**: based on the Oauth 2.0 specification, the Discovery Agent can be configure to delegate the credential provisioning to an external IDP of type keycloak or Okta
+
+**Bug fixes**: Apigee agent status remains unhealthy
+
+## [Amplify Central June 2022](/docs/amplify_relnotes/20220630_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.10.3): None
+* **Amplify Central WebUI**: See the Release Notes for Asset Catalog, Product foundry, and Service Registry
+
+**Bug fixes**: None
+
+## [Analytics June 2022](/docs/amplify_relnotes/20220630_analytics_relnotes/)
+
+**What's new**: Business Insights: provider can filter the API Health metrics with the consumer teams and/or the consumer subscription
+
+**Bug fixes**: None
+
+## [Asset Catalog June 2022](/docs/amplify_relnotes/20220630_catalog_relnotes/)
+
+**What's new**: The warning message displayed when deleting an API now includes the number/name of the affected assets
+
+**Bug fixes**:
+
+* An API developer role cannot delete an asset that is owned by the team which the developer is a member of
+* The asset icon is not visible when shared with another team
+* The items per page is not reflected in the table view of Asset details
+* The query string length when selecting Asset filters is too long
+* Catalog Managers who are a member of the owning team of an asset cannot edit the asset and its ownership access rights
+
+## [Marketplace June 2022](/docs/amplify_relnotes/20220630_marketplace_relnotes/)
+
+**What's new**:
+
+* Paid plan: consumer can see the paid plan and their associated cost
+* Application: consumer can now edit the application
+* Subscription: by default, subscription is owned by a team. Adding x-private tag on a team allows the user to not share the subscription with their team
+* Product visibility: based on what the provider has defined, a consumer only sees the product(s) that is visible to the team(s) he is part of
+* Access request: the consumer see the access request provisioned data that a provider wants him to see or use
+* Error management: when an error occurred during provisioning access or credentials from the provider side, the consumer can see the error
+* Subscription approval: provider can set the type of approval for subscription plans
+
+**Bug fixes**:
+
+* Security fixes
+* Subscription buttons styling
+
+## [Product Foundry June 2022](/docs/amplify_relnotes/20220630_foundry_relnotes/)
+
+**What's new**:
+
+* Product filtering: the product list can be filter using the Owning Team filtering widget
+* Product plan management:
+
+    * Provider can add multiple plans to a product
+    * Provider can select the plan type: Free / Paid
+    * Provider can define the subscription plan approval: Automatic (default) / Manual
+    * Provider can edit a draft plan
+    * Provider cannot edit an active plan
+
+* Product publication: provider can activate plan(s) during the Marketplace product publication
+* Marketplace product visibility: provider can define which team is able to see and subscribe to a product in the Marketplace
+* Product documentation management: provider can add multiple documents and rearrange them using the drag and drop
+* Catalog Manager role: can create product for a particular team and enables the subscription approval
+* Archiving product: this action terminates any associated subscription
+
+**Bug fixes**:
+
+* Updating Categories on the product is not reflected on the Marketplace product details page
+* Product fails to be created when configuring a usage plan with quota is skipped
+* Catalog Manager cannot create a product when adding plan/quotas
+
+## [Service Registry June 2022](/docs/amplify_relnotes/20220630_serviceregistry_relnotes/)
+
+**What's new**: None
+
+**Bug fixes**: None
+
+## [Amplify Platform Management June 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+## [Axway CLI June 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
 
 ## [Amplify agents May 2022](/docs/amplify_relnotes/20220523_ampc_agents_relnotes/)
 
@@ -401,7 +502,7 @@ For more details, click on the release note title to go to the corresponding rel
 * The CLI command `axway central config` does not execute with telemetry enabled
 * The CLI command to add a service account user to a team does not execute
 
-## [Amplify agents November 2021](/docs/amplify_relnotes/20211130_ampc_agents_relnotes/)
+## Amplify agents November 2021
 
 **What's new for**:
 
@@ -413,7 +514,7 @@ For more details, click on the release note title to go to the corresponding rel
 * AWS Discovery Agent goes stale after a while
 * logger adds additional rotate file hooks on config change
 
-## [Amplify Central November 2021](/docs/amplify_relnotes/20211130_ampc_relnotes/)
+## Amplify Central November 2021
 
 **What's new for**:
 
@@ -430,7 +531,7 @@ For more details, click on the release note title to go to the corresponding rel
 * CLI - The use of “install agents” command in a headless mode with a service account and tooling credentials of a platform admin account
 * WebUI - Creating an Environment with the name ‘add’
 
-## [Amplify agents October 2021](/docs/amplify_relnotes/20211031_ampc_agents_relnotes/)
+## Amplify agents October 2021
 
 **What's new for**:
 
@@ -443,7 +544,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Discovery Agent fails when using an environment owned by a team
 * Amplify Gateway helm installation Private key and Public key transposed in amplify-agents-keys secret
 
-## [Amplify Central October 2021](/docs/amplify_relnotes/20211031_ampc_relnotes/)
+## Amplify Central October 2021
 
 **What's new for**:
 
@@ -457,7 +558,7 @@ For more details, click on the release note title to go to the corresponding rel
 * CLI - Incorrect cloudformation_properties.json generated for AWS Agent
 * CLI - Authentication timeout
 
-## [Amplify agents September 2021](/docs/amplify_relnotes/20210930_ampc_agents_relnotes/)
+## Amplify agents September 2021
 
 **What's new for**:
 
@@ -468,7 +569,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 **Bug fixes**: Agent cannot contact the version service check
 
-## [Amplify Central September 2021](/docs/amplify_relnotes/20210930_ampc_relnotes/)
+## Amplify Central September 2021
 
 **What's new for**:
 
@@ -481,7 +582,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 **Bug fixes**: Activity report on the Environment details page does not display an error message if an API Service encounters an error while publishing to the Unified Catalog
 
-## [Amplify agents August 2021](/docs/amplify_relnotes/20210831_ampc_agents_relnotes/)
+## Amplify agents August 2021
 
 **What's new for**:
 
@@ -494,7 +595,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Discovered API added to wrong team
 * Discovery Agent panic while discovering
 
-## [Amplify Central August 2021](/docs/amplify_relnotes/20210831_ampc_relnotes/)
+## Amplify Central August 2021
 
 **What's new for Axway Central CLI** (version 1.25.0):
 
@@ -504,7 +605,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 **Bug fixes**: None
 
-## [Amplify agents July 2021](/docs/amplify_relnotes/20210731_ampc_agents_relnotes/)
+## Amplify agents July 2021
 
 **What's new for**:
 
@@ -514,7 +615,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 **Bug fixes**: Catalog item’s categories are lost when a consumer instance is updated
 
-## [Amplify Central July 2021](/docs/amplify_relnotes/20210731_ampc_relnotes/)
+## Amplify Central July 2021
 
 **What's new for**:
 
@@ -530,7 +631,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Amplify Central CLI could not create a service account when the path contained a space
 * Long endpoint names that contained a period could not be created
 
-## [Amplify Central June 2021](/docs/amplify_relnotes/20210630_ampc_relnotes/)
+## Amplify Central June 2021
 
 **What's new for**:
 
@@ -549,7 +650,7 @@ For more details, click on the release note title to go to the corresponding rel
 * A page error is displayed when adding the first API Service to an environment in the WebUI
 * Traceability Agent working in an Externally Managed Topology (EMT) deployment cannot report the transaction request/response headers
 
-## [Unified Catalog June 2021](/docs/amplify_relnotes/20210631_catalog_relnotes/)
+## Unified Catalog June 2021
 
 **What's new**: Managing categories and assigning them to catalog items when publishing an API Service
 
@@ -558,7 +659,7 @@ For more details, click on the release note title to go to the corresponding rel
 * The protocol dropdown on the API Service Endpoint screen did not allow for selection of protocols other than http/http for AsyncAPI services
 * Developers could no longer access an environment owned by their team
 
-## [Amplify Central May 2021](/docs/amplify_relnotes/20210531_ampc_relnotes/)
+## Amplify Central May 2021
 
 **What's new for**:
 
@@ -580,13 +681,13 @@ For more details, click on the release note title to go to the corresponding rel
 * Prevent running multiple instances of an agent on the same machine
 * Installing Traceability Agent only for v7 asks you for disco agent name
 
-## [Unified Catalog May 2021](/docs/amplify_relnotes/20210531_catalog_relnotes/)
+## Unified Catalog May 2021
 
 **What's new**: Discovery and publishing of GraphQL APIs
 
 **Bug fixes**: None
 
-## [Amplify Central April 2021](/docs/amplify_relnotes/20210430_ampc_relnotes/)
+## Amplify Central April 2021
 
 **What's new for**:
 
@@ -604,7 +705,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Base path is not displayed in service endpoint
 * API Observer is not always showing the correct number of spans
 
-## [Unified Catalog April 2021](/docs/amplify_relnotes/20210431_catalog_relnotes/)
+## Unified Catalog April 2021
 
 **What's new**: None
 
@@ -614,7 +715,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Users that are assigned the Platform Consumer role and Team Consumer role are not able to access Unified Catalog
 * Loading the subscriptions details screen fails with a CORS error on Safari
 
-## [Amplify Central March 2021](/docs/amplify_relnotes/20210331_ampc_relnotes/)
+## Amplify Central March 2021
 
 **What's new for**:
 
@@ -634,7 +735,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Incorrect URL for Traceability Agent running in EU organization
 * Amplify Central WebUI Observer traffic display is incomplete
 
-## [Unified Catalog March 2021](/docs/amplify_relnotes/20210331_catalog_relnotes/)
+## Unified Catalog March 2021
 
 **What's new**: None
 
@@ -643,7 +744,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Removing an environment with duplicate attributes could get stuck in deleting state
 * The Unified Catalog could not display the full schema definition in the embedded Swagger UI
 
-## [Amplify Central February 2021](/docs/amplify_relnotes/20210228_ampc_relnotes/)
+## Amplify Central February 2021
 
 **What's new for**:
 
@@ -666,7 +767,7 @@ For more details, click on the release note title to go to the corresponding rel
 * V7 Traceability Agent Linux service mode broken
 * Fixed IP addresses
 
-## [Unified Catalog February 2021](/docs/amplify_relnotes/20210226_catalog_relnotes/)
+## Unified Catalog February 2021
 
 **What's new**:
 
@@ -680,7 +781,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Failure publishing to the Unified Catalog using the Amplify Apigee extension for APIs with long description
 * Filter by category pagination issue
 
-## [Amplify Central January 2021](/docs/amplify_relnotes/20210131_ampc_relnotes/)
+## Amplify Central January 2021
 
 **What's new for**:
 
@@ -696,7 +797,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Some Amplify Central CLI results from the amplify central get xxx commands did not correctly return their RESOURCE KIND and SCOPE KIND columns
 * The environment name was not reported for API transactions shown in the Amplify Platform Visibility Dashboard
 
-## [Unified Catalog January 2021](/docs/amplify_relnotes/20210130_catalog_relnotes/)
+## Unified Catalog January 2021
 
 **What's new**: Improve searching and browsing in the Unified Catalog
 
@@ -705,7 +806,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Name of an active subscription could not be updated without changing the subscription status
 * Long category names, descriptions, or tags were not properly displayed
 
-## [Amplify Central November 2020](/docs/amplify_relnotes/20201130_ampc_relnotes/)
+## Amplify Central November 2020
 
 **What's new for**:
 
@@ -720,7 +821,7 @@ For more details, click on the release note title to go to the corresponding rel
 * When an API was not in PUBLISHED status, a consumer could still start the subscription
 * The Central CLI results listing for the Mesh Discovery resources now indicates the correct SCOPE and SCOPE NAME the resources are related to
 
-## [Unified Catalog November 2021](/docs/amplify_relnotes/20201130_catalog_relnotes/)
+## Unified Catalog November 2021
 
 **What's new**:
 
@@ -734,7 +835,7 @@ For more details, click on the release note title to go to the corresponding rel
 * Users assigned the Developer role could not push an API asset from the Unified Catalog to Integration Builder as a connector
 * When no app was required with a subscription, the Approve and Reject dialog screen would display “App has been deleted”
 
-## [Amplify Central October 2020](/docs/amplify_relnotes/20201030_ampc_relnotes/)
+## Amplify Central October 2020
 
 **What's new for**:
 
@@ -758,7 +859,3 @@ For more details, click on the release note title to go to the corresponding rel
 
 * Issue with the Observer display of API filters menu displaying the Axway Cloud and Service mesh environment names
 * The 403 error is not handled properly by the AWS Traceability Agent due to a misconfiguration of the logging variable by the Discovery Agent
-
-## Support Policy for Amplify Agents and Amplify Agent SDK
-
-See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
