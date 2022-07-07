@@ -25,9 +25,9 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 * **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
 * **Amplify Apigee Agent** (version 0.0.8): See Amplify agent general
 * **Amplify Mulesoft Agent** (version 1.1.5): No new updates
-* **Amplify agent general** (version 1.1.21): 
+* **Amplify agent general** (version 1.1.21):
 
-    * * **Consumer insights**: traffic and metrics events are enriched with Marketplace information (product / subscription / plan / application) to help consumers filtering their traffic
+    * **Consumer insights**: traffic and metrics events are enriched with Marketplace information (product / subscription / plan / application) to help consumers filtering their traffic
     * **Traffic sampling improvement**: Traceability Agent sample traffic based on Marketplace subscription and API
     * **External IDP connectivity**: based on the Oauth 2.0 specification, the Discovery Agent can be configure to delegate the credential provisioning to an external IDP of type keycloak or Okta
 
@@ -52,7 +52,7 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
 **What's new**: The warning message displayed when deleting an API now includes the number/name of the affected assets
 
-**Bug fixes**: 
+**Bug fixes**:
 
 * An API developer role cannot delete an asset that is owned by the team which the developer is a member of
 * The asset icon is not visible when shared with another team
@@ -99,7 +99,7 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 **Bug fixes**:
 
 * Updating Categories on the product is not reflected on the Marketplace product details page
-*  Product fails to be created when configuring a usage plan with quota is skipped
+* Product fails to be created when configuring a usage plan with quota is skipped
 * Catalog Manager cannot create a product when adding plan/quotas
 
 ## [Service Registry June 2022](/docs/amplify_relnotes/20220630_serviceregistry_relnotes/)
