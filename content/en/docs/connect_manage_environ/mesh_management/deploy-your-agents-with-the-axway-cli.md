@@ -17,7 +17,16 @@ Ensure you have the following tools installed:
 * Node.js >= 10.13.0 and <= 12.14.1
 * OpenSSL 2.8.3 or later
 
-## Log in to the Axway Central CLI
+## How to proceed?
+
+There are 2 ways for configuring and deploying ISITO agents:
+
+* Automatic [using Axway Central CLI](/docs/connect-manage-environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-axway-cli)
+* Manual using [helm commands](/docs/connect-manage-environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-helm-chart)
+
+## Deploy using Axway CLI
+
+### Log in to the Axway Central CLI
 
 **Note:** The most recently validated Kubernetes version was 1.19.8.
 
@@ -35,7 +44,7 @@ A dialog box is shown. Enter your valid credentials (email address and password)
 
 If you are a member of multiple Amplify organizations, select an organization and continue.
 
-## Install Amplify Istio Agents
+### Install Amplify Istio Agents
 
 1. Run the `install` command to begin the installation of the Amplify Istio Agents. The first section of the installation collects information about the Istio deployment:
 
@@ -54,7 +63,7 @@ If you are a member of multiple Amplify organizations, select an organization an
 
 2. Select `Istio` as your gateway. The next prompt asks if you already have Istio installed.
 
-### If Istio is already installed
+#### If Istio is already installed
 
 1. If Istio is already installed in your cluster, select 'Yes':
 
@@ -74,7 +83,7 @@ If you are a member of multiple Amplify organizations, select an organization an
 
 The rest of the prompts relate to the Istio agents. Continue on with the section [Select the agents to install](#select-the-agents-to-install).
 
-### If Istio is not installed
+#### If Istio is not installed
 
 1. If Istio is not installed, select No:
 
@@ -114,7 +123,7 @@ The rest of the prompts relate to the Istio agents. Continue on with the section
 
     If you choose to generate a certificate, the Axway CLI will use OpenSSL to create the private key and the certificate, which will be placed in the current directory where you are running the Axway CLI. If you choose to provide an existing certificate, you will be prompted with the file path to the private key and the certificate.
 
-### Generate a self-signed certificate
+#### Generate a self-signed certificate
 
 1. Select `Generate self signed certificate`.
 
@@ -134,7 +143,7 @@ Created gateway-cert.crt and gateway-cert.key in /Users/axway
 Created secret/gateway-cert in the istio-system namespace.
 ```
 
-### Provide certificate
+#### Provide certificate
 
 1. Select `Provide certificate`.
 
@@ -152,7 +161,7 @@ Created secret/gateway-cert in the istio-system namespace.
 
     The CLI will create the secret in the `istio-system` namespace.
 
-## Select the agents to install
+### Select the agents to install
 
 The following prompts are related to the details about the Amplify Istio Agents.
 
@@ -203,7 +212,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
 
 {{< alert title="Note" color="primary" >}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify Central.{{< /alert >}}
 
-### Create a new DOSA account
+#### Create a new DOSA account
 
 1. Select `Create a new account` and press `enter`:
 
@@ -233,7 +242,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
     The public key has been placed at /Users/axway/public_key.pem
     ```
 
-### Use an existing DOSA account
+#### Use an existing DOSA account
 
 1. Select the DOSA account from the list and press `enter`:
 
@@ -254,7 +263,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
     Enter the file path to the private key:  /Users/axway/private_key.pem
     ```
 
-## Provide an environment resource
+### Provide an environment resource
 
 After the details of the DOSA account have been provided, you are prompted to either create an environment resource in Amplify Central or provide the name of an existing environment resource. The environment will hold the Kubernetes resources that were found by the Amplify Istio Discovery Agent.
 
@@ -292,7 +301,7 @@ After the new environment is created, the CLI creates the following:
 
 The demo service is packaged along with the `ampc-hybrid` helm chart.
 
-## Install Istio
+### Install Istio
 
 If Istio is not yet installed, the final output of the install prompts will provide the following command to install Istio:
 
@@ -309,7 +318,7 @@ Istio override file has been placed at /Users/Axway/istio-override.yaml
 
 If you want to install Istio in an Openshift Cluster, there are additional steps required. Please follow the steps in the [Istio docs](https://istio.io/latest/docs/setup/platform-setup/openshift/) for installing Istio into an OCP cluster. Istio has multiple profiles that can be used for installation. Select the appropriate profile and apply with the merged details from the CLI generated `istio-override.yaml` file.
 
-## Finish the installation of the agents
+### Finish the installation of the agents
 
 After the Istio installation is complete, edit the `hybrid-override.yaml` file, since the CLI allows to enter only one nanespace, using an editor of your choice, you can add additional namespaces for the envoy filters in the value of `istioGatewayNamespaces` under the `als` key:
 
@@ -327,6 +336,7 @@ where namespaces 1 through N is a list of all the namespaces on your cluster tha
 Once you save the `hybrid-override.yaml` file with the changes made above, run the following command to finish the installation of the agents:
 
 ```bash
+helm repo add axway https://charts.axway.com/charts
 helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
 ```
@@ -337,6 +347,40 @@ For example, if you want the API Discovery agent to poll every 2 seconds for the
 
 ```bash
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set ada.poll.interval=2s
+```
+
+## Deploy using helm chart
+
+Before deploying the helm chart, you will need to prepare the Amplify environment as well as the Kubernetes cluster and then the override file for deploying the chart correctly.
+
+### Preparing kubernetes cluster
+
+TODO
+
+* Explain the certificate generation / install
+* explain the namespace creation
+* explain how to install ISTIO (refer to ### Install Istio )
+
+### Preparing Amplify Central
+
+TODO
+
+* Explain how to create environment (from UI / API)
+* Explain how to create the service account the agent will use to commnunicate from Kubernetes cluster to Amplify platform
+
+### Preparing the helm override file
+
+TODO
+
+* explain the override file values: can show existing override file and add comment in it?
+
+### deploying the agent
+
+```bash
+helm repo add axway https://charts.axway.com/charts
+helm repo update
+helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
+
 ```
 
 ## Verify that the pods are running
