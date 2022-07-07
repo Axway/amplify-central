@@ -7,7 +7,7 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-The following is the Support Policy for Amplify Agents/SDK, and a list of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI. Enhancement overviews and bug fixes for each release are also provided.
+This page displays the link to the Support Policy for Amplify Agents/SDK, and brief summaries of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI. Enhancement overviews and bug fixes for each release are provided.
 
 For more details, click on the release note title to go to the corresponding release note.
 
@@ -19,69 +19,92 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
 **What's new for**:
 
-* **Amplify Gateway Agent** (version 1.1.18): See Amplify agent general
-* **Amplify AWS Gateway Agent** (version 1.1.16): See Amplify agent general
-* **Amplify Azure Agent** (version 1.1.16): See Amplify agent general
+* **Amplify Gateway Agent** (version 1.1.21): See Amplify agent general
+* **Amplify AWS Gateway Agent** (version 1.1.19): See Amplify agent general
+* **Amplify Azure Agent** (version 1.1.19): See Amplify agent general
 * **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
-* **Amplify Apigee Agent** (version 0.0.7): See Amplify agent general
+* **Amplify Apigee Agent** (version 0.0.8): See Amplify agent general
 * **Amplify Mulesoft Agent** (version 1.1.5): No new updates
-* **Amplify agent general** (version 1.1.16): Add text
+* **Amplify agent general** (version 1.1.21): 
 
-**Bug fixes**:
+    * * **Consumer insights**: traffic and metrics events are enriched with Marketplace information (product / subscription / plan / application) to help consumers filtering their traffic
+    * **Traffic sampling improvement**: Traceability Agent sample traffic based on Marketplace subscription and API
+    * **External IDP connectivity**: based on the Oauth 2.0 specification, the Discovery Agent can be configure to delegate the credential provisioning to an external IDP of type keycloak or Okta
 
-* Add text
-* Add text
+**Bug fixes**: Apigee agent status remains unhealthy
 
 ## [Amplify Central June 2022](/docs/amplify_relnotes/20220630_ampc_relnotes/)
 
 **What's new for**:
 
-* **Axway Central CLI** (version 2.10.3):
-    * Add text
-* **Amplify Central WebUI**:
-    * See the Release Notes for Asset Catalog, Product foundry, and Service Registry
+* **Axway Central CLI** (version 2.10.3): None
+* **Amplify Central WebUI**: See the Release Notes for Asset Catalog, Product foundry, and Service Registry
 
-**Bug fixes**: Add text
+**Bug fixes**: None
 
 ## [Analytics June 2022](/docs/amplify_relnotes/20220630_analytics_relnotes/)
 
-**What's new**: Add text
+**What's new**: Business Insights: provider can filter the API Health metrics with the consumer teams and/or the consumer subscription
 
 **Bug fixes**: None
 
 ## [Asset Catalog June 2022](/docs/amplify_relnotes/20220630_catalog_relnotes/)
 
-**What's new**:
+**What's new**: The warning message displayed when deleting an API now includes the number/name of the affected assets
 
-* Add text
-* Add text
+**Bug fixes**: 
 
-**Bug fixes**: Add text
+* An API developer role cannot delete an asset that is owned by the team which the developer is a member of
+* The asset icon is not visible when shared with another team
+* The items per page is not reflected in the table view of Asset details
+* The query string length when selecting Asset filters is too long
+* Catalog Managers who are a member of the owning team of an asset cannot edit the asset and its ownership access rights
 
 ## [Marketplace June 2022](/docs/amplify_relnotes/20220630_marketplace_relnotes/)
 
 **What's new**:
 
-* Add text
-* Add text
+* Paid plan: consumer can see the paid plan and their associated cost
+* Application: consumer can now edit the application
+* Subscription: by default, subscription is owned by a team. Adding x-private tag on a team allows the user to not share the subscription with their team
+* Product visibility: based on what the provider has defined, a consumer only sees the product(s) that is visible to the team(s) he is part of
+* Access request: the consumer see the access request provisioned data that a provider wants him to see or use
+* Error management: when an error occurred during provisioning access or credentials from the provider side, the consumer can see the error
+* Subscription approval: provider can set the type of approval for subscription plans
 
 **Bug fixes**:
 
-* Add text
-* Add  text
+* Security fixes
+* Subscription buttons styling
 
 ## [Product Foundry June 2022](/docs/amplify_relnotes/20220630_foundry_relnotes/)
 
 **What's new**:
 
-* Add text
-* Add text
+* Product filtering: the product list can be filter using the Owning Team filtering widget
+* Product plan management:
 
-**Bug fixes**: None
+    * Provider can add multiple plans to a product
+    * Provider can select the plan type: Free / Paid
+    * Provider can define the subscription plan approval: Automatic (default) / Manual
+    * Provider can edit a draft plan
+    * Provider cannot edit an active plan
+
+* Product publication: provider can activate plan(s) during the Marketplace product publication
+* Marketplace product visibility: provider can define which team is able to see and subscribe to a product in the Marketplace
+* Product documentation management: provider can add multiple documents and rearrange them using the drag and drop
+* Catalog Manager role: can create product for a particular team and enables the subscription approval
+* Archiving product: this action terminates any associated subscription
+
+**Bug fixes**:
+
+* Updating Categories on the product is not reflected on the Marketplace product details page
+*  Product fails to be created when configuring a usage plan with quota is skipped
+* Catalog Manager cannot create a product when adding plan/quotas
 
 ## [Service Registry June 2022](/docs/amplify_relnotes/20220630_serviceregistry_relnotes/)
 
-**What's new**: Add text
+**What's new**: None
 
 **Bug fixes**: None
 

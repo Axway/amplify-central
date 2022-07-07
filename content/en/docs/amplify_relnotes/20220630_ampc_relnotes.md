@@ -40,4 +40,4 @@ The following issue is fixed in this Amplify Central CLI update:
 
 This following limitation exists in this update of Amplify Central:
 
-* Access Rights for both Assets or Products are limited to Team Ownership setting.  Any existing shared with Assets or Products will be accessible in a Read-only mode.
+* Access rights for both assets and products are limited to the Team Ownership setting.  Any existing shared with Assets or Products will be accessible in a Read-only mode.

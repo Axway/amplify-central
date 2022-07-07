@@ -25,9 +25,9 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* **Consumer insights**: traffic and metrics events are enriched with marketplace information (Product / subscription / plan / application) to help consumer filtering their traffic.
-* **Traffic sampling improvement**: Traceability agent sample traffic based on marketplace subscription and API.
-* **External IDP connectivity**: based on the Oauth 2.0 specification, the discovery agent can be configure to delegate the credential provisioning to an external IDP of type keycloack or Okta.
+* **Consumer insights**: traffic and metrics events are enriched with Marketplace information (product / subscription / plan / application) to help consumers filtering their traffic.
+* **Traffic sampling improvement**: Traceability Agent sample traffic based on Marketplace subscription and API.
+* **External IDP connectivity**: based on the Oauth 2.0 specification, the Discovery Agent can be configure to delegate the credential provisioning to an external IDP of type keycloak or Okta.
 
 ### Amplify Gateway agents enhancements
 
@@ -46,10 +46,8 @@ The following new features and enhancements are available in this update:
 
 ### Amplify Istio agents enhancements
 
-Latest helm chart version: 0.71.0
-
-Latest agent version: 2.0.33
-
+* Latest helm chart version: 0.71.0
+* Latest agent version: 2.0.33
 * See Common enhancements and features.
 
 ### Amplify Apigee agents
@@ -81,11 +79,9 @@ The following agents are open source and everybody can contribute:
 
 ## Fixed issues
 
-The following agent issues are fixed in this update:
+The following agent issue is fixed in this update:
 
-* **Agigee agent status remains unhealthy**. Previously, when Apigee agents becomes unhealthy due to connectivity issue, the agent was not able to change back its status to connected. Now, the agent recovers itself correctly.
-
-*
+* **Apigee agent status remains unhealthy**. Previously, when Apigee agents became unhealthy due to connectivity issues, the agent was not able to change back its status to connected. Now, the agent recovers itself correctly.
 
 ## Known limitations
 
@@ -98,7 +94,7 @@ The following limitations exist in this update.
 ### Amplify AWS Gateway agents
 
 * Discovery Agent is working with only one AWS Region (the one used when installing the agent).
-* Discovery Agent can discover APIs having ANY method only, but consumers will not be able to subscribe to it from Unified Catalog.
+* Discovery Agent can discover APIs having ANY method only, but consumers cannot subscribe to it from Unified Catalog.
 * Discovery Agent does not associate the usage plan and API when a subscriber chooses a usage plan that is not already linked to the chosen API.
 * The Usage report is not scalable, as the agent relies on AWS Simple Queue Service and cannot have more than 10 consumers per queue. It is possible to increase the number of workers on the agent side.
 

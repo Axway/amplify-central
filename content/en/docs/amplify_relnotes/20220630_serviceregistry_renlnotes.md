@@ -15,7 +15,7 @@ The following new feature is available in this update:
 
 ## Fixed issues
 
-The following issues have been fixed in this update:
+The following issue has been fixed in this update:
 
 * None.
 
