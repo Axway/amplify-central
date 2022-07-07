@@ -361,12 +361,19 @@ TODO
 * explain the namespace creation
 * explain how to install ISTIO (refer to ### Install Istio )
 
+### Preparing ISTIO
+
+TODO
+
+* explain the istio override file: can show existing override file and add comment in it?
+
 ### Preparing Amplify Central
 
 TODO
 
 * Explain how to create environment (from UI / API)
 * Explain how to create the service account the agent will use to commnunicate from Kubernetes cluster to Amplify platform
+* Explain how to create the k8scluster resource
 
 ### Preparing the helm override file
 
