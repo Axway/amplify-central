@@ -21,8 +21,8 @@ Ensure you have the following tools installed:
 
 There are 2 ways for configuring and deploying ISITO agents:
 
-* Automatic [using Axway Central CLI](/docs/connect-manage-environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-axway-cli)
-* Manual using [helm commands](/docs/connect-manage-environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-helm-chart)
+* Automatic [using Axway Central CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-axway-cli)
+* Manual using [helm commands](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-helm-chart)
 
 ## Deploy using Axway CLI
 
