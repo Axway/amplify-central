@@ -19,12 +19,12 @@ The following steps steps summararize the provider journey within the Amplify AP
     a. Create asset - see [create an asset](/docs/manage_asset_catalog/asset_management/#create-an-asset)
     b. Release asset - see [Activate an asset](/docs/manage_asset_catalog/asset_management/#activate-an-asset)
     c. End of life an asset - see [Deprecate an asset](/docs/manage_asset_catalog/asset_management/#deprecate-an-asset) and [Archive an asset](/docs/manage_asset_catalog/asset_management/#archive-an-asset)
-    
+
 5. Productize the product - see  [Product foundry](/docs/manage_product_foundry)
 
     a. Create a product - see [Create a product](/docs/manage_product_foundry/foundry_product_management/#create-a-product)
     b. Release a product - see [Activate a product](/docs/manage_product_foundry/foundry_product_management/#activate-a-product)
     c. End of life an asset - see [Deprecate an asset](/docs/manage_asset_catalog/asset_management/#deprecate-an-asset) and [Archive an asset](/docs/manage_asset_catalog/asset_management/#archive-an-asset)
-    
+
 6. Publish / Monetize the product - see [Publish to marketplace](/docs/manage_marketplace/publish_to_marketplace)
 7. Manage your consumer subscriptions - functionality coming soon
