@@ -4,9 +4,9 @@ linkTitle: Consumer journey
 weight: 20
 ---
 
-The following steps steps summararize the customer journey within the Marketplace. Click on the links to learn more about each step.
+The following steps summarize the consumer journey within the Marketplace. Click on the links to learn more about each step.
 
-1. Browse the Marketplace to find a product - see [Browse the marketplace](/docs/manage_marketplace/consumer_experience/browse_marketplace)
+1. Browse the Marketplace to find a product - content coming soon
 2. Subscribe to a product to to use it - see [Subscribe to the product](/docs/manage_marketplace/consumer_experience/subscription_management/#create-a-new-subscription)
 3. View the subscription status - see [View your subscription status](/docs/manage_marketplace/consumer_experience/subscription_management/#manage-existing-subscriptions)
 4. Request access to a product resource - see [Request access to an API](/docs/manage_marketplace/consumer_experience/credential_management/#request-access-to-an-api)
