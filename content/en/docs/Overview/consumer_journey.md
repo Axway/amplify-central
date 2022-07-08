@@ -4,11 +4,11 @@ linkTitle: Consumer journey
 weight: 20
 ---
 
-The consumer journey within the Marketplace can be summarized through a number of steps:
+The following steps steps summararize the customer journey within the Marketplace. Click on the links to learn more about each step. 
 
-* Browse the Marketplace to find a product - refer to [Browse the marketplace](/docs/manage_marketplace/consumer_experience/browse_marketplace)
-* Subscribe to a product to be able to use it - refer to [Subscribe to the product](/docs/manage_marketplace/consumer_experience/subscription_management/#create-a-new-subscription)
-* View the subscription status - refer to [View your subscription status](/docs/manage_marketplace/consumer_experience/subscription_management/#manage-existing-subscriptions)
-* Request access to a product resource - refer to [Request access to an API](/docs/manage_marketplace/consumer_experience/credential_management/#request-access-to-an-api)
-* Request credentials for a product resource - refer to [Create credentials](/docs/manage_marketplace/consumer_experience/credential_management/#create-credentials)
-* Get insights of your consumption - refer to [Consumer insights](/docs/manage_marketplace/consumer_experience/consumer_insights)
+1. Browse the Marketplace to find a product - see [Browse the marketplace](/docs/manage_marketplace/consumer_experience/browse_marketplace)
+2. Subscribe to a product to to use it - see [Subscribe to the product](/docs/manage_marketplace/consumer_experience/subscription_management/#create-a-new-subscription)
+3. View the subscription status - see [View your subscription status](/docs/manage_marketplace/consumer_experience/subscription_management/#manage-existing-subscriptions)
+4. Request access to a product resource - see [Request access to an API](/docs/manage_marketplace/consumer_experience/credential_management/#request-access-to-an-api)
+5. Request credentials for a product resource - see [Create credentials](/docs/manage_marketplace/consumer_experience/credential_management/#create-credentials)
+6. Get insights into your consumption - see [Consumer insights](/docs/manage_marketplace/consumer_experience/consumer_insights)
