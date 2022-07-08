@@ -1,14 +1,13 @@
 ---
-title: Amplify Central overview
-linkTitle: Amplify Central overview
+title: Amplify overview
+linkTitle: Amplify overview
 weight: 150
 date: 2019-07-30
 hide_readingtime: true
-description: Amplify Central enables you to provide universal API Management
-  across your enterprise. It allows you to manage and govern APIs and
-  integration assets across all environments, clouds and API Gateways (Axway and
-  non-Axway) through a [central management plane](#amplify-management-plane).
 ---
+
+Amplify enables you to provide universal API Management across your enterprise. It allows you to manage and govern APIs and integrate assets across all environments, clouds and API Gateways (Axway and non-Axway) through a [central management plane](#amplify-management-plane).
+
 With Amplify, enterprise teams have a centralized hub for discovering existing APIs, curating and sharing their APIs, onboarding consumers, and subscribing to APIs for consumption. Amplify Central enables you to increase the visibility and consumption of your APIs by engaging across your internal and partner ecosystem. You will gain insights into your API ecosystem in how it’s being utilized and how it adheres to your corporate standards.
 
 Amplify integrates seamlessly with your internal systems, with Amplify agents deployed across gateway and service platforms to help you manage data and application assets across multi-cloud and hybrid environments. It supports:
@@ -77,6 +76,6 @@ Federated data planes are data planes that are connected to the Amplify platform
 * **[API Builder](https://docs.axway.com/bundle/api-builder/page/docs/index.html)** is an integration orchestration layer between existing service providers and the API management system, or governance layer, that allows you to quickly implement integration use cases.
 * **[Integration Builder](https://docs.axway.com/bundle/Amplify_Integration_Builder_allOS_en/page/amplify_integration_builder.html)** is an integration tool that allows you to easily build flows, mappings, and connectors between virtually any endpoint. Robust integrations can be built rapidly by using the prebuilt connectors.
 
-## Try Amplify Central for free
+## Try Amplify for free
 
 To get full, free access to Amplify Central for a trial period, go to [Amplify platform](https://platform.axway.com/) and sign up for a free trial.
