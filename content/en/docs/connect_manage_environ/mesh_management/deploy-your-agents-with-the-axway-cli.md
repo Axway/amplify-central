@@ -478,12 +478,12 @@ metadata:
     kind: K8SCluster
     name: istio-k8scluster
 spec:
-	# Specify the namespaces the Discovery Agent should look for resources
+# Specify the namespaces the Discovery Agent should look for resources
   namespaceFilter:
     names:
     - ampc-demo
   targets:
-		# Specify the endpoints where OAS or Swagger specs may be found in the cluster
+# Specify the endpoints where OAS or Swagger specs may be found in the cluster
     exactPaths:
       - path: /apidocs
         headers:
@@ -511,11 +511,11 @@ metadata:
     kind: K8SCluster
     name: istio-k8scluster
 spec:
-	# Tells the Discovery Agent to watch for Pod resources
+# Tells the Discovery Agent to watch for Pod resources
   kind: Pod
   group: ''
   version: v1
-	# Tells the Discovery Agent to watch for Pods in the provided namespaces
+# Tells the Discovery Agent to watch for Pods in the provided namespaces
   namespaceFilter:
     names:
     - ampc-demo
@@ -530,11 +530,11 @@ metadata:
     kind: K8SCluster
     name: istio-k8scluster
 spec:
-	# Tells the Discovery Agent to watch for Service resources
+# Tells the Discovery Agent to watch for Service resources
   kind: Service
   group: ''
   version: v1
-	# Tells the Discovery Agent to watch for Services in the provided namespaces
+# Tells the Discovery Agent to watch for Services in the provided namespaces
   namespaceFilter:
     names:
     - ampc-demo
@@ -651,7 +651,7 @@ spec:
 ```
 
 The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the yaml content below.
-ß
+
 #### Update the override file
 
 ```yaml
@@ -662,12 +662,12 @@ global:
     port: 443
     scheme: https
     timeout: 10s
-	# Provide the ID of the Environment resource
+# Provide the ID of the Environment resource
   envID: 8ac9924581ed71fa0181ef817e9b0976
-	# Provide the name of the Environment resource
+# Provide the name of the Environment resource
   envName: "istio"
   instanceID: ""
-	# Provide the tenantID
+# Provide the tenantID
   tenantID: "123937327920141"
   imageRegistry: axway.jfrog.io/ampc-public-docker-release
   tokenUrl: "https://login.axway.com/auth/realms/Broker/protocol/openid-connect/token"
@@ -681,8 +681,8 @@ global:
 
 # configures the ALS Traceability agent
 als:
-	# Enables the ALS Traceability Agent
-	enabled: true
+  # Enables the ALS Traceability Agent
+  enabled: true
   # Header publishing mode. Set to default or verbose.
   mode: default
   # Use the name of the K8SCluster resource
@@ -707,11 +707,11 @@ als:
     per_api: true
     reportAllErrors: true
 
-	# Use the name of the keys created earlier
+  # Use the name of the keys created earlier
   keysSecretName: amplify-agents-keys
   publishHeaders: true
 
-	# Specify a list of namespaces where the envoy filters should be created
+  # Specify a list of namespaces where the envoy filters should be created
   istioGatewayNamespaces:
   - default
 
@@ -723,7 +723,7 @@ ada:
   # name of the K8SCluster the agent is connected to
   clusterName: istio-k8scluster
   command: apis
-	# Enables API Discovery
+  # Enables API Discovery
   enabled: true
 
   # name of the secret containing the public & private keys used by the provided service account client ID
@@ -737,7 +737,7 @@ rda:
   # name of the connected K8SCluster
   clusterName: istio-k8scluster
   command: resources
-	# Enables Pod and Service Discovery
+  # Enables Pod and Service Discovery
   enabled: false
 
   # name of the secret containing the public & private keys used by the provided service account client ID
