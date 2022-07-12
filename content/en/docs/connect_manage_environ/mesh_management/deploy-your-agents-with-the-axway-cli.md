@@ -679,6 +679,18 @@ global:
     protocol: openid-connect
     platformTimeout: 10s
 
+# Optional method that allows the helm chart to create the k8s secret that contains the service account public/private key pair.
+secret:
+	# Set to true to have the secret be created as part of the helm deployment
+  create: false
+	# The name of the secret. If create is set to true, then update als.keysSecretName, rda.keysSecretName, and ada.keysSecretName with the same secret name that is set here.
+  name: ""
+  password: ""
+  publicKey: |
+		# Public key pem content
+  privateKey: |
+		# Private key pem content
+
 # configures the ALS Traceability agent
 als:
   # Enables the ALS Traceability Agent
