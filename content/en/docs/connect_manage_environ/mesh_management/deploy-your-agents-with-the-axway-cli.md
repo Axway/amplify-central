@@ -437,7 +437,6 @@ spec:
 axway central create -f environment.yaml
 ```
 
-
 #### [Discovery Agent resources](#discovery-agent-resources)
 
 The following resources are required to run the Discovery Agent. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified. However, a resource may reference another resource by name, so be sure to update all occurrences fo the name in the file.
@@ -652,8 +651,7 @@ spec:
 ```
 
 The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the yaml content below.
-
-
+ß
 #### Update the override file
 
 ```yaml
