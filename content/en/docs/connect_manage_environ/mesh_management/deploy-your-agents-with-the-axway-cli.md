@@ -328,7 +328,7 @@ als:
     - namespace1
     - namespace2
     ..
-    - namespaceN    
+    - namespaceN
 ```
 
 where namespaces 1 through N is a list of all the namespaces on your cluster that have an Istio ingress gateway running and where you want the envoy filter to be deployed to monitor the traffic.
@@ -349,37 +349,408 @@ For example, if you want the API Discovery agent to poll every 2 seconds for the
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set ada.poll.interval=2s
 ```
 
-## Deploy using helm chart
+## Deploy the helm chart
 
 Before deploying the helm chart, you will need to prepare the Amplify environment as well as the Kubernetes cluster and then the override file for deploying the chart correctly.
 
-### Preparing kubernetes cluster
+### Preparing the kubernetes cluster
 
-TODO
+To prepare the cluster for the Amplify Agents, create a namespace for the agents to run in. `kubectl create namespace amplify-agents`
 
-* Explain the certificate generation / install
-* explain the namespace creation
-* explain how to install ISTIO (refer to ### Install Istio )
+A service account is required for the agents to connect to Amplify Central. Create a service account using the Amplify Central CLI, and either generate a public and private key pair, or provide the file paths to keys you would like to use for the service account.
 
-### Preparing ISTIO
+```bash
+~ » axway service-account create
+AXWAY CLI, version 3.2.5
+Copyright (c) 2018-2022, Axway, Inc. All Rights Reserved.
 
-TODO
+Account:      amplify-cli:user@axway.com
+Organization: axway (12345678-0000-4444-99e9-ac4fa7d116db)
 
-* explain the istio override file: can show existing override file and add comment in it?
+✔ Display name · istio-service-account
+✔ Description ·
+✔ Authentication method · generate
+✔ Private key output file · private_key.pem
+✔ Public key output file · public_key.pem
+✔ Roles · Central Admin
+
+Successfully created service account
+
+Client ID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
+```
+
+After the service account has been created you will be provided with a Client ID. Save this id to be used later in the `hybrid-override.yaml` to install the agents.
+
+The public and private keys that were used to create the service account need to be added to the namespace as a secret.
+
+```bash
+kubectl create secret generic amplify-agents-keys \
+--namespace amplify-agents \
+--from-file=publicKey=public_key.pem \
+--from-file=privateKey=private_key.pem \
+--from-literal=password="" -o yaml
+```
+
+### Preparing Istio
+
+In order for Istio to connect to the Traceability Agent, an `IstioOperator` is required that tells Istio where the Envoy Access Log Service is running. If you already have Istio deployed in your environment, then merge the following configuration into your `IstioOperator` resource and apply the change. If Istio is not yet deployed, then copy this configuration into a file and then apply the change.
+
+```yaml
+---
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  meshConfig:
+    enableTracing: true
+    enableEnvoyAccessLogService: false
+    defaultConfig:
+      envoyAccessLogService:
+        address: ampc-hybrid-als.amplify-agents.svc.cluster.local:9000
+    outboundTrafficPolicy:
+      mode: REGISTRY_ONLY
+
+  values:
+    telemetry:
+      enabled: true
+      v2:
+        enabled: true
+```
+
+To deploy this change to your istio environment you will run `istioctl install --set profile=$YOUR_PROFILE -f istio-override.yaml`
+Update the command to use your desired Istio profile, and then run the install. For questions about the installation refer to the [Istio documentation](https://istio.io/v1.9/docs/setup/install/istioctl/).
 
 ### Preparing Amplify Central
 
-TODO
+There are two agents that can be deployed. A Discovery Agent, and a Traceability Agent. The Environment resource is required for each agent.
+Environment
 
-* Explain how to create environment (from UI / API)
-* Explain how to create the service account the agent will use to commnunicate from Kubernetes cluster to Amplify platform
-* Explain how to create the k8scluster resource
+```yaml
+apiVersion: v1alpha1
+title: istio
+name: istio
+kind: Environment
+spec:
+  description: istio environment
+```
+
+```bash
+axway central create -f environment.yaml
+```
+
+
+#### [Discovery Agent resources](#discovery-agent-resources)
+
+The following resources are required to run the Discovery Agent. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified. However, a resource may reference another resource by name, so be sure to update all occurrences fo the name in the file.
+
+```yaml
+apiVersion: v1alpha1
+group: management
+kind: Mesh
+name: istio-mesh
+title: istio-mesh
+spec: {}
+---
+apiVersion: v1alpha1
+group: management
+kind: MeshDiscovery
+name: istio-mesh-discovery
+title: istio-mesh-discovery
+metadata:
+  scope:
+    kind: Mesh
+    name: istio-mesh
+spec:
+  environmentRef: istio
+---
+apiVersion: v1alpha1
+group: management
+kind: K8SCluster
+name: istio-k8scluster
+title: istio-k8scluster
+spec:
+  mesh: istio-mesh
+---
+apiVersion: v1alpha1
+kind: SpecDiscovery
+group: management
+name: dumbservices-discovery
+metadata:
+  scope:
+    kind: K8SCluster
+    name: istio-k8scluster
+spec:
+	# Specify the namespaces the Discovery Agent should look for resources
+  namespaceFilter:
+    names:
+    - ampc-demo
+  targets:
+		# Specify the endpoints where OAS or Swagger specs may be found in the cluster
+    exactPaths:
+      - path: /apidocs
+        headers:
+          Content-Type: application/json
+      - path: /apidoc/swagger.json
+        headers:
+          Content-Type: application/json
+      - path: /swagger.json
+        headers:
+          Content-Type: application/json
+      - path: /api/v1/docs
+        headers:
+          Content-Type: application/json
+      - path: /apis/docs
+        headers:
+          Content-Type: application/json
+---
+apiVersion: v1alpha1
+group: management
+kind: ResourceDiscovery
+name: pod-discovery
+title: pod-discovery
+metadata:
+  scope:
+    kind: K8SCluster
+    name: istio-k8scluster
+spec:
+	# Tells the Discovery Agent to watch for Pod resources
+  kind: Pod
+  group: ''
+  version: v1
+	# Tells the Discovery Agent to watch for Pods in the provided namespaces
+  namespaceFilter:
+    names:
+    - ampc-demo
+---
+apiVersion: v1alpha1
+group: management
+kind: ResourceDiscovery
+name: service-discovery
+title: service-discovery
+metadata:
+  scope:
+    kind: K8SCluster
+    name: istio-k8scluster
+spec:
+	# Tells the Discovery Agent to watch for Service resources
+  kind: Service
+  group: ''
+  version: v1
+	# Tells the Discovery Agent to watch for Services in the provided namespaces
+  namespaceFilter:
+    names:
+    - ampc-demo
+```
+
+Create the Discovery Agent resources
+
+```bash
+axway central create -f discovery-resources.yaml
+```
+
+#### Traceability Agent resources
+
+The following resources are required to run the Traceability Agent. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified. However, a resource may reference another resource by name, so be sure to update all occurrences fo the name in the file.
+
+If you are running the discovery agent and have already applied the resources from the [Discovery Agent resources](#discovery-agent-resources) section above, then you do not need to create the K8SCluster resource again.
+
+If you are not running the Discovery Agent, then create the K8SCluster resource now.
+
+```yaml
+apiVersion: v1alpha1
+group: management
+kind: K8SCluster
+name: istio-k8scluster
+title: istio-k8scluster
+spec: {}
+```
+
+```bash
+axway central create -f k8scluster.yaml
+```
+
+Create the Traceability Agent resource so that the agent can report a health status back to Amplify Central.
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: TraceabilityAgent
+name: istio-ta
+title: istio-ta
+metadata:
+  scope:
+    kind: Environment
+    name: istio
+spec:
+  config:
+    owningTeam: Default Team
+  dataplaneType: Istio
+```
+
+```bash
+axway central create -f traceability-agent.yaml
+```
 
 ### Preparing the helm override file
 
-TODO
+A helm override file is required to deploy the agents to an environment. Update the override file below according to your needs.
 
-* explain the override file values: can show existing override file and add comment in it?
+#### Retrieve the Organization ID
+
+The override file requires your organization ID. To retrieve your organization ID run the command below.
+
+```bash
+axway auth whoami
+
+AXWAY CLI, version 3.2.5
+Copyright (c) 2018-2022, Axway, Inc. All Rights Reserved.
+
+You are logged into a platform account in organization axway
+The current region is set to US.
+
+ORGANIZATION                          GUID                                  ORG ID
+✔ axway                 55e55b55-0000-4444-9999-ac4fa4d444db  123937327920141
+
+"TJOHNSON-AXWAY-COM" ROLES  DESCRIPTION    TYPE
+  administrator             Administrator  Platform
+  api_central_admin         Central Admin  Service
+
+"TJOHNSON-AXWAY-COM" TEAMS  GUID                                  ROLE
+✔ Default Team              4e44d44f-d444-4f44-9999-04f4ca44d4a4  administrator
+```
+
+The command returned details about my current logged in organization. The ID of the org from the command is `123937327920141`. Use this as the `tenantID` field in the yaml content below.
+
+#### Retrieve the Environment ID
+
+To retrieve the ID of the Environment resource created earlier run the command below. Be sure to update the command to use the same environment name you created.
+
+```bash
+axway central get environments $YOUR_ENVIRONMENT_NAME -o yaml
+
+group: management
+apiVersion: v1alpha1
+kind: Environment
+name: istio
+title: istio
+metadata:
+  id: 8ac9924581ed71fa0181ef817e9b0976
+  audit:
+    createTimestamp: 2022-07-11T23:04:10.139+0000
+    createUserId: 31c9538c-32ad-4db7-a5e4-020470accd0c
+    modifyTimestamp: 2022-07-11T23:04:10.139+0000
+    modifyUserId: 31c9538c-32ad-4db7-a5e4-020470accd0c
+  acl: []
+  resourceVersion: '0'
+  references: []
+  selfLink: /management/v1alpha1/environments/istio
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  production: false
+  axwayManaged: false
+```
+
+The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the yaml content below.
+
+
+#### Update the override file
+
+```yaml
+---
+global:
+  apic:
+    host: apicentral.axway.com
+    port: 443
+    scheme: https
+    timeout: 10s
+	# Provide the ID of the Environment resource
+  envID: 8ac9924581ed71fa0181ef817e9b0976
+	# Provide the name of the Environment resource
+  envName: "istio"
+  instanceID: ""
+	# Provide the tenantID
+  tenantID: "123937327920141"
+  imageRegistry: axway.jfrog.io/ampc-public-docker-release
+  tokenUrl: "https://login.axway.com/auth/realms/Broker/protocol/openid-connect/token"
+  aud: "https://login.axway.com/auth/realms/Broker"
+  platformTimeout: 10s
+  auth:
+    baseUrl: "https://login.axway.com/auth"
+    realm: Broker
+    protocol: openid-connect
+    platformTimeout: 10s
+
+# configures the ALS Traceability agent
+als:
+	# Enables the ALS Traceability Agent
+	enabled: true
+  # Header publishing mode. Set to default or verbose.
+  mode: default
+  # Use the name of the K8SCluster resource
+  clusterName: istio-k8scluster
+
+  # Use the name of the TraceabilityAgent resource
+  agentName: istio-ta
+
+  # distinguishes events between apic deployments
+  apicDeployment: prod
+
+  # Use the name of the Service Account
+  clientID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
+
+  # condor ingestion endpoint
+  condorUrl: ingestion.datasearch.axway.com:5044
+  condorSslVerification: full
+
+  # sampling configuration
+  sampling:
+    percentage: 100
+    per_api: true
+    reportAllErrors: true
+
+	# Use the name of the keys created earlier
+  keysSecretName: amplify-agents-keys
+  publishHeaders: true
+
+	# Specify a list of namespaces where the envoy filters should be created
+  istioGatewayNamespaces:
+  - default
+
+# discovers API Documentation
+ada:
+  # service account client ID
+  clientID: sa-1_51e15b63-0050-45e5-92e9-ac4fa7d116db
+
+  # name of the K8SCluster the agent is connected to
+  clusterName: k8s-istio
+  command: apis
+	# Enables API Discovery
+  enabled: true
+
+  # name of the secret containing the public & private keys used by the provided service account client ID
+  keysSecretName: amplify-agents-keys
+
+# discovers running pods/services
+rda:
+  # service account client ID
+  clientID: sa-1_51e15b63-0050-45e5-92e9-ac4fa7d116db
+
+  # name of the connected K8SCluster
+  clusterName: k8s-istio
+  command: resources
+	# Enables Pod and Service Discovery
+  enabled: false
+
+  # name of the secret containing the public & private keys used by the provided service account client ID
+  keysSecretName: amplify-agents-keys
+
+# to enable deployment of demo list service with agent installation. Set to true to install the demo service
+list:
+  enabled: false
+```
+
+Copy the content into a file called `hybrid-override.yaml`
 
 ### deploying the agent
 
@@ -387,7 +758,6 @@ TODO
 helm repo add axway https://charts.axway.com/charts
 helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
-
 ```
 
 ## Verify that the pods are running
