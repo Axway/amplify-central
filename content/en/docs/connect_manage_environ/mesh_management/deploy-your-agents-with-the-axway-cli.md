@@ -719,11 +719,11 @@ als:
 
 # discovers API Documentation
 ada:
-  # service account client ID
-  clientID: sa-1_51e15b63-0050-45e5-92e9-ac4fa7d116db
+  # Use the name of the Service Account
+  clientID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
 
   # name of the K8SCluster the agent is connected to
-  clusterName: k8s-istio
+  clusterName: istio-k8scluster
   command: apis
 	# Enables API Discovery
   enabled: true
@@ -733,11 +733,11 @@ ada:
 
 # discovers running pods/services
 rda:
-  # service account client ID
-  clientID: sa-1_51e15b63-0050-45e5-92e9-ac4fa7d116db
+  # Use the name of the Service Account
+  clientID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
 
   # name of the connected K8SCluster
-  clusterName: k8s-istio
+  clusterName: istio-k8scluster
   command: resources
 	# Enables Pod and Service Discovery
   enabled: false
