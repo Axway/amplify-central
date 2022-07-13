@@ -3,8 +3,9 @@ title: Deploy your agents with Axway CLI
 linkTitle: Deploy your agents
 weight: 50
 date: 2020-12-0
-description: Use the Axway CLI to deploy Amplify Istio Agents.
 ---
+
+Use the Axway CLI or helm commands to deploy Amplify Istio Agents.
 
 ## Before you begin
 
@@ -19,11 +20,11 @@ Ensure you have the following tools installed:
 
 ## Objectives
 
-Learn how to configure and deploy ISTIO agents using either Axway Central CLI or helm commands.
+Learn how to configure and deploy Istio agents using either Axway Central CLI or helm commands.
 
 ## Deployment methods
 
-There are two methods for configuring and deploying ISITO agents:
+There are two methods for configuring and deploying Istio agents:
 
 * Automatic using [Axway Central CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-axway-cli)
 * Manual using [helm commands](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-helm-chart)
