@@ -17,22 +17,22 @@ Ensure you have the following tools installed:
 * Node.js >= 10.13.0 and <= 12.14.1
 * OpenSSL 2.8.3 or later
 
-## How to proceed?
+## Deployment methods
 
-There are 2 ways for configuring and deploying ISITO agents:
+There are two methods for configuring and deploying ISITO agents:
 
 * Automatic [using Axway Central CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-axway-cli)
 * Manual using [helm commands](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-helm-chart)
 
 ## Deploy using Axway CLI
 
-### Log in to the Axway Central CLI
+Use the following procedures to deploy the agent using Axway CLI.
 
-**Note:** The most recently validated Kubernetes version was 1.19.8.
+### Log into the Axway Central CLI
 
-For more information about installing the CLI, see [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+{{< alert title="Notes" color="primary" >}}The most recently validated Kubernetes version was 1.19.8. For more information about installing the CLI, see [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
-**Note:** Istio agents are compatible with RedHat OpenShift 4.7 and later. For more information see [Using RedHat OpenShift](/docs/connect_manage_environ/mesh_management/using_redhat_openshift/).
+Istio agents are compatible with RedHat OpenShift 4.7 and later. For more information see [Using RedHat OpenShift](/docs/connect_manage_environ/mesh_management/using_redhat_openshift/).{{< /alert >}}
 
 Run the following command to log into the Axway CLI with your Amplify Platform credentials:
 
@@ -40,7 +40,7 @@ Run the following command to log into the Axway CLI with your Amplify Platform c
 axway auth login
 ```
 
-A dialog box is shown. Enter your valid credentials (email address and password), and after the authorization successful message is displayed, go back to the Axway CLI.
+A dialog box is displayed. Enter your valid credentials (email address and password), and after the authorization successful message is displayed, go back to the Axway CLI.
 
 If you are a member of multiple Amplify organizations, select an organization and continue.
 
@@ -165,7 +165,7 @@ Created secret/gateway-cert in the istio-system namespace.
 
 The following prompts are related to the details about the Amplify Istio Agents.
 
-1. Select what you would like to install. You can install only one of the agents, or both. The Discovery agent option deploys the Amplify Istio Discovery Agent.
+1. Select what you would like to install. You can install only one of the agents, or both. The Discovery Agent option deploys the Amplify Istio Discovery Agent.
 
     ```bash
     Select which agents to install: (Use arrow keys)
@@ -174,7 +174,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
     Traceability agent
     ```
 
-    If you choose to deploy Traceability agent, select the mode in which you want the Traceability Agent to run.
+    If you choose to deploy the Traceability Agent, select the mode in which you want the Traceability Agent to run.
 
     The Amplify Istio Traceability Agent has two modes, default and verbose. The default mode captures only the headers specified in the EnvoyFilter. The verbose mode captures all the headers in the request and response flows. Once selected, you will be able to switch modes if required. Refer to [Monitor APIs and Services - Toggling the Traceability Agent](/docs/connect_manage_environ/mesh_management/traceability_agent_configuration/#toggling-the-traceability-agent).
 
@@ -208,7 +208,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
       Yes
     ```
 
-4. Select either an exisiting DevOps Service Account (DOSA), or create a new DOSA account, so the agents can authenticate with Amplify Central.
+4. Select either an existing DevOps Service Account (DOSA), or create a new DOSA account, so the agents can authenticate with Amplify Central.
 
 {{< alert title="Note" color="primary" >}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify Central.{{< /alert >}}
 
@@ -224,7 +224,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
     ──────────────
     ```
 
-2. Enter a name for the new DOSA account. Creating a new DOSA account will override any file named `public_key.pem` or `private_key.pem` in the directory where you invoked the Axway Central CLI from. The public and private key pair are used to authenticate with Amplify Central. The keys will be placed in a secret in the selected namespace, and will be named "amplify-agents-keys".
+2. Enter a name for the new DOSA account. Creating a new DOSA account will override any file named `public_key.pem` or `private_key.pem` in the directory where you invoked the Axway Central CLI from. The public and private key pair are used to authenticate with Amplify Central. The keys will be placed in a secret in the selected namespace, and will be named "amplify-agents-keys."
 
     ```bash
     Select a service account (DOSA):  Create a new account
@@ -232,7 +232,7 @@ The following prompts are related to the details about the Amplify Istio Agents.
     Enter a new service account name:  mesh-dosa
     ```
 
-    After you enter the name of the account and press `enter`, an output is shown with the client ID of the account and the directory where the keys were placed:
+    After you enter the name of the account and press `enter`, an output is displayed with the client ID of the account and the directory where the keys were placed:
 
     ```bash
     Enter a new service account name: mesh-dosa
@@ -254,11 +254,11 @@ The following prompts are related to the details about the Amplify Istio Agents.
     ──────────────
     ```
 
-2. Enter the keys that were used to create the account. They must be the **same** keys that were used to create this DOSA account. It is recommended to provide the full file path to the location of the keys. The public and private key pair are used to authenticate with Amplify Central. The keys will be placed in a secret in the selected namespace, and will be named "amplify-agents-keys".
+2. Enter the keys that were used to create the account. They must be the **same** keys that were used to create this DOSA account. It is recommended to provide the full file path to the location of the keys. The public and private key pair are used to authenticate with Amplify Central. The keys will be placed in a secret in the selected namespace, and will be named "amplify-agents-keys."
 
     ```bash
     Select a service account (DOSA):  mesh
-    Please provide the the same "private_key.pem" and "public_key.pem" that was used to create the selected DOSA Account.
+    Please provide the same "private_key.pem" and "public_key.pem" that was used to create the selected DOSA Account.
     Enter the file path to the public key:  /Users/axway/public_key.pem
     Enter the file path to the private key:  /Users/axway/private_key.pem
     ```
@@ -320,7 +320,7 @@ If you want to install Istio in an Openshift Cluster, there are additional steps
 
 ### Finish the installation of the agents
 
-After the Istio installation is complete, edit the `hybrid-override.yaml` file, since the CLI allows to enter only one nanespace, using an editor of your choice, you can add additional namespaces for the envoy filters in the value of `istioGatewayNamespaces` under the `als` key:
+After the Istio installation is complete, edit the `hybrid-override.yaml` file with the editor of your choice. Since the CLI allows you to enter only one namespace, you can add additional namespaces for the envoy filters in the value of `istioGatewayNamespaces` under the `als` key:
 
 ```yaml
 als:
@@ -343,19 +343,23 @@ helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid 
 
 {{< alert title="Note" color="primary" >}}By default, the Amplify Istio Discovery Agent polls every 20 seconds for the discovery resources. To change this, you must pass a helm override in the form of `--set ada.poll.interval` or `--set rda.poll.interval` accordingly with the desired agents.{{< /alert >}}
 
-For example, if you want the API Discovery agent to poll every 2 seconds for the discovery resources, run the following command to install the agents:
+For example, if you want the API Discovery Agent to poll every 2 seconds for the discovery resources, run the following command to install the agents:
 
 ```bash
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set ada.poll.interval=2s
 ```
 
-## Deploy the helm chart
+## Deploy using helm chart
 
-Before deploying the helm chart, you will need to prepare the Amplify environment as well as the Kubernetes cluster and then the override file for deploying the chart correctly.
+Before deploying the helm chart, you must prepare the Kubernetes cluster, the Amplify environment, and the override file for deploying the chart correctly.
 
-### Preparing the kubernetes cluster
+### Prepare the kubernetes cluster
 
-To prepare the cluster for the Amplify Agents, create a namespace for the agents to run in. `kubectl create namespace amplify-agents`
+To prepare the cluster for the Amplify Agents, create a namespace for the agents to run in:
+
+```bash
+kubectl create namespace amplify-agents
+```
 
 A service account is required for the agents to connect to Amplify Central. Create a service account using the Amplify Central CLI, and either generate a public and private key pair, or provide the file paths to keys you would like to use for the service account.
 
@@ -379,9 +383,9 @@ Successfully created service account
 Client ID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
 ```
 
-After the service account has been created you will be provided with a Client ID. Save this id to be used later in the `hybrid-override.yaml` to install the agents.
+After the service account has been created you will be provided with a Client ID. Save this ID to be used later in the `hybrid-override.yaml` to install the agents.
 
-The public and private keys that were used to create the service account need to be added to the namespace as a secret.
+The public and private keys that were used to create the service account must be added to the namespace as a secret:
 
 ```bash
 kubectl create secret generic amplify-agents-keys \
@@ -391,9 +395,9 @@ kubectl create secret generic amplify-agents-keys \
 --from-literal=password="" -o yaml
 ```
 
-### Preparing Istio
+### Prepare Istio
 
-In order for Istio to connect to the Traceability Agent, an `IstioOperator` is required that tells Istio where the Envoy Access Log Service is running. If you already have Istio deployed in your environment, then merge the following configuration into your `IstioOperator` resource and apply the change. If Istio is not yet deployed, then copy this configuration into a file and then apply the change.
+An `IstioOperator` is required for Istio to connect to the Traceability Agent. It tells Istio where the Envoy Access Log Service is running. If you already have Istio deployed in your environment, then merge the following configuration into your `IstioOperator` resource and apply the change. If Istio is not yet deployed, then copy this configuration into a file and then apply the change.
 
 ```yaml
 ---
@@ -419,10 +423,9 @@ spec:
 To deploy this change to your istio environment you will run `istioctl install --set profile=$YOUR_PROFILE -f istio-override.yaml`
 Update the command to use your desired Istio profile, and then run the install. For questions about the installation refer to the [Istio documentation](https://istio.io/v1.9/docs/setup/install/istioctl/).
 
-### Preparing Amplify Central
+### Prepare Amplify Central
 
 There are two agents that can be deployed. A Discovery Agent, and a Traceability Agent. The Environment resource is required for each agent.
-Environment
 
 ```yaml
 apiVersion: v1alpha1
@@ -439,7 +442,7 @@ axway central create -f environment.yaml
 
 #### [Discovery Agent resources](#discovery-agent-resources)
 
-The following resources are required to run the Discovery Agent. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified. However, a resource may reference another resource by name, so be sure to update all occurrences fo the name in the file.
+The following resources are required to run the Discovery Agent. Copy the following yaml into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified. However, a resource may reference another resource by name, so be sure to update all occurrences of the name in the file.
 
 ```yaml
 apiVersion: v1alpha1
@@ -540,7 +543,7 @@ spec:
     - ampc-demo
 ```
 
-Create the Discovery Agent resources
+Create the Discovery Agent resources:
 
 ```bash
 axway central create -f discovery-resources.yaml
@@ -548,11 +551,11 @@ axway central create -f discovery-resources.yaml
 
 #### Traceability Agent resources
 
-The following resources are required to run the Traceability Agent. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified. However, a resource may reference another resource by name, so be sure to update all occurrences fo the name in the file.
+The following resources are required to run the Traceability Agent. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified. However, a resource may reference another resource by name, so be sure to update all occurrences of the name in the file.
 
-If you are running the discovery agent and have already applied the resources from the [Discovery Agent resources](#discovery-agent-resources) section above, then you do not need to create the K8SCluster resource again.
+If you are running the Discovery Agent and have already applied the resources from the [Discovery Agent resources](#discovery-agent-resources) section above, then you do not need to create the K8SCluster resource again.
 
-If you are not running the Discovery Agent, then create the K8SCluster resource now.
+If you are not running the Discovery Agent, then create the K8SCluster resource now:
 
 ```yaml
 apiVersion: v1alpha1
@@ -567,7 +570,7 @@ spec: {}
 axway central create -f k8scluster.yaml
 ```
 
-Create the Traceability Agent resource so that the agent can report a health status back to Amplify Central.
+Create the Traceability Agent resource so that the agent can report a health status back to Amplify Central:
 
 ```yaml
 group: management
@@ -589,13 +592,13 @@ spec:
 axway central create -f traceability-agent.yaml
 ```
 
-### Preparing the helm override file
+### Prepare the helm override file
 
-A helm override file is required to deploy the agents to an environment. Update the override file below according to your needs.
+A helm override file is required to deploy the agents to an environment. Update the following override file according to your needs.
 
 #### Retrieve the Organization ID
 
-The override file requires your organization ID. To retrieve your organization ID run the command below.
+The override file requires your organization ID. Run the following command to retrieve your organization ID:
 
 ```bash
 axway auth whoami
@@ -617,11 +620,11 @@ ORGANIZATION                          GUID                                  ORG 
 ✔ Default Team              4e44d44f-d444-4f44-9999-04f4ca44d4a4  administrator
 ```
 
-The command returned details about my current logged in organization. The ID of the org from the command is `123937327920141`. Use this as the `tenantID` field in the yaml content below.
+The command returns details about your current logged in organization. The ID of the org from the command is `123937327920141`. Use this as the `tenantID` field in the yaml content below.
 
 #### Retrieve the Environment ID
 
-To retrieve the ID of the Environment resource created earlier run the command below. Be sure to update the command to use the same environment name you created.
+Run the following command to retrieve the ID of the Environment resource created earlier. Be sure to update the command to use the same environment name you created.
 
 ```bash
 axway central get environments $YOUR_ENVIRONMENT_NAME -o yaml
@@ -650,7 +653,7 @@ spec:
   axwayManaged: false
 ```
 
-The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the yaml content below.
+The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the following yaml:.
 
 #### Update the override file
 
@@ -760,9 +763,9 @@ list:
   enabled: false
 ```
 
-Copy the content into a file called `hybrid-override.yaml`
+Copy the content into a file called `hybrid-override.yaml`.
 
-### deploying the agent
+### Deploy the agent
 
 ```bash
 helm repo add axway https://charts.axway.com/charts
@@ -791,7 +794,7 @@ helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid 
     ampc-hybrid-list-598f8f9b4b-9wsc6   2/2     Running   0          90s
     ```
 
-3. The installation creates resources, which provide configuration to the API Discovery Agent and the Resource Discovery Agent. You can use the Axway CLI to verify the agents are configured and running, and to list the resources that are expect to exist as a result of the agents discovering the `ampc-hybrid-list` service:
+3. The installation creates resources, which provide configuration to the API Discovery Agent and the Resource Discovery Agent. You can use the Axway CLI to verify the agents are configured and running, and to list the resources that are expected to exist as a result of the agents discovering the `ampc-hybrid-list` service:
 
     ```bash
     axway central get apispecs -s mesh-demo
