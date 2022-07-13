@@ -17,11 +17,15 @@ Ensure you have the following tools installed:
 * Node.js >= 10.13.0 and <= 12.14.1
 * OpenSSL 2.8.3 or later
 
+## Objectives
+
+Learn how to configure and deploy ISTIO agents using either Axway Central CLI or helm commands.
+
 ## Deployment methods
 
 There are two methods for configuring and deploying ISITO agents:
 
-* Automatic [using Axway Central CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-axway-cli)
+* Automatic using [Axway Central CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-axway-cli)
 * Manual using [helm commands](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/#deploy-using-helm-chart)
 
 ## Deploy using Axway CLI
