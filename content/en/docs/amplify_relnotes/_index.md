@@ -15,6 +15,75 @@ For more details, click on the release note title to go to the corresponding rel
 
 See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify agents July 2022](/docs/amplify_relnotes/20220729_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.21): See Amplify agent general
+* **Amplify AWS Gateway Agent** (version 1.1.19): See Amplify agent general
+* **Amplify Azure Agent** (version 1.1.19): See Amplify agent general
+* **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
+* **Amplify Apigee Agent** (version 0.0.8): See Amplify agent general
+* **Amplify Mulesoft Agent** (version 1.1.5): No new updates
+* **Amplify agent general** (version 1.1.21):
+
+    * **Add feature**: Add text
+
+**Bug fixes**: Add text
+
+## [Amplify Central July 2022](/docs/amplify_relnotes/20220729_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.10.3): None
+* **Amplify Central WebUI**: See the Release Notes for Asset Catalog, Product foundry, and Service Registry
+
+**Bug fixes**: None
+
+## [Analytics July 2022](/docs/amplify_relnotes/20220729_analytics_relnotes/)
+
+**What's new**: Add text
+
+**Bug fixes**: None
+
+## [Asset Catalog July 2022](/docs/amplify_relnotes/20220729_catalog_relnotes/)
+
+**What's new**: Add text
+
+**Bug fixes**:
+
+* Add text
+
+## [Marketplace July 2022](/docs/amplify_relnotes/20220729_marketplace_relnotes/)
+
+**What's new**:
+
+* Add text
+
+**Bug fixes**:
+
+* Add text
+
+## [Product Foundry July 2022](/docs/amplify_relnotes/20220729_foundry_relnotes/)
+
+**What's new**:
+
+* Add text
+
+**Bug fixes**:
+
+* Add text
+
+## [Service Registry July 2022](/docs/amplify_relnotes/20220729_serviceregistry_relnotes/)
+
+**What's new**: None
+
+**Bug fixes**: None
+
+## [Amplify Platform Management July 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+## [Axway CLI July 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
 ## [Amplify agents June 2022](/docs/amplify_relnotes/20220630_ampc_agents_relnotes/)
 
 **What's new for**:
