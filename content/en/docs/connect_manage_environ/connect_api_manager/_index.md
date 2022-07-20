@@ -44,6 +44,7 @@ The Traceability Agent sends log information about APIs in API Gateway and publi
 * An Axway Amplify Central subscription in the Amplify platform
 * (Optional) A platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
 * (Optional) An Amplify Central environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments)
+* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent).
 * An API Manager user having the role of API Manager administrator for the Discovery / Traceability agent to connect to API Manager
 * An API Gateway user having the role of API Gateway operator for Traceability Agent to connect to API Gateway
 

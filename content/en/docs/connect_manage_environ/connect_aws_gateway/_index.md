@@ -57,6 +57,7 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 * Amazon Simple Queue Service (AWS SQS)
 * AWS Lambda
 * CloudFormation template. Download from [https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config](<https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config>)
+* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent).
 
 ## Region support
 
