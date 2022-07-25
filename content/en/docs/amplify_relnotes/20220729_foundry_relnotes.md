@@ -11,13 +11,14 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
-* **Add feature**: Add text.
+* **Overview documentation**: When adding a document to a product, it is possible to tell the system that this document needs to be displayed in the marketplace overview.
+* **Product filtering per owning team**: the product can be filtered by owning team to help finding the appropriate one.
 
 ## Fixed issues
 
 The following issues have been fixed in this update:
 
-* Add text.
+* **Paid plan base price with large number crash the backend**: it is no more possible to enter a paid plan value higher than 999,999,999.99
 
 ## Known limitations
 
