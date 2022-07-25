@@ -36,7 +36,7 @@ To call APIs via cURL:
 2. Change the file to be executable: `chmod a+x amplify.sh`
 3. Call the file: `./amplify\_api.sh`
 
-{{< alert title="Note" color="primary" >}}In this script, environment variables are assumed to have been set using the information specified under [API Authorization](#api-authorization):{{< /alert >}}
+{{< alert title="Note" color="primary" >}}In this script, environment variables are assumed to have been set using the information specified under [API Authorization](/docs/integrate_with_central/query-the-traceability-apis-with-lexus/#prerequisite-api-authorization):{{< /alert >}}
 
 ```sh
 export $CLIENT_ID=<clientId>

@@ -18,8 +18,8 @@ Learn how to publish the product to the marketplace.
 
 1. Navigate to *Product Foundry*.
 2. Select **Products > All Products**. The product list view is displayed.
-3. Click the Marketplace icon, located at the bottom right corner, to start the publication process. *The [Marketplace Settings](/docs/manage_marketplace/marketplace_settings/) page is displayed*.
-4. Confirm the publication settings, including the [product visibility settings](#control-product-visibility).
+3. Click the Marketplace icon, located at the bottom right corner, to start the publication process. A popup displays the current product version that will be visible from the marketplace as well as the defined plans.
+4. Select the plan(s) that needs to be activated at the same time of the publication.
 5. Click **Publish** to publish the product to the Marketplace.
 
 See [Set product visibility](/docs/manage_marketplace/set_product_visibility/) to learn how to control the visibility of the product in the Marketplace.

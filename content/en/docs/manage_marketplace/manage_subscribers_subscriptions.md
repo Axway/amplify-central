@@ -102,7 +102,7 @@ The access request is auto approved by the provider.
 
 There are two options for requesting credentials:
 
-* Option 1: just after requesting access. See [Request access to a resource](#request-access-to-a-resource)
+* Option 1: just after requesting access. See [Request access to a resource](/docs/manage_marketplace/manage_subsribers_subscriptions/#Step-3:- Request-access-to-a-resource)
 * Option 2: by navigating to the application details page, finding the correct access request, and requesting new credentials.
 
 #### Option 1: just after requesting access

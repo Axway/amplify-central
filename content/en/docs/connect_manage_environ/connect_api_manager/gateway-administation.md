@@ -601,7 +601,7 @@ The agent can work either with the Gateway event logs (**default**) or the Gatew
 
 This section describes how to use Gateway event logs for traceability reporting.
 
-`EVENT_LOG_INPUT`: Used to turn on or off the event log input for the Traceability Agent. Defaulted is `true`, set to false when using [open traffic](#sourcing-gateway-traffic-from-open-traffic-file-s).
+`EVENT_LOG_INPUT`: Used to turn on or off the event log input for the Traceability Agent. Defaulted is `true`, set to false when using [open traffic](/docs/connect_manage_environ/connect_api_manager/gateway-administation/#sourcing-gateway-traffic-from-open-traffic-file-s).
 `EVENT_LOG_PATHS`: List all API Gateway event log files (absolute path) the beat will listen to. It could be a single file if there is only one Gateway installed on the machine, or multiple files if several Gateways are installed on the same machine.
 
 Single Gateway - explicit file name:
