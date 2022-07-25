@@ -29,7 +29,7 @@ As a consumer, learn how to create a free or paid subscription and manage existi
     * Select the Owner
     * Click **Save**
 
-5. Track the status of your subscription from the *Subscription overview* page. For additional information on states, see [Subscription approval states](#Subscription approval states).
+5. Track the status of your subscription from the *Subscription overview* page. For additional information on states, see [Subscription approval states](/docs/manage_marketplace/consumer_experience/subscription_management/#manage-existing-subscriptions).
 6. Once the subscription request is approved, navigate to the subscription and request access to the underlying resources:
 
     * Click **Request access from the subscription**. A wizard is displayed.
