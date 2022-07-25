@@ -29,7 +29,7 @@ The following new features and enhancements are available in this update:
 
 ### Amplify Gateway agents enhancements
 
-* Agent version: 1.1.21
+* Agent version: 1.1.23
 * See Common enhancements and features.
 
 ### Amplify AWS Gateway agents enhancements
