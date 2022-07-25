@@ -11,7 +11,7 @@ Analytics provide insights into your API program, API environments, and APIs.
 
 The following new feature is available in this update:
 
-* **Add feature**: Add text.
+* **Consumer insights per application**: consumer can see their consumption across multiple products linked to an application and filter per application and/or products. Go to Marketplace home page > Consumer Insights > Applications.
 
 ## Fixed issues
 
