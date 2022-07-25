@@ -13,6 +13,7 @@ The following new features and enhancements are available in this update:
 
 * **Overview documentation**: When adding a document to a product, it is possible to tell the system that this document needs to be displayed in the marketplace overview.
 * **Product filtering per owning team**: the product can be filtered by owning team to help finding the appropriate one.
+* **Hide a product from marketplace**: instead of unpublishing a product from the marketplace to "hide" it, it is possible to set its visibility to None. In that situation, the product is still published to the marketplace but nobody will see it.
 
 ## Fixed issues
 
