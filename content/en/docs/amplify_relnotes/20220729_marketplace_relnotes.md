@@ -11,16 +11,19 @@ The Marketplace is the storefront into all products exposed for discovery and co
 
 The following new features and enhancements are available in this update:
 
-* **Add feature**: Add text
+* **Credential time to live**: The encrypted value of a credentials is kept in the marketplace system for only 3 days after its provisioning for security purpose. If consumers does not read the value before the expiration, the encrypted value is automatically erased (a job is run every night at midnight) from the Marketplace system but the value remains on the Gateway for the consumer to use it.
+* **Owning team information**: Applications and subscriptions are displaying which team is owning it.
+* **reuse credentials**: When creating a credentials, consumer has the possibility to see existing credentials and avoid create new one.
+* **WSDL support**: API resources of type WSDL can be viewed in the resource definition page.
 
 ## Fixed issues
 
 The following issues have been fixed in this update:
 
-* Add text.
+* **Image in markdown documentation are not displayed**: Now, the images in markdown documentation are correctly displayed in Marketplace UI.
 
 ## Known limitations
 
 The following limitation exists in this update:
 
-* Highlighted documents displayed on the overview screen of the product details cannot be configured using the Product Foundry APIs. The CLI must be used to add star documents.
+None.
