@@ -31,7 +31,7 @@ Click **Applications** to see an aggregated view of Application usage per produc
 
 Click an individual item to see the total transactions per API.
 
-![Applications example](/Images/merketplace/consumer_experience/ci_applications.png)
+![Applications example](/Images/marketplace/consumer_experience/ci_applications.png)
 
 You can filter by applications, products, and time ranges.
 
