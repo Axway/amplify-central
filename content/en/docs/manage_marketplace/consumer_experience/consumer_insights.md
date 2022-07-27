@@ -15,7 +15,7 @@ From the Marketplace left navigation click **Consumer Insights**. You are direct
 
 Click **API Health** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
 
-![API Health example](/Images/marketplace/consumer_experience/insights_api_health.png)
+![API Health example](/Images/marketplace/consumer_experience/ci_api_health.png)
 
 The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected) in the tiles across the top below the filter options. Click the **Compare to previous period** option to compare the current selected time range to the previous time range. You can compare the current week, month, or year to the previous week, month, or year to understand how your API usage is changing over time.
 
@@ -24,3 +24,15 @@ Each item in the list provides the average, maximum, and minimum duration.
 You can filter by subscriptions, products, applications, and APIs. You can choose a wide range of time from minutes to years. You can choose one of the pre-configured time ranges.
 
 The API usage reporting for transactions is not real time and may be delayed by several minutes based on settings selected by your API provider.
+
+## Applications
+
+Click **Applications** to see an aggregated view of Application usage per product. These are applications configured within the Marketplace.
+
+Click an individual item to see the total transactions per API.
+
+![Applications example](/Images/merketplace/consumer_experience/ci_applications.png)
+
+You can filter by applications, products, and time ranges.
+
+The Application usage reporting for transactions is not real time and may be delayed by several minutes based on settings selected by your API provider.
