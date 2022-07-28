@@ -724,11 +724,17 @@ als:
   # Set to true to connect to Amplify Central over gRPC
   grpcEnabled: false
 
+  # Set to true to report traffic/metric events for marketplace subscription/application
+  marketplaceProvisioningEnabled: false
+
+  # Set to true to report traffic/metric events for marketplace subscription/application
+  versionCheckerEnabled: "true"
+
   # sampling configuration
   sampling:
     percentage: 100
     per_api: true
-		per_subscription: true
+    per_subscription: true
     reportAllErrors: true
 
   # The tracing provider configured for Istio
