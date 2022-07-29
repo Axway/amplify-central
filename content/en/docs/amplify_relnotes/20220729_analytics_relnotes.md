@@ -12,6 +12,8 @@ Analytics provide insights into your API program, API environments, and APIs.
 The following new feature is available in this update:
 
 * **Consumer insights per application**: consumer can see their consumption across multiple products linked to an application and filter per application and/or products. Go to Marketplace home page > Consumer Insights > Applications.
+* **Consumer insights traffic**: consumer can see the detail of their traffic (return code / endpoint called / duration). This traffic can be sampled by the provider but at least all errors will be visible. Go to Marketplace home page > Consumer Insights > Traffic.
+* **Consumer insights subscriptions**: consumer can see the detail of their subscription consumption. For each subscription the details of each resource consumption is displayed (quota definition / actual consumption) Go to Marketplace home page > Consumer Insights > Subscriptions.
 
 ## Fixed issues
 
