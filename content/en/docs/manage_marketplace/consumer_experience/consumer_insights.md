@@ -9,7 +9,7 @@ Get insights about your API consumption in the Marketplace.
 
 Access to the Consumer Insights menu is based on your role and permissions and your organization's subscriptions to the Marketplace. Users must have a Consumer or Subscription Admin [role](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the API Health dashboards.
 
-From the Marketplace left navigation click **Consumer Insights**, and then select a dasbhoard you want to view.
+From the Marketplace left navigation click **Consumer Insights**, and then select a dashboard you want to view.
 
 ## API Health
 
@@ -55,7 +55,7 @@ Click **API Traffic** to view the traffic information for the API or Application
 
 You can filter by Applications, methods, status codes, and select a pre-configured time range or customize your own.
 
-{{% alert title="Note" color="primary" %}} API Traffic is based on a limited sample of the actual gateway traffic and will now show all transacations.{{% /alert %}}
+{{% alert title="Note" color="primary" %}} API Traffic is based on a limited sample of the actual gateway traffic and will now show all transactions.{{% /alert %}}
 
 Each individual item provides the following data:
 
@@ -88,6 +88,6 @@ Click **Subscriptions** to see a list of the products and its subscription in yo
 
 ![Subscriptions example](/Images/marketplace/consumer_experience/ci_subscriptions.png)
 
-You can filter by products, subscriptions, and select a time range in 3 month increments (last 3 months, 4 to 6 monhts, 7 to 9 months, and 10 to 12 months).
+You can filter by products, subscriptions, and select a time range in 3 month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
 
 Click an individual item to see resource usage and quota for the subscription.
