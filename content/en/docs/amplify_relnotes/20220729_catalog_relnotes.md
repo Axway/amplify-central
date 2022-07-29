@@ -11,13 +11,14 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 
 The following new  enhancement is available in this update:
 
-* Add text.
+* **Asset filtering per owning team**: the asset can be filtered by owning team to help finding the appropriate one.
+* **Corrupted asset detection**: a warning icon is displayed on the Asset resource column when the resource reference is missing. This can happen when an existing resource is removed from the dataplane.
 
 ## Fixed issues
 
 The following issue has been fixed in this update:
 
-* Add text.
+* **Asset is not updated with latest API Service update**: previously, a change in the API service revision was not propagated on the asset. Now every changes in the service is reflected in the asset as soon as the asset is linked to the "latest" version of the API Service.
 
 ## Known limitations
 
