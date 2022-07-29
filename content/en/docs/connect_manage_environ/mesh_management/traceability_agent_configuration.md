@@ -142,6 +142,224 @@ Once configured, use the following command to populate the resources in Amplify 
 axway central apply -f <fileName>.yaml 
  ```
 
+#### Reporting traffic and metric event correlated to Amplify Marketplace subscription/application
+In order to allow traceability agent to report traffic and metric event that correlates to Amplify Marketplace subscription/application, few resources needs to be setup with metadata that correlates the client provisioned in external OAuth IdP. 
+
+Amplify Marketplace allows the consumer to create applications, request access to the resource and create credentials. To allow Amplify Marketplace to request access, an access request definition(AccessRequestDefinition) can be created to define the schema for the information that a consumer may provide for granting access to a discovered API. Similarly to request credential for the application, a credential request definition(CredentialRequestDefinition) must be created to define the schema for the information that consumer will provide to create the credential and for the information for the provisioned credential. 
+
+Below is a sample for the AccessRequestDefinition and CredenitialRequestDefinition
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: AccessRequestDefinition
+name: idp-ard
+title: idp-ard
+metadata:
+  scope:
+    kind: Environment
+    name: mesh-env
+spec:
+  schema:
+    type: object
+    $schema: http://json-schema.org/draft-07/schema#
+    properties: {}
+    description: ''
+  provision:
+    schema:
+      type: object
+      $schema: http://json-schema.org/draft-07/schema#
+      properties: {}
+      description: ''
+
+group: management
+apiVersion: v1alpha1
+kind: CredentialRequestDefinition
+name: idp-crd
+title: idp-crd
+metadata:
+  scope:
+    kind: Environment
+    name: mesh-env
+spec:
+  schema:
+    type: object
+    $schema: http://json-schema.org/draft-07/schema#
+    required:
+      - idpTokenURL
+    properties:
+      jwksURI:
+        type: string
+        title: JWKS URI
+        description: ''
+      grantType:
+        enum:
+          - authorization_code
+          - client_credentials
+        type: string
+        title: Grant Type
+        default: client_credentials
+        description: ''
+      idpTokenURL:
+        type: string
+        title: Token URL
+        default: >-
+          http://idp-token-url
+        readOnly: true
+        description: ''
+      tokenAuthMethod:
+        enum:
+          - private_key_jwt
+          - client_secret_basic
+          - client_secret_post
+          - client_secret_jwt
+        type: string
+        title: Token Auth Method
+        default: client_secret_basic
+        description: ''
+    description: ''
+  provision:
+    schema:
+      type: object
+      $schema: http://json-schema.org/draft-07/schema#
+      required:
+        - clientId
+        - clientSecret
+      properties:
+        clientId:
+          type: string
+          title: Client ID
+          description: ''
+        clientSecret:
+          type: string
+          title: Client Secret
+          description: ''
+          x-axway-encrypted: true
+      description: ''
+```
+
+Once these two resources are setup, the APIServiceInstance for the published API needs to be setup with the reference for AccessRequestDefinition and CredenitialRequestDefinition, like in example below 
+
+```yaml
+kind: APIServiceInstance
+name: mylist
+metadata:
+  scope:
+    kind: Environment
+    name: mesh
+spec:
+  apiServiceRevision: list-v1
+  endpoint:
+    - host: "apicentral.axway.com"
+      port: 8080
+      protocol: http
+      routing:
+        basePath: "/mylist"
+  accessRequestDefinition: idp-ard
+  credentialRequestDefinitions:
+    - idp-crd
+x-agent-details:
+  externalAPIID: clusterone-ampc-hybrid-list.apic-demo.svc.cluster.local
+```
+
+This will allow the Amplify Marketplace to request access and credential based on the schema defined in the resources. While creating the resources for provisioning application, access and credential, the Amplify Marketplace creates ManagedApplication, AccessRequest and Credential resource with pending status. The provisioning system can uses these the data provided based on the schema definition to manage the corresponding provisioning of these resources. In order to provide the provisioned details these resources needs to be updated with the provisioned information to represent successful provisioning. Below is an example of the resources to be updated.
+```yaml
+
+---
+group: management
+apiVersion: v1alpha1
+kind: ManagedApplication
+name: mylist-app
+title: mylist-app
+metadata:
+  id: 8ac9880782168e800182170f50af0012
+  scope:
+    kind: Environment
+    name: mesh-env
+spec:
+  security:
+    encryptionKey: |-
+      -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoQv1R+ikyEaS1PLesrO9
+      oKCNUwTI6jeX360CNeQpDaMzlHcF3Q1QScbvUGx9EElF9qVv3l3bVCiJmJU04vLt
+      PHaEbGaLMlBTkENjJbZ4Xq7QbPdfWmZqpsgP4h3YuwqXgb/kiujZ/FnvR63o7Ijx
+      8rZKhZZ87jJkXnl7EqpcgQv/baNx6X4/A08gP7ujVc56u3HiUtXVd2pIkdgifPQU
+      zpSj0CnfQDkdiZ2qRrZRN0s7SwAvotg6KeO87icycLO5OPhI0lM3EJ4aKqcZAQcd
+      VoJTG2A5B7VNwEkJ+nWFDnxLvkU8KChUrD96iIbbPpQha1ftJuK52V36KFyxlsME
+      owIDAQAB
+      -----END PUBLIC KEY-----
+    encryptionHash: SHA256
+    encryptionAlgorithm: RSA-OAEP
+marketplace:
+  name: 485e6b28-7727-49b2-8f1f-fad6480c177f
+  resource:
+    owner:
+      id: e4eb11a969e09fdf0169e3d994e2000a
+      type: team
+      organization:
+        id: '111111111111'
+    metadata:
+      createUserId: 5dabf3fd-c509-4692-a56c-43ec23a3b51c
+      modifyUserId: 5dabf3fd-c509-4692-a56c-43ec23a3b51c
+status:
+  level: Success
+
+---
+group: management
+apiVersion: v1alpha1
+kind: AccessRequest
+name: 8ac9859c821691f20182170f23c60000
+title: 8ac9859c821691f20182170f23c60000
+metadata:
+  id: 8ac9880782168e800182170f51bf001b
+  scope:
+    id: 8ac98b818211684201821359685f0193
+    kind: Environment
+    name: mesh-env
+spec:
+  data: {}
+  quota:
+    limit: 10000000
+    interval: monthly
+  apiServiceInstance: mylist
+  managedApplication: mylist
+status:
+  level: Success
+
+---
+
+group: management
+apiVersion: v1alpha1
+kind: Credential
+name: 8ac9859c821691f20182170f42fb0001
+title: 8ac9859c821691f20182170f42fb0001
+metadata:
+  id: 8ac9880782168e800182170f5399002e
+  scope:
+    kind: Environment
+    name: mesh-env
+spec:
+  data:
+    grantType: client_credentials
+    idpTokenURL: >-
+      http://idp-token-url
+    tokenAuthMethod: client_secret_basic
+  managedApplication: mylist-app
+  credentialRequestDefinition: idp-crd
+data:
+  clientId: idp-client-id
+  clientSecret: << encrypted content in base-64 >>
+x-agent-details:
+  clientId: idp-client-id
+status:
+  level: Success
+```
+
+While updating the Credential resource the data properties can be encrypted if the associated property definition in CredentialRequestDefinition has x-axway-encrypted set to true. To encrypt the data provisioning system can use the public key in the ManagedApplication resource. This allow Amplify Marketplace to secure the secret data and can be decrypted only by the private key associate to the organization. Amplify Marketplace manages a separate key for each organization. Once the credential is updated, the consumers can go to Amplify Marketplace UI and view the decrypted secret data only once after which the secret data is not accessible.
+
+
+For traceability agent to associate the traffic with the Amplify Marketplace application, the sub-resource "x-agent-details" with "clientId" property needs to be setup(as in example below). When the traceability agent receives the traffic it will identify the client id using metadata setup by Istio envoy filter and then it performs the lookup for the associated Credential resource which has the reference to the associated application.
+
 ### Istio CRDs
 
 #### Gateway
