@@ -9,7 +9,7 @@ Traceability and Discovery agents for Amplify Gateway / AWS / Azure / Istio prov
 
 ## Versioning
 
-Current agent versions are based on Amplify Agents SDK v1.1.27.
+Current agent versions are based on Amplify Agents SDK v1.1.30.
 To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
@@ -25,21 +25,21 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* **Add feature**: Add text
+* **Consumer insights metrics**: the traceability agent enriches the metrics data with information related to the marketplace (product / resource / subscription / quota / application) to help the Consumer filtering his data in the Consumer insights screens.
 
 ### Amplify Gateway agents enhancements
 
-* Agent version: 1.1.23
+* Agent version: 1.1.24
 * See Common enhancements and features.
 
 ### Amplify AWS Gateway agents enhancements
 
-* Agent version: 1.1.19
+* Agent version: 1.1.22
 * See Common enhancements and features.
 
 ### Amplify Azure agents enhancements
 
-* Agent version: 1.1.19
+* Agent version: 1.1.22
 * See Common enhancements and features.
 
 ### Amplify Istio agents enhancements
