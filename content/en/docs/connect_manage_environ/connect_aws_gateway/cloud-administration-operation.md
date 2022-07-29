@@ -571,10 +571,10 @@ It is possible to run the agents without requiring the entirety of the AWS servi
 
 The inputs to the IAM Setup CloudFormation Template (`amplify-agents-setup.yaml`):
 
-| Parameter Name                | Description                                                                                                                               | Default Value                   | Mode       |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ---------- |
-| APIGWCWRoleSetup              | If set to true, the IAM Role for the API Gateway Service to write logs to CloudWatch will be created                                      | true                            | both       |
-| APIGWTrafficLogGroupName      | The name of the CloudWatch Log Group to be created, for AWS API Gateway to log traffic to                                                 | aws-apigw-traffic-logs          | both       |
+| Parameter Name                | Description                                                                                                                               | Default Value                   |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| APIGWCWRoleSetup              | If set to true, the IAM Role for the API Gateway Service to write logs to CloudWatch will be created                                      | true                            |
+| APIGWTrafficLogGroupName      | The name of the CloudWatch Log Group to be created, for AWS API Gateway to log traffic to                                                 | aws-apigw-traffic-logs          |
 
 #### Resources - API Gateway Polling
 
