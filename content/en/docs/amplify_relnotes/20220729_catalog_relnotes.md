@@ -18,7 +18,7 @@ The following new  enhancement is available in this update:
 
 The following issue has been fixed in this update:
 
-* **Asset is not updated with latest API Service update**: previously, a change in the API service revision was not propagated on the asset. Now every changes in the service is reflected in the asset as soon as the asset is linked to the "latest" version of the API Service.
+* **Asset is not updated with latest API Service update**: previously, a change in the API service revision was not propagated to the asset. Now every changes in the service is reflected in the asset as soon as the asset is linked to the "latest" version of the API Service.
 
 ## Known limitations
 
