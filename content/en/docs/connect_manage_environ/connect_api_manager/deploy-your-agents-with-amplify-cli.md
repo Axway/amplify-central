@@ -27,7 +27,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 ## Agent configuration machine pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com and login.axway.com on port 443
+    * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
