@@ -740,8 +740,8 @@ als:
   # The tracing provider configured for Istio
   istioTracer: "zipkin"
 
-  # The name of the secret created in the cluster to hold the keys to authenticate with Amplify Central. 
-	# If .Values.secret.create is set to true, then use the name set in .Values.secret.name
+  # The name of the secret created in the cluster to hold the keys to authenticate with Amplify Central.
+  # If .Values.secret.create is set to true, then use the name set in .Values.secret.name
   keysSecretName: amplify-agents-keys
   publishHeaders: true
 

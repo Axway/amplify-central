@@ -143,11 +143,12 @@ axway central apply -f <fileName>.yaml
  ```
 
 #### Reporting traffic and metric event correlated to Amplify Marketplace subscription/application
-In order to allow traceability agent to report traffic and metric event that correlates to Amplify Marketplace subscription/application, few resources needs to be setup with metadata that correlates the client provisioned in external OAuth IdP. 
 
-Amplify Marketplace allows the consumer to create applications, request access to the resource and create credentials. To allow Amplify Marketplace to request access, an access request definition(AccessRequestDefinition) can be created to define the schema for the information that a consumer may provide for granting access to a discovered API. Similarly to request credential for the application, a credential request definition(CredentialRequestDefinition) must be created to define the schema for the information that consumer will provide to create the credential and for the information for the provisioned credential. 
+In order to allow traceability agent to report traffic and metric event that correlates to Amplify Marketplace subscription/application, few resources needs to be setup with metadata that correlates the client provisioned in external OAuth IdP.
 
-Below is a sample for the AccessRequestDefinition and CredenitialRequestDefinition
+Amplify Marketplace allows the consumer to create applications, request access to the resource and create credentials. To allow Amplify Marketplace to request access, an access request definition(AccessRequestDefinition) can be created to define the schema for the information that a consumer may provide for granting access to a discovered API. Similarly to request credential for the application, a credential request definition(CredentialRequestDefinition) must be created to define the schema for the information that consumer will provide to create the credential and for the information for the provisioned credential.
+
+Below is a sample for the AccessRequestDefinition and CredenitialRequestDefinition.
 
 ```yaml
 group: management
@@ -238,7 +239,7 @@ spec:
       description: ''
 ```
 
-Once these two resources are setup, the APIServiceInstance for the published API needs to be setup with the reference for AccessRequestDefinition and CredenitialRequestDefinition, like in example below 
+Once these two resources are setup, the APIServiceInstance for the published API needs to be setup with the reference for AccessRequestDefinition and CredenitialRequestDefinition, like in example below.
 
 ```yaml
 kind: APIServiceInstance
@@ -263,6 +264,7 @@ x-agent-details:
 ```
 
 This will allow the Amplify Marketplace to request access and credential based on the schema defined in the resources. While creating the resources for provisioning application, access and credential, the Amplify Marketplace creates ManagedApplication, AccessRequest and Credential resource with pending status. The provisioning system can uses these the data provided based on the schema definition to manage the corresponding provisioning of these resources. In order to provide the provisioned details these resources needs to be updated with the provisioned information to represent successful provisioning. Below is an example of the resources to be updated.
+
 ```yaml
 
 ---
@@ -356,7 +358,6 @@ status:
 ```
 
 While updating the Credential resource the data properties can be encrypted if the associated property definition in CredentialRequestDefinition has x-axway-encrypted set to true. To encrypt the data provisioning system can use the public key in the ManagedApplication resource. This allow Amplify Marketplace to secure the secret data and can be decrypted only by the private key associate to the organization. Amplify Marketplace manages a separate key for each organization. Once the credential is updated, the consumers can go to Amplify Marketplace UI and view the decrypted secret data only once after which the secret data is not accessible.
-
 
 For traceability agent to associate the traffic with the Amplify Marketplace application, the sub-resource "x-agent-details" with "clientId" property needs to be setup(as in example below). When the traceability agent receives the traffic it will identify the client id using metadata setup by Istio envoy filter and then it performs the lookup for the associated Credential resource which has the reference to the associated application.
 
