@@ -361,7 +361,7 @@ While updating the Credential resource the data properties can be encrypted if t
 
 For traceability agent to associate the traffic with the Amplify Marketplace application, the sub-resource "x-agent-details" with "clientId" property needs to be setup in the Credential resource(as in example above).
 
-In addition, create a RequestAuthentication resource in the namespace in which the Istio agents to allow Istio to parse the authentication information.
+In addition, create a RequestAuthentication resource in the namespace in which the Istio agents were installed to allow Istio to parse the authentication information.
 
 {{% alert title="Note" %}}
 For more information about RequestAuthentication CRD, please refer to [Istio documentation](https://istio.io/latest/docs/reference/config/security/request_authentication/).
