@@ -359,7 +359,7 @@ status:
 
 While updating the Credential resource the data properties can be encrypted if the associated property definition in CredentialRequestDefinition has x-axway-encrypted set to true. To encrypt the data provisioning system can use the public key in the ManagedApplication resource. This allow Amplify Marketplace to secure the secret data and can be decrypted only by the private key associate to the organization. Amplify Marketplace manages a separate key for each organization. Once the credential is updated, the consumers can go to Amplify Marketplace UI and view the decrypted secret data only once after which the secret data is not accessible.
 
-For traceability agent to associate the traffic with the Amplify Marketplace application, the sub-resource "x-agent-details" with "clientId" property needs to be setup in the Credential resource(as in example above). 
+For traceability agent to associate the traffic with the Amplify Marketplace application, the sub-resource "x-agent-details" with "clientId" property needs to be setup in the Credential resource(as in example above).
 
 In addition, create a RequestAuthentication resource in the namespace in which the Istio agents to allow Istio to parse the authentication information.
 
