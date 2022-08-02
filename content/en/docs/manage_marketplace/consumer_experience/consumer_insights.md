@@ -37,13 +37,13 @@ The API usage reporting for transactions is not real time and may be delayed by 
 
 ## Applications
 
-Click **Applications** to see an aggregated view of Application usage per product. These are applications configured within the Marketplace.
+Click **Applications** to see an aggregated view of Application usage. These are applications configured within the Marketplace.
 
 ![Applications example](/Images/marketplace/consumer_experience/ci_applications.png)
 
 You can filter by applications, products, and select a pre-configured time range or customize your own.
 
-Click an individual item to see the total transactions per API.
+Click an individual item to see that application's usage by product, API, and total transactions.
 
 The Application usage reporting for transactions is not real time and may be delayed by several minutes based on settings selected by your API provider.
 
@@ -90,4 +90,4 @@ Click **Subscriptions** to see a list of the products and its subscription in yo
 
 You can filter by products, subscriptions, and select a time range in 3 month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
 
-Click an individual item to see resource usage and quota for the subscription.
+Click an individual item to see quota and last three-month usage by each resource and plan in that subscription.
