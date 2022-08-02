@@ -359,7 +359,30 @@ status:
 
 While updating the Credential resource the data properties can be encrypted if the associated property definition in CredentialRequestDefinition has x-axway-encrypted set to true. To encrypt the data provisioning system can use the public key in the ManagedApplication resource. This allow Amplify Marketplace to secure the secret data and can be decrypted only by the private key associate to the organization. Amplify Marketplace manages a separate key for each organization. Once the credential is updated, the consumers can go to Amplify Marketplace UI and view the decrypted secret data only once after which the secret data is not accessible.
 
-For traceability agent to associate the traffic with the Amplify Marketplace application, the sub-resource "x-agent-details" with "clientId" property needs to be setup(as in example below). When the traceability agent receives the traffic it will identify the client id using metadata setup by Istio envoy filter and then it performs the lookup for the associated Credential resource which has the reference to the associated application.
+For traceability agent to associate the traffic with the Amplify Marketplace application, the sub-resource "x-agent-details" with "clientId" property needs to be setup in the Credential resource(as in example above). 
+
+In addition, create a RequestAuthentication resource in the namespace in which the Istio agents to allow Istio to parse the authentication information.
+
+{{% alert title="Note" %}}
+For more information about RequestAuthentication CRD, please refer to [Istio documentation](https://istio.io/latest/docs/reference/config/security/request_authentication/).
+{{% /alert %}}
+
+```yaml
+apiVersion: "security.istio.io/v1beta1"
+kind: RequestAuthentication
+metadata:
+  name: jwt-auth
+  namespace: istio-system
+spec:
+  selector:
+    matchLabels:
+      istio: istio-apic-ingress
+  jwtRules:
+    - issuer: "issuer-foo"
+      jwksUri: https://example.com/.well-known/jwks.json
+ ```
+
+When the traceability agent receives the traffic it will identify the client id using metadata setup by Istio envoy filter that is parsed based on the RequestAuthentication defintion and then the agent performs the lookup for the associated Credential resource which has the reference to the associated Amplify Marketplace application.
 
 ### Istio CRDs
 
