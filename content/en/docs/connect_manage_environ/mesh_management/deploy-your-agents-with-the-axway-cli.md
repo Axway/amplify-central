@@ -658,7 +658,7 @@ spec:
   axwayManaged: false
 ```
 
-The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the following yaml:
+The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the following yaml.
 
 #### Update the override file
 
