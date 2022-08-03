@@ -146,7 +146,7 @@ axway central apply -f <fileName>.yaml
 
 To allow Traceability Agent to report traffic and metric events that correlate to the Amplify Marketplace subscription/application, resources must be set up with metadata that correlates the client provisioned in external OAuth IdP.
 
-Amplify Marketplace allows the consumer to create applications, request access to the resource and create credentials. To allow Amplify Marketplace to request access, an access request definition (AccessRequestDefinition) must be created to define the schema for the information that a consumer may provide for granting access to a discovered API. Similarly, to request credentials for the application, a credential request definition (CredentialRequestDefinition) must be created to define the schema for the information that the consumer will provide to create the credential, and for the provisioned credential information.
+Amplify Marketplace allows the consumer to create applications, request access to the resource, and create credentials. To allow Amplify Marketplace to request access, an access request definition (AccessRequestDefinition) must be created to define the schema for the information that a consumer may provide for granting access to a discovered API. Similarly, to request credentials for the application, a credential request definition (CredentialRequestDefinition) must be created to define the schema for the information that the consumer will provide to create the credential, and for the provisioned credential information.
 
 This is an AccessRequestDefinition and CredenitialRequestDefinition example:
 
