@@ -13,7 +13,7 @@ Connecting AWS API Gateway to Amplify Central will provide you with a connected/
 
 Each AWS Gateway is represented by an Amplify Central environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with AWS API Gateway and Amplify Central.
 
-The agents, by default, require setup to send events (Configuration and Traffic) to an SQS queue for processing by the agent. To operate the agents in a manner that does not require this additional setup, see [Running agents without SQS](#running-agents-without-sqs-api-gateway-polling).
+The agents, by default, require setup to send events (Configuration and Traffic) to an SQS queue for processing by the agent. To operate the agents in a manner that does not require this additional setup, see [Running agents without SQS](#running-agents-without-sqs---api-gateway-polling).
 
 ### Discovery Agent
 
