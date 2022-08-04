@@ -17,7 +17,7 @@ The following new feature is available in this update:
 
 The following issue has been fixed in this update:
 
-* None.
+* **API service deletion**: A warning message has been added to indicate the affected assets which are consuming the API service being deleted.
 
 ## Known limitations
 
