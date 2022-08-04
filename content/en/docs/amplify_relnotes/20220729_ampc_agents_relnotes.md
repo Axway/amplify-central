@@ -31,6 +31,7 @@ The following new features and enhancements are available in this update:
 
 * Agent version: 1.1.24
 * See Common enhancements and features.
+* **Quota enforcement**: the subscription quota plan is enforced on the dataplane. 
 
 ### Amplify AWS Gateway agents enhancements
 
@@ -79,7 +80,7 @@ The following agents are open source and everybody can contribute:
 
 The following agent issue is fixed in this update:
 
-* **Add issue**. Add text.
+* **API Service revision updates**. Agents detect when an API specification changes without deployement changes and update the service instance with a new revision.
 
 ## Known limitations
 
