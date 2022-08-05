@@ -107,7 +107,7 @@ Note: For logging, it is recommended to set it up in the agent configuration fil
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_BODY      | The body of the email for Failed to Subscribe events.                                                                                                     |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_SUBJECT | The subject of email sent for Failed to Unsubscribe events.                                                                                               |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_BODY    | The body of the email for Failed to Unsubscribe events.                                                                                                   |
-| CENTRAL_MIGRATION_CLEANINSTANCES                                   | When set to true the agent, on startup, will clean all but the latest API Service Instance for every API Service and Stage combination                    |
+| CENTRAL_MIGRATION_CLEANINSTANCES                                   | When set to true, the agent, on startup, will clean all except the latest API Service Instance for every API Service and Stage combination.                    |
 
 ### Specific variables for Traceability Agent
 
