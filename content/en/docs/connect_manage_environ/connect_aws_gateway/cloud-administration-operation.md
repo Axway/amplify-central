@@ -3,18 +3,17 @@ title: Administer AWS Gateway cloud
 linkTitle: Administer AWS Gateway cloud
 draft: false
 weight: 25
-description: As a Cloud Administrator / Operator, you are responsible for
-  configuring and managing your organization’s AWS infrastructure. This topic
-  contains setup and test details for the additional AWS services that are
-  required for Axway’s agents to govern your AWS API Gateway service. The
-  additional services which will be configured are AWS CloudWatch, AWS SQS, AWS
-  Config, AWS KMS, and AWS Lambda.
 ---
-## Overview
+
+As a Cloud Administrator / Operator, you are responsible for configuring and managing your organization’s AWS infrastructure. This topic contains setup and test details for the additional AWS services that are required for Axway’s agents to govern your AWS API Gateway service. The additional services which will be configured are AWS CloudWatch, AWS SQS, AWS Config, AWS KMS, and AWS Lambda.
+
+## Connected AWS API Gateway overview
 
 Connecting AWS API Gateway to Amplify Central will provide you with a connected/managed environment, and a global centralized view of your APIs and their related traffic, allowing users to have a centralized governance (creation/deployment/publish/subscription) and monitoring of the traffic for AWS API Gateway hosted APIs.
 
 Each AWS Gateway is represented by an Amplify Central environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with AWS API Gateway and Amplify Central.
+
+The agents, by default, require setup to send events (Configuration and Traffic) to an SQS queue for processing by the agent. To operate the agents in a manner that does not require this additional setup, see [Running agents without SQS](#running-agents-without-sqs---api-gateway-polling).
 
 ### Discovery Agent
 
@@ -366,16 +365,13 @@ Managed Policy
 
 ##### APICAgentsGroup
 
-The group that is assigned the APICAgentsPolicy
-.
+The group that is assigned the APICAgentsPolicy.
 
 ##### APICAgentsUser
 
-The user that the APIC Agents will log in as, added to the APICAgentsGroup
-.
+The user that the APIC Agents will log in as, added to the APICAgentsGroup.
 
-An Access and Secret Key for the user should be created and given to the person deploying the agent, please follow your organizations key rotation policies. See [Managing Access Keys for IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)
-.
+An access and secret key for the user should be created and given to the person deploying the agent, please follow your organizations key rotation policies. See [Managing Access Keys for IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 #### Parameters (Resources only)
 
@@ -563,6 +559,56 @@ Note that these privileges do not include those necessary for rollback, if the s
 | iam:CreateInstanceProfile             | AgentsInstanceProfile                                                                           | continuous | amplify-agents-deploy-all  | DeploymentType = EC2         |
 | iam:AddRoleToInstanceProfile          | AgentsInstanceRole                                                                              | continuous | amplify-agents-deploy-all  | DeploymentType = EC2         |
 | iam:AttachRolePolicy                  | AgentsInstanceRole                                                                              | continuous | amplify-agents-deploy-all  | DeploymentType = EC2         |
+
+### Running agents without SQS - API Gateway Polling
+
+Agents can be run without requiring the entirety of the AWS service setup to push Configuration and Traffic events to SQS for the agents to operate off of in an event based fashion. However, this mode still requires minimal setup on AWS to get the agents up and running.
+
+#### CloudFormation parameters - API Gateway Polling
+
+The inputs to the IAM Setup CloudFormation Template (`amplify-agents-setup.yaml`):
+
+| Parameter Name                | Description                                                                                                                               | Default Value                   |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| APIGWCWRoleSetup              | If set to true, the IAM role for the API Gateway Service to write logs to CloudWatch will be created                                      | true                            |
+| APIGWTrafficLogGroupName      | The name of the CloudWatch Log Group to be created, for AWS API Gateway to log traffic to                                                 | aws-apigw-traffic-logs          |
+
+#### Resources - API Gateway Polling
+
+The services that are configured with this CloudFormation template:
+
+##### TraceabilityAPIGWCWIAMRole - API Gateway Polling
+
+This cloudformation creates the [TraceabilityAPIGWCWIAMRole](#traceabilityapigwcwiamrole) role, which is the same in all templates.
+
+##### TraceabilityAPIGWCWRole - API Gateway Polling
+
+This resource applies the [TraceabilityAPIGWCWIAMRole](#traceabilityapigwcwiamrole) role to API Gateway so it may log transactional data to CloudWatch, which the Traceability Agent will later use.
+
+##### APICAgentsPolicy - API Gateway Polling
+
+The policy has the access required by the APICAgentsUser. The polling agents require slightly less access.
+
+| Effect | Action                  | Resource                                                                                            | Description                                                                        |
+|--------|-------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| Allow  | logs:DescribeLogGroups  | All log groups in AWS account and Region                                                            | Used to validate connection to AWS CloudWatch on agent startup                     |
+| Allow  | logs:DescribeLogStreams | API-Gateway-Execution-Logs\_\* and {TraceabilityAgentLogGroupName} log groups in account and region | Allows the agent to get the streams for API Gateway Execution Logs                  |
+| Allow  | logs:GetLogEvents       | API-Gateway-Execution-Logs\_\* log groups in account and region                                     | Allows the agent to get log events for API Gateway Execution Logs                  |
+| Allow  | logs:FilterLogEvents    | API-Gateway-Execution-Logs\_\* and {TraceabilityAgentLogGroupName} log groups in account and region | Allows the agent to get log events for specific transactions in API Gateway        |
+| Allow  | logs:CreateLogGroup     | Log streams for the Discovery and Traceability agents log group                                     | Allows agent, via docker on the EC2 instance, to create its log group in CloudWatch |
+| Allow  | apigateway:PUT          | All API Gateway resources in region                                                                 | Allows the Discovery Agent to make updates to the API endpoints                    |
+| Allow  | apigateway:PATCH        | All API Gateway resources in region                                                                 | Allows the Discovery Agent to make updates to the API endpoints                    |
+| Allow  | apigateway:GET          | All API Gateway resources in region                                                                 | Allows the Discovery Agent to get the configuration of the API endpoints           |
+| Allow  | apigateway:DELETE       | All API Gateway resources in region                                                                 | Allows the Discovery Agent remove tags for Unsubscribe events                      |
+| Allow  | apigateway:POST         | All API Gateway resources in region                                                                 | Allows the Discovery Agent to make updates to the API endpoints                    |
+
+##### APICAgentsGroup - API Gateway Polling
+
+This cloudformation creates the [APICAgentsGroup](#apicagentsgroup) group, which is the same in all templates.
+
+##### APICAgentsUser - API Gateway Polling
+
+This cloudformation creates the [APICAgentsUser](#apicagentsuser) user, which is the same in all templates.
 
 ### Troubleshooting
 
