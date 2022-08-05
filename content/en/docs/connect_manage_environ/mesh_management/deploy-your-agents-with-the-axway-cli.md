@@ -658,7 +658,7 @@ spec:
   axwayManaged: false
 ```
 
-The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the following yaml:.
+The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the following yaml.
 
 #### Update the override file
 
@@ -670,12 +670,12 @@ global:
     port: 443
     scheme: https
     timeout: 10s
-# Provide the ID of the Environment resource
+  # Provide the ID of the Environment resource
   envID: 8ac9924581ed71fa0181ef817e9b0976
-# Provide the name of the Environment resource
+  # Provide the name of the Environment resource
   envName: "istio"
   instanceID: ""
-# Provide the tenantID
+  # Provide the tenantID
   tenantID: "123937327920141"
   imageRegistry: axway.jfrog.io/ampc-public-docker-release
   tokenUrl: "https://login.axway.com/auth/realms/Broker/protocol/openid-connect/token"
@@ -689,9 +689,9 @@ global:
 
 # Optional method that allows the helm chart to create the k8s secret that contains the service account public/private key pair.
 secret:
-        # Set to true to have the secret be created as part of the helm deployment
+  # Set to true to have the secret be created as part of the helm deployment
   create: false
-        # The name of the secret. If create is set to true, then update als.keysSecretName, rda.keysSecretName, and ada.keysSecretName with the same secret name that is set here.
+   # The name of the secret. If create is set to true, then update als.keysSecretName, rda.keysSecretName, and ada.keysSecretName with the same secret name that is set here.
   name: ""
   password: ""
   publicKey: |
@@ -721,19 +721,72 @@ als:
   condorUrl: ingestion.datasearch.axway.com:5044
   condorSslVerification: full
 
+  # Set to true to connect to Amplify Central over gRPC
+  grpcEnabled: false
+
+  # Set to true to report traffic/metric events for marketplace subscription/application
+  marketplaceProvisioningEnabled: false
+
+  # Set to true to report traffic/metric events for marketplace subscription/application
+  versionCheckerEnabled: "true"
+
   # sampling configuration
   sampling:
     percentage: 100
     per_api: true
+    per_subscription: true
     reportAllErrors: true
 
-  # Use the name of the keys created earlier
+  # The tracing provider configured for Istio
+  istioTracer: "zipkin"
+
+  # The name of the secret created in the cluster to hold the keys to authenticate with Amplify Central.
+  # If .Values.secret.create is set to true, then use the name set in .Values.secret.name
   keysSecretName: amplify-agents-keys
   publishHeaders: true
 
-  # Specify a list of namespaces where the envoy filters should be created
+  # A list of namespaces where the envoy filters should be created
   istioGatewayNamespaces:
   - default
+
+  # A list of request headers that are sent to the agent
+  defaultModeRequestHeaders:
+  - "accept"
+  - "user-agent"
+  - "x-envoy-decorator-operation"
+  - "x-envoy-external-address"
+  - "x-forwarded-client-cert"
+  - "x-forwarded-for"
+  - "x-forwarded-proto"
+  - "x-istio-attributes"
+
+  # A list of response headers that are sent to the agent
+  defaultModeResponseHeaders:
+  - "connection"
+  - "content-length"
+  - "content-md5"
+  - "content-type"
+  - "date"
+  - "etag"
+  - "request-id"
+  - "response-time"
+  - "server"
+  - "start-time"
+  - "vary"
+
+#Redaction configuration
+redaction:
+  path:
+    show:
+  queryArgument:
+    show:
+    sanitize:
+  requestHeader:
+    show:
+    sanitize:
+  responseHeader:
+    show:
+    sanitize:
 
 # discovers API Documentation
 ada:
