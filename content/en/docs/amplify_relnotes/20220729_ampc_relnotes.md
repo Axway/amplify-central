@@ -32,12 +32,12 @@ The following issue is fixed in this Amplify Central CLI update:
 
 ### Amplify Central WebUI
 
-* Refer to [Asset Catalog July 2022 Release notes](/docs/amplify_relnotes/20220729_catalog_relnotes).
-* Refer to [Product Foundry July 2022 Release notes](/docs/amplify_relnotes/20220729_foundry_relnotes).
-* Refer to [Service Registry July 2022 Release notes](/docs/amplify_relnotes/20220729_serviceregistry_relnotes).
+* See [Asset Catalog July 2022 Release notes](/docs/amplify_relnotes/20220729_catalog_relnotes).
+* See [Product Foundry July 2022 Release notes](/docs/amplify_relnotes/20220729_foundry_relnotes).
+* See [Service Registry July 2022 Release notes](/docs/amplify_relnotes/20220729_serviceregistry_relnotes).
 
 ## Known limitations
 
 This following limitation exists in this update of Amplify Central:
 
-* Access rights for both assets and products are limited to the Team Ownership setting.  Any existing shared with Assets or Products will be accessible in a Read-only mode.
+* Access rights for both assets and products are limited to the Team Ownership setting. Any existing shared with Assets or Products will be accessible in a Read-only mode.

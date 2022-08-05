@@ -11,20 +11,20 @@ The Product Foundry enables providers to build API products by linking multiple 
 
 The following new features and enhancements are available in this update:
 
-* **Overview documentation**: When adding a document to a product, it is possible to tell the system that this document needs to be displayed in the marketplace overview.
-* **Product filtering per owning team**: the product can be filtered by owning team to help finding the appropriate one.
-* **Product filtering per category**: the product can be filtered by category to help finding the appropriate one.
-* **Product filtering per status**: the product can be filtered by status (Draft / Active / Deprecated / Archived) to help finding the appropriate one.
+* **Overview documentation**: when adding a document to a product, it is possible to tell the system that this document needs to be displayed in the marketplace overview.
+* **Product filtering per owning team**: the product can be filtered by owning team to help find the appropriate one.
+* **Product filtering per category**: the product can be filtered by category to help find the appropriate one.
+* **Product filtering per status**: the product can be filtered by status (Draft / Active / Deprecated / Archived) to help find the appropriate one.
 * **Hide a product from marketplace**: instead of unpublishing a product from the marketplace to "hide" it, it is possible to set its visibility to None. In that situation, the product is still published to the marketplace but nobody will see it.
 
 ## Fixed issues
 
-The following issues have been fixed in this update:
+The following issue has been fixed in this update:
 
-* **Paid plan base price with large number crash the backend**: it is no more possible to enter a paid plan value higher than 999,999,999.99
+* **Paid plan base price with large number crash the backend**: a paid plan value higher than 999,999,999.99 can no longer be entered.
 
 ## Known limitations
 
 The following limitations exist in this update:
 
-* None
+* None.

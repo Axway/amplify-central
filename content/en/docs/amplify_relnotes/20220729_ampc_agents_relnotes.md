@@ -25,7 +25,7 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* **Consumer insights metrics**: the traceability agent enriches the metrics data with information related to the marketplace (product / resource / subscription / quota / application) to help the Consumer filtering his data in the Consumer insights screens.
+* **Consumer insights metrics**: the Traceability Agent enriches the metrics data with information related to the Marketplace (product / resource / subscription / quota / application) to help the consumer filter data in the Consumer Insights screens.
 
 ### Amplify Gateway agents enhancements
 
@@ -66,7 +66,7 @@ For more information, see the [Axway GitHub](https://github.com/Axway/agents-api
 
 Current release (1.1.5) of the Amplify Mulesoft agent is available on [Axway GitHub](https://github.com/Axway/agents-mulesoft) repository.
 
-* No new updates.
+* None.
 
 ### Other available community agents
 
@@ -80,7 +80,7 @@ The following agents are open source and everybody can contribute:
 
 The following agent issue is fixed in this update:
 
-* **API Service revision updates**. Agents detect when an API specification changes without deployement changes and update the service instance with a new revision.
+* **API Service revision updates**: agents detect when an API specification changes without deployment changes and updates the service instance with a new revision.
 
 ## Known limitations
 
