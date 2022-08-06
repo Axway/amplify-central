@@ -25,7 +25,7 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 * **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
 * **Amplify Apigee Agent** (version 0.0.8): See Amplify agent general
 * **Amplify Mulesoft Agent** (version 1.1.5): No new updates
-* **Amplify agent general** (version 1.1.24): The Traceability Agent enriches the metrics data with information related to the Marketplace (product / resource / subscription / quota / application) to help the consumer filter data in the Consumer Insights screens
+* **Amplify agent general**: The Traceability Agent enriches the metrics data with information related to the Marketplace (product / resource / subscription / quota / application) to help the consumer filter data in the Consumer Insights screens
 
 **Bug fixes**: Agents do not detect when an API specification changes without deployment changes
 
