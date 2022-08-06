@@ -15,6 +15,85 @@ For more details, click on the release note title to go to the corresponding rel
 
 See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify agents July 2022](/docs/amplify_relnotes/20220729_ampc_agents_relnotes/)
+
+**What's new for**:
+
+* **Amplify Gateway Agent** (version 1.1.24): The subscription quota plan is enforced on the dataplane
+* **Amplify AWS Gateway Agent** (version 1.1.22): See Amplify agent general
+* **Amplify Azure Agent** (version 1.1.22): See Amplify agent general
+* **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
+* **Amplify Apigee Agent** (version 0.0.8): See Amplify agent general
+* **Amplify Mulesoft Agent** (version 1.1.5): No new updates
+* **Amplify agent general**: The Traceability Agent enriches the metrics data with information related to the Marketplace (product / resource / subscription / quota / application) to help the consumer filter data in the Consumer Insights screens
+
+**Bug fixes**: Agents do not detect when an API specification changes without deployment changes
+
+## [Amplify Central July 2022](/docs/amplify_relnotes/20220729_ampc_relnotes/)
+
+**What's new for**:
+
+* **Axway Central CLI** (version 2.10.3): None
+* **Amplify Central WebUI**: See the Release Notes for Asset Catalog, Product Foundry, and Service Registry
+
+**Bug fixes**: None
+
+## [Analytics July 2022](/docs/amplify_relnotes/20220729_analytics_relnotes/)
+
+**What's new**:
+
+* Consumer can see their consumption across multiple products linked to an application and filter per application and/or products
+* Consumer can see the details of their traffic
+* Consumer can see the detail of their subscription consumption
+
+**Bug fixes**: None
+
+## [Asset Catalog July 2022](/docs/amplify_relnotes/20220729_catalog_relnotes/)
+
+**What's new**:
+
+* Asset can be filtered by owning team
+* A warning icon is displayed on the Asset resource column when the resource reference is missing
+
+**Bug fixes**:
+
+* The asset is not updated with latest API Service update
+* The team developer role cannot cannot delete an asset even if they are a member of the owning team
+
+## [Marketplace July 2022](/docs/amplify_relnotes/20220729_marketplace_relnotes/)
+
+**What's new**:
+
+* For security, the encrypted value of a credential is kept in the Marketplace system for only three days after its provisioning
+* Applications and subscriptions display their owning teams
+* The system detects if there are existing credentials linked to the current application. Consumer can use existing credentials or create a new one
+* WSDL support
+* Protobuf support
+
+**Bug fixes**: Images in markdown documentation are not displayed
+
+## [Product Foundry July 2022](/docs/amplify_relnotes/20220729_foundry_relnotes/)
+
+**What's new**:
+
+* Display a document in the Marketplace overview when adding adding it to a product
+* Filter product by owning team
+* Filter product by category
+* Filter product by status
+* Hide a product from Marketplace without unpublishing it
+
+**Bug fixes**: Paid plan base price with large number crashes the backend
+
+## [Service Registry July 2022](/docs/amplify_relnotes/20220729_serviceregistry_relnotes/)
+
+**What's new**: None
+
+**Bug fixes**: No warning when deleting API service
+
+## [Amplify Platform Management July 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
+
+## [Axway CLI July 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
+
 ## [Amplify agents June 2022](/docs/amplify_relnotes/20220630_ampc_agents_relnotes/)
 
 **What's new for**:
@@ -38,7 +117,7 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 **What's new for**:
 
 * **Axway Central CLI** (version 2.10.3): None
-* **Amplify Central WebUI**: See the Release Notes for Asset Catalog, Product foundry, and Service Registry
+* **Amplify Central WebUI**: See the Release Notes for Asset Catalog, Product Foundry, and Service Registry
 
 **Bug fixes**: None
 
@@ -141,7 +220,7 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 * **Axway Central CLI** (version 2.10.3):
     * The agent installation supports the single-entry point URL defined by the region where the agent is installed
 * **Amplify Central WebUI**:
-    * See the Release Notes for Asset Catalog, Product foundry, and Service Registry
+    * See the Release Notes for Asset Catalog, Product Foundry, and Service Registry
 
 **Bug fixes**: Amplify Tooling packages use an older version of an ‘ejs’ dependency causing a security issue with template injection
 
