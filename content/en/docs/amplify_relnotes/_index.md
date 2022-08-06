@@ -40,7 +40,7 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
 ## [Analytics July 2022](/docs/amplify_relnotes/20220729_analytics_relnotes/)
 
-**What's new**: 
+**What's new**:
 
 * Consumer can see their consumption across multiple products linked to an application and filter per application and/or products
 * Consumer can see the details of their traffic
@@ -50,7 +50,7 @@ See [Support Policy](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
 ## [Asset Catalog July 2022](/docs/amplify_relnotes/20220729_catalog_relnotes/)
 
-**What's new**: 
+**What's new**:
 
 * Asset can be filtered by owning team
 * A warning icon is displayed on the Asset resource column when the resource reference is missing
