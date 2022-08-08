@@ -3,10 +3,8 @@ title: Feature - Discover APIs
 linkTitle: Feature - Discover APIs
 draft: false
 weight: 40
-description: Learn how to set up tag-based condition expressions using the
-  APIMANAGER_FILTER environment variable to discover APIs that could be added to
-  Amplify Central.
 ---
+This topic explains how to set up tag-based condition expressions using the APIMANAGER_FILTER environment variable to discover APIs that could be added to Amplify Central.
 
 Conditional expressions statements use logical operators to compare values. This section provides sample syntax for defining expressions.
 

@@ -3,9 +3,9 @@ title: Reference - Agent configuration
 linkTitle: Reference - Agent configuration
 draft: false
 weight: 30
-description: Use the following environment variables to control your Discovery
-  and Traceability agents
 ---
+This topic explains how to use variables to control your Discovery and Traceability agents.
+
 As the Discovery and Traceability agents share many parameters, it is more efficient to use environment variables and reference these parameters, instead of declaring parameters twice.
 
 To maintain a shareable collection of environment files, you can create a `da_env_vars.env` (Discovery Agent) and `ta_env_vars.env` (Traceability Agent) file per environment, which contains simple key value pairs.  By default, agent configuration files are looking for corresponding environment variables before looking on the configuration file property. This file can be used for both modes of the agent (binary VS Docker container).

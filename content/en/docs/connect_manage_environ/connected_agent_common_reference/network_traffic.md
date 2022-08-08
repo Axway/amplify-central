@@ -3,11 +3,8 @@ title: Administer network traffic
 linkTitle: Administer network traffic
 draft: false
 weight: 40
-description: Traffic is always initiated by the Agent to the data plane, API
-  Gateway, and Amplify Central. No sessions are ever initiated back to the
-  Agent.
 ---
-## Overview
+Traffic is always initiated by the Agent to the data plane, API Gateway, and Amplify Central. No sessions are ever initiated back to the Agent.
 
 ![Agent networking](/Images/central/connect-api-manager/agents-proxy2.png "Agent networking")
 

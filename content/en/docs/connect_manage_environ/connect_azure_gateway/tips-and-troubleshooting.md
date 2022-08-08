@@ -3,9 +3,8 @@ title: Get help with Connected Azure Gateway
 linkTitle: Get help with Connected Azure Gateway
 draft: false
 weight: 40
-description: This section provides troubleshooting, error code and known limitations
- that you may encounter while working with the connected managed environment for Azure Gateway within Amplify Central.
 ---
+This topic provides troubleshooting, error code and known limitations that you may encounter while working with the connected managed environment for Azure Gateway within Amplify Central.
 
 ## Troubleshooting
 

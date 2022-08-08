@@ -2,10 +2,6 @@
 title: View Dependency Analysis
 linkTitle: View Dependency Analysis
 weight: 60
-description: "An API Service can be selected from the list on the Environment
-  details page. The API Services details page includes a Dependency Analysis
-  view of the relationship to  dependencies to the selected API Service
-  version.    "
 ---
 The *Dependency Analysis* view displays details about the relationships to the selected API Service version. The relationship details enable the API Provider to make informed decisions and take actions on any of the dependencies.
 

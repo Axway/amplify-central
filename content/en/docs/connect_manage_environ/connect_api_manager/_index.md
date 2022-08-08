@@ -3,12 +3,12 @@ title: Connect API Manager
 linkTitle: Connect API Manager
 weight: 100
 date: 2020-15-15
-description: Understand why you would connect Axway API Manager to Amplify
-  Central. Learn how you can publish to the Amplify Catalog from your API
-  Management System in order to obtain a global view of your APIs and present
-  this Catalog to your consumers. Learn how you can collect the traffic of all
-  your gateways and see it in a single place in Amplify Central Observability.
 ---
+This topic explains:
+
+* Why you would connect Axway API Manager to Amplify Central
+* How to publish to the Amplify Catalog from your API Management System in order to obtain a global view of your APIs and present this Catalog to your consumers
+* How to collect the traffic of all your gateways and see it in a single place in Amplify Central Observability
 
 ## What is Axway API Manager connected?
 
@@ -42,9 +42,9 @@ The Traceability Agent sends log information about APIs in API Gateway and publi
 ## Prerequisites
 
 * An Axway Amplify Central subscription in the Amplify platform
-* (Optional) A platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
+* (Optional) A platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * (Optional) An Amplify Central environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments)
-* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent).
+* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 * An API Manager user having the role of API Manager administrator for the Discovery / Traceability agent to connect to API Manager
 * An API Gateway user having the role of API Gateway operator for Traceability Agent to connect to API Gateway
 

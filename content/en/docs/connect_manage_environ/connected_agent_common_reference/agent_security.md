@@ -3,8 +3,8 @@ title: Administer agent security
 linkTitle: Administer agent security
 draft: false
 weight: 40
-description: This section describes the main security features of the agents.
 ---
+This topic describes the main security features of the agents.
 
 ## Information security
 

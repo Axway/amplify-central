@@ -3,9 +3,9 @@ title: Use Traceability Agent to report Gateway usage
 linkTitle: Use Traceability Agent to report Gateway usage
 draft: false
 weight: 10
-description: Understand how the Traceability Agent reports the Gateway usage to
-  Amplify platform.
 ---
+This topic explains how the Traceability Agent reports the Gateway usage to Amplify platform.
+
 ## Before you start
 
 * Make sure your entitlement is correctly set up, based on your Gateway (AWS / Axway v7 / Azure). Refer to your Axway CSM for more information.

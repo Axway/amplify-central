@@ -3,16 +3,13 @@ title: Upgrade an agent
 linkTitle: Upgrade an agent
 draft: false
 weight: 20
-description: Upgrade your agent
 ---
+This topic explains how to upgrade your existing agent installation.
+
 ## Before you start
 
 * Make sure a previous version of the agent is installed
 * Determine if your existing agent installation uses environment variables or a YAML file, or both
-
-## Objectives
-
-Learn how to upgrade an existing agent installation.
 
 ## Standard upgrade procedure
 

@@ -3,10 +3,8 @@ title: Use Discovery Agent to categorize your APIs
 linkTitle: Use Discovery Agent to categorize your APIs
 draft: false
 weight: 10
-description: Understand how the Discovery Agent can automatically categorize 
-  discovered APIs when publishing to Amplify Central. Learn how you can add
-  conditions and associated categories when those conditions are met.
 ---
+This topic explains how the Discovery Agent can automatically categorize discovered APIs when publishing to Amplify Central. Learn how to add conditions and associated categories when those conditions are met.
 
 {{< alert title="Note" color="primary" >}}
 The automatic categorization filter is only available in the Axway API Manager Discovery Agent. Support in the other agents is coming soon!

@@ -3,9 +3,7 @@ title: View your environments
 linkTitle: View your environments
 weight: 10
 date: 2020-12-14
-description: All of your environments displayed in one place.
 ---
-
 The environments page contains all of your environments in a searchable and sortable list. This list contains:
 
 * Axway Cloud SaaS environment
