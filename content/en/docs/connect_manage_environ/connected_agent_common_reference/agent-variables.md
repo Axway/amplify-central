@@ -4,7 +4,7 @@ linkTitle: Common agent variables
 draft: false
 weight: 40
 ---
-This topic describes, in more detail, the variable common to all agents:
+This topic describes, in more detail, the variables common to all agents:
 
 * [CENTRAL_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
 
