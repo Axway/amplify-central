@@ -2,10 +2,9 @@
 title: Test an API from the browser
 linkTitle: Test an API from the browser
 weight: 140
-description: >
-  Learn how to explore the API documentation and test an API from the browser
-  using the built-in test capability.
 ---
+This topic explains how to explore the API documentation and test an API from the browser using the built-in test capability.
+
 Unified Catalog has an built-in testing tool that allows you to explore the list of API endpoints and their related documentation, and test the API methods directly in the browser. It is built over the official Swagger.io and supports both OAS2 and OAS3 specifications.
 
 {{< alert title="Note" color="primary" >}}Unified Catalog can contain APIs that have been registered in Amplify Central as API proxies or APIs that have been published from external gateways. How you authenticate to make an API call from the browser depends on how the API has been published.{{< /alert >}}

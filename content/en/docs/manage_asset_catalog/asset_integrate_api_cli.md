@@ -3,8 +3,7 @@ title: Integrate with API / CLI
 linkTitle: Integrate with API / CLI
 weight: 30
 ---
-
-Use the Amplify Central API / CLI to create and manage your assets.
+This topic explains how to use the Amplify Central API / CLI to create and manage your assets.
 
 ## Before you start
 

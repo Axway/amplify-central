@@ -4,7 +4,7 @@ linkTitle: Integrate with API / CLI
 weight: 30
 ---
 
-Use the Amplify Central API / CLI to create, manage and promote your products to the Marketplace for consumption.
+This topic explains how to use the Amplify Central API / CLI to create, manage and promote your products to the Marketplace for consumption.
 
 ## Before you start
 

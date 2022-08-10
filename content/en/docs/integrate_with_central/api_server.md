@@ -3,7 +3,6 @@ title: API Server overview
 linkTitle: API Server overview
 weight: 110
 ---
-
 The core of the Amplify management plane is the API Server. The API Server exposes an HTTP API that allows you to configure different parts of the management plane. The API Server's API lets you query and manipulate the state of resources in Amplify Central. For example: Environments, API Services, Secrets, Webhooks.
 
 Most operations can be performed through the Axway Central command-line interface, which in turn uses the API. However, you can also access the API directly using REST calls. The REST documentation is publicly available at [Axway API Server](https://apicentral.axway.com/apis/docs).

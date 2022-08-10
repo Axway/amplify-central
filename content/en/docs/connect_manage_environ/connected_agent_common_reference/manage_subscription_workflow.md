@@ -3,12 +3,11 @@ title: Use Discovery Agent to manage subscription workflow
 linkTitle: Use Discovery Agent to manage subscription workflow
 draft: false
 weight: 30
-description: >-
-  A subscription provides the consumer, or subscriber, with the required
-  security and endpoint materials to correctly consume the API.
-
-  The security material and/or quota to access an API is configured inside the Gateway either on the Application (Axway API Manager) or the Usage plan (AWS Gateway) or subscription (Azure Gateway).
 ---
+A subscription provides the consumer, or subscriber, with the required security and endpoint materials to correctly consume the API.
+
+The security material and/or quota to access an API is configured inside the Gateway either on the Application (Axway API Manager) or the Usage plan (AWS Gateway) or subscription (Azure Gateway).
+
 ## Supported use cases when consumer subscribes to an API
 
 ### API Manager use cases

@@ -3,8 +3,7 @@ title: Manage assets using the CLI
 linkTitle: Manage assets using the CLI
 weight: 200
 ---
-
-Learn how to create assets from discovered APIs with the Amplify management plane.
+This topic explains how to create assets from discovered APIs with the Amplify management plane.
 
 ## Before you start
 

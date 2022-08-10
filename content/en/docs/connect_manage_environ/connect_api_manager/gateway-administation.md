@@ -3,9 +3,9 @@ title: Administer API Manager Gateway
 linkTitle: Administer API Manager Gateway
 draft: false
 weight: 25
-description: Learn how to deploy your Discovery Agent and Traceability Agent so
-  that you can manage your Axway API Gateway environment within Amplify Central.
 ---
+This topic explains how to deploy your Discovery Agent and Traceability Agent so you can manage your Axway API Gateway environment within Amplify Central.
+
 ## Before you start
 
 * Read [Amplify Central and Axway API Manager connected overview](/docs/connect_manage_environ/connect_api_manager/)

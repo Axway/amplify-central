@@ -3,13 +3,8 @@ title: Trace sampling
 linkTitle: Trace sampling
 draft: false
 weight: 10
-description: Understand how the Traceability Agent can sample the transaction
-  information that is sent to Amplify Central.  Learn how you can control the
-  sampling by using the sampling configuration.
 ---
-## Objectives
-
-Learn how to set up sampling rules used to send only certain transactions to Amplify Central. With the agent default configuration, all transactions are sent to Amplify Central.
+Traceability Agent can sample the transaction information that is sent to Amplify Central. Learn how to set up sampling rules used to send only certain transactions to Amplify Central. With the agent default configuration, all transactions are sent to Amplify Central.
 
 ## Sampling
 

@@ -2,11 +2,7 @@
 title: Integrate with Amplify Central
 linkTitle: Integrate with Amplify Central
 weight: 300
-description: "What you need to know to try Amplify Central APIs and build your
-  own integrations. "
 ---
-## Introduction
-
 Amplify Central is built using the API-first pattern, then CLI, and lastly UI. Because of this, you can use Amplify Central APIs to build your own integration patterns.
 
 ## Amplify Central APIs definition and usage

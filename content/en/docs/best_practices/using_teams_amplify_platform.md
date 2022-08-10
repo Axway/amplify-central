@@ -3,11 +3,8 @@ title: Using teams in Amplify platform
 linkTitle: Using teams in Amplify platform
 draft: false
 weight: 10
-description: A set of best practices for using teams in the Amplify platform,
-  which will help you to have a global and centralized approach of managing your
-  APIs.
 ---
-Use this information as a guide for setting up your teams in the Amplify platform.
+Use this information as a guide for setting up and using your teams in the Amplify platform, which will provide a global and centralized approach to managing your APIs.
 
 {{< alert title="Note" color="primary" >}}Please note that the team concept is flexible, it can be used for your specific use case.
 {{< /alert >}}

@@ -3,9 +3,9 @@ title: Deploy your agents with Axway CLI
 linkTitle: Deploy your agents with Axway CLI
 draft: false
 weight: 10
-description: Learn how to deploy your agents using Axway CLI so that you can
-  manage your Azure Gateway environment within Amplify Central.
 ---
+This topic explains how to deploy your agents using Axway CLI so you can manage your Azure Gateway environment within Amplify Central.
+
 ## Before you start
 
 * Read [Amplify Central Azure Gateway connected overview](/docs/connect_manage_environ/connect_azure_gateway/)
@@ -13,7 +13,7 @@ description: Learn how to deploy your agents using Axway CLI so that you can
 
     * where the API Service management is located (resource group name / API Management service name)
     * service principal for using to Azure APIs
-    * event hub definition (namespace / name / policy).
+    * event hub definition (namespace / name / policy)
 
 * It is recommended that you have access to the Azure CLI command line to run the necessary setup commands
 

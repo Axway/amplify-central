@@ -2,11 +2,9 @@
 title: Manage your Unified Catalog
 linkTitle: Manage your Unified Catalog
 weight: 500
-description: "Normalize discovery for APIs from multiple gateways, classify your
-  services to support multiple audiences (partners, IT, business), control
-  consumer subscription to access your APIs, and extend your APIs to be reused
-  in other integration flows."
 ---
+This section explains how to normalize discovery for APIs from multiple gateways, classify your services to support multiple audiences (partners, IT, business), control consumer subscription to access your APIs, and extend your APIs to be reused in other integration flows.
+
 Amplify Unified Catalog is a SaaS based service that is part of the Amplify platform management layer, Amplify Central.
 
 Amplify Central and Amplify Unified Catalog work together to provide a common place for all integration assets from all of your distributed gateways through the enterprise. Amplify Unified Catalog enables sophisticated integration ﬂows combining cloud and public on-premise APIs together. Alongside API interfaces, you can find Managed File Transfer (MFT) flows that move data across your enterprise and outside its boundaries.

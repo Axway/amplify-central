@@ -3,11 +3,8 @@ title: Connect AWS Gateway
 linkTitle: Connect AWS Gateway
 weight: 110
 date: 2021-01-04
-description: Understand why you would want a connected / managed environment for
-  AWS API Gateway within Amplify Central. Learn how you can govern and monitor
-  the creation / deployment / publishing and subscriptions of the AWS API
-  Gateway hosted APIs in one central location.
 ---
+This section explains why you would want a connected / managed environment for AWS API Gateway within Amplify Central. Learn how you can govern and monitor the creation / deployment / publishing and subscriptions of the AWS API Gateway hosted APIs in one central location.
 
 ## Why do you want to connect AWS API Gateway and Amplify Central?
 
@@ -50,14 +47,14 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 ## Prerequisites
 
 * An Axway Amplify Central subscription in the Amplify platform
-* A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
+* A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * (Optional) An Amplify Central environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * API Key credentials on AWS. Allow for CLI access
 * Amazon CloudWatch Service
 * Amazon Simple Queue Service (AWS SQS)
 * AWS Lambda
 * CloudFormation template. Download from [https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config](<https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config>)
-* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent).
+* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
 ## Region support
 

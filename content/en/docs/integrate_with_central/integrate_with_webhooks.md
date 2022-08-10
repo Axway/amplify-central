@@ -4,7 +4,7 @@ linkTitle: Set up integrations through Webhooks
 weight: 100
 date: 2019-07-30
 ---
-Learn how you can configure webhooks to receive notifications from Amplify Central.
+This topic explains how to configure webhooks to receive notifications from Amplify Central.
 
 ## Before you start
 

@@ -4,7 +4,7 @@ linkTitle: Manage product plans
 weight: 35
 ---
 
-Product plans are used to monetize the product and define the usage terms.
+This topic explains how to use product plans to monetize the product and define the usage terms.
 
 ## Objectives
 

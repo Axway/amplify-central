@@ -3,8 +3,8 @@ title: Get started with the SaaS API Gateway
 linkTitle: Get started
 weight: 20
 date: 2019-07-30
-description: Learn how to register your first SaaS API in Amplify Central.
 ---
+This topic explains how to register your first SaaS API in Amplify Central.
 
 ## Before you start
 

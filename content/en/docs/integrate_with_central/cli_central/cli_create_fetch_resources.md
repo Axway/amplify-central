@@ -4,8 +4,9 @@ linkTitle: Create and fetch resources with the CLI
 weight: 120
 draft: yes
 date: 2021-01-13T00:00:00.000Z
-description: Creating and fetch different Amplify Central resources using the CLI.
 ---
+This topic explains how to create and fetch different Amplify Central resources using the CLI.
+
 ## Before You Start
 
 * [Install and authenticate yourself via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).

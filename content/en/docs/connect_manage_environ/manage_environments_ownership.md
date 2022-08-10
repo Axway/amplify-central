@@ -2,9 +2,9 @@
 title: Assign an environment owner
 linkTitle: Assign an environment owner
 weight: 5
-description: Learn how to limit access to environments and API Services by
-  assigning an owning team.
 ---
+This topic explains how to limit access to environments and API Services by assigning an owning team.
+
 Within Amplify Central you can configure the environment ownership to provide access to API Services in that environment to a specific team. By assigning an owner, Administrators can delegate full control over the API Services within that environment to the members of the owning team, as further indicated by their user roles. Members outside of the owning team will not be able to view or create API Services or any other resources in that scope.
 
 #### Who can configure the environment ownership?

@@ -3,8 +3,9 @@ title: Use secure credentials in configuration
 linkTitle: Use secure credentials in configuration
 draft: false
 weight: 20
-description: Understand how to secure credentials in the agent configuration by referencing data keys within the secret resource in Central. 
 ---
+This topic explains how to secure credentials in the agent configuration by referencing data keys within the secret resource in Central.
+
 ## Before You Start
 
 * [Install and authenticate yourself via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).

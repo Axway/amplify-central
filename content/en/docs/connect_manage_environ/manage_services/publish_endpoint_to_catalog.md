@@ -3,8 +3,8 @@ title: Publish an endpoint to Unified Catalog
 linkTitle: Publish an endpoint to Unified Catalog
 weight: 40
 date: 2021-02-11
-description: Learn how to publish an API service endpoint to Unified Catalog.
 ---
+This topic explains how to publish an API service endpoint to Unified Catalog.
 
 ## Publish an endpoint to Unified Catalog
 

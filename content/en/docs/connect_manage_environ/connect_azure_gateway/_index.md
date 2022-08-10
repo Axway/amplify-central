@@ -3,13 +3,9 @@ title: Connect Azure Gateway
 linkTitle: Connect Azure Gateway
 weight: 120
 date: 2021-01-07
-description: Understand why you would connect Azure API Management Services to
-  Amplify Central. Learn how you can publish to the Amplify Catalog from your
-  API Management Services in order to obtain a global view of your APIs and
-  present this Catalog to your consumers. Learn how you can collect the traffic
-  of all your gateways and see it in a single place in Amplify Central
-  Observability.
 ---
+This section explains why you would connect Azure API Management Services to Amplify Central. Learn how you can publish to the Amplify Catalog from your API Management Services in order to obtain a global view of your APIs and present this Catalog to your consumers. Learn how you can collect the traffic of all your gateways and see it in a single place in Amplify Central Observability.
+
 ## What is Azure API Management Service connected?
 
 Connect your Azure Management Services to Amplify Central by using two agents: Discovery and Traceability.
@@ -40,8 +36,8 @@ The Traceability Agent sends log information about APIs that have been discovere
 ## Prerequisites
 
 * An Axway Amplify Central subscription in the Amplify Platform
-* (Optional) A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts).
-* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent).
+* (Optional) A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
+* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
 {{< alert title="Note" color="primary" >}}Although both service account types are currently supported, the Amplify Central Service Account will soon be retired. For this reason, it is recommended that you use the Platform Service Account.{{< /alert >}}
 

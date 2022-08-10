@@ -3,11 +3,9 @@ title: Trace redaction
 linkTitle: Trace redaction
 draft: false
 weight: 10
-description: Understand how the Traceability Agent will redact and sanitize
-  information that is sent to Amplify Central.  Learn how you can control the
-  information that is sent to Amplify Central by using the redaction
-  configuration.
 ---
+This topic explains how the Traceability Agent redacts and sanitizes information that is sent to Amplify Central.  Learn how you can control the information that is sent to Amplify Central by using the redaction configuration.
+
 ## Before you start
 
 * Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent.

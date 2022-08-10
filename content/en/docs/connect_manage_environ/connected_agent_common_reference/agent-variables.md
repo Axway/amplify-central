@@ -3,10 +3,8 @@ title: Common agent variables
 linkTitle: Common agent variables
 draft: false
 weight: 40
-description: This section describes, in more detail, variables common to all agents.
 ---
-
-This common agent variable is explained in detail:
+This topic describes, in more detail, the variables common to all agents:
 
 * [CENTRAL_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
 
