@@ -3,8 +3,8 @@ title: Service Mesh Traceability
 linkTitle: Service Mesh Traceability
 weight: 70
 date: 2021-03-03
-description: Observe transactions in mesh.
 ---
+This topic explains how to observe transactions in mesh.
 
 ## Before you begin
 

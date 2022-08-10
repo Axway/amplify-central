@@ -3,10 +3,8 @@ title: Connect Istio Gateway
 linkTitle: Connect Istio Gateway
 weight: 130
 date: 2019-07-30
-description: Understand what Amplify Istio agents are used for, what a hybrid environment is,
-  and how you can monitor the APIs and microservices in a hybrid environment from
-  Amplify Central.
 ---
+This section explains what Amplify Istio agents are used for, what a hybrid environment is, and how you can monitor the APIs and microservices in a hybrid environment from Amplify Central.
 
 ## What is Istio Gateway connected?
 

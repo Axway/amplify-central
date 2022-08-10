@@ -3,9 +3,8 @@ title: Using Red Hat OpenShift
 linkTitle: Using Red Hat OpenShift
 weight: 40
 date: 2021-03-18
-description: Setup a Red Hat OpenShift 4.7+ managed cluster and install Amplify Istio Agents
 ---
-
+This topic explains how to set up a Red Hat OpenShift 4.7+ managed cluster and install Amplify Istio Agents
 The Amplify Istio Agents are compatible with Red Hat® OpenShift® 4.7+ when using Istio 1.9.5.
 
 ## Prerequisites

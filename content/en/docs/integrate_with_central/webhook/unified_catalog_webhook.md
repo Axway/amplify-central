@@ -3,8 +3,7 @@ title: Set a webhook call back to approve or reject API consumer subscriptions f
 linkTitle: Webhooks in the Unified Catalog
 weight: 50
 ---
-
-Learn how you can configure webhooks to receive notifications from Amplify Unified Catalog so that you can implement customized onboarding of API consumers to the Unified Catalog.
+This topic explains how to configure webhooks to receive notifications from Amplify Unified Catalog so that you can implement customized onboarding of API consumers to the Unified Catalog.
 
 ## Before you start
 

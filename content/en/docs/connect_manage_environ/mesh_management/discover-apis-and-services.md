@@ -3,8 +3,8 @@ title: Discover APIs and services
 linkTitle: Discover APIs and services
 weight: 60
 date: 2020-11-19
-description: Learn how to configure the Amplify Istio Agent to discover your APIs and services.
 ---
+This topic explains how to configure the Amplify Istio Agent to discover your APIs and services.
 
 ## Before you begin
 

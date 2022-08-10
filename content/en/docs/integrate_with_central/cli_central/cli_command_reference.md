@@ -3,10 +3,9 @@ title: Axway Central CLI Command reference
 linkTitle: CLI commands reference
 weight: 130
 date: 2021-01-13T00:00:00.000Z
-description: Learn about the different Axway Central CLI commands.
 ---
 
-This section contains the basic commands for creating, fetching, updating, and deleting various Axway API Server assets using the Axway Central CLI. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
+This topic contains the basic commands for creating, fetching, updating, and deleting various Axway API Server assets using the Axway Central CLI. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
 ### The accessibility of resources
 

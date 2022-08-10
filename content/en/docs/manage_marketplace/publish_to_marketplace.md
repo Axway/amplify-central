@@ -4,7 +4,7 @@ linkTitle: Publish to the Marketplace
 weight: 10
 ---
 
-To make a product available for consumption by subscribers, a set of business capabilities is published into the Marketplace, which is the storefront into all products exposed for discovery and consumption by internal and / or external consumers.
+This topic how to make a product available for consumption by subscribers. A set of business capabilities is published into the Marketplace, which is the storefront into all products exposed for discovery and consumption by internal and / or external consumers.
 
 ## Before you start
 

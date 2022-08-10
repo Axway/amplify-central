@@ -3,12 +3,9 @@ title: Install Axway Central CLI
 linkTitle: Install Axway Central CLI
 weight: 90
 date: 2020-05-29T00:00:00.000Z
-description: Learn how to install the Axway CLI core package and Axway Central
-  CLI extension, and authorize them to use the Amplify Central APIs. This
-  enables you to integrate the CLI into your DevOps pipeline.
 ---
 
-{{< alert title="Note" color="primary" >}}This page details installation instructions for the 'Axway Central CLI' package, which replaced the deprecated 'Amplify Central CLI' package.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This topic details installation instructions for the 'Axway Central CLI' package, which replaced the deprecated 'Amplify Central CLI' package.{{< /alert >}}
 
 If you are a current user of the deprecated 'Amplify Central CLI' package, you can uninstall that package by running:
 

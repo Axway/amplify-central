@@ -4,8 +4,7 @@ linkTitle: Register APIs using the CLI
 weight: 200
 draft: yes
 ---
-
-Learn how to register an API with the Amplify management plane using an existing OpenAPI Specification.
+This topic explains how to register an API with the Amplify management plane using an existing OpenAPI Specification.
 
 ## Before you start
 
