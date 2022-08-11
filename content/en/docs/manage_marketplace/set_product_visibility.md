@@ -10,7 +10,7 @@ This topic explains how to expose products for discovery and consumption by inte
 
 ## Before you start
 
-[Publish the product to the Marketplace](/docs/manage_martketplace/publish_to_marketplace/).
+[Publish the product to the Marketplace](/docs/manage_marketplace/publish_to_marketplace/).
 
 ## Objectives
 
