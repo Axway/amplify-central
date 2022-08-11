@@ -4,7 +4,7 @@ linkTitle: Marketplace homepage
 weight: 45
 ---
 
-Configure the Marketplace homepage that greets consumers entering from high-level links with a searh or calls to action and featured content.
+Configure the Marketplace homepage that greets consumers entering from high-level links with a search or calls to action and featured content.
 
 ## Before you start
 
