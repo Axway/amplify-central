@@ -24,14 +24,16 @@ To set the visibility for members that are registered in your provider organizat
 2. Select **Products > All Products**. The product list view is displayed.
 3. Select a product to view its details.
 4. Click **Set Visibility**.
-5. Under **Platform User**, select one of the following options from the **Visible To** menu:
+5. Under **Platform Users**, select one of the following options from the **Visible To** menu:
 
     * **Everyone** - (default) make the product visible to all registered users in your provider organization.
-    * **Selected user** - only members of the selected teams can see the product in the Marketplace:
+    * **Selected teams** - only members of the selected teams can see the product in the Marketplace
+    * **Exclude selected teams** - only members not part of selected teams can see the product in Marketplace
+    * **None** - nobody on arketpalce will be able to see the product
 
-        * From the list of available teams in your provider organization, select the teams you want to give product visibility.
+        * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
 
-## Make product available to Marketplace users
+## Make product available to Marketplace users - COMING SOON
 
 To set the visibility for external consumers:
 
@@ -42,7 +44,8 @@ To set the visibility for external consumers:
 5. Under **Marketplace User**, select one of the following options from the **Visible To** menu:
 
     * **Everyone** - (default) make the product visible to all registered users into your provider organization.
-    * **None** - product will not be shown to any members registered with a Marketplace account or anonymous users.
-    * **Selected user** - product will be visible only to the selected users registered with an account in the Marketplace:
+    * **Selected teams** - product will be visible only to users registered with a marketplace account member of the selected teams
+    * **Exclude selected teams** - product will be visible only to users registered with a marketplace account not member of the selected teams
+    * **None** - product will not be shown to any user registered with a Marketplace account or anonymous users:
 
-        * Select the Marketplace organizations you want to show this product to in the Marketplace
+        * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
