@@ -57,15 +57,15 @@ From the *Homepage* page, click **Configure** to apply an image to the hero back
 2. Select an option to resize the background image. Options are Auto, Cover, Contain, and Stretch.
 3. Select an option to specify the starting position of the background image. Options are:
 
-  * Left top
-  * Left center
-  * Left bottom
-  * Right top
-  * Right center
-  * Right bottom
-  * Center top
-  * Center center
-  * Center bottom
+* Left top
+* Left center
+* Left bottom
+* Right top
+* Right center
+* Right bottom
+* Center top
+* Center center
+* Center bottom
 
 To remove the background image, click **Remove** to revert to the Amplify default values.
 
