@@ -1,9 +1,10 @@
 ---
 title: Manage your subscribers and subscriptions
 linkTitle: Manage your subscribers and subscriptions
-draft: yes
+draft: no
 weight: 20
 ---
+Subscribe to a product to access and consume the product resources.
 
 ## Before you start
 
