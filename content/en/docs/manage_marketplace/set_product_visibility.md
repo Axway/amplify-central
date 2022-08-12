@@ -6,7 +6,7 @@ weight: 15
 
 {{< alert title="Note" color="primary" >}}Functionality coming soon.{{< /alert >}}
 
-This topic explains how to expose products for discovery and consumption by internal and / or external consumers by setting the visibility of the product in the Marketplace.
+Expose products for discovery and consumption by internal and / or external consumers by setting the visibility of the product in the Marketplace.
 
 ## Before you start
 
@@ -26,10 +26,10 @@ To set the visibility for members that are registered in your provider organizat
 4. Click **Set Visibility**.
 5. Under **Platform Users**, select one of the following options from the **Visible To** menu:
 
-    * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization
-    * **Selected teams** - only members of the selected teams can see the product in the Marketplace
-    * **Exclude selected teams** - only members that are not part of selected teams can see the product in the Marketplace
-    * **None** - the product is not visible to anyone in the Marketplace
+    * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
+    * **Selected teams** - only members of the selected teams can see the product in the Marketplace.
+    * **Exclude selected teams** - only members that are not part of selected teams can see the product in the Marketplace.
+    * **None** - the product is not visible to anyone in the Marketplace.
 
         * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
 
@@ -38,14 +38,14 @@ To set the visibility for members that are registered in your provider organizat
 To set the visibility for external consumers:
 
 1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**. The product list view is displayed.
+2. Select **All Products**. The product list view is displayed.
 3. Select a product to view its details.
 4. Click **Set Visibility**.
 5. Under **Marketplace User**, select one of the following options from the **Visible To** menu:
 
-    * **Everyone** - (default) make the product visible to all registered users into your provider organization.
-    * **Selected teams** - product will be visible only to users registered with a marketplace account member of the selected teams
-    * **Exclude selected teams** - product will be visible only to users registered with a marketplace account not member of the selected teams
-    * **None** - product will not be shown to any user registered with a Marketplace account or anonymous users:
+    * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
+    * **Selected teams** - only users registered with a Marketplace account and a member of the selected teams can see the product in the Marketplace.
+    * **Exclude selected teams** - only users registered with a Marketplace account and not a member of the selected teams can see the product in the Mrketplace.
+    * **None** - the product is not visible to any user registered with a Marketplace account or anonymous users.
 
         * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
