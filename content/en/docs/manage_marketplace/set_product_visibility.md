@@ -21,7 +21,7 @@ Learn how to control the visibility of the product in the Marketplace.
 To set the visibility for members that are registered in your provider organization:
 
 1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**. The product list view is displayed.
+2. Select **All Products**. The product list view is displayed.
 3. Select a product to view its details.
 4. Click **Set Visibility**.
 5. Under **Platform Users**, select one of the following options from the **Visible To** menu:
