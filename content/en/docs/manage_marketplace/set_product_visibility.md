@@ -26,7 +26,7 @@ To set the visibility for members that are registered in your provider organizat
 4. Click **Set Visibility**.
 5. Under **Platform Users**, select one of the following options from the **Visible To** menu:
 
-    * **Everyone** - (default) make the product visible to all registered users in your provider organization.
+    * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization
     * **Selected teams** - only members of the selected teams can see the product in the Marketplace
     * **Exclude selected teams** - only members not part of selected teams can see the product in Marketplace
     * **None** - nobody on arketpalce will be able to see the product
