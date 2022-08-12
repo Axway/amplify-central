@@ -28,7 +28,7 @@ To set the visibility for members that are registered in your provider organizat
 
     * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization
     * **Selected teams** - only members of the selected teams can see the product in the Marketplace
-    * **Exclude selected teams** - only members not part of selected teams can see the product in Marketplace
+    * **Exclude selected teams** - only members that are not part of selected teams can see the product in the Marketplace
     * **None** - nobody on arketpalce will be able to see the product
 
         * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
