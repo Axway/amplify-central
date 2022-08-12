@@ -4,8 +4,6 @@ linkTitle: Set product visibility
 weight: 15
 ---
 
-{{< alert title="Note" color="primary" >}}Functionality coming soon.{{< /alert >}}
-
 Expose products for discovery and consumption by internal and / or external consumers by setting the visibility of the product in the Marketplace.
 
 ## Before you start
