@@ -4,7 +4,7 @@ linkTitle: Discover and consume catalog assets
 weight: 20
 date: 2019-12-16T00:00:00.000Z
 ---
-This topic explains how to discover and consume assets in Amplify Unified Catalog. Assets can be REST APIs, SOAP APIs, other non-REST APIs (for example, gRPC, Avro, graphQL), MFT services, and custom catalog assets.
+Discover and consume assets in Amplify Unified Catalog. Assets can be REST APIs, SOAP APIs, other non-REST APIs (for example, gRPC, Avro, graphQL), MFT services, and custom catalog assets.
 
 ## Find a catalog asset
 

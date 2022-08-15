@@ -4,7 +4,7 @@ linkTitle: Integrate with API / CLI
 weight: 30
 ---
 
-This topic explains how to manually register an API with the Amplify Management Plane using an existing OpenAPI Specification so that it appears in the Service Registry.
+Manually register an API with the Amplify Management Plane using an existing OpenAPI Specification so that it appears in the Service Registry.
 
 ## Before you start
 

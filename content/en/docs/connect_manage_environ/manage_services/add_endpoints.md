@@ -4,7 +4,7 @@ linkTitle: Add an endpoint to API service
 weight: 30
 date: 2021-02-22
 ---
-This topic explains how to add endpoints to an API service.
+Add endpoints to an API service.
 
 ## Add an endpoint to an API service
 

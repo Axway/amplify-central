@@ -3,7 +3,7 @@ title: Manage your Unified Catalog
 linkTitle: Manage your Unified Catalog
 weight: 500
 ---
-This section explains how to normalize discovery for APIs from multiple gateways, classify your services to support multiple audiences (partners, IT, business), control consumer subscription to access your APIs, and extend your APIs to be reused in other integration flows.
+Normalize discovery for APIs from multiple gateways, classify your services to support multiple audiences (partners, IT, business), control consumer subscription to access your APIs, and extend your APIs to be reused in other integration flows.
 
 Amplify Unified Catalog is a SaaS based service that is part of the Amplify platform management layer, Amplify Central.
 

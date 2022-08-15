@@ -4,7 +4,7 @@ linkTitle: Rate limit an API
 weight: 70
 date: 2019-09-19
 ---
-This topic explains how to apply a rate limit configuration to your API.
+Apply a rate limit configuration to your API.
 
 ## Before you start
 

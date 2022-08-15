@@ -4,7 +4,7 @@ linkTitle: Reference - Agent configuration
 draft: false
 weight: 30
 ---
-This topic explains how to use variables to control your Discovery and Traceability agents.
+Use variables to control your Discovery and Traceability agents.
 
 As the Discovery and Traceability agents share many parameters, it is more efficient to use environment variables and reference these parameters, instead of declaring parameters twice.
 

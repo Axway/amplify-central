@@ -4,7 +4,7 @@ linkTitle: Back-end TLS authentication
 weight: 60
 date: 2019-10-16
 ---
-This topic explains how to configure TLS for requests to your back-end API.
+Configure TLS for requests to your back-end API.
 
 ## Before you start
 

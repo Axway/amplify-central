@@ -4,7 +4,7 @@ linkTitle: Get started
 weight: 20
 date: 2019-07-30
 ---
-This topic explains how to register your first SaaS API in Amplify Central.
+Register your first SaaS API in Amplify Central.
 
 ## Before you start
 

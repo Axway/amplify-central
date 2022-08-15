@@ -5,7 +5,7 @@ weight: 130
 date: 2021-01-13T00:00:00.000Z
 ---
 
-This topic contains the basic commands for creating, fetching, updating, and deleting various Axway API Server assets using the Axway Central CLI. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
+Use Axway Central CLI basic commands for creating, fetching, updating, and deleting various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
 ### The accessibility of resources
 

@@ -5,7 +5,7 @@ weight: 200
 date: 2020-05-29T00:00:00.000Z
 hide_readingtime: true
 ---
-This section explains how to get started with the Axway Central CLI to support a DevOps approach to API Management.
+Get started with the Axway Central CLI to support a DevOps approach to API Management.
 
 ## What is the Axway Central CLI
 

@@ -4,7 +4,7 @@ linkTitle: Manage product plans
 weight: 35
 ---
 
-This topic explains how to use product plans to monetize the product and define the usage terms.
+Monetize the product and define the usage terms by using product plans.
 
 ## Objectives
 

@@ -3,7 +3,7 @@ title: Create a product and promote it to the Marketplace
 linkTitle: Create a product and promote it to the Marketplace
 weight: 250
 ---
-This topic explains how to create a product from an existing asset and make it available in the marketplace for consumption.
+Create a product from an existing asset and make it available in the marketplace for consumption.
 
 ## Before you start
 

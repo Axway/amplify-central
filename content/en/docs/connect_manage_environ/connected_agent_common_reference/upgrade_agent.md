@@ -4,7 +4,7 @@ linkTitle: Upgrade an agent
 draft: false
 weight: 20
 ---
-This topic explains how to upgrade your existing agent installation.
+Upgrade your existing agent installation.
 
 ## Before you start
 

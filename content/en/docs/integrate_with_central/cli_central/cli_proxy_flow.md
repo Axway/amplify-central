@@ -4,7 +4,7 @@ linkTitle: Manage an Axway SaaS Gateway API proxy
 weight: 100
 date: 2020-06-01T00:00:00.000Z
 ---
-This topic explains how your DevOps service can use Axway Central CLI to manage your Axway SaaS Gateway API proxies.
+Manage your Axway SaaS Gateway API proxies with Axway Central CLI.
 
 ## Before you start
 

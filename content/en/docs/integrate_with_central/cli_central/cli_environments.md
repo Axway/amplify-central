@@ -4,7 +4,7 @@ linkTitle: Build an environment
 weight: 110
 date: 2020-06-10T00:00:00.000Z
 ---
-This topic explains how your DevOps process can use Axway Central CLI to build and manage your environments.
+Build and manage your environments with Axway Central CLI.
 
 ## Before you start
 

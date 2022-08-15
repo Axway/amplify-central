@@ -4,7 +4,7 @@ linkTitle: Authenticate an API secured with OAuth
 weight: 40
 date: 2020-04-28T00:00:00.000Z
 ---
-This topic explains how to authenticate an API secured with OAuth credentials, which was published from an external gateway.
+Authenticate an API secured with OAuth credentials, which was published from an external gateway.
 
 The Unified Catalog allows you to test OAS2 and OAS3 API's methods from the browser. The current support for testing APIs published from an external gateway from the browser includes APIs secured with an API key, JWT authentication, and no authentication at all. At this time, it is not possible to test OAuth methods from the catalog in the browser, we recommend you use a tool like Postman for testing your external gateway APIs with OAuth. You may still publish APIs secured with OAuth to the Unified Catalog. To learn more, see [Authorizing requests](https://learning.postman.com/docs/postman/sending-api-requests/authorization/#oauth-20).
 

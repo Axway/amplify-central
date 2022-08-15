@@ -4,7 +4,7 @@ linkTitle: Manage catalog assets
 weight: 110
 date: 2020-06-03
 ---
-This topic explains how to edit the details of your catalog assets and how to share the assets with teams in your organization. You can also group catalog assets by assigning them to categories.
+Edit the details of your catalog assets and how to share the assets with teams in your organization. You can also group catalog assets by assigning them to categories.
 
 ## Edit a catalog asset
 

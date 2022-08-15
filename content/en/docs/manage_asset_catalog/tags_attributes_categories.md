@@ -3,7 +3,7 @@ title: Tags, Attributes and Categories
 linkTitle: Tags, Attributes and Categories
 weight: 40
 ---
-This topic explains how to use tags, attributes, and categories to edit the details of your assets. This can make the curation and organization of assets more valuable.
+Edit the details of your assets with tags, attributes, and categories. This can make the curation and organization of assets more valuable.
 
 ## Add or remove tags
 
