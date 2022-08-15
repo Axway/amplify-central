@@ -30,54 +30,64 @@ All Marketplace branding changes are made from the Marketplace *Appearance* page
 
     ![Marketplace appearance](/Images/marketplace/marketplace_appearance.png)
 
-To revert branding changes, select either:
-
-* **Reset to Amplify Platform defaults** - resets to default values.
-* **Reset** - resets the changes to the previous values.
-
 ### Change the logo and favicon
 
 From the *Appearance* page, click **Choose file** in either the Logo or the Favicon section to upload an icon from your local computer.
 
-* Acceptable file formats include JPEG, PNG and GIF.
-* The file must be less than 500MB.
+* **Logo** - acceptable file formats are PNG, GIF or JPG and the file must be less than 500KB.
+* **Favicon** - acceptable file formats are ICO or PNG and the file must be less than 100KB.
 
 A preview of the selected logo / favicon is displayed:
 
-![Icon preview](/Images/marketplace/marketplace_defaulticons.png)
+![Logo and Favicon preview](/Images/marketplace/marketplace_logo.png)
 
 To remove the logo or favicon image, click **Remove** to revert to the Amplify default values.
 
 ### Change the color theme
 
-From the *Appearance* page, click **Configure** in the Theme section to change the Marketplace colors and theming. The Theme settings are displayed:
+From the *Appearance* page, click **Configure** in the Theme section to change the Marketplace colors and theming to match your brand. The Theme settings are displayed:
 
-![Icon preview](/Images/marketplace/marketplace_colortheme.png)
+![Color theme preview](/Images/marketplace/marketplace_colortheme.png)
 
-Under **Default Colors**, you can configure and preview:
+Under **Brand Colors**, you can configure and preview:
 
-* **Text** - color used for the page text.
-* **Background** - color of the main Marketplace screens. This setting does not apply to the Product Card elements.
-* **Link** - color applied to clickable text on the Marketplace screens.
+* **Primary** - colors used for icons, card titles, tab menu links (hover and active), and call to action (CTA) buttons.
+* **Secondary** - color for the hero banner.
+* **Tertirary** - color for the product banner.
+* **Black** - color used for page text.
+* **Background** - color of the main Marketplace screens. This setting does not apply to the card elements.
 
-Under **Elements Colors**, you can customize and preview:
+Under **Semantic Colors**, you can configure and preview:
 
-* Product Cards:
+* Alerts, messaging, and common UI patterns:
 
-    * **Card Title** - color of the card title.
-    * **Card Background** - color applied to all card elements in the Marketplace.
-    * **Card Boarders** - color applied to card boarders of all card elements in the Marketplace.
+    * **Success** - color used for the success state icon.
+    * **Danger** - color used for the danger state icon.
+    * **Warning** - color used for the warning state icon.
+    * **Info** - color used for the info state icon.
 
-* Product Details banner and Call to Actions buttons:
+Under **Element Colors**, you can customize and preview:
 
-    * **Heading Background** - color of the heading block displayed on the *Product Details* page.
-    * **Heading Title** - color of the product title on the *Product Details* page.
-    * **CTA button** - color of the buttons displayed in the heading section, such as **Documentation** and **Subscribe**.
-    * **CTA button text** - color of the CTA button text.
+* Product details banner:
 
-* Default icons:
+    * **Heading Titles** - color used for page titles, section titles, and title text.
+    * **Heading Backgrounds** - color used for the heading block.
 
-    * **Icon** - color of the default icons.
+* Cards:
+
+    * **Card Titles** - color of the card titles.
+    * **Card Backgounds** - color applied to all card background.
+    * **Card Borders** - color applied to card borders of all card elements in the Marketplace.
+
+* Links and icons:
+
+    * **Links** - color applied to clickable text on the Marketplace screens.
+    * **Icons** -  color applied to icons next to clickable text on the Marketplace screens.
+
+* Call to Action buttons:
+
+    * **CTA Button** - color of the buttons displayed in the heading section, such as **View** and **Subscribe**.
+    * **CTA Button Text** - color of the CTA button text.
 
 ### Change the fonts
 
@@ -115,3 +125,10 @@ See [APIs](https://platform.axway.com/api-docs.html#operation/provider_providerF
 | Get Marketplace settings    | /provider (GET)  |
 | Set Marketplace settings    | /provider (POST) |
 | Update Marketplace settings | / provider (PUT) |
+
+## Revert changes
+
+To revert branding changes, select either:
+
+* **Reset to Amplify Platform defaults** - resets to default values.
+* **Reset** - resets the changes to the previous values.
