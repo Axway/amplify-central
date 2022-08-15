@@ -23,8 +23,6 @@ The Marketplace homepage changes are made from the Marketplace *Homepage* page:
 
     ![Marketplace homepage](/Images/marketplace/marketplace_homepage.png)
 
-To revert changes to the previous values, click **Reset**.
-
 ## Show or hide the Marketplace homepage
 
 From the *Homepage* page, click the toggle button to **Hide** or **Show** the Marketplace homepage. When enabled (Show is selected) the Hero Banner and Featured Content sections are displayed.
@@ -70,3 +68,7 @@ From the *Homepage* page, select an option to showcase featured categories, feat
 * **Alphabetical** - products of categories sorted alphabetically.
 * **Most popular** - sorted by most subscriptions.
 * **Most recent** - sorted by created date with most recent first.
+
+## Revert changes
+
+To revert changes to the previous values, click **Reset**.
