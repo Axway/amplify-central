@@ -4,7 +4,7 @@ linkTitle: Manage subscriptions
 weight: 130
 date: 2019-12-16T00:00:00.000Z
 ---
-This topic explains how to manage your Amplify Unified Catalog subscriptions. Learn how subscriptions work in Amplify Unified Catalog, and configure a custom subscription workflow.
+Manage your Amplify Unified Catalog subscriptions. Learn how subscriptions work in Amplify Unified Catalog, and configure a custom subscription workflow.
 
 ## How subscriptions work
 

@@ -4,7 +4,7 @@ linkTitle: Use Traceability Agent to report Gateway usage
 draft: false
 weight: 10
 ---
-This topic explains how the Traceability Agent reports the Gateway usage to Amplify platform.
+The Traceability Agent reports the Gateway usage to Amplify platform. Learn how to configure the Traceability Agent to report usage data.
 
 ## Before you start
 

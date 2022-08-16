@@ -4,7 +4,7 @@ linkTitle: Trace redaction
 draft: false
 weight: 10
 ---
-This topic explains how the Traceability Agent redacts and sanitizes information that is sent to Amplify Central.  Learn how you can control the information that is sent to Amplify Central by using the redaction configuration.
+The Traceability Agent redacts and sanitizes information that is sent to Amplify Central.  Learn how you can control the information that is sent to Amplify Central by using the redaction configuration.
 
 ## Before you start
 

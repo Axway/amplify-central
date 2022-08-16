@@ -4,7 +4,7 @@ linkTitle: Administer agent security
 draft: false
 weight: 40
 ---
-This topic describes the main security features of the agents.
+The main security features of the agents are described here.
 
 ## Information security
 

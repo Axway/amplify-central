@@ -4,7 +4,7 @@ linkTitle: Add an API Service
 weight: 20
 date: 2021-02-09
 ---
-This topic explains how to create an API service asset on your environment.
+Create an API service asset on your environment.
 
 ## Add an API service
 

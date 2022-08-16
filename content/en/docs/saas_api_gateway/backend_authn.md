@@ -4,7 +4,7 @@ linkTitle: Configure back-end authentication
 weight: 50
 date: 2019-07-30
 ---
-This topic explains how to configure back-end authentication for an API.
+Configure back-end authentication for an API.
 
 ## Before you start
 

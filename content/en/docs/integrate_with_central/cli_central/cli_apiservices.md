@@ -5,7 +5,7 @@ weight: 110
 draft: yes
 date: 2021-01-13T00:00:00.000Z
 ---
-This topic explains how your DevOps process can use Axway Central CLI to build and manage API services in your environments.
+Build and manage API services in your environments with Axway Central CLI.
 
 ## Before you start
 

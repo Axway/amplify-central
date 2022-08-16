@@ -4,7 +4,7 @@ linkTitle: Concepts
 weight: 10
 date: 2019-07-30T00:00:00.000Z
 ---
-This topic explains the fundamental SaaS API Gateway concepts you will encounter in Amplify Central.
+The fundamental SaaS API Gateway concepts you will encounter in Amplify Central.
 
 ## API and API proxy
 

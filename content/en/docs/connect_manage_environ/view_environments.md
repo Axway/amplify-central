@@ -4,9 +4,9 @@ linkTitle: View your environments
 weight: 10
 date: 2020-12-14
 ---
-The environments page contains all of your environments in a searchable and sortable list. This list contains:
+Display your environments in a searchable and sortable list. The list contains:
 
-* Axway Cloud SaaS environment
+* Axway Cloud SaaS environments
 * Environments using the API service model:
 
     * AWS Gateway environments

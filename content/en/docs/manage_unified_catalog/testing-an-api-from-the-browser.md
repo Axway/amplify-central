@@ -3,7 +3,7 @@ title: Test an API from the browser
 linkTitle: Test an API from the browser
 weight: 140
 ---
-This topic explains how to explore the API documentation and test an API from the browser using the built-in test capability.
+Explore the API documentation and test an API from the browser using the built-in test capability.
 
 Unified Catalog has an built-in testing tool that allows you to explore the list of API endpoints and their related documentation, and test the API methods directly in the browser. It is built over the official Swagger.io and supports both OAS2 and OAS3 specifications.
 

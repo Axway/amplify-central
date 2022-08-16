@@ -4,7 +4,7 @@ linkTitle: Use secure credentials in configuration
 draft: false
 weight: 20
 ---
-This topic explains how to secure credentials in the agent configuration by referencing data keys within the secret resource in Central.
+Secure credentials in the agent configuration by referencing data keys within the secret resource in Central.
 
 ## Before You Start
 
