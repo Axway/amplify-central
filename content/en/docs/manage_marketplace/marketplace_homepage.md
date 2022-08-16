@@ -40,12 +40,16 @@ From the *Homepage* page, click **Configure** in the Hero Content section to cha
 * **Message** - your hero banner message.
 * **Position** - the position to place the hero banner content.
 
+Close the Hero Content pop out, and then click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+
 ### Change the background color
 
 From the *Homepage* page, select a solid or gradient option for the hero background color. Make sure your text remains legible and meets accessibility requirements.
 
 * **Solid** - one solid color is used for the background. When selected, configure one background color.
 * **Gradient** - two colors are used for the background. When selected, configure the start color, end color, and direction for the gradient.
+
+Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
 
 ### Change the background image
 
@@ -59,7 +63,7 @@ From the *Homepage* page, click **Configure** to apply an image to the hero back
     * **Stretch** - expands or shrinks both dimensions to fill the area.
 * **Background Position** - the starting position of the background image.
 
-To remove the background image, click **Remove** to revert to the Amplify default values.
+In the Configure pop out, click **Remove** to remove the background image.
 
 ## Customize the featured content
 
@@ -69,6 +73,4 @@ From the *Homepage* page, select an option to showcase featured categories, feat
 * **Most popular** - sorted by most subscriptions.
 * **Most recent** - sorted by created date with most recent first.
 
-## Revert changes
-
-To revert changes to the previous values, click **Reset**.
+Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.

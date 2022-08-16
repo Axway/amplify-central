@@ -41,7 +41,7 @@ A preview of the selected logo / favicon is displayed:
 
 ![Logo and Favicon preview](/Images/marketplace/marketplace_logo.png)
 
-To remove the logo or favicon image, click **Remove** to revert to the Amplify default values.
+Click **Remove** to remove the logo or favicon image.
 
 ### Change the color theme
 
@@ -89,6 +89,8 @@ Under **Element Colors**, you can customize and preview:
     * **CTA Button** - color of the buttons displayed in the heading section, such as **View** and **Subscribe**.
     * **CTA Button Text** - color of the CTA button text.
 
+Click **Reset to Amplify Platform defaults** to reset the colors to the default values.
+
 ### Change the fonts
 
 From the *Appearance* page, click **Configure** in the Fonts section to change and preview the Marketplace fonts. The font settings are displayed:
@@ -96,12 +98,16 @@ From the *Appearance* page, click **Configure** in the Fonts section to change a
 * **Font family** - the font set to display text. You can choose an existing font or add your own font.
 * **Kerning** - adjust the spacing between characters.
 
+Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+
 ### Change the buttons appearance
 
 From the *Appearance* page, click **Configure** in the Buttons section to change and preview the Marketplace buttons. The buttons settings are displayed:
 
 * **Button format** - the format of the button: Solid or Outline.
 * **Button radius** - the button radius: Square, Rounded or Round.
+
+Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
 
 ### Customize the help menu
 
@@ -125,10 +131,3 @@ See [APIs](https://platform.axway.com/api-docs.html#operation/provider_providerF
 | Get Marketplace settings    | /provider (GET)  |
 | Set Marketplace settings    | /provider (POST) |
 | Update Marketplace settings | / provider (PUT) |
-
-## Revert changes
-
-To revert branding changes, select either:
-
-* **Reset to Amplify Platform defaults** - resets to default values.
-* **Reset** - resets the changes to the previous values.
