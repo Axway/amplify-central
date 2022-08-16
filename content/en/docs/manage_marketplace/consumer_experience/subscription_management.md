@@ -4,7 +4,7 @@ linkTitle: Subscription management
 weight: 10
 ---
 
-Consumers can create new subscriptions and manage existing subscriptions from the Marketplace.
+Create new subscriptions and manage existing subscriptions from the Marketplace.
 
 ## What is a subscription
 

@@ -4,7 +4,7 @@ linkTitle: Credential management
 weight: 35
 ---
 
-Consumers can manage their subscriptions credentials from the Marketplace.
+Manage your subscriptions credentials from the Marketplace.
 
 ## What are credentials
 

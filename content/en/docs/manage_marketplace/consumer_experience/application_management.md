@@ -4,7 +4,7 @@ linkTitle: Application management
 weight: 30
 ---
 
-Consumers can manage their applications from the Marketplace, including create, view and delete applications. Consumers can also view issued credentials that enable him to consume the product resources, request new credentials and delete existing credential.
+Manage your applications from the Marketplace, including create, view and delete applications. View issued credentials that enable you to consume the product resources, request new credentials and delete existing credential.
 
 ## What is an application
 
