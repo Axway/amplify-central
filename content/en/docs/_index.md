@@ -7,7 +7,7 @@ menu:
   main:
     weight: 20
 ---
-This website contains the entire documentation set for Amplify Central. 
+This website contains the entire documentation set for Amplify Central.
 
 ## Amplify Central documentation
 

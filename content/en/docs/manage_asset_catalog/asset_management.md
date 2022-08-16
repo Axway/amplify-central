@@ -4,7 +4,7 @@ linkTitle: Asset management
 weight: 20
 ---
 
-Manage your assets, including: view, create, activate, deprecate and archive, with the Asset Catalog WebUI. 
+Manage your assets, including: view, create, activate, deprecate and archive, with the Asset Catalog WebUI.
 
 ## Before you start
 
