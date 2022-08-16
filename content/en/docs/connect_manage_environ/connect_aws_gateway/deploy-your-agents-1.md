@@ -4,7 +4,7 @@ linkTitle: Reference - Agent configuration
 draft: false
 weight: 50
 ---
-This topic explains how to deploy your Discovery Agent and Traceability Agent using Docker containers so that you can manage  your AWS API Gateway environment within Amplify Central.
+Deploy your Discovery Agent and Traceability Agent using Docker containers so that you can manage  your AWS API Gateway environment within Amplify Central.
 
 Once agents are correctly deployed, they can collect the data from the AWS API Gateway and send it securely to Amplify Central.
 

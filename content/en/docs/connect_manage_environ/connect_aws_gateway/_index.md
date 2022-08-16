@@ -4,7 +4,7 @@ linkTitle: Connect AWS Gateway
 weight: 110
 date: 2021-01-04
 ---
-This section explains why you would want a connected / managed environment for AWS API Gateway within Amplify Central. Learn how you can govern and monitor the creation / deployment / publishing and subscriptions of the AWS API Gateway hosted APIs in one central location.
+Connect AWS API Gateway and Amplify Central so you can govern and monitor the creation / deployment / publishing and subscriptions of the AWS API Gateway hosted APIs in one central location.
 
 ## Why do you want to connect AWS API Gateway and Amplify Central?
 

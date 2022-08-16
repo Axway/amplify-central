@@ -4,7 +4,7 @@ linkTitle: Product management
 weight: 20
 ---
 
-This topic explains how to use the Product Foundry UI to manage your products, including create, activate a release, edit, delete, monetize, deprecate, and archive products.
+Manage your products, including: create, activate a release, edit, delete, monetize, deprecate, and archive, with the Product Foundry UI.
 
 ## Before you start
 

@@ -4,7 +4,10 @@ linkTitle: Connect Azure Gateway
 weight: 120
 date: 2021-01-07
 ---
-This section explains why you would connect Azure API Management Services to Amplify Central. Learn how you can publish to the Amplify Catalog from your API Management Services in order to obtain a global view of your APIs and present this Catalog to your consumers. Learn how you can collect the traffic of all your gateways and see it in a single place in Amplify Central Observability.
+Connect Azure API Management Services to Amplify Central so you can:
+
+* Publish to the Amplify Catalog from your API Management Services in order to obtain a global view of your APIs and present this Catalog to your consumers
+* Collect the traffic of all your gateways and see it in a single place in Amplify Central Observability
 
 ## What is Azure API Management Service connected?
 

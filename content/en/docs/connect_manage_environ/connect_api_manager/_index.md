@@ -4,11 +4,10 @@ linkTitle: Connect API Manager
 weight: 100
 date: 2020-15-15
 ---
-This section explains:
+Connect Axway API Manager to Amplify Central so you can:
 
-* Why you would connect Axway API Manager to Amplify Central
-* How to publish to the Amplify Catalog from your API Management System in order to obtain a global view of your APIs and present this Catalog to your consumers
-* How to collect the traffic of all your gateways and see it in a single place in Amplify Central Observability
+* Publish to the Amplify Catalog from your API Management System in order to obtain a global view of your APIs and present this Catalog to your consumers
+* Collect the traffic of all your gateways and see it in a single place in Amplify Central Observability
 
 ## What is Axway API Manager connected?
 

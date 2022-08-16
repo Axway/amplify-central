@@ -5,7 +5,7 @@ weight: 250
 draft: yes
 ---
 
-The information in section helps you to get started using Amplify Central.
+Get started using Amplify Central.
 
 ## Prerequisites
 

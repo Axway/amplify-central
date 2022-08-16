@@ -4,7 +4,7 @@ linkTitle: Get help with Connected AWS Gateway
 draft: false
 weight: 55
 ---
-This topic provides troubleshooting and error codes that you may encounter while working with the connected managed environment for AWS API Gateway within Amplify Central.
+Troubleshooting and error codes that you may encounter while working with the connected managed environment for AWS API Gateway within Amplify Central.
 
 ## Troubleshooting
 

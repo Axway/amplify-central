@@ -4,7 +4,7 @@ linkTitle: Product Tags, Attributes and Categories
 weight: 40
 ---
 
-This topic explains how to use tags, attributes, and categories to edit the details of your products. This can make the curation and organization of products more valuable.
+Edit the details of your products using tags, attributes, and categories. This can make the curation and organization of products more valuable.
 
 Tags, attributes, and categories are set at the product level, meaning all releases of the product will always look similar. The tags, attributes and categories can be updated any time and do not require a new release of the product.
 

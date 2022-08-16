@@ -4,7 +4,7 @@ linkTitle: Secure an API with JWT
 weight: 30
 date: 2019-07-30
 ---
-This topic explains how to secure your API using a JWT token.
+Secure your API using a JWT token.
 
 ## Before you start
 

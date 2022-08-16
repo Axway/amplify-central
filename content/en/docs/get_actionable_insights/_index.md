@@ -4,7 +4,7 @@ linkTitle: Get actionable insights
 weight: 525
 date: 2022-02-04
 ---
-This topic explains how to get insights about your API program, API environments, and APIs.
+Get insights about your API program, API environments, and APIs.
 
 ## Business Insights dashboards
 
