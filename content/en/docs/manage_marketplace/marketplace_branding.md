@@ -4,7 +4,7 @@ linkTitle: Marketplace appearance
 weight: 40
 ---
 
-This topic explains how to adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The platform administrator may choose to use the Marketplace WebUI or API to change the settings.
+Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The platform administrator may choose to use the Marketplace WebUI or API to change the settings.
 
 Standard custom branding capabilities include:
 
