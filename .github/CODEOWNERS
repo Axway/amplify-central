@@ -65,7 +65,7 @@
 /content/en/docs/manage_service_registry/ @lbadenhop @robertengaxway
 
 # Documentation files for Connect and Manage environments
-/content/en/docs/connect_manage_environ/ @lbadenhop @mpatiaxway
+/content/en/docs/connect_manage_environ/ @lbadenhop @robertengaxway
 
 # The `docs/*` pattern will match files like
 # `docs/getting-started.md` but not further nested files like
