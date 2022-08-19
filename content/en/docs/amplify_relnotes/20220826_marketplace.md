@@ -1,6 +1,6 @@
 ---
-title: Marketplace: August 26th 2022
-linkTitle: Marketplace: August 26th 2022
+title: Marketplace August 26th 2022
+linkTitle: Marketplace August 26th 2022
 weight: 90
 date: 2022-08-19
 ---

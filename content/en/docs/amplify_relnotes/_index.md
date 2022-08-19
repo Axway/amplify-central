@@ -14,22 +14,22 @@ This page displays the link to the Support Policy for Amplify Agents/SDK, and br
 
 For more details, click on the release note title to go to the corresponding release note.
 
-For Administration Release Notes [click here](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html).
+To view the *Administration Release Notes* [click here](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html).
 
-## Support Policy for Amplify Agents and Amplify Agent SDK [(click here)](/docs/amplify_relnotes/agent_agentsdk_support_policy/)
+To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## Marketplace: August 26, 2022 [(click here)](/docs/amplify_relnotes/20220826_marketplace/)
+## [Marketplace August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
 
 ### Agents
 
 #### What's new
 
-* **Axway API Management** (7.6.2 SPx and 7.7 SPx): Add text
-* **AWS Gateway** (SDK 2.0): Add text
+* **Axway API Management** (7.6.2 SPx and 7.7 SPx): No updates
+* **AWS Gateway** (SDK 2.0): No Updates
 * **Azure** (latest release): Consumer insights metrics
-* **Istio** (1.9.5): Add text
-* **Apigee** (): Add text
-* **Mulesoft Anypoint platform** (v3): Add text
+* **Istio** (1.9.5): No updates
+* **Apigee** (): No updates
+* **Mulesoft Anypoint platform** (v3): No updates
 
 #### Bug fixes
 
