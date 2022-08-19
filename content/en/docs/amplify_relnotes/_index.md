@@ -7,10 +7,10 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-This page displays the link to the Support Policy for Amplify Agents/SDK, and brief summaries of feature updates and bug fixes for Amplify Marketplace, including: 
+This page displays brief summaries of feature updates and bug fixes for each release of Amplify Marketplace, including: 
 
-* Provider experience: Agents, Service Registry, Asset Catalog, Product Foundry, Business Insights
-* Consumer experience: Marketplace, Consumer Insights
+* Provider experience: Agents, Service Registry, Asset Catalog, Product Foundry, Business insights
+* Consumer experience: Marketplace, Consumer insights
 
 For more details, click on the release note title to go to the corresponding release note.
 
