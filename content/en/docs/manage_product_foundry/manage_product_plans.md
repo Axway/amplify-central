@@ -120,7 +120,7 @@ To configure a quota for a paid plan, enter values for the following properties:
     * Standard quota type has the same information as for the free plan (Unit, Limit, Quota type, Limit type)
     * Tiered quota type: for each tier, you need to enter the **lower limit**, the **upper limit** the **unit price** and the **Standard** fees. There is no limit in the tier number. The **+** button enables to add another tier and the **-** button enables to remove a tier definition. The lower limit a the next tier is automatically computed based the the upper limit of previous tier.
 
-The + Add Quota button allows to create another quota group for different resources. Once a resources is assigned to a quota group, it is no more avialble for another quota group.
+The **+ Add Quota** button allows to create another quota group for different resources. Once a resources is assigned to a quota group, it is no more avialble for another quota group.
 
 When you are finished creating the pplan, click **Save Draft and Exit** to save the product and create the Free plan in **DRAFT** state.
 
