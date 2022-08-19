@@ -94,7 +94,7 @@ To configure a product plan from the product detail:
 
 A quota describes the itemized units per resource or group of resources in a product, and how much of those units they are entitled to use over a period.
 
-For paid plan quota, it also describes the base pricing of the plan and the pricing of the quota based on the quota type (Standard / Tier). Refer to [Product plan type and consumption cost](/docs/manage_product_foundry/manage_product_plans#prodct-plan-type-and-consumption-cost)
+For paid plan quota, it also describes the base pricing of the plan and the pricing of the quota based on the quota type (Standard / Tier). Refer to [Product plan type and consumption cost](/docs/manage_product_foundry/manage_product_plans/#prodct-plan-type-and-consumption-cost)
 
 To configure a quota for a free plan, enter values for the following properties:
 
