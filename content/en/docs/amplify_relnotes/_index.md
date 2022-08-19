@@ -33,7 +33,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 | What's new     |
 |----------------|
-| **Azure** - Consumer insights metrics | 
+| **Azure** - Consumer insights metrics |
 
 | Bug fixes      |
 |----------------|
@@ -49,11 +49,11 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 | What's new     |
 |----------------|
-| * Asset filtering per owning team <br /> * Corrupted asset detection | 
+| * Asset filtering per owning team <br />* Corrupted asset detection |
 
 | Bug fixes      |
 |----------------|
-| * Asset is not updated with latest API Service update <br /> * A team developer role cannot delete an asset |
+| * Asset is not updated with latest API Service update <br />* A team developer role cannot delete an asset |
 
 ### Product Foundry
 
