@@ -22,47 +22,59 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ### Agents
 
-#### What's new for agents
+Current agent versions are based on Amplify Agents SDK v1.1.30. This version is compatible with:
 
-* **Axway API Management** (7.6.2 SPx and 7.7 SPx): No updates
-* **AWS Gateway** (SDK 2.0): No Updates
-* **Azure** (latest release): Consumer insights metrics
-* **Istio** (1.9.5): No updates
-* **Apigee** (): No updates
-* **Mulesoft Anypoint platform** (v3): No updates
+* **Axway API Management** (7.6.2 SPx and 7.7 SPx)
+* **AWS Gateway** (SDK 2.0)
+* **Azure** (latest release)
+* **Istio** (1.9.5)
+* **Apigee** ()
+* **Mulesoft Anypoint platform** (v3)
 
-#### Bug fixes for agents
+| What's new     |
+|----------------|
+| **Azure** - Consumer insights metrics | 
 
-* **Azure**: API Service revision updates
+| Bug fixes      |
+|----------------|
+| **Azure** - API Service revision updates|
 
 ### Service Registry
 
-* No updates or bug fixes
+| What's new - none      |
+|----------------|
+| **Bug fixes - none**|
 
 ### Asset Catalog
 
-#### What's new Asset Catalog
+| What's new     |
+|----------------|
+| * Asset filtering per owning team <br /> * Corrupted asset detection | 
 
-* Asset filtering per owning team
-* Corrupted asset detection
-
-#### Bug fixes for Asset Catalog
-
-* Asset is not updated with latest API Service update
-* A team developer role cannot delete an asset
+| Bug fixes      |
+|----------------|
+| * Asset is not updated with latest API Service update <br /> * A team developer role cannot delete an asset |
 
 ### Product Foundry
 
-* No updates or bug fixes
+| What's new - none      |
+|----------------|
+| **Bug fixes - none**|
 
 ### Business insights
 
-* No updates or bug fixes
+| What's new - none      |
+|----------------|
+| **Bug fixes - none**|
 
 ### Marketplace
 
-* No updates or bug fixes
+| What's new - none      |
+|----------------|
+| **Bug fixes - none**|
 
 ### Consumer insights
 
-* No updates or bug fixes
+| What's new - none      |
+|----------------|
+| **Bug fixes - none**|
