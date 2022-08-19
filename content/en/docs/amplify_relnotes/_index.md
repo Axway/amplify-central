@@ -7,7 +7,7 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-This page displays brief summaries of feature updates and bug fixes for each release of Amplify Marketplace, including: 
+This page displays brief summaries of feature updates and bug fixes for each release of Amplify Marketplace, including:
 
 * Provider experience: Agents, Service Registry, Asset Catalog, Product Foundry, Business insights
 * Consumer experience: Marketplace, Consumer insights
@@ -22,7 +22,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ### Agents
 
-#### What's new
+#### What's new for agents
 
 * **Axway API Management** (7.6.2 SPx and 7.7 SPx): No updates
 * **AWS Gateway** (SDK 2.0): No Updates
@@ -31,7 +31,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 * **Apigee** (): No updates
 * **Mulesoft Anypoint platform** (v3): No updates
 
-#### Bug fixes
+#### Bug fixes for agents
 
 * **Azure**: API Service revision updates
 
@@ -41,12 +41,12 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ### Asset Catalog
 
-#### What's new
+#### What's new Asset Catalog
 
 * Asset filtering per owning team
-* Corrupted asset detection 
+* Corrupted asset detection
 
-#### Bug fixes
+#### Bug fixes for Asset Catalog
 
 * Asset is not updated with latest API Service update
 * A team developer role cannot delete an asset

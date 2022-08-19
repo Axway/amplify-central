@@ -25,15 +25,15 @@ This version is compatible with:
 
 The following enhancements and bug fixes are available in this release.
 
-##### Feature updates
+##### Feature updates for Azure Gateway
 
 **Consumer insights metrics** - The Traceability Agent enriches the metrics data with information related to the Marketplace (product / resource / subscription / quota / application) to help the consumer filter data in the Consumer insights UI pages.
 
-##### Bug fixes
+##### Bug fixes for Azure Gateway
 
 **API Service revision updates** - Agents detect when an API specification changes without deployment changes and updates the service instance with a new revision.
 
-##### Known issues
+##### Known issues for Azure Gateway
 
 **Renaming an API in API Manager is not synchronized by the Discovery Agent** - When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
 
@@ -41,15 +41,15 @@ The following enhancements and bug fixes are available in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates
+#### Feature updates for Service Registry
 
 There are no enhancements available in this release.
 
-#### Bug fixes
+#### Bug fixes for Service Registry
 
 There are no bug fixes available in this release.
 
-#### Known issues
+#### Known issues for Service Registry
 
 There are no known limitations in this release.
 
@@ -57,20 +57,19 @@ There are no known limitations in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates
+#### Feature updates for Asset Catalog
 
 **Asset filtering per owning team** - The Asset Catalog can be filtered by owning team to help find the appropriate one.
 
 **Corrupted asset detection** - A warning icon is displayed on the Asset resource column when the resource reference is missing. This can happen when an existing resource is removed from the dataplane. A warning icon is also displayed on the Asset details page in the Asset version pull-down menu and on the grouped resource tab.
 
-
-#### Bug fixes
+#### Bug fixes for Asset Catalog
 
 **Asset is not updated with latest API Service update** - Previously, a change in the API Service revision was not propagated to the asset. Now, every change in the service is reflected in the asset with the use of the Discovery Agent as soon as the asset is linked to the "latest updated" version of the API Service.
 
 **Asset deletion** - Previously, a team developer role could not delete an asset. Now, a team developer role can delete an asset if they are a member of the owning team.
 
-#### Known issues
+#### Known issues for Asset Catalog
 
 **Team sharing** - Team sharing has been disabled from the Asset Catalog until *Shared with read-only* access is available.
 
@@ -78,15 +77,15 @@ The following enhancements and bug fixes are available in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates
+#### Feature updates for Product Foundry
 
 There are no enhancements available in this release.
 
-#### Bug fixes
+#### Bug fixes for Product Foundry
 
 There are no bug fixes available in this release.
 
-#### Known issues
+#### Known issues for Product Foundry
 
 There are no known limitations in this release.
 
@@ -94,15 +93,15 @@ There are no known limitations in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates
+#### Feature updates for Business insights
 
 There are no enhancements available in this release.
 
-#### Bug fixes
+#### Bug fixes for Business insights
 
 There are no bug fixes available in this release.
 
-#### Known issues
+#### Known issues for Business insights
 
 There are no known limitations in this release.
 
@@ -112,15 +111,15 @@ There are no known limitations in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates
+#### Feature updates for Marketplace
 
 There are no enhancements available in this release.
 
-#### Bug fixes
+#### Bug fixes for Marketplace
 
 There are no bug fixes available in this release.
 
-#### Known issues
+#### Known issues for Marketplace
 
 There are no known limitations in this release.
 
@@ -128,14 +127,14 @@ There are no known limitations in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates
+#### Feature updates for Consumer insights
 
 There are no enhancements available in this release.
 
-#### Bug fixes
+#### Bug fixes for Consumer insights
 
 There are no bug fixes available in this release.
 
-#### Known issues
+#### Known issues for Consumer insights
 
 There are no known limitations in this release.
