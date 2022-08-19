@@ -87,7 +87,7 @@ To configure a product plan from the create product wizard:
 To configure a product plan from the product detail:
 
 1. Navigate to the Plans section
-2. Click the + Add Plan button to open the plan creation wizard
+2. Click the **+ Add Plan** button to open the plan creation wizard
 3. Follow the plan wizard and enter the required information
 
 ### Configure a quota
@@ -118,7 +118,7 @@ To configure a quota for a paid plan, enter values for the following properties:
     * **Metering period** - select either **Monthly**, **Daily**, **Weekly**, **Annually**
 * **Quota type** - select either **Standard** or **Tiered**
     * Standard quota type has the same information as for the free plan (Unit, Limit, Quota type, Limit type)
-    * Tiered quota type: for each tier, you need to enter the **lower limit**, the **upper limit** the **unit price** and the **Standard** fees. There is no limit in the tier number. The + button enables to add another tier and the - button enables to remove a tier definition. The lower limit a the next tier is automatically computed based the the upper limit of previous tier.
+    * Tiered quota type: for each tier, you need to enter the **lower limit**, the **upper limit** the **unit price** and the **Standard** fees. There is no limit in the tier number. The **+** button enables to add another tier and the **-** button enables to remove a tier definition. The lower limit a the next tier is automatically computed based the the upper limit of previous tier.
 
 The + Add Quota button allows to create another quota group for different resources. Once a resources is assigned to a quota group, it is no more avialble for another quota group.
 
