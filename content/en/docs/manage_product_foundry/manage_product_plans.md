@@ -68,10 +68,11 @@ When you create a new product, you have the option to configure one **Free** or 
 
 Plans can be created anytime regardless the product state (draft/active/deprecated) and the product publication on the marketplace.
 
-The plan wizard is composed of two pages:
+The plan wizard is composed of three pages:
 
 * page 1: the plan profile - title, description, type (Free / Paid)
 * page 2: [the plan quotas definition](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
+* page 3: [the approval mode](/docs/manage_product_foundry/manage_product_plans#configure-access)
 
 To configure a product plan from the create product wizard:
 
@@ -122,7 +123,16 @@ To configure a quota for a paid plan, enter values for the following properties:
 
 The **+ Add Quota** button allows to create another quota group for different resources. Once a resources is assigned to a quota group, it is no more avialble for another quota group.
 
-When you are finished creating the pplan, click **Save Draft and Exit** to save the product and create the Free plan in **DRAFT** state.
+When you are finished configuring the quotas, click **Next** to select the approval mode of the plan.
+
+### Configure access
+
+To configure the type of approval when a subscriber select the plan, choose between:
+
+* **Manual**: a provider will have to manually approve the subscription before the consumer can use it
+* **Automatic**: the subscription is automatically approved and immediately usable
+
+When you are finished creating the plan, click **Save Draft and Exit** to save the product plan in DRAFT state.
 
 ## Edit product plans
 
