@@ -31,11 +31,11 @@ Learn how to create and configure the product plan using the Product Foundry Web
 
 There are 2 types of plans that can be used:
 
-* **free plan**: consumer will not be charged for their API consumption
-* **paid plan**:
-    * **standard**: consumer will be charged based on the volume of their consumption
-    * **tier - volume**: consuner will be charged based on the volume corresponding to the tier quota + flat tier fee is any
-    * **tier - graduated**: consuner will be charged based on the volume corresponding to each tier quota that include their consumption + flat tier fee if any
+* **Free plan**: consumer will not be charged for their API consumption
+* **Paid plan**:
+    * **Standard**: consumer will be charged a base price for the consumption of a guaranteed set of quota
+    * **Tier - volume**: consumer will be charged based on the volume corresponding to the tier quota + flat tier fee, if any
+    * **Tier - graduated**: consunmr will be charged based on the volume corresponding to each tier quota that include their consumption + flat tier fee, if any
 
 Illustrative pricing samples:
 
@@ -93,7 +93,7 @@ To configure a product plan from the product detail:
 
 ### Configure a quota
 
-A quota describes the itemized units per resource or group of resources in a product, and how much of those units they are entitled to use over a period.
+A quota describes the itemized units per resource or group of resources in a product, and how much of those units they are entitled to use over a period of time.
 
 For paid plan quota, it also describes the base pricing of the plan and the pricing of the quota based on the quota type (Standard / Tier). Refer to [Product plan type and consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-consumption-cost)
 
@@ -121,13 +121,13 @@ To configure a quota for a paid plan, enter values for the following properties:
     * Standard quota type has the same information as for the free plan (Unit, Limit, Quota type, Limit type)
     * Tiered quota type: for each tier, you need to enter the **lower limit**, the **upper limit** the **unit price** and the **Standard** fees. There is no limit in the tier number. The **+** button enables to add another tier and the **-** button enables to remove a tier definition. The lower limit a the next tier is automatically computed based the the upper limit of previous tier.
 
-The **+ Add Quota** button allows to create another quota group for different resources. Once a resources is assigned to a quota group, it is no more avialble for another quota group.
+Click **+ Add Quota** to create another quota group for a different resource. Once a resources is assigned to a quota group, it is no longer avialable for another quota group.
 
 When you are finished configuring the quotas, click **Next** to select the approval mode of the plan.
 
 ### Configure access
 
-To configure the type of approval when a subscriber select the plan, choose between:
+To configure the type of approval when a subscriber submits a request to purchase the plan, choose between:
 
 * **Manual**: a provider will have to manually approve the subscription before the consumer can use it
 * **Automatic**: the subscription is automatically approved and immediately usable
