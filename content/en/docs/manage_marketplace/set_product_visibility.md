@@ -27,7 +27,7 @@ To set the visibility for members that are registered in your provider organizat
     * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
     * **Selected teams** - only members of the selected teams can see the product in the Marketplace.
     * **Exclude selected teams** - only members that are not part of selected teams can see the product in the Marketplace.
-    * **Include teams ghaving tag** - only members of the team that have the selected tag can see the product in the Marketplace.
+    * **Include teams having tag** - only members of the team that have the selected tag can see the product in the Marketplace.
     * **None** - the product is not visible to anyone in the Marketplace.
 
         * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
@@ -45,6 +45,7 @@ To set the visibility for external consumers:
     * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
     * **Selected teams** - only users registered with a Marketplace account and a member of the selected teams can see the product in the Marketplace.
     * **Exclude selected teams** - only users registered with a Marketplace account and not a member of the selected teams can see the product in the Mrketplace.
+    * **Include teams having tag** - only members of the team that have the selected tag can see the product in the Marketplace.
     * **None** - the product is not visible to any user registered with a Marketplace account or anonymous users.
 
         * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
