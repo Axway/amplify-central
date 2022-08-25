@@ -8,13 +8,15 @@ Create assets from discovered APIs with the Amplify management plane.
 ## Before you start
 
 * Have credentials or service account to use the CLI. Follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Understanding of the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/_index)
-* Understand the steps in steps in [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api)
+* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/_index)
+* Understand the steps in [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api)
 * Install [jq](https://stedolan.github.io/jq/) on the system
 
 ## Objectives
 
 In this tutorial, you'll create an asset in the Asset Catalog, link an API to it, and release it to the Product Foundry using the Axway Central CLI.
+
+You'll also learn how to [create an asset for an SDK](/docs/integrate_with_central/cli_central/cli_asset_catalog/#create-an-asset-for-an-SDK).
 
 ## Steps to manually create, publish and manage your assets
 
@@ -26,9 +28,9 @@ In this tutorial, you'll create an asset in the Asset Catalog, link an API to it
 
 ### Group an asset in a stage
 
-Assets can represent any digital entity – sdks, docs, REST API, WSDL, gif etc. – whatever you want to catalog and productize, APIs being the primary use case for assets in the system. The lifecycle of those productizable APIs is nebulous, as the decisions on how they can be grouped and managed is a business decision. A “stage” is a grouping mechanism, but it’s not got a concrete physical representation (i.e., tied to an environment). It could be dev/test/prod, it could be eu/us/cn, it could be R&D/Sales/Marketing.
+Assets can represent any digital entity – SDKs, docs, REST API, WSDL, gif etc. – whatever you want to catalog and productize, APIs being the primary use case for assets in the system. The lifecycle of those productizable APIs is nebulous, as the decisions on how they can be grouped and managed is a business decision. A “stage” is a grouping mechanism, but it’s not got a concrete physical representation (i.e., tied to an environment). It could be dev/test/prod, it could be eu/us/cn, it could be R&D/Sales/Marketing.
 
-Run the following command To see the list of currently available stages in the system:
+Run the following command to list the available stages in the system:
 
 ```bash
 axway central get stg
@@ -174,7 +176,7 @@ Where ```asset-release-tag.jq``` has the following content:
 }
 ```
 
-After making a product `active` and versioning it with a `release tag` the asset is now available to be used in the Product Foundry.
+After making a product `active` and versioning it with a `release tag` the asset is now available for use in the Product Foundry.
 
 ### Manage assets
 
@@ -230,7 +232,7 @@ Where ```category.json``` contains the following content:
 }
 ```
 
-After the category has been created, run the following command to assign the category to the asset:
+After the category is created, run the following command to assign the category to the asset:
 
 ```bash
 #!/bin/bash
@@ -281,3 +283,76 @@ After the asset state is set to `archived`, run the following command to delete 
 ```bash
 axway central delete asset my-asset -y
 ```
+
+### Create an asset for an SDK
+
+Assets can be created for any digital content if the SDK is contained in a zip file.
+
+#### Create an asset
+
+Run the following command to create an asset:
+
+```bash
+axway central create -f asset.json -o json -y > asset-created.json
+```
+
+Where `asset.json` contains the following content:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "Asset",
+    "title": "SDK",
+    "spec": {
+        "type": "SDK"
+    },
+    "state": "draft"
+}
+```
+
+The asset is created in **Draft** state. To use this asset in a product definition, it must be moved to an **Active** state.
+
+#### Create an SDK asset
+
+An SDK cannot be added to an asset by creating an AssetResource and associating the AssetResource with the asset. Instead, use the following script to:
+
+* Query the asset-created.json file created in the previous step on disk using jq and store the result in environment variable called `assetName`.
+* based64 encode the contents of zip file and store it in an environment variable called `encodedSDK`. 
+* Update an AssetResource with the environment variables. 
+* Push the updated json content back to the API Server so that the asset has an image attached.
+
+```bash
+#!/bin/bash
+export assetName=`jq -r .[0].name asset-created.json`
+export encodedSDK=`base64 -i sdk.zip`
+jq '.spec.definition = env.encodedSDK | .metadata.scope.name = env.assetName' AssetResource.json  > AssetResourceCreate.json
+
+axway central create -f AssetResourceCreate.json -y
+```
+
+Where `AssetResource.json` contains the following content:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "AssetResource",
+    "title": "SDK",
+    "metadata": {
+        "scope": {
+            "kind": "Asset"
+        }
+    },
+    "spec": {
+        "type": "SDK",
+        "stage": "default",
+        "status": "active",
+        "contentType": "application/zip"
+    }
+}
+```
+
+The asset is now associated with the SDK content. 
+
+The asset is created in **Draft** state. To use this asset in a product definition, the asset must be moved to an **Active** state and used in a product. Once the product is available in the Marketplace, API consumers can download the SDK.
