@@ -78,8 +78,8 @@ The following enhancements and bug fixes are available in this release.
 
 * **Tiered product plans**: Catalog Managers can now create product plans that will charge consumers for multiple unit limits based upon the corresponding tier price and model. The following models are supported:
 
-  * Tier - volume – consumers will be charged based on the volume corresponding to the tier quota + flat tier fee (if any).
-  * Tier – graduated – consumers will be charged on each unit based on the price of the corresponding tier + a flat fee (if any).
+    * Tier - volume – consumers will be charged based on the volume corresponding to the tier quota + flat tier fee (if any).
+    * Tier – graduated – consumers will be charged on each unit based on the price of the corresponding tier + a flat fee (if any).
 
   Please refer to [Manage product plans](/docs/manage_product_foundry/manage_product_plans/) for more details.
 
@@ -128,8 +128,8 @@ The following enhancements and bug fixes are available in this release.
 
 * **Marketplace home page**: A Homepage screen has been introduced in the Marketplace, that will enable Platform Administrator to create a personlized look and feel by customizing the following sections:
 
-  * the hero banner
-  * featured categories
+    * the hero banner
+    * featured categories
 
   The page can be customized from the Marketplace Homepage settings, which can be accessed by navigating to your Organization profile -> Marketplace -> Homepage.   Please refer to **[add link here]** for more details.
 On the home page, consumers can see a list of featured categories, view the most recent products published and choose to browse all products available in the Marketplace. The search function can be use to search products based on title.
