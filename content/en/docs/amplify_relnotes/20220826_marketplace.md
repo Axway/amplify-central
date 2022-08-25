@@ -103,19 +103,7 @@ There are no known limitations in this release.
 
 ### Business insights
 
-The following enhancements and bug fixes are available in this release.
-
-#### Feature updates for Business insights
-
-There are no enhancements available in this release.
-
-#### Bug fixes for Business insights
-
-There are no bug fixes available in this release.
-
-#### Known issues for Business insights
-
-There are no known limitations in this release.
+There are no enhancements and bug fixes in this release.
 
 ## Consumer experience
 
@@ -145,16 +133,5 @@ There are no known limitations in this release.
 
 ### Consumer insights
 
-The following enhancements and bug fixes are available in this release.
+There are no enhancements and bug fixes in this release.
 
-#### Feature updates for Consumer insights
-
-There are no enhancements available in this release.
-
-#### Bug fixes for Consumer insights
-
-There are no bug fixes available in this release.
-
-#### Known issues for Consumer insights
-
-There are no known limitations in this release.
