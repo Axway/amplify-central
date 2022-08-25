@@ -131,7 +131,7 @@ The following enhancements and bug fixes are available in this release.
     * the hero banner
     * featured categories
 
-  The page can be customized from the Marketplace Homepage settings, which can be accessed by navigating to your Organization profile -> Marketplace -> Homepage.   Please refer to **[add link here]** for more details.
+  The page can be customized from the Marketplace Homepage settings, which can be accessed by navigating to your Organization profile -> Marketplace -> Homepage.   Please refer to [Marketplace home page settings](/docs/manage_marketplace/marketplace_homepage) for more details.
 On the home page, consumers can see a list of featured categories, view the most recent products published and choose to browse all products available in the Marketplace. The search function can be use to search products based on title.
 
 * **Plan details**: Consumers can now drill down to view the details of a plan, which includes the various quota and resources attached to the plan, from a dedicated plan details page.
