@@ -134,4 +134,3 @@ There are no known limitations in this release.
 ### Consumer insights
 
 There are no enhancements and bug fixes in this release.
-
