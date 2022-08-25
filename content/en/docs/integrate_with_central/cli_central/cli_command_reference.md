@@ -142,8 +142,6 @@ axway central get apis --team <name|guid>
 axway central get apis --no-owner
 ```
 
-For more examples, see [Create and fetch resources via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_create_fetch_resources/).
-
 ## create
 
 Use this command to create one or more resources from a YAML or JSON file, or `Stdin`.
