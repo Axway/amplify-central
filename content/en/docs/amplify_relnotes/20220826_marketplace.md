@@ -81,10 +81,9 @@ The following enhancements and bug fixes are available in this release.
     * Tier - volume – consumers will be charged based on the volume corresponding to the tier quota + flat tier fee (if any).
     * Tier – graduated – consumers will be charged on each unit based on the price of the corresponding tier + a flat fee (if any).
 
-  Please refer to [Manage product plans](/docs/manage_product_foundry/manage_product_plans/) for more details.
+Please refer to [Manage product plans](/docs/manage_product_foundry/manage_product_plans/) for more details.
 
 * **Product visibility enhancements**: When setting the product visibility in the Marketplace, Catalog Managers can now choose to either show it to certain teams or hide it for selected teams. In addition, they can now select to make the product visible based on team tags. For instance, a product can be made visible in the Marketplace for teams that have the tag *External*.  
-
 This will allow providers to always make the product discoverable without having to adjust the product visibility settings as they onboard new teams.
 
 * **Category management**: Categories can now be created and managed from a dedicated screen that can be accessed by navigating to the Product Foundry -> Categories.
