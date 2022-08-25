@@ -82,14 +82,16 @@ The following enhancements and bug fixes are available in this release.
 
 **Tiered product plans**: Catalog Managers can now create product plans that will charge consumers for multiple unit limits based upon the corresponding tier price and model. The following models are supported:
 
-* Tier - volume– consumers will be charged based on the volume corresponding to the tier quota + flat tier fee (if any).
+* Tier - volume – consumers will be charged based on the volume corresponding to the tier quota + flat tier fee (if any).
 * Tier – graduated – consumers will be charged on each unit based on the price of the corresponding tier + a flat fee (if any).
 
 Please refer to [Manage product plans](/docs/manage_product_fondry/manage_product_plans/) for more details.
 
 **Product visibility enhancements**: When setting the product visibility in the Marketplace, Catalog Managers can now choose to either show it to certain teams or hide it for selected teams. In addition, they can now select to make the product visible based on team tags. For instance, a product can be made visible in the Marketplace for teams that have the tag External.  
 
-This will allow providers to always make the product discoverable without having to adjust the product visibility settings as they onboard new teams.  
+This will allow providers to always make the product discoverable without having to adjust the product visibility settings as they onboard new teams.
+
+**Category management**: Catalog Managers can now create dedicated category for their product. The category could be either visible only on product foundry or also visible in the Marketplace. Up to 5 ctegories can be set as "Featured" to display them in the Marketplace home page. Refer to Product Foundry > Categories
 
 #### Bug fixes for Product Foundry
 
@@ -123,7 +125,15 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Marketplace
 
-There are no enhancements available in this release.
+**Marketplace home page**: From the platfrom settings, it is now possible to activate the Marketplace home page. This page has 3 sections:
+
+* the hero banner
+* the list featured category
+* the browse product with the eight most recent product
+
+From the home page, consumer search for product by name and also navigate to the complete browse product page
+
+**Plan details**: consumer can now naviagte from the product plan page to the plan details page. This page highlight the various quotas and resources attached to the plan.
 
 #### Bug fixes for Marketplace
 
