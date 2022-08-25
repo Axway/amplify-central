@@ -288,7 +288,7 @@ axway central delete asset my-asset -y
 
 Assets can be created for any digital content if the SDK is contained in a zip file.
 
-#### Create an asset
+#### Create an asset.json
 
 Run the following command to create an asset:
 
@@ -318,8 +318,8 @@ The asset is created in **Draft** state. To use this asset in a product definiti
 An SDK cannot be added to an asset by creating an AssetResource and associating the AssetResource with the asset. Instead, use the following script to:
 
 * Query the asset-created.json file created in the previous step on disk using jq and store the result in environment variable called `assetName`.
-* based64 encode the contents of zip file and store it in an environment variable called `encodedSDK`. 
-* Update an AssetResource with the environment variables. 
+* based64 encode the contents of zip file and store it in an environment variable called `encodedSDK`.
+* Update an AssetResource with the environment variables.
 * Push the updated json content back to the API Server so that the asset has an image attached.
 
 ```bash
@@ -353,6 +353,6 @@ Where `AssetResource.json` contains the following content:
 }
 ```
 
-The asset is now associated with the SDK content. 
+The asset is now associated with the SDK content.
 
 The asset is created in **Draft** state. To use this asset in a product definition, the asset must be moved to an **Active** state and used in a product. Once the product is available in the Marketplace, API consumers can download the SDK.
