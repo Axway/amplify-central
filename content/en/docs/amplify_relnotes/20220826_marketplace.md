@@ -10,7 +10,7 @@ We work hard to improve the Marketplace experience by releasing new features and
 
 ### Agents
 
-Current agent versions are based on Amplify Agents SDK v1.1.30. To display version information in the agents, use command `agentName --version`.
+Current agent versions are based on Amplify Agents SDK v1.1.32. To display version information in the agents, use command `agentName --version`.
 
 This version is compatible with:
 
@@ -59,15 +59,16 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Asset Catalog
 
-**Asset filtering per owning team** - The Asset Catalog can be filtered by owning team to help find the appropriate one.
+**Manual or automatic access request approvals**: Catalog Managers can now configure the access request approval for an asset to either manual or automatic. The access requests submitted by the consumers will appear on the Access Request management screen, where Catalog Managers can review, approve, or decline them. The approval process can be delegated to an external 3rd party system, such as ServiceNow by leveraging our webhook capabilities. Please refer to [Integrate with Amplify Central](/docs/integrate_with_central/) for more details.  
+This new feature enables you, the provider, to take consumer’s access requests to APIs in your ecosystem through a review process that is compliant with your company’s regulations and procedures.
 
-**Corrupted asset detection** - A warning icon is displayed on the Asset resource column when the resource reference is missing. This can happen when an existing resource is removed from the dataplane. A warning icon is also displayed on the Asset details page in the Asset version pull-down menu and on the grouped resource tab.
+**Share assets with Read-Only permissions**: Catalog Managers can now choose to give read-only access permission to other teams in their organizations when sharing an asset. The teams the asset was shared with will only be able to view the asset and bundle into their own products, but they will not be able to edit or control any asset lifecycle aspects.  
+
+**Filter assets by status**: The filter has been enhanced to allow filtering the asset catalog by the status. Now users can choose to filter the assets that have the 'Error' status.  
 
 #### Bug fixes for Asset Catalog
 
-**Asset is not updated with latest API Service update** - Previously, a change in the API Service revision was not propagated to the asset. Now, every change in the service is reflected in the asset with the use of the Discovery Agent as soon as the asset is linked to the "latest updated" version of the API Service.
-
-**Asset deletion** - Previously, a team developer role could not delete an asset. Now, a team developer role can delete an asset if they are a member of the owning team.
+**Slow rendering of the Asset Catalog screen** - We fixed an issue that was cause a slow loading in the Asset Catalog screen.
 
 #### Known issues for Asset Catalog
 
@@ -79,7 +80,16 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Product Foundry
 
-There are no enhancements available in this release.
+**Tiered product plans**: Catalog Managers can now create product plans that will charge consumers for multiple unit limits based upon the corresponding tier price and model. The following models are supported:
+
+* Tier - volume– consumers will be charged based on the volume corresponding to the tier quota + flat tier fee (if any).
+* Tier – graduated – consumers will be charged on each unit based on the price of the corresponding tier + a flat fee (if any).
+
+Please refer to [Manage product plans](/docs/manage_product_fondry/manage_product_plans/) for more details.
+
+**Product visibility enhancements**: When setting the product visibility in the Marketplace, Catalog Managers can now choose to either show it to certain teams or hide it for selected teams. In addition, they can now select to make the product visible based on team tags. For instance, a product can be made visible in the Marketplace for teams that have the tag External.  
+
+This will allow providers to always make the product discoverable without having to adjust the product visibility settings as they onboard new teams.  
 
 #### Bug fixes for Product Foundry
 
