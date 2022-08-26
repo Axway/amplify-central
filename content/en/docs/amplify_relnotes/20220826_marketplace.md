@@ -19,9 +19,9 @@ Agents version and Gateway compatibility:
 | Axway API Management 7.6.2 SPx and 7.7 SPx | 1.1.26       |
 | AWS Gateway using SDK 2.0                  | 1.1.24       |
 | Azure latest release                       | 1.1.26       |
-| Istio 1.9.5                                |              |
-| Apigee Edge                                | 0.0.5        |
-| Mulesoft Anypoint platform v3              |              |
+| Istio 1.9.5                                | 2.0.38       |
+| Apigee Edge                                | 0.0.9        |
+| Mulesoft Anypoint platform v3              | 1.1.8        |
 
 #### Azure Gateway
 
