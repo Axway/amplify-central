@@ -21,6 +21,12 @@ This version is compatible with:
 * Apigee Edge
 * Mulesoft Anypoint platform v3
 
+Agent Versions
+SDK version v1.1.32
+Axway Edge version 1.1.26
+AWS version 1.1.24
+Azure version 1.1.26
+
 #### Azure Gateway
 
 The following enhancements and bug fixes are available in this release.
