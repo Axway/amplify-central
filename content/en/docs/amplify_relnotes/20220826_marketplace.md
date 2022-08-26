@@ -12,20 +12,16 @@ We work hard to improve the Marketplace experience by releasing new features and
 
 Current agent versions are based on Amplify Agents SDK v1.1.32. To display version information in the agents, use command `agentName --version`.
 
-This version is compatible with:
+Agents version and Gateway compatibility:
 
-* Axway API Management 7.6.2 SPx and 7.7 SPx
-* AWS Gateway using SDK 2.0
-* Azure latest release
-* Istio 1.9.5
-* Apigee Edge
-* Mulesoft Anypoint platform v3
-
-Agent Versions
-SDK version v1.1.32
-Axway Edge version 1.1.26
-AWS version 1.1.24
-Azure version 1.1.26
+| API Gateway version                        | Agent version|
+|--------------------------------------------|--------------|
+| Axway API Management 7.6.2 SPx and 7.7 SPx | 1.1.26       |
+| AWS Gateway using SDK 2.0                  | 1.1.24       |
+| Azure latest release                       | 1.1.26       |
+| Istio 1.9.5                                |              |
+| Apigee Edge                                | 0.0.5        |
+| Mulesoft Anypoint platform v3              |              |
 
 #### Azure Gateway
 
