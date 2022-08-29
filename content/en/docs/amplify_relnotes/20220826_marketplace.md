@@ -102,7 +102,7 @@ This new feature enables you, the provider, to take consumers' access requests t
 
 #### Bug fixes for Asset Catalog
 
-**Slow rendering of the Asset Catalog screen** - An issue has been fixed that was causing a slow loading of the Asset Catalog screen.
+* **Slow rendering of the Asset Catalog screen** - An issue has been fixed that was causing a slow loading of the Asset Catalog screen.
 
 ### Product Foundry
 
@@ -153,9 +153,9 @@ The following enhancements and bug fixes are available in this release.
     * Featured categories
 
     The page can be customized from the Marketplace home page settings, which can be accessed by navigating to your **Organization profile > Marketplace > Homepage**.
-    Please see [Marketplace home page settings](/docs/manage_marketplace/marketplace_homepage) for more details.
     On the home page, consumers can see a list of featured categories, view the most recent products published, and choose to browse all products available in the Marketplace.
     The search function can be used to search products based on title.
+    Please see [Marketplace home page settings](/docs/manage_marketplace/marketplace_homepage) for more details.
 
 * **Plan details** - Consumers can now drill down to view the details of a plan, which includes the various quota and resources attached to the plan, from a dedicated plan details page.
 
