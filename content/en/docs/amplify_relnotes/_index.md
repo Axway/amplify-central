@@ -41,9 +41,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 ### Service Registry or Topology
 
-| What's new - Team Ownership can be set when creating Environments or API Services with the UI |
+| What's new     |
 |----------------|
-| **Bug fixes - none**|
+| - Team Ownership can be set when creating Environments or API Services with the UI |
+
+| Bug fixes      |
+|----------------|
+| none
 
 ### Asset Catalog
 
@@ -79,7 +83,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 | Bug fixes      |
 |----------------|
-| None |
+| none |
 
 ### Consumer insights
 
