@@ -23,6 +23,22 @@ Agents version and Gateway compatibility:
 | Apigee Edge                                | 0.0.9        |
 | Mulesoft Anypoint platform v3              | 1.1.8        |
 
+#### All Gateway Agents
+
+The following enhancements and bug fixes are available in this release.
+
+##### Feature updates for All Gateway Agents
+
+There are no enhancements available in this release.
+
+##### Bug fixes for All Gateway Agnets
+
+**API Service revision updates** - Agents detect when an API specification changes without deployment changes and updates the service instance with a new revision.
+
+##### Known issues for All Gateway Agents
+
+There are no known limitations in this release.
+
 #### Azure Gateway
 
 The following enhancements and bug fixes are available in this release.
@@ -33,9 +49,25 @@ The following enhancements and bug fixes are available in this release.
 
 ##### Bug fixes for Azure Gateway
 
-**API Service revision updates** - Agents detect when an API specification changes without deployment changes and updates the service instance with a new revision.
+There are no enhancements available in this release.
 
 ##### Known issues for Azure Gateway
+
+There are no known limitations in this release.
+
+#### Edge Gateway
+
+The following enhancements and bug fixes are available in this release.
+
+##### Feature updates for Edge Gateway
+
+There are no enhancements available in this release.
+
+##### Bug fixes for Edge Gateway
+
+There are no bug fixes available in this release.
+
+##### Known issues for Edge Gateway
 
 **Renaming an API in API Manager is not synchronized by the Discovery Agent** - When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
 
@@ -43,15 +75,15 @@ The following enhancements and bug fixes are available in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates for Service Registry
+#### Feature updates for Service Registry or Topology
 
-There are no enhancements available in this release.
+The Central Admins, Catalog Managers and Developers are able to set the Team Ownership when creating Environments or API Services with the UI.
 
-#### Bug fixes for Service Registry
+#### Bug fixes for Service Registry or Topology
 
 There are no bug fixes available in this release.
 
-#### Known issues for Service Registry
+#### Known issues for Service Registry or Topology
 
 There are no known limitations in this release.
 
@@ -64,7 +96,7 @@ The following enhancements and bug fixes are available in this release.
 * **Manual or automatic access request approvals**: Catalog Managers can now configure the access request approval for an asset to either manual or automatic. The access requests submitted by the consumers will appear on the Access Request management screen, where Catalog Managers can review, approve, or decline them. The approval process can be delegated to an external 3rd party system, such as ServiceNow by leveraging our webhook capabilities. Please refer to [Integrate with Amplify Central](/docs/integrate_with_central/) for more details.  
 This new feature enables you, the provider, to take consumer’s access requests to APIs in your ecosystem through a review process that is compliant with your company’s regulations and procedures.
 
-* **Share assets with Read-Only permissions**: Catalog Managers can now choose to give read-only access permissions to other teams in their organization when sharing an asset. The teams the asset was shared with will only be able to view the asset and bundle into their own products, but they will not be able to edit or control any asset lifecycle aspects.  
+* **Share assets with Read-Only permissions**: Catalog Managers can now choose to give read-only access permissions to other teams in their organization (which the Catalog Manager is a member of) when sharing an asset. The teams the asset was shared with will only be able to view the asset and bundle into their own products, but they will not be able to edit or control any asset lifecycle aspects.  
 
 * **Filter assets by status**: The filter has been enhanced to allow filtering the asset catalog by the status. Now users can choose to filter the assets that have the status 'Error'.
 
