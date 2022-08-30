@@ -176,7 +176,7 @@ Where ```asset-release-tag.jq``` has the following content:
 }
 ```
 
-After making a product `active` and versioning it with a `release tag` the asset is now available for use in the Product Foundry.
+After making a product `active` and versioning it with a `release tag` the asset is available for use in the Product Foundry.
 
 ### Manage assets
 
@@ -286,7 +286,7 @@ axway central delete asset my-asset -y
 
 ### Create an asset for an SDK
 
-Assets can be created for any digital content if the SDK is contained in a zip file.
+Assets can be created for any digital content, provided that the SDK is contained in a zip file and the file type matches the content type in the asset definition.
 
 #### Create an asset.json
 
@@ -317,9 +317,9 @@ The asset is created in **Draft** state. To use this asset in a product definiti
 
 An SDK cannot be added to an asset by creating an AssetResource and associating the AssetResource with the asset. Instead, use the following script to:
 
-* Query the asset-created.json file created in the previous step on disk using jq and store the result in environment variable called `assetName`.
-* based64 encode the contents of zip file and store it in an environment variable called `encodedSDK`.
-* Update an AssetResource with the environment variables.
+* Query the asset-created.json file (created in the previous step) on disk using jq and store the result in the environment variable called `assetName`.
+* based64 encode the contents of the zip file and store it in an environment variable called `encodedSDK`.
+* Update AssetResource with the environment variables.
 * Push the updated json content back to the API Server so that the asset has an image attached.
 
 ```bash
