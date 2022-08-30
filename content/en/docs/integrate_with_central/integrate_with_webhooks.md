@@ -2,6 +2,7 @@
 title: Set up integrations through Webhooks
 linkTitle: Set up integrations through Webhooks
 weight: 100
+draft: yes
 date: 2019-07-30
 ---
 Configure webhooks to receive notifications from Amplify Central.
