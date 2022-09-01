@@ -17,7 +17,6 @@ Amplify generates a wide array of events that can be used for integration purpos
 Common scenarios to integrate through events / webhooks are the following items:
 
 * Manage manual subscription approvals for the Marketplace through a third-party system
-* Manage manual subscription approvals for the Unified Catalog through a third-party system
 * Manage validation on changes to discovered API Services in an environment to ensure they comply with corporate standards
 
 ## Before you start
