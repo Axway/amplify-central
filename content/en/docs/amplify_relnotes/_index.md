@@ -18,6 +18,79 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Marketplace September 9th, 2022](/docs/amplify_relnotes/20220909_marketplace/)
+
+### Agents
+
+Current agent versions are based on Amplify Agents SDK v1.1.30. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.26
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.24
+* **Azure latest release** - Agent version 1.1.26
+* **Istio 1.9.5** - Agent version 2.0.38
+* **Apigee Edge** - Agent version 0.0.9
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.8
+
+| What's new     |
+|----------------|
+| **Azure** - Text |
+
+| Bug fixes      |
+|----------------|
+| **All agents** - Text|
+
+### Service Registry or Topology
+
+| What's new     |
+|----------------|
+| - Text |
+
+| Bug fixes      |
+|----------------|
+| none
+
+### Asset Catalog
+
+| What's new     |
+|----------------|
+| - Text <br />- Text |
+
+| Bug fixes      |
+|----------------|
+| - Text |
+
+### Product Foundry
+
+| What's new     |
+|----------------|
+| - Text <br />- Text |
+
+| Bug fixes      |
+|----------------|
+| - Text |
+
+### Business insights
+
+| What's new - none      |
+|----------------|
+| **Bug fixes - none**|
+
+### Marketplace
+
+| What's new     |
+|----------------|
+| - text |
+
+| Bug fixes      |
+|----------------|
+| none |
+
+### Consumer insights
+
+| What's new - none      |
+|----------------|
+| **Bug fixes - none**|
+
 ## [Marketplace August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
 
 ### Agents
