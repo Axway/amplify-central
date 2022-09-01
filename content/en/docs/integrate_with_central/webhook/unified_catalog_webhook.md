@@ -7,7 +7,7 @@ Configure webhooks to receive notifications from Amplify Unified Catalog so that
 
 ## Before you start
 
-* You understand the concepts outlined in [set up integrations through Webhooks](/docs/integrate_with_central/integrate_with_webhooks/).
+* You understand the concepts outlined in [Webhooks](/docs/integrate_with_central/webhook/).
 
 ## Objectives
 

@@ -38,4 +38,4 @@ It all depends on what you want to accomplish with the platform:
 
 * If you want to manipulate Amplify Central resources, the APIs or [Axway Central CLI](/docs/integrate_with_central/cli_central/a) can be used to add/update/remove resources.
 
-* If you want to trigger a flow when specific events happen in Amplify Central, you will need a [webhook integration](/docs/integrate_with_central/integrate_with_webhooks/).
+* If you want to trigger a flow when specific events happen in Amplify Central, you will need a [webhook integration](/docs/integrate_with_central/webhook/).
