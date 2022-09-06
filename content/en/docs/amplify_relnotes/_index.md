@@ -20,8 +20,6 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Marketplace September 9th, 2022](/docs/amplify_relnotes/20220909_marketplace/)
 
-### Agents
-
 Current agent versions are based on Amplify Agents SDK v1.1.30. This version is compatible with:
 
 * **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.26
@@ -31,70 +29,43 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Apigee Edge** - Agent version 0.0.9
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.8
 
-| What's new     |
-|----------------|
-| **Azure** - Text |
+| Agents |         |
+|--------|---------|
+| What's new: | Text. |
+| Bug fixes:  | Text. | 
 
-| Bug fixes      |
-|----------------|
-| **All agents** - Text|
+| Service registry <br />Topology |         |
+|--------|---------|
+| What's new: | Text. |
+| Bug fixes:  | Text. |
 
-### Service Registry or Topology
+| Asset Catalog |         |
+|--------|---------|
+| What's new: | Text. |
+| Bug fixes:  | Text. | 
 
-| What's new     |
-|----------------|
-| - Text |
+| Product Foundry |         |
+|--------|---------|
+| What's new: | Text. |
+| Bug fixes:  | Text. | 
 
-| Bug fixes      |
-|----------------|
-| none
+| Business insights |         |
+|--------|---------|
+| What's new: | Text. |
+| Bug fixes:  | Text. | 
 
-### Asset Catalog
+| Marketplace |         |
+|--------|---------|
+| What's new: | Text. |
+| Bug fixes:  | Text. | 
 
-| What's new     |
-|----------------|
-| - Text <br />- Text |
-
-| Bug fixes      |
-|----------------|
-| - Text |
-
-### Product Foundry
-
-| What's new     |
-|----------------|
-| - Text <br />- Text |
-
-| Bug fixes      |
-|----------------|
-| - Text |
-
-### Business insights
-
-| What's new - none      |
-|----------------|
-| **Bug fixes - none**|
-
-### Marketplace
-
-| What's new     |
-|----------------|
-| - text |
-
-| Bug fixes      |
-|----------------|
-| none |
-
-### Consumer insights
-
-| What's new - none      |
-|----------------|
-| **Bug fixes - none**|
+| Consumer insights |         |
+|--------|---------|
+| What's new: | Text. |
+| Bug fixes:  | Text. | 
 
 ## [Marketplace August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
 
-### Agents
-
 Current agent versions are based on Amplify Agents SDK v1.1.30. This version is compatible with:
 
 * **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.26
@@ -104,62 +75,37 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Apigee Edge** - Agent version 0.0.9
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.8
 
-| What's new     |
-|----------------|
-| **Azure** - Consumer insights metrics |
+| Agents |         |
+|--------|---------|
+| What's new: | **Azure** - Consumer insights. |
+| Bug fixes:  | **All agents** - API Service revision updates. | 
 
-| Bug fixes      |
-|----------------|
-| **All agents** - API Service revision updates|
+| Service registry <br />Topology |         |
+|---------------------------------|---------|
+| What's new:                     | Team Ownership can be set when creating environments or API Services with the UI. |
+| Bug fixes:                      | None.   |
 
-### Service Registry or Topology
+| Asset Catalog |         |
+|---------------|---------|
+| What's new: | Manual or automatic access request approvals. <br />Share assets with Read-Only permissions. <br />Filter assets by status.|
+| Bug fixes:  | Corrupted assets could be added to a product. <br />Wrong product status in Product Foundry. | 
 
-| What's new     |
-|----------------|
-| - Team Ownership can be set when creating Environments or API Services with the UI |
+| Product Foundry |         |
+|-----------------|---------|
+| What's new: | Tiered product plans. <br />Product visibility enhancements. <br />Category management. <br />Corrupted products notification. |
+| Bug fixes:  | Slow rendering of the Asset Catalog screen. | 
 
-| Bug fixes      |
-|----------------|
-| none
+| Business insights |         |
+|-------------------|---------|
+| What's new: | None. |
+| Bug fixes:  | None. |
 
-### Asset Catalog
+| Marketplace |         |
+|-------------|---------|
+| What's new: | Marketplace home page. <br />Plan details. |
+| Bug fixes:  | None. | 
 
-| What's new     |
-|----------------|
-| - Manual or automatic access request approvals <br />- Share assets with Read-Only permissions <br />- Filter assets by status |
-
-| Bug fixes      |
-|----------------|
-| - Corrupted assets could be added to a product <br />- Wrong product status in Product Foundry |
-
-### Product Foundry
-
-| What's new     |
-|----------------|
-| - Tiered product plans <br />- Product visibility enhancements <br />- Category management <br />- Corrupted products notification |
-
-| Bug fixes      |
-|----------------|
-| - Slow rendering of the Asset Catalog screen |
-
-### Business insights
-
-| What's new - none      |
-|----------------|
-| **Bug fixes - none**|
-
-### Marketplace
-
-| What's new     |
-|----------------|
-| - Marketplace home page <br />- Plan details |
-
-| Bug fixes      |
-|----------------|
-| none |
-
-### Consumer insights
-
-| What's new - none      |
-|----------------|
-| **Bug fixes - none**|
+| Consumer insights |         |
+|-------------------|---------|
+| What's new: | None. |
+| Bug fixes:  | None. | 
