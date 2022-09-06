@@ -105,11 +105,13 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Product Foundry
 
-* **Feature** - Text.
+* **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen at **Product Foundry > Categories**.
+The preview helps admnistrator to change that category visibility as well as if a cateory is featured or not.
 
 #### Bug fixes for Product Foundry
 
-* **Issue** - Text.
+* **Assigning category to product removes many product details** - Previously when creating a category and assigning product(s) to it, the assigned product(s) changed to Draft status. Now, the category assignment does not create a product Draft release anymore.
+* **Marketplace active subscription list is empty** - Previously, it was possible to create/activate a plan with a quota having no resource assigned. Now, the quota cannot be created/updated if they have no resource assigned and a plan cannot be activated if it has no quota.
 
 #### Known issues for Product Foundry
 
@@ -127,11 +129,12 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Marketplace
 
-* **Feature** - Text.
+* **Marketplace home page - filter per featured category** - The featured categories displayed in the home page allows the user to see all related product when using the "View products" link on a category.
+* **Markeplace browse product - filter per category** - the browse home page is enriched with the category filter and allow user to see all product for a selected category. A breadcrumb is added as soon as a category is selected in the result page. This breadcrumb allows the user to unselect a previously selected category.
 
 #### Bug fixes for Marketplace
 
-There are no bug fixes available in this release.
+* **Paid plan base price with large number crash the backend** - Previously when using a big number in paid plan, the backend api return a 500 error. Now, the UI does not allow to enter a number having more than 10 digits.
 
 #### Known issues for Marketplace
 
