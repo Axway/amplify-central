@@ -32,7 +32,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Agents |         |
 |--------|---------|
 | What's new: | Text. |
-| Bug fixes:  | Text. | 
+| Bug fixes:  | Text. |
 
 | Service registry <br />Topology |         |
 |--------|---------|
@@ -42,27 +42,27 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Asset Catalog |         |
 |--------|---------|
 | What's new: | Text. |
-| Bug fixes:  | Text. | 
+| Bug fixes:  | Text. |
 
 | Product Foundry |         |
 |--------|---------|
 | What's new: | Text. |
-| Bug fixes:  | Text. | 
+| Bug fixes:  | Text. |
 
 | Business insights |         |
 |--------|---------|
 | What's new: | Text. |
-| Bug fixes:  | Text. | 
+| Bug fixes:  | Text. |
 
 | Marketplace |         |
 |--------|---------|
 | What's new: | Text. |
-| Bug fixes:  | Text. | 
+| Bug fixes:  | Text. |
 
 | Consumer insights |         |
 |--------|---------|
 | What's new: | Text. |
-| Bug fixes:  | Text. | 
+| Bug fixes:  | Text. |
 
 ## [Marketplace August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
 
@@ -78,7 +78,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Agents |         |
 |--------|---------|
 | What's new: | **Azure** - Consumer insights. |
-| Bug fixes:  | **All agents** - API Service revision updates. | 
+| Bug fixes:  | **All agents** - API Service revision updates. |
 
 | Service registry <br />Topology |         |
 |---------------------------------|---------|
@@ -88,12 +88,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Asset Catalog |         |
 |---------------|---------|
 | What's new: | Manual or automatic access request approvals. <br />Share assets with Read-Only permissions. <br />Filter assets by status.|
-| Bug fixes:  | Corrupted assets could be added to a product. <br />Wrong product status in Product Foundry. | 
+| Bug fixes:  | Corrupted assets could be added to a product. <br />Wrong product status in Product Foundry. |
 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Tiered product plans. <br />Product visibility enhancements. <br />Category management. <br />Corrupted products notification. |
-| Bug fixes:  | Slow rendering of the Asset Catalog screen. | 
+| Bug fixes:  | Slow rendering of the Asset Catalog screen. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -103,9 +103,9 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Marketplace home page. <br />Plan details. |
-| Bug fixes:  | None. | 
+| Bug fixes:  | None. |
 
 | Consumer insights |         |
 |-------------------|---------|
 | What's new: | None. |
-| Bug fixes:  | None. | 
+| Bug fixes:  | None. |
