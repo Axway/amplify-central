@@ -106,7 +106,7 @@ The following enhancements and bug fixes are available in this release.
 #### Feature updates for Product Foundry
 
 * **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen at **Product Foundry > Categories**.
-The preview helps admnistrator to change that category visibility as well as if a cateory is featured or not.
+The preview helps admnistrator to change the category visibility as well as if a cateory is featured or not.
 
 #### Bug fixes for Product Foundry
 
