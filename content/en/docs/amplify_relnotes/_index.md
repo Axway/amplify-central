@@ -7,7 +7,7 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-This page displays brief summaries of feature updates and bug fixes for each release of Amplify Marketplace, including:
+This page displays brief summaries of feature updates and bug fixes for each release of Amplify, including:
 
 * Provider experience: Agents, Service Registry, Asset Catalog, Product Foundry, Business insights
 * Consumer experience: Marketplace, Consumer insights
@@ -18,7 +18,7 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Marketplace August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
+## [Amplify August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
 
 ### Agents
 
