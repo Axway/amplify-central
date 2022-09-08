@@ -1,10 +1,10 @@
 ---
-title: Marketplace August 26th 2022
-linkTitle: Marketplace August 26th 2022
+title: Amplify August 26th 2022
+linkTitle: Amplify August 26th 2022
 weight: 90
 date: 2022-08-19
 ---
-We work hard to improve the Marketplace experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in the latest release.
+We work hard to improve the Amplify experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in the latest release.
 
 ## Provider experience
 
