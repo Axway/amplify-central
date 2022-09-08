@@ -105,13 +105,12 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Product Foundry
 
-* **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen at **Product Foundry > Categories**.
-The preview helps admnistrator to change the category visibility as well as if a cateory is featured or not.
+* **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen that can be access from **Product Foundry > Categories**. This gives Central Administrators full management capabilities over categories from the WebUI.
 
 #### Bug fixes for Product Foundry
 
-* **Assigning category to product removes many product details** - Previously when creating a category and assigning product(s) to it, the assigned product(s) changed to Draft status. Now, the category assignment does not create a product Draft release anymore.
-* **Marketplace active subscription list is empty** - Previously, it was possible to create/activate a plan with a quota having no resource assigned. Now, the quota cannot be created/updated if they have no resource assigned and a plan cannot be activated if it has no quota.
+* **Assigning a product to a category changed the product state** - Previously, when creating a category from the category management screen, and assigning product(s) to it, the assigned product(s) changed to Draft status. Now, the category assignment does not create a product Draft release.
+* **Marketplace active subscription list is empty** - Previously, it was possible to create/activate a plan with a quota having no resource assigned. Now, the quota cannot be created/updated if it has no resource assigned and a plan cannot be activated if it has no quota.
 
 #### Known issues for Product Foundry
 
@@ -129,12 +128,12 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Marketplace
 
-* **Marketplace home page - filter per featured category** - The featured categories displayed in the home page allows the user to see all related product when using the "View products" link on a category.
-* **Markeplace browse product - filter per category** - the browse home page is enriched with the category filter and allow user to see all product for a selected category. A breadcrumb is added as soon as a category is selected in the result page. This breadcrumb allows the user to unselect a previously selected category.
+* **View products in a featured category** - Consumers can now see the products included in the featured categories displayed on the home page by clicking on the "View products" link shown for each category.
+* **Filter products by categories** - The browse products page has been enhanced with a category filter to allow users to filter the catalog of products by categories. A breadcrumb is added to the result page once the filter is applied that enables users to unselect a selected category and reset the filter.
 
 #### Bug fixes for Marketplace
 
-* **Paid plan base price with large number crash the backend** - Previously when using a big number in paid plan, the backend api return a 500 error. Now, the UI does not allow to enter a number having more than 10 digits.
+* **Paid plan base price with large number crash the backend** - Previously when using a big number in a paid plan, the backend api crashed. Now, the UI does not allow a number having more than 10 digits.
 
 #### Known issues for Marketplace
 
