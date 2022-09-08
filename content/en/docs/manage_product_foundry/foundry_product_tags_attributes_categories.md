@@ -54,7 +54,7 @@ To create a category:
 
 1. Log into the platform
 2. Naviagte to the **Catalog > Product Foundry > Categories**
-3. This page displays all global category assigned only to product and the product categories
+3. This page displays all global categories assigned only to product and the product categories
 4. The **+ Add New Category** button start the category creation wizard:
    1. Category Profile page: enter the category definition (Name, Visibility, Description, and optionally an image). The category logical name is optional and will be computed based on the category name.
    2. Product Association page: assign/unassign product to this category
@@ -82,7 +82,7 @@ To update a category:
 
 1. Log into the platform
 2. Naviagte to the **Catalog > Product Foundry > Categories**
-3. This page displays all global category assigned only to product and the product categories
+3. This page displays all global categories assigned only to product and the product categories
 4. Open the elipsis menu on a category and select Edit. This will open the category wizard in Edit mode and enable to change any information except the Category logical name.
 5. Save the change
 
@@ -94,7 +94,7 @@ To delete a category:
 
 1. Log into the platform
 2. Naviagte to the **Catalog > Product Foundry > Categories**
-3. This page displays all global category assigned only to product and the product categories
+3. This page displays all global categories assigned only to product and the product categories
 4. Open the elipsis menu on a category and select Delete. This will open a confirmation popup and once the confirmation is done, the category will be deleted from the system.
 
 ### Convert a product category into a Featured category
@@ -105,7 +105,7 @@ To convert a category into a Featured category:
 
 1. Log into the platform
 2. Naviagte to the **Catalog > Product Foundry > Categories**
-3. This page displays all global category assigned only to product and the product categories
+3. This page displays all global categories assigned only to product and the product categories
 4. Clicking the Category name will open the category preview side blade where user is allowed to change the category visibility as well as the Fetured category toggle. If five Featured category are already present in the system, a warning message will prevent the user to add a new one.
 5. Save the change
 
