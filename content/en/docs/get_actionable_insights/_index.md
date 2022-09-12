@@ -88,6 +88,18 @@ Click an item in the API traffic list to view its transaction details, including
 
  Headers can be redacted and sanitized based on the agent configuration reporting the data. Refer to [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/) for details.
 
+## Subscriptions
+
+Click **Subscriptions** to see a list of the consumer team with their subscriptions in their Marketplace to verify subscription usage.
+
+{{% alert title="Note" color="primary" %}} The Subscription page is available to providers with an active Marketplace subscription.{{% /alert %}}
+
+![Example of Subscriptions](/Images/central/subscriptions.png)
+
+You can filter by consuming team, product, resource (API), subscriptions, and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
+
+Click an individual item to see quota and last three-month usage by each resource and plan in that subscription.
+
 ## Leaderboard
 
 Click **Leaderboard** to view the following aspects about the APIs in your organization:
