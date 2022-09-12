@@ -58,7 +58,7 @@ To create a category:
 
     * Category Profile page: Enter the category definition (Name, Visibility, Description, and an optional image). The category logical name is optional and will be computed based on the category name.
     * Product Association page: Assign/unassign product to this category.
-    
+
 4. Save the category.
 
 ### Editing a category
@@ -71,12 +71,12 @@ Only product categories, not global categories, can be edited from the WebUI.
 
 1. Log into the platform.
 2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-4. Open the elipsis menu on a category and select **Edit**. The category wizard opens in Edit mode to enable changes to all information except the Category logical name.
-5. Save the changes.
+3. Open the elipsis menu on a category and select **Edit**. The category wizard opens in Edit mode to enable changes to all information except the Category logical name.
+4. Save the changes.
 
-#### Update any category using Axway Central CLI 
+#### Update any category using Axway Central CLI
 
-Both product and global categories can be edited using Axway Central CLI. 
+Both product and global categories can be edited using Axway Central CLI.
 
 If a global category was only assigned to a product, it can be converted to a product category by updating the category's spec definition:
 
@@ -98,7 +98,7 @@ To delete a category:
 
 1. Log into the platform.
 2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-4. Open the elipsis menu on a category and select **Delete**. A confirmation message is displayed. Once confirmed, the category is deleted from the system.
+3. Open the elipsis menu on a category and select **Delete**. A confirmation message is displayed. Once confirmed, the category is deleted from the system.
 
 ### Convert a product category into a Featured category
 
@@ -108,8 +108,8 @@ To convert a category into a Featured category:
 
 1. Log into the platform.
 2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-4. Click the category name to open the category preview pane. Change the category visibility as well as the Featured category toggle. If five Featured categories are already present in the system, a warning message is displayed and a new one cannot be added.
-5. Save the change.
+3. Click the category name to open the category preview pane. Change the category visibility as well as the Featured category toggle. If five Featured categories are already present in the system, a warning message is displayed and a new one cannot be added.
+4. Save the change.
 
 ### Assigning a category while creating/editing a product
 
@@ -117,5 +117,5 @@ Only users that are assigned the **Central Admin** role can create categories 
 Catalog manager users can only assign existing categories.
 
 1. Select a product in the *Product Foundry* and open it.
-2. Click on the Categories field in the details pane and select the category from the list. The list contains global categories and product specific categories. 
+2. Click on the Categories field in the details pane and select the category from the list. The list contains global categories and product specific categories.
 3. Click the **X** next to the category name to remove a category.
