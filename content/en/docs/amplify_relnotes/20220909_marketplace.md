@@ -33,7 +33,7 @@ There are no enhancements available in this release.
 
 ##### Bug fixes for all Gateway agents
 
-* **Issue** - text.
+There are no bug fixes available in this release.
 
 ##### Known issues for all Gateway agents
 
@@ -45,11 +45,11 @@ The following enhancements and bug fixes are available in this release.
 
 ##### Feature updates for Azure Gateway
 
-* **Feature** - Text.
+* **API Discovery** - The Azure Discovery Agent v1.1.27 has been enhanced to use Azure Products to group APIs, provision API access and credentials. 
 
 ##### Bug fixes for Azure Gateway
 
-There are no enhancements available in this release.
+There are no bug fixes available in this release.
 
 ##### Known issues for Azure Gateway
 
@@ -69,7 +69,7 @@ There are no bug fixes available in this release.
 
 ##### Known issues for Edge Gateway
 
-* **Issue** - text.
+There are no known limitations in this release.
 
 ### Service Registry
 
@@ -93,11 +93,11 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Asset Catalog
 
-* **Feature** - Text.
+* **Asset Sharing** - The Catalog Manager and Developer can share assets with read only access to any team or all teams in the organziation.
 
 #### Bug fixes for Asset Catalog
 
-* **Issue** - Text.
+* **Team Selector** - The team selector on the UI is now able to switch teams.  The scroll bar or a search bar is able to find all the teams which you are a member of.
 
 ### Product Foundry
 
@@ -106,6 +106,7 @@ The following enhancements and bug fixes are available in this release.
 #### Feature updates for Product Foundry
 
 * **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen that can be access from **Product Foundry > Categories**. This gives Central Administrators full management capabilities over categories from the WebUI.
+* **Product Sharing** - The Catalog Manager can share products with read only access to any team or all teams in the organziation.
 
 #### Bug fixes for Product Foundry
 
