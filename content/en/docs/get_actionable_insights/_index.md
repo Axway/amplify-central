@@ -90,7 +90,7 @@ Click an item in the API traffic list to view its transaction details, including
 
 ## Subscriptions
 
-Click **Subscriptions** to see a list of the consumer team with their products and subscriptions in their Marketplace to verify subscription usage.
+Click **Subscriptions** to see a list of the consumer team with their subscriptions in their Marketplace to verify subscription usage.
 
 {{% alert title="Note" color="primary" %}} The Subscription page is available to providers with an active Marketplace subscription.{{% /alert %}}
 
