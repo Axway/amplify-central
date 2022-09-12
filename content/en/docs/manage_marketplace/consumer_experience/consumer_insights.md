@@ -88,6 +88,6 @@ Click **Subscriptions** to see a list of the products and its subscription in yo
 
 ![Subscriptions example](/Images/marketplace/consumer_experience/ci_subscriptions.png)
 
-You can filter by products, subscriptions, and time range in 3 month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
+You can filter by products, subscriptions, and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
 
 Click an individual item to see quota and last three-month usage by each resource and plan in that subscription.
