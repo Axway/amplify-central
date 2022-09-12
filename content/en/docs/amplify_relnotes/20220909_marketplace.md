@@ -25,19 +25,7 @@ Agents' version and Gateway compatibility:
 
 #### All Gateway agents
 
-The following enhancements and bug fixes are available in this release.
-
-##### Feature updates for all Gateway agents
-
-There are no enhancements available in this release.
-
-##### Bug fixes for all Gateway agents
-
-There are no bug fixes available in this release.
-
-##### Known issues for all Gateway agents
-
-There are no known limitations in this release.
+There are no enhancements and bug fixes in this release.
 
 #### Azure Gateway
 
@@ -45,7 +33,7 @@ The following enhancements and bug fixes are available in this release.
 
 ##### Feature updates for Azure Gateway
 
-* **API Discovery** - The Azure Discovery Agent v1.1.27 has been enhanced to use Azure Products to group APIs, provision API access and credentials. 
+* **API discovery** - The Azure Discovery Agent v1.1.27 has been enhanced to use Azure products to group APIs, provision API access and credentials. 
 
 ##### Bug fixes for Azure Gateway
 
@@ -55,37 +43,9 @@ There are no bug fixes available in this release.
 
 There are no known limitations in this release.
 
-#### Edge Gateway
-
-The following enhancements and bug fixes are available in this release.
-
-##### Feature updates for Edge Gateway
-
-There are no enhancements available in this release.
-
-##### Bug fixes for Edge Gateway
-
-There are no bug fixes available in this release.
-
-##### Known issues for Edge Gateway
-
-There are no known limitations in this release.
-
 ### Service Registry
 
-The following enhancements and bug fixes are available in this release.
-
-#### Feature updates for Service Registry or Topology
-
-There are no enhancements available in this release.
-
-#### Bug fixes for Service Registry or Topology
-
-There are no bug fixes available in this release.
-
-#### Known issues for Service Registry or Topology
-
-There are no known limitations in this release.
+There are no enhancements and bug fixes in this release.
 
 ### Asset Catalog
 
@@ -93,11 +53,15 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Asset Catalog
 
-* **Asset Sharing** - The Catalog Manager and Developer can share assets with read only access to any team or all teams in the organziation.
+* **Asset sharing** - The Catalog Manager and Developer can share assets with read only access to any team or all teams in the organziation.
 
 #### Bug fixes for Asset Catalog
 
-* **Team Selector** - The team selector on the UI is now able to switch teams.  The scroll bar or a search bar is able to find all the teams which you are a member of.
+* **Team selector** - The team selector on the UI can now switch teams. The scroll bar or a search bar can find all the teams that you are a member of.
+
+#### Known issues for Asset Catalog
+
+There are no known limitations in this release.
 
 ### Product Foundry
 
@@ -105,8 +69,8 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Product Foundry
 
-* **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen that can be access from **Product Foundry > Categories**. This gives Central Administrators full management capabilities over categories from the WebUI.
-* **Product Sharing** - The Catalog Manager can share products with read only access to any team or all teams in the organziation.
+* **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen that can be accessed from **Product Foundry > Categories**. This gives Central Administrators full management capabilities over categories from the WebUI.
+* **Product sharing** - The Catalog Manager can share products with read only access to any team or all teams in the organization.
 
 #### Bug fixes for Product Foundry
 
@@ -134,7 +98,7 @@ The following enhancements and bug fixes are available in this release.
 
 #### Bug fixes for Marketplace
 
-* **Paid plan base price with large number crash the backend** - Previously when using a big number in a paid plan, the backend api crashed. Now, the UI does not allow a number having more than 10 digits.
+* **Paid plan base price with large number crashes the backend** - Previously when using a big number in a paid plan, the backend API crashed. Now, the UI does not allow a number having more than 10 digits.
 
 #### Known issues for Marketplace
 
