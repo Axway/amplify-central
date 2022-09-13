@@ -53,7 +53,7 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Asset Catalog
 
-* **Asset sharing** - The Catalog Manager and Developer can share assets with read-only access to any team or all teams in the organziation.
+* **Asset sharing** - The Catalog Manager and Developer can share assets with read-only access to any team or all teams in the organization.
 
 #### Bug fixes for Asset Catalog
 
