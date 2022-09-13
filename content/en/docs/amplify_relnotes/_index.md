@@ -36,8 +36,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.33. This version is 
 
 | Service registry <br />Topology |         |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes:  | None. |
+| What's new: | None.  |
+| Bug fixes:  | None.  |
 
 | Asset Catalog |         |
 |--------|---------|
