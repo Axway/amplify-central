@@ -53,7 +53,7 @@ The following enhancements and bug fixes are available in this release.
 
 #### Feature updates for Asset Catalog
 
-* **Asset sharing** - The Catalog Manager and Developer can share assets with read only access to any team or all teams in the organziation.
+* **Asset sharing** - The Catalog Manager and Developer can share assets with read-only access to any team or all teams in the organziation.
 
 #### Bug fixes for Asset Catalog
 
@@ -70,7 +70,7 @@ The following enhancements and bug fixes are available in this release.
 #### Feature updates for Product Foundry
 
 * **Category management** - Categories can now be edited, deleted and previewed from a dedicated screen that can be accessed from **Product Foundry > Categories**. This gives Central Administrators full management capabilities over categories from the WebUI.
-* **Product sharing** - The Catalog Manager can share products with read only access to any team or all teams in the organization.
+* **Product sharing** - The Catalog Manager can share products with read-only access to any team or all teams in the organization.
 
 #### Bug fixes for Product Foundry
 
