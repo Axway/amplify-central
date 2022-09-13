@@ -20,49 +20,49 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify September 9th, 2022](/docs/amplify_relnotes/20220909_marketplace/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.30. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.33. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.26
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.24
-* **Azure latest release** - Agent version 1.1.26
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.267
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.25
+* **Azure latest release** - Agent version 1.1.27
 * **Istio 1.9.5** - Agent version 2.0.38
 * **Apigee Edge** - Agent version 0.0.9
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.8
 
 | Agents |         |
 |--------|---------|
-| What's new: | Text. |
-| Bug fixes:  | Text. |
+| What's new: | **Azure** - API discovery. |
+| Bug fixes:  | None. |
 
 | Service registry <br />Topology |         |
 |--------|---------|
-| What's new: | Text. |
-| Bug fixes:  | Text. |
+| What's new: | None. |
+| Bug fixes:  | None. |
 
 | Asset Catalog |         |
 |--------|---------|
-| What's new: | Text. |
-| Bug fixes:  | Text. |
+| What's new: | Asset sharing with read-only access. |
+| Bug fixes:  | Team selector does not switch teams. |
 
 | Product Foundry |         |
 |--------|---------|
-| What's new: | Text. |
-| Bug fixes:  | Text. |
+| What's new: | Category management from a dedicated screen. <br />Product sharing with read-only access. |
+| Bug fixes:  | Assigning a product to a category changed the product state. <br />Marketplace active subscription list is empty. |
 
 | Business insights |         |
 |--------|---------|
-| What's new: | Text. |
-| Bug fixes:  | Text. |
+| What's new: | View the consuming teams' usage and quota compliance of subscriptions. |
+| Bug fixes:  | None. |
 
 | Marketplace |         |
 |--------|---------|
-| What's new: | Text. |
-| Bug fixes:  | Text. |
+| What's new: | View products in a featured category on the home page. <br />Filter the catalog of products by categories. |
+| Bug fixes:  | Paid plan base price with large number crashes the backend. |
 
 | Consumer insights |         |
 |--------|---------|
-| What's new: | Text. |
-| Bug fixes:  | Text. |
+| What's new: | None. |
+| Bug fixes:  | None. |
 
 ## [Amplify August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
 
