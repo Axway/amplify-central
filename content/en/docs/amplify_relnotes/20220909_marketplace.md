@@ -83,7 +83,19 @@ There are no known limitations in this release.
 
 ### Business insights
 
-There are no enhancements and bug fixes in this release.
+The following enhancements and bug fixes are available in this release.
+
+#### Feature updates for Business insights.
+
+* **Subscriptions** - API Providers can now see the usage and quota compliance of subscriptions to their APIs by different consuming teams.
+
+#### Bug fixes for Business insights
+
+There are no bug fixes available in this release.
+
+#### Known issues for Business insights
+
+There are no known limitations in this release.
 
 ## Consumer experience
 
