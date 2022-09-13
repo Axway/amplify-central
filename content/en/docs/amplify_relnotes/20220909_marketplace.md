@@ -33,7 +33,7 @@ The following enhancements and bug fixes are available in this release.
 
 ##### Feature updates for Azure Gateway
 
-* **API discovery** - The Azure Discovery Agent v1.1.27 has been enhanced to use Azure products to group APIs, provision API access and credentials. 
+* **API discovery** - The Azure Discovery Agent v1.1.27 has been enhanced to use Azure products to group APIs, provision API access and credentials.
 
 ##### Bug fixes for Azure Gateway
 
@@ -85,7 +85,7 @@ There are no known limitations in this release.
 
 The following enhancements and bug fixes are available in this release.
 
-#### Feature updates for Business insights.
+#### Feature updates for Business insights
 
 * **Subscriptions** - API Providers can now see the usage and quota compliance of subscriptions to their APIs by different consuming teams.
 
