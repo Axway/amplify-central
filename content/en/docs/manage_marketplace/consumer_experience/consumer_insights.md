@@ -51,9 +51,9 @@ Click **API Traffic** to view the traffic information for the API or Application
 
 ![API Traffic example](/Images/marketplace/consumer_experience/ci_api_traffic.png)
 
-You can filter by Applications, methods, status codes, and a pre-configured time range or customize your own.
+You can filter by applications, methods, status codes, and a pre-configured time range or customize your own.
 
-{{% alert title="Note" color="primary" %}} API Traffic is based on a limited sample of the actual gateway traffic and will now show all transactions.{{% /alert %}}
+{{% alert title="Note" color="primary" %}} API Traffic is based on a limited sample of the actual gateway traffic and will not show all transactions.{{% /alert %}}
 
 Each individual item provides the following data:
 
