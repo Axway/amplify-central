@@ -42,7 +42,7 @@ Amplify Istio agents provide the secure connection between your hybrid environme
 
 ### Amplify Istio Discovery Agent
 
-The Amplify Istio Discovery Agent listens for events coming from Kubernetes to discover pods, services, and API documentation within your cluster to publish resources to Amplify Central in a corresponding environment.
+The Amplify Istio Discovery Agent listens for events from Kubernetes to Virtual Services, and API documentation within your cluster to publish resources to Amplify Central in a corresponding environment.
 
 ### Amplify Istio Traceability Agent
 
