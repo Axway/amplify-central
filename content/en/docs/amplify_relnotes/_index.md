@@ -22,32 +22,32 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 Current agent versions are based on Amplify Agents SDK v1.1.33. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.267
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.25
-* **Azure latest release** - Agent version 1.1.27
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.29
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.27
+* **Azure latest release** - Agent version 1.1.29
 * **Istio 1.9.5** - Agent version 2.0.38
-* **Apigee Edge** - Agent version 0.0.9
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.8
+* **Apigee Edge** - Agent version 0.1.0
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.9
 
 | Agents |         |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes:  | None. |
+| What's new: | **All agents** - Consumer credential management. <br />**Apigee Gateway** - Quota provisioning. |
+| Bug fixes:  | **API Management Gateway** - Consumer Insights Application Usage issue, Marketplace product and application deletion issue. |
 
 | Service registry <br />Topology |         |
 |--------|---------|
-| What's new: | None.  |
-| Bug fixes:  | None.  |
+| What's new: | Unified Catalog enabled by entitlements. |
+| Bug fixes:  | Teams names in the filter are not sorted alphabetically. |
 
 | Asset Catalog |         |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes:  | None. |
+| Bug fixes:  | Teams names in the filter are not sorted alphabetically. <br />Ownership set at the asset version level. |
 
 | Product Foundry |         |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes:  | None. |
+| What's new: | Provider credential management. <br />Subscription approver role. <br />Swap featured categories. |
+| Bug fixes:  | Teams names in the filter are not sorted alphabetically. |
 
 | Business insights |         |
 |--------|---------|
@@ -56,8 +56,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.33. This version is 
 
 | Marketplace |         |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes:  | None. |
+| What's new: | Consumer credential management. <br />Search feature on the Marketplace Homepage. <br />Subscription enhancements. |
+| Bug fixes:  | Subscription and applications do not have the same owner. |
 
 | Consumer insights |         |
 |--------|---------|
