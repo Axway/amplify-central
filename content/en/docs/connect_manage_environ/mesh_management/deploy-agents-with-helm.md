@@ -351,8 +351,6 @@ global:
 
 Copy the content into a file called `hybrid-override.yaml`.
 
-Update the 
-
 ### Deploy the agent
 
 ```bash

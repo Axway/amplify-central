@@ -101,25 +101,25 @@ If you are a member of multiple Amplify organizations, select an organization an
 
 5. Select either an existing DevOps Service Account (DOSA), or create a new DOSA account, so the agents can authenticate with Amplify.
 
-{{< alert title="Note" color="primary" >}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify.{{< /alert >}}
+	{{< alert title="Note" color="primary" >}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify.{{< /alert >}}
 
-6. Select `Create a new account` and press `enter`:
+	Select `Create a new account` and press `enter`:
 
-    ```bash
-    Select a service account (DOSA):
-    Create a new account
-    ──────────────
-    istio-service-account
-    ──────────────
-    ```
+			```bash
+			Select a service account (DOSA):
+			Create a new account
+			──────────────
+			istio-service-account
+			──────────────
+			```
 
-7. Create the Discovery Agent resource (Prompt only appears if installing the discovery agent).
+6. Create the Discovery Agent resource (Prompt only appears if installing the discovery agent).
 
     ```bash
     Enter a new discovery agent name:(cli-1664387590624)
     ```
 
-8. Create the Traceability Agent resourece (Prompt only appears if installing the traceability agent)
+7. Create the Traceability Agent resourece (Prompt only appears if installing the traceability agent)
 
     ```bash
     Enter a new traceability agent name:(cli-1664387590624)
