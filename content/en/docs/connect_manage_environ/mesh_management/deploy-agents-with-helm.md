@@ -18,7 +18,7 @@ To prepare the cluster for the Amplify Agents, create a namespace for the agents
 kubectl create namespace amplify-agents
 ```
 
-A service account is required for the agents to connect to Amplify Central. Create a service account using the Amplify Central CLI, and either generate a public and private key pair, or provide the file paths to keys you would like to use for the service account.
+A service account is required for the agents to connect to Amplify. Create a service account using the Amplify Central CLI, and either generate a public and private key pair, or provide the file paths to keys you would like to use for the service account.
 
 ```bash
 ~ » axway service-account create
@@ -37,7 +37,7 @@ Organization: axway (12345678-0000-4444-99e9-ac4fa7d116db)
 
 Successfully created service account
 
-Client ID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
+Client ID: istio-service-account_12345678-0000-4444-99e9
 ```
 
 After the service account has been created you will be provided with a Client ID. Save this ID to be used later in the `hybrid-override.yaml` to install the agents.
@@ -169,17 +169,17 @@ You are logged into a platform account in organization axway
 The current region is set to US.
 
 ORGANIZATION                          GUID                                  ORG ID
-✔ axway                 55e55b55-0000-4444-9999-ac4fa4d444db  123937327920141
+✔ axway                 55e55b55-0000-4444-9999                         123456789912345
 
 "ABC-AXWAY-COM" ROLES  DESCRIPTION    TYPE
   administrator             Administrator  Platform
   api_central_admin         Central Admin  Service
 
-"ABC-AXWAY-COM" TEAMS  GUID                                  ROLE
-✔ Default Team              4e44d44f-d444-4f44-9999-04f4ca44d4a4  administrator
+"ABC-AXWAY-COM" TEAMS                GUID                                  ROLE
+✔ Default Team              4e44d44f-d444-4f44-9999                     administrator
 ```
 
-The command returns details about your current logged in organization. The ID of the org from the command is `123937327920141`. Use this as the `tenantID` field in the yaml content below.
+The command returns details about your current logged in organization. The ID of the org from the command is `123456789912345`. Use your org ID as the `tenantID` field in the yaml content below.
 
 #### Retrieve the Environment ID
 
@@ -225,7 +225,7 @@ global:
     clientTimeout: 10s
     envID: 8ac9924581ed71fa0181ef817e9b0976
     envName: "istio"
-    tenantID: "123937327920141"
+    tenantID: "123456789912345"
     grpcEnabled: "true"
     marketplaceProvisioningEnabled: "true"
     auth:
@@ -253,7 +253,7 @@ global:
     # Amplify Central Deployment (prod, prod-eu)
     apicDeployment: prod
     # Amplify Platform service account client ID
-    clientID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
+    clientID: istio-service-account_12345678-0000-4444-99e9
     # Amplify ingestion service endpoint
     condorUrl: ingestion.datasearch.axway.com:5044
     condorSslVerification: full
@@ -314,7 +314,7 @@ global:
     # Name of the discovery agent resource
     agentName: istio-da
     # Amplify Platform service account client ID
-    clientID: istio-service-account_12345678-0000-4444-99e9-ac4fa7d116db
+    clientID: istio-service-account_12345678-0000-4444-99e9
     # Name of the k8s secret for private/public key pair
     keysSecretName: amplify-agents-keys
     # name of the K8SCluster the agent is connected to
@@ -350,6 +350,8 @@ global:
 ```
 
 Copy the content into a file called `hybrid-override.yaml`.
+
+Update the 
 
 ### Deploy the agent
 

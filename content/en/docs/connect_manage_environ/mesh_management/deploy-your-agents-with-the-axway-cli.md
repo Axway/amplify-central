@@ -60,40 +60,97 @@ If you are a member of multiple Amplify organizations, select an organization an
     The installation displays the following prompts:
 
     ```bash
-    Select the type of gateway you want to connect:
-    API Gateway v7
-    Amazon API Gateway
-    Istio
+      Amplify API Gateway
+      Amazon API Gateway
+      Azure API Gateway
+    ❯ Istio
     ```
 
-2. Select `Istio` as your gateway. The next prompt asks if you already have Istio installed.
+2. Select what you would like to install. You can install only one of the agents, or both.
+
+    ```bash
+    Select the type of agent(s) you want to install:
+    ❯ All agents
+      Discovery
+      Traceability
+    ```
+
+3. Select an environment to connect, or create a new environment.
+
+    ```bash
+    Create a new environment
+    ──────────────
+    istio
+    ──────────────
+    ```
+
+    If you chose to create a new environment, enter a name and press `enter`:
+
+    ```bash
+    Enter a new Environment name:istio-demo
+    Creating a new Environment
+    New environment "istio-demo" has been successfully created.
+    ```
+
+4. Select a team.
+
+    ```bash
+      Select a team:
+    ❯ Default Team
+    ```
+
+5. Select either an existing DevOps Service Account (DOSA), or create a new DOSA account, so the agents can authenticate with Amplify.
+
+{{< alert title="Note" color="primary" >}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify.{{< /alert >}}
+
+6. Select `Create a new account` and press `enter`:
+
+    ```bash
+    Select a service account (DOSA):
+    Create a new account
+    ──────────────
+    istio-service-account
+    ──────────────
+    ```
+
+7. Create the Discovery Agent resource (Prompt only appears if installing the discovery agent).
+
+    ```bash
+    Enter a new discovery agent name:(cli-1664387590624)
+    ```
+
+8. Create the Traceability Agent resourece (Prompt only appears if installing the traceability agent)
+
+    ```bash
+    Enter a new traceability agent name:(cli-1664387590624)
+    ```
 
 #### If Istio is already installed
 
 1. If Istio is already installed in your cluster, select 'Yes':
 
     ```bash
-    ? Use existing Istio installation?:  (Use arrow keys)
+    ? Use existing Istio installation?:
     ❯ Yes
       No
     ```
 
-2. Select from the list the namespace that the ingress-gateway is running in:
+2. Select the namespace where the Envoy filters should be created for the traceability agent:
 
     ```bash
-    ? Select the namespace where the Istio ingress gateway is running:
+    ? Select the namespace where you would like the ALS Envoy Filters to be applied:
       default
     ❯ istio-system
     ```
 
-The rest of the prompts relate to the Istio agents. Continue on with the section [Select the agents to install](#select-the-agents-to-install).
+The rest of the prompts relate to the Istio agents. Continue on with the section [Additional Agent Configuration](#additional-agent-configuration).
 
 #### If Istio is not installed
 
 1. If Istio is not installed, select No:
 
     ```bash
-    ? Use existing Istio installation?:  (Use arrow keys)
+    ? Use existing Istio installation?:
     ❯ No
       Yes
     ```
@@ -118,7 +175,7 @@ The rest of the prompts relate to the Istio agents. Continue on with the section
     Enter the Kubernetes cluster port: (443)
     ```
 
-5. Enter the name of the Kubernetes secret to store the certificate. By default, Istio is deployed in the `istio-system` namespace, and the secret for the gateway certificate is saved to this namespace. The creation of this namespace is handled by the deployment of Istio, if it does not exists yet.
+5. Enter the name of the Kubernetes secret to store the certificate. By default, the Istio ingress gateway is deployed in the `istio-system` namespace, and the secret for the gateway certificate is saved to this namespace. The creation of this namespace is handled by the deployment of Istio, if it does not exists yet.
 
    ```bash
    Enter the name of the secret to store the Istio gateway certificate: (gateway-cert)
@@ -128,14 +185,14 @@ The rest of the prompts relate to the Istio agents. Continue on with the section
 
     If you choose to generate a certificate, the Axway CLI will use OpenSSL to create the private key and the certificate, which will be placed in the current directory where you are running the Axway CLI. If you choose to provide an existing certificate, you will be prompted with the file path to the private key and the certificate.
 
-#### Generate a self-signed certificate
+##### Generate a self-signed certificate
 
 1. Select `Generate self signed certificate`.
 
 2. Press `enter`:
 
     ```bash
-    Would you like to generate a self signed certificate, or provide your own?: (Use arrow keys)
+    Would you like to generate a self signed certificate, or provide your own?: 
     Generate self signed certificate
     Provide certificate
     ```
@@ -148,7 +205,7 @@ Created gateway-cert.crt and gateway-cert.key in /Users/axway
 Created secret/gateway-cert in the istio-system namespace.
 ```
 
-#### Provide certificate
+##### Provide certificate
 
 1. Select `Provide certificate`.
 
@@ -166,37 +223,35 @@ Created secret/gateway-cert in the istio-system namespace.
 
     The CLI will create the secret in the `istio-system` namespace.
 
-### Select the agents to install
+### Discovery Agent Prompts
 
-The following prompts are related to the details about the Amplify Istio Agents.
-
-1. Select what you would like to install. You can install only one of the agents, or both. The Discovery Agent option deploys the Amplify Istio Discovery Agent.
-
-    ```bash
-    Select which agents to install: (Use arrow keys)
-    All agents
-    Discovery agent
-    Traceability agent
-    ```
+1. Select the Traceability Agent mode.
 
     If you choose to deploy the Traceability Agent, select the mode in which you want the Traceability Agent to run.
 
     The Amplify Istio Traceability Agent has two modes, default and verbose. The default mode captures only the headers specified in the EnvoyFilter. The verbose mode captures all the headers in the request and response flows. Once selected, you will be able to switch modes if required. Refer to [Monitor APIs and Services - Toggling the Traceability Agent](/docs/connect_manage_environ/mesh_management/traceability_agent_configuration/#toggling-the-traceability-agent).
 
    ```bash
-    Select Traceability Agent HTTP header publishing mode:  (Use arrow keys)
+    Select Traceability Agent HTTP header publishing mode:
     ❯ Default
       Verbose
    ```
 
-2. Enter the namespace where you would like to deploy the agents or accept the default option by pressing `enter`. The CLI collects a list of all your existing namespaces and provides an option to deploy to one of those. You can also choose to create a new Kubernetes namespace and deploy there instead.
+2. Select the namespace where Virtual Services should be discovered from.
+
+   ```bash
+    Select the namespace where the agent should discover Virtual Service resources:
+    ❯ default
+      istio-system
+   ```
+
+3. Enter the namespace where you would like to deploy the agents, or accept the default option by pressing `enter`. The CLI collects a list of all your existing namespaces and provides an option to deploy to one of those. You can also choose to create a new Kubernetes namespace and deploy there instead.
 
     ```bash
     Create a new namespace
     ──────────────
     default
     istio-system
-    kube-node-lease
     ```
 
     In this example we will create a new namespace:
@@ -205,101 +260,51 @@ The following prompts are related to the details about the Amplify Istio Agents.
     Enter a new namespace name: (amplify-agents)
     ```
 
-3. Select whether you want to deploy the demo List service. This is an optional demo service which can be leveraged to ensure the Istio agents are working as expected. The demo service can be found in the ampc-hybrid namespace if selected to be deployed.
+4. Select whether you want to deploy the demo List service. This is an optional demo service which can be leveraged to ensure the Istio agents are working as expected. The demo service can be found in the ampc-demo namespace if selected to be deployed.
 
     ```bash
-    ? Do you want to deploy the optional demo application?:  (Use arrow keys)
+    Do you want to deploy the optional demo application?:
     ❯ No
       Yes
     ```
 
-4. Select either an existing DevOps Service Account (DOSA), or create a new DOSA account, so the agents can authenticate with Amplify Central.
-
-{{< alert title="Note" color="primary" >}} If you choose to use an existing DOSA account, you must provide the same public and private keys that were used to create the DOSA account you have selected. Failure to do so will cause the agents to fail to authenticate with Amplify Central.{{< /alert >}}
-
-#### Create a new DOSA account
-
-1. Select `Create a new account` and press `enter`:
+5. Create a K8S Cluster resource.
 
     ```bash
-    Select a service account (DOSA): (Use arrow keys)
-    Create a new account
-    ──────────────
-    mesh
-    ──────────────
+    Enter a unique k8s cluster name:  (cli-1664387590624)
     ```
 
-2. Enter a name for the new DOSA account. Creating a new DOSA account will override any file named `public_key.pem` or `private_key.pem` in the directory where you invoked the Axway Central CLI from. The public and private key pair are used to authenticate with Amplify Central. The keys will be placed in a secret in the selected namespace, and will be named "amplify-agents-keys."
+### Traceability Agent Prompts
+
+1. Optionally enable traceability logging to gather usage and metrics of your API Services.
 
     ```bash
-    Select a service account (DOSA):  Create a new account
-    WARNING: Creating a new DOSA account will overwrite any existing "private_key.pem" and "public_key.pem" files in this directory
-    Enter a new service account name:  mesh-dosa
+    Would you like to enable transaction logging?:
+    ❯ Yes
+      No
     ```
 
-    After you enter the name of the account and press `enter`, an output is displayed with the client ID of the account and the directory where the keys were placed:
+2. Select a sampling rate. A sampling rate of 1 will log 1% of transactions, a sampling rate of 100 will log all transactions.
 
     ```bash
-    Enter a new service account name: mesh-dosa
-    Creating a new service account.
-    New service account "mesh-dosa" with clientId "DOSA_cb46caebd35f4e8689b56ee5f813b576" has been successfully created.
-    The private key has been placed at /Users/axway/private_key.pem
-    The public key has been placed at /Users/axway/public_key.pem
+    What sampling rate would you like to use? (1-100):  (10)
     ```
 
-#### Use an existing DOSA account
-
-1. Select the DOSA account from the list and press `enter`:
+3. Select if the agent should report all errors recorded by the Traceability Agent.
 
     ```bash
-    Select a service account (DOSA):  (Use arrow keys)
-    Create a new account
-    ──────────────
-    mesh
-    ──────────────
+    Would you like to report all errors?:
+    ❯ Yes
+      No
     ```
 
-2. Enter the keys that were used to create the account. They must be the **same** keys that were used to create this DOSA account. It is recommended to provide the full file path to the location of the keys. The public and private key pair are used to authenticate with Amplify Central. The keys will be placed in a secret in the selected namespace, and will be named "amplify-agents-keys."
+4. Select the Traceability agent protocol.
 
     ```bash
-    Select a service account (DOSA):  mesh
-    Please provide the same "private_key.pem" and "public_key.pem" that was used to create the selected DOSA Account.
-    Enter the file path to the public key:  /Users/axway/public_key.pem
-    Enter the file path to the private key:  /Users/axway/private_key.pem
+    ? Select Traceability protocol:  (Use arrow keys)
+    ❯ Lumberjack
+      HTTPS
     ```
-
-### Provide an environment resource
-
-After the details of the DOSA account have been provided, you are prompted to either create an environment resource in Amplify Central or provide the name of an existing environment resource. The environment will hold the Kubernetes resources that were found by the Amplify Istio Discovery Agent.
-
-```bash
-Create a new environment
-──────────────
-mesh-env
-──────────────
-```
-
-If you chose to create a new environment, enter a name and press `enter`:
-
-```bash
-Enter a new Environment name:  mesh-demo
-Creating a new Environment
-New environment "mesh-demo" has been successfully created.
-```
-
-A message indicating that the new environment has been created is displayed.
-
-Add a name for your Kubernetes cluster. This unique name will be used by the Istio agents. Enter a name and press 'enter':
-
-```bash
-Enter a new k8s Cluster name:  test-cluster
-Creating a new k8s Cluster
-New k8scluster "test-cluster" has been successfully created.
-```
-
-A message indicating that the new k8s cluster has been created is displayed.
-
-The demo service is packaged along with the `ampc-hybrid` helm chart.
 
 ### Install Istio
 
@@ -320,14 +325,14 @@ If you want to install Istio in an Openshift Cluster, there are additional steps
 
 ### Finish the installation of the agents
 
-After the Istio installation is complete, edit the `hybrid-override.yaml` file with the editor of your choice. Since the CLI allows you to enter only one namespace, you can add additional namespaces for the envoy filters in the value of `envoyFilterNamespaces` under the `als` key:
+After the Istio installation is complete, edit the `hybrid-override.yaml`. Since the CLI allows you to enter only one namespace, you can add additional namespaces for the envoy filters in the value of `envoyFilterNamespaces` under the `als` key:
 
 ```yaml
 als:
    envoyFilterNamespaces:
     - namespace1
     - namespace2
-    ..
+    ...
     - namespaceN
 ```
 

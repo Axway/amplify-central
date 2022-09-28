@@ -21,8 +21,6 @@ The Discovery Agent (DA) discovers Istio Virtual Service resources from configur
 
 ## Configure the discovery agent
 
-### How to discover Virtual Service resources
-
 The discovery agent must be configured to find the Virtual Services, API Documentation, and Request Authentication resources in your cluster.
 There are a few values to modify in the `hybrid-override.yaml` file.
 
@@ -91,7 +89,7 @@ da:
 
 ## Discover the Hybrid List app
 
-In this section we will deploy a service called `hybrid-list`, create a `VirtualService` to expose the service outside the cluster, and allow the Istio DA to discover the api and publish it in central. We will also create a `RequestAuthentication` resource to secure the `hybrid-list` service, and we will see an OAuth policy applied to the API in Amplify Central.
+In this section we will deploy a service called `hybrid-list`, create a `VirtualService` to expose the service outside the cluster, and allow the Istio DA to discover the api and publish it in Amplify. We will also create a `RequestAuthentication` resource to secure the `hybrid-list` service, and we will see an OAuth policy applied to the API in Amplify.
 
 ### Prepare the hybrid-override.yaml
 
@@ -254,7 +252,7 @@ The steps are as follows:
     helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
     ```
 
-10. Confirm that the agent discovered the hybrid-list virtual service by looking up `APIServices` in Amplify Central.
+10. Confirm that the agent discovered the hybrid-list virtual service by looking up `APIServices` in Amplify.
 
     ```bash
     ~ » axway central get apiservices -s istio
@@ -264,7 +262,7 @@ The steps are as follows:
     mylist  9 minutes ago  mylist  APIService     Environment  istio       management      Default Team
     ```
 
-11. Confirm that the agent discovered the `RequestAuthentication` by looking up `CredentialRequestDefinitions` in Amplify Central.
+11. Confirm that the agent discovered the `RequestAuthentication` by looking up `CredentialRequestDefinitions` in Amplify.
 
     ```bash
     ~ » axway central get credentialrequestdefinitions -s istio
