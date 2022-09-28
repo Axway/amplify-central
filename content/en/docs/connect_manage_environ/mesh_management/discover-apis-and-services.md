@@ -27,6 +27,7 @@ The discovery agent must be configured to find the Virtual Services, API Documen
 There are a few values to modify in the `hybrid-override.yaml` file.
 
 To configure the discovery of Virtual Services, update `da.discovery.virtualService.namespaces` to provide a list of namespaces where the agent should find Virtual Service resources in your cluster.
+
 ```yaml
 da:
   discovery:
