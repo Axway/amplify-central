@@ -1,4 +1,3 @@
-
 ---
 title: Deploy your agents with helm
 linkTitle: Deploy your agents with helm
