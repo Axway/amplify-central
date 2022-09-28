@@ -13,6 +13,7 @@ Before you start, see [Deploy your agents with the Axway CLI](/docs/connect_mana
 This page references the resources created from the [Deploy your agents with the Axway CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/) procedure.
 
 You may optionally create the Amplify resources manually with the Axway CLI, and install the agents with helm by referencing [Deploy your agents with helm](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-helm). Either article should be completed before starting.
+
 ## Overview
 
 Amplify Istio Discovery Agent is a service that gets installed into your Kubernetes cluster as part of deploying the `ampc-hybrid` helm chart.
