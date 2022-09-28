@@ -234,7 +234,7 @@ global:
 
   # Configuration for creating the K8S Secret that holds the Amplify Platform service account details as part of the helm chart deployment
   secret:
-    # Set to true, and provide the following values to enable the creation of the K8S Secret
+    # Set to true, and provide the following values to enable the creation of the K8S Secret. als.keysSecretName and da.keysSecretName should receive the same name if this is enabled.
     create: false
     name: ""
     password: ""
@@ -350,6 +350,10 @@ global:
 ```
 
 Copy the content into a file called `hybrid-override.yaml`.
+
+##### Fields to update
+
+There are several fields that must be updated in order to properly connect to Amplify and discover resources in your environment.
 
 ### Deploy the agent
 
