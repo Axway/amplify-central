@@ -174,46 +174,46 @@ The steps are as follows:
 2. Create a VirtualService. Copy the following content into a yaml file named `hybrid-list-vs.yaml` on your machine. Be sure to update `spec.gateways` with the name of the gateway resource that is deployed in your cluster that you would like to use, and update `spec.hosts` to be the name of the host this VirtualService uses.
 
     ```yaml
-		apiVersion: networking.istio.io/v1beta1
-		kind: VirtualService
-		metadata:
-			name: hybrid-list
-			namespace: amplify-agents
-		spec:
-			hosts:
-			- demo.hybrid.sandbox.axwaytest.net
-			gateways:
-			- gateway-ingress # Update the gateway to reflect the gateway resource you want to use
-			http:
-			- name: mylist
-				match:
-				- uri:
-						prefix: "/hybridlist"
-				rewrite:
-					uri: "/api"
-				route:
-				- destination:
-						host: ampc-hybrid-list.ampc-demo.svc.cluster.local
-						port:
-							number: 8080
-		```
+    apiVersion: networking.istio.io/v1beta1
+    kind: VirtualService
+    metadata:
+      name: hybrid-list
+      namespace: amplify-agents
+    spec:
+      hosts:
+      - demo.hybrid.sandbox.axwaytest.net
+      gateways:
+      - gateway-ingress # Update the gateway to reflect the gateway resource you want to use
+      http:
+      - name: mylist
+        match:
+        - uri:
+            prefix: "/hybridlist"
+        rewrite:
+          uri: "/api"
+        route:
+        - destination:
+            host: ampc-hybrid-list.ampc-demo.svc.cluster.local
+            port:
+              number: 8080
+    ```
 
 3. Create a RequestAuthentication. Copy the content into a yaml file named `request-auth.yaml` on your machine. Be sure to update the resource to reflect your own IDP configuration.
 
     ```yaml
-		apiVersion: "security.istio.io/v1beta1"
-		kind: RequestAuthentication
-		metadata:
-			name: list-request-authentication
-			namespace: ampc-demo
-		spec:
-			selector:
-				matchLabels:
-					app: list
-			jwtRules:
-				- issuer: "local-keycloak"
-					jwksUri: https://example.com/.well-known/jwks.json
-		```
+    apiVersion: "security.istio.io/v1beta1"
+    kind: RequestAuthentication
+    metadata:
+      name: list-request-authentication
+      namespace: ampc-demo
+    spec:
+      selector:
+        matchLabels:
+          app: list
+      jwtRules:
+        - issuer: "local-keycloak"
+          jwksUri: https://example.com/.well-known/jwks.json
+    ```
 
 4. Create a new namespace named `ampc-demo`:
 
@@ -288,14 +288,14 @@ The steps are as follows:
     name: mylist
     title: mylist (istio)
     spec:
-    	endpoint:
+      endpoint:
         - host: tjohnson.hybrid.sandbox.axwaytest.net
-        	port: 8080
-        	routing:
+          port: 8080
+          routing:
             basePath: /hybridlist
-        	protocol: http
-    	apiServiceRevision: mylist.1
-    	accessRequestDefinition: istio
-    	credentialRequestDefinitions:
+          protocol: http
+      apiServiceRevision: mylist.1
+      accessRequestDefinition: istio
+      credentialRequestDefinitions:
         - local-keycloak-oauth-idp # Should be the same crd name from the previous step
     ```
