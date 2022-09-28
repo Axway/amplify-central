@@ -173,53 +173,54 @@ The steps are as follows:
 
 2. Create a VirtualService. Copy the following content into a yaml file named `hybrid-list-vs.yaml` on your machine. Be sure to update `spec.gateways` with the name of the gateway resource that is deployed in your cluster that you would like to use, and update `spec.hosts` to be the name of the host this VirtualService uses.
 
-  ```yaml
-  apiVersion: networking.istio.io/v1beta1
-  kind: VirtualService
-  metadata:
-    name: hybrid-list
-    namespace: amplify-agents
-  spec:
-    hosts:
-    - demo.hybrid.sandbox.axwaytest.net
-    gateways:
-    - gateway-ingress # Update the gateway to reflect the gateway resource you want to use
-    http:
-    - name: mylist
-      match:
-      - uri:
-          prefix: "/hybridlist"
-      rewrite:
-        uri: "/api"
-      route:
-      - destination:
-          host: ampc-hybrid-list.ampc-demo.svc.cluster.local
-          port:
-            number: 8080
-  ```
+    ```yaml
+		apiVersion: networking.istio.io/v1beta1
+		kind: VirtualService
+		metadata:
+			name: hybrid-list
+			namespace: amplify-agents
+		spec:
+			hosts:
+			- demo.hybrid.sandbox.axwaytest.net
+			gateways:
+			- gateway-ingress # Update the gateway to reflect the gateway resource you want to use
+			http:
+			- name: mylist
+				match:
+				- uri:
+						prefix: "/hybridlist"
+				rewrite:
+					uri: "/api"
+				route:
+				- destination:
+						host: ampc-hybrid-list.ampc-demo.svc.cluster.local
+						port:
+							number: 8080
+		```
 
 3. Create a RequestAuthentication. Copy the content into a yaml file named `request-auth.yaml` on your machine. Be sure to update the resource to reflect your own IDP configuration.
 
-  ```yaml
-  apiVersion: "security.istio.io/v1beta1"
-  kind: RequestAuthentication
-  metadata:
-    name: list-request-authentication
-    namespace: ampc-demo
-  spec:
-    selector:
-      matchLabels:
-        app: list
-    jwtRules:
-      - issuer: "local-keycloak"
-        jwksUri: https://example.com/.well-known/jwks.json
-  ```
+    ```yaml
+		apiVersion: "security.istio.io/v1beta1"
+		kind: RequestAuthentication
+		metadata:
+			name: list-request-authentication
+			namespace: ampc-demo
+		spec:
+			selector:
+				matchLabels:
+					app: list
+			jwtRules:
+				- issuer: "local-keycloak"
+					jwksUri: https://example.com/.well-known/jwks.json
+		```
 
 4. Create a new namespace named `ampc-demo`:
 
    ```bash
    kubectl create namespace ampc-demo
    ```
+
 5. Deploy the `hybrid-list` app:
 
    ```bash
@@ -246,56 +247,55 @@ The steps are as follows:
    hybrid-list-749ddd444-ncllr              1/1     Running   0          22m
    ```
 
-
 9. If you modified anything in the `hybrid-override.yaml`, then re-deploy the helm chart.
 
-```bash
-helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
-```
+    ```bash
+    helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
+    ```
 
 10. Confirm that the agent discovered the hybrid-list virtual service by looking up `APIServices` in Amplify Central.
 
-```bash
-~ » axway central get apiservices -s istio
-✔ Resource(s) successfully retrieved
+    ```bash
+    ~ » axway central get apiservices -s istio
+    ✔ Resource(s) successfully retrieved
 
-NAME    AGE            TITLE   RESOURCE KIND  SCOPE KIND   SCOPE NAME  RESOURCE GROUP  OWNER
-mylist  9 minutes ago  mylist  APIService     Environment  istio       management      Default Team
-```
+    NAME    AGE            TITLE   RESOURCE KIND  SCOPE KIND   SCOPE NAME  RESOURCE GROUP  OWNER
+    mylist  9 minutes ago  mylist  APIService     Environment  istio       management      Default Team
+    ```
 
 11. Confirm that the agent discovered the `RequestAuthentication` by looking up `CredentialRequestDefinitions` in Amplify Central.
 
-```bash
-~ » axway central get credentialrequestdefinitions -s istio
-✔ Resource(s) successfully retrieved
+    ```bash
+    ~ » axway central get credentialrequestdefinitions -s istio
+    ✔ Resource(s) successfully retrieved
 
-NAME                AGE             TITLE          RESOURCE KIND                SCOPE KIND   SCOPE NAME  RESOURCE GROUP
-local-keycloak-oauth-idp  22 minutes ago  OAuthlocal-keycloak  CredentialRequestDefinition  Environment  istio       management
-```
+    NAME                AGE             TITLE          RESOURCE KIND                SCOPE KIND   SCOPE NAME  RESOURCE GROUP
+    local-keycloak-oauth-idp  22 minutes ago  OAuthlocal-keycloak  CredentialRequestDefinition  Environment  istio       management
+    ```
 
 12. Confirm that the agent discovered associated the `APIServiceInstance` to the `CredentialRequestDefinition`. The value of `spec.credentialRequestDefinition` should be the same as the `CredentialRequestDefinition` name from the previous step.
 
-```bash
-~ » axway central get apiserviceinstances -s istio mylist -o yaml
-✔ Resource(s) successfully retrieved
+    ```bash
+    ~ » axway central get apiserviceinstances -s istio mylist -o yaml
+    ✔ Resource(s) successfully retrieved
 
-NAME                AGE             TITLE          RESOURCE KIND                SCOPE KIND   SCOPE NAME  RESOURCE GROUP
-local-keycloak-oauth-idp  22 minutes ago  OAuthlocal-keycloak  CredentialRequestDefinition  Environment  istio       management
+    NAME                AGE             TITLE          RESOURCE KIND                SCOPE KIND   SCOPE NAME  RESOURCE GROUP
+    local-keycloak-oauth-idp  22 minutes ago  OAuthlocal-keycloak  CredentialRequestDefinition  Environment  istio       management
 
-group: management
-apiVersion: v1alpha1
-kind: APIServiceInstance
-name: mylist
-title: mylist (istio)
-spec:
-  endpoint:
-    - host: tjohnson.hybrid.sandbox.axwaytest.net
-      port: 8080
-      routing:
-        basePath: /hybridlist
-      protocol: http
-  apiServiceRevision: mylist.1
-  accessRequestDefinition: istio
-  credentialRequestDefinitions:
-    - local-keycloak-oauth-idp # Should be the same crd name from the previous step
-```
+    group: management
+    apiVersion: v1alpha1
+    kind: APIServiceInstance
+    name: mylist
+    title: mylist (istio)
+    spec:
+    	endpoint:
+        - host: tjohnson.hybrid.sandbox.axwaytest.net
+        	port: 8080
+        	routing:
+            basePath: /hybridlist
+        	protocol: http
+    	apiServiceRevision: mylist.1
+    	accessRequestDefinition: istio
+    	credentialRequestDefinitions:
+        - local-keycloak-oauth-idp # Should be the same crd name from the previous step
+    ```
