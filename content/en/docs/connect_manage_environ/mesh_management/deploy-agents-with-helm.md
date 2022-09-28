@@ -108,6 +108,7 @@ axway central create -f environment.yaml
 ```
 
 For the discovery agent, create the DiscoveryAgent resource.
+
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -129,6 +130,7 @@ axway central create -f discovery-agent.yaml
 ```
 
 For the traceability agent, create the TraceabilityAgent resource.
+
 ```yaml
 group: management
 apiVersion: v1alpha1
