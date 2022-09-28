@@ -351,6 +351,8 @@ global:
 
 Copy the content into a file called `hybrid-override.yaml`.
 
+For a detailed example of how to configure the agent for discovery refer to the [Discover APIs and Services](/docs/connect_manage_environ/mesh_management/discover-apis-and-services/)
+
 ##### Fields to update
 
 There are several fields that must be updated in order to properly connect to Amplify and discover resources in your environment.

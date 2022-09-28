@@ -22,7 +22,7 @@ The Discovery Agent (DA) discovers Istio Virtual Service resources from configur
 ## Configure the discovery agent
 
 The discovery agent must be configured to find the Virtual Services, API Documentation, and Request Authentication resources in your cluster.
-There are a few values to modify in the `hybrid-override.yaml` file.
+The values below must be updated in the `hybrid-override.yaml` file in order for discovery to work.
 
 To configure the discovery of Virtual Services, update `da.discovery.virtualService.namespaces` to provide a list of namespaces where the agent should find Virtual Service resources in your cluster.
 
