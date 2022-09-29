@@ -143,7 +143,7 @@ If you are a member of multiple Amplify organizations, select an organization an
     ❯ istio-system
     ```
 
-The rest of the prompts relate to the Istio agents. Continue on with the section [Additional Agent Configuration](#additional-agent-configuration).
+The rest of the prompts relate to the Istio agents. Continue with [Discovery Agent prompts](#discovery-agent-prompts).
 
 #### If Istio is not installed
 

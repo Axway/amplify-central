@@ -148,7 +148,7 @@ To allow Traceability Agent to report traffic and metric events that correlate t
 
 Amplify Marketplace allows the consumer to create applications, request access to the resource, and create credentials. To allow Amplify Marketplace to request access, an access request definition (AccessRequestDefinition) must be created to define the schema for the information that a consumer may provide for granting access to a discovered API. Similarly, to request credentials for the application, a credential request definition (CredentialRequestDefinition) must be created to define the schema for the information that the consumer will provide to create the credential, and for the provisioned credential information.
 
-This is an AccessRequestDefinition and CredenitialRequestDefinition example:
+This is an AccessRequestDefinition and CredentialRequestDefinition example:
 
 ```yaml
 group: management
@@ -239,7 +239,7 @@ spec:
       description: ''
 ```
 
-Once these two resources are set up, the APIServiceInstance for the published API must be set up with the reference for AccessRequestDefinition and CredenitialRequestDefinition:
+Once these two resources are set up, the APIServiceInstance for the published API must be set up with the reference for AccessRequestDefinition and CredentialRequestDefinition:
 
 ```yaml
 kind: APIServiceInstance
@@ -382,7 +382,7 @@ spec:
       jwksUri: https://example.com/.well-known/jwks.json
  ```
 
-When the Traceability Agent receives the traffic it will identify the client id using metadata set up by the Istio envoy filter that is parsed based on the RequestAuthentication defintion, and then the agent will perform the lookup for the associated Credential resource that has the reference to the associated Amplify Marketplace application.
+When the Traceability Agent receives the traffic it will identify the client id using metadata set up by the Istio envoy filter that is parsed based on the RequestAuthentication definition, and then the agent will perform the lookup for the associated Credential resource that has the reference to the associated Amplify Marketplace application.
 
 ### Istio CRDs
 
