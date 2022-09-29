@@ -4,12 +4,9 @@ linkTitle: Deploy your agents with helm
 weight: 55
 date: 2022-9-26
 ---
-
-## Deploy using helm chart
-
 Before deploying the helm chart, you must prepare the Kubernetes cluster, the Amplify environment, and the override file for deploying the chart correctly.
 
-### Prepare the kubernetes cluster
+## Prepare the kubernetes cluster
 
 To prepare the cluster for the Amplify Agents, create a namespace for the agents to run in:
 
@@ -51,7 +48,7 @@ kubectl create secret generic amplify-agents-keys \
 --from-literal=password="" -o yaml
 ```
 
-### Prepare Istio
+## Prepare Istio
 
 An `IstioOperator` is required for Istio to connect to the Traceability Agent. It tells Istio where the Envoy Access Log Service is running. If you already have Istio deployed in your environment, then merge the following configuration into your `IstioOperator` resource and apply the change. If Istio is not yet deployed, then copy this configuration into a file and apply the change.
 
@@ -79,7 +76,7 @@ spec:
 To deploy this change to your Istio environment you will run `istioctl install --set profile=$YOUR_PROFILE -f istio-override.yaml`.
 Update the command to use your desired Istio profile, and then run the install. Refer to the [Istio documentation](https://istio.io/v1.9/docs/setup/install/istioctl/) for more information.
 
-### Prepare Amplify Central
+## Prepare Amplify Central
 
 There are two agents that can be deployed, a Discovery Agent and a Traceability Agent. The Environment and K8SCluster resources are required for each agent.
 
@@ -180,7 +177,7 @@ ORGANIZATION                          GUID                                  ORG 
 
 The command returns details about your current logged in organization. The ID of the org from the command is `123456789912345`. Use your org ID as the `tenantID` field in the yaml content below.
 
-#### Retrieve the Environment ID
+### Retrieve the Environment ID
 
 Run the following command to retrieve the ID of the Environment resource created earlier. Be sure to update the command to use the same environment name you created.
 
@@ -213,7 +210,7 @@ spec:
 
 The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`. Use this in the envID field, and use the Environment name field in the `envName` field in the following yaml:
 
-#### Update the override file
+### Update the override file
 
 ```yaml
 ---
@@ -352,11 +349,11 @@ Copy the content into a file called `hybrid-override.yaml`.
 
 For a detailed example of how to configure the agent for discovery, see [Discover APIs and Services](/docs/connect_manage_environ/mesh_management/discover-apis-and-services/).
 
-##### Fields to update
+#### Fields to update
 
 There are several fields that must be updated in order to properly connect to Amplify and discover resources in your environment.
 
-### Deploy the agent
+## Deploy the agent
 
 ```bash
 helm repo add axway https://charts.axway.com/charts
