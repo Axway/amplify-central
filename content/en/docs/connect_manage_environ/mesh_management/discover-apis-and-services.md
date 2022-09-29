@@ -20,9 +20,9 @@ Amplify Istio Discovery Agent is a service that gets installed into your Kuberne
 
 The Discovery Agent (DA) discovers Istio Virtual Service resources from configured namespaces, and creates API Services based on the routes defined in the Virtual Service.
 
-## Configure the discovery agent
+## Configure the Discovery Agent
 
-The discovery agent must be configured to find the Virtual Services, API Documentation, and Request Authentication resources in your cluster.
+The Discovery Agent must be configured to find the Virtual Services, API documentation, and Request Authentication resources in your cluster.
 The values below must be updated in the `hybrid-override.yaml` file in order for discovery to work.
 
 To configure the discovery of Virtual Services, update `da.discovery.virtualService.namespaces` to provide a list of namespaces where the agent should find Virtual Service resources in your cluster.
@@ -94,7 +94,7 @@ In this section we will deploy a service called `hybrid-list`, create a `Virtual
 
 ### Prepare the hybrid-override.yaml
 
-Configure the `hybrid-override.yaml` to discover `VirtualServices` and `RequestAuthentication` resources fromthe `ampc-demo` namespace, and documentation from the `/apidoc/swagger.json` endpoint
+Configure the `hybrid-override.yaml` to discover `VirtualServices` and `RequestAuthentication` resources from the `ampc-demo` namespace, and documentation from the `/apidoc/swagger.json` endpoint
 
 ```yaml
 da:
