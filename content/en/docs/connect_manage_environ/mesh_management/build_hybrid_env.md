@@ -32,7 +32,7 @@ Learn how to build a basic Amazon EC2 private cloud hybrid environment and add t
     * kubectl - compatible version with your K8s server side - Enables you to deploy and manage applications on Kubernetes from the command line. See the [kubectl installation documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
     * kops 1.19 or later is recommended - Helps you create, destroy, upgrade and maintain Kubernetes clusters from the command line. See the [kops installation documentation](https://github.com/kubernetes/kops/blob/master/docs/install.md).
     * Helm 3.2.4 is recommended - Enables you to install the Axway proprietary service mesh layer later and to export Helm charts. See the [Helm installation documentation](https://helm.sh/docs/using_helm/#installing-helm).
-    * Istioctl 1.9.5 - Used after the environment is built for the next phase to deploy the service mesh and add this environment to Amplify Central.
+    * Istioctl 1.9.5 - Used after the environment is built for the next phase to deploy the service mesh and add this environment to Amplify.
 
 ## Build an Amazon EC2 hybrid environment
 
@@ -118,4 +118,4 @@ Your cluster kubernetes-cluster.example.com is ready
 
 ## Review and next steps
 
-You have learned how to build a basic Amazon EC2 hybrid environment and have added the required tools to access and manage your cluster. Next, read [Deploy your agents with Axway CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/) to learn how to add your environment to Amplify Central and to deploy the Amplify Istio Agents.
+You have learned how to build a basic Amazon EC2 hybrid environment and have added the required tools to access and manage your cluster. Next, read [Deploy your agents with Axway CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/) to learn how to add your environment to Amplify and to deploy the Amplify Istio Agents.
