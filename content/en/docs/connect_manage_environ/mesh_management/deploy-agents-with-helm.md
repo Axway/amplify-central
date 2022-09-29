@@ -1,7 +1,7 @@
 ---
 title: Deploy your agents with helm
 linkTitle: Deploy your agents with helm
-weight: 50
+weight: 55
 date: 2022-9-26
 ---
 
@@ -17,7 +17,7 @@ To prepare the cluster for the Amplify Agents, create a namespace for the agents
 kubectl create namespace amplify-agents
 ```
 
-A service account is required for the agents to connect to Amplify. Create a service account using the Amplify Central CLI, and either generate a public and private key pair, or provide the file paths to keys you would like to use for the service account.
+A service account is required for the agents to connect to Amplify. Create a service account using the Amplify Central CLI, and either generate a public and private key pair, or provide the file paths to keys you would like to use for the service account:
 
 ```bash
 ~ » axway service-account create
@@ -53,7 +53,7 @@ kubectl create secret generic amplify-agents-keys \
 
 ### Prepare Istio
 
-An `IstioOperator` is required for Istio to connect to the Traceability Agent. It tells Istio where the Envoy Access Log Service is running. If you already have Istio deployed in your environment, then merge the following configuration into your `IstioOperator` resource and apply the change. If Istio is not yet deployed, then copy this configuration into a file and then apply the change.
+An `IstioOperator` is required for Istio to connect to the Traceability Agent. It tells Istio where the Envoy Access Log Service is running. If you already have Istio deployed in your environment, then merge the following configuration into your `IstioOperator` resource and apply the change. If Istio is not yet deployed, then copy this configuration into a file and apply the change.
 
 ```yaml
 ---
@@ -76,12 +76,12 @@ spec:
         enabled: true
 ```
 
-To deploy this change to your istio environment you will run `istioctl install --set profile=$YOUR_PROFILE -f istio-override.yaml`
-Update the command to use your desired Istio profile, and then run the install. For questions about the installation refer to the [Istio documentation](https://istio.io/v1.9/docs/setup/install/istioctl/).
+To deploy this change to your Istio environment you will run `istioctl install --set profile=$YOUR_PROFILE -f istio-override.yaml`.
+Update the command to use your desired Istio profile, and then run the install. Refer to the [Istio documentation](https://istio.io/v1.9/docs/setup/install/istioctl/) for more information.
 
 ### Prepare Amplify Central
 
-There are two agents that can be deployed. A Discovery Agent, and a Traceability Agent. The Environment and K8SCluster resources are required for each agent.
+There are two agents that can be deployed, a Discovery Agent and a Traceability Agent. The Environment and K8SCluster resources are required for each agent.
 
 The following resources are used run the agents. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified.
 
@@ -106,7 +106,7 @@ spec:
 axway central create -f environment.yaml
 ```
 
-For the discovery agent, create the DiscoveryAgent resource.
+For the Discovery Agent, create the DiscoveryAgent resource:
 
 ```yaml
 group: management
@@ -128,7 +128,7 @@ spec:
 axway central create -f discovery-agent.yaml
 ```
 
-For the traceability agent, create the TraceabilityAgent resource.
+For the Traceability Agent, create the TraceabilityAgent resource:
 
 ```yaml
 group: management
@@ -350,7 +350,7 @@ global:
 
 Copy the content into a file called `hybrid-override.yaml`.
 
-For a detailed example of how to configure the agent for discovery refer to the [Discover APIs and Services](/docs/connect_manage_environ/mesh_management/discover-apis-and-services/)
+For a detailed example of how to configure the agent for discovery, see [Discover APIs and Services](/docs/connect_manage_environ/mesh_management/discover-apis-and-services/).
 
 ##### Fields to update
 
