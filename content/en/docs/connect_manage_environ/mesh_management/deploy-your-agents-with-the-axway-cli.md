@@ -113,13 +113,13 @@ If you are a member of multiple Amplify organizations, select an organization an
     ──────────────
     ```
 
-6. Create the Discovery Agent resource (Prompt only appears if installing the discovery agent).
+6. Create the Discovery Agent resource (Prompt only appears if installing the Discovery Agent).
 
     ```bash
     Enter a new discovery agent name:(cli-1664387590624)
     ```
 
-7. Create the Traceability Agent resourece (Prompt only appears if installing the traceability agent)
+7. Create the Traceability Agent resource (Prompt only appears if installing the Traceability Agent)
 
     ```bash
     Enter a new traceability agent name:(cli-1664387590624)
@@ -135,7 +135,7 @@ If you are a member of multiple Amplify organizations, select an organization an
       No
     ```
 
-2. Select the namespace where the Envoy filters should be created for the traceability agent:
+2. Select the namespace where the Envoy filters should be created for the Traceability Agent:
 
     ```bash
     ? Select the namespace where you would like the ALS Envoy Filters to be applied:
@@ -223,7 +223,7 @@ Created secret/gateway-cert in the istio-system namespace.
 
     The CLI will create the secret in the `istio-system` namespace.
 
-### Discovery Agent Prompts
+### Discovery Agent prompts
 
 1. Select the Traceability Agent mode.
 
@@ -274,7 +274,7 @@ Created secret/gateway-cert in the istio-system namespace.
     Enter a unique k8s cluster name:  (cli-1664387590624)
     ```
 
-### Traceability Agent Prompts
+### Traceability Agent prompts
 
 1. Optionally enable traceability logging to gather usage and metrics of your API Services.
 
@@ -298,7 +298,7 @@ Created secret/gateway-cert in the istio-system namespace.
       No
     ```
 
-4. Select the Traceability agent protocol.
+4. Select the Traceability Agent protocol.
 
     ```bash
     ? Select Traceability protocol:  (Use arrow keys)
