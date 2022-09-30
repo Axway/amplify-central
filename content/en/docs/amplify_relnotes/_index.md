@@ -20,19 +20,19 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify September 23rd, 2022](/docs/amplify_relnotes/20220923_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.33. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.37. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.29
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.27
-* **Azure latest release** - Agent version 1.1.29
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.31
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.29
+* **Azure latest release** - Agent version 1.1.31
 * **Istio 1.9.5** - Agent version 2.0.38
-* **Apigee Edge** - Agent version 0.1.0
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.9
+* **Apigee Edge** - Agent version 0.1.1
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
 
 | Agents |         |
 |--------|---------|
 | What's new: | **All agents** - Consumer credential management. <br />**Apigee Gateway** - Quota provisioning. |
-| Bug fixes:  | **API Management Gateway** - Consumer Insights Application Usage issue, Marketplace product and application deletion issue. |
+| Bug fixes:  | **All agents** - Fix for Analytics support and Marketplace provisioning. <br />**API Management Gateway** - Consumer Insights Application Usage issue, Marketplace product and application deletion issue. |
 
 | Service registry <br />Topology |         |
 |--------|---------|
