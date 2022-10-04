@@ -5,7 +5,7 @@ weight: 100
 draft: yes
 date: 2019-07-30
 ---
-Configure webhooks to receive notifications from Amplify Central.
+Configure webhooks to receive notifications from Amplify.
 
 ## Before you start
 
@@ -13,11 +13,11 @@ Configure webhooks to receive notifications from Amplify Central.
 
 ## Objectives
 
-Learn how to create and configure webhooks in Amplify Central, as well as the event structure that corresponds to a set of actions, such as catalog asset updated and new subscription request submitted.
+Learn how to create and configure webhooks in Amplify, as well as the event structure that corresponds to a set of actions, such as catalog asset updated and new subscription request submitted.
 
 ## Webhooks
 
-A webhook is an HTTP callback: an HTTP POST that occurs when something happens. Webhooks are used to automatically receive notifications that something happened to any resources on the API Server. For example, when a new asset is discovered in a environment or when an item is subscribed to in the Marketplace. Webhooks allow you to configure integrations on resources in Amplify Central. When one of those events is triggered, Amplify Central sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as needed.
+A webhook is an HTTP callback: an HTTP POST that occurs when something happens. Webhooks are used to automatically receive notifications that something happened to any resources on the API Server. For example, when a new asset is discovered in a environment or when an item is subscribed to in the Marketplace. Webhooks allow you to configure integrations on resources in Amplify. When one of those events is triggered, Amplify sends an HTTP POST payload to the URL configured in the webhook. Once you receive an event on your server, you can process and act on it as needed.
 
 You can use webhooks to define a custom approval flow, set up a policy to validate discovered APIs or deploy to your production server.
 
@@ -87,7 +87,7 @@ Each event payload that your webhook server receives is structured similar to th
 
 * **id**: a uid for the webhook event.
 * **time**: indicates the time when the webhook was triggered by a change in resource.
-* **correlationId:** each API request is tagged with an id once it received by Amplify Central. The correlationId is the id of the originating request which updated the system. Note that an API call into Amplify Central may result in a number of changes to resources in Central. For example, consider the result of deleting an environment request which will result in a cascade delete of all the resources and subresources of that environment.
+* **correlationId:** each API request is tagged with an id once it received by Amplify. The correlationId is the id of the originating request which updated the system. Note that an API call into Amplify may result in a number of changes to resources in Amplify. For example, consider the result of deleting an environment request which will result in a cascade delete of all the resources and subresources of that environment.
 * **organization:** indicates the organization id that the resource belongs to.
 * **type:** indicates if this is a create, update or delete event. Supported types: ResourceCreated/ResourceUpdated/ResourceDeleted/SubResourceUpdated.
 * **payload:** contains the contents of the resource that changed and resulted in the webhook being triggered.
@@ -137,7 +137,7 @@ axway central apply -f webhook.yaml
 
 ### Create the trigger
 
-After the webhook has been created, you must specify when the webhook will be invoked. You can set up a webhook on any resource in Amplify Central by configuring a **Resource hook**. An event will be published on any CRUD operation. When the resource hook trigger conditions match, the resource hook referenced webhooks will be invoked, and an HTTP `POST` payload will be sent to the webhook's URL. For example, the webhook can be invoked when a new API asset is created.
+After the webhook has been created, you must specify when the webhook will be invoked. You can set up a webhook on any resource in Amplify by configuring a **Resource hook**. An event will be published on any CRUD operation. When the resource hook trigger conditions match, the resource hook referenced webhooks will be invoked, and an HTTP `POST` payload will be sent to the webhook's URL. For example, the webhook can be invoked when a new API asset is created.
 
 The following are examples of the **Resource Hook** payload.
 
@@ -329,11 +329,11 @@ Example of a webhook payload referencing a secret:
 
 ## Configure webhooks on catalog asset subscriptions
 
-Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify Central, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
+Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
 
 To publish an asset to the Amplify Unified Catalog with a custom subscription flow that will be triggered on any subscription events, you must:
 
-* Create an environment in Amplify Central.
+* Create an environment in Amplify.
 * Create an API service, API service instance, and API service revision.
 * Create a webhook with a secret, if you want to secure the webhook.
 * Create a custom subscription definition that references the webhook.

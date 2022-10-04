@@ -14,7 +14,7 @@ This section shows how to test an external gateway API from the Unified Catalog 
 
 Follow this procedure to test your API:
 
-In Amplify Central navigate to the Unified Catalog, click the **Explore catalog** side menu and form the list of APIs, click an API secured with OAuth that is published from an external gateway to go to the details page.
+In Amplify navigate to the Unified Catalog, click the **Explore catalog** side menu and form the list of APIs, click an API secured with OAuth that is published from an external gateway to go to the details page.
 
 ![Download specification from catalog](/Images/central/catalog/catalog-details.png)
 

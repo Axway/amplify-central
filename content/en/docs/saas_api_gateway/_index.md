@@ -6,7 +6,7 @@ date: 2021-08-18T00:00:00.000Z
 hide_readingtime: true
 ---
 
-Amplify Central provides the Amplify SaaS API Gateway as a single point of entry for all clients. The SaaS API Gateway can support the following API Management services:
+Amplify provides the Amplify SaaS API Gateway as a single point of entry for all clients. The SaaS API Gateway can support the following API Management services:
 
 * Register an API as an API Proxy
 * Deploy the API Proxy to test and production run-time environments

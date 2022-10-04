@@ -160,4 +160,4 @@ In this case, you have a few options on how to instruct the CLI to use a correct
 
 ## Review
 
-You have learned how to install the Axway CLI core package, the Axway Central CLI extension, and how to register or link it to a service account, or to the Amplify Platform account. Now, you can integrate the Axway Central CLI into your DevOps pipeline to automate actions in Amplify Central.
+You have learned how to install the Axway CLI core package, the Axway Central CLI extension, and how to register or link it to a service account, or to the Amplify Platform account. Now, you can integrate the Axway Central CLI into your DevOps pipeline to automate actions in Amplify.

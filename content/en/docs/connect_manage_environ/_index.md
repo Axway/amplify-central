@@ -4,7 +4,7 @@ linkTitle: Connect and manage your environment
 weight: 350
 date: 2020-11-18
 ---
-Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, secrets) are displayed in Amplify Central. Environments are at the highest hierarchical level, and all assets are scoped within.
+Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
 
 The following is an example of a simple environment with an API service asset:
 
@@ -27,7 +27,7 @@ You can combine assets within an environment to create catalog items that consum
 
 ## Synchronize your environment with a gateway
 
-Using agents is the recommended way to add API services to your environment. When a Discovery Agent is installed on your gateway, the agent will automatically discover API service assets and add them to your environment in Amplify Central. The Traceability Agent will send API traffic logs from your gateway to Amplify Central, where you can then view and analyze the logs.
+Using agents is the recommended way to add API services to your environment. When a Discovery Agent is installed on your gateway, the agent will automatically discover API service assets and add them to your environment in Amplify. The Traceability Agent will send API traffic logs from your gateway to Amplify, where you can then view and analyze the logs.
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
@@ -38,7 +38,7 @@ For more information about the agents, see:
 * [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_azure_gateway/).
 * [Discovery and Traceability Agents for Istio Gateway](/docs/mesh_management/).
 
-To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_apiservices) or the [Amplify Central APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify Central.
+To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_apiservices) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 
 ## Asset definitions
 

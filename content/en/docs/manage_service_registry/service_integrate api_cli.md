@@ -15,7 +15,7 @@ Manually register an API with the Amplify Management Plane using an existing Ope
 
 ## Objectives
 
-Register an API in Amplify Central using the Axway Central CLI, including:
+Register an API in Amplify using the Axway Central CLI, including:
 
 * Create a new API service in an environment
 * Register an API to the service
@@ -147,7 +147,7 @@ Where `api-service-instance.jq` has the following content:
 }
 ```
 
-The API Service is now registered with its associated API definition in Amplify Central and can be viewed in the Service Registry.
+The API Service is now registered with its associated API definition in Amplify and can be viewed in the Service Registry.
 
 ### Update with a new version of the API
 
@@ -172,7 +172,7 @@ jq --slurp -f api-service-instance.jq openapi-v2.json api-service-revision-v2-cr
 
 ### Give the API Service an icon
 
-Provide the API Service with an image / avatar, making it visually appealling to the API consumer. The following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedImage`. It will query the API Server for the API Service resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the API Service has an image attached.
+Provide the API Service with an image / avatar, making it visually appealing to the API consumer. The following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedImage`. It will query the API Server for the API Service resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the API Service has an image attached.
 
 ```bash
 #!/bin/bash

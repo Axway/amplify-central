@@ -76,7 +76,7 @@ spec:
 To deploy this change to your Istio environment you will run `istioctl install --set profile=$YOUR_PROFILE -f istio-override.yaml`.
 Update the command to use your desired Istio profile, and then run the install. Refer to the [Istio documentation](https://istio.io/v1.9/docs/setup/install/istioctl/) for more information.
 
-## Prepare Amplify Central
+## Prepare Amplify
 
 There are two agents that can be deployed, a Discovery Agent and a Traceability Agent. The Environment and K8SCluster resources are required for each agent.
 

@@ -8,7 +8,7 @@ This topic explains how to build a basic Amazon EC2 private cloud hybrid environ
 
 ## Before you start
 
-* Read [Amplify Central mesh governance overview](/docs/connect_manage_environ/mesh_management/).
+* Read [Amplify mesh governance overview](/docs/connect_manage_environ/mesh_management/).
 * You will need a basic knowledge of Amazon Web Services (AWS), Amazon EC2 instances, and associated tools.
 * You will need to be familiar with Kubernetes and Helm, including running Helm, kubectl, and kops commands.
 
@@ -16,7 +16,7 @@ This topic explains how to build a basic Amazon EC2 private cloud hybrid environ
 
 Learn how to build a basic Amazon EC2 private cloud hybrid environment and add the required tools to enable you to access and manage it remotely from a client system.
 
-{{< alert title="Tip" color="" >}}For the latest Amazon EC2 build instructions and more client system configuration details, see [Set up Amplify Central mesh governance documentation on GitHub](https://github.com/Axway/Setup-Amplify-Mesh-Governance).{{< /alert >}}
+{{< alert title="Tip" color="" >}}For the latest Amazon EC2 build instructions and more client system configuration details, see [Set up Amplify mesh governance documentation on GitHub](https://github.com/Axway/Setup-Amplify-Mesh-Governance).{{< /alert >}}
 
 ## Minimum requirements
 

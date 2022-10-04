@@ -4,7 +4,7 @@ linkTitle: Concepts
 weight: 10
 date: 2019-07-30T00:00:00.000Z
 ---
-The fundamental SaaS API Gateway concepts you will encounter in Amplify Central.
+The fundamental SaaS API Gateway concepts you will encounter in Amplify.
 
 ## API and API proxy
 
@@ -22,15 +22,15 @@ An API is clearly defined by way of its endpoints, request parameters, and respo
 * What the supported request parameters are
 * What responses they can expect
 
-An API implies a *contract*, which provides app developers with an assurance that the API will change in a predictable manner over time, meaning that their app will continue to work with future changes to the API. Amplify Central supports Swagger 2.0 and Open API 3.0 specifications.
+An API implies a *contract*, which provides app developers with an assurance that the API will change in a predictable manner over time, meaning that their app will continue to work with future changes to the API. Amplify supports Swagger 2.0 and Open API 3.0 specifications.
 
 ### What is an API proxy?
 
-In Amplify Central, you create an API proxy to represent your back-end API to your API consumers. Instead of interacting directly with your API, app developers now interact with the API proxy.
+In Amplify, you create an API proxy to represent your back-end API to your API consumers. Instead of interacting directly with your API, app developers now interact with the API proxy.
 
 ![Interactions between app developers - API proxy - back-end API](/Images/central/api_proxy.png)
 
-Managing your API in Amplify Central by way of an API proxy offers the following benefits:
+Managing your API in Amplify by way of an API proxy offers the following benefits:
 
 * You can change the implementation of the back-end service without impacting app developers as they continue to call the API proxy.
 * You can apply policies to the API proxy to manage or secure how client apps use your API.
@@ -38,15 +38,15 @@ Managing your API in Amplify Central by way of an API proxy offers the following
 
 ## Roles and teams
 
-Amplify Central has its own set of roles in addition to the Amplify Platform roles. These Amplify Central roles include Amplify Central Admin, Developer, and Consumer type roles to manage and use assets (for example, API proxies, applications, environments, Unified Catalog, and so on).  
+Amplify has its own set of roles in addition to the Amplify Platform roles. These Amplify roles include Amplify Central Admin, Developer, and Consumer type roles to manage and use assets (for example, API proxies, applications, environments, Unified Catalog, and so on).  
 
-* Amplify Central Admin has full access to manage Amplify Central and the Unified Catalog.
+* Amplify Central Admin has full access to manage Amplify and the Unified Catalog.
 * Amplify Central Developer has access to the Unified Catalog, Application management, and traffic monitoring.
 * Amplify Central Consumer has access to the Unified Catalog and its Applications.
 
 An Amplify Central team is a group of users with varying abilities to manage and use assets. For example, a team member can share assets and their promotion to the Unified Catalog.
 
-Users and teams of Amplify Central are managed by the Amplify Platform. For more information, see [Managing Organizations](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html).
+Users and teams of Amplify are managed by the Amplify Platform. For more information, see [Managing Organizations](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html).
 
 <!-- ### Amplify Central roles -->
 

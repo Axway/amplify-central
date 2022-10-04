@@ -1,11 +1,11 @@
 ---
-title: Amplify Central getting started
-linkTitle: Amplify Central getting started
+title: Amplify getting started
+linkTitle: Amplify getting started
 weight: 250
 draft: yes
 ---
 
-Get started using Amplify Central.
+Get started using Amplify.
 
 ## Prerequisites
 
@@ -21,4 +21,4 @@ Is there any initial setup users need to do after installation to try your proje
 
 ## Try it out
 
-Can your users test their installation, for example by running a commmand or deploying a Hello World example?
+Can your users test their installation, for example by running a command or deploying a Hello World example?

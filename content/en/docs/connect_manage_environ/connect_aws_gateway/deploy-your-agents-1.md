@@ -4,14 +4,14 @@ linkTitle: Reference - Agent configuration
 draft: false
 weight: 50
 ---
-Deploy your Discovery Agent and Traceability Agent using Docker containers so that you can manage  your AWS API Gateway environment within Amplify Central.
+Deploy your Discovery Agent and Traceability Agent using Docker containers so that you can manage your AWS API Gateway environment within Amplify.
 
-Once agents are correctly deployed, they can collect the data from the AWS API Gateway and send it securely to Amplify Central.
+Once agents are correctly deployed, they can collect the data from the AWS API Gateway and send it securely to Amplify.
 
 ## Before you start
 
-* Read [Amplify Central AWS API Gateway connected overview](/docs/connect_manage_environ/connect_aws_gateway/)
-* [Prepare Amplify Central](/docs/integrate_with_central/cli_central/cli_install/)
+* Read [Amplify AWS API Gateway connected overview](/docs/connect_manage_environ/connect_aws_gateway/)
+* [Prepare Amplify](/docs/integrate_with_central/cli_central/cli_install/)
 * [Prepare AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/)
 * Docker must be installed and you will need a basic understanding of Docker commands
 
@@ -21,7 +21,7 @@ Learn how to create your Discovery Agent and Traceability Agent configuration fi
 
 ## Discovery Agent
 
-The Discovery Agent is used to discover new deployments and stage updates to existing deployments. Once they are discovered, the related APIs are published to Amplify Central so that they become available for any consumer.
+The Discovery Agent is used to discover new deployments and stage updates to existing deployments. Once they are discovered, the related APIs are published to Amplify so that they become available for any consumer.
 
 The Discovery Agent only discovers published APIs where the stage has tags defined in the agent configuration file. See AWS_DISCOVERYTAGS.
 
@@ -33,7 +33,7 @@ In this mode the agent will receive change events for configuration changes to A
 
 ### Synchronous Discovery Overview
 
-In this mode the agent will read the configuration on AWS API Gateway and send all REST APIs to Amplify Central. Once it has completed this task it will exit and no additional changes will be sent to Amplify Central until the agent is executed again. This mode does not handle any subscription events.
+In this mode the agent will read the configuration on AWS API Gateway and send all REST APIs to Amplify Central. Once it has completed this task it will exit and no additional changes will be sent to Amplify until the agent is executed again. This mode does not handle any subscription events.
 
 The configuration of the AWS_QUEUENAME is not used in this mode.
 
@@ -282,7 +282,7 @@ LOG_PATH=logs
 
 ## Traceability Agent
 
-The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Central and is visible in Business Insights.
+The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify and is visible in Business Insights.
 
 ### Create your Traceability Agent configuration
 

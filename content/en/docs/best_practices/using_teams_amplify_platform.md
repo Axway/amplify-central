@@ -55,7 +55,7 @@ A global and centralized API team strategy consists of:
 * **Data plane**:
 
     * **Gateway** - contains the API Gateways that host and run the APIs. There can be multiple gateways of several types, such as the Axway API Gateway, Azure API Gateway, Amazon API Gateway, Istio Service Mesh, etc.
-    * **Agents** - the link between the data plane and the Amplify platform. They discover the APIs in the gateways and publish them in environments hosted on Amplify Central.
+    * **Agents** - the link between the data plane and the Amplify platform. They discover the APIs in the gateways and publish them in environments hosted on Amplify.
 * **Amplify platform**:
 
     * **Amplify Central** - hosts the environments which represent the different gateways in the data planes. It also contains the definitions of the APIs that were discovered by the agents.

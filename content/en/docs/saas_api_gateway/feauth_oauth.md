@@ -32,7 +32,7 @@ Watch the animation to learn how to do this in Amplify Central UI.
 
 ## Use an API proxy secured with an OAuth policy
 
-To use the proxy, the provider must first set up a third-party OAuth server with a valid application. A single application from the third-party server's application will directly relate to a single Amplify Central application.
+To use the proxy, the provider must first set up a third-party OAuth server with a valid application. A single application from the third-party server's application will directly relate to a single Amplify application.
 
 {{< alert title="Note" color="primary" >}}The Amplify Central OAuth proxy support is RFC 7662 compliant and it should work with any standard OAuth 2.0 authorization server. At this time, Okta is the only verified supported third-party OAuth provider. See more detailed configuration examples showing Okta as an integrated (external) authorization server in [Okta documentation](https://developer.okta.com/docs/guides/customize-authz-server/overview/).{{< /alert >}}
 
@@ -58,4 +58,4 @@ After your third-party OAuth server has generated a valid OAuth token, paste tha
 
 ## Review
 
-You have learned how to set up an OAuth front-end security policy on an API proxy in Amplify Central.
+You have learned how to set up an OAuth front-end security policy on an API proxy in Amplify.

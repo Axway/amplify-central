@@ -53,7 +53,7 @@ The following image shows the transition between different subscription states:
 
 To view the historical transition of a subscription request:
 
-1. In Amplify Central, select **Subscriptions** in the left navigation bar,
+1. In Amplify, select **Subscriptions** in the left navigation bar,
 2. Use the top filter drop-down to filter the subscription by their status.
 3. Click a subscription to select it. The subscription details screen is shown.
 4. Click the **History** tab. The historical activity on a subscription request is shown
@@ -69,7 +69,7 @@ As an asset provider, you can configure how subscription requests will be approv
 There are two possible options for subscription approval:
 
 * **Automatic**: There is no manual intervention required from the asset provider, and the user is automatically granted access to consume the asset.
-* **Manual**: The asset provider manually approves or rejects each request, either from Amplify Central or by delegating the approval mechanism through an external system, for example,  Microsoft Teams, Flow Manager.
+* **Manual**: The asset provider manually approves or rejects each request, either from Amplify or by delegating the approval mechanism through an external system, for example,  Microsoft Teams, Flow Manager.
 
 Follow these steps to enable manual approvals:
 

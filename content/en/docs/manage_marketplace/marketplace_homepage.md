@@ -53,9 +53,9 @@ Click **Save** at the top of the page to save your changes or **Reset** to rever
 
 ### Change the background image
 
-From the *Homepage* page, click **Configure** to apply an image to the hero background. Use transparent images and position options to compliment your content. The Backgound Image settings are displayed.
+From the *Homepage* page, click **Configure** to apply an image to the hero background. Use transparent images and position options to compliment your content. The Background Image settings are displayed.
 
-* **Choose File** - the hero banner background image. Acceptabe file formats are PNG, GIF, and JPG and the file size must be less than 5MB.
+* **Choose File** - the hero banner background image. Acceptable file formats are PNG, GIF, and JPG and the file size must be less than 5MB.
 * **Background Size** - resize the background image. Options are:
     * **Auto** - shown original size.
     * **Cover** - fills the area by scaling proportionately.

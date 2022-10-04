@@ -78,4 +78,4 @@ Federated data planes are data planes that are connected to the Amplify platform
 
 ## Try Amplify for free
 
-To get full, free access to Amplify Central for a trial period, go to [Amplify platform](https://platform.axway.com/) and sign up for a free trial.
+To get full, free access to Amplify for a trial period, go to [Amplify platform](https://platform.axway.com/) and sign up for a free trial.

@@ -8,8 +8,8 @@ Configure TLS for requests to your back-end API.
 
 ## Before you start
 
-* You will need an administrator account for Amplify Central
-* Learn how to import your API as an API proxy in Amplify Central (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
+* You will need an administrator account for Amplify
+* Learn how to import your API as an API proxy in Amplify (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
 * Learn how to use the Axway Central CLI to manage an API proxy (see [Manage an API proxy using Axway Central CLI](/docs/integrate_with_central/cli_central/cli_proxy_flow))
 
 ## Objectives
@@ -27,7 +27,7 @@ There are two versions of TLS Protocol. Version 1.2 is described in [RFC 5246](h
 
 ### TLS from Amplify Central API proxy to the back-end API
 
-Amplify Central provides one-way TLS from the API proxy to the back-end API. One-way TLS is automatically negotiated for each API registered to a HTTPS back-end URL endpoint.
+Amplify provides one-way TLS from the API proxy to the back-end API. One-way TLS is automatically negotiated for each API registered to a HTTPS back-end URL endpoint.
 
 TLS versions 1.2 and 1.3 are both supported by Amplify Central. Advanced Encryption Standard (AES) using both 128-bit and 256-bit keys are supported. RSA 1024-bit public key lengths are supported for X.509v3 certificates.
 

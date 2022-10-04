@@ -75,5 +75,5 @@ To delete the service (all versions):
 2. Select **Catalog > Service Registry**.
 3. From the list view, select a service to open the service details in a new browser tab.
 4. From the new browser tab, click on the environment name breadcrumb at the top of the page (i.e., the name to the right of **ENVIRONMENTS / NAME**).
-5. In the *Services* tab at the bottom of the page, click on the trash bin asociated with the service you want to delete.
+5. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
 6. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.”

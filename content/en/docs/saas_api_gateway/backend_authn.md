@@ -58,4 +58,4 @@ Changing the HTTP basic authentication credentials for a deployed proxy revision
 
 ## Review
 
-You have learned how to configure back-end authentication for your API in Amplify Central.
+You have learned how to configure back-end authentication for your API in Amplify.

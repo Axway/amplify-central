@@ -8,7 +8,7 @@ The main security features of the agents are described here.
 
 ## Information security
 
-The agents communicate to AWS API Gateway Manager, API Manager, APIGateway Manager, and Amplify Central servers over TLS-encrypted HTTP connections by default. Except for AWS API Gateway Manager, the agents can be configured to enforce various TLS protocol versions. You can specify both a minimum and a maximum version. The default minimum version is TLS1.2, and the default maximum version is TLS1.3. Either of these values can be changed to one of the following: TLS1.0, TLS1.1, TLS1.2, TLS1.3. For more information, see the **Reference - Agent configuration** documentation for your specific agent.
+The agents communicate to AWS API Gateway Manager, API Manager, APIGateway Manager, and Amplify servers over TLS-encrypted HTTP connections by default. Except for AWS API Gateway Manager, the agents can be configured to enforce various TLS protocol versions. You can specify both a minimum and a maximum version. The default minimum version is TLS1.2, and the default maximum version is TLS1.3. Either of these values can be changed to one of the following: TLS1.0, TLS1.1, TLS1.2, TLS1.3. For more information, see the **Reference - Agent configuration** documentation for your specific agent.
 
 Agents can also be configured to use one or more specific SSL. The ciphers that are configured within the agents to be used by default are:
 

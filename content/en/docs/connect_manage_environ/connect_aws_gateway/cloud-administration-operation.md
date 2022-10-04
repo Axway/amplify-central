@@ -9,9 +9,9 @@ As a Cloud Administrator / Operator, you are responsible for configuring and man
 
 ## Connected AWS API Gateway overview
 
-Connecting AWS API Gateway to Amplify Central will provide you with a connected/managed environment, and a global centralized view of your APIs and their related traffic, allowing users to have a centralized governance (creation/deployment/publish/subscription) and monitoring of the traffic for AWS API Gateway hosted APIs.
+Connecting AWS API Gateway to Amplify will provide you with a connected/managed environment, and a global centralized view of your APIs and their related traffic, allowing users to have a centralized governance (creation/deployment/publish/subscription) and monitoring of the traffic for AWS API Gateway hosted APIs.
 
-Each AWS Gateway is represented by an Amplify Central environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with AWS API Gateway and Amplify Central.
+Each AWS Gateway is represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with AWS API Gateway and Amplify.
 
 The agents, by default, require setup to send events (Configuration and Traffic) to an SQS queue for processing by the agent. To operate the agents in a manner that does not require this additional setup, see [Running agents without SQS](#running-agents-without-sqs---api-gateway-polling).
 
@@ -21,7 +21,7 @@ The Discovery Agent has two operating modes, continuous discovery and synchronou
 
 #### Continuous Discovery Overview
 
-To deploy an API In the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent listens for new deployments and for stage updates to existing deployments. When the agent receives an event, it will publish or update Amplify Central with the API details. It is possible for the agent to publish the API information directly into the Unified Catalog, or it can be added to the environment associated with the agent in Amplify Central.
+To deploy an API In the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent listens for new deployments and for stage updates to existing deployments. When the agent receives an event, it will publish or update Amplify with the API details. It is possible for the agent to publish the API information directly into the Unified Catalog, or it can be added to the environment associated with the agent in Amplify.
 
 In order for the Discovery Agent to receive the API details, the following AWS services are used:
 
@@ -40,15 +40,15 @@ The agent only publishes APIs that pass the tagging criteria that is configured 
 
 #### Synchronous Discovery Overview
 
-To deploy an API in the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent, when executed, will find all APIs and stages in AWS API Gateway and send them to Amplify Central. Once synchronizing all resources, the agent will stop and no changes will be sent to Amplify Central until it is started again.
+To deploy an API in the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent, when executed, will find all APIs and stages in AWS API Gateway and send them to Amplify. Once synchronizing all resources, the agent will stop and no changes will be sent to Amplify until it is started again.
 
 This operating mode does not utilize the AWS Config, SQS, or CloudWatch services as the continuous mode does.
 
 ### Traceability Agent
 
-The Traceability Agent sends summaries to Amplify Central of the API traffic that has passed through the AWS API Gateway. The agent only sends a traffic summary for APIs that have been discovered.
+The Traceability Agent sends summaries to Amplify of the API traffic that has passed through the AWS API Gateway. The agent only sends a traffic summary for APIs that have been discovered.
 
-The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify Central. Business Insights provides a view of the traffic and API usage of APIs deployed to the Gateway.
+The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify. Business Insights provides a view of the traffic and API usage of APIs deployed to the Gateway.
 
 In order for the Traceability Agent to monitor API traffic, the following AWS services are used:
 
