@@ -16,11 +16,11 @@ The automatic categorization filter is only available in the Axway API Manager D
 
 ## Objectives
 
-Learn how to set conditions based on tag name and tag value to automatically categorize discovered APIs in Amplify Service registry.
+Learn how to set conditions based on tag name and tag value to automatically categorize discovered APIs in Amplify Service Registry.
 
 ## Category mapping
 
-Category mapping provides a way for your agent to determine how to map discovered APIs to categories for viewing in Amplify Service registry.
+Category mapping provides a way for your agent to determine how to map discovered APIs to categories for viewing in Amplify Service Registry.
 
 {{< alert title="Note" color="primary" >}}
 When any category mapping is defined, manual categories will be removed from an API when the agent performs an update
@@ -112,7 +112,7 @@ Sample of a composite expression to categorize APIs having Math as a tag name OR
 
 ## Categorizing
 
-When an entire conditional is met, the categories defined with that condition are added to the list of categories that will be applied to the API in Amplify Service registry.
+When an entire conditional is met, the categories defined with that condition are added to the list of categories that will be applied to the API in Amplify Service Registry.
 
 When multiple mapping conditions evaluate to true, all categories from all mappings are added to the list with duplicates removed.
 
