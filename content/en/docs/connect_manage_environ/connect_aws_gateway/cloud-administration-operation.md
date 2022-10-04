@@ -9,9 +9,9 @@ As a Cloud Administrator / Operator, you are responsible for configuring and man
 
 ## Connected AWS API Gateway overview
 
-Connecting AWS API Gateway to Amplify Central will provide you with a connected/managed environment, and a global centralized view of your APIs and their related traffic, allowing users to have a centralized governance (creation/deployment/publish/subscription) and monitoring of the traffic for AWS API Gateway hosted APIs.
+Connecting AWS API Gateway to Amplify will provide you with a connected/managed environment, and a global centralized view of your APIs and their related traffic, allowing users to have a centralized governance (creation/deployment/publish/subscription) and monitoring of the traffic for AWS API Gateway hosted APIs.
 
-Each AWS Gateway is represented by an Amplify Central environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with AWS API Gateway and Amplify Central.
+Each AWS Gateway is represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with AWS API Gateway and Amplify.
 
 The agents, by default, require setup to send events (Configuration and Traffic) to an SQS queue for processing by the agent. To operate the agents in a manner that does not require this additional setup, see [Running agents without SQS](#running-agents-without-sqs---api-gateway-polling).
 
@@ -21,7 +21,7 @@ The Discovery Agent has two operating modes, continuous discovery and synchronou
 
 #### Continuous Discovery Overview
 
-To deploy an API In the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent listens for new deployments and for stage updates to existing deployments. When the agent receives an event, it will publish or update Amplify Central with the API details. It is possible for the agent to publish the API information directly into the Unified Catalog, or it can be added to the environment associated with the agent in Amplify Central.
+To deploy an API In the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent listens for new deployments and for stage updates to existing deployments. When the agent receives an event, it will publish or update Amplify with the API details. It is possible for the agent to publish the API information directly into the Unified Catalog, or it can be added to the environment associated with the agent in Amplify.
 
 In order for the Discovery Agent to receive the API details, the following AWS services are used:
 
@@ -40,15 +40,15 @@ The agent only publishes APIs that pass the tagging criteria that is configured 
 
 #### Synchronous Discovery Overview
 
-To deploy an API in the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent, when executed, will find all APIs and stages in AWS API Gateway and send them to Amplify Central. Once synchronizing all resources, the agent will stop and no changes will be sent to Amplify Central until it is started again.
+To deploy an API in the AWS API Gateway, you create an API deployment and associate it with a stage. The Axway Discovery Agent, when executed, will find all APIs and stages in AWS API Gateway and send them to Amplify. Once synchronizing all resources, the agent will stop and no changes will be sent to Amplify until it is started again.
 
 This operating mode does not utilize the AWS Config, SQS, or CloudWatch services as the continuous mode does.
 
 ### Traceability Agent
 
-The Traceability Agent sends summaries to Amplify Central of the API traffic that has passed through the AWS API Gateway. The agent only sends a traffic summary for APIs that have been discovered.
+The Traceability Agent sends summaries to Amplify of the API traffic that has passed through the AWS API Gateway. The agent only sends a traffic summary for APIs that have been discovered.
 
-The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify Central. Business Insights provides a view of the traffic and API usage of APIs deployed to the Gateway.
+The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify. Business Insights provides a view of the traffic and API usage of APIs deployed to the Gateway.
 
 In order for the Traceability Agent to monitor API traffic, the following AWS services are used:
 
@@ -133,17 +133,17 @@ The inputs to the IAM Setup CloudFormation Template (`amplify-agents-deploy-all.
 | EC2InstanceType               | The instance type to use for this EC2 instance                                                                                            | t3.micro                        | continuous |
 | EC2KeyName                    | The SSH Key to deploy inside the EC2 instance                                                                                             |                                 | continuous |
 | EC2VPCID                      | The VPC to deploy the EC2 instance to. Leave blank to deploy all infrastructure                                                           |                                 | continuous |
-| EC2PublicIPAddress            | Assign a Public IP address. The agents needs internet access for Amplify Central communication                                            | true                            | continuous |
+| EC2PublicIPAddress            | Assign a Public IP address. The agents needs internet access for Amplify communication                                                    | true                            | continuous |
 | EC2SSHLocation                | The CIDR range that is allowed to SSH to the instance                                                                                     | 0.0.0.0/0                       | continuous |
 | ECSClusterName                | The name of the ECS Fargate Cluster for the ECS tasks to be deployed to                                                                   |                                 | continuous |
-| ECSCentralOrganizationID      | The Amplify Central Organization ID to add to the ECS tasks                                                                               |                                 | continuous |
-| ECSCentralEnvironmentName     | The Amplify Central Environment that the agents will be associated with                                                                   |                                 | continuous |
+| ECSCentralOrganizationID      | The Amplify Organization ID to add to the ECS tasks                                                                                       |                                 | continuous |
+| ECSCentralEnvironmentName     | The Amplify Environment that the agents will be associated with                                                                           |                                 | continuous |
 | ECSCentralDiscoveryAgentName    | The Amplify Discovery Agent name                                                                                                        |                                 | continuous |
 | ECSCentralTraceabilityAgentName | The Amplify Traceability Agent name                                                                                                     |                                 | continuous |
-| ECSCentralURL                   | The Amplify Central URL to connect to, required for EU region                                                                           |                                 | continuous |
-| ECSCentralDeployment            | The Amplify Central Deployment, required for EU region                                                                                  |                                 | continuous |
-| ECSCentralTraceabilityHost      | The Amplify Central Traceability host, required for EU region                                                                           |                                 | continuous |
-| ECSCentralClientID            | The Amplify Central Client ID (DOSA_xxxxxxx) that the agents will use to communicate to Amplify                                           |                                 | continuous |
+| ECSCentralURL                   | The Amplify URL to connect to, required for EU region                                                                                   |                                 | continuous |
+| ECSCentralDeployment            | The Amplify Deployment, required for EU region                                                                                          |                                 | continuous |
+| ECSCentralTraceabilityHost      | The Amplify Traceability host, required for EU region                                                                                   |                                 | continuous |
+| ECSCentralClientID            | The Amplify Client ID (DOSA_xxxxxxx) that the agents will use to communicate to Amplify                                                   |                                 | continuous |
 | DiscoveryAgentLogGroupName    | The name that the Discovery Agent running on EC2 will log to                                                                              | amplify-discovery-agent-logs    | continuous |
 | TraceabilityAgentLogGroupName | The name that the Traceability Agent running on EC2 will log to                                                                           | amplify-traceability-agent-logs | continuous |
 | SSMPrivateKeyParameter        | The key name in SSM Parameter Store holding the Amplify Private Key                                                                       | AmplifyPrivateKey               | continuous |
@@ -190,8 +190,8 @@ The resources created by the CloudFormation template:
 | AWS::EC2::SubnetRouteTableAssociation | AgentsRouteTableSubnetAssociation | VpcID not blank                                          | Associates the Subnet with the VPC and Route Table                                                 | continuous     |
 | AWS::EC2::Route                       | AllowInternetTraffic              | VpcID not blank                                          | The route to direct all traffic in the VPC to the internet                                         | continuous     |
 | AWS::EC2::SecurityGroup               | AgentsSecurityGroup               | VpcID not blank                                          | The Security Group assigned to the VPC, allowing SSH only to the host                              | continuous     |
-| AWS::EC2::InternetGateway             | InternetGW                        | VpcID not blank                                          | The Internet Gateway so the agents can talk to Amplify Central                                     | continuous     |
-| AWS::EC2::VPCGatewayAttachment        | GatewayAttachment                | VpcID not blank                                          | Attaches the Internet Gateway to the VPC                                                           | continuous     |
+| AWS::EC2::InternetGateway             | InternetGW                        | VpcID not blank                                          | The Internet Gateway so the agents can talk to Amplify                                             | continuous     |
+| AWS::EC2::VPCGatewayAttachment        | GatewayAttachment                 | VpcID not blank                                          | Attaches the Internet Gateway to the VPC                                                           | continuous     |
 | AWS::EC2::Instance                    | AgentsHost                        |                                                          | The EC2 instance that the agents wil run in                                                        | continuous     |
 | amplify-agents-ecs-fargate.yaml       |                                   |                                                          |                                                                                                    | continuous     |
 | AWS::ECS::TaskDefinition              | AmplifyAgentsTask                 |                                                          | The ECS task that defines both of the agents                                                       | continuous     |
@@ -314,8 +314,8 @@ Policies
 | Allow  | s3:ListBucket           | The bucket set as the AgentsResourceBucket when creating the stack | Used by the EC2 instance to list all files in the resources directory of the bucket, for the agent execution    |
 | Allow  | s3:GetObjectAcl         | The bucket set as the AgentsResourceBucket when creating the stack | Used by the EC2 instance to get all the files in the resources directory of the bucket, for the agent execution |
 | Allow  | s3:GetObject            | The bucket set as the AgentsResourceBucket when creating the stack | Used by the EC2 instance to get all the files in the resources directory of the bucket, for the agent execution |
-| Allow  | ssm:GetParameter        | The Parameters for the Amplify keys in the region                  | Used by the EC2 instance or ECS task to get the keys needed to access Amplify Central resources                 |
-| Allow  | ssm:GetParameters       | The Parameters for the Amplify keys in the region                  | Used by the EC2 instance or ECS task to get the keys needed to access Amplify Central resources                 |
+| Allow  | ssm:GetParameter        | The Parameters for the Amplify keys in the region                  | Used by the EC2 instance or ECS task to get the keys needed to access Amplify resources                         |
+| Allow  | ssm:GetParameters       | The Parameters for the Amplify keys in the region                  | Used by the EC2 instance or ECS task to get the keys needed to access Amplify resources                         |
 | Allow  | kms:*                   | Queue encryption key ARN                                           | Used by the agents for SQS encryption                                                                           |
 
 ##### AgentsInstanceRole
@@ -436,7 +436,7 @@ These outputs will be used as inputs for running both the Discovery and Traceabi
 * Validate messages received in AWS SQS
 * Validate logging in CloudWatch under the Log group named after the REST API ID/Stage
 
-### Connecting AWS API Gateway to Amplify Central
+### Connecting AWS API Gateway to Amplify
 
 * [Deploy agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/)
 
@@ -612,10 +612,10 @@ This cloudformation creates the [APICAgentsUser](#apicagentsuser) user, which is
 
 ### Troubleshooting
 
-| Question                                        | Answer                                                                                                                                                                                              |
-| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Why isn’t my API discovered?                    | Check that the tag set on the stage has a correct name and value based on the AWS_FILTER variable. See [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/).       |
-| Why can’t my agents connect to AWS API Gateway? | Go to AWS console / IAM service and make sure that `AWS_REGION`, `AWS_AUTH_ACCESSKEY` and `AWS_AUTH_SECRETKEY` are valid and not inactivated.                                                       |
-| Why can’t my agents connect to Amplify Central? | Go to **Amplify Central UI > Access > Service Accounts** and make sure that the Service Account is correctly named and valid. Make sure that the organizationID and team configuration are correct. |
-| Why don’t I see traffic in Amplify Central?     | Make sure that the Condor URL is accessible from the machine where Traceability Agent is installed.                                                                                                 |
-| How do I verify that the Agent is running?        | `docker inspect --format='{{json .State.Health}}' <container>`                                                                                                                                      |
+| Question                                              | Answer                                                                                                                                                                                                       |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Why isn’t my API discovered?                          | Check that the tag set on the stage has a correct name and value based on the AWS_FILTER variable. See [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/). |
+| Why can’t my agents connect to AWS API Gateway?       | Go to AWS console / IAM service and make sure that `AWS_REGION`, `AWS_AUTH_ACCESSKEY` and `AWS_AUTH_SECRETKEY` are valid and not inactivated.                                                                |
+| Why can’t my agents connect to Amplify?               | Go to **Amplify Central UI > Access > Service Accounts** and make sure that the Service Account is correctly named and valid. Make sure that the organizationID and team configuration are correct.                  |
+| Why don’t I see traffic in Amplify Business Insights? | Make sure that the Condor URL is accessible from the machine where Traceability Agent is installed.                                                                                                          |
+| How do I verify that the Agent is running?            | `docker inspect --format='{{json .State.Health}}' <container>`                                                                                                                                               |

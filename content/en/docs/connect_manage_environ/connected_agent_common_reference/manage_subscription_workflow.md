@@ -46,11 +46,11 @@ CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL={The webhook URL that subscription da
 CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS={The headers that will be used when posting data to the webhook url}
 ```
 
-{{< alert title="Note" color="primary" >}}Each API that is discovered contains the subscription approval mode for its corresponding Amplify Central catalog item, which is set when the API is discovered and published. The only way to change a catalog item's subscription approval mode is to update the agent configuration mode (refer to `CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE`), restart the agent, and then rediscover the API.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Each API that is discovered contains the subscription approval mode for its corresponding Amplify catalog item, which is set when the API is discovered and published. The only way to change a catalog item's subscription approval mode is to update the agent configuration mode (refer to `CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE`), restart the agent, and then rediscover the API.{{< /alert >}}
 
 ## Supported use cases for receiving API credentials
 
-Once the subscription is approved, the agent catches this event from Amplify Central and, based on its configuration, can forward the credentials using either an SMTP server or a webhook.
+Once the subscription is approved, the agent catches this event from Amplify and, based on its configuration, can forward the credentials using either an SMTP server or a webhook.
 
 ### Email server and email template configuration
 
@@ -235,7 +235,7 @@ If the API provider does not allow an API consumer to create his Application (Ax
 
 ### Axway API Gateway custom field
 
-A custom field track the Amplify Central subscription can be added to the API. Refer to `<API_Gateway_install_dir>/apigateway/webapps//apiportal/vordel/apiportal/app/app.config file` in the **customPropertiesConfig** section. For more details, see [Customize API Manager](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html).
+A custom field track the Amplify subscription can be added to the API. Refer to `<API_Gateway_install_dir>/apigateway/webapps//apiportal/vordel/apiportal/app/app.config file` in the **customPropertiesConfig** section. For more details, see [Customize API Manager](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html).
 
 Sample application:
 
@@ -260,7 +260,7 @@ customPropertiesConfig: {
 
 ## API consumer: subscription workflow
 
-1. A consumer initiates the subscription in Amplify Central:
+1. A consumer initiates the subscription in Amplify web UI:
 
    1. Open an Amplify Catalog item.
    2. Click **Subscribe**.
@@ -281,7 +281,7 @@ customPropertiesConfig: {
 
    * The API can be consumed once the API credential details are received.
 
-{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user subscribes an API to an application/usage plan/subscription until Amplify Central shows the subscription state of **Active**. This is because of the time it takes to send events back and forth between the Gateway and Amplify Central.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user subscribes an API to an application/usage plan/subscription until Amplify Central Web UI shows the subscription state of **Active**. This is because of the time it takes to send events back and forth between the Gateway and Amplify.{{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}If the FrontEnd API on API Manager corresponding to the Catalog item is set to **unpublished** at the time the subscription is initiated, the Discovery Agent will receive the event, but will not allow the subscription to be completed. Instead, it will send back a subscription status of **Subscribe failed**.{{< /alert >}}
 
@@ -305,19 +305,19 @@ customPropertiesConfig: {
    * API Manager: The subscription ID is removed from the application's Custom field. The related credentials are removed too.
    * AWS Gateway: The `subscriptions-<subscriptionID from Amplify Central>` is removed from the usage plan. The related credentials are removed too.
    * Azure: The subscription is deleted.
-   * Set the Amplify Central subscription status to **unsubscribed** or **unsubscribe failed** in case or error. Refer to Discovery Agent log for more information of the error.
+   * Set the Amplify subscription status to **unsubscribed** or **unsubscribe failed** in case or error. Refer to Discovery Agent log for more information of the error.
 
 ## Impact on subscription when unpublishing an API in API Manager
 
-1. In API Manager, assume there is a FrontEnd API that is published, has been discovered by the Discovery Agent, and has an active subscription to it in Amplify Central.
+1. In API Manager, assume there is a FrontEnd API that is published, has been discovered by the Discovery Agent, and has an active subscription to it in Amplify.
 2. A user in API Manager unpublishes that API.
 3. The Discovery Agent discovers the change and:
 
-   * Initiates an unsubscribe to Amplify Central for that Catalog item.
+   * Initiates an unsubscribe to Amplify for that Catalog item.
    * The subscription ID is removed from the application's Custom field.
    * The subscription status is set to **Unsubscribed**.
 
-{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify Central shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify Central.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify Central Web UI shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
 
 ## Impact of subscription approval mode on subscription workflow
 
@@ -327,9 +327,9 @@ The configuration setting for central.subscriptions.approvalmode affects the flo
 
 This is the default setting. In manual approval mode, the subscription approval flow is as follows:
 
-1. A consumer in Amplify Central clicks on **Subscribe**.
+1. A consumer in Amplify clicks on **Subscribe**.
 2. The subscription status moves to **Waiting for approval...**.
-3. The subscription remains in this state until a user with appropriate permissions on Amplify Central locates the subscription and clicks **Approve**.
+3. The subscription remains in this state until a user with appropriate permissions on Amplify locates the subscription and clicks **Approve**.
 4. The subscription status moves to **Subscribing**.
 5. The Discovery Agent receives the event and sets the status to **Active**, or **Subscribe failed** if there is a failure to subscribe.
 
@@ -337,7 +337,7 @@ This is the default setting. In manual approval mode, the subscription approval 
 
 In auto approval mode, the subscription approval flow is as described at the top of this page:
 
-1. A consumer in Amplify Central clicks on **Subscribe**.
+1. A consumer in Amplify clicks on **Subscribe**.
 2. The subscription status moves immediately to **Subscribing...**.
 3. The Discovery Agent receives the event and sets the status to **Active**, or **Subscribe failed** if there is a failure to subscribe.
 
@@ -345,14 +345,14 @@ In auto approval mode, the subscription approval flow is as described at the top
 
 In webhook approval mode, the Discovery Agent must be configured with a webhook url, and any webhook headers and authentication secret that the webhook needs. Within the webhook, many things are possible. For example, the webhook could either generate an email to notify someone that a subscription is awaiting approval, or the webhook could do the subscription approval. Assuming that the webhook is correctly configured and coded, the subscription approval flow is as follows:
 
-1. A consumer in Amplify Central clicks on **Subscribe**.
+1. A consumer in Amplify clicks on **Subscribe**.
 2. The subscription status moves to **Waiting for approval...**.
 3. The webhook is notified of the event.
-4. The subscription remains in this state until the webhook moves the subscription to **Approved**, or a user with appropriate permissions on Amplify Central locates the subscription and clicks **Approve**.
+4. The subscription remains in this state until the webhook moves the subscription to **Approved**, or a user with appropriate permissions on Amplify locates the subscription and clicks **Approve**.
 5. The subscription status moves to  **Subscribing**.
 6. The Discovery Agent receives the event and sets the status to **Active**, or **Subscribe failed** if there is a failure to subscribe.
 
-{{< alert title="AWS Gateway Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify Central shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify Central.{{< /alert >}}
+{{< alert title="AWS Gateway Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
 
 ## Subscription failures
 

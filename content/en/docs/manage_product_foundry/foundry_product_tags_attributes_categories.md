@@ -24,7 +24,7 @@ Attributes are keyword and value pairs that can be assigned to products and used
 
 ## Manage categories
 
-Searching through an unordered, unorganized list of products can be a daunting task. However, Central Admin users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
+Searching through an unordered, unorganized list of products can be a daunting task. However, **Central Admin** users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
 
 Categories allow for a broader grouping of products into different topics or themes. Categories are created once, and multiple products can be assigned to them. One product can be in multiple categories.
 
@@ -53,7 +53,7 @@ If the product is already published to a Marketplace, the change of category wil
 To create a category:
 
 1. Log into the platform.
-2. Navgiate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories
+2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories
 3. Click **+ Add New Category** to start the category creation wizard:
 
     * Category Profile page: Enter the category definition (Name, Visibility, Description, and an optional image). The category logical name is optional and will be computed based on the category name.

@@ -8,8 +8,8 @@ Apply a rate limit configuration to your API.
 
 ## Before you start
 
-* You will need an administrator account for Amplify Central
-* Learn how to import your API as an API proxy in Amplify Central (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
+* You will need an administrator account for Amplify
+* Learn how to import your API as an API proxy in Amplify (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
 * Learn how to use the Axway CLI to manage an API proxy (see [Manage an API proxy using Axway Central CLI](/docs/integrate_with_central/cli_central/cli_proxy_flow))
 
 ## Objectives
@@ -26,11 +26,11 @@ Rate limiting is a way to protect the backend service underlying (or implementin
 
 API providers typically measure processing limits in transactions per time period (seconds, minutes, hours), for example, 100 transactions per 10 seconds. Rate limiting at the API level is a way to enforce a maximum limit for the total transactions per time period for all of your API consumers.
 
-### Amplify Central API rate limiting
+### Amplify API rate limiting
 
-Amplify Central provides rate limiting around the API Proxy activity. You can set up the rate limiting from **1 second** to **1 day** interval.
+Amplify provides rate limiting around the API Proxy activity. You can set up the rate limiting from **1 second** to **1 day** interval.
 
-Amplify Central allows for two levels of enforcement for rate limiting:
+Amplify allows for two levels of enforcement for rate limiting:
 
 * At the proxy level, rate limiting affects all API transactions regardless of the consuming application.
 * At the proxy and application level, rate limiting affects all API transactions originating with a specific application.

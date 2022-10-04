@@ -4,11 +4,11 @@ linkTitle: Deploy your agents with Axway CLI
 draft: false
 weight: 20
 ---
-Deploy your agents using Axway CLI so you can manage your AWS API Gateway environment within Amplify Central.
+Deploy your agents using Axway CLI so you can manage your AWS API Gateway environment within Amplify.
 
 ## Before you start
 
-* Read [Amplify Central AWS API Gateway connected overview](/docs/connect_manage_environ/connect_aws_gateway/)
+* Read [Amplify AWS API Gateway connected overview](/docs/connect_manage_environ/connect_aws_gateway/)
 * You will need information on AWS
 
     * The region that the AWS API Gateway resources are hosted in

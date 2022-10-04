@@ -29,7 +29,7 @@ Follow these steps to subscribe to an API asset:
 5. (Optional) Enter a short description. This can be used to let the asset provider know how you intend to use the API.
 6. Select an **Application**.
 
-   Amplify Central administrators can subscribe an application on behalf of API consumers. In this case, they will be required to select the **Team** that will own the subscription.
+   Amplify **Central admin** can subscribe an application on behalf of API consumers. In this case, they will be required to select the **Team** that will own the subscription.
 7. Click **Subscribe**.
 
 Watch the animation to learn how to subscribe to an API asset.

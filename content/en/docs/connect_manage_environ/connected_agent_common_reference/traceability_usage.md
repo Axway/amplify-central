@@ -76,7 +76,7 @@ Step 1. Install Axway CLI and Axway Central CLI:
 
    More information regarding the CLI installation is available [here](/docs/integrate_with_central/cli_central/cli_install/).
 
-Step 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
+Step 2. Authorize your CLI to use the Amplify APIs: `axway auth login`
 
 Step 3. Create an empty directory and go in that directory to run the next command.
 
@@ -107,7 +107,7 @@ For more information regarding agents' installation, see [Axway Gateway agents](
 
 ### Reporting Gateway usage event - automatic reporting for online mode
 
-You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
+You can view the environment in **Amplify Central > Environment** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
 Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. The Traceability Agent sends the usage counter to the platform on a regular basis (default is 15 minutes).
 
@@ -145,7 +145,7 @@ Step 1. Install Axway CLI and Axway Central CLI:
 * Install Axway CLI: `npm install -g axway`
 * Install Axway Central CLI: `axway pm install @axway/axway-central-cli`
 
-Step 2. Authorize your CLI to use the Amplify Central APIs: `axway auth login`
+Step 2. Authorize your CLI to use the Amplify APIs: `axway auth login`
 
 Step 3. Create an empty directory and go in that directory to run the next command.
 
@@ -174,7 +174,7 @@ For more information regarding agents installation, see [Axway Gateway agents](/
 
 ### Reporting Gateway usage event - manual reporting for offline mode
 
-You can view the environment in **Amplify Central > Topology** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
+You can view the environment in **Amplify Central > Environment** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
 The offline report is generated every month and saved to the \[agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
 

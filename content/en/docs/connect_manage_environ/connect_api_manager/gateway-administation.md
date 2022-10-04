@@ -4,12 +4,12 @@ linkTitle: Administer API Manager Gateway
 draft: false
 weight: 25
 ---
-Deploy your Discovery Agent and Traceability Agent so you can manage your Axway API Gateway environment within Amplify Central.
+Deploy your Discovery Agent and Traceability Agent so you can manage your Axway API Gateway environment within Amplify.
 
 ## Before you start
 
-* Read [Amplify Central and Axway API Manager connected overview](/docs/connect_manage_environ/connect_api_manager/)
-* Be sure you have [Prepared Amplify Central](/docs/connect_manage_environ/connect_api_manager/#prerequisites)
+* Read [Amplify and Axway API Manager connected overview](/docs/connect_manage_environ/connect_api_manager/)
+* Be sure you have [Prepared Amplify](/docs/connect_manage_environ/connect_api_manager/#prerequisites)
 * You will need a basic knowledge of Axway API Management solution:
 
     * Where the solution is running (host / port / path to the logs / users)
@@ -23,7 +23,7 @@ Learn how to install, customize and run your Discovery and Traceability agents.
 
 ## Discovery Agent
 
-The Discovery Agent is used to discover new published APIs or any updated APIs. Once they are discovered, the related APIs are published to Amplify Central, in one of the following publication modes:
+The Discovery Agent is used to discover new published APIs or any updated APIs. Once they are discovered, the related APIs are published to Amplify, in one of the following publication modes:
 
 * **Environment / API Service publication**: Customers publish their APIs to the Amplify platform.
 * **Environment / API Service publication / Catalog item publication** (default mode): Same as previous plus automatically expose the APIS to the consumer via the Amplify Catalog.
@@ -82,7 +82,7 @@ CENTRAL_ORGANIZATIONID=<ORGANIZATIONID>
 CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 ```
 
-* The value for *team* can be found in [Amplify Central > Access > Team Assets](https://apicentral.axway.com/access/teams/).
+* The value for *team* can be found in [Amplify > Organization > Teams](https://apicentral.axway.com/access/teams/).
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
@@ -100,7 +100,7 @@ The `da_env_vars.env` configuration file contain 3 sections to personalize: API 
 
 #### Customizing Discovery Agent API Manager connectivity variables
 
-This section connects the agent to API Manager and determines which APIs should be discovered and published to Amplify Central.
+This section connects the agent to API Manager and determines which APIs should be discovered and published to Amplify .
 
 `APIMANAGER_HOST`: Machine name where API Manager is running. Use a hostname according to the certificate returned by the API-Manager.
 
@@ -150,7 +150,7 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_ORGANIZATIONID`: The Organization ID from Amplify Central. Locate this at Platform > User > Organization > Org ID field.
 
-`CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify Central](/docs/integrate_with_central/cli_central/cli_install/).
+`CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/).
 
 `CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.ß
 
@@ -158,11 +158,11 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_AUTH_REALM`: The Realm used to authenticate for Amplify Central. Default value is **Broker**.
 
-`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify Central](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify Central > Access > Service Accounts.
+`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify > Organization > Service Accounts.
 
-`CENTRAL_AUTH_PRIVATEKEY`: The location of the private key file you created when [preparing Amplify Central](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.
+`CENTRAL_AUTH_PRIVATEKEY`: The location of the private key file you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.
 
-`CENTRAL_AUTH_PUBLICKEY`:  The location of the public key file you created when [preparing Amplify Central](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.  
+`CENTRAL_AUTH_PUBLICKEY`:  The location of the public key file you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.  
 
 `CENTRAL_AUTH_KEYPASSWORD`: The location of the key password file to open the key. None set up by default.
 
@@ -575,7 +575,7 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 CENTRAL_ENVIRONMENT=<Environment>
 ```
 
-* The value for *team* can be found in [Amplify Central > Access > Team Assets](https://apicentral.axway.com/access/teams/).
+* The value for *team* can be found in [Amplify > ORganization > Teams](https://apicentral.axway.com/access/teams/).
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 

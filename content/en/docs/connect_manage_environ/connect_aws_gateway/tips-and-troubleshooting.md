@@ -4,7 +4,7 @@ linkTitle: Get help with Connected AWS Gateway
 draft: false
 weight: 55
 ---
-Troubleshooting and error codes that you may encounter while working with the connected managed environment for AWS API Gateway within Amplify Central.
+Troubleshooting and error codes that you may encounter while working with the connected managed environment for AWS API Gateway within Amplify.
 
 ## Troubleshooting
 
@@ -14,8 +14,8 @@ This section describe the common error cases you can encounter when using agents
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Why isn't my API discovered?                                                        | Check that the tag set on the stage has a correct name and value based on the `AWS_FILTER` variable.                                                                                                                                                                                                                                                                          |
 | Why can't my agents connect to AWS API Gateway?                                     | Check that agent environment variables `AWS_REGION` and `AWS_QUEUENAME` are valid. Also check that the EC2 instance / ECS fargate instance is up and running.                                                                                                                                                                                                                 |
-| Why can't my agents connect to Amplify Central?                                     | Go to Amplify Central UI > Access > Service Accounts and make sure that the Service Account is correctly named and valid in `CENTRAL_AUTH_CLIENTID` variable. Also make sure that the organizationID (`CENTRAL_ORGANIZATIONID`) is correct.                                                                                                                                   |
-| Why don't I see traffic in Amplify Central?                                         | Make sure that the `TRACEABILITY_HOST` and `TRACEABILITY_PORT` are accessible from the machine where Traceability Agent is installed. If you are using a proxy (`TRACEABILITY_PROXYURL`), make sure the connections are opened correctly. Refer to [Communication ports](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#communication-ports). |
+| Why can't my agents connect to Amplify?                                             | Go to Amplify > Organization > Service Accounts and make sure that the Service Account is correctly named and valid in `CENTRAL_AUTH_CLIENTID` variable. Also make sure that the organizationID (`CENTRAL_ORGANIZATIONID`) is correct.                                                                                                                                        |
+| Why don't I see traffic in Amplify Business Insights?                               | Make sure that the `TRACEABILITY_HOST` and `TRACEABILITY_PORT` are accessible from the machine where Traceability Agent is installed. If you are using a proxy (`TRACEABILITY_PROXYURL`), make sure the connections are opened correctly. Refer to [Communication ports](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#communication-ports). |
 | Why isn't my agent status displayed in the environment details page?                | It is possible that your agents and their corresponding resources are not linked together. Follow [this procedure](/docs/connect_manage_environ//environment_agent_resources) to ensure the correct usage of agent resources.                                                                                                                                                 |
 | Why is my Traceability Agent receiving EOF errors while sending transaction events? | It is possible that the number of `TRACEABILITY_WORKER` is set too high. Lower the number of configured workers.                                                                                                                                                                                                                                                              |
 
@@ -26,7 +26,7 @@ Each log is displayed in a JSON format following this pattern: {"level":"info|de
 The agent logging mechanism is based on logrus (<https://github.com/sirupsen/logrus>) and can display several levels of information:
 
 * **info** (default): informative log about the agent activity (start, stop, discovering API, publishing traffic, etc.).
-* **debug**: same as info level plus some troubleshooting information (healthcheck, connection to Central / Gateway, etc.).
+* **debug**: same as info level plus some troubleshooting information (healthcheck, connection to Amplify / Gateway, etc.).
 * **trace**: same as debug plus all information related to API call (action / duration / return code / endpoint).
 
 The log level definition is provided using the `LOG_LEVEL` variable set in the agent configuration file.

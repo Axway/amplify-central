@@ -25,7 +25,7 @@ Learn how to create a product from an existing asset and make it available in th
 
 ## Amplify Central API
 
-For reference, the Open API Specification for Amplify Central is located [here](https://apicentral.axway.com/apis/docs).
+For reference, the Open API Specification for Amplify is located [here](https://apicentral.axway.com/apis/docs).
 
 ## Create product YAML
 

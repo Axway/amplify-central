@@ -76,7 +76,7 @@ Under **Element Colors**, you can customize and preview:
 * Cards:
 
     * **Card Titles** - color of the card titles.
-    * **Card Backgounds** - color applied to all card background.
+    * **Card Backgrounds** - color applied to all card background.
     * **Card Borders** - color applied to card borders of all card elements in the Marketplace.
 
 * Links and icons:

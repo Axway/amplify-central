@@ -8,7 +8,7 @@ The main security features of the agents are described here.
 
 ## Information security
 
-The agents communicate to AWS API Gateway Manager, API Manager, APIGateway Manager, and Amplify Central servers over TLS-encrypted HTTP connections by default. Except for AWS API Gateway Manager, the agents can be configured to enforce various TLS protocol versions. You can specify both a minimum and a maximum version. The default minimum version is TLS1.2, and the default maximum version is TLS1.3. Either of these values can be changed to one of the following: TLS1.0, TLS1.1, TLS1.2, TLS1.3. For more information, see the **Reference - Agent configuration** documentation for your specific agent.
+The agents communicate to AWS API Gateway Manager, API Manager, APIGateway Manager, and Amplify servers over TLS-encrypted HTTP connections by default. Except for AWS API Gateway Manager, the agents can be configured to enforce various TLS protocol versions. You can specify both a minimum and a maximum version. The default minimum version is TLS1.2, and the default maximum version is TLS1.3. Either of these values can be changed to one of the following: TLS1.0, TLS1.1, TLS1.2, TLS1.3. For more information, see the **Reference - Agent configuration** documentation for your specific agent.
 
 Agents can also be configured to use one or more specific SSL. The ciphers that are configured within the agents to be used by default are:
 
@@ -92,9 +92,9 @@ When using the on-premise installation of API Manager/Gateway, it is possible th
 
 ## Agent client/server
 
-The agents use HTTPS connections to its API servers for communication between a running agent, the API Manager, AWS API Gateway, Azure API Gateway or Amplify Central. The Traceability Agents also use the Lumberjack protocol over TCP to communicate to the Amplify search logs service.
+The agents use HTTPS connections to its API servers for communication between a running agent, the API Manager, AWS API Gateway, Azure API Gateway or Amplify. The Traceability Agents also use the Lumberjack protocol over TCP to communicate to the Amplify search logs service.
 
-Authentication to the servers is enforced through tokens, username/password, or public/private keys, depending upon what is required by the particular server. All JWT tokens and private keys and secrets stay within the environment of the agent. Public keys are registered in Amplify Central. Configuration details for these settings can be found in the **Deploy your agent** documentation for your specific agent.
+Authentication to the servers is enforced through tokens, username/password, or public/private keys, depending upon what is required by the particular server. All JWT tokens and private keys and secrets stay within the environment of the agent. Public keys are registered in Amplify. Configuration details for these settings can be found in the **Deploy your agent** documentation for your specific agent.
 
 ## Agent configuration file
 
@@ -104,17 +104,17 @@ To remove the credentials from the agent configuration file, export environment 
 
 Although the agent configuration allows setting up credential-based configuration as environment variables with clear text, it still doesn't provide the necessary security. Instead, you can do one of the following:
 
-* Reference data keys within `@secret` resource created in Central
+* Reference data keys within `@secret` resource created in Amplify
 * Script the agent startup with openSSL
 * Use Docker secret for the Dockerized agents
 
 {{< alert title="Warning" color="warning" >}}If you are running your Traceability Agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
 
-### Use the @Secret resources in Central
+### Use the @Secret resources in Amplify
 
-This will help you store your password or any sensitive information inside Amplify Central directly. This will work only when the agent is "connected" to Amplify Central.
+This will help you store your password or any sensitive information inside Amplify directly. This will work only when the agent is "connected" to Amplify.
 
-#### Create secret resource in Central
+#### Create secret resource in Amplify
 
 * Create a yaml file with a resource definition for secret in environment scope:
 

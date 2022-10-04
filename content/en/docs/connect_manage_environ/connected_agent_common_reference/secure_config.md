@@ -4,7 +4,7 @@ linkTitle: Use secure credentials in configuration
 draft: false
 weight: 20
 ---
-Secure credentials in the agent configuration by referencing data keys within the secret resource in Central.
+Secure credentials in the agent configuration by referencing data keys within the secret resource in Amplify.
 
 ## Before You Start
 
@@ -17,16 +17,16 @@ While the agent configuration allows setting up credential-based configuration a
 
 Learn how to secure credentials in the agent configuration with one of the following methods:
 
-* Reference data keys within secret resource created in Central
+* Reference data keys within secret resource created in Amplify
 * Script the agent startup with openSSL
 
 {{< alert title="Warning" color="warning" >}}If you are running your agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
 
-## Use the Secret resources in Central
+## Use the Secret resources in Amplify
 
-This will help you to store your password or any sensitive information inside Amplify Central directly. This will work only when the agent is "connected" to Amplify Central.
+This will help you to store your password or any sensitive information inside Amplify directly. This will work only when the agent is "connected" to Amplify.
 
-### Create secret resource in Central
+### Create secret resource in Amplify
 
 * Create a yaml file with a resource definition for secret in environment scope:
 

@@ -1,7 +1,7 @@
 ---
 title: Query the Traceability APIs with Lexus
 ---
-Query data about API specifics and aggregate performance using the Amplify Central Traceability APIs.
+Query data about API specifics and aggregate performance using the Amplify Traceability APIs.
 
 ## Core concepts
 
@@ -14,11 +14,11 @@ The core of the Lexus language and how to use it are described [in this document
 1. ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
 2. ***Authorize the CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html)
 
-{{< alert title="Note" color="primary" >}}If you are querying against Amplify Central APIs, ensure your account is assigned the **Central Admin** role in the Amplify platform dashboard.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you are querying against Amplify APIs, ensure your account is assigned the **Central Admin** role in the Amplify platform dashboard.{{< /alert >}}
 
-## Amplify Central use case
+## Amplify use case
 
-One common use case is to call the various APIs inside Amplify Central to retrieve summaries of transactions, events, or an individual transaction or event. See [https://docs.axway.com/category/api](https://docs.axway.com/category/api) > Amplify Platform > Traceability Connector API.
+One common use case is to call the various APIs inside Amplify to retrieve summaries of transactions, events, or an individual transaction or event. See [https://docs.axway.com/category/api](https://docs.axway.com/category/api) > Amplify Platform > Traceability Connector API.
 
 You can use whichever of the following methods you feel the most comfortable with to call the APIs.
 

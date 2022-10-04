@@ -4,17 +4,17 @@ linkTitle: Get started
 weight: 20
 date: 2019-07-30
 ---
-Register your first SaaS API in Amplify Central.
+Register your first SaaS API in Amplify.
 
 ## Before you start
 
-* Read [Amplify Central overview](/docs/overview)
-* Read [Understand Amplify Central concepts](/docs/saas_api_gateway/fundamental_concepts/)
-* Sign up for a free trial of Amplify Central at [Amplify platform](https://platform.axway.com/)
+* Read [Amplify overview](/docs/overview)
+* Read [Understand Amplify concepts](/docs/saas_api_gateway/fundamental_concepts/)
+* Sign up for a free trial of Amplify at [Amplify platform](https://platform.axway.com/)
 
 ## Objectives
 
-Learn how to register your first API in Amplify Central.
+Learn how to register your first API in Amplify.
 
 * Register an API as an API proxy and deploy it to a runtime group
 * Secure the API with a client authentication policy
@@ -23,7 +23,7 @@ Learn how to register your first API in Amplify Central.
 
 ## Register an API
 
-Watch this video to learn how to register your first API as an API proxy in Amplify Central, how to deploy it to a runtime group, and how to test the deployed API.
+Watch this video to learn how to register your first API as an API proxy in Amplify, how to deploy it to a runtime group, and how to test the deployed API.
 
 {{< youtube v2zt-EveOu8 >}}
 
@@ -39,4 +39,4 @@ To publish and share your API endpoints in the Amplify Catalog, so that consumer
 
 ## Review
 
-You have learned how to register an API as an API proxy in Amplify Central, how to deploy and test it, and how to apply security policies to it. You have also learned how to monitor API usage and traffic, and how to publish API endpoints to Amplify Catalog to make them available to consumers.
+You have learned how to register an API as an API proxy in Amplify, how to deploy and test it, and how to apply security policies to it. You have also learned how to monitor API usage and traffic, and how to publish API endpoints to Amplify Catalog to make them available to consumers.

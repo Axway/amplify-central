@@ -95,7 +95,7 @@ View the following detailed information for a specific product in any state (Dra
     * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
     * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
 
-9. Select the team(s) the product can be shared with. By default, a product is not shared and only the Central Admin will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
+9. Select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
 10. Provide the Tags, Attribute, and Category details for the product.
 11. Click **Save**.
 

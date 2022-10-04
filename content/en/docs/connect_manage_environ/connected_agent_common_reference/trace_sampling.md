@@ -4,11 +4,11 @@ linkTitle: Trace sampling
 draft: false
 weight: 10
 ---
-The Traceability Agent can sample the transaction information that is sent to Amplify Central. Learn how to set up sampling rules used to send only certain transactions to Amplify Central. With the agent default configuration, all transactions are sent to Amplify Central.
+The Traceability Agent can sample the transaction information that is sent to Amplify Analytics . Learn how to set up sampling rules used to send only certain transactions to Amplify Anaytics. With the agent default configuration, all transactions are sent to Amplify Analytics.
 
 ## Sampling
 
-Sampling adds the ability to control the amount of transaction data that is sent to Amplify Central.
+Sampling adds the ability to control the amount of transaction data that is sent to Amplify Analytics.
 
 ### Settings
 
@@ -18,8 +18,8 @@ The following settings can be used to control the sampling.  A percentage can be
 
 The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to `10`, may be set to any value between 0 and 100.  
 
-* A value of `0` results in no transactions sent to Amplify Central
-* A value of `100` results in all transactions sent to Amplify Central
+* A value of `0` results in no transactions sent to Amplify Analytics
+* A value of `100` results in all transactions sent to Amplify Analytics
 
 The agent uses a counter to apply the sampling. When a value (other than 0 and 100) is set, the agent will send all transactions up to that value and then not send any until it reaches 100.  Therefore, this percentage results in the first x of each 100 transactions being sampled.
 
@@ -43,7 +43,7 @@ The Traceability Agent may be configured to sample fewer than all events.
 
 #### No events
 
-The following is a sample value that is added to `ta_env_vars.env`, which will send no gateway transactions to Amplify Central.
+The following is a sample value that is added to `ta_env_vars.env`, which will send no gateway transactions to Amplify Analytics.
 
 ```shell
 TRACEABILITY_SAMPLING_PERCENTAGE=0
@@ -51,22 +51,22 @@ TRACEABILITY_SAMPLING_PERCENTAGE=0
 
 #### 50% of all events, regardless of API
 
-The following is a sample value that is added to `ta_env_vars.env`, which will send 50% of the gateway transactions to Amplify Central.
+The following is a sample value that is added to `ta_env_vars.env`, which will send 50% of the gateway transactions to Amplify Analytics.
 
 ```shell
 TRACEABILITY_SAMPLING_PERCENTAGE=50
 TRACEABILITY_SAMPLING_PER_API=false
 ```
 
-If the agent receives 100 transactions, evenly between 2 APIs, only the first 50 will be sent to Amplify Central.
+If the agent receives 100 transactions, evenly between 2 APIs, only the first 50 will be sent to Amplify Analytics.
 
 #### 50% of events per API ID
 
-The following is a sample value that is added to `ta_env_vars.env`, which will send 50% of the gateway transactions to Amplify Central.
+The following is a sample value that is added to `ta_env_vars.env`, which will send 50% of the gateway transactions to Amplify Analytics.
 
 ```shell
 TRACEABILITY_SAMPLING_PERCENTAGE=50
 TRACEABILITY_SAMPLING_PER_API=true
 ```
 
-If the agent receives 100 transactions, evenly between 2 APIs, only 50 (25 from each API) will be sent to Amplify Central.
+If the agent receives 100 transactions, evenly between 2 APIs, only 50 (25 from each API) will be sent to Amplify Analytics.
