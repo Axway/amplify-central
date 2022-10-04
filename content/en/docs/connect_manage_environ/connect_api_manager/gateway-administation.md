@@ -82,7 +82,7 @@ CENTRAL_ORGANIZATIONID=<ORGANIZATIONID>
 CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 ```
 
-* The value for *team* can be found in [Amplify Central > Access > Team Assets](https://apicentral.axway.com/access/teams/).
+* The value for *team* can be found in [Amplify > Organization > Teams](https://apicentral.axway.com/access/teams/).
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
@@ -158,7 +158,7 @@ This section connects the agent to Amplify Central and determines how to publish
 
 `CENTRAL_AUTH_REALM`: The Realm used to authenticate for Amplify Central. Default value is **Broker**.
 
-`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify Central > Access > Service Accounts.
+`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify > Organization > Service Accounts.
 
 `CENTRAL_AUTH_PRIVATEKEY`: The location of the private key file you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.
 
@@ -575,7 +575,7 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 CENTRAL_ENVIRONMENT=<Environment>
 ```
 
-* The value for *team* can be found in [Amplify Central > Access > Team Assets](https://apicentral.axway.com/access/teams/).
+* The value for *team* can be found in [Amplify > ORganization > Teams](https://apicentral.axway.com/access/teams/).
 * The value for *organizationID* can be found in Amplify Central Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
