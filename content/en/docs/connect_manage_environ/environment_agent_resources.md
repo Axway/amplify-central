@@ -5,7 +5,7 @@ weight: 50
 ---
 Add your agent status to the environment details page.
 
-If your environment status in **Amplify / Topology** displays `Manual Sync.`, even though you have configured agents that have discovered APIs from your gateway and sent relative traffic to Business Insights, then you either installed the agents manually or with an older version of Axway Central CLI. Axway Central CLI (0.12.0 and later) creates necessary resources for the known agents (AWS, v7, Azure) to report its environment status to Amplify for you to view.
+If your environment status in **Amplify Central / Topology** displays `Manual Sync.`, even though you have configured agents that have discovered APIs from your gateway and sent relative traffic to Business Insights, then you either installed the agents manually or with an older version of Axway Central CLI. Axway Central CLI (0.12.0 and later) creates necessary resources for the known agents (AWS, v7, Azure) to report its environment status to Amplify for you to view.
 
 If you installed the agents manually or with an older version of Axway Central CLI, you must:
 

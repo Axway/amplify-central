@@ -4,7 +4,7 @@ linkTitle: Trace redaction
 draft: false
 weight: 10
 ---
-The Traceability Agent redacts and sanitizes information that is sent to Amplify analytics.  Learn how you can control the information that is sent to Amplify Analytics by using the redaction configuration.
+The Traceability Agent redacts and sanitizes information that is sent to Amplify Analytics.  Learn how you can control the information that is sent to Amplify Analytics by using the redaction configuration.
 
 ## Before you start
 

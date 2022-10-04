@@ -18,7 +18,7 @@ Learn how to use Axway Central CLI to manage your Amplify SaaS Gateway API proxi
 * Create a YAML configuration file representing your API proxy
 * Create the API proxy using Axway Central CLI
 * Promote the API proxy using Axway Central CLI
-* Test the API proxy using Amplify Web UI or a REST client
+* Test the API proxy using Amplify Central Web UI or a REST client
 
 ## Create the API configuration file
 
@@ -160,9 +160,9 @@ For details of the API, see [Promote proxy API](https://d-api.docs.stoplight.io/
 
 ## Test the Amplify SaaS Gateway API proxy
 
-The API proxy is now accessible on the URL returned from the `promote` command. You can test the methods and view the results in Amplify Web UI or using a REST client.
+The API proxy is now accessible on the URL returned from the `promote` command. You can test the methods and view the results in Amplify Central Web UI or using a REST client.
 
-To test the API methods in Amplify Web UI, select **API Proxies** in the left navigation bar, click the appropriate API proxy from the list, and select the **Test Methods** tab.
+To test the API methods in Amplify Central Web UI, select **API Proxies** in the left navigation bar, click the appropriate API proxy from the list, and select the **Test Methods** tab.
 
 ## Review
 
