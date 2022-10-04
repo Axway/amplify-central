@@ -317,7 +317,7 @@ customPropertiesConfig: {
    * The subscription ID is removed from the application's Custom field.
    * The subscription status is set to **Unsubscribed**.
 
-{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify Ceweb UI shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify web UI shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
 
 ## Impact of subscription approval mode on subscription workflow
 
