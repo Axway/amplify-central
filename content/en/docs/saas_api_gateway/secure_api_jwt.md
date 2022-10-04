@@ -24,7 +24,7 @@ Follow these steps to add JWT client authentication to your API proxy:
 2. On the **Policies** tab change the client authentication policy to `JWT Token`.
 3. On the **Deployments** tab deploy or update a runtime group with this revision of your API proxy.
 
-Watch the animation to learn how to do this in Amplify Central UI.
+Watch the animation to learn how to do this in Amplify Web UI.
 
 ![Add JWT authentication](/Images/central/JWTaddproxyauth_animation.gif)
 

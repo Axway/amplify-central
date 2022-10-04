@@ -64,7 +64,7 @@ Watch a quick animation to view your subscription history.
 
 ## Enable manual approval
 
-As an asset provider, you can configure how subscription requests will be approved. However, only users that are assigned to the Central Admin, API Developer roles, and Service accounts can change the subscription approval mode.
+As an asset provider, you can configure how subscription requests will be approved. However, only users that are assigned to the **Central Admin**, API Developer roles, and Service accounts can change the subscription approval mode.
 
 There are two possible options for subscription approval:
 
@@ -83,11 +83,11 @@ Follow these steps to enable manual approvals:
 
 ## Approve or reject a subscription
 
-As an asset provider, you can approve or reject subscription requests to assets in the Amplify Unified Catalog. However, only users that are assigned to the Central Admin role and DevOps Service accounts can approve or reject subscriptions.
+As an asset provider, you can approve or reject subscription requests to assets in the Amplify Unified Catalog. However, only users that are assigned to the **Central Admin** role and DevOps Service accounts can approve or reject subscriptions.
 
 Follow the steps below to approve a subscription:
 
-1. In Amplify Central, select **Subscriptions** in the left navigation bar.
+1. In Amplify, select **Subscriptions** in the left navigation bar.
 2. Use the top filter drop-down to filter the subscription by their status.
 3. Select a subscription that has the status set to **Awaiting Approval.**
 4. Review the asset subscription request details.
@@ -102,7 +102,7 @@ Watch a quick animation on how to approve a subscription:
 
 To unsubscribe from an asset:
 
-* In Amplify Central, select **Subscriptions** from the left navigation bar.
+* In Amplify, select **Subscriptions** from the left navigation bar.
 * Click **Unsubscribe** on the subscription of your choice. You can enter an optional text for unsubscribing from the asset.
 
 You can also unsubscribe from the **Subscription** detail page as shown below.

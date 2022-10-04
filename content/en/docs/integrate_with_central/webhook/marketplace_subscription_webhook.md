@@ -207,7 +207,7 @@ For example, if you have implemented your webhook listener in PowerAutomate, the
 
 ![Condition filter in Microsoft PowerAutomate](/Images/integration/power_automate_condition.png)
 
-Once your webhook flow has determined whether the subscription has to be approved or rejected, an "approved" or "rejected" update should be sent to Central's API Service. The information on the resource that needs to be update is contained in the `selflink` of the webhook notification. The selfLink provides an easy way to get access to a specific resource and change the data. The URL that you send the HTTP PUT request to is a combination of the region that your Amplify Central service is available at (i.e., `<https://apicentral.axway.com/>` or `<https://central.eu-fr.axway.com/>`) and the `selflink`:
+Once your webhook flow has determined whether the subscription has to be approved or rejected, an "approved" or "rejected" update should be sent to Central's API Service. The information on the resource that needs to be update is contained in the `selflink` of the webhook notification. The selfLink provides an easy way to get access to a specific resource and change the data. The URL that you send the HTTP PUT request to is a combination of the region that your Amplify service is available at (i.e., `<https://apicentral.axway.com/>` or `<https://central.eu-fr.axway.com/>`) and the `selflink`:
 
 ```bash
 https://<YOUR AMPLIFY CENTRAL REGION>/apis/<SELFLINK from Webhook notification>/approval

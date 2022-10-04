@@ -4,7 +4,7 @@ linkTitle: Trace redaction
 draft: false
 weight: 10
 ---
-The Traceability Agent redacts and sanitizes information that is sent to Amplify Central.  Learn how you can control the information that is sent to Amplify Central by using the redaction configuration.
+The Traceability Agent redacts and sanitizes information that is sent to Amplify analytics.  Learn how you can control the information that is sent to Amplify Analytics by using the redaction configuration.
 
 ## Before you start
 
@@ -12,11 +12,11 @@ The Traceability Agent redacts and sanitizes information that is sent to Amplify
 
 ## Objectives
 
-Learn how to set up redaction and sanitization rules used to ALLOW transaction path, query arguments, request headers, and response headers when sending data to Amplify Central. With the agent default configuration, this information will not be sent to Amplify.
+Learn how to set up redaction and sanitization rules used to ALLOW transaction path, query arguments, request headers, and response headers when sending data to Amplify Analytics. With the agent default configuration, this information will not be sent to Amplify.
 
 ## Path show rules
 
-Parts of the URI path will be redacted before the information is sent to Amplify Central. When this is done, the Traceability Agent replaces the path value with "{*}" in the transaction details.
+Parts of the URI path will be redacted before the information is sent to Amplify Analytics. When this is done, the Traceability Agent replaces the path value with "{*}" in the transaction details.
 
 By default, everything is redacted and rules must be set to show the path elements. When using environment variables, the variable name is `TRACEABILITY_REDACTION_PATH_SHOW`.
 

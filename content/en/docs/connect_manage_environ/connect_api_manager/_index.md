@@ -57,7 +57,7 @@ The Traceability Agent sends log information about APIs in API Gateway and publi
 
 Amplify supports two regions, US (default) and EU. The data (APIs, traffic) that the agents send to Amplify is stored in one of those regions based on the agent configuration.
 
-Use one of the following URLs to access the Amplify Central UI:
+Use one of the following URLs to access the Amplify UI:
 
 * US: [https://apicentral.axway.com](https://apicentral.axway.com)
 * EU: [https://central.eu-fr.axway.com](https://central.eu-fr.axway.com)

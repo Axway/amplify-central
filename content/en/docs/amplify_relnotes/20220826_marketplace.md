@@ -69,7 +69,7 @@ There are no bug fixes available in this release.
 
 ##### Known issues for Edge Gateway
 
-* **Renaming an API in API Manager is not synchronized by the Discovery Agent** - When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify Central with dual entries of both the originally discovered name and the newly changed name.
+* **Renaming an API in API Manager is not synchronized by the Discovery Agent** - When an API is renamed in API Manager, Discovery Agent cannot recognize the API name change. This results in the API displaying in Amplify with dual entries of both the originally discovered name and the newly changed name.
 
 ### Service Registry
 

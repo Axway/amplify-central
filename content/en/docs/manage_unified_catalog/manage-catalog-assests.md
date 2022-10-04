@@ -53,7 +53,7 @@ Unified Catalog allows you to control who can view and subscribe to catalog asse
 
 ## Manage categories
 
-Searching through an unordered list of catalog assets can become a daunting tasks and make assets not easily discoverable. Central Admin users can create categories to group assets in the Amplify Unified Catalog to make searching for assets more effective and improve discovery.
+Searching through an unordered list of catalog assets can become a daunting tasks and make assets not easily discoverable. **Central Admin** users can create categories to group assets in the Amplify Unified Catalog to make searching for assets more effective and improve discovery.
 
 Categories allow for a broader grouping of catalog assets into different topics or themes. They are created once, and multiple catalog asset can be assigned to them. One catalog asset can be in multiple categories.
 

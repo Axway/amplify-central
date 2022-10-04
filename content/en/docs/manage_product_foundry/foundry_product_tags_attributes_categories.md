@@ -24,7 +24,7 @@ Attributes are keyword and value pairs that can be assigned to products and used
 
 ## Manage categories
 
-Searching through an unordered, unorganized list of products can be a daunting task. However, Central Admin users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
+Searching through an unordered, unorganized list of products can be a daunting task. However, **Central Admin** users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
 
 Categories allow for a broader grouping of products into different topics or themes. Categories are created once, and multiple products can be assigned to them. One product can be in multiple categories.
 

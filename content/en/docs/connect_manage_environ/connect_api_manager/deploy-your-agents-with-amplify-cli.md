@@ -8,7 +8,7 @@ Deploy your agents using Axway CLI so that you can manage your Axway API Gateway
 
 ## Before you start
 
-* Read [Amplify Central and Axway API Manager connected overview](/docs/connect_manage_environ/connect_api_manager/)
+* Read [Amplify and Axway API Manager connected overview](/docs/connect_manage_environ/connect_api_manager/)
 * You will need a basic knowledge of Axway API Management installation
 
     * Where the API Gateway is running (host / port / path to event logs)

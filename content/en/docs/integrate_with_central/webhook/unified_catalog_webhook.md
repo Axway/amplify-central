@@ -15,11 +15,11 @@ Learn how to create and configure webhooks for the Amplify Unified Catalog so th
 
 ## Configure webhooks on catalog asset subscriptions
 
-Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify Central, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
+Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
 
 To publish an asset to the Amplify Unified Catalog with a custom subscription flow that will be triggered on any subscription events, you must:
 
-* Create an environment in Amplify Central.
+* Create an environment in Amplify.
 * Create an API service, API service instance, and API service revision.
 * Create a webhook with a secret, if you want to secure the webhook.
 * Create a custom subscription definition that references the webhook.

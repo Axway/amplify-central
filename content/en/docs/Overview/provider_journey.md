@@ -9,7 +9,7 @@ The following steps summarize the provider journey within the Amplify API Manage
 1. Create an environment - see [Define an environment](/docs/connect_manage_environ) that represent the dataplane
 2. Discover APIs from an existing dataplane
 
-    * Manual discovery using the Central UI - see [Add an API Service](/docs/connect_manage_environ/manage_services/add_api_service)
+    * Manual discovery using the Amplify Web UI - see [Add an API Service](/docs/connect_manage_environ/manage_services/add_api_service)
     * Automatic using a CI/CD procedure - see [Integrate with Amplify](/docs/integrate_with_central)
     * Automatic and synchronized using a discovery agent - see [Connect your environment with a Gateway](/docs/connect_manage_environ#synchronize-your-environment-with-a-gateway)
 

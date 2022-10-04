@@ -17,7 +17,7 @@ Configure TLS for requests to your back-end API.
 Learn how Transport Layer Security (TLS) is applied to requests to the back-end API:
 
 * Understand what TLS is and how it can be useful
-* Use the Amplify Central UI to to confirm TLS is negotiated for your API
+* Use the Amplify Web UI to to confirm TLS is negotiated for your API
 
 ## What is Transport Layer Security?
 

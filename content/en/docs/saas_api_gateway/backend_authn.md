@@ -36,7 +36,7 @@ The credentials for the sample musical instruments API are:
 * user name/password: `admin`/`changeme`
 * user name/no password: `EtHJ0DUYiqv1l5hV1Ztg2XW7HfLlBZKk`
 
-Watch the animation to learn how to do this in Amplify Central UI.
+Watch the animation to learn how to do this in Amplify Web UI.
 
 ![Configure HTTP basic authentication details](/Images/central/APICBackendHTTPBasic1Cropped.gif)
 

@@ -4,7 +4,7 @@ linkTitle: Administer network traffic
 draft: false
 weight: 40
 ---
-Traffic is always initiated by the Agent to the data plane, API Gateway, and Amplify Central. No sessions are ever initiated back to the Agent.
+Traffic is always initiated by the Agent to the data plane, API Gateway, and Amplify. No sessions are ever initiated back to the Agent.
 
 ![Agent networking](/Images/central/connect-api-manager/agents-proxy2.png "Agent networking")
 
@@ -98,7 +98,7 @@ Structural Fields:
 * Timestamp
 * Event Identifier
 * App Identifier (v7 Gateway application or AWS Usage plan or Azure subscription)
-* Amplify Central environment Identifier
+* Amplify environment Identifier
 * Event name and version
 
 Data Fields:
@@ -233,7 +233,7 @@ Both proxy types will use one of two authentication mechanisms, none or username
 
 ### Direct Connection
 
-**Connecting to Amplify Central and Login hosts:**
+**Connecting to Amplify and Login hosts:**
 
 ```shell
 # US region
@@ -249,7 +249,7 @@ curl -s -o /dev/null -w "%{http_code}"  https://login.axway.com
 
 A return of **"200"** validates the connection was established.
 
-**Connecting to Amplify Central Event Traffic host, HTTPS:**
+**Connecting to Amplify Event Traffic host, HTTPS:**
 
 ```shell
 # US region
@@ -261,7 +261,7 @@ curl -s -o /dev/null -w "%{http_code}" https://ingestion.visibility.eu-fr.axway.
 
 A return of **"200"** validates the connection was established.
 
-**Connecting to Amplify Central Event Traffic host, Lumberjack:**
+**Connecting to Amplify Event Traffic host, Lumberjack:**
 
 ```shell
 # US region
@@ -275,7 +275,7 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
 
 ### Connection via Proxy
 
-**Connecting to Amplify Central and Login hosts:**
+**Connecting to Amplify and Login hosts:**
 
 ```shell
 # US region
@@ -290,7 +290,7 @@ curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https:/
 
 A return of **"200"** validates the connection was established.
 
-**Connecting to Amplify Central Event Traffic host, HTTPS:**
+**Connecting to Amplify Event Traffic host, HTTPS:**
 
 ```shell
 # US region
@@ -302,7 +302,7 @@ curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}" https://
 
 A return of **"200"** validates the connection was established.
 
-**Connecting to Amplify Central Event Traffic host, Lumberjack:**
+**Connecting to Amplify Event Traffic host, Lumberjack:**
 
 ```shell
 # US region
