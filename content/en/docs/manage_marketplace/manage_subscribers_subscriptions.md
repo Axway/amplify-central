@@ -58,7 +58,7 @@ Anyone can subscribe to a product with the following role restrictions:
 
 #### Subscribe from the UI
 
-1. Log into the Marketplace WebUI.
+1. Log into Amplify Marketplace Enterprise WebUI.
 2. Browse for the product you want to subscribe to, and click on the product name. The product details page is displayed.
 3. Click **Subscribe** to start the subscription process. A side panel is displayed asking you to:
 
