@@ -5,7 +5,7 @@ weight: 510
 hide_readingtime: true
 ---
 
-The Marketplace is the storefront into all products exposed for discovery and consumption by internal and/or external consumers.
+The Amplify Enterprise Marketplace is the storefront into all products exposed for discovery and consumption by internal and/or external consumers.
 
 Providers can publish to the Marketplace a curated set of business capabilities (products) that target different needs, use cases, and audiences.
 
