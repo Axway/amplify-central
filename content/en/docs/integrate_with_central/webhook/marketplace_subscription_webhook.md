@@ -3,7 +3,7 @@ title: Set a webhook call back to approve or reject API consumer subscriptions f
 linkTitle: Webhooks in the Marketplace
 weight: 40
 ---
-Configure webhooks to receive notifications from Amplify Marketplace so that you can implement customized onboarding of API consumers.
+Configure webhooks to receive notifications from the Marketplace so that you can implement customized onboarding of API consumers.
 
 ## Before you start
 
@@ -11,9 +11,9 @@ Configure webhooks to receive notifications from Amplify Marketplace so that you
 
 ## Objectives
 
-Learn how to create and configure webhooks for the Amplify Marketplace so that you can implement customized approval workflows to approve or reject access to an API product that has been published to the Marketplace.
+Learn how to create and configure webhooks for the Marketplace so that you can implement customized approval workflows to approve or reject access to an API product that has been published to the Marketplace.
 
-Amplify Marketplace provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered API product in the Marketplace, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
+The Marketplace provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered API product in the Marketplace, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
 
 ## Set the subscription to manual approval
 
