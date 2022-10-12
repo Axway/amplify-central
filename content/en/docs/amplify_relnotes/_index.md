@@ -25,39 +25,44 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 * **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.32
 * **AWS Gateway using SDK 2.0** - Agent version 1.1.29
 * **Azure latest release** - Agent version 1.1.32
-* **Istio 1.9.5** - Agent version 2.0.38
+* **Istio 1.9.5** - Agent version 0.75
 * **Apigee Edge** - Agent version 0.1.1
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.10
 
+| Axway Agent SDK |         |
+|--------|---------|
+| What's new: | None. |
+| Bug fixes: | Credential validation. |
+
 | Agents |         |
 |--------|---------|
-| What's new: | **All agents** - Description. <br />**Agent** - Description. |
-| Bug fixes: | **All agents** - Description. <br />**Agent** - Description. |
+| What's new: | **Azure Gateway** - Product plan quota provisioning. <br />**Istio Gateway** - Marketplace provisioning, Helm override values. |
+| Bug fixes: | **API Management Gateway** - Single entry point URL. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
-| What's new: | Description. |
-| Bug fixes: | Description. |
+| What's new: | None. |
+| Bug fixes: | None. |
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | None. |
-| Bug fixes: | Description. |
+| What's new: | Auto-asset release from latest API Service version. |
+| Bug fixes: | None. |
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | Description. |
-| Bug fixes: | Description. |
+| What's new: | Filter access requests. <br />Product wizard update to create product category while creating/editing product. <br />Auto-product release from latest Asset version. |
+| Bug fixes: | Product plans not inheriting the product ownership. |
 
 | Business insights |         |
 |-------------------|---------|
-| What's new: | None. |
+| What's new: | Application usage report. <br />New Application column in Subscription compliance report. |
 | Bug fixes: | None. |
 
 | Marketplace |         |
 |-------------|---------|
-| What's new: | Description. |
-| Bug fixes: | Description. |
+| What's new: | Browse products and product card usability enhancements. |
+| Bug fixes: | Product plan display issues. <br />Remaining time to view credential issue. |
 
 | Consumer insights |         |
 |-------------------|---------|
