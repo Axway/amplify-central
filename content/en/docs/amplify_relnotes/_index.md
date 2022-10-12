@@ -29,7 +29,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 * **Apigee Edge** - Agent version 0.1.1
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.10
 
-| Axway Agent SDK |         |
+| Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
 | Bug fixes: | Credential validation. |
