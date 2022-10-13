@@ -18,6 +18,57 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify October 7th, 2022](/docs/amplify_relnotes/20221007_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.38. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.32
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.29
+* **Azure latest release** - Agent version 1.1.32
+* **Istio 1.9.5** - Agent version 0.75
+* **Apigee Edge** - Agent version 0.1.1
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | None. |
+| Bug fixes: | Credential validation. |
+
+| Agents |         |
+|--------|---------|
+| What's new: | **Azure Gateway** - Product plan quota provisioning. <br />**Istio Gateway** - Marketplace provisioning, Helm override values. |
+| Bug fixes: | **API Management Gateway** - Single entry point URL. |
+
+| Service registry <br />Topology |         |
+|------------------|------------------------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
+| Asset Catalog |         |
+|---------------|---------|
+| What's new: | Auto-asset release from latest API Service version. |
+| Bug fixes: | None. |
+
+| Product Foundry |         |
+|-----------------|---------|
+| What's new: | Filter access requests. <br />Product wizard update to create product category while creating/editing product. <br />Auto-product release from latest Asset version. |
+| Bug fixes: | Product plans not inheriting the product ownership. |
+
+| Business insights |         |
+|-------------------|---------|
+| What's new: | Application usage report. <br />New Application column in Subscription compliance report. |
+| Bug fixes: | None. |
+
+| Marketplace |         |
+|-------------|---------|
+| What's new: | Browse products and product card usability enhancements. |
+| Bug fixes: | Product plan display issues. <br />Remaining time to view credential issue. |
+
+| Consumer insights |         |
+|-------------------|---------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify September 23rd, 2022](/docs/amplify_relnotes/20220923_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.37. This version is compatible with:
@@ -32,37 +83,37 @@ Current agent versions are based on Amplify Agents SDK v1.1.37. This version is 
 | Agents |         |
 |--------|---------|
 | What's new: | **All agents** - Consumer credential management. <br />**Apigee Gateway** - Quota provisioning. |
-| Bug fixes:  | **All agents** - Fix for Analytics support and Marketplace provisioning. <br />**API Management Gateway** - Consumer Insights Application Usage issue, Marketplace product and application deletion issue. |
+| Bug fixes: | **All agents** - Fix for Analytics support and Marketplace provisioning. <br />**API Management Gateway** - Consumer Insights Application Usage issue, Marketplace product and application deletion issue. |
 
 | Service registry <br />Topology |         |
-|--------|---------|
+|------------------|------------------------|
 | What's new: | Unified Catalog enabled by entitlements. |
-| Bug fixes:  | Teams names in the filter are not sorted alphabetically. |
+| Bug fixes: | Teams names in the filter are not sorted alphabetically. |
 
 | Asset Catalog |         |
-|--------|---------|
+|---------------|---------|
 | What's new: | None. |
-| Bug fixes:  | Teams names in the filter are not sorted alphabetically. <br />Ownership set at the asset version level. |
+| Bug fixes: | Teams names in the filter are not sorted alphabetically. <br />Ownership set at the asset version level. |
 
 | Product Foundry |         |
-|--------|---------|
+|-----------------|---------|
 | What's new: | Provider credential management. <br />Subscription approver role. <br />Swap featured categories. |
-| Bug fixes:  | Teams names in the filter are not sorted alphabetically. |
+| Bug fixes: | Teams names in the filter are not sorted alphabetically. |
 
 | Business insights |         |
-|--------|---------|
+|-------------------|---------|
 | What's new: | None. |
-| Bug fixes:  | None. |
+| Bug fixes: | None. |
 
 | Marketplace |         |
-|--------|---------|
+|-------------|---------|
 | What's new: | Consumer credential management. <br />Search feature on the Marketplace Homepage. <br />Subscription enhancements. |
-| Bug fixes:  | Subscription and applications do not have the same owner. |
+| Bug fixes: | Subscription and applications do not have the same owner. |
 
 | Consumer insights |         |
-|--------|---------|
+|-------------------|---------|
 | What's new: | None. |
-| Bug fixes:  | None. |
+| Bug fixes: | None. |
 
 ## [Amplify September 9th, 2022](/docs/amplify_relnotes/20220909_marketplace/)
 
