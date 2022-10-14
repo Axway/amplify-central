@@ -30,7 +30,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
     * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
-    * You can install OpenSSL
+    * You can install OpenSSL (make sure it is in the path for the CLI to use it if needed)
     * There is a graphical environment (optional)
     * You can use Kubernetes 1.19 (Helm install only)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
