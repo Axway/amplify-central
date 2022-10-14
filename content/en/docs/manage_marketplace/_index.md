@@ -17,4 +17,6 @@ Consumers can explore the Marketplace to find products that address their needs,
 
 **Custom branding** - Providers can customize the look and feel of the Marketplace to match each organization's preference and branding style. This enables providers to create a curated experience for both internal and external consumers that access their products within the Marketplace.
 
+**Self signup** - Providers can decide if they wants to allows users register themselves to the Marketplace and create their own consumer organization independent from the provider organization.
+
 **Extended product documentation** - Providers can create comprehensive product documentation via markdown format, providing a uniform experience for all Marketplace content.

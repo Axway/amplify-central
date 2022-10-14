@@ -32,6 +32,11 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
         * **Protected** - select to make the Marketplace accessible only to registered users in your organization.
         * **Public** - select to make your Marketplace accessible to all users, anonymous and authenticated with an account.
 
+    * **Self signup** - indicates whether a user can signup for the Marketplace:
+
+        * **Disallow** - nobody can signup to the Marketplace and only Administrator can invite users to ths Marketplace.
+        * **Allow** - anyone can signup to the Marketplace and register their own account. They will receive and email to activate their account.
+
     * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
 
         * If enabled, you must provide the Terms & Conditions by either uploading a PDF file or entering a URL where it is available.
