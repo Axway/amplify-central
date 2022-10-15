@@ -90,8 +90,9 @@ Administrator user cannot be removed if no other Administrator is present in the
 
 ## Team management
 
-Adding and removing a team is only available for Administrator user.
-Team Administrator can only add/remove member from the team they are part of.
+Adding, editing, set default team and removing a team is only available for Administrator user.
+
+Team Administrator can only add/remove members from the team they are part of.
 
 ### Adding a team
 
@@ -122,6 +123,8 @@ Team Administrator can only add/remove member from the team they are part of.
 4. Once the action is validated, the team is removed from the system
 
 ## Managing the organization
+
+Only Administrator user can perform these actions.
 
 ### Changing the Organization name
 
