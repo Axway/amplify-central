@@ -51,6 +51,8 @@ Only Administrator and Team Manager can create/view/edit/delete any team. But, t
 
 ## User Management
 
+The user management is performed by an Administrator user.
+
 ### Inviting a user to an organization
 
 For Adding a user to the current organization, Administrator has to invite the user.
@@ -87,6 +89,9 @@ When editing your own user, once you get to the user details screen, you can edi
 Administrator user cannot be removed if no other Administrator is present in the system
 
 ## Team management
+
+Adding and removing a team is only available for Administrator user.
+Team Administrator can only add/remove member from the team they are part of.
 
 ### Adding a team
 
