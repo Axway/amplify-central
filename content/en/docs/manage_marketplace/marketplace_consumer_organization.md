@@ -4,7 +4,7 @@ linkTitle: Marketplace Consumer Organization
 weight: 40
 ---
 
-Enable of disable the Marketplace consumer organization
+Provider can provide one or more consumer organization that are independently managed from the his own organization
 
 ## Before you start
 
@@ -12,13 +12,23 @@ You must have platform administrator credentials.
 
 ## Objectives
 
-Learn how to enable/disable or delete a Marketplace consumer organization.
+Understand what is a consumer organization and learn how to enable/disable a Marketplace consumer organization.
 
-## View the marketplace consumer organization
+## What is a consumer organization?
+
+When you want to share your marketplace with multiple external entities (partners / subsidiaries ...) to your company, it becomes complex to manage all the users and associated teams especially when your Marketplace is connected to an IDP.
+
+To facilitate that, it is possible to delegate this user management using one or more Consumer organizations. A consumer organization is a place where consumers will be able to self-organize their users and teams independently from your provider organization.
+
+For instance, if you have a partner and you don't want to manage their users in your provider organization, you can let them have their own consumer organization. Like this your partner becomes self-autonomous to manage their users/teams and you don't need to bother to introduce their users into your user management.
+
+Refer to [Consumer organization management](/docs/manage_marketplace/consumer_experience/consuner_organization)
+
+## View the Marketplace consumer organization
 
 From platform.axway.con > Marketplace > navigate to **Consumer Orgs** page.
 
-This page displays all the consumer organization available with their number of teams and users. Provider is not able to add teams or users to those organizations and can only enable/disable or delete them.
+This page displays all the consumer organization available with their number of teams and users. Provider is not able to add teams or users to those organizations and can only enable/disable them.
 
 Only Enabled organization allows user to connect to the Marketplace.
 
