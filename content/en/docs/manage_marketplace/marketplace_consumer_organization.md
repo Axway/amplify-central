@@ -22,7 +22,7 @@ To facilitate that, it is possible to delegate this user management using one or
 
 For instance, if you have a partner and you don't want to manage their users in your provider organization, you can let them have their own Consumer organization. Like this your partner becomes self-autonomous to manage their users/teams and you don't need to bother to introduce their users into your user management.
 
-Refer to [Consumer organization management](/docs/manage_marketplace/consumer_experience/consuner_organization)
+Refer to [Consumer organization management](/docs/manage_marketplace/consumer_experience/consumer_organization)
 
 ## View the Marketplace consumer organization
 
