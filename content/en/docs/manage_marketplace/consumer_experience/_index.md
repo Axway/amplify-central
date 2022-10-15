@@ -11,6 +11,11 @@ Anonymous consumers can freely explore the published products in the Marketplace
 
 A *Private marketplace* can be browsed by navigating to the configured Marketplace URL, for example: `http://acme.marketplace.axway.com`. Consumers are redirected to a login screen and ask to enter their Platform credentials.
 
+There are two ways of getting credentials for a marketplace:
+
+* a provider invited you in his organization
+* provider decided to let his consumer to self signup to the marketplace and manage their [organization, users and teams](/docs/manage_marketplace/consumer_experience/consumer_organization)
+
 Once consumers are logged in, they can browse products, subscribe to products, request access and credentials for resource they wants to use, and get [insight](/docs/manage_marketplace/consumer_experience/consumer_insights/) into their API consumption.
 
 {{< alert title="Note" color="primary" >}}Because a consumer can belong to multiple organizations, it is preferable to configure the user account to always ask for the organization. Refer to Platform home > Account > Settings > Org login Rule : Always ask for Org option{{< /alert >}}
