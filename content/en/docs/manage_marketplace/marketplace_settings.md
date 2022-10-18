@@ -6,11 +6,11 @@ weight: 30
 
 Configure the Marketplace to publish your products and expose them to consumers for consumption.
 
-The platform administrator will use the Amplify Enterprise Marketplace WebUI to configure the settings, including the Marketplace URL, access, and Terms & Conditions.
+The platform Administrator will use the Amplify Enterprise Marketplace WebUI to configure the settings, including the Marketplace URL, access, and Terms & Conditions.
 
 ## Before you start
 
-You must have platform administrator credentials.
+You must have platform Administrator credentials.
 
 ## Objectives
 
@@ -34,8 +34,8 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 
     * **Self signup** - indicates whether a user can signup for the Marketplace:
 
-        * **Disallow** - nobody can signup to the Marketplace and only Administrator can invite users to ths Marketplace.
-        * **Allow** - anyone can signup to the Marketplace and register their own account. They will receive and email to activate their account.
+        * **Disallow** - self-signup is disabled and only Administrators can invite users into the Marketplace.
+        * **Allow** - anyone can signup to the Marketplace and register their own account.
 
     * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
 
