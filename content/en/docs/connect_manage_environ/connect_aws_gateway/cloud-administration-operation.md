@@ -237,7 +237,7 @@ Managed Policies
 
 | Managed Policy ARN                                 | Description                                                                                                                    |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| arn:aws:iam::aws:policy/service-role/AWSConfigRole | This policy is needed for the Config Service to be able to read the various configurations to track for changes in API Gateway |
+| arn:aws:iam::aws:policy/service-role/AWS_ConfigRole | This policy is needed for the Config Service to be able to read the various configurations to track for changes in API Gateway |
 
 Policies
 
