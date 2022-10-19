@@ -33,7 +33,7 @@ Only an enabled organization allows users to connect to the Marketplace. Disable
 
 To disable an organization:
 
-1. Select an active organization you want to disable and click the ellipsis menu **Disable**. A confirmation popup is displayed. 
+1. Select an active organization you want to disable and click the ellipsis menu **Disable**. A confirmation popup is displayed.
 2. Click **Disable** to trigger the action and disable the organization. In a disabled state, no users from this organization can connect to the Marketplace. Click **Cancel** to cancel the action and the organization continues to be in an enabled state.
 
 To re-enable an organization:
