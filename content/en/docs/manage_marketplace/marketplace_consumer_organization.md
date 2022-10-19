@@ -23,7 +23,7 @@ To facilitate user management, you can delegate to one or more consumer organiza
 ## View the Marketplace consumer organization
 
 1. Navigate to *platform.axway.com > Marketplace*.
-2. Select **Consumer Orgs**. The Consumer Orgs page is displayed.
+2. Select **Consumer Orgs**. *The Consumer Orgs page is displayed*.
 
 This page displays all the consumer organization available, along with their number of teams and users. A provider does not have the rights to add teams or users into a consumer organization. The only actions they are allowed to perform is enable/disable organizations.
 
