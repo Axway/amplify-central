@@ -12,7 +12,7 @@ Use the Topology WebUI to select an environment and then manage your API Service
 
 ## Before you start
 
-You must have credentials or a user account from your org administrator to use the Service Registry WebUI.  Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+You must have credentials or a user account from your org Administrator to use the Service Registry WebUI.  Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
 
 ## Objectives
 
@@ -27,33 +27,35 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 
 To list API Services:
 
-1. Navigate to *Service Registry*.
-2. Select **Select Catalog > Service Registry**.
+1. Navigate to *Catalog > Service Registry*.
+2. View the following information for all services:
 
-View the following information for all services:
+   * Environment
+   * Assets
+   * Owner
+   * Version
+   * Tags
+   * Created/Updated date by User
 
-* Environment, Owner, Tags, and the Create / Updated date by User
-
-You can also filter the services by the Environment and Team Ownership using the **Filter By** controls. Search by the Service Name with the search bar.
+You can also filter the services by the Service type, Environment and Team Ownership using the **Filter By** controls. Search by the Service Name with the search bar.
 
 ## View API Service details
 
 To view service details:
 
-1. Navigate to *Service Registry*.
-2. Select **Catalog > Service Registry**.
-3. From the list view, select a service to open the service details in a new browser tab.
+1. Navigate to *Catalog > Service Registry*.
+2. From the list view, select a service to open the service details.
 
 View the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* Service Name, Description, Owning Team, Tags, Attributes, and the Create / Updated date by User
+* Service Name, Logical Name, Description, Owning Team, Tags, Attributes, Endpoints, Catalog Items, Subscriptions, Active Version, Spec, Create on / Modified on date by User
 * Per Service Version Tags and Attributes
 * The API Specification and Methods
 * Endpoints listening for requests to the service
+* Catalog Items (APIs)
+* Dependency Analysis graph
 
 ## Create an API Service
-
-To create an API Service:
 
 1. Navigate to *Topology* and select an environment.
 2. Click **+ Add API Service** to add a new service.
@@ -69,11 +71,8 @@ To create an API Service:
 
 ## Delete an API Service
 
-To delete the service (all versions):
-
-1. Navigate to *Service Registry*.
-2. Select **Catalog > Service Registry**.
-3. From the list view, select a service to open the service details in a new browser tab.
-4. From the new browser tab, click on the environment name breadcrumb at the top of the page (i.e., the name to the right of **ENVIRONMENTS / NAME**).
-5. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
-6. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.”
+1. Navigate to *Catalog > Service Registry*.
+2. From the list view, select a service to open the service details.
+3. Click on the environment name breadcrumb at the top of the page (i.e., the name to the right of **ENVIRONMENTS / NAME**).
+4. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
+5. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.” **All versions of the service are deleted.**
