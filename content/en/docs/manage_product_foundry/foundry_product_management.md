@@ -25,8 +25,8 @@ Learn how to use the Product Catalog WebUI to create and manage products, includ
 
 To view products:
 
-1. Navigate to *Product Foundry Catalog*.
-2. Select **Catalog > Product Foundry > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
 
 View the following information for all products in any state (Draft, Active, Deprecated, Active):
 
@@ -35,18 +35,18 @@ View the following information for all products in any state (Draft, Active, Dep
 * Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
 * State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
 * Current version - The most recent version number. Can be `---` if the product is not released
-* Asset Name - The asset(s) linked to the product
+* Asset Name and Type - The asset(s) linked to the product
 * Trash icon - Activated only when the product can be deleted
 * Marketplace icon - Enable to publish the product to the Marketplace. Disable to not publish
 
-You can also filter the products by the name and title using the **Filter By** controls.
+You can also filter the products by categories, state and owning team using the **Filter By** controls. Search by name, title and tag with the search bar.
 
 ## View product details
 
 To view product details:
 
-1. Navigate to *Product Foundry*.
-2. Select **Catalog > Product Foundry > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
 3. From the list view, select a product.
 
 View the following detailed information for a specific product in any state (Draft, Active, Deprecated, Active):
@@ -56,7 +56,7 @@ View the following detailed information for a specific product in any state (Dra
 * Product version - The most recent version available. Can be empty if product is not released
 * Product icon - The icon / image representing the product, if any
 * Logical Name - Uniquely identifies the product
-* Owner - The team owner of the product
+* Owning Team - The team owner of the product
 * Modified On - Date, Time, and Username of who last modified this product
 * Modified By - The user who last modified the product
 * Created On - Date, Time, and Username of who created this product
@@ -65,6 +65,9 @@ View the following detailed information for a specific product in any state (Dra
 * Resources - List of assets linked to the product
 * Plans - Plan list associated to the product
 * Documentation - Documentation associated with the product
+* Access Rights - List the team the product is shared with
+* Subscriptions - List the subscription attached to the product
+* Visibility - Set the product visibility in the Marketplace (for everyone / specific teams / specific team with a specific tag / Nobody)
 * Version State - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
 * Category - Categories to help classify product into groups and find the asset by filtering on the Category
 * Tags - Labels to help find product in the catalog
@@ -74,8 +77,8 @@ View the following detailed information for a specific product in any state (Dra
 
 ## Create a product
 
-1. Navigate to the *Product Foundry*.
-2. Select **Products > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
 3. Click **+ Add New Product** to add a new product.
 4. Add the following and then click **Next**:
 
@@ -105,8 +108,8 @@ The product is created in **Draft** state. To publish this product in the Market
 
 The product must be in **Draft** state.
 
-1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
 3. From the list view, select the product to activate.
 4. Click **Activate**.
 5. Select a Release Type of either **Major**, **Minor**, or **Patch**.
@@ -116,8 +119,8 @@ The product must be in **Draft** state.
 
 The product can be in **Draft**, **Active**, or **Deprecated** state.
 
-1. Navigate to Product Foundry.
-2. Select **Catalog > Product Foundry > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**..
 3. From the list view, select the product to edit.
 4. Select a product version in a **Draft**, **Active** or **Deprecated** state.
 5. Click **Edit Draft** or **Create Draft**.
@@ -134,8 +137,8 @@ The product can be in any state.
 
 You can offer multiple free and paid consumption options for your product. As a provider, you can define one or more subscription plans free of charge, or paid, with optional quota limits.
 
-1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
 3. From the list view, select the product to monetize.
 4. Click on the **Plans** tab.
 5. Click **Add product plan +**.
@@ -173,19 +176,20 @@ You can offer multiple free and paid consumption options for your product. As a 
 
 The product must have at least one **Active** version.
 
-1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**. And open the product details.
-3. Click **Deprecate Product**.
-4. Confirm that the selected product is the one you want to deprecate.
-5. Click **Update**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
+3. From the list view, select the product to deprecate.
+4. Click **Deprecate Product**.
+5. Confirm that the selected product is the one you want to deprecate.
+6. Click **Update**.
 
 ## Archive a product release
 
 The product must be in **Deprecated** state.
 
-1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**.
-3. From the list view, select the asset to Archive.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
+3. From the list view, select the product to Archive.
 4. Click **Archive Product**.
 5. Confirm that the selected product is the one you want to Archive.
 6. Click **Update**.
@@ -194,8 +198,8 @@ The product must be in **Deprecated** state.
 
 The product can be in any state.
 
-1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
 3. From the list view, find the product to Archive.
 4. Click **Archive** from the more options (ellipsis) menu.
 5. Confirm that the selected product is the one you want to Archive.
@@ -205,8 +209,8 @@ The product can be in any state.
 
 The product must be in **Archive** state and no release published to a marketplace
 
-1. Navigate to *Product Foundry*.
-2. Select **Products > All Products**.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
 3. From the list view, find the product to delete.
 4. Click the **Bin icon**.
 5. Confirm that the selected product is the one you want to delete.
