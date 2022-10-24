@@ -20,24 +20,24 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify October 21st, 2022](/docs/amplify_relnotes/20221021_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.38. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.39. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.32
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.29
-* **Azure latest release** - Agent version 1.1.32
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.33
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.30
+* **Azure latest release** - Agent version 1.1.33
 * **Istio 1.9.5** - Agent version 0.75
-* **Apigee Edge** - Agent version 0.1.1
+* **Apigee Edge** - Agent version 0.1.2
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.10
 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Subscription migration. |
 
 | Agents |         |
 |--------|---------|
-| What's new: | text. |
-| Bug fixes: | text. |
+| What's new: | **AWS Gateway** - Quota provisioning feature. <br />**Apigee Gateway** - Configurable IDP settings. |
+| Bug fixes: | **Apigee Gateway** - CPU/Memory utilization. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -46,23 +46,23 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | text. |
+| What's new: | Auto release management. |
 | Bug fixes: | None. |
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | text. |
-| Bug fixes: | text. |
+| What's new: | Auto release management. <br />Export subscriber contact information. <br />Subscription approver role. |
+| Bug fixes: | Product ownership not replicated to plan ownership. |
 
 | Business insights |         |
 |-------------------|---------|
-| What's new: | text. |
+| What's new: | None. |
 | Bug fixes: | None. |
 
 | Marketplace |         |
 |-------------|---------|
-| What's new: | text. |
-| Bug fixes: | text. |
+| What's new: | User experience improvements. <br />Consumer Organization management. |
+| Bug fixes: | Wrong owner of the subscription. <br />Category names are truncated. <br />Incorrect warning displayed. <br />Error message when subscribing is not clear. |
 
 | Consumer insights |         |
 |-------------------|---------|
