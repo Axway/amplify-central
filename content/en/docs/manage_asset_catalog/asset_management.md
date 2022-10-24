@@ -83,8 +83,8 @@ To create an asset:
 
 5. Add the following Release Management information and then click **Next**:
 
-    * Auto-Release - Enable/Disable of the auto release of new Asset versions
-    * Auto-Release Type - If auto-release is enable, you must select the type of asset release
+    * Auto-Release - Enabled/Disabled of the auto release of new Asset versions
+    * Auto-Release Type - If auto-release is enabled, a new asset will be automatically release with each change to any one of the grouped resources. The default is set to a Patch release and you can select another type of asset release.
 
 6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
 7. Configure the Access Request handling, Manual or Automatic, and click **Next**.
