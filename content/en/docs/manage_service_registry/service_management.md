@@ -48,12 +48,10 @@ To view service details:
 
 View the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* Service Name, Logical Name, Description, Owning Team, Tags, Attributes, Endpoints, Catalog Items, Subscriptions, Active Version, Spec, Create on / Modified on date by User
+* Service Name, Logical Name, Description, Owning Team, Tags, Attributes, Endpoints, Active Version, Spec, Created on / Modified on date by User
 * Per Service Version Tags and Attributes
 * The API Specification and Methods
 * Endpoints listening for requests to the service
-* Catalog Items (APIs)
-* Dependency Analysis graph
 
 ## Create an API Service
 
