@@ -65,9 +65,9 @@ View the following detailed information for a specific product in any state (Dra
 * Resources - List of assets linked to the product
 * Plans - Plan list associated to the product
 * Documentation - Documentation associated with the product
-* Access Rights - List the team the product is shared with 
+* Access Rights - List the team the product is shared with
 * Subscriptions - List the subscription attached to the product
-* Visibility - Set the product visibility in the Marketplace (for everyone / specific teams / specific team with a specific tag / Nobody) 
+* Visibility - Set the product visibility in the Marketplace (for everyone / specific teams / specific team with a specific tag / Nobody)
 * Version State - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
 * Category - Categories to help classify product into groups and find the asset by filtering on the Category
 * Tags - Labels to help find product in the catalog
