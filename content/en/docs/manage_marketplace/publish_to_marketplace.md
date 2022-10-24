@@ -12,7 +12,7 @@ Create a valid product by bundling assets that solve a business case, create com
 
 ## Objectives
 
-Learn how to publish the product to the marketplace.
+Learn how to publish the product to the Marketplace.
 
 ## Publish a product
 
