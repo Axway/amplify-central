@@ -24,8 +24,8 @@ Learn how to use the Asset Catalog WebUI to create and manage assets, including:
 
 To view assets:
 
-1. Navigate to *Catalog > Asset Catalog.
-2. Select **All Assets**..
+1. Navigate to *Catalog > Asset Catalog*.
+2. Select **All Assets**.
 3. View the following information for all assets in any state (Draft, Active, Deprecated, Active):
 
     * Asset Name
@@ -48,22 +48,22 @@ To view asset details:
 3. From the list view, select an asset.
 4. View the following detailed information for a specific asset in any state (Draft, Active, Deprecated, Active):
 
-* Asset Name - The display name for the asset in the WebUI
-* Asset Type - API Service or other resource types (e.g., PDF and video files)
-* Asset State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
-* Logical Name - Uniquely identifies the asset
-* Owning Team - The development team that owns the asset
-* Modified On - Date, Time, and Username of who last modified this asset
-* Modified By - The user who last modified the asset
-* Created On - Date, Time, and Username of who created this asset
-* Description - A short description of the asset
-* Resources - API Services or other resource types that are linked to this asset
-* Products - Information on products that are linked to this asset
-* Access Rights - Shared teams that have access to this asset
-* Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
-* Categories - Help classify assets into groups and find the asset by filtering on the Category
-* Tags - Labels to help find assets in the catalog
-* Attributes - Key and value pair to allow customers to attach/query for custom information
+    * Asset Name - The display name for the asset in the WebUI
+    * Asset Type - API Service or other resource types (e.g., PDF and video files)
+    * Asset State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
+    * Logical Name - Uniquely identifies the asset
+    * Owning Team - The development team that owns the asset
+    * Modified On - Date, Time, and Username of who last modified this asset
+    * Modified By - The user who last modified the asset
+    * Created On - Date, Time, and Username of who created this asset
+    * Description - A short description of the asset
+    * Resources - API Services or other resource types that are linked to this asset
+    * Products - Information on products that are linked to this asset
+    * Access Rights - Shared teams that have access to this asset
+    * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
+    * Categories - Help classify assets into groups and find the asset by filtering on the Category
+    * Tags - Labels to help find assets in the catalog
+    * Attributes - Key and value pair to allow customers to attach/query for custom information
 
 {{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the asset details view.{{< /alert >}}
 
