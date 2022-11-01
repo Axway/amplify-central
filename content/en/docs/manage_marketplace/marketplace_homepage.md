@@ -85,7 +85,7 @@ From the *Homepage* page, locate the Call To Action section to show and customiz
 
 ### Change the call to action content
 
-From the Homepage - *Call To Action* section, click **Configure** in the Call To Action Content section to change the content and action. 
+From the Homepage - *Call To Action* section, click **Configure** in the Call To Action Content section to change the content and action.
 
 The Content settings are displayed:
 
