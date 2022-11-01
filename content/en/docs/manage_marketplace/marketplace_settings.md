@@ -41,7 +41,7 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
         * **Disallow** - consumers outside your organization are not allowed to access your Marketplace.
         * **Allow** - consumers outside your organization are allowed to access your Marketplace.
 
-    * **Self signup** - indicates whether a user can signup for the Marketplace:
+    * **Self signup** - when Consumer Organizations are allowed, this setting becomes available and indicates whether a user can signup for the Marketplace:
 
         * **Disallow** - self-signup is disabled and only Administrators can invite users into the Marketplace.
         * **Allow** - anyone can signup to the Marketplace and register their own account.

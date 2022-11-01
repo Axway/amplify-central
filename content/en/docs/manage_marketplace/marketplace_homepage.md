@@ -85,11 +85,22 @@ From the *Homepage* page, locate the Call To Action section to show and customiz
 
 ### Change the call to action content
 
-From the Homepage - *Call To Action* section, click **Configure** in the Call To Action Content section to change the content and action. The call to action content settings are displayed:
+From the Homepage - *Call To Action* section, click **Configure** in the Call To Action Content section to change the content and action. 
+
+The Content settings are displayed:
 
 * **Title** - the title for your call to action section.
 * **Message** - your call to action message.
 * **Position** - the position to place the call to action content.
+
+The Action Button settings are displayed where you can configure the action button URL and styling:
+
+* **URL** - select Sign in / Register (the default) or Custom. When Custom is selected, type a custom URL and label for the action button.
+* **Action Behavior** - select whether to open the same browser tab or open in a new tab when the action button is clicked.
+* **Button Background** - select a color for the action button background.
+* **Button Text** - select a color for the action button text.
+* **Button Format** - select a solid fill background or outline for the button appearance.
+* **Button Radius** - select an option for the action button radius (Square, Rounded, or Round).
 
 Close the Call To Action pop out, and then click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
 
