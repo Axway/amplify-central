@@ -26,13 +26,22 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 3. Select **Marketplace > Settings**. *The Marketplace Settings page is displayed*.
 4. Set the values for:
 
-    * **Marketplace URL** - enter the address of your Marketplace. This is required to make your Marketplace available for product publication.
+    * **Marketplace URL** - select whether your Marketplace is hosted on a subdomain or fully qualified domain name. This is required to make your Marketplace available for product publication.
+
+        * **URL** - select to host your Marketplace on a fully qualified domain name. Type the URL where your Marketplace will be available and upload a certificate that matches the specified URL.
+        * **Subdomain** - select to host your Marketplace on a subdomain. Type the URL where your Marketplace will be available.
+
     * **Access** - indicates whether the Marketplace can be accessed by unauthenticated users or by registered users in your organization:
 
         * **Protected** - select to make the Marketplace accessible only to registered users in your organization.
         * **Public** - select to make your Marketplace accessible to all users, anonymous and authenticated with an account.
 
-    * **Self signup** - indicates whether a user can signup for the Marketplace:
+    * **Consumer Organizations** - indicates whether consumers outside of your organization can access your Marketplace.
+
+        * **Disallow** - consumers outside your organization are not allowed to access your Marketplace.
+        * **Allow** - consumers outside your organization are allowed to access your Marketplace.
+
+    * **Self signup** - when Consumer Organizations are allowed, this setting becomes available and indicates whether a user can signup for the Marketplace:
 
         * **Disallow** - self-signup is disabled and only Administrators can invite users into the Marketplace.
         * **Allow** - anyone can signup to the Marketplace and register their own account.

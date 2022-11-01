@@ -120,6 +120,17 @@ From the *Appearance* page, click **Configure** in the Help Menu section to chan
 5. Click the delete icon to remove a menu item.
 6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
 
+### Customize the navigation menu
+
+From the *Appearance* page, click **Configure** in the Navigation Menu Items section to add and configure links to the common navigation menu. Click **Add navigation item**, and then do the following to configure menu items:
+
+1. Type a label for the menu item.
+2. Type a link to the menu item.
+3. Click the **+** button to add more menu items.
+4. Click the up or down arrow keys to move the menu item's position.
+5. Click the delete icon to remove a menu item.
+6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
+
 ## Customize the Marketplace appearance with APIs
 
 The following APIs provide the equivalent functionality of what is provided throughout the WebUI to brand your Marketplace.
