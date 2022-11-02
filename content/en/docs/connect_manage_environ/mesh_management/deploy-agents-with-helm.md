@@ -304,15 +304,15 @@ als:
       show:
       sanitize:
   # Config to override default values set by the ALS agent by extracting them from the Access Log Entry filter metadata.
-	# To override the apiID or clientID, filterName and filterKeyMeta must be set.
+  # To override the apiID or clientID, filterName and filterKeyMeta must be set.
   metadataOverride:
     # The name of the filter that contains the metadata. Ex: "envoy.filters.http.lua"
     filterName: ""
-		# The name of the key within the filter: Ex: "custom.metadata"
+    # The name of the key within the filter: Ex: "custom.metadata"
     filterKeyMeta: ""
-		# The name of the API ID key found within the filterKeyMetadata: Ex: "externalAPIID"
+    # The name of the API ID key found within the filterKeyMetadata: Ex: "externalAPIID"
     apiID: ""
-		# The name of the Client ID key: Ex: "clientID"
+    # The name of the Client ID key: Ex: "clientID"
     clientID: ""
 
 
