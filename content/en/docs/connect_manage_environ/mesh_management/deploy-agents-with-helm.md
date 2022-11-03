@@ -237,14 +237,14 @@ secret:
   publicKey: ""
   privateKey: ""
 
-# configures the ALS Traceability agent
+# Configures the ALS Traceability Agent
 als:
   enabled: true
   # Header publishing mode. Set to default or verbose.
   mode: default
   # Name of the k8scluster
   clusterName: istio-k8scluster
-  # Name of the traceability agent resource
+  # Name of the Traceability Agent resource
   agentName: istio-ta
   # Amplify Central Deployment (prod, prod-eu)
   apicDeployment: prod
@@ -316,20 +316,20 @@ als:
     clientID: ""
 
 
-# configures the discovery agent
+# Configures the Discovery Agent
 da:
   enabled: true
-  # Name of the discovery agent resource
+  # Name of the Discovery Agent resource
   agentName: istio-da
   # Amplify Platform service account client ID
   clientID: istio-service-account_12345678-0000-4444-99e9
   # Name of the k8s secret for private/public key pair
   keysSecretName: amplify-agents-keys
-  # name of the K8SCluster the agent is connected to
+  # Name of the K8SCluster the agent is connected to
   clusterName: istio-k8scluster
   # Polling interval for events
   pollInterval: "60s"
-  # Discovery Configuration
+  # Discovery configuration
   discovery:
     # List of http endpoints to discover api specs from
     specEndpoints:
