@@ -120,55 +120,17 @@ Open the following ports so that agents can communicate to the Amplify platform:
 
 **Single Entry Point**:
 
-| Region | Host                            | IP             | port | Protocol | data |
-|--------|---------------------------------|----------------|------|----------|------|
-| US     | ingestion.platform.axway.com    | 35.71.150.229  | 443  | HTTPS    |      |
-|        |                                 | 52.223.61.108  |      |          |      |
-|        |                                 |                |      |          |      |
-| EU     | ingestion-eu.platform.axway.com | 76.223.107.214 | 443  | HTTPS    |      |
-|        |                                 | 13.248.240.123 |      |          |      |
-
-**Outbound**:
-
-| Region | Host                                 | IP             | port        | Protocol     | data                               |
-|--------|--------------------------------------|----------------|-------------|--------------|------------------------------------|
-| EU/US  | platform.axway.com                   | 34.211.114.227 | 443         | HTTPS        |                                    |
-|        |                                      | 54.201.86.113  |             |              |                                    |
-|        |                                      |                |             |              |                                    |
-| EU/US  | lighthouse.admin.axway.com           |                | 443         | HTTPS        | API usage statics                  |
-|        |                                      |                |             |              |                                    |
-|        |                                      |                |             |              |                                    |
-| EU/US  | login.axway.com                      | 52.58.132.2    | 443         | HTTPS        |                                    |
-|        |                                      | 52.29.4.35     |             |              |                                    |
-|        |                                      | 54.93.140.145  |             |              |                                    |
-|        |                                      |                |             |              |                                    |
-| EU/US  | axway.jfrog.io *                     |                | 443         | HTTPS        | Version check for new releases     |
-|        |                                      |                |             |              |                                    |
-|        |                                      |                |             |              |                                    |
-| US     | apicentral.axway.com                 | 3.94.245.118   | 443         | HTTPS        | API definitions, Subscription info |
-|        |                                      | 54.208.199.251 |             |              |                                    |
-|        |                                      | 3.212.78.217   |             |              |                                    |
-|        |                                      |                |             |              |                                    |
-| EU     | central.eu-fr.axway.com              | 52.47.84.198   | 443         | HTTPS        | API definitions, Subscription info |
-|        |                                      | 13.36.25.69    |             |              |                                    |
-|        |                                      | 35.181.21.87   |             |              |                                    |
-|        |                                      |                |             |              |                                    |
-| US     | ingestion.datasearch.axway.com       | 54.225.171.111 | 5044 or 443 | TCP or HTTPS | API event data                     |
-|        |                                      | 54.225.2.221   |             |              |                                    |
-|        |                                      | 54.146.97.250  |             |              |                                    |
-|        |                                      | 54.147.98.128  |             |              |                                    |
-|        |                                      | 52.206.193.184 |             |              |                                    |
-|        |                                      | 54.225.92.97   |             |              |                                    |
-|        |                                      |                |             |              |                                    |
-| EU     | ingestion.visibility.eu-fr.axway.com | 35.180.77.202  | 5044 or 443 | TCP or HTTPS | API event data                     |
-|        |                                      | 13.36.27.97    |             |              |                                    |
-|        |                                      | 13.36.33.229   |             |              |                                    |
+| Region | Host                            | IP             | port | Protocol | data            |
+|--------|---------------------------------|----------------|------|----------|-----------------|
+| US     | ingestion.platform.axway.com    | 35.71.150.229  | 443  | HTTPS    | See note below  |
+|        |                                 | 52.223.61.108  |      |          |                 |
+|        |                                 |                |      |          |                 |
+| EU     | ingestion-eu.platform.axway.com | 76.223.107.214 | 443  | HTTPS    | See note below  |
+|        |                                 | 13.248.240.123 |      |          |                 |
 
 {{< alert title="Note" color="primary" >}}
-*Region* column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding *Host*/*Port* for your agents to operate correctly.
+*Region* column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding *Host*/*Port* for your agents to operate correctly. <br />*Data* for both US and EU Regions include: API usage statistics, version check for new releases, API definitions and subscription information, API event data. <br />The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
 {{< /alert >}}
-
-\* The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
 
 ### Axway API Gateway - other ports
 
@@ -217,61 +179,25 @@ Associated agent variables are:
 * APIGATEWAY_PROXYURL: connection to API Gateway
 * CENTRAL_PROXYURL: connection to Amplify platform
 
-### SOCKS5 Proxy for Traceability Agent
-
-Use a SOCKS5 Proxy for communication to the Amplify Platform when sending API Traffic Events.  This configuration is set only for [Traceability](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent) Agents.
-
-Associated agent variable is:
-
-* TRACEABILITY_PROXYURL: connection to the transaction service endpoint
-
 ### Proxy authentication
 
-Both proxy types will use one of two authentication mechanisms, none or username/password authentication. The username authentication is specified within the URL `http://{userName}:{password}@{proxyHost}:{proxyPort}`.
+Proxy will use one of two authentication mechanisms, none or username/password authentication. The username authentication is specified within the URL `http://{userName}:{password}@{proxyHost}:{proxyPort}`.
 
 ## Validation
 
 ### Direct Connection
 
-**Connecting to Amplify and Login hosts:**
+**Connecting to Amplify hosts:**
 
 ```shell
 # US region
-curl -s -o /dev/null -w "%{http_code}"  https://apicentral.axway.com
+curl -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
 or
 # EU region
-curl -s -o /dev/null -w "%{http_code}"  https://central.eu-fr.axway.com
-```
-
-```shell
-curl -s -o /dev/null -w "%{http_code}"  https://login.axway.com
+curl -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, HTTPS:**
-
-```shell
-# US region
-curl -s -o /dev/null -w "%{http_code}" https://ingestion.datasearch.axway.com
-or
-# EU region
-curl -s -o /dev/null -w "%{http_code}" https://ingestion.visibility.eu-fr.axway.com
-```
-
-A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, Lumberjack:**
-
-```shell
-# US region
-curl ingestion.datasearch.axway.com:5044
-or
-#EU region
-curl ingestion.visibility.eu-fr.axway.com:5044
-```
-
-A return of **"curl: (52) Empty reply from server"** validates the connection was established.
 
 ### Connection via Proxy
 
@@ -279,56 +205,28 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
 
 ```shell
 # US region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://apicentral.axway.com
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
 # EU region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://central.eu-fr.axway.com
-```
-
-```shell
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://login.axway.com
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, HTTPS:**
-
-```shell
-# US region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}" https://ingestion.datasearch.axway.com
-or
-# EU region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}" https://ingestion.visibility.eu-fr.axway.com
-```
-
-A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, Lumberjack:**
-
-```shell
-# US region
-curl -x socks5://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com:5044
-or
-# EU region
-curl -x socks5://{{proxy_host}}:{{proxy_port}} ingestion.visibility.eu-fr.axway.com:5044
-```
-
-A return of **"curl: (52) Empty reply from server"** validates the connection was established.
 
 ## Troubleshooting
 
-### Curl connection to ingestion.datasearch.axway.com
+### Curl connection to ingestion.platform.axway.com
 
 * **Error:**
 
   ```shell
-  curl: (6) Could not resolve host: ingestion.datasearch.axway.com
+  curl: (6) Could not resolve host: ingestion.platform.axway.com
   ```
 
-    * **Cause:** The host making the call can’t resolve the ingestion.datasearch.axway.com DNS name.
-    * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
+    * **Cause:** The host making the call can’t resolve the ingestion.platform.axway.com DNS name.
+    * **Possible Resolution:** Make sure the firewall whitelist ingestion.platform.axway.com corresponds to the IP address, and your proxy allows the connection to ingestion.platform.axway.com.
 
   ```shell
-  curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com
+  curl -x {{proxy_host}}:{{proxy_port}} ingestion.platform.axway.com
   ```
 * **Error:**
 
@@ -336,11 +234,11 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
   curl: (7) No authentication method was acceptable.
   ```
 
-    * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
+    * **Cause:** The proxy server expected an authentication type other than what was specified.
     * **Possible Resolution:** Provide authentication to the proxy:
 
   ```shell
-  socks5://{{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
+  {{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
   ```
 
-    The Agents only support the use of username/password authentication method for SOCKS connections.
+    The Agents only support the use of username/password authentication method for proxy connections.
