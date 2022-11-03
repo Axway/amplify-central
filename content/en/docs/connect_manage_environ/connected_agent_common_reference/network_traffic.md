@@ -195,45 +195,17 @@ Both proxy types will use one of two authentication mechanisms, none or username
 
 ### Direct Connection
 
-**Connecting to Amplify and Login hosts:**
+**Connecting to Amplify hosts:**
 
 ```shell
 # US region
-curl -s -o /dev/null -w "%{http_code}"  https://apicentral.axway.com
+curl -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
 or
 # EU region
-curl -s -o /dev/null -w "%{http_code}"  https://central.eu-fr.axway.com
-```
-
-```shell
-curl -s -o /dev/null -w "%{http_code}"  https://login.axway.com
+curl -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, HTTPS:**
-
-```shell
-# US region
-curl -s -o /dev/null -w "%{http_code}" https://ingestion.datasearch.axway.com
-or
-# EU region
-curl -s -o /dev/null -w "%{http_code}" https://ingestion.visibility.eu-fr.axway.com
-```
-
-A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, Lumberjack:**
-
-```shell
-# US region
-curl ingestion.datasearch.axway.com:5044
-or
-#EU region
-curl ingestion.visibility.eu-fr.axway.com:5044
-```
-
-A return of **"curl: (52) Empty reply from server"** validates the connection was established.
 
 ### Connection via Proxy
 
@@ -241,56 +213,28 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
 
 ```shell
 # US region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://apicentral.axway.com
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
 # EU region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://central.eu-fr.axway.com
-```
-
-```shell
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://login.axway.com
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, HTTPS:**
-
-```shell
-# US region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}" https://ingestion.datasearch.axway.com
-or
-# EU region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}" https://ingestion.visibility.eu-fr.axway.com
-```
-
-A return of **"200"** validates the connection was established.
-
-**Connecting to Amplify Event Traffic host, Lumberjack:**
-
-```shell
-# US region
-curl -x socks5://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com:5044
-or
-# EU region
-curl -x socks5://{{proxy_host}}:{{proxy_port}} ingestion.visibility.eu-fr.axway.com:5044
-```
-
-A return of **"curl: (52) Empty reply from server"** validates the connection was established.
 
 ## Troubleshooting
 
-### Curl connection to ingestion.datasearch.axway.com
+### Curl connection to ingestion.platform.axway.com
 
 * **Error:**
 
   ```shell
-  curl: (6) Could not resolve host: ingestion.datasearch.axway.com
+  curl: (6) Could not resolve host: ingestion.platform.axway.com
   ```
 
-    * **Cause:** The host making the call can’t resolve the ingestion.datasearch.axway.com DNS name.
-    * **Possible Resolution:** Tell curl to resolve the hostname on the proxy:
+    * **Cause:** The host making the call can’t resolve the ingestion.platform.axway.com DNS name.
+    * **Possible Resolution:** make sure the firewall whitelist ingestion.platform.axway.com corresponding IP address. Make sure your proxy allows the connection to ingestion.platform.axway.com
 
   ```shell
-  curl -x socks5h://{{proxy_host}}:{{proxy_port}} ingestion.datasearch.axway.com
+  curl -x {{proxy_host}}:{{proxy_port}} ingestion.platform.axway.com
   ```
 * **Error:**
 
@@ -298,11 +242,11 @@ A return of **"curl: (52) Empty reply from server"** validates the connection wa
   curl: (7) No authentication method was acceptable.
   ```
 
-    * **Cause:** The SOCKS proxy server expected an authentication type other than what was specified.
+    * **Cause:** The proxy server expected an authentication type other than what was specified.
     * **Possible Resolution:** Provide authentication to the proxy:
 
   ```shell
-  socks5://{{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
+  {{username}}:{{password}}@{{proxy_host}}:{{proxy_port}}
   ```
 
-    The Agents only support the use of username/password authentication method for SOCKS connections.
+    The Agents only support the use of username/password authentication method for proxy connections.
