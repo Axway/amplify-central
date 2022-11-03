@@ -181,7 +181,7 @@ Associated agent variables are:
 
 ### Proxy authentication
 
-Both proxy types will use one of two authentication mechanisms, none or username/password authentication. The username authentication is specified within the URL `http://{userName}:{password}@{proxyHost}:{proxyPort}`.
+Proxy will use one of two authentication mechanisms, none or username/password authentication. The username authentication is specified within the URL `http://{userName}:{password}@{proxyHost}:{proxyPort}`.
 
 ## Validation
 
