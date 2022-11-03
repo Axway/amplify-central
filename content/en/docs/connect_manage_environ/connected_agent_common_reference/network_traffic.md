@@ -223,7 +223,7 @@ A return of **"200"** validates the connection was established.
   ```
 
     * **Cause:** The host making the call can’t resolve the ingestion.platform.axway.com DNS name.
-    * **Possible Resolution:** make sure the firewall whitelist ingestion.platform.axway.com corresponding IP address. Make sure your proxy allows the connection to ingestion.platform.axway.com
+    * **Possible Resolution:** Make sure the firewall whitelist ingestion.platform.axway.com corresponds to the IP address, and your proxy allows the connection to ingestion.platform.axway.com.
 
   ```shell
   curl -x {{proxy_host}}:{{proxy_port}} ingestion.platform.axway.com
