@@ -228,121 +228,133 @@ global:
       baseUrl: "https://login.axway.com/auth"
       clientTimeout: 10s
 
-  # Configuration for creating the K8S Secret that holds the Amplify Platform service account details as part of the helm chart deployment
-  secret:
-    # Set to true, and provide the following values to enable the creation of the K8S Secret. als.keysSecretName and da.keysSecretName should receive the same name if this is enabled.
-    create: false
-    name: ""
-    password: ""
-    publicKey: ""
-    privateKey: ""
+# Configuration for creating the K8S Secret that holds the Amplify Platform service account details as part of the helm chart deployment
+secret:
+  # Set to true, and provide the following values to enable the creation of the K8S Secret. als.keysSecretName and da.keysSecretName should receive the same name if this is enabled.
+  create: false
+  name: ""
+  password: ""
+  publicKey: ""
+  privateKey: ""
 
-  # configures the ALS Traceability agent
-  als:
-    enabled: true
-    # Header publishing mode. Set to default or verbose.
-    mode: default
-    # Name of the k8scluster
-    clusterName: istio-k8scluster
-    # Name of the traceability agent resource
-    agentName: istio-ta
-    # Amplify Central Deployment (prod, prod-eu)
-    apicDeployment: prod
-    # Amplify Platform service account client ID
-    clientID: istio-service-account_12345678-0000-4444-99e9
-    # Amplify ingestion service endpoint
-    condorUrl: ingestion.datasearch.axway.com:5044
-    condorSslVerification: full
-    # Sampling configuration
-    sampling:
-      percentage: 100
-      per_api: true
-      per_subscription: true
-      reportAllErrors: true
-    # The tracing provider configured for Istio
-    istioTracer: "zipkin"
-    # Name of the secret containing the public & private keys used by the provided service account client ID
-    keysSecretName: amplify-agents-keys
-    publishHeaders: true
-    # List of namespaces where the ALS Envoy filters should be applied
-    envoyFilterNamespaces:
-    - default
-    # A list of request headers that are sent to the agent
-    defaultModeRequestHeaders:
-    - "accept"
-    - "user-agent"
-    - "x-envoy-decorator-operation"
-    - "x-envoy-external-address"
-    - "x-forwarded-client-cert"
-    - "x-forwarded-for"
-    - "x-forwarded-proto"
-    - "x-istio-attributes"
-    # A list of response headers that are sent to the agent
-    defaultModeResponseHeaders:
-    - "connection"
-    - "content-length"
-    - "content-md5"
-    - "content-type"
-    - "date"
-    - "etag"
-    - "request-id"
-    - "response-time"
-    - "server"
-    - "start-time"
-    - "vary"
-    #Redaction configuration
-    redaction:
-      path:
-        show:
-      queryArgument:
-        show:
-        sanitize:
-      requestHeader:
-        show:
-        sanitize:
-      responseHeader:
-        show:
-        sanitize:
+# Configures the ALS Traceability Agent
+als:
+  enabled: true
+  # Header publishing mode. Set to default or verbose.
+  mode: default
+  # Name of the k8scluster
+  clusterName: istio-k8scluster
+  # Name of the Traceability Agent resource
+  agentName: istio-ta
+  # Amplify Central Deployment (prod, prod-eu)
+  apicDeployment: prod
+  # Amplify Platform service account client ID
+  clientID: istio-service-account_12345678-0000-4444-99e9
+  # Amplify ingestion service endpoint
+  condorUrl: ingestion.datasearch.axway.com:5044
+  condorSslVerification: full
+  # Sampling configuration
+  sampling:
+    percentage: 100
+    per_api: true
+    per_subscription: true
+    reportAllErrors: true
+  # The tracing provider configured for Istio
+  istioTracer: "zipkin"
+  # Name of the secret containing the public & private keys used by the provided service account client ID
+  keysSecretName: amplify-agents-keys
+  publishHeaders: true
+  # List of namespaces where the ALS Envoy filters should be applied
+  envoyFilterNamespaces:
+  - default
+  # A list of request headers that are sent to the agent
+  defaultModeRequestHeaders:
+  - "accept"
+  - "user-agent"
+  - "x-envoy-decorator-operation"
+  - "x-envoy-external-address"
+  - "x-forwarded-client-cert"
+  - "x-forwarded-for"
+  - "x-forwarded-proto"
+  - "x-istio-attributes"
+  # A list of response headers that are sent to the agent
+  defaultModeResponseHeaders:
+  - "connection"
+  - "content-length"
+  - "content-md5"
+  - "content-type"
+  - "date"
+  - "etag"
+  - "request-id"
+  - "response-time"
+  - "server"
+  - "start-time"
+  - "vary"
+  # Redaction configuration
+  redaction:
+    path:
+      show:
+    queryArgument:
+      show:
+      sanitize:
+    requestHeader:
+      show:
+      sanitize:
+    responseHeader:
+      show:
+      sanitize:
+  # Config to override default values set by the ALS agent by extracting them from the Access Log Entry filter metadata.
+  # To override the apiID or clientID, filterName and filterKeyMeta must be set.
+  metadataOverride:
+    # The name of the filter that contains the metadata. Ex: "envoy.filters.http.lua"
+    filterName: ""
+    # The name of the key within the filter: Ex: "custom.metadata"
+    filterKeyMeta: ""
+    # The name of the API ID key found within the filterKeyMetadata: Ex: "externalAPIID"
+    apiID: ""
+    # The name of the Client ID key: Ex: "clientID"
+    clientID: ""
 
-  # configures the discovery agent
-  da:
-    enabled: true
-    # Name of the discovery agent resource
-    agentName: istio-da
-    # Amplify Platform service account client ID
-    clientID: istio-service-account_12345678-0000-4444-99e9
-    # Name of the k8s secret for private/public key pair
-    keysSecretName: amplify-agents-keys
-    # name of the K8SCluster the agent is connected to
-    clusterName: istio-k8scluster
-    # Polling interval for events
-    pollInterval: "60s"
-    # Discovery Configuration
-    discovery:
-      # List of http endpoints to discover api specs from
-      specEndpoints:
-      - /apidoc/swagger.json
-      - /swagger.json
-      - /api/v1/docs
-      - /apis/docs
-      virtualService:
-        # List of namespaces that will be used by agent to discover VirtualService resources
-        namespaces:
-        - ampc-demo
-        # List of labels that will be used by agent to filter VirtualService resources
-        labels: []
-      requestAuth:
-        # List of namespaces that will be used by agent to discover RequestAuthentication resources
-        namespaces:
-        - ampc-demo
-        # List of labels that will be used by agent to filter RequestAuthentication resources
-        labels: []
-    # IDP Provider configuration
-    idpProviders:
 
-  # Deploy the chart with an optional demo service
-  list:
-    enabled: true
+# Configures the Discovery Agent
+da:
+  enabled: true
+  # Name of the Discovery Agent resource
+  agentName: istio-da
+  # Amplify Platform service account client ID
+  clientID: istio-service-account_12345678-0000-4444-99e9
+  # Name of the k8s secret for private/public key pair
+  keysSecretName: amplify-agents-keys
+  # Name of the K8SCluster the agent is connected to
+  clusterName: istio-k8scluster
+  # Polling interval for events
+  pollInterval: "60s"
+  # Discovery configuration
+  discovery:
+    # List of http endpoints to discover api specs from
+    specEndpoints:
+    - /apidoc/swagger.json
+    - /swagger.json
+    - /api/v1/docs
+    - /apis/docs
+    virtualService:
+      # List of namespaces that will be used by agent to discover VirtualService resources
+      namespaces:
+      - ampc-demo
+      # List of labels that will be used by agent to filter VirtualService resources
+      labels: []
+    requestAuth:
+      # List of namespaces that will be used by agent to discover RequestAuthentication resources
+      namespaces:
+      - ampc-demo
+      # List of labels that will be used by agent to filter RequestAuthentication resources
+      labels: []
+  # IDP Provider configuration
+  idpProviders:
+
+# Deploy the chart with an optional demo service
+list:
+  enabled: true
 ```
 
 Copy the content into a file called `hybrid-override.yaml`.
