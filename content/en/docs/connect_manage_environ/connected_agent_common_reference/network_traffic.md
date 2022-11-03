@@ -179,14 +179,6 @@ Associated agent variables are:
 * APIGATEWAY_PROXYURL: connection to API Gateway
 * CENTRAL_PROXYURL: connection to Amplify platform
 
-### SOCKS5 Proxy for Traceability Agent
-
-Use a SOCKS5 Proxy for communication to the Amplify Platform when sending API Traffic Events.  This configuration is set only for [Traceability](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent) Agents.
-
-Associated agent variable is:
-
-* TRACEABILITY_PROXYURL: connection to the transaction service endpoint
-
 ### Proxy authentication
 
 Both proxy types will use one of two authentication mechanisms, none or username/password authentication. The username authentication is specified within the URL `http://{userName}:{password}@{proxyHost}:{proxyPort}`.
