@@ -7,7 +7,7 @@ weight: 10
 The Discovery Agent can automatically categorize discovered APIs when publishing to Amplify Service Registry. Learn how to add conditions and associated categories when those conditions are met.
 
 {{< alert title="Note" color="primary" >}}
-The automatic categorization filter is only available in the Axway API Manager Discovery Agent. Support in the other agents is coming soon!
+The automatic categorization filter is only available in the Axway API Manager Discovery Agent. Support in the other agents is not available.
 {{< /alert >}}
 
 ## Before you start

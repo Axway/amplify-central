@@ -131,10 +131,6 @@ A new product release is created in **Draft** state.
 
 ## Create a plan
 
-{{< alert title="Note" color="primary" >}}Functionality coming soon.{{< /alert >}}
-
-The product can be in any state.
-
 You can offer multiple free and paid consumption options for your product. As a provider, you can define one or more subscription plans free of charge, or paid, with optional quota limits.
 
 1. Navigate to *Catalog > Product Foundry*.
