@@ -20,23 +20,23 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify November 4th, 2022](/docs/amplify_relnotes/20221104_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.39. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.40. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.33
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.30
-* **Azure latest release** - Agent version 1.1.33
-* **Istio 1.9.5** - Agent version 0.75
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.34
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.31
+* **Azure latest release** - Agent version 1.1.34
+* **Istio 1.9.5** - DA=v1.0.2 / TA=v2.0.43
 * **Apigee Edge** - Agent version 0.1.2
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.10
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes: | Subscription migration. |
+| What's new: | Discovery Agent supports HTTP Basic Authentication for inbound security of Marketplace products. |
+| Bug fixes: | None. |
 
 | Agents |         |
 |--------|---------|
-| What's new: | None. |
+| What's new: | **API Management Gateway** - Discovery Agent supports HTTP Basic Authentication for inbound security of Marketplace products. <br />**AWS Gateway** - Updated with the latest Agent SDK. <br />**Azure Gateway** - Updated with the latest Agent SDK. <br />**Istio Gateway** - Usage tracking customization. |
 | Bug fixes: | None. |
 
 | Service registry <br />Topology |         |
@@ -46,23 +46,23 @@ Current agent versions are based on Amplify Agents SDK v1.1.39. This version is 
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | None. |
+| What's new: | An asset can be edited from the Web UI with or without the release of a new asset version. |
 | Bug fixes: | None. |
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Support contacts can be assigned to a product. <br />A product can be edited from the Web UI with or without the release of a new product version. |
+| Bug fixes: | Subscription Approver role is not able to see the access requests submitted by a user in a consumer organization. <br />Creating a product/plan and changing the product plan ownership fails. <br />Wrong plan ownership. <br />Quota price validation. |
 
 | Business insights |         |
 |-------------------|---------|
-| What's new: | None. |
+| What's new: | Provider engagement report. |
 | Bug fixes: | None. |
 
 | Marketplace |         |
 |-------------|---------|
-| What's new: | Non. |
-| Bug fixes: | None. |
+| What's new: | Support contact displays on product overview. <br />Product resources page improvement. |
+| Bug fixes: | Issue with the “logical name” of the category - Product Foundry. <br />Confusing plan count on product tile. <br />Confusing sign in page. |
 
 | Consumer insights |         |
 |-------------------|---------|
