@@ -69,7 +69,6 @@ Current agent versions are based on Amplify Agents SDK v1.1.40. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-
 ## [Amplify November 4th, 2022](/docs/amplify_relnotes/20221104_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.40. This version is compatible with:
