@@ -36,7 +36,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 
 | Agents |         |
 |--------|---------|
-| What's new: | **Axway API Management Gateway** - None. <br />**AWS Gateway** - Updated with Axway Agent SDK. <br />**Azure Gateway** - Updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK.  <br />**Apigee Edge Gateway** - Updated with Axway Agent SDK. |
+| What's new: | **AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK.  <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. |
 | Bug fixes: | **Axway API Management Gateway** - Helm chart installation when using an existing service account. |
 
 | Service registry <br />Topology |         |
@@ -51,7 +51,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | Pay per use plan configured in Catalog Manager. <br />Product visibility for consumer organization user. <br />Support contact alternative method. <br />Support Contact set while creating / updating product. |
+| What's new: | Pay per use plan configured in Catalog Manager. <br />Product visibility for consumer organization user. <br />Support contact alternative method. <br />Support contact set while creating / updating product. |
 | Bug fixes: | Country codes list for support contact phone number. |
 
 | Business insights |         |
