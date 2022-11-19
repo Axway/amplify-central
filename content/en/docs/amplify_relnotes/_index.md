@@ -18,6 +18,57 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify November 18th, 2022](/docs/amplify_relnotes/20221118_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.41. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.36
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.32
+* **Azure latest release** - Agent version 1.1.35
+* **Istio 1.9.5** - DA=v1.0.3 / TA=v2.0.43
+* **Apigee Edge** - Agent version 0.1.3
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | Discovery Agent updated for Async API support. |
+| Bug fixes: | API Service deletion handling. <br />API Service revision handling. |
+
+| Agents |         |
+|--------|---------|
+| What's new: | **AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK.  <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. |
+| Bug fixes: | **Axway API Management Gateway** - Helm chart installation when using an existing service account. |
+
+| Service registry <br />Topology |         |
+|------------------|------------------------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
+| Asset Catalog |         |
+|---------------|---------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
+| Product Foundry |         |
+|-----------------|---------|
+| What's new: | Pay per use plan configured in Catalog Manager. <br />Product visibility for consumer organization user. <br />Support contact alternative method. <br />Support contact set while creating / updating product. |
+| Bug fixes: | Country codes list for support contact phone number. |
+
+| Business insights |         |
+|-------------------|---------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
+| Marketplace |         |
+|-------------|---------|
+| What's new: | Vanity URL. <br />Application list page improvement. <br />Call to Action. <br />Access request visibility. |
+| Bug fixes: | Consumer user (non-admin) cannot create access request / credentials in the consumer org. <br />Product documents in the Marketplace are not being displayed in proper order. |
+
+| Consumer insights |         |
+|-------------------|---------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify November 4th, 2022](/docs/amplify_relnotes/20221104_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.40. This version is compatible with:
