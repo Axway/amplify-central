@@ -49,7 +49,7 @@ Now that you have created your service account with client and secret, you can r
 
 #### Using the CLI Directly
 
-**Capture the Auth Result as a JSON Body**
+##### Capture the Auth Result as a JSON Body
 
 ```sh
 authResult=$(axway auth login --client-id test-sa-ccc_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret thisisasecret --json)
@@ -57,7 +57,7 @@ authResult=$(axway auth login --client-id test-sa-ccc_6d66dc36-f838-4006-8c44-53
 
 The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services. (The alternative, manual steps, are outlined below for clarity)
 
-**Extract the Bearer Token and TenantID**
+##### Extract the Bearer Token and TenantID
 
 ```sh
 token=$(echo $authResult | jq -r '.auth.tokens.access_token')
@@ -65,9 +65,10 @@ tenantId=$(echo $authResult | jq -r '.org.id')
 ```
 
 #### Alternative approach call auth server directly
-This approach is more cumbersome, but demonstrates what is necessary if you decide to build against an application using a language like JavaScript, Java or Golang.
 
-Use the Client ID and Secret for Basic Authentication and base64 encode the string. A colon should be used as a field seperator, such that the unencoded string looks like "clientID:secret". 
+This approach is more cumbersome, but demonstrates what is necessary if you decide to build against an application using a language like JavaScript, Java or Golang.  
+
+Use the Client ID and Secret for Basic Authentication and base64 encode the string. A colon should be used as a field seperator, such that the unencoded string looks like "clientID:secret".  
 
 ```
 echo "clientID:secret" | base64 
@@ -96,6 +97,7 @@ You can extract and use the token from the resulting JSON response:
 ```
 
 ### Making the API Calls
+
 Now that you have a valid bearer token and the Tenant ID you can make platform calls as outlined in API docs. For example:  
 
 #### Calling Central  
