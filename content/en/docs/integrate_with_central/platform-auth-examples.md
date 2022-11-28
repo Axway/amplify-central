@@ -1,7 +1,7 @@
 ---
 title: How to authorize API Calls to Platform Services
 ---
-Step-by-step guide for authorizing clients to make REST calls to the Amplify Platform API. This section will outline the easiest way, by using a service account client and secret key.
+A step-by-step guide for authorizing clients to make REST calls to the Amplify Platform API. This section will outline the easiest way, by using a service account client and secret key.
 
 ## Prerequisite - API authorization
 
