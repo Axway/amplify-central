@@ -1,7 +1,7 @@
 ---
 title: How to authorize API Calls to Platform Services
 ---
-Step by step guide for authorizing clients to make REST calls to the Amplify Platform API. This section will outline the easiest way, by using a service account client and secret key. There is also a private key method that will not be covered in the section.
+Step-by-step guide for authorizing clients to make REST calls to the Amplify Platform API. This section will outline the easiest way, by using a service account client and secret key.
 
 ## Prerequisite - API authorization
 
@@ -9,11 +9,11 @@ Step by step guide for authorizing clients to make REST calls to the Amplify Pla
 
 2. ***Install JQ***:  [https://github.com/stedolan/jq](https://github.com/stedolan/jq)
 
-JQ is needed for parsing the authorization response and extracting the bearer token and org id required in the http  request headers.
+JQ is needed for parsing the authorization response and extracting the bearer token and org ID required in the http  request headers.
 
 ## Create your service account via the CLI
 
-A service account is an Amplify concept that allows for a non-user, such as a CLI or headless process to gain access to the platform services and will be granted specific roles and privileges within on organization.
+A service account is an Amplify concept that allows for a non-user, such as a CLI or headless process, to gain access to the platform services and will be granted specific roles and privileges within an organization.
 
 * From the command line, log into the platform using:
 
@@ -55,18 +55,18 @@ Now that you have created your service account with client and secret, you can r
 authResult=$(axway auth login --client-id test-sa-ccc_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret thisisasecret --json)
 ```
 
-The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services. (The alternative, manual steps, are outlined below for clarity)
+The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services (The alternative-- manual steps, are outlined below for clarity).
 
 ##### Extract the Bearer Token and TenantID
 
 ```sh
 token=$(echo $authResult | jq -r '.auth.tokens.access_token')
-tenantId=$(echo $authResult | jq -r '.org.id')
+tenantID=$(echo $authResult | jq -r '.org.id')
 ```
 
 #### Alternative approach call auth server directly
 
-This approach is more cumbersome, but demonstrates what is necessary if you decide to build against an application using a language like JavaScript, Java or Golang.  
+This approach is more cumbersome, but demonstrates what is necessary if you decide to build an application using a language like JavaScript, Java or Golang.  
 
 Use the Client ID and Secret for Basic Authentication and base64 encode the string. A colon should be used as a field seperator, such that the unencoded string looks like "clientID:secret".  
 
