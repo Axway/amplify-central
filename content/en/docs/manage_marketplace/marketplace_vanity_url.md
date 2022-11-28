@@ -9,6 +9,7 @@ Expose your marketplace to a specific url on your domain to match your brand.
 ## Before you start
 
 You must have platform Administrator credentials to be able to update the marketplace settings.
+
 You must have some IT rights to update your company Domain Name System (DNS) configuration.
 
 ## Objectives
