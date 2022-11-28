@@ -4,7 +4,7 @@ linkTitle: Marketplace  custom URL
 weight: 30
 ---
 
-Expose your marketplace to a specific url on your domain to match your brand.
+Expose your marketplace to a specific URL on your domain to match your brand.
 
 ## Before you start
 
@@ -14,25 +14,25 @@ You must have some IT rights to update your company Domain Name System (DNS) con
 
 ## Objectives
 
-Learn how to customize the maketplace url, create your certificate and udpate your DNS configuration to connect to a custom marketplace url.
+Learn how to customize the maketplace URL, create your certificate and udpate your DNS configuration to connect to a custom marketplace URL.
 
-## Customize the marketplace url in settings
+## Customize the marketplace URL in settings
 
 Naviagte to platform.axay.com > Organization > Marketplace > Settings.
 
-Change *Marketplace URL* field value from Subdomain to URL
+Change *Marketplace URL* field value from Subdomain to URL.
 
-Enter the url for your marketplace.
+Enter the URL for your marketplace.
 
 ## Generate your certificate
 
-The certificate will be used to validate the SSL connection with the marketplace. It is highly recommended to use a certificate authority (Verisign, DigiCert, Entrust...) to sign the certificate to avoid getting the "Not secure" warning when navigating to the marketplace.
+The certificate will be used to validate the TLS connection with the marketplace. It is required to use a certificate authority (Verisign, DigiCert, Entrust...) to sign the certificate to avoid getting the "Not secure" warning when navigating to the marketplace.
 
-We accept only PEM format certificate. Be sure to include the key in the certificate to be able to correctly read the certificate information.
+We accept only PEM format certificate. Be sure to include the intermediate CA and the key in the certificate to be able to correctly read the certificate information.
 
 Step 1- Create you certificate
 
-It is recommended to use a certificate authority to signed your certificate. We also accept self-signed certificate but they are not recommended for production environment.
+It is requited to use a certificate authority to sign your certificate. We also accept self-signed certificate but they are not recommended for production environment.
 
 Sample for self-signed certificate creation
 
@@ -53,35 +53,37 @@ copy *.pem certificate-key.pem
 cat certificate.pem key.pem > certificate-key.pem
 ```
 
-Step 3- Updload the `certificate-key.pem` file into the marketplace settings.
+Step 3- Upload the `certificate-key.pem` file into the marketplace settings.
 
-Naviagte to platform.axay.com > Organization > Marketplace > Settings and click the Choose file button to select the `certificate-key.pem` file. Then click Open.
+Navigate to platform.axway.com > Organization > Marketplace > Settings and click the Choose file button to select the `certificate-key.pem` file. Then click Open.
 
 When saving the settings, the plaform will validate that the certificate is correct and store it internally.
 
 ## Add a CNAME to your DNS entries
 
-This step will enable to redirect your marketplace url traffic to the actual marketplace url hosted on Axway server.
+This step will enable to redirect your marketplace URL traffic to the actual marketplace URL hosted on Axway server.
 
-The info bubble on the url field shows you which values should be added to your DNS (Hostname / Value). Hostame is deduced from the provided URL and Value is the current service url hosted by Axway.
+The info bubble on the URL field shows you which values should be added to your DNS (Hostname / Value). Hostame is deduced from the provided URL and Value is the current service URL hosted by Axway.
 
 Once the DNS is updated, you can validate that the route is correctly set using nslookup:
 
 ```shell
-nslookup yourMarketplaceURL
+nslookup your.marletplace.domain.com
 
 #The answer may vary from the operating system used.
 Server:  yourDNSserverName
 Address:  XXX.XXX.XXX.XXX
 
 Non-authoritative answer:
-Name:    providedAxwayMarketplateURL
-Addresses:  XXX.XXX.XXX.XXX
-          XXX.XXX.XXX.XXX
-          XXX.XXX.XXX.XXX
-Aliases:  yourMarketplaceURL
+your.marletplace.domain.com    canonical name = {marketplaceID}.marketplace.{region}.axway.com
+Name:    {marketplaceID}.marketplace.{region}.axway.com
+Address: XXX.XXX.XXX.XXX
+Name:    {marketplaceID}.marketplace.{region}.axway.com
+Address: XXX.XXX.XXX.XXX
+Name:    {marketplaceID}.marketplace.{region}.axway.com
+Address: XXX.XXX.XXX.XXX
 ```
 
 ## Access the marketplace
 
-Using your marketplace url, you should be able to access the marketplace homepage.
+Using your marketplace URL, you should be able to access the marketplace homepage.
