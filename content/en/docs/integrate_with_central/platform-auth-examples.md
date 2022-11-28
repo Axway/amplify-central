@@ -9,7 +9,7 @@ Step-by-step guide for authorizing clients to make REST calls to the Amplify Pla
 
 2. ***Install JQ***:  [https://github.com/stedolan/jq](https://github.com/stedolan/jq)
 
-JQ is needed for parsing the authorization response and extracting the bearer token and org ID required in the http  request headers.
+JQ is needed for parsing the authorization response and extracting the bearer token and org ID required in the HTTP request headers.
 
 ## Create your service account via the CLI
 
