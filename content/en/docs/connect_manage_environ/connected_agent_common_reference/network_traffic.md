@@ -120,13 +120,16 @@ Open the following ports so that agents can communicate to the Amplify platform:
 
 **Single Entry Point**:
 
-| Region | Host                            | IP             | port | Protocol | data            |
-|--------|---------------------------------|----------------|------|----------|-----------------|
-| US     | ingestion.platform.axway.com    | 35.71.150.229  | 443  | HTTPS    | See note below  |
-|        |                                 | 52.223.61.108  |      |          |                 |
-|        |                                 |                |      |          |                 |
-| EU     | ingestion-eu.platform.axway.com | 76.223.107.214 | 443  | HTTPS    | See note below  |
-|        |                                 | 13.248.240.123 |      |          |                 |
+| Region | Host                               | IP             | port | Protocol | data            |
+|--------|------------------------------------|----------------|------|----------|-----------------|
+| US     | ingestion.platform.axway.com       | 35.71.150.229  | 443  | HTTPS    | See note below  |
+|        |                                    | 52.223.61.108  |      |          |                 |
+|        |                                    |                |      |          |                 |
+| EU     | ingestion-eu.platform.axway.com    | 76.223.107.214 | 443  | HTTPS    | See note below  |
+|        |                                    | 13.248.240.123 |      |          |                 |
+|        |                                    |                |      |          |                 |
+| APAC   | ingestion-ap-sg.platform.axway.com | 3.33.213.199   | 443  | HTTPS    | See note below  |
+|        |                                    | 15.197.242.120 |      |          |                 |
 
 {{< alert title="Note" color="primary" >}}
 *Region* column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding *Host*/*Port* for your agents to operate correctly. <br />*Data* for both US and EU Regions include: API usage statistics, version check for new releases, API definitions and subscription information, API event data. <br />The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
