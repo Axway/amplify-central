@@ -23,15 +23,15 @@ A service account is an Amplify concept that allows for a non-user, such as a CL
 
 * Enter a name and description
 
-* Select the client secret authentication method as either 'Auto-generated client secret key' or 'Custom client secret key'. Here we select 'Custom client secret key'
-
-* Enter a client secret. You need to remember/store this secret as it will not be displayed anywhere.
+* Select the client secret authentication method as either 'Auto-generated client secret key' or 'Custom client secret key'. Here we select 'Auto-generated client secret key'
 
 * For the Roles, select what is appropriate for this service account, in this case, we are choosing Central Admin
 
 * Your service account should now be created:
 
   ![service acoount dialog screen](/Images/integration/create-service-account.png)
+  
+* Take note of the Client ID and Secret. You will need to remember/store the secret as it will not be displayed anywhere again.
 
 * To verify you can use the CLI:
 
@@ -59,7 +59,7 @@ A service account is an Amplify concept that allows for a non-user, such as a CL
 
 * You now have your service account and can use the Client Id and Secret to Authenticate to the platform
 
-  ![ui service account form screen](/Images/integration/ui-service-account-client-id.png)
+  ![ui service account completed screen](/Images/integration/ui-service-acccount-client-id.png)
 
 ## Using your Service Account
 
@@ -141,7 +141,7 @@ curl --location --request GET 'https://apicentral.axway.com/apis/management/v1al
 --header "Content-Type: application/json" 
 ```
 
-#### Calling Tracability
+#### Calling Traceability
 
 ```
 curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/traceability/summary?groupBy=proxyId&groupBy=proxyRevision&count=10&offset=0&from=1668895561864&to=1669500361864' \
