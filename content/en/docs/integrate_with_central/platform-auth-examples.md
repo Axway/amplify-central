@@ -7,13 +7,11 @@ A step-by-step guide for authorizing clients to make REST calls to the Amplify P
 
 1. ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
 
-2. ***Install JQ***:  [https://github.com/stedolan/jq](https://github.com/stedolan/jq)
+## Create your service account
 
-JQ is needed for parsing the authorization response and extracting the bearer token and org ID required in the HTTP request headers.
+A service account is an Amplify concept that allows for a non-user, such as a CLI or headless process, to gain access to the platform services and will be granted specific roles and privileges within an organization. You can create your service account(s) using the CLI or directly within the UI.
 
-## Create your service account via the CLI
-
-A service account is an Amplify concept that allows for a non-user, such as a CLI or headless process, to gain access to the platform services and will be granted specific roles and privileges within an organization.
+### Create the service account via the CLI
 
 * From the command line, log into the platform using:
 
@@ -41,30 +39,69 @@ A service account is an Amplify concept that allows for a non-user, such as a CL
 
   ![service account list screen](/Images/integration/service-account-list.png)
 
+### Create the service account via the CLI
+
+* From the Platform screen, select the dropdown in the right-hand corner and choose **_Organization_**
+
+  ![organization drop down screen](/Images/integration/organization-drop-down.png)
+
+* From the Service Accounts screen select the button labeled **_+ Service Account_**
+
+  ![ui create service account screen](/Images/integration/ui-create-service-account.png)
+
+* Fillout the following form. Here we are choosing Client Secret, Platform Generated and the Central Admin role. Next, select the button labeled **_Save_**
+
+  ![ui service account form screen](/Images/integration/ui-service-account-form.png)
+
+* You will now be presented with a popup screen where you can copy your generated secret. You need to store this secret as this is the only time it will ever be displayed
+
+  ![ui service account form screen](/Images/integration/ui-service-account-secret.png)
+
+* You now have your service account and can use the Client Id and Secret to Authenticate to the platform
+
+  ![ui service account form screen](/Images/integration/ui-service-account-client-id.png)
+
 ## Using your Service Account
 
 Now that you have created your service account with client and secret, you can reuse this approach in a scripted manner.
 
 ### Authorization
 
+If you are interested in using cURL or Postman, the easiest way to authenticate is by using the CLI. However, in the event that you need to embed authorization within a compiled application, see the section [here](#alternative-approach-to-call-auth-server-directly).
+
 #### Using the CLI Directly
 
-##### Capture the Auth Result as a JSON Body
 
 ```sh
-authResult=$(axway auth login --client-id test-sa-ccc_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret thisisasecret --json)
+axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
 
-The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services (The alternative-- manual steps, are outlined below for clarity).
 
-##### Extract the Bearer Token and TenantID
+The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services. 
 
-```sh
-token=$(echo $authResult | jq -r '.auth.tokens.access_token')
-tenantID=$(echo $authResult | jq -r '.org.id')
+You can extract and use the token from the resulting JSON response:
+
+```
+{
+  "auth": {
+    "authenticator": "ClientSecret",
+    "baseUrl": "https://login.axway.com",
+    "clientId": "sa-test_6d66dc36-f838-4006-8c44-5340d4698be5",
+    "env": "prod",
+    "expires": {
+      "access": 1669920901070,
+      "refresh": null
+    },
+    "realm": "Broker",
+    "tokens": {
+      "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI...",
+            ...
+      }
+      ...
+}
 ```
 
-#### Alternative approach call auth server directly
+#### Alternative approach to call auth server directly
 
 This approach is more cumbersome, but demonstrates what is necessary if you decide to build an application using a language like JavaScript, Java or Golang.  
 
@@ -83,8 +120,6 @@ curl --location --request POST 'https://login.axway.com/auth/realms/Broker/proto
 --data-urlencode 'grant_type=client_credentials'
 ```
 
-You can extract and use the token from the resulting JSON response:
-
 ```
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJKLUhJOWxTbE5fYUxMSj...",
@@ -98,15 +133,14 @@ You can extract and use the token from the resulting JSON response:
 
 ### Making the API Calls
 
-Now that you have a valid bearer token and the Tenant ID you can make platform calls as outlined in API docs. For example:  
+Now that you have a valid bearer token and the Tenant ID you can make platform calls as outlined in [Amplify Platform API docs](https://docs.axway.com/category/api). For example:  
 
 #### Calling Central  
 
 ```
 curl --location --request GET 'https://apicentral.axway.com/apis/management/v1alpha1/environments' \
 --header "Authorization: Bearer ${token}" \
---header "Content-Type: application/json" \
---header "X-Axway-Tenant-Id: 652605300303530"
+--header "Content-Type: application/json" 
 ```
 
 #### Calling Tracability
@@ -114,6 +148,13 @@ curl --location --request GET 'https://apicentral.axway.com/apis/management/v1al
 ```
 curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/traceability/summary?groupBy=proxyId&groupBy=proxyRevision&count=10&offset=0&from=1668895561864&to=1669500361864' \
 --header "Authorization: Bearer ${token}" \
---header "Content-Type: application/json" \
---header "X-Axway-Tenant-Id: 652605300303530"
+--header "Content-Type: application/json" 
+```
+
+#### Calling Platform
+
+```
+curl --location --request GET 'https://platform.axway.com/api/v1/env' \
+--header "Authorization: Bearer ${token}" \
+--header "Content-Type: application/json"
 ```
