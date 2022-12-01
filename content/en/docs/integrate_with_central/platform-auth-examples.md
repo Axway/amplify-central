@@ -131,7 +131,7 @@ curl --location --request POST 'https://login.axway.com/auth/realms/Broker/proto
 
 ### Making the API Calls
 
-Now that you have a valid bearer token and the Tenant ID you can make platform calls as outlined in [Amplify Platform API docs](https://docs.axway.com/category/api). For example:  
+Now that you have a valid bearer token you can make platform calls as outlined in [Amplify Platform API docs](https://docs.axway.com/category/api). For example:  
 
 #### Calling Central  
 
