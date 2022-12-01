@@ -39,17 +39,17 @@ A service account is an Amplify concept that allows for a non-user, such as a CL
 
   ![service account list screen](/Images/integration/service-account-list.png)
 
-### Create the service account via the CLI
+### Create the service account via the UI
 
-* From the Platform screen, select the dropdown in the right-hand corner and choose **_Organization_**
+* From the Platform screen, select the dropdown in the right-hand corner and choose **Organization**
 
   ![organization drop down screen](/Images/integration/organization-drop-down.png)
 
-* From the Service Accounts screen select the button labeled **_+ Service Account_**
+* From the Service Accounts screen select the button labeled **+ Service Account**
 
   ![ui create service account screen](/Images/integration/ui-create-service-account.png)
 
-* Fillout the following form. Here we are choosing Client Secret, Platform Generated and the Central Admin role. Next, select the button labeled **_Save_**
+* Fillout the following form. Here we are choosing Client Secret, Platform Generated and the Central Admin role. Next, select the button labeled **Save**
 
   ![ui service account form screen](/Images/integration/ui-service-account-form.png)
 
@@ -71,11 +71,9 @@ If you are interested in using cURL or Postman, the easiest way to authenticate 
 
 #### Using the CLI Directly
 
-
 ```sh
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
-
 
 The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services. 
 
