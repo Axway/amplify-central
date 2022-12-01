@@ -1,40 +1,44 @@
 ---
-title: Marketplace custom URL
-linkTitle: Marketplace  custom URL
-weight: 30
+title: Customize Marketplace URL
+linkTitle: Customize Marketplace URL
+weight: 35
 ---
 
-Expose your marketplace to a specific URL on your domain to match your brand.
+Provide your own custom domain for the Marketplace.
 
 ## Before you start
 
-You must have platform Administrator credentials to be able to update the marketplace settings.
-
-You must have some IT rights to update your company Domain Name System (DNS) configuration.
+* You must have platform Administrator credentials to be able to update the marketplace settings.
+* You must have appropriate IT rights to update your company's Domain Name System (DNS) configuration.
 
 ## Objectives
 
-Learn how to customize the maketplace URL, create your certificate and udpate your DNS configuration to connect to a custom marketplace URL.
+Learn how to customize the Marketplace URL in three easy steps:
 
-## Customize the marketplace URL in settings
+1. Add a custom URL in Marketplace Settings.
+2. Generate a TLS certificate.
+3. Configure your DNS.
 
-Naviagte to platform.axay.com > Organization > Marketplace > Settings.
+## Add a custom URL in Marketplace Settings
 
-Change *Marketplace URL* field value from Subdomain to URL.
+To add a custom URL to the Marketplace:
 
-Enter the URL for your marketplace.
+1. Navigate to *platform.axway.com > Organization > Marketplace > Settings*.
+2. Select **URL** in the Marketplace URL drop-down menu.
+3. Enter the URL for the Marketplace.
+4. Save your changes.
 
-## Generate your certificate
+## Generate a TLS certificate
 
-The certificate will be used to validate the TLS connection with the marketplace. It is required to use a certificate authority (Verisign, DigiCert, Entrust...) to sign the certificate to avoid getting the "Not secure" warning when navigating to the marketplace.
+This certificate will be used to validate the TLS connection with the marketplace. It is recommended that you use a reputable certificate authority (Verisign, DigiCert, Entrust...) to sign your certificate to avoid the "Not secure" warning when navigating to the Marketplace.
 
-We accept only PEM format certificate. Be sure to include the intermediate CA and the key in the certificate to be able to correctly read the certificate information.
+Only the PEM format certificate is accepted. Be sure to include the intermediate CA and the key in the certificate to correctly read the certificate information.
 
-Step 1- Create you certificate
+### Step 1 - Create your certificate
 
-It is requited to use a certificate authority to sign your certificate. We also accept self-signed certificate but they are not recommended for production environment.
+It is required that you use a certificate authority to sign your certificate. Self-signed certificate are also accepted, but they are not recommended for a production environment.
 
-Sample for self-signed certificate creation
+Self-signed certificate creation example:
 
 ```shell
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out certificate.pem -sha256 -days 365 -nodes
@@ -43,7 +47,7 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out certificate.pem -sha256 
 openssl x509 -text -noout -in certificate.pem
 ```
 
-Step 2- Merge the certificate and the key into a single PEM file
+### Step 2 - Merge the certificate and the key into a single PEM file
 
 ```shell
 # windows
@@ -53,22 +57,24 @@ copy *.pem certificate-key.pem
 cat certificate.pem key.pem > certificate-key.pem
 ```
 
-Step 3- Upload the `certificate-key.pem` file into the marketplace settings.
+### Step 3 - Upload the `certificate-key.pem` file into the Marketplace Settings
 
-Navigate to platform.axway.com > Organization > Marketplace > Settings and click the Choose file button to select the `certificate-key.pem` file. Then click Open.
+1. Navigate to *platform.axway.com > Organization > Marketplace > Settings*.
+2. Click **Choose file** to select the `certificate-key.pem` file.
+3. Click **Open**.
 
-When saving the settings, the plaform will validate that the certificate is correct and store it internally.
+When saving the settings, the platform will validate that the certificate is correct and store it internally.
 
-## Add a CNAME to your DNS entries
+## Configure your DNS
 
-This step will enable to redirect your marketplace URL traffic to the actual marketplace URL hosted on Axway server.
+You must add a canonical name (CNAME) record to your DNS entries to redirect the Marketplace traffic to the Marketplace URL hosted on the Axway server.
 
-The info bubble on the URL field shows you which values should be added to your DNS (Hostname / Value). Hostame is deduced from the provided URL and Value is the current service URL hosted by Axway.
+The info bubble on the URL field shows you which values must be added to your DNS (Hostname / Value). Hostname is deduced from the provided URL and Value is the current service URL hosted by Axway.
 
 Once the DNS is updated, you can validate that the route is correctly set using nslookup:
 
 ```shell
-nslookup your.marletplace.domain.com
+nslookup your.marketplace.domain.com
 
 #The answer may vary from the operating system used.
 Server:  yourDNSserverName
@@ -86,4 +92,4 @@ Address: XXX.XXX.XXX.XXX
 
 ## Access the marketplace
 
-Using your marketplace URL, you should be able to access the marketplace homepage.
+Navigate your custom Marketplace URL to validate that the changes have been applied successfully.
