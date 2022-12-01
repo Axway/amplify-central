@@ -75,7 +75,7 @@ If you are interested in using cURL or Postman, the easiest way to authenticate 
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
 
-The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services. 
+The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services.
 
 You can extract and use the token from the resulting JSON response:
 
