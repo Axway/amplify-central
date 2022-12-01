@@ -28,8 +28,8 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 
     * **Marketplace URL** - select whether your Marketplace is hosted on a subdomain or fully qualified domain name. This is required to make your Marketplace available for product publication.
 
-        * **URL** - select to host your Marketplace on a fully qualified domain name. Type the URL where your Marketplace will be available and upload a certificate that matches the specified URL. More information can be found [here](/docs/manage_marketplace/marketplace_vanity_url)
-        * **Subdomain** - select to host your Marketplace on a subdomain. Type the URL where your Marketplace will be available. This subDomain is hosted by Axway.
+        * **URL** - select to host your Marketplace on a fully qualified domain name. Type the URL where your Marketplace will be available and upload a certificate that matches the specified URL. See [Customize Marketplace URL](/docs/manage_marketplace/marketplace_vanity_url) for more information.
+        * **Subdomain** - select to host your Marketplace on a subdomain. Type the URL where your Marketplace will be available. This subdomain is hosted by Axway.
 
     * **Access** - indicates whether the Marketplace can be accessed by unauthenticated users or by registered users in your organization:
 
