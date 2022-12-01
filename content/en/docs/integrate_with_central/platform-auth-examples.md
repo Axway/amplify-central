@@ -79,7 +79,7 @@ The command above will fulfill the authorization flow and cause the client ID an
 
 You can extract and use the token from the resulting JSON response:
 
-```
+```json
 {
   "auth": {
     "authenticator": "ClientSecret",
@@ -105,20 +105,20 @@ This approach is more cumbersome, but demonstrates what is necessary if you deci
 
 Use the Client ID and Secret for Basic Authentication and base64 encode the string. A colon should be used as a field seperator, such that the unencoded string looks like "clientID:secret".  
 
-```
+```sh
 echo "clientID:secret" | base64 
 ```
 
 After base64 encoding the string the authorization call will look something like this:
 
-```
+```bash
 curl --location --request POST 'https://login.axway.com/auth/realms/Broker/protocol/openid-connect/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Authorization: Basic c2EtdGVzdF84Y2RlMWExOC0yYWViLTRiY2QtODVkNS1jZmI1M2VjOWVmYjQ6ZjU0MDlmYjMtYjNhZC00MjU3LWE4NjgtZTNmMzY4NGYxMmY1' \
 --data-urlencode 'grant_type=client_credentials'
 ```
 
-```
+```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJKLUhJOWxTbE5fYUxMSj...",
   "expires_in": 1800,
@@ -135,7 +135,7 @@ Now that you have a valid bearer token you can make platform calls as outlined i
 
 #### Calling Central  
 
-```
+```sh
 curl --location --request GET 'https://apicentral.axway.com/apis/management/v1alpha1/environments' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" 
@@ -143,7 +143,7 @@ curl --location --request GET 'https://apicentral.axway.com/apis/management/v1al
 
 #### Calling Traceability
 
-```
+```sh
 curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/traceability/summary?groupBy=proxyId&groupBy=proxyRevision&count=10&offset=0&from=1668895561864&to=1669500361864' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" 
@@ -151,7 +151,7 @@ curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/
 
 #### Calling Platform
 
-```
+```sh
 curl --location --request GET 'https://platform.axway.com/api/v1/env' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json"
