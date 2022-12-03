@@ -31,7 +31,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 4. Select the client secret authentication method as either "Auto-generated client secret key" or "Custom client secret key." In this example, "Auto-generated client secret key" is used.
 
-5. Select the appropriate role for this service account. In this example, Central Admin is used. Your service account should now be created:
+5. Select the appropriate role for this service account. In this example, Central Admin is used. Your service account should now be created.
 
     ![service acoount dialog screen](/Images/integration/create-service-account.png)
   
@@ -77,7 +77,7 @@ If you are using cURL or Postman, the easiest way to authenticate is by using th
 
 #### Use the CLI Directly
 
-The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services.
+The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services:
 
 ```sh
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
@@ -109,7 +109,7 @@ You can extract and use the token from the resulting JSON response:
 
 This approach is cumbersome but demonstrates what is necessary to build an application using a language like JavaScript, Java or Golang.  
 
-Use the client ID and secret for basic authentication and base64 encode the string. A colon must be used as a field separator, so that the unencoded string looks like "clientID:secret".  
+Use the client ID and secret for basic authentication and base64 encode the string. A colon must be used as a field separator, so that the unencoded string looks like "clientID:secret":  
 
 ```sh
 echo "clientID:secret" | base64 
