@@ -1,81 +1,87 @@
 ---
-title: How to authorize API Calls to Platform Services
+title: Authorize API calls to platform services
+linkTitle: Authorize API calls to platform services
+weight: 400
 ---
-A step-by-step guide for authorizing clients to make REST calls to the Amplify Platform API. This section will outline the easiest way, by using a service account client and secret key.
+Use a service account client and secret key for authorizing clients to make REST calls to the Amplify platform API.  
 
-## Prerequisite - API authorization
+## Before you start
 
-1. ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
+[Install the Axway CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html).
+
+## Objectives
+
+Learn how to authorize clients to make REST calls to the Amplify platform API.
 
 ## Create your service account
 
-A service account is an Amplify concept that allows for a non-user, such as a CLI or headless process, to gain access to the platform services and will be granted specific roles and privileges within an organization. You can create your service account(s) using the CLI or directly within the UI.
+A service account is an Amplify concept that allows a non-user, such as a CLI or headless process, to gain access to the platform services and be granted specific roles and privileges within an organization. You can create service account(s) either using the CLI or directly within the UI.
 
-### Create the service account via the CLI
+### Create the service account with the CLI
 
-* From the command line, log into the platform using:
+1. From the command line, log into the platform using:
 
   `axway auth login`
 
-* Create a service account using:
+2. Create a service account using:
 
   `axway service-account create`
 
-* Enter a name and description
+3. Enter a name and description.
 
-* Select the client secret authentication method as either 'Auto-generated client secret key' or 'Custom client secret key'. Here we select 'Auto-generated client secret key'
+4. Select the client secret authentication method as either "Auto-generated client secret key" or "Custom client secret key." In this example, "Auto-generated client secret key" is used.
 
-* For the Roles, select what is appropriate for this service account, in this case, we are choosing Central Admin
-
-* Your service account should now be created:
+5. Select the appropriate role for this service account. In this example, Central Admin is used. Your service account should now be created:
 
   ![service acoount dialog screen](/Images/integration/create-service-account.png)
   
-* Take note of the Client ID and Secret. You will need to remember/store the secret as it will not be displayed anywhere again.
+6. Take note of the Client ID and Secret. You will need to remember or store the secret securely, as this is the only time it will ever be displayed.
 
-* To verify you can use the CLI:
+7. Verify your account using:
 
   `axway service-account list`
 
   ![service account list screen](/Images/integration/service-account-list.png)
 
-### Create the service account via the UI
+### Create the service account with the UI
 
-* From the Platform screen, select the dropdown in the right-hand corner and choose **Organization**
+1. Sign into the Amplify platform and select **Organization** from the User dropdown menu.
 
   ![organization drop down screen](/Images/integration/organization-drop-down.png)
 
-* From the Service Accounts screen select the button labeled **+ Service Account**
+2. Click **Service Accounts** from the left navigation.
+
+3. Click **+ Service Account** in the upper-right corner. 
 
   ![ui create service account screen](/Images/integration/ui-create-service-account.png)
 
-* Fillout the following form. Here we are choosing Client Secret, Platform Generated and the Central Admin role. Next, select the button labeled **Save**
+4. Complete the following form. This example uses Client Secret, Platform Generated and the Central Admin role.
 
   ![ui service account form screen](/Images/integration/ui-service-account-form.png)
 
-* You will now be presented with a popup screen where you can copy your generated secret. You need to store this secret as this is the only time it will ever be displayed
+5. When finished, click **Save**. A dialog appears allowing you to view or copy the generated secret to store securely. You need to store this secret, as this is the only time it will ever be displayed.
 
   ![ui service account form screen](/Images/integration/ui-service-account-secret.png)
 
-* You now have your service account and can use the Client Id and Secret to Authenticate to the platform
+Now that your service account has been created, use your client Id and secret to authenticate to the platform.
 
   ![ui service account completed screen](/Images/integration/ui-service-acccount-client-id.png)
 
-## Using your Service Account
+## Use your service account
 
 Now that you have created your service account with client and secret, you can reuse this approach in a scripted manner.
 
 ### Authorization
 
-If you are interested in using cURL or Postman, the easiest way to authenticate is by using the CLI. However, in the event that you need to embed authorization within a compiled application, see the section [here](#alternative-approach-to-call-auth-server-directly).
+If you are using cURL or Postman, the easiest way to authenticate is by using the CLI. However, if you need to embed authorization within a compiled application, use the [alternative approach](#alternative-approach-to-call-auth-server-directly).
 
-#### Using the CLI Directly
+#### Use the CLI Directly
+
+The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services.
 
 ```sh
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
-
-The command above will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded and then passed to the auth server and then subsequently use the token to call platform services.
 
 You can extract and use the token from the resulting JSON response:
 
@@ -101,15 +107,15 @@ You can extract and use the token from the resulting JSON response:
 
 #### Alternative approach to call auth server directly
 
-This approach is more cumbersome, but demonstrates what is necessary if you decide to build an application using a language like JavaScript, Java or Golang.  
+This approach is cumbersome but demonstrates what is necessary to build an application using a language like JavaScript, Java or Golang.  
 
-Use the Client ID and Secret for Basic Authentication and base64 encode the string. A colon should be used as a field seperator, such that the unencoded string looks like "clientID:secret".  
+Use the client ID and secret for basic authentication and base64 encode the string. A colon must be used as a field separator, so that the unencoded string looks like "clientID:secret".  
 
 ```sh
 echo "clientID:secret" | base64 
 ```
 
-After base64 encoding the string the authorization call will look something like this:
+After base64 encoding the string, the authorization call will look similar to:
 
 ```bash
 curl --location --request POST 'https://login.axway.com/auth/realms/Broker/protocol/openid-connect/token' \
@@ -129,11 +135,11 @@ curl --location --request POST 'https://login.axway.com/auth/realms/Broker/proto
 }
 ```
 
-### Making the API Calls
+### Make the API Calls
 
-Now that you have a valid bearer token you can make platform calls as outlined in [Amplify Platform API docs](https://docs.axway.com/category/api). For example:  
+Now that you have a valid bearer token you can make platform calls as outlined in [Amplify Platform API docs](https://docs.axway.com/category/api) and in the following examples.  
 
-#### Calling Central  
+#### Call Central  
 
 ```sh
 curl --location --request GET 'https://apicentral.axway.com/apis/management/v1alpha1/environments' \
@@ -141,7 +147,7 @@ curl --location --request GET 'https://apicentral.axway.com/apis/management/v1al
 --header "Content-Type: application/json" 
 ```
 
-#### Calling Traceability
+#### Call Traceability
 
 ```sh
 curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/traceability/summary?groupBy=proxyId&groupBy=proxyRevision&count=10&offset=0&from=1668895561864&to=1669500361864' \
@@ -149,7 +155,7 @@ curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/
 --header "Content-Type: application/json" 
 ```
 
-#### Calling Platform
+#### Call platform
 
 ```sh
 curl --location --request GET 'https://platform.axway.com/api/v1/env' \
