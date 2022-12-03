@@ -51,7 +51,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 2. Click **Service Accounts** from the left navigation.
 
-3. Click **+ Service Account** in the upper-right corner. 
+3. Click **+ Service Account** in the upper-right corner.
 
     ![ui create service account screen](/Images/integration/ui-create-service-account.png)
 
@@ -65,7 +65,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 Now that your service account has been created, use your client Id and secret to authenticate to the platform.
 
-    ![ui service account completed screen](/Images/integration/ui-service-acccount-client-id.png)
+![ui service account completed screen](/Images/integration/ui-service-acccount-client-id.png)
 
 ## Use your service account
 
