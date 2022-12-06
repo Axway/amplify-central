@@ -30,27 +30,6 @@ Click an individual item to see the usage data of individual transactions of tha
 Depending on the Agent version you are using, the API Usage reporting for transactions on the dataplane may not be in real time. This is because metrics are aggregated on the agent side and sent to the platform on regular intervals (15 min by default).
 See the agent variable CENTRAL_USAGEREPORTING_INTERVAL if you want to lower the interval value.{{< /alert >}}
 
-## App Usage
-
-Click **App Usage** to see an aggregated view of API usage in your organization grouped by app over time.
-
-  ![Example of App usage](/Images/central/app_usage.png)
-
-You can filter by environments, apps, and a pre-configured timeframe or custoimze your own.
-
-App or Application refers to:
-
-* Axway SaaS Gateway application
-* API Gateway application
-* AWS Gateway usage plan
-* Azure Gateway subscription
-
-{{< alert title="Note" color="primary" >}} The application filter is for SaaS Gateway only. The filter is not populated with external Gateway applications (that is, API Gateway application, AWS Gateway usage plan, or Azure Gateway subscription).{{< /alert >}}
-
-{{% getactionableinsights/api_app_usage %}}
-
-Click an individual item to see the usage of APIs by that app over time.
-
 ## API Traffic
 
 Click **API Traffic** to view the traffic information for the API or App. This view is useful for finding and troubleshooting failed transactions.
@@ -87,6 +66,50 @@ Click an item in the API traffic list to view its transaction details, including
   ![Example of API traffic request and response](/Images/central/api_traffic_request_response.png)
 
  Headers can be redacted and sanitized based on the agent configuration reporting the data. Refer to [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/) for details.
+
+## Provider Engagement
+
+Click **Provider Engagement** to see metrics and details about your Provider teams engagement level to understand and improve overall health of your API program and engagement of different teams.
+
+![Example of Provider Engagement](/Images/central/provider_engagement.png)
+
+You can filter by provider team (select one, multiple, or all).
+
+In the **Current Totals** section, view the total current counts for the following:
+
+* **Teams** - total number of teams as of the current time.
+* **Services** - total number of services as of the current time.
+* **Assets** - total number of assets and their current states (draft, active, deprecated, and archived) as of the current time.
+* **Products** - total number of products and their current states (draft, active, deprecated, and archived) as of the current time. Also, the total number of published products is displayed.
+
+In the **Team Activity** section, view the chart (for all teams selected) or the table (break down by team) for events that have occurred in the time frame selected.
+
+* **Services** - the number of services created, updated, and deprecated during the selected timeframe.
+* **Assets** - the number of assets created, activated, deprecated, and archived during the selected timeframe.
+* **Products** - the number of products created, activated, published, deprecated, and archived during the selected timeframe.
+
+The events reflect changes of state, creation, and publish actions. In the chart view, use the filter to show the details by week or month. Review the table to see the break down by team.
+
+## App Usage
+
+Click **App Usage** to see an aggregated view of API usage in your organization grouped by app over time.
+
+  ![Example of App usage](/Images/central/app_usage.png)
+
+You can filter by environments, apps, and a pre-configured timeframe or custoimze your own.
+
+App or Application refers to:
+
+* Axway SaaS Gateway application
+* API Gateway application
+* AWS Gateway usage plan
+* Azure Gateway subscription
+
+{{< alert title="Note" color="primary" >}} The application filter is for SaaS Gateway only. The filter is not populated with external Gateway applications (that is, API Gateway application, AWS Gateway usage plan, or Azure Gateway subscription).{{< /alert >}}
+
+{{% getactionableinsights/api_app_usage %}}
+
+Click an individual item to see the usage of APIs by that app over time.
 
 ## Subscriptions
 
