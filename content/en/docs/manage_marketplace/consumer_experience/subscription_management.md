@@ -67,6 +67,8 @@ Use the *Account settings* page to manage existing subscriptions:
 
 Clicking the subscription name will display the side blade with the subscription detail information.
 
+From the subscription detail information screen, you have access to the product link, the plan link and all application associated with this subscription. Each application is a link that redirect you to the application details page. The bottom of the screen shows the subscritpion history (requested time / last approval/rejection time).
+
 ### Delete a subscription
 
 1. Navigate to the *Marketplace*.
