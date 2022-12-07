@@ -20,7 +20,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify December 2nd, 2022](/docs/amplify_relnotes/20221202_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.41. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.42. This version is compatible with:
 
 * **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.37
 * **AWS Gateway using SDK 2.0** - Agent version 1.1.33
@@ -52,7 +52,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Plan and quota corruption indicator. <br />Product edits reflected in Marketplace immediately after the edits are saved. |
-| Bug fixes: | Never ending ellipsis for Archived product with no releases. <br />Country code on the support contact did not indicate that ‘+’ is required in front of the digits. <br />Unable to add all assets to a product. |
+| Bug fixes: | Never ending ellipsis for Archived product with no releases. <br />Country code on the support contact does not indicate that ‘+’ is required in front of the digits. <br />Unable to add all assets to a product. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -62,7 +62,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Consumers and Subscription Managers can now access subscription details. <br />Product URL has been simplified so it can be bookmarked. |
-| Bug fixes: | Manually approved access request are not synchronize. <br />Subscription plans were not displayed for corrupted products. <br />Icons displayed in the documentation overview are stretched using Safari browser. <br />Accessing a Marketplace after another one does not work. |
+| Bug fixes: | Manually approved access request are not synchronize. <br />Subscription plans are not displayed for corrupted products. <br />Icons displayed in the documentation overview are stretched using Safari browser. <br />Accessing a Marketplace after another one does not work. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -108,7 +108,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | Business insights |         |
 |-------------------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Non-Marketplace related data displays in the Subscriptions and Applications reports. |
 
 | Marketplace |         |
 |-------------|---------|
