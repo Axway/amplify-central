@@ -18,6 +18,57 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify December 2nd, 2022](/docs/amplify_relnotes/20221202_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.42. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.37
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.33
+* **Azure latest release** - Agent version 1.1.36
+* **Istio 1.9.5** - DA=v1.0.4 / TA=v2.0.46
+* **Apigee Edge** - Agent version 0.1.3
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | None. |
+| Bug fixes: | API Service Revision Handling. <br />Environment Resource creation. |
+
+| Agents |         |
+|--------|---------|
+| What's new: | **Axway API Management Gateway** - Agents updated with Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Agents updated with Axway Agent SDK. |
+| Bug fixes: | None. |
+
+| Service registry <br />Topology |         |
+|------------------|------------------------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
+| Asset Catalog |         |
+|---------------|---------|
+| What's new: | Access Rights are now selectable from the Environment wizard UI and the API Service wizard UI to enable read only sharing. |
+| Bug fixes: | None. |
+
+| Product Foundry |         |
+|-----------------|---------|
+| What's new: | Plan and quota corruption indicator. <br />Product edits reflected in Marketplace immediately after the edits are saved. |
+| Bug fixes: | Never ending ellipsis for Archived product with no releases. <br />Country code on the support contact does not indicate that ‘+’ is required in front of the digits. <br />Unable to add all assets to a product. |
+
+| Business insights |         |
+|-------------------|---------|
+| What's new: | None. |
+| Bug fixes: | Some data are marked with Not set. |
+
+| Marketplace |         |
+|-------------|---------|
+| What's new: | Consumers and Subscription Managers can now access subscription details. <br />Product URL has been simplified so it can be bookmarked. |
+| Bug fixes: | Manually approved access request are not synchronize. <br />Subscription plans are not displayed for corrupted products. <br />Icons displayed in the documentation overview are stretched using Safari browser. <br />Accessing a Marketplace after another one does not work. |
+
+| Consumer insights |         |
+|-------------------|---------|
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify November 18th, 2022](/docs/amplify_relnotes/20221118_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.41. This version is compatible with:
@@ -57,7 +108,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | Business insights |         |
 |-------------------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Non-Marketplace related data displays in the Subscriptions and Applications reports. |
 
 | Marketplace |         |
 |-------------|---------|
