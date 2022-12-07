@@ -22,6 +22,7 @@ Provisioning use cases include:
 
 * Provision data plane when a consumer requests access to a product resource
 * Deprovision data plane when a consumer deletes an application or credentials
+* Enforce an expiration date for provisioned credential
 * Report traffic to Consumer Insights
 
 ### Provision data plane when consumer requests access to a product resource
@@ -66,6 +67,25 @@ AGENTFEATURES_IDP_TYPE_2="okta"
 AGENTFEATURES_IDP_METADATAURL_2="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
 AGENTFEATURES_IDP_AUTH_TYPE_2="accessToken"
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_2="okta-admin-api-access-token-xxxxxxxxx"
+```
+
+### Enforce credential expiration date
+
+In addition to the provisioning, it is possible to assing an expiration date to the provisioned credentials. This expiration date can be reflected on the dataplane if it supports this feature.
+
+By default the credential will never expire. You have to change the agent configuration to enforce the credential expiration date using this variable:**CENTRAL_CREDENTIALS_EXPIRATIONDAYS**. Once the expiration date is reached, the agent will automatically change the credential status to 'Expired'. At that point another variable can force the deprovisioning of the credential on the dataplane: **CENTRAL_CREDENTIALS_DEPROVISIONONEXPIRE=true**. Enforcing the credential deprovisioning will prevent consumer having a valid credential to use it anymore and may disrupt his application.
+
+Sample variables to automatically deprovision credential after 30 days:
+
+```shell
+CENTRAL_CREDENTIALS_EXPIRATIONDAYS=30
+CENTRAL_CREDENTIALS_DEPROVISIONONEXPIRE=true
+```
+
+Sample variables to expire credential after 90 days:
+
+```shell
+CENTRAL_CREDENTIALS_EXPIRATIONDAYS=90
 ```
 
 ### Deprovision data plane when consumer deletes an application or credentials

@@ -20,6 +20,14 @@ As a consumer, learn how to create and manage your applications from the Marketp
 
 ## Create a new application
 
+Anyone who is uthenticated in the marketplace can subscribe to a product with the following role restrictions:
+
+| Persona               | Create application |
+|-----------------------|--------------------|
+| Subscription manager  | Forbidden          |
+| Central administrator | Authorized         |
+| Developer/Consumer    | Authorized         |
+
 1. Navigate to the *Marketplace*.
 2. Select **Applications**.
 3. Click **Create Application**. *The Create Applications side panel is displayed*.
@@ -27,7 +35,7 @@ As a consumer, learn how to create and manage your applications from the Marketp
 
     * **Name** - the application name
     * **Description** - the application description
-    * **Owner** - the team that owns this application. This dropdown is only available if you belong to multiple teams. If you belong to only one team, then the owner will be set automatically to the team you belong to.
+    * **Owner** - the team that owns this application. This dropdown is only available if you belong to multiple teams. If you belong to only one team, then the owner will be set automatically to the team you belong to. Be sure the application owner will match the subscription you will use when requesting access to the product resources.
     * **icon** - The icon / image representing the application, if any
 
 5. Click **Create**.

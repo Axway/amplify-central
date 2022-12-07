@@ -1,6 +1,6 @@
 ---
-title: Credential management
-linkTitle: Credential management
+title: Access and Credential management
+linkTitle: Access and Credential management
 weight: 35
 ---
 
@@ -47,7 +47,7 @@ View and track the status of the access requests:
 The credential request can be done from several places in the Marketplace:
 
 * From the application: *Marketplace* > Application > navigate to the appropriate resource > **Create Credential** button
-* From the resource: *Marketplace* > Product > Resource > Access > navigate to the appropriate application > **Create Credential** button
+* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > **Create Credential** button
 * While requesting access to the product resource: if access is auto approved, then the Create Credential screen is displayed
 
 To create a credential, select the credential type and enter the required information.
@@ -55,3 +55,43 @@ To create a credential, select the credential type and enter the required inform
 Once the credential is provisioned by the provider of the resource, you can view the value of a credential only once inside the marketplace, but it will remain on the data plane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, click **Create Credential** to create a new one.
 
 To delete the existing credential, click the trash bin icon.
+
+## View credential value
+
+Once the credential is provisoned by the provider (either manually or using Discovery Agent), you can view your credential secret. These secret are encrypted and available only for 3 days. After this period, the credentials encrypted value is remove from Amplify but still provisoned on the dataplane.
+
+Viewing credential clear value can be done from several places in the Marketplace:
+
+* From the application: *Marketplace* > Application > navigate to the appropriate resource > **View Credential** button
+* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > **View Credential** button
+
+Once the side blade is opened, you can see the credentials details. For viewing the credential clear value, consumer has to click the **View credential** button. The panel is enlarged to show the remaining time to view the decrpted value and an eye icon to access it. After confirming your need to view the clear value of credentials, the credentials is decrypted and displayed on the scren. A copy button help the consumer to copy the value. Be sure to store this clear value in a safe place as it will no more ba availble after closing the side blade or your session expiration.
+
+## Suspending / Enabling credential
+
+Credential can de suspended / enabled from several place in the Marketplace:
+
+* From the application: *Marketplace* > Application > navigate to the appropriate resource
+* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application
+
+Clicking on credential name opens the side blade with the credential detail information and the user can:
+
+* suspend an active credential using the **Suspend credential** button. The credential status will become Inactive.
+* enable a suspended credential using the **Enable credential** button. The credentail status will become Active.
+
+Each action needs to be confirmed by the user.
+
+## Renewing credential
+
+This action is not supported by all dataplane and may not be avialble for the consumer.
+
+When viewing the credential list from application or from product resources detail, a **Renew credential** menu can be used if enabled by the underline dataplane.
+
+## deleting credential
+
+Credential can de deleted from several place in the Marketplace:
+
+* From the application: *Marketplace* > Application > navigate to the appropriate resource
+* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application
+
+Clicking on credential name opens the side blade with the credential detail information and the user can delete the credential using the **Delete credential** button. This action needs to be confirmed by the user as it is irreversible.

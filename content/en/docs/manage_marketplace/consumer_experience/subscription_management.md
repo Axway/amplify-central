@@ -20,6 +20,18 @@ As a consumer, learn how to create a free or paid subscription and manage existi
 
 ## Create a new subscription
 
+Anyone who is uthenticated in the marketplace can subscribe to a product with the following role restrictions:
+
+| Persona               | Subscribe to a paid plan | subscribe to a free plan |
+|-----------------------|--------------------------|--------------------------|
+| Subscription manager  | Authorized               | Authorized               |
+| Central administrator | Authorized               | Authorized               |
+| Developer/Consumer    | Forbidden                | Authorized               |
+
+Each subscription is owned by a team and shared with each member of the team. If you are part of multiple teams, you will be asked to select the team owner. If your team has the attribute **x-private**, the subscription will be owned by your user and not shared inside your team.
+
+Only one subscription per team/product/plan type combination is allowed.
+
 1. Navigate to the *Marketplace*.
 2. Select the product you would like to subscribe to.
 3. Click **Subscribe**. *The Subscription Request form is displayed*.
@@ -52,6 +64,8 @@ Use the *Account settings* page to manage existing subscriptions:
 
 1. Navigate to the *Marketplace*.
 2. Select **Subscriptions**. A list of Marketplace subscriptions is displayed.
+
+Clicking the subscription name will display the side blade with the subscription detail information.
 
 ### Delete a subscription
 

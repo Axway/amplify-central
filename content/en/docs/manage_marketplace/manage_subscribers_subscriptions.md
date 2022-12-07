@@ -4,7 +4,7 @@ linkTitle: Manage your subscribers and subscriptions
 draft: no
 weight: 20
 ---
-Subscribe to a product to access and consume the product resources.
+Validate the subscription information and manage the access to your resources.
 
 ## Before you start
 
@@ -12,133 +12,177 @@ You must have a published product in the Marketplace. Refer to [Publish to Marke
 
 ## Objectives
 
-Learn how to create a Marketplace subscription and request access / credentials to resources, including:
+Learn how to manage Marketplace subscriptions, request access and credentials to resources, including:
 
-* Subscribe to a product
-* Request access to a product resource
-* Request product resource credentials
+* Approving / rejecting subscription
+* Approving / rejecting Request access
+* Provisioning / deleting / renewing credentials
 
 ## Concepts
 
-Two personas are identified:
+Three personas are identified:
 
-* Subscription manager: responsible for creating /updating the subscription
-* Developer: responsible for designing application(s) that use subscriptions and access services that belongs to a product
+* Subscription manager: responsible for approving / rejecting the subscriptions
+* Catalog Manager: responsible for approving / rejecting resources access and for managing the credentials
+* Consumer: responsible for designing application(s) that use subscriptions and access services that belongs to a product
 
 ### Terminology
 
 **Product**: group of linked assets that create a business capability.
 
+**Plan**: billing and quotas information attached to a prodcut. Each plan has a subscription approval: automatic (default) or manual.
+
 **Subscription**: authorization to manipulate a product under a plan condition. Based on the subscription plan, fees might apply, which are required to be paid by the subscription manager.
 
 **Application**: represents one (or multiple) business facet of a product that a consumer will use.
 
-**Access request**: represents an authorization to use certain services for an application under the constraint of a subscription plan.
+**Access request**: represents an authorization to use certain services for an application under the constraint of a subscription plan. Access request can be automatically (default) or manually approved.
 
 **Credentials**: API Key or Oauth client credential / secret to allow access to a service.
 
 ## Get access to a product service
 
-To consume APIs from the Marketplace, you must:
+To consume APIs from the Marketplace, consumer must:
 
-* Step 1: subscribe to a product
+* Step 1: subscribe to a product and wait for the provider approval
 * Step 2: create an application
 * Step 2: request access to a resource
 * Step 4: request credentials that will allow an application to consume a resource
+* Step 5: wait for the provider to provision the credentials
+* Step 6: use the provided credentials to consume the product resources
 
-### Step 1: Subscribe to a product
+## Manage consumer subscriptions
 
-Anyone can subscribe to a product with the following role restrictions:
+Persona: **Subscription Approver** team role.
 
-| Persona               | Subscribe to a paid plan | subscribe to a free plan |
-|-----------------------|--------------------------|--------------------------|
-| Subscription manager  | Authorized               | Authorized               |
-| Central administrator | Authorized               | Authorized               |
-| Developer             | Forbidden                | Authorized               |
+{{< alert title="Note" color="primary" >}}Central Admin role can be used to. This user will be able to see all subscriptions without team constraint.{{< /alert >}}
 
-#### Subscribe from the UI
+Subscriptions are attached to a product. Consequently, subscription approver can see only the subscriptions associated to a product owned by the team(s) he is part of.
 
-1. Log into Amplify Enterprise Marketplace WebUI.
-2. Browse for the product you want to subscribe to, and click on the product name. The product details page is displayed.
-3. Click **Subscribe** to start the subscription process. A side panel is displayed asking you to:
+Subscription has 3 approval states:
 
-    * enter a subscription name
-    * select a subscription plan
-    * select the owning team of the subscription
+* Pending: subscription have been initiated by a consumer. Subscription approver can approve/reject a pending subscription.
+* Approved: subscription has been approved by a provider. Subscription approver can reject an approved subscription.
+* Rejected: subscription has been rejected by a provider. Subscription approver can approve a rejected subsription.
 
-4. Click **Save** to create the subscription.
+Only approved subscription will let the consumer continue his journey to request access to a product resource.
 
-The subscription is auto approved and a green subscribed ribbon is displayed across the product image.
+### Approving a subscription
 
-You can view your subscription by navigating to the **Subscription** menu.
+Subscription approver needs to navigate to Amplify Central > Marketplace > Subscriptions to view all subscriptions he can manage.
 
-### Step 2: Create an application
+The subscription list can be filter per subscription status (Pending / Approved / Rejected) and/or per team.
 
-1. Navigate to the **Application** menu.
-2. Click **Create application** to start creating an application. A side panel is displayed asking you to:
+Each subscription displays its name, the associated product, the organization and team that owned the subscription and the approval status.
 
-    * enter the application name
-    * optionally, enter a short description that can help to retrieve the application
-    * select the owning team of this application
-    * optionally, select an icon
+Clicking on subscription name opens the side blade with the subscription detail information. From this screen, once his consumer met all the requirements that are needed to bill him, subscrition approver can approve the subscription using the **Approve** button.
 
-3. Click **Create** to create the application.
+### Rejecting a subscription
 
-The newly created application is visible on the page. You can view its details by clicking on the application name.
+Subscription approver needs to navigate to Amplify Central > Marketplace > Subscriptions to view all subscriptions he can manage.
 
-### Step 3: Request access to a resource
+The subscription list can be filter per subscription status (Pending / Approved / Rejected) and/or per team.
 
-1. Open a subscribed product and navigate to the **product resources** section.
-2. Click the key icon related to the resource you want to access. A side panel is displayed, asking you to:
+Each subscription displays its name, the associated product, the organization and team that owned the subscription and the approval status.
 
-    * enter the access name
-    * select the subscription (only subscriptions associated to the product are visible)
-    * select the application
+Clicking on subscription name opens the side blade with the subscription detail information. From this screen, subscrition approver can reject the subscription using the **Revoke** button in case the subscription was approved previously or the **Decline** button in case the subscription is pending.
 
-3. Click **Request Access** to validate your choice.
+## Manage access request
 
-The access request is auto approved by the provider.
+Persona: **Catalog Manager** team role
 
-### Step 4: Request credentials
+{{< alert title="Note" color="primary" >}}Central Admin role can be used to. This user will be able to see all access requests without team constraint.{{< /alert >}}
 
-There are two options for requesting credentials:
+Access request are attached to an application under the constraint of a subscription. Since subscription is linked to a product, catalog manager can see only the access request associated to a product owned by the team(s) he is part of.
 
-* Option 1: just after requesting access. See [Request access to a resource](#step-3-request-access-to-a-resource)
-* Option 2: by navigating to the application details page, finding the correct access request, and requesting new credentials.
+Access request has 3 approval states:
 
-#### Option 1: just after requesting access
+* Pending: subscription has been initiated by a consumer. Subscription approver can approve/reject a pending subscription.
+* Approved: subscription has been approved by a provider. Subscription approver can reject an approved subscription.
+* Rejected: subscription has been rejected by a provider. Subscription approver can approve a rejected subsription.
 
-A **Create credentials** side panel is displayed, which allows you to request credentials. After you name your credentials and click **Save**, an event is triggered for the provider.
+Access request also contain a provisioning status:
 
-The credentials are issued on the dataplane by the provider, encrypted with the public key associated to the Marketplace organization, sent back and attached to the application.
+* Pending: the access request has not been provisioned yet
+* Success: the provisioning access has been succesfully granted
+* Error: an error occured during the provisioning process
 
-All sensitive data (API Key or Oauth client secret) coming from the dataplane are encrypted using the public key assigned to the consumer organization. The encrypted data is store in the Marketplace database for three days, after which the encrypted data is deleted and no longer available.
+### Approving an access request
 
-#### Option 2: browsing the application details
+Catalog manager needs to navigate to Amplify Central > Marketplace > Access Requests to view all access request he can manage.
 
-Navigate to the application details, open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials. Click **Create Credential** to request new credentials.
+The Access Request list can be filter per approval state (Pending / Approved / Rejected) and/or per provisioning state (Pending / Success / Error) and/or per team.
 
-### View credentials
+Each access request displays its name, the associated asset, the organization ot the team that owned the request, the approval status and the provisioning status.
 
-1. Navigate to the application details
-2. Open the corresponding subscription to see all plans you subscribe to. Once you find the appropriate plan, you will be able to see any existing credentials.
-3. Click the eye icon to see the clear value of the credentials. Be aware that this value is displayed only once and a warning message informs you about it.
+Clicking on access request name opens the side blade with the access request detail information. From this screen, once his consumer met all the requirements that are needed, catalog manager can approve the access request using the **Approve** button.
 
-After viewing your credentials, the Marketplace deletes them from its internal database. However, the credentials are still available on the dataplane side.
+This will trigger an event to infrom of the access request request approval. Based on this event, the provisioning process can start. Once the provisioning process is completed, the access request provisioning state can be enrich with the appropriate value. This provisioning can be manual or automated with the Discovery Agent associated to the environment dataplane hosting the API the cosnumer wants to use.
 
-You can request new credentials by clicking the **Create Credentials** button.
+### Rejecting an access request
 
-## Delete an application
+Catalog manager needs to navigate to Amplify Central > Marketplace > Access Requests to view all access request he can manage.
 
-1. Navigate to the *Application* page.
-2. Click the bin icon associated with the application you want to delete.
+The Access Request list can be filter per approval state (Pending / Approved / Rejected) and/or per provisioning state (Pending / Success / Error) and/or per team.
 
-An event is triggered for the provider (or the Discovery Agent if provider is using Amplify agents), who processes the event and deletes the corresponding application on the dataplane. All associated credentials on the Marketplace are removed.
+Each access request displays its name, the associated asset, the organization ot the team that owned the request, the approval status and the provisioning status.
 
-## Unsubscribe to a product
+Clicking on access request name opens the side blade with the access request detail information. From this screen, catalog manager can reject the access request using the **Revoke** button in case the access request was approved previously or the **Decline** button in case the access request is pending.
 
-1. Navigate to the *Subscription* page.
-2. Select the product you want to unsubscribe to. The details page is displayed, listing all the plans you subscribe to.
-3. Click the icon on the right side of the plan to trigger the unsubscribing process.
+## Manage credentials
 
-The triggered event is processed by the provider.
+Persona: **Catalog Manager** team role
+
+{{< alert title="Note" color="primary" >}}Central Admin role can be used to. This user will be able to see all credentials without team constraint.{{< /alert >}}
+
+Credentials are attached to a application under the constraint of a subscription. Since subscription is linked to a product, catalog manager can see only the credentials associated to a product owned by the team(s) he is part of.
+
+Credentials has 2 states:
+
+* Inactive: credential cannot be use to consume corresponding API
+* Active: credential can be use to consume corresponding API
+
+Credentials also has a provisioning status:
+
+* Pending: credential request has been initiated by a consumer. Subscription approver can approve/reject a pending subscription.
+* Success: all provisioning access have been succesfully granted
+* Error: an error occured during the provisioning step
+
+Credential can have an expiration date. This expiration date is defined in the Discovery Agent configuration managing the dataplane environment. Refer to [Enforce credential expiration date](/docs/connect_manage_environ/connected_agent_common_reference/marketplace_provisioning/#enforce-credential-expiration-date)
+
+### Suspending / Enabling credential
+
+Catalog manager needs to navigate to Amplify Central > Marketplace > Credentials to view all credentials he can manage.
+
+The Credential list can be filter per state (Active / Inactive) and/or per provisioning state (Pending / Success / Error) and/or per team.
+
+Each credential displays its name, state, epiration date if any, application name, owner name, the organization and team of the owner.
+
+Clicking on credential name opens the side blade with the credential detail information. Catalog Manager has to enter a reason before being allowed to use any action.
+
+Once the reason is entered, catalog manager can:
+
+* suspend an active credential using the **Suspend** button. The credential status will become Inactive.
+* enable a suspended credential using the **Enable** button. The credentail status will become Active and a new expiration date will be set if enforce by the Discovery Agent.
+
+### Renewing credential
+
+This action is not supported by all dataplane and may not be avialble for the provider.
+
+Catalog manager needs to navigate to Amplify Central > Marketplace > Credentials to view all credentials he can manage.
+
+The Credential list can be filter per state (Active / Inactive) and/or per provisioning state (Pending / Success / Error) and/or per team.
+
+Each credential displays its name, state, epiration date if any, application name, owner name, the organization and team of the owner.
+
+Clicking on credential name opens the side blade with the credential detail information. Catalog Manager has to enter a reason before being allowed to use the **Renew** button.
+
+### Deleting credential
+
+Catalog manager needs to navigate to Amplify Central > Marketplace > Credentials to view all credentials he can manage.
+
+The Credential list can be filter per state (Active / Inactive) and/or per provisioning state (Pending / Success / Error) and/or per team.
+
+Each credential displays its name, state, epiration date if any, application name, owner name, the organization and team of the owner.
+
+Clicking on credential name opens the side blade with the credential detail information. Catalog Manager has to enter a reason before being allowed to use the **Delete** button. A confirmation popup is display and Catalog Manager has to confirm his choice. Credential  will be completely remove from the system and deprovisioned on the dataplane.
