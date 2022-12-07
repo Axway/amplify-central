@@ -87,6 +87,15 @@ Each subscription displays its name, the associated product, the organization an
 
 Clicking on subscription name opens the side blade with the subscription detail information. From this screen, subscrition approver can reject the subscription using the **Revoke** button in case the subscription was approved previously or the **Decline** button in case the subscription is pending.
 
+### Contacting the subscribers
+
+There are 2 places from where Provider can access their consumer email:
+
+* Product Foundry > Product details > Subscriptions: select the consumer you need and click the **Copy Email** button or use directly the copy button besides the consumer email address.
+* Marketplace > Credentials list > Credential details: use the **Copy** icon besides the consumer email address.
+
+With these emails, you can reach out to the consumer using your regular messaging system.
+
 ## Manage access request
 
 Persona: **Catalog Manager** team role
