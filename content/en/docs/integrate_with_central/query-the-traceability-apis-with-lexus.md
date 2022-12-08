@@ -11,8 +11,8 @@ The core of the Lexus language and how to use it are described [in this document
 
 ## Prerequisite - API authorization
 
-1. ***Install the Axway CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick\_start/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html)
-2. ***Authorize the CLI***: [https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html)
+1. [Install the Axway CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html).
+2. [Authorize the CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html).
 
 {{< alert title="Note" color="primary" >}}If you are querying against Amplify APIs, ensure your account is assigned the **Central Admin** role in the Amplify platform dashboard.{{< /alert >}}
 
@@ -151,7 +151,7 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 }
 ```
 
-Transaction summary event
+### Transaction summary event
 
 ```js
 {

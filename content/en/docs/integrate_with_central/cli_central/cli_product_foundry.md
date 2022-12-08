@@ -8,7 +8,7 @@ Create a product from an existing asset and make it available in the marketplace
 ## Before you start
 
 * Have credentials or service account to use the CLI. Follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Understanding of the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/_index)
+* Understanding of the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/index.html)
 * Install [jq](https://stedolan.github.io/jq/) on the system
 
 For reference, the Open API specification for Amplify Central is located [here](https://apicentral.axway.com/apis/docs)
