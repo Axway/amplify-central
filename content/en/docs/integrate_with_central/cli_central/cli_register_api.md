@@ -1,8 +1,8 @@
 ---
 title: Register APIs using the CLI
 linkTitle: Register APIs using the CLI
-weight: 200
-draft: yes
+weight: 112
+draft: no
 ---
 Register an API with the Amplify management plane using an existing OpenAPI Specification.
 
@@ -19,7 +19,6 @@ Register an API in Amplify Central using the Axway Central CLI, including:
 
 * Create a new API service in an environment
 * Register an API to the service
-* Publish the API to the Unified Catalog
 
 ## Steps
 
@@ -172,7 +171,7 @@ jq --slurp -f api-service-instance.jq openapi-v2.json api-service-revision-v2-cr
 
 ### Give the API Service an icon
 
-Provide the API Service with an image / avatar, making it visually appealling to the API consumer. The following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedImage`. It will query the API Server for the API Service resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the API Service has an image attached.
+Provide the API Service with an image / avatar, making it visually appealing to the API consumer. The following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedImage`. It will query the API Server for the API Service resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the API Service has an image attached.
 
 ```bash
 #!/bin/bash
@@ -181,42 +180,4 @@ export envName=`jq -r .[0].metadata.scope.name api-service-created.json`
 export encodedImage=`base64 -i api.png`
 axway central get apis $serviceName --scope $envName -o json | jq '.spec.icon.data = $ENV.encodedImage' | jq '.spec.icon.contentType = "image/png"'  > upload.json
 axway central apply -f upload.json
-```
-
-### Publish the API to the Unified Catalog
-
-Now that the API has been registered in Amplify, make it available to API consumers in the Unified Catalog. To do this, create a resource of kind `ConsumerInstance`:
-
-```bash
-jq --slurp -f consumer-instance.jq openapi.json api-service-instance-created.json > consumer-instance.json
-axway central create -f consumer-instance.json -o json -y > consumer-instance-created.json
-```
-
-Where `api-service-instance.jq` has the following content:
-
-```json
-# Creates the API Service Instance from OAS and the created service revision
-{
-    apiVersion: "v1alpha1",
-    kind: "ConsumerInstance",
-    title: .[0].info.title,
-    metadata: {
-        scope: {
-            kind: "Environment",
-            name: .[1][0].metadata.scope.name,
-        }
-    },
-    spec: {
-        apiServiceRevision: .[1][0].name,
-        "endpoint" : [ 
-            {
-                "host" : "petstore3.swagger.io",
-                "routing" : {
-                    "basePath" : .[0].servers[0].url
-                },
-                "protocol" : "https"
-            } 
-        ],
-    }
-}
 ```

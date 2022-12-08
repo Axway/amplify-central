@@ -1,18 +1,18 @@
 ---
 title: Create and publish other resource types to the Unified Catalog
 linkTitle: Create and publish other resource types to the Unified Catalog
-weight: 110
+weight: 115
 date: 2020-06-10T00:00:00.000Z
 ---
 Use the Axway Central CLI to create other resource types, which are used by your API service, and publish the API service to the Unified Catalog. You can use the scripting of CLI commands to automate the process to create multiple resource types in your environment.
 
-After an [API Service representation](/docs/integrate_with_central/cli_central/cli_apiservices/#create-an-api-service-in-your-environment) is created, you can create additional information (resources) related to the API Service. This includes multiple versions of the API, endpoints, secrets, webhooks, subscription definitions, and a Catalog item.
+After an [API Service representation](/docs/integrate_with_central/cli_central/cli_register_api/) is created, you can create additional information (resources) related to the API Service. This includes multiple versions of the API, endpoints, secrets, webhooks, subscription definitions, and a Catalog item.
 
 ## Before you start
 
 * You will need to [authorize your DevOps service to use the DevOps API](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-devops-service-to-use-the-amplify-central-apis)
 * Verify the @axway/amplify-central-cli version is at minimum 0.1.3.
-* You have already learned how to [create a representation of an environment and API Service using the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_apiservices/).
+* You have already learned how to [create a representation of an environment and API Service using the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_register_api/).
 
 ## Objectives
 

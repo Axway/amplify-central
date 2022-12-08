@@ -21,7 +21,7 @@ Follow these steps to create an API service in your environment:
     * **API Service Image**: A visual aid when looking through the list of API services.
 4. Click **Save**.
 
-To learn how to add an API service using the Axway Central CLI, see [Build and manage API services in your environments](/docs/integrate_with_central/cli_central/cli_apiservices).
+To learn how to add an API service using the Axway Central CLI, see [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api/).
 
 ### Import an API service specification
 
@@ -44,4 +44,4 @@ On upload, the file is automatically parsed and the recommended **Specification 
 
 ### Errors and debugging
 
-In the event of an error while saving the API service, the form page will show an error box explaining what caused the error. The error may contain references to objects only found when using the CLI or API directly. In this case, please refer to the [Axway CLI](/docs/integrate_with_central/cli_central/cli_apiservices) documentation.
+In the event of an error while saving the API service, the form page will show an error box explaining what caused the error. The error may contain references to objects only found when using the CLI or API directly. In this case, please refer to the [Axway CLI](/docs/integrate_with_central/cli_central/cli_register_api) documentation.
