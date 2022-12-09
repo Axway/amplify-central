@@ -43,7 +43,7 @@ Click **Remove** to remove the logo or favicon image.
 
 ### Change the color theme
 
-From the *Appearance* page, click **Configure** in the Theme section to change the Marketplace colors and theming to match your brand. 
+From the *Appearance* page, click **Configure** in the Theme section to change the Marketplace colors and theming to match your brand.
 
 The Theme settings are displayed.
 
