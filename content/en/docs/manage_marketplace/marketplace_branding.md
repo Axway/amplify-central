@@ -37,17 +37,15 @@ From the *Appearance* page, click **Choose file** in either the Logo or the Favi
 * **Logo** - acceptable file formats are PNG, GIF or JPG and the file must be less than 500KB.
 * **Favicon** - acceptable file formats are ICO or PNG and the file must be less than 100KB.
 
-A preview of the selected logo / favicon is displayed:
-
-![Logo and Favicon preview](/Images/marketplace/marketplace_logo.png)
+A preview of the selected logo / favicon is displayed.
 
 Click **Remove** to remove the logo or favicon image.
 
 ### Change the color theme
 
-From the *Appearance* page, click **Configure** in the Theme section to change the Marketplace colors and theming to match your brand. The Theme settings are displayed:
+From the *Appearance* page, click **Configure** in the Theme section to change the Marketplace colors and theming to match your brand. 
 
-![Color theme preview](/Images/marketplace/marketplace_colortheme.png)
+The Theme settings are displayed.
 
 Under **Brand Colors**, you can configure and preview:
 
