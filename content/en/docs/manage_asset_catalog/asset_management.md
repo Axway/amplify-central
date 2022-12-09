@@ -114,12 +114,13 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
 3. From the list view, select the asset to edit.
-4. Select an asset version in a **Draft**, **Active** or **Deprecated** state.
-5. Click **Edit Asset**, **Create Draft**.
-6. The Edit Asset wizard is displayed. You can edit the Asset Name, Description, Image, Access Rights, Categories, Tags and Attributes.
-7. Click **Save Draft * Exit**.
-
-The asset is created in **Draft** state.
+4. Select an asset and click on **Edit Asset**.   version in a **Draft**, **Active** or **Deprecated** state.
+5. The Edit Asset wizard is displayed and any edits will be based on the latest draft version or release verion of the asset.
+6. You can edit the Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes without releasing a new asset version.
+7. You can edit the API Services linked to this asset in the Group Resources step and release a new asset version so its availble for consumption by a Product.
+8. You can click on the **Preview Asset** step to view your changes.  If you have made edits which do not require a new asset release, click on **Save** to update changes to the asset in a new draft.
+If you have made edits which require a new asset release on the Group Resources step, you can click on **Save** to update changes to the asset.  The **Save** action will either update the latest draft when Auto-relase is disabled or create a new release when Auto-release is enabled.
+Alternatively if you have made edits which require a new asset release on the Group Resources step with Auto-release disabled, you can click on **Save & Activate** to update changes in a asset version release.
 
 ## Delete an asset
 
