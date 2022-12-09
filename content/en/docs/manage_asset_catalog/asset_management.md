@@ -90,10 +90,11 @@ To create an asset:
 6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
 7. Configure the Access Request handling, Manual or Automatic, and click **Next**.
 8. Add the Access Rights for the asset, and click **Next**.
-9. Provide the Category, Tags, and Attribute details for the asset. Click **Save**.
-10. Click **Save Draft and Exit** to exit Asset Creation.
+9. Provide the Category, Tags, and Attribute details for the asset. Click **Next**.
+10. At the **Preview Asset** step, you can view the Asset details prior to creation.  
+At his point you can click on **Save** to create the asset in a draft state.  Alternatively, you can click on **Save & Activate** to create a new asset version release in an **Active** state for consumption in a product definition.
 
-The asset is created in **Draft** state. To use this asset in a product definition, you must move the asset to an **Active** state by activating the asset.
+If the asset is created in **Draft** state. To use this asset in a product definition, you must move the asset to an **Active** state by activating the asset.
 
 ## Activate an asset
 
