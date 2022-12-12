@@ -7,7 +7,7 @@
 // you want to generate previews for using the PREVIEW_FOR_BRANCHES variable e.g. 
 //    String PREVIEW_FOR_BRANCHES = "developmay22 developaug22 developnov22"
 //    String PREVIEW_FOR_BRANCHES = "developmay22,developaug22,developnov22"
-String PREVIEW_FOR_BRANCHES = "RDAPI-28682"
+String PREVIEW_FOR_BRANCHES = ""
 
 node('OpendocsBuilder') {
   timestamps{  // enable timestamp in the console logs
