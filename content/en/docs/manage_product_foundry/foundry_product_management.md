@@ -18,7 +18,7 @@ Learn how to use the Product Catalog WebUI to create and manage products, includ
 * Link an existing asset to the created product
 * Activate the product to make it available to the Product Foundry
 * Organize your products and releases
-* Edits the product without creating a new release
+* Edit the product with or without creating a new release
 * Archive and delete a product release
 * Archive and delete a product
 
