@@ -2,6 +2,7 @@
 title: Set product visibility
 linkTitle: Set product visibility
 weight: 15
+draft: yes
 ---
 
 Expose products for discovery and consumption by internal and / or external consumers by setting the visibility of the product in the Marketplace.
