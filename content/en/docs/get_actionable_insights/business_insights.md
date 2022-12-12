@@ -90,26 +90,15 @@ In the **Team Activity** section, view the chart (for all teams selected) or the
 
 The events reflect changes of state, creation, and publish actions. In the chart view, use the filter to show the details by week or month. Review the table to see the break down by team.
 
-## App Usage
+## Applications
 
-Click **App Usage** to see an aggregated view of API usage in your organization grouped by app over time.
+Click **Applications** to see metrics and charts about the performance of API assets within the consumers' Marketplace Applications to understand and improve the real world performance of the APIs. The list includes the parent consuming team that owns each application and its usage.
 
   ![Example of App usage](/Images/central/app_usage.png)
 
-You can filter by environments, apps, and a pre-configured timeframe or custoimze your own.
+You can filter by consuming team, application, product, service, and a pre-configured timeframe or cutomize your own.
 
-App or Application refers to:
-
-* Axway SaaS Gateway application
-* API Gateway application
-* AWS Gateway usage plan
-* Azure Gateway subscription
-
-{{< alert title="Note" color="primary" >}} The application filter is for SaaS Gateway only. The filter is not populated with external Gateway applications (that is, API Gateway application, AWS Gateway usage plan, or Azure Gateway subscription).{{< /alert >}}
-
-{{% getactionableinsights/api_app_usage %}}
-
-Click an individual item to see the usage of APIs by that app over time.
+Click an individual item to see the products with the service name and number of transactions per service.
 
 ## Subscriptions
 
