@@ -48,6 +48,8 @@ kubectl create secret generic amplify-agents-keys \
 --from-literal=password="" -o yaml
 ```
 
+Alternatively, the kubernetes secrets can be created with the helm deployment by overriding the secret properties. Please refer to the section [Update the override file](#update-the-override-file)
+
 ## Prepare Istio
 
 An `IstioOperator` is required for Istio to connect to the Traceability Agent. It tells Istio where the Envoy Access Log Service is running. If you already have Istio deployed in your environment, then merge the following configuration into your `IstioOperator` resource and apply the change. If Istio is not yet deployed, then copy this configuration into a file and apply the change.
@@ -232,9 +234,16 @@ global:
 secret:
   # Set to true, and provide the following values to enable the creation of the K8S Secret. als.keysSecretName and da.keysSecretName should receive the same name if this is enabled.
   create: false
+  # Name of the secret that will be created
   name: ""
+  # Set to false if the value of password, publicKey and privateKey properties are base64 encoded. 
+  # Defaults to true, the properties will be base64 encoded by template.
+  base64Encode: true
+  # Password for the private key
   password: ""
+  # Content of the public key
   publicKey: ""
+  # Content of the private key
   privateKey: ""
 
 # Configures the ALS Traceability Agent
@@ -314,7 +323,6 @@ als:
     apiID: ""
     # The name of the Client ID key: Ex: "clientID"
     clientID: ""
-
 
 # Configures the Discovery Agent
 da:
