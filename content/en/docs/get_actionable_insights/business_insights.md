@@ -119,7 +119,9 @@ Click **Subscriptions** to see a list of the consumer team with their subscripti
 
 ![Example of Subscriptions](/Images/central/subscriptions.png)
 
-You can filter by consuming team, product, resource (API), subscriptions, and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
+You can filter by consuming team, product, resource (API), application, subscription, and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
+
+Click the **Actions (..) menu** to download the table data.
 
 Click an individual item to see quota and last three-month usage by each resource and plan in that subscription.
 
