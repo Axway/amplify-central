@@ -8,11 +8,11 @@ Manage your products, including: create, activate a release, edit, delete, monet
 
 ## Before you start
 
-You must have credentials or a user account from your org administrator to use the Product Catalog WebUI. Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+You must have credentials or a user account from your org administrator to use the Product Foundry WebUI. Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
 
 ## Objectives
 
-Learn how to use the Product Catalog WebUI to create and manage products, including:
+Learn how to use the Product Foundry WebUI to create and manage products, including:
 
 * Create a product
 * Link an existing asset to the created product
@@ -66,7 +66,7 @@ View the following detailed information for a specific product in any state (Dra
 * Resources - List of assets linked to the product
 * Plans - Plan list associated to the product
 * Documentation - Documentation associated with the product
-* Access Rights - List the team the product is shared with
+* Access Rights - List the team(s) the product is shared with
 * Subscriptions - List the subscription attached to the product
 * Visibility - Set the product visibility in the Marketplace (for everyone / specific teams / specific team with a specific tag / Nobody)
 * Version State - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
