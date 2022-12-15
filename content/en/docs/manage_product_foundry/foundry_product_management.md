@@ -8,7 +8,7 @@ Manage your products, including: create, activate a release, edit, delete, monet
 
 ## Before you start
 
-You must have Catlog Manager team role assigned by your org administrator to use the Product Foundry WebUI. Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+You must have Catalog Manager team role, assigned by your org administrator, to use the Product Foundry WebUI. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
 
 ## Objectives
 
@@ -91,8 +91,8 @@ View the following detailed information for a specific product in any state (Dra
 
 5. Add the following Release Management information and then click **Next**:
 
-    * Auto-Release - Enabled/Disabled of the auto release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e. Assets). For example, auto-release enabled will trigger an automatic product release every time a new grouped asset version is discovered or created. This would enable a more automated and hands-off experience. If you want more control of the product release process, select auto-relase to **disabled**.
-    * Auto-Release Type - The default is set to a Patch release versions and you can select another type of asset release versioning (i.e. major or minor).
+    * Auto-Release - Enable / Disable the auto-release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e., Assets). For example, auto-release enabled will trigger an automatic product release every time a new grouped asset version is discovered or created. This enables a more automated and hands-off experience. If you want more control of the product release process, set auto-release to **disabled**.
+    * Auto-Release Type - The default is set to Patch release versions and you can select another type of product release versioning (i.e., major or minor).
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
 7. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
@@ -105,12 +105,12 @@ View the following detailed information for a specific product in any state (Dra
     * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
     * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
 
-10. At the Access Rights step, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
-11. (optional step) Provide one support contact for this product to allows consumer to get help if they need some. You can create one if you don't have support contact yet using the **+ Add new contact** button. Click **Next**.
+10. For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
+11. (Optional step) Provide one support contact so consumers can get product help, if needed. Click **+ Add new contact** and enter the contact information. Click **Next**.
 12. Provide the Tags, Attribute, and Category details for the product.
-13. You can click Preview Product to view the details prior to creation. At his point you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
+13. Click **Preview Product** to view the details prior to creation. At his point, you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
 
-If the product is created in **Draft** state. To publish this product in the Marketplace, you must move the product to an **Active** state by activating the product.
+If the product was created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published in the Marketplace.
 
 ## Activate a product
 
@@ -130,10 +130,10 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
 3. From the list view, select the product to edit.
-4. Click Edit Product. The Edit Product wizard is displayed. All edits will be based on the latest draft version or release version of the Product.
-5. The Edit Product wizard is displayed. You can edit the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, and Attributes.
-6. You can edit the Assets linked to this Product in the Link Asset step and release a new product version so its available for consumption in the Marketplace.
-7. Click Preview Product to view your product changes prior to taking effect. If you made edits that do not require a new product release, click **Save Draft & Exit** to update changes to the product in a new draft. If you have made edits that require a new asset release on the Link Asset step, click **Save** to update changes to the product. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release on the Link Asset step with Auto-release disabled, you can click **Save & Activate** to update changes in a product version release.
+4. Click **Edit Product**. *The Edit Product wizard is displayed*. All edits will be based on the latest draft version or release version of the Product.
+5. You can edit the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, and Attributes.
+6. You can edit the assets linked to this product in the Link Asset step and release a new product version so it is available for consumption in the Marketplace.
+7. Click **Preview Product** to view your product changes prior to taking effect. If you made edits that do not require a new product release, click **Save Draft & Exit** to update changes to the product in a new draft. If you have made edits that require a new asset release in the Link Asset step, click **Save** to update changes to the product. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release in the Link Asset step with Auto-release disabled, you can click **Save & Activate** to update changes in a product version release.
 
 ## Create a plan
 
