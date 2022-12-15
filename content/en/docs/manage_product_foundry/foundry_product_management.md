@@ -8,7 +8,7 @@ Manage your products, including: create, activate a release, edit, delete, monet
 
 ## Before you start
 
-You must have credentials or a user account from your org administrator to use the Product Foundry WebUI. Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+You must have Catlog Manager team role assigned by your org administrator to use the Product Foundry WebUI. Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
 
 ## Objectives
 
@@ -91,7 +91,7 @@ View the following detailed information for a specific product in any state (Dra
 
 5. Add the following Release Management information and then click **Next**:
 
-    * Auto-Release - Enabled/Disabled of the auto release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e. Assets). For example, auto-release enabled will trigger an automatic prodcut release every time a new grouped asset version is discovered or created. This would enable a more automated and hands-off experience. If you want more control of the product release process, select auto-relase to **disabled**.
+    * Auto-Release - Enabled/Disabled of the auto release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e. Assets). For example, auto-release enabled will trigger an automatic product release every time a new grouped asset version is discovered or created. This would enable a more automated and hands-off experience. If you want more control of the product release process, select auto-relase to **disabled**.
     * Auto-Release Type - The default is set to a Patch release versions and you can select another type of asset release versioning (i.e. major or minor).
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
