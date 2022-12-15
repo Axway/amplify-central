@@ -93,7 +93,6 @@ View the following detailed information for a specific product in any state (Dra
 
     * Auto-Release - Enabled/Disabled of the auto release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e. Assets). For example, auto-release enabled will trigger an automatic prodcut release every time a new grouped asset version is discovered or created. This would enable a more automated and hands-off experience. If you want more control of the product release process, select auto-relase to **disabled**.
     * Auto-Release Type - The default is set to a Patch release versions and you can select another type of asset release versioning (i.e. major or minor).
-    
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
 7. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
