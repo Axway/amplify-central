@@ -104,8 +104,8 @@ View the following detailed information for a specific product in any state (Dra
     * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
     * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
 
-10. Select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
-11. Provide one or more support contacts to be made available for this product in the Marketplace. Click **Next**.
+10. At the Access Rights step, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
+11. (optional step) Provide one support contact for this product to allows consumer to get help if they need some. You can create one if you don't have support contact yet using the **+ Add new contact** button. Click **Next**.
 12. Provide the Tags, Attribute, and Category details for the product.
 13. You can click Preview Product to view the details prior to creation. At his point you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
 
