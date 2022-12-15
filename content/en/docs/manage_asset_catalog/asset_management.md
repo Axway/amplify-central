@@ -89,7 +89,7 @@ To create an asset:
 
 6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
 7. Configure the Access Request handling, Manual or Automatic, and click **Next**.
-8. Add the Access Rights for the asset, and click **Next**.
+8. At the Access Rights step, select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Central Admin** will have access to it. If you shared your asset with a specific team, each member of the team will be able to see your product. Click **Next**.
 9. Provide the Category, Tags, and Attribute details for the asset. Click **Next**.
 10. Click **Preview Asset** to view the details prior to creation. At his point you can click **Save** to create the asset in a draft state. Alternatively, you can click **Save & Activate** to create a new asset version release in an **Active** state for consumption in a product definition.
 
