@@ -4,11 +4,11 @@ linkTitle: Asset management
 weight: 20
 ---
 
-Manage your assets, including: view, create, activate, deprecate and archive, with the Asset Catalog WebUI.
+Manage your assets, including: view, create, activate, edit, delete, deprecate and archive, with the Asset Catalog WebUI.
 
 ## Before you start
 
-You must have credentials or a user account from your org administrator to use the Asset Catalog WebUI.  Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+You must have credentials or a user account from your org administrator to use the Asset Catalog WebUI. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
 
 ## Objectives
 
@@ -18,6 +18,7 @@ Learn how to use the Asset Catalog WebUI to create and manage assets, including:
 * Link an existing API to the created asset
 * Activate the asset to make it available to the Product Foundry
 * Organize your assets
+* Edit the asset with or without creating a new release
 * Archive and delete an asset
 
 ## View assets
@@ -64,6 +65,7 @@ To view asset details:
     * Categories - Help classify assets into groups and find the asset by filtering on the Category
     * Tags - Labels to help find assets in the catalog
     * Attributes - Key and value pair to allow customers to attach/query for custom information
+    * Release Management - The Asset details page has a badge below the title indicating the asset is set for **Automatic** or **Manual** release of new versions.  
 
 {{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the asset details view.{{< /alert >}}
 
@@ -83,16 +85,16 @@ To create an asset:
 
 5. Add the following Release Management information and then click **Next**:
 
-    * Auto-Release - Enabled/Disabled of the auto release of new Asset versions
-    * Auto-Release Type - If auto-release is enabled, a new asset will be automatically released with each change to any one of the grouped resources. The default is set to a Patch release and you can select another type of asset release.
+    * Auto-Release - Enable / disable the auto-release of new Asset versions. If auto-release is **enabled**, a new asset will be automatically released with each change to any one of the grouped resources (i.e., API Services). For example, auto-release enabled will trigger an automatic asset release every time a new grouped API Service revision is discovered or created. This enables a more automated and hands-off experience. If you want more control of the asset release process, set auto-release to **disabled**.
+    * Auto-Release Type - The default is set to Patch release versions and you can select another type of asset release versioning (i.e., major or minor).
 
 6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
-7. Configure the Access Request handling, Manual or Automatic, and click **Next**.
-8. Add the Access Rights for the asset, and click **Next**.
-9. Provide the Category, Tags, and Attribute details for the asset. Click **Save**.
-10. Click **Save Draft and Exit** to exit Asset Creation.
+7. Configure the Access Request handling for Manual or Automatic, and click **Next**. If Access Request Handling is set to **Manual**, a user must approve access to the API Service(s) grouped in the asset. If Access Request Handling is set to **Automatic**, the access to the API Service(s) grouped in the asset is granted automatically.
+8. For Access Rights, select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Central Admin** will have access to it. If you shared your asset with a specific team, each member of the team will be able to see your asset. Click **Next**.
+9. Provide the Category, Tags, and Attribute details for the asset. Click **Next**.
+10. Click **Preview Asset** to view the details prior to creation. At his point, you can click **Save** to create the asset in a draft state. Alternatively, you can click **Save & Activate** to create a new asset version release in an **Active** state for consumption in a product definition.
 
-The asset is created in **Draft** state. To use this asset in a product definition, you must move the asset to an **Active** state by activating the asset.
+If the asset was created in a **Draft** state, you must move it to an **Active** state (by activating the asset) before you can use it in a product definition.
 
 ## Activate an asset
 
@@ -112,13 +114,13 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
-3. From the list view, select the asset to edit.
-4. Select an asset version in a **Draft**, **Active** or **Deprecated** state.
-5. Click **Edit Asset**, **Create Draft**.
-6. The Edit Asset wizard is displayed. You can edit the Asset Name, Description, Image, Access Rights, Categories, Tags and Attributes.
-7. Click **Save Draft * Exit**.
-
-The asset is created in **Draft** state.
+3. From the list view, click on the asset to edit.
+4. Click **Edit Asset**. *The Edit Asset wizard is displayed*. All edits will be based on the latest draft version or release version of the asset.
+5. You can edit the Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes without releasing a new asset version.
+6. You can edit the API Services linked to this asset in the Group Resources step and release a new asset version to make it available for consumption by a product.
+7. Click **Preview Asset** to view your asset changes prior to taking effect. If you made edits that do not require a new asset release, click **Save Draft & Exit** to update changes to the asset in a new draft.
+If you have made edits that require a new asset release in the Group Resources step, click **Save** to update changes to the asset. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
+Alternatively, if you made edits that require a new asset release in the Group Resources step with Auto-release disabled, you can click **Save & Activate** to update changes in an asset version release.
 
 ## Delete an asset
 
