@@ -88,10 +88,15 @@ View the following detailed information for a specific product in any state (Dra
     * Description - A short description of the asset
     * Image - An icon or image to be associated with the product
 
-5. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
-6. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
-7. Add the quota to the plan. By default, one quota is added. You can assign multiple resource to the quota, but each resource can be part of only one quota. To add a quota, click **+ Add Quota** and select the resources and the limit for the quota. Click **Next**.
-8. Add documentation elements (sections and articles). By default, an empty document is created.
+5. Add the following Release Management information and then click **Next**:
+
+    * Auto-Release - Enabled/Disabled of the auto release of new Product versions
+    * Auto-Release Type - If auto-release is enabled, a new product will be automatically released with each change to any one of the linked assets. The default is set to a Patch release and you can select another type of product release.
+
+6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
+7. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
+8. Add the quota to the plan. By default, one quota is added. You can assign multiple resource to the quota, but each resource can be part of only one quota. To add a quota, click **+ Add Quota** and select the resources and the limit for the quota. Click **Next**.
+9. Add documentation elements (sections and articles). By default, an empty document is created.
 
     * Update the document name and description.
     * Click the folder icon to add a new section at the end of the document.
@@ -99,11 +104,12 @@ View the following detailed information for a specific product in any state (Dra
     * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
     * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
 
-9. Select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
-10. Provide the Tags, Attribute, and Category details for the product.
-11. Click **Save**.
+10. Select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
+11. Provide one or more support contacts to be made available for this product in the Marketplace. Click **Next**.
+12. Provide the Tags, Attribute, and Category details for the product.
+13. You can click Preview Product to view the details prior to creation. At his point you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
 
-The product is created in **Draft** state. To publish this product in the Marketplace, you must move the product to an **Active** state by activating the product.
+If the product is created in **Draft** state. To publish this product in the Marketplace, you must move the product to an **Active** state by activating the product.
 
 ## Activate a product
 
@@ -121,14 +127,12 @@ The product must be in **Draft** state.
 The product can be in **Draft**, **Active**, or **Deprecated** state.
 
 1. Navigate to *Catalog > Product Foundry*.
-2. Select **All Products**..
+2. Select **All Products**.
 3. From the list view, select the product to edit.
-4. Select a product version in a **Draft**, **Active** or **Deprecated** state.
-5. Click **Edit Draft** or **Create Draft**.
-6. The Edit Product wizard is displayed. You can edit the Product Name, Description, Image, Asset link, documentation, Categories, Tags, and Attributes.
-7. Click **Save Draft * Exit**.
-
-A new product release is created in **Draft** state.
+4. Click Edit Product. The Edit Product wizard is displayed. All edits will be based on the latest draft version or release version of the Product.
+5. The Edit Product wizard is displayed. You can edit the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, and Attributes.
+6. You can edit the Assets linked to this Product in the Link Asset step and release a new product version so its available for consumption in the Marketplace.
+7. Click Preview Product to view your changes. If you made edits that do not require a new product release, click **Save Draft & Exit** to update changes to the product in a new draft. If you have made edits that require a new asset release on the Link Asset step, click **Save** to update changes to the product. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release on the Link Asset step with Auto-release disabled, you can click **Save & Activate** to update changes in a product version release.
 
 ## Create a plan
 
