@@ -89,8 +89,8 @@ To create an asset:
     * Auto-Release Type -  The default is set to a Patch release versions and you can select another type of asset release versioning (i.e. major or minor).
 
 6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
-7. Configure the Access Request handling, Manual or Automatic, and click **Next**.
-8. At the Access Rights step, select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Central Admin** will have access to it. If you shared your asset with a specific team, each member of the team will be able to see your product. Click **Next**.
+7. Configure the Access Request handling, Manual or Automatic, and click **Next**.  If Access Request Handling is set to **Manual**, a user must approve access to the API Service(s) grouped in the asset.   If Access Reuest Handling is set to **Automatic**, the access to the API Service(s) grouped in the asset is granted atuomatically. 
+8. At the Access Rights step, select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Central Admin** will have access to it. If you shared your asset with a specific team, each member of the team will be able to see your asset. Click **Next**.
 9. Provide the Category, Tags, and Attribute details for the asset. Click **Next**.
 10. Click **Preview Asset** to view the details prior to creation. At his point you can click **Save** to create the asset in a draft state. Alternatively, you can click **Save & Activate** to create a new asset version release in an **Active** state for consumption in a product definition.
 
