@@ -73,6 +73,7 @@ View the following detailed information for a specific product in any state (Dra
 * Category - Categories to help classify product into groups and find the asset by filtering on the Category
 * Tags - Labels to help find product in the catalog
 * Attributes - Key and value pair to allow customers to attach / query for custom information
+* Release Management - The Product details page has a badge below the title indicating the Product is set for **Automatic** or **Manual release** of new versions.
 
 {{< alert title="Note" color="primary" >}}Tags, Attributes, Categories, and plans can be added or removed in the product details view without impacting the product lifecycle.{{< /alert >}}
 
@@ -90,8 +91,9 @@ View the following detailed information for a specific product in any state (Dra
 
 5. Add the following Release Management information and then click **Next**:
 
-    * Auto-Release - Enabled/Disabled of the auto release of new Product versions
-    * Auto-Release Type - If auto-release is enabled, a new product will be automatically released with each change to any one of the linked assets. The default is set to a Patch release and you can select another type of product release.
+    * Auto-Release - Enabled/Disabled of the auto release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e. Assets). For example, auto-release enabled will trigger an automatic prodcut release every time a new grouped asset version is discovered or created. This would enable a more automated and hands-off experience. If you want more control of the product release process, select auto-relase to **disabled**.
+    * Auto-Release Type - The default is set to a Patch release versions and you can select another type of asset release versioning (i.e. major or minor).
+    
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
 7. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
@@ -132,7 +134,7 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 4. Click Edit Product. The Edit Product wizard is displayed. All edits will be based on the latest draft version or release version of the Product.
 5. The Edit Product wizard is displayed. You can edit the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, and Attributes.
 6. You can edit the Assets linked to this Product in the Link Asset step and release a new product version so its available for consumption in the Marketplace.
-7. Click Preview Product to view your changes. If you made edits that do not require a new product release, click **Save Draft & Exit** to update changes to the product in a new draft. If you have made edits that require a new asset release on the Link Asset step, click **Save** to update changes to the product. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release on the Link Asset step with Auto-release disabled, you can click **Save & Activate** to update changes in a product version release.
+7. Click Preview Product to view your product changes prior to taking effect. If you made edits that do not require a new product release, click **Save Draft & Exit** to update changes to the product in a new draft. If you have made edits that require a new asset release on the Link Asset step, click **Save** to update changes to the product. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release on the Link Asset step with Auto-release disabled, you can click **Save & Activate** to update changes in a product version release.
 
 ## Create a plan
 
