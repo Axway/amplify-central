@@ -71,11 +71,14 @@ From the *Homepage* page, locate the Featured Content section to show and custom
 
 ### Customize the featured content
 
-From the Homepage - *Featured Content* section, when you select to show featured categories or featured products you must select how the content should be sorted on your Marketplace homepage:
+From the Homepage - *Featured Content* section, you can select to show featured categories or featured products and then customize the following:
 
-* **Alphabetical** - products of categories sorted alphabetically.
-* **Most popular** - sorted by most subscriptions.
-* **Most recent** - sorted by created date with most recent first.
+* **Title** - the title for the featured categories or featured products section.
+* **Sort by** - how the featured content should be sorted on your Marketplace homepage:
+
+    * **Alphabetical** - products of categories sorted alphabetically.
+    * **Most popular** - sorted by most subscriptions.
+    * **Most recent** - sorted by created date with most recent first.
 
 Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
 
