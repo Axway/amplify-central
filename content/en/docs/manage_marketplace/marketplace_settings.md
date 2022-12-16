@@ -36,15 +36,17 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
         * **Protected** - select to make the Marketplace accessible only to registered users in your organization.
         * **Public** - select to make your Marketplace accessible to all users, anonymous and authenticated with an account.
 
-    * **Consumer Organizations** - indicates whether consumers outside of your organization can access your Marketplace.
+    * **Consumer Organizations** - select whether consumers outside of your organization can access your Marketplace (allow or disallow).
 
-        * **Disallow** - consumers outside your organization are not allowed to access your Marketplace.
-        * **Allow** - consumers outside your organization are allowed to access your Marketplace.
+        * **Require Approval** - select to require approval for newly registered consumer orgs before allowing access to the corresponding marketplace.
 
-    * **Self signup** - when Consumer Organizations are allowed, this setting becomes available and indicates whether a user can signup for the Marketplace:
+            * **Unrestriced** - approval from an org administrator is not required to access the corresponding Marketplace.
+            * **Restricted** - approval from an org administator is required to access the corresponding Marketplace.
 
-        * **Disallow** - self-signup is disabled and only Administrators can invite users into the Marketplace.
-        * **Allow** - anyone can signup to the Marketplace and register their own account.
+        * **Self signup** - when Consumer Organizations are allowed, this setting becomes available and indicates whether a user can signup for the Marketplace:
+
+            * **Disallow** - self-signup is disabled and only Administrators can invite users into the Marketplace.
+            * **Allow** - anyone can signup to the Marketplace and register their own account.
 
     * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
 
