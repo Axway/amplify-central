@@ -20,24 +20,24 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify December 16th, 2022](/docs/amplify_relnotes/20221216_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.42. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.43. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.37
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.33
-* **Azure latest release** - Agent version 1.1.36
-* **Istio 1.9.5** - DA=v1.0.4 / TA=v2.0.46
-* **Apigee Edge** - Agent version 0.1.3
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.38
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.34
+* **Azure latest release** - Agent version 1.1.37
+* **Istio 1.9.5** - DA=v1.0.4 / TA=v2.0.47
+* **Apigee Edge** - Agent version 0.1.4
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.13
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
+| What's new: | Improved processing of unpublishing API Services. <br />Check for duration and interval values within a recommended range. |
 | Bug fixes: | None. |
 
 | Agents |         |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | **Axway API Management Gateway** - Virtual Host support / Discover published front-end APIs only / Configure number of workers to reduce requests and CPU usage / Agents updated with Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Base64 Encoding / Agents updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - API traffic metrics / Agents updated with Axway Agent SDK. <br />**Mulesoft Gateway** - Consumer details in metric event / Provisioning application / Agents updated with Axway Agent SDK. |
+| Bug fixes: | **Istio Gateway** - Unnecessary log messages during cleanup. <br />**Mulesoft Gateway** - Traceability Agent configuration setup not working. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -46,13 +46,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.42. This version is 
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | None. |
+| What's new: | Team sharing. <br />Edit API Service in non-connected agent environment. <br />Asset details improvement.  |
 | Bug fixes: | None. |
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Configurable support contact office hours. <br />Multi-Marketplace support. <br />Team sharing. |
+| Bug fixes: | Desynchronization of the product’s publication status. <br />Product using a shared asset is not displayed correctly. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -61,8 +61,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.42. This version is 
 
 | Marketplace |         |
 |-------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Multi-Marketplace support. <br />Application page enhancements. <br />Corrupted products are not visible in Marketplace to non-subscription users. |
+| Bug fixes: | Marketplace tooltip too small in size. <br />Users that are not logged in have access to credentials. |
 
 | Consumer insights |         |
 |-------------------|---------|
