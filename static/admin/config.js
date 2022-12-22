@@ -179,6 +179,13 @@ format: 'frontmatter',
   description: 'All pages related to Manage your Marketplace',
   format: 'frontmatter',
 }, {
+    ...docsDefaults('billing_integration', 'billing_integration'),
+    name: 'billing_integration',
+    label: 'Billing integration',
+    label_singular: 'page in Billing integration section',
+    description: 'All pages related to Billing integration',
+    format: 'frontmatter',
+  }, {  
   ...docsDefaults('consumer_experience', 'consumer_experience'),
   name: 'consumer_experience',
   label: 'Consumer experience',
