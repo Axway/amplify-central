@@ -1,11 +1,17 @@
 ---
 title: Billing integration
-linkTitle: Consumer experience
+linkTitle: Billing integration
 weight: 50
 hide_readingtime: true
 ---
 
-The Amplify Marketplace Billing integration consists of three integration flows for linking Amplify product plans, Marketplace subscriptions and API transactions to a billing platform, such as Recurly, to monetize API usage.
+The Amplify Marketplace Billing integration consists of three integration flows for linking Amplify product plans, Marketplace subscriptions and API transactions to a billing platform, such as Recurly, to monetize API usage:
+
+* Provision plan flow
+* Provision subscription flow
+* Traffic reporter flow
+
+For detailed flow information, see [Integration components and flows](/docs/manage_marketplace/billing_integration/integration_components_flows)
 
 ## How Billing integration works
 
@@ -24,8 +30,8 @@ The Amplify Marketplace Billing integration consists of three integration flows 
 **Usage Notes**:
 
 * To specify which product plans should be linked to the billing platform, the API provider must add a specific attribute to those Products with either the API, CLI or the UI.
-* Webhook integrations are configured to detect updates to product plans and subscriptions. For example, when a new product plan is created or deleted, or when a subscription is created or deleted. These trigger the integrations to process resources that are tagged appropriately.
-* Amplify product APIs are used to retrieve and update product plans, quotas, subscriptions and other related resources.
+* [Webhook integrations](/docs/integrate_with_central/webhook) are configured to detect updates to product plans and subscriptions. For example, when a new product plan is created or deleted, or when a subscription is created or deleted. These trigger the integrations to process resources that are tagged appropriately.
+* [Amplify product APIs](https://docs.axway.com/category/api) are used to retrieve and update product plans, quotas, subscriptions and other related resources.
 * Billing platform APIs are used to create, retrieve and update accounts, billing plans, subscriptions and other related resources in the billing platform.
 * The integrations create billing platform resources with codes that relate to the linked resources in Amplify. They also add attributes to the Amplify resources to link them to the corresponding billing platform resources.
-* A traffic reporting integration, that runs on a configurable schedule, queries the Amplify Traceability API and reports corresponding API traffic to the billing platform.
+* A traffic reporting integration, that runs on a configurable schedule, queries the [Amplify Traceability API](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=TraceabilityConnector&productversion=1.0.0&filename=swagger.json&disabletry=true) and reports corresponding API traffic to the billing platform.
