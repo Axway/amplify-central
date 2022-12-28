@@ -64,7 +64,7 @@ Use the following instructions to install and configure the integrations.
 
 8. Test the integration by creating a product plan and a subscription. After the subscription is approved by the integration, you can request access to an asset and make API calls. You can then trigger the Traffic Reporting integration to report subscription usage to the billing system.
 
-### Link the Amplify plan and subscription with the billing platform
+### Link the Amplify plan and subscription to the billing platform
 
  To automatically create billing plans based on product plans, you must set a `billingSystem` attribute in the Marketplace product:
 
@@ -82,6 +82,6 @@ Use the following instructions to install and configure the integrations.
 .
 ```
 
-The Product Plan must be a paid plan with manual approval. Only product plans with at least one Tiered/Graduated and/or Pay Per Use quota are supported.
+The product plan must be a paid plan with manual approval. Only product plans with at least one Tiered/Graduated and/or Pay Per Use quota are supported.
 
-For product subscriptions to be linked to subscriptions in the billing platform, such as Recurly, an Account must exist in in the billing platform with a code that corresponds to the subscriber's user ID, Team ID or Organization ID:
+For product subscriptions to be linked to subscriptions in the billing platform, such as Recurly, an account must exist in in the billing platform with a code that corresponds to the subscriber's user ID, team ID or organization ID:
