@@ -6,6 +6,10 @@ weight: 20
 ---
 The imported integrations do not contain authentication on the webhook trigger, but you can enhance security by adding basic authentication.  
 
+## Before you start
+
+You must have an [installed and configured](/docs/manage_marketplace/billing_integration/intall_configure_billing_integration) Billing integration solution.
+
 ## Objective
 
 Use the following instructions to add basic authentication and set a username and password.
@@ -17,6 +21,8 @@ Use the following instructions to add basic authentication and set a username an
     a. Set **Authentication** to *Basic*. <br />
     b. Enter your **Username** and **Password**. <br />
     c. Click **Update**.
+
+    ![Components](/Images/marketplace/billing_integration/webhook1.png)
 
 2. Edit your YAML files to specify the authentication via a [secret](https://docs.axway.com/bundle/amplify-central/page/docs/integrate_with_central/webhook/index.html), so that the webhook will use Basic Authentication with the provided credentials when it triggers your integrations.
 

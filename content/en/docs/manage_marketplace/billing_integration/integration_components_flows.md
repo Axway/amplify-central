@@ -4,7 +4,9 @@ linkTitle: Billing integration components
 draft: false
 weight: 40
 ---
-The Amplify Billing integration is comprise of seven connections, three integration flows, one Service and one Java Service:
+The Amplify Billing integration solution is comprise of seven connections, three integration flows, one Service and one Java Service:
+
+![Components](/Images/marketplace/billing_integration/components1.png)
 
 ## Connections
 
@@ -28,4 +30,8 @@ The Amplify Billing integration is comprise of seven connections, three integrat
 
 ## Service
 
-* **ProviderNotifier** - Notifies the API Provider of issues. It contains an MS Teams call. It is separated out from the integrations in case you want to modify the way notifications are handled (e.g., send an email instead). This way, you modify just this service instead of making multiple changes throughout the integrations.
+* **ProviderNotifier** - Notifies the API Provider of issues. It contains an MS Teams call:
+
+    ![MS Teams call](/Images/marketplace/billing_integration/components2.png)
+
+    It is separated out from the integrations in case you want to modify the way notifications are handled (e.g., send an email instead). This way, you modify just this service instead of making multiple changes throughout the integrations.
