@@ -22,9 +22,9 @@ Learn how to create and configure the product plan using the Product Foundry Web
 
 | State      | Description                                                                                                                                                                |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Draft      | The plan is not listed in the Marketplace. Changes can be made to the plan.                                                                                 |
-| Active     | The plan is listed in the Marketplace. Allows new subscriptions.                                                                                            |
-| Deprecated | New subscriptions on this plan are not allowed. Consumers with an existing subscription can continue to stay on this plan until their subscription expires. |
+| Draft      | The plan is not listed in the Marketplace. Changes can be made to the plan.                                                                                                |
+| Active     | The plan is listed in the Marketplace. Allows new subscriptions.                                                                                                           |
+| Deprecated | New subscriptions on this plan are not allowed. Consumers with an existing subscription can continue to stay on this plan until their subscription expires.                |
 | Archived   | After a plan is deprecated with an auto-expiration date, the plan will automatically move to Archived when the last subscription moves to expired.                         |
 
 ## Product plan type and consumption cost
@@ -34,14 +34,22 @@ There are two types of plans:
 * **Free plan** - consumer will not be charged for their API consumption.
 * **Paid plan**:
     * **Standard** - consumer will be charged a base price for the consumption of a guaranteed set of quota.
+    * **Pay per use** - consumer will be charged a fixed amount for each consumed transaction. There is no consumption limit.
     * **Tier - volume** - consumer will be charged based on the volume corresponding to the tier quota + flat tier fee, if any.
     * **Tier - graduated** - consumer will be charged based on the volume corresponding to each tier quota that includes their consumption + flat tier fee, if any.
 
-Illustrative pricing samples:
+Illustrative pricing samples for paid plans:
 
-* Standard paid plan cost: $0.01 per transaction
+* Standard paid plan cost: base plan price cost if any.
 
-* Tier paid plan cost:
+* Pay per use paid plan cost: plan base price if any + cost per consumed transaction
+
+| *Consumed transactions* | *Transaction price* | *Billing price*       |
+|-------------------------|---------------------|-----------------------|
+| 1,000                   | 0.01                | 1,000 \* 0.01 = $10   |
+| 10,000                  | 0.01                | 10,000 \* 0.01 = $100 |
+
+* Tier paid plan cost: plan base price if any + tier cost
 
 | *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   |
 |--------------|----------------|--------------|-------------------|
@@ -49,17 +57,14 @@ Illustrative pricing samples:
 | 501          | 5000           | $1           | $10               |
 | 5001         | unlimited      | $0.5         | $20               |
 
-* Associated costs:
+Associated costs:
 
-| *Plan Type*      | *Consumed transactions* | *Cost*                                                                                                                                                                         |
-|------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| standard         | 1,975                   | 1,975 * 0.01 = **$ 19.75**                                                                                                                                                     |
-| standard         | 10,000                  | 10,000 * 0.01 = **$ 100**                                                                                                                                                      |
-|                  |                         |                                                                                                                                                                                |
-| tier - volume    | 1,975                   | Second tier applied as matching the number of transactions + flat fee tier 2 -> 1975 \* 1 + 10 = **$ 1,985**                                                                      |
-| tier - volume    | 10,000                  | Third tier applied + flat fee tier 3 -> 10,000 \* 0.5 + 20 = **$ 5,020**                                                                                                 |
-|                  |                         |                                                                                                                                                                                |
-| tier - graduated | 1,975                   | Cost of the first 500 trs + cost of the remaining transactions + flat fee from tier 1 and 2 -> 500 \* 2 + 1,474 \* 1 + 10 = **$ 2,484**                                              |
+| *Plan Type*      | *Consumed transactions* | *Cost*                                                                                                                                                                                  |
+|------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| tier - volume    | 1,975                   | Second tier applied as matching the number of transactions + flat fee tier 2 -> 1975 \* 1 + 10 = **$ 1,985**                                                                            |
+| tier - volume    | 10,000                  | Third tier applied + flat fee tier 3 -> 10,000 \* 0.5 + 20 = **$ 5,020**                                                                                                                |
+|                  |                         |                                                                                                                                                                                         |
+| tier - graduated | 1,975                   | Cost of the first 500 trs + cost of the remaining transactions + flat fee from tier 1 and 2 -> 500 \* 2 + 1,474 \* 1 + 10 = **$ 2,484**                                                 |
 | tier - graduated | 10,000                  | Cost of the first 500 trs + cost of the next 5000 + cost of the remaining transactions + flat fee from tier 1,2 and 3 -> 500 \* 2 + 4,499 \* 1 + 4,999 \* 0.5 + 10 + 20 = **$ 8,528.5** |
 
 ## Create a product plan
@@ -117,9 +122,10 @@ To configure a quota for a paid plan, enter values for the following properties:
     * **Currency** - the currency that will be used by the billing system (USD - EUR).
     * **Amount** - the price value.
     * **Metering period** - select either **Monthly**, **Daily**, **Weekly**, or **Annually**.
-* **Quota type** - select either **Standard** or **Tiered**:
+* **Quota type** - select either **Standard** or **Tiered** or **Pay Per Use**:
     * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota type**, **Limit type**).
     * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier.
+    * Pay per Use - select the transacation unit cost.
 
 Click **+ Add Quota** to create another quota group for a different resource. Once a resources is assigned to a quota group, it is no longer available for another quota group.
 
