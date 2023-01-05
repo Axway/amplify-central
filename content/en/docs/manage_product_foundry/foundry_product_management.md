@@ -63,7 +63,7 @@ View the following detailed information for a specific product in any state (Dra
 * Created On - Date, Time, and Username of who created this product
 * Created By - The user who last modified the product
 * Description - A short description of the product
-* Resources - List of assets linked to the product 
+* Resources - List of assets linked to the product
 * Plans - Plan list associated to the product
 * Documentation - Documentation associated with the product
 * Access Rights - List the team(s) the product is shared with **Robert**
