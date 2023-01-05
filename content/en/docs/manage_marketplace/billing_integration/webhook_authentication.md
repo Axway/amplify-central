@@ -1,6 +1,6 @@
 ---
 title: Integration webhook authentication
-linkTitle: webhook authentication
+linkTitle: Integration webhook authentication
 draft: False
 weight: 20
 ---

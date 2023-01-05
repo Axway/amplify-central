@@ -50,7 +50,7 @@ Once Billing integration is installed and configured, you are ready to monetize 
 
 **Usage Notes**:
 
-* To specify which product plans should be linked to the billing platform, the API provider must add a specific attribute to those Products with either the API, CLI or the UI.
+* To specify which product plans should be linked to the billing platform, the API provider must add a specific attribute `billingSystem=recurly` to those Products with either the API, CLI or the UI.
 * [Webhook integrations](/docs/integrate_with_central/webhook) are configured to detect updates to product plans and subscriptions. For example, when a new product plan is created or deleted, or when a subscription is created or deleted. These trigger the integrations to process resources that are tagged appropriately.
 * [Amplify product APIs](https://docs.axway.com/category/api) are used to retrieve and update product plans, quotas, subscriptions and other related resources.
 * Billing platform APIs are used to create, retrieve and update accounts, billing plans, subscriptions and other related resources in the billing platform.

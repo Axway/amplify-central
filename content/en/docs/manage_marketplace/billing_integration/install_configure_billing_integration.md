@@ -74,13 +74,13 @@ Use the following instructions to install and configure the integrations.
 3. Create your [Amplify integration](https://blog.axway.com/product-insights/amplify-platform/central/create-an-amplify-central-integration-webhook-using-the-axway-cli) using the CLI:
 
     ```yaml
-    amplify central create -f monitor-updated-deleted-plans-integration.yaml
+    axway central create -f monitor-updated-deleted-plans-integration.yaml
     ```
 
     and
 
     ```yaml
-    amplify central create -f monitor-updated-deleted-subscriptions-integration.yaml
+    axway central create -f monitor-updated-deleted-subscriptions-integration.yaml
     ```
 
 4. Edit the Traffic Reporter Integration Scheduler trigger to specify the frequency that traffic will be reported to the billing system.
@@ -144,6 +144,12 @@ The product plan must be a paid plan with manual approval. Only product plans wi
 ![Tiered Graduated](/Images/marketplace/billing_integration/config24.png)
 
 For product subscriptions to be linked to subscriptions in the billing platform, such as Recurly, an account must exist in in the billing platform with a code that corresponds to the subscriber's user ID, team ID or organization ID.
+
+Use the following format for the Recurly account code:
+
+* amplify-user-{{user id}}
+* amplify-team-{{team id}}
+* amplify-org-{{org id}}
 
 ![Recurly accounts](/Images/marketplace/billing_integration/config25.png)
 
