@@ -60,7 +60,7 @@ To view asset details:
     * Description - A short description of the asset
     * Resources - API Services or other resource types that are linked to this asset
     * Products - Information on products that are linked to this asset
-    * Access Rights - Shared teams that have access to this asset
+    * Access Rights - Shared teams that have access to this asset **Robert**
     * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
     * Categories - Help classify assets into groups and find the asset by filtering on the Category
     * Tags - Labels to help find assets in the catalog

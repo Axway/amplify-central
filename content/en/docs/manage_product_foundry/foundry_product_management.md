@@ -63,10 +63,10 @@ View the following detailed information for a specific product in any state (Dra
 * Created On - Date, Time, and Username of who created this product
 * Created By - The user who last modified the product
 * Description - A short description of the product
-* Resources - List of assets linked to the product
+* Resources - List of assets linked to the product 
 * Plans - Plan list associated to the product
 * Documentation - Documentation associated with the product
-* Access Rights - List the team(s) the product is shared with
+* Access Rights - List the team(s) the product is shared with **Robert**
 * Subscriptions - List the subscription attached to the product
 * Visibility - Set the product visibility in the Marketplace (for everyone / specific teams / specific team with a specific tag / Nobody)
 * Version State - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
