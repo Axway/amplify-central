@@ -1,7 +1,7 @@
 ---
 title: Manage product support contact
 linkTitle: Manage product support contact
-weight: 30
+weight: 50
 ---
 
 Manage the product support contact including: create, assignment to a product, edit and delete with the product Foundry UI.
