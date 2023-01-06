@@ -22,9 +22,9 @@ Visibility can be restricted based on a provider team, a provider team tag and/o
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**. *The product list view is displayed*.
-3. Find the product you want to publish and click **+**, located at the bottom right corner beside the Unpublished badge, to start the publication process. 
+3. Find the product you want to publish and click **+**, located at the bottom right corner beside the Unpublished badge, to start the publication process.
 4. Select the Marketplace where you want to publish the product, as well as the visibility restriction: Platform Users and/or Marketplace Users.
-    
+
     * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
 
         * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
