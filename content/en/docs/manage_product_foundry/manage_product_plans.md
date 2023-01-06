@@ -40,16 +40,16 @@ There are two types of plans:
 
 Illustrative pricing samples for paid plans:
 
-* Standard paid plan cost: base plan price cost if any.
+* Standard paid plan cost: plan base price, if any
 
-* Pay per use paid plan cost: plan base price if any + cost per consumed transaction
+* Pay per use paid plan cost: plan base price, if any + cost per consumed transaction
 
 | *Consumed transactions* | *Transaction price* | *Billing price*       |
 |-------------------------|---------------------|-----------------------|
 | 1,000                   | 0.01                | 1,000 \* 0.01 = $10   |
 | 10,000                  | 0.01                | 10,000 \* 0.01 = $100 |
 
-* Tier paid plan cost: plan base price if any + tier cost
+* Tier paid plan cost: plan base price, if any + tier cost
 
 | *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   |
 |--------------|----------------|--------------|-------------------|
