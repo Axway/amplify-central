@@ -1,10 +1,10 @@
 ---
-title: Manage product support contact
-linkTitle: Manage product support contact
+title: Manage product support contacts
+linkTitle: Manage product support contacts
 weight: 50
 ---
 
-Manage the product support contact, including: create, assign to a product, edit, and delete with the Product Foundry UI.
+Manage product support contacts in the Product Foundry UI, including: create, assign to a product, edit, and delete.
 
 ## Before you start
 
@@ -13,7 +13,7 @@ Manage the product support contact, including: create, assign to a product, edit
 
 ## Objectives
 
-Learn how to manage a product support contact and assigned it to a new or existing product.
+Learn how to manage product support contacts and assigned them to new or existing products.
 
 ## Product support contact
 
@@ -58,8 +58,6 @@ The product support contact is saved and assigned to all selected products. Cons
 
 ### Edit a product support contact
 
-To edit a support contact:
-
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **Support Contacts**.
 3. Click the support contact name to open the support details screen
@@ -73,7 +71,7 @@ You can assign a support contact when creating a product with the product creati
 
 ### Delete a product support contact
 
-To delete, the support contact cannot be assigned to any product.
+To delete, the product support contact cannot be assigned to any product.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **Support Contacts**.
@@ -82,4 +80,4 @@ To delete, the support contact cannot be assigned to any product.
 5. Confirm that the selected support contact is the one you want to delete.
 6. Click **Delete**.
 
-The delete action allows you to delete more than one support contact at a time.
+The delete action allows you to delete more than one product support contact at a time.
