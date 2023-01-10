@@ -66,7 +66,7 @@ View the following detailed information for a specific product in any state (Dra
 * Resources - List of assets linked to the product
 * Plans - Plan list associated to the product
 * Documentation - Documentation associated with the product
-* Access Rights - List the team(s) the product is shared with
+* Access Rights - List the team(s) the product is shared with that can have a different type of access to this product
 * Subscriptions - List the subscription attached to the product
 * Visibility - Set the product visibility in the Marketplace (for everyone / specific teams / specific team with a specific tag / Nobody)
 * Version State - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
@@ -105,7 +105,8 @@ View the following detailed information for a specific product in any state (Dra
     * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
     * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
 
-10. For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you shared your product with a specific team, each member of the team will be able to see your product. Click **Next**.
+10. For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it.
+If you want your product shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected product. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your product with the chosen "Rights". This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
 11. (Optional step) Provide one support contact so consumers can get product help, if needed. Click **+ Add new contact** and enter the contact information. Click **Next**.
 12. Provide the Tags, Attribute, and Category details for the product.
 13. Click **Preview Product** to view the details prior to creation. At his point, you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
