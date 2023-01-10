@@ -60,7 +60,7 @@ To view asset details:
     * Description - A short description of the asset
     * Resources - API Services or other resource types that are linked to this asset
     * Products - Information on products that are linked to this asset
-    * Access Rights - Shared teams can have a different type of access to this asset 
+    * Access Rights - Shared teams can have different types of access to this asset
     * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
     * Categories - Help classify assets into groups and find the asset by filtering on the Category
     * Tags - Labels to help find assets in the catalog
@@ -90,7 +90,7 @@ To create an asset:
 
 6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
 7. Configure the Access Request handling for Manual or Automatic, and click **Next**. If Access Request Handling is set to **Manual**, a user must approve access to the API Service(s) grouped in the asset. If Access Request Handling is set to **Automatic**, the access to the API Service(s) grouped in the asset is granted automatically.
-8. For Access Rights, select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Central Admin** will have access to it. If you want your assset shared with a specific team, select a team owner and then select all the teams you want to grant "Rights" to the selected asset.    For each of the teams selected, you can choose either Edit or Read access "Rights".   Each member of the shared team(s) selected will be able to access your asset with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team.  Click **Next**.
+8. For Access Rights, select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Central Admin** will have access to it. If you want your asset shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected asset. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your asset with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team. Click **Next**.
 9. Provide the Category, Tags, and Attribute details for the asset. Click **Next**.
 10. Click **Preview Asset** to view the details prior to creation. At his point, you can click **Save** to create the asset in a draft state. Alternatively, you can click **Save & Activate** to create a new asset version release in an **Active** state for consumption in a product definition.
 
