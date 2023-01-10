@@ -4,7 +4,7 @@ linkTitle: Application management
 weight: 30
 ---
 
-Manage your applications from the Marketplace, including create, view and delete applications. View issued credentials that enable you to consume the product resources, request new credentials and delete existing credential.
+Manage your applications from the Marketplace, including create, view, and delete applications. View issued credentials that enable you to consume the product resources, request new credentials and delete existing credential.
 
 ## What is an application
 
@@ -20,7 +20,7 @@ As a consumer, learn how to create and manage your applications from the Marketp
 
 ## Create a new application
 
-Anyone who is uthenticated in the marketplace can subscribe to a product with the following role restrictions:
+Anyone who is authenticated in the Marketplace can subscribe to a product with the following role restrictions:
 
 | Persona               | Create application |
 |-----------------------|--------------------|
@@ -35,7 +35,7 @@ Anyone who is uthenticated in the marketplace can subscribe to a product with th
 
     * **Name** - the application name
     * **Description** - the application description
-    * **Owner** - the team that owns this application. This dropdown is only available if you belong to multiple teams. If you belong to only one team, then the owner will be set automatically to the team you belong to. Be sure the application owner will match the subscription you will use when requesting access to the product resources.
+    * **Owner** - the team that owns this application. This dropdown is only available if you belong to multiple teams. If you belong to only one team, then the owner will be set automatically to the team you belong to. Be sure the application owner matches the subscription you will use when requesting access to the product resources.
     * **icon** - The icon / image representing the application, if any
 
 5. Click **Create**.
@@ -52,7 +52,7 @@ View the following product information associated with the application:
 * For each subscription/plan, all resources that are accessible with the subscription
 * For each resource, all credentials requested by the consumers and their statuses (Pending / Approved / Error)
 
-    * Open the resource details to see the detail of each credential that enables you to consume the resource. **Important**: For security, the value of a credential can be viewed only once inside the marketplace but it will remain on the datatplane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, you can request a new one.  
+    * Open the resource details to see the detail of each credential that enables you to consume the resource. **Important**: For security, the value of a credential can be viewed only once inside the Marketplace, but it will remain on the data plane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, you can request a new one.  
     * Click **Create Credential** to request new credentials. Once the credential (apiKey / oauth) is provisioned by the provider, you can view its value once. Be sure to store it in a secure place.
     * Click the bin icon to delete existing credentials.
 
