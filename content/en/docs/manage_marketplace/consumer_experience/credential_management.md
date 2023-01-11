@@ -83,7 +83,7 @@ Each action must be confirmed by the user.
 
 ## Renew credential
 
-This action is not supported by all data planes and may not be avialable for the consumer.
+This action is not supported by all data planes and may not be available for the consumer.
 
 When viewing the credential list from the application or from the product resources details, a **Renew credential** menu can be used if enabled by the underlying data plane.
 
