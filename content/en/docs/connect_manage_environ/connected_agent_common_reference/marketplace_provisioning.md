@@ -22,6 +22,7 @@ Provisioning use cases include:
 
 * Provision data plane when a consumer requests access to a product resource
 * Deprovision data plane when a consumer deletes an application or credentials
+* Enforce an expiration date for provisioned credential
 * Report traffic to Consumer Insights
 
 ### Provision data plane when consumer requests access to a product resource
@@ -38,7 +39,7 @@ From the Marketplace, a consumer first requests access to a resource and then re
 
 #### Provisioning OAuth credential to an identity provider
 
-The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated dataplane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
+The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated data plane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
 * Name: The name of the OAuth identity provider
 * Type: The type of OAuth identity provider ("generic", "keycloak" or "okta")
@@ -49,7 +50,7 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
     * Client ID: The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is set to "client"
     * Client Secret: The secret for the client in the OAuth identity provider. The config is required if the type is set to "client"
 
-The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable based configuration. The environment variable based config must to be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
+The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable based configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
 ```shell
 # IDP configuration with client type authentication
@@ -68,12 +69,31 @@ AGENTFEATURES_IDP_AUTH_TYPE_2="accessToken"
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_2="okta-admin-api-access-token-xxxxxxxxx"
 ```
 
+### Enforce credential expiration date
+
+In addition to the provisioning, an expiration date can be assigned to the provisioned credentials. This expiration date will be reflected on the underlying data plane, if the data plane supports this feature.
+
+By default, the credential has no expiry. To set an expiration date, you must configure the agent using the CENTRAL_CREDENTIALS_EXPIRATIONDAYS variable. At that point, another variable CENTRAL_CREDENTIALS_DEPROVISIONONEXPIRE=true can be configured to enforce the deprovisioning of the credential on the data plane, so that consumers can no longer use it.
+
+Sample variables to automatically deprovision credential after 30 days:
+
+```shell
+CENTRAL_CREDENTIALS_EXPIRATIONDAYS=30
+CENTRAL_CREDENTIALS_DEPROVISIONONEXPIRE=true
+```
+
+Sample variables to expire credential after 90 days:
+
+```shell
+CENTRAL_CREDENTIALS_EXPIRATIONDAYS=90
+```
+
 ### Deprovision data plane when consumer deletes an application or credentials
 
 From the Marketplace, a consumer can delete an existing application or an existing credential. These two actions generate events that the Discovery Agent is listening to. Once the events are received by the agent, the agent converts them based on the data plane it is connected to:
 
 * Remove the corresponding application from the data plane:
-    * Application on Axway API MAnager
+    * Application on Axway API Manager
     * Usage plan on AWS Gateway
     * Subscription on Azure Gateway
 * Delete a credential:
@@ -86,7 +106,7 @@ Each time a call to an API is made on a data plane monitored by a Traceability A
 
 If a correlation is found, then the corresponding traffic will be visible in [Consumer Insights](/docs/manage_marketplace/consumer_experience/consumer_insights), as well as in [Business Insights](/docs/get_actionable_insights).
 
-If no correlationis found, then the traffic will only be visible in [Business Insights](/docs/get_actionable_insights).
+If no correlation is found, then the traffic will only be visible in [Business Insights](/docs/get_actionable_insights).
 
 ## Discovery Agent configuration for Marketplace provisioning and deprovisioning
 
@@ -128,6 +148,6 @@ These are the more common error cases you can encounter when using agents for th
 
 | Question                                                  | Answer                                                                                                                                                                                                                                                                                                                                          |
 |-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Why doesn't agent provitioning work?                      | Make sure the marketplace provisioning feature (`AGENTFEATURES_MARKETPLACEPROVISIONING`) is enabled.                                                                                                                                                                                                                                            |
+| Why doesn't agent provisioning work?                      | Make sure the marketplace provisioning feature (`AGENTFEATURES_MARKETPLACEPROVISIONING`) is enabled.                                                                                                                                                                                                                                            |
 | Why can't Traceability Agent connect to Amplify platform? | Make sure the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any.  Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) to check the http/2 connectivity.     |
 | Why can't Discovery Agent connect to Amplify platform?    | Make sure that the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) to check the http/2 connectivity. |
