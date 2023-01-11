@@ -145,9 +145,9 @@ A credential can have an expiration date. This expiration date is defined in the
 
 ### Suspending / Enabling credential
 
-1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials that can be managed. 
+1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials that can be managed.
 2. Filer the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
-3. Click on the credential name to open the credential details. 
+3. Click on the credential name to open the credential details.
 4. Enter a reason.
 
 Once the reason is entered, the catalog manager can:
@@ -161,13 +161,13 @@ This action is not supported by all data planes and may not be available for the
 
 1. As a catalog manager, navigate to **Amplify Central > Marketplace > Credentials** to view all credentials that can be managed.
 2. Filter the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
-3. Click on the credential name to open the credential details. 
+3. Click on the credential name to open the credential details.
 4. Enter a reason, then click **Renew**.
 
 ### Deleting credential
 
 1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials that can be managed.
 2. Filter the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
-3. Click on a credential name to open the credential details. 
+3. Click on a credential name to open the credential details.
 4. Enter a reason, then click **Delete**. A confirmation popup is displayed.
 5. Confirm your choice. The credential will be completely removed from the system and deprovisioned on the data plane.
