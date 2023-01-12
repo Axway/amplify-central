@@ -8,7 +8,7 @@ Configure the Marketplace homepage, a landing page that can be customized to pro
 
 ## Before you start
 
-You must have platform administrator credentials.
+You must have platform administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Homepage* content.
 
 ## Objectives
 
