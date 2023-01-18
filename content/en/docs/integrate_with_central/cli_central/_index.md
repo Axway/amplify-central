@@ -40,7 +40,7 @@ The result from the `get` command lists the available types in the API Server an
 | RESOURCE KIND   | The type of object this represents        |
 | SCOPED   | Resources are scoped to prevent naming collisions and to reinforce the relationship between the resources in the scope. This column indicates if the resource is scoped or not.         |
 | SCOPE KIND   | The resource kind which the type is scope to. For example, API Services are scoped to Environments.         |
-| RESOURCE GROUP  | These will represent separate business domains, e.g., ‘management’ encompasses our API and Dataplane management businesses for the API Provider side of the platform. ‘catalog’ represents the API Consumer side of the platform.  |
+| RESOURCE GROUP  | These will represent separate business domains, e.g., ‘management’ encompasses our API and Data plane management businesses for the API Provider side of the platform. ‘catalog’ represents the API Consumer side of the platform.  |
 
 You can query for a singular resource or multiple resources, and the CLI will display a table of the most important information about the specified resource.
 

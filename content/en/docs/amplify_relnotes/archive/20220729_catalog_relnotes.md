@@ -12,7 +12,7 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 The following new enhancements are available in this update:
 
 * **Asset filtering per owning team**: the asset can be filtered by owning team to help find the appropriate one.
-* **Corrupted asset detection**: a warning icon is displayed on the Asset resource column when the resource reference is missing. This can happen when an existing resource is removed from the dataplane. A warning icon is also displayed on the Asset details page in the Asset version pull-down menu and on the grouped resource tab.
+* **Corrupted asset detection**: a warning icon is displayed on the Asset resource column when the resource reference is missing. This can happen when an existing resource is removed from the data plane. A warning icon is also displayed on the Asset details page in the Asset version pull-down menu and on the grouped resource tab.
 
 ## Fixed issues
 

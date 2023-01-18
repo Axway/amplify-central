@@ -124,7 +124,7 @@ This will allow providers to make the product discoverable without having to adj
 A category can be configured to either be visible only in the Product Foundry or visible in both the Product Foundry and the Marketplace.
 Categories can be flagged to show as featured on the Marketplace Homepage, with a maximum of five categories featured. This will enable Catalog Managers to highlight and advertise a group of products to their consumers.
 
-* **Corrupted products notification** - A visual indicator has been added in the Product Foundry to indicate when an API Service that is contained within a product has been removed, which is typically by being deleted from the underlying dataplane. This will enable Catalog Managers to either take the appropriate actions to correct the product to make it usable again, or deprecate the product so it is no longer available for use in the Marketplace.
+* **Corrupted products notification** - A visual indicator has been added in the Product Foundry to indicate when an API Service that is contained within a product has been removed, which is typically by being deleted from the underlying data plane. This will enable Catalog Managers to either take the appropriate actions to correct the product to make it usable again, or deprecate the product so it is no longer available for use in the Marketplace.
 
 #### Bug fixes for Product Foundry
 
