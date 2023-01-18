@@ -1,6 +1,6 @@
 ---
-title: Amplify September 9th 2022
-linkTitle: Amplify September 9th 2022
+title: Amplify September 9 2022
+linkTitle: Amplify September 9 2022
 weight: 85
 date: 2022-09-1
 ---

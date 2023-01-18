@@ -1,6 +1,6 @@
 ---
-title: Amplify August 26th 2022
-linkTitle: Amplify August 26th 2022
+title: Amplify August 26 2022
+linkTitle: Amplify August 26 2022
 weight: 90
 date: 2022-08-19
 ---
