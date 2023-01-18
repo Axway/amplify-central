@@ -18,26 +18,26 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify December 16th, 2022](/docs/amplify_relnotes/20221216_amplify/)
+## [Amplify January 13th, 2023](/docs/amplify_relnotes/20230112_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.43. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.38
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.34
-* **Azure latest release** - Agent version 1.1.37
-* **Istio 1.9.5** - DA=v1.0.4 / TA=v2.0.47
-* **Apigee Edge** - Agent version 0.1.4
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.39
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.35
+* **Azure latest release** - Agent version 1.1.38
+* **Istio 1.9.5** - DA=v1.0.5 / TA=v2.0.48
+* **Apigee Edge** - Agent version 0.1.6
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.13
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | Improved processing of unpublishing API Services. <br />Check for duration and interval values within a recommended range. |
-| Bug fixes: | None. |
+| What's new: | None. |
+| Bug fixes: | Performance improvement in the gathering of API Service revisions. |
 
 | Agents |         |
 |--------|---------|
-| What's new: | **Axway API Management Gateway** - Virtual Host support / Discover published front-end APIs only / Configure number of workers to reduce requests and CPU usage / Agents updated with Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Base64 Encoding / Agents updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - API traffic metrics / Agents updated with Axway Agent SDK. <br />**Mulesoft Gateway** - Consumer details in metric event / Provisioning application / Agents updated with Axway Agent SDK. |
-| Bug fixes: | **Istio Gateway** - Unnecessary log messages during cleanup. <br />**Mulesoft Gateway** - Traceability Agent configuration setup not working. |
+| What's new: | **AWS Gateway** - Updated with the Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. |
+| Bug fixes: | **API Management Gateway** - Duplicate API Service Revision. <br />**Apigee Edge gateway** - API usage metrics do not display on the Business Insights page. Memory Utilization issue. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -46,13 +46,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | Team sharing. <br />Edit API Service in non-connected agent environment. <br />Asset details improvement.  |
-| Bug fixes: | None. |
+| What's new: | Archive an asset from UI. |
+| Bug fixes: | Error message generated in the UI when using special characters in the search bar. <br />Asset creation error when asset is either saved or saved and activated. <br />Incorrect asset status when re-activating a deprecated asset. |
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | Configurable support contact office hours. <br />Multi-Marketplace support. <br />Team sharing. |
-| Bug fixes: | Desynchronization of the product’s publication status. <br />Product using a shared asset is not displayed correctly. |
+| What's new: | Archive a deprecated product plan from the UI. |
+| Bug fixes: | Long product name is truncated when activating a product. <br />Permission issue when editing product and asset has read-only access. <br />Switching back and forth between a paid and free plan in the wizard does not create the plan correctly. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -61,403 +61,10 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 
 | Marketplace |         |
 |-------------|---------|
-| What's new: | Multi-Marketplace support. <br />Application page enhancements. <br />Corrupted products are not visible in Marketplace to non-subscription users. |
-| Bug fixes: | Marketplace tooltip too small in size. <br />Users that are not logged in have access to credentials. |
+| What's new: | Documentation real estate enhancement. |
+| Bug fixes: | The names of the featured categories are overlapping. <br />Long support contact names are not displayed properly in the Marketplace. <br />Untimely scrolling issue when searching product in the Marketplace home page. <br />Credentials cannot be viewed from the Application details screen. <br />Special characters break the navigation section in documentation. |
 
 | Consumer insights |         |
 |-------------------|---------|
 | What's new: | None. |
 | Bug fixes: | None. |
-
-## [Amplify December 2nd, 2022](/docs/amplify_relnotes/20221202_amplify/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.42. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.37
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.33
-* **Azure latest release** - Agent version 1.1.36
-* **Istio 1.9.5** - DA=v1.0.4 / TA=v2.0.46
-* **Apigee Edge** - Agent version 0.1.3
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
-
-| Axway Agent SDK |        |
-|--------|---------|
-| What's new: | None. |
-| Bug fixes: | API Service Revision Handling. <br />Environment Resource creation. |
-
-| Agents |         |
-|--------|---------|
-| What's new: | **Axway API Management Gateway** - Agents updated with Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Agents updated with Axway Agent SDK. |
-| Bug fixes: | None. |
-
-| Service registry <br />Topology |         |
-|------------------|------------------------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Asset Catalog |         |
-|---------------|---------|
-| What's new: | Access Rights are now selectable from the Environment wizard UI and the API Service wizard UI to enable read only sharing. |
-| Bug fixes: | None. |
-
-| Product Foundry |         |
-|-----------------|---------|
-| What's new: | Plan and quota corruption indicator. <br />Product edits reflected in Marketplace immediately after the edits are saved. |
-| Bug fixes: | Never ending ellipsis for Archived product with no releases. <br />Country code on the support contact does not indicate that ‘+’ is required in front of the digits. <br />Unable to add all assets to a product. |
-
-| Business insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | Some data are marked with Not set. |
-
-| Marketplace |         |
-|-------------|---------|
-| What's new: | Consumers and Subscription Managers can now access subscription details. <br />Product URL has been simplified so it can be bookmarked. |
-| Bug fixes: | Manually approved access request are not synchronize. <br />Subscription plans are not displayed for corrupted products. <br />Icons displayed in the documentation overview are stretched using Safari browser. <br />Accessing a Marketplace after another one does not work. |
-
-| Consumer insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-## [Amplify November 18th, 2022](/docs/amplify_relnotes/20221118_amplify/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.41. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.36
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.32
-* **Azure latest release** - Agent version 1.1.35
-* **Istio 1.9.5** - DA=v1.0.3 / TA=v2.0.43
-* **Apigee Edge** - Agent version 0.1.3
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
-
-| Axway Agent SDK |        |
-|--------|---------|
-| What's new: | Discovery Agent updated for Async API support. |
-| Bug fixes: | API Service deletion handling. <br />API Service revision handling. |
-
-| Agents |         |
-|--------|---------|
-| What's new: | **AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK.  <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. |
-| Bug fixes: | **Axway API Management Gateway** - Helm chart installation when using an existing service account. |
-
-| Service registry <br />Topology |         |
-|------------------|------------------------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Asset Catalog |         |
-|---------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Product Foundry |         |
-|-----------------|---------|
-| What's new: | Pay per use plan configured in Catalog Manager. <br />Product visibility for consumer organization user. <br />Support contact alternative method. <br />Support contact set while creating / updating product. |
-| Bug fixes: | Country codes list for support contact phone number. |
-
-| Business insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | Non-Marketplace related data displays in the Subscriptions and Applications reports. |
-
-| Marketplace |         |
-|-------------|---------|
-| What's new: | Vanity URL. <br />Application list page improvement. <br />Call to Action. <br />Access request visibility. |
-| Bug fixes: | Consumer user (non-admin) cannot create access request / credentials in the consumer org. <br />Product documents in the Marketplace are not being displayed in proper order. |
-
-| Consumer insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-## [Amplify November 4th, 2022](/docs/amplify_relnotes/20221104_amplify/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.40. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.34
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.31
-* **Azure latest release** - Agent version 1.1.34
-* **Istio 1.9.5** - DA=v1.0.2 / TA=v2.0.43
-* **Apigee Edge** - Agent version 0.1.2
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
-
-| Axway Agent SDK |        |
-|--------|---------|
-| What's new: | Discovery Agent supports HTTP Basic Authentication for inbound security of Marketplace products. |
-| Bug fixes: | None. |
-
-| Agents |         |
-|--------|---------|
-| What's new: | **API Management Gateway** - Discovery Agent supports HTTP Basic Authentication for inbound security of Marketplace products. <br />**AWS Gateway** - Updated with the latest Agent SDK. <br />**Azure Gateway** - Updated with the latest Agent SDK. <br />**Istio Gateway** - Usage tracking customization. |
-| Bug fixes: | None. |
-
-| Service registry <br />Topology |         |
-|------------------|------------------------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Asset Catalog |         |
-|---------------|---------|
-| What's new: | An asset can be edited from the Web UI with or without the release of a new asset version. |
-| Bug fixes: | None. |
-
-| Product Foundry |         |
-|-----------------|---------|
-| What's new: | Support contacts can be assigned to a product. <br />A product can be edited from the Web UI with or without the release of a new product version. |
-| Bug fixes: | Subscription Approver role is not able to see the access requests submitted by a user in a consumer organization. <br />Creating a product/plan and changing the product plan ownership fails. <br />Wrong plan ownership. <br />Quota price validation. |
-
-| Business insights |         |
-|-------------------|---------|
-| What's new: | Provider engagement report. |
-| Bug fixes: | None. |
-
-| Marketplace |         |
-|-------------|---------|
-| What's new: | Support contact displays on product overview. <br />Product resources page improvement. |
-| Bug fixes: | Issue with the “logical name” of the category - Product Foundry. <br />Confusing plan count on product tile. <br />Confusing sign in page. |
-
-| Consumer insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-## [Amplify October 21st, 2022](/docs/amplify_relnotes/20221021_amplify/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.39. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.33
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.30
-* **Azure latest release** - Agent version 1.1.33
-* **Istio 1.9.5** - Agent version 0.75
-* **Apigee Edge** - Agent version 0.1.2
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
-
-| Axway Agent SDK |        |
-|--------|---------|
-| What's new: | None. |
-| Bug fixes: | Subscription migration. |
-
-| Agents |         |
-|--------|---------|
-| What's new: | **AWS Gateway** - Quota provisioning feature. <br />**Apigee Gateway** - Configurable IDP settings. |
-| Bug fixes: | **Apigee Gateway** - CPU/Memory utilization. |
-
-| Service registry <br />Topology |         |
-|------------------|------------------------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Asset Catalog |         |
-|---------------|---------|
-| What's new: | Auto release management. |
-| Bug fixes: | None. |
-
-| Product Foundry |         |
-|-----------------|---------|
-| What's new: | Auto release management. <br />Export subscriber contact information. <br />Subscription approver role. |
-| Bug fixes: | Product ownership not replicated to plan ownership. |
-
-| Business insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Marketplace |         |
-|-------------|---------|
-| What's new: | User experience improvements. <br />Consumer Organization management. |
-| Bug fixes: | Wrong owner of the subscription. <br />Category names are truncated. <br />Incorrect warning displayed. <br />Error message when subscribing is not clear. |
-
-| Consumer insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-## [Amplify October 7th, 2022](/docs/amplify_relnotes/20221007_amplify/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.38. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.32
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.29
-* **Azure latest release** - Agent version 1.1.32
-* **Istio 1.9.5** - Agent version 0.75
-* **Apigee Edge** - Agent version 0.1.1
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
-
-| Axway Agent SDK |        |
-|--------|---------|
-| What's new: | None. |
-| Bug fixes: | Credential validation. |
-
-| Agents |         |
-|--------|---------|
-| What's new: | **Azure Gateway** - Product plan quota provisioning. <br />**Istio Gateway** - Marketplace provisioning, Helm override values. |
-| Bug fixes: | **API Management Gateway** - Single entry point URL. |
-
-| Service registry <br />Topology |         |
-|------------------|------------------------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Asset Catalog |         |
-|---------------|---------|
-| What's new: | Auto-asset release from latest API Service version. |
-| Bug fixes: | None. |
-
-| Product Foundry |         |
-|-----------------|---------|
-| What's new: | Filter access requests. <br />Product wizard update to create product category while creating/editing product. <br />Auto-product release from latest Asset version. |
-| Bug fixes: | Product plans not inheriting the product ownership. |
-
-| Business insights |         |
-|-------------------|---------|
-| What's new: | Application usage report. <br />New Application column in Subscription compliance report. |
-| Bug fixes: | None. |
-
-| Marketplace |         |
-|-------------|---------|
-| What's new: | Browse products and product card usability enhancements. |
-| Bug fixes: | Product plan display issues. <br />Remaining time to view credential issue. |
-
-| Consumer insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-## [Amplify September 23rd, 2022](/docs/amplify_relnotes/20220923_amplify/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.37. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.31
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.29
-* **Azure latest release** - Agent version 1.1.31
-* **Istio 1.9.5** - Agent version 2.0.38
-* **Apigee Edge** - Agent version 0.1.1
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.10
-
-| Agents |         |
-|--------|---------|
-| What's new: | **All agents** - Consumer credential management. <br />**Apigee Gateway** - Quota provisioning. |
-| Bug fixes: | **All agents** - Fix for Analytics support and Marketplace provisioning. <br />**API Management Gateway** - Consumer Insights Application Usage issue, Marketplace product and application deletion issue. |
-
-| Service registry <br />Topology |         |
-|------------------|------------------------|
-| What's new: | Unified Catalog enabled by entitlements. |
-| Bug fixes: | Teams names in the filter are not sorted alphabetically. |
-
-| Asset Catalog |         |
-|---------------|---------|
-| What's new: | None. |
-| Bug fixes: | Teams names in the filter are not sorted alphabetically. <br />Ownership set at the asset version level. |
-
-| Product Foundry |         |
-|-----------------|---------|
-| What's new: | Provider credential management. <br />Subscription approver role. <br />Swap featured categories. |
-| Bug fixes: | Teams names in the filter are not sorted alphabetically. |
-
-| Business insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-| Marketplace |         |
-|-------------|---------|
-| What's new: | Consumer credential management. <br />Search feature on the Marketplace Homepage. <br />Subscription enhancements. |
-| Bug fixes: | Subscription and applications do not have the same owner. |
-
-| Consumer insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
-
-## [Amplify September 9th, 2022](/docs/amplify_relnotes/20220909_marketplace/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.33. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.27
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.25
-* **Azure latest release** - Agent version 1.1.27
-* **Istio 1.9.5** - Agent version 2.0.38
-* **Apigee Edge** - Agent version 0.0.9
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.8
-
-| Agents |         |
-|--------|---------|
-| What's new: | **Azure** - API discovery. |
-| Bug fixes:  | None. |
-
-| Service registry <br />Topology |         |
-|--------|---------|
-| What's new: | None.  |
-| Bug fixes:  | None.  |
-
-| Asset Catalog |         |
-|--------|---------|
-| What's new: | Asset sharing with read-only access. |
-| Bug fixes:  | Team selector does not switch teams. |
-
-| Product Foundry |         |
-|--------|---------|
-| What's new: | Category management from a dedicated screen. <br />Product sharing with read-only access. |
-| Bug fixes:  | Assigning a product to a category changed the product state. <br />Marketplace active subscription list is empty. |
-
-| Business insights |         |
-|--------|---------|
-| What's new: | View the consuming teams' usage and quota compliance of subscriptions. |
-| Bug fixes:  | None. |
-
-| Marketplace |         |
-|--------|---------|
-| What's new: | View products in a featured category on the home page. <br />Filter the catalog of products by categories. |
-| Bug fixes:  | Paid plan base price with large number crashes the backend. |
-
-| Consumer insights |         |
-|--------|---------|
-| What's new: | None. |
-| Bug fixes:  | None. |
-
-## [Amplify August 26, 2022](/docs/amplify_relnotes/20220826_marketplace/)
-
-Current agent versions are based on Amplify Agents SDK v1.1.30. This version is compatible with:
-
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.26
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.24
-* **Azure latest release** - Agent version 1.1.26
-* **Istio 1.9.5** - Agent version 2.0.38
-* **Apigee Edge** - Agent version 0.0.9
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.8
-
-| Agents |         |
-|--------|---------|
-| What's new: | **Azure** - Consumer insights. |
-| Bug fixes:  | **All agents** - API Service revision updates. |
-
-| Service registry <br />Topology |         |
-|---------------------------------|---------|
-| What's new:                     | Team Ownership can be set when creating environments or API Services with the UI. |
-| Bug fixes:                      | None.   |
-
-| Asset Catalog |         |
-|---------------|---------|
-| What's new: | Manual or automatic access request approvals. <br />Share assets with Read-Only permissions. <br />Filter assets by status.|
-| Bug fixes:  | Corrupted assets could be added to a product. <br />Wrong product status in Product Foundry. |
-
-| Product Foundry |         |
-|-----------------|---------|
-| What's new: | Tiered product plans. <br />Product visibility enhancements. <br />Category management. <br />Corrupted products notification. |
-| Bug fixes:  | Slow rendering of the Asset Catalog screen. |
-
-| Business insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes:  | None. |
-
-| Marketplace |         |
-|-------------|---------|
-| What's new: | Marketplace home page. <br />Plan details. |
-| Bug fixes:  | None. |
-
-| Consumer insights |         |
-|-------------------|---------|
-| What's new: | None. |
-| Bug fixes:  | None. |
