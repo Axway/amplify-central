@@ -15,7 +15,7 @@ For more details, click on the release note title to go to the corresponding rel
 
 See [Support Policy](/docs/amplify_relnotes/archive/agent_agentsdk_support_policy/).
 
-## [Amplify December 16th, 2022](/docs/amplify_relnotes/archive/20221216_amplify/)
+## [Amplify December 16 2022](/docs/amplify_relnotes/archive/20221216_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.43. This version is compatible with:
 
@@ -66,7 +66,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-## [Amplify December 2nd, 2022](/docs/amplify_relnotes/archive/20221202_amplify/)
+## [Amplify December 2 2022](/docs/amplify_relnotes/archive/20221202_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.42. This version is compatible with:
 
@@ -117,7 +117,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.42. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-## [Amplify November 18th, 2022](/docs/amplify_relnotes/archive/20221118_amplify/)
+## [Amplify November 18 2022](/docs/amplify_relnotes/archive/20221118_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.41. This version is compatible with:
 
@@ -168,7 +168,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-## [Amplify November 4th, 2022](/docs/amplify_relnotes/archive/20221104_amplify/)
+## [Amplify November 4 2022](/docs/amplify_relnotes/archive/20221104_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.40. This version is compatible with:
 
@@ -219,7 +219,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.40. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-## [Amplify October 21st, 2022](/docs/amplify_relnotes/archive/20221021_amplify/)
+## [Amplify October 21 2022](/docs/amplify_relnotes/archive/20221021_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.39. This version is compatible with:
 
@@ -270,7 +270,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.39. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-## [Amplify October 7th, 2022](/docs/amplify_relnotes/archive/20221007_amplify/)
+## [Amplify October 7 2022](/docs/amplify_relnotes/archive/20221007_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.38. This version is compatible with:
 
@@ -321,7 +321,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-## [Amplify September 23rd, 2022](/docs/amplify_relnotes/archive/20220923_amplify/)
+## [Amplify September 23 2022](/docs/amplify_relnotes/archive/20220923_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.37. This version is compatible with:
 
@@ -367,7 +367,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.37. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
-## [Amplify September 9th, 2022](/docs/amplify_relnotes/archive/20220909_marketplace/)
+## [Amplify September 9 2022](/docs/amplify_relnotes/archive/20220909_marketplace/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.33. This version is compatible with:
 
@@ -413,7 +413,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.33. This version is 
 | What's new: | None. |
 | Bug fixes:  | None. |
 
-## [Amplify August 26, 2022](/docs/amplify_relnotes/archive/20220826_marketplace/)
+## [Amplify August 26 2022](/docs/amplify_relnotes/archive/20220826_marketplace/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.30. This version is compatible with:
 
@@ -463,7 +463,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new for**:
 
-* **Amplify Gateway Agent** (version 1.1.24): The subscription quota plan is enforced on the dataplane
+* **Amplify Gateway Agent** (version 1.1.24): The subscription quota plan is enforced on the data plane
 * **Amplify AWS Gateway Agent** (version 1.1.22): See Amplify agent general
 * **Amplify Azure Agent** (version 1.1.22): See Amplify agent general
 * **Amplify Istio Agent** (helm chart version 0.71.0, Agent version 2.0.33): See Amplify agent general
@@ -735,7 +735,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Istio Agent** (helm chart version 0.69.0, Agent version 2.0.28): Multiple Istio namespace support
 * **Amplify Apigee Agent** (version 0.0.6): Marketplace provisioning / deprovisioning
 * **Amplify Mulesoft Agent** (version 1.1.5): Marketplace provisioning / deprovisioning
-* **Amplify agent general** (version 1.1.16): Marketplace subscription provisioning and deprovisioning on the dataplane
+* **Amplify agent general** (version 1.1.16): Marketplace subscription provisioning and deprovisioning on the data plane
 
 **Bug fixes**: Unable to update Istio agents using the helm update command
 

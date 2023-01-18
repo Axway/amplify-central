@@ -97,12 +97,12 @@ Agents can be installed in any Docker container. A Cloud formation template is p
 
 A new set of resource is provided within Amplify Central CLI:
 
-* **edgedp**: this resource represent the Axway API Management dataplane. It contains the connectivity (url / port) to the Axway API Manager/Gateway and a reference to the Amplify Central topology environment.
-* **eddeda**: this resource represent a Discovery Agent for Axway API Manager. It contains the Discovery Agent configuration and the reference to the dataplane.
-* **edgeta**: this resource represent a Discovery Agent for Axway Edge Gateway. It contains the Traceability Agent configuration and the reference to the dataplane.
-* **awsdp**: this resource represent the AWS API Management dataplane. It contains the region, transactionLogGroup reference and the queues to be monitored by the agents.
-* **awsda**: this resource represent a Discovery Agent for AWS API Manager. It contains the Discovery Agent configuration and the reference to the dataplane.
-* **awsta**: this resource represent a Discovery Agent for Axway Edge Gateway. It contains the Traceability Agent configuration and the reference to the dataplane.
+* **edgedp**: this resource represent the Axway API Management data plane. It contains the connectivity (url / port) to the Axway API Manager/Gateway and a reference to the Amplify Central topology environment.
+* **eddeda**: this resource represent a Discovery Agent for Axway API Manager. It contains the Discovery Agent configuration and the reference to the data plane.
+* **edgeta**: this resource represent a Discovery Agent for Axway Edge Gateway. It contains the Traceability Agent configuration and the reference to the data plane.
+* **awsdp**: this resource represent the AWS API Management data plane. It contains the region, transactionLogGroup reference and the queues to be monitored by the agents.
+* **awsda**: this resource represent a Discovery Agent for AWS API Manager. It contains the Discovery Agent configuration and the reference to the data plane.
+* **awsta**: this resource represent a Discovery Agent for Axway Edge Gateway. It contains the Traceability Agent configuration and the reference to the data plane.
 
 #### Discovery Agent
 

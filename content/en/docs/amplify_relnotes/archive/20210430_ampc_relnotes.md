@@ -62,7 +62,7 @@ Mesh Governance includes the following enhancements:
 
 The following issues are fixed in this version of Amplify Central:
 
-* **Unsubscribing to an API does not remove the corresponding credentials on the data plane**. Previously, when a consumer unsubscribed to an API, his associated credentials (API Key / OAuth client) where not removed from the corresponding dataplane. Now, every Discovery Agent (v7 / AWS / Azure) can remove the credentials associated with the subscription.
+* **Unsubscribing to an API does not remove the corresponding credentials on the data plane**. Previously, when a consumer unsubscribed to an API, his associated credentials (API Key / OAuth client) where not removed from the corresponding data plane. Now, every Discovery Agent (v7 / AWS / Azure) can remove the credentials associated with the subscription.
 * **As a consumer, I want to see the friendly name for my AWS Usage plan**. Previously, when subscribing to an API, the AWS Usage plan name used the subscription technical identifier. Now, the AWS Usage plan name is based on the subscription name provided by the user.
 * **Azure agents are not able to reconnect after Amplify token expiration**. Previously, when the token expired, Azure agents could not request a new token to continue their duty. Now, the token expiration is managed correctly and the agent stays up and running.
 * **Base path is not displayed in service endpoint**. Previously, when displaying the service endpoint in the Service details page, only the service url was visible. Now, the full endpoint ("protocol://host:port/basepath") is visible.

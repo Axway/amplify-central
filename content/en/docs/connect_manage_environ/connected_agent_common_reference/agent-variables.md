@@ -38,9 +38,9 @@ These variables can be used in the naming template:
 | Variable Name   | Description                                                                                                                                                          |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | .APIServiceName | The friendly name of the API Service that this revision is being added too                                                                                           |
-| .Stage          | The name of the stage, if applicable, that this API Service Revision is linked to on the dataplane                                                                   |
-| .StageLabel     | The descriptor of the stage for the linked dataplane. For example, AWS stage descriptor is Stage or Apigee stage descriptor is Portal                                         |
-| .Date           | The [date](#date-formats) that this API Service Revision is being created. This is when the resource is created on Amplify, not when the dataplane created the API |
+| .Stage          | The name of the stage, if applicable, that this API Service Revision is linked to on the data plane                                                                   |
+| .StageLabel     | The descriptor of the stage for the linked data plane. For example, AWS stage descriptor is Stage or Apigee stage descriptor is Portal                                         |
+| .Date           | The [date](#date-formats) that this API Service Revision is being created. This is when the resource is created on Amplify, not when the data plane created the API |
 | .Revision       | The revision number, according to what is on Amplify, for this API Service Revision                                                                                  |
 
 ### Date Formats

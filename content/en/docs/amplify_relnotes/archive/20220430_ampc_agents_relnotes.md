@@ -25,9 +25,9 @@ This version is compatible with:
 
 The following new features and enhancements are available in this update:
 
-* Manage Marketplace subscription provisioning on the dataplane. When a consumer subscribes and requests access to an API using the Marketplace, the agent handles the request and provisions the appropriate application (Axway / Apigee), Usage plan (AWS), subscription (Azure), and creates corresponding credentials (apiKey / oauth clientID,clientSecret).
+* Manage Marketplace subscription provisioning on the data plane. When a consumer subscribes and requests access to an API using the Marketplace, the agent handles the request and provisions the appropriate application (Axway / Apigee), Usage plan (AWS), subscription (Azure), and creates corresponding credentials (apiKey / oauth clientID,clientSecret).
 
-* Manage Marketplace subscription deprovisioning on the dataplane. When a consumer removes a marketplace application, the agent removes the corresponding object (application, Usage plan, or subscription) and the associated credentials from the dataplane.
+* Manage Marketplace subscription deprovisioning on the data plane. When a consumer removes a marketplace application, the agent removes the corresponding object (application, Usage plan, or subscription) and the associated credentials from the data plane.
 
 To activate the marketplace provisioning/deprovisioning, the following variables must be added to the Discovery Agent configuration:
 
