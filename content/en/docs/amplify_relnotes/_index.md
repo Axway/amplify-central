@@ -18,26 +18,26 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify January 12th, 2023](/docs/amplify_relnotes/20230112_amplify/)
+## [Amplify January 13th, 2023](/docs/amplify_relnotes/20230112_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.43. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.38
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.34
-* **Azure latest release** - Agent version 1.1.37
-* **Istio 1.9.5** - DA=v1.0.4 / TA=v2.0.47
-* **Apigee Edge** - Agent version 0.1.4
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.39
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.35
+* **Azure latest release** - Agent version 1.1.38
+* **Istio 1.9.5** - DA=v1.0.5 / TA=v2.0.48
+* **Apigee Edge** - Agent version 0.1.6
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.13
 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Performance improvement in the gathering of API Service revisions. |
 
 | Agents |         |
 |--------|---------|
-| What's new: | **Gateway** - Text. |
-| Bug fixes: | **Gateway** - Text. |
+| What's new: | **AWS Gateway** - Updated with the Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. |
+| Bug fixes: | **API Management Gateway** - Duplicate API Service Revision. <br />**Apigee Edge gateway** - API usage metrics do not display on the Business Insights page. Memory Utilization issue. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -46,13 +46,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Archive an asset from UI. |
+| Bug fixes: | Error message generated in the UI when using special characters in the search bar. <br />Asset creation error when asset is either saved or saved and activated. <br />Incorrect asset status when re-activating a deprecated asset. |
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Archive a deprecated product plan from the UI. |
+| Bug fixes: | Long product name is truncated when activating a product. <br />Permission issue when editing product and asset has read-only access. <br />Switching back and forth between a paid and free plan in the wizard does not create the plan correctly. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -61,8 +61,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 
 | Marketplace |         |
 |-------------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Documentation real estate enhancement. |
+| Bug fixes: | The names of the featured categories are overlapping. <br />Long support contact names are not displayed properly in the Marketplace. <br />Untimely scrolling issue when searching product in the Marketplace home page. <br />Credentials cannot be viewed from the Application details screen. <br />Special characters break the navigation section in documentation. |
 
 | Consumer insights |         |
 |-------------------|---------|
