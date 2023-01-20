@@ -4,7 +4,7 @@ linkTitle: Reference - Agent configuration
 draft: false
 weight: 50
 ---
-**Robert to add TLS updates** Use the following environment variables to control your Discovery and Traceability agents.
+Use the following environment variables to control your Discovery and Traceability agents.
 
 The Discovery and Traceability agents share many parameters, which are located in:
 
