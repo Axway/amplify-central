@@ -43,14 +43,14 @@ A corrupted product is highlighted as follows in any marketplace the product is 
 
 ### I already have a subscription to a corrupted product
 
-When consumer have already a subscription to a product, they continue to view their product and subscription. But they will not be allowed to request new access nor  new credentials to the corrupted resources.
+When consumers already have a subscription to a product, they continue to view their product and subscription. But they will not be allowed to request new access nor  new credentials to the corrupted resources.
 
-You can still use your existing subscription or create a new one.
+Consumers can still use their existing subscription or create a new one.
 
-Access and credentials request is only permitted to non corrupted resource.
+Access and credentials requests are only permitted to the non corrupted resource.
 
 ### I don't have a subscription to a corrupted product
 
-You will not be able to see a corrupted product if it contains a single resource and if you don't already have a subscription.
+Consumers who have not already a subscription to a corrupted product will not be able to see it when the product contains a single resource.
 
-You are still able to see the corrupted product if it contains multiple resources regardless if you already have a subscription or not. You will be allowed to subscribe. The access request to corrupted resources is blocked but you can request access to the non corrupted resources.
+Consumers are able to see a corrupted product if it contains multiple resources. Consumers will be allowed to subscribe to the corrupted product. The access request to corrupted resources is blocked but you can request access to the non corrupted resources.
