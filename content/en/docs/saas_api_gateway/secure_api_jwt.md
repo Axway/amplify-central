@@ -6,6 +6,8 @@ date: 2019-07-30
 ---
 Secure your API using a JWT token.
 
+TEST
+
 ## Before you start
 
 * You will need a basic understanding of JWT ([RFC 7523](https://tools.ietf.org/html/rfc7523))
