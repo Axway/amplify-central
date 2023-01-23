@@ -5,7 +5,7 @@ weight: 10
 date: 2022-02-04
 ---
 
-Business insights provides API Providers and Program Managers with 360-degree actionable insights on their API Program, consumption, adoption, API health, applications, and environments.
+Business insights provides API Providers and Program Managers with 360-degree actionable insights on their API Program, consumption, adoption, API health, applications, and environments
 
 ## Business Insights dashboards
 
