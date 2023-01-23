@@ -69,7 +69,7 @@ Click an item in the API traffic list to view its transaction details, including
 
 ## Provider Engagement
 
-Click **Provider Engagement** to see metrics and details about your Provider teams engagement level to understand and improve overall health of your API program and engagement of different teams.
+Click **Provider Engagement** to see metrics and details about your Provider teams engagement level to understand and improve the overall health of your API program and engagement of different teams.
 
 ![Example of Provider Engagement](/Images/central/provider_engagement.png)
 
