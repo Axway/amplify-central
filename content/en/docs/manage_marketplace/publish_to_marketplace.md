@@ -1,7 +1,7 @@
 ---
 title: Publish to the Marketplace
 linkTitle: Publish to the Marketplace
-weight: 20
+weight: 25
 ---
 
 Make a product available for consumption by subscribers. Publish a set of business capabilities into the Marketplace, which is the storefront into all products exposed for discovery and consumption by internal and / or external consumers.
