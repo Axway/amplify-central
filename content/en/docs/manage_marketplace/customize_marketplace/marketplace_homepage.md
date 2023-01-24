@@ -1,7 +1,7 @@
 ---
 title: Marketplace homepage
 linkTitle: Marketplace homepage
-weight: 45
+weight: 40
 ---
 
 Configure the Marketplace homepage, a landing page that can be customized to provide a search, featured content, and calls to action for consumers who enter from high-level links.

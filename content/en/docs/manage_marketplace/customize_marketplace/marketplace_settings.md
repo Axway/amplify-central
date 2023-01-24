@@ -1,7 +1,7 @@
 ---
 title: Marketplace settings
 linkTitle: Marketplace settings
-weight: 30
+weight: 10
 ---
 
 Configure the Marketplace to publish your products and expose them to consumers for consumption.

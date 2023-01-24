@@ -2,7 +2,7 @@
 title: Manage your subscribers and subscriptions
 linkTitle: Manage your subscribers and subscriptions
 draft: no
-weight: 20
+weight: 30
 ---
 Validate the subscription information and manage the access to your resources.
 
