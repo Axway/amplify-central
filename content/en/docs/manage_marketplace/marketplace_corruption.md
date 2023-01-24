@@ -1,7 +1,7 @@
 ---
 title: Marketplace corruption detection
 linkTitle: Marketplace corruption detection
-weight: 55
+weight: 40
 ---
 
 Understand all mechanism highlighting issues with assets and products.

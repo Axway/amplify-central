@@ -1,7 +1,7 @@
 ---
 title: Marketplace appearance
 linkTitle: Marketplace appearance
-weight: 40
+weight: 30
 ---
 
 Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The platform administrator may choose to use the Amplify Enterprise Marketplace WebUI or API to change the settings.

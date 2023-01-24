@@ -1,7 +1,7 @@
 ---
 title: Marketplace consumer organization
 linkTitle: Marketplace consumer organization
-weight: 40
+weight: 50
 ---
 
 Providers can configure one or more consumer organizations that are independently managed from their own provider organization.

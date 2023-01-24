@@ -1,7 +1,7 @@
 ---
 title: Customize Marketplace URL
 linkTitle: Customize Marketplace URL
-weight: 35
+weight: 20
 ---
 
 Provide your own custom domain for the Marketplace.
