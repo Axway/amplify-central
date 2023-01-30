@@ -63,7 +63,7 @@ Subscription has three approval states:
 
 * Pending: subscription has been initiated by a consumer. Subscription approver can approve/reject a pending subscription.
 * Approved: subscription has been approved by a provider. Subscription approver can reject an approved subscription.
-* Rejected: subscription has been rejected by a provider. Subscription approver can approve a rejected subsc0ription.
+* Rejected: subscription has been rejected by a provider. Subscription approver can approve a rejected subscription.
 
 Only approved subscription will allow the consumer to continue to request access to a product resource.
 

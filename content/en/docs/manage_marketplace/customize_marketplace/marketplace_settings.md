@@ -48,7 +48,7 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
         * **Require Approval** - select to require approval for newly registered consumer orgs before allowing access to the corresponding marketplace.
 
             * **Unrestriced** - approval from an org administrator is not required to access the corresponding Marketplace.
-            * **Restricted** - approval from an org administator is required to access the corresponding Marketplace.
+            * **Restricted** - approval from an org administrator is required to access the corresponding Marketplace.
 
     * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
 

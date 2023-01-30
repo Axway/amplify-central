@@ -53,7 +53,7 @@ If the product is already published to a Marketplace, the change of category wil
 To create a category:
 
 1. Log into the platform.
-2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories
+2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
 3. Click **+ Add New Category** to start the category creation wizard:
 
     * Category Profile page: Enter the category definition (Name, Visibility, Description, and an optional image). The category logical name is optional and will be computed based on the category name.
@@ -71,7 +71,7 @@ Only product categories, not global categories, can be edited from the WebUI.
 
 1. Log into the platform.
 2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-3. Open the elipsis menu on a category and select **Edit**. The category wizard opens in Edit mode to enable changes to all information except the Category logical name.
+3. Open the ellipsis menu on a category and select **Edit**. The category wizard opens in Edit mode to enable changes to all information except the Category logical name.
 4. Save the changes.
 
 #### Update any category using Axway Central CLI
@@ -98,7 +98,7 @@ To delete a category:
 
 1. Log into the platform.
 2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-3. Open the elipsis menu on a category and select **Delete**. A confirmation message is displayed. Once confirmed, the category is deleted from the system.
+3. Open the ellipsis menu on a category and select **Delete**. A confirmation message is displayed. Once confirmed, the category is deleted from the system.
 
 ### Convert a product category into a Featured category
 

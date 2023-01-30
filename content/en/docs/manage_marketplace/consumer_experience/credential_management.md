@@ -65,7 +65,7 @@ To view the clear value of the credential:
 * From the application: *Marketplace* > Application > navigate to the appropriate resource > **View Credential** button
 * From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > **View Credential** button
 
-The panel is enlarged to show the remaining time to view the decrypted value and an eye icon to access it. After confirming your need to view the clear value of credentials, the credentials are decrypted and displayed on the screen. After you retrieve the credential clear value, make sure to copy and paste it in a secure location as you will not be able to see it again once the side blade is closed or the session expires.
+The panel is enlarged to show the remaining time to view the decrypted value and an eye icon to access it. After confirming your need to view the clear value of credentials, the credentials are decrypted and displayed on the screen. After you retrieve the credential clear value, make sure to copy and paste it in a secure location as you will not be able to see it again once the side panel is closed or the session expires.
 
 ## Suspend / Enable credential
 

@@ -60,14 +60,14 @@ The product support contact is saved and assigned to all selected products. Cons
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **Support Contacts**.
-3. Click the support contact name to open the support details screen
+3. Click the support contact name to open the support details screen.
 4. Click the **Pen** icon to open the support contact wizard in edit mode.
 5. Change any information, as required. The **Save** button is activated once you have navigated to both the Support Contact profile and Product Association pages.
 6. Click **Save** to validate your choices.
 
 ### Assign a support contact when creating a product
 
-You can assign a support contact when creating a product with the product creation wizard. This allows the Catalog Manager to either select an existing support contact or create a new one from a side blade panel. If you create a new support contact, it is availabe to other users immeditately after you click **Create*, even if you cancel the product creation.
+You can assign a support contact when creating a product with the product creation wizard. This allows the Catalog Manager to either select an existing support contact or create a new one from a side panel. If you create a new support contact, it is available to other users immediately after you click **Create*, even if you cancel the product creation.
 
 ### Delete a product support contact
 
