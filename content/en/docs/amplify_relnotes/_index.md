@@ -36,12 +36,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.45. This version is 
 
 | Agents |         |
 |--------|---------|
-| What's new: | **API Management Gateway** - Agents updated with Axway Agent SDK. <br />**AWS Gateway** - None. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Agents updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with Axway Agent SDK. |
-| Bug fixes: | **API Management Gateway** - Incorrect version on Environment details page. <br />**AWS Gateway** - Incorrect version on Environment details page. <br />**Azure Gateway** - Incorrect version on Environment details page. <br />**Istio Gateway** - Incorrect version on Environment details page. <br />**Apigee Edge gateway** - Incorrect version on Environment details page. <br />.**Mulesoft Gateway** - Incorrect version on Environment details page. |
+| What's new: | **API Management Gateway** - Agents updated with Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Agents updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with Axway Agent SDK. |
+| Bug fixes: | **API Management Gateway** - Incorrect version on Environment details page. <br />**AWS Gateway** - Incorrect version on Environment details page. <br />**Azure Gateway** - Incorrect version on Environment details page. <br />**Istio Gateway** - Incorrect version on Environment details page. <br />**Apigee Edge gateway** - Incorrect version on Environment details page. <br />**Mulesoft Gateway** - Incorrect version on Environment details page. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
-| What's new: | Publish an API to Marketplace from the Service Registry. |
+| What's new: | Publish an API to the Marketplace from the Service Registry. |
 | Bug fixes: | None. |
 
 | Asset Catalog |         |
@@ -51,7 +51,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.45. This version is 
 
 | Product Foundry |         |
 |-----------------|---------|
-| What's new: | Deprecate a plan and migrate corresponding subscriptions to a new plan. <br />Multi-role alignment. <br />Visibility when Unified Catalog entitlement set to Yes. <br />Edit product plan tags and attributes. |
+| What's new: | Deprecate a plan and migrate corresponding subscriptions to the new plan. <br />Multi-role alignment. <br />Visibility when Unified Catalog entitlement is set to Yes. <br />Edit product plan tags and attributes. |
 | Bug fixes: | The Central / Marketplace page loads continuously due to the consumer + subscriber roles. <br />A platform consumer without a team role cannot access the Amplify menu options. <br />Long product names are not displayed correctly. <br />Race condition in API Server APIs when deleting objects. |
 
 | Business insights |         |
