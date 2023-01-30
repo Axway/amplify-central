@@ -96,7 +96,7 @@ Click **Applications** to see metrics and charts about the performance of API as
 
   ![Example of App usage](/Images/central/app_usage.png)
 
-You can filter by consuming team, application, product, service, and a pre-configured timeframe or cutomize your own.
+You can filter by consuming team, application, product, service, and a pre-configured timeframe or customize your own.
 
 Click an individual item to see the products with the service name and number of transactions per service.
 

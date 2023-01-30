@@ -134,7 +134,7 @@ tags:
   - sample
 spec:
   data: 
-    accessKeyName : AzureShareAcceccKey
+    accessKeyName : AzureShareAccessKey
     accessKeyValue: ww0********=
 ```
 
@@ -210,7 +210,7 @@ This script below shows how to decrypt an encrypted password and place the value
 ```shell
 #!/bin/bash
 
-# script argument: the name of the environment variable that will contain the uncrypted value.
+# script argument: the name of the environment variable that will contain the unencrypted value.
 if [ $# -ne 1 ];  then
     echo "You need to give the environment variable name in the command: . ./decrypt.sh ENV_VAR_NAME"
 else
@@ -232,10 +232,10 @@ Sample of script starting the Axway API Gateway Discovery Agent. The script will
 ```shell
 #!/bin/bash
 
-echo "Decrypt APIGATEAY password"
+echo "Decrypt APIGATEWAY password"
 . ./decrypt.sh APIGATEWAY_AUTH_PASSWORD
 
-echo "Decrypt APIMANGER password"
+echo "Decrypt APIMANAGER password"
 . ./decrypt.sh APIMANAGER_AUTH_PASSWORD
 
 echo "staring Discovery agent"
@@ -247,7 +247,7 @@ Sample of execution:
 
 ```shell
 axway@ref-env:~/TMP$ ./startDA.sh
-Decrypt APIGATEAY password
+Decrypt APIGATEWAY password
 Encrypted password: ****
 enter aes-256-cbc decryption password:
 Decrypt APIMANGER password

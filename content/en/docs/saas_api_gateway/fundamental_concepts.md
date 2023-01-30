@@ -50,7 +50,7 @@ Users and teams of Amplify are managed by the Amplify Platform. For more informa
 
 <!-- ### Amplify Central roles -->
 
-<!-- The roles available in Amplify Central and the capabilites of each role are: -->
+<!-- The roles available in Amplify Central and the capabilities of each role are: -->
 
 <!-- TODO Add list of roles and what they can do -->
 
