@@ -171,7 +171,7 @@ A provider can decide to deprecate an active plan as it is no move relevant for 
 2. Click on the **Plans** tab. All plans configured for this product are displayed.
 3. Open the ellipsis menu and select **Deprecate**.
 
-The plan State will change to Deprecated with today's date.
+The plan state will change to Deprecated with today's date.
 
 Once this plan is deprecated, Marketplace consumers cannot subscribe to it anymore. Only subscribers having an active subscription with this plan can see it.
 
@@ -201,4 +201,4 @@ A provider can decide to archive a deprecated plan. This action is allowed only 
 2. Click on the **Plans** tab. All plans configured for this product are displayed.
 3. Open the ellipsis menu and select **Archive**.
 
-The plan State will change to Archived.
+The plan state will change to Archived.
