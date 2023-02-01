@@ -162,3 +162,43 @@ When you are finished creating the plan, click **Save Draft and Exit** to save t
 You can also use the ellipsis menu on the plan list and select **Activate**. Only plans in DRAFT state can be activated.
 
 {{< alert title="Note" color="primary" >}}A plan can only be listed in the Marketplace when the product the plan is associated to is ACTIVE and PUBLISHED in the Marketplace.{{< /alert >}}
+
+## Deprecate a product plan
+
+A provider can decide to deprecate an active plan as it is no move relevant for his subscribers.
+
+1. Navigate to the *Product Foundry* and select a product.
+2. Click on the **Plans** tab. All plans configured for this product are displayed.
+3. Open the ellipsis menu and select **Deprecate**.
+
+The plan State will change to Deprecated with today's date.
+
+Once this plan is deprecated, Marketplace consumers cannot subscribe to it anymore. Only subscribers having an active subscription with this plan can see it.
+
+## Migrate a product plan to another
+
+A provider can decide to deprecate active plan in favor of a new one. When doing this operation, he is able to move existing associated subscriptions to the new plan. This will enable his consumer to continue using the corresponding API Services. There might be a period of time the API Service access could be disrupted as everything is event based and the Discovery Agent needs to process the new plan information to apply the corresponding changes into the Dataplane.
+
+{{< alert title="Note" color="primary" >}}
+Only plan having subscription can be migrated to a new plan.
+{{< /alert >}}
+
+1. Navigate to the *Product Foundry* and select a product.
+2. Click on the **Plans** tab. All plans configured for this product are displayed.
+3. Open the ellipsis menu of the plan you want to migrate and select **Migrate**.
+4. The migration plan screen opens. Select the new plan you want your subscription to be migrated to.
+5. In case the new plan does not have the same resource as the original plan, a warning message is displayed showing the resources for each plan (original / target). You can click continue to approve the plan selection or select another plan.
+6. Select when the migration should happen: **Immediately** or at **Future date** and select the date you want.
+7. Click **Migrate Subscriptions**
+
+Once you validate your choice, the original plan will be deprecated. A new subscription is added to the target plan. The new subscription will inherit the status of original subscription. If they were some access request / credential to the original subscription, those access are marked as deleting and new access is created. Again these access request status will inherit the status of the original access request. The Discovery agent will deprovision original subscription and provision the new one. Be sure your agent is up and running to minimize the service disruption.
+
+## Archive a product plan
+
+A provider can decide to archive a deprecated plan. This action is allowed only for deprecated plan with no subscription attached.
+
+1. Navigate to the *Product Foundry* and select a product.
+2. Click on the **Plans** tab. All plans configured for this product are displayed.
+3. Open the ellipsis menu and select **Archive**.
+
+The plan State will change to Archived.
