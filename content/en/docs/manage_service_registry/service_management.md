@@ -22,6 +22,7 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 * View details for an API Service
 * Create a new API Service
 * Delete an API Service
+* Publish a service to the Marketplace
 
 ## List API Services
 
@@ -74,3 +75,17 @@ View the following detailed information for a specific service in any state (Dra
 3. Click on the environment name breadcrumb at the top of the page (i.e., the name to the right of **ENVIRONMENTS / NAME**).
 4. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
 5. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.” **All versions of the service are deleted.**
+
+## Publish to the Marketplace
+
+1. Navigate to *Catalog > Service Registry*.
+2. From the list view, click the ellipsis that is associated to the service.
+3. Select **Publish to Marketplace**.
+4. Add / Edit information where applicable:
+
+    * Asset Name Name -
+    * Product Name -
+    * Team Ownership -
+    * Product Visibility -
+
+5. Click **Publish**.
