@@ -175,23 +175,25 @@ The plan state will change to Deprecated with today's date.
 
 Once this plan is deprecated, Marketplace consumers cannot subscribe to it anymore. Only subscribers having an active subscription with this plan can see it.
 
-## Migrate a product plan to another
+## Migrate subscriptions to a new plan
 
-A provider can decide to deprecate active plan in favor of a new one. When doing this operation, he is able to move existing associated subscriptions to the new plan. This will enable his consumer to continue using the corresponding API Services. There might be a period of time the API Service access could be disrupted as everything is event based and the Discovery Agent needs to process the new plan information to apply the corresponding changes into the Dataplane.
+Providers get consumers on a new plan when the terms change (a change in the quota, price, resources) by migrating existing subscriptions to a another plan. When subscriptions are migrated, the issued credentials under the previous subscriptions remain valid, allowing consumers to continue to use the resources offered under the previous plan. There might be a period of time the API Service access could be disrupted as everything is event based and the Discovery Agent needs to process the new plan information to apply the corresponding changes into the underlying dataplane.
 
-{{< alert title="Note" color="primary" >}}
-Only plan having subscription can be migrated to a new plan.
-{{< /alert >}}
+To migrate subscriptions to a new plan:
 
 1. Navigate to the *Product Foundry* and select a product.
-2. Click on the **Plans** tab. All plans configured for this product are displayed.
-3. Open the ellipsis menu of the plan you want to migrate and select **Migrate**.
-4. The migration plan screen opens. Select the new plan you want your subscription to be migrated to.
-5. In case the new plan does not have the same resource as the original plan, a warning message is displayed showing the resources for each plan (original / target). You can click continue to approve the plan selection or select another plan.
-6. Select when the migration should happen: **Immediately** or at **Future date** and select the date you want.
-7. Click **Migrate Subscriptions**
+2. Click the **Plans** tab. All plans configured for this product are displayed.
+3. Click the ellipsis menu of the plan you want to migrate and select **Migrate**.
+4. The migration plan screen opens. Select the new plan you want your subscriptions to be migrated to.
+5. In case the new plan does not have the same resource as the original plan, a warning message is displayed showing the resources for each plan (original / target). Click **Continue** to approve the plan selection or select another plan.
+6. Select when the migration should happen: **Immediately** or at a **Future date**.
+7. Click **Migrate Subscriptions**.
 
-Once you validate your choice, the original plan will be deprecated. A new subscription is added to the target plan. The new subscription will inherit the status of original subscription. If they were some access request / credential to the original subscription, those access are marked as deleting and new access is created. Again these access request status will inherit the status of the original access request. The Discovery agent will deprovision original subscription and provision the new one. Be sure your agent is up and running to minimize the service disruption.
+{{< alert title="Note" color="primary" >}}
+The **Migrate** action appears only for plans with subscriptions.
+{{< /alert >}}
+
+Once you validate your choice, the original plan will be deprecated. A new subscription is added to the target plan. The new subscription will inherit the status of original subscription. If there were access requests / credentials under the original subscription, they are marked as deleting and new a access request is created. Again these access request status will inherit the status of the original access request. The Discovery agent will deprovision the original subscription and provision the new one. Be sure your agent is up and running to minimize the service disruption.
 
 ## Archive a product plan
 
