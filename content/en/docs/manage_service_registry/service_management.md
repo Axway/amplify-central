@@ -41,7 +41,7 @@ You can also filter the services by the Service type, Environment and Team Owner
 
 ## View API Service details
 
-To view service details:
+To view service details: (Robert to update)
 
 1. Navigate to *Catalog > Service Registry*.
 2. From the list view, select a service to open the service details.
