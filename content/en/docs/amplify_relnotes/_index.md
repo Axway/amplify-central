@@ -22,7 +22,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 Current agent versions are based on Amplify Agents SDK v1.1.45. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.41
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.44
 * **AWS Gateway using SDK 2.0** - Agent version 1.1.37
 * **Azure latest release** - Agent version 1.1.40
 * **Istio 1.9.5** - DA=v1.0.7 / TA=v2.0.50
@@ -34,23 +34,23 @@ Current agent versions are based on Amplify Agents SDK v1.1.45. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **API Management Gateway** - Agents updated with Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Agents updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with Axway Agent SDK. |
-| Bug fixes: | **API Management Gateway** - Text. <br />**AWS Gateway** - Text. <br />**Azure Gateway** - Text. <br />**Istio Gateway** - Text. <br />**Apigee Edge gateway** - Text. <br />**Mulesoft Gateway** - Text. |
+| What's new: | **API Management Gateway** - Agents updated with Axway Agent SDK. |
+| Bug fixes: | **API Management Gateway** - Usage metrics exclude OAuth service calls initiated by the API Management Gateway. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | None. |
+| What's new: | API Service details improvement. |
 | Bug fixes: | None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | Text. |
-| Bug fixes: | Text. |
-| <br />**Business insights** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Cannot modify and display a contact assigned to a product. <br />Product image not available in Marketplace. |
+| <br />**Business insights** |         |
+| What's new: | Business insights displays the organization and consumer team. <br />Subscription data can be exported as a CSV file. <br />Multi select capability. |
+| Bug fixes: | Large number of applications showing “Unknown.” |
 | <br />**Marketplace** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Deprecated / archived plan is still available for subscription. <br />Corrupted product does not show the warning icon in all Marketplaces. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
