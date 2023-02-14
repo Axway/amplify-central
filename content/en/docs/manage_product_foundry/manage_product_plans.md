@@ -168,7 +168,7 @@ You can also use the ellipsis menu on the plan list and select **Activate**. Onl
 A provider can decide to deprecate an active plan as it is no move relevant for his subscribers. Once the action is initiated, provider will face multiple choices:
 
 * **Deprecate the plan only** - this plan will no more be available for any new subscriber but existing subscription with this plan are still valid.
-* **Cancel the corresponding subscription** - the corresponding subscription will be cancelled and cannot be use anymore to request resource access.
+* **Cancel the corresponding subscription** - the corresponding subscription will be cancelled and cannot be use anymore to request resource access. But the subscription is still present in the Marketplace so that the associated metrics are still relevant.
 * **Migrate subscription to a new plan** = the existing plan subscription will be move to a new plan. Refer to [Migrate subscriptions to a new plan](/docs/manage_product_foundry/manage_product_plans#migrate-subscriptions-to-a-new-plan).
 
 1. Navigate to the *Product Foundry* and select a product.
