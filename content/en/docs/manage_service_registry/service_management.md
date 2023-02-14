@@ -46,12 +46,15 @@ To view service details:
 1. Navigate to *Catalog > Service Registry*.
 2. From the list view, select a service to open the service details.
 
-View the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
+Click on the Service name or icon to view the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* Service Name, Logical Name, Description, Owning Team, Tags, Attributes, Endpoints, Active Version, Spec, Created on / Modified on date by User
-* Per Service Version Tags and Attributes
-* The API Specification and Methods
-* Endpoints listening for requests to the service
+* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights, Tags & Attributes, and Assets for the General Service.
+* The metrics area displays the number of assets and products related to the General Service.
+* The general Access Rights tab displays all teams the API Service is shared with.
+* The general Tags & Attributes tab displays the tags and attributes properties for the general API Service.
+* The general Asset tab displays the assets that contain this API Service.
+* Version specific information is displayed at the bottom in the Versions tab. Every version of the service is displayed by Service Revision name, specification type, and created/updated date on the left side of the Version tab, making it easy to view all versions of an API Service.
+* With the version specific tab, there are other tabs to view the API Specification & Methods, Endpoints listening for requests to the service, Tags & Attributes, and Assets which are related to version of the service.
 
 ## Create an API Service
 
