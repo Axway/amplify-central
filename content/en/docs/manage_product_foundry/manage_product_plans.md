@@ -165,26 +165,28 @@ You can also use the ellipsis menu on the plan list and select **Activate**. Onl
 
 ## Deprecate a product plan
 
-A provider can decide to deprecate an active plan as it is no move relevant for his subscribers. Once the action is initiated, provider will face multiple choices:
+A provider can deprecate an active plan when is terms of the plan changes or it is no longer relevant and they would like to prevent new subscriptions under the plan. When deprecating a plan, the user can choose from the following options:
 
-* **Deprecate the plan only** - this plan will no more be available for any new subscriber but existing subscription with this plan are still valid.
-* **Cancel the corresponding subscription** - the corresponding subscription will be cancelled and cannot be use anymore to request resource access. But the subscription is still present in the Marketplace so that the associated metrics are still relevant.
-* **Migrate subscription to a new plan** - the existing plan subscription will be move to a new plan. Refer to [Migrate subscriptions to a new plan](/docs/manage_product_foundry/manage_product_plans#migrate-subscriptions-to-a-new-plan).
+* **Deprecate the plan only** - this plan will no longer be available for new subscriptions, but existing ones will continue to work.
+* **Cancel the corresponding subscription** - the corresponding subscription will be cancelled and cannot be used anymore to request resource access; the subscription is still present in the Marketplace so that the associated metrics can be displayed.
+* **Migrate subscription to a new plan** - the subscriptions under this plan will be moved to a new plan. Refer to [Migrate subscriptions to a new plan](/docs/manage_product_foundry/manage_product_plans#migrate-subscriptions-to-a-new-plan).
+
+To deprecate a plan:
 
 1. Navigate to the *Product Foundry* and select a product.
 2. Click on the **Plans** tab. All plans configured for this product are displayed.
 3. Open the ellipsis menu and select **Deprecate**.
-4. The Plan deprecation panel is open.
-5. Select the action: None, Move to a new Plan or Cancel.
+4. The plan deprecation panel is open.
+5. Select the action: None, Move to a new plan or Cancel.
 6. Click **Update** to deprecate the plan or **Cancel** to cancel the plan deprecation.
 
 The plan state will change to Deprecated with today's date.
 
-Once this plan is deprecated, Marketplace consumers cannot subscribe to it anymore. Only subscribers having an active subscription with this plan can see it.
+Once this plan is deprecated, Marketplace consumers cannot subscribe to it anymore. Only subscribers having an active subscription under this plan can see it.
 
 ## Migrate subscriptions to a new plan
 
-Providers get consumers on a new plan when the terms change (a change in the quota, price, resources) by migrating existing subscriptions to a another plan. When subscriptions are migrated, the issued credentials under the previous subscriptions remain valid, allowing consumers to continue to use the resources offered under the previous plan. There might be a period of time the API Service access could be disrupted as everything is event based and the Discovery Agent needs to process the new plan information to apply the corresponding changes into the underlying dataplane.
+Providers can get consumers on a new plan when the terms change (a change in the quota, price, resources) by migrating existing subscriptions to a another plan. When subscriptions are migrated, the issued credentials under the previous subscriptions remain valid, allowing consumers to continue to use the resources offered under the previous plan. There might be a period of time the API Service access could be disrupted as everything is event based and the Discovery Agent needs to process the new plan information to apply the corresponding changes into the underlying dataplane.
 
 To migrate subscriptions to a new plan:
 
