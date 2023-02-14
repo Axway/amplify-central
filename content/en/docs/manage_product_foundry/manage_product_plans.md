@@ -165,11 +165,18 @@ You can also use the ellipsis menu on the plan list and select **Activate**. Onl
 
 ## Deprecate a product plan
 
-A provider can decide to deprecate an active plan as it is no move relevant for his subscribers.
+A provider can decide to deprecate an active plan as it is no move relevant for his subscribers. Once the action is initiated, provider will face multiple choices:
+
+* **Deprecate the plan only** - this plan will no more be available for any new subscriber but existing subscription with this plan are still valid.
+* **Cancel the corresponding subscription** - the corresponding subscription will be cancelled and cannot be use anymore to request resource access.
+* **Migrate subscription to a new plan** = the existing plan subscription will be move to a new plan. Refer to [Migrate subscriptions to a new plan](/docs/manage_product_foundry/manage_product_plans#migrate-subscriptions-to-a-new-plan).
 
 1. Navigate to the *Product Foundry* and select a product.
 2. Click on the **Plans** tab. All plans configured for this product are displayed.
 3. Open the ellipsis menu and select **Deprecate**.
+4. The Plan deprecation panel is open.
+5. Select the action: None, Move to a new Plan or Cancel.
+6. Click **Update** to deprecate the plan or **Cancel** to cancel the plan deprecation.
 
 The plan state will change to Deprecated with today's date.
 
