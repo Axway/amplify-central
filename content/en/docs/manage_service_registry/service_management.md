@@ -86,7 +86,7 @@ View the following detailed information for a specific service in any state (Dra
     * Asset Name - The proposed asset name is set to the API Service name.  
     * Product Name - The proposed asset name is set to the API Service name.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created Asset and Product are only visible to the Central Admin role.
-    * Product Visibility - The proposed visibility is set to the currently logged in team to facilitate collaboratiion withi internal teams to edit the product documention or product plan.  If you are logged in as a Central Admin, the proposed Product Visibility is set to none. 
+    * Product Visibility - The proposed visibility is set to the currently logged in team to facilitate collaboration with internal teams to edit the product documentation or product plan.  If you are logged in as a Central Admin, the proposed Product Visibility is set to none.
     * The default product plan will use a free unlimited plan which can be edited after the product is created.
 
 5. Click **Publish** to quickly make an API service available from consumption in the Marketplace.
