@@ -41,19 +41,19 @@ You can also filter the services by the Service type, Environment and Team Owner
 
 ## View API Service details
 
-To view service details: (Robert to update)
+To view service details:
 
 1. Navigate to *Catalog > Service Registry*.
 2. From the list view, select a service to open the service details.
 
 Click on the Service name or icon to view the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* General Service information (non-version specific) is displayed at the top portion of the page.   The inclucdes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights Tags & Attrivutes, and Assets for the General Service.
-* The is metrics area which displays the count of the number of Assets and Product related to the General Service.
-* The general Access Rights tab displays all the other teams the API Service is shared with.
-* The general Tags & Attribues tab displays the tags and attributes properties for the general API Service.
-* The general Asset tab displays all the Assets which are grouped with this general API Service.
-* Version specific infomration is diplayed in the bottom portion of the screen in the Versions tab.  Every version of the Service is displayed by their Service Revision name, the specification type, and created/updated date on the left hand side of the Version tab.  This makes it easier to view all the versions of an API Service.
+* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights, Tags & Attributes, and Assets for the General Service.
+* The metrics area displays the number of assets and products related to the General Service.
+* The general Access Rights tab displays all teams the API Service is shared with.
+* The general Tags & Attributes tab displays the tags and attributes properties for the general API Service.
+* The general Asset tab displays the assets that contain this API Service.
+* Version specific information is displayed at the bottom in the Versions tab. Every version of the service is displayed by Service Revision name, specification type, and created/updated date on the left side of the Version tab, making it easy to view all versions of an API Service.
 * With the version specific tab, there are other tabs to view the API Specification & Methods, Endpoints listening for requests to the service, Tags & Attributes, and Assets which are related to version of the service.
 
 ## Create an API Service
