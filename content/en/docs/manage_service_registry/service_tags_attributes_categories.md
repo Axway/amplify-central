@@ -12,7 +12,8 @@ Tags are keywords that can be assigned to API Services and used to search for se
 
 1. Select a service in the *Service Registry* and open it.
 2. Click **Edit API Service** on upper right.
-3. Click **Tags and Attributes** in side panel and enter the new tag. To remove a tag, click the **X** next to the tag name.
+3. Click **Tags and Attributes** in side panel and enter the new tag. 
+4. Click **+** to add the tag. To remove a tag, click the **X** next to the tag name.
 
 ## Add or remove attributes
 
@@ -20,6 +21,7 @@ Attributes are keyword and value pairs that can be assigned to API Services and 
 
 1. Select a service in the *Service Registry* and open it.
 2. Click **Edit API Service** on upper right.
-3. Click **Tags and Attributes** in side panel and enter the new attribute and value. To remove an attribute, click the **X** next to the attribute key=value.
+3. Click **Tags and Attributes** in side panel and enter the new attribute and value. 
+4. Click **+** to add the attribute. To remove an attribute, click the **X** next to the attribute key=value.
 
-Note:  Categories which are created can be assigned to Assets and Products.  They can not be assigned to API Services.
+{{< alert title="Note" color="primary" >}}Categories that are created can be assigned to assets and products, but not to API Services.{{< /alert >}}
