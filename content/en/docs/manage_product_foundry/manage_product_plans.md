@@ -191,7 +191,7 @@ To migrate subscriptions to a new plan:
 
 1. Navigate to the *Product Foundry* and select a product.
 2. Click the **Plans** tab. All plans configured for this product are displayed.
-3. Click the ellipsis menu of the plan you want to migrate and select **Migrate**. *The Migration Subscriptions panel is displayed*. 
+3. Click the ellipsis menu of the plan you want to migrate and select **Migrate**. *The Migration Subscriptions panel is displayed*.
 4. Select the new destination plan you want your subscriptions to be migrated to. If the new plan does not have the same resource as the original plan, a warning message is displayed showing the resources for each plan (original / target).
 5. Click **Continue** to approve the plan selection or select another plan.
 6. Select when the migration should happen: **Immediately** or at a **Future date**.
