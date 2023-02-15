@@ -165,7 +165,7 @@ You can also use the ellipsis menu on the plan list and select **Activate**. Onl
 
 ## Deprecate a product plan
 
-A provider can deprecate an active plan when the terms of the plan change, or it is no longer relevant, and they would like to prevent new subscriptions under the plan. When deprecating a plan, the provider can choose one of the following subscription migrations:
+A provider can deprecate an active plan when the terms of the plan change, or it is no longer relevant, and they would like to prevent new subscriptions under the plan. When deprecating a plan, the provider can choose one of the following:
 
 * Deprecate the plan only - this plan will no longer be available for new subscriptions, but existing ones will continue to work.
 * Cancel the corresponding subscription - the corresponding subscription will be cancelled and cannot be used anymore to request resource access; the subscription is still present in the Marketplace so that the associated metrics can be displayed.
