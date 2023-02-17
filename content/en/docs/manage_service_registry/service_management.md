@@ -22,6 +22,7 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 * View details for an API Service
 * Create a new API Service
 * Delete an API Service
+* Publish a service to the Marketplace
 
 ## List API Services
 
@@ -77,3 +78,20 @@ Click on the Service name or icon to view the following detailed information for
 3. Click on the environment name breadcrumb at the top of the page (i.e., the name to the right of **ENVIRONMENTS / NAME**).
 4. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
 5. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.” **All versions of the service are deleted.**
+
+## Publish to the Marketplace
+
+Use Publish to Marketplace to quickly promote an API to the Marketplace for internal consumption as a product under a free plan. An asset and a product will automatically be generated. The publication is initially restricted to teams in the provider organization, but changes can be made to the product from the Product Foundry.
+
+1. Navigate to *Catalog > Service Registry*.
+2. From the list view, click the ellipsis that is associated to the service.
+3. Select **Publish to Marketplace**.
+4. Add / edit information where applicable:
+
+    * Asset Name - The proposed asset name is set to the API Service name.  
+    * Product Name - The proposed asset name is set to the API Service name.
+    * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
+    * Product Visibility - The proposed visibility is set to the currently logged in team to facilitate collaboration with internal teams to edit the product documentation or product plan.  If you are logged in as a Central Admin, the proposed Product Visibility is set to None.
+    * The default product plan is a free unlimited plan which can be edited after the product is created.
+
+5. Click **Publish** to quickly make an API Service available from consumption in the Marketplace.
