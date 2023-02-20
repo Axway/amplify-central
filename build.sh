@@ -10,8 +10,9 @@
 # Description:
 #   This is roughly the flow of the script:
 #     1. make sure "go" is available
-#     2. update config.toml
-#     3. runs "hugo server" to build the site and the
+#     2. install npm dependencies used by docsy
+#     3. update config.toml
+#     4. runs "hugo server" to build the site and the
 #        micro site will be available on http://localhost:1313/
 #
 # Usage:
