@@ -20,36 +20,36 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify February 24 2023](/docs/amplify_relnotes/20230224_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.45. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.46. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.44
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.37
-* **Azure latest release** - Agent version 1.1.40
-* **Istio 1.9.5** - DA=v1.0.7 / TA=v2.0.50
-* **Apigee Edge** - Agent version 0.1.8
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.14
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.45
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.38
+* **Azure latest release** - Agent version 1.1.41
+* **Istio 1.9.5** - DA=v1.0.8 / TA=v2.0.51
+* **Apigee Edge** - Agent version 0.1.9
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.15
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | The agents have been updated with the Axway Agent SDK. |
+| Bug fixes: | Incorrect API Service status. |
 | <br />**Agents** |         |
-| What's new: | **API Management Gateway** - None. |
-| Bug fixes: | **API Management Gateway** - None. |
+| What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
+| Bug fixes: | None. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | None. |
+| What's new: | Publish an API progress bar. |
 | Bug fixes: | None. |
 | <br />**Asset Catalog** |         |
-| What's new: | None. |
+| What's new: | Asset entitlement. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Product Category in multiple Marketplaces context. |
+| Bug fixes: | Product access specific rights raise an error when no owner is set. <br />Pagination issue in the category list view and plan list view. <br />Free plan quota not created with a default value. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
+| What's new: | Category works in multiple Marketplaces context. |
 | Bug fixes: | None. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
