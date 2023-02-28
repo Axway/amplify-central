@@ -53,7 +53,7 @@ A public category can be Visible / Featured in one or multiple marketplaces depe
    5. the category description
    6. the ellipsis menu for additional actions: Edit / Delete
 
-When clicking the category name, it opens the category detail page. From the details page, you can [edit the category](#editing-a-category) or [features a category](#featuring-a-category)
+When clicking the category name, it opens the category detail page. From the details page, you can [edit the category](#editing-a-category) or [convert to a featured category](#convert-a-product-category-into-a-featured-category)
 
 ### Creating a global category
 
