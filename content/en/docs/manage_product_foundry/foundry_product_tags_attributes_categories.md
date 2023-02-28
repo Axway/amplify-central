@@ -55,16 +55,6 @@ A public category can be Visible / Featured in one or multiple marketplaces depe
 
 When clicking the category name, it opens the category detail page. From the details page, you can [edit the category](#editing-a-category) or [features a category](#featuring-a-category)
 
-### Featuring a category
-
-Featuring a category helps you to advertize specific product in your marketplace home page.
-
-1. Log into the platform.
-2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories with the following information:
-3. Click the star icon to open the category detail screen and automatically expand the Marketplace visibility section where the marketplace list is displayed and if the category is featured or not in each marketplace.
-4. Click the star icon to feature the category in the corresponding marketplace. In case the maximum number (5) of featured category is reached, a popup will allow to either discard the change or replace an existing featured category with the current one.
-5. Save the changes.
-
 ### Creating a global category
 
 Only users that are assigned the **Central Admin** role can create global categories when creating or editing a product. Categories are created at the Organization level and available to all teams to apply them to their products.
@@ -99,6 +89,18 @@ Only product categories, not global categories, can be edited from the WebUI.
 2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
 3. Open the ellipsis menu on a category and select **Edit**. The category wizard opens in Edit mode to enable changes to all information except the Category logical name.
 4. Save the changes.
+
+### Convert a product category into a Featured category
+
+Only users that are assigned the **Central Admin** role can edit product categories.
+
+To convert a category into a Featured category:
+
+1. Log into the platform.
+2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories with the following information:
+3. Click the star icon to open the category detail screen and automatically expand the Marketplace visibility section where the marketplace list is displayed and if the category is featured or not in each marketplace.
+4. Click the star icon to feature the category in the corresponding marketplace. In case the maximum number (5) of featured category is reached, a popup will allow to either discard the change or replace an existing featured category with the current one.
+5. Save the changes.
 
 #### Update any category using Axway Central CLI
 
@@ -152,17 +154,6 @@ To delete a category:
 1. Log into the platform.
 2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
 3. Open the ellipsis menu on a category and select **Delete**. A confirmation message is displayed. Once confirmed, the category is deleted from the system.
-
-### Convert a product category into a Featured category
-
-Only users that are assigned the **Central Admin** role can edit product categories.
-
-To convert a category into a Featured category:
-
-1. Log into the platform.
-2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-3. Click the category name to open the category preview pane. Change the category visibility as well as the Featured category toggle. If five Featured categories are already present in the system, a warning message is displayed and a new one cannot be added.
-4. Save the change.
 
 ### Assigning a category while creating/editing a product
 
