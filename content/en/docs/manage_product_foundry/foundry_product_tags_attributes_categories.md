@@ -38,7 +38,32 @@ The product specific categories have two types of visibility:
 * Private: This category is used for filtering the Product Foundry catalog only.
 * Public: This category is used to filter the Product Foundry catalog, as well as the Marketplace product.
 
-A public category can be set as a **Featured** by providers to highlight and advertise this category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of Featured categories is set to five.
+A public category can be set as a **Featured** by providers to highlight and advertise this category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of Featured categories is set to **five**.
+
+A public category can be Visible / Featured in one or multiple marketplaces depending on the advertisement level needed on the Marketplaces.
+
+### Viewing categories
+
+1. Log into the platform.
+2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories with the following information:
+   1. the category name
+   2. the number of product the category is assigned to
+   3. the category visibility (Product Foundry or Marketplace)
+   4. how many times the category is featured in marketplaces
+   5. the category description
+   6. the ellipsis menu for additional actions: Edit / Delete
+
+When clicking the category name, it opens the category detail page. From the details page, you can [edit the category](#editing-a-category) or [features a category](#featuring-a-category)
+
+### Featuring a category
+
+Featuring a category helps you to advertize specific product in your marketplace home page.
+
+1. Log into the platform.
+2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories with the following information:
+3. Click the star icon to open the category detail screen and automatically expand the Marketplace visibility section where the marketplace list is displayed and if the category is featured or not in each marketplace.
+4. Click the star icon to feature the category in the corresponding marketplace. In case the maximum number (5) of featured category is reached, a popup will allow to either discard the change or replace an existing featured category with the current one.
+5. Save the changes.
 
 ### Creating a global category
 
@@ -58,6 +83,7 @@ To create a category:
 
     * Category Profile page: Enter the category definition (Name, Visibility, Description, and an optional image). The category logical name is optional and will be computed based on the category name.
     * Product Association page: Assign/unassign product to this category.
+    * Marketplace association page: Assign/unassign all marketplaces or specific ones where this category will be visible and/or featured.
 
 4. Save the category.
 
@@ -85,9 +111,36 @@ spec:
   ...
   restriction:
     type: product
+# The following definition is deprecated and is replaced with the CategoryVisibility object below 
     marketplace:
       visible: true|false
       featured: true|false
+```
+
+Adding visibility/feature for a specific marketplace with the following object:
+
+```yaml
+# this object helps to make the category visible and/or featured for specific marketplace.
+# If you need the same category to be visible/featured in multiple marketplaces, you need to create as many objects as many marketplaces where the category is exposed.
+group: catalog
+apiVersion: v1alpha1
+kind: CategoryVisibility
+name: {a-unique-name}
+title: category X visible in Marketplace Y
+metadata:
+  scope:
+      kind: Marketplace
+# MARKETPLACE_ID can be found in the Marketplace settings: pick the ID displayed in the marketplace settings url.
+      name: {MARKETPLACE_ID}
+attributes: {}
+finalizers: []
+tags: []
+spec:
+# refer to the Category list column - Logical Name
+  category: {CATEGORY_LOGICAL_NAME}
+# featured: true => the category is featured for this marketplace and visible in marketplace home page
+# featured: false => the category is not featured for this marketplace but is used to filter products
+  featured: true|false
 ```
 
 ### Deleting a category
