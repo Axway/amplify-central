@@ -30,13 +30,13 @@ Categories allow for a broader grouping of products into different topics or the
 
 The category types are:
 
-* **Global**: Either legacy categories that were created using the Unified Catalog category management system, or are categories created while creating products. They can be used with either asset or products.
+* **Global**: Either legacy categories that were created using the Unified Catalog category management system, or categories added while creating products. They can be used with either asset or products.
 * **Product specific**: Categories that can only be assigned to a product.
 
 The product specific categories have two types of visibility:
 
-* Private: For filtering the Product Foundry catalog only.
-* Public: For filtering the Product Foundry catalog and the Marketplace product.
+* Private: Visible in the Product Foundry only.
+* Public: Visible in both the Product Foundry and the Marketplace.
 
 A public category can be set to **Featured** by providers to highlight and advertise the category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of featured categories is **five**.
 
@@ -54,7 +54,7 @@ A public category can be Visible / Featured in one or multiple Marketplaces depe
     * The category description
     * The ellipsis menu for additional actions: Edit / Delete
 
-Click the category name to open the category details page. From the details page, you can [edit the category](#editing-a-category) or [convert to a featured category](#converting-a-product-category-into-a-featured-category).
+Click the category name to open the category details page. From the details page, you can [edit the category](#editing-a-category) or [convert to a featured category](#setting-a-product-category-as-featured-in-a-marketplace).
 
 ### Creating a global category
 
@@ -89,7 +89,7 @@ Only product categories, not global categories, can be edited from the WebUI.
 3. Open the ellipsis menu on a category and select **Edit**. The category wizard opens in edit mode to enable changes to all information except the Category logical name.
 4. Save the changes.
 
-### Converting a product category into a Featured category
+### Setting a product category as Featured in a Marketplace
 
 Only users that are assigned the **Central Admin** role can edit product categories.
 
