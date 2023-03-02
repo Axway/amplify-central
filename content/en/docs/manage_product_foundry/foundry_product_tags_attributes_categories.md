@@ -30,7 +30,7 @@ Categories allow for a broader grouping of products into different topics or the
 
 The category types are:
 
-* **Global**: Either legacy categories that were created using the Unified Catalog category management system, or are categories created while creating products. They can be used with either Asset or Products.
+* **Global**: Either legacy categories that were created using the Unified Catalog category management system, or are categories created while creating products. They can be used with either asset or products.
 * **Product specific**: Categories that can only be assigned to a product.
 
 The product specific categories have two types of visibility:
@@ -38,7 +38,7 @@ The product specific categories have two types of visibility:
 * Private: For filtering the Product Foundry catalog only.
 * Public: For filtering the Product Foundry catalog and the Marketplace product.
 
-A public category can be set to **Featured** by providers to highlight and advertise the category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of Featured categories is **five**.
+A public category can be set to **Featured** by providers to highlight and advertise the category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of featured categories is **five**.
 
 A public category can be Visible / Featured in one or multiple Marketplaces depending on the necessary Marketplace advertisement level.
 
@@ -54,7 +54,7 @@ A public category can be Visible / Featured in one or multiple Marketplaces depe
     * The category description
     * The ellipsis menu for additional actions: Edit / Delete
 
-Click the category name to open the category details page. From the details page, you can [edit the category](#editing-a-category) or [convert to a featured category](#convert-a-product-category-into-a-featured-category).
+Click the category name to open the category details page. From the details page, you can [edit the category](#editing-a-category) or [convert to a featured category](#converting-a-product-category-into-a-featured-category).
 
 ### Creating a global category
 
