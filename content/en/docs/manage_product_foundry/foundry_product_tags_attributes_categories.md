@@ -30,15 +30,31 @@ Categories allow for a broader grouping of products into different topics or the
 
 The category types are:
 
-* **Global**: These are either legacy categories that were created using the Unified Catalog category management system, or are categories created while creating products. They can be used with either Asset or Products.
-* **Product specific**:  These categories can only be assigned to a product.
+* **Global**: Either legacy categories that were created using the Unified Catalog category management system, or are categories created while creating products. They can be used with either Asset or Products.
+* **Product specific**: Categories that can only be assigned to a product.
 
 The product specific categories have two types of visibility:
 
-* Private: This category is used for filtering the Product Foundry catalog only.
-* Public: This category is used to filter the Product Foundry catalog, as well as the Marketplace product.
+* Private: For filtering the Product Foundry catalog only.
+* Public: For filtering the Product Foundry catalog and the Marketplace product.
 
-A public category can be set as a **Featured** by providers to highlight and advertise this category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of Featured categories is set to five.
+A public category can be set to **Featured** by providers to highlight and advertise the category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of Featured categories is **five**.
+
+A public category can be Visible / Featured in one or multiple Marketplaces depending on the necessary Marketplace advertisement level.
+
+### Viewing categories
+
+1. Log into the platform.
+2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories with the following information:
+
+    * The category name
+    * The number of products the category is assigned to
+    * The category visibility (Product Foundry or Marketplace)
+    * The number of times the category is featured in Marketplaces
+    * The category description
+    * The ellipsis menu for additional actions: Edit / Delete
+
+Click the category name to open the category details page. From the details page, you can [edit the category](#editing-a-category) or [convert to a featured category](#convert-a-product-category-into-a-featured-category).
 
 ### Creating a global category
 
@@ -50,14 +66,13 @@ Only users that are assigned the **Central Admin** role can create product cat
 
 If the product is already published to a Marketplace, the change of category will be reflected immediately in the Marketplace.
 
-To create a category:
-
 1. Log into the platform.
-2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
+2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories.
 3. Click **+ Add New Category** to start the category creation wizard:
 
     * Category Profile page: Enter the category definition (Name, Visibility, Description, and an optional image). The category logical name is optional and will be computed based on the category name.
     * Product Association page: Assign/unassign product to this category.
+    * Marketplace association page: Assign/unassign all Marketplaces or specific ones where this category will be visible and/or featured.
 
 4. Save the category.
 
@@ -70,9 +85,19 @@ Only users that are assigned the **Central Admin** role can edit product categ
 Only product categories, not global categories, can be edited from the WebUI.
 
 1. Log into the platform.
-2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-3. Open the ellipsis menu on a category and select **Edit**. The category wizard opens in Edit mode to enable changes to all information except the Category logical name.
+2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories.
+3. Open the ellipsis menu on a category and select **Edit**. The category wizard opens in edit mode to enable changes to all information except the Category logical name.
 4. Save the changes.
+
+### Converting a product category into a Featured category
+
+Only users that are assigned the **Central Admin** role can edit product categories.
+
+1. Log into the platform.
+2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories.
+3. Click the star icon to open the category details screen and automatically expand the Marketplace visibility section where the Marketplace list is displayed and whether the category is featured in each Marketplace.
+4. Click the star icon to feature the category in the corresponding Marketplace. If the maximum number (five) of featured categories is reached, you will be prompted to either discard the change or replace an existing featured category with the current one.
+5. Save the changes.
 
 #### Update any category using Axway Central CLI
 
@@ -85,9 +110,36 @@ spec:
   ...
   restriction:
     type: product
+# The following definition is deprecated and is replaced with the CategoryVisibility object below 
     marketplace:
       visible: true|false
       featured: true|false
+```
+
+Adding visibility/feature for a specific Marketplace with the following object:
+
+```yaml
+# this object helps to make the category visible and/or featured for specific marketplace.
+# If you need the same category to be visible/featured in multiple marketplaces, you need to create as many objects as there are marketplaces where the category is exposed.
+group: catalog
+apiVersion: v1alpha1
+kind: CategoryVisibility
+name: {a-unique-name}
+title: category X visible in Marketplace Y
+metadata:
+  scope:
+      kind: Marketplace
+# MARKETPLACE_ID can be found in the Marketplace settings: pick the ID displayed in the marketplace settings url.
+      name: {MARKETPLACE_ID}
+attributes: {}
+finalizers: []
+tags: []
+spec:
+# refer to the Category list column - Logical Name
+  category: {CATEGORY_LOGICAL_NAME}
+# featured: true => the category is featured for this marketplace and visible in marketplace home page
+# featured: false => the category is not featured for this marketplace but is used to filter products
+  featured: true|false
 ```
 
 ### Deleting a category
@@ -97,19 +149,8 @@ Only users that are assigned the **Central Admin** role can delete product cat
 To delete a category:
 
 1. Log into the platform.
-2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
+2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories.
 3. Open the ellipsis menu on a category and select **Delete**. A confirmation message is displayed. Once confirmed, the category is deleted from the system.
-
-### Convert a product category into a Featured category
-
-Only users that are assigned the **Central Admin** role can edit product categories.
-
-To convert a category into a Featured category:
-
-1. Log into the platform.
-2. Navigate to **Catalog > Product Foundry > Categories**. This page displays all global categories assigned only to products and product categories.
-3. Click the category name to open the category preview pane. Change the category visibility as well as the Featured category toggle. If five Featured categories are already present in the system, a warning message is displayed and a new one cannot be added.
-4. Save the change.
 
 ### Assigning a category while creating/editing a product
 
@@ -117,5 +158,5 @@ Only users that are assigned the **Central Admin** role can create categories 
 Catalog manager users can only assign existing categories.
 
 1. Select a product in the *Product Foundry* and open it.
-2. Click on the Categories field in the details pane and select the category from the list. The list contains global categories and product specific categories.
+2. Click on the Categories field in the details panel and select the category from the list. The list contains global categories and product specific categories.
 3. Click the **X** next to the category name to remove a category.
