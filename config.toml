@@ -111,7 +111,7 @@ github_branch = ""
 # gcs_engine_id = "011737558837375720776:fsdu1nryfng"
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
-prism_syntax_highlighting = true
+# prism_syntax_highlighting = true
 
 # User interface configuration
 [params.ui]
