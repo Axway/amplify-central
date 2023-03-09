@@ -323,6 +323,12 @@ als:
     apiID: ""
     # The name of the Client ID key: Ex: "clientID"
     clientID: ""
+  # Config for correlation service to be used for getting the apiID, stage, version and clientID to lookup API server resources.
+  correlation:
+    # correlation service host
+    host:
+    # correlation service port
+    port: 
 
 # Configures the Discovery Agent
 da:
