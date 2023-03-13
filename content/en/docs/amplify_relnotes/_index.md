@@ -20,36 +20,36 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify March 10 2023](/docs/amplify_relnotes/20230310_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.46. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.47. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.45
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.38
-* **Azure latest release** - Agent version 1.1.41
-* **Istio 1.9.5** - DA=v1.0.8 / TA=v2.0.51
-* **Apigee Edge** - Agent version 0.1.9
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.15
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.46
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.39
+* **Azure latest release** - Agent version 1.1.42
+* **Istio 1.9.5** - DA=v1.0.9 / TA=v2.0.52
+* **Apigee Edge** - Agent version 0.1.10
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.16
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
+| What's new: | Usage reporting frequency reduced. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
+| What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. <br />**Axway API Management Gateway** - Improve the display of Discovery Agent log messages. |
 | Bug fixes: | None. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | None. |
+| What's new: | Service details page includes metrics. |
 | Bug fixes: | None. |
 | <br />**Asset Catalog** |         |
-| What's new: | None. |
+| What's new: | Asset Catalog list view UX improvement. <br />Asset details view UX improvement. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Product details screen re-organization. <br />Unpublish product from Marketplace. <br />Product Category in multiple Marketplaces. |
+| Bug fixes: | Failure when not selecting any owner for a product if the user is team restricted. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
+| What's new: | Category works in multiple Marketplaces. |
 | Bug fixes: | None. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
