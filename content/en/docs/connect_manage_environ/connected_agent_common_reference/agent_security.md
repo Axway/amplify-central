@@ -290,15 +290,15 @@ The agents are implemented in Golang. Security tools are run against the agents 
 
 SAST (Static Application Security Testing):
 
-    * Scan the code for possible coding errors or inconsistencies
-    * Look for code reliability issues, security vulnerabilities, and unit test coverage
-    * Scan all library dependencies for security vulnerabilities and compliance issues
+* Scan the code for possible coding errors or inconsistencies
+* Look for code reliability issues, security vulnerabilities, and unit test coverage
+* Scan all library dependencies for security vulnerabilities and compliance issues
 
 DSAT (Dynamic Application Security Testing):
 
-    * For agents that run in docker containers. Scan the container for security protection within the infrastructure
+* *For agents that run in docker containers*. Scan the container for security protection within the infrastructure
 
 SCA (Software Composition Analysis):
 
-    * Scan the code for possible coding errors or inconsistencies
-    * System architects manually create threat models of the system to identify and mitigate architectural security risks
+* Scan the code for possible coding errors or inconsistencies
+* System architects manually create threat models of the system to identify and mitigate architectural security risks
