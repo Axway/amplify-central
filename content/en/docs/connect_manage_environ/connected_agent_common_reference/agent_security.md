@@ -294,7 +294,7 @@ SAST (Static Application Security Testing):
 * Look for code reliability issues, security vulnerabilities, and unit test coverage
 * Scan all library dependencies for security vulnerabilities and compliance issues
 
-DSAT (Dynamic Application Security Testing):
+DAST (Dynamic Application Security Testing):
 
 * *For agents that run in docker containers*. Scan the container for security protection within the infrastructure
 
