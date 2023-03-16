@@ -284,18 +284,21 @@ To remove the clear value from the agent configuration file, create a correspond
 
 ## Agent security scans
 
-All Axway software is developed under a Secure Software Development Lifecycle; therefore, the agents undergo regular security analysis.
+All Axway software is developed under a Secure Software Development Lifecycle; therefore, the agents undergo regular security analysis. See [Axway's Security Statement](https://www.axway.com/en/customers/axway-security-statement) for an overview of the Axway security framework and security tools.  
 
-The agents are implemented in Golang. These security tools are run against the agents and the findings are remediated:
+The agents are implemented in Golang. Security tools are run against the agents and the findings are remediated:
 
-* [Golint](https://github.com/golang/lint) - scans the code for possible coding errors or inconsistencies
+SAST (Static Application Security Testing):
 
-* [Fortify](https://www.microfocus.com/en-us/cyberres/application-security/software-security-center) - static code analyzer that searches for violations of security-specific coding rules and guidelines
+    * Scan the code for possible coding errors or inconsistencies
+    * Look for code reliability issues, security vulnerabilities, and unit test coverage
+    * Scan all library dependencies for security vulnerabilities and compliance issues
 
-* [SonarQube](https://www.sonarqube.org/) - looks for code reliability issues, security vulnerabilities, and unit test coverage
+DSAT (Dynamic Application Security Testing):
 
-* [Whitesource](https://www.whitesourcesoftware.com/) - scans all library dependencies for security vulnerabilities and compliance issues
+    * For agents that run in docker containers. Scan the container for security protection within the infrastructure
 
-* [Twistlock](https://www.infoguard.ch/en/partners/twistlock-container-security) - for the agents that run in docker containers, scans the container for security protection within the infrastructure
+SCA (Software Composition Analysis):
 
-* [IriusRisk](https://www.iriusrisk.com/) - this is the manual creation of threat models of the system by the system architects to identify and mitigate architectural security risks
+    * Scan the code for possible coding errors or inconsistencies
+    * System architects manually create threat models of the system to identify and mitigate architectural security risks
