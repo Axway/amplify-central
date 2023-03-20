@@ -368,7 +368,7 @@ To publish your product to the Marketplace, you must first know the name of the 
 
 Run the following command get the details of your Marketplace:
 
-```js
+```json
 axway central get marketplaces -o json > marketplace.json
 ```
 

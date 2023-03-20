@@ -40,7 +40,7 @@ The following tables describe the API style in terms of GET, PUT, POST etc. and 
 
 All operations on the API Server can be performed via the Axway CLI and the Amplify Central CLI. For example, to view all resource types that are available in the system, run the following `get` command and provide an argument as to the type to get:
 
-```sh
+```shell
 axway central get
 .....
 .....
@@ -121,7 +121,7 @@ API Server supports **scoped** and **unscoped** types of resources. The resource
 When you retrieve a resource from the API Server, notice that it has a 'metadata' field. Metadata is server-side generated resource information. You can retrieve a resource using the 'get' CLI command. The following example is a definition of an environment showing its metadata.
 The command to run to get an environment named `apigtw-v77` and output the result in yaml:
 
-```sh
+```shell
 axway central get env apigtw-v77 -o yaml
 ```
 
@@ -175,7 +175,7 @@ Metadata fields:
 
 To view the APIs under an environment named `apigtw-v77`, run the following command:
 
-```sh
+```shell
 axway central get apis -s apigtw-v77 -o yaml
 ```
 

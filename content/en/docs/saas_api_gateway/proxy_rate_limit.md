@@ -112,7 +112,7 @@ https://test-e4f77cd969cdaf3a0169ce16c8320000.apicentral.axwayamplify.com/music/
 
 Save the following script as `rate-limit-test.js`.
 
-```js
+```json
 import http from 'k6/http';
 import { sleep } from 'k6';
 import { Counter } from 'k6/metrics';

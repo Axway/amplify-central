@@ -202,7 +202,7 @@ The action above will be one of the following:
 
 Subscription notifications with email notifications can set both the subject and the body. The body, which may be HTML, is able to substitute data from the subscription event into the email that is sent to the event initiator. Here is a sample of the template used for subscribe events:
 
-```
+```yaml
 CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_SUBJECT=Subscription Notification
 CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_BODY=Subscription created for Catalog Item:  <a href= {{.CatalogItemURL}}> {{.CatalogItemName}} </a> <br/>
 Your API is secured using an APIKey credential:header:<b>{{.KeyHeaderName}}</b>/value:<b>{{.Key}}</b>

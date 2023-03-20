@@ -84,7 +84,7 @@ The ACL is associated or scoped to one environment and references the teamID tha
 
 In the following sample, `env1`, which was defined previously, is shared with two teams (teamA and teamB):
 
-```yml
+```yaml
 {
   "group": "management",
   "apiVersion": "v1alpha1",
