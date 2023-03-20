@@ -50,7 +50,7 @@ Sample to discover all APIs having a tag name API_TYPE that does not have 'Finan
 
 Sample to  discover all APIs having a tag name containing API: `tag.API_TYPE.contains(API) == true`
 
-Sample to  discover all APIs having a tag name not containing API: `tag.API_TYPE.contains(API) == false` 
+Sample to  discover all APIs having a tag name not containing API: `tag.API_TYPE.contains(API) == false`
 
 ## Filter using MatchRegEx
 
