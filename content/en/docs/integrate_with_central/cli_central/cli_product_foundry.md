@@ -94,7 +94,7 @@ jq -f article.jq product-created.json > article.json
 axway central create -f article.json -o json -y 
 ```
 
-Where ```article.jq``` has the following content:
+Where `article.jq` has the following content:
 
 ```json
 {
@@ -171,7 +171,7 @@ jq -f document.jq available-articles.json > document.json
 axway central create -f document.json -o json -y > document-created.json
 ```
 
-Where ```document.jq``` has the following content:
+Where `document.jq` has the following content:
 
 ```json
 {
@@ -276,7 +276,7 @@ jq -f product-plan.jq product-created.json > product-plan.json
 axway central create -f product-plan.json -o json -y > product-plan-created.json
 ```
 
-Where ```product-plan.jq``` has the following content:
+Where `product-plan.jq` has the following content:
 
 ```json
 {
@@ -339,7 +339,7 @@ jq -f product-release-tag.jq product-created.json > product-release-tag.json
 axway central create -f product-release-tag.json -o json -y > product-release-tag-created.json
 ```
 
-Where ```product-release-tag.jq``` has the following content:
+Where `product-release-tag.jq` has the following content:
 
 ```json
 {
@@ -381,7 +381,7 @@ jq --slurp -f publish-product.jq marketplace.json product-created.json  > publis
 axway central create -f publish-product.json -o json -y > publish-product-created.json
 ```
 
-Where ```publish-product.jq``` has the following content:
+Where `publish-product.jq` has the following content:
 
 ```json
 {
@@ -406,7 +406,7 @@ Your product is now available in the Marketplace for API consumers to find and s
 
 ### Remove a product
 
-Before a product can be deleted, its state must first be marked as `archived`. Run the following command to archive a product named `petstore`, where you get the product details from the API Server, and change the ```state``` field in the result. The modified result is written to file and then this file is applied to the resource as its state is changed.
+Before a product can be deleted, its state must first be marked as `archived`. Run the following command to archive a product named `petstore`, where you get the product details from the API Server, and change the `state` field in the result. The modified result is written to file and then this file is applied to the resource as its state is changed.
 
 ```bash
 axway central get products petstore -o json | jq '.state = "archived"' > product-changed.json

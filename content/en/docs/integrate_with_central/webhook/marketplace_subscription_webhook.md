@@ -61,7 +61,7 @@ Register the webhook that will receive the subscription approval notification. T
 axway central create -f webhook.json -o json -y > webhook-details.json
 ```
 
-Where ```webhook.json``` contains the following content:
+Where `webhook.json` contains the following content:
 
 ```json
 {
@@ -98,7 +98,7 @@ Create the ResourceHook that will call the webhook when a Subscription needs to 
 axway central create -f trigger.json -o json -y > trigger-details.json
 ```
 
-Where ```trigger.json``` contains the following content:
+Where `trigger.json` contains the following content:
 
 ```json
 {
@@ -199,9 +199,9 @@ A Subscription has three subresources: marketplace, approval and status, which m
 
 To ensure you're processing the need to approve once, your webhook processor should check that the following are true:
 
-* The ```type``` field is ```SubResourceUpdated```
-* The ```metadata.subresource``` is ```approval```
-* The ```payload.approval.state``` is ```pending```
+* The `type` field is `SubResourceUpdated`
+* The `metadata.subresource` is `approval`
+* The `payload.approval.state` is `pending`
 
 For example, if you have implemented your webhook listener in PowerAutomate, then the condition to validate the above will look as follows:
 

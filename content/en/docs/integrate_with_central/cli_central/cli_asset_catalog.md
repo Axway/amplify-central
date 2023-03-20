@@ -56,7 +56,7 @@ Run the following command to create a new stage that doesn't exist in the system
 axway central create -f stage.json -o json -y > stage-details.json
 ```
 
-Where ```stage.json``` contains the following content:
+Where `stage.json` contains the following content:
 
 ```json
 {
@@ -80,7 +80,7 @@ Run the following command to create an asset:
 axway central create -f asset.json -o json -y > asset-created.json
 ```
 
-Where ```asset.json``` contains the following content:
+Where `asset.json` contains the following content:
 
 ```json
 {
@@ -106,7 +106,7 @@ jq --slurp -f asset-resource.jq asset-created.json api-service-revision-created.
 axway central create -f asset-resource.json -o json -y > asset-resource-created.json
 ```
 
-Where ```asset-resource.jq``` has the following content:
+Where `asset-resource.jq` has the following content:
 
 ```json
 # Creates the API Service Instance from OAS and the created service revision
@@ -157,7 +157,7 @@ jq --slurp -f asset-release-tag.jq asset-created.json > asset-release-tag.json
 axway central create -f asset-release-tag.json -o json -y > asset-release-tag-created.json
 ```
 
-Where ```asset-release-tag.jq``` has the following content:
+Where `asset-release-tag.jq` has the following content:
 
 ```json
 {
@@ -218,7 +218,7 @@ Run the following command to create a new category with the titled `Finance` and
 axway central create -f category.json -o json -y > category-created.json
 ```
 
-Where ```category.json``` contains the following content:
+Where `category.json` contains the following content:
 
 ```json
 {
