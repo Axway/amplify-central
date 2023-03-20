@@ -10,9 +10,7 @@ Conditional expressions statements use logical operators to compare values. This
 
 {{< alert title="Note" color="primary" >}}For tag-based filtering, the conditional expression should have “tag” as the prefix / selector in the symbol name. The expression can be a simple condition or a compound condition in which multiple conditions are evaluated using logical operators. See Logical operators and Comparative operators, below.{{< /alert >}}
 
-```
-tag.<tagName> == <tagValue>
-```
+`tag.<tagName> == <tagValue>`
 
 ## Before you start
 
@@ -24,45 +22,39 @@ Learn how to set filtering based on tag name, tag value, partial value and Match
 
 ## Filter based on tag name
 
-```
-tag.<tagName>.Exists() == true | false
-```
+`tag.<tagName>.Exists() == true | false`
 
-Sample to discover all APIs having a tag name API_TYPE: ```filter: tag.API_TYPE.Exists() == true```  
-Sample to discover all APIs not having a tag name API_TYPE: ```filter: tag.API_TYPE.Exists() == false```  
+Sample to discover all APIs having a tag name API_TYPE: `filter: tag.API_TYPE.Exists() == true`
+
+Sample to discover all APIs not having a tag name API_TYPE: `filter: tag.API_TYPE.Exists() == false`  
 
 ## Filter based on tag value
 
-```
-tag.Any() == | != <tagValue>
-```
+`tag.Any() == | != <tagValue>`
 
-Sample to discover all APIs having a tag that has Finance in its value: ```filter: tag.Any() == Finance```  
-Sample to discover all APIs having a tag that does not have Finance in its value: ```filter: tag.Any() != Finance```  
+Sample to discover all APIs having a tag that has Finance in its value: `filter: tag.Any() == Finance`
+
+Sample to discover all APIs having a tag that does not have Finance in its value: `filter: tag.Any() != Finance`  
 
 ## Filter based on tag name and tag value
 
-```
-tag.<tagName> == | != <tagValue>
-```
+`tag.<tagName> == | != <tagValue>`
 
-Sample to discover all APIs having a tag name API_TYPE that has 'Finance' in its value: ```filter: tag.API_TYPE == Finance```  
-Sample to discover all APIs having a tag name API_TYPE that does not have 'Finance' in its value: ```filter: tag.API_TYPE !=  Finance```  
+Sample to discover all APIs having a tag name API_TYPE that has 'Finance' in its value: `filter: tag.API_TYPE == Finance`
+
+Sample to discover all APIs having a tag name API_TYPE that does not have 'Finance' in its value: `filter: tag.API_TYPE !=  Finance`
 
 ## Filter based on partial value
 
-```
-tag.<tagName>.contains(<value>) == true |  false
-```
+`tag.<tagName>.contains(<value>) == true |  false`
 
-Sample to  discover all APIs having a tag name containing API: ```tag.API_TYPE.contains(API) == true```  
-Sample to  discover all APIs having a tag name not containing API: ```tag.API_TYPE.contains(API) == false```  
+Sample to  discover all APIs having a tag name containing API: `tag.API_TYPE.contains(API) == true`
+
+Sample to  discover all APIs having a tag name not containing API: `tag.API_TYPE.contains(API) == false`
 
 ## Filter using MatchRegEx
 
-```
-tag.<tagName>.matchRegEx(<regularExpression>)
-```
+`tag.<tagName>.matchRegEx(<regularExpression>)`
 
 ## Logical operators
 
@@ -82,4 +74,4 @@ Comparative operators are used for comparing two values. These can be combined w
 | `==`       | Equal to operator, returns true if values on both sides are equal.                                             |   |
 | `!=`       | Not equal to operator, returns true if the value on the left side is not equal to the value on the right side. |   |
 
-Sample of a composite expression to discover APIs having Math as a tag name OR APIs having a tag name API_TYPE whose value is 'Healthcare' and exclude APIs having a tag name API_TYPE whose value is 'SOAP': ```tag.Math.Exists() == true || tag.API_TYPE == Healthcare || tag.API_TYPE != SOAP```
+Sample of a composite expression to discover APIs having Math as a tag name OR APIs having a tag name API_TYPE whose value is 'Healthcare' and exclude APIs having a tag name API_TYPE whose value is 'SOAP': `tag.Math.Exists() == true || tag.API_TYPE == Healthcare || tag.API_TYPE != SOAP`

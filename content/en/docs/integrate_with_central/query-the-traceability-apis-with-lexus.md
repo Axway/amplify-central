@@ -38,7 +38,7 @@ To call APIs via cURL:
 
 {{< alert title="Note" color="primary" >}}In this script, environment variables are assumed to have been set using the information specified under [API Authorization](#prerequisite---api-authorization):{{< /alert >}}
 
-```sh
+```shell
 export $CLIENT_ID=<clientId>
 export $SECRET_FILE=<secretFile>
 ```
@@ -47,7 +47,7 @@ export $SECRET_FILE=<secretFile>
 
 This script shows an example of exercising the API calls directly from the command line:
 
-```js
+```json
 #!/bin/bash
  
 # params
@@ -93,7 +93,7 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 
 ### Last 100 events, both summaries and events
 
-```js
+```json
 // Replace "lt" with the current time in ms
 // List is last 100 items, sorted in descending order by event_time
 {
@@ -121,7 +121,7 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 
 ### Show only transactionSummary or transactionEvent events
 
-```js
+```json
 // This extends the previous example to filter on the type of "transactionSummary"
 {
     "filters": {
@@ -153,7 +153,7 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 
 ### Transaction summary event
 
-```js
+```json
 {
    "@category":"message",
    "headers":{
@@ -213,7 +213,7 @@ curl --location --request POST "${CENTRAL_URL}/api/traceability/v1/traceability/
 
 ### Transaction event
 
-```js
+```json
 {
    "@category":"message",
    "headers":{
@@ -297,7 +297,7 @@ When using the sample queries:
 
 Find all transaction events, where the event direction is "inbound" between the two stated times. Sum the total number of bytes received, and group the totals by environmentId.
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -341,7 +341,7 @@ Find all transaction events, where the event direction is "inbound" between the 
 
 Find all inbound transaction events between the two timestamps, and count the number of response codes of each type, grouped by environment.
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -392,7 +392,7 @@ Find all inbound transaction events between the two timestamps, and count the nu
 
 {{< alert title="Note" color="primary" >}}The "404" can be replaced with a new response code, or extended to include other error codes by adding additional elements to the array. This query also shows all environments. See the following query to specify a specific environment by adding another "$match" clause.{{< /alert >}}
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -443,7 +443,7 @@ Find all inbound transaction events between the two timestamps, and count the nu
 
 Show the graph of calls going in and out, grouped by source and destination, restricted to the environment in question.
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -506,7 +506,7 @@ Show the graph of calls going in and out, grouped by source and destination, res
 
 Similar to the previous one, but now for all environments, grouped by environment id.
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -565,7 +565,7 @@ Similar to the previous one, but now for all environments, grouped by environmen
 
 Extend the previous call to also include the API paths called.
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -621,7 +621,7 @@ Extend the previous call to also include the API paths called.
 
 The count of transactionSummaries for a particular environment, grouped by status code. Note statuses are 1XX, 2XX, 3XX, so the interval of "100" will group them into those buckets.
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -668,7 +668,7 @@ The count of transactionSummaries for a particular environment, grouped by statu
 
 The count of transactionSummaries across all environments, grouped by method and path.
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -709,7 +709,7 @@ The count of transactionSummaries across all environments, grouped by method and
 
 The count of transactionSummaries across all environments, grouped by method and path, but only paths that start with the phrase "/apis".
 
-```js
+```json
 {
     "filters": {
         "$and": [
@@ -757,7 +757,7 @@ The count of transactionSummaries across all environments, grouped by method and
 
 Given a specific transaction id, find all matching transaction events.
 
-```js
+```json
 {
     "filters": {
         "$and": [

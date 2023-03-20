@@ -40,7 +40,7 @@ Each API can define its own approval mode:
 
 Agent configuration:
 
-```yml
+```yaml
 CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE={manual|auto|webhook}
 CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL={The webhook URL that subscription data will be posted to}
 CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS={The headers that will be used when posting data to the webhook url}
@@ -170,7 +170,7 @@ The agent configuration contains the webhook details about where to send the pay
 
 Agent configuration:
 
-```yml
+```yaml
 CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_URL={The webhook URL that subscription notification data will be posted to}
 CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_HEADERS={The headers that will be used when posting data to the webhook url}
 ```

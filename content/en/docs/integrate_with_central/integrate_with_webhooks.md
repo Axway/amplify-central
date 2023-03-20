@@ -130,7 +130,7 @@ Key fields in the Webhook resource:
 
 You can create the webhook resource using the CLI:
 
-```sh
+```shell
 axway central apply -f webhook.yaml
 ✔ "Webhook/invoke-jira-webhook" in the scope "Environment/azure-apiman-service" has successfully been updated.
 ```

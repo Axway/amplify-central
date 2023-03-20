@@ -12,9 +12,7 @@ Conditional expressions statements use logical operators to compare values. This
 
 ## Filter based on tag name
 
-```
-tag.<tagName>.Exists() == true | false
-```
+`tag.<tagName>.Exists() == true | false`
 
 Sample to discover all APIs having a tag name API_TYPE: `AWS_FILTER=tag.API_TYPE.Exists() == true`
 
@@ -22,9 +20,7 @@ Sample to discover all APIs not having a tag name API_TYPE: `AWS_FILTER=tag.API_
 
 ## Filter based on tag value
 
-```
-tag.Any() == | != <tagValue>
-```
+`tag.Any() == | != <tagValue>`
 
 Sample to discover all APIs having a tag that has Finance in its value: `AWS_FILTER=tag.Any() == Finance`
 
@@ -32,9 +28,7 @@ Sample to discover all APIs having a tag that does not have Finance in its value
 
 ## Filter based on tag name and tag value
 
-```
-tag.<tagName> == | != <tagValue>
-```
+`tag.<tagName> == | != <tagValue>`
 
 Sample to discover all APIs having a tag name API_TYPE that has ‘Finance’ in its value: `AWS_FILTER=tag.API_TYPE == Finance`
 
@@ -42,9 +36,7 @@ Sample to discover all APIs having a tag name API_TYPE that does not have ‘Fin
 
 ## Filter based on partial value
 
-```
-tag.<tagName>.contains(<value>) == true |  false
-```
+`tag.<tagName>.contains(<value>) == true |  false`
 
 Sample to discover all APIs having a tag name containing API: `AWS_FILTER=tag.API_TYPE.contains(API) == true`
 
@@ -52,9 +44,7 @@ Sample to discover all APIs having a tag name not containing API: `AWS_FILTER=ta
 
 ## Filter using MatchRegEx
 
-```
-tag.<tagName>.matchRegEx(<regularExpression>)
-```
+`tag.<tagName>.matchRegEx(<regularExpression>)`
 
 ## Logical operators
 

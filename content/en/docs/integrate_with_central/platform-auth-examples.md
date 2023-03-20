@@ -79,7 +79,7 @@ If you are using cURL or Postman, the easiest way to authenticate is by using th
 
 The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services:
 
-```sh
+```shell
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
 
@@ -111,7 +111,7 @@ This approach is cumbersome but demonstrates what is necessary to build an appli
 
 Use the client ID and secret for basic authentication and base64 encode the string. A colon must be used as a field separator, so that the unencoded string looks like "clientID:secret":  
 
-```sh
+```shell
 echo "clientID:secret" | base64 
 ```
 
@@ -141,7 +141,7 @@ Now that you have a valid bearer token you can make platform calls as outlined i
 
 #### Call Central  
 
-```sh
+```shell
 curl --location --request GET 'https://apicentral.axway.com/apis/management/v1alpha1/environments' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" 
@@ -149,7 +149,7 @@ curl --location --request GET 'https://apicentral.axway.com/apis/management/v1al
 
 #### Call Traceability
 
-```sh
+```shell
 curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/traceability/summary?groupBy=proxyId&groupBy=proxyRevision&count=10&offset=0&from=1668895561864&to=1669500361864' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" 
@@ -157,7 +157,7 @@ curl --location --request GET 'https://apicentral.axway.com/api/traceability/v1/
 
 #### Call platform
 
-```sh
+```shell
 curl --location --request GET 'https://platform.axway.com/api/v1/env' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json"

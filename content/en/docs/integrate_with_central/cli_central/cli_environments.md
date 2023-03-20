@@ -53,10 +53,8 @@ axway central create environment env3 -f <filepath>
 
 Optional flags:
 
-```
--o, --output = yaml | json
--f, --file = (filename.yml, filename.yaml, filename.json)
-```
+`-o, --output = yaml | json
+-f, --file = (filename.yml, filename.yaml, filename.json)`
 
 Try out the [create_environments.json](/samples/central/create_environments.json) or [create_environments.yaml](/samples/central/create_environments.yaml) samples to create an environment.
 

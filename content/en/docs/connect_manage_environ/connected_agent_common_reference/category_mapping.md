@@ -56,39 +56,31 @@ Conditionals use the same format and operators that the Discovery Agent filter f
 
 ### Categorize based on tag name
 
-```
-tag.<tagName>.Exists()
-```
+`tag.<tagName>.Exists()`
 
-Sample to categorize APIs having a tag name API_TYPE: ```conditions: tag.API_TYPE.Exists()```
+Sample to categorize APIs having a tag name API_TYPE: `conditions: tag.API_TYPE.Exists()`
 
-Sample to categorize APIs that do not not having a tag name API_TYPE: ```conditions: tag.API_TYPE.Exists() == false```
+Sample to categorize APIs that do not not having a tag name API_TYPE: `conditions: tag.API_TYPE.Exists() == false`
 
 ### Categorize based on tag value
 
-```
-tag.<tagName> == | != <tagValue>
-```
+`tag.<tagName> == | != <tagValue>`
 
-Sample to categorize APIs having a tag name API_TYPE and 'Finance' as its value: ```filter: tag.API_TYPE == Finance```
+Sample to categorize APIs having a tag name API_TYPE and 'Finance' as its value: `filter: tag.API_TYPE == Finance`
 
-Sample to categorize APIs having a tag name API_TYPE and does not have 'Finance' as its value: ```filter: tag.API_TYPE !=  Finance```
+Sample to categorize APIs having a tag name API_TYPE and does not have 'Finance' as its value: `filter: tag.API_TYPE !=  Finance`
 
 ### Categorize based on partial value
 
-```
-tag.<tagName>.contains(<value>)
-```
+`tag.<tagName>.contains(<value>)`
 
-Sample to categorize APIs having a tag name API_TYPE with a value containing API: ```tag.API_TYPE.contains(API)```
+Sample to categorize APIs having a tag name API_TYPE with a value containing API: `tag.API_TYPE.contains(API)`
 
-Sample to categorize APIs having a tag name API_TYPE with a value not containing API: ```tag.API_TYPE.contains(API) == false```
+Sample to categorize APIs having a tag name API_TYPE with a value not containing API: `tag.API_TYPE.contains(API) == false`
 
 ### Categorize using MatchRegEx
 
-```
-tag.<tagName>.matchRegEx(<regularExpression>)
-```
+`tag.<tagName>.matchRegEx(<regularExpression>)`
 
 ### Logical operators
 
@@ -108,7 +100,7 @@ Comparative operators are used for comparing two values. These can be combined w
 | `==`     | Equal to operator, returns true if values on both sides are equal.                                             |
 | `!=`     | Not equal to operator, returns true if the value on the left side is not equal to the value on the right side. |
 
-Sample of a composite expression to categorize APIs having Math as a tag name OR APIs having a tag name API_TYPE whose value is 'Healthcare' and not APIs having a tag name API_TYPE whose value is 'SOAP': ```tag.Math.Exists() || tag.API_TYPE == Healthcare && tag.API_TYPE != SOAP```
+Sample of a composite expression to categorize APIs having Math as a tag name OR APIs having a tag name API_TYPE whose value is 'Healthcare' and not APIs having a tag name API_TYPE whose value is 'SOAP': `tag.Math.Exists() || tag.API_TYPE == Healthcare && tag.API_TYPE != SOAP`
 
 ## Categorizing
 
@@ -124,9 +116,7 @@ An additional switch (default: `false`) is provided to tell the Agent to create 
 The `APIMANAGER_` prefix, below, will be different depending on which gateway the agent is for.
 {{< /alert >}}
 
-```
-APIMANAGER_CATEGORY_AUTOCREATION=true
-```
+`APIMANAGER_CATEGORY_AUTOCREATION=true`
 
 When auto creating categories, the name of all categories will be processed prior to creating the category on Amplify.  Since categories may only contain letters, numbers, spaces, [], and (), any other characters will be removed automatically.
 
@@ -136,8 +126,6 @@ In addition to static category names, the category mapping may reference a tags 
 
 Sample of using TagA's value as a category on the API:
 
-```
-APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.TagA.Exists()",categories:"CategoryA,tag.TagA.Value"}]
-```
+`APIMANAGER_CATEGORY_MAPPINGS=[{conditions:"tag.TagA.Exists()",categories:"CategoryA,tag.TagA.Value"}]`
 
 If a discoverd API has a tag of `TagA = TagValue` then that API would get two categories assigned to it, `CategoryA` and `TagValue`.
