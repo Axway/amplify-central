@@ -292,13 +292,15 @@ SAST (Static Application Security Testing):
 
 * Scan the code for possible coding errors or inconsistencies
 * Look for code reliability issues, security vulnerabilities, and unit test coverage
-* Scan all library dependencies for security vulnerabilities and compliance issues
 
 DAST (Dynamic Application Security Testing):
 
-* *For agents that run in docker containers*. Scan the container for security protection within the infrastructure
+* Scan running application in real-time against leading vulnerability sources to find security flaws and open vulnerabilities
 
 SCA (Software Composition Analysis):
 
-* Scan the code for possible coding errors or inconsistencies
-* System architects manually create threat models of the system to identify and mitigate architectural security risks
+* Scan all library dependencies for security vulnerabilities and compliance issues
+
+Threat Modeling:
+
+* System architects create threat models of the system to identify and mitigate architectural security risks
