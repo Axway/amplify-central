@@ -34,7 +34,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.47. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. <br />**Axway API Management Gateway** - None. |
+| What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
 | Bug fixes: | None. |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | None. |
