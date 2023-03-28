@@ -80,7 +80,7 @@ The following agents are open source and everybody can contribute:
 
 The following agent issue is fixed in this update:
 
-* **API Service revision updates**: agents detect when an API specification changes without deployment changes and updates the service instance with a new revision.
+* **API service revision updates**: agents detect when an API specification changes without deployment changes and updates the service instance with a new revision.
 
 ## Known limitations
 
@@ -100,7 +100,7 @@ The following limitations exist in this update.
 ### Amplify Azure agents
 
 * Discovery Agent does not manage revision and version.
-* Discovery Agent does not remove the API Service and the Catalog item when the Azure API is removed.
+* Discovery Agent does not remove the API service and the Catalog item when the Azure API is removed.
 
 ### Amplify Istio agents
 

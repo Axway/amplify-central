@@ -185,7 +185,7 @@ Once the plan is deprecated, Marketplace consumers cannot subscribe to it. Only 
 
 ## Migrate subscriptions to a new plan
 
-Providers can move consumers onto a new plan when the terms change (a change in the quota, price, resources) by migrating existing subscriptions to another plan. When subscriptions are migrated, the issued credentials under the previous subscriptions remain valid, allowing consumers to continue to use the resources offered under the previous plan. There might be a period of time that the API Service access is disrupted, as everything is event based and the Discovery Agent needs to process the new plan information to apply the corresponding changes to the underlying data plane.
+Providers can move consumers onto a new plan when the terms change (a change in the quota, price, resources) by migrating existing subscriptions to another plan. When subscriptions are migrated, the issued credentials under the previous subscriptions remain valid, allowing consumers to continue to use the resources offered under the previous plan. There might be a period of time that the API service access is disrupted, as everything is event based and the Discovery Agent needs to process the new plan information to apply the corresponding changes to the underlying data plane.
 
 To migrate subscriptions to a new plan:
 

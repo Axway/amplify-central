@@ -3,7 +3,7 @@ title: API Server overview
 linkTitle: API Server overview
 weight: 110
 ---
-The core of the Amplify management plane is the API Server. The API Server exposes an HTTP API that allows you to configure different parts of the management plane. The API Server's API lets you query and manipulate the state of resources in Amplify. For example: Environments, API Services, Secrets, Webhooks.
+The core of the Amplify management plane is the API Server. The API Server exposes an HTTP API that allows you to configure different parts of the management plane. The API Server's API lets you query and manipulate the state of resources in Amplify. For example: Environments, API services, Secrets, Webhooks.
 
 Most operations can be performed through the Axway command-line interface, which in turn uses the API. However, you can also access the API directly using REST calls. The REST documentation is publicly available at [Axway API Server](https://apicentral.axway.com/apis/docs).
 
@@ -79,7 +79,7 @@ Types in the system:
 * **Consumer Instance:** Contains all the configuration for publishing an asset in the Amplify Unified Catalog for consumption.
 * **Webhook**: Defines the webhook URL that will be invoked on certain events.
 * **Integrations:** Logical grouping of webhook integrations.
-* **Resource Hook**: Allows you to configure webhooks for resources (environments, API Service) in Amplify
+* **Resource Hook**: Allows you to configure webhooks for resources (environments, API service) in Amplify
 
 ## Anatomy of a resource in API Server
 
@@ -171,7 +171,7 @@ Metadata fields:
 * **references**: an API Server resource can **refer** other resource(s) withing their spec or subresource (for example, an APIServiceInstance refers an APIServiceRevision by its name). The metadata references provide additional information about the referred resource, like the resource id/name/kind/scopeName/scopeKind/selfLink/type. References can be of two types, soft and hard.
 * **scope**: only present for the scoped resources. Provides information about the scope in which the resource is defined.
 * **resourceVersion**: indicates how many times a resource was updated. The metadata.resourceVersion can be used to detect if the resource has been changed on the server side. If sent in the put request and it's not the same value as what's on the server side, a 428 HTTP error code is returned. If not sent in the request, the put request will override what's present on the server side no matter if the resource has been changed since it was read by the client doing the update.
-* **selfLink**: the api path with which the current resource can be accessed. Resources can be accessed within their scopes or across scopes. The selfLink provides an easy way to get access to a specific resource and mutate the data. For example, if you look at API Services under an environment you will notice that the selfLink contains the environment name and the name of the API Server.
+* **selfLink**: the api path with which the current resource can be accessed. Resources can be accessed within their scopes or across scopes. The selfLink provides an easy way to get access to a specific resource and mutate the data. For example, if you look at API services under an environment you will notice that the selfLink contains the environment name and the name of the API Server.
 
 To view the APIs under an environment named `apigtw-v77`, run the following command:
 

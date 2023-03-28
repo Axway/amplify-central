@@ -13,7 +13,7 @@ Learn how your DevOps process can use Axway Central CLI to build and manage your
 
 ## Objectives
 
-Learn how to create an asset from one API Service or multiple similar API Services across multiple environments using the Axway Central CLI.
+Learn how to create an asset from one API service or multiple similar API services across multiple environments using the Axway Central CLI.
 
 * Create a new asset
 * Retrieve a list of all available assets
@@ -23,7 +23,7 @@ Learn how to create an asset from one API Service or multiple similar API Servic
 
 ## Create an asset
 
-An asset represents one or more API Services (i.e. grouping) across multiple user or customer defined contexts.
+An asset represents one or more API services (i.e. grouping) across multiple user or customer defined contexts.
 
 The following is an example of how a DevOps user can run a CLI command to create an asset.
 

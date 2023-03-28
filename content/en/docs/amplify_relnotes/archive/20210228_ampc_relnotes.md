@@ -31,7 +31,7 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 
 The Amplify Central WebUI includes the following enhancements:  
 
-* Providers can publish an API Service to the Unified Catalog after API Service registration.
+* Providers can publish an API service to the Unified Catalog after API service registration.
 * Providers can register an AsyncAPI under an environment in Amplify Central and publish it up to the Unified Catalog for consumption.
 * Amplify Central WebUI can now be accessed using static IP address:
     * apicentral.axway.com (US region): 3.94.245.118 / 54.208.199.251 / 3.212.78.217 / 52.202.95.208 / 107.23.176.64 / 3.225.16.120.

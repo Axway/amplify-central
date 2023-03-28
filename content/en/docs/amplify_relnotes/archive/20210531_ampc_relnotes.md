@@ -57,10 +57,10 @@ Mesh Governance includes the following enhancements: None.
 
 The following issues are fixed in this version of Amplify Central:
 
-* **Could not import large API specification file (5000 Methods) when creating an API from the UI in the topology screen**. Previously, when trying to import large specification files, Central WebUI did not answer. Now, the API Service can be created correctly.
+* **Could not import large API specification file (5000 Methods) when creating an API from the UI in the topology screen**. Previously, when trying to import large specification files, Central WebUI did not answer. Now, the API service can be created correctly.
 * **Azure Discovery Agent adds (Azure) to the service name**. Previously, when an API was discovered by Azure Discovery Agent, "(Azure)" was added to the Catalog item. Now, only the environment name is added to the Catalog item.
 * **Agents terminate if API Manager system is unreachable on startup**. Previously, when starting the v7 agents in service mode, if the API Gateway and/or API Manager was not ready, the Discovery and Traceability agents stopped. Now, the service mode has a retry mechanism that tries the startup again as soon as the API Manager system is available. To activate, update the existing Linux service by running the following command: `sudo ./discovery_agent service update -u axway -g axway --envFile /path/to/da_env_file.env` or `sudo ./traceability_agent service update -u axway -g axway --envFile /path/to/ta_env_file.env`. This will remove the existing service and re-create the service with the appropriate parameters.
-* **Discovery agent does not remove API Service when API is removed in Axway API Manager**. Previously, when an API was deleted in Axway API Manager, the Catalog item was removed but the API service was not. Now, both the Catalog item and API service are removed.
+* **Discovery agent does not remove API service when API is removed in Axway API Manager**. Previously, when an API was deleted in Axway API Manager, the Catalog item was removed but the API service was not. Now, both the Catalog item and API service are removed.
 * **Azure trace is not pushed to Condor: "empty url"**. Previously, when an authentication error occurred on Azure Gateway (401 HTTP code), the Azure Traceability Agent failed to correctly catch the error and displayed "empty url" in logs. Now, the error is correctly handled and the transaction is visible in API Observer.
 * **Prevent running multiple instances of an agent on the same machine**. Previously, it was possible to start a v7 binary agent several times on the same machine, which led to bad agent behavior. Now, using the agent healthcheck, only one instance of a v7 agent can be started on the same machine.
 * **Installing Traceability Agent only for v7 asks you for disco agent name**. Previously, when installing v7 Traceability Agent alone, CLI prompted for a Discovery Agent name. Now, you are only prompted for the Traceability Agent name.
@@ -89,4 +89,4 @@ This version of Amplify Central has the following limitations:
 * Azure agents:
 
     * Discovery Agent does not manage revision and version.
-    * Discovery agent does not remove API Service and Catalog item when Azure API is removed.
+    * Discovery agent does not remove API service and Catalog item when Azure API is removed.

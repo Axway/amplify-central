@@ -68,7 +68,7 @@ The following limitations exist in this update:
 * Amplify Azure agents:
 
     * Discovery Agent does not manage revision and version.
-    * Discovery Agent does not remove API Service and Catalog item when Azure API is removed.
+    * Discovery Agent does not remove API service and Catalog item when Azure API is removed.
 
 * Amplify Istio agents:
 

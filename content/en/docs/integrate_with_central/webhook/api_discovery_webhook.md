@@ -1,9 +1,9 @@
 ---
-title: Set a webhook call back when there is a change to an API Service in an environment
+title: Set a webhook call back when there is a change to an API service in an environment
 linkTitle: API Discovery webhooks
 weight: 60
 ---
-Configure webhooks to receive notifications when there are changes to discovered API Services in an environment. When the notification is received, validation can be run on the API Service to ensure that it complies with corporate standards.
+Configure webhooks to receive notifications when there are changes to discovered API services in an environment. When the notification is received, validation can be run on the API service to ensure that it complies with corporate standards.
 
 ## Before you start
 
@@ -11,7 +11,7 @@ Configure webhooks to receive notifications when there are changes to discovered
 
 ## Objectives
 
-Learn how to create a webhook so that you can receive events when API Services change in an environment.
+Learn how to create a webhook so that you can receive events when API services change in an environment.
 
 ## Create an integration
 
@@ -45,7 +45,7 @@ The triggers and associated webhooks will use this name for their scope.
 
 ## Create the webhook
 
-Register the webhook that will receive notifications for changes in discovered API Service revisions. To do this, create a Webhook resource within the scope of the integration created above. For this tutorial, use a webhook listener at [https://webhook.site/](https://webhook.site/). Run the following command to create a webhook:
+Register the webhook that will receive notifications for changes in discovered API service revisions. To do this, create a Webhook resource within the scope of the integration created above. For this tutorial, use a webhook listener at [https://webhook.site/](https://webhook.site/). Run the following command to create a webhook:
 
 ```bash
 axway central create -f webhook.json -o json -y > webhook-details.json
@@ -82,7 +82,7 @@ jq '.[0].name' webhook-details.json
 
 ## Create the trigger
 
-Create the ResourceHook that will call the webhook when a API Service revision has been changed in an environment. Run the following command to create a ResourceHook:
+Create the ResourceHook that will call the webhook when a API service revision has been changed in an environment. Run the following command to create a ResourceHook:
 
 ```bash
 axway central create -f trigger.json -o json -y > trigger-details.json
@@ -171,9 +171,9 @@ When you are processing the webhook in your system, consider the following:
 
 * Validate that the webhook is processing a creation and update event by checking that the field `type` in the webhook payload has the value `ResourceCreated` or `ResourceUpdated`.
 
-* Validate that the event is on a API Service revision type that you are able to process. For example, your webhook listener implementation may only be able to process Open API standard updates, but not GraphQL. You can check the value of the field `payload.spec.definition.type` to see what type of specification update is being processed. The content of `payload.spec.definition.value` is the base64 encoded content of the specification for this API Service revision (i.e. OAS, WSDL, AsynC API, or SDL for GraphQL).
+* Validate that the event is on a API service revision type that you are able to process. For example, your webhook listener implementation may only be able to process Open API standard updates, but not GraphQL. You can check the value of the field `payload.spec.definition.type` to see what type of specification update is being processed. The content of `payload.spec.definition.value` is the base64 encoded content of the specification for this API service revision (i.e. OAS, WSDL, AsynC API, or SDL for GraphQL).
 
-{{< alert title="Note" color="primary" >}}If you need to store the result of your webhook, then you can store it as a custom sub resource (`x-resource`) with the API Service revision. For example, if the webhook preforms linting validation of the API specification, then it is possible to store the results as a JSON payload in a sub resource of the API Service revision by posting the results to `API Central URL/apis/'payload.metadata.selfLink'/x-lint-results`.
+{{< alert title="Note" color="primary" >}}If you need to store the result of your webhook, then you can store it as a custom sub resource (`x-resource`) with the API service revision. For example, if the webhook preforms linting validation of the API specification, then it is possible to store the results as a JSON payload in a sub resource of the API service revision by posting the results to `API Central URL/apis/'payload.metadata.selfLink'/x-lint-results`.
 {{< /alert >}}
 
 * If you are handling a `ResourceUpdated` and you update the resource back during the webhook event processing (for example, adding an attribute), then you need to guard against getting into a loop, as your change will generate another `ResourceUpdated` event. It is recommended that you attach a sub resource, as mentioned in the above note, and then add to your webhook the type that has been updated.

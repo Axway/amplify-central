@@ -28,7 +28,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | Improved processing of unpublishing API Services. <br />Check for duration and interval values within a recommended range. |
+| What's new: | Improved processing of unpublishing API services. <br />Check for duration and interval values within a recommended range. |
 | Bug fixes: | None. |
 
 | Agents |         |
@@ -43,7 +43,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | Team sharing. <br />Edit API Service in non-connected agent environment. <br />Asset details improvement.  |
+| What's new: | Team sharing. <br />Edit API service in non-connected agent environment. <br />Asset details improvement.  |
 | Bug fixes: | None. |
 
 | Product Foundry |         |
@@ -80,7 +80,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.42. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | API Service Revision Handling. <br />Environment Resource creation. |
+| Bug fixes: | API service Revision Handling. <br />Environment Resource creation. |
 
 | Agents |         |
 |--------|---------|
@@ -131,7 +131,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | Discovery Agent updated for Async API support. |
-| Bug fixes: | API Service deletion handling. <br />API Service revision handling. |
+| Bug fixes: | API service deletion handling. <br />API service revision handling. |
 
 | Agents |         |
 |--------|---------|
@@ -298,7 +298,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 
 | Asset Catalog |         |
 |---------------|---------|
-| What's new: | Auto-asset release from latest API Service version. |
+| What's new: | Auto-asset release from latest API service version. |
 | Bug fixes: | None. |
 
 | Product Foundry |         |
@@ -427,11 +427,11 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Agents |         |
 |--------|---------|
 | What's new: | **Azure** - Consumer insights. |
-| Bug fixes:  | **All agents** - API Service revision updates. |
+| Bug fixes:  | **All agents** - API service revision updates. |
 
 | Service registry <br />Topology |         |
 |---------------------------------|---------|
-| What's new:                     | Team Ownership can be set when creating environments or API Services with the UI. |
+| What's new:                     | Team Ownership can be set when creating environments or API services with the UI. |
 | Bug fixes:                      | None.   |
 
 | Asset Catalog |         |
@@ -501,7 +501,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **Bug fixes**:
 
-* The asset is not updated with latest API Service update
+* The asset is not updated with latest API service update
 * The team developer role cannot cannot delete an asset even if they are a member of the owning team
 
 ## [Marketplace July 2022](/docs/amplify_relnotes/archive/20220729_marketplace_relnotes/)
@@ -678,7 +678,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**:
 
-* The creation or edit of an asset allows for the selection of multiple API Service versions
+* The creation or edit of an asset allows for the selection of multiple API service versions
 * An **Access Rights** tab has been added to the asset details screen to show all teams that the asset is shared with
 * A **Products** tab has been added to the asset details screen to show all products that contain the asset
 
@@ -717,7 +717,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 ## [Service Registry May 2022](/docs/amplify_relnotes/archive/20220523_serviceregistry_relnotes/)
 
-**What's new**: Filtering the Service Registry by API Service Type
+**What's new**: Filtering the Service Registry by API service Type
 
 **Bug fixes**: None
 
@@ -764,7 +764,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**:
 
-* Link / unlink the API Services when editing an asset with the WebUI Group Resources step
+* Link / unlink the API services when editing an asset with the WebUI Group Resources step
 * Access Rights to an asset/product reflect the limitations of the Amplify Central role
 * Tags for an asset now support all special characters
 * Asset details page lists products that are consuming/using the currently displayed asset version
@@ -794,7 +794,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 ## [Service Registry April 2022](/docs/amplify_relnotes/archive/20220430_serviceregistry_relnotes/)
 
-**What's new**: Service Registry view has a column indicating the number of assets that are linked to each API Service
+**What's new**: Service Registry view has a column indicating the number of assets that are linked to each API service
 
 **Bug fixes**: None
 
@@ -806,7 +806,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new for**:
 
-* **Amplify Gateway Agent** (version 1.1.13): Discovery Agent adds a status message to the API Service when the API Service cannot be assigned to a team
+* **Amplify Gateway Agent** (version 1.1.13): Discovery Agent adds a status message to the API service when the API service cannot be assigned to a team
 * **Amplify AWS Gateway Agent** (version 1.1.13): None
 * **Amplify Azure Agent** (version 1.1.13): None
 * **Amplify Istio Agent** (helm chart version 0.62.0, Agent version 2.0.23): None
@@ -821,7 +821,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 * **Axway Central CLI** (version 2.8.0):
     * Displays the friendly team name that owns an environment
-    * Filter environments and API Services by team ownership or no ownership
+    * Filter environments and API services by team ownership or no ownership
 * **Amplify Central WebUI**:
     * Refer to the Asset Catalog March 2022 Release notes
 
@@ -871,8 +871,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**:
 
-* API Services across all environments can be viewed
-* API Services can be filtered by Environment / Owner and searched by Service Name across all environments
+* API services across all environments can be viewed
+* API services can be filtered by Environment / Owner and searched by Service Name across all environments
 
 **Bug fixes**: None
 
@@ -909,12 +909,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 **What's new for**:
 
 * **Axway Central CLI** (version 2.8.0):
-    * The `install agents` command has the option to replicate your organizational structure by auto-associating the team ownership of API Services
+    * The `install agents` command has the option to replicate your organizational structure by auto-associating the team ownership of API services
     * The Central Admin role can share environments with other teams using an Access Control List
-    * The Central Admin role can view / set the team ownership of an Environment or an API Service
+    * The Central Admin role can view / set the team ownership of an Environment or an API service
     * The logical names of resources are now more friendly
 * **Amplify Central WebUI**:
-    * New API Services can be published faster to the Unified Catalog
+    * New API services can be published faster to the Unified Catalog
     * Async API specification version 2.3.0 is now supported with six additional Async protocols: IBMMQ, JMS SECURE, MECURE, SOLACE, SOLACE SECURE, and SOLACE COMPRESSED
     * The UX display of many tags / attributes and long text names has been improved
 
@@ -1012,9 +1012,9 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 **What's new for**:
 
 * **Axway Central CLI** (version 2.7.1):
-    * A developer on a team can access Environments and API Services owned by teams that the developer is a member of
+    * A developer on a team can access Environments and API services owned by teams that the developer is a member of
 * **Amplify Central WebUI**:
-    * Team ownership of Environments and API Services is now displayed on the WebUI
+    * Team ownership of Environments and API services is now displayed on the WebUI
     * Consumers from the same team are not able to manipulate/view subscriptions from other team members in the Unified Catalog
     * API Providers can now publish APIs to the Unified Catalog faster with the relaxed validation of API Specification files on the WebUI
 
@@ -1042,12 +1042,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 **What's new for**:
 
 * **Axway Central CLI** (version 2.6.0):
-    * Manages team ownership of Environments and API Services
-    * Added a simple ‘–team’ filter for users to only Get Environments and API Services for a specific team that they are a member of
+    * Manages team ownership of Environments and API services
+    * Added a simple ‘–team’ filter for users to only Get Environments and API services for a specific team that they are a member of
     * Auto-generates a logical name for resources when a logical name is not provided with a ‘create’ and ‘apply’ command
     * Deprecated the “axway central create service-account” command as of Central CLI version 2.5.0 or later
 * **Amplify Central WebUI**:
-    * When adding an API Service using an API Specification file (OAS2/OAS3), the title, description and endpoints are auto-populated
+    * When adding an API service using an API Specification file (OAS2/OAS3), the title, description and endpoints are auto-populated
 
 **Bug fixes**:
 
@@ -1101,9 +1101,9 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Create and manage service accounts
     * Display organization activity and usage for a selected date range
     * Support for Node.js version 12.13.0 or later
-* **Amplify Central WebUI**: API provider can add an API Service without specifying an endpoint
+* **Amplify Central WebUI**: API provider can add an API service without specifying an endpoint
 
-**Bug fixes**: Activity report on the Environment details page does not display an error message if an API Service encounters an error while publishing to the Unified Catalog
+**Bug fixes**: Activity report on the Environment details page does not display an error message if an API service encounters an error while publishing to the Unified Catalog
 
 ## Amplify agents August 2021
 
@@ -1143,7 +1143,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 **What's new for**:
 
 * **Axway Central CLI** (version 1.21.0):
-    * Group API Services in Assets
+    * Group API services in Assets
     * Delete Resources using a name scope parameter
 * **Amplify Central WebUI**:
     * Delete Resources using a name scope parameter Environments list page
@@ -1168,18 +1168,18 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **Bug fixes**:
 
-* Wrong API Service count on the service page list
-* A provider cannot remove tags from an API Service
-* A page error is displayed when adding the first API Service to an environment in the WebUI
+* Wrong API service count on the service page list
+* A provider cannot remove tags from an API service
+* A page error is displayed when adding the first API service to an environment in the WebUI
 * Traceability Agent working in an Externally Managed Topology (EMT) deployment cannot report the transaction request/response headers
 
 ## Unified Catalog June 2021
 
-**What's new**: Managing categories and assigning them to catalog items when publishing an API Service
+**What's new**: Managing categories and assigning them to catalog items when publishing an API service
 
 **Bug fixes**:
 
-* The protocol dropdown on the API Service Endpoint screen did not allow for selection of protocols other than http/http for AsyncAPI services
+* The protocol dropdown on the API service Endpoint screen did not allow for selection of protocols other than http/http for AsyncAPI services
 * Developers could no longer access an environment owned by their team
 
 ## Amplify Central May 2021
@@ -1199,7 +1199,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Could not import large API specification file
 * Azure Discovery Agent adds (Azure) to the service name
 * Agents terminate if API Manager system is unreachable on startup
-* Discovery agent does not remove API Service when API is removed in Axway API Manager
+* Discovery agent does not remove API service when API is removed in Axway API Manager
 * Azure trace is not pushed to Condor: "empty url"
 * Prevent running multiple instances of an agent on the same machine
 * Installing Traceability Agent only for v7 asks you for disco agent name
@@ -1216,8 +1216,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 * **Axway Central CLI** (version 1.9.0):
     * Select the name of your agent you want to appear in the Topology view
-    * Environment and API Services can be segmented by team
-* **Amplify Central WebUI**: Use markdown formatting for Environment and API Service descriptions
+    * Environment and API services can be segmented by team
+* **Amplify Central WebUI**: Use markdown formatting for Environment and API service descriptions
 * **Amplify agents general**: Traceability Agent data redaction
 
 **Bug fixes**:
@@ -1253,7 +1253,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * As a consumer, I want to see the friendly name for my v7 application
 * As a consumer, I want to see the friendly name for my Azure subscription
 * Traceability Agent logs are not stored to a log file
-* API Service is duplicated
+* API service is duplicated
 * V7 agent fails to start if APIMANAGER_HOST is not set
 * Incorrect URL for Traceability Agent running in EU organization
 * Amplify Central WebUI Observer traffic display is incomplete
@@ -1273,7 +1273,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 * **Amplify Central CLI** (version 0.12.0): Download the Azure agents from the public artifactory
 * **Amplify Central WebUI**:
-    * Providers can publish an API Service to the Unified Catalog
+    * Providers can publish an API service to the Unified Catalog
     * Providers can register an AsyncAPI
 * **Amplify Azure Agent**:
     * Amplify Azure Agent is publicly available
@@ -1284,7 +1284,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 **Bug fixes**:
 
 * The image import/crop feature for environments, API services, and catalog items is not a blocking action
-* API Service creator detail link is broken for service account
+* API service creator detail link is broken for service account
 * The Central CLI instructions after an agent installation are not clear
 * Consumer is unable to consume v7 discovered APIs from Amplify Central WebUI
 * V7 Traceability Agent Linux service mode broken

@@ -29,7 +29,7 @@ The following new features and enhancements are available in this update:
 
 ### Amplify Gateway agents enhancements
 
-* Discovery Agent adds a status message to the API Service when the API Service cannot be assigned to a team. Refer to status sub-resource of the APIService. This functionality is coming soon to the WebUI under the Service Registry.
+* Discovery Agent adds a status message to the API service when the API service cannot be assigned to a team. Refer to status sub-resource of the APIService. This functionality is coming soon to the WebUI under the Service Registry.
 
 ### Amplify AWS Gateway agents enhancements
 
@@ -92,7 +92,7 @@ The following limitations exist in this update.
 ### Amplify Azure agents
 
 * Discovery Agent does not manage revision and version.
-* Discovery Agent does not remove API Service and Catalog item when Azure API is removed.
+* Discovery Agent does not remove API service and Catalog item when Azure API is removed.
 
 ### Amplify Istio agents
 

@@ -11,7 +11,7 @@ Deploy your agents using Axway CLI so you can manage your Azure Gateway environm
 * Read [Amplify Azure Gateway connected overview](/docs/connect_manage_environ/connect_azure_gateway/)
 * You will need information on Azure:
 
-    * where the API Service management is located (resource group name / API Management service name)
+    * where the API service management is located (resource group name / API Management service name)
     * service principal for using to Azure APIs
     * event hub definition (namespace / name / policy)
 

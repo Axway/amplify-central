@@ -4,7 +4,7 @@ linkTitle: Asset lifecycle
 weight: 10
 ---
 
-The lifecycle of an asset is linked to the lifecycle of the API Services that an asset is made up of and the products that the asset is turned into. The states of the asset determine where it is in its lifecycle.
+The lifecycle of an asset is linked to the lifecycle of the API services that an asset is made up of and the products that the asset is turned into. The states of the asset determine where it is in its lifecycle.
 
 ## Asset states
 

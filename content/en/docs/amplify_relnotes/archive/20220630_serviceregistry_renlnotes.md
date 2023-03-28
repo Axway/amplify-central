@@ -5,7 +5,7 @@ weight: 90
 date: 2022-06-30
 ---
 
-The Service Registry is part of the Provider experience. The WebUI is an easy way to view all your API Services (Auto-discovered and manually registered) across all environments, so you can facilitate the adoption/re-use of the similar API Services in an Asset. The Topology view is another way to see the API Services per environment.
+The Service Registry is part of the Provider experience. The WebUI is an easy way to view all your API services (Auto-discovered and manually registered) across all environments, so you can facilitate the adoption/re-use of the similar API services in an Asset. The Topology view is another way to see the API services per environment.
 
 ## New features and enhancements
 
@@ -23,5 +23,5 @@ The following issue has been fixed in this update:
 
 The following limitations exist in this update:
 
-* Filtering of API Services by No Owner is not supported.
-* Searching of API Services by Tags is not supported.
+* Filtering of API services by No Owner is not supported.
+* Searching of API services by Tags is not supported.

@@ -11,7 +11,7 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 
 The following new features and enhancements are available in this update:
 
-* The creation or edit of an asset allows for the selection of multiple API Service versions.
+* The creation or edit of an asset allows for the selection of multiple API service versions.
 * An **Access Rights** tab has been added to the asset details screen to show the teams that the asset is shared with.
 * A **Products** tab has been added to the asset details screen to show all products that contain the asset.
 

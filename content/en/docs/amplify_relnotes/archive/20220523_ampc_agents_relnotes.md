@@ -31,7 +31,7 @@ This new variable is enforced by Axway Central CLI with version 2.10.3 or above.
 
     * The Discovery Agent will no longer listen to the Unified Catalog subscription.
 
-    * When the Discovery Agent discovers APIs, a catalog item will be created -- only an API Service.
+    * When the Discovery Agent discovers APIs, a catalog item will be created -- only an API service.
 
     In short, either your agent manages the Unified Catalog subscription or the Marketplace subscription, but not at the same time.
 * **Single polling entry point**: With the introduction of the event-based agent for managing the Marketplace subscription, the existing polling (API, Unified Catalog subscription...) was also switch to a single source of truth: harvester service where all events that the agent is interested in are available.
@@ -104,7 +104,7 @@ The following limitations exist in this update.
 ### Amplify Azure agents
 
 * Discovery Agent does not manage revision and version.
-* Discovery Agent does not remove the API Service and the Catalog item when the Azure API is removed.
+* Discovery Agent does not remove the API service and the Catalog item when the Azure API is removed.
 
 ### Amplify Istio agents
 

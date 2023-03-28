@@ -3,9 +3,9 @@ title: Assign an environment owner
 linkTitle: Assign an environment owner
 weight: 5
 ---
-Limit access to environments and API Services by assigning an owning team.
+Limit access to environments and API services by assigning an owning team.
 
-Within Amplify you can configure the environment ownership to provide access to API Services in that environment to a specific team. By assigning an owner, Administrators can delegate full control over the API Services within that environment to the members of the owning team, as further indicated by their user roles. Members outside of the owning team will not be able to view or create API Services or any other resources in that scope.
+Within Amplify you can configure the environment ownership to provide access to API services in that environment to a specific team. By assigning an owner, Administrators can delegate full control over the API services within that environment to the members of the owning team, as further indicated by their user roles. Members outside of the owning team will not be able to view or create API services or any other resources in that scope.
 
 #### Who can configure the environment ownership?
 
@@ -13,11 +13,11 @@ Users that are assigned the Platform Administrator role in combination with the 
 
 #### Environment ownership
 
-Environments can be created without configuring the ownership, so setting an owner is OPTIONAL. If ownership is not configured, then only Central Administrators can view and manage the environment and the API Services within the scope. No other members in the organization will be able to view or access the resources until an owner is assigned. When an owner is assigned, only members of the owner's team can view/edit/delete the environment and manipulate resources scoped to the environment.
+Environments can be created without configuring the ownership, so setting an owner is OPTIONAL. If ownership is not configured, then only Central Administrators can view and manage the environment and the API services within the scope. No other members in the organization will be able to view or access the resources until an owner is assigned. When an owner is assigned, only members of the owner's team can view/edit/delete the environment and manipulate resources scoped to the environment.
 
-#### API Service ownership
+#### API service ownership
 
-When creating an API Service, you can assign an owner. However, the API Service must have the same owner as the environment the service was registered under. If no owner is assigned, then that API Service will inherit the environment's owner. The same rules apply to all the resources created within the environment.
+When creating an API service, you can assign an owner. However, the API service must have the same owner as the environment the service was registered under. If no owner is assigned, then that API service will inherit the environment's owner. The same rules apply to all the resources created within the environment.
 
 #### How to assign an owner?
 
@@ -78,7 +78,7 @@ The table below describes the Amplify Central roles and the resources they have 
 
 If you want to use the same environment (owned or not) with multiple teams, you must share the environment with the appropriate teams. Use an Access Control List (ACL) to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. However, they will not see other teams' work; members can only see the work done inside their team. There is no restriction on the number of teams included in the ACL.
 
-API Service owners can be set to any team that is not the environment owner. It is recommended to share the environment with all teams that own one or more API Services in the environment.
+API service owners can be set to any team that is not the environment owner. It is recommended to share the environment with all teams that own one or more API services in the environment.
 
 The ACL is associated or scoped to one environment and references the teamID that can access the environment. You must know the teamId to create the ACL (see "To retrieve the team id," above).
 
@@ -125,4 +125,4 @@ Save this configuration into a file (`acl.yaml`) after finding the teamID that c
 
 {{< alert title="" color="warning" >}}Currently, there is no check validating the correctness of the team identifier.{{< /alert >}}
 
-Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API Service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API Service owner is not set, only a Central administrator will be able to view and update the ownership of the API service.
+Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API service owner is not set, only a Central administrator will be able to view and update the ownership of the API service.

@@ -44,8 +44,8 @@ The Amplify Central WebUI includes the following enhancements:
 * Improved Provider UX for the Environment details page:
     * Activity report metrics of the aggregated count of API Services, Catalog Items and Subscriptions for the selected Environment.  
 * Improved Provider UX of the API Service details page:
-    * View of multiple API Service versions.
-    * Activity report metrics of the related Endpoints, Catalog Items and Subscriptions for the selected API Service version.  
+    * View of multiple API service versions.
+    * Activity report metrics of the related Endpoints, Catalog Items and Subscriptions for the selected API service version.  
     * Rendering of WSDL and PROTOBUF specifications in addition to OAS2/OAS3.
 
 ### Axway Edge Gateway / AWS Agents

@@ -36,13 +36,13 @@ The Amplify Central WebUI is used by both the API providers and consumers to man
 
 The following enhancements are available in this Amplify Central WebUI update:
 
-* An API provider can add an API Service without specifying an endpoint.  When using an OAS2 API Specifiation file, information from the file (title, description, and tags) is automatically entered for the API Service.
+* An API provider can add an API service without specifying an endpoint.  When using an OAS2 API Specifiation file, information from the file (title, description, and tags) is automatically entered for the API service.
 
 ## Fixed issues
 
 The following issues are fixed in this Amplify Central update:
 
-* The Activity report on the Environment details page now displays an error message if an API Service encounters an error while publishing to the Unified Catalog. A similar error message is displayed on the API Service details page to assist with finding which catalog items failed to publish to the Unified Catalog.
+* The Activity report on the Environment details page now displays an error message if an API service encounters an error while publishing to the Unified Catalog. A similar error message is displayed on the API Service details page to assist with finding which catalog items failed to publish to the Unified Catalog.
 
 ## Known limitations
 
