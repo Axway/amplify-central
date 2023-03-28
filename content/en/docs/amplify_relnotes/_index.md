@@ -20,37 +20,37 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify March 24 2023](/docs/amplify_relnotes/20230324_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.47. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.48. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.46
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.39
-* **Azure latest release** - Agent version 1.1.42
-* **Istio 1.9.5** - DA=v1.0.9 / TA=v2.0.52
-* **Apigee Edge** - Agent version 0.1.10
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.16
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.47
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.40
+* **Azure latest release** - Agent version 1.1.43
+* **Istio 1.9.5** - DA=v1.0.10 / TA=v2.0.53
+* **Apigee Edge** - Agent version 0.1.11
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.17
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Platform URL update for Amplify event traffic. |
+| Bug fixes: | Reduction on Amplify event traffic. <br />Traceability Agent sending duplicate metrics events. <br />Handling of duplicate Unified Catalog categories. |
 | <br />**Agents** |         |
 | What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
 | Bug fixes: | None. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | None. |
+| What's new: | Published to Marketplace indicator. |
 | Bug fixes: | None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
+| What's new: | Unpublish product from Marketplace. <br />New currencies for paid plan. |
 | Bug fixes: | None. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Configurable Marketplace footer. <br />Category list page. |
+| Bug fixes: | The category visibility is not reflected in the product details page. <br />Long category names are not correctly displayed. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
