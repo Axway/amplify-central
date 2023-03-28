@@ -202,9 +202,9 @@ The product release must be in **Deprecated** state.
 
 ## Archive a product
 
-The product can be in any state. This action when confirmed cannot be undone but product is still accessible in view mode only in Product Foundry.
+The product can be in any state. Once this action is confirmed, it cannot be undone. However, the product will still be accessible in view mode only in Product Foundry.
 
-{{< alert title="Warning" color="warning" >}}Archiving the product will also terminate associated subscriptions, deprovision all access to the corresponding API Service and remove associated credentials. The API Consumers will no longer be able to consume this product.{{< /alert >}}
+{{< alert title="Warning" color="warning" >}}Once a product is archived, the associated subscriptions are terminated. All access to the corresponding API Service are deprovisioned and associated credentials are removed. The API consumers will not be able to consume the product.{{< /alert >}}
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
@@ -215,9 +215,9 @@ The product can be in any state. This action when confirmed cannot be undone but
 
 ## Delete a product
 
-The product must be in **Archive** state, no release published to a marketplace and no remaining subscription. This action when confirmed cannot be undone.
+The product must be in **Archive** state, with no release published to a Marketplace and no remaining subscriptions. Once this action is confirmed, it cannot be undone.
 
-{{< alert title="Warning" color="warning" >}}Deleting a product will prevent you to filter the Business Insights metrics (Subscriptions / Applications) with it.{{< /alert >}}
+{{< alert title="Warning" color="warning" >}}Once a product is deleted, you cannot filter Business Insights metrics (Subscriptions / Applications) with it.{{< /alert >}}
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
@@ -226,4 +226,4 @@ The product must be in **Archive** state, no release published to a marketplace 
 5. Confirm that the selected product is the one you want to delete.
 6. Click **Update**.
 
-{{< alert title="Note" color="primary" >}}Products that are part of an active subscription and are not in an **Archive** state cannot be deleted.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Products that are in an **Archive** state but part of an active subscription cannot be deleted.{{< /alert >}}
