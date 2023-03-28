@@ -119,10 +119,11 @@ The product must be in **Draft** state.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
-3. From the list view, select the product to activate.
-4. Click **Activate**.
-5. Select a Release Type of either **Major**, **Minor**, or **Patch**.
-6. Click **Update**.
+3. From the list view, select the product to activate and open it.
+4. Select the **Version** tab and search for the Draft version to activate.
+5. Click **Activate** from the version ellipsis menu.
+6. Select a Release Type of either **Major**, **Minor**, or **Patch**.
+7. Click **Update**.
 
 ## Edit a product
 
@@ -181,25 +182,29 @@ The product must have at least one **Active** version.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
-3. From the list view, select the product to deprecate.
-4. Click **Deprecate Product**.
-5. Confirm that the selected product is the one you want to deprecate.
-6. Click **Update**.
+3. From the list view, select the product and open it.
+4. Select the **Version** tab and search for the version to deprecate.
+5. Click **Deprecate** from the version ellipsis menu.
+6. Confirm that the selected product release is the one you want to deprecate.
+7. Click **Update**.
 
 ## Archive a product release
 
-The product must be in **Deprecated** state.
+The product release must be in **Deprecated** state.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
-3. From the list view, select the product to Archive.
-4. Click **Archive Product**.
-5. Confirm that the selected product is the one you want to Archive.
-6. Click **Update**.
+3. From the list view, select the product and open it.
+4. Select the **Version** tab and search for the version to Archive.
+5. Click **Archive** from the version ellipsis menu.
+6. Confirm that the selected product release is the one you want to Archive.
+7. Click **Update**.
 
 ## Archive a product
 
-The product can be in any state.
+The product can be in any state. Once this action is confirmed, it cannot be undone. However, the product will still be accessible in view mode only in Product Foundry.
+
+{{< alert title="Warning" color="warning" >}}Once a product is archived, the associated subscriptions are terminated. All access to the corresponding API Service are deprovisioned and associated credentials are removed. The API consumers will not be able to consume the product.{{< /alert >}}
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
@@ -210,7 +215,9 @@ The product can be in any state.
 
 ## Delete a product
 
-The product must be in **Archive** state and no release published to a marketplace
+The product must be in **Archive** state, with no release published to a Marketplace and no remaining subscriptions. Once this action is confirmed, it cannot be undone.
+
+{{< alert title="Warning" color="warning" >}}Once a product is deleted, you cannot filter Business Insights metrics (Subscriptions / Applications) with it.{{< /alert >}}
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
@@ -219,4 +226,4 @@ The product must be in **Archive** state and no release published to a marketpla
 5. Confirm that the selected product is the one you want to delete.
 6. Click **Update**.
 
-{{< alert title="Note" color="primary" >}}Products that are part of an active subscription and are not in an **Archive** state cannot be deleted.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Products that are in an **Archive** state but part of an active subscription cannot be deleted.{{< /alert >}}
