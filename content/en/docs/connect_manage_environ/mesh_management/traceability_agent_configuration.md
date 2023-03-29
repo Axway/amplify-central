@@ -510,7 +510,7 @@ Once configured, create the resource using the command:
 
 #### Pre-existing Virtual Service
 
-If you have a Virtual Service resource already, simply add a name for (or rename) the http route so that the API Service and the related transactions can be linked in API Central:
+If you have a Virtual Service resource already, simply add a name for (or rename) the http route so that the API service and the related transactions can be linked in API Central:
 
 Example:
 

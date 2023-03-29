@@ -25,4 +25,4 @@ The following issues have been fixed in this release:
 
 The following limitations exist in this update:
 
-* Editing of an asset with the WebUI does not support the linking / unlinking of API Services.
+* Editing of an asset with the WebUI does not support the linking / unlinking of API services.

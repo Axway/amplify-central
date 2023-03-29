@@ -11,7 +11,7 @@ The Asset Catalog is used to organize your APIs, group them together, and make t
 
 The following new features and enhancements are available in this update:
 
-* When editing an asset with the WebUI Group Resources step, it is now possible to link / unlink the API Services.
+* When editing an asset with the WebUI Group Resources step, it is now possible to link / unlink the API services.
 * The Access Rights to an asset/product reflect the limitations of your Amplify Central role.
 * The Tags for an asset now support all special characters (e.g. & @ $ ).
 * The Asset details page lists products that are consuming/using the currently displayed asset version. With this information, an API Provider make an informed decision before taking action to Deprecate or Archive an asset version.

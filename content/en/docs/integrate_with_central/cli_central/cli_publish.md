@@ -6,17 +6,17 @@ date: 2020-06-10T00:00:00.000Z
 ---
 Use the Axway Central CLI to create other resource types, which are used by your API service, and publish the API service to the Unified Catalog. You can use the scripting of CLI commands to automate the process to create multiple resource types in your environment.
 
-After an [API Service representation](/docs/integrate_with_central/cli_central/cli_register_api/) is created, you can create additional information (resources) related to the API Service. This includes multiple versions of the API, endpoints, secrets, webhooks, subscription definitions, and a Catalog item.
+After an [API service representation](/docs/integrate_with_central/cli_central/cli_register_api/) is created, you can create additional information (resources) related to the API service. This includes multiple versions of the API, endpoints, secrets, webhooks, subscription definitions, and a Catalog item.
 
 ## Before you start
 
 * You will need to [authorize your DevOps service to use the DevOps API](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-devops-service-to-use-the-amplify-central-apis)
 * Verify the @axway/amplify-central-cli version is at minimum 0.1.3.
-* You have already learned how to [create a representation of an environment and API Service using the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_register_api/).
+* You have already learned how to [create a representation of an environment and API service using the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_register_api/).
 
 ## Objectives
 
-Learn how to publish your API service to Unified Catalog using the Axway Central CLI. Also learn how to create other resource types, which can be used by your API Service, and how to publish SDK docs to the Unified Catalog. All resources types (API service revision, endpoint URL, and so on) are scoped to an environment.
+Learn how to publish your API service to Unified Catalog using the Axway Central CLI. Also learn how to create other resource types, which can be used by your API service, and how to publish SDK docs to the Unified Catalog. All resources types (API service revision, endpoint URL, and so on) are scoped to an environment.
 
 * Create a version of an API service.
 * Create an endpoint for an API service version.
@@ -149,7 +149,7 @@ axway central delete secret secret1 --scope env1 --wait   ## Delete secret named
 
 ## Create a webhook
 
-A webhook defines a webhook URL to communicate events (for example, subscription or registration changes) back to an API Service. In Amplify Central and Unified Catalog, a webhook can be used in a custom subscription or registration process. A webhook is a combination of a URL and any custom parameters (for example, a secret) needed to subscribe and register to  your API Service.
+A webhook defines a webhook URL to communicate events (for example, subscription or registration changes) back to an API service. In Amplify Central and Unified Catalog, a webhook can be used in a custom subscription or registration process. A webhook is a combination of a URL and any custom parameters (for example, a secret) needed to subscribe and register to  your API service.
 
 The following is an example of how to create a webhook for an environment by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (Webhook in the Amplify data model).
 
@@ -284,7 +284,7 @@ axway central delete consumerinstance consumerinst1 --scope env1 --wait   ## Del
 
 ## Create and publish a Catalog item combining different resources
 
-You can create an API service within environment `env1` by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource. In this case, only one API Service called `apisvc1` is created from the resource file and published to the Unified Catalog:
+You can create an API service within environment `env1` by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource. In this case, only one API service called `apisvc1` is created from the resource file and published to the Unified Catalog:
 
 ```bash
 axway central create -f <filepath>
@@ -331,7 +331,7 @@ The following are some of the `"unstructuredDataProperties" : "contentTypes"` su
 
 ## Review
 
-You have learned how to publish your API Service to Unified Catalog using the Axway Central CLI. You have also learned how to create other resource types which can be used by your API service and how to publish SDK docs to the Unified Catalog.
+You have learned how to publish your API service to Unified Catalog using the Axway Central CLI. You have also learned how to create other resource types which can be used by your API service and how to publish SDK docs to the Unified Catalog.
 
 ## For Further information
 

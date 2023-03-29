@@ -28,14 +28,14 @@ The following enhancements are available in this Axway CLI update:
 
 The following enhancements are available in this Axway Central CLI update:
 
-* Manages team ownership of Environments and API Services.
-* Added a simple '--team' filter for users to only Get Environments and API Services for a specific team that they are a member of.
+* Manages team ownership of Environments and API services.
+* Added a simple '--team' filter for users to only Get Environments and API services for a specific team that they are a member of.
 * Auto-generates a logical name for resources when a logical name is not provided with a 'create' and 'apply' command.  
 * Deprecated the "axway central create service-account" command as of Central CLI version 2.5.0 or later.  The management of service accounts is included in the Axway CLI.
 
 ### Amplify Central WebUI
 
-* When adding an API Service using an API Specification file (OAS2/OAS3), the title, description and endpoints are auto-populated. This reduces the extra data entry steps for the user.
+* When adding an API service using an API Specification file (OAS2/OAS3), the title, description and endpoints are auto-populated. This reduces the extra data entry steps for the user.
 
 ## Fixed issues
 
@@ -48,4 +48,4 @@ The following issues are fixed in this Amplify Central update:
 
 This following limitation exists in this version of Amplify Central:
 
-* API Service details: The team ownership of API Services is not displayed on the WebUI.
+* API Service details: The team ownership of API services is not displayed on the WebUI.

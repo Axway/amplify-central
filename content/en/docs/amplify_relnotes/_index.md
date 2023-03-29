@@ -106,7 +106,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.46. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | The agents have been updated with the Axway Agent SDK. |
-| Bug fixes: | Incorrect API Service status. |
+| Bug fixes: | Incorrect API service status. |
 | <br />**Agents** |         |
 | What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
 | Bug fixes: | None. |
@@ -217,7 +217,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | Performance improvement in the gathering of API Service revisions. |
+| Bug fixes: | Performance improvement in the gathering of API service revisions. |
 | <br />Agents |         |
 | What's new: | **AWS Gateway** - Updated with the Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. |
 | Bug fixes: | **API Management Gateway** - Duplicate API Service Revision. <br />**Apigee Edge gateway** - API usage metrics do not display on the Business Insights page. Memory Utilization issue. |

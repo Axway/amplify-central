@@ -10,7 +10,7 @@ The variables common to all agents are described here in more detail.
 
 ## CENTRAL_APISERVICEREVISIONPATTERN
 
-This variable sets the pattern used when creating API Service Revisions on Amplify Central.  The default pattern is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
+This variable sets the pattern used when creating API service revisions on Amplify Central.  The default pattern is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
 
 ### Default pattern
 
@@ -37,11 +37,11 @@ These variables can be used in the naming template:
 
 | Variable Name   | Description                                                                                                                                                          |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| .APIServiceName | The friendly name of the API Service that this revision is being added too                                                                                           |
-| .Stage          | The name of the stage, if applicable, that this API Service Revision is linked to on the data plane                                                                   |
+| .APIServiceName | The friendly name of the API service that this revision is being added too                                                                                           |
+| .Stage          | The name of the stage, if applicable, that this API service revision is linked to on the data plane                                                                   |
 | .StageLabel     | The descriptor of the stage for the linked data plane. For example, AWS stage descriptor is Stage or Apigee stage descriptor is Portal                                         |
-| .Date           | The [date](#date-formats) that this API Service Revision is being created. This is when the resource is created on Amplify, not when the data plane created the API |
-| .Revision       | The revision number, according to what is on Amplify, for this API Service Revision                                                                                  |
+| .Date           | The [date](#date-formats) that this API service revision is being created. This is when the resource is created on Amplify, not when the data plane created the API |
+| .Revision       | The revision number, according to what is on Amplify, for this API service revision                                                                                  |
 
 ### Date Formats
 

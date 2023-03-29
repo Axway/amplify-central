@@ -27,11 +27,11 @@ The following enhancements are available in this Axway CLI update:
 
 The following enhancements are available in this Axway Central CLI update:
 
-* A developer on a team can access Environments and API Services owned by teams that the developer is a member of. Access is denied to Environments and API Services owned by teams that the developer is not a member of.
+* A developer on a team can access Environments and API services owned by teams that the developer is a member of. Access is denied to Environments and API services owned by teams that the developer is not a member of.
 
 ### Amplify Central WebUI
 
-* Team ownership of Environments and API Services is now displayed on the WebUI.
+* Team ownership of Environments and API services is now displayed on the WebUI.
 * Consumers from the same team are not able to manipulate/view subscriptions from other team members in the Unified Catalog. However, the Central Administrator role can see subscriptions from every member of the team. For this enhancement, the API Provider must add the tag `x-private` on the corresponding team.
 * API Providers can now publish APIs faster to the Unified Catalog because the validation of API Specification files on the WebUI has been relaxed.
 

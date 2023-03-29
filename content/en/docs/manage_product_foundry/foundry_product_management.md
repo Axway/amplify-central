@@ -204,7 +204,7 @@ The product release must be in **Deprecated** state.
 
 The product can be in any state. Once this action is confirmed, it cannot be undone. However, the product will still be accessible in view mode only in Product Foundry.
 
-{{< alert title="Warning" color="warning" >}}Once a product is archived, the associated subscriptions are terminated. All access to the corresponding API Service are deprovisioned and associated credentials are removed. The API consumers will not be able to consume the product.{{< /alert >}}
+{{< alert title="Warning" color="warning" >}}Once a product is archived, the associated subscriptions are terminated. All access to the corresponding API service are deprovisioned and associated credentials are removed. The API consumers will not be able to consume the product.{{< /alert >}}
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.

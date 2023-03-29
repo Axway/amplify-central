@@ -11,7 +11,7 @@ The targeted user of the Asset Catalog is typically someone who has knowledge of
 
 ## What is an asset
 
-An asset is a grouping of API Services that:
+An asset is a grouping of API services that:
 
 * Are similar in nature but running on different data planes. For example, Petstore API 1.0 in Axway API Gateway and Petstore API 1.0 in Azure Gateway can be grouped in a Petstore API.
 
@@ -21,6 +21,6 @@ An asset is a grouping of API Services that:
 
 The asset model is flexible, so APIs can be group to suit individual needs.
 
-Once the Asset Catalog has been used to manage and group API Services into assets, they are deployed as products in the [Product Foundry](/docs/manage_product_foundry) where they can be attached to subscription plans and consumed from the [Marketplace](/docs/manage_marketplace).
+Once the Asset Catalog has been used to manage and group API services into assets, they are deployed as products in the [Product Foundry](/docs/manage_product_foundry) where they can be attached to subscription plans and consumed from the [Marketplace](/docs/manage_marketplace).
 
 For information on the lifecycle of an asset, see [Asset lifecycle](/docs/manage_asset_catalog/asset_lifecycle/).

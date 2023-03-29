@@ -122,7 +122,7 @@ webhooks                  webh           Webhook                         true   
 
 ```
 
-## Retrieve details of a specific API Service
+## Retrieve details of a specific API service
 
 Get the details of a specific API service in an environment by providing the environment name and the API service name:
 

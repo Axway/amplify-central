@@ -14,7 +14,7 @@ The following new features and enhancements are available in this update:
 
 ### Category assignment via API / CLI
 
-The Central API and CLI have been enhanced to allow for managing categories and assigning to catalog items when publishing an API Service in the Unified Catalog.
+The Central API and CLI have been enhanced to allow for managing categories and assigning to catalog items when publishing an API service in the Unified Catalog.
 
 * Providers can now CREATE / READ / UPDATE / DELETE / categories using the API / CLI.
 * Categories can be configured for ConsumerInstance resources that are published to the Unified Catalog.

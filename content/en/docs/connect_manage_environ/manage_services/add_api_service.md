@@ -1,6 +1,6 @@
 ---
-title: Add an API Service
-linkTitle: Add an API Service
+title: Add an API service
+linkTitle: Add an API service
 weight: 20
 date: 2021-02-09
 ---

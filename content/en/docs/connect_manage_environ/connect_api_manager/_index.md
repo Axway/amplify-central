@@ -18,7 +18,7 @@ Connect your API Management system (v7.6.2 or above) to Amplify by using two age
 These two agents will help you to represent and expose your API Management eco-system in Amplify:
 
 * Create an API Gateway environment in Amplify that represent your actual API Management eco-system.
-* Detect a published API using the Discovery Agent. The Discovery Agent discovers the API from API Manager and makes it available in Amplify. An API Service in Amplify is created to reference the API from API Manager and then you can optionally tell the agent to publish it to the Amplify Catalog to allow your consumer to discover it.
+* Detect a published API using the Discovery Agent. The Discovery Agent discovers the API from API Manager and makes it available in Amplify. An API service in Amplify is created to reference the API from API Manager and then you can optionally tell the agent to publish it to the Amplify Catalog to allow your consumer to discover it.
 * Manage consumer subscription using the Discovery Agent. When a consumer subscribes / unsubscribes to a Catalog asset, the Discovery Agent keeps track of the changes and maintains the API Management system accordingly.
 * Filter the Axway API Gateway logs using the Traceability Agent. The Traceability Agent uses the discovered API to filter API Gateway events to extract the transaction information and send it to the Amplify platform Observability module.
 
@@ -28,7 +28,7 @@ The Discovery Agent is used to discover new published APIs. The Discovery Agent 
 
 If the Discovery Agent discovers an API where the inbound security is not set to PassThrough / API Key / OAuth, the correlating catalog asset will not be created. Discovered APIs that do not have the correct inbound security will only be available in the environment.
 
-The related APIs are published to Amplify either as an API Service in environment or an API Service in environment and optionally as Catalog item (default behavior).
+The related APIs are published to Amplify either as an API service in environment or an API service in environment and optionally as Catalog item (default behavior).
 
 If the default owner of the discovered APIs is not set in the agent configuration, the ownership is assigned to the team whose name matches the Organization name that the APIs belong to.
 

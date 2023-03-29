@@ -18,7 +18,7 @@ The following new enhancements are available in this update:
 
 The following issues have been fixed in this update:
 
-* **Asset is not updated with latest API Service update**: previously, a change in the API service revision was not propagated to the asset. Now every change in the service is reflected in the asset with the use of the Discovery Agent as soon as the asset is linked to the "latest updated" version of the API Service.
+* **Asset is not updated with latest API service update**: previously, a change in the API service revision was not propagated to the asset. Now every change in the service is reflected in the asset with the use of the Discovery Agent as soon as the asset is linked to the "latest updated" version of the API service.
 * **Asset deletion**: a team developer role can delete an asset if they are a member of the owning team.
 
 ## Known limitations

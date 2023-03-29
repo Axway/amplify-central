@@ -16,16 +16,16 @@ Learn how providers and consumers are impacted by corrupted assets and/or produc
 
 ## What is a corrupted asset/product?
 
-An asset or a product becomes corrupted when one of the API Service they are built on disappear from the system (intentionally or not).
+An asset or a product becomes corrupted when one of the API service they are built on disappear from the system (intentionally or not).
 
-The API Service deletion affects the asset as its resource references are no more available. The products linked to this corrupted asset becomes corrupted too as the plan and quotas cannot map the deleted API Service. And consequently, the product resources cannot be consumed from the marketplace.
+The API service deletion affects the asset as its resource references are no more available. The products linked to this corrupted asset becomes corrupted too as the plan and quotas cannot map the deleted API service. And consequently, the product resources cannot be consumed from the marketplace.
 
 ## How a corrupted asset/product is displayed for the provider?
 
 A corrupted asset is highlighted as follows:
 
 * Asset list view - a warning icon on the resources from the Asset list view.
-* Asset details view - each version linked to a deleted API Service has the warning icon and an explanation. The details of the version show the resource(s) in error when the API Service is missing.
+* Asset details view - each version linked to a deleted API service has the warning icon and an explanation. The details of the version show the resource(s) in error when the API service is missing.
 
 A corrupted product is highlighted as follows in Amplify UI:
 

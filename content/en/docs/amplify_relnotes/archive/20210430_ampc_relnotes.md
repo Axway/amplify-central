@@ -24,7 +24,7 @@ The CLI extension is compatible with the Axway CLI **version 2.0** (<https://www
 The Axway Central CLI includes the following enhancements:
 
 * When installing the agents, you can now select the name of your agent you want to appear in the Topology view.
-* Environment and API Services can now be segmented by team. As soon as ownership is assigned to a team, only members of the team can manage the environment and the API Service attached to it. Refer to [Assign an environment owner](/docs/connect_manage_environ//manage_environments_ownership).
+* Environment and API services can now be segmented by team. As soon as ownership is assigned to a team, only members of the team can manage the environment and the API service attached to it. Refer to [Assign an environment owner](/docs/connect_manage_environ//manage_environments_ownership).
 
 ### Amplify Central WebUI
 
@@ -36,7 +36,7 @@ The Amplify Central WebUI includes the following enhancements:
 * Environment details page now displays the date and time activity that was last reported between the Discovery and Traceability agents and Amplify Central under Service synchronization.
 * Refresh buttons have been added to both the Environment details and the Service details pages.
 * The tags and attributes from the service and version levels have been added to the Service details page.
-* The option to use markdown formatting for Environment and API Service descriptions is now available. This also includes the ability to show performance metrics and linter results badges by using shield.io badges.
+* The option to use markdown formatting for Environment and API service descriptions is now available. This also includes the ability to show performance metrics and linter results badges by using shield.io badges.
 
 ### Axway APIM Gateway / AWS / Azure agents
 
@@ -47,7 +47,7 @@ The agents include the following enhancements:
 * Traceability Agent redaction. The redaction feature can be applied at the agent level. By default, the redaction feature is on. This means that no path/headers or query parameters are sent to Amplify Central, and only the transaction summary information is sent. For more information, refer to [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction).
 * v7 Discovery Agent can now publish Catalog items even if their inbound security is not managed in Amplify. The status badge of the Catalog item will contain an **Unidentified inbound policy** that will be highlighted in orange.
 * API Manager CLI integration (aka Swagger-Promote): in order to work in a CI/CD process, the v7 Discovery Agent is now relying on the vhost / path and routing key to uniquely identify an API.
-* Azure Discovery Agent can now read the tags associated to an Azure API and then add those tags to the published API Service and Catalog item.
+* Azure Discovery Agent can now read the tags associated to an Azure API and then add those tags to the published API service and Catalog item.
 * AWS agents now use the AWS SDK 2.0 to communicate with AWS services.
 
 ### Mesh Governance / Istio agent
@@ -92,4 +92,4 @@ This version of Amplify Central has the following limitations:
 * Azure agents:
 
     * Discovery Agent does not manage revision and version.
-    * Discovery agent does not remove API Service and Catalog item when Azure API is removed.
+    * Discovery agent does not remove API service and Catalog item when Azure API is removed.

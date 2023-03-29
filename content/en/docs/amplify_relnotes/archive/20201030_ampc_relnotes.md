@@ -124,7 +124,7 @@ By default, Discovery Agent discovers all APIs matching the following filters:
 
 Within Amplify Central, an API can by visible in different angles. Either it is only exposed for the API provider or it is also exposed for a consumer:
 
-* When an API is exposed for the provider, it is visible in the Topology/Environment view as an API Service.
+* When an API is exposed for the provider, it is visible in the Topology/Environment view as an API service.
 * When an API is exposed for the consumer, it is visible in the Catalog view as a Catalog asset.
 * The same API can be exposed in both views.
 

@@ -59,7 +59,7 @@ The following information is displayed for environments created using the API se
 
 For more information about Axway Cloud SaaS environment, refer to [Axway Cloud SaaS: Get Started](/docs/saas_api_gateway/quickstart/)
 
-### Delete an API Service
+### Delete an API service
 
 To delete an API service:
 

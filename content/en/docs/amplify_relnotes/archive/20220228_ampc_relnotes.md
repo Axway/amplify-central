@@ -22,14 +22,14 @@ For more information, see [Axway CLI release note](https://docs.axway.com/bundle
 
 The following enhancements are available in this Axway Central CLI update:
 
-* The Axway Central CLI `install agents` command has the option to replicate your organizational structure by auto-associating the team ownership of API Services.
+* The Axway Central CLI `install agents` command has the option to replicate your organizational structure by auto-associating the team ownership of API services.
 * The Central Admin role can share environments with other teams using an Access Control List (ACLs).
-* The Central Admin role can view / set the team ownership of an Environment or an API Service.
+* The Central Admin role can view / set the team ownership of an Environment or an API service.
 * The logical names of resources are now more friendly and memorable. The logical name is uniquely derived from the provided resource name / title or auto-generated.
 
 ### Amplify Central WebUI
 
-* New API Services can be published faster to the Unified Catalog.  Errors in the API Specification file are allowed.
+* New API services can be published faster to the Unified Catalog.  Errors in the API Specification file are allowed.
 * Async API specification version 2.3.0 is now supported with six additional Async protocols: IBMMQ, JMS SECURE, MECURE, SOLACE, SOLACE SECURE, and SOLACE COMPRESSED.
 * The UX display of many tags / attributes and long text names has been improved.
 

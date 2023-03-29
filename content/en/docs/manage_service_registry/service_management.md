@@ -4,11 +4,11 @@ linkTitle: Service management
 weight: 20
 ---
 
-An API Service represents an API, including all its versions and deployed endpoints, and additional information to represent your API. For example, description, environment scope, image encoded in base64.
+An API service represents an API, including all its versions and deployed endpoints, and additional information to represent your API. For example, description, environment scope, image encoded in base64.
 
-Use the Service Registry WebUI to view all your API Services across all environments.
+Use the Service Registry WebUI to view all your API services across all environments.
 
-Use the Topology WebUI to select an environment and then manage your API Services, including view, create, update, and delete.
+Use the Topology WebUI to select an environment and then manage your API services, including view, create, update, and delete.
 
 ## Before you start
 
@@ -18,15 +18,15 @@ You must have credentials or a user account from your org Administrator to use t
 
 Learn how to use the Service Registry WebUI to create and manage services, including:
 
-* List all API Services in an environment
-* View details for an API Service
-* Create a new API Service
-* Delete an API Service
+* List all API services in an environment
+* View details for an API service
+* Create a new API service
+* Delete an API service
 * Publish a service to the Marketplace
 
-## List API Services
+## List API services
 
-To list API Services:
+To list API services:
 
 1. Navigate to *Catalog > Service Registry*.
 2. View the following information for all services:
@@ -40,7 +40,7 @@ To list API Services:
 
 You can also filter the services by the Service type, Environment and Team Ownership using the **Filter By** controls. Search by the Service Name with the search bar.
 
-## View API Service details
+## View API service details
 
 To view service details:
 
@@ -51,13 +51,13 @@ Click on the Service name or icon to view the following detailed information for
 
 * General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights, Tags & Attributes, and Assets for the General Service.
 * The metrics area displays the number of assets and products related to the General Service.
-* The general Access Rights tab displays all teams the API Service is shared with.
-* The general Tags & Attributes tab displays the tags and attributes properties for the general API Service.
-* The general Asset tab displays the assets that contain this API Service.
-* Version specific information is displayed at the bottom in the Versions tab. Every version of the service is displayed by Service Revision name, specification type, and created/updated date on the left side of the Version tab, making it easy to view all versions of an API Service.
+* The general Access Rights tab displays all teams the API service is shared with.
+* The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
+* The general Asset tab displays the assets that contain this API service.
+* Version specific information is displayed at the bottom in the Versions tab. Every version of the service is displayed by Service Revision name, specification type, and created/updated date on the left side of the Version tab, making it easy to view all versions of an API service.
 * With the version specific tab, there are other tabs to view the API Specification & Methods, Endpoints listening for requests to the service, Tags & Attributes, and Assets which are related to version of the service.
 
-## Create an API Service
+## Create an API service
 
 1. Navigate to *Topology* and select an environment.
 2. Click **+ Add API Service** to add a new service.
@@ -71,7 +71,7 @@ Click on the Service name or icon to view the following detailed information for
 5. Add / edit Endpoint information, if available, and then click **Next**.
 6. Click **Save**.
 
-## Delete an API Service
+## Delete an API service
 
 1. Navigate to *Catalog > Service Registry*.
 2. From the list view, select a service to open the service details.
@@ -88,10 +88,10 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 3. Select **Publish to Marketplace**.
 4. Add / edit information where applicable:
 
-    * Asset Name - The proposed asset name is set to the API Service name.  
-    * Product Name - The proposed asset name is set to the API Service name.
+    * Asset Name - The proposed asset name is set to the API service name.  
+    * Product Name - The proposed asset name is set to the API service name.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility - The proposed visibility is set to the currently logged in team to facilitate collaboration with internal teams to edit the product documentation or product plan.  If you are logged in as a Central Admin, the proposed Product Visibility is set to None.
     * The default product plan is a free unlimited plan which can be edited after the product is created.
 
-5. Click **Publish** to quickly make an API Service available from consumption in the Marketplace.
+5. Click **Publish** to quickly make an API service available from consumption in the Marketplace.

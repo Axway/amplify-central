@@ -44,7 +44,7 @@ To manually synchronize your environment, you can use the [Axway Central CLI](/d
 
 This section describes the assets that are represented in your environment.
 
-### API Services
+### API services
 
 An API service represents a physical deployment of a resource in an environment. Examples of API services include API, MFT, Protobuf, documentation, and so on. You can manually add API services to your environment or they can be discovered and auto-added by Axway agents. Later, these API services can be combined and packaged together to create catalog items for your consumers to access.
 
