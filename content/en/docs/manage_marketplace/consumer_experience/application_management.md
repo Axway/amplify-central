@@ -50,50 +50,50 @@ View the following product information associated with the application:
 
 * The subscription and plan names
 * For each subscription/plan, all resources that are accessible with the subscription
-* For each resource, all credentials requested by the consumers with their statuses (Pending / Active / Inactive - see the details [here](/docs/manage_marketplace/consumer_experience/credential_management#credential-life-cycle)) and its expiration date if any
+* For each resource, all credentials requested by the consumers with their statuses (Pending / Active / Inactive - see [Credential lifecycle](/docs/manage_marketplace/consumer_experience/credential_management#credential-lifecycle)) and its expiration, date if any
 
-    * Click the resource name to open the resource details screen (Methods / Credentials / Access Requests).
-    * Click **Create Credential** to request new credentials. Once the credential is provision on the data plane, you will be able to see it using the **eye** icon. **Important**: For security, the value of a credential can be viewed only once inside the Marketplace, but it will remain on the data plane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, you can request a new one.
-    * The ellipsis menu on each credentials allows to:
+    * Click the resource name to view the resource details (Methods / Credentials / Access Requests)
+    * Click **Create Credential** to request new credentials. Once the credential is provisioned on the data plane, click the **eye** icon to view it. **Important**: For security, the value of a credential can be viewed only once inside the Marketplace, but it will remain on the data plane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, you can request a new one.
+    * Click the credential ellipsis menu to:
 
-        * **View** the credential details. From the details screen, you can **Renew credentials** (if the feature available on the Gateway), **Delete** credential, **Suspend** credential (i.e. temporary inactivate the credential) or **Enable credential** (i.e. reactivate a suspended credential)
-        * **Renew** a credential (if the feature available on the Gateway) - this will create an new credential
-        * **Delete** a credentials
+        * **View** the details of a credential. From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
+        * **Renew** a credential (if the feature available on the Gateway). This will create an new credential.
+        * **Delete** a credential
 
-From this page, you can also initiate a new subscription using the **Add subscription** button.
+{{< alert title="Note" color="primary" >}}You can also initiate a new subscription from the application details. Click **Add subscription**.{{< /alert >}}
 
 ## Edit an application
 
-You have to be part of the owning team to be able to edit an application.
+You must be a member of the owning team to edit an application.
 
 1. Navigate to the *Marketplace*.
 2. Select **Applications** and find the application you want to edit.
-3. From application ellipsis menu, click **Edit** to open the application details.
-4. Update the application name, description or icon as required.
+3. Click the ellipsis menu and select **Edit** to open the application details.
+4. Update the application name, description or icon.
 5. Click **Save** to confirm your changes or **Cancel** to undo the changes.
 
 ## Archive an application
 
-You have to be part of the owning team to be able to archive an application.
+You must be a member of the owning team to archive an application.
 
-In case an application is no more needed but you still want to see the corresponding metrics in the Consumer Insights screen, you can archive the application. This action cannot be undone.
+Archive an application if it is no longer needed but you still want to see the corresponding metrics in Consumer Insights. This action cannot be undone.
 
-{{< alert title="Warning" color="warning" >}}Archiving an application will remove all related access and credentials. An archived application cannot be used anymore to consume APIs.{{< /alert >}}
+{{< alert title="Warning" color="warning" >}}Archiving an application will remove all related access and credentials. An archived application cannot be used to consume APIs.{{< /alert >}}
 
 1. Navigate to the *Marketplace*.
 2. Select **Applications** and find the application you need to be archive.
-3. From the Application ellipsis menu, click the **Archive** to trigger the application archival. A confirmation popup is displayed to confirm the choice.
+3. Click the ellipsis menu and select **Archive** to trigger application archival. A confirmation popup is displayed to confirm the choice.
 4. Click **Archive** to confirm or **Cancel** to abort the action.
 
 ## Delete an application
 
-You have to be part of the owning team to be able to delete an application.
+You must be a member of the owning team to delete an application.
 
-Application must be in Archived state to be deleted. This action cannot be undone.
+An application must be in Archived state to be deleted. This action cannot be undone.
 
-{{< alert title="Warning" color="warning" >}}Deleting an application will prevent to access related Consumer Insights metrics.{{< /alert >}}
+{{< alert title="Warning" color="warning" >}}Deleting an application will remove access to related Consumer Insights metrics.{{< /alert >}}
 
 1. Navigate to the *Marketplace*.
-2. Select **Applications** and find the application you need to delete.
-3. From the Application ellipsis menu, click the **Delete** to trigger the application deletion. A confirmation popup is displayed to confirm the choice.
+2. Select **Applications** and find the application you want to delete.
+3. Click the ellipsis menu and select **Delete** to trigger application deletion. A confirmation popup is displayed to confirm the choice.
 4. Click **Delete** to confirm or **Cancel** to abort the action.
