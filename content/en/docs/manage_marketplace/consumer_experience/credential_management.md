@@ -42,6 +42,15 @@ View and track the status of the access requests:
 * From the application: *Marketplace* > Application > navigate to the appropriate resource.
 * From the product: *Marketplace* > Product > Resource > Access > navigate to the appropriate application.
 
+## Credential lifecycle
+
+| State          | Description                                                                                                                        |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------|
+| **Pending**    | The credential creation has been initiated by the consumer and is waiting to be provisioned in the corresponding data plane.              |
+| **Active**     | The credential is provisioned on the data plane and can be used to consume APIs.                                                   |
+| **Inactive**   | The credential is provisioned on the data plane but cannot be used to consume APIs. This can be the result of a [Suspend action](/docs/manage_marketplace/consumer_experience/credential_management#suspend--enable-credential). |
+| **Deleting**   | The credential deletion has been initiated and is waiting for the credentials to be deprovisioned in the data plane.                        |
+
 ## Create credentials
 
 The credential request can be done from several places in the Marketplace:
