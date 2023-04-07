@@ -20,11 +20,11 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify April 7 2023](/docs/amplify_relnotes/20230407_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.48. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.49. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.47
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.48
 * **AWS Gateway using SDK 2.0** - Agent version 1.1.40
-* **Azure latest release** - Agent version 1.1.43
+* **Azure latest release** - Agent version 1.1.44
 * **Istio 1.9.5** - DA=v1.0.10 / TA=v2.0.53
 * **Apigee Edge** - Agent version 0.1.11
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.17
@@ -35,7 +35,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.48. This version is 
 | Bug fixes: | None. |
 | <br />**Agents** |         |
 | What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
-| Bug fixes: | None. |
+| Bug fixes: | **Axway API Management Gateway:** <br/> - OPTIONS transactions are now reported to Amplify Platform <br/> - Deprecated API are no more discovered and pushed to Amplify <br/> **Azure Gateway:** <br/> - Duplicate APIs discovered due to a faulty healthcheck process |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -43,14 +43,14 @@ Current agent versions are based on Amplify Agents SDK v1.1.48. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | - Marketplace product publication preference enforcement. <br/> - Provider has now access to the consumer subscription status (Active / Cancelled / Migrated...)|
+| Bug fixes: | - Product seen as unpublished in Category and Support Contact creation <br/> - Markdown editor side by side prevent to see the actual text <br/> - Plan preview does not scroll <br/> - Long category name not displayed correctly <br/> - Provider is not redirected to the product details after publishing a product to a marketplace|
 | <br />**Business insights** |         |
-| What's new: | None. |
+| What's new: | - Marketplace and Organization filter available in all screens <br/> - Friendly name display instead of logical names |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Product resource sensitive data (server url / try it) are hidden for unauthenticated users |
+| Bug fixes: | - Subscriber are not able to see an archived product <br/> - Fail to signin into Marketplace with Safari 16.2|
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
