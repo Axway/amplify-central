@@ -35,7 +35,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.49. This version is 
 | Bug fixes: | None. |
 | <br />**Agents** |         |
 | What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
-| Bug fixes: | **Axway API Management Gateway:** <br/> - OPTIONS transactions are now reported to Amplify Platform <br/> - Deprecated API are no more discovered and pushed to Amplify <br/> **Azure Gateway:** <br/> - Duplicate APIs discovered due to a faulty healthcheck process |
+| Bug fixes: | **Axway API Management Gateway:** <br/> - OPTIONS transactions are now reported to Amplify Platform <br/> - Deprecated APIs are not discovered and pushed to Amplify <br/> **Azure Gateway:** <br/> - A fix was made for Duplicate APIs discovered due to a faulty healthcheck process |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
