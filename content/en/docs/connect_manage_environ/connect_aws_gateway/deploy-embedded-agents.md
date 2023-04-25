@@ -126,25 +126,7 @@ Integrating the embedded agent discovery process with your CI/CD pipelines is th
 
 1. Log in to the Axway Central CLI
 2. Retrieve the latest Discovery Agent resource fo ryour environment `axway central get discoveryagent <agent-name> -s <environment-name> -o yaml > da.yaml`
-3. Modify the da.yaml file adding the line `queueDiscovery: true` to the `dataplane` section. See the yaml in [Dataplane subresource](#dataplane-subresource)
-
-### Triggering the agent to run discovery (API)
-
-Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the API.
-
-1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl
-2. Using the json in [Dataplane subresource](#dataplane-subresource), updating &lt;dataplane-name&gt;, run the following curl command. Update the vales of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;filename&gt;
-
-```sh
-curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
---header "Authorization: Bearer ${token}" \
---header "Content-Type: application/json" \
--d @<filename>
-```
-
-{{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
-
-#### Dataplane subresource
+3. Modify the da.yaml file adding the line `queueDiscovery: true` to the `dataplane` section
 
 ```yaml
 dataplane:
@@ -152,11 +134,18 @@ dataplane:
   queueDiscovery: true
 ```
 
-```json
-{
-  "dataplane": {
-    "name": "<dataplane-name>",
-    "queueDiscovery": true
-  }
-}
+### Triggering the agent to run discovery (API)
+
+Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the API.
+
+1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl
+2. Run the following curl command. Update the vales of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;
+
+```sh
+curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
+--header "Authorization: Bearer ${token}" \
+--header "Content-Type: application/json" \
+-d @'{"dataplane": {"name": "<dataplane-name>","queueDiscovery": true}}'
 ```
+
+{{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
