@@ -18,7 +18,7 @@ Deploy your embedded agents using Axway CLI so you can manage your AWS API Gatew
 
 ## Objectives
 
-Learn how to quickly configure, install, and run your Embedded agents with basic configuration using Axway Central CLI.
+Learn how to quickly configure, install, and run your Embedded agents with basic configuration using the Axway Central CLI.
 
 Axway Central CLI and Amplify platform connectivity are required to configure the agent.
 
@@ -115,7 +115,48 @@ The installation procedure will prompt for the following:
    * Access and Secret Keys Prompts
      * **Access Key ID** the Access Key ID that the embedded agent will use when connecting to your AWS API Gateway
      * **Security Access Key** the Secret Access Key that the embedded agent will use when connecting to your AWS API Gateway
-   * Set how often the embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline
+   * Set how often the embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover AMS API Gateway resources after installation is complete
 
 Once you have answered all questions, the embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If the setup to run immediately on install the agent will additionally connect and discover your resources and show them in the Service Registry.
+
+### Triggering the agent to run discovery (CLI)
+
+Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the CLI.
+
+1. Log in to the Axway Central CLI
+2. Retrieve the latest Discovery Agent resource fo ryour environment `axway central get discoveryagent <agent-name> -s <environment-name> -o yaml > da.yaml`
+3. Modify the da.yaml file adding the line `queueDiscovery: true` to the `dataplane` section. See the yaml in [Dataplane subresource](#dataplane-subresource)
+
+### Triggering the agent to run discovery (API)
+
+Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the API.
+
+1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl
+2. Using the json in [Dataplane subresource](#dataplane-subresource), updating &lt;dataplane-name&gt;, run the following curl command. Update the vales of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;filename&gt;
+
+```sh
+curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
+--header "Authorization: Bearer ${token}" \
+--header "Content-Type: application/json" \
+-d @<filename>
+```
+
+{{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
+
+#### Dataplane subresource
+
+```yaml
+dataplane:
+  name: <dataplane-name>
+  queueDiscovery: true
+```
+
+```json
+{
+  "dataplane": {
+    "name": "<dataplane-name>",
+    "queueDiscovery": true
+  }
+}
+```
