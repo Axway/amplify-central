@@ -20,7 +20,7 @@ Create an IAM policy that allows the embedded agent the ability to discover and 
 
 1. Within the AWS IAM Console begin the `Create policy` wizard
 2. Select the JSON editor tab and paste the [AWS IAM policy JSON](#aws-iam-policy-json) policy
-3. Update for your specific region (i.e. eu-west-1 becomes us-east-2), to setup [least-privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) access
+3. Update for your specific region (i.e. &ltaws-region&gt becomes us-east-2), to setup [least-privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) access
 4. Click `Next: Tags` and add any tags you may want
 5. Click `Next: Review`
 6. Give the policy a name such as `AmplifyAgentPolicy`
@@ -35,14 +35,14 @@ Create an IAM policy that allows the embedded agent the ability to discover and 
       "Effect": "Allow",
       "Action": "apigateway:GET",
       "Resource": [
-        "arn:aws:apigateway:eu-west-1::/restapis",
-        "arn:aws:apigateway:eu-west-1::/restapis/*",
-        "arn:aws:apigateway:eu-west-1::/restapis/*/deployments",
-        "arn:aws:apigateway:eu-west-1::/restapis/*/deployments/*",
-        "arn:aws:apigateway:eu-west-1::/apis",
-        "arn:aws:apigateway:eu-west-1::/apis/*",
-        "arn:aws:apigateway:eu-west-1::/apis/*/deployments",
-        "arn:aws:apigateway:eu-west-1::/apis/*/deployments/*"
+        "arn:aws:apigateway:<aws-region>::/restapis",
+        "arn:aws:apigateway:<aws-region>::/restapis/*",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/deployments",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/deployments/*",
+        "arn:aws:apigateway:<aws-region>::/apis",
+        "arn:aws:apigateway:<aws-region>::/apis/*",
+        "arn:aws:apigateway:<aws-region>::/apis/*/deployments",
+        "arn:aws:apigateway:<aws-region>::/apis/*/deployments/*"
       ]
     },
     {
@@ -54,14 +54,14 @@ Create an IAM policy that allows the embedded agent the ability to discover and 
         "apigateway:GET"
       ],
       "Resource": [
-        "arn:aws:apigateway:eu-west-1::/apis/*/usageplans",
-        "arn:aws:apigateway:eu-west-1::/apis/*/usageplans/*",
-        "arn:aws:apigateway:eu-west-1::/apikeys/*",
-        "arn:aws:apigateway:eu-west-1::/apikeys",
-        "arn:aws:apigateway:eu-west-1::/usageplans",
-        "arn:aws:apigateway:eu-west-1::/usageplans/*",
-        "arn:aws:apigateway:eu-west-1::/usageplans/*/keys/*",
-        "arn:aws:apigateway:eu-west-1::/usageplans/*/keys"
+        "arn:aws:apigateway:<aws-region>::/apis/*/usageplans",
+        "arn:aws:apigateway:<aws-region>::/apis/*/usageplans/*",
+        "arn:aws:apigateway:<aws-region>::/apikeys/*",
+        "arn:aws:apigateway:<aws-region>::/apikeys",
+        "arn:aws:apigateway:<aws-region>::/usageplans",
+        "arn:aws:apigateway:<aws-region>::/usageplans/*",
+        "arn:aws:apigateway:<aws-region>::/usageplans/*/keys/*",
+        "arn:aws:apigateway:<aws-region>::/usageplans/*/keys"
       ]
     },
     {
@@ -72,10 +72,10 @@ Create an IAM policy that allows the embedded agent the ability to discover and 
         "apigateway:GET"
       ],
       "Resource": [
-        "arn:aws:apigateway:eu-west-1::/apis/*/stages/*",
-        "arn:aws:apigateway:eu-west-1::/apis/*/stages",
-        "arn:aws:apigateway:eu-west-1::/restapis/*/stages",
-        "arn:aws:apigateway:eu-west-1::/restapis/*/stages/*"
+        "arn:aws:apigateway:<aws-region>::/apis/*/stages/*",
+        "arn:aws:apigateway:<aws-region>::/apis/*/stages",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/stages",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/stages/*"
       ]
     }
   ]
