@@ -120,7 +120,9 @@ The installation procedure will prompt for the following:
 
 Once you have answered all questions, the embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If the setup to run immediately on install the agent will additionally connect and discover your resources and show them in the Service Registry.
 
-### Triggering the agent to run discovery (CLI)
+### Triggering the agent to run discovery
+
+#### Triggering via CLI
 
 Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the CLI.
 
@@ -135,7 +137,7 @@ dataplane:
   queueDiscovery: true
 ```
 
-### Triggering the agent to run discovery (API)
+#### Triggering via API
 
 Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the API.
 
