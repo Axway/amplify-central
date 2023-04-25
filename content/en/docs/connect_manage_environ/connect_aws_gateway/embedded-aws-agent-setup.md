@@ -19,8 +19,13 @@ Learn how to quickly setup an AWS Assume Role policy or create Access and Secret
 Create an IAM policy that allows the embedded agent the ability to discover and provision access to your AWS API Gateway resources. This step will be required regardless of the authentication type you using
 
 1. Within the AWS IAM Console begin the `Create policy` wizard
-2. Select the JSON editor tab and paste the following policy
+2. Select the JSON editor tab and paste the [#aws-iam-policy-json] policy
 3. Update for your specific region (i.e. eu-west-1 becomes us-east-2), to setup [least-privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) access
+4. Click `Next: Tags` and add any tags you may want
+5. Click `Next: Review`
+6. Give the policy a name such as `AmplifyAgentPolicy`
+
+### AWS IAM policy JSON
 
 ```json
 {
@@ -76,10 +81,6 @@ Create an IAM policy that allows the embedded agent the ability to discover and 
   ]
 }
 ```
-
-3. Click `Next: Tags` and add any tags you may want
-4. Click `Next: Review`
-5. Give the policy a name such as `AmplifyAgentPolicy`
 
 ## AWS IAM role (preferred)
 
