@@ -20,7 +20,7 @@ Create an IAM policy that allows the embedded agent the ability to discover and 
 
 1. Within the AWS IAM Console begin the `Create policy` wizard
 2. Select the JSON editor tab and paste the [AWS IAM policy JSON](#aws-iam-policy-json) policy
-3. Update for your specific region (i.e. &ltaws-region&gt becomes us-east-2), to setup [least-privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) access
+3. Update for your specific region (i.e. &lt;aws-region&gt; becomes us-east-2), to setup [least-privilege](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#grant-least-privilege) access
 4. Click `Next: Tags` and add any tags you may want
 5. Click `Next: Review`
 6. Give the policy a name such as `AmplifyAgentPolicy`
