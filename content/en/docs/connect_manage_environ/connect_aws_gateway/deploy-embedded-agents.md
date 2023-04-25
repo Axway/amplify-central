@@ -148,7 +148,7 @@ Integrating the embedded agent discovery process with your CI/CD pipelines is th
 curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" \
--d @'{"dataplane": {"name": "<dataplane-name>","queueDiscovery": true}}'
+-d '{"dataplane": {"name": "<dataplane-name>","queueDiscovery": true}}'
 ```
 
 {{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
