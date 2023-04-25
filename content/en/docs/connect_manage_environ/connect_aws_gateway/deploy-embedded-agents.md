@@ -127,6 +127,7 @@ Integrating the embedded agent discovery process with your CI/CD pipelines is th
 1. Log in to the Axway Central CLI
 2. Retrieve the latest Discovery Agent resource fo ryour environment `axway central get discoveryagent <agent-name> -s <environment-name> -o yaml > da.yaml`
 3. Modify the da.yaml file adding the line `queueDiscovery: true` to the `dataplane` section
+4. Run `axway central apply -f da.yaml` to apply the changes
 
 ```yaml
 dataplane:
