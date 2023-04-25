@@ -20,22 +20,22 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify April 21 2023](/docs/amplify_relnotes/20230421_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.49. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.51. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.48
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.40
-* **Azure latest release** - Agent version 1.1.44
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.49
+* **AWS Gateway using SDK 2.0** - Agent version 1.1.41
+* **Azure latest release** - Agent version 1.1.45
 * **Istio 1.9.5** - DA=v1.0.10 / TA=v2.0.53
-* **Apigee Edge** - Agent version 0.1.11
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.17
+* **Apigee Edge** - Agent version 0.1.12
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.18
 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | SDK was not updating X-agent-details. |
 | <br />**Agents** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. <br />**Embedded Agent** - New Embedded Agent discovery service for AWS Gateway. |
+| Bug fixes: | **Axway API Management Gateway** - nil pointer is now handled when the agent retrieves an API Logical Keys. <br />**Azure Gateway** - Version updates when new API Method is added. |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -43,14 +43,14 @@ Current agent versions are based on Amplify Agents SDK v1.1.49. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | |
-| Bug fixes: | |
+| What's new: | Support contact added in product details screen. <br />Migrated subscription can be deleted. <br />IDE resource creation support. |
+| Bug fixes: | Product visibility shows consumer orgs when disabled on Marketplace Settings. <br />Create support contact wizard enhancements. <br />Paid plan details screen is missing the Quota type. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: |  |
-| Bug fixes: |  |
+| What's new: | None. |
+| Bug fixes: | Application list does not scroll. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
