@@ -107,18 +107,16 @@ The installation procedure will prompt for the following:
 4. AWS Configuration Setup options:
    * **Region** of the AWS API Gateway resources
    * **Authentication Type** select either Assume Role Policy or Access and Secret Keys
-
    * Assume Role Policy (preferred) Prompts
      * **Assume Role ARN** enter the ARN (Amazon Resource Number) that was created in a prerequisite step
      * **External ID** the optional External ID that the embedded agent will use when assuming the provided role
-
    * Access and Secret Keys Prompts
      * **Access Key ID** the Access Key ID that the embedded agent will use when connecting to your AWS API Gateway
      * **Security Access Key** the Secret Access Key that the embedded agent will use when connecting to your AWS API Gateway
    * Set how often the embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover AWS API Gateway resources after installation is complete
 
-Once you have answered all questions, the embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If the setup to run immediately on install the agent will additionally connect and discover your resources and show them in the Service Registry.
+Once you have answered all questions, the embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If set to discover AWS API Gateway resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
 
 ### Triggering the agent to run discovery
 
