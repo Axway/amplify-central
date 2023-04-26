@@ -140,7 +140,7 @@ dataplane:
 1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl
 2. Run the following curl command. Update the values of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;
 
-```sh
+```shell
 curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" \

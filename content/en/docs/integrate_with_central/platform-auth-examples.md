@@ -112,7 +112,7 @@ This approach is cumbersome but demonstrates what is necessary to build an appli
 Use the client ID and secret for basic authentication and base64 encode the string. A colon must be used as a field separator, so that the unencoded string looks like "clientID:secret":  
 
 ```shell
-echo "clientID:secret" | base64 
+echo -n "clientID:secret" | base64 
 ```
 
 After base64 encoding the string, the authorization call will look similar to:
