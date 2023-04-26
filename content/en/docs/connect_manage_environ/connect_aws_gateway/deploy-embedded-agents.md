@@ -120,9 +120,9 @@ Once you have answered all questions, the embedded agent will be created. The pr
 
 ### Triggering the agent to run discovery
 
-#### Triggering via CLI
+Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify.
 
-Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the CLI.
+#### Triggering via CLI
 
 1. Log in to the Axway Central CLI
 2. Retrieve the latest Discovery Agent resource for your environment `axway central get discoveryagent <agent-name> -s <environment-name> -o yaml > da.yaml`
@@ -136,8 +136,6 @@ dataplane:
 ```
 
 #### Triggering via API
-
-Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify. In this section you will learn how to trigger this discovery via the API.
 
 1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl
 2. Run the following curl command. Update the values of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;
