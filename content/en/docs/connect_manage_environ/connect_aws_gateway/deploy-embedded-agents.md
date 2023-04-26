@@ -116,7 +116,7 @@ The installation procedure will prompt for the following:
      * **Access Key ID** the Access Key ID that the embedded agent will use when connecting to your AWS API Gateway
      * **Security Access Key** the Secret Access Key that the embedded agent will use when connecting to your AWS API Gateway
    * Set how often the embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](#triggering-the-agent-to-run-discovery)
-   * Set if the agent should discover AMS API Gateway resources after installation is complete
+   * Set if the agent should discover AWS API Gateway resources after installation is complete
 
 Once you have answered all questions, the embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If the setup to run immediately on install the agent will additionally connect and discover your resources and show them in the Service Registry.
 
