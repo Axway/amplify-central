@@ -26,7 +26,7 @@ All customer payments are done using the Stripe billing portal.
 
 ### Accessing Stripe using Stripe API and API Key
 
-You need first to check that Stripe is set to use the 2022-11-15 API version [Refer to](https://stripe.com/docs/libraries/set-version)
+You need first to check that Stripe is set to use the 2022-11-15 API version Refer to [this page](https://stripe.com/docs/libraries/set-version).
 
 For Amplify to be able to access Stripe account, an API key is required. For security constraints we will use a restricted API Key with the minimum access possible: Customer:Write and Invoices:Write rights.
 
@@ -34,7 +34,7 @@ For Amplify to be able to access Stripe account, an API key is required. For sec
 2. Search for API key and navigate to the link **Developers > API Keys**
 3. Create a new restricted key
    1. name it Amplify Integration
-   2. add the following permissions: Core resource: **Customers <Write>** / All billing resources: **Invoices <Write>**
+   2. add the following permissions: Core resource: **Customers -Write-** / All billing resources: **Invoices -Write-**
 4. Click the Create key button. The key is created and visible under the Restricted key list
 5. Use the **Reveal test key** button to get the key value. We will need it later on the Marketplace side.
 
