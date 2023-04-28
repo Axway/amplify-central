@@ -77,4 +77,4 @@ Now each time a consumer from the consumer organization of the marketplace subsc
 
 On a monthly basis or annual basis depending on the plan metering period, a new invoice will be generated based on the consumer consumption. The invoice will be added to the subscription invoices list with the link to pay it.
 
-Once the consumer terminate his subscription, a final OK
+Once the consumer terminate his subscription, a final invoice is generated with the usage consumed between the last invoice and now.
