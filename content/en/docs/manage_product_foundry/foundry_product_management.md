@@ -125,6 +125,8 @@ The product must be in **Draft** state.
 6. Select a Release Type of either **Major**, **Minor**, or **Patch**.
 7. Click **Update**.
 
+Once your product is active, you can [publish it to any marketplace](/docs/manage_marketplace/publish_to_marketplace) your user is [allowed to publish to](/docs/manage_marketplace/customize_marketplace/marketplace_settings#configure-settings).
+
 ## Edit a product
 
 The product can be in **Draft**, **Active**, or **Deprecated** state.

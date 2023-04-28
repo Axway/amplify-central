@@ -47,9 +47,21 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 
         * **Require Approval** - select to require approval for newly registered consumer orgs before allowing access to the corresponding marketplace.
 
-            * **Unrestriced** - approval from an org administrator is not required to access the corresponding Marketplace.
+            * **Unrestricted** - approval from an org administrator is not required to access the corresponding Marketplace.
             * **Restricted** - approval from an org administrator is required to access the corresponding Marketplace.
 
     * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
 
         * If enabled, you must provide the Terms & Conditions by either uploading a PDF file or entering a URL where it is available.
+
+    * **Administration preference** - indicates who will be able to update the marketplace settings.
+        * **All teams** (default) - anyone having a Marketplace Manager role in any team is allowed to manage the Marketplace settings or any Administrator user.
+        * **None** - only Administrator user can manage the marketplace settings.
+        * **Selected teams** - only a member of the team with **Marketplace Manager** role can manage the Marketplace settings or any Administrator user.
+
+    * **Publication preference** - indicates which team can publish product into the marketplace.
+        * **All teams** (default) - anyone having a Catalog Manager role in any team is allowed to publish product into the Marketplace.
+        * **None** - Nobody is able to publish a product into the marketplace.
+        * **Included teams** - only **Catalogs Manager** of the selected team can publish product into the Marketplace.
+        * **Excluded teams** - only **Catalogs Manager** not part of the selected team can publish product into the Marketplace.
+        * **Included teams with tags** - only **Catalogs Manager** of the specified team that have the selected tag can publish product into the Marketplace.
