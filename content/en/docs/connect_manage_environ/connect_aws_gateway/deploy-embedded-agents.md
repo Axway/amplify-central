@@ -2,17 +2,17 @@
 title: Deploy your Embedded AWS agents with Axway CLI
 linkTitle: Deploy your Embedded AWS agents with Axway CLI
 draft: false
-weight: 20
+weight: 22
 ---
 Deploy your Embedded agents using Axway CLI so you can manage your AWS API Gateway environment within Amplify.
 
 ## Before you start
 
 * Read [Embedded AWS API Gateway agents setup](/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/)
-* You will need information on AWS
+* You will need information on AWS:
 
-    * The region that the embedded agent will connect to
-    * The credentials the embedded agent will use (one of the following):
+    * The region that the Embedded agent will connect to
+    * The credentials the Embedded agent will use (one of the following):
         * Assume Role ARN (Amazon Resource Number) and optional External ID
         * Access Key ID and Secret Access Key
 
@@ -116,7 +116,7 @@ The installation procedure will prompt for the following:
    * Set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover AWS API Gateway resources after installation is complete
 
-Once you have answered all questions, the embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If set to discover AWS API Gateway resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
+Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If set to discover AWS API Gateway resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
 
 ### Triggering the agent to run discovery
 

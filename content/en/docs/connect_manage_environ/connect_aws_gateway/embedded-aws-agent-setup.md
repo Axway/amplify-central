@@ -1,8 +1,8 @@
 ---
-title: Setup AWS for Embedded agents
-linkTitle: Setup AWS for Embedded agents
+title: Set up AWS for Embedded agents
+linkTitle: Set up AWS for Embedded agents
 draft: false
-weight: 20
+weight: 21
 ---
 Setup AWS so an Embedded agent can connect to and managed your AWS API Gateway environment within Amplify.
 
@@ -88,11 +88,11 @@ Create an IAM role with a trust relationship that allows the Embedded agent to r
 
 1. Within the AWS IAM Console, start the *Create role* wizard.
 2. Select the **AWS account** option for the trusted entity type and select **Another AWS account**.
-3. Enter Axway's AWS account ID `358983902532` which will grant the embedded agent access to your AWS API Gateway.
+3. Enter Axway's AWS account ID `358983902532`, which will grant the Embedded agent access to your AWS API Gateway.
 4. Optionally, but preferred, select **set an Require external ID** and enter any string. Go [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html) for more information on external IDs. Note this for installation.
 5. Ensure **Require MFA** is not selected and click **Next**.
 6. Search for and select the IAM policy that was created in the previous section and click **Next**.
-7. Enter the role a name, such as `AmplifyAgentRole`.
+7. Enter the role name, such as `AmplifyAgentRole`.
 8. Set an optional description and tags, then click **Create role**.
 9. Note the created ARN for this role for installation.
 
