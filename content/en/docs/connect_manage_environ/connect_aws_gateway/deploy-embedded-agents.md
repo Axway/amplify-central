@@ -1,10 +1,10 @@
 ---
-title: Deploy your embedded AWS agents with Axway CLI
-linkTitle: Deploy your embedded AWS agents with Axway CLI
+title: Deploy your Embedded AWS agents with Axway CLI
+linkTitle: Deploy your Embedded AWS agents with Axway CLI
 draft: false
 weight: 20
 ---
-Deploy your embedded agents using Axway CLI so you can manage your AWS API Gateway environment within Amplify.
+Deploy your Embedded agents using Axway CLI so you can manage your AWS API Gateway environment within Amplify.
 
 ## Before you start
 
@@ -12,7 +12,7 @@ Deploy your embedded agents using Axway CLI so you can manage your AWS API Gatew
 * You will need information on AWS
 
     * The region that the embedded agent will connect to
-    * The credentials the embedded agent will use, one of the following
+    * The credentials the embedded agent will use (one of the following):
         * Assume Role ARN (Amazon Resource Number) and optional External ID
         * Access Key ID and Secret Access Key
 
@@ -39,7 +39,7 @@ Use Axway Central CLI to install the agents. This CLI will prompt you for answer
 
 Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
-You can validate that your installation by running: `axway central --version`.
+You can validate your installation by running: `axway central --version`.
 
 ### Step 2: Identify yourself to Amplify platform with Axway CLI
 
@@ -89,9 +89,9 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. Please see [Embedded AWS API Gateway agents setup](/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/) for the prerequisite setup on AWS.
+The Axway Central CLI will guide you through the configuration of the agents. See [Embedded AWS API Gateway agents setup](/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/) for the prerequisite setup on AWS.
 
-To start the configuration procedure, run the following command:
+Run the following command to start the configuration procedure:
 
 ```shell
 axway central install agents
@@ -105,29 +105,29 @@ The installation procedure will prompt for the following:
    * **Environment**: can be an existing environment or a new one that will be created by the installation procedure
    * **Team**: can be an existing team or a new one that will be created by the installation procedure
 4. AWS Configuration Setup options:
-   * **Region** of the AWS API Gateway resources
-   * **Authentication Type** select either Assume Role Policy or Access and Secret Keys
-   * Assume Role Policy (preferred) Prompts
-     * **Assume Role ARN** enter the ARN (Amazon Resource Number) that was created in a prerequisite step
-     * **External ID** the optional External ID that the embedded agent will use when assuming the provided role
-   * Access and Secret Keys Prompts
-     * **Access Key ID** the Access Key ID that the embedded agent will use when connecting to your AWS API Gateway
-     * **Security Access Key** the Secret Access Key that the embedded agent will use when connecting to your AWS API Gateway
-   * Set how often the embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](#triggering-the-agent-to-run-discovery)
+   * **Region**: the AWS API Gateway resources
+   * **Authentication Type**: select either Assume Role Policy or Access and Secret Keys
+   * Assume Role Policy (preferred) Prompts:
+     * **Assume Role ARN**: enter the ARN (Amazon Resource Number) that was created in a prerequisite step
+     * **External ID**: the optional External ID that the Embedded agent will use when assuming the provided role
+   * Access and Secret Keys Prompts:
+     * **Access Key ID**: the Access Key ID that the Embedded agent will use when connecting to your AWS API Gateway
+     * **Security Access Key**: the Secret Access Key that the Embedded agent will use when connecting to your AWS API Gateway
+   * Set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover AWS API Gateway resources after installation is complete
 
 Once you have answered all questions, the embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If set to discover AWS API Gateway resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
 
 ### Triggering the agent to run discovery
 
-Integrating the embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure all of your APIs are always up to date within Amplify.
+Integrating the Embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure your APIs are always up to date within Amplify.
 
 #### Triggering via CLI
 
-1. Log in to the Axway Central CLI
-2. Retrieve the latest Discovery Agent resource for your environment `axway central get discoveryagent <agent-name> -s <environment-name> -o yaml > da.yaml`
-3. Modify the da.yaml file adding the line `queueDiscovery: true` to the `dataplane` section
-4. Run `axway central apply -f da.yaml` to apply the changes
+1. Log into the Axway Central CLI.
+2. Retrieve the latest Discovery Agent resource for your environment `axway central get discoveryagent <agent-name> -s <environment-name> -o yaml > da.yaml`.
+3. Modify the da.yaml file by adding the line `queueDiscovery: true` to the `dataplane` section.
+4. Run `axway central apply -f da.yaml` to apply the changes.
 
 ```yaml
 dataplane:
@@ -137,7 +137,7 @@ dataplane:
 
 #### Triggering via API
 
-1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl
+1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl.
 2. Run the following curl command. Update the values of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;
 
 ```shell
