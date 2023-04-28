@@ -6,7 +6,7 @@ date: 2021-01-04
 ---
 Connect AWS API Gateway and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the AWS API Gateway hosted APIs in one central location.
 
-{{< alert title="Note" color="primary" >}}Go [here](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/) for documentation on installing the AWS Embedded Agents.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Go [here](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/) for documentation on installing the AWS Embedded agents.{{< /alert >}}
 
 ## Why do you want to connect AWS API Gateway and Amplify?
 
