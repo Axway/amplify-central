@@ -100,7 +100,7 @@ axway central install agents
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (AWS API Gateway in this scenario).
-2. Select `Yes` when asked if the agent will be embedded.
+2. Select **Yes** when asked if the agent will be embedded.
 3. Platform connectivity:
    * **Environment**: can be an existing environment or a new one that will be created by the installation procedure
    * **Team**: can be an existing team or a new one that will be created by the installation procedure
