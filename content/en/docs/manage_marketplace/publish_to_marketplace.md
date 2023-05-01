@@ -14,22 +14,22 @@ Create a valid product by bundling assets that solve a business case, create com
 
 Learn how to publish the product to the Marketplace and how to control its visibility in the Marketplace.
 
-## Publish and set product visibility to a marketplace
+## Publish and set product visibility to a Marketplace
 
-The product visibility helps you to control who can see the product in your various marketplaces. By default, everyone can see the product in any Marketplace.
+The product visibility helps you to control who can see the product in your various Marketplaces. By default, everyone can see the product in any Marketplace.
 
 Visibility can be restricted based on a provider team, a provider team tag and/or a consumer organization (only available if consumer organization is enable in the Marketplace).
 
-Visibility also depends on the Marketplace type (private VS public). A public Marketplace can be browse anonymously but you can restrict a product to only authenticated users. Whereas a private marketplace always required authenticated users.
+Visibility also depends on the Marketplace type (private vs. public). A public Marketplace can be browsed anonymously, but a product can be restriced to only authenticated users. Whereas, a private Marketplace always requires authenticated users.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**. *The product list view is displayed*.
-3. Find the product you want to publish and click **+**, located at the bottom right corner beside the Unpublished badge, to start the publication process.
+3. Find the product you want to publish and click **+**, located at the bottom right beside the Unpublished badge, to start the publication process.
 4. Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
 
-    * **Authenticated users** visibility: indicates if the user needs to be authenticated to see the product
+    * **Authenticated users** visibility - indicates if the user must be authenticated to see the product:
 
-        * **unchecked** - anonymous user can view any product in Public marketplace (default behavior). This option is not available for Private Marketplace.
+        * **unchecked** - anonymous user can view any product in the Public Marketplace (default behavior). This option is not available for Private Marketplace.
         * **checked** - user must be authenticated to see the product and can be restricted farther with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
 
     * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
