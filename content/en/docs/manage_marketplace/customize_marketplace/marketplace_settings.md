@@ -26,7 +26,7 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 3. Select **Marketplace > Settings**. *The Marketplace Settings page is displayed*.
 4. Set the values for:
 
-    * **Marketplace URL** - select whether your Marketplace is hosted on a subdomain or fully qualified domain name. This is required to make your Marketplace available for product publication.
+    * **Marketplace URL** - select whether your Marketplace is hosted on a subdomain or fully qualified domain name. This is required to make your Marketplace available for product publication:
 
         * **URL** - select to host your Marketplace on a fully qualified domain name. Type the URL where your Marketplace will be available and upload a certificate that matches the specified URL.
         * **Certificate** - for a fully qualified domain name, upload a certificate that matches the specified URL.
@@ -38,30 +38,30 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
         * **Protected** - select to make the Marketplace accessible only to registered users in your organization.
         * **Public** - select to make your Marketplace accessible to all users, anonymous and authenticated with an account.
 
-    * **Consumer Organizations** - select whether consumers outside of your organization can access your Marketplace (allow or disallow).
+    * **Consumer Organizations** - select whether consumers outside of your organization can access your Marketplace (allow or disallow):
 
         * **Self signup** - when Consumer Organizations are allowed, this setting becomes available and indicates whether a user can signup for the Marketplace:
 
             * **Disallow** - self-signup is disabled and only Administrators can invite users into the Marketplace.
-            * **Allow** - anyone can signup to the Marketplace and register their own account.
+            * **Allow** - anyone can sign up to the Marketplace and register their own account.
 
-        * **Require Approval** - select to require approval for newly registered consumer orgs before allowing access to the corresponding marketplace.
+        * **Require Approval** - select to require approval for newly registered consumer orgs before allowing access to the corresponding Marketplace:
 
-            * **Unrestricted** - approval from an org administrator is not required to access the corresponding Marketplace.
-            * **Restricted** - approval from an org administrator is required to access the corresponding Marketplace.
+            * **Unrestricted** - approval from an org Administrator is not required to access the corresponding Marketplace.
+            * **Restricted** - approval from an org Administrator is required to access the corresponding Marketplace.
 
     * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
 
         * If enabled, you must provide the Terms & Conditions by either uploading a PDF file or entering a URL where it is available.
 
-    * **Administration preference** - indicates who will be able to update the marketplace settings.
+    * **Administration preference** - indicates who will be able to update the Marketplace settings:
         * **All teams** (default) - anyone having a Marketplace Manager role in any team is allowed to manage the Marketplace settings or any Administrator user.
-        * **None** - only Administrator user can manage the marketplace settings.
-        * **Selected teams** - only a member of the team with **Marketplace Manager** role can manage the Marketplace settings or any Administrator user.
+        * **None** - only an Administrator user can manage the Marketplace settings.
+        * **Selected teams** - only a member of the team with a **Marketplace Manager** role can manage the Marketplace settings or any Administrator user.
 
-    * **Publication preference** - indicates which team can publish product into the marketplace.
+    * **Publication preference** - indicates which team can publish product into the Marketplace:
         * **All teams** (default) - anyone having a Catalog Manager role in any team is allowed to publish product into the Marketplace.
-        * **None** - Nobody is able to publish a product into the marketplace.
-        * **Included teams** - only **Catalogs Manager** of the selected team can publish product into the Marketplace.
-        * **Excluded teams** - only **Catalogs Manager** not part of the selected team can publish product into the Marketplace.
-        * **Included teams with tags** - only **Catalogs Manager** of the specified team that have the selected tag can publish product into the Marketplace.
+        * **None** - no one is allowed to publish a product into the Marketplace.
+        * **Included teams** - only a **Catalogs Manager** of the selected team can publish product into the Marketplace.
+        * **Excluded teams** - only a **Catalogs Manager** that is not part of the selected team can publish product into the Marketplace.
+        * **Included teams with tags** - only a **Catalogs Manager** of the specified team that has the selected tag can publish product into the Marketplace.
