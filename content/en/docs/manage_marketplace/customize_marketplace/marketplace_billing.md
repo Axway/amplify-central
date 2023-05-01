@@ -17,7 +17,7 @@ Learn how to setup the billing integration to generate invoices for **consumer o
 
 ## Overview
 
-The billing integration is helping to manage the invoices for consumer organization only and collect money from the product monetization.
+The billing integration is helping to manage the invoices for consumer organization subscription only and collect money from the product monetization.
 
 When the billing integration is enable for a specific marketplace, each subscription originated from a consumer organization of this marketplace will produce invoices:
 
