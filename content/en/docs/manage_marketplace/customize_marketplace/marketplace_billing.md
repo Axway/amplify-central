@@ -4,16 +4,32 @@ linkTitle: Marketplace billing
 weight: 45
 ---
 
-Setup the Stripe integration to enable consumers to pay their product consumption.
+Setup the billing integration to enable consumers from consumer organization to pay for their product consumption.
 
 ## Before you start
 
-You must have a Stripe account to manage all the invoices for your customer.
 You must have a platform administrator credentials or a Marketplace Manager credential to enable the Stripe integration.
+You must have a Stripe account to manage all the invoices for your customer.
 
 ## Objectives
 
-Learn how to setup the Stripe integration to generate invoices for consumer organization subscription.
+Learn how to setup the billing integration to generate invoices for **consumer organization subscription**.
+
+## Overview
+
+The billing integration is helping to manage the invoices for consumer organization only and collect money from the product monetization.
+
+When the billing integration is enable for a specific marketplace, each subscription originated from a consumer organization of this marketplace will produce invoices:
+
+* one at subscription time to start the trusted period with the customer and pay the base price plan cost
+* one at the end of each plan metering period to pay for the base plan price + the metering period consumption
+* a final one when the subscription is cancelled to pay the remaining consumption (from last metering period until the cancellation time)
+
+Those invoices must be paid using a third party payment tool. The first implementation is using [Stripe](https://stripe.com) for the invoice payment.
+
+{{< alert title="Note" color="primary" >}}
+Until the first invoice is fully paid, customer can request access to the resources but the access itself will not be granted until the payment is collected by the provider.
+{{< /alert >}}
 
 ## Stripe account configuration
 
@@ -45,7 +61,7 @@ The invoice source of record is located in Stripe but the Marketplace needs to k
 1. log into Stripe
 2. Search for webhook and navigate to the link **Developers > API Keys**
 3. Click **Add an endpoint**
-4. Enter the endpoint url: `https://apicentral.axway.com/integrations/stripe` or `https://central.ap-sg.axway.com/integrations/stripe` or `https://central.eu-fr.axway.com//integrations/stripe` based on your Amplify organization location.
+4. Enter the endpoint url: `https://apicentral.axway.com/integrations/stripe` or `https://central.ap-sg.axway.com/integrations/stripe` or `https://central.eu-fr.axway.com/integrations/stripe` based on your Amplify organization location.
 5. Add a description to enable recognize this webhook (Amplify Marketplace feeding invoice status for instance)
 6. Add the events to listen to:
    1. invoice.finalized
