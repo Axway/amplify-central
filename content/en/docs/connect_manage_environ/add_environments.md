@@ -4,7 +4,7 @@ linkTitle: Add your environment
 weight: 8
 date: 2023-04-27
 ---
-##Add your environment
+## Add your environment
 
 Start by listing all the environments by navigating to Topology -> Environments 
 
@@ -22,4 +22,8 @@ The Add an Environment wizard will be displayed.
 * Description - A short description of the Environment
 * Image - An icon or image to be associated with the Environment
 
-2. 
+2. Configuration (Optional depending on Embedded Agent support)
+
+3. Access Rights
+
+4. Tags & Attributes
