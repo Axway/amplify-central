@@ -6,7 +6,7 @@ date: 2023-04-27
 ---
 Within topology, environments are used to represent a group of objects discovered from a gateway, a repository, or anything manually added to the environment.  These grouped objects (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all objects are scoped within.
 
-Learn how to create an environment to represent your API services and other discovered objects. 
+Learn how to create an environment to represent your API services and other discovered objects.
 
 ## Add your environment
 
@@ -29,11 +29,11 @@ Learn how to create an environment to represent your API services and other disc
 4. Configuration (Optionally displayed steps if there is Embedded Agent support for the selected Environment Type)
 
     * **Agent Type** - select the type of agent to be be used to connect to this API Gateway.  Select **Embedded** for Axway to host the agent or select **Remotely Hosted** if the agent will be hosted by the customer.
-    * **Agent Configuration** - This is only displayed for Environment Types supported by the Embedded Agent.  AWS API Gateway is currently supported with more to be added in the future.  
-         * **AWS Region** - Select the AWS Region where the AWS API Gateway is located.
-         * **AWS Authentication** - Select the method of AWS Authentication to use, AssumeRole or Access Key/Secret Key.  For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded Agents](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/index.html)
-         * **Discovery Frequency** - Set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline.  See [Triggering the agent to run discovery](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/index.html#triggering-the-agent-to-run-discovery)
-         *  **Initiate Immediate discovery** - Check the checkbox if the embedded agent should discover AWS API Gateway resources after environment creation and embedded agent configuration are complete.
+    * **Agent Configuration** - this is only displayed for Environment Types supported by the Embedded Agent. AWS API Gateway is currently supported with more to be added in the future.  
+         * **AWS Region** - select the AWS Region where the AWS API Gateway is located.
+         * **AWS Authentication** - select the method of AWS Authentication to use, AssumeRole or Access Key/Secret Key. For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded Agents](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/index.html)
+         * **Discovery Frequency** - set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/index.html#triggering-the-agent-to-run-discovery)
+         * **Initiate Immediate discovery** - check the checkbox if the embedded agent should discover AWS API Gateway resources after environment creation and embedded agent configuration are complete.
 
 5. For Access Rights, select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, and then select all the teams you want to grant Read access “Rights” to the selected environment. For each of the teams selected, each member of the shared team(s) selected will be able to access your environem with the Read access “Rights”. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team. Click **Next**.
 
