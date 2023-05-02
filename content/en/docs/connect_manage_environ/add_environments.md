@@ -28,7 +28,7 @@ Learn how to create an environment to represent your API services and other disc
 
 4. Configuration (Optionally displayed steps if there is Embedded Agent support for the selected Environment Type)
 
-    * **Agent Type** - select the type of agent to be be used to connect to this API Gateway.  Select **Embedded** for Axway to host the agent in the Amplify Managed Cloud or select **Remotely Hosted** if the agent will be hosted by the customer.
+    * **Agent Type** - select the type of agent to be be used to connect to this API Gateway.  Select **Embedded** for Axway to host the agent or select **Remotely Hosted** if the agent will be hosted by the customer.
     * **Agent Configuration** - This is only displayed for Environment Types supported by the Embedded Agent.  AWS API Gateway is currently supported with more to be added in the future.  
          * **AWS Region** - Select the AWS Region where the AWS API Gateway is located.
          * **AWS Authentication** - Select the method of AWS Authentication to use, AssumeRole or Access Key/Secret Key.  For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded Agents](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/index.html)
