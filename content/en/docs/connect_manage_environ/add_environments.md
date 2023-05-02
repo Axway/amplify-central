@@ -33,5 +33,6 @@ Robert, why do you need to add your environment???
          * **Discovery Frequency** - Set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline.  See [Triggering the agent to run discovery](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/index.html#triggering-the-agent-to-run-discovery)
          *  **Initiate Immediate discovery** - Check the checkbox if the embedded agent should discover AWS API Gateway resources after environment creation and embedded agent configuration are complete.
 
-5. Access Rights
-6. Tags & Attributes
+5. For Access Rights, select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, and then select all the teams you want to grant Read access “Rights” to the selected environment. For each of the teams selected, each member of the shared team(s) selected will be able to access your environem with the Read access “Rights”. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team. Click **Next**.
+
+6. Provide the Tags and Attribute details for the environment. Click **Save** to create the environment.
