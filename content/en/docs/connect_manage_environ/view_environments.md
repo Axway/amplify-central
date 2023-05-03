@@ -13,8 +13,6 @@ Display your environments in a searchable and sortable list. The list contains:
     * API Manager environments
     * Environments that have been defined manually using the Axway Central CLI or APIs
 
-To add a new environment, click **+ Environment**.
-
 ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
 This page can be sorted by an environment's logical name, title, or by the time that they were created or last modified. To sort the list, select the desired option from the dropdown menu.
