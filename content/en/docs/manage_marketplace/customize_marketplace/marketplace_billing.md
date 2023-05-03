@@ -85,7 +85,7 @@ To enable the Stripe integration, either an Administrator or a Marketplace Manag
 3. Enable the billing integration
 4. Select the Vendor Stripe from the dropdown
 5. Enter the Restricted Key. This is the Stripe API Key generated earlier
-6. Enter the webhook Signature - this will be added be Stripe each time the webhook is called.
+6. Enter the webhook Signature - this will be added by Stripe as header when posting event to Marketplace so that Marketplace can validate the incoming event and reject it if the signature is incorrect.
 7. Enter the Customer portal url. This is the Stripe Billing Portal url
 8. Click Save
 
