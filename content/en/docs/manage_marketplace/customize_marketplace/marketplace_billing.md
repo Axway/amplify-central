@@ -59,7 +59,7 @@ For Marketplace to be able to access Stripe account, an API key is required. For
 The invoice source of record is located in Stripe but the Marketplace needs to know the invoice status and their changes to present them to the consumer. For that we will use a webhook to communicate from Stripe to the Marketplace.
 
 1. log into Stripe
-2. Search for webhook and navigate to the link **Developers > API Keys**
+2. Search for webhook and navigate to the link **Developers > Webhooks**
 3. Click **Add an endpoint**
 4. Enter the endpoint url: `https://apicentral.axway.com/integrations/stripe` or `https://central.ap-sg.axway.com/integrations/stripe` or `https://central.eu-fr.axway.com/integrations/stripe` based on your Amplify organization location.
 5. Add a description to enable recognize this webhook (Amplify Marketplace feeding invoice status for instance)
