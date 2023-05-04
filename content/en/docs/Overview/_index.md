@@ -58,15 +58,15 @@ Amplify provides you with a centralized view of the API usage and consumption ac
 
 ##### API Traffic
 
-![API Traffic](/Images/central/overview/api_traffic.png)
+![API Traffic](/Images/Overview/api_traffic.png)
 
 ##### API trends
 
-![API trends](/Images/central/overview/api_trends.png)
+![API trends](/Images/Overview/api_trends.png)
 
 ##### API reports
 
-![API reports](/Images/central/overview/api_report.png)
+![API reports](/Images/Overview/api_report.png)
 
 ### Amplify agents
 
