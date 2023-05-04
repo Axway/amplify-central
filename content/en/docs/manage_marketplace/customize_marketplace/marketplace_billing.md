@@ -52,7 +52,7 @@ For Marketplace to be able to access Stripe account, an API key is required. For
    1. name it Amplify Marketplace Integration
    2. add the following permissions: Core resource: **Customers -Write-** / All billing resources: **Invoices -Write-**
 4. Click the Create key button. The key is created and visible under the Restricted key list
-5. Use the **Reveal test key** button to get the key value. We will need it later on the Marketplace side.
+5. Use the **Reveal test key** button to get the key value. We will need it later on the Marketplace side
 
 ### Sending Stripe events to Marketplace
 
@@ -68,24 +68,27 @@ The invoice source of record is located in Stripe but the Marketplace needs to k
    2. invoice.marked_uncollectible
    3. invoice.paid
    4. invoice.voided
-7. Click Add endpoint to save your endpoint.
+7. Click the Add events with the selection above
+8. Click Add endpoint to save your endpoint
 
 ### Enable the Billing Customer portal to your Stripe account
 
+This portal will help the Stripe customers to see their information: billing address / payment information and invoices.
+
 1. log into Stripe
 2. Search for portal and navigate to the link **Settings > Billing > Customer portal**
-3. Enable the billing portal and key the url. We will need it later on the Marketplace side.
+3. Enable the billing portal and copy the url. We will need it later on the Marketplace side
 
 ## Enable the Stripe integration in the Marketplace
 
 To enable the Stripe integration, either an Administrator or a Marketplace Manager can update the settings.
 
-1. Navigate to *Organization > Marketplaces*.
-2. Select **Billing** tab.
+1. Navigate to *Organization > Marketplaces*
+2. Select **Billing** tab
 3. Enable the billing integration
 4. Select the Vendor Stripe from the dropdown
 5. Enter the Restricted Key. This is the Stripe API Key generated earlier
-6. Enter the webhook Signature - this will be added by Stripe as header when posting event to Marketplace so that Marketplace can validate the incoming event and reject it if the signature is incorrect.
+6. Enter the webhook Signature - this will be added by Stripe as header when posting event to Marketplace so that Marketplace can validate the incoming event and reject it if the signature is incorrect
 7. Enter the Customer portal url. This is the Stripe Billing Portal url
 8. Click Save
 
