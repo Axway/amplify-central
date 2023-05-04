@@ -31,7 +31,7 @@ Amplify manages the complexity and sprawl of a diverse, distributed IT architect
 
 ![Amplify functionality](/Images/Overview/amplify-platform-overview.png)
 
-Amplify consists of a SaaS-based Amplify Management Plane (shown in the top of the diagram in blue), federated control & data planes (shown at the bottom) and Amplify agents (shown in the middle). The terms management plane and control / data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
+Amplify consists of a SaaS-based Amplify management plane (shown in the top of the diagram in blue), federated control & data planes (shown at the bottom) and Amplify agents (shown in the middle). The terms management plane and control / data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
 
 Mapping this analogy back to Amplify:
 
@@ -40,7 +40,7 @@ Mapping this analogy back to Amplify:
 
 {{< alert title="Note" color="primary" >}}The integration of data planes is also available through API or CLI, for integration with existing CI/CD tooling and processes. Besides a series of prebuilt agents, Axway offers an Amplify Agent SDK for creating agents for platforms not yet supported.{{< /alert >}}
 
-### Amplify Management Plane
+### Amplify management plane
 
 The management plane allows platform admins and API providers to administer users, teams, agents, and other related entities in support of managing your distributed environments and organizations.
 
