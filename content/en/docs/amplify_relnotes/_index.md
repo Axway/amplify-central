@@ -22,9 +22,9 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 Current agent versions are based on Amplify Agents SDK v1.1.51. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.49
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.50
 * **AWS Gateway using SDK 2.0** - Agent version 1.1.41
-* **Azure latest release** - Agent version 1.1.45
+* **Azure latest release** - Agent version 1.1.46
 * **Istio 1.9.5** - DA=v1.0.10 / TA=v2.0.53
 * **Apigee Edge** - Agent version 0.1.12
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.18
@@ -34,8 +34,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.51. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **All agents** - The agents have been updated with the Axway Agent SDK. |
-| Bug fixes: | None. |
+| What's new: | **AWS Gateway** - The agents have been updated with the Axway Agent SDK. |
+| Bug fixes: | **Axway API Mangement Gateway** - Traceability Agent memory leak. <br />**Embedded agent** - Discover AWS APIs empty description field. <br />**Azure Gateway** - Azure credential deletion. |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -43,14 +43,14 @@ Current agent versions are based on Amplify Agents SDK v1.1.51. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Product visibility restricted to authenticated users. <br />Brazilian Real currency available for paid plan. <br />Create a new product version from an archived product. |
+| Bug fixes: | Marketplace name synchronization. <br />Display of the quota type and currency on the plan details screen. |
 | <br />**Business insights** |         |
-| What's new: | None. |
+| What's new: | Export API Health and API Traffic records from Business insights to a CSV file. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Navigation and help menu behavior. <br />Rotating credentials. <br />Brazilian Real currency available for paid plan. |
+| Bug fixes: | Marketplace subscription and team visibility. <br />Cannot subscribe on Firefox 112.0.1 version. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
