@@ -5,7 +5,7 @@ weight: 250
 draft: yes
 ---
 
-Get started using Amplify.
+Get started using Amplify. This is a test
 
 ## Prerequisites
 
