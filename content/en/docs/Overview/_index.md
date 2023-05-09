@@ -29,53 +29,63 @@ Amplify manages the complexity and sprawl of a diverse, distributed IT architect
 
 ## Functional capability
 
-![Amplify functionality](/Images/Overview/amplify-platform-overview.jpg)
+![Amplify functionality](/Images/Overview/amplify-platform-overview.png)
 
-Amplify consists of a SaaS-based Amplify Management Plane (shown in the top of the diagram in blue), data planes (shown at the bottom), and Amplify agents (shown in the middle). The terms management (or control) plane and data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
+Amplify consists of a SaaS-based Amplify management plane (shown in the top of the diagram in blue), federated control & data planes (shown at the bottom) and Amplify agents (shown in the middle). The terms management plane and control / data plane are borrowed from computer networking, as the data plane carries the user’s runtime traffic while the management plane is responsible for administration, configuration, monitoring, and management across the network.
 
 Mapping this analogy back to Amplify:
 
-* The data planes are the API Gateways that are processing runtime transactions; these are your enforcement points that are providing security and access control for your traffic.
-* The Amplify management plane is providing governance over the data planes. Data planes are connected to the Management plane via Amplify agents (see below for intro to agents).
+* The data planes are the environments that are processing runtime transactions; these are your enforcement points that are providing security and access control for your traffic. Besides runtime environments, they could be code repositories that hold your API definitions.
+* The Amplify management plane is providing governance over the data planes. Data planes are connected to the Management plane via Amplify agents (see below for more information about the agents).
 
-{{< alert title="Note" color="primary" >}}The integration of data planes is also available through API or CLI, for integration with existing CI/CD tooling and processes. Axway also offers an Amplify Agent SDK for creating agents for platforms not yet supported.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The integration of data planes is also available through API or CLI, for integration with existing CI/CD tooling and processes. Besides a series of prebuilt agents, Axway offers an Amplify Agent SDK for creating agents for platforms not yet supported.{{< /alert >}}
 
-### Amplify Management Plane
+### Amplify management plane
 
 The management plane allows platform admins and API providers to administer users, teams, agents, and other related entities in support of managing your distributed environments and organizations.
 
-#### Catalog
+#### Marketplace
 
-API providers have visibility over the environments that have been connected to the Amplify platform, including services within those environments. Discovery Agents automate the retrieval of information from these systems, but services can also be added manually or via API or CLI. APIs and other assets are curated and published to the Amplify Catalog, which becomes the marketplace for all integration assets in your enterprise, ranging from APIs to Managed File Transfer Flows to mobile SDKs. The Catalog caters to both providers and consumers, and enables enterprises to deliver digital experiences with great speed and control by offering a centralized location for discovery and collaboration around assets, maximizing reuse across the enterprise.
+API providers have visibility over the environments that have been connected to the Amplify platform, including services within those environments. Discovery Agents automate the retrieval of information from these systems, but services can also be added manually or via API or CLI. APIs and other assets are curated and published to the Amplify Marketplace. The Enterprise Marketplace caters to both providers and consumers and enables enterprises to deliver digital experiences with great speed and control by offering a centralized location for discovery and collaboration around assets, maximizing reuse across the enterprise.
 
 #### Administration
 
-API providers can manage onboarding of developers, assign permissions, and oversee the environments. As consumers create apps and subscribe to assets, API providers can grant access and manage those subscriptions.
+Manage users and teams, the onboarding of developers (consumers), assign permissions, and oversee the environments. As consumers create apps and subscribe to assets, API providers can grant access and manage those subscriptions.
 
-#### Analytics
+#### Insights
 
-Amplify provides you with a centralized view of the API usage and consumption across the enterprise:
+Amplify provides you with a centralized view of the API usage and consumption across the enterprise, for both producers and consumers.
 
-![Amplify analytics](/Images/central/analytics.png)
+##### API Traffic
 
-### Data plane
+![API Traffic](/Images/Overview/api_traffic.png)
 
-#### Amplify agents
+##### API trends
 
-Amplify agents are lightweight software applications that run on your data plane host. These agents are responsible for gathering information that is happening in your data plane and sending it to the Amplify platform:
+![API trends](/Images/Overview/api_trends.png)
 
-* **Discovery Agents** automate the process of finding assets deployed in a Gateway (for example, OAS 3.0, WSDL, etc.), and sending them to the Amplify platform where they are made available in the Catalog. Consumers can subscribe to use the discovered assets, at which point the agent helps to natively provision this subscription in the Gateway.
+##### API reports
+
+![API reports](/Images/Overview/api_report.png)
+
+### Amplify agents
+
+Amplify agents are lightweight software applications that either run on your data plane host, or are hosted / embedded with the Amplify Platform for certain SaaS native environments. These agents are responsible for gathering information that is happening in your data plane and sending it to the Amplify platform:
+
+* **Discovery Agents** automate the process of finding resources deployed in an environment (for example, OAS 3.0, WSDL, etc.), and sending them to the Amplify platform where they will automatically service in the Service Registry. After they have been published, consumers can subscribe to use the discovered assets, at which point the agent helps to natively provision this subscription in the Gateway, as well as to manage credentials and quota enforcement.
 * **Traceability Agents** collect usage, metrics, and data plane transaction metadata and send them to the Amplify platform for additional insights. In the platform, API consumers and API providers gain visibility into the performance and behavior of the assets discovered in the data plane.
 
-#### Federate data planes
+### Federated control & data planes
 
-Federated data planes are data planes that are connected to the Amplify platform, but work completely independent from each other. Axway offers the following federate data planes, with each offering specific capabilities:
+Federated control ans data planes are the environments that are connected to the Amplify platform, but work completely independent from each other. Axway offers integration with a variety of these data planes, both Axway and non-Axway. The agents facilitate a consistent and unified experience for both your producers and consumers, irrespective of the underlying vendor or deployment architecture. This includes but is not limited to:
 
-* **[API Gateway](https://docs.axway.com/category/apim)** is a runtime gateway that proxies the REST APIs registered in API Manager and enforces configured policies on client requests and responses.
-* **[Streams](https://docs.axway.com/bundle/streams-open-docs/page/docs/index.html)** is a publish/subscribe messaging service where the senders of messages are decoupled from the receivers of messages.
-* **[API Builder](https://docs.axway.com/bundle/api-builder/page/docs/index.html)** is an integration orchestration layer between existing service providers and the API management system, or governance layer, that allows you to quickly implement integration use cases.
-* **[Integration Builder](https://docs.axway.com/bundle/Amplify_Integration_Builder_allOS_en/page/amplify_integration_builder.html)** is an integration tool that allows you to easily build flows, mappings, and connectors between virtually any endpoint. Robust integrations can be built rapidly by using the prebuilt connectors.
+* Service discovery
+* Compliance validation
+* Curation and productization
+* Subscription provisioning management
+* Credential management
+* Quota enforcement
 
-## Try Amplify for free
+The list of supported environments is growing. For a full list of supported environments, navigate to our [platform](https:/platform.axway.com/) or software downloads at <https://repository.axway.com>.
 
-To get full, free access to Amplify for a trial period, go to [Amplify platform](https://platform.axway.com/) and sign up for a free trial.
+More information on the Axway API Gateway Manager solution can be found [here](https://docs.axway.com/category/apim/).
