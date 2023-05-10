@@ -78,12 +78,6 @@ The following is a high-level overview of the required steps to connect an API M
 
 You will be guided through this procedure using Axway Central CLI. See [Deploy your agent with Axway CLI](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli/).
 
-## Connect Axway API Manager to Amplify manually
-
-The following demonstrates how to connect an Axway API-Gateway V7 to Amplify without using the Axway CLI.
-
-{{< youtube kugRyYVw5nI >}}
-
 ## Role-based documentation
 
 Some of the content in the Connect API Manager documentation is of interest to a wide range of development and administrator professions. The following topics are organized by professional role and common task scenarios:

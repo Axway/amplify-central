@@ -77,7 +77,7 @@ Amplify agents are lightweight software applications that either run on your dat
 
 ### Federated control & data planes
 
-Federated control ans data planes are the environments that are connected to the Amplify platform, but work completely independent from each other. Axway offers integration with a variety of these data planes, both Axway and non-Axway. The agents facilitate a consistent and unified experience for both your producers and consumers, irrespective of the underlying vendor or deployment architecture. This includes but is not limited to:
+Federated control and data planes are the environments that are connected to the Amplify platform, but work completely independent from each other. Axway offers integration with a variety of these data planes, both Axway and non-Axway. The agents facilitate a consistent and unified experience for both your producers and consumers, irrespective of the underlying vendor or deployment architecture. This includes but is not limited to:
 
 * Service discovery
 * Compliance validation
