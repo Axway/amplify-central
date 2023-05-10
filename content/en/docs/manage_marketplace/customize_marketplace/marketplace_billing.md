@@ -57,7 +57,7 @@ For Marketplace to access the Stripe account, an API key is required. For securi
 
 ### Sending Stripe events to Marketplace
 
-The invoice source of record is located in Stripe, so a webhook is used to communicate invoice status / changes from Strip to the Marketplace.
+The invoice source of record is located in Stripe, so a webhook is used to communicate invoice status / changes from Stripe to the Marketplace.
 
 1. Log into Stripe.
 2. Search for webhook and navigate to the link **Developers > Webhooks**.
