@@ -118,13 +118,8 @@ When everything works fine, the user should be able to see the paid invoice asso
 
 If something went wrong, one of the below question should be able to fix the issue.
 
-Q: What to do if the invoice is not generated?
-A: This means that the Marketplace is not able to communicate properly with Stripe. Please check that the Stripe API key and validate that the corresponding key is used under the Marketplace > Billing > Restricted key. Refer to [Accessing Stripe using Stripe API and API Key](#accessing-stripe-using-stripe-api-and-api-key) to get the Stripe API Key.
-
-Q: Why the invoice status in Stripe is different from the one I see on the Marketplace?
-
-A: This mean that Stripe is not able to communicate back to the Marketplace using Stripe Webhook. Either the webhook is disabled, or the webhook url is incorrect or the Signing signature is different. Please check those parameters in Stripe (Refer to [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature.
-
-Q: My provider user does not have access to the invoice checkout.
-
-A: This is normal behavior. Only Consumer organization users will be billed for their subscription usage.
+| Question                                                                             | Answer                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| What to do if the invoice is not generated?                                          | This means that the Marketplace is not able to communicate properly with Stripe. Please check that the Stripe API key and validate that the corresponding key is used under the Marketplace > Billing > Restricted key. Refer to [Accessing Stripe using Stripe API and API Key](#accessing-stripe-using-stripe-api-and-api-key) to get the Stripe API Key.                                                                |
+| Why the invoice status in Stripe is different from the one I see on the Marketplace? | This mean that Stripe is not able to communicate back to the Marketplace using Stripe Webhook. Either the webhook is disabled, or the webhook url is incorrect or the Signing signature is different. Please check those parameters in Stripe (Refer to [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature. |
+| My provider user does not have access to the invoice checkout.                       | This is normal behavior. Only Consumer organization users will be billed for their subscription usage.                                                                                                                                                                                                                                                                                                                     |
