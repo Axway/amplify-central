@@ -55,6 +55,8 @@ For Marketplace to access the Stripe account, an API key is required. For securi
 4. Click **Create key**. The key is created and visible under the Restricted key list.
 5. Click **Reveal test key** to get the key value. You will need it later on the Marketplace side.
 
+{{< alert title="Note" color="primary" >}}When the key is changed on Stripe account, be sure to update it on the Marketplace > Billing > Restricted Key value.{{< /alert >}}
+
 ### Sending Stripe events to Marketplace
 
 The invoice source of record is located in Stripe, so a webhook is used to communicate invoice status / changes from Stripe to the Marketplace.
@@ -73,6 +75,8 @@ The invoice source of record is located in Stripe, so a webhook is used to commu
 7. Click **Add events**.
 8. Click **Add endpoint** to save your endpoint.
 
+Reveal the Signing secret as you will need it later on the Marketplace side.
+
 ### Enable the Billing Customer portal to use with your Stripe account
 
 This portal will help the Stripe customers to see their information: billing address / payment information and invoices.
@@ -90,7 +94,7 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 3. Enable the billing integration
 4. Select the Vendor **Stripe** from the drop down.
 5. Enter the Restricted Key. This is the Stripe API Key you generated earlier.
-6. Enter the webhook Signature. This will be added by Stripe, as the header, when posting the event to Marketplace. Marketplace can then validate the incoming event and reject it if the signature is incorrect.
+6. Enter the webhook Signature. This is the Signing secret of the Stripe webhook. This will be added by Stripe, as the header, when posting the event to Marketplace. Marketplace can then validate the incoming event and reject it if the signature does not match.
 7. Enter the Customer portal URL. This is the Stripe billing portal URL.
 8. Click **Save**.
 
@@ -99,3 +103,26 @@ Each time a consumer from the consumer organization of the Marketplace subscribe
 On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption. The invoice is added to the subscription invoices list with the link to pay it.
 
 Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.
+
+## Troubleshooting
+
+Once all the settings are in place and to ensure the proper communication between Stripe and the Marketplace, we recommend to:
+
+* Create a dummy consumer organization
+* Create a dummy product with a paid plan
+* Publish the product and make it visible to the consumer organization only
+* Navigate to the marketplace and connect with the user from the consumer organization
+* Subscribe to the dummy product and pay for the generated invoice
+
+When everything works fine, the user should be able to see the paid invoice associated to his subscription from the subscription details page.
+
+If something went wrong, one of the below question should be able to fix the issue.
+
+Q: What to do if the invoice is not generated?
+A: This means that the Marketplace is not able to communicate properly with Stripe. Please check that the Stripe API key and validate that the corresponding key is used under the Marketplace > Billing > Restricted key. Refer to [Accessing Stripe using Stripe API and API Key](#accessing-stripe-using-stripe-api-and-api-key) to get the Stripe API Key.
+
+Q: Why the invoice status in Stripe is different from the one I see on the Marketplace?
+A: This mean that Stripe is not able to communicate back to the Marketplace using Stripe Webhook. Either the webhook is disabled, or the webhook url is incorrect or the Signing signature is different. Please check those parameters in Stripe (Refer to [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature.
+
+Q: My provider user does not have access to the invoice checkout.
+A: This is normal behavior. Only Consumer organization users will be billed for their subscription usage.
