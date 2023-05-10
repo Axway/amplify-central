@@ -37,7 +37,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.51. This version is 
 | What's new: | **AWS Gateway** - The agents have been updated with the Axway Agent SDK. |
 | Bug fixes: | **Axway API Mangement Gateway** - Traceability Agent memory leak. <br />**Embedded agent** - Discover AWS APIs empty description field. <br />**Azure Gateway** - Azure credential deletion. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | None. |
+| What's new: | API Compliance Validation. |
 | Bug fixes: | None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
