@@ -106,21 +106,21 @@ Once the consumer terminates the subscription, a final invoice is generated base
 
 ## Troubleshooting
 
-Once all the settings are in place and to ensure the proper communication between Stripe and the Marketplace, we recommend to:
+It is recommended that you test the communication between Stripe and the Marketplace once the billing integration setup is done:
 
 * Create a dummy consumer organization
 * Create a dummy product with a paid plan
 * Publish the product and make it visible to the consumer organization only
-* Navigate to the marketplace and connect with the user from the consumer organization
+* Navigate to the Marketplace and connect with the user from the consumer organization
 * Subscribe to the dummy product and pay for the generated invoice
 
-When everything works fine, the user should be able to see the paid invoice associated to his subscription from the subscription details page.
+A paid invoice associated to the subscription should be visible on the subscription details page.
 
-If something went wrong, one of the below question should be able to fix the issue.
+If something went wrong, see the following:
 
 | Question                                                                             | Answer                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| What to do if the invoice is not generated?                                          | This means that the Marketplace is not able to communicate properly with Stripe. Please check that the Stripe API key value and validate that the corresponding key value is used under the Marketplace > Billing > Restricted key. Refer to [Accessing Stripe using Stripe API and API Key](#accessing-stripe-using-stripe-api-and-api-key) to get the Stripe API Key.                                                    |
-| Why the invoice status in Stripe is different from the one I see on the Marketplace? | This mean that Stripe is not able to communicate back to the Marketplace using Stripe Webhook. Either the webhook is disabled, or the webhook url is incorrect or the Signing signature is different. Please check those parameters in Stripe (Refer to [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature. |
+| What if the invoice is not generated?                                          | The Marketplace is not communicating properly with Stripe. Check the Stripe API key value and validate that the corresponding key value is used under the Marketplace > Billing > Restricted key. Refer to [Accessing Stripe using Stripe API and API Key](#accessing-stripe-using-stripe-api-and-api-key) to get the Stripe API Key.                                                    |
+| Why is the invoice status in Stripe different from the one I see on the Marketplace? | Stripe cannot communicate back to the Marketplace using the Stripe Webhook. Either the webhook is disabled, the webhook url is incorrect or the Signing signature is different. Check the parameters in Stripe (Refer to [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature. |
 | My provider user does not have access to the invoice checkout.                       | This is normal behavior. Only Consumer organization users will be billed for their subscription usage.                                                                                                                                                                                                                                                                                                                     |
-| Why my invoice is automatically paid?                                                |  Depending on the plan currency, Stripe will automatically mark the invoice as paid if the invoice total in under the minimum charted. Refer to [Minimum and maximum charge amounts](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts) |
+| Why is my invoice automatically paid?                                                |  Depending on the plan currency, Stripe will automatically mark the invoice as paid if the invoice total in under the minimum charted. Refer to [Minimum and maximum charge amounts](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). |
