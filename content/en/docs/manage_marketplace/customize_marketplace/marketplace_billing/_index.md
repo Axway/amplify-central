@@ -55,7 +55,7 @@ For Marketplace to access the Stripe account, an API key is required. For securi
 4. Click **Create key**. The key is created and visible under the Restricted key list.
 5. Click **Reveal test key** to get the key value. You will need it later on the Marketplace side.
 
-{{< alert title="Note" color="primary" >}}When the key is changed on Stripe account, be sure to update it on the Marketplace > Billing > Restricted Key value.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}When the key is changed on the Stripe account, be sure to update it on the Marketplace > Billing > Restricted Key value.{{< /alert >}}
 
 ### Sending Stripe events to Marketplace
 
