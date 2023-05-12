@@ -4,7 +4,7 @@ linkTitle: Billing integration components
 draft: false
 weight: 40
 ---
-The Amplify Billing integration solution is comprise of seven connections, three integration flows, one Service and one Java Service:
+The Enterprise Amplify Billing integration solution is comprise of seven connections, three integration flows, one Service and one Java Service:
 
 ![Components](/Images/marketplace/billing_integration/components1.png)
 

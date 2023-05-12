@@ -8,7 +8,7 @@ The imported integrations do not contain authentication on the webhook trigger, 
 
 ## Before you start
 
-You must have an [installed and configured](/docs/manage_marketplace/billing_integration/intall_configure_billing_integration) Billing integration solution.
+You must have an [installed and configured](/docs/manage_marketplace/customize_marketplace/marketplace_billing/billing_integration/intall_configure_billing_integration) Enterprise Billing integration solution.
 
 ## Objective
 
