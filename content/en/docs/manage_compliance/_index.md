@@ -16,7 +16,7 @@ For example, an API can be checked for compliance in terms of the API methods su
 
 ## How to perform compliance validation
 
-API Compliance Validation can be enabled/disabled per Environment.   Navigate to the Topology screen then create/edit an environment.   The environment wizard with have a **Compliance Profile** step, where you can enable either of Design Rules or Security Rules for compliance.   A default Design rule set (default-design-regulate) and a default Security rules set (default-security-ruleset) is available to be used.  Changes take effect as soon as the environment settings are saved.
+API Compliance Validation can be enabled/disabled per Environment.   Navigate to the Topology screen then create/edit an environment.   The environment wizard with have a **Compliance Profile** step, where you can enable either of Design Rules or Security Rules for compliance.   A default Design rule set (default-design-ruleset) and a default Security rules set (default-security-ruleset) is available to be used.  Changes take effect as soon as the environment settings are saved.
 Once enabled for the environment, all current APIs and future API updates within the selected environment will be automatically Compliance Validated.
 At the Service Registry, on each line at the far right is an ellipsis where you can select "Run Ruleset" to manually initiate a Compliance Lint job.
 
