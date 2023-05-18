@@ -69,25 +69,6 @@ AGENTFEATURES_IDP_AUTH_TYPE_2="accessToken"
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_2="okta-admin-api-access-token-xxxxxxxxx"
 ```
 
-### Enforce credential expiration date
-
-In addition to the provisioning, an expiration date can be assigned to the provisioned credentials. This expiration date will be reflected on the underlying data plane, if the data plane supports this feature.
-
-By default, the credential has no expiry. To set an expiration date, you must configure the agent using the CENTRAL_CREDENTIALS_EXPIRATIONDAYS variable. At that point, another variable CENTRAL_CREDENTIALS_DEPROVISIONONEXPIRE=true can be configured to enforce the deprovisioning of the credential on the data plane, so that consumers can no longer use it.
-
-Sample variables to automatically deprovision credential after 30 days:
-
-```shell
-CENTRAL_CREDENTIALS_EXPIRATIONDAYS=30
-CENTRAL_CREDENTIALS_DEPROVISIONONEXPIRE=true
-```
-
-Sample variables to expire credential after 90 days:
-
-```shell
-CENTRAL_CREDENTIALS_EXPIRATIONDAYS=90
-```
-
 ### Deprovision data plane when consumer deletes an application or credentials
 
 From the Marketplace, a consumer can delete an existing application or an existing credential. These two actions generate events that the Discovery Agent is listening to. Once the events are received by the agent, the agent converts them based on the data plane it is connected to:
