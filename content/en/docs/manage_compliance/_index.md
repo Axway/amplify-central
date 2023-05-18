@@ -11,7 +11,7 @@ The Amplify API Management platform allows you to validate how well your APIs me
 
 ## What is compliance validation
 
-Compliance validation is the verification of your APIs in terms of how thy meet the guidelines defined in a rule set.  Both an API Design and Security rule set can be applied to all the APIs in a selected environment.  Amplify has integrated an open-source tool (Spectral) which supports the linting of Open API version 2, Open API version 3, and Async API specification files.
+Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a rule set.  Both an API Design and Security rule set can be applied to all the APIs in a selected environment.  Amplify has integrated an open-source tool (Spectral) which supports the linting of Open API version 2, Open API version 3, and Async API specification files.
 For example, an API can be checked for compliance in terms of the API methods supported or the presence of a security policy.  The grading results of the compliance are measured in the number of Errors, Warnings, Info, or Hints found.
 
 ## How to perform compliance validation
