@@ -7,7 +7,7 @@ hide_readingtime: true
 ---
 
 With the growth of API usage, there is a need for make sure the APIs are technically correct and meet the API standards of your organization.
-The Amplify API Management platform allows you to validate how well your APIs meet the API guidelines of your organization.   This is known as API linting and has been integrated into the Amplify API Management.  Compliance Validation is an entitlement you can purchase API Management.  
+The Amplify API Management platform allows you to validate how well your APIs meet the API guidelines of your organization.   This is known as API linting and has been integrated into the Amplify API Management.  Compliance Validation is an entitlement you can purchase from Axway as part of the API Management platform.  
 
 ## What is compliance validation
 
