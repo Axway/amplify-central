@@ -35,7 +35,7 @@ A letter grade from A to F is used to indicate the level of Design or Security c
 
 ## Grading results
 
-In the Services Registry of the WebUI, there are columns with the Compliance Grading of each API.   Hover over the grading letter to view the counts.
+In the Service Registry of the WebUI, there are columns with the Compliance Grading of each API.   Hover over the grading letter to view the counts.
 A circular spinner will be displayed in either grading column when the API is queued for Design or Security Compliance Validation.
 A "N/A" will be displayed in either grading column if the API is not one of the supported API types.
 A red icon will be display in either the grading column if the API specification file is missing a required value.
