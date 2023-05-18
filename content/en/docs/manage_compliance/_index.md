@@ -26,9 +26,13 @@ A letter grade from A to F is used to indicate the level of Design or Security c
 
 **A** = no errors, warnings, info or hints found in the API.
 **B** = no errors and no warnings found in the API.  Count of 1-5 info and/or at least 1 hint found in the API.
+
 **C** = no errors found in the API.   Count of 1-5 warnings found in the API.   The count of info and hints found the API are ignored.
+
 **D** = no errors found in the API.   Count of more than 5 warnings found in the API.   The count of info and hints found the API are ignored.
+
 **E** = A count of 1-5 errors found in the API.  The count of warnings, info and hints found the API are ignored.
+
 **F** = A count of more than 5 errors found in the API.  The count of warnings, info and hints found the API are ignored.
 
 ## Grading Results
