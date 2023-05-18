@@ -25,6 +25,7 @@ At the Service Registry, on each line at the far right is an ellipsis where you 
 A letter grade from A to F is used to indicate the level of Design or Security compliance for an API.   The ranges for each grading are as follows:
 
 **A** = no errors, warnings, info or hints found in the API.
+
 **B** = no errors and no warnings found in the API.  Count of 1-5 info and/or at least 1 hint found in the API.
 
 **C** = no errors found in the API.   Count of 1-5 warnings found in the API.   The count of info and hints found the API are ignored.
