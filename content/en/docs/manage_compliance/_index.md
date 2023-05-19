@@ -6,7 +6,7 @@ date: 2023-05-04
 hide_readingtime: true
 ---
 
-With the growth of API usage, there is a need to make sure that APIs are technically correct and meet the API standards of your organization.
+With an increasing number of APIs, API providers and consumers of APIs, there is a more pressing need to make sure that exposed APIs are compliant with internally or externally defined API standards.
 The Amplify API Management platform allows you to validate how well your APIs meet the API guidelines of your organization.   This is known as API linting and has been integrated into the Amplify API Management.  Compliance Validation is an entitlement you can purchase from Axway as part of the API Management platform.  
 
 ## What is compliance validation
@@ -35,9 +35,6 @@ A letter grade from A to F is used to indicate the level of Design or Security c
 
 ## Grading results
 
-In the Service Registry of the WebUI, there are columns with the Compliance Grading of each API.   Hover over the grading letter to view the counts.
-A circular spinner will be displayed in either grading column when the API is queued for Design or Security Compliance Validation.
-A "N/A" will be displayed in either grading column if the API is not one of the supported API types.
-A red icon will be display in either the grading column if the API specification file is missing a required value.
+In the Service Registry, two columns visualize the Compliance Grading of each API. The first one shows the grade from a security perspective, the second one visualized the design compliance level. Hover over the grading letter to see the summary of the analysis that resulted in the current grading. A circular spinner will be displayed in either grading column when the API is queued for Design or Security Compliance Validation. A “N/A” will be displayed in either grading column if the API is not one of the supported API types. A red icon will be display in either the grading column if the API specification file is missing a required value.
 
 ![Error results](/Images/compliance/error_results.png)
