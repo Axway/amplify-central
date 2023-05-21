@@ -6,23 +6,27 @@ date: 2023-05-04
 hide_readingtime: true
 ---
 
-With an increasing number of APIs, API providers and consumers of APIs, there is a more pressing need to make sure that exposed APIs are compliant with internally or externally defined API standards.
-The Amplify API Management platform allows you to validate how well your APIs meet the API guidelines of your organization.   This is known as API linting and has been integrated into the Amplify API Management.  Compliance Validation is an entitlement you can purchase from Axway as part of the API Management platform.  
+With an increasing number of APIs, API providers and consumers of APIs, there is a pressing need to make sure that exposed APIs are compliant with internally or externally defined API standards.
+
+The Amplify API Management platform allows you to validate how well your APIs meet the API guidelines of your organization. This is known as API linting and has been integrated into the Amplify API Management. Compliance validation is an entitlement you can purchase from Axway as part of the API Management platform.
 
 ## What is compliance validation
 
-Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a rule set.  Both an API Design and Security rule set can be applied to all the APIs in a selected environment.  Amplify has integrated an open-source tool (Spectral) which supports the linting of Open API version 2, Open API version 3, and Async API specification files.
-For example, an API can be checked for compliance in terms of the API methods supported or the presence of a security policy.  The grading results of the compliance are measured in the number of Errors, Warnings, Info, or Hints found.
+Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a rule set. Both an API Design and Security rule set can be applied to all the APIs in a selected environment. Amplify has integrated an open-source tool (Spectral) which supports the linting of Open API version 2, Open API version 3, and Async API specification files.
+
+For example, an API can be checked for compliance in terms of the API methods supported or the presence of a security policy. The grading results of the compliance are measured in the number of errors, warnings, info, or hints found.
 
 ## How to perform compliance validation
 
-API Compliance Validation can be enabled/disabled per Environment.   Navigate to the Topology screen then create/edit an environment.   The environment wizard has a **Compliance Profile** step, where you can enable either of Design Rules or Security Rules for compliance.   A default Design rule set (default-design-ruleset) and a default Security rules set (default-security-ruleset) is available to be used.  Changes take effect as soon as the environment settings are saved.
-Once enabled for the environment, all current APIs and future API updates within the selected environment will be automatically Compliance Validated.
-At the Service Registry, on each line at the far right is an ellipsis where you can select "Run Ruleset" to manually initiate a Compliance Lint job.
+API compliance validation can be enabled/disabled per environment. Navigate to the Topology screen then create/edit an environment. The environment wizard has a **Compliance Profile** step, where you can enable the Design rules and/or Security rules for compliance. A default Design rule set (default-design-ruleset) and a default Security rules set (default-security-ruleset) are available. Changes take effect as soon as the environment settings are saved.
+
+Once enabled for the environment, all current APIs and future API updates within the selected environment are automatically compliance validated.
+
+At the right of each line in the Service Registry is an ellipsis where you can select **Run Ruleset** to manually initiate a compliance lint job.
 
 ## Default grading scores
 
-A letter grade from A to F is used to indicate the level of Design or Security compliance for an API.   The ranges for each grading are as follows:
+A letter grade from A to F is used to indicate the level of Design or Security compliance for an API. The ranges for each grading are:
 
 | Grading score  | Range  | Information  |
 |----------------|--------|--------------|
@@ -35,6 +39,6 @@ A letter grade from A to F is used to indicate the level of Design or Security c
 
 ## Grading results
 
-In the Service Registry, two columns visualize the Compliance Grading of each API. The first one shows the grade from a security perspective, the second one visualized the design compliance level. Hover over the grading letter to see the summary of the analysis that resulted in the current grading. A circular spinner will be displayed in either grading column when the API is queued for Design or Security Compliance Validation. A “N/A” will be displayed in either grading column if the API is not one of the supported API types. A red icon will be display in either the grading column if the API specification file is missing a required value.
+In the Service Registry, two columns visualize the compliance grading of each API. The first one shows the grade from a Security perspective, the second one visualized the Design compliance level. Hover over the grading letter to see the summary of the analysis that resulted in the current grading. A circular spinner is displayed in either grading column once the API is queued for Design or Security compliance validation. An N/A is displayed in either grading column if the API is not one of the supported API types. A red icon is displayed in the grading column if the API specification file is missing a required value.
 
 ![Error results](/Images/compliance/error_results.png)
