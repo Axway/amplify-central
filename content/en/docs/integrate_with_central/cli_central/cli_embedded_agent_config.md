@@ -31,12 +31,12 @@ axway central get -o yaml -s <environment> discoveryagent <agent-name> > agent.y
 ```
 
 * Using the editor of your choice open the `agent.yaml` file and add/change any or all of the values below
-  * filter - `tag.DISCOVER.Exists() == true` specifies that the dataplane resource must have a tag named DISCOVER
-  * additionalTags - a list of strings that will be added to Central resources that are created
-  * ignoreTags - tags that, if found on the dataplane resource, will not be added to Central resources
-  * owner - the team owner that will be set when creating resources in Central
-    * type - should be set to `team`
-    * id - the id value found when viewing the team in Central
+    * filter - `tag.DISCOVER.Exists() == true` specifies that the dataplane resource must have a tag named DISCOVER
+    * additionalTags - a list of strings that will be added to Central resources that are created
+    * ignoreTags - tags that, if found on the dataplane resource, will not be added to Central resources
+    * owner - the team owner that will be set when creating resources in Central
+        * type - should be set to `team`
+        * id - the id value found when viewing the team in Central
 
 ```yaml
 spec:
