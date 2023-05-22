@@ -20,37 +20,37 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify May 19 2023](/docs/amplify_relnotes/20230519_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.51. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.53. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - Agent version 1.1.50
-* **AWS Gateway using SDK 2.0** - Agent version 1.1.41
-* **Azure latest release** - Agent version 1.1.46
-* **Istio 1.9.5** - DA=v1.0.10 / TA=v2.0.53
-* **Apigee Edge** - Agent version 0.1.12
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.18
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.51 / TA=v1.1.52
+* **AWS Gateway using SDK 2.0** - DA=v1.1.42 / TA-v1.1.43
+* **Azure latest release** - DA=v1.1.47 / TA=v1.1.48
+* **Istio 1.9.5** - DA=v1.0.14 / TA=v2.0.58
+* **Apigee Edge** - Agent version 0.1.14
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.20
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
+| What's new: | Credential expiration. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **AWS Gateway** - None. |
-| Bug fixes: | **Axway API Mangement Gateway** - None. <br />**Embedded agent** - None. <br />**Azure Gateway** - None. |
+| What's new: | **Axway API Mangement Gateway** - Agents updated with the Axway Agent SDK. <br />**Embedded agent** - Custom variables for team owner of an API, filter by API, set tags or ignore tags during the discovery of APIs. <br />**AWS Gateway** - Agents updated with the Axway Agent SDK. <br />**Azure Gateway** - Agents updated with the Axway Agent SDK. <br />**Istio Gateway** - Agents updated with the Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with the Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with the Axway Agent SDK. |
+| Bug fixes: |**Azure Gateway** - Connection error handling. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | None. |
+| What's new: | **Service Registry** - API compliance validation. <br />**Topology** - Compliance profiles, Credential management. |
 | Bug fixes: | None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | MNone. |
+| What's new: | Embed image in markdown documentation. <br />Migrate individual subscriptions to a another plan. |
+| Bug fixes: | Missing reference when creating a new version of the product. <br />Line break not working in product description. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Stripe billing integration. <br />Credentials rotation screen. <br />Navigation to subscription details. <br />Unsubscribe dialog validation. |
+| Bug fixes: | Subscribing from plan details does not prefill the plan drop-down. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
