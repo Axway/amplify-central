@@ -252,7 +252,7 @@ axway central apply -f product-updated.json
 
 ### Tag a product
 
-Use tags to organize and filter products in the marketplace. To tag a product you update the `tags` field of a product resource. The `tags` field is a string array.
+Use tags to organize and filter products in the Marketplace. To tag a product you update the `tags` field of a product resource. The `tags` field is a string array.
 
 To update `tags` with a value of `experimental` to indicate to the API consumer that the API they are subscribing to is in an experimental state, run the following commands:
 
@@ -376,9 +376,9 @@ To get the name, run the following command:
 axway central get marketplaces -o json > marketplace.json
 ```
 
-{{< alert title="Note" color="primary" >}}If no marketplace resources are returned, save the Marketplace settings on the platform, and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings), then check the output again for the previous command.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If no Marketplace resources are returned, save the Marketplace settings on the platform, and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings), then check the output again for the previous command.{{< /alert >}}
 
-### Get the details of your marketplace and create a PublishedProduct event for the API Server
+### Get the details of your Marketplace and create a PublishedProduct event for the API Server
 
 To get the details and create a PublishedProduct event, run the following commands:
 
@@ -423,7 +423,7 @@ axway central get products petstore -o json | jq '.state = "NEW STATE"' > produc
 axway central apply -f product-changed.json
 ```
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Caution" color="danger" >}}This action cannot be reversed. {{< /alert >}}
 
 To prepare the product for removal, run the previous command two times:
 

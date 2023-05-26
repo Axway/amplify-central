@@ -104,7 +104,7 @@ axway central edit env <name> -o yaml
 
 This action will delete all API services and resources in the environment specified. The CLI command can take a few seconds to finish depending on the number of resources represented in the environment.
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Caution" color="danger" >}}This action cannot be reversed. {{< /alert >}}
 
 To delete all resources in an environment:
 

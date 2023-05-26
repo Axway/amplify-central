@@ -24,7 +24,7 @@ Use the following instructions to add basic authentication and set a username an
 
     ![Components](/Images/marketplace/billing_integration/webhook1.png)
 
-2. Edit your YAML files to specify the authentication via a [secret](https://docs.axway.com/bundle/amplify-central/page/docs/integrate_with_central/webhook/index.html), so that the webhook will use Basic Authentication with the provided credentials when it triggers your integrations.
+2. Edit your YAML files to specify the authentication via a [secret](https://docs.axway.com/bundle/amplify-central/page/docs/integrate_with_central/webhook/), so that the webhook will use Basic Authentication with the provided credentials when it triggers your integrations.
 
 Define a secret with a Basic Auth header example:
 

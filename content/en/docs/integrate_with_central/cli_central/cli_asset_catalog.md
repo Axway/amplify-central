@@ -72,7 +72,7 @@ Where `stage.json` contains the following content:
 
 ### Create an asset
 
-An asset is a resource that has business value, something that an API Provider might want to expose to API Consumers via the marketplace. The asset resource is a scope, which aggregates the business value.
+An asset is a resource that has business value, something that an API Provider might want to expose to API Consumers via the Marketplace. The asset resource is a scope, which aggregates the business value.
 
 Run the following command to create an asset:
 
@@ -276,7 +276,7 @@ axway central get asset my-asset -o json | jq '.state = "archived"' > asset-chan
 axway central apply -f asset-changed.json
 ```
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Caution" color="danger" >}}This action cannot be reversed. {{< /alert >}}
 
 After the asset state is set to `archived`, run the following command to delete the asset:
 
