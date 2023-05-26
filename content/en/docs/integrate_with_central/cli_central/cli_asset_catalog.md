@@ -8,7 +8,7 @@ Create assets from discovered APIs with the Amplify management plane.
 ## Before you start
 
 * Have credentials or service account to use the CLI. Follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/index.html)
+* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/)
 * Understand the steps in [Register an API in the CLI](/docs/manage_service_registry/service_integrate-api_cli/)
 * Install [jq](https://stedolan.github.io/jq/) on the system
 
