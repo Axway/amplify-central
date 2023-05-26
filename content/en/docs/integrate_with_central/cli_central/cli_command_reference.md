@@ -11,7 +11,7 @@ Use Axway Central CLI basic commands for creating, fetching, updating, and delet
 
 Resources can be *scoped* or *unscoped*.
 
-The scope refers to the lifetime and accessibility of a resource. Unscoped resource are top-level resources which act as groups. Scoped resource are grouped under unscoped resources. For example, an API service resource is scoped to a corresponding Environment resource. When that Environment is deleted, the scoped API service resource (as well as any other scoped resource belonging to it) will also be deleted. Versus deleting the API service resource, which will only delete that one resource.
+The scope refers to the lifetime and accessibility of a resource. Unscoped resource are top-level resources which act as groups. Scoped resource are grouped under unscoped resources. For example, an API service resource is scoped to a corresponding environment resource. When that environment is deleted, the scoped API service resource (as well as any other scoped resource belonging to it) will also be deleted. Versus deleting the API service resource, which will only delete that one resource.
 
 If the desired resource type is scoped, you must specify the scope name by providing the `-s, --scope <name>` flag.
 

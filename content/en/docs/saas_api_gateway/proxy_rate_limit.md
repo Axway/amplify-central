@@ -45,7 +45,7 @@ To begin, [register an api proxy](/docs/saas_api_gateway/quickstart/#register-an
 
 1. On the **API Proxies** tab, click the API proxy name to open the API proxy details page.
 2. On the **Policies** tab, edit the rate limit policy under the **Request to backend** section by clicking the gear icon.
-3. Enter the number of transactions and use the dropdown duration list to select an interval.
+3. Enter the number of transactions and use the drop-down duration list to select an interval.
 
     ![Enter the transactions per interval to apply a proxy rate limit on your API](/Images/central/proxy_rate_limit_modal.png)
 
@@ -75,7 +75,7 @@ After deploying a new revision, you can test the rate limit configuration by cli
     ![Hover over the Rate Limit Balloon to see more information about rate limiting policies for your API](/Images/central/rate_limit_balloon.png)
 
 3. To set an app rate limit on your API, click either the **RL** or the **+** button.
-4. Enter the number of transactions and use the dropdown duration list to select an interval.
+4. Enter the number of transactions and use the drop-down duration list to select an interval.
 
     ![Enter the desired transactions per interval to apply an app rate limit on your API](/Images/central/app_rate_limit_modal.png)
 

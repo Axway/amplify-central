@@ -155,7 +155,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.49. This version is 
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
 | What's new: | - Marketplace product publication preference enforcement. <br/> - Provider has now access to the consumer subscription status (Active / Cancelled / Migrated...)|
-| Bug fixes: | - Product seen as unpublished in Category and Support Contact creation <br/> - Markdown editor side by side prevent to see the actual text <br/> - Plan preview does not scroll <br/> - Long category name not displayed correctly <br/> - Provider is not redirected to the product details after publishing a product to a marketplace|
+| Bug fixes: | - Product seen as unpublished in Category and Support Contact creation <br/> - Markdown editor side by side prevent to see the actual text <br/> - Plan preview does not scroll <br/> - Long category name not displayed correctly <br/> - Provider is not redirected to the product details after publishing a product to a Marketplace|
 | <br />**Business insights** |         |
 | What's new: | - Marketplace and Organization filter available in all screens <br/> - Friendly name display instead of logical names |
 | Bug fixes: | None. |

@@ -692,7 +692,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Consumers can see the plan quotas
 * Redesign of the Application page so that credentials can be viewed per resource
 * Consumers can visualize the Async and graphQL API documentation
-* Consumers can log into the marketplace and visualize the resources associated to the credentials
+* Consumers can log into the Marketplace and visualize the resources associated to the credentials
 * Consumers can request access only to APIs included in the subscribed plan
 * consumers can subscribe to only one free plan with the same product and team owner
 * Subscription name and request access names are auto filled by the system
@@ -951,7 +951,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**:
 
-* Platform administrators can define the marketplace sub-domain from the *Marketplace Settings* page
+* Platform administrators can define the Marketplace sub-domain from the *Marketplace Settings* page
 * Platform administrators can change the look and feel of their Marketplace from the *Marketplace Appearance* page
 * Marketplace is available in public mode
 
@@ -1179,7 +1179,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **Bug fixes**:
 
-* The protocol dropdown on the API service Endpoint screen did not allow for selection of protocols other than http/http for AsyncAPI services
+* The protocol drop-down on the API service Endpoint screen did not allow for selection of protocols other than http/http for AsyncAPI services
 * Developers could no longer access an environment owned by their team
 
 ## Amplify Central May 2021

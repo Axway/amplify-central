@@ -53,7 +53,7 @@ Click **API Traffic** to view the traffic information for the API or Application
 
 You can filter by applications, methods, status codes, and a pre-configured time range or customize your own.
 
-{{% alert title="Note" color="primary" %}} API Traffic is based on a limited sample of the actual gateway traffic and will not show all transactions.{{% /alert %}}
+{{< alert title="Note" color="primary" >}} API Traffic is based on a limited sample of the actual gateway traffic and will not show all transactions.{{< /alert >}}
 
 Each individual item provides the following data:
 

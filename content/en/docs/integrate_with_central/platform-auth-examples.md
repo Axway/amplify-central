@@ -45,7 +45,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 ### Create the service account with the UI
 
-1. Sign into the Amplify platform and select **Organization** from the User dropdown menu.
+1. Sign into the Amplify platform and select **Organization** from the User drop-down menu.
 
     ![organization drop down screen](/Images/integration/organization-drop-down.png)
 

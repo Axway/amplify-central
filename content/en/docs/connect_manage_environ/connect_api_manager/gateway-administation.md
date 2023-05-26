@@ -114,7 +114,7 @@ This section connects the agent to API Manager and determines which APIs should 
 
 `APIMANAGER_POLLINTERVAL`: The frequency in which API Manager is polled for new endpoints. Default value is 30s.
 
-`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Amplify Central, setting this value to true will enable a selection in the App name dropdown for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create a new application in API Manager. The new application in API Manager will be given the name of the subscription ID from Amplify Central. A value of false will cause 'Create an application' to not be shown in the dropdown. Default value is **true**.
+`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Amplify Central, setting this value to true will enable a selection in the App name drop-down for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create a new application in API Manager. The new application in API Manager will be given the name of the subscription ID from Amplify Central. A value of false will cause 'Create an application' to not be shown in the drop-down. Default value is **true**.
 
 `APIMANAGER_AUTH_USERNAME`: An API Manager user the agent will use to connect to the API Manager. This user must have either the “API Manager Administrator” or “Organization administrator” role. Based on the role of this user, the agent is able to:
 
@@ -646,7 +646,7 @@ OPENTRAFFIC_LOG_INPUT=true
 OPENTRAFFIC_LOG_PATHS=/events/DefaultGroup_*.log
 ```
 
-{{< alert title="Warning" color="warning" >}}Be careful when entering the file name in `OPENTRAFFIC_LOG_PATHS` variable, as based on the Gateway deployment (standard VS EMT mode). The default name **group-\*_instance-\*.log** might not be accurate if any customization occurred!
+{{< alert title="Caution" color="danger" >}}Be careful when entering the file name in `OPENTRAFFIC_LOG_PATHS` variable, as based on the Gateway deployment (standard VS EMT mode). The default name **group-\*_instance-\*.log** might not be accurate if any customization occurred!
 
 When using the open traffic logs, it is not required to configure the Gateway connectivity (`APIGATEWAY_*` variables), as all information the Traceability Agent needs to report is present in the open traffic log.
 {{< /alert >}}
