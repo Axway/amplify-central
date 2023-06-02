@@ -175,7 +175,7 @@ You can extend the previous minimum variable list with the following variables. 
 
 ### Specific variables for Traceability Agent
 
-{{< alert title="Note" color="primary" >}}To exclude health checks from being counted towards the number of transactions for the purpose of entitlement, use the variable TRACEABILITY_EXCEPTION_LIST to identify the API path that the health check transactions use. The agent will then dismiss the transactions and not processs them for usage in transaction reporting.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}To exclude health checks from being counted towards the number of transactions for the purpose of entitlement, use the variable TRACEABILITY_EXCEPTION_LIST to identify the API path that the health check transactions use. The agent will then dismiss the transactions and not process them for usage in transaction reporting.{{< /alert >}}
 
 | Variable name                                  | Description  |
 |----------------------------------------------- |--------------|
