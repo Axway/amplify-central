@@ -48,7 +48,7 @@ The Embedded Discovery Agent can be configured to apply a filter to the data pla
         ignoreTags:
           - sensitive
           - SENSITIVE
-       owner:
+        owner:
           type: team
           id: <team-id>
     ```
@@ -58,3 +58,79 @@ The Embedded Discovery Agent can be configured to apply a filter to the data pla
     ```bash
     axway central apply -f agent.yaml
     ```
+
+## Embedded Traceability Agent
+
+The Embedded Traceability Agent can by configured to set if headers should be processed, redact certain information, sample an amount of the transactional data, and set the owner for the transactional data.
+
+* Pull the existing Traceability Agent from your environment and direct it to a file:
+
+    ```bash
+    axway central get -o yaml -s <environment> traceabilityagent <agent-name> > agent.yaml
+    ```
+* Using the editor of your choice, open the `agent.yaml` file and add/change any or all values:
+    * **processHeaders** - when set to `true` the headers will be included with the transactional data
+    * **redaction** - the redaction settings to use when reporting transactions from the data plane [Redaction](#redaction)
+        * **path** - a list of all URL paths, or path regular expressions, that may be reported to Central
+        * **queryArgument** - regular expressions applied to the query arguments in the transactional data
+            * **show** - query arguments names that match any of these expressions will be reported
+            * **sanitize**
+                * **keyMatch** - query argument names that match any of these expressions will have the valueMatch sanitized
+                * **valueMatch** - when the keyMatch matches this expression is applied to replace matches within the value masking character
+        * **requestHeaders** - regular expressions applied to the request headers in the transactional data
+            * **show** - request headers keys that match any of these expressions will be reported
+            * **sanitize**
+                * **keyMatch** - request headers keys that match any of these expressions will have the valueMatch sanitized
+                * **valueMatch** - when the keyMatch matches this expression is applied to replace matches within the value the masking character
+        * **responseHeaders** - regular expressions applied to the response headers in the transactional data
+            * **show** - response headers keys that match any of these expressions will be reported
+            * **sanitize**
+                * **keyMatch** - response headers keys that match any of these expressions will have the valueMatch sanitized
+                * **valueMatch** - when the keyMatch matches this expression is applied to replace matches within the value masking character
+        * **maskingCharacter** - the set of character(s) that will replace any value matched while sanitizing
+    * **sampling** - the sampling settings that will be applied when reporting transactional data
+        * **percentage** - the percentage of all transacations that will be reported to Central for display in Business and Consumer Insights
+        * **allErrors** - when set to `true`, regardless of the percentage, all errored transactions will be reported to Central
+    * **owner** - the team owner that will be set when creating resources in Central
+        * type - set to `team`
+        * id - the id value found when viewing the team in Central
+
+    ```yaml
+    spec:
+      config:
+        processHeaders: true
+        redaction:
+          path:
+            - <path-regex>
+          queryArgument:
+            show:
+              - <arg-regex>
+            sanitize:
+              - keyMath: <arg-regex>
+                valueMatch: <val-regex>
+          requestHeaders:
+            show:
+              - <header-key-regex>
+            sanitize:
+              - keyMath: <header-key-regex>
+                valueMatch: <header-val-regex>
+          responseHeaders:
+            show:
+              - <header-key-regex>
+            sanitize:
+              - keyMath: <header-key-regex>
+                valueMatch: <header-val-regex>
+          maskingCharacter: {*}
+        sampling: 
+          percentage: 1
+          allErrors: true
+        owner:
+          type: team
+          id: <team-id>
+    ```
+
+### Redaction
+
+Redaction settings can be added to the Embedded Traceability Agnet that will be used when finding and reporting transactional data to Central.  The settings include the ability to customize the URL path of the transaction, the query arguments in the transaction, as well as the request and response headers
+
+* Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent.
