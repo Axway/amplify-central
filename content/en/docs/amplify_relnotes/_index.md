@@ -18,7 +18,7 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify June 6 2023](/docs/amplify_relnotes/20230606_amplify/)
+## [Amplify June 2 2023](/docs/amplify_relnotes/20230602_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.53. This version is compatible with:
 
