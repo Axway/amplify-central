@@ -38,13 +38,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.54. This version is 
 | Bug fixes: | None. |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | **Service Registry** - None. <br />**Topology** - None. |
-| Bug fixes: | **Service Registry** - User with multiple roles could not see the Team Ownership list when publishing an API Service to the Marketplace. <br />When deprecating a plan, the new plans list was truncated based on screen resolution. <br />Missing subscription information when the product was in two or more Marketplaces. |
+| Bug fixes: | **Service Registry** - User with multiple roles could not see the Team Ownership list when publishing an API Service to the Marketplace. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
 | Bug fixes: | A user with multiple roles in a team could not activate an asset in draft state via the Web UI. |
 | <br />**Product Foundry** |         |
 | What's new: | The consumer org team is visible in the Subscriptions/Credentials screen. <br />When defining a quota type, a standard loose quota type can be created. |
-| Bug fixes: | Adding an image resulted in a black background. <br />For consistency, a placeholder image is added to the product card when none is set. |
+| Bug fixes: | Adding an image resulted in a black background. <br />For consistency, a placeholder image is added to the product card when none is set. <br />When deprecating a plan, the new plans list was truncated based on screen resolution. <br />Missing subscription information when the product was in two or more Marketplaces. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
