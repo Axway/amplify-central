@@ -21,6 +21,22 @@ Mange your API Compliance with the Axway Central CLI.
 
 Enable Design and Security compliance validation for an environment.  When this is enabled, compliance validation will be initiated for all API services in the selected environment. 
 
+Example of viewing the environment resource for an envivronment named, test, with the get command:
+~~~
+axway centrea get environment test -o yaml
+~~~
+
+Example of the output of the envivronment resouec in yaml format:
+~~~
+Add environment resource example showing design and security compliance disabled
+~~~
+
+Example of changing the environment resource for an envivronment named, test, with the apply command:
+~~~
+axway central apply -f test.yaml
+~~~
+
+Example of the environment resource, test.yaml, which enables the design and securiy compliance:
 ~~~
 Add environment resource example to enable design and security compliance here
 ~~~
