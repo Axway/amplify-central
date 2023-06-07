@@ -1,25 +1,42 @@
 ---
-title: Manage your compliance with Axway CLI
-linkTitle: Manage your compliance with Axway CLI
+title: Manage your compliance with Axway Central CLI
+linkTitle: Manage your compliance with Axway Central CLI
 weight: 30
 ---
-Short description.
+Mange your API Compliance with the Axway Central CLI.
 
 ## Before you start
 
-* information
-* Information:
-
-    * Information
+* You will need to have the Axway Central CLI installed and with a Central Administrator role.  Refer to https://docs.axway.com/bundle/amplify-central/page/docs/integrate_with_central/cli_central/index.html
 
 ## Objectives
 
-Learn how to.
+* Using the Axway Central Central CLI:
+
+    * Learn how to enable/disable compliance validation.
+    * Learn how to manually initiate a compliance lint job.
+    * Learn how to view the results of the compliance validation.
 
 ### Step 1
 
-Information
+Enable Design and Security compliance validation for an environment.  When this is enabled, compliance validation will be initiated for all API services in the selected environment. 
+
+~~~
+Add environment resource example to enable design and security compliance here
+~~~
 
 ### Step 2
 
-Information
+Once compliance validation is enabled, a single API service can be compliance validated using the following Central CLI command: 
+
+~~~
+Add linting job resource example to enable design and security compliance here
+~~~
+
+### Step 3
+
+To view the status and results of compliance validation, use the following Central CLI command:
+
+~~~
+Add an example of a completed linting job resource 
+~~~
