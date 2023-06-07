@@ -27,54 +27,54 @@ You can extend the previous minimum variable list with the following variables. 
 | Variable name                     | Description    |
 | --------------------------------- | -------------- |
 | **Azure configuration variables** |                |
-| AZURE_SUBSCRIPTIONID              | The Azure subscription identifier. |
-| AZURE_TENANTID                    | The tenantID of the service principal. |
+| AZURE_APIMSERVICENAME             | The container that holds the API you want the agent to discover. |
 | AZURE_CLIENTID                    | The appId of the service principal. |
 | AZURE_CLIENTSECRET                | The password of the service principal. |
-| AZURE_RESOURCEGROUPNAME           | The container name that holds resources. |
-| AZURE_APIMSERVICENAME             | The container that holds the API you want the agent to discover. |
-| AZURE_PUSHTAGS                    | When set to TRUE, the Azure API tags will be pushed to Amplify API service. |
 | AZURE_FILTER                      | Filter condition expression for discovering APIs based on tags. The conditional expression must have \"tag\" as the prefix/selector. Azure Discovery Agent supports only Exists() call expression-based conditions. For example, `tag.some_tag_name.Exists() == true`. |
+| AZURE_PUSHTAGS                    | When set to TRUE, the Azure API tags will be pushed to Amplify API service. |
+| AZURE_RESOURCEGROUPNAME           | The container name that holds resources. |
+| AZURE_SUBSCRIPTIONID              | The Azure subscription identifier. |
+| AZURE_TENANTID                    | The tenantID of the service principal. |
 | **Amplify Central variables**     |                 |
-| CENTRAL_DEPLOYMENT                | Specifies region (default: US = `prod` / EU = `prod-eu`). |
-| CENTRAL_URL                       | The URL to the Amplify instance being used for agents (default value: US =  `<https://apicentral.axway.com>` / EU = `https://central.eu-fr.axway.com`). |
-| CENTRAL_ORGANIZATIONID            | The Organization ID from Amplify. Locate this at Platform > User > Organization. |
-| CENTRAL_TEAM                      | The name of the team in Amplify that all APIs will be linked to. Locate this at Amplify > Organization > Teams. |
-| CENTRAL_APPENDENVIRONMENTTOTITLE  | Set to false to skip adding the environment name to the title and description of the API. |
-| CENTRAL_REPORTACTIVITYFREQUENCY   | The time interval at which the HTTP client times out making HTTP requests and processing the response (ns - default, us, ms, s, m, h). Set to 60s. |
-| CENTRAL_APIVALIDATIONFREQUENCY    | The frequency at which the agent validates each API Instance and Service against the data plane (ns - default, us, ms, s, m, h). Set to 1h, minimum value of 5m. |
-| CENTRAL_VERSIONCHECKER            | Set to false to turn off the Agent job that checks if the running agent is the latest available (default: `true`). |
-| CENTRAL_CLIENTTIMEOUT             | The frequency at which the agent polls for event changes for the periodic agent status updater (ns - default, us, ms, s, m, h). Set to 5m. |
-| CENTRAL_JOBTIMEOUT                | The longest duration interval or scheduled jobs are allowed to run before being canceled (default: `5m`). |
 | CENTRAL_APISERVICEREVISIONPATTERN | Refer to [CENTRAL_APISERVICEREVISIONPATTERN](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#CENTRAL_APISERVICEREVISIONPATTERN). |
-| CENTRAL_PROXYURL                  | The URL for the proxy for Amplify `<http://username:password@hostname:port>`. If empty, no proxy is defined. |
-| CENTRAL_AUTH_URL                  | The Amplify login URL: `<https://login.axway.com/auth>`. |
-| CENTRAL_AUTH_REALM                | The Realm used to authenticate for Amplify: `Broker`. |
+| CENTRAL_APISERVERVERSION          | Version of the API Server that the agent will communicate with. |
+| CENTRAL_APIVALIDATIONFREQUENCY    | The frequency at which the agent validates each API Instance and Service against the data plane (ns - default, us, ms, s, m, h). Set to 1h, minimum value of 5m. |
+| CENTRAL_APPENDENVIRONMENTTOTITLE  | Set to false to skip adding the environment name to the title and description of the API. |
 | CENTRAL_AUTH_CLIENTID             | The client identifier associated to the Service Account created in Amplify. Locate this at Amplify > Organization > Service Accounts > client Id. |
+| CENTRAL_AUTH_KEYPASSWORD          | The path to the file with the password for the private key, if applicable. |
 | CENTRAL_AUTH_PRIVATEKEY           | The private key associated with the Service Account. |
 | CENTRAL_AUTH_PUBLICKEY            | The public key associated with the Service Account. |
-| CENTRAL_AUTH_KEYPASSWORD          | The path to the file with the password for the private key, if applicable. |
+| CENTRAL_AUTH_REALM                | The Realm used to authenticate for Amplify: `Broker`. |
 | CENTRAL_AUTH_TIMEOUT              | The timeout to wait for the authentication server to respond (ns - default, us, ms, s, m, h). Set to 10s. |
+| CENTRAL_AUTH_URL                  | The Amplify login URL: `<https://login.axway.com/auth>`. |
+| CENTRAL_CLIENTTIMEOUT             | The frequency at which the agent polls for event changes for the periodic agent status updater (ns - default, us, ms, s, m, h). Set to 5m. |
+| CENTRAL_DEPLOYMENT                | Specifies region (default: US = `prod` / EU = `prod-eu`). |
 | CENTRAL_ENVIRONMENT               | Name of the Amplify environment where API will be hosted. |
-| CENTRAL_APISERVERVERSION          | Version of the API Server that the agent will communicate with. |
-| CENTRAL_SSL_MINVERSION            | String value for the minimum SSL/TLS version that is acceptable. If zero, empty TLS 1.0 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3. |
-| CENTRAL_SSL_MAXVERSION            | String value for the maximum SSL/TLS version that is acceptable. If empty, then the maximum version supported by this package is used, which is currently TLS 1.3. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3. |
+| CENTRAL_JOBTIMEOUT                | The longest duration interval or scheduled jobs are allowed to run before being canceled (default: `5m`). |
+| CENTRAL_ORGANIZATIONID            | The Organization ID from Amplify. Locate this at Platform > User > Organization. |
+| CENTRAL_PROXYURL                  | The URL for the proxy for Amplify `<http://username:password@hostname:port>`. If empty, no proxy is defined. |
+| CENTRAL_REPORTACTIVITYFREQUENCY   | The time interval at which the HTTP client times out making HTTP requests and processing the response (ns - default, us, ms, s, m, h). Set to 60s. |
 | CENTRAL_SSL_CIPHERSUITES          | An array of strings. It is a list of supported cipher suites for TLS versions up to TLS 1.2. If CipherSuites is nil, a default list of secure cipher suites is used, with a preference order based on hardware performance. See [Supported Cipher Suites](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/). |
 | CENTRAL_SSL_INSECURESKIPVERIFY    | Controls whether a client verifies the server's certificate chain and host name. If true, TLS accepts any certificate presented by the server and any host name in that certificate. In this mode, TLS is susceptible to man-in-the-middle attacks.|
+| CENTRAL_SSL_MAXVERSION            | String value for the maximum SSL/TLS version that is acceptable. If empty, then the maximum version supported by this package is used, which is currently TLS 1.3. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3. |
+| CENTRAL_SSL_MINVERSION            | String value for the minimum SSL/TLS version that is acceptable. If zero, empty TLS 1.0 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3. |
+| CENTRAL_TEAM                      | The name of the team in Amplify that all APIs will be linked to. Locate this at Amplify > Organization > Teams. |
+| CENTRAL_URL                       | The URL to the Amplify instance being used for agents (default value: US =  `<https://apicentral.axway.com>` / EU = `https://central.eu-fr.axway.com`). |
+| CENTRAL_VERSIONCHECKER            | Set to false to turn off the Agent job that checks if the running agent is the latest available (default: `true`). |
 | **Status variables**              |      |
-| STATUS_PORT                       | Port used for checking the health status of the running agent. |
 | STATUS_HEALTHCHECKINTERVAL        | Time in seconds between running periodic health checker (binary agents only). Allowed values are from 30 seconds to 5 minutes. Specify value as s or m. (default value: 30s). |
 | STATUS_HEALTHCHECKPERIOD          | Time in minutes allotted for services to be ready before exiting the agent. Allowed values are from 1 to 5 minutes. |
+| STATUS_PORT                       | Port used for checking the health status of the running agent. |
 | **Logging variables**             |        |
-| LOG_LEVEL                         | The log level for output messages (debug, info, warn, error). |
-| LOG_FORMAT                        | The format to print log messages (json, line, package). |
-| LOG_OUTPUT                        | The output for the log lines (stdout, file, both). When set to `both` for the Traceability Agent, only the file output will appear. |
-| LOG_MASKEDVALUES                  | Comma-separated list of keywords to identify within the agent config, which is used to mask its corresponding sensitive data. Keywords are matched by whole words and are case-sensitive. |
+| LOG_FILE_CLEANBACKUPS             | The max age of a backup file, in days. |
+| LOG_FILE_KEEPFILES                | The max number of log file backups to keep. |
 | LOG_FILE_NAME                     | The name of the log files. |
 | LOG_FILE_PATH                     | The path (relative or absolute) to save logs files, if output type file or both. |
 | LOG_FILE_ROTATEEVERYMEGABYTES     | The max size, in megabytes that a log file can grow to. |
-| LOG_FILE_KEEPFILES                | The max number of log file backups to keep. |
-| LOG_FILE_CLEANBACKUPS             | The max age of a backup file, in days. |
+| LOG_FORMAT                        | The format to print log messages (json, line, package). |
+| LOG_LEVEL                         | The log level for output messages (debug, info, warn, error). |
+| LOG_MASKEDVALUES                  | Comma-separated list of keywords to identify within the agent config, which is used to mask its corresponding sensitive data. Keywords are matched by whole words and are case-sensitive. |
+| LOG_OUTPUT                        | The output for the log lines (stdout, file, both). When set to `both` for the Traceability Agent, only the file output will appear. |
 
 {{< alert title="Note" color="primary" >}}For logging, it is recommended to set it up in the agent configuration file to keep the log separated for each agent.{{< /alert >}}
 
@@ -83,29 +83,29 @@ You can extend the previous minimum variable list with the following variables. 
 | Variable name                                                      |          |
 | ------------------------------------------------------------------ | -------- |
 | CENTRAL_ADDITIONALTAGS                                             | Additional tag names to publish while publishing the API. Could help to identified the API source. It is a comma separated list. |
+| CENTRAL_MIGRATION_CLEANINSTANCES                                   | When set to true, the agent, on startup, will clean all except the latest API service instance for every API service and Stage combination.               |
 | CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE                                | The mode for approving subscriptions on Amplify (manual, auto, webhook; default = manual). |
-| CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL                         | The url for a subscription approval webhook (if any). CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE must be set to "webhook" for webhooks to be invoked. |
-| CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS                     | The headers to pass to the subscription approval webhook (if any). For example, "Header=contentType,Value=application/json".|
 | CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_AUTHSECRET                  | The authentication secret to pass to the subscription approval webhook (if any). |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_URL                    | The webhook URL that subscription data will be posted to, see Subscription webhook notifications. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_HEADERS                | The headers that will be used when posting data to the webhook url, see Subscription webhook notifications. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_HOST                      | The SMTP server that will send email notifications. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PORT                      | The SMTP port to communicate to the SMTP server over. |
+| CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS                     | The headers to pass to the subscription approval webhook (if any). For example, "Header=contentType,Value=application/json".|
+| CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL                         | The url for a subscription approval webhook (if any). CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE must be set to "webhook" for webhooks to be invoked. |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_AUTHTYPE                  | The authentication type based on the email server.  You may have to refer to the email server properties and specifications. This value defaults to NONE. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_USERNAME                  | The username used to authenticate to the SMTP server, if necessary. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PASSWORD                  | The password used to authenticate to the SMTP server, if necessary. |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_FROMADDRESS               | The email address that will be listed in the from field. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_SUBJECT         | The subject of email sent for Subscribe events. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_HOST                      | The SMTP server that will send email notifications. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PASSWORD                  | The password used to authenticate to the SMTP server, if necessary. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PORT                      | The SMTP port to communicate to the SMTP server over. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_APIKEYS         | The body of the email for Subscribe events when the API is secured using an APIKEY. |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_BODY            | The body of the email for Subscribe events. |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_OAUTH           | The body of the email for Subscribe events when the API is secured using an OAUTH token. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_APIKEYS         | The body of the email for Subscribe events when the API is secured using an APIKEY. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_SUBJECT       | The subject of email sent for Unsubscribe events. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_BODY          | The body of the email for Unsubscribe events. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_SUBJECT   | The subject of email sent for Failed to Subscribe events. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_SUBJECT         | The subject of email sent for Subscribe events. |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_BODY      | The body of the email for Failed to Subscribe events. |
-| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_SUBJECT | The subject of email sent for Failed to Unsubscribe events. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_SUBJECT   | The subject of email sent for Failed to Subscribe events. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_BODY          | The body of the email for Unsubscribe events. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_SUBJECT       | The subject of email sent for Unsubscribe events. |
 | CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_BODY    | The body of the email for Failed to Unsubscribe events. |
-| CENTRAL_MIGRATION_CLEANINSTANCES                                   | When set to true, the agent, on startup, will clean all except the latest API service instance for every API service and Stage combination.               |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_SUBJECT | The subject of email sent for Failed to Unsubscribe events. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_USERNAME                  | The username used to authenticate to the SMTP server, if necessary. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_HEADERS                | The headers that will be used when posting data to the webhook url, see Subscription webhook notifications. |
+| CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_URL                    | The webhook URL that subscription data will be posted to, see Subscription webhook notifications. |
 
 ### Specific variables for Traceability Agent
 
@@ -113,29 +113,29 @@ You can extend the previous minimum variable list with the following variables. 
 
 | Variable name                                  | Description        |
 | ---------------------------------------------- | ------------------- |
-| CENTRAL_USAGEREPORTING_PUBLISH                 | Enables/disables the sending of usage events to Amplify (default value: `true`). Takes precedence over replaced variable CENTRAL_PUBLISHUSAGE. |
+| AZURE_GETHEADERS                               | Call the Azure Gateway API to get additional transaction details (headers, useragent). Default is True. |
 | CENTRAL_USAGEREPORTING_INTERVAL                | The frequency in which the agent reports API usage to Amplify (default value: `15m`). Takes precedence over replaced variable CENTRAL_EVENTAGGREGATIONINTERVAL. |
 | CENTRAL_USAGEREPORTING_OFFLINE                 | Set to True to enable offline usage reporting (default value: False). Ignores CENTRAL_USAGEREPORTING_INTERVAL value as that is only for online reporting. |
 | CENTRAL_USAGEREPORTING_OFFLINESCHEDULE         | Determines how often usage numbers should be saved (default value and minimum: @hourly). |
-| TRACEABILITY_HOST                              | The host name and port of the ingestion service to forward the transaction log entries (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044`). |
-| TRACEABILITY_PROTOCOL                          | Protocol (https or tcp) to be used for communicating with ingestion service (default value: `tcp`). |
-| TRACEABILITY_PROXYURL                          | The socks5 or http URL of the proxy server for ingestion service (`<socks5://hostname:port>`). If empty, no proxy is defined.|
-| TRACEABILITY_COMPRESSIONLEVEL                  | The gzip compression level for the output event (default value: `3`). |
-| TRACEABILITY_BULKMAXSIZE                       | The maximum number of events to bulk in a single ingestion request (default value: `100`). |
-| TRACEABILITY_CLIENTTIMEOUT                     | The time to wait for ingestion response (default value: `60s`). |
-| TRACEABILITY_WORKER                            | The number of workers collecting events and sending them to Amplify (default value: `1`). |
-| TRACEABILITY_REDACTION_PATH_SHOW               | Determines what portions of a transactions PATH to send to Amplify. |
-| TRACEABILITY_REDACTION_QUERYARGUMENT_SHOW      | Determines what Query Arguments to send to Amplify. |
-| TRACEABILITY_REDACTION_QUERYARGUMENT_SANITIZE  | Determines what portions of a Query Arguments value to sanitize. |
-| TRACEABILITY_REDACTION_REQUESTHEADER_SHOW      | Determines what Request Header Keys to send to Amplify. |
-| TRACEABILITY_REDACTION_REQUESTHEADER_SANITIZE  | Determines what portions of a Request Headers value to sanitize. |
-| TRACEABILITY_REDACTION_RESPONSEHEADER_SHOW     | Determines what Response Header Keys to send to Amplify. |
-| TRACEABILITY_REDACTION_RESPONSEHEADER_SANITIZE | Determines what portions of a Response Headers value to sanitize. |
-| TRACEABILITY_REDACTION_MASKING_CHARACTERS      | Determines what characters are displayed as the sanitized response header values on Amplify (default value: `{*}`). |
-| TRACEABILITY_SAMPLING_PERCENTAGE               | The percentage of all transactions that are sent to Amplify. A value of `0` reports no traffic (default value: `10`). |
-| TRACEABILITY_SAMPLING_PER_API                  | When true, the percentage of API transactions sent will be based on each API ID in the transaction (default value: `true`). |
-| TRACEABILITY_EXCEPTION_LIST                    | Determines what API paths the agent will dismiss and not process for usage or transaction reporting. Valid regular expressions can be configured. Example: `["/api/v\\d+/ping.*$", "^/qa.*$", "/qa.*" ]`. Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent. |
+| CENTRAL_USAGEREPORTING_PUBLISH                 | Enables/disables the sending of usage events to Amplify (default value: `true`). Takes precedence over replaced variable CENTRAL_PUBLISHUSAGE. |
 | QUEUE_MEM_EVENTS                               | The size of the internal queue used for storing consumed events before publishing them (default value: `2048`). |
 | QUEUE_MEM_FLUSH_MINEVENTS                      | The minimum number of events in queue required for publishing (default value: `100`). |
 | QUEUE_MEM_FLUSH_TIMEOUT                        | The maximum time to wait for min_events to be fulfilled (default value: `1s`). |
-| AZURE_GETHEADERS                               | Call the Azure Gateway API to get additional transaction details (headers, useragent). Default is True. |
+| TRACEABILITY_BULKMAXSIZE                       | The maximum number of events to bulk in a single ingestion request (default value: `100`). |
+| TRACEABILITY_CLIENTTIMEOUT                     | The time to wait for ingestion response (default value: `60s`). |
+| TRACEABILITY_COMPRESSIONLEVEL                  | The gzip compression level for the output event (default value: `3`). |
+| TRACEABILITY_EXCEPTION_LIST                    | Determines what API paths the agent will dismiss and not process for usage or transaction reporting. Valid regular expressions can be configured. Example: `["/api/v\\d+/ping.*$", "^/qa.*$", "/qa.*" ]`. Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent. |
+| TRACEABILITY_HOST                              | The host name and port of the ingestion service to forward the transaction log entries (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044`). |
+| TRACEABILITY_PROTOCOL                          | Protocol (https or tcp) to be used for communicating with ingestion service (default value: `tcp`). |
+| TRACEABILITY_PROXYURL                          | The socks5 or http URL of the proxy server for ingestion service (`<socks5://hostname:port>`). If empty, no proxy is defined.|
+| TRACEABILITY_REDACTION_MASKING_CHARACTERS      | Determines what characters are displayed as the sanitized response header values on Amplify (default value: `{*}`). |
+| TRACEABILITY_REDACTION_PATH_SHOW               | Determines what portions of a transactions PATH to send to Amplify. |
+| TRACEABILITY_REDACTION_QUERYARGUMENT_SANITIZE  | Determines what portions of a Query Arguments value to sanitize. |
+| TRACEABILITY_REDACTION_QUERYARGUMENT_SHOW      | Determines what Query Arguments to send to Amplify. |
+| TRACEABILITY_REDACTION_REQUESTHEADER_SANITIZE  | Determines what portions of a Request Headers value to sanitize. |
+| TRACEABILITY_REDACTION_REQUESTHEADER_SHOW      | Determines what Request Header Keys to send to Amplify. |
+| TRACEABILITY_REDACTION_RESPONSEHEADER_SANITIZE | Determines what portions of a Response Headers value to sanitize. |
+| TRACEABILITY_REDACTION_RESPONSEHEADER_SHOW     | Determines what Response Header Keys to send to Amplify. |
+| TRACEABILITY_SAMPLING_PERCENTAGE               | The percentage of all transactions that are sent to Amplify. A value of `0` reports no traffic (default value: `10`). |
+| TRACEABILITY_SAMPLING_PER_API                  | When true, the percentage of API transactions sent will be based on each API ID in the transaction (default value: `true`). |
+| TRACEABILITY_WORKER                            | The number of workers collecting events and sending them to Amplify (default value: `1`). |
