@@ -6,3 +6,7 @@ date: 2021-12-03
 ---
 
 Helpful information / best practices for successfully using the Amplify platform.
+
+## Related topic
+
+See the following topic for related information.

@@ -339,4 +339,6 @@ Example of a webhook payload referencing a secret:
 * **$spec.auth.secret.key**: key to the secret, which will be used to invoke the webhook.
 * **$spec.enabled**: when enabled, will invoke the webhook.
 
+## Related topics
+
 The links below provide a step-by-step guide for common integrations through events / webhooks.
