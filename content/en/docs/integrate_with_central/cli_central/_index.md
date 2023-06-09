@@ -153,3 +153,7 @@ To delete a resource that represents an environment type with a name “hellowor
 ```bash
 axway central delete environment helloworld
 ```
+
+## Related topics
+
+See the following topics for related information.

@@ -124,3 +124,7 @@ If something went wrong, see the following:
 | Why is the invoice status in Stripe different from the one I see on the Marketplace? | Stripe cannot communicate back to the Marketplace using the Stripe Webhook. Either the webhook is disabled, the webhook url is incorrect or the Signing signature is different. Check the parameters in Stripe (Refer to [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature. |
 | My provider user does not have access to the invoice checkout.                       | This is normal behavior. Only Consumer organization users will be billed for their subscription usage.                                                                                                                                                                                                                                                                                                                     |
 | Why is my invoice automatically paid?                                                |  Depending on the plan currency, Stripe will automatically mark the invoice as paid if the invoice total in under the minimum charted. Refer to [Minimum and maximum charge amounts](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). |
+
+## Related topic
+
+See the following topic for related information.

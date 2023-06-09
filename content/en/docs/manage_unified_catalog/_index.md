@@ -45,3 +45,7 @@ The Unified Catalog supports the following type of assets:
 * AsyncAPI: Supported as "Unstructured" type to publish the specification of the API.
 * MFT flows: Manage File Transfer Service definitions.
 * Custom: Custom assets, such as API Definitions that are technology agnostic, SDKs, tutorials, etc.
+
+## Related topics
+
+See the following topics for related information.
