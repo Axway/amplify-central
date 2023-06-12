@@ -5,4 +5,4 @@ weight: 600
 date: 2021-12-03
 ---
 
-Helpful information / best practices for successfully using the Amplify platform.
+The following topic provides helpful information / best practices for successfully using the Amplify platform.

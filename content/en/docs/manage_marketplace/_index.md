@@ -22,3 +22,7 @@ Consumers can explore the Marketplace to find products that address their needs,
 **Self signup** - Providers can configure whether users can self register with an account in the Marketplace and create their own consumer organization independent of the provider organization.
 
 **Extended product documentation** - Providers can create comprehensive product documentation via markdown format, providing a uniform experience for all Marketplace content.
+
+## Related topics
+
+See the following topics for related information.
