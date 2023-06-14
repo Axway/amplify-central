@@ -38,7 +38,7 @@ To list API services:
    * Tags
    * Created/Updated date by User
 
-You can filter the services by the Service type, Environment, Team Ownership, Design, and Security grading scores (a, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
+You can filter the services by the Service type, Environment, Team Ownership, and Design and Security grading scores (a, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
 ## View API service details
 
