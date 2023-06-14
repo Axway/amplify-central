@@ -53,7 +53,9 @@ The following information is displayed for environments created using the API se
     * Services: The total count of API services represented in the environment.
     * Catalog Items: The total count of published catalog items.
     * Subscriptions: The total count of subscribers to all the published catalog items.
-* **Services**: This section shows all API services that exist within the environment. It is sortable by title, logical name, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the user who last modified the API service, and when.
+* **Services**: This section shows all API services that exist within the environment. It is sortable by title, logical name, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the user who last modified the API service, the Security and Design compliance validation scores, and when the API service was last modified.
+
+{{< alert title="Note" color="primary" >}}If enabled, Security and Design compliance validation scores are displayed for each of the API Service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.{{< /alert >}}
 
 For more information about Axway Cloud SaaS environment, refer to [Axway Cloud SaaS: Get Started](/docs/saas_api_gateway/quickstart/)
 
