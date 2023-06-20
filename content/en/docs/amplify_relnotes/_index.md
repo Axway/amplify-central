@@ -20,37 +20,37 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify June 16 2023](/docs/amplify_relnotes/20230616_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.54. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.55. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.51 / TA=v1.1.53
-* **AWS Gateway using SDK 2.0** - DA=v1.1.42 / TA-v1.1.44
-* **Azure latest release** - DA=v1.1.47 / TA=v1.1.48
-* **Istio 1.9.5** - DA=v1.0.14 / TA=v2.0.58
-* **Apigee Edge** - Agent version 0.1.14
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.21
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.52 / TA=v1.1.54
+* **AWS Gateway using SDK 2.0** - DA=v1.1.43 / TA-v1.1.45
+* **Azure latest release** - DA=v1.1.48 / TA=v1.1.50
+* **Istio 1.9.5** - DA=v1.0.15 / TA=v2.0.59
+* **Apigee Edge** - Agent version 0.1.15
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.22
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
+| What's new: | Security patches. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **Axway API Management Gateway** - Agents updated with the Axway Agent SDK. <br />**AWS Gateway** - Agents updated with the Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with the Axway Agent SDK. |
-| Bug fixes: | None. |
+| What's new: | **All Agents** - Agents updated with the Axway Agent SDK. |
+| Bug fixes: | **Embedded agent** - Update and delete requests. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - None. <br />**Topology** - Compliance validation enabled for environment. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
-| What's new: | None. |
+| What's new: | Design and/or Security grading are displayed during creation / editing of an asset. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
+| What's new: | Category ownership and sharing. |
 | Bug fixes: | None. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Marketplace sitename in settings. <br />Navigation and display of product documents. <br />Navigation to product from subscriptions and applications. <br />Consumer organization invite. |
+| Bug fixes: | Team name visibility. <br />Footer had display inconsistencies. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
