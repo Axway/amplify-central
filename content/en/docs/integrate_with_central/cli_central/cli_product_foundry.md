@@ -3,12 +3,12 @@ title: Create a product and promote it to the Marketplace
 linkTitle: Create a product and promote it to the Marketplace
 weight: 250
 ---
-Create a product from an existing asset and make it available in the marketplace for consumption.
+Create a product from an existing asset and make it available in the Marketplace for consumption.
 
 ## Before you start
 
 * Have credentials or service account to use the CLI. Follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Understanding of the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/index.html)
+* Understanding of the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/)
 * Install [jq](https://stedolan.github.io/jq/) on the system
 
 For reference, the Open API specification for Amplify Central is located [here](https://apicentral.axway.com/apis/docs)
@@ -372,7 +372,7 @@ Run the following command get the details of your Marketplace:
 axway central get marketplaces -o json > marketplace.json
 ```
 
-If no marketplace resources are returned, make sure to save the Marketplace settings on platform and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings) and check the output again for the previous command.
+If no Marketplace resources are returned, make sure to save the Marketplace settings on platform and set your subdomain at [Marketplace settings page](https://platform.axway.com/org/marketplace/settings) and check the output again for the previous command.
 
 Run the following command to create a PublishedProduct event for the API Server:
 
@@ -413,7 +413,7 @@ axway central get products petstore -o json | jq '.state = "archived"' > product
 axway central apply -f product-changed.json
 ```
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Caution" color="danger" >}}This action cannot be reversed. {{< /alert >}}
 
 Once the product state is set to `archived`, the asset can be deleted. Run the following command to delete the asset:
 

@@ -47,3 +47,7 @@ The Amplify Istio Discovery Agent listens for events from Kubernetes to Virtual 
 ### Amplify Istio Traceability Agent
 
 The Amplify Istio Traceability Agent (TA) sends metrics and logs for API activity back to Amplify so that you can monitor service activity and troubleshoot your services. All API transactions are captured and sent to Amplify. The agent has deployment configuration options that control the optional logging of request and response headers. The payload remains in the hybrid data plane and can be operated on by other native tools.
+
+## Related topics
+
+See the following topics for related information.

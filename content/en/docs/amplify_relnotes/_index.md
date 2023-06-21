@@ -18,6 +18,80 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify June 16 2023](/docs/amplify_relnotes/20230616_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.55. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.52 / TA=v1.1.54
+* **AWS Gateway using SDK 2.0** - DA=v1.1.43 / TA-v1.1.45
+* **Azure latest release** - DA=v1.1.48 / TA=v1.1.50
+* **Istio 1.9.5** - DA=v1.0.15 / TA=v2.0.59
+* **Apigee Edge** - Agent version 0.1.15
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.22
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | Security patches. |
+| Bug fixes: | None. |
+| <br />**Agents** |         |
+| What's new: | **All Agents** - Agents updated with the Axway Agent SDK. |
+| Bug fixes: | **Embedded agent** - Update and delete requests. |
+| <br />**Service registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - None. <br />**Topology** - Compliance validation enabled for environment. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | Design and/or Security grading are displayed during creation / editing of an asset. |
+| Bug fixes: | None. |
+| <br />**Product Foundry** |         |
+| What's new: | Category ownership and sharing. |
+| Bug fixes: | None. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Marketplace** |         |
+| What's new: | Marketplace sitename in settings. <br />Navigation and display of product documents. <br />Navigation to product from subscriptions and applications. <br />Consumer organization invite. |
+| Bug fixes: | Team name visibility. <br />Footer had display inconsistencies. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
+## [Amplify June 2 2023](/docs/amplify_relnotes/20230602_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.54. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.51 / TA=v1.1.53
+* **AWS Gateway using SDK 2.0** - DA=v1.1.42 / TA-v1.1.44
+* **Azure latest release** - DA=v1.1.47 / TA=v1.1.48
+* **Istio 1.9.5** - DA=v1.0.14 / TA=v2.0.58
+* **Apigee Edge** - Agent version 0.1.14
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.21
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | None. |
+| Bug fixes: | When agents have APIs that rely on a stage property, the reported metric usage could not relate transactions to a specific consumer context. <br />With offline usage reporting support, an error caused the agent to exit at startup. |
+| <br />**Agents** |         |
+| What's new: | **Axway API Management Gateway** - Agents updated with the Axway Agent SDK. <br />**AWS Gateway** - Agents updated with the Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with the Axway Agent SDK. |
+| Bug fixes: | None. |
+| <br />**Service registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - User with multiple roles could not see the Team Ownership list when publishing an API Service to the Marketplace. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | None. |
+| Bug fixes: | A user with multiple roles in a team could not activate an asset in draft state via the Web UI. |
+| <br />**Product Foundry** |         |
+| What's new: | The consumer org team is visible in the Subscriptions/Credentials screen. <br />When defining a quota type, a standard loose quota type can be created. |
+| Bug fixes: | Adding an image resulted in a black background. <br />For consistency, a placeholder image is added to the product card when none is set. <br />When deprecating a plan, the new plans list was truncated based on screen resolution. <br />Missing subscription information when the product was in two or more Marketplaces. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Marketplace** |         |
+| What's new: | Category image selector allows horizontal image selection. |
+| Bug fixes: | None. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify May 19 2023](/docs/amplify_relnotes/20230519_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.53. This version is compatible with:
@@ -34,7 +108,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.53. This version is 
 | What's new: | Credential expiration. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **Axway API Mangement Gateway** - Agents updated with the Axway Agent SDK. <br />**Embedded agent** - Custom variables for team owner of an API, filter by API, set tags or ignore tags during the discovery of APIs. <br />**AWS Gateway** - Agents updated with the Axway Agent SDK. <br />**Azure Gateway** - Agents updated with the Axway Agent SDK. <br />**Istio Gateway** - Agents updated with the Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with the Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with the Axway Agent SDK. |
+| What's new: | **Axway API Management Gateway** - Agents updated with the Axway Agent SDK. <br />**Embedded agent** - Custom variables for team owner of an API, filter by API, set tags or ignore tags during the discovery of APIs. <br />**AWS Gateway** - Agents updated with the Axway Agent SDK. <br />**Azure Gateway** - Agents updated with the Axway Agent SDK. <br />**Istio Gateway** - Agents updated with the Axway Agent SDK. <br />**Apigee Edge Gateway** - Agents updated with the Axway Agent SDK. <br />**Mulesoft Gateway** - Agents updated with the Axway Agent SDK. |
 | Bug fixes: |**Azure Gateway** - Connection error handling. |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | **Service Registry** - API compliance validation. <br />**Topology** - Compliance profiles, Credential management. |
@@ -72,7 +146,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.51. This version is 
 | Bug fixes: | None. |
 | <br />**Agents** |         |
 | What's new: | **AWS Gateway** - The agents have been updated with the Axway Agent SDK. |
-| Bug fixes: | **Axway API Mangement Gateway** - Traceability Agent memory leak. <br />**Embedded agent** - Discover AWS APIs empty description field. <br />**Azure Gateway** - Azure credential deletion. |
+| Bug fixes: | **Axway API Management Gateway** - Traceability Agent memory leak. <br />**Embedded agent** - Discover AWS APIs empty description field. <br />**Azure Gateway** - Azure credential deletion. |
 | <br />**Service registry** <br />**Topology** |         |
 | What's new: | API Compliance Validation. |
 | Bug fixes: | None. |
@@ -155,7 +229,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.49. This version is 
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
 | What's new: | - Marketplace product publication preference enforcement. <br/> - Provider has now access to the consumer subscription status (Active / Cancelled / Migrated...)|
-| Bug fixes: | - Product seen as unpublished in Category and Support Contact creation <br/> - Markdown editor side by side prevent to see the actual text <br/> - Plan preview does not scroll <br/> - Long category name not displayed correctly <br/> - Provider is not redirected to the product details after publishing a product to a marketplace|
+| Bug fixes: | - Product seen as unpublished in Category and Support Contact creation <br/> - Markdown editor side by side prevent to see the actual text <br/> - Plan preview does not scroll <br/> - Long category name not displayed correctly <br/> - Provider is not redirected to the product details after publishing a product to a Marketplace|
 | <br />**Business insights** |         |
 | What's new: | - Marketplace and Organization filter available in all screens <br/> - Friendly name display instead of logical names |
 | Bug fixes: | None. |

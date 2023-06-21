@@ -8,7 +8,7 @@ Create assets from discovered APIs with the Amplify management plane.
 ## Before you start
 
 * Have credentials or service account to use the CLI. Follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/index.html)
+* Understand the concepts of the Axway Central CLI presented in the [Overview of the Axway Central CLI capabilities](/docs/integrate_with_central/cli_central/)
 * Understand the steps in [Register an API in the CLI](/docs/manage_service_registry/service_integrate-api_cli/)
 * Install [jq](https://stedolan.github.io/jq/) on the system
 
@@ -72,7 +72,7 @@ Where `stage.json` contains the following content:
 
 ### Create an asset
 
-An asset is a resource that has business value, something that an API Provider might want to expose to API Consumers via the marketplace. The asset resource is a scope, which aggregates the business value.
+An asset is a resource that has business value, something that an API Provider might want to expose to API Consumers via the Marketplace. The asset resource is a scope, which aggregates the business value.
 
 Run the following command to create an asset:
 
@@ -276,7 +276,7 @@ axway central get asset my-asset -o json | jq '.state = "archived"' > asset-chan
 axway central apply -f asset-changed.json
 ```
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Caution" color="danger" >}}This action cannot be reversed. {{< /alert >}}
 
 After the asset state is set to `archived`, run the following command to delete the asset:
 

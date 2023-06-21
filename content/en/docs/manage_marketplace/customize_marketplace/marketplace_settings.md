@@ -21,7 +21,7 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 1. Log into Amplify.
 2. Navigate to Organization.
 
-    {{% alert title="Note" color="warning"%}}Users with the appropriate rights can configure General Settings for the Marketplace, such as the name of the Marketplace (that will appear in the Marketplace URL) and the Access mode, by using the Organization settings in the user menu.{{% /alert %}}
+    {{< alert title="Caution" color="danger" >}}Users with the appropriate rights can configure General Settings for the Marketplace, such as the name of the Marketplace (that will appear in the Marketplace URL) and the Access mode, by using the Organization settings in the user menu. {{< /alert >}}
 
 3. Select **Marketplace > Settings**. *The Marketplace Settings page is displayed*.
 4. Set the values for:

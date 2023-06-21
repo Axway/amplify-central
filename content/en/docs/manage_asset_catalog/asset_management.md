@@ -89,6 +89,9 @@ To create an asset:
     * Auto-Release Type - The default is set to Patch release versions and you can select another type of asset release versioning (i.e., major or minor).
 
 6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
+
+    * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+
 7. Configure the Access Request handling for Manual or Automatic, and click **Next**. If Access Request Handling is set to **Manual**, a user must approve access to the API service(s) grouped in the asset. If Access Request Handling is set to **Automatic**, the access to the API service(s) grouped in the asset is granted automatically.
 8. For Access Rights, select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Central Admin** will have access to it. If you want your asset shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected asset. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your asset with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team. Click **Next**.
 9. Provide the Category, Tags, and Attribute details for the asset. Click **Next**.
@@ -118,6 +121,9 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 4. Click **Edit Asset**. *The Edit Asset wizard is displayed*. All edits will be based on the latest draft version or release version of the asset.
 5. You can edit the Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes without releasing a new asset version.
 6. You can edit the API services linked to this asset in the Group Resources step and release a new asset version to make it available for consumption by a product.
+
+    * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+
 7. Click **Preview Asset** to view your asset changes prior to taking effect. If you made edits that do not require a new asset release, click **Save Draft & Exit** to update changes to the asset in a new draft.
 If you have made edits that require a new asset release in the Group Resources step, click **Save** to update changes to the asset. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
 Alternatively, if you made edits that require a new asset release in the Group Resources step with Auto-release disabled, you can click **Save & Activate** to update changes in an asset version release.

@@ -83,3 +83,7 @@ The following is a high-level overview of the required steps to connect an AWS A
 * Deploy the agent in the chosen infrastructure (EC2 / ECS-fargate / Docker only)
 
 You will be guided through this procedure using Axway Central CLI. See [Deploy your agents with Axway CLI](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli).
+
+## Related topics
+
+See the following topics for related information.

@@ -13,3 +13,7 @@ Axway agents (v7 / AWS / Azure) are built using the [agent SDK](https://github.c
 * Trace redaction parameters (`TRACEABILITY_REDACTION_*`)
 * Common error codes related to the previous features
 * Securing credentials in agent configuration
+
+## Related topics
+
+See the following topics for related information.

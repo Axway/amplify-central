@@ -46,7 +46,7 @@ To be able to test your API, create an app to manage client access to your API:
 
 To test your API proxy in Amplify:
 
-{{< alert title="Tip" color="" >}}You need to create a JWT token to test the API proxy, which is explained in [Create a JWT token](#create-a-jwt-token).{{< /alert >}}
+{{< alert title="Tip" color="primary" >}}You need to create a JWT token to test the API proxy, which is explained in [Create a JWT token](#create-a-jwt-token).{{< /alert >}}
 
 1. Select **API Proxies** in the left navigation bar, and click your API proxy with JWT authentication in the list.
 2. Click the **Test Methods** tab.
@@ -195,7 +195,7 @@ This example uses [jwt.io](https://jwt.io/) to create a JWT token:
 * To create the JWT token, you need the **Application ID** and **JWT Key ID** from the API proxy in Amplify.
 * Use the generated JWT token from jwt.io as the **JWT Token** to test your API in Amplify.
 
-{{< alert title="Caution" color="warning" >}} This method is for testing only as it requires you to share your private key with a third party website.{{< /alert >}}
+{{< alert title="Caution" color="danger" >}} This method is for testing only as it requires you to share your private key with a third party website.{{< /alert >}}
 
 To create a JWT token on jwt.io:
 

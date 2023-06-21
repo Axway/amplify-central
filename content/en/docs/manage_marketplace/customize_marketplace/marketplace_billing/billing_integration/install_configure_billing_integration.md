@@ -44,7 +44,7 @@ Use the following instructions to install and configure the integrations.
 
     ![Edit connections](/Images/marketplace/billing_integration/config8.png)
 
-    * Enter your Service Account Client ID and Secret, as described [here](https://blog.axway.com/product-insights/amplify-platform/application-integration/axway-amplify-platform-api-calls), for Amplify Central, Platform, and Traceability connections. Click **Update**.
+    * Enter your Service Account Client ID and Secret, as described [here](https://blog.axway.com/product-insights/amplify-platform/application-integration/axway-amplify-platform-api-calls), for Amplify Central, platform, and Traceability connections. Click **Update**.
 
     ![Client ID and secret](/Images/marketplace/billing_integration/config9.png)
 

@@ -89,3 +89,7 @@ Federated control and data planes are the environments that are connected to the
 The list of supported environments is growing. For a full list of supported environments, navigate to our [platform](https:/platform.axway.com/) or software downloads at <https://repository.axway.com>.
 
 More information on the Axway API Gateway Manager solution can be found [here](https://docs.axway.com/category/apim/).
+
+## Related topics
+
+See the following topics for related information.

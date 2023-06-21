@@ -24,3 +24,7 @@ The asset model is flexible, so APIs can be group to suit individual needs.
 Once the Asset Catalog has been used to manage and group API services into assets, they are deployed as products in the [Product Foundry](/docs/manage_product_foundry) where they can be attached to subscription plans and consumed from the [Marketplace](/docs/manage_marketplace).
 
 For information on the lifecycle of an asset, see [Asset lifecycle](/docs/manage_asset_catalog/asset_lifecycle/).
+
+## Related topics
+
+See the following topics for related information.

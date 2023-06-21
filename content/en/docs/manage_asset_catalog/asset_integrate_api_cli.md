@@ -294,7 +294,7 @@ axway central get asset my-asset -o json | jq '.state = "archived"' > asset-chan
 axway central apply -f asset-changed.json
 ```
 
-{{% alert title="Warning" color="warning"%}}This action cannot be reversed.{{% /alert %}}
+{{< alert title="Caution" color="danger">}}This action cannot be reversed. {{< /alert >}}
 
 ### Delete an asset
 
