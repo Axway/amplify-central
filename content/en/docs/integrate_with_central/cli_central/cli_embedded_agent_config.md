@@ -29,6 +29,7 @@ The Dataplane resource can be configured with configuration that is common to bo
     ```bash
     axway central get -o yaml -s <environment> dataplane <dataplane-name> > dataplane.yaml
     ```
+
 * Using the editor of your choice, open the `agent.yaml` file
 * Update the settings for the dataplane type you are using, settings for each are below.
 
