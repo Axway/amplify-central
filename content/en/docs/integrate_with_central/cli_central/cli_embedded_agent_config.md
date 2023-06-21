@@ -20,6 +20,24 @@ Learn how to add or change configuration settings for an Embedded agent using th
 * Learn the configuration settings and where to add them in the resource file
 * Apply the updated resource, with configuration changes, to Amplify Central
 
+## Dataplane
+
+The Dataplane resource can be configured with configuration that is common to both the Embedded Discovery and Traceability Agents.
+
+* Pull the existing Dataplane from your environment and direct it to a file:
+
+    ```bash
+    axway central get -o yaml -s <environment> dataplane <dataplane-name> > dataplane.yaml
+    ```
+* Using the editor of your choice, open the `agent.yaml` file
+* Update the settings for the dataplane type you are using, settings for each are below.
+
+### AWS
+
+A Dataplane of type AWS will need the access log group ARN value set so the Discovery Agent may setup logging and the Traceability Agent will know where to read the logs.
+
+* **accessLogARN** - the ARN needed in both agents. When a discovery agent discovers a Stage this arn will be set for its logging. The traceability agent will also read this log for reporting usage, metrics, and traffic events.
+
 ## Embedded Discovery Agent
 
 The Embedded Discovery Agent can be configured to apply a filter to the data plane resource for discovery, add additional tags to resources on Central, ignore tags on data plane resources before pushing to Central, and set the owner of the resources.
@@ -69,7 +87,6 @@ The Embedded Traceability Agent can by configured to set if headers should be pr
     axway central get -o yaml -s <environment> traceabilityagent <agent-name> > agent.yaml
     ```
 * Using the editor of your choice, open the `agent.yaml` file and add/change any or all values:
-    * **processHeaders** - when set to `true` the headers will be included with the transactional data
     * **redaction** - the redaction settings to use when reporting transactions from the data plane [Redaction](#redaction)
         * **path** - a list of all URL paths, or path regular expressions, that may be reported to Central
         * **queryArgument** - regular expressions applied to the query arguments in the transactional data
@@ -98,7 +115,6 @@ The Embedded Traceability Agent can by configured to set if headers should be pr
     ```yaml
     spec:
       config:
-        processHeaders: true
         redaction:
           path:
             - <path-regex>
