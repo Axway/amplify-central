@@ -102,7 +102,6 @@ spec:
   config:
     excludeHeaders:
       - Authorization
-    processHeaders: true
   dataplaneType: my-dataplane-name
 ```
 
