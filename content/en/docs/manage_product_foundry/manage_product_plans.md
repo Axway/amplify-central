@@ -33,7 +33,7 @@ There are two types of plans:
 
 * **Free plan** - consumer will not be charged for their API consumption.
 * **Paid plan**:
-    * **Standard** - consumer will be charged a base price for the consumption of a guaranteed set of quota.
+    * **Standard** - consumer will be charged a base price for the consumption of a guaranteed set of quotas.
     * **Pay per use** - consumer will be charged a fixed amount for each consumed transaction. There is no consumption limit.
     * **Tier - volume** - consumer will be charged based on the volume corresponding to the tier quota + flat tier fee, if any.
     * **Tier - graduated** - consumer will be charged based on the volume corresponding to each tier quota that includes their consumption + flat tier fee, if any.
@@ -88,7 +88,7 @@ To configure a product plan from the create product wizard:
     * **Logical name** - a logical name to uniquely identity the plan in the system. If no value is entered, one will be auto generated for you.
     * **Description** - describe the product plan in few words so the consumer will know what the offering is.
 
-3. Select either **Free** or **Paid** plan type, and proceed to the **Next** step to configure the plan quota.
+3. Select either **Free** or **Paid** plan type and proceed to the **Next** step to configure the plan quota.
 
 To configure a product plan from the product detail:
 
@@ -102,32 +102,33 @@ A quota describes the itemized units per resource or group of resources in a pro
 
 For paid plan quota, it also describes the base pricing of the plan and the pricing of the quota based on the quota type (Standard / Tier). See [Product plan type and consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-consumption-cost).
 
-To configure a quota for a free plan, enter values for the following properties:
+To configure a quota for a **free plan**, enter values for the following properties:
 
 * **Quota name** - a name for the quota.
 * **Quota type** - only **Standard** is available.
 * **Unit** - the default is **Transactions**. This non-configurable field defines a quota for Transaction units only.
-* **Limit** - a quantity. For example, 1000, 15.
-* **Quota type** - select either **Daily**, **Weekly**, **Monthly**, or **Annually**.
-* **Limit Type**:  
-    * **Strict** - the gateway enforces a hard stop when the quota limit is exceeded.
-    * **Loose** - the quota can be exceeded.
+* **Limit** - enter a quantity (for example, 1000, 15) or check Unlimited to not specify any limitation.
+* **Quota type** - select either **Daily**, **Weekly** or **Monthly**.
+* **Limit Type** - only **Strict** is available - the gateway enforces a hard stop when the quota limit is exceeded.
 * **Assign Resources** - the list of resources the provider will charge for by a measured unit. Only the resources included in the plan can be selected.
 
 {{< alert title="Note" color="primary" >}}When Limit Type is set to Strict, make sure the quota is enforced on the underlying gateway.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}When selecting **Unlimited**, Limit, Quota Type and Limit Type are disabled. Be sure the underlying gateway will be able to support the load.{{< /alert >}}
 
-To configure a quota for a paid plan, enter values for the following properties:
+To configure a quota for a **paid plan**, enter values for the following properties:
 
 * **Base price**:
-    * **Currency** - the currency that will be used by the billing system (USD - EUR).
-    * **Amount** - the price value.
-    * **Metering period** - select either **Monthly**, **Daily**, **Weekly**, or **Annually**.
+    * **Currency** - the currency that will be used by the billing system (US Dollar, Euro, ...). The most common currencies are available in the dropdown.
+    * **Amount** - the plan price value.
+    * **Metering period** - select either **Monthly** or **Annually**. This is the period used for billing cycle.
 * **Quota type** - select either **Standard** or **Tiered** or **Pay Per Use**:
-    * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota type**, **Limit type**).
-    * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier.
-    * Pay per Use - select the transacation unit cost.
+    * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota type**, **Limit type**, **Overage** for loose limit type).
+    * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 ad automatically added to the last tier.
+    * Pay per Use - select the transaction unit cost.
 
-Click **+ Add Quota** to create another quota group for a different resource. Once a resources is assigned to a quota group, it is no longer available for another quota group.
+{{< alert title="Note" color="primary" >}}For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.{{< /alert >}}
+
+Click **+ Add Quota** to create another quota group for a different resource. Once a resource is assigned to a quota group, it is no longer available for another quota group.
 
 When you are finished configuring the quotas, click **Next** to select the approval mode of the plan.
 
@@ -201,7 +202,7 @@ To migrate subscriptions to a new plan:
 The **Migrate** action is available only for plans with subscriptions.
 {{< /alert >}}
 
-Once you validate your choice, the original plan is deprecated and a new subscription is added to the target plan. The new subscription inherits the status of the original subscription. If there were access requests / credentials under the original subscription, they are marked as deleted and a new access request is created. Again, the access request status inherits the status of the original access request. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent and running to minimize the service disruption.
+Once you validate your choice, the original plan is deprecated, and a new subscription is added to the target plan. The new subscription inherits the status of the original subscription. If there were access requests / credentials under the original subscription, they are marked as deleted and a new access request is created. Again, the access request status inherits the status of the original access request. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent and running to minimize the service disruption.
 
 ## Archive a product plan
 
