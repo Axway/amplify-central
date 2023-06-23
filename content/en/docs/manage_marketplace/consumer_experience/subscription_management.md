@@ -20,7 +20,7 @@ As a consumer, learn how to create a free or paid subscription and manage existi
 
 ## Create a new subscription
 
-Anyone who is authenticated in the marketplace can subscribe to a product with the following role restrictions:
+Anyone who is authenticated in the Marketplace can subscribe to a product with the following role restrictions:
 
 | Persona               | Subscribe to a paid plan | subscribe to a free plan |
 |-----------------------|--------------------------|--------------------------|

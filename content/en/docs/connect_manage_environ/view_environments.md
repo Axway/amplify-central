@@ -15,7 +15,7 @@ Display your environments in a searchable and sortable list. The list contains:
 
 ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
-This page can be sorted by an environment's logical name, title, or by the time that they were created or last modified. To sort the list, select the desired option from the dropdown menu.
+This page can be sorted by an environment's logical name, title, or by the time that they were created or last modified. To sort the list, select the desired option from the drop-down menu.
 
 You can search the environments by their logical name, title, or any tags that are attached to it.
 
@@ -83,7 +83,7 @@ To delete an API service:
 To view the details of your API Service and its versions:
 
 1. Click an API service from the list.
-2. Choose a version from the **Version** dropdown menu. The most recent version is displayed by default.
+2. Choose a version from the **Version** drop-down menu. The most recent version is displayed by default.
 
 ![Service Details Page](/Images/central/ServiceDetailsPage.png)
 
@@ -95,7 +95,7 @@ The following describes the sections on the API Service details page:
     * Endpoints: The total count of endpoints associated with this API service version.
     * Catalog Items: The total count of successfully published items in the Unified Catalog. This number might differ from the number of items available in the **Catalog Items** table. This count only recognizes items that are available in the Unified Catalog, whereas the table also contains items that were not published or that are in an error state.
     * Subscriptions: The total count of subscribers to all the published catalog items.
-* **Version Information**: Contains information specific to the version that you have selected from the dropdown menu. Includes the type of specification represented by the API service version (OAS2, OAS3, WSDL, Protobuf, and so on.)
+* **Version Information**: Contains information specific to the version that you have selected from the drop-down menu. Includes the type of specification represented by the API service version (OAS2, OAS3, WSDL, Protobuf, and so on.)
 * **Specification tab**: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
 * **Endpoints tab**: Contains a table listing the URLs pointing to deployed instances of the API service.
 * **Catalog Items tab**: Contains a table listing both successfully published and unpublished items in the Unified Catalog. Each entry contains the state of the item (PUBLISHED, UNPUBLISHED, or IN ERROR).

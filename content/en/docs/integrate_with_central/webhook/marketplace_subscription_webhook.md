@@ -189,7 +189,7 @@ The subscription webhook listener will receive the following JSON payload:
 
 ## Considerations when processing the event in your webhook
 
-A Subscription has three subresources: marketplace, approval and status, which means you'll receive a number of webhook call backs as they are updating. You'll receive events for:
+A Subscription has three subresources: Marketplace, approval and status, which means you'll receive a number of webhook call backs as they are updating. You'll receive events for:
 
 * subscription created
 * status set to Pending

@@ -5,11 +5,11 @@ weight: 100
 hide_readingtime: true
 ---
 
-A *Public marketplace* can be browsed by navigating to the configured Marketplace URL, for example: `http://acme.marketplace.axway.com`.
+A *Public Marketplace* can be browsed by navigating to the configured Marketplace URL, for example: `http://acme.marketplace.axway.com`.
 
 Anonymous consumers can freely explore the published products in the Marketplace, but won’t have the ability to subscribe, or any other actions, until they have logged in.
 
-A *Private marketplace* can be browsed by navigating to the configured Marketplace URL, for example: `http://acme.marketplace.axway.com`. Consumers are redirected to a login screen and asked to enter their Platform credentials.
+A *Private Marketplace* can be browsed by navigating to the configured Marketplace URL, for example: `http://acme.marketplace.axway.com`. Consumers are redirected to a login screen and asked to enter their Platform credentials.
 
 There are two ways of signing up in the Marketplace:
 

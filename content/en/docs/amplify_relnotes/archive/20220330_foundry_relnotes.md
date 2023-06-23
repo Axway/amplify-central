@@ -15,7 +15,7 @@ The following new features and enhancements are available in this update:
 * Product editions:
     * Documentation articles can be renamed.
     * Documentation can be added.
-* Catalog manager role added. A catalog manager can manipulate the entire product lifecycle from its creation to its marketplace publication.
+* Catalog manager role added. A catalog manager can manipulate the entire product lifecycle from its creation to its Marketplace publication.
 
 ## Fixed issues
 
