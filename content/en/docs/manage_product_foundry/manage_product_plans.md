@@ -33,7 +33,7 @@ There are two types of plans:
 
 * **Free plan** - consumer will not be charged for their API consumption.
 * **Paid plan**:
-    * **Standard** - consumer will be charged a base price for the consumption of a guaranteed set of quota.
+    * **Standard** - consumer will be charged a base price for the consumption of a guaranteed set of quotas.
     * **Pay per use** - consumer will be charged a fixed amount for each consumed transaction. There is no consumption limit.
     * **Tier - volume** - consumer will be charged based on the volume corresponding to the tier quota + flat tier fee, if any.
     * **Tier - graduated** - consumer will be charged based on the volume corresponding to each tier quota that includes their consumption + flat tier fee, if any.
@@ -88,7 +88,7 @@ To configure a product plan from the create product wizard:
     * **Logical name** - a logical name to uniquely identity the plan in the system. If no value is entered, one will be auto generated for you.
     * **Description** - describe the product plan in few words so the consumer will know what the offering is.
 
-3. Select either **Free** or **Paid** plan type, and proceed to the **Next** step to configure the plan quota.
+3. Select either **Free** or **Paid** plan type and proceed to the **Next** step to configure the plan quota.
 
 To configure a product plan from the product detail:
 
@@ -128,7 +128,7 @@ To configure a quota for a **paid plan**, enter values for the following propert
 
 {{< alert title="Note" color="primary" >}}For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.{{< /alert >}}
 
-Click **+ Add Quota** to create another quota group for a different resource. Once a resources is assigned to a quota group, it is no longer available for another quota group.
+Click **+ Add Quota** to create another quota group for a different resource. Once a resource is assigned to a quota group, it is no longer available for another quota group.
 
 When you are finished configuring the quotas, click **Next** to select the approval mode of the plan.
 
@@ -202,7 +202,7 @@ To migrate subscriptions to a new plan:
 The **Migrate** action is available only for plans with subscriptions.
 {{< /alert >}}
 
-Once you validate your choice, the original plan is deprecated and a new subscription is added to the target plan. The new subscription inherits the status of the original subscription. If there were access requests / credentials under the original subscription, they are marked as deleted and a new access request is created. Again, the access request status inherits the status of the original access request. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent and running to minimize the service disruption.
+Once you validate your choice, the original plan is deprecated, and a new subscription is added to the target plan. The new subscription inherits the status of the original subscription. If there were access requests / credentials under the original subscription, they are marked as deleted and a new access request is created. Again, the access request status inherits the status of the original access request. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent and running to minimize the service disruption.
 
 ## Archive a product plan
 
