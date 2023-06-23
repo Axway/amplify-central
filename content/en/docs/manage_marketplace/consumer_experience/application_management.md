@@ -35,7 +35,7 @@ Anyone who is authenticated in the Marketplace can subscribe to a product with t
 
     * **Name** - the application name
     * **Description** - the application description
-    * **Owner** - the team that owns this application. This dropdown is only available if you belong to multiple teams. If you belong to only one team, then the owner will be set automatically to the team you belong to. Be sure the application owner matches the subscription you will use when requesting access to the product resources.
+    * **Owner** - the team that owns this application. This drop-down is only available if you belong to multiple teams. If you belong to only one team, then the owner will be set automatically to the team you belong to. Be sure the application owner matches the subscription you will use when requesting access to the product resources.
     * **icon** - The icon / image representing the application, if any
 
 5. Click **Create**.

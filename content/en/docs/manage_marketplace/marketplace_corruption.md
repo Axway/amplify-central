@@ -18,7 +18,7 @@ Learn how providers and consumers are impacted by corrupted assets and/or produc
 
 An asset or a product becomes corrupted when one of the API service they are built on disappear from the system (intentionally or not).
 
-The API service deletion affects the asset as its resource references are no more available. The products linked to this corrupted asset becomes corrupted too as the plan and quotas cannot map the deleted API service. And consequently, the product resources cannot be consumed from the marketplace.
+The API service deletion affects the asset as its resource references are no more available. The products linked to this corrupted asset becomes corrupted too as the plan and quotas cannot map the deleted API service. And consequently, the product resources cannot be consumed from the Marketplace.
 
 ## How a corrupted asset/product is displayed for the provider?
 

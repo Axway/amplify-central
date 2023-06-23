@@ -118,12 +118,12 @@ To configure a quota for a **free plan**, enter values for the following propert
 To configure a quota for a **paid plan**, enter values for the following properties:
 
 * **Base price**:
-    * **Currency** - the currency that will be used by the billing system (US Dollar, Euro, ...). The most common currencies are available in the dropdown.
+    * **Currency** - the currency that will be used by the billing system (US Dollar, Euro, ...). The most common currencies are available in the drop-down.
     * **Amount** - the plan price value.
     * **Metering period** - select either **Monthly** or **Annually**. This is the period used for billing cycle.
 * **Quota type** - select either **Standard** or **Tiered** or **Pay Per Use**:
     * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota type**, **Limit type**, **Overage** for loose limit type).
-    * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 ad automatically added to the last tier.
+    * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 and automatically added to the last tier **upper limit**.
     * Pay per Use - select the transaction unit cost.
 
 {{< alert title="Note" color="primary" >}}For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.{{< /alert >}}

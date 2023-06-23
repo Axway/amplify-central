@@ -8,7 +8,7 @@ Provide your own custom domain for the Marketplace.
 
 ## Before you start
 
-* You must have platform Administrator credentials to be able to update the marketplace settings.
+* You must have platform Administrator credentials to be able to update the Marketplace settings.
 * You must have appropriate IT rights to update your company's Domain Name System (DNS) configuration.
 
 ## Objectives
