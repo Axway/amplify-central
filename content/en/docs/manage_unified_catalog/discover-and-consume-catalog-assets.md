@@ -111,7 +111,7 @@ After you submit your changes, the subscription will transition to **Change Requ
 Follow these steps to download an asset from the catalog:
 
 1. Select an asset from the Unified Catalog to see a detailed view of its description.
-2. Click the **More Options** menu, and select **Download** from the dropdown list.
+2. Click the **More Options** menu, and select **Download** from the drop-down list.
 
 ## Promote an API to Integration Builder
 
@@ -122,7 +122,7 @@ You can promote an API published in the Unified Catalog to Integration Builder a
 To promote an API as a connector template:
 
 1. Navigate to **Unified Catalog**.
-2. Select an API asset. From the details screen, click the **More Options** menu, and select **Export** from the dropdown list.
+2. Select an API asset. From the details screen, click the **More Options** menu, and select **Export** from the drop-down list.
 3. Select either the **Production** or **Sandbox** Integration Builder environment where you want to use this API. This option is not shown when you have only one environment activated with your Amplify platform license.
 4. Enter a **Connector Name** for the template. This name is mandatory and it has the API asset name by default.
 5. (Optional) Enter a short description in the **Connector description** box.

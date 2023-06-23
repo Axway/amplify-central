@@ -36,7 +36,7 @@ This will open up a dialog box where you can edit the authorization for the API.
 
 ![Postman edit button](/Images/central/catalog/postman-edit-dots.png)
 
-Click the **Authorization** tab, and from the **Type** dropdown list select **OAuth 2.0**.
+Click the **Authorization** tab, and from the **Type** drop-down list select **OAuth 2.0**.
 
 ![Postman edit auth](/Images/central/catalog/postman-edit-auth.png)
 
@@ -64,7 +64,7 @@ Click **Update** to complete the authorization process.
 
 ![Postman update collection authentication](/Images/central/catalog/postman-update-collection-auth.png)
 
-After authenticating and setting the OAuth token, expand the collection and select a method. Once you select a method, click the **Authorization** tab,  and from the **Type** dropdown list select **Inherit auth from parent** to use the new OAuth token.
+After authenticating and setting the OAuth token, expand the collection and select a method. Once you select a method, click the **Authorization** tab,  and from the **Type** drop-down list select **Inherit auth from parent** to use the new OAuth token.
 
 ![Postman select method](/Images/central/catalog/postman-select-method.png)
 
