@@ -40,7 +40,7 @@ To list API services:
    * Security compliance grading
    * Design compliance grading
 
-You can filter the services by the Service type, Environment, Team Ownership, and Design and Security grading scores (a, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
+You can filter the services by the Service type, Environment, and Team Ownership using the **Filter By** controls. Search by the Service Name with the search bar.
 
 ## View API service details
 
