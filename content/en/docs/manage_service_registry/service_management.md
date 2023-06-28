@@ -52,7 +52,7 @@ To view service details:
 Click on the Service name or icon to view the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
 * General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
-* The metrics area displays the number of assets and products related to the General Service, the number of teams the asset is shared with, and the number of active asset requests.
+* The metrics area displays the number of teams the General service is shared with, the number of assets and products related to the General Service, and the number of active asset requests to the General Service.
 * The general Access Rights tab displays all teams the API service is shared with.
 * The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
 * The general Assets tab displays the assets that contain this API service, the state of the assets, and when they were last modified.
