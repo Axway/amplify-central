@@ -37,8 +37,10 @@ To list API services:
    * Version
    * Tags
    * Created/Updated date by User
+   * Security compliance grading
+   * Design compliance grading
 
-You can also filter the services by the Service type, Environment and Team Ownership using the **Filter By** controls. Search by the Service Name with the search bar.
+You can filter the services by the Service type, Environment, and Team Ownership using the **Filter By** controls. Search by the Service Name with the search bar.
 
 ## View API service details
 
@@ -49,13 +51,17 @@ To view service details:
 
 Click on the Service name or icon to view the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights, Tags & Attributes, and Assets for the General Service.
-* The metrics area displays the number of assets and products related to the General Service.
+* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
+* The metrics area displays the number of teams the General Service is shared with, the number of assets and products related to the General Service, and the number of active asset requests to the General Service.
 * The general Access Rights tab displays all teams the API service is shared with.
 * The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
-* The general Asset tab displays the assets that contain this API service.
-* Version specific information is displayed at the bottom in the Versions tab. Every version of the service is displayed by Service Revision name, specification type, and created/updated date on the left side of the Version tab, making it easy to view all versions of an API service.
-* With the version specific tab, there are other tabs to view the API Specification & Methods, Endpoints listening for requests to the service, Tags & Attributes, and Assets which are related to version of the service.
+* The general Assets tab displays the assets that contain this API service, the state of the assets, and when they were last modified.
+* The general Products tab displays the products that contain this API service, the state and status of the products, and when they were last modified.
+* The Versions tab displays version information for the specific service. Every version of the service is displayed by Service Revision name, specification type, and created/updated date, making it easy to view all versions of an API service. This tab also displays the number of endpoints, assets, products, and if enabled, Security and Design compliance validation scores for each of the API Service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+
+    {{< alert title="Tip" color="primary" >}} Enter the name of a version in the search bar to quickly find a specific version. <br /> <br/>Click Compliance Score **Details** to open the Compliance tab and view the Security and Design Compliance details, download results in CSV format, and run linting tests. {{< /alert >}}
+
+* With the version specific tab, there are other tabs to view the API Specification & Methods, Endpoints listening for requests to the service, Tags & Attributes, Compliance, Assets, and Products which are related to the version of the service.
 
 ## Create an API service
 
