@@ -27,7 +27,7 @@ Example of viewing the environment resource for an envivronment named, test, wit
 axway centrea get environment test -o yaml
 ~~~
 
-Example of the output of the envivronment resouec in yaml format:
+Example of the output of the environment resource in yaml format:
 ~~~
 Add environment resource example showing design and security compliance disabled
 ~~~
