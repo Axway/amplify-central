@@ -7,11 +7,12 @@ Mange your API Compliance with the Axway Central CLI.
 
 ## Before you start
 
+* You will need Compliance Validation enabled for your organization.
 * You will need to have the Axway Central CLI installed and with a Central Administrator role.  Refer to https://docs.axway.com/bundle/amplify-central/page/docs/integrate_with_central/cli_central/index.html
 
 ## Objectives
 
-* Using the Axway Central Central CLI:
+* Using the Axway Central CLI:
 
     * Learn how to enable/disable compliance validation.
     * Learn how to manually initiate a compliance lint job.
