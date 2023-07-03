@@ -26,17 +26,17 @@ At the right of each line in the Service Registry is an ellipsis where you can s
 
 ### Default Design ruleset
 
-```yaml
-default-design-rulesset
+default-design-ruleset sample:
 
+```yaml
 extends: ["spectral:oas", "spectral:asyncapi"]
 ```
 
 ### Default Security ruleset
 
-```yaml
-default-security-rulesset
+default-security-ruleset sample:
 
+```yaml
 rules:
     security-must-be-enforced-for-unsafe-endpoints:
         message: Security must be applied to "write" endpoints
