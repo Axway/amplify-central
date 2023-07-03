@@ -26,11 +26,26 @@ At the right of each line in the Service Registry is an ellipsis where you can s
 
 ### Default Design ruleset
 
-Add content.
+```yaml
+default-design-rulesset
+
+extends: ["spectral:oas", "spectral:asyncapi"]
+```
 
 ### Default Security ruleset
 
-Add content
+```yaml
+default-security-rulesset
+
+rules:
+    security-must-be-enforced-for-unsafe-endpoints:
+        message: Security must be applied to "write" endpoints
+        severity: error
+        given: "$.paths.*[?(@property == 'post' || @property == 'put' || @property == 'patch' || @property == 'delete')]"
+        then:
+        - field: security 
+         function: truthy
+```
 
 ## Default grading scores
 
