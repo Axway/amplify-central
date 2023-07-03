@@ -20,37 +20,37 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify June 30 2023](/docs/amplify_relnotes/20230630_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.55. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.56. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.52 / TA=v1.1.54
-* **AWS Gateway using SDK 2.0** - DA=v1.1.43 / TA-v1.1.45
-* **Azure latest release** - DA=v1.1.48 / TA=v1.1.50
-* **Istio 1.9.5** - DA=v1.0.15 / TA=v2.0.59
-* **Apigee Edge** - Agent version 0.1.15
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.22
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.53 / TA=v1.1.55
+* **AWS Gateway using SDK 2.0** - DA=v1.1.44 / TA-v1.1.46
+* **Azure latest release** - DA=v1.1.49 / TA=v1.1.51
+* **Istio 1.9.5** - DA=v1.0.16 / TA=v2.0.60
+* **Apigee Edge** - Agent version 0.1.16
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.23
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | Security patches. |
+| What's new: | Embedded AWS Traceability sampling and redaction. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
 | What's new: | **All Agents** - Agents updated with the Axway Agent SDK. |
-| Bug fixes: | None. |
+| Bug fixes: | **AWS Gateway** - Improved accuracy of the running status displayed in Environment details. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - Compliance Validation results in Service details, API Specification version displays in Service details. <br />**Topology** - None. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Category owner can make category visible in Marketplace. <br />A new *Display resources grouped by asset* option. |
+| Bug fixes: | Warning icon when product plans were created. <br />Inaccurate publication statuses of  products in Marketplace. <br />Extra labels on the Category page in the product wizard. |
 | <br />**Business insights** |         |
-| What's new: | None. |
+| What's new: | Multi-value filtering. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | TNone. |
+| What's new: | A new *Display resources grouped by asset* option. |
+| Bug fixes: | None. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
