@@ -42,7 +42,7 @@ An environment can be configured to automatically lint all its pre-existing API 
     axway central apply -f my-env.yaml
     ```
 
-Once you've entered the above, the system will automatically lint the newest `APIServiceRevision` belonging to every `APIService` for that environment. 
+Once you've entered the above, the system will automatically lint the newest `APIServiceRevision` belonging to every `APIService` for that environment.
 
 {{< alert title="Note" color="primary" >}} If you remove the above compliance properties, then that will disable automatic linting for that environment.{{< /alert >}}
 
