@@ -173,7 +173,7 @@ You can start a manual linting job by creating a new `APISpecLintingJob` resourc
       apiSpecLintingRuleset: default-security-ruleset
     ```
 
-2. Create the above `APIServiceRevision` with the CLI, as follows, replacing the `<PathToYamlFile>` with the name of the file storing the above YAML settings. Once created, the system will automatically set its state to "Pending" and queue the job to perform the linting service. The CLI will also return the auto-generated name for this new job so that you can fetch its status via the CLI.
+2. Create the above `APISpecLintingJob` with the CLI, as follows, replacing the `<PathToYamlFile>` with the name of the file storing the above YAML settings. Once created, the system will automatically set its state to "Pending" and queue the job to perform the linting service. The CLI will also return the auto-generated name for this new job so that you can fetch its status via the CLI.
 
     ```
     axway central create -f <PathToYamlFile>
