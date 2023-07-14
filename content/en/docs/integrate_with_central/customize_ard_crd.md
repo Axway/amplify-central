@@ -47,6 +47,13 @@ Each item is described using json format. Below is a non exhaustive list:
 
 You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/react-jsonschema-form/) to try out the various combination.
 
+{{< alert title="Note" color="primary" >}}
+The playground allows to change the UI component (UISchenma section of the playground). But, Marketplace UI does not use these components. Thus don't be surprised to have a different render in the Marketplace compare to the one in the playground.
+
+It is better to think of the playground as a validator of your schema using the playground JSONSchema section.
+{{< /alert >}}
+
+
 #### Text component
 
 ```json
