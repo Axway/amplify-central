@@ -24,7 +24,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.56. This version is 
 
 * **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.53 / TA=v1.1.55
 * **AWS Gateway using SDK 2.0** - DA=v1.1.44 / TA-v1.1.46
-* **Azure latest release** - DA=v1.1.49 / TA=v1.1.51
+* **Azure latest release** - DA=v1.1.49 / TA=v1.1.52
 * **Istio 1.9.5** - DA=v1.0.16 / TA=v2.0.60
 * **Apigee Edge** - Agent version 0.1.16
 * **Mulesoft Anypoint platform v3** - Agent version 1.1.23
@@ -34,23 +34,23 @@ Current agent versions are based on Amplify Agents SDK v1.1.56. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Agents** |         |
-| What's new: | **All Agents** - Agents updated with the Axway Agent SDK. |
-| Bug fixes: | **All Agents** - None. |
+| What's new: | None. |
+| Bug fixes: | **Azure gateway** - Event Hub connection error logging. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - Display the swagger version of the service. <br />**Topology** - None. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
-| What's new: | None. |
+| What's new: | Display the swagger version of the service. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Redirected to wrong page after creating product plan. <br />Product plan created with wrong status. <br />Wrong Marketplace publication status. <br />The publication of a product fails when including plan in invalid state. <br />Category deletion popup enrichment. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Display the swagger version of the API. |
+| Bug fixes: | Switching from a public Marketplace to a private Marketplace shows error. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
