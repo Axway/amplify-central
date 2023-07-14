@@ -53,7 +53,6 @@ The playground allows to change the UI component (UISchenma section of the playg
 It is better to think of the playground as a validator of your schema using the playground JSONSchema section.
 {{< /alert >}}
 
-
 #### Text component
 
 ```json
