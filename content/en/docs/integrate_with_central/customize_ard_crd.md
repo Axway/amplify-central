@@ -174,18 +174,27 @@ You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/r
       "minlength": 5,
       "maxlength": 5
     },
-    "telephone": {
+    "phone": {
       "type": "string",
       "title": "Telephone",
       "minLength": 10
-    }
+    },
+    "x-axway-order": [
+        "firstName",
+        "latName",
+        "age",
+        "phone",
+        "address",
+        "city",
+        "zipcode"
+    ]
   }
 }
 ```
 
 ## Customize access request screen
 
-To customize the access request screen, you will need an AccessRequestDefinition. This object is scope per environment meaning if you have multiple environment, you will need a specific access request definition per environment.
+To customize the access request screen, you will need an AccessRequestDefinition. This object will contain the screen definition of the information required to provision access to a Service and the output the provider want to return to his consumer. This object is scope per environment meaning if you have multiple environments, you will need to duplicate the access request definition for each individual environment.
 
 Name of the object: **AccessRequestDefinition**
 
@@ -220,12 +229,14 @@ Object skeleton (json format):
 }
 ```
 
-The accessRequestDefinition contains 2 schemas in its specification section:
+The accessRequestDefinition contains 2 optional schemas in its specification section:
 
-* one for asking information from the consumer: schema
-* one for sending information to the consumer: provision
+* one to define which information are required from the consumer and how to display them on the screen: **schema**
+* one for sending information back to the consumer: **provision**
 
 Those two schemas follows the component framework describe above.
+
+Once the access request is created, the consumer is able to see the supplied information as well as the provisioned information (if any) by opening the access request detail screen and navigating to the Schema section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
 ### AccessRequestDefinition sample
 
@@ -334,7 +345,7 @@ Once the subscription is active, you can request access. You should be able to s
 
 ## Customize credential request screen
 
-To customize the credential request screen, you will need an CredentialRequestDefinition. This object is scope per environment meaning if you have multiple environment, you will need a specific credential request definition per environment.
+To customize the credential request screen, you will need an CredentialRequestDefinition. This object will contain the screen definition of the information required to provision access to a Service and the output the provider want to return to his consumer. This object is scope per environment meaning if you have multiple environment, you will need to duplicate the access request definition for each individual environment.
 
 Name of the object: **CredentialRequestDefinition**
 
@@ -367,12 +378,14 @@ Object skeleton (json format):
 }
 ```
 
-The CredentialRequestDefinition contains 2 schemas in its specification section:
+The CredentialRequestDefinition contains 2 optional schemas in its specification section:
 
-* one for asking information from the consumer: schema
-* one for sending information to the consumer: provision
+* one to define which information are required from the consumer and how to display them on the screen: **schema**
+* one for sending information back to the consumer: **provision**
 
 Those two schemas follows the component framework describe above.
+
+Once the credential is created, the consumer is able to see the supplied information as well as the provisioned information (if any) by opening the credential detail screen and navigating to the Credential value section.
 
 ### CredentialRequestDefinition samples
 
