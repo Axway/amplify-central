@@ -240,7 +240,7 @@ The accessRequestDefinition contains 2 optional schemas in its specification sec
 * one to define which information are required from the consumer and how to display them on the screen: **schema**
 * one for sending information back to the consumer: **provision**
 
-Those two schemas follows the component framework describe in the [Highlight section](#highlights).
+Those two schemas follows the component framework describe in the [Highlight](#highlights) section.
 
 Once the access request is created, the consumer is able to see the supplied information as well as the provisioned information (if any) by opening the access request detail screen and navigating to the Schema section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
@@ -389,7 +389,7 @@ The CredentialRequestDefinition contains 2 optional schemas in its specification
 * one to define which information are required from the consumer and how to display them on the screen: **schema**
 * one for sending information back to the consumer: **provision**
 
-Those two schemas follows the component framework describe in the [Highlight section](#highlights).
+Those two schemas follows the component framework describe in the [Highlight](#highlights) section.
 
 Once the credential is created, the consumer is able to see the supplied information as well as the provisioned information (if any) by opening the credential detail screen and navigating to the Credential value section.
 
