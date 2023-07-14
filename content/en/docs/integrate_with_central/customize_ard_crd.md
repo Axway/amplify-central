@@ -119,7 +119,7 @@ It is better to think of the playground as a validator of your schema using the 
 }
 ```
 
-#### file selector component
+#### File selector component
 
 ```json
 {
