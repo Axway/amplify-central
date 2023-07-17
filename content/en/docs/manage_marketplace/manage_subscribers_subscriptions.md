@@ -69,15 +69,30 @@ Only approved subscription will allow the consumer to continue to request access
 
 ### Approving a subscription
 
-1. As the subscription approver, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions that can be managed.
-2. Filtered the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, and the approval status.
+1. As the subscription approver, navigate to *Amplify Central > Marketplace > Subscriptions* to view  all subscriptions belonging to a product owned by your team.
+2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, and the approval status.
 3. Click on the subscription name to open the subscription details. From this page, once the consumer meets all the requirements that are needed for billing, click **Approve** to approve the subscription.
 
 ### Rejecting a subscription
 
-1. As the subscription approver, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions that can be managed.
+1. As the subscription approver, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions belonging to a product owned by your team.
 2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that owned the subscription, and the approval status.
 3. Click on the subscription name to open the subscription details. From this screen, click either **Revoke** to reject the subscription that was previously approved, or **Decline** if the subscription is pending.
+
+A rejected subscription can be deleted from the system.
+
+### Deleting a subscription
+
+Only Cancelled subscription and rejected subscription can be deleted from the system.
+
+{{< alert title="Warning" color="warning" >}}
+Deleting a subscription is irrevocable, once the subscription is deleted from the system, Business Insights and Consumer Insights screen will cease to show that subscription.
+{{< /alert >}}
+
+1. As a Catalog Manager or a subscription approver of a product, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions belonging to a product owned by your team.
+2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, and the approval status.
+3. Use the **Delete** from the ellipsis menu to trigger the subscription deletion.
+4. A confirmation popup will ask you to confirm your choice and validate it.
 
 ### Contacting the subscribers
 
@@ -110,7 +125,7 @@ Access request also contains a provisioning status:
 
 ### Approving an access request
 
-1. As the catalog manager, navigate to *Amplify Central > Marketplace > Access Requests* to view all access requests that can be managed.
+1. As a subscription approver, navigate to *Amplify Central > Marketplace > Access Requests* to view all access requests associated to  product owned by your team.
 2. Filter the Access Requests by approval state (Pending / Approved / Rejected) and/or provisioning state (Pending / Success / Error) and/or team. Each access request displays the name, the associated product, the organization of the team, the approval status, and the provisioning status.
 3. Click on the access request name to open the access request details. From this page, click **Approve** to approve the access request.
 
@@ -118,7 +133,7 @@ This will trigger an event to inform of the access request approval. Based on th
 
 ### Rejecting an access request
 
-1. As the catalog manager, navigate to *Amplify Central > Marketplace > Access Requests* to view all access request that can be managed.
+1. As the catalog manager or subscription approver, navigate to *Amplify Central > Marketplace > Access Requests* to view all access request associated to  product owned by your team.
 2. Filter the Access Request list by approval state (Pending / Approved / Rejected) and/or provisioning state (Pending / Success / Error) and/or team. Each access request displays its name, the associated asset, the organization of the team that owned the request, the approval status and the provisioning status.
 3. Click on the access request name to display the access request detail. From this screen, click either **Revoke** to reject the access request that was previously approved, or **Decline** if the access request is pending.
 
@@ -145,7 +160,7 @@ A credential can have an expiration date. This expiration date is defined in the
 
 ### Suspending / Enabling credential
 
-1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials that can be managed.
+1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials associated to  product owned by your team.
 2. Filer the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
 3. Click on the credential name to open the credential details.
 4. Enter a reason.
@@ -159,14 +174,14 @@ Once the reason is entered, the catalog manager can:
 
 This action is not supported by all data planes and may not be available for the provider.
 
-1. As a catalog manager, navigate to **Amplify Central > Marketplace > Credentials** to view all credentials that can be managed.
+1. As a catalog manager, navigate to **Amplify Central > Marketplace > Credentials** to view all credentials associated to  product owned by your team.
 2. Filter the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
 3. Click on the credential name to open the credential details.
 4. Enter a reason, then click **Renew**.
 
 ### Deleting credential
 
-1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials that can be managed.
+1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials associated to  product owned by your team.
 2. Filter the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
 3. Click on a credential name to open the credential details.
 4. Enter a reason, then click **Delete**. A confirmation popup is displayed.

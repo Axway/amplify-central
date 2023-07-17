@@ -69,8 +69,14 @@ Click on the subscription name to display the subscription details information.
 
 On the subscription details page, you have a link to the product, a link to the plan, and a link to the application(s) associated with this subscription. Each application is a link that redirects you to the application details page. The bottom of the page displays the subscription history (requested time / last approval/rejection time).
 
-### Delete a subscription
+### Terminate a subscription
+
+When you no longer need a subscription, you can terminate it so that it is no more available for requesting access to resources using that subscription.
 
 1. Navigate to the *Marketplace*.
-2. Select **Subscriptions**. A list of Marketplace subscriptions is displayed.
-3. Click the bin icon next to the subscription to trigger the unsubscribing process.
+2. Select **Subscriptions**. A list of Marketplace products having subscriptions owned by your team(s) is displayed.
+3. Search for the concerned product and open it: the subscription list is displayed.
+4. Once you found the subscription to terminate, click **Unsubscribe** from the ellipsis menu to trigger the subscription termination.
+5. The state of the subscription is updated to **Cancelled**. The subscription cannot be used anymore from the access request screen.
+
+A cancelled subscription remains in the system in order to still be visible in Consumer Insights screens. Only the provider will be able to completely remove the subscription from the system. At that moment, the subscription will no more be visible in the Consumer Insights screens.
