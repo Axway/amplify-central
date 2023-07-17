@@ -78,8 +78,7 @@ Only approved subscription will allow the consumer to continue to request access
 1. As the subscription approver, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions belonging to a product owned by your team.
 2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that owned the subscription, the approval status and the subscription state.
 3. Click on the subscription name to open the subscription details. From this screen, click either **Revoke** to reject the subscription that was previously approved, or **Decline** if the subscription is pending.
-
-A rejected subscription can be deleted from the system.
+4. The subscription global state becomes Cancelled and can be [deleted](#deleting-a-subscription) from the system.
 
 ### Deleting a subscription
 
