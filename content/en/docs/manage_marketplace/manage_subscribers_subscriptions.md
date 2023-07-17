@@ -70,13 +70,13 @@ Only approved subscription will allow the consumer to continue to request access
 ### Approving a subscription
 
 1. As the subscription approver, navigate to *Amplify Central > Marketplace > Subscriptions* to view  all subscriptions belonging to a product owned by your team.
-2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, and the approval status.
+2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, the approval status and the subscription state.
 3. Click on the subscription name to open the subscription details. From this page, once the consumer meets all the requirements that are needed for billing, click **Approve** to approve the subscription.
 
 ### Rejecting a subscription
 
 1. As the subscription approver, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions belonging to a product owned by your team.
-2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that owned the subscription, and the approval status.
+2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that owned the subscription, the approval status and the subscription state.
 3. Click on the subscription name to open the subscription details. From this screen, click either **Revoke** to reject the subscription that was previously approved, or **Decline** if the subscription is pending.
 
 A rejected subscription can be deleted from the system.
@@ -86,11 +86,11 @@ A rejected subscription can be deleted from the system.
 Only Cancelled subscription and rejected subscription can be deleted from the system.
 
 {{< alert title="Warning" color="warning" >}}
-Deleting a subscription is irrevocable, once the subscription is deleted from the system, Business Insights and Consumer Insights screen will cease to show that subscription.
+Deleting a subscription is irrevocable: once the subscription is deleted from the system, Business Insights and Consumer Insights screen will cease to show that subscription.
 {{< /alert >}}
 
 1. As a Catalog Manager or a subscription approver of a product, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions belonging to a product owned by your team.
-2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, and the approval status.
+2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, the approval status and the subscription state.
 3. Use the **Delete** from the ellipsis menu to trigger the subscription deletion.
 4. A confirmation popup will ask you to confirm your choice and validate it.
 
