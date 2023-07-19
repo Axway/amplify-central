@@ -8,7 +8,7 @@ Create new subscriptions and manage existing subscriptions from the Marketplace.
 
 ## What is a subscription
 
-Subscriptions are free or paid consumption options to access certain API from resources in products to help provide business case solutions. Consumers browse products, but must subscribe, request access, and be approved before products can be consumed with an application.
+Subscriptions are free or paid consumption options to access certain APIs from resources in products to help provide business case solutions. Consumers browse products, but must subscribe, request access, and be approved before products can be consumed with an application.
 
 ## Before you start
 
@@ -63,20 +63,20 @@ Once submitted, a subscription request goes through an approval process:
 Use the *Account settings* page to manage existing subscriptions:
 
 1. Navigate to the *Marketplace*.
-2. Select **Subscriptions**. A list of Marketplace subscriptions is displayed.
+2. Select **Subscriptions**. *A list of Marketplace subscriptions is displayed*.
 
 Click on the subscription name to display the subscription details information.
 
-On the subscription details page, you have a link to the product, a link to the plan, and a link to the application(s) associated with this subscription. Each application is a link that redirects you to the application details page. The bottom of the page displays the subscription history (requested time / last approval/rejection time).
+On the subscription details page, there are links to the product, to the plan, and to the application(s) associated with this subscription. Each application is a link that redirects you to the application details page. The bottom of the page displays the subscription history (requested time / last approval / rejection time).
 
 ### Terminate a subscription
 
-When you no longer need a subscription, you can terminate it so that it is no more available for requesting access to resources using that subscription.
+When a subscription is no longer needed, it should be terminated to prevent access requests to the resources that are using that subscription.
 
 1. Navigate to the *Marketplace*.
-2. Select **Subscriptions**. A list of Marketplace products having subscriptions owned by your team(s) is displayed.
-3. Search for the concerned product and open it: the subscription list is displayed.
-4. Once you found the subscription to terminate, click **Unsubscribe** from the ellipsis menu to trigger the subscription termination.
-5. The state of the subscription is updated to **Cancelled**. The subscription cannot be used anymore from the access request screen.
+2. Select **Subscriptions**. *A list of Marketplace products that have subscriptions owned by your team(s) is displayed*.
+3. Search for a specific product and open it. *The subscription list is displayed*.
+4. Find the subscription to terminate and click **Unsubscribe** from the ellipsis menu to trigger the subscription termination.
+5. The state of the subscription is updated to **Cancelled**. The subscription can no longer be used from the access request screen.
 
-A cancelled subscription remains in the system in order to still be visible in Consumer Insights screens. Only the provider will be able to completely remove the subscription from the system. At that moment, the subscription will no more be visible in the Consumer Insights screens.
+A cancelled subscription remains in the system and is visible in the Consumer Insights screens. Only the provider can completely remove the subscription from the system. Once removed, the subscription will no long be visible in the Consumer Insights screens.
