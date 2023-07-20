@@ -53,7 +53,7 @@ To consume APIs from the Marketplace, the consumer must:
 
 ## Manage consumer subscriptions
 
-Persona: **Subscription approver** team role.
+Persona: **Subscription Approver** team role.
 
 {{< alert title="Note" color="primary" >}}Central Admin role can be used. This user can see all subscriptions without team constraint.{{< /alert >}}
 
@@ -104,7 +104,7 @@ With these emails, you can reach out to the consumer using your regular messagin
 
 ## Manage access requests
 
-Persona: **Catalog manager** team role
+Persona: **Catalog Manager** team role
 
 {{< alert title="Note" color="primary" >}}The Central Admin role can be used. This user can see all access requests without team constraint.{{< /alert >}}
 
@@ -138,7 +138,7 @@ This will trigger an event to inform of the access request approval. Based on th
 
 ## Manage credentials
 
-Persona: **Catalog manager** team role
+Persona: **Catalog Manager** team role
 
 {{< alert title="Note" color="primary" >}}The Central Admin role can be used. This user will be able to see all credentials without team constraint.{{< /alert >}}
 
