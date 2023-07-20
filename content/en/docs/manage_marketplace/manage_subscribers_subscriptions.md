@@ -22,8 +22,8 @@ Learn how to manage Marketplace subscriptions, request access and credentials to
 
 Three personas are identified:
 
-* Subscription manager: responsible for approving / rejecting the subscriptions
-* Catalog manager: responsible for approving / rejecting resources access and for managing the credentials
+* Subscription Approver: responsible for approving / rejecting the subscriptions and resources access
+* Catalog Manager: responsible for approving / rejecting the subscriptions and resources access. He is also responsible for managing the credentials
 * Consumer: responsible for designing application(s) that use subscriptions and access services that belongs to a product
 
 ### Terminology
@@ -53,7 +53,7 @@ To consume APIs from the Marketplace, the consumer must:
 
 ## Manage consumer subscriptions
 
-Persona: **Subscription Approver** team role.
+Persona: **Subscription Approver** team role or **Catalog Manager** team role
 
 {{< alert title="Note" color="primary" >}}Central Admin role can be used. This user can see all subscriptions without team constraint.{{< /alert >}}
 
@@ -95,16 +95,21 @@ Deleting a subscription is irrevocable. Once the subscription is deleted from th
 
 ### Contacting the subscribers
 
-The provider can access their consumer email from:
+The Catalog Manager can access their consumer email from:
 
-* *Product Foundry > Product details > Subscriptions*: Select the consumer and click **Copy Email** or use the **Copy** icon located next to the consumer email address.
-* *Marketplace > Credentials list > Credential details*: Use the **Copy** icon located next to the consumer email address.
+* Product Foundry > Product details > Subscriptions: select the consumer and click **Copy Email** or use the **Copy** icon located next to the consumer email address.
+
+Both Subscription approver and Catalog Manager can access their consumer email from:
+
+* Marketplace > Subscriptions list > subscription details: use the **Copy** icon located next to the consumer email address.
+* Marketplace > Access Requests list > access requests details: use the **Copy** icon located next to the consumer email address.
+* Marketplace > Credentials list > Credential details: use the **Copy** icon located next to the consumer email address.
 
 With these emails, you can reach out to the consumer using your regular messaging system.
 
 ## Manage access requests
 
-Persona: **Catalog Manager** team role
+Persona: **Subscription Approver** team role or **Catalog Manager** team role
 
 {{< alert title="Note" color="primary" >}}The Central Admin role can be used. This user can see all access requests without team constraint.{{< /alert >}}
 
