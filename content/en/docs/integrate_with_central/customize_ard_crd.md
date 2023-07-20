@@ -3,7 +3,7 @@ title: Customize access request and credentials request screens
 linkTitle: Customize access request and credentials request screens
 weight: 300
 ---
-Amplify Allows to personalize the access request screen and the credential screen to ask any information to your consumer and send them in return appropriate answer
+Amplify allows you to personalize the *access request* and *credential* screens by customizing consumer questions that return appropriate responses.
 
 ## Before you start
 
@@ -14,33 +14,34 @@ Amplify Allows to personalize the access request screen and the credential scree
 
 Learn how to customize the access request and credentials request screen in Marketplace using [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form) framework.
 
-## Highlights
+## Use cases
 
-When consumer wants to access a resource, or create credential, the definition of the access or credentials might require extra parameters. In other word, provider might want to ask extra information from his consumer to be able to provision correctly his request. The provider might also want to send back extra information to his consumer (credential information, public keys....).
+* A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to access a resource or create credentials, the definition of the access or credentials may require extra parameters. 
+* A provider may want to send back extra information to the consumer. For example, credential information or public keys, etc.
 
-In both case, you will need to implement a schema definition based on **react-jsonchema-form**. This schema will be used to convoy the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
+In both cases, a schema definition based on **react-jsonchema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
 
-By default when using Discovery Agents, those extra information are integrated when the agent discover APIS based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
+By default when using Discovery Agents, the extra information is integrated when the agent discovers APIs based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
 
-But, it is also possible to manage manually what you want to ask/send to your consumer.
+{{< alert title="Note" color="primary" >}}It is also possible to manually manage what you want to ask/send to your consumer.{{< /alert >}}
 
 ### Available components
 
-A various number of simple components are available to use: string text, date, number, arrays, dropdown, file selector and more. It is also possible to define your own object by combining multiple simple components.
+Various simple components are available to use: string text, date, number, arrays, dropdown, file selector and more. It is also possible to define your own object by combining multiple simple components.
 
 In addition, there are two special parameters `x-axway-order` and `x-axway-encrypted` that extend this framework:
 
-* **x-axway-order** - enables to select in which order the selected fields will be presented in the UI
-* **x-axway-encrypted** - tell the system that the field should be encrypted for security purpose
+* **x-axway-order** - use to determine the order in which the selected fields will be presented in the UI
+* **x-axway-encrypted** - use to tell the system that the field must be encrypted for security purpose
 
-Each item is described using json format. Below is a non exhaustive list:
+Each item is described using json format. Below is a non-exhaustive list:
 
 * type: string, integer, number, boolean
 * format: date-time, date, time
-* title: the title used to display the component in UI
-* description (optional): Text that will appear below the title to help user understand the field component
+* title: the title used to display the component in the UI
+* description (optional): text that will appear below the title to help the user understand the field component
 * default (optional): the default value
-* enum: list of text to displays
+* enum: list of text to display
 * minimum / maximum: value range for integer field
 * minLength / maxLength: value length for string
 * arrays: defining an array of items
@@ -48,9 +49,7 @@ Each item is described using json format. Below is a non exhaustive list:
 You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/react-jsonschema-form/) to try out the various combination.
 
 {{< alert title="Note" color="primary" >}}
-The playground allows to change the UI component (UISchenma section of the playground). But, Marketplace UI does not use these components. Thus don't be surprised to have a different render in the Marketplace compare to the one in the playground.
-
-It is better to think of the playground as a validator of your schema using the playground JSONSchema section.
+The playground allows you to change the UI components (UISchenma section of the playground); however, the Marketplace UI does not use these components. As a result, the Marketplace UI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
 {{< /alert >}}
 
 #### Text component
@@ -200,7 +199,7 @@ It is better to think of the playground as a validator of your schema using the 
 
 ## Customize access request screen
 
-To customize the access request screen, you will need an AccessRequestDefinition. This object will contain the screen definition of the information required to provision access to a Service and the output the provider want to return to his consumer. This object is scope per environment meaning if you have multiple environments, you will need to duplicate the access request definition for each individual environment.
+To customize the access request screen, you need an `AccessRequestDefinition`. This object will contain the screen definition of the information required to provision access to a Service and the output the provider wants to return to the consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
 
 Name of the object: **AccessRequestDefinition**
 
@@ -235,14 +234,14 @@ Object skeleton (json format):
 }
 ```
 
-The accessRequestDefinition contains 2 optional schemas in its specification section:
+`accessRequestDefinition` contains two optional schemas in its specification section: 
 
-* one to define which information are required from the consumer and how to display them on the screen: **schema**
-* one for sending information back to the consumer: **provision**
+* **schema** - to define the information that is required from the consumer and how it is displayed on the screen. 
+* **provision** - for sending information back to the consumer. 
 
-Those two schemas follows the component framework describe in the [Highlight](#highlights) section.
+These above two schemas follow the component framework describe in the [Highlight](#highlights) section.
 
-Once the access request is created, the consumer is able to see the supplied information as well as the provisioned information (if any) by opening the access request detail screen and navigating to the Schema section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
+Once the access request is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *access request detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
 ### AccessRequestDefinition sample
 
@@ -300,7 +299,7 @@ Sample of an AccessRequestDefinition (json format) asking consumer to select a p
 }
 ```
 
-Once you get you AccessRequestDefinition object created using the Axway central CLI (`axway central apply -f ard-api-scopes.json`), you must link it to an APIServiceInstance.
+Once the AccessRequestDefinition object is created using the Axway Central CLI (`axway central apply -f ard-api-scopes.json`), it must be linked to an APIServiceInstance.
 
 Sample of an APIServiceInstance (json format) using the previous accessRequestDefinition:
 
@@ -339,19 +338,17 @@ Sample of an APIServiceInstance (json format) using the previous accessRequestDe
 }
 ```
 
-In case the APIService instance is already linked to an asset prior to add the access request definition, you have to create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
+If the APIService instance is already linked to an asset prior to adding the access request definition, you must create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
 
-Otherwise, create an asset based on this service and then a product. Publish the product to the marketplace.
+Otherwise, create an asset based on this service and then a product. 
 
-Now that the product is published to a Marketplace, you can subscribe to it to get an active subscription.
-
-Once the subscription is active, you can request access. You should be able to see the purpose selector:
+You will be able to see the purpose selector once you publish the product to the marketplace, subscribe to it to get an active subscription, and then request access.
 
 ![Access Request screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
 
 ## Customize credential request screen
 
-To customize the credential request screen, you will need an CredentialRequestDefinition. This object will contain the screen definition of the information required to provision access to a Service and the output the provider want to return to his consumer. This object is scope per environment meaning if you have multiple environment, you will need to duplicate the access request definition for each individual environment.
+To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a Service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
 
 Name of the object: **CredentialRequestDefinition**
 
@@ -384,18 +381,18 @@ Object skeleton (json format):
 }
 ```
 
-The CredentialRequestDefinition contains 2 optional schemas in its specification section:
+The CredentialRequestDefinition contains two optional schemas in its specification section:
 
-* one to define which information are required from the consumer and how to display them on the screen: **schema**
-* one for sending information back to the consumer: **provision**
+* **schema** - to define the information that is required from the consumer and how it is displayed on the screen. 
+* **provision** - for sending information back to the consumer. 
 
-Those two schemas follows the component framework describe in the [Highlight](#highlights) section.
+Those above two schemas follow the component framework describe in the [Highlight](#highlights) section.
 
-Once the credential is created, the consumer is able to see the supplied information as well as the provisioned information (if any) by opening the credential detail screen and navigating to the Credential value section.
+Once the credential is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *credential detail* page and navigating to the **Credential value** section.
 
 ### CredentialRequestDefinition samples
 
-Sample consumer giving the Javascript origin values and provider return the information provisioned (APIKey credential) in an encrypted value.
+Sample of the consumer giving the Javascript origin values and the provider returning the information provisioned (APIKey credential) in an encrypted value:
 
 ```json
 {
@@ -459,7 +456,7 @@ Sample consumer giving the Javascript origin values and provider return the info
 }
 ```
 
-Sample no information supplied by the consumer but information provisioned (OAuth credential) sent back to consumer
+Sample of no information supplied by the consumer but information provisioned (OAuth credential) sent back to consumer:
 
 ```json
 {
@@ -512,7 +509,7 @@ Sample no information supplied by the consumer but information provisioned (OAut
 }
 ```
 
-Sample asking the consumer for a PEM public key file and returning oauth clientID
+Sample asking the consumer for a PEM public key file and returning oauth clientID:
 
 ```json
 {
@@ -571,7 +568,7 @@ Sample asking the consumer for a PEM public key file and returning oauth clientI
     }
 ```
 
-Once you get you CredentialRequestDefinition object created using the Axway central CLI (`axway central apply -f crd-pem-key.json`), you must link it to the corresponding APIServiceInstance.
+Once the CredentialRequestDefinition object is created using the Axway central CLI (`axway central apply -f crd-pem-key.json`), you must link it to the corresponding APIServiceInstance.
 
 Sample of an APIServiceInstance (json format) using the previous AccessRequestDefinition and a CredentialRequestDefinition:
 
@@ -612,13 +609,11 @@ Sample of an APIServiceInstance (json format) using the previous AccessRequestDe
 }
 ```
 
-In case the APIService instance is already linked to an asset prior to add the credential request definition, you have to create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
+If the APIService instance is already linked to an asset prior to adding the credential request definition, you must create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
 
-Otherwise, create an asset based on this service and then a product. Publish the product to the marketplace.
+Otherwise, create an asset based on this service and then a product. 
 
-Now that the product is published to a Marketplace, you can subscribe to it to get an active subscription.
-
-Once the subscription is active, you can request access. You should be able to see the purpose selector:
+You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
 ![Access Request screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
 
