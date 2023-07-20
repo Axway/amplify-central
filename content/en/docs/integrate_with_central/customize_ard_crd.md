@@ -16,7 +16,7 @@ Learn how to customize the access request and credentials request screen in Mark
 
 ## Use cases
 
-* A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to access a resource or create credentials, the definition of the access or credentials may require extra parameters. 
+* A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to access a resource or create credentials, the definition of the access or credentials may require extra parameters.
 * A provider may want to send back extra information to the consumer. For example, credential information or public keys, etc.
 
 In both cases, a schema definition based on **react-jsonchema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
@@ -234,10 +234,10 @@ Object skeleton (json format):
 }
 ```
 
-`accessRequestDefinition` contains two optional schemas in its specification section: 
+`accessRequestDefinition` contains two optional schemas in its specification section:
 
-* **schema** - to define the information that is required from the consumer and how it is displayed on the screen. 
-* **provision** - for sending information back to the consumer. 
+* **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
+* **provision** - for sending information back to the consumer.
 
 These above two schemas follow the component framework describe in the [Highlight](#highlights) section.
 
@@ -340,7 +340,7 @@ Sample of an APIServiceInstance (json format) using the previous accessRequestDe
 
 If the APIService instance is already linked to an asset prior to adding the access request definition, you must create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
 
-Otherwise, create an asset based on this service and then a product. 
+Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the marketplace, subscribe to it to get an active subscription, and then request access.
 
@@ -383,8 +383,8 @@ Object skeleton (json format):
 
 The CredentialRequestDefinition contains two optional schemas in its specification section:
 
-* **schema** - to define the information that is required from the consumer and how it is displayed on the screen. 
-* **provision** - for sending information back to the consumer. 
+* **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
+* **provision** - for sending information back to the consumer.
 
 Those above two schemas follow the component framework describe in the [Highlight](#highlights) section.
 
@@ -611,7 +611,7 @@ Sample of an APIServiceInstance (json format) using the previous AccessRequestDe
 
 If the APIService instance is already linked to an asset prior to adding the credential request definition, you must create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
 
-Otherwise, create an asset based on this service and then a product. 
+Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
