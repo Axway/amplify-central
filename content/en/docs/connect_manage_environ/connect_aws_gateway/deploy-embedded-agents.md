@@ -134,8 +134,8 @@ dataplane:
   name: <dataplane-name>
   queueDiscovery: true
 ```
-{{< alert title="Note" color="primary" >}}This process is the same for queueing the Embedded Traceability Agent but uses `queueTrafficCollection` instead.{{< /alert >}}
 
+{{< alert title="Note" color="primary" >}}This process is the same for queueing the Embedded Traceability Agent but uses `queueTrafficCollection` instead.{{< /alert >}}
 
 #### Triggering via API
 
