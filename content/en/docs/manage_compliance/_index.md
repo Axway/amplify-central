@@ -24,17 +24,35 @@ Once enabled for the environment, all current APIs and future API updates within
 
 At the right of each line in the Service Registry is an ellipsis where you can select **Run Ruleset** to manually initiate a compliance lint job.
 
-### Default Design ruleset
+### Design rulesets
 
-default-design-ruleset sample:
+The system has a built-in `default-design-ruleset` which validates OpenAPI and AsyncAPI specifications. This ruleset is configured as follows.
 
 ```yaml
 extends: ["spectral:oas", "spectral:asyncapi"]
 ```
 
-### Default Security ruleset
+To use the community driven [Spectral AWS API Gateway Ruleset](https://github.com/andylockran/spectral-aws-apigateway-ruleset), set up a custom ruleset which extends the following. Note that this ruleset only supports OAS3 (OpenAPI v3) and it requires you to also extend the built-in `spectral:oas` ruleset.
 
-default-security-ruleset sample:
+```yaml
+extends: ["spectral:oas", "spectral-aws-apigateway-ruleset"]
+```
+
+To use the [Spectral Documentation Ruleset](https://github.com/stoplightio/spectral-documentation) which validates API descriptions, set up a custom ruleset which extends the following.
+
+```yaml
+extends: ["@stoplight/spectral-documentation"]
+```
+
+To use the [Spectral URL Versioning Ruleset](https://github.com/stoplightio/spectral-url-versioning) which validates URL paths, set up a custom ruleset which extends the following.
+
+```yaml
+extends: ["@stoplight/spectral-url-versioning"]
+```
+
+### Security rulesets
+
+The system has a built-in `default-security-ruleset` which scans OpanAPI and AsyncAPI for security issues. This ruleset is configured as follows.
 
 ```yaml
 rules:
@@ -45,6 +63,12 @@ rules:
         then:
         - field: security 
          function: truthy
+```
+
+To use the [Spectral OWASP Ruleset](https://github.com/stoplightio/spectral-owasp-ruleset) (Open Worldwide Application Security Project), set up a custom ruleset which extends the following.
+
+```yaml
+extends: ["@stoplight/spectral-owasp-ruleset"]
 ```
 
 ## Default grading scores
