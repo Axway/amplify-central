@@ -22,7 +22,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 Current agent versions are based on Amplify Agents SDK v1.1.57. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.54 / TA=v1.1.56
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.55 / TA=v1.1.57
 * **AWS Gateway using SDK 2.0** - DA=v1.1.45 / TA-v1.1.47
 * **Azure latest release** - DA=v1.1.50 / TA=v1.1.53
 * **Istio 1.9.5** - DA=v1.0.17 / TA=v2.0.61
