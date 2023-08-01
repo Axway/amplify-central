@@ -151,4 +151,4 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1al
 
 {{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
 
-{{< alert title="Note" color="primary" >}}This process is the same for queueing the Embedded Traceability Agent but uses `queueTrafficCollection` instead and the URL i updated accordingly.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This process is the same for queueing the Embedded Traceability Agent but uses `queueTrafficCollection` instead and the URL is updated accordingly.{{< /alert >}}
