@@ -32,7 +32,7 @@ The role created here is then given to AWS API Gateway so it will have the abili
    * Add the *AmazonAPIGatewayPushToCloudWatchLogs* policy, if it is not already added.
    * Click **Next**.
 4. Give the role a name, such as `APIGWPushToCloudWatch` and click **Create role**, note this role arn.
-5. Navigate to the AWS API Gateway Console, start the *Create role* wizard.
+5. Navigate to the AWS API Gateway Console
 6. Select any API listed.
 7. Select *Settings* at the bottom left.
 8. Enter the previously created role arn and click **Save**.
