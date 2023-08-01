@@ -63,6 +63,115 @@ Create an IAM policy that allows the Embedded agent the ability to discover and 
 
 ### AWS IAM policy JSON
 
+#### Discover only
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:DELETE",
+        "apigateway:PATCH",
+        "apigateway:POST",
+        "apigateway:PUT",
+        "apigateway:GET"
+      ],
+      "Resource": [
+        "arn:aws:apigateway:<aws-region>::*"
+      ]
+    }
+  ]
+}
+```
+
+#### Discover only, least privilege
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "apigateway:GET",
+      "Resource": [
+        "arn:aws:apigateway:<aws-region>::/restapis",
+        "arn:aws:apigateway:<aws-region>::/restapis/*",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/deployments",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/deployments/*",
+        "arn:aws:apigateway:<aws-region>::/apis",
+        "arn:aws:apigateway:<aws-region>::/apis/*",
+        "arn:aws:apigateway:<aws-region>::/apis/*/deployments",
+        "arn:aws:apigateway:<aws-region>::/apis/*/deployments/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:DELETE",
+        "apigateway:PATCH",
+        "apigateway:POST",
+        "apigateway:GET"
+      ],
+      "Resource": [
+        "arn:aws:apigateway:<aws-region>::/apis/*/usageplans",
+        "arn:aws:apigateway:<aws-region>::/apis/*/usageplans/*",
+        "arn:aws:apigateway:<aws-region>::/apikeys/*",
+        "arn:aws:apigateway:<aws-region>::/apikeys",
+        "arn:aws:apigateway:<aws-region>::/usageplans",
+        "arn:aws:apigateway:<aws-region>::/usageplans/*",
+        "arn:aws:apigateway:<aws-region>::/usageplans/*/keys/*",
+        "arn:aws:apigateway:<aws-region>::/usageplans/*/keys"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:PATCH",
+        "apigateway:POST",
+        "apigateway:GET"
+      ],
+      "Resource": [
+        "arn:aws:apigateway:<aws-region>::/apis/*/stages/*",
+        "arn:aws:apigateway:<aws-region>::/apis/*/stages",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/stages",
+        "arn:aws:apigateway:<aws-region>::/restapis/*/stages/*"
+      ]
+    }
+  ]
+}
+```
+
+#### Traceability only
+
+{{< alert title="Note" color="primary" >}}The role that the Embedded Agents use will be the same and require both the Traceability and Discovery policies.{{< /alert >}}
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams",
+        "logs:GetLogEvents",
+        "logs:FilterLogEvents"
+      ],
+      "Resource": [
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>",
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>:log-stream:*"
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*",
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*:log-stream:*",
+      ]
+    }
+  ]
+}
+```
+
+#### Discovery and Traceability combined policy
+
 ```json
 {
   "Version": "2012-10-17",
