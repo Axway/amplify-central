@@ -18,6 +18,43 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify July 28 2023](/docs/amplify_relnotes/20230728_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.57. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.55 / TA=v1.1.57
+* **AWS Gateway using SDK 2.0** - DA=v1.1.45 / TA-v1.1.47
+* **Azure latest release** - DA=v1.1.50 / TA=v1.1.53
+* **Istio 1.9.5** - DA=v1.0.17 / TA=v2.0.61
+* **Apigee Edge** - Agent version 0.1.17
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.24
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | Additional Agent SDK examples in the documentation. |
+| Bug fixes: | Agent Unknown Status for Metric events. |
+| <br />**Agents** |         |
+| What's new: | **All** - Updated with the Axway Agent SDK. |
+| Bug fixes: | **Apigee Edge Gateway** - Subscribing to a product with an Unlimited Plan. |
+| <br />**Service registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - Display the API specification version of the service. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Product Foundry** |         |
+| What's new: | None. |
+| Bug fixes: | Subscriptions and Access Requests filters do not show all teams. <br />Plan status update. <br />Product visibility screen for private Marketplace is missing the consumption preferences. <br />Product activation failure after removing product documentation overview. <br />Impossible to archive a deprecated plan when attached to migrated subscriptions. <br />Product release name issue. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Marketplace** |         |
+| What's new: | None. |
+| Bug fixes: | Typeahead search for Applications/Subscriptions is not working properly. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify July 14 2023](/docs/amplify_relnotes/20230714_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.56. This version is compatible with:
