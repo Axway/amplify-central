@@ -161,9 +161,9 @@ Create an IAM policy that allows the Embedded agent the ability to discover and 
       ],
       "Resource": [
         "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>",
-        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>:log-stream:*"
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>:log-stream:*",
         "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*",
-        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*:log-stream:*",
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*:log-stream:*"
       ]
     }
   ]
@@ -199,9 +199,9 @@ Create an IAM policy that allows the Embedded agent the ability to discover and 
       ],
       "Resource": [
         "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>",
-        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>:log-stream:*"
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:<log-group-name>:log-stream:*",
         "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*",
-        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*:log-stream:*",
+        "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:API-Gateway-Execution-Logs_*:log-stream:*"
       ]
     }
   ]
