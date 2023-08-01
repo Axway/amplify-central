@@ -112,6 +112,7 @@ Create an IAM policy that allows the Embedded agent the ability to discover and 
         "apigateway:DELETE",
         "apigateway:PATCH",
         "apigateway:POST",
+        "apigateway:PUT",
         "apigateway:GET"
       ],
       "Resource": [
@@ -130,6 +131,7 @@ Create an IAM policy that allows the Embedded agent the ability to discover and 
       "Action": [
         "apigateway:PATCH",
         "apigateway:POST",
+        "apigateway:PUT",
         "apigateway:GET"
       ],
       "Resource": [
