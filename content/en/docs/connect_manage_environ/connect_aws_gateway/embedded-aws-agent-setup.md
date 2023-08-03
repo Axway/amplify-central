@@ -16,7 +16,7 @@ Learn how to quickly setup an AWS Assume Role policy or create Access and Secret
 
 ## AWS CloudWatch
 
-The Embedded Traceability Agent, as well as AWS API Gateway itself, use the AWS CloudWatch. To enable the agent to retrieve API usages, you must set up the following. 
+The Embedded Traceability Agent, as well as AWS API Gateway itself, use the AWS CloudWatch. To enable the agent to retrieve API usages, you must set up the following.
 
 ### AWS IAM Role for API Gateway
 
