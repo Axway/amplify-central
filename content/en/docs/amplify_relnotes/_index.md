@@ -34,10 +34,10 @@ Current agent versions are based on Amplify Agents SDK v1.1.57. This version is 
 | What's new: | Additional Agent SDK examples in the documentation. |
 | Bug fixes: | Agent Unknown Status for Metric events. |
 | <br />**Agents** |         |
-| What's new: | **All** - Updated with the Axway Agent SDK. |
+| What's new: | **All** - Updated with the Axway Agent SDK. <br />**Embedded agent** - Embedded AWS Traceability Agent, custom settings for the Embedded AWS Agent. |
 | Bug fixes: | **Apigee Edge Gateway** - Subscribing to a product with an Unlimited Plan. |
 | <br />**Service registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - Display the API specification version of the service. <br />**Topology** - None. |
+| What's new: | **Service Registry** - Display the API specification version of the service. <br />**Topology** - Configure Embedded AWS Traceability Agent when creating an environment. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
