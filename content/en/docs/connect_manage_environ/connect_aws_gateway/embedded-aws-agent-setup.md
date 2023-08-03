@@ -16,44 +16,44 @@ Learn how to quickly setup an AWS Assume Role policy or create Access and Secret
 
 ## AWS CloudWatch
 
-AWS CloudWatch is used by the Embedded Traceability Agent as well as AWS API Gateway itself. In order for the agent to be able to retrieve API usages the following must be set up.
+The Embedded Traceability Agent, as well as AWS API Gateway itself, use the AWS CloudWatch. To enable the agent to retrieve API usages, you must set up the following. 
 
 ### AWS IAM Role for API Gateway
 
-The role created here is then given to AWS API Gateway so it will have the ability to create and write to cloud watch log groups.
+The role created here is given to AWS API Gateway, allowing it to create and write to CloudWatch log groups.
 
 1. Within the AWS IAM Console, start the *Create role* wizard.
-2. On the *Select trusted entity* page.
-   * Select *AWS service* and.
-   * Select *API Gateway* from the *Use cases for other AWS services*.
-   * Select the *API Gateway* radio button.
+2. On the *Select trusted entity* page:
+   * Select **AWS service**.
+   * Select **API Gateway** from Use cases for other AWS services.
+   * Select the **API Gateway** radio button.
    * Click **Next**.
-3. On the *Add permissions* page.
-   * Add the *AmazonAPIGatewayPushToCloudWatchLogs* policy, if it is not already added.
+3. On the *Add permissions* page:
+   * Add the *AmazonAPIGatewayPushToCloudWatchLogs* policy if it was not already added.
    * Click **Next**.
-4. Give the role a name, such as `APIGWPushToCloudWatch` and click **Create role**, note this role arn.
-5. Navigate to the AWS API Gateway Console
+4. Give the role a name, such as `APIGWPushToCloudWatch` and click **Create role**. Note this role ARN.
+5. Navigate to the *AWS API Gateway Console*.
 6. Select any API listed.
-7. Select *Settings* at the bottom left.
-8. Enter the previously created role arn and click **Save**.
+7. Select **Settings** at the bottom left.
+8. Enter the previously created role ARN and click **Save**.
 
 ### AWS CloudWatch Log Group
 
-The CloudWatch Log Group that is created here will be used by both agents. Upon discovery of a Rest API stage the Discovery agent will configure the logging to send details to CloudWatch. The Traceability agent then watches the CloudWatch for new entries in order to send usage, metric, and transactional data to Amplify Central.
+This CloudWatch Log Group will be used by both agents. Upon discovery of a Rest API stage, the Discovery Agent configures the logging to send details to CloudWatch. The Traceability Agent then watches the CloudWatch for new entries and sends usage, metric, and transactional data to Amplify Central.
 
-1. Within the AWS CloudWatch Console, select *Log groups* on the left then start the *Create log group* wizard
-2. Set the log group name, such as `amplify-agents-access-log`, and retention settings, note the log group name for use in setting up the AWS IAM policy
-3. Click **Create**
-4. After the window refreshes you should see the new log group in the list, select it
-5. Under *Log group details* is the ARN for this log group, note this for use in setting up the agents
+1. Within the AWS CloudWatch Console, select **Log groups** on the left and start the *Create log group* wizard.
+2. Set the log group name, such as `amplify-agents-access-log`, and retention settings. Note the log group name for use in setting up the AWS IAM policy.
+3. Click **Create**.
+4. After the window refreshes, select the new log group from the list.
+5. The ARN for this log group is located in the *Log group details*. Note this ARN for use in setting up the agents.
 
 ## AWS IAM policy
 
-Create an IAM policy that allows the Embedded agent the ability to discover and provision access to your AWS API Gateway resources. This step is required regardless of the authentication type you using
+Create an IAM policy that allows the Embedded agent to discover and provision access to your AWS API Gateway resources. This step is required regardless of the authentication type you use.
 
 1. Within the AWS IAM Console, start the *Create policy* wizard.
 2. Select the *JSON editor* tab and paste the [AWS IAM policy JSON](#aws-iam-policy-json) policy.
-3. Update the policy sample below with your values
+3. Update the policy sample below with your values:
    * &lt;aws-region&gt; becomes us-east-2
    * &lt;aws-account-id&gt;, becomes your AWs account ID
    * &lt;log-group-name&gt;, becomes the log group name from [AWS CloudWatch Log Group](#aws-cloudwatch-log-group)
@@ -147,7 +147,7 @@ Create an IAM policy that allows the Embedded agent the ability to discover and 
 
 #### Traceability only
 
-{{< alert title="Note" color="primary" >}}The role that the Embedded Agents use will be the same and require both the Traceability and Discovery policies.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The role that the Embedded agents use will be the same and require both the Traceability and Discovery policies.{{< /alert >}}
 
 ```json
 {
