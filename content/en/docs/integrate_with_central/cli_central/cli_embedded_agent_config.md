@@ -89,21 +89,21 @@ Configured to set if headers should be processed, redact certain information, sa
 * Using an editor of your choice, open the `agent.yaml` file and add/change any or all values:
     * **redaction** - the redaction settings to use when reporting transactions from the dataplane [Redaction](#redaction)
         * **path** - a list of all URL paths, or path regular expressions, which may be reported to Central
-        * **queryArgument** - regular expressions applied to the query arguments in the transactional data
+        * **queryArgument** - regular expressions applied to the query argument name and query argument value in the transactional data
             * **show** - query argument names that match any of these expressions will be reported
             * **sanitize**
                 * **keyMatch** - query argument names that match any of these expressions will have the valueMatch sanitized
-                * **valueMatch** - when the keyMatch matches this expression, it is applied to replace matches within the value masking character
+                * **valueMatch** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value
         * **requestHeaders** - regular expressions applied to the request headers in the transactional data
             * **show** - request headers keys that match any of these expressions will be reported
             * **sanitize**
                 * **keyMatch** - request headers keys that match any of these expressions will have the valueMatch sanitized
-                * **valueMatch** - when the keyMatch matches this expression, it is applied to replace matches within the value masking character
+                * **valueMatch** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value
         * **responseHeaders** - regular expressions applied to the response headers in the transactional data
             * **show** - response headers keys that match any of these expressions will be reported
             * **sanitize**
                 * **keyMatch** - response headers keys that match any of these expressions will have the valueMatch sanitized
-                * **valueMatch** - when the keyMatch matches this expression, it is applied to replace matches within the value masking character
+                * **valueMatch** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
         * **maskingCharacter** - the set of character(s) that will replace any value matched while sanitizing
     * **sampling** - the sampling settings that will be applied when reporting transactional data
         * **percentage** - the percentage of all transactions that will be reported to Central for display in Business and Consumer insights
