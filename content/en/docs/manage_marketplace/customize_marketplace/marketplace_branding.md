@@ -122,12 +122,16 @@ From the *Appearance* page, click **Configure** in the Help Menu section to chan
 
 From the *Appearance* page, click **Configure** in the Navigation Menu Items section to add and configure links to the common navigation menu. Click **Add navigation item**, and then do the following to configure menu items:
 
-1. Type a label for the menu item.
-2. Type a link to the menu item.
-3. Click the **+** button to add more menu items.
-4. Click the up or down arrow keys to move the menu item's position.
-5. Click the delete icon to remove a menu item.
-6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
+* **Clear all items** - deletes all navigation menu items. Use the trash bin to remove specific navigation menu items.
+* **Label** - a name identifying the URL.
+* **URL** - address to a resource. This could be a fixed URL or a Document library document to be selected among the one available.
+* **Visibility** - when this menu is visible (Always / Only when a user is signed in / only when user is signed out)
+* **New Tab** - select to open the resource in a new page.
+* **Bin icon** - remove the corresponding menu.
+* **+ Add Menu Item** - click to add up to four more navigation menu items. Once you have added the items, use the chevrons to change the order that they will appear within the menu.  
+* **Menu Position** - the alignment of the navigation menu within the footer (left, center, right).
+
+Close the panel and click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
 
 ## Customize the Marketplace appearance with APIs
 

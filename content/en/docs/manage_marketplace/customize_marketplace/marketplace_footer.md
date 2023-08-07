@@ -35,8 +35,9 @@ From the *Footer* page, click **+** to add an element, select **Navigation Menu*
 
 * **Clear all items** - deletes all navigation menu items. Use the trash bin to remove specific navigation menu items.
 * **Label** - a name identifying the URL.
-* **URL** - address to a resource.
+* **URL** - address to a resource. This could be a fixed URL or a Document library document to be selected among the one available.
 * **New Tab** - select to open the resource in a new page.
+* **Bin icon** - remove the corresponding menu.
 * **+ Add Menu Item** - click to add up to four more navigation menu items. Once you have added the items, use the chevrons to change the order that they will appear within the menu.  
 * **Menu Position** - the alignment of the navigation menu within the footer (left, center, right).
 
