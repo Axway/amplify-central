@@ -26,7 +26,7 @@ Learn how to create an environment to represent your API services and other disc
     * **Description** - a short description of the environment
     * **Image** - an icon or image to be associated with the environment
 
-4. Configure (optionally displayed steps if there is Embedded agent support for the selected environment type):
+4. Configure (optionally displayed steps if there is Embedded agent support for the selected environment type): (**Robert- update for Embedded AWS**)
 
     * **Agent Type** - select the type of agent to be used to connect to this API Gateway. Select **Embedded** for Axway to host the agent or select **Remotely Hosted** if the agent will be hosted by the customer
     * **Agent Configuration** - this is only displayed for environment types supported by the Embedded agent. Currently, only AWS API Gateway is supported.  
