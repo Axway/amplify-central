@@ -77,21 +77,16 @@ From the document details, it is possible to download any document
 Only pdf, md, doc, docx, xlsx and pptx files are accepted. All files bigger than 5MB will be rejected.
 
 1. Navigate to *Document Library*.
-2. Click **+ Add New Document** to add a new document and open the document wizard
+2. Click **+ Add New Document** to add new documents and open the documents wizard
 3. Select the method Upload files, the browse page is displayed:
 
     * either use the Browse files button or drop files in the drop area
 
 4. Uploaded files are displayed at the bottom of the screen. If a file does not respect the limitations, it will appear in the error message area
 5. The check box in front of the uploaded file allows to edit the file details (Document name / Document description / Document version). Once your document information is correct, click **Next**
-6. Add your Document visibility (Product and/or Marketplace) then click **Next**
-
-{{< alert title="Note" color="warning">}}
-For now it is not possible to select individual document for setting the visibility: those settings needs to be the same for all current uploaded document. If you need specific visibility for a document, please consider uploading only that document
-{{< /alert >}}
-
-7. Add the team permission: Restricted (only Central Admin user will be abe to manage the document) / Shared (specific team permission: owner / read / edit / none). Then click **Next**
-8. Review your uploaded files and then click **Save**
+6. Add your Document visibility (Product and/or Marketplace). This visibility will be applied to all documents. If you need specific visibility for a document, please consider uploading only that document. Then click **Next**
+7. Add the team permission: Restricted (only Central Admin user will be abe to manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, please consider uploading only that document. Then click **Next**
+8. Review your uploaded files. You can still return to any pages using the ellipsis menu on document tile. Once every thing looks good click **Save**
 
 All documents should appear in the Document list view.
 
