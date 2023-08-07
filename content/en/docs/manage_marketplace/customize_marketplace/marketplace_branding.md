@@ -4,14 +4,22 @@ linkTitle: Marketplace appearance
 weight: 30
 ---
 
-Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The platform administrator may choose to use the Amplify Enterprise Marketplace WebUI or API to change the settings.
+Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The platform administrator may choose to use the Amplify Enterprise Marketplace WebUI or API to change the settings;however, only changes made with the WebUI can be previewed before they are saved.
 
-Standard custom branding capabilities include:
+Standard appearance capabilities include:
 
-* Customize the logo
-* Modify the WebUI color scheme / theme
-* Alter font colors with organization's branding colors
-* Change the contents of the help menu displayed in the navigation bar
+* Branding
+    * Customize the logo
+    * Upload an icon for users to see on the browser tab
+    * Modify the WebUI color scheme / theme
+
+* Typography
+    * Change the font
+    * Change the spacing between characters
+
+* Buttons
+    * Select the background fill of the buttons
+    * Select the default radius of the buttons
 
 ## Before you start
 
@@ -47,51 +55,66 @@ From the *Appearance* page, click **Configure** in the Theme section to change t
 
 The Theme settings are displayed.
 
-Under **Brand Colors**, you can configure and preview:
+{{< alert title="Note" color="primary" >}} At any time while you are modifying the theme, simply click **Reset to Amplify Platform defaults** in the Colors section to reset to the default light or dark values.{{< /alert >}}
 
-* **Primary** - colors used for icons, card titles, tab menu links (hover and active), and call to action (CTA) buttons.
-* **Secondary** - color for the hero banner.
-* **Tertirary** - color for the product banner.
-* **Black** - color used for page text.
-* **Background** - color of the main Marketplace screens. This setting does not apply to the card elements.
+Under **Element Colors**, you can customize and preview common elements:
 
-Under **Semantic Colors**, you can configure and preview:
+* **Text** - color applied to default page text.
+* **Background** - color applied to the page background.
+* **Links** - color applied to clickable text.
+* **Icons** - color applied to icons.
+* **Muted Text** - color applied to details and contextual text.
 
-* Alerts, messaging, and common UI patterns:
+Under **Action Colors**, you can customize and preview buttons and other actionable elements:
 
-    * **Success** - color used for the success state icon.
-    * **Danger** - color used for the danger state icon.
-    * **Warning** - color used for the warning state icon.
-    * **Info** - color used for the info state icon.
+* **Primary** - color used for primary actions, such as icons, card titles, tab menu links (hover and active), and call to action (CTA) buttons.
+* **Secondary** - color for the secondary actions, such as the hero banner.
+* **Tertiary** - color for the supplemental actions, such as the product banner.
 
-Under **Element Colors**, you can customize and preview:
+Under **Status Colors**, you can customize and preview alerts, badges and other status indicators:
 
-* Product details banner:
+* **Success** - color used to indicate success or completion.
+* **Danger** - color used to indicate an error or loss of data.
+* **Warning** - color used for to indicate a non-destructive message.
+* **Info** - color used for additional information message.
 
-    * **Heading Titles** - color used for page titles, section titles, and title text.
-    * **Heading Backgrounds** - color used for the heading block.
+Under **Container Colors**, you can customize and preview cards, inputs, rules, modals, sideblades and drop-downs
 
-* Cards:
+* **Titles** - color used for container element title text.
+* **Text** - color used for container element text.
+* **Backgrounds** - color used for container element backgrounds.
+* **Secondary Backgrounds** - color used for alternate container element backgrounds, such as table headings.
+* **Borders** - color used for container element borders.
+* **Active Text** - color used for text to indicate active state.
+* **Active Backgrounds** - color used for backgrounds to indicate active state.
 
-    * **Card Titles** - color of the card titles.
-    * **Card Backgrounds** - color applied to all card background.
-    * **Card Borders** - color applied to card borders of all card elements in the Marketplace.
+Under **Header Colors**, you can customize and preview header elements:
 
-* Links and icons:
+* **Title** - color used for page heading text.
+* **Background** - color used for page heading background.
+* **Buttons** - color used for page heading button background
+* **Button Text** - color used for page heading button text.
 
-    * **Links** - color applied to clickable text on the Marketplace screens.
-    * **Icons** -  color applied to icons next to clickable text on the Marketplace screens.
+Under **Navigation Colors**, you can customize and preview the top and left navigation elements:
 
-* Call to Action buttons:
+* Top Navigation
+    * **Text** - color used for top navigation bar text.
+    * **Background Fill** - pattern used for top navigation background fill.
+    * **Color** - color used for top navigation bar background.
+    * **Menu Background** - color used for top navigation bar drop-down menu backgrounds.
+    * **Icons** - color used for top navigation bar drop-down menu icons.
 
-    * **CTA Button** - color of the buttons displayed in the heading section, such as **View** and **Subscribe**.
-    * **CTA Button Text** - color of the CTA button text.
+* Left Navigation
+    * **Text** - color used for left navigation text.
+    * **Background** - color used for left navigation background.
+    * **Active Text** - color used for left navigation text to indicate active state.
+    * **Active Background** - color used for left navigation backgrounds to indicate active state.
 
-Click **Reset to Amplify Platform defaults** to reset the colors to the default values.
+Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
 
-### Change the fonts
+### Change the font
 
-From the *Appearance* page, click **Configure** in the Fonts section to change and preview the Marketplace fonts. The font settings are displayed:
+From the *Appearance* page, select a menu option from the Typography section to change and preview the Marketplace font:
 
 * **Font family** - the font set to display text. You can choose an existing font or add your own font.
 * **Kerning** - adjust the spacing between characters.
@@ -100,34 +123,12 @@ Click **Save** at the top of the page to save your changes or **Reset** to rever
 
 ### Change the buttons appearance
 
-From the *Appearance* page, click **Configure** in the Buttons section to change and preview the Marketplace buttons. The buttons settings are displayed:
+From the *Appearance* page, select a radio button in the Buttons section to change and preview the Marketplace buttons:
 
-* **Button format** - the format of the button: Solid or Outline.
-* **Button radius** - the button radius: Square, Rounded or Round.
+* **Button format** - the format of the button. Choose Solid or Outline.
+* **Button radius** - the button shape. Choose Square, Rounded or Round.
 
 Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
-
-### Customize the help menu
-
-From the *Appearance* page, click **Configure** in the Help Menu section to change the contents of the help menu displayed in the navigation bar. Click **Add menu item** to configure a Help menu. Do the following to configure menu items:
-
-1. Click the question mark icon to select an icon from the drop down menu to use for the help item image.
-2. Type a label for the menu item.
-3. Type a link to the menu item.
-4. Click the up or down arrow keys to move the menu item's position.
-5. Click the delete icon to remove a menu item.
-6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
-
-### Customize the navigation menu
-
-From the *Appearance* page, click **Configure** in the Navigation Menu Items section to add and configure links to the common navigation menu. Click **Add navigation item**, and then do the following to configure menu items:
-
-1. Type a label for the menu item.
-2. Type a link to the menu item.
-3. Click the **+** button to add more menu items.
-4. Click the up or down arrow keys to move the menu item's position.
-5. Click the delete icon to remove a menu item.
-6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
 
 ## Customize the Marketplace appearance with APIs
 
