@@ -162,6 +162,7 @@ AZURE_APIMSERVICENAME=beano-apim
 # existing Azure properties for Traceability Agent
 AZURE_EVENTHUBNAME=sample-event-hub
 AZURE_EVENTHUBNAMESPACE=event-hub-namespace
+AZURE_EVENTHUBTIMEOUT=30s
 AZURE_SHAREDACCESSKEYNAME=SharedAccess
 AZURE_SHAREDACCESSKEYVALUE=zYn2K4P...
 ...
