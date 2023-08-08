@@ -26,15 +26,47 @@ Learn how to create an environment to represent your API services and other disc
     * **Description** - a short description of the environment
     * **Image** - an icon or image to be associated with the environment
 
-4. Configure (optionally displayed steps if there is Embedded agent support for the selected environment type): (**Robert- update for Embedded AWS**)
+4. Configure (optionally displayed steps if there is Embedded agent support for the selected environment type):
 
     * **Agent Type** - select the type of agent to be used to connect to this API Gateway. Select **Embedded** for Axway to host the agent or select **Remotely Hosted** if the agent will be hosted by the customer
-    * **Agent Configuration** - this is only displayed for environment types supported by the Embedded agent. Currently, only AWS API Gateway is supported.  
-         * **AWS Region** - select the AWS region where the AWS API Gateway is located
+    * **Agent Configuration** - this is only displayed for environment types supported by the Embedded agent. Currently, only AWS API Gateway is supported.
+         * **Enable Traceability Agent** - select to enable the Embedded Traceability Agent setup, which requires an Access Log ARN to be entered in Cloud Watch Settings.
+         * **AWS Region** - select the AWS region where the AWS API Gateway is located.
          * **AWS Authentication** - select the method of AWS authentication to use, AssumeRole or Access Key/Secret Key. For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded agents](/docs/connect_manage_environ/connect_aws_gateway/#embedded-aws-agent-setup).
-         * **Discovery Frequency** - set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
-         * **Initiate Immediate discovery** - select to enable the Embedded agent to discover AWS API Gateway resources after environment creation and Embedded agent configuration are complete.
+         * **Cloud Watch Settings** - the Embedded Traceability Agent, as well as AWS API Gateway itself, use the AWS CloudWatch. To enable the agent to retrieve API usages, Access Log ARN needs to be entered.
+         
+5. Embedded Discovery Agent Settings (optionally displayed steps if there is Embedded agent support for the selected environment type):
 
-5. For Access Rights, select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, and then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team. Click **Next**.
+   * **Frequency** - set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+   * **Initiate Immediate discovery** - select to enable the Embedded agent to discover AWS API Gateway resources after environment creation and Embedded agent configuration are complete.
+   * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). "No Owner" can also be selected if ownership isn't needed.
+   * **API Discovery Filter** - filter conditions for discovery of API Services based on tags, see [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
+   * **Additional Tags** - in adddition to any tags found on the gateway, tags defined here will be added to all API Services created from this discovery agent.
+   * **Exclude Tags** - if a tag listed here is on an API in the gateway it will not be added as a tag in the API Service.
+  
+6. Embedded Traceability Agent Settings (optionally displayed steps if there is Embedded agent support for the selected environment type and "Enable Traceability Agent" is selected in the Configure step):
 
-6. Provide the Tags and Attribute details for the environment. Click **Save** to create the environment.
+   * **Frequency** - set how often the Embedded agent should run traffic collection.
+   * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights.
+   * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the dataplane.
+       * **URL Path** - a list of all URL paths, or path regular expressions, which may be reported to Central.
+       * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
+           * **Allowed Patterns** - query argument names that match any of these expressions will be reported.
+           * **Sanitization Patterns**
+                 * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
+                 * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
+       * **Request Headers** - regular expressions applied to the request headers in the transactional data.
+           * **Allowed Patterns** - request headers keys that match any of these expressions will be reported.
+           * **Sanitization Patterns**
+               * **Key Match** - request headers keys that match any of these expressions will have the valueMatch sanitized.
+               * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+       * **Response Headers** - regular expressions applied to the response headers in the transactional data.
+           * **Allowed Patterns** - response headers keys that match any of these expressions will be reported.
+           * **Sanitization Patterns**
+               * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
+               * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+   * **Masking Characters** - the set of character(s) that will replace any value matched while sanitizing.
+
+7. For Access Rights, select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, and then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team. Click **Next**.
+
+8. Provide the Tags and Attribute details for the environment. Click **Save** to create the environment.
