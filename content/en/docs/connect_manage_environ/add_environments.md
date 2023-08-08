@@ -34,7 +34,7 @@ Learn how to create an environment to represent your API services and other disc
          * **AWS Region** - select the AWS region where the AWS API Gateway is located.
          * **AWS Authentication** - select the method of AWS authentication to use, AssumeRole or Access Key/Secret Key. For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded agents](/docs/connect_manage_environ/connect_aws_gateway/#embedded-aws-agent-setup).
          * **Cloud Watch Settings** - the Embedded Traceability Agent, as well as AWS API Gateway itself, use the AWS CloudWatch. To enable the agent to retrieve API usages, Access Log ARN needs to be entered.
-         
+
 5. Embedded Discovery Agent Settings (optionally displayed steps if there is Embedded agent support for the selected environment type):
 
    * **Frequency** - set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
@@ -43,7 +43,7 @@ Learn how to create an environment to represent your API services and other disc
    * **API Discovery Filter** - filter conditions for discovery of API Services based on tags, see [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
    * **Additional Tags** - in adddition to any tags found on the gateway, tags defined here will be added to all API Services created from this discovery agent.
    * **Exclude Tags** - if a tag listed here is on an API in the gateway it will not be added as a tag in the API Service.
-  
+
 6. Embedded Traceability Agent Settings (optionally displayed steps if there is Embedded agent support for the selected environment type and "Enable Traceability Agent" is selected in the Configure step):
 
    * **Frequency** - set how often the Embedded agent should run traffic collection.
