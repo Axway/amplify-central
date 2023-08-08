@@ -53,8 +53,8 @@ Learn how to create an environment to represent your API services and other disc
        * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
            * **Allowed Patterns** - query argument names that match any of these expressions will be reported.
            * **Sanitization Patterns**
-                 * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
-                 * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
+               * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
+               * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
        * **Request Headers** - regular expressions applied to the request headers in the transactional data.
            * **Allowed Patterns** - request headers keys that match any of these expressions will be reported.
            * **Sanitization Patterns**
