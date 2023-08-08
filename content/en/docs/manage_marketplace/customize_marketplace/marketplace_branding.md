@@ -53,7 +53,10 @@ Click **Remove** to remove the logo or favicon image.
 
 From the *Appearance* page, click **Configure** in the Theme section to change the Marketplace colors and theming to match your brand.
 
-The Theme settings are displayed.
+The Theme settings are displayed:
+
+* Click anywhere in the preview to highlight the corresponding colors from the list.
+* Select a color from the list to see it reflected on the preview.
 
 {{< alert title="Note" color="primary" >}} At any time while you are modifying the theme, simply click **Reset to Amplify Platform defaults** in the Colors section to reset to the default light or dark values.{{< /alert >}}
 
