@@ -8,7 +8,7 @@ Configure the Marketplace menus. This footer is displayed on all pages of the Ma
 
 ## Before you start
 
-You must have platform administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Menus* content.
+You must have Platform Administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Menus* content.
 
 ## Objectives
 

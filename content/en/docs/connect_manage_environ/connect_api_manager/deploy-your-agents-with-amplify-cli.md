@@ -129,9 +129,9 @@ The installation procedure will prompt for the following:
 1. Select the type of gateway you want to connect to (V7 Gateway in this scenario).
 2. Select the agents you want to install: Discovery / Traceability / Traceability offline mode / all.
 3. Platform connectivity:
-   * **environment**: can be an existing environment or a new one that will be created by the installation procedure
+   * **environment**: can be an existing environment or one that will be created by the installation procedure
    * **team**: the default team the agent will assign when no team corresponds to the API Manager organization that the API belongs to. If the value is left empty, "Default team" will be used by the agent when no team correspond to the API organization.
-   * **service account**: can be an existing service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create a new one, the generated private and public keys will be provided (OpenSSL is required for this step).
+   * **service account**: can be an existing service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create a one, the generated private and public keys will be provided (OpenSSL is required for this step).
 4. Select the agent deployment mode: binary / Docker image / Helm.
 5. API Manager connectivity:
    * **hostname** of the API Manager (localhost by default - use the API Manager service name `apimgr` when deploying via helm charts)

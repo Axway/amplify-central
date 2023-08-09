@@ -48,7 +48,7 @@ This operating mode does not utilize the AWS Config, SQS, or CloudWatch services
 
 The Traceability Agent sends summaries to Amplify of the API traffic that has passed through the AWS API Gateway. The agent only sends a traffic summary for APIs that have been discovered.
 
-The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify. Business Insights provides a view of the traffic and API usage of APIs deployed to the Gateway.
+The Traceability Agent is used to filter the AWS CloudWatch logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer it will result in an event (summary + detail) being sent to Amplify. Business Insights provides a view of the traffic and API usage of APIs deployed to the Gateway.
 
 In order for the Traceability Agent to monitor API traffic, the following AWS services are used:
 
@@ -179,8 +179,8 @@ The resources created by the CloudFormation template:
 | AWS::SQS::QueuePolicy                 | DiscoveryConfigSqsQueuePolicy     |                                                          | The policy that grants permission to push to the SqsQueue                                          | continuous     |
 | AWS::Logs::LogGroup                   | TraceabilityAccessLogGroup        |                                                          | Creates the Log Group to track access of APIC tracked API Gateway endpoints                        | both           |
 | AWS::ApiGateway::Account              | TraceabilityAPIGWCWRole           | TraceabilityAPIGWCWRoleArn not blank                     | Sets the CloudWatch Role ARN in the API Gateway Settings                                           | both           |
-| AWS::Lambda::Function                 | TraceabilityLambda                |                                                          | The Lambda function that takes Cloud Watch events in the Log Group and sends them to the SQS Queue | both           |
-| AWS::Lambda::Permission               | TraceabilityLambdaCWInvoke        |                                                          | Allows Cloud Watch events to trigger the Lambda Function                                           | both           |
+| AWS::Lambda::Function                 | TraceabilityLambda                |                                                          | The Lambda function that takes CloudWatch events in the Log Group and sends them to the SQS Queue | both           |
+| AWS::Lambda::Permission               | TraceabilityLambdaCWInvoke        |                                                          | Allows CloudWatch events to trigger the Lambda Function                                           | both           |
 | AWS::SQS::Queue                       | TraceabilitySqsQueue              |                                                          | The Queue that all API Gateway access logs are pushed to                                           | both           |
 | AWS::Logs::SubscriptionFilter         | TraceabilityLogToLambdaFilter     |                                                          | Filter events from the Traceability Logs to the Lambda Function                                    | both           |
 | amplify-agents-ec2.yaml               |                                   |                                                          |                                                                                                    | continuous     |
@@ -406,8 +406,8 @@ The services that are configured with this CloudFormation template:
 | AWS::SQS::QueuePolicy              | DiscoveryConfigSqsQueuePolicy  |                           | The policy that grants permission to push to the SqsQueue                                          | continuous     |
 | AWS::Logs::LogGroup                | APIGWTrafficLogGroupName       |                           | Creates the Log Group to track access of APIC tracked API Gateway endpoints                        | both           |
 | AWS::ApiGateway::Account           | TraceabilityAPIGWCWRole        | ShouldSetupAPIGWCWRoleArn | Sets the CloudWatch Role ARN in the API Gateway Settings                                           | both           |
-| AWS::Lambda::Function              | TraceabilityLambda             |                           | The Lambda function that takes Cloud Watch events in the Log Group and sends them to the SQS Queue | both           |
-| AWS::Lambda::Permission            | TraceabilityLambdaCWInvoke     |                           | Allows Cloud Watch events to trigger the Lambda Function                                           | both           |
+| AWS::Lambda::Function              | TraceabilityLambda             |                           | The Lambda function that takes CloudWatch events in the Log Group and sends them to the SQS Queue | both           |
+| AWS::Lambda::Permission            | TraceabilityLambdaCWInvoke     |                           | Allows CloudWatch events to trigger the Lambda Function                                           | both           |
 | AWS::SQS::Queue                    | TraceabilitySqsQueue           |                           | The Queue that all API Gateway access logs are pushed to                                           | both           |
 | AWS::Logs::SubscriptionFilter      | TraceabilityLogToLambdaFilter  |                           | Filter events from the Traceability Logs to the Lambda Function                                    | both           |
 | AWS::KMS::Key                      | sqs/encryptionKey              |                           | The key used for Discovery and Traceability SQS queue encryption                                   | both           |
@@ -425,7 +425,7 @@ These outputs will be used as inputs for running both the Discovery and Traceabi
 
 ### Testing the setup for the AWS Discovery Agent
 
-* Make a change to an existing REST API/Stage OR create a new REST API/Stage
+* Make a change to an existing REST API/Stage OR create a REST API/Stage
 * Validate that the `<DiscoveryQueueName>` has messages waiting
 
 ### Testing the setup for the AWS Traceability Agent

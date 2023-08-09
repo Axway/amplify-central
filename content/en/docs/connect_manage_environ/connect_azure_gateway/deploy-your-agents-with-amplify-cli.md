@@ -66,7 +66,7 @@ You can validate that your installation is correct by running: `axway central --
 
 Create an empty directory where Axway CLI will generate files. Run all Axway Central CLI from this directory.
 
-### Step 3: Identify yourself to Amplify Platform with Axway CLI
+### Step 3: Identify yourself to Amplify platform with Axway CLI
 
 There are two ways to authenticate with Axway CLI:
 
@@ -133,9 +133,9 @@ The installation procedure will prompt for the following:
 1. Select the type of gateway you want to connect to (Azure API Gateway in this scenario).
 2. Select the agents you want to install: Discovery / Traceability / All Agents. **Note**: If you select Traceability **ONLY**, you must provide configurations for both Steps 4 and 5.
 3. Platform connectivity:
-   * **Environment**: can be an existing environment or a new one that will be created by the installation procedure
-   * **Team**: can be an existing team or a new one that will be created by the installation procedure
-   * **Service account**: can be an existing service account (from platform or Central). The installation procedure creates only a Central service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify Platform. If you choose to create a new one, the generated private and public keys will be provided.
+   * **Environment**: can be an existing environment or one that will be created by the installation procedure
+   * **Team**: can be an existing team or one that will be created by the installation procedure
+   * **Service account**: can be an existing service account (from platform or Central). The installation procedure creates only a Central service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 4. Azure Discovery Agent Configuration Setup options:
    * **Tenant ID** can be found in the *Directory ID* box on the Properties page
    * **Subscription ID** is a GUID that uniquely identifies your subscription to use Azure services
@@ -165,7 +165,7 @@ public_key.pem           *newly created service account only
 
 `da_env_vars.env` / `ta_env_vars.env` contains the specific configuration you entered during the installation procedure. These files are required to start the agents.
 
-`private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify Platform (if you choose to let the installation generate them).
+`private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify platform (if you choose to let the installation generate them).
 
 ### Step 5: Deploy the agent in Docker Container
 

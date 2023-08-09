@@ -24,8 +24,8 @@ Anyone who is authenticated in the Marketplace can subscribe to a product with t
 
 | Persona               | Create application |
 |-----------------------|--------------------|
-| Subscription manager  | Forbidden          |
-| Central administrator | Authorized         |
+| Subscription Manager  | Forbidden          |
+| Central Administrator | Authorized         |
 | Developer/Consumer    | Authorized         |
 
 1. Navigate to the *Marketplace*.

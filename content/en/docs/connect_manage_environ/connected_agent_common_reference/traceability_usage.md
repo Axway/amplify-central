@@ -224,7 +224,7 @@ In the case of high demand, Axway recommends turning off the trace event logging
 
 ### AWS API Gateway
 
-The current solution relies on AWS Simple Queue Service to collect traffic from Cloud Watch. However, there is a limit of 10 SQS messages per client connection that can be consumed at one time. As a workaround, you can increase the number of workers (i.e., consumer clients) using the `AWS_WORKERS` variable. Be aware that the number of workers is directly related to the network consumption -- the more you add, the more network connections are used.
+The current solution relies on AWS Simple Queue Service to collect traffic from CloudWatch. However, there is a limit of 10 SQS messages per client connection that can be consumed at one time. As a workaround, you can increase the number of workers (i.e., consumer clients) using the `AWS_WORKERS` variable. Be aware that the number of workers is directly related to the network consumption -- the more you add, the more network connections are used.
 
 ### Azure API Gateway
 

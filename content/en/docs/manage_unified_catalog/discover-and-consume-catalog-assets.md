@@ -128,7 +128,7 @@ To promote an API as a connector template:
 5. (Optional) Enter a short description in the **Connector description** box.
 6. Click **Export**.
 
-{{< alert title="Tip" color="primary" >}}You must have the **Central admin** role or the **Developer** team role assigned, and Integration Builder activated to view the **Export** option.{{< /alert >}}
+{{< alert title="Tip" color="primary" >}}You must have the **Central Admin** role or the **Developer** team role assigned, and Integration Builder activated to view the **Export** option.{{< /alert >}}
 
 Now you can navigate to Integration Builder to use your connector.
 
