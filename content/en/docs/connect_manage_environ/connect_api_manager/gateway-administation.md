@@ -114,12 +114,12 @@ This section connects the agent to API Manager and determines which APIs should 
 
 `APIMANAGER_POLLINTERVAL`: The frequency in which API Manager is polled for new endpoints. Default value is 30s.
 
-`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Amplify Central, setting this value to true will enable a selection in the App name drop-down for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create a new application in API Manager. The new application in API Manager will be given the name of the subscription ID from Amplify Central. A value of false will cause 'Create an application' to not be shown in the drop-down. Default value is **true**.
+`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Amplify Central, setting this value to true will enable a selection in the App name drop-down for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create an application in API Manager. The new application in API Manager will be given the name of the subscription ID from Amplify Central. A value of false will cause 'Create an application' to not be shown in the drop-down. Default value is **true**.
 
-`APIMANAGER_AUTH_USERNAME`: An API Manager user the agent will use to connect to the API Manager. This user must have either the “API Manager Administrator” or “Organization administrator” role. Based on the role of this user, the agent is able to:
+`APIMANAGER_AUTH_USERNAME`: An API Manager user the agent will use to connect to the API Manager. This user must have either the “API Manager Administrator” or “Organization Administrator” role. Based on the role of this user, the agent is able to:
 
 * Discover any API from any organization (“API Manager Administrator”)  
-* Discover any API from a specific organization (“Organization administrator”)
+* Discover any API from a specific organization (“Organization Administrator”)
 
 `APIMANAGER_AUTH_PASSWORD`: The password of the API Manager user in clear text.
 
@@ -423,7 +423,7 @@ For the service to start correctly, ensure that the variables `CENTRAL_AUTH_PUBL
   ```
 
 {{< alert title="Note" color="primary" >}}
-When using the update command, the current service definition will be removed and a new one will be created.  Therefore, it is required to supply all of the necessary values, such as the user and group arguments.
+When using the update command, the current service definition will be removed and one will be created.  Therefore, it is required to supply all of the necessary values, such as the user and group arguments.
 {{< /alert >}}
 
 **`start`** - To start the service:
@@ -681,7 +681,7 @@ This section helps the agent to collect the request/response headers from the AP
 
 `APIGATEWAY_SENDALLTRAFFIC`: Used to determine whether the Traceability Agent should send all traffic to be reported. When set to **false**, only discovered APIs will be reported. Default value is **true**.
 
-`APIGATEWAY_AUTH_USERNAME`: An Axway API Gateway username with the "API Gateway operator" role.
+`APIGATEWAY_AUTH_USERNAME`: An Axway API Gateway username with the "API Gateway Operator" role.
 
 `APIGATEWAY_AUTH_PASSWORD`: The Axway API Gateway username password in clear text.
 
@@ -915,7 +915,7 @@ To update the service definition and have the agent execute as user axway and gr
   ```
 
 {{< alert title="Note" color="primary" >}}
-When using the update command, the current service definition will be removed and a new one will be created. Therefore, it is required to supply all of the necessary values, such as the user and group arguments.
+When using the update command, the current service definition will be removed and one will be created. Therefore, it is required to supply all of the necessary values, such as the user and group arguments.
 {{< /alert >}}
 
 **`start`** - To start the service:

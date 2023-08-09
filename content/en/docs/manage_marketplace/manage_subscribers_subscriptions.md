@@ -32,7 +32,7 @@ Three personas are identified:
 
 **Plan**: billing and quota information attached to a product. Each plan has a subscription approval: automatic (default) or manual.
 
-**Subscription**: authorization to manipulate a product under a plan condition. Based on the subscription plan, fees might apply, which are required to be paid by the subscription manager.
+**Subscription**: authorization to manipulate a product under a plan condition. Based on the subscription plan, fees might apply, which are required to be paid by the Subscription Manager.
 
 **Application**: represents one (or multiple) business facet of a product that a consumer will use.
 
@@ -88,7 +88,7 @@ Only cancelled and rejected subscription can be deleted from the system.
 Deleting a subscription is irrevocable. Once the subscription is deleted from the system, Business Insights and Consumer Insights screens will cease to show that subscription.
 {{< /alert >}}
 
-1. As a catalog manager or a subscription approver of a product, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions belonging to a product owned by your team.
+1. As a Catalog Manager or a subscription approver of a product, navigate to *Amplify Central > Marketplace > Subscriptions* to view all subscriptions belonging to a product owned by your team.
 2. Filter the subscription list by subscription status (Pending / Approved / Rejected) and/or team. Each subscription displays its name, the associated product, the organization and team that own the subscription, the approval status and the subscription state.
 3. Click **Delete** from the ellipsis menu to trigger the subscription deletion.
 4. Confirm your choice and validate it.
@@ -113,7 +113,7 @@ Persona: **Subscription Approver** team role or **Catalog Manager** team role
 
 {{< alert title="Note" color="primary" >}}The Central Admin role can be used. This user can see all access requests without team constraint.{{< /alert >}}
 
-Access requests are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the catalog manager can see only the access requests associated to a product owned by the team(s) he is a part of.
+Access requests are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the Catalog Manager can see only the access requests associated to a product owned by the team(s) he is a part of.
 
 Access request have three approval states:
 
@@ -137,7 +137,7 @@ This will trigger an event to inform of the access request approval. Based on th
 
 ### Rejecting an access request
 
-1. As the catalog manager or subscription approver, navigate to *Amplify Central > Marketplace > Access Requests* to view all access requests associated to the   product(s) owned by your team.
+1. As the Catalog Manager or subscription approver, navigate to *Amplify Central > Marketplace > Access Requests* to view all access requests associated to the   product(s) owned by your team.
 2. Filter the access request list by approval state (Pending / Approved / Rejected) and/or provisioning state (Pending / Success / Error) and/or team. Each access request displays its name, the associated asset, the organization of the team that owned the request, the approval status and the provisioning status.
 3. Click on the access request name to display the access request details. From this page, click either **Revoke** to reject the access request that was previously approved, or **Decline** if the access request is pending.
 
@@ -147,7 +147,7 @@ Persona: **Catalog Manager** team role
 
 {{< alert title="Note" color="primary" >}}The Central Admin role can be used. This user will be able to see all credentials without team constraint.{{< /alert >}}
 
-Credentials are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the catalog manager can see only the credentials associated to a product owned by the team(s) they are part of.
+Credentials are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the Catalog Manager can see only the credentials associated to a product owned by the team(s) they are part of.
 
 A credential has two states:
 
@@ -164,12 +164,12 @@ A credential can have an expiration date. This expiration date is defined in the
 
 ### Suspending / Enabling credentials
 
-1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials associated to the product(s) owned by your team.
+1. As a Catalog Manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials associated to the product(s) owned by your team.
 2. Filer the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
 3. Click on the credential name to open the credential details.
 4. Enter a reason.
 
-Once the reason is entered, the catalog manager can:
+Once the reason is entered, the Catalog Manager can:
 
 * Click **Suspend** to suspend an active credential. The credential status will become Inactive.
 * Click **Enable** to enable a suspended credential. The credential status will become Active and a new expiration date will be set if enforced by the Discovery Agent.
@@ -178,7 +178,7 @@ Once the reason is entered, the catalog manager can:
 
 This action is not supported by all data planes and may not be available for the provider.
 
-1. As a catalog manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials associated to the product(s) owned by your team.
+1. As a Catalog Manager, navigate to *Amplify Central > Marketplace > Credentials* to view all credentials associated to the product(s) owned by your team.
 2. Filter the credential list by state (Active / Inactive) and/or provisioning state (Pending / Success / Error) and/or team. Each credential displays its name, state, expiration date if any, application name, owner name, the organization and team of the owner.
 3. Click on the credential name to open the credential details.
 4. Enter a reason, then click **Renew**.

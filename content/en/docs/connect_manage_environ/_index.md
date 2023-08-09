@@ -50,7 +50,7 @@ An API service represents a physical deployment of a resource in an environment.
 
 #### Versions
 
-API Services have a specification based on type (OAS2, OAS3, WSDL, Protobuf, etc). Whenever this specification changes a new version must be created. This helps account for different stages in the lifecycle of the API service. Each version has a direct dependency on its associated API services and can be individually configured for differing consumer access needs.
+API Services have a specification based on type (OAS2, OAS3, WSDL, Protobuf, etc). Whenever this specification changes, a version must be created. This helps account for different stages in the lifecycle of the API service. Each version has a direct dependency on its associated API services and can be individually configured for differing consumer access needs.
 
 #### Endpoints
 

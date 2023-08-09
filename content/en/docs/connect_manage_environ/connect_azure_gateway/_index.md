@@ -38,7 +38,7 @@ The Traceability Agent sends log information about APIs that have been discovere
 
 ## Prerequisites
 
-* An Axway Amplify subscription in the Amplify Platform
+* An Axway Amplify subscription in the Amplify platform
 * (Optional) A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
@@ -46,7 +46,7 @@ The Traceability Agent sends log information about APIs that have been discovere
 
 * An Amplify environment
 * An Azure Service principal for the Discovery Agent to use Azure APIs
-* An Azure Event Hub for the Traceability Agent to report API traffic to Amplify Platform
+* An Azure Event Hub for the Traceability Agent to report API traffic to Amplify platform
 
 ## System requirements
 

@@ -174,7 +174,7 @@ If your network policy restricts outbound traffic such that outbound traffic mus
 
 ### HTTP/HTTPS Proxy for Discovery and Traceability Agent
 
-Use a HTTP/HTTPS Proxy for communication to the Amplify Platform.  This configuration is set for both the [Discovery](/docs/connect_manage_environ/connect_api_manager/agent-variables/) and [Traceability](/docs/connect_manage_environ/connect_api_manager/agent-variables/) Agents.
+Use a HTTP/HTTPS Proxy for communication to the Amplify platform.  This configuration is set for both the [Discovery](/docs/connect_manage_environ/connect_api_manager/agent-variables/) and [Traceability](/docs/connect_manage_environ/connect_api_manager/agent-variables/) Agents.
 
 Associated agent variables are:
 

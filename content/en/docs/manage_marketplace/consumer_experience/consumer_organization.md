@@ -32,7 +32,7 @@ To submit the information, click the **Sign up** button. A message to check your
 
 A consumer organization allows you to define users and teams. A user can have multiple roles assigned, and can be a member of multiple teams.
 
-The user that registered with a consumer organization will become the **Administrator** of the organization. The administrator can manage the user roles, under the condition that there must always be a user that has the Administrator role assigned.
+The user that registered with a consumer organization will become the **Administrator** of the organization. The Administrator can manage the user roles, under the condition that there must always be a user that has the Administrator role assigned.
 
 The Administrator has all the roles on the default team.
 
