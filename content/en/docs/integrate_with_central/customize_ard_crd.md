@@ -19,7 +19,7 @@ Learn how to customize the access request and credentials request screen in Mark
 * A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to access a resource or create credentials, the definition of the access or credentials may require extra parameters.
 * A provider may want to send back extra information to the consumer. For example, credential information or public keys, etc.
 
-In both cases, a schema definition based on **react-jsonchema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
+In both cases, a schema definition based on **react-jsonschema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
 
 By default when using Discovery Agents, the extra information is integrated when the agent discovers APIs based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
 
@@ -49,7 +49,7 @@ Each item is described using json format. Below is a non-exhaustive list:
 You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/react-jsonschema-form/) to try out the various combination.
 
 {{< alert title="Note" color="primary" >}}
-The playground allows you to change the UI components (UISchenma section of the playground); however, the Marketplace UI does not use these components. As a result, the Marketplace UI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
+The playground allows you to change the UI components (UISchema section of the playground); however, the Marketplace UI does not use these components. As a result, the Marketplace UI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
 {{< /alert >}}
 
 #### Text component
@@ -199,7 +199,7 @@ The playground allows you to change the UI components (UISchenma section of the 
 
 ## Customize access request screen
 
-To customize the access request screen, you need an `AccessRequestDefinition`. This object will contain the screen definition of the information required to provision access to a Service and the output the provider wants to return to the consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
+To customize the access request screen, you need an `AccessRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to the consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
 
 Name of the object: **AccessRequestDefinition**
 
@@ -348,7 +348,7 @@ You will be able to see the purpose selector once you publish the product to the
 
 ## Customize credential request screen
 
-To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a Service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
+To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
 
 Name of the object: **CredentialRequestDefinition**
 
@@ -568,7 +568,7 @@ Sample asking the consumer for a PEM public key file and returning oauth clientI
     }
 ```
 
-Once the CredentialRequestDefinition object is created using the Axway central CLI (`axway central apply -f crd-pem-key.json`), you must link it to the corresponding APIServiceInstance.
+Once the CredentialRequestDefinition object is created using the Axway Central CLI (`axway central apply -f crd-pem-key.json`), you must link it to the corresponding APIServiceInstance.
 
 Sample of an APIServiceInstance (json format) using the previous AccessRequestDefinition and a CredentialRequestDefinition:
 
