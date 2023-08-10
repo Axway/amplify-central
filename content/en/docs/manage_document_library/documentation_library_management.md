@@ -98,6 +98,10 @@ Cancelling the wizard will not remove the uploaded files. If you don't need the 
 
 ## Delete a document
 
+Central Admin can delete any document regardless if they are used in product documentation or in Marketplace settings.
+
+Catalog Manager / Marketplace MAnager are able to delete the document they owned only if the document is not used in product document nor in Marketplace settings.
+
 This action is irrevocable and cannot be undone.
 
 1. Navigate to *Document Library*
