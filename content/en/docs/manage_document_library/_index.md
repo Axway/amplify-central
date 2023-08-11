@@ -10,7 +10,7 @@ The Document Library allows user to centralize their documentation. This central
 
 ## What is the Document Library?
 
-The Document Library is a collection of resuable documentation that can be published to the Marketplace that highlights the products available to consumers. Use the Document Library WebUI to:
+The Document Library is a collection of resuable documentation. Use the Document Library WebUI to:
 
 * Upload existing documents into the library
 * Create Markdown documents (coming soon)
