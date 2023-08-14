@@ -30,24 +30,24 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Agent Type** - select the type of agent to be used to connect to this API Gateway. Select **Embedded** for Axway to host the agent or select **Remotely Hosted** if the agent will be hosted by the customer
     * **Agent Configuration** - this is only displayed for environment types supported by the Embedded agent. Currently, only AWS API Gateway is supported.
-         * **Enable Traceability Agent** - select to enable the Embedded Traceability Agent setup, which requires an Access Log ARN to be entered in Cloud Watch Settings.
-         * **AWS Region** - select the AWS region where the AWS API Gateway is located.
+         * **Enable Traceability Agent** - to optionally configure the Traceability Agent, the checkbox for to enable the Embedded Traceability Agent setup. The requires an Access Log ARN to be entered in the CloudWatch settings..
+         * **AWS Region** - select or enter the AWS region if not in the list where the AWS API Gateway is located.
          * **AWS Authentication** - select the method of AWS authentication to use, AssumeRole or Access Key/Secret Key. For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded agents](/docs/connect_manage_environ/connect_aws_gateway/#embedded-aws-agent-setup).
-         * **Cloud Watch Settings** - the Embedded Traceability Agent, as well as AWS API Gateway itself, use the AWS CloudWatch. To enable the agent to retrieve API usages, Access Log ARN needs to be entered.
+         * **CloudWatch Settings** - the Embedded Traceability Agent, as well as AWS API Gateway itself, use the AWS CloudWatch. To enable the agent to retrieve API usages, Access Log ARN needs to be entered.
 
 5. Embedded Discovery Agent Settings (optionally displayed steps if there is Embedded agent support for the selected environment type):
 
-   * **Frequency** - set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+   * **Frequency** - set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. (eg. 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days). See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
    * **Initiate Immediate discovery** - select to enable the Embedded agent to discover AWS API Gateway resources after environment creation and Embedded agent configuration are complete.
-   * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). "No Owner" can also be selected if ownership isn't needed.
+   * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). "No Owner" can also be selected which makes the API service(s) only accessible by the Central Admin role.
    * **API Discovery Filter** - filter conditions for discovery of API Services based on tags, see [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
    * **Additional Tags** - in adddition to any tags found on the gateway, tags defined here will be added to all API Services created from this discovery agent.
    * **Exclude Tags** - if a tag listed here is on an API in the gateway it will not be added as a tag in the API Service.
 
 6. Embedded Traceability Agent Settings (optionally displayed steps if there is Embedded agent support for the selected environment type and "Enable Traceability Agent" is selected in the Configure step):
 
-   * **Frequency** - set how often the Embedded agent should run traffic collection.
-   * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights.
+   * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. (eg. 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days).
+   * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is "10" and the acceptable values are between "0" and "50".
    * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the dataplane.
        * **URL Path** - a list of all URL paths, or path regular expressions, which may be reported to Central.
        * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
