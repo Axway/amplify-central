@@ -49,7 +49,7 @@ Learn how to create an environment to represent your API services and other disc
    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. (eg. 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days).
    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is "10" and the acceptable values are between "0" and "50".
    * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the dataplane.
-       * **URL Path** - a list of all URL paths, or path regular expressions, which may be reported to Central. For example, ".*" will send all the path values, i.e., if the agent finds a path of https://somehost.com/pathof/my/api/uses/thispath then https://somehost.com/pathof/my/api/uses/thispath will be sent to the platform.
+       * **URL Path** - a list of all URL paths, or path regular expressions, which may be reported to Central. For example, ".*" will send all the path values, i.e., if the agent finds a path of (https://somehost.com/pathof/my/api/uses/thispath) then (https://somehost.com/pathof/my/api/uses/thispath) will be sent to the platform.
        * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
            * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and sent to platform.
            * **Sanitization Patterns**
