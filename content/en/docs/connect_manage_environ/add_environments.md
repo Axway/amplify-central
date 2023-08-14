@@ -49,22 +49,25 @@ Learn how to create an environment to represent your API services and other disc
    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. (eg. 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days).
    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is "10" and the acceptable values are between "0" and "50".
    * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the dataplane.
-       * **URL Path** - a list of all URL paths, or path regular expressions, which may be reported to Central.
+       * **URL Path** - a list of all URL paths, or path regular expressions, which may be reported to Central. For example, ".*" will send all the path values, i.e., if the agent finds a path of https://somehost.com/pathof/my/api/uses/thispath then https://somehost.com/pathof/my/api/uses/thispath will be sent to the platform.
        * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
-           * **Allowed Patterns** - query argument names that match any of these expressions will be reported.
+           * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and sent to platform.
            * **Sanitization Patterns**
                * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
                * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
+               For example, if we would like to sanitize the whole value of "id" query argument then keyMatch:"^id$",valueMatch:".*" will return the query arguments with their key set to "id" and value set to {*}.
        * **Request Headers** - regular expressions applied to the request headers in the transactional data.
-           * **Allowed Patterns** - request headers keys that match any of these expressions will be reported.
+           * **Allowed Patterns** - request headers keys that match any of these expressions will be reported. For example, "authorization" value will find all the request headers that have "authorization" anywhere in the key and sent to platform.
            * **Sanitization Patterns**
                * **Key Match** - request headers keys that match any of these expressions will have the valueMatch sanitized.
                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+               For example, if we would like to sanitize the first five characters of any request header with a key that has "authorization" in it, then keyMatch:"authorization",valueMatch:"^.{0,5}" will return the request headers with their "key" set to "authorization" and "value" set to a value whose first five characters replaced by the masking character value.
        * **Response Headers** - regular expressions applied to the response headers in the transactional data.
-           * **Allowed Patterns** - response headers keys that match any of these expressions will be reported.
+           * **Allowed Patterns** - response headers keys that match any of these expressions will be reported. For example, ".*" value will find all the response headers and sent to platform.
            * **Sanitization Patterns**
                * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+               For example, Sanitize the response headers of the word ‘data’, wherever it is found, in any header that starts with ‘content', then keyMatch:"^content",valueMatch:"data", and maskingCharacter: ""{##}"" will return the response headers with their "key" starting with "content" and "value" set to a value in which the "data" occurences are replaced by "{##}" masking character.
    * **Masking Characters** - the set of character(s) that will replace any value matched while sanitizing.
 
 7. For Access Rights, select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, and then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team. Click **Next**.
