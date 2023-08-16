@@ -1,20 +1,20 @@
 ---
-title: Manage your Documentation library
-linkTitle: Manage your Documentation library
+title: Manage your Document Library
+linkTitle: Manage your Document Library
 weight: 465
 date: 2022-08-07
 hide_readingtime: true
 ---
 
-The Documentation library allows user to centralize their documentation. This centralized documentation can then be reference in Product Documentation or in the Marketplace settings (footer link / menus link). When modifying a central documentation, the changes are immediately visible on the objects using it.
+The Document Library allows user to centralize their documentation. This centralized documentation can then be referenced in Product Documentation or in the Marketplace settings (footer link / menus link). When modifying the documentation, the changes are immediately visible on the objects using it.
 
-## What is Documentation Library?
+## What is the Document Library?
 
-The documentation library allows to:
+The Document Library is a collection of resuable documentation. Use the Document Library WebUI to:
 
-* upload existing document into the library
-* create Markdown document (coming soon)
-* use external Links (coming soon)
+* Upload existing documents into the library
+* Create Markdown documents (coming soon)
+* Use external documentation links (coming soon)
 
 ## Related topics
 
