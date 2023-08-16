@@ -105,6 +105,6 @@ Catalog Manager / Marketplace MAnager are able to delete the document they owned
 This action is irrevocable and cannot be undone.
 
 1. Navigate to *Document Library*
-2. Select the checkbox in front of the document you want to delete then click  **Delete**.
+2. Select the checkbox in front of the document you want to delete then click  **Delete**. You can also delete individual document using the ellipsis menu.
 3. A popup displays the selected document names as well as all affected references (Product / Marketplace). Type **DELETE** in the confirmation field.
 4. click **Delete** to validate the action
