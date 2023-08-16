@@ -23,7 +23,7 @@ Learn how to create an environment to represent your API services and other disc
     * **Environment Type** - select the type of API Gateway (Amplify API Gateway, AWS API Gateway, Azure API Gateway, Istio) which Axway provides Connected agent support. The Custom/SDK option is for community supported agents or agents developed with the Agent SDK. The Manual option is for a manual sync environment that does not use an agent.
     * **Production** - select **Yes** if this environment will perform production processing or connects to a non-Axway gateway. The usage will count against your entitled quota.
     * **Governance** - select **Axway Manage** if the environment is hosted in Axway Managed Cloud.
-    * **Description** - enter a short description of the environment.
+    * **Description** - enter a brief description of the environment.
     * **Image** - Add an icon or image to be associated with the environment.
 
 4. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
@@ -51,7 +51,7 @@ Learn how to create an environment to represent your API services and other disc
    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
    * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane.
-       * **URL Path** - all URL paths, or path regular expressions, that may be reported to Central. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
+       * **URL Path** - all URL paths, or path regular expressions, which may be reported to Central. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
        * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
            * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and send to platform.
            * **Sanitization Patterns**
