@@ -28,10 +28,10 @@ Learn how to create an environment to represent your API services and other disc
 
 4. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
 
-    * **Agent Type** - select the type of agent that will connect to this API Gateway.
+    * **Agent Type** - select the type of agent that will connect to this API Gateway:
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted**  the customer to host the agent.
-    * **Agent Configuration** - currently, only AWS API Gateway is supported by Embedded agent.
+    * **Agent Configuration** - currently, only AWS API Gateway is supported by Embedded agent:
          * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires an Access Log ARN in the CloudWatch settings below.
          * **AWS Region** - select or enter the AWS region if not in the list where the AWS API Gateway is located.
          * **AWS Authentication** - select the method of AWS authentication to use, AssumeRole or Access Key/Secret Key. For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded agents](/docs/connect_manage_environ/connect_aws_gateway/#embedded-aws-agent-setup).
@@ -50,23 +50,23 @@ Learn how to create an environment to represent your API services and other disc
 
    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
-   * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane.
+   * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane:
        * **URL Path** - all URL paths, or path regular expressions, which may be reported to Central. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
-       * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
+       * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data:
            * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and send to platform.
-           * **Sanitization Patterns**
+           * **Sanitization Patterns**:
                * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
                * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
                For example, to sanitize the whole value of "id" query argument, keyMatch:"^id$",valueMatch:".*" will return the query arguments with their key set to "id" and value set to {*}.
-       * **Request Headers** - regular expressions applied to the request headers in the transactional data.
+       * **Request Headers** - regular expressions applied to the request headers in the transactional data:
            * **Allowed Patterns** - request headers keys that match any of these expressions will be reported. For example, "authorization" value will find all the request headers that have "authorization" anywhere in the key and send to platform.
-           * **Sanitization Patterns**
+           * **Sanitization Patterns**:
                * **Key Match** - request headers keys that match any of these expressions will have the valueMatch sanitized.
                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
                For example, to sanitize the first five characters of any request header with a key that has "authorization" in it, keyMatch:"authorization",valueMatch:"^.{0,5}" will return the request headers with their "key" set to "authorization" and "value" set to a value whose first five characters replaced by the masking character value.
-       * **Response Headers** - regular expressions applied to the response headers in the transactional data.
+       * **Response Headers** - regular expressions applied to the response headers in the transactional data:
            * **Allowed Patterns** - response headers keys that match any of these expressions will be reported. For example, ".*" value will find all the response headers and send to platform.
-           * **Sanitization Patterns**
+           * **Sanitization Patterns**:
                * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
                For example, to sanitize the response headers of the word "data" wherever it is found, in any header that starts with ‘content', keyMatch:"^content",valueMatch:"data", and maskingCharacter: ""{##}"" will return the response headers with their "key" starting with "content" and "value" set to a value in which the "data" occurrences are replaced by "{##}" masking character.
