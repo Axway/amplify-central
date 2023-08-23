@@ -81,8 +81,8 @@ To create a document:
 3. Select the method **Upload Document(s)**, and either use the **BROWSE FILES** button or drop file(s) in the drop area. The successfully uploaded file is displayed in the Manage Uploads area. If a file does not respect the limitations, it will appear in an error message area.
 4. Check the box in front of the uploaded file to edit the file details: Document name, Description, Version. Once your document information is correct, click **Next**.
 5. Add your document visibility: Product and/or Marketplace. This visibility will be applied to all documents. If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
-6. Add the team permissions: Restricted (only the Central Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**
-7. Review your uploaded files. You can return to any page using either the ellipsis menu next to the document tile or the **Prev** button. Once everything looks good click **Save**.
+6. Add the team permissions: Restricted (only the Central Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
+7. Review your uploaded files. Click the **Prev** button to return to any of the previous pages. Once everything looks good click **Save**.
 
 All documents will be displayed in the Document Library list view.
 
