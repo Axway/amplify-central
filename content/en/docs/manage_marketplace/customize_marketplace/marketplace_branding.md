@@ -96,7 +96,7 @@ From the *Appearance* page, click **Configure** in the Fonts section to change a
 * **Font family** - the font set to display text. You can choose an existing font or add your own font.
 * **Kerning** - adjust the spacing between characters.
 
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+Click **Save** at the top of the page to save your changes. Click **Reset** to revert the changes to the previous values.
 
 ### Change the buttons appearance
 
@@ -105,11 +105,11 @@ From the *Appearance* page, click **Configure** in the Buttons section to change
 * **Button format** - the format of the button: Solid or Outline.
 * **Button radius** - the button radius: Square, Rounded or Round.
 
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+Click **Save** at the top of the page to save your changes. Click **Reset** to revert the changes to the previous values.
 
 ### Customize the help menu
 
-From the *Appearance* page, click **Configure** in the Help Menu section to change the contents of the help menu displayed in the navigation bar. Click **Add menu item** to configure a Help menu. Do the following to configure menu items:
+From the *Appearance* page, click **Configure** in the Help Menu section to change the contents of the help menu displayed in the navigation bar. Click **Add menu item** and configure the menu items:
 
 1. Click the question mark icon to select an icon from the drop down menu to use for the help item image.
 2. Type a label for the menu item.
@@ -120,18 +120,18 @@ From the *Appearance* page, click **Configure** in the Help Menu section to chan
 
 ### Customize the navigation menu
 
-From the *Appearance* page, click **Configure** in the Navigation Menu Items section to add and configure links to the common navigation menu. Click **Add navigation item**, and then do the following to configure menu items:
+From the *Appearance* page, click **Configure** in the Navigation Menu Items section to add and configure links to the common navigation menu. Click **Add navigation item** and configure the menu items:
 
-* **Clear all items** - deletes all navigation menu items. Use the trash bin to remove specific navigation menu items.
-* **Label** - a name identifying the URL.
-* **URL** - address to a resource. This could be a fixed URL or a Document library document to be selected among the one available.
-* **Visibility** - when this menu is visible (Always / Only when a user is signed in / only when user is signed out)
+* **Clear all items** - click to delete all navigation menu items. Use the trash bin to remove specific navigation menu items.
+* **Label** - enter a name identifying the URL.
+* **URL** - ent the address to a resource. This could be a fixed URL or a document in the Document library document.
+* **Visibility** - select when this menu is visible (always shown / only when a user is signed in / only when user is signed out)
 * **New Tab** - select to open the resource in a new page.
 * **Bin icon** - remove the corresponding menu.
-* **+ Add Menu Item** - click to add up to four more navigation menu items. Once you have added the items, use the chevrons to change the order that they will appear within the menu.  
+* **+ Add Menu Item** - click to add up to four more navigation menu items. Once you have added the items, use the arrows to change the order that they will appear within the menu.  
 * **Menu Position** - the alignment of the navigation menu within the footer (left, center, right).
 
-Close the panel and click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+Close the panel and click **Save** at the top of the page to save your changes. Click **Reset** to revert the changes to the previous values.
 
 ## Customize the Marketplace appearance with APIs
 
