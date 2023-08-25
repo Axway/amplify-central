@@ -22,9 +22,7 @@ Learn how to use the Document Library WebUI to:
 
 ## View documents
 
-To view documents:
-
-1. Navigate to *Document Library*.
+To view documents, navigate to *Document Library*.
 
 View the following information for all documents:
 
@@ -32,7 +30,7 @@ View the following information for all documents:
 * Description - the document description (may be truncated after 50 characters)
 * Access - the document visibility (Public / Protected)
 * Referenced - the number of times this document is referenced (product document / Marketplace settings)
-* Type - the document type ((plain text format (TXT) / Portable Document Format (PDF) / Word documents (DOC, DOCX) / Markdown (MD) / PowerPoint (PPTX) / Excel (XLSX))
+* Type - the document type (plain text format - TXT / Portable Document Format - PDF / Word documents - DOC, DOCX / Markdown - MD / PowerPoint - PPTX / Excel - XLSX)
 * Modified - the last time the document was updated
 
 You can also filter the documents by types using the **Filter by:** controls. Search by document name with the search bar.
@@ -82,27 +80,25 @@ To create a document:
 4. Check the box in front of the uploaded file to edit the file details: Document name, Description, Version. Once your document information is correct, click **Next**.
 5. Add your document visibility: Product and/or Marketplace. This visibility will be applied to all documents. If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
 6. Add the team permissions: Restricted (only the Central Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
-7. Review your uploaded files. Click the **Prev** button to return to any of the previous pages. Once everything looks good click **Save**.
+7. Review your uploaded files. Click **Prev** to return to any of the previous pages. Once everything looks good, click **Save**.
 
-All documents will be displayed in the Document Library list view.
+All documents are now displayed in the Document Library list view.
 
 {{< alert title="Note" color="warning">}}
-Cancelling the wizard will not remove the uploaded files. If you don't need the uploaded files, [removing them](#delete-a-document).
+Cancelling the wizard will not remove the uploaded files. If you don't need an uploaded file, [remove it](#delete-a-document).
 {{< /alert >}}
 
 ## Edit a document
 
-Funtionality under development.
+Functionality under development.
 
 ## Delete a document
 
 Central Admins can delete any document regardless of whether they are used in product documentation or in Marketplace settings.
 
-Catalog Manager / Marketplace Manager can delete a document they own only when it is not used in product documention or in Marketplace settings.
+Catalog Manager / Marketplace Manager can delete a document they own only when it is not used in product documentation or in Marketplace settings.
 
-{{< alert title="Note" color="warning">}}
-This action is irrevocable and cannot be undone.
-{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This action is irrevocable and cannot be undone.{{< /alert >}}
 
 To delete a document:
 
