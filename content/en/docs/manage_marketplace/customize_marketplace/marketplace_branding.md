@@ -122,7 +122,7 @@ From the *Appearance* page, select a menu option from the Typography section to 
 * **Font family** - the font set to display text. You can choose an existing font or add your own font.
 * **Kerning** - adjust the spacing between characters.
 
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+Click **Save** at the top of the page to save your changes. Click **Reset** to revert the changes to the previous values.
 
 ### Change the buttons appearance
 
@@ -132,6 +132,28 @@ From the *Appearance* page, select a radio button in the Buttons section to chan
 * **Button radius** - the button shape. Choose Square, Rounded or Round.
 
 Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+
+### Customize the help menu
+
+From the *Appearance* page, click **Configure** in the Help Menu section to change the contents of the help menu displayed in the navigation bar. Click **Add menu item** to configure a Help menu. Do the following to configure menu items:
+
+1. Click the question mark icon to select an icon from the drop down menu to use for the help item image.
+2. Type a label for the menu item.
+3. Type a link to the menu item.
+4. Click the up or down arrow keys to move the menu item's position.
+5. Click the delete icon to remove a menu item.
+6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
+
+### Customize the navigation menu
+
+From the *Appearance* page, click **Configure** in the Navigation Menu Items section to add and configure links to the common navigation menu. Click **Add navigation item**, and then do the following to configure menu items:
+
+1. Type a label for the menu item.
+2. Type a link to the menu item.
+3. Click the **+** button to add more menu items.
+4. Click the up or down arrow keys to move the menu item's position.
+5. Click the delete icon to remove a menu item.
+6. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
 
 ## Customize the Marketplace appearance with APIs
 
