@@ -107,6 +107,6 @@ This action is irrevocable and cannot be undone.
 To delete a document:
 
 1. Navigate to *Document Library*.
-2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete more than one documen at a time, select the checkboxes in front of the documents you want to delete and click  **Delete**. 
+2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete more than one document at a time, select the checkboxes in front of the documents you want to delete and click  **Delete**.
 3. A popup displays the selected document name(s) as well as all affected references (product / Marketplace). Type **DELETE** in the confirmation field.
 4. Click **Delete** to validate the action.
