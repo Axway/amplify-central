@@ -124,7 +124,7 @@ From the *Appearance* page, click **Configure** in the Navigation Menu Items sec
 
 * **Clear all items** - click to delete all navigation menu items. Use the trash bin to remove specific navigation menu items.
 * **Label** - enter a name identifying the URL.
-* **URL** - ent the address to a resource. This could be a fixed URL or a document in the Document library document.
+* **URL** - enter the address to a resource. This could be a fixed URL or a document in the Document library document.
 * **Visibility** - select when this menu is visible (always shown / only when a user is signed in / only when user is signed out)
 * **New Tab** - select to open the resource in a new page.
 * **Bin icon** - remove the corresponding menu.
