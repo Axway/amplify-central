@@ -4,7 +4,7 @@ linkTitle: Document management
 weight: 20
 ---
 
-Manage your documents with the Document Library UI.
+Manage your documents with the Document Library WebUI.
 
 ## Before you start
 
@@ -15,31 +15,29 @@ You must have Catalog Manager team role, assigned by your org administrator, to 
 Learn how to use the Document Library WebUI to:
 
 * Upload a document
-* Make a document available for Product document or Marketplace settings
+* Make a document available (product document / Marketplace settings)
 * Restrict the document access
 * Edit a document (coming soon)
 * Delete a document
 
 ## View documents
 
-To view documents:
-
-1. Navigate to *Document Library*.
+To view documents, navigate to *Document Library*.
 
 View the following information for all documents:
 
-* Document Name - the name of the document and current document version
+* Document Name - the name of the document and the current document version
 * Description - the document description (may be truncated after 50 characters)
 * Access - the document visibility (Public / Protected)
-* Referenced - the number of times this document is referenced (product document / Marketplace settings)
-* Type - the document type ((plain text format (TXT) / Portable Document Format (PDF) / Word documents (DOC, DOCX) / Markdown (MD) / PowerPoint (PPTX) / Excel (XLSX))
+* Referenced - the number of times the document is referenced (product document / Marketplace settings)
+* Type - the document type (plain text format - TXT / Portable Document Format - PDF / Word documents - DOC, DOCX / Markdown - MD / PowerPoint - PPTX / Excel - XLSX)
 * Modified - the last time the document was updated
 
 You can also filter the documents by types using the **Filter by:** controls. Search by document name with the search bar.
 
 ## View document details
 
-To view details of a document:
+To view a document's details:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the Document Details:
@@ -49,14 +47,14 @@ To view details of a document:
     * Document type - TXT / PDF / DOC / DOCX / MD / PPTX / XLSX
     * Updated On - the last update date
     * Created On - the creation date
-    * Document thumbnail - Preview of the first page of the document (only available for PDF documents)
+    * Document thumbnail - preview of the document's first page (only available for PDF documents)
     * Document file name - the file name associated to the document
-    * Document description - the document description helping identify the document content
-    * Referenced Resources - the resources that are using this document (product and/or Marketplace) and the statuses of the resources (Available / Used)
+    * Document description - the document description that helps identify the document content
+    * Referenced Resources - the resources that are using the document (product and/or Marketplace) and the statuses of the resources (Available / Used)
 
 ### Preview a document
 
-To open a preview of a PDF / Markdown document:
+To open a preview of a PDF / MD document:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the Document Details.
@@ -64,7 +62,7 @@ To open a preview of a PDF / Markdown document:
 
 ### Download a document
 
-To download any document:
+To download a document:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the Document Details.
@@ -82,31 +80,29 @@ To create a document:
 4. Check the box in front of the uploaded file to edit the file details: Document name, Description, Version. Once your document information is correct, click **Next**.
 5. Add your document visibility: Product and/or Marketplace. This visibility will be applied to all documents. If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
 6. Add the team permissions: Restricted (only the Central Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
-7. Review your uploaded files. Click the **Prev** button to return to any of the previous pages. Once everything looks good click **Save**.
+7. Review your uploaded files. Click **Prev** to return to any of the previous pages. Once everything looks good, click **Save**.
 
-All documents will be displayed in the Document Library list view.
+All documents are now displayed in the Document Library list view.
 
-{{< alert title="Note" color="warning">}}
-Cancelling the wizard will not remove the uploaded files. If you don't need the uploaded files, [removing them](#delete-a-document).
+{{< alert title="Note" color="primary" >}}
+Cancelling the wizard will not remove the uploaded files. If you don't need an uploaded file, [remove it](#delete-a-document).
 {{< /alert >}}
 
 ## Edit a document
 
-Funtionality under development.
+Functionality under development.
 
 ## Delete a document
 
-Central Admins can delete any document regardless of whether they are used in product documentation or in Marketplace settings.
+Central Admins can delete any document regardless of whether it is used in product documentation or in Marketplace settings.
 
-Catalog Manager / Marketplace Manager can delete a document they own only when it is not used in product documention or in Marketplace settings.
+Catalog Manager / Marketplace Manager can delete a document they own only when it is not used in product documentation or in Marketplace settings.
 
-{{< alert title="Note" color="warning">}}
-This action is irrevocable and cannot be undone.
-{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This action is irrevocable and cannot be undone.{{< /alert >}}
 
 To delete a document:
 
 1. Navigate to *Document Library*.
-2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete more than one document at a time, select the checkboxes in front of the documents you want to delete and click  **Delete**.
+2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete multiple documents, select the checkboxes in front of the documents and click **Delete**.
 3. A popup displays the selected document name(s) as well as all affected references (product / Marketplace). Type **DELETE** in the confirmation field.
 4. Click **Delete** to validate the action.
