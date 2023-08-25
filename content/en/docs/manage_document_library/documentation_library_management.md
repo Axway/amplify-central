@@ -15,7 +15,7 @@ You must have Catalog Manager team role, assigned by your org administrator, to 
 Learn how to use the Document Library WebUI to:
 
 * Upload a document
-* Make a document available for Product document or Marketplace settings
+* Make a document available (product document / Marketplace settings)
 * Restrict the document access
 * Edit a document (coming soon)
 * Delete a document
