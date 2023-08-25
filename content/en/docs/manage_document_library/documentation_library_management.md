@@ -26,10 +26,10 @@ To view documents, navigate to *Document Library*.
 
 View the following information for all documents:
 
-* Document Name - the name of the document and current document version
+* Document Name - the name of the document and the current document version
 * Description - the document description (may be truncated after 50 characters)
 * Access - the document visibility (Public / Protected)
-* Referenced - the number of times this document is referenced (product document / Marketplace settings)
+* Referenced - the number of times the document is referenced (product document / Marketplace settings)
 * Type - the document type (plain text format - TXT / Portable Document Format - PDF / Word documents - DOC, DOCX / Markdown - MD / PowerPoint - PPTX / Excel - XLSX)
 * Modified - the last time the document was updated
 
@@ -37,7 +37,7 @@ You can also filter the documents by types using the **Filter by:** controls. Se
 
 ## View document details
 
-To view details of a document:
+To view a document's details:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the Document Details:
@@ -47,14 +47,14 @@ To view details of a document:
     * Document type - TXT / PDF / DOC / DOCX / MD / PPTX / XLSX
     * Updated On - the last update date
     * Created On - the creation date
-    * Document thumbnail - Preview of the first page of the document (only available for PDF documents)
+    * Document thumbnail - preview of the document's first page (only available for PDF documents)
     * Document file name - the file name associated to the document
-    * Document description - the document description helping identify the document content
-    * Referenced Resources - the resources that are using this document (product and/or Marketplace) and the statuses of the resources (Available / Used)
+    * Document description - the document description that helps identify the document content
+    * Referenced Resources - the resources that are using the document (product and/or Marketplace) and the statuses of the resources (Available / Used)
 
 ### Preview a document
 
-To open a preview of a PDF / Markdown document:
+To open a preview of a PDF / MD document:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the Document Details.
@@ -62,7 +62,7 @@ To open a preview of a PDF / Markdown document:
 
 ### Download a document
 
-To download any document:
+To download a document:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the Document Details.
