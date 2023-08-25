@@ -155,7 +155,7 @@ To delete a category:
 ### Assigning a category while creating/editing a product
 
 Only users that are assigned the **Central Admin** role can create categories while editing/creating a product.
-Catalog manager users can only assign existing categories.
+Catalog Manager users can only assign existing categories.
 
 1. Select a product in the *Product Foundry* and open it.
 2. Click on the Categories field in the details panel and select the category from the list. The list contains global categories and product specific categories.

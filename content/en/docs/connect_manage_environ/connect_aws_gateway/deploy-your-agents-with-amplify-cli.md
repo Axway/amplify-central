@@ -128,9 +128,9 @@ The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (AWS API Gateway in this scenario).
 2. Platform connectivity:
-   * **Environment**: can be an existing environment or a new one that will be created by the installation procedure
-   * **Team**: can be an existing team or a new one that will be created by the installation procedure
-   * **Service account**: can be an existing service account (from platform or Central). The installation procedure creates only a Central service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify Platform. If you choose to create a new one, the generated private and public keys will be provided.
+   * **Environment**: can be an existing environment or one that will be created by the installation procedure
+   * **Team**: can be an existing team or one that will be created by the installation procedure
+   * **Service account**: can be an existing service account (from platform or Central). The installation procedure creates only a Central service account. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 3. AWS Configuration Setup options:
    * **Deployment Type** select between `EC2`, `ECS Fargate`, or `Docker Container Only`
    * **Region** of the AWS API Gateway resources
@@ -182,7 +182,7 @@ traceability_lambda.zip
 
 `da_env_vars.env` / `ta_env_vars.env` contains the specific configuration you entered during the installation procedure. These files are required to start the agents.
 
-`private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify Platform (if you choose to let the installation generate them).
+`private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify platform (if you choose to let the installation generate them).
 
 `amplify-agents-deploy-all.yaml` / `amplify-agents-ec2.yaml` / `amplify-agents-ecs-fargate.yaml` / `amplify-agents-resources.yaml` are the CloudFormation files to configure AWS services / infrastructure.
 

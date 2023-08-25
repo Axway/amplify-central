@@ -97,9 +97,9 @@ Before using the Amplify Central APIs you must first authorize your CLI, so you 
 
 You can use the following two options to authorize your CLI:
 
-### Option 1 - Log in with your Amplify Platform credentials
+### Option 1 - Log in with your Amplify platform credentials
 
-To use Axway CLI to launch the default web browser and log in with your Amplify Platform credentials, run the following command:
+To use Axway CLI to launch the default web browser and log in with your Amplify platform credentials, run the following command:
 
 ```bash
 axway auth login
@@ -109,7 +109,7 @@ If you are a member of multiple Amplify organizations, you might have to choose 
 
 ### Option 2 - Authenticate and authorize your service account
 
-To use the Central CLI, your service account must authenticate with Amplify Platform and it must be authorized to use the Amplify Central APIs.
+To use the Central CLI, your service account must authenticate with Amplify platform and it must be authorized to use the Amplify Central APIs.
 
 You can use the following options to create your service account:
 
@@ -160,4 +160,4 @@ In this case, you have a few options on how to instruct the CLI to use a correct
 
 ## Review
 
-You have learned how to install the Axway CLI core package, the Axway Central CLI extension, and how to register or link it to a service account, or to the Amplify Platform account. Now, you can integrate the Axway Central CLI into your DevOps pipeline to automate actions in Amplify.
+You have learned how to install the Axway CLI core package, the Axway Central CLI extension, and how to register or link it to a service account, or to the Amplify platform account. Now, you can integrate the Axway Central CLI into your DevOps pipeline to automate actions in Amplify.
