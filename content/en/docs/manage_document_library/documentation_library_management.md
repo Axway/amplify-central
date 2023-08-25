@@ -4,7 +4,7 @@ linkTitle: Document management
 weight: 20
 ---
 
-Manage your documents with the Document Library UI.
+Manage your documents with the Document Library WebUI.
 
 ## Before you start
 
