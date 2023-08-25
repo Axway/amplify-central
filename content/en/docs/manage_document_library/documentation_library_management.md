@@ -84,7 +84,7 @@ To create a document:
 
 All documents are now displayed in the Document Library list view.
 
-{{< alert title="Note" color="warning">}}
+{{< alert title="Note" color="primary" >}}
 Cancelling the wizard will not remove the uploaded files. If you don't need an uploaded file, [remove it](#delete-a-document).
 {{< /alert >}}
 
@@ -94,7 +94,7 @@ Functionality under development.
 
 ## Delete a document
 
-Central Admins can delete any document regardless of whether they are used in product documentation or in Marketplace settings.
+Central Admins can delete any document regardless of whether it is used in product documentation or in Marketplace settings.
 
 Catalog Manager / Marketplace Manager can delete a document they own only when it is not used in product documentation or in Marketplace settings.
 
@@ -103,6 +103,6 @@ Catalog Manager / Marketplace Manager can delete a document they own only when i
 To delete a document:
 
 1. Navigate to *Document Library*.
-2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete more than one document at a time, select the checkboxes in front of the documents you want to delete and click  **Delete**.
+2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete multiple documents, select the checkboxes in front of the documents and click **Delete**.
 3. A popup displays the selected document name(s) as well as all affected references (product / Marketplace). Type **DELETE** in the confirmation field.
 4. Click **Delete** to validate the action.
