@@ -20,31 +20,31 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify August 25 2023](/docs/amplify_relnotes/20230825_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.60. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.61. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.56 / TA=v1.1.58
-* **AWS Gateway using SDK 2.0** - DA=v1.1.46 / TA-v1.1.48
-* **Azure latest release** - DA=v1.1.51 / TA=v1.1.56
-* **Istio 1.9.5** - DA=v1.0.18 / TA=v2.0.62
-* **Apigee Edge** - Agent version 0.1.19
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.25
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.57 / TA=v1.1.59
+* **AWS Gateway using SDK 2.0** - DA=v1.1.47 / TA-v1.1.49
+* **Azure latest release** - DA=v1.1.52 / TA=v1.1.57
+* **Istio 1.9.5** - DA=v1.0.19 / TA=v2.0.63
+* **Apigee Edge** - Agent version 0.1.20
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.26
 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | IdP Authentication methods to support Financial Data Exchange standards. <br />Caching of API IDs. |
 | <br />**Agents** |         |
-| What's new: | **All** - Updated with the Axway Agent SDK. |
+| What's new: | **All** - Updated with the Axway Agent SDK. <br />**Axway API Management Gateway** - Consumer Organization ID is now a custom attribute. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - Compliance validation filters. <br />**Topology** - None. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Asset activation by developer role. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Document Library. <br />Product documentation rebranding. |
+| Bug fixes: | Asset categories available in product creation wizard. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
