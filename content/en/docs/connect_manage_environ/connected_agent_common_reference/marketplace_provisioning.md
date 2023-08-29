@@ -49,8 +49,8 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
         * `accessToken`: Authentication based on the pre-configured access token(initial access token, Admin API token etc).
         * `client`: *Deprecated*. Use client_secret_post.
         * `client_secret_basic`: Agent uses the client id and secret to acquire access token using HTTP Basic authentication.
-        * `client_secret_post`: Agent uses the client id and secret to acquire access token by placing a POST request with client credential in request body. 
-        * `client_secret_jwt`: Agent generates a HMAC SHA signed JWT token using client secret and uses it to acquire the token. 
+        * `client_secret_post`: Agent uses the client id and secret to acquire access token by placing a POST request with client credential in request body.
+        * `client_secret_jwt`: Agent generates a HMAC SHA signed JWT token using client secret and uses it to acquire the token.
         * `private_key_jwt`: Agent generates a signed JWT token using registered key pair and uses it to acquire the token.
         * `tls_client_auth`: Agent uses the mTLS connection based on public key infrastructure (PKI) with registered client certificate to acquire the access token.
         * `self_signed_tls_client_auth`: Agent uses the mTLS connection with registered self-signed client certificate to acquire the access token.
