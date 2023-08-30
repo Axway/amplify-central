@@ -41,32 +41,130 @@ From the Marketplace, a consumer first requests access to a resource and then re
 
 The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated data plane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
-* Name: The name of the OAuth identity provider
-* Type: The type of OAuth identity provider ("generic", "keycloak" or "okta")
-* Metadata URL: The URL exposed by the OAuth authorization server to provide metadata information
-* Authentication Config: Used by the agent to communicate with the OAuth identity provider
-    * Type: The type of authentication mechanism to be used ("accessToken" or "client")
-    * Access Token: The token (initial access token, Admin API Token, etc.) to be used by the Agent SDK to authenticate with the OAuth identity provider. The config is required if type is set to "accessToken"
-    * Client ID: The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is set to "client"
-    * Client Secret: The secret for the client in the OAuth identity provider. The config is required if the type is set to "client"
+* Name (`AGENTFEATURES_IDP_NAME`): The name of the OAuth identity provider.
+* Type (`AGENTFEATURES_IDP_TYPE`): The type of OAuth identity provider (`generic`, `keycloak` or `okta`).
+* Metadata URL (`AGENTFEATURES_IDP_METADATAURL`): The URL exposed by the OAuth authorization server to provide metadata information.
+* Authentication Config: Used by the agent to communicate with the OAuth identity provider.
+    * Type (`AGENTFEATURES_IDP_AUTH_TYPE`): The type of authentication mechanism to be used. The supported types are:
+        * `accessToken`: Authentication based on the pre-configured access token(initial access token, Admin API token, etc.).
+        * `client`: *Deprecated*. Use client_secret_post.
+        * `client_secret_basic`: Agent uses the client id and secret to acquire access token using HTTP Basic authentication.
+        * `client_secret_post`: Agent uses the client id and secret to acquire access token by placing a POST request with client credential in request body.
+        * `client_secret_jwt`: Agent generates a HMAC SHA signed JWT token using client secret and uses it to acquire the token.
+        * `private_key_jwt`: Agent generates a signed JWT token using registered key pair and uses it to acquire the token.
+        * `tls_client_auth`: Agent uses the mTLS connection based on public key infrastructure (PKI) with registered client certificate to acquire the access token.
+        * `self_signed_tls_client_auth`: Agent uses the mTLS connection with registered self-signed client certificate to acquire the access token.
+    * Access Token (`AGENTFEATURES_IDP_AUTH_ACCESSTOKEN`): The token (initial access token, Admin API Token, etc.) to be used by the Agent SDK to authenticate with the OAuth identity provider. The config is required if the type is set to `accessToken`. The config is required when using `accessToken` based authentication.
+    * Client ID (`AGENTFEATURES_IDP_AUTH_CLIENTID`): The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is not set to `accessToken`.
+    * Client Secret (`AGENTFEATURES_IDP_AUTH_CLIENTSECRET`): The secret for the client in the OAuth identity provider. The config is required if the type is set to `client_secret_basic`, `client_secret_post` or `client_secret_jwt`.
+    * Scopes (`AGENTFEATURES_IDP_AUTH_CLIENTSCOPE`): Space-separated scopes to be used when requesting the access token from the authorization server.
+    * Private Key file path (`AGENTFEATURES_IDP_AUTH_PRIVATEKEY`): Path of the private key file to be used for `private_key_jwt` authentication.
+    * Public Key file path (`AGENTFEATURES_IDP_AUTH_PUBLICKEY`): Path of the public key file to be used for `private_key_jwt` authentication.
+    * Private Key password (`AGENTFEATURES_IDP_AUTH_KEYPASSWORD`): Password for the private key.
+    * Token Signing Algorithm (`AGENTFEATURES_IDP_AUTH_TOKENSIGNINGMETHOD`): Algorithm used for signing the token for `client_secret_jwt` or `private_key_jwt`. Defaults to `HS256` for `client_secret_jwt` and `RS256` for `private_key_jwt`.
+    * Flag for re-using cached token (`AGENTFEATURES_IDP_AUTH_USECACHEDTOKEN`): Boolean flag to enable / disable the agent to cache the token until the expiry of the access token.
+    * mTLS Config:
+        * Skip host verification (`AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY`): Flag to control verification of the TLS server certificate chain and host name.
+        * Root CA certificate (`AGENTFEATURES_IDP_SSL_ROOTCACERTPATH`): The path of the root CA certificate to be used for the mTLS connection.
+        * Client certificate (`AGENTFEATURES_IDP_SSL_CLIENTCERTPATH`): The path of the client certificate to be used for the mTLS connection.
+        * Client key (`AGENTFEATURES_IDP_SSL_CLIENTKEYPATH`): The path of the client key to be used for the mTLS connection.
 
-The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable based configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
+The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
 ```shell
-# IDP configuration with client type authentication
-AGENTFEATURES_IDP_NAME_1="dev-keycloak"
+# IDP configuration with accessToken type authentication
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="okta"
+AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
+
+AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
+
+AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
+```
+
+```shell
+# IDP configuration with client_secret_basic type authentication
+AGENTFEATURES_IDP_NAME_1="idp-name"
 AGENTFEATURES_IDP_TYPE_1="keycloak"
 AGENTFEATURES_IDP_METADATAURL_1="http://keycloak:9999/realms/somerealm/.well-known/openid-configuration"
-AGENTFEATURES_IDP_AUTH_TYPE_1="client"
-AGENTFEATURES_IDP_AUTH_CLIENTID_1="service-account"
-AGENTFEATURES_IDP_AUTH_CLIENTSECRET_1="service-account-secret"
 
-# IDP configuration with accessToken type authentication
-AGENTFEATURES_IDP_NAME_2="dev-okta"
-AGENTFEATURES_IDP_TYPE_2="okta"
-AGENTFEATURES_IDP_METADATAURL_2="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
-AGENTFEATURES_IDP_AUTH_TYPE_2="accessToken"
-AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_2="okta-admin-api-access-token-xxxxxxxxx"
+AGENTFEATURES_IDP_AUTH_TYPE_1="client_secret_basic"
+
+AGENTFEATURES_IDP_AUTH_CLIENTID_1="id-for-client"
+AGENTFEATURES_IDP_AUTH_CLIENTSECRET_1="secret-for-client"
+```
+
+```shell
+# IDP configuration with client_secret_post type authentication
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="generic"
+AGENTFEATURES_IDP_METADATAURL_1="https://idp-url/.well-known/openid-configuration"
+
+AGENTFEATURES_IDP_AUTH_TYPE_1="client_secret_post"
+
+AGENTFEATURES_IDP_AUTH_CLIENTID_1="id-for-client"
+AGENTFEATURES_IDP_AUTH_CLIENTSECRET_1="secret-for-client"
+
+AGENTFEATURES_IDP_AUTH_CLIENTSCOPE_1="register-client manage-client"
+```
+
+```shell
+# IDP configuration with client_secret_jwt type authentication
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="generic"
+AGENTFEATURES_IDP_METADATAURL_1="https://idp-url/.well-known/openid-configuration"
+
+AGENTFEATURES_IDP_AUTH_TYPE_1="client_secret_jwt"
+
+AGENTFEATURES_IDP_AUTH_CLIENTID_1="id-for-client"
+AGENTFEATURES_IDP_AUTH_CLIENTSECRET_1="secret-for-client"
+AGENTFEATURES_IDP_AUTH_TOKENSIGNINGMETHOD_1=HS256
+```
+
+```shell
+# IDP configuration with private_key_jwt type authentication
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="generic"
+AGENTFEATURES_IDP_METADATAURL_1="https://idp-url/.well-known/openid-configuration"
+
+AGENTFEATURES_IDP_AUTH_TYPE_1="private_key_jwt"
+
+AGENTFEATURES_IDP_AUTH_CLIENTID_1="id-for-client"
+AGENTFEATURES_IDP_AUTH_PRIVATEKEY_1=/path-of-pem-encoded-private-key-file
+AGENTFEATURES_IDP_AUTH_PUBLICKEY_1=/path-of-pem-encoded-public-key-file
+AGENTFEATURES_IDP_AUTH_TOKENSIGNINGMETHOD_1=RS256
+```
+
+```shell
+# IDP configuration with tls_client_auth type authentication
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="generic"
+AGENTFEATURES_IDP_METADATAURL_1="https://idp-url/.well-known/openid-configuration"
+
+AGENTFEATURES_IDP_AUTH_TYPE_1="tls_client_auth"
+
+AGENTFEATURES_IDP_AUTH_CLIENTID_1="id-for-client"
+AGENTFEATURES_IDP_AUTH_USECACHEDTOKEN_1=false
+
+AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY_1=true
+AGENTFEATURES_IDP_SSL_ROOTCACERTPATH_1=/path-of-root-ca-certificate
+AGENTFEATURES_IDP_SSL_CLIENTCERTPATH_1=/path-of-client-certificate
+AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
+```
+
+```shell
+# IDP configuration with self_signed_tls_client_auth type authentication
+AGENTFEATURES_IDP_NAME_1="admin_self_signed_tls_client_auth"
+AGENTFEATURES_IDP_TYPE_1="generic"
+AGENTFEATURES_IDP_METADATAURL_1="https://idp-url/.well-known/openid-configuration"
+
+AGENTFEATURES_IDP_AUTH_TYPE_1="self_signed_tls_client_auth"
+
+AGENTFEATURES_IDP_AUTH_CLIENTID_1="id-for-client"
+
+AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY_1=true
+AGENTFEATURES_IDP_SSL_CLIENTCERTPATH_1=/path-of-self-signed-client-certificate
+AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
 ```
 
 ### Deprovision data plane when consumer deletes an application or credentials
