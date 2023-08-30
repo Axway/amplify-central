@@ -160,7 +160,7 @@ A credential also has a provisioning status:
 * Success: all provisioning access has been successfully granted.
 * Error: an error occurred during the provisioning step.
 
-A credential can have an expiration date. This expiration date is defined in the Discovery Agent configuration managing the data plane environment. See [Enforce credential expiration date](/docs/connect_manage_environ/connected_agent_common_reference/marketplace_provisioning/#enforce-credential-expiration-date) for more information.
+A credential can have an expiration date. This expiration date is defined in the Discovery Agent configuration managing the data plane environment. See [Enforce credential expiration date](/docs/connect_manage_environ/marketplace_provisioning/#enforce-credential-expiration-date) for more information.
 
 ### Suspending / Enabling credentials
 
