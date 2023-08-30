@@ -55,7 +55,7 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
         * `tls_client_auth`: Agent uses the mTLS connection based on public key infrastructure (PKI) with registered client certificate to acquire the access token.
         * `self_signed_tls_client_auth`: Agent uses the mTLS connection with registered self-signed client certificate to acquire the access token.
     * Access Token(`AGENTFEATURES_IDP_AUTH_ACCESSTOKEN`): The token (initial access token, Admin API Token, etc.) to be used by the Agent SDK to authenticate with the OAuth identity provider. The config is required if type is set to `accessToken`. The config is required when using `accessToken` based authentication.
-    * Client ID(`AGENTFEATURES_IDP_AUTH_CLIENTID`): The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is not set to `zccessToken`.
+    * Client ID(`AGENTFEATURES_IDP_AUTH_CLIENTID`): The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is not set to `accessToken`.
     * Client Secret(`AGENTFEATURES_IDP_AUTH_CLIENTSECRET`): The secret for the client in the OAuth identity provider. The config is required if the type is set to `client_secret_basic`, `client_secret_post` or `client_secret_jwt`
     * Scopes(`AGENTFEATURES_IDP_AUTH_CLIENTSCOPE`): Space separated scopes to be used when requesting the access token from authorization server.
     * Private Key file path(`AGENTFEATURES_IDP_AUTH_PRIVATEKEY`): Path of the private key file to be used for `private_key_jwt` authentication
