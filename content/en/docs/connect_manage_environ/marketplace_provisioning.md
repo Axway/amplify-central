@@ -2,7 +2,7 @@
 title: Manage your Marketplace provisioning
 linkTitle: Manage your Marketplace provisioning
 draft: false
-weight: 35 
+weight: 145 
 ---
 
 A subscription provides the consumer, or subscriber, with the required security and endpoint materials to correctly consume the API.
@@ -13,7 +13,7 @@ The security material and/or quota to access an API is configured inside the gat
 
 Learn how to configure:
 
-* Discovery Agent for Marketplace provisioning /deprovisioning
+* Discovery Agent for Marketplace provisioning / deprovisioning
 * Traceability Agent for reporting traffic to Consumer Insights
 
 ## Supported use cases
