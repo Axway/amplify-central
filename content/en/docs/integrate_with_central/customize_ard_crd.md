@@ -33,20 +33,20 @@ By default when using Discovery Agents, the extra information is integrated when
 
 Various simple components are available to use: string text, date, number, arrays, dropdown, file selector and more. It is also possible to define your own object by combining multiple simple components.
 
-In addition, there are several special parameters label `x-axway-*` that extend this framework:
+In addition, there are several special parameters labeled `x-axway-*` that extend this framework:
 
-* **x-axway-order** - use to determine the order in which the selected fields will be presented in the UI
+* **x-axway-order** - use to determine the order in which the selected fields will be presented in the WebUI
 * **x-axway-label** - use to set a label in front of the component
-* **x-axway-widget** - use to define how the ui should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
+* **x-axway-widget** - use to define how the WebUI should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
 * **x-axway-encrypted** - use to tell the system that the field must be encrypted for security purpose
 * **x-axway-hidden** - use to tell that this field will not be visible
-* **x-axway-copyable** - add the copy button to copy the value from the UI
+* **x-axway-copyable** - add the copy button to copy the value from the WebUI
   
 Each item is described using json format. Below is a non-exhaustive list:
 
 * type: string, integer, number, boolean
 * format: date-time, date, time
-* title: the title used to display the component in the UI
+* title: the title used to display the component in the WebUI
 * description (optional): text that will appear below the title to help the user understand the field component
 * default (optional): the default value
 * enum: list of text to display
@@ -57,7 +57,7 @@ Each item is described using json format. Below is a non-exhaustive list:
 You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/react-jsonschema-form/) to try out the various combination.
 
 {{< alert title="Note" color="primary" >}}
-The playground allows you to change the UI components (UISchema section of the playground); however, the Marketplace UI does not use these components. As a result, the Marketplace UI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
+The playground allows you to change the WebUI components (UISchema section of the playground); however, the Marketplace WebUI does not use these components. As a result, the Marketplace WebUI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
 {{< /alert >}}
 
 #### Text component
@@ -281,7 +281,7 @@ Sample of the consumer giving a required email contact and billing address:
 
 Once the SubscriptionRequestDefinition object is created using the Axway Central CLI (`axway central apply -f srd.json`), you must link it to a draft product plan.
 
-The linkage can either be done using the UI and selecting the subscription definition request from the dropdown in the plan profile page or using the Axway Central CLI by adding `"definition": "subscriptionrequestdefinition-name"` under the *spec.subscription* section.
+The linkage can either be done using the WebUI and selecting the subscription definition request from the dropdown in the plan profile page or using the Axway Central CLI by adding `"definition": "subscriptionrequestdefinition-name"` under the *spec.subscription* section.
 
 Sample of plan and subscription definition request association:
 
