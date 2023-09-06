@@ -218,35 +218,26 @@ Object skeleton (json format):
     "group": "management",
     "apiVersion": "v1alpha1",
     "kind": "SubscriptionRequestDefinition",
-    "name": "name-for-credential-request-definition",
-    "title": "title-for-credential-request-definition",
-    "metadata": {
-        "scope": {
-            "kind": "Environment",
-            "name": "environment-name",
-        },
-    },
+    "name": "name-for-subscription-request-definition",
+    "title": "title-for-subscription-request-definition",
     "attributes": {},
     "finalizers": [],
     "tags": [],
     "spec": {
         "schema": {
           ...
-        },
-        "provision": {
-          ...
         }
     }
 }
 ```
 
-The CredentialRequestDefinition contains only one schema in its specification section:
+The SubscriptionRequestDefinition contains only one schema in its specification section:
 
 * **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
 
 This schema follows the component framework describe in the [Highlight](#highlights) section.
 
-This SubscriptionRequestDefinition needs to be attached to a product plan in order to display the required fields when the consumer subscribe to ths specific plan.
+This SubscriptionRequestDefinition needs to be attached to a product plan in order to display the required fields when the consumer subscribe to this specific plan.
 
 Once the subscription is created, both consumer and provider will be able to see the information from the *subscription details* page and navigating to the **Additional information** section.
 
@@ -261,15 +252,6 @@ Sample of the consumer giving an email contact and billing address:
     "kind": "SubscriptionRequestDefinition",
     "name": "srd-1",
     "title": "Subscription definition email consumer",
-    "metadata": {
-        "acl": [],
-        "accessRights": {
-            "canChangeOwner": true,
-            "canDelete": true,
-            "canWrite": true,
-            "canRead": true
-        },
-    },
     "attributes": {},
     "finalizers": [],
     "tags": [],
