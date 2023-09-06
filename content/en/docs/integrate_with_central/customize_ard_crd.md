@@ -243,7 +243,7 @@ Once the subscription is created, both consumer and provider will be able to see
 
 ### SubscriptionRequestDefinition samples
 
-Sample of the consumer giving an email contact and billing address:
+Sample of the consumer giving a required email contact and billing address:
 
 ```json
 {
