@@ -1,9 +1,9 @@
 ---
-title: Customize access request and credentials request screens
-linkTitle: Customize access request and credentials request screens
+title: Customize access request, credentials request and subscription screens
+linkTitle: Customize access request, credentials request and subscription screens
 weight: 300
 ---
-Amplify allows you to personalize the *access request* and *credential* screens by customizing consumer questions that return appropriate responses.
+Amplify allows you to personalize the *access request*, *credential* and *subscription* screens by customizing consumer questions that return appropriate responses.
 
 ## Before you start
 
@@ -16,10 +16,14 @@ Learn how to customize the access request and credentials request screen in Mark
 
 ## Use cases
 
-* A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to access a resource or create credentials, the definition of the access or credentials may require extra parameters.
+* A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to subscribe, access a resource or create credentials, the definition of the subscription, access or credentials may require extra parameters.
 * A provider may want to send back extra information to the consumer. For example, credential information or public keys, etc.
 
 In both cases, a schema definition based on **react-jsonschema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
+
+{{< alert title="Note" color="primary" >}}
+For the subscription screen, there is no `provision` schema available.
+{{< /alert >}}
 
 By default when using Discovery Agents, the extra information is integrated when the agent discovers APIs based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
 
@@ -29,11 +33,15 @@ By default when using Discovery Agents, the extra information is integrated when
 
 Various simple components are available to use: string text, date, number, arrays, dropdown, file selector and more. It is also possible to define your own object by combining multiple simple components.
 
-In addition, there are two special parameters `x-axway-order` and `x-axway-encrypted` that extend this framework:
+In addition, there are several special parameters label `x-axway-*` that extend this framework:
 
 * **x-axway-order** - use to determine the order in which the selected fields will be presented in the UI
+* **x-axway-label** - use to set a label in front of the component
+* **x-axway-widget** - use to define how the ui should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
 * **x-axway-encrypted** - use to tell the system that the field must be encrypted for security purpose
-
+* **x-axway-hidden** - use to tell that this field will not be visible
+* **x-axway-copyable** - add the copy button to copy the value from the UI
+  
 Each item is described using json format. Below is a non-exhaustive list:
 
 * type: string, integer, number, boolean
@@ -196,6 +204,144 @@ The playground allows you to change the UI components (UISchema section of the p
   }
 }
 ```
+
+## Customize Subscription screen
+
+To customize the subscription screen, you need a `SubscriptionRequestDefinition`. This object will contain the screen definition of the information required to subscribe to a service. This object is not scoped and are globally available.
+
+Name of the object: **SubscriptionRequestDefinition**
+
+Object skeleton (json format):
+
+```json
+{
+    "group": "management",
+    "apiVersion": "v1alpha1",
+    "kind": "SubscriptionRequestDefinition",
+    "name": "name-for-credential-request-definition",
+    "title": "title-for-credential-request-definition",
+    "metadata": {
+        "scope": {
+            "kind": "Environment",
+            "name": "environment-name",
+        },
+    },
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+          ...
+        },
+        "provision": {
+          ...
+        }
+    }
+}
+```
+
+The CredentialRequestDefinition contains only one schema in its specification section:
+
+* **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
+
+This schema follows the component framework describe in the [Highlight](#highlights) section.
+
+This SubscriptionRequestDefinition needs to be attached to a product plan in order to display the required fields when the consumer subscribe to ths specific plan.
+
+Once the subscription is created, both consumer and provider will be able to see the information from the *subscription details* page and navigating to the **Additional information** section.
+
+### SubscriptionRequestDefinition samples
+
+Sample of the consumer giving an email contact and billing address:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "SubscriptionRequestDefinition",
+    "name": "srd-1",
+    "title": "Subscription definition email consumer",
+    "metadata": {
+        "acl": [],
+        "accessRights": {
+            "canChangeOwner": true,
+            "canDelete": true,
+            "canWrite": true,
+            "canRead": true
+        },
+    },
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+                "email", "billingAddress"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "title": "Email",
+                    "description": "The best email to reach you"
+                },
+                "billingAddress": {
+                    "type": "string",
+                    "title": "Billing address",
+                    "description": "Physical address with postal code and city"
+                }
+            }
+        }
+    }
+}
+```
+
+Once the SubscriptionRequestDefinition object is created using the Axway Central CLI (`axway central apply -f srd.json`), you must link it to a draft product plan.
+
+The linkage can either be done using the UI and selecting the subscription definition request from the dropdown in the plan profile page or using the Axway Central CLI by adding `"definition": "subscriptionrequestdefinition-name"` under the *spec.subscription* section.
+
+Sample of plan and subscription definition request association:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "ProductPlan",
+    "name": "plan-name",
+    "title": "Plan title",
+    "metadata": {
+        "acl": [],
+    },
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "type": "paid",
+        "billing": {
+            "cycle": "recurring",
+            "price": 15,
+            "currency": "USD",
+            "interval": "monthly"
+        },
+        "product": "product-name",
+        "description": "",
+        "subscription": {
+            "renewal": "automatic",
+            "approval": "automatic",
+            "interval": {
+                "type": "months",
+                "length": 1
+            }
+            "definition": "srd-1"
+        }
+    }
+}
+```
+
+When subscribing to the plan, you will be able to see the emails and billing address:
+
+![Subscription Request screen](/Images/central/integrate_with_central/SubscriptionRequestDefinition.png)
 
 ## Customize access request screen
 
