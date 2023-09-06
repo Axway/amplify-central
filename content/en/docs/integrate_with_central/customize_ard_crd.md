@@ -235,7 +235,7 @@ The SubscriptionRequestDefinition contains only one schema in its specification 
 
 * **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
 
-This schema follows the component framework describe in the [Highlight](#highlights) section.
+This schema follows the component framework describe in the [Available components](#available-components) section.
 
 This SubscriptionRequestDefinition needs to be attached to a product plan in order to display the required fields when the consumer subscribe to this specific plan.
 
@@ -367,7 +367,7 @@ Object skeleton (json format):
 * **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
 * **provision** - for sending information back to the consumer.
 
-These above two schemas follow the component framework describe in the [Highlight](#highlights) section.
+These above two schemas follow the component framework describe in the [Available components](#available-components) section.
 
 Once the access request is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *access request detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
@@ -514,7 +514,7 @@ The CredentialRequestDefinition contains two optional schemas in its specificati
 * **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
 * **provision** - for sending information back to the consumer.
 
-Those above two schemas follow the component framework describe in the [Highlight](#highlights) section.
+Those above two schemas follow the component framework describe in the [Available components](#available-components) section.
 
 Once the credential is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *credential detail* page and navigating to the **Credential value** section.
 
