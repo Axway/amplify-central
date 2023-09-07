@@ -22,7 +22,7 @@ Learn how to customize the access request and credentials request screen in Mark
 In both cases, a schema definition based on **react-jsonschema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
 
 {{< alert title="Note" color="primary" >}}
-For the subscription screen, there is no `provision` schema available.
+For the subscription screen, there is no `provision` schema available. It is a one way only: from consumer to provider.
 {{< /alert >}}
 
 {{< alert title="Security warning" color="warning" >}}
