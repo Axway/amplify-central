@@ -11,7 +11,7 @@ Learn how to create an environment to represent your API services and other disc
 ## Add your environment
 
 1. Navigate to *Topology > Environments*.
-2. Click **+ Environment**.
+2. Click **+ Environment**. (**Robert**, the following image is outdated)
 
     ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
@@ -26,7 +26,7 @@ Learn how to create an environment to represent your API services and other disc
     * **Description** - enter a brief description of the environment.
     * **Image** - Add an icon or image to be associated with the environment.
 
-4. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
+4. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above): (**Robert**, the steps from here down are outdated. This should be the Compliance Profile configuration. Also, Compliance Profiles is now a menu option under Topology and has to be documented.)
 
     * **Agent Type** - select the type of agent that will connect to this API Gateway.
         * **Embedded** - Axway to host the agent.

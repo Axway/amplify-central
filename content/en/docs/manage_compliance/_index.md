@@ -12,13 +12,13 @@ The Amplify API Management platform allows you to validate how well your APIs me
 
 ## What is compliance validation
 
-Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a ruleset. Both an API Design and Security ruleset can be applied to all the APIs in a selected environment. See the default [Design](#default-design-ruleset) and [Security](#default-security-ruleset) ruleset values. Amplify has integrated an open-source tool (Spectral) which supports the linting of Open API version 2, Open API version 3, and Async API specification files.
+Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a ruleset. Both an API Design and Security ruleset can be applied to all the APIs in a selected environment. See the default [Design](#design-rulesets) and [Security](#security-rulesets) ruleset values. Amplify has integrated an open-source tool (Spectral) which supports the linting of Open API version 2, Open API version 3, and Async API specification files.
 
 For example, an API can be checked for compliance in terms of the API methods supported or the presence of a security policy. The grading results of the compliance are measured in the number of errors, warnings, info, or hints found.
 
 ## How to perform compliance validation
 
-API compliance validation can be enabled/disabled per environment. Navigate to the Topology screen then create/edit an environment. The environment wizard has a **Compliance Profile** step, where you can enable the Design rules and/or Security rules for compliance. A default [Design ruleset](#default-design-ruleset) (default-design-ruleset) and a default [Security ruleset](#default-security-ruleset) (default-security-ruleset) are available. Changes take effect as soon as the environment settings are saved.
+API compliance validation can be enabled/disabled per environment. Navigate to the Topology screen then create/edit an environment. The environment wizard has a **Compliance Profile** step, where you can enable the Design rules and/or Security rules for compliance (**Robert**, this needs a link to the appropriate section in the Add environments topic). A default [Design ruleset](#design-rulesets) (default-design-ruleset) and a default [Security ruleset](#security-rulesets) (default-security-ruleset) are available. Changes take effect as soon as the environment settings are saved.
 
 Once enabled for the environment, all current APIs and future API updates within the selected environment are automatically compliance validated.
 

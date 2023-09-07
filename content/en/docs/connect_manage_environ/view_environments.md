@@ -11,15 +11,15 @@ Display your environments in a searchable and sortable list. The list contains:
 
     * AWS Gateway environments
     * API Manager environments
-    * Environments that have been defined manually using the Axway Central CLI or APIs
+    * Environments that have been defined manually using the Axway Central CLI or APIs (**Robert**, the following image is outdated)
 
 ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
-This page can be sorted by an environment's logical name, title, or by the time that they were created or last modified. To sort the list, select the desired option from the drop-down menu.
+This page can be sorted by an environment's logical name, title, or by the time that they were created or last modified. To sort the list, select the desired option from the drop-down menu. (**Robert**, outdated?)
 
-You can search the environments by their logical name, title, or any tags that are attached to it.
+You can search the environments by their logical name, title, or any tags that are attached to it. (**Robert**, outdated?)
 
-Each environment in the list contains some basic information:
+Each environment in the list contains some basic information: (**Robert**, the following image is outdated)
 
 ![Environment Results Details](/Images/central/env_gw_mgmt/environmentlistresultupdate.png)
 
@@ -47,6 +47,8 @@ The following information is displayed for environments created using the API se
 
 ![Environment Details Page](/Images/central/env_gw_mgmt/environmentdetailspage2.png)
 
+(**Robert**, the following information through the Details information is outdated and missing Service Synchronization)
+
 * **Environment Information**: This section contains general information and any tags or attributes that are specific to the environment asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third-party systems.
 * **Activity Report**: Dashboard, which shows the aggregated values for how your environment assets are distributed and how many subscriptions exist across all of those assets:
 
@@ -68,7 +70,7 @@ To delete an API service:
 
 ### Agent Environment Status
 
-**Agents resources scoped to the environment**:
+**Agents resources scoped to the environment**: (**Robert**, outdated)
 
 | STATUS              | BADGE                                                                 | SCENARIOS                                                                                                                                           |
 | ------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -83,11 +85,11 @@ To delete an API service:
 To view the details of your API Service and its versions:
 
 1. Click an API service from the list.
-2. Choose a version from the **Version** drop-down menu. The most recent version is displayed by default.
+2. Choose a version. The most recent version is displayed by default. (**Robert**, the following image is outdated)
 
 ![Service Details Page](/Images/central/ServiceDetailsPage.png)
 
-The following describes the sections on the API Service details page:
+The following describes the sections on the API Service details page: (**Robert**, outdated)
 
 * **Service Information**: Contains general information and any tags or attributes that are specific to the API service asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third party systems.
 * **Activity Report**: Dashboard, which shows the aggregated values for how your API service version assets are distributed and how many subscriptions exist across all of those assets.
@@ -99,6 +101,10 @@ The following describes the sections on the API Service details page:
 * **Specification tab**: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
 * **Endpoints tab**: Contains a table listing the URLs pointing to deployed instances of the API service.
 * **Catalog Items tab**: Contains a table listing both successfully published and unpublished items in the Unified Catalog. Each entry contains the state of the item (PUBLISHED, UNPUBLISHED, or IN ERROR).
+
+### Add endpoints
+
+Add instructions
 
 ### Delete endpoints and catalog items
 
