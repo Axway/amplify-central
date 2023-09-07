@@ -25,6 +25,11 @@ In both cases, a schema definition based on **react-jsonschema-form** must be im
 For the subscription screen, there is no `provision` schema available.
 {{< /alert >}}
 
+{{< alert title="Security warning" color="warning" >}}
+Be careful on the information you are asking to your consumer as nothing is encoded at rest while transmitting from the consumer to the provider.
+Only provider has the possibility to transmit encrypted data.
+{{< /alert >}}
+
 By default when using Discovery Agents, the extra information is integrated when the agent discovers APIs based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
 
 {{< alert title="Note" color="primary" >}}It is also possible to manually manage what you want to ask/send to your consumer.{{< /alert >}}
@@ -38,7 +43,7 @@ In addition, there are several special parameters labeled `x-axway-*` that exten
 * **x-axway-order** - use to determine the order in which the selected fields will be presented in the WebUI
 * **x-axway-label** - use to set a label in front of the component
 * **x-axway-widget** - use to define how the WebUI should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
-* **x-axway-encrypted** - use to tell the system that the field must be encrypted for security purpose
+* **x-axway-encrypted** - use to tell the system that the field must be encrypted for security purpose (only se when sending information from Provider to Consumer)
 * **x-axway-hidden** - use to tell that this field will not be visible
 * **x-axway-copyable** - add the copy button to copy the value from the WebUI
   
