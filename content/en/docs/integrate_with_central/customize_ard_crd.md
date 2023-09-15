@@ -27,7 +27,7 @@ There is no `provision` schema available for the subscription screen. It is one 
 
 {{< alert title="Security warning" color="warning" >}}
 Be cautious of the information you are asking your consumer to provide, as nothing is encoded at rest while transmitting from the consumer to the provider.
-Only the provider has can transmit encrypted data.
+Only the provider can transmit encrypted data.
 {{< /alert >}}
 
 By default when using Discovery Agents, the extra information is integrated when the agent discovers APIs based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
