@@ -22,12 +22,12 @@ Learn how to customize the access request and credentials request screen in Mark
 In both cases, a schema definition based on **react-jsonschema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
 
 {{< alert title="Note" color="primary" >}}
-For the subscription screen, there is no `provision` schema available. It is a one way only: from consumer to provider.
+There is no `provision` schema available for the subscription screen. It is one way only, from consumer to provider.
 {{< /alert >}}
 
 {{< alert title="Security warning" color="warning" >}}
-Be careful on the information you are asking to your consumer as nothing is encoded at rest while transmitting from the consumer to the provider.
-Only provider has the possibility to transmit encrypted data.
+Be cautious of the information you are asking your consumer to provide, as nothing is encoded at rest while transmitting from the consumer to the provider.
+Only the provider has can transmit encrypted data.
 {{< /alert >}}
 
 By default when using Discovery Agents, the extra information is integrated when the agent discovers APIs based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
@@ -40,12 +40,12 @@ Various simple components are available to use: string text, date, number, array
 
 In addition, there are several special parameters labeled `x-axway-*` that extend this framework:
 
-* **x-axway-order** - use to determine the order in which the selected fields will be presented in the WebUI
-* **x-axway-label** - use to set a label in front of the component
-* **x-axway-widget** - use to define how the WebUI should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
-* **x-axway-encrypted** - use to tell the system that the field must be encrypted for security purpose (only se when sending information from Provider to Consumer)
-* **x-axway-hidden** - use to tell that this field will not be visible
-* **x-axway-copyable** - add the copy button to copy the value from the WebUI
+* **x-axway-order** - determines the order in which the selected fields will be presented in the WebUI
+* **x-axway-label** - sets a label in front of the component
+* **x-axway-widget** - defines how the WebUI should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
+* **x-axway-encrypted** - tells the system that the field must be encrypted for security purpose (only se when sending information from Provider to Consumer)
+* **x-axway-hidden** - indicates that this field will not be visible
+* **x-axway-copyable** - adds the copy button to copy the value from the WebUI
   
 Each item is described using json format. Below is a non-exhaustive list:
 
