@@ -134,6 +134,8 @@ When you are finished configuring the quotas, click **Next** to select the appro
 
 ### Configure access
 
+At the time of the subscription, it is optional to request additional information from your consumer by selecting one of the predefined [subscription screen definitions](/docs/integrate_with_central/customize_ard_crd#customize-subscription-screen) from the dropdown.
+
 To configure the type of approval when a subscriber submits a request to purchase the plan, choose between:
 
 * **Manual** - a provider will have to manually approve the subscription before the consumer can use it.
