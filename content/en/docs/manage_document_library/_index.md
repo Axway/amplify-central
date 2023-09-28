@@ -17,7 +17,7 @@ The Document Library is a collection of resuable documentation. Use the Document
 * Use external documentation links (coming soon)
 
 {{< alert title="Note" color="warning" >}}
-Document Library is anly available if you have the "Public Marketplace" entitlement and a number of marketplaces > 0. Refer to [your entitlement](https://platform.axway.com/org)
+Document Library is only available if you have the "Public Marketplace" entitlement and a number of marketplaces > 0. Refer to [your entitlement](https://platform.axway.com/org)
 {{< /alert >}}
 
 ## Related topics
