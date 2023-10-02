@@ -84,7 +84,7 @@ Only an approved subscription will allow the consumer to continue to request acc
 
 Only cancelled and rejected subscription can be deleted from the system.
 
-{{< alert title="Warning" color="warning" >}}
+{{< alert title="Caution" color="danger" >}}
 Deleting a subscription is irrevocable. Once the subscription is deleted from the system, Business Insights and Consumer Insights screens will cease to show that subscription.
 {{< /alert >}}
 

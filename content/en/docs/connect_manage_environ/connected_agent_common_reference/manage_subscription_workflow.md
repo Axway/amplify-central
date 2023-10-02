@@ -352,7 +352,7 @@ In webhook approval mode, the Discovery Agent must be configured with a webhook 
 5. The subscription status moves to  **Subscribing**.
 6. The Discovery Agent receives the event and sets the status to **Active**, or **Subscribe failed** if there is a failure to subscribe.
 
-{{< alert title="AWS Gateway Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes to an API until Amplify shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
 
 ## Subscription failures
 

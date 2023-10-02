@@ -194,7 +194,7 @@ traceability_lambda.zip
 
 The installation summary contains the AWS CLI commands needed to finish the installation.
 
-{{< alert title="Warning for us-east-1 region" color="warning" >}}If you are installing the agents using the `us-east1-1` region, remove the region in the generated `--template-url` parameter as follows, `https://my-bucket-name.s3.amazonaws.com/amplify-agents-deploy-all.yaml`. For any other region, keep the file as prompted (i.e. `https://my-bucket-name.s3-<_RegionName_>.amazonaws.com/amplify-agents-deploy-all.yaml)`.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you are installing the agents using the `us-east1-1` region, remove the region in the generated `--template-url` parameter as follows, `https://my-bucket-name.s3.amazonaws.com/amplify-agents-deploy-all.yaml`. For any other region, keep the file as prompted (i.e. `https://my-bucket-name.s3-<_RegionName_>.amazonaws.com/amplify-agents-deploy-all.yaml)`.{{< /alert >}}
 
 Example:
 

@@ -97,7 +97,7 @@ Step 5. Install the agent.
 
 After all questions are answered, the Axway Central CLI will create an Amplify platform environment that will host the usage report, as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration / the public-private key to manage the communication from the agent to the Platform), based on the provided answers.
 
-{{< alert title="Disabling transaction report" color="warning" >}}If you plan to use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file produced by the CLI to disable the transaction report.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you plan to use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file produced by the CLI to disable the transaction report.{{< /alert >}}
 
 The local files must be copied to the Gateway machine, as mentioned in the CLI output.
 

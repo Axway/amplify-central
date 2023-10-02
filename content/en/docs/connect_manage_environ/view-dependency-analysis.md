@@ -5,7 +5,7 @@ weight: 60
 ---
 The *Dependency Analysis* view displays details about the relationships to the selected API service version. The relationship details enable the API Provider to make informed decisions and take actions on any of the dependencies.
 
-{{< alert title="Warning" color="primary" >}}
+{{< alert title="Note" color="primary" >}}
 The Dependency Analysis view is not supported for Axway Cloud and Service Mesh environments.
 {{< /alert >}}
 
