@@ -108,7 +108,7 @@ Although the agent configuration allows setting up credential-based configuratio
 * Script the agent startup with openSSL
 * Use Docker secret for the Dockerized agents
 
-{{< alert title="Warning" color="warning" >}}If you are running your Traceability Agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you are running your Traceability Agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
 
 ### Use the @Secret resources in Amplify
 

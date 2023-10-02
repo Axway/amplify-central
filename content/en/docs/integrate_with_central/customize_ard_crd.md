@@ -25,7 +25,7 @@ In both cases, a schema definition based on **react-jsonschema-form** must be im
 There is no `provision` schema available for the subscription screen. It is one way only, from consumer to provider.
 {{< /alert >}}
 
-{{< alert title="Security warning" color="warning" >}}
+{{< alert title="Caution" color="danger" >}}
 Be cautious of the information you are asking your consumer to provide, as nothing is encoded at rest while transmitting from the consumer to the provider.
 Only the provider can transmit encrypted data.
 {{< /alert >}}
