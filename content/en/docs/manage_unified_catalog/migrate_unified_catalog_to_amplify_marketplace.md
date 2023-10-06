@@ -16,7 +16,7 @@ Use the Axway migration tool to help migrate your Unified Catalog assets and ite
 
 * Ensure that migration is appropriate for your environment and your product needs.
 * Review the latest [Amplify Release Notes](/docs/amplify_relnotes/).
-* Visit Axway University education material for full usage of [Amplify Enterprise Marketplace features](https://university.axway.com/learn/courses/11665/introduction-to-amplify-enterprise-marketplace).
+* Visit Axway University to learn about the [Amplify Enterprise Marketplace features](https://university.axway.com/learn/courses/11665/introduction-to-amplify-enterprise-marketplace).
 * Check the [migration tool's prerequisites](https://github.com/Axway/unified-catalog-migration#pre-requisites).
 * Evaluate the effort required for the migration:
     * Length and impact of product down time. The migration tool is designed to transition your assets smoothly with minimal down-time, but it may be necessary to inform users.
