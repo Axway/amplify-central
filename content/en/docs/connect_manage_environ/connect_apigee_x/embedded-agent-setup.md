@@ -16,6 +16,27 @@ Learn how to quickly setup a GCP Role and create a service account that the Embe
 
 ## GCP IAM setup
 
+### Enable IAM Service Account Credentials API
+
+The IAM Service Account Credentials API allows the creation of short lived credentials and is required by the Embedded Apigee Agent in order to login to your GCP project and request a short lived credential while placing API calls.
+
+1. Within your GCP project navigate to *APIs and Services*
+2. At the top of the *APIs and Services* select *+ ENABLE APIS AND SERVICES*
+3. Within the search box type `IAM Service Account Credentials API` and search for it
+4. Select the *IAM Service Account Credentials API* option that appears in the results
+5. Then click *ENABLE*, if it had previously been enabled the *MANAGE* button will appear
+
+### GCP Axway service account
+
+Allow the Axway Service Account to create a token in your GCP project.
+
+1. Within the GCP IAM Console, if not already there, navigate to *IAM* and select *Grant Access*
+2. In the New principals box enter `apigee-agent@rd-amplify-apigee-agent.iam.gserviceaccount.com`
+3. Under Assign roles select the *Service Account Token Creator* role
+4. Click *Save*
+
+The Axway Service Account may now create short lived tokens within your GCP project.
+
 ### GCP role
 
 Create an IAM role that allows the Embedded agent to discover, provision, and gather stats from your Apigee X deployment.
