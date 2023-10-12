@@ -31,7 +31,7 @@ The IAM Service Account Credentials API allows the creation of short lived crede
 Allow the Axway Service Account to create a token in your GCP project.
 
 1. Within the GCP IAM Console, if not already there, navigate to *IAM* and select *Grant Access*
-2. In the New principals box enter `apigee-agent@rd-amplify-apigee-agent.iam.gserviceaccount.com`
+2. In the New principals box enter `srvc-amplifyagent@rd-amplify-apigee-agent.iam.gserviceaccount.com`
 3. Under Assign roles select the *Service Account Token Creator* role
 4. Click *Save*
 
@@ -79,5 +79,5 @@ Create an IAM role with a trust relationship that allows the Embedded agent to r
 1. Within the GCP IAM Console, navigate to *Service Accounts* and select *+Create Service Account*
 2. Set a Name, ID, and Description then click *Create and Continue*
 3. Grant the role, created above, to this service account then click *Continue*
-4. In the *Service account users role* input allow Axway's GCP Service Account the ability to [Impersonate](https://cloud.google.com/docs/authentication/use-service-account-impersonation) this role by entering `apigee-agent@rd-amplify-apigee-agent.iam.gserviceaccount.com`
+4. In the *Service account users role* input allow Axway's GCP Service Account the ability to [Impersonate](https://cloud.google.com/docs/authentication/use-service-account-impersonation) this role by entering `srvc-amplifyagent@rd-amplify-apigee-agent.iam.gserviceaccount.com`
 5. Save the service account email address, as it will be required when setting up your agent
