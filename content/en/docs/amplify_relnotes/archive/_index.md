@@ -7,9 +7,11 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-This page displays the link to the Support Policy for Amplify Agents/SDK, and brief summaries of release notes for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI. Enhancement overviews and bug fixes for each release are provided.
+This page displays the link to the Support Policy for Amplify Agents/SDK, and brief summaries of enhancements for Amplify Central, Amplify agents, Analytics, Asset Catalog, Marketplace, Product Foundry, Amplify Platform Management, and Axway CLI.
 
 For more details, click on the release note title to go to the corresponding release note.
+
+{{< alert title="Note" color="primary" >}}You must log in to this portal and be authenticated as an Axway customer to have access to release notes.{{< /alert >}}
 
 ## Support Policy for Amplify Agents and Amplify Agent SDK
 
@@ -34,7 +36,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 | Agents |         |
 |--------|---------|
 | What's new: | **Axway API Management Gateway** - Virtual Host support / Discover published front-end APIs only / Configure number of workers to reduce requests and CPU usage / Agents updated with Axway Agent SDK. <br />**AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Base64 Encoding / Agents updated with Axway Agent SDK. <br />**Apigee Edge Gateway** - API traffic metrics / Agents updated with Axway Agent SDK. <br />**Mulesoft Gateway** - Consumer details in metric event / Provisioning application / Agents updated with Axway Agent SDK. |
-| Bug fixes: | **Istio Gateway** - Unnecessary log messages during cleanup. <br />**Mulesoft Gateway** - Traceability Agent configuration setup not working. |
+| Bug fixes: | See release note. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -49,7 +51,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Configurable support contact office hours. <br />Multi-Marketplace support. <br />Team sharing. |
-| Bug fixes: | Desynchronization of the product’s publication status. <br />Product using a shared asset is not displayed correctly. |
+| Bug fixes: | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -59,7 +61,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.43. This version is 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Multi-Marketplace support. <br />Application page enhancements. <br />Corrupted products are not visible in Marketplace to non-subscription users. |
-| Bug fixes: | Marketplace tooltip too small in size. <br />Users that are not logged in have access to credentials. |
+| Bug fixes: | See release note. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -80,7 +82,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.42. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | API service Revision Handling. <br />Environment Resource creation. |
+| Bug fixes: | See release note. |
 
 | Agents |         |
 |--------|---------|
@@ -100,17 +102,17 @@ Current agent versions are based on Amplify Agents SDK v1.1.42. This version is 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Plan and quota corruption indicator. <br />Product edits reflected in Marketplace immediately after the edits are saved. |
-| Bug fixes: | Never ending ellipsis for Archived product with no releases. <br />Country code on the support contact does not indicate that ‘+’ is required in front of the digits. <br />Unable to add all assets to a product. |
+| Bug fixes: | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
 | What's new: | None. |
-| Bug fixes: | Some data are marked with Not set. |
+| Bug fixes: | See release note. |
 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Consumers and Subscription Managers can now access subscription details. <br />Product URL has been simplified so it can be bookmarked. |
-| Bug fixes: | Manually approved access request are not synchronize. <br />Subscription plans are not displayed for corrupted products. <br />Icons displayed in the documentation overview are stretched using Safari browser. <br />Accessing a Marketplace after another one does not work. |
+| Bug fixes: | See release note. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -131,12 +133,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | Discovery Agent updated for Async API support. |
-| Bug fixes: | API service deletion handling. <br />API service revision handling. |
+| Bug fixes: | See release note. |
 
 | Agents |         |
 |--------|---------|
 | What's new: | **AWS Gateway** - Agents updated with Axway Agent SDK. <br />**Azure Gateway** - Agents updated with Axway Agent SDK. <br />**Istio Gateway** - Discovery Agent updated with Axway Agent SDK.  <br />**Apigee Edge Gateway** - Agents updated with Axway Agent SDK. |
-| Bug fixes: | **Axway API Management Gateway** - Helm chart installation when using an existing service account. |
+| Bug fixes: | See release note. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -151,17 +153,17 @@ Current agent versions are based on Amplify Agents SDK v1.1.41. This version is 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Pay per use plan configured in Catalog Manager. <br />Product visibility for consumer organization user. <br />Support contact alternative method. <br />Support contact set while creating / updating product. |
-| Bug fixes: | Country codes list for support contact phone number. |
+| Bug fixes: | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
 | What's new: | None. |
-| Bug fixes: | Non-Marketplace related data displays in the Subscriptions and Applications reports. |
+| Bug fixes: | See release note. |
 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Vanity URL. <br />Application list page improvement. <br />Call to Action. <br />Access request visibility. |
-| Bug fixes: | Consumer user (non-admin) cannot create access request / credentials in the consumer org. <br />Product documents in the Marketplace are not being displayed in proper order. |
+| Bug fixes: | See release note. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -202,7 +204,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.40. This version is 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Support contacts can be assigned to a product. <br />A product can be edited from the Web UI with or without the release of a new product version. |
-| Bug fixes: | Subscription Approver role is not able to see the access requests submitted by a user in a consumer organization. <br />Creating a product/plan and changing the product plan ownership fails. <br />Wrong plan ownership. <br />Quota price validation. |
+| Bug fixes: | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -212,7 +214,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.40. This version is 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Support contact displays on product overview. <br />Product resources page improvement. |
-| Bug fixes: | Issue with the “logical name” of the category - Product Foundry. <br />Confusing plan count on product tile. <br />Confusing sign in page. |
+| Bug fixes: | See release note. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -233,12 +235,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.39. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | Subscription migration. |
+| Bug fixes: | See release note. |
 
 | Agents |         |
 |--------|---------|
 | What's new: | **AWS Gateway** - Quota provisioning feature. <br />**Apigee Gateway** - Configurable IDP settings. |
-| Bug fixes: | **Apigee Gateway** - CPU/Memory utilization. |
+| Bug fixes: | See release note. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -253,7 +255,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.39. This version is 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Auto release management. <br />Export subscriber contact information. <br />Subscription approver role. |
-| Bug fixes: | Product ownership not replicated to plan ownership. |
+| Bug fixes: | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -263,7 +265,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.39. This version is 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | User experience improvements. <br />Consumer Organization management. |
-| Bug fixes: | Wrong owner of the subscription. <br />Category names are truncated. <br />Incorrect warning displayed. <br />Error message when subscribing is not clear. |
+| Bug fixes: | See release note. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -284,12 +286,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | Credential validation. |
+| Bug fixes: | See release note. |
 
 | Agents |         |
 |--------|---------|
 | What's new: | **Azure Gateway** - Product plan quota provisioning. <br />**Istio Gateway** - Marketplace provisioning, Helm override values. |
-| Bug fixes: | **API Management Gateway** - Single entry point URL. |
+| Bug fixes: | See release note. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
@@ -304,7 +306,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Filter access requests. <br />Product wizard update to create product category while creating/editing product. <br />Auto-product release from latest Asset version. |
-| Bug fixes: | Product plans not inheriting the product ownership. |
+| Bug fixes: | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -314,7 +316,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.38. This version is 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Browse products and product card usability enhancements. |
-| Bug fixes: | Product plan display issues. <br />Remaining time to view credential issue. |
+| Bug fixes: | See release note. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -335,22 +337,22 @@ Current agent versions are based on Amplify Agents SDK v1.1.37. This version is 
 | Agents |         |
 |--------|---------|
 | What's new: | **All agents** - Consumer credential management. <br />**Apigee Gateway** - Quota provisioning. |
-| Bug fixes: | **All agents** - Fix for Analytics support and Marketplace provisioning. <br />**API Management Gateway** - Consumer Insights Application Usage issue, Marketplace product and application deletion issue. |
+| Bug fixes: | See release note. |
 
 | Service registry <br />Topology |         |
 |------------------|------------------------|
 | What's new: | Unified Catalog enabled by entitlements. |
-| Bug fixes: | Teams names in the filter are not sorted alphabetically. |
+| Bug fixes: | See release note. |
 
 | Asset Catalog |         |
 |---------------|---------|
 | What's new: | None. |
-| Bug fixes: | Teams names in the filter are not sorted alphabetically. <br />Ownership set at the asset version level. |
+| Bug fixes: | See release note. |
 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Provider credential management. <br />Subscription approver role. <br />Swap featured categories. |
-| Bug fixes: | Teams names in the filter are not sorted alphabetically. |
+| Bug fixes: | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -360,7 +362,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.37. This version is 
 | Marketplace |         |
 |-------------|---------|
 | What's new: | Consumer credential management. <br />Search feature on the Marketplace Homepage. <br />Subscription enhancements. |
-| Bug fixes: | Subscription and applications do not have the same owner. |
+| Bug fixes: | See release note. |
 
 | Consumer insights |         |
 |-------------------|---------|
@@ -391,12 +393,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.33. This version is 
 | Asset Catalog |         |
 |--------|---------|
 | What's new: | Asset sharing with read-only access. |
-| Bug fixes:  | Team selector does not switch teams. |
+| Bug fixes:  | See release note. |
 
 | Product Foundry |         |
 |--------|---------|
 | What's new: | Category management from a dedicated screen. <br />Product sharing with read-only access. |
-| Bug fixes:  | Assigning a product to a category changed the product state. <br />Marketplace active subscription list is empty. |
+| Bug fixes:  | See release note. |
 
 | Business insights |         |
 |--------|---------|
@@ -406,7 +408,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.33. This version is 
 | Marketplace |         |
 |--------|---------|
 | What's new: | View products in a featured category on the home page. <br />Filter the catalog of products by categories. |
-| Bug fixes:  | Paid plan base price with large number crashes the backend. |
+| Bug fixes:  | See release note. |
 
 | Consumer insights |         |
 |--------|---------|
@@ -427,7 +429,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Agents |         |
 |--------|---------|
 | What's new: | **Azure** - Consumer insights. |
-| Bug fixes:  | **All agents** - API service revision updates. |
+| Bug fixes:  | See release note. |
 
 | Service registry <br />Topology |         |
 |---------------------------------|---------|
@@ -437,12 +439,12 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 | Asset Catalog |         |
 |---------------|---------|
 | What's new: | Manual or automatic access request approvals. <br />Share assets with Read-Only permissions. <br />Filter assets by status.|
-| Bug fixes:  | Corrupted assets could be added to a product. <br />Wrong product status in Product Foundry. |
+| Bug fixes:  | See release note. |
 
 | Product Foundry |         |
 |-----------------|---------|
 | What's new: | Tiered product plans. <br />Product visibility enhancements. <br />Category management. <br />Corrupted products notification. |
-| Bug fixes:  | Slow rendering of the Asset Catalog screen. |
+| Bug fixes:  | See release note. |
 
 | Business insights |         |
 |-------------------|---------|
@@ -471,7 +473,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Mulesoft Agent** (version 1.1.5): No new updates
 * **Amplify agent general**: The Traceability Agent enriches the metrics data with information related to the Marketplace (product / resource / subscription / quota / application) to help the consumer filter data in the Consumer Insights screens
 
-**Bug fixes**: Agents do not detect when an API specification changes without deployment changes
+**Bug fixes**: See release note
 
 ## [Amplify Central July 2022](/docs/amplify_relnotes/archive/20220729_ampc_relnotes/)
 
@@ -499,10 +501,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Asset can be filtered by owning team
 * A warning icon is displayed on the Asset resource column when the resource reference is missing
 
-**Bug fixes**:
-
-* The asset is not updated with latest API service update
-* The team developer role cannot cannot delete an asset even if they are a member of the owning team
+**Bug fixes**: See release note
 
 ## [Marketplace July 2022](/docs/amplify_relnotes/archive/20220729_marketplace_relnotes/)
 
@@ -514,7 +513,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * WSDL support
 * Protobuf support
 
-**Bug fixes**: Images in markdown documentation are not displayed
+**Bug fixes**: See release note
 
 ## [Product Foundry July 2022](/docs/amplify_relnotes/archive/20220729_foundry_relnotes/)
 
@@ -526,13 +525,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Filter product by status
 * Hide a product from Marketplace without unpublishing it
 
-**Bug fixes**: Paid plan base price with large number crashes the backend
+**Bug fixes**: See release note
 
 ## [Service Registry July 2022](/docs/amplify_relnotes/archive/20220729_serviceregistry_relnotes/)
 
 **What's new**: None
 
-**Bug fixes**: No warning when deleting API service
+**Bug fixes**: See release note
 
 ## [Amplify Platform Management July 2022](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html)
 
@@ -552,9 +551,9 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
     * **Consumer insights**: traffic and metrics events are enriched with Marketplace information (product / subscription / plan / application) to help consumers filtering their traffic
     * **Traffic sampling improvement**: Traceability Agent sample traffic based on Marketplace subscription and API
-    * **External IDP connectivity**: based on the Oauth 2.0 specification, the Discovery Agent can be configure to delegate the credential provisioning to an external IDP of type keycloak or Okta
+    * **External IDP connectivity**: based on the Oauth 2.0 specification, the Discovery Agent can be configured to delegate the credential provisioning to an external IDP of type keycloak or Okta
 
-**Bug fixes**: Apigee agent status remains unhealthy
+**Bug fixes**: See release note
 
 ## [Amplify Central June 2022](/docs/amplify_relnotes/archive/20220630_ampc_relnotes/)
 
@@ -575,13 +574,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**: The warning message displayed when deleting an API now includes the number/name of the affected assets
 
-**Bug fixes**:
-
-* An API developer role cannot delete an asset that is owned by the team which the developer is a member of
-* The asset icon is not visible when shared with another team
-* The items per page is not reflected in the table view of Asset details
-* The query string length when selecting Asset filters is too long
-* Catalog Managers who are a member of the owning team of an asset cannot edit the asset and its ownership access rights
+**Bug fixes**: See release note
 
 ## [Marketplace June 2022](/docs/amplify_relnotes/archive/20220630_marketplace_relnotes/)
 
@@ -595,10 +588,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Error management: when an error occurred during provisioning access or credentials from the provider side, the consumer can see the error
 * Subscription approval: provider can set the type of approval for subscription plans
 
-**Bug fixes**:
-
-* Security fixes
-* Subscription buttons styling
+**Bug fixes**: See release note
 
 ## [Product Foundry June 2022](/docs/amplify_relnotes/archive/20220630_foundry_relnotes/)
 
@@ -619,11 +609,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Catalog Manager role: can create product for a particular team and enables the subscription approval
 * Archiving product: this action terminates any associated subscription
 
-**Bug fixes**:
-
-* Updating Categories on the product is not reflected on the Marketplace product details page
-* Product fails to be created when configuring a usage plan with quota is skipped
-* Catalog Manager cannot create a product when adding plan/quotas
+**Bug fixes**: See release note
 
 ## [Service Registry June 2022](/docs/amplify_relnotes/archive/20220630_serviceregistry_relnotes/)
 
@@ -651,11 +637,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * **Marketplace subscription provisioning** - `AGENTFEATURES_MARKETPLACEPROVISIONING=true`
     * **Single polling entry point** - polling uses harvester service. All events are available to the agent
 
-**Bug fixes**:
-
-* Istio TA does not receive expected log entries from Istio
-* Istio TA does not record all hops
-* OAS3 spec parser does not set the auth policies within the service body
+**Bug fixes**: See release note
 
 ## [Amplify Central May 2022](/docs/amplify_relnotes/archive/20220523_ampc_relnotes/)
 
@@ -666,7 +648,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Central WebUI**:
     * See the Release Notes for Asset Catalog, Product Foundry, and Service Registry
 
-**Bug fixes**: Amplify Tooling packages use an older version of an ‘ejs’ dependency causing a security issue with template injection
+**Bug fixes**: See release note
 
 ## [Analytics May 2022](/docs/amplify_relnotes/archive/20220523_analytics_relnotes/)
 
@@ -682,7 +664,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * An **Access Rights** tab has been added to the asset details screen to show all teams that the asset is shared with
 * A **Products** tab has been added to the asset details screen to show all products that contain the asset
 
-**Bug fixes**: An API Developer role can view assets that are owned/shared with a team that they are not a member of
+**Bug fixes**: See release note
 
 ## [Marketplace May 2022](/docs/amplify_relnotes/archive/20220523_marketplace_relnotes/)
 
@@ -699,10 +681,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Intercom chat bubble has been removed from the Marketplace
 * Consumers can view API Health
 
-**Bug fixes**:
-
-* Active Products with descriptions longer than 250 characters are not published correctly into the Marketplace
-* When a published product has been renamed, the change is not reflected in the Marketplace
+**Bug fixes**: See release note
 
 ## [Product Foundry May 2022](/docs/amplify_relnotes/archive/20220523_foundry_relnotes/)
 
@@ -737,7 +716,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Mulesoft Agent** (version 1.1.5): Marketplace provisioning / deprovisioning
 * **Amplify agent general** (version 1.1.16): Marketplace subscription provisioning and deprovisioning on the data plane
 
-**Bug fixes**: Unable to update Istio agents using the helm update command
+**Bug fixes**: See release note
 
 ## [Amplify Central April 2022](/docs/amplify_relnotes/archive/20220430_ampc_relnotes/)
 
@@ -749,10 +728,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Central WebUI**:
     * See Asset Catalog, Product Foundry, and Service Registry Release Notes
 
-**Bug fixes**:
-
-* Edge agent Helm install template uses the Team name instead of the correct override syntax and organization ID
-* Istio agent install errors when a Kubernetes warning is encountered
+**Bug fixes**: See release note
 
 ## [Analytics April 2022](/docs/amplify_relnotes/archive/20220430_analytics_relnotes/)
 
@@ -770,11 +746,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Asset details page lists products that are consuming/using the currently displayed asset version
 * When creating or editing an asset, assign one owning team of the asset and share it with other teams
 
-**Bug fixes**:
-
-* Cannot delete an asset with multiple asset versions
-* The Product (Catalog) Manager role cannot manage assets
-* The team developer role is not limited to read only permissions in the access rights step of the asset wizard
+**Bug fixes**: See release note
 
 ## [Marketplace April 2022](/docs/amplify_relnotes/archive/20220430_marketplace_relnotes/)
 
@@ -790,7 +762,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**: When creating or editing a product, assign one owning team of the product and share it with other teams
 
-**Bug fixes**: The Product (Catalog) Manager role cannot manage products (team ownership/sharing and the management of the lifecycle of a product)
+**Bug fixes**: See release note
 
 ## [Service Registry April 2022](/docs/amplify_relnotes/archive/20220430_serviceregistry_relnotes/)
 
@@ -831,7 +803,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**: None
 
-**Bug fixes**: API Health and API Traffic cannot be filtered by API
+**Bug fixes**: See release note
 
 ## [Asset Catalog March 2022](/docs/amplify_relnotes/archive/20220330_catalog_relnotes/)
 
@@ -840,10 +812,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * API Providers can set/change the Categories with the WebUI
 * API Providers can set/change the team ownership of an Asset with the WebUI
 
-**Bug fixes**:
-
-* Display of all asset stages for filtering
-* Improved warning message when attempting to archive an asset release being used by a product
+**Bug fixes**: See release note
 
 ## [Marketplace March 2022](/docs/amplify_relnotes/archive/20220330_marketplace_relnotes/)
 
@@ -918,10 +887,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Async API specification version 2.3.0 is now supported with six additional Async protocols: IBMMQ, JMS SECURE, MECURE, SOLACE, SOLACE SECURE, and SOLACE COMPRESSED
     * The UX display of many tags / attributes and long text names has been improved
 
-**Bug fixes**:
-
-* The Axway Central CLI `install agents` command outputs an error message indicating the required platform roles to access the teams
-* The Axway Central CLI `get` command can support retrieving thousands of resources without a timeout
+**Bug fixes**: See release note
 
 ## [Analytics February 2022](/docs/amplify_relnotes/archive/20220228_analytics_relnotes/)
 
@@ -931,7 +897,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Each screen has a compare capability to visualize the trend with the previous period
 * Leaderboard view to help verify your API performance
 
-**Bug fixes**: Application usage is not visible
+**Bug fixes**: See release note
 
 ## [Asset Catalog February 2022](/docs/amplify_relnotes/archive/20220228_catalog_relnotes/)
 
@@ -976,14 +942,11 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 **What's new**: None
 
-**Bug fixes**:
-
-* Org Activity view events for updating a team member’s roles or removing a member from a team may not state which member was affected
-* Amplify Runtime Services app Overview view may not render for unpublished apps
+**Bug fixes**: See release note
 
 ## [Axway CLI February 2022](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/release_notes/index.html)
 
-**Security update**. Migrated from the outdated `listr` package to the actively maintained `listr2` package to resolves moderate security vulnerability warnings during installation
+**Security update**. See release note
 
 ## [Amplify agents January 2022](/docs/amplify_relnotes/archive/20220131_ampc_agents_relnotes/)
 
@@ -1001,11 +964,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * API Usage is reported to Amplify Analytics
 * **Amplify agent general** (version 1.1.10): Traceability Agents now report three types of data to the platform: Transaction, Usage and Metrics (new)
 
-**Bug fixes**:
-
-* Custom webhook for subscription is overridden by the agent
-* Traceability Agent fails to connect to transaction service via proxy
-* Changing discovery filter does not always update the discovered APIs
+**Bug fixes**: See release note
 
 ## [Amplify Central January 2022](/docs/amplify_relnotes/archive/20220131_ampc_relnotes/)
 
@@ -1018,12 +977,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Consumers from the same team are not able to manipulate/view subscriptions from other team members in the Unified Catalog
     * API Providers can now publish APIs to the Unified Catalog faster with the relaxed validation of API Specification files on the WebUI
 
-**Bug fixes**:
-
-* A Service account cannot be used in a headless environment with the install agents command
-* The `get` command with `--team` option does not support all teams that you have access to as a Central Administrator
-* The CLI command `axway central config` does not execute with telemetry enabled
-* The CLI command to add a service account user to a team does not execute
+**Bug fixes**: See release note
 
 ## Amplify agents November 2021
 
@@ -1031,11 +985,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 * **Amplify Gateway Agent** (version 1.1.7): A warning is raised when using @secret for password configuration in the Traceability Agent offline mode
 
-**Bug fixes**:
-
-* Error getting authentication token from AxwayId
-* AWS Discovery Agent goes stale after a while
-* logger adds additional rotate file hooks on config change
+**Bug fixes**: See release note
 
 ## Amplify Central November 2021
 
@@ -1049,10 +999,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Central WebUI**:
     * When adding an API service using an API Specification file (OAS2/OAS3), the title, description and endpoints are auto-populated
 
-**Bug fixes**:
-
-* CLI - The use of “install agents” command in a headless mode with a service account and tooling credentials of a platform admin account
-* WebUI - Creating an Environment with the name ‘add’
+**Bug fixes**: See release note
 
 ## Amplify agents October 2021
 
@@ -1061,11 +1008,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Gateway Agent** (version 1.1.5): Agent resource status contains the previous and current status
 * **Amplify agents general** (version 1.1.5): Amplify Central CLI configures the agent with the proper "latest release"
 
-**Bug fixes**:
-
-* Traceability connectivity connection failed, too many colons in address
-* Discovery Agent fails when using an environment owned by a team
-* Amplify Gateway helm installation Private key and Public key transposed in amplify-agents-keys secret
+**Bug fixes**: See release note
 
 ## Amplify Central October 2021
 
@@ -1076,10 +1019,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * A Trial Experience is available to new free trail users to experience the features of Amplify Central
     * Developer role can access the API Observer and see the traffic associated to APIs belonging to the teams he is part of
 
-**Bug fixes**:
-
-* CLI - Incorrect cloudformation_properties.json generated for AWS Agent
-* CLI - Authentication timeout
+**Bug fixes**: See release note
 
 ## Amplify agents September 2021
 
@@ -1090,7 +1030,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Traceability Agent configuration to disregard API paths from being reported to the Platform
 * **Amplify agents general** (version 1.1.4): None
 
-**Bug fixes**: Agent cannot contact the version service check
+**Bug fixes**: See release note
 
 ## Amplify Central September 2021
 
@@ -1103,7 +1043,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Support for Node.js version 12.13.0 or later
 * **Amplify Central WebUI**: API provider can add an API service without specifying an endpoint
 
-**Bug fixes**: Activity report on the Environment details page does not display an error message if an API service encounters an error while publishing to the Unified Catalog
+**Bug fixes**: See release note
 
 ## Amplify agents August 2021
 
@@ -1112,11 +1052,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Gateway Agent** (version 1.1.2): Offline usage report and volume usage report
 * **Amplify agents general** (version 1.1.2): Usage report contains the agent name
 
-**Bug fixes**:
-
-* Index out of range in trace log when attempting to send a 403 traffic
-* Discovered API added to wrong team
-* Discovery Agent panic while discovering
+**Bug fixes**: See release note
 
 ## Amplify Central August 2021
 
@@ -1136,7 +1072,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify AWS Gateway Agent** (version 1.1.0): Encrypted queues
 * **Amplify Istio Agent** (version 1.1.0): Alignment with the latest Amplify Agents SDK
 
-**Bug fixes**: Catalog item’s categories are lost when a consumer instance is updated
+**Bug fixes**: See release note
 
 ## Amplify Central July 2021
 
@@ -1149,10 +1085,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Delete Resources using a name scope parameter Environments list page
     * Service Mesh v1 support has been removed. It is now replaced by Amplify ISTIO
 
-**Bug fixes**:
-
-* Amplify Central CLI could not create a service account when the path contained a space
-* Long endpoint names that contained a period could not be created
+**Bug fixes**: See release note
 
 ## Amplify Central June 2021
 
@@ -1166,21 +1099,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Visualize the Agent Status in Central WebUI
     * Dependency Analysis View
 
-**Bug fixes**:
-
-* Wrong API service count on the service page list
-* A provider cannot remove tags from an API service
-* A page error is displayed when adding the first API service to an environment in the WebUI
-* Traceability Agent working in an Externally Managed Topology (EMT) deployment cannot report the transaction request/response headers
+**Bug fixes**: See release note
 
 ## Unified Catalog June 2021
 
 **What's new**: Managing categories and assigning them to catalog items when publishing an API service
 
-**Bug fixes**:
-
-* The protocol drop-down on the API service Endpoint screen did not allow for selection of protocols other than http/http for AsyncAPI services
-* Developers could no longer access an environment owned by their team
+**Bug fixes**: See release note
 
 ## Amplify Central May 2021
 
@@ -1194,15 +1119,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Transaction sampling
     * Transaction redaction
 
-**Bug fixes**:
-
-* Could not import large API specification file
-* Azure Discovery Agent adds (Azure) to the service name
-* Agents terminate if API Manager system is unreachable on startup
-* Discovery agent does not remove API service when API is removed in Axway API Manager
-* Azure trace is not pushed to Condor: "empty url"
-* Prevent running multiple instances of an agent on the same machine
-* Installing Traceability Agent only for v7 asks you for disco agent name
+**Bug fixes**: See release note
 
 ## Unified Catalog May 2021
 
@@ -1220,23 +1137,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Central WebUI**: Use markdown formatting for Environment and API service descriptions
 * **Amplify agents general**: Traceability Agent data redaction
 
-**Bug fixes**:
-
-* Unsubscribing to an API does not remove the corresponding credentials on the data plane
-* As a consumer, I want to see the friendly name for my AWS Usage plan
-* Azure agents are not able to reconnect after Amplify token expiration
-* Base path is not displayed in service endpoint
-* API Observer is not always showing the correct number of spans
+**Bug fixes**: See release note
 
 ## Unified Catalog April 2021
 
 **What's new**: None
 
-**Bug fixes**:
-
-* API catalog item is not created for API with large swagger files (3000 methods)
-* Users that are assigned the Platform Consumer role and Team Consumer role are not able to access Unified Catalog
-* Loading the subscriptions details screen fails with a CORS error on Safari
+**Bug fixes**: See release note
 
 ## Amplify Central March 2021
 
@@ -1248,24 +1155,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Support for Istio 1.8.2
     * Support for Red Hat OpenShift 4.7 managed clusters
 
-**Bug fixes**:
-
-* As a consumer, I want to see the friendly name for my v7 application
-* As a consumer, I want to see the friendly name for my Azure subscription
-* Traceability Agent logs are not stored to a log file
-* API service is duplicated
-* V7 agent fails to start if APIMANAGER_HOST is not set
-* Incorrect URL for Traceability Agent running in EU organization
-* Amplify Central WebUI Observer traffic display is incomplete
+**Bug fixes**: See release note
 
 ## Unified Catalog March 2021
 
 **What's new**: None
 
-**Bug fixes**:
-
-* Removing an environment with duplicate attributes could get stuck in deleting state
-* The Unified Catalog could not display the full schema definition in the embedded Swagger UI
+**Bug fixes**: See release note
 
 ## Amplify Central February 2021
 
@@ -1281,14 +1177,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * Amplify Azure Traceability Agent reports APIs usage
 * **Mesh governance**: Amplify CLI for Istio agent Kubernetes discovery
 
-**Bug fixes**:
-
-* The image import/crop feature for environments, API services, and catalog items is not a blocking action
-* API service creator detail link is broken for service account
-* The Central CLI instructions after an agent installation are not clear
-* Consumer is unable to consume v7 discovered APIs from Amplify Central WebUI
-* V7 Traceability Agent Linux service mode broken
-* Fixed IP addresses
+**Bug fixes**: See release note
 
 ## Unified Catalog February 2021
 
@@ -1297,12 +1186,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Event-based APIs can now be registered in the Unified Catalog as AsyncAPI type
 * Catalog Subscription enhancements
 
-**Bug fixes**:
-
-* Team names no longer visible on catalog asset
-* Logging with a user that was assigned the Consumer role, does not allow viewing the subscription details
-* Failure publishing to the Unified Catalog using the Amplify Apigee extension for APIs with long description
-* Filter by category pagination issue
+**Bug fixes**: See release note
 
 ## Amplify Central January 2021
 
@@ -1314,20 +1198,13 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Central WebUI**: View the agents connected to an environment in the Environment Detail page
 * **Mesh governance**: The alpha Mesh Governance Discovery Agent can be installed with the CLI option
 
-**Bug fixes**:
-
-* Mesh Governance helm APIC-hybrid chart installation step would not accept an alternate target namespace
-* Some Amplify Central CLI results from the amplify central get xxx commands did not correctly return their RESOURCE KIND and SCOPE KIND columns
-* The environment name was not reported for API transactions shown in the Amplify Platform Visibility Dashboard
+**Bug fixes**: See release note
 
 ## Unified Catalog January 2021
 
 **What's new**: Improve searching and browsing in the Unified Catalog
 
-**Bug fixes**:
-
-* Name of an active subscription could not be updated without changing the subscription status
-* Long category names, descriptions, or tags were not properly displayed
+**Bug fixes**: See release note
 
 ## Amplify Central November 2020
 
@@ -1337,12 +1214,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * **Amplify Central WebUI**: View if a Discovery Agent is connected to an environment
 * **Amplify agents general**: Discovery Agent now handles log rotation/retention
 
-**Bug fixes**:
-
-* When a service account was installed with a wrong name it caused the CLI to freeze
-* When a subscription failed, Discovery Agent did not send an email to the subscriber
-* When an API was not in PUBLISHED status, a consumer could still start the subscription
-* The Central CLI results listing for the Mesh Discovery resources now indicates the correct SCOPE and SCOPE NAME the resources are related to
+**Bug fixes**: See release note
 
 ## Unified Catalog November 2021
 
@@ -1353,10 +1225,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 * Enable integration with Bitbucket for manual discovery and publishing of APIs
 * Enable integration with Layer7 for manual discovery and publishing of APIs
 
-**Bug fixes**:
-
-* Users assigned the Developer role could not push an API asset from the Unified Catalog to Integration Builder as a connector
-* When no app was required with a subscription, the Approve and Reject dialog screen would display “App has been deleted”
+**Bug fixes**: See release note
 
 ## Amplify Central October 2020
 
@@ -1378,7 +1247,4 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
     * AWS API Gateway agents are available as a Docker image
 * **Mesh governance**: The validated service mesh version has been updated to Istio 1.6.8
 
-**Bug fixes**:
-
-* Issue with the Observer display of API filters menu displaying the Axway Cloud and Service mesh environment names
-* The 403 error is not handled properly by the AWS Traceability Agent due to a misconfiguration of the logging variable by the Discovery Agent
+**Bug fixes**: See release note
