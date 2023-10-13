@@ -35,13 +35,15 @@ The Discovery Agent is used to discover new API proxies configured in Apigee X, 
 * Given a specification file is found the agent will then create an API Service, Revision, and Instance to represent that proxy in Amplify Central
 * The agent does not validate or configure any policies within the proxy, it will expect the spec to represent what is defined in the proxy
 
+{{< alert title="Note" color="primary" >}}An API Proxy without an API Specification will not be discovered by the agent{{< /alert >}}
+
 #### Provisioning process
 
 * When a consumer is granted access to an API proxy within Apigee the agent will...
     * Create an Application on Apigee, with the same name, and assign the ownership to the developer email address configured for the agent
     * Create a Product on Apigee, if one does not already exist, that allows access to the specified API proxy
         * If a quota has been set in Ampilfy then that quota will be used when creating the product in Apigee
-* When a consumer requests credentials for an Application that has access to an API proxy within Apigee the agent will... 
+* When a consumer requests credentials for an Application that has access to an API proxy within Apigee the agent will...
     * Find the previously created Application on Apigee and create a new Credential within that Application
     * Allow access to all Products created previously for the Application on Amplify
     * Return the created credential to Amplify, encrypted, to be viewed by the consumer in Marketplace

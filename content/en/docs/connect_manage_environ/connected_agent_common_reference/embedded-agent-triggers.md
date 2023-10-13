@@ -41,7 +41,6 @@ dataplane:
 1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl.
 2. Run one of the following curl commands. Update the values of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;
 
-
 ##### Discovery Agent API Dataplane example
 
 ```shell
@@ -61,4 +60,3 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1al
 ```
 
 {{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
-
