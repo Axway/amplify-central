@@ -31,7 +31,14 @@ Learn how to create an environment to represent your API services and other disc
     * **Agent Type** - select the type of agent that will connect to this API Gateway.
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted**  the customer to host the agent.
-    * **Agent Configuration** - currently, only AWS API Gateway is supported by Embedded agent.
+    * **Agent Configuration** - currently, only Apigee X API Gateway and AWS API Gateway are supported as an Embedded agent.
+       Apigee API Gateway settings:
+         * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires a Client Email Address in the Apigee X Authentication below.
+         * **Project ID**: the Project ID for your Google Cloud Platform (GCP) project.
+         * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applicaitons.
+         * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources.
+           
+      AWS API Gateway settings:
          * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires an Access Log ARN in the CloudWatch settings below.
          * **AWS Region** - select or enter the AWS region if not in the list where the AWS API Gateway is located.
          * **AWS Authentication** - select the method of AWS authentication to use, AssumeRole or Access Key/Secret Key. For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded agents](/docs/connect_manage_environ/connect_aws_gateway/#embedded-aws-agent-setup).
