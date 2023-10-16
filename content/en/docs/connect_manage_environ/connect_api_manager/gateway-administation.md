@@ -263,7 +263,7 @@ The log section defines how the agent is managing its logs.
 
 `LOG_FILE_NAME`: The name of the log file. Default value is the name of the binary.
 
-`LOG_FILE_PATH`: The path (relative / absolute) to save log files, if output is file or both.
+`LOG_FILE_PATH`: The path (relative / absolute), traceability  to save log files, if output is file or both.
 
 `LOG_FILE_ROTATEEVERYBYTES`: The maximum size, in bytes, that log file can grow to.
 
@@ -784,7 +784,7 @@ Once all data is gathered, this section should look like this for standard outpu
 ```shell
 LOG_LEVEL=info
 LOG_OUTPUT=stdout
-LOG_FILE_PATH=logs
+LOG_FILE_PATH=/path/to/logs
 LOG_FILE_NAME=traceability_agent.log
 ```
 
@@ -838,7 +838,7 @@ TRACEABILITY_PROTOCOL=tcp
 #logging
 LOG_LEVEL=info
 LOG_OUTPUT=stdout
-LOG_FILE_PATH=logs
+LOG_FILE_PATH=/path/to/logs
 LOG_FILE_NAME=traceability_agent.log
 ```
 
