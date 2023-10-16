@@ -18,7 +18,7 @@ Each Apigee X Organization can be represented by an Amplify environment allowing
 ## Before you start
 
 * Read [Embedded Apigee X agents setup](/docs/connect_manage_environ/connect_apigee_x/embedded-agent-setup/)
-* You will need information on AWS:
+* You will need information on GCP and Apigee:
     * The Project ID for the Google Cloud Project
     * The Developer Email address that will be the owner of agent created Application in Apigee
     * The Principal name of the service account created in setup
@@ -31,7 +31,7 @@ The Discovery Agent is used to discover new API proxies configured in Apigee X, 
 
 * Find all deployed API Proxy revisions
 * From those revisions attempts to find a specification file
-    * To do this the agent looks at the proxy configuration for a resource file of type oas
+    * To do this the agent looks at the proxy configuration for a resource file of type `oas`
 * Given a specification file is found the agent will then create an API Service, Revision, and Instance to represent that proxy in Amplify Central
 * The agent does not validate or configure any policies within the proxy, it will expect the spec to represent what is defined in the proxy
 
