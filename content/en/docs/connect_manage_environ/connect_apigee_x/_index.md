@@ -50,7 +50,8 @@ The Discovery Agent is used to discover new API proxies configured in Apigee X, 
 
 {{< alert title="Note" color="primary" >}}Although credentials will be created and returned to a consumer the API proxy on Apigee must have a policy which validates them{{< /alert >}}
 
-{{< alert title="Note" color="primary" >}}Quotas set on Products within Apigee must be enforced by a policy within the API proxy on Apigee{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Quotas set on Products within Apigee must be enforced by a policy within the API proxy on Apigee. See [Quota policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy) for more information{{< /alert >}}
+
 
 ### Traceability Agent
 
