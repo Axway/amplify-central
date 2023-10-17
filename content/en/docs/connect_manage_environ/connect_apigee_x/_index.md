@@ -52,7 +52,6 @@ The Discovery Agent is used to discover new API proxies configured in Apigee X, 
 
 {{< alert title="Note" color="primary" >}}Quotas set on Products within Apigee must be enforced by a policy within the API proxy on Apigee. See [Quota policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy) for more information{{< /alert >}}
 
-
 ### Traceability Agent
 
 The Traceability Agent gathers usage metrics for all proxies defined in Apigee X. The agent will query, based on the configured frequency, the Apigee X stats API for new metrics. The metrics, as noted in the [Apigee X documentation](https://cloud.google.com/apigee/docs/api-platform/analytics/use-analytics-api-measure-api-program-performance), can be delayed up to 10 minutes. Do to this possible delay the Traceability Agent will not gather metrics within the last 10 minutes of executing the stats query. On subsequent runs those metrics will be gathered.
