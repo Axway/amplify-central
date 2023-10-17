@@ -32,7 +32,7 @@ Learn how to create an environment to represent your API services and other disc
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted**  the customer to host the agent.
     * **Agent Configuration** - currently, only Apigee X API Gateway and AWS API Gateway are supported as an Embedded agent.
-       Apigee API Gateway settings:
+       Apigee X API Gateway settings:
          * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires a Client Email Address in the Apigee X Authentication below.
          * **Project ID**: the Project ID for your Google Cloud Platform (GCP) project.
          * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applicaitons.
@@ -51,7 +51,7 @@ Learn how to create an environment to represent your API services and other disc
    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
    * **API Discovery Filter** - filter conditions for discovery of API services based on tags. See [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
-   * **Exclude Tags** - if a tag listed here is on an API in the gateway, then it will not be added as a tag in the API service.
+   * **Exclude Tags** - if a tag listed here is on an API in the gateway, then it will not be added as a tag in the API service (Only available for AWS API Gateway).
 
 6. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
