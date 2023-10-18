@@ -9,18 +9,18 @@ Connect Google Cloud Platform Apigee X and Amplify so you can govern and monitor
 
 Connecting Apigee X to Amplify will provide you with a global centralized view of your APIs and their related traffic.
 
-Each Apigee X Organization can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with Apigee X and Amplify to:
+Each Apigee X organization can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with Apigee X and Amplify to:
 
 * Detect changes to Apigee X proxies deployments using the Discovery Agent. The Discovery Agent pushes the proxy configuration as an API service for the environment, which can then be published as a catalog item to be used by consumers to subscribe to the service.
-* Gather Apigee X statistics that are related to discovered APIs and prepare the metric events that are sent to Amplify Platform.
+* Gather Apigee X statistics that are related to discovered APIs and prepare the metric events that are sent to Amplify platform.
 
 ## Before you start
 
 * Read [Embedded Apigee X agents setup](/docs/connect_manage_environ/connect_apigee_x/embedded-agent-setup/)
-* You will need information on GCP and Apigee:
-    * The Project ID for the Google Cloud Project
-    * The Developer Email address that will be the owner of agent created Application in Apigee
-    * The Principal name of the service account created in setup
+* Gather information on GCP and Apigee:
+    * The project ID for the Google Cloud project
+    * The developer email address that will be the owner of the agent created application in Apigee
+    * The principal name of the service account created in setup
 
 ### Discovery Agent
 
@@ -28,32 +28,31 @@ The Discovery Agent is used to discover new API proxies configured in Apigee X, 
 
 #### Discovery process
 
-* Find all deployed API Proxy revisions
-* From those revisions attempts to find a specification file
+* Find all deployed API proxy revisions
+* From those revisions, attempts to find a specification file
     * To do this the agent looks at the proxy configuration for a resource file of type `oas`
-* Given a specification file is found the agent will then create an API Service, Revision, and Instance to represent that proxy in Amplify Central
-* The agent does not validate or configure any policies within the proxy, it will expect the spec to represent what is defined in the proxy
+* Given that a specification file is found, the agent then creates an API service, revision, and instance to represent that proxy in Amplify Central. The agent does not validate or configure any policies within the proxy, it will expect the spec to represent what is defined in the proxy.
 
-{{< alert title="Note" color="primary" >}}An API Proxy without an API Specification will not be discovered by the agent{{< /alert >}}
+{{< alert title="Note" color="primary" >}}An API Proxy without an API Specification will not be discovered by the agent.{{< /alert >}}
 
 #### Provisioning process
 
-* When a consumer is granted access to an API proxy within Apigee the agent will...
-    * Create an Application on Apigee, with the same name, and assign the ownership to the developer email address configured for the agent
-    * Create a Product on Apigee, if one does not already exist, that allows access to the specified API proxy
-        * If a quota has been set in Ampilfy then that quota will be used when creating the product in Apigee
-* When a consumer requests credentials for an Application that has access to an API proxy within Apigee the agent will...
-    * Find the previously created Application on Apigee and create a new Credential within that Application
-    * Allow access to all Products created previously for the Application on Amplify
+* When a consumer is granted access to an API proxy within Apigee the agent will:
+    * Create an application on Apigee, with the same name, and assign the ownership to the developer email address configured for the agent
+    * Create a product on Apigee, if one does not already exist, that allows access to the specified API proxy
+        * If a quota has been set in Amplify then that quota will be used when creating the product in Apigee
+* When a consumer requests credentials for an application that has access to an API proxy within Apigee the agent will:
+    * Find the previously created application on Apigee and create a new credential within that application
+    * Allow access to all products created previously for the application on Amplify
     * Return the created credential to Amplify, encrypted, to be viewed by the consumer in Marketplace
 
-{{< alert title="Note" color="primary" >}}Although credentials will be created and returned to a consumer the API proxy on Apigee must have a policy which validates them{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Although credentials will be created and returned to a consumer, the API proxy on Apigee must have a policy that validates them.{{< /alert >}}
 
-{{< alert title="Note" color="primary" >}}Quotas set on Products within Apigee must be enforced by a policy within the API proxy on Apigee. See [Quota policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy) for more information{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Quotas set on products within Apigee must be enforced by a policy within the API proxy on Apigee. See [Quota policy](https://cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy) for more information.{{< /alert >}}
 
 ### Traceability Agent
 
-The Traceability Agent gathers usage metrics for all proxies defined in Apigee X. The agent will query, based on the configured frequency, the Apigee X stats API for new metrics. The metrics, as noted in the [Apigee X documentation](https://cloud.google.com/apigee/docs/api-platform/analytics/use-analytics-api-measure-api-program-performance), can be delayed up to 10 minutes. Do to this possible delay the Traceability Agent will not gather metrics within the last 10 minutes of executing the stats query. On subsequent runs those metrics will be gathered.
+The Traceability Agent gathers usage metrics for all proxies defined in Apigee X. The agent will query, based on the configured frequency, the Apigee X stats API for new metrics. The metrics, as noted in the [Apigee X documentation](https://cloud.google.com/apigee/docs/api-platform/analytics/use-analytics-api-measure-api-program-performance), can be delayed up to 10 minutes. Due to this possible delay the Traceability Agent will not gather metrics within the last 10 minutes of executing the stats query. On subsequent runs those metrics will be gathered.
 
 ### Installation via CLI
 
@@ -141,7 +140,7 @@ The installation procedure will prompt for the following:
    * **Team**: can be an existing team or one that will be created by the installation procedure
 4. Apigee Configuration Setup:
    * **Project ID**: the Project ID for your Google Cloud Platform project
-   * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applicaitons
+   * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
    * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
    * Set how often the Embedded agent should check Apigee for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover Apigee resources after installation is complete
