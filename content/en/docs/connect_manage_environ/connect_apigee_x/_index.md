@@ -2,7 +2,6 @@
 title: Connect Apigee X
 linkTitle: Connect Apigee X
 weight: 110
-date: 2021-01-04
 ---
 Connect Google Cloud Platform Apigee X and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the Apigee X hosted APIs in one central location.
 
@@ -69,7 +68,7 @@ The Traceability Agent gathers usage metrics for all proxies defined in Apigee X
 
 ## Configure the agents with Axway Central CLI
 
-Use Axway Central CLI to install the agents. This CLI will prompt you for answers regarding AWS Gateway access information and where to store the discovered APIs in the Amplify platform.
+Use Axway Central CLI to install the agents. This CLI will prompt you for answers regarding GCP and Apigee access information and where to store the discovered APIs in the Amplify platform.
 
 ### Step 1: Install Axway Central CLI
 
@@ -125,7 +124,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. See [Embedded Apigee X agents setup](/docs/connect_manage_environ/connect_apigee_x/embedded-agent-setup/) for the prerequisite setup on AWS.
+The Axway Central CLI will guide you through the configuration of the agents. See [Embedded Apigee X agents setup](/docs/connect_manage_environ/connect_apigee_x/embedded-agent-setup/) for the prerequisite setup on GCP and Apigee.
 
 Run the following command to start the configuration procedure:
 
@@ -147,4 +146,4 @@ The installation procedure will prompt for the following:
    * Set how often the Embedded agent should check Apigee for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover Apigee resources after installation is complete
 
-Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If set to discover AWS API Gateway resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
+Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GCP and Apigee. If set to discover Apigee resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
