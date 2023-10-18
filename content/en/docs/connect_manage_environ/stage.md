@@ -1,6 +1,6 @@
 ---
-title: Add your environment
-linkTitle: Add your environment
+title: Stage management
+linkTitle: Stage management
 weight: 20
 date: 2023-10-18
 ---
