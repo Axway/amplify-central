@@ -34,7 +34,7 @@ The Discovery Agent is used to discover new specification files within the confi
 ## Embedded agent configuration pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
+    * You can access platform.axway.com and login.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
@@ -98,7 +98,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. See [Embedded GitHub agents setup](/docs/connect_manage_environ/connect_apigee_x/embedded-agent-setup/) for the prerequisite setup on GCP and Apigee.
+The Axway Central CLI will guide you through the configuration of the agents. See [Embedded GitHub agents setup](/docs/connect_manage_environ/connect_github_repository/embedded-agent-setup/) for the prerequisite setup on GCP and Apigee.
 
 Run the following command to start the configuration procedure:
 
@@ -108,20 +108,19 @@ axway central install agents
 
 The installation procedure will prompt for the following:
 
-1. Select the type of gateway you want to connect to GitHub in this scenario).
-2. Select **Yes** when asked if the agent will be embedded.
-3. Platform connectivity:
+1. Select the type of gateway you want to connect to GitHub in this scenario.
+2. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
-   * **Team**: can be an existing team or one that will be created by the installation procedure
-4. GitHub Configuration Setup:
+   * **Team**: select an existing team
+3. GitHub Configuration Setup:
    * **Access Token**: the access token the agent will use to read the files in the repository
    * Set how often the Embedded agent should check GitHub for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover GitHub resources after installation is complete
    * **Repository Owner Name**: the name of the owner of the repository
    * **Repository Name**: the name of the repository
-   * **Paths**: the paths that the agent will look for specs in
+   * **Paths**: the paths that the agent will look for specs in, paths should start with a `/` character
    * **Filename Patterns**: the patterns that a filename must match to be discovered
      * The pattens here are regular expressions [RE2 Syntax](https://github.com/google/re2/wiki/Syntax), only one pattern must match to discover a specification file
      * The pattern will pass if it matches any part of the filename, if the desire is to match the whole name then adding anchors to the expression should be used (ex: `^spec\.json$`, this will match only files that literally named `spec.json`)
 
-Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GitHub. If set to discover GitHut resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
+Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GitHub. If set to discover GitHub resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.

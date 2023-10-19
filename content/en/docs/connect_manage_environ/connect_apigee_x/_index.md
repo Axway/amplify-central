@@ -59,7 +59,7 @@ The Traceability Agent gathers usage metrics for all proxies defined in Apigee X
 ## Embedded agent configuration pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
+    * You can access platform.axway.com and login.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
@@ -133,12 +133,11 @@ axway central install agents
 
 The installation procedure will prompt for the following:
 
-1. Select the type of gateway you want to connect to Apigee-X in this scenario).
-2. Select **Yes** when asked if the agent will be embedded.
-3. Platform connectivity:
+1. Select the type of gateway you want to connect to Apigee-X in this scenario.
+2. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
-   * **Team**: can be an existing team or one that will be created by the installation procedure
-4. Apigee Configuration Setup:
+   * **Team**: select an existing team
+3. Apigee Configuration Setup:
    * **Project ID**: the Project ID for your Google Cloud Platform project
    * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
    * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
