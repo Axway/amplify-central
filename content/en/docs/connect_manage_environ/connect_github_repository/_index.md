@@ -26,7 +26,8 @@ The Discovery Agent is used to discover new specification files within the confi
 
 * Find all files within the paths configured
 * From those files validate that they match at least one of the patterns configured, if no patterns are configured all files are discovered
-* The agent then creates an API service and revision to represent that specification file in Amplify Central.
+* The agent then creates an API service and revision to represent that specification file in Amplify Central
+* If the files is of a known specification type then the service will be marked with that type, otherwise the service will have a type of `Unstructured`
 
 ### Installation via CLI
 
