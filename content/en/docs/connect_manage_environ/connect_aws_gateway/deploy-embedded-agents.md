@@ -113,42 +113,7 @@ The installation procedure will prompt for the following:
    * Access and Secret Keys Prompts:
      * **Access Key ID**: the Access Key ID that the Embedded agent will use when connecting to your AWS API Gateway
      * **Security Access Key**: the Secret Access Key that the Embedded agent will use when connecting to your AWS API Gateway
-   * Set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](#triggering-the-agent-to-run-discovery)
+   * Set how often the Embedded agent should check for changes in your AWS API Gateway, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover AWS API Gateway resources after installation is complete
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your AWS API Gateway. If set to discover AWS API Gateway resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
-
-### Triggering the agent to run discovery
-
-Integrating the Embedded agent discovery process with your CI/CD pipelines is the preferred way to ensure your APIs are always up to date within Amplify.
-
-#### Triggering via CLI
-
-1. Log into the Axway Central CLI.
-2. Retrieve the latest Discovery Agent resource for your environment `axway central get discoveryagent <agent-name> -s <environment-name> -o yaml > da.yaml`.
-3. Modify the da.yaml file by adding the line `queueDiscovery: true` to the `dataplane` section.
-4. Run `axway central apply -f da.yaml` to apply the changes.
-
-```yaml
-dataplane:
-  name: <dataplane-name>
-  queueDiscovery: true
-```
-
-{{< alert title="Note" color="primary" >}}This process is the same for queueing the Embedded Traceability Agent but uses `queueTrafficCollection` instead.{{< /alert >}}
-
-#### Triggering via API
-
-1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl.
-2. Run the following curl command. Update the values of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;
-
-```shell
-curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
---header "Authorization: Bearer ${token}" \
---header "Content-Type: application/json" \
--d '{"dataplane": {"name": "<dataplane-name>","queueDiscovery": true}}'
-```
-
-{{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
-
-{{< alert title="Note" color="primary" >}}This process is the same for queueing the Embedded Traceability Agent but uses `queueTrafficCollection` instead and the URL is updated accordingly.{{< /alert >}}
