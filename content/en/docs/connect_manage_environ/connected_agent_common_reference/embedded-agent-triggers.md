@@ -7,7 +7,7 @@ weight: 19
 
 ## Objectives
 
-* Learn how to use the CLI or API to trigger an Embedded agent to run immediately
+* Learn how to use the CLI or API to trigger an Embedded agent to run immediately.
 
 ### Triggering the agent to run discovery
 
@@ -39,7 +39,7 @@ dataplane:
 #### Triggering via API
 
 1. Follow the instructions on [Authorize API calls to platform services](/docs/integrate_with_central/platform-auth-examples/) to create a service account and authenticate with curl.
-2. Run one of the following curl commands. Update the values of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;
+2. Run one of the following curl commands. Update the values of &lt;environment-name&gt;, &lt;agent-name&gt; and &lt;dataplane-name&gt;.
 
 ##### Discovery Agent API Dataplane example
 
@@ -59,4 +59,4 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1al
 -d '{"dataplane": {"name": "<dataplane-name>","queueTrafficCollection": true}}'
 ```
 
-{{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region based URL.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Update the preceding commands Axway Central URL with the correct region-based URL.{{< /alert >}}
