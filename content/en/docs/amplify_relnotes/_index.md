@@ -22,40 +22,40 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify October 20 2023](/docs/amplify_relnotes/20231020_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.64. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.66. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.60 / TA=v1.1.62
-* **AWS Gateway using SDK 2.0** - DA=v1.1.50 / TA-v1.1.52
-* **Azure latest release** - DA=v1.1.55 / TA=v1.1.60
-* **Istio 1.9.5** - DA=v1.0.22 / TA=v2.0.66
-* **Apigee Edge** - Agent version 0.1.23
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.29
-* **Software AG webMethods** - 0.0.11
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.61 / TA=v1.1.64
+* **AWS Gateway using SDK 2.0** - DA=v1.1.51 / TA-v1.1.53
+* **Azure latest release** - DA=v1.1.56 / TA=v1.1.61
+* **Istio 1.9.5** - DA=v1.0.23 / TA=v2.0.67
+* **Apigee Edge** - Agent version 0.1.24
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.30
+* **Software AG webMethods** - 0.0.12
 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Agents** |         |
-| What's new: | **All** - Updated with the Axway Agent SDK. <br />**Apigee Edge Gateway** - API Proxies without a Specification not discovered. |
-| Bug fixes: | None. |
+| What's new: | **All** - Updated with the Axway Agent SDK. |
+| Bug fixes: | **Azure Gateway** - See release note. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - None. <br />**Topology** - Apigee X Gateway support. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Migrate subscription from a deprecated plan. <br />Create Markdown documents in the Document Library. |
+| Bug fixes: | See release note. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Access request Subscription selection. |
+| Bug fixes: | See release note. |
 | <br />**Consumer insights** |         |
-| What's new: | None. |
+| What's new: | Marketplace appearance. |
 | Bug fixes: | None. |
 
 ## [Amplify October 6 2023](/docs/amplify_relnotes/20231006_amplify/)
