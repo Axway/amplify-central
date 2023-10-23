@@ -7,9 +7,12 @@ Connect a GitHub Repository and Amplify so you can discover your API specificati
 
 ## Why do you want to connect GitHub and Amplify?
 
-Connecting a GitHub Repository to Amplify will provide you with a global centralized view of your APIs.
+Connecting a GitHub Repository to Amplify will provide you with a global centralized view of your APIs. Once connected, Discovery Agent will detect changes to a GitHub specification file and push the specification file as an API Service for the environment. The Discovery Agent discovers new specification files within the configured paths that match any of the configured file name patterns:
 
-* Detect changes to GitHub specification files using the Discovery Agent. The Discovery Agent pushes the specification file as an API Service for the environment.
+* Finds all files within the paths configured
+* From those files, validates that they match at least one of the patterns configured. If no patterns are configured, then all files are discovered
+* The agent then creates an API service and revision to represent that specification file in Amplify Central
+* If the files are of a known specification type, then the service will be marked with that type. Otherwise, the service will have a type of `Unstructured`
 
 ## Before you start
 
@@ -19,28 +22,14 @@ Connecting a GitHub Repository to Amplify will provide you with a global central
     * The repository owner name that the agent will connect to
     * The repository name that the agent will connect to
     * The paths and filename patterns that the agent should discover
-
-### Discovery Agent
-
-The Discovery Agent is used to discover new specification files within the configured paths that also match any of the configured file name patterns.
-
-* Find all files within the paths configured
-* From those files validate that they match at least one of the patterns configured. If no patterns are configured, then all files are discovered
-* The agent then creates an API service and revision to represent that specification file in Amplify Central
-* If the files are of a known specification type, then the service will be marked with that type. Otherwise, the service will have a type of `Unstructured`
-
-### Installation via CLI
-
-## Embedded agent configuration pre-requisites
-
-* Any machine (Windows / Linux / Mac) where:
+* Ensure your machine (Windows / Linux / Mac) meets the Embedded agent configuration prerequisites, where:
     * You can access platform.axway.com and login.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
     * There is a graphical environment (optional)
 
-## Configure the agents with Axway Central CLI
+## Configure the agents with Axway Central CLI and GitHub
 
 Use Axway Central CLI to install the agents. This CLI will prompt you for answers regarding GitHub access information and where to store the discovered APIs in the Amplify platform.
 
@@ -121,6 +110,6 @@ The installation procedure will prompt for the following:
    * **Paths**: the paths that the agent will look for specs in, paths should start with a `/` character
    * **Filename Patterns**: the patterns that a filename must match to be discovered
      * The pattens here are regular expressions [RE2 Syntax](https://github.com/google/re2/wiki/Syntax), only one pattern must match to discover a specification file
-     * The pattern will pass if it matches any part of the filename. To match the whole name, add anchors to the expression (ex: `^spec\.json$`, this will match only files that literally named `spec.json`)
+     * The pattern will pass if it matches any part of the filename. To match the whole name, add anchors to the expression (example: `^spec\.json$`, this will match only files that are literally named `spec.json`)
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GitHub. If set to discover GitHub resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
