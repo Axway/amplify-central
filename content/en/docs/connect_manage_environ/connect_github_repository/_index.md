@@ -18,16 +18,16 @@ Connecting a GitHub Repository to Amplify will provide you with a global central
     * The access token that the agent will use to connect to GitHub
     * The repository owner name that the agent will connect to
     * The repository name that the agent will connect to
-    * The paths and filname patterns that the agent should discover
+    * The paths and filename patterns that the agent should discover
 
 ### Discovery Agent
 
 The Discovery Agent is used to discover new specification files within the configured paths that also match any of the configured file name patterns.
 
 * Find all files within the paths configured
-* From those files validate that they match at least one of the patterns configured, if no patterns are configured all files are discovered
+* From those files validate that they match at least one of the patterns configured. If no patterns are configured, then all files are discovered
 * The agent then creates an API service and revision to represent that specification file in Amplify Central
-* If the files is of a known specification type then the service will be marked with that type, otherwise the service will have a type of `Unstructured`
+* If the files are of a known specification type, then the service will be marked with that type. Otherwise, the service will have a type of `Unstructured`
 
 ### Installation via CLI
 
@@ -98,7 +98,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. See [Embedded GitHub agents setup](/docs/connect_manage_environ/connect_github_repository/embedded-agent-setup/) for the prerequisite setup on GCP and Apigee.
+The Axway Central CLI will guide you through the configuration of the agents. See [Embedded GitHub agents' setup](/docs/connect_manage_environ/connect_github_repository/embedded-agent-setup/) for the prerequisite setup on GCP and Apigee.
 
 Run the following command to start the configuration procedure:
 
@@ -121,6 +121,6 @@ The installation procedure will prompt for the following:
    * **Paths**: the paths that the agent will look for specs in, paths should start with a `/` character
    * **Filename Patterns**: the patterns that a filename must match to be discovered
      * The pattens here are regular expressions [RE2 Syntax](https://github.com/google/re2/wiki/Syntax), only one pattern must match to discover a specification file
-     * The pattern will pass if it matches any part of the filename, if the desire is to match the whole name then adding anchors to the expression should be used (ex: `^spec\.json$`, this will match only files that literally named `spec.json`)
+     * The pattern will pass if it matches any part of the filename. To match the whole name, add anchors to the expression (ex: `^spec\.json$`, this will match only files that literally named `spec.json`)
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GitHub. If set to discover GitHub resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
