@@ -5,47 +5,47 @@ weight: 20
 date: 2023-10-18
 ---
 
-Within topology, stages are used to regroup API Service discovered from a gateway, a repository, or anything manually added to the environment.
+Within topology, stages are used to regroup API services discovered from a gateway, a repository, or anything manually added to the environment.
 
-Learn how to manage the stage to represent your API services life cycle.
+Learn how to manage the stage to represent your API services lifecycle.
 
 ## What is a Stage?
 
-A stage is a concept that provides an abstraction view of the life cycle state of an API (for example, beta, dev, pre-prod, prod, and so on).
-The stage allows to quickly identify where the API is available and if some restriction may apply. For instance in a dev stage, the API security might be less important than in production stage.
-Once the API satisfied all the criteria of the current stage, the API can be promoted to the next stage. Like this you can build your API life cycle and ensure a correct implementation at each stage.
+A stage is a concept that provides an abstraction view of the lifecycle state of an API (for example, beta, dev, pre-prod, prod, etc.).
+The stage identifies where the API is available and if any restriction apply. For instance, in a dev stage, the API security might be less important than in production stage.
+Once the API satisfies all the criteria of the current stage, the API can be promoted to the next stage, helping you to build your API lifecycle and to ensure a correct implementation at each stage.
 
-Stage management is optional.
+{{< alert title="Note" color="primary" >}}Stage management is optional.{{< /alert >}}
 
 ## Stage and environment
 
-A environment might be link to a specific Gateway managing one or more stages of the API life cycle.
+An environment might be link to a specific gateway managing one or more stages of the API lifecycle.
 
-Multiple stages can be assigned to an environment and one of them can become the default stage for the environment. Once you define a default stage, this stage will be automatically assigned to the API Service endpoint discovered in the environment. Without default stage, user will have to manually assign the stage to the API Service endpoint
+Multiple stages can be assigned to an environment and one of them can become the default stage for the environment. Once you define a default stage, this stage will be automatically assigned to the API service endpoint discovered in the environment. Without a default stage, you must manually assign the stage to the API service endpoint
 
-By default the stage is assigned to no environment meaning nobody can use/view it.
+By default, the stage is assigned to no environment, meaning that nobody can use/view it.
 
-## Stage and API Service endpoint
+## Stage and API service endpoint
 
-Each API Service is part of an environment. When the environment has a default stage, the discovered API Service endpoint is automatically assigned to the stage. When creating Asset, Catalog Manager has to decide which endpoint will be exposed by the asset and consequently which stage will be visible in the Marketplace when this asset is used in a published product.
+Each API service is part of an environment. When the environment has a default stage, the discovered API service endpoint is automatically assigned to the stage. When creating an asset, the Catalog Manager must decide which endpoint will be exposed by the asset and consequently which stage will be visible in the Marketplace when this asset is used in a published product.
 
 ## Stage and Marketplace visibility
 
-By default the stage is not visible in the Marketplace. Catalog Manager has to explicitly give a stage visibility for each Marketplace where he wants the stage to be visible.
+By default, the stage is not visible in the Marketplace. The Catalog Manager must explicitly give a stage visibility for each Marketplace where the stage is to be visible.
 
-The visibility follows the same pattern as for product visibility and took precedence on the product visibility. That mean I can be part of a team having visibility on product but no visibility on the stage: in that situation, consumer will see the product but no resources inside.
+The visibility follows the same pattern as for product visibility but has precedence over the product visibility. Meaning that there could be visibility on the product but no visibility on the stage. In this situation, the consumer will see the product but no resources inside.
 
 A stage can be restricted to:
 
-* provider organization: everyone, specific teams, nobody
-* consumer organization: all organizations, specific organization, no organization
+* Provider organization: everyone, specific teams, nobody
+* Consumer organization: all organizations, specific organization, no organization
 
-With the stage visibility, provider is able to exposed the endpoint he wants to the appropriate consumer audience:
+With the stage visibility, the provider can expose an endpoint to the appropriate consumer audience:
 
-* a dev endpoint may be suitable for an internal development teams but not for a partner team.
-* a production endpoint may be suitable for the validation team as well as for a partner team or for any consumer organization.
+* A dev endpoint may be suitable for an internal development team but not for a partner team.
+* A production endpoint may be suitable for the validation team as well as for a partner team or any consumer organization.
   
-## Stage Management
+## Stage management
 
 ### Viewing available stages
 
@@ -53,10 +53,10 @@ With the stage visibility, provider is able to exposed the endpoint he wants to 
 
 The list of stages is displayed with the following information:
 
-* Stage name - the title of the stage
-* Stage visibility - the number of marketplace where the stage will be visible with restriction / the number of marketplace where the stage will be visible without restriction
-* Asset count - number of asset having and endpoint attached to the stage
-* Description - the stage description
+* Stage name - the title of the stage.
+* Stage visibility - the number of Marketplaces where the stage will be visible with restrictions / the number of Marketplaces where the stage will be visible without restrictions.
+* Asset count - the number of assets with an endpoint attached to the stage.
+* Description - the stage description.
 
 ### Creating a stage
 
@@ -68,53 +68,53 @@ The list of stages is displayed with the following information:
 3. Add the following stage profile information and then click **Next**:
 
     * **Title** - enter a display name for the stage in the WebUI.
-    * **Logical name** (Optional) - Will be auto computed based on the stage title if left empty.
+    * **Logical name** (Optional) - if left empty, it will auto computed based on the stage title.
     * **Description** (Optional) - enter a brief description of the stage.
 
-4. Add the stage visibility for Marketplace in the list and then click **Next**:
+4. Add the stage visibility for the Marketplace in the list and then click **Next**:
 
-    * Only set visibility to the Marketplace where the stage should be visible and leave other empty.
+    * Only set visibility to the Marketplace where the stage should be visible. Leave others empty.
     * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
 
-        * **Everyone** - (default) the stage is visible in the Marketplace by all registered users in your provider organization.
+        * **Everyone** - (Default) - the stage is visible in the Marketplace by all registered users in your provider organization.
         * **Selected teams** - only members of the selected teams can see the stage in the Marketplace.
         * **Exclude selected teams** - only members that are not part of selected teams can see the stage in the Marketplace.
         * **Include teams having tag** - only members of the team that have the selected tag can see the stage in the Marketplace.
         * **None** - the stage is not visible to anyone in the Marketplace.
 
-            * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
+            * From the list of available teams in your provider organization, select the teams you want to give product visibility to or remove visibility from.
 
-    * **Marketplace Users** visibility: under **Marketplace User** (only available when MArketplace has consumer organization), select one of the following options from the **Visible To** menu:
+    * **Marketplace Users** visibility: under **Marketplace User** (only available when the Marketplace has a consumer organization), select one of the following options from the **Visible To** menu:
 
-        * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
+        * **Everyone** - (Default) - the product is visible in the Marketplace by all registered users in your provider organization.
         * **Selected organizations** - only users registered with a Marketplace account and a member of the selected consumer organization can see the product in the Marketplace.
         * **None** - the product is not visible to any user registered with a Marketplace account or anonymous users.
 
-            * From the list of available consumer organizations in your provider organization, select the consumer organization you want to give product visibility or remove visibility from.
+            * From the list of available consumer organizations in your provider organization, select the consumer organization you want to give product visibility to or remove visibility from.
 
 5. Add the stage assignment for each environment and then click **Next**:
 
-    * define for which environment the stage will be assigned using the **Assignment dropdown** and eventually if the stage is the default one for a specific environment using the **Default checkbox**. In case there is already a default stage assigned to an environment, the Default check box contains a "-" and a tooltip indicate which stage is the default.
-    * by default the stage is not assigned to any environment.
-    * you can select multiple environments at a time to assign/unassign the current stage.
+    * Define for which environment the stage will be assigned using the **Assignment dropdown** and if the stage will be the default for a specific environment using the **Default checkbox**. If there is already a default stage assigned to an environment, the Default check box will contain a "-" and a tooltip indicating which stage is the default.
+    * By default, the stage is not assigned to any environment.
+    * You can select multiple environments at a time to assign/unassign the current stage.
 
 6. Provide the Tags and Attribute details for the stage.
-7. Click **Save** to create the stage and return to the list of stage view.
+7. Click **Save** to create the stage and return to the list of stage views.
 
-### Deleting a stage - TBD
+### Deleting a stage
 
 1. Navigate to *Topology > Stages*.
-2. Select one or more stage
-3. Click Delete. A popup is displayed informing which environment can use the stage.
+2. Select the stage(s).
+3. Click **Delete**. A popup is displayed informing which environment can be used the stage.
 
 ## Stage in Marketplace
 
-Once a product using an asset having endpoint link to a stage, the consumer will be able to see that endpoint and the stage information if the team he is part of has visibility over the stage.
+Once a product has an asset with an endpoint linked to a stage, the consumer will be able to see that endpoint and the stage information if thier team has visibility over the stage.
 
-The stage is visible:
+The stage is visible when:
 
-* when displaying the product resources page
-* when displaying the plan details page
-* when subscribing to a plan via the plan preview
+* Displaying the product resources page.
+* Displaying the plan details page.
+* Subscribing to a plan through the plan preview.
 
-If a consumer from a provider organization is part of multiple teams able to subscribe to a product, when subscribing, a warning is displayed informing that what he sees in the plan is not necessary what he will be able to access with the specified selected team and encourage the consumer to review the plan details before proceeding to the subscription.
+{{< alert title="Note" color="primary" >}}If a consumer from a provider organization is part of multiple teams that can subscribe to a product, then a warning is displayed when attempting to subscribe. It informs the consumer that what is seen in the plan is not necessarily what will be accessible to the specified team. The consumer is encouraged to review the plan details before proceeding to the subscription.{{< /alert >}}
