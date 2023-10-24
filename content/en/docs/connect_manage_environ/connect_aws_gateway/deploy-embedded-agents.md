@@ -25,7 +25,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 ## Embedded agent configuration pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
+    * You can access platform.axway.com and login.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
@@ -103,7 +103,7 @@ The installation procedure will prompt for the following:
 2. Select **Yes** when asked if the agent will be embedded.
 3. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
-   * **Team**: can be an existing team or one that will be created by the installation procedure
+   * **Team**: select an existing team
 4. AWS Configuration Setup options:
    * **Region**: the AWS API Gateway resources
    * **Authentication Type**: select either Assume Role Policy or Access and Secret Keys
