@@ -60,10 +60,12 @@ The list of stages is displayed with the following information:
 
 ### Creating a stage
 
+Only Central Admin role can create Stages.
+
 1. Navigate to *Topology > Stages*.
 2. Click **+ Add new Stage**.
 
-    *The Add an Environment wizard is displayed*.
+    *The Add a Stage wizard is displayed*.
 
 3. Add the following stage profile information and then click **Next**:
 
@@ -102,6 +104,10 @@ The list of stages is displayed with the following information:
 7. Click **Save** to create the stage and return to the list of stage views.
 
 ### Deleting a stage
+
+Stage cannot be deleting as soon as it is assigned to one or more environments and/or API services. You have to first remove those association to be able to delete a stage.
+
+Only Central Admin role can delete Stages.
 
 1. Navigate to *Topology > Stages*.
 2. Select the stage(s).
