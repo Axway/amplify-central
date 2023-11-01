@@ -49,6 +49,8 @@ With the stage visibility, the provider can expose an endpoint to the appropriat
 
 ### Viewing available stages
 
+Central Admin, Catalog Manager and Developer can view the Stages.
+
 1. Navigate to *Topology > Stages*.
 
 The list of stages is displayed with the following information:
@@ -115,7 +117,7 @@ Only Central Admin role can delete Stages.
 
 ## Stage in Marketplace
 
-Once a product has an asset with an endpoint linked to a stage, the consumer will be able to see that endpoint and the stage information if thier team has visibility over the stage.
+Once a product has an asset with an endpoint linked to a stage, the consumer will be able to see that endpoint and the stage information if their team has visibility over the stage.
 
 The stage is visible when:
 
