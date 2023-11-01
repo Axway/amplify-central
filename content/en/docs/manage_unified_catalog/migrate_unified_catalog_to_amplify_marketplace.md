@@ -4,8 +4,6 @@ linkTitle: Migrate Unified Catalog to Amplify Marketplace
 weight: 145
 ---
 
-{{< alert title="Caution" color="danger" >}}The Unified Catalog feature will be deprecated end of November 2023.{{< /alert >}}
-
 Use the Axway migration tool to help migrate your Unified Catalog assets and items via the provider/consumer model to Asset Catalog, Product Catalog and Marketplace. For information and instructions, see the [unified-catalog-migration README](https://github.com/Axway/unified-catalog-migration).
 
 ## Prepare to migrate Unified Catalog
