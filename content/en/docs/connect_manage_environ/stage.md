@@ -59,8 +59,6 @@ The list of stages is displayed with the following information:
 * Environment - the number of environment the stage is associated to
 * Services - the number of services the stage is associated to
 * Assets - the number of asset having a service the stage is associated to
-* Stage visibility - the number of Marketplaces where the stage will be visible with restrictions / the number of Marketplaces where the stage will be visible without restrictions.
-* Asset count - the number of assets with an endpoint attached to the stage.
 * Description - the stage description.
 
 ### Creating a stage
