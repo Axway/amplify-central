@@ -60,8 +60,6 @@ lifecycle:
   stage: demo-prod
 ```
 
-
-
 ## Stage and Marketplace visibility
 
 By default, the stage is not visible in the Marketplace. The Catalog Manager must explicitly give a stage visibility for each Marketplace where the stage is to be visible.
