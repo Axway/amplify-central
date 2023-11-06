@@ -29,6 +29,39 @@ By default, the stage is assigned to no environment, meaning that nobody can use
 
 Each API service is part of an environment. When the environment has a default stage, the discovered API service endpoint is automatically assigned to the stage. When creating an asset, the Catalog Manager must decide which endpoint will be exposed by the asset and consequently which stage will be visible in the Marketplace when this asset is used in a published product.
 
+In case the Environment supports multiple stage, each API Service endpoint will have to be manually assigned to a specific stage via the **lifecycle** field.
+
+API Service endpoint sample for attaching specific stage :
+
+``` yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: APIServiceInstance
+name: customer-data-instance-prod-v2
+title: Cutomer Data Service Instance PROD V2
+metadata:
+  scope:
+    kind: Environment
+    name: demo-prod
+attributes: {}
+finalizers: []
+tags:
+  - nonprod
+spec:
+  endpoint:
+    - host: prod200.k8s.axwayamplify.com
+      port: 443
+      routing:
+        basePath: /apis
+      protocol: https
+  apiServiceRevision: customer-data-revision-v200
+lifecycle:
+  stage: demo-prod
+```
+
+
+
 ## Stage and Marketplace visibility
 
 By default, the stage is not visible in the Marketplace. The Catalog Manager must explicitly give a stage visibility for each Marketplace where the stage is to be visible.
