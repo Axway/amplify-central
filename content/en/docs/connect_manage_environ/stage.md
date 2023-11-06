@@ -29,9 +29,9 @@ By default, the stage is assigned to no environment, meaning that nobody can use
 
 Each API service is part of an environment. When the environment has a default stage, the discovered API service endpoint is automatically assigned to the stage. When creating an asset, the Catalog Manager must decide which endpoint will be exposed by the asset and consequently which stage will be visible in the Marketplace when this asset is used in a published product.
 
-In case the Environment supports multiple stage, each API Service endpoint will have to be manually assigned to a specific stage via the **lifecycle** field.
+If the environment supports multiple stages, then each API service endpoint must be manually assigned to a specific stage via the **lifecycle** field.
 
-API Service endpoint sample for attaching specific stage :
+API service endpoint sample for attaching a specific stage:
 
 ``` yaml
 ---
