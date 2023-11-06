@@ -56,14 +56,14 @@ Central Admin, Catalog Manager and Developer can view the Stages.
 The list of stages is displayed with the following information:
 
 * Stage name - the title of the stage.
-* Environment - the number of environment the stage is associated to
-* Services - the number of services the stage is associated to
-* Assets - the number of asset having a service the stage is associated to
+* Environment - the number of environments the stage is associated to.
+* Services - the number of services the stage is associated to.
+* Assets - the number of asset that have a service the stage is associated to.
 * Description - the stage description.
 
 ### Creating a stage
 
-Only Central Admin role can create Stages.
+Only the Central Admin role can create Stages.
 
 1. Navigate to *Topology > Stages*.
 2. Click **+ Add new Stage**.
@@ -108,9 +108,9 @@ Only Central Admin role can create Stages.
 
 ### Deleting a stage
 
-Stage cannot be deleted as soon as it is assigned to one or more environments and/or API services. You have to first remove those association to be able to delete a stage.
+A stage cannot be deleted once it is assigned to one or more environments and/or API services. You must remove the associations before deleting a stage.
 
-Only Central Admin role can delete Stages.
+Only the Central Admin role can delete stages.
 
 1. Navigate to *Topology > Stages*.
 2. Select the stage(s).
