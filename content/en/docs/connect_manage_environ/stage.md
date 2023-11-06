@@ -19,7 +19,7 @@ Once the API satisfies all the criteria of the current stage, the API can be pro
 
 ## Stage and environment
 
-An environment might be link to a specific gateway managing one or more stages of the API lifecycle.
+An environment might be linked to a specific gateway managing one or more stages of the API lifecycle.
 
 Multiple stages can be assigned to an environment and one of them can become the default stage for the environment. Once you define a default stage, this stage will be automatically assigned to the API service endpoint discovered in the environment. Without a default stage, you must manually assign the stage to the API service endpoint
 
@@ -91,7 +91,7 @@ The list of stages is displayed with the following information:
 * Stage name - the title of the stage.
 * Environment - the number of environments the stage is associated to.
 * Services - the number of services the stage is associated to.
-* Assets - the number of asset that have a service the stage is associated to.
+* Assets - the number of assets that have a service the stage is associated to.
 * Description - the stage description.
 
 ### Creating a stage
