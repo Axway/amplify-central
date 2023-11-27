@@ -122,7 +122,7 @@ To create an Azure Event Hub, it is first required to create an Event Hubs names
 
 Once the namespace is created, you can add an Event Hub to this namespace.  
 
-Once the Event Hub is created, you can also create an additional consumer group alongside the `$Default` consumer group. Refer to <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about> regarding explanation and configuration.
+Once the Event Hub is created, you can also create an additional consumer group alongside the `$Default` consumer group. Refer to <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about> or <https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups> regarding explanation and configuration.
 
 Remember the following when creating the Azure Event Hub, as you'll need the information for the Traceability Agent configuration:
 
