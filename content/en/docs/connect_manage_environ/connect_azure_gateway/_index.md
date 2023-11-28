@@ -6,7 +6,7 @@ date: 2021-01-07
 ---
 Connect Azure API Management Services to Amplify so you can:
 
-* Publish to the Amplify Catalog from your API Management Services in order to obtain a global view of your APIs and present this Catalog to your consumers
+* Publish to the Amplify Catalog from your API Management Services in order to obtain a global view of your APIs and present this catalog to your consumers
 * Collect the traffic of all your gateways and see it in a single place in Amplify Observability
 
 ## What is Azure API Management Service connected?
@@ -118,31 +118,31 @@ To install an Azure Traceability Agent only, you must create an Azure service pr
 
 Azure Event Hubs is a big data streaming platform and event ingestion service. Refer to <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about>.
 
-To create an Azure Event Hub, it is first required to create an Event Hubs namespace. For that, go to Azure Portal and select the \[Event Hubs] service. Then create the Event Hubs namespace. Select the appropriate Azure subscription and resource group where this namespace will be available. Be sure to create the Event Hubs namespace in the same region as your API Management service. For the pricing, we recommend the Standard one. When creating the Event Hubs namespace, Azure will automatically attach to it an access policy. We recommend you keep the default values provided.
+To create an Azure Event Hub, it is first required to create an event hubs namespace. For that, go to Azure Portal and select the \[Event Hubs] service. Then create the event hubs namespace. Select the appropriate Azure subscription and resource group where this namespace will be available. Be sure to create the event hubs namespace in the same region as your API Management service. For the pricing, we recommend the Standard one. When creating the event hubs namespace, Azure will automatically attach to it an access policy. We recommend you keep the default values provided.
 
-Once the namespace is created, you can add an Event Hub to this namespace.  
+Once the namespace is created, you can add an event hub to this namespace.  
 
-Once the Event Hub is created, you can also optionally create an additional consumer group alongside the `$Default` consumer group. Refer to <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about> or <https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups> regarding explanation and configuration.
+Once the event hub is created, you can optionally create an additional consumer group alongside the `$Default` consumer group. Refer to <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about> or <https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-features#consumer-groups> regarding explanation and configuration.
 
 Remember the following when creating the Azure Event Hub, as you'll need the information for the Traceability Agent configuration:
 
 * **Event Hubs namespace name**
 * **Event Hub name**
-* **policy name** attached to the Event Hubs namespace (RootManageSharedAccessKey by default)
+* **policy name** attached to the event hubs namespace (RootManageSharedAccessKey by default)
 * **policy primary or second key**
 
 ### Creating Azure diagnostic settings
 
-The Azure diagnostic settings will link the Resource group to the Event Hub.
+The Azure diagnostic settings will link the resource group to the event hub.
 
 To create a diagnostic setting:
 
 1. Go to Azure portal, open your resource group and open the Monitoring / Diagnostic settings page.
 2. Add a diagnostic setting and give it a name.
-3. Select the **GatewayLogs** and **Stream to an event hub** options. The **Stream to event hub** option requires the previous information from Event Hubs namespace and Event Hub name.
+3. Select the **GatewayLogs** and **Stream to an event hub** options. The **Stream to event hub** option requires the previous information from event hubs namespace and event hub name.
 4. Save your changes.
 
-Azure is now ready to register your API traffic to the Event Hub.
+Azure is now ready to register your API traffic to the event hub.
 
 ### Configuring API Azure monitoring
 
