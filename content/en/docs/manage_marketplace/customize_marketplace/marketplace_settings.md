@@ -57,17 +57,17 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 
         * **Sign In With GitHub** - when Consumer users are allowed, this setting indicates that a user can sign into the Marketplace with GitHub:
 
-            * **Disallow** - Default. No login nor signup with GitHub account is allowed.
-            * **Allow** - Allow consumer users to sign in to your Marketplace using their GitHub account. If Self Signup is enabled, consumers can sign up with their GitHub account. For that you need to create an Authorized Client in Github with the following callback URL. Then you can enter the Client ID and secret in the Marketplace settings. Once the settings are saved, users will be allowed to use their GitHub account to connect to this Marketplace.
+            * **Disallow** - Default. No login nor signup with GitHub account is allowed for this Marketplace.
+            * **Allow** - Allow consumer users to sign in to your Marketplace using their GitHub account. If Self Signup is enabled, consumers can sign up with their GitHub account. For that you need to create an Authorized Client in Github with the displayed callback URL. Then you can enter the GitHub Client ID and secret in the Marketplace settings. Once the settings are saved, users will be allowed to use their GitHub account to connect to this Marketplace.
 
-                * **GitHub Authorization Callback URL** - Authorization callback URL to set on your registered application within GitHub. This url is the one the GitHub Authorization will call after a successful login.
+                * **GitHub Authorization Callback URL** - Authorization callback URL to set on your registered Client within GitHub. This url is the one the GitHub Authorization will call after a successful login.
                 * **GitHub Client ID** - Client ID of your registered application within GitHub.
                 * **GitHub Client Secret** - Client secret for your registered application within GitHub.
 
         * **Sign In With GitLab** - when Consumer users are allowed, this setting indicates that a user can sign into the Marketplace with GitLab:
 
-            * **Disallow** - Default. No login nor signup with GitLab account is allowed.
-            * **Allow** - Allow consumer users to sign in to your Marketplace using their GitLab account. If Self Signup is enabled, consumers can sign up with their GitLab account. For that you need to create an Authorized application in GitLab. For that you need to create an Authorized application in Github with the following callback URL. Then you can enter the Application ID and secret in the Marketplace settings.  Once the settings are saved, users will be allowed to use their GitLab account to connect to this Marketplace.
+            * **Disallow** - Default. No login nor signup with GitLab account is allowed for this Marketplace.
+            * **Allow** - Allow consumer users to sign in to your Marketplace using their GitLab account. If Self Signup is enabled, consumers can sign up with their GitLab account. For that you need to create an Authorized application in GitLab. For that you need to create an Authorized application in Github with the displayed callback URL. Then you can enter the Application ID and secret in the Marketplace settings. Once the settings are saved, users will be allowed to use their GitLab account to connect to this Marketplace.
 
                 * **GitLab Authorization Callback URL** - Callback URL to set on your registered application within GitLab. This url is the one the GitLab Authorization will call after a successful login.
                 * **GitLAb Application ID** - Application ID of your registered application within GitLab.
@@ -75,8 +75,8 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 
         * **Sign In With Google** - when Consumer users are allowed, this setting indicates that a user can sign into the Marketplace with Google:
 
-            * **Disallow** - Default. No login nor signup with Google account is allowed.
-            * **Allow** - Allow consumer users to sign in to your Marketplace using their Google account. If Self Signup is enabled, consumers can sign up with their Google account.  For that you need to create an OAuth 2.0 Client IDs in Google cloud service with the following callback url. Then ou can enter the the Client ID and secret in the Marketplace settings. Once the settings are saved, users will be allowed to use their Google account to connect to this Marketplace.
+            * **Disallow** - Default. No login nor signup with Google account is allowed for this Marketplace.
+            * **Allow** - Allow consumer users to sign in to your Marketplace using their Google account. If Self Signup is enabled, consumers can sign up with their Google account. For that you need to create an OAuth 2.0 Client IDs in Google cloud service with the displayed callback url. Then ou can enter the Client ID and secret in the Marketplace settings. Once the settings are saved, users will be allowed to use their Google account to connect to this Marketplace.
 
                 * **Google Authorization Callback URL** - Authorized redirect URI to set on your OAuth client within Google. This url is the one Google will call after a successful login.
                 * **Google Client ID** - Client ID of your registered OAuth 2.0 Credentials within Google.
