@@ -202,3 +202,57 @@ attributes:
   externalAPIID: ace84b76-2207-4bd8-a78e-44d170302a77
 finalizers: []
 ```
+
+### Ownership and sharing
+
+#### Ownership
+
+There are 2 kinds of user interacting with API Server objects:
+
+* **Central Admin** user: a powerful user that can do anything.
+* **Regular team** user: a user belongings to one or multiple teams with specific roles in each team. These roles will limit his interaction with the system.
+
+For more information about the role, refer to [Role and Capabilities](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#roles-and-capabilities) / [Team roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) documentation.
+
+{{< alert title="Note" color="primary" >}}
+Service account for CI/CD purpose can have either be a Central Admin role or a team role based on their need of interaction
+{{< /alert >}}
+
+The person (or service account) creating an object in the system automatically becomes the owner of it via the team he created the object with. Which mean all user of the same team can manage any object created by a team member. Users from a team are not be able to see the objects created by another team unless the owning team decides to share the object with them. Refer to [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing object across team.
+
+The exception for this is related to Central Admin role. Since this role does not belongs to any team, all objects created by Central Admin user will be only visible by other Central Admin users. A user part of a team will not be able to see objects created by Central Admin unless Central Admin decides to share the object with that team. Refer to [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing object across team.
+
+Object owner is located in the `owner` property of each object. This property is absent if the object is created by a Central Admin user.
+
+Sample of environment owned by the *API Development* team:
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: Environment
+name: doc-tutorial
+title: Doc tutorial
+owner:
+  type: team
+  id: d9120f39*****************
+  teamName: API Development
+...
+```
+
+When an object is created in the system 2 things can happen depending on who is creating it.
+
+When **Central Admin** user creates object, only Central Admin can modify this object 
+
+#### Access Control List
+
+Access Control List or ACL allows an owner to share with other person the object. The sharing can be:
+
+* read only
+* edit
+* delete
+
+#### ACL and scoped objects
+
+share the top object only
+share all dependent object
+share specific instance
