@@ -239,10 +239,6 @@ owner:
 ...
 ```
 
-When an object is created in the system 2 things can happen depending on who is creating it.
-
-When **Central Admin** user creates object, only Central Admin can modify this object 
-
 #### Access Control List
 
 Access Control List or ACL allows an owner to share with other person the object. The sharing can be:
