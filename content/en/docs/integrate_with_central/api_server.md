@@ -241,14 +241,171 @@ owner:
 
 #### Access Control List
 
-Access Control List or ACL allows an owner to share with other person the object. The sharing can be:
+Access Control List or ACL allows an object owner to share it with other teams. The sharing can be:
 
-* read only
-* edit
-* delete
+* read only: any member of the team the object is shared with will only see it if its team role permit.
+* edit: any member of the team the object is shared with will b able to modify it if its team role permit.
+* delete: any member of the team the object is shared with will b able to modify it if its team role permit.
+
+Anatomy of an ACL object:
+
+```yaml
+group: catalog
+apiVersion: v1alpha1
+kind: AccessControlList
+name: acl-tutorial-doc
+metadata:
+  scope:
+    kind: _MainObjectKind_
+    name: main-object-name
+spec:
+  rules:
+    - access:
+      # Allow users to update/delete the unscoped resource this ACL is scoped under.
+      - level: scope
+        allowDelete: true/false/null
+        allowWrite: true/false/null
+      # Allows users to create/update/delete scoped resources. Does not apply to unscoped resource.
+      - level: scopedKind
+        kind: "*"
+        allowCreate: true/false/null
+        allowDelete: true/false/null
+        allowWrite: true/false/null
+      # Allows users to update/delete the 1 referenced scoped resource.
+      - level: scopedResource
+        kind: APIService
+        name: my-api
+        allowDelete: true/false/null
+        allowWrite: true/false/null
+  subjects:
+    # list of team the ACL applies to
+    - type: team
+      id: "*"
+```
+
+If you have multiple permissions referencing the same resource, then it will be resolved as follows:
+
+* **false** takes precedence over **true** and **null**/**undefined**.
+* **true** takes precedence over **null**/**undefined**.
+* If **null**/**undefined**, then default to **false** for resources you do NOT own and **true** for resources you do own.
+
+{{< alert title="Note" color="primary" >}}
+For the subject, you can use '*' for giving access to all team or use the teamId to specify specific team
+{{< /alert >}}
 
 #### ACL and scoped objects
 
-share the top object only
-share all dependent object
-share specific instance
+When object is scoped to another, the sharing of the depending objects is not automatic.
+
+For instance API Service is scoped to environment. One can decide to share his environment with another team. That does not imply that the other team will gain access to the API of the environment.
+
+This should be an explicit will of the owner of the object.
+
+Sample for sharing only environment with team1 and team2:
+
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: AccessControlList
+name: doc-sharing-env
+title: Doc sharing doc-env only with team1 and team2
+metadata:
+  scope:
+    kind: Environment
+    name: doc-env
+  acl: []
+  accessRights:
+    canChangeOwner: true
+    canDelete: true
+    canWrite: true
+    canRead: true
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  rules:
+    - access:
+        - level: scope
+  subjects:
+    - id: 37cea73d-9d63-*********
+      type: team
+    - id: bf5c20e9-a2a9-*********
+      type: team
+```
+
+Sample for sharing environment and depending API Service with team1 and team2:
+
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: AccessControlList
+name: doc-sharing-apiservice
+title: Doc sharing API Service from doc-env with team1 and team2
+metadata:
+  scope:
+    kind: Environment
+    name: doc-env
+  acl: []
+  accessRights:
+    canChangeOwner: true
+    canDelete: true
+    canWrite: true
+    canRead: true
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  rules:
+    - access:
+        - level: scopedKind
+          kind: "apiservice"
+  subjects:
+    - id: 37cea73d-9d63-*********
+      type: team
+    - id: bf5c20e9-a2a9-*********
+      type: team
+```
+
+Sample for sharing environment and specific depending API Service with team1 and team2:
+
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: AccessControlList
+name: doc-sharing-apiservice-instance
+title: Doc sharing API Service service1 from doc-env with team1 and team2
+metadata:
+  scope:
+    kind: Environment
+    name: doc-env
+  acl: []
+  accessRights:
+    canChangeOwner: true
+    canDelete: true
+    canWrite: true
+    canRead: true
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  rules:
+    - access:
+        - level: scopedKind
+          kind: "apiservice"
+          name: "service1"
+  subjects:
+    - id: 37cea73d-9d63-*********
+      type: team
+    - id: bf5c20e9-a2a9-*********
+      type: team
+```
+
+#### Attaching ACL to an object
+
+Once the ACL is defined, you need to attach it to the object.
+
+TODO - check with Josh.
+The ACL is attached to the main object and to its dependents.
