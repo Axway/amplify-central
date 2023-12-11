@@ -20,6 +20,47 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify December 15 2023](/docs/amplify_relnotes/20231215_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.69. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.64 / TA=v1.1.67
+* **AWS Gateway using SDK 2.0** - DA=v1.1.54 / TA-v1.1.56
+* **Azure latest release** - DA=v1.1.60 / TA=v1.1.65
+* **Istio 1.9.5** - DA=v1.0.26 / TA=v2.0.70
+* **Apigee Edge** - Agent version 0.1.27
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.37
+* **Software AG webMethods** - 0.0.15
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**On-premise agents** |         |
+| What's new: | **All** - Updated with the Axway Agent SDK. |
+| Bug fixes: | None. |
+| <br />**SaaS (embedded) agents** |
+| What's new: | **All** - None. |
+| Bug fixes: | **All** - None. |
+| <br />**Service Registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Product Foundry** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Marketplace** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify December 1 2023](/docs/amplify_relnotes/20231201_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.69. This version is compatible with:
