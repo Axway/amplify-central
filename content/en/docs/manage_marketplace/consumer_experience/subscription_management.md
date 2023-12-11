@@ -87,14 +87,14 @@ View the following information for all subscriptions assigned to the product:
 * State - the status of the subscription - Refer to [Subscription status](#subscription-status)
 * Expires - if the plan has a specific number of billing terms, indicates when the subscription is planned to expire
 * Applications - the number of applications that can use the subscription
-* Invoices - if the billing feature is activated, indicates the number of invoices associated with the subscription 
+* Invoices - if the billing feature is activated, indicates the number of invoices associated with the subscription
 
 Click on the subscription name to display the subscription details information.
 
-The *subscription details* page provides: 
+The *subscription details* page provides:
 
-* Links to the product, the plan, and the application(s) associated with the subscription. Each application link redirects you to the *application details* page. 
-* Subscription usage breakdown per subscription plan quota. This breakdown allows to see how much has been consumed for the current billing period. 
+* Links to the product, the plan, and the application(s) associated with the subscription. Each application link redirects you to the *application details* page.
+* Subscription usage breakdown per subscription plan quota. This breakdown allows to see how much has been consumed for the current billing period.
 * Subscription history (requested time / last approval / rejection time).
 
 ### Terminate a subscription
