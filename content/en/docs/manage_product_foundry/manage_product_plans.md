@@ -120,7 +120,7 @@ To configure a quota for a **paid plan**, enter values for the following propert
 * **Base price**:
     * **Currency** - the currency that will be used by the billing system (US Dollar, Euro, ...). The most common currencies are available in the drop-down.
     * **Amount** - the plan price value.
-    * **Billing period** - select either **Monthly** or **Annually**. This is the period used for billing cycle. The billing cycle is based on the calendar month for Monthly plans or calendar year for Annually plans.
+    * **Billing period** - select either **Monthly** or **Annually**. This is the period used for billing cycle, which is based on the calendar month for Monthly plans or calendar year for Annually plans.
     * **Subscription Term Length** - the length of the subscription for a limited period of time or **Unlimited** (default). If a number of terms is selected, the subscription will be automatically cancelled once the term is reached.
 * **Quota type** - select either **Standard** or **Tiered** or **Pay Per Use**:
     * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota type**, **Limit type**, **Overage** for loose limit type).
@@ -205,7 +205,7 @@ To migrate subscriptions to a new plan:
 The **Migrate** action is available only for plans with subscriptions.
 {{< /alert >}}
 
-Once you validate your choice, the original plan is deprecated, and a new subscription is added to the target plan. The new subscription inherits the approval status of the original subscription. If there were access requests / credentials under the original subscription, they are marked as deleted and a new access request is created. Again, the access request approval status inherits the status of the original access request. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent and running to minimize the service disruption.
+Once you validate your choice, the original plan is deprecated and a new subscription is added to the target plan. *The new subscription inherits the approval status of the original subscription*. If there were access requests / credentials under the original subscription, they are marked as deleted and a new access request is created. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent is running to minimize the service disruption.
 
 The original subscription status will become "**Migration scheduled**" in case the migration is planned at a future date or "**Cancelled**" in case the migration is planned immediately.
 
