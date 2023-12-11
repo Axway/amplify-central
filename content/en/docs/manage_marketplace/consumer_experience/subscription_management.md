@@ -58,16 +58,40 @@ Once submitted, a subscription request goes through an approval process:
 | **Declined**  | The subscription request has been declined by the provider for several reasons (compliance, payment issues, etc.). Applications cannot use the product. |
 | **Error**     | There is an error in processing the subscription request. Typically, a system error. |
 
+### Subscription status
+
+The subscription also carried a state to know if it is usable or not. The state is not set until the subscription is approved.
+
+| State                   | Characteristics                                                                                             |
+|-------------------------|-------------------------------------------------------------------------------------------------------------|
+| **Active**              | The subscription is ready to be use to get access to product resources                                      |
+| **Migration scheduled** | The subscription is planned to be migrated to another plan                                                  |
+| **Migrating**           | The subscription migration to a new plan is in progress                                                     |
+| **Migrated**            | The subscription has been migrated to a new plan and cannot be used anymore to get access product resources |
+| **Archival scheduled**  | The subscription has an ending date and once reached, the subscription will be automatically archived       |
+| **Archived**            | The subscription has been terminated and cannot be used anymore to get access to product resources          |
+
 ## Manage existing subscriptions
 
 Use the *Account settings* page to manage existing subscriptions:
 
 1. Navigate to the *Marketplace*.
-2. Select **Subscriptions**. *A list of Marketplace subscriptions is displayed*.
+2. Select **Subscriptions**. *A list of Marketplace subscriptions is displayed*
+
+View the following information for all subscriptions assigned to the product:
+
+* Subscription name - the name of the subscription
+* Owning Team - the team that on and can use the subscription to get access to the product resources
+* Plan - the plan name used by the subscription
+* Approval State - the approval given by the provider of the product - Refer to [Subscription approval states](#subscription-approval-states)
+* State - the status of the subscription - Refer to [Subscription status](#subscription-status)
+* Expires - when the subscription is planned to expires in case the plan has a specific number of billing terms.
+* Applications - the number of applications that can use the subscription
+* Invoices - the number of invoices associated with the subscription when the billing feature is activated.
 
 Click on the subscription name to display the subscription details information.
 
-On the subscription details page, there are links to the product, to the plan, and to the application(s) associated with this subscription. Each application is a link that redirects you to the application details page. The bottom of the page displays the subscription history (requested time / last approval / rejection time).
+On the subscription details page, there are links to the product, to the plan, and to the application(s) associated with this subscription. Each application is a link that redirects you to the application details page. You can also find the subscription usage break down per subscription plan quota. This break down allows to see how much has been consumed for the current billing period. The bottom of the page displays the subscription history (requested time / last approval / rejection time).
 
 ### Terminate a subscription
 
