@@ -115,24 +115,6 @@ proxy:
 
 It is recommended to keep the YAML configuration file in the same source control repository as the source code of your service, so that you can update the configuration file when you make changes to the code for your service.
 
-## Create an Amplify SaaS Gateway API proxy
-
-The `create` command *creates* an API proxy if none already exists for this API, or *updates* the existing API proxy. It returns the name of the API proxy created.
-
-To create an API proxy, run the following command. You must specify the full path to the YAML configuration file that describes your API:
-
-```bash
-axway central proxies create /myservices/my_service_config.yaml
-```
-
-This command also supports the following options:
-
-| Option            | Description                                                                                                 |
-| ----------------- | ----------------------------------------------------------------------------------------------------------- |
-| `--force` or `-f` | The default behavior is to create or update the API proxy. Use this option to force create a new API proxy. |
-
-For details of the API, see [Create proxy API](https://d-api.docs.stoplight.io/api-reference/devops-api/create-proxy).
-
 ## Promote an Amplify SaaS Gateway API proxy
 
 The `promote` command deploys the latest revision of the API proxy to a target runtime group. It returns the URL of the deployed API proxy and, if you have specified an API key client authentication, a set of API keys to access the API proxy.
