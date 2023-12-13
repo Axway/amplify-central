@@ -9,6 +9,7 @@ Apply a rate limit configuration to your API.
 ## Before you start
 
 * You will need an administrator account for Amplify
+* Learn how to import your API as an API proxy in Amplify (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
 
 ## Objectives
 
