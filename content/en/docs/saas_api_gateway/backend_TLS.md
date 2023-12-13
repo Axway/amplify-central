@@ -10,7 +10,6 @@ Configure TLS for requests to your back-end API.
 
 * You will need an administrator account for Amplify
 * Learn how to import your API as an API proxy in Amplify (see [Register an API](/docs/saas_api_gateway/quickstart/#register-an-api))
-* Learn how to use the Axway Central CLI to manage an API proxy (see [Manage an API proxy using Axway Central CLI](/docs/integrate_with_central/cli_central/cli_proxy_flow))
 
 ## Objectives
 
