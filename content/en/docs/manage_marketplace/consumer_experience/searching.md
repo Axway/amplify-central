@@ -108,7 +108,7 @@ Allow to select products that matches one or more categories. In case category c
 
 ### Consumer Insights filters
 
-In the various Consumer Insights screen, only filters are used. They appeared at the top of each page in the form of a dropdown. 
+In the various Consumer Insights screen, only filters are used. They appeared at the top of each page in the form of a dropdown.
 
 All the dropdown acts in the same way:
 
