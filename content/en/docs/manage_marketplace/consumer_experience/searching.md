@@ -6,7 +6,7 @@ weight: 5
 
 Learn how you can find content in the Marketplace.
 
-## what is indexed and available for searching
+## What is indexed and available for searching
 
 There are 4 types of objects you can search for in the Marketplace using their specific attributes:
 
