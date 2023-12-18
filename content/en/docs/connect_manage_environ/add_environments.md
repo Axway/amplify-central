@@ -28,7 +28,7 @@ Learn how to create an environment to represent your API services and other disc
 
 ### Embeded AWS your environment
 
-4. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above): (**Robert**, the steps from here down are outdated. This should be the Compliance Profile configuration. Also, Compliance Profiles is now a menu option under Topology and has to be documented.)
+4. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above): 
 
     * **Agent Type** - select the type of agent that will connect to this API Gateway.
         * **Embedded** - Axway to host the agent.
@@ -112,19 +112,20 @@ Learn how to create an environment to represent your API services and other disc
          * **Access Token**: the Personal Access Token (classic) for Github authentication.  The allows us to discover API Service specifications in design prior to deployment (e.g. to determine API Compliance)
            
 ### Compliance Profile
-RENG: Add section for Compliance Profile
 
-### Stage Assignment
-
-RENG: Add section for Stage Assignement
+7. For the Compliance Profile step, you have the option to enable API Compliance Design Rules or Security Rule for environment.   For example, API Specification discovered on Github prior to deployment can be check for Compliance to your organization's Center of Excellence.  Once enabled you can select a default Deisng or Securityt Ruleset to be used for all the API services associated with the environment.   Custom rulesets can be uploaded from the Compliance Profiles screen within the Topology section of the Web UI.
 
 ### Credential Preferences
 
-RENG: Add section for Credential Preferences
+8. For Credential Prefences, you can select the duration of time when all credentials to Marketplace subscriptions are set to expire.  The default is for credential to never expire but you can select from 7 days, 30 days, 60 days, 90 days, or a configurable number of days (range from 7 to 365 days)for expiration
+    .
+### Stage Assignment
+
+9. For Stage Assignment, you have the option to select one or more  stages from the global list of stages to be associated with this environment.  The default is for no stage defined for the environment.  In addition to selection of a stage, a stage can be assigned as the default for all newly discovered API Services in the environment.  STages (e.g. Dev, Test, or Production) can be created from the Stages screen within the Topology section of the Web UI.
 
 ### Access Rights
 
-7. For Access Rights, select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team. Click **Next**.
+10. For Access Rights, select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team. Click **Next**.
 
 8. Provide the Tags and Attribute details for the environment.
 9. Click **Save** to create the environment.
