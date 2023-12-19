@@ -20,6 +20,50 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify December 15 2023](/docs/amplify_relnotes/20231215_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.71. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.66 / TA=v1.1.69
+* **AWS Gateway using SDK 2.0** - DA=v1.1.56 / TA-v1.1.58
+* **Azure latest release** - DA=v1.1.62 / TA=v1.1.67
+* **Istio 1.9.5** - DA=v1.0.28 / TA=v2.0.72
+* **Apigee Edge** - Agent version 0.1.28
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.38
+* **Software AG webMethods** - 0.0.16
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | SDK Spec Parcer enhancement. |
+| Bug fixes: | See release note. |
+| <br />**On-premise agents** |         |
+| What's new: | **All** - Updated with the Axway Agent SDK. |
+| Bug fixes: | **Axway API Management Agent** - See release note. |
+| <br />**SaaS (embedded) agents** |
+| What's new: | **All** - None. |
+| Bug fixes: | **All** - None. |
+| <br />**Axway Central CLI** |       |
+| What's new: | None. |
+| Bug fixes: | See release note. |
+| <br />**Service Registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - None. <br />**Topology** - Endpoint edit. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | Endpoint linking. |
+| Bug fixes: | None. |
+| <br />**Product Foundry** |         |
+| What's new: | Configure a plan term length. |
+| Bug fixes: | None. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | See release note. |
+| <br />**Marketplace** |         |
+| What's new: | Limit the product plan time. <br />Remove corrupted resources from Active plan. |
+| Bug fixes: | See release note. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify December 1 2023](/docs/amplify_relnotes/20231201_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.69. This version is compatible with:
