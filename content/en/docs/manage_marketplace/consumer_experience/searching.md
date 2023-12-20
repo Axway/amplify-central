@@ -63,6 +63,8 @@ When viewing the product list, refine your search with an Advanced search.
 
 2. Once you are satisfied with your criteria, click **Search**. The corresponding matching products are displayed.
 
+The **Reset** button will remove the selected criteria and refresh the product list to the one visible by the user.
+
 Click **Basic search** to return to the search bar at any time.
 
 #### Refine your findings with filters
