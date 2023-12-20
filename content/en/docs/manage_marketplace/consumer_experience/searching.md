@@ -49,13 +49,13 @@ Search is available when the home page is activated from the Marketplace setting
   
 ### Product search
 
-By default, the product search bar uses what is entered to find a match in product title / description / specification content / Documentation (markdown only) / category title assigned to a product.
+By default, the product search uses what is entered in the search bar to find a match in product title / description / specification content / Documentation (markdown only) / category title assigned to a product.
 
 #### Advanced search
 
-When viewing the product list, refine your search with an Advanced search.
+When viewing the product list, refine your search with Advanced Search.
 
-1. Click the Advanced search menu to replace the search bar with the Advanced search component.
+1. Click **Advanced Search** to replace the search bar with the Advanced Search component.
 
     * Enter multiple words and then select the appropriate matching parameter via a dropdown: **EQUALS**, **NOT EQUALS**.
     * When entering multiple words, you can decide the operator between those words: **OR** or **AND**. The drop-down on the matching parameter and on the operator allows you to adjust your criteria.
@@ -63,9 +63,9 @@ When viewing the product list, refine your search with an Advanced search.
 
 2. Once you are satisfied with your criteria, click **Search**. The corresponding matching products are displayed.
 
-The **Reset** button will remove the selected criteria and refresh the product list to the one visible by the user.
+Click **Reset** to remove the selected criteria and refresh the product list to the one that is visible by the user.
 
-Click **Basic search** to return to the search bar at any time.
+Click **Basic Search** to return to the Basic Search bar at any time.
 
 #### Refine your findings with filters
 
