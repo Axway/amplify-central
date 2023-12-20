@@ -19,7 +19,7 @@ Search the Marketplace for four types of objects by using their attributes:
 
 The search is based on a match pattern. This mean that the results will have the portion of entered text anywhere in the fields mentioned in previous section.
 
-Each main page (Product / Applications / Subscriptions / Categories / Home page) has a search bar to refine the page content. The search is refined as characters are entered in the search bar. The search bar indicates the number of found result: "Found **X** result for ***WhatYouEnterInTheSearchField***". Click **X** on the search bar to reset the search. 
+Each main page (Product / Applications / Subscriptions / Categories / Home page) has a search bar to refine the page content. The search is refined as characters are entered in the search bar. The search bar indicates the number of found result: "Found **X** result for ***WhatYouEnterInTheSearchField***". Click **X** on the search bar to reset the search.
 
 ## Filter a result
 
