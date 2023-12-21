@@ -4,28 +4,41 @@ linkTitle: Search and filter Marketplace content
 weight: 5
 ---
 
-Learn how you can find content in the Marketplace.
+Learn how to search through content in the Marketplace.
 
-## What is indexed and available for searching
+## Search by keyword
 
-Search the Marketplace for four types of objects by using their attributes:
+Each main page has a search bar that allows you to type a keyword and refine the results. 
 
-* **Category**: title, description
-* **Product**: title, description, documentation (markdown only), category title assigned to the product, product resource specification
-* **Application**: title
-* **Subscription**: product title, product description
+**Products search** allows you to look for terms in:
 
-## Where to search from
+* Product title
+* Product description
+* Markdown documentation
+* Product categories
+* API specification
 
-The search is based on a match pattern. This mean that the results will have the portion of entered text anywhere in the fields mentioned in previous section.
+From the **Category** page, you can search categories by:
 
-Each main page (Product / Applications / Subscriptions / Categories / Home page) has a search bar to refine the page content. The search is refined as characters are entered in the search bar. The search bar indicates the number of found result: "Found **X** result for ***WhatYouEnterInTheSearchField***". Click **X** on the search bar to reset the search.
+* Title
+* Description
+
+From the **Applications** page, you can search applications by:
+
+* Title
+
+From the **Subscriptions** page, you can search subscriptions by:
+
+* Product title
+* Product description
+
+The search looks for a partial or complete match with the keyword that is entered in the search bar. The search is refined as characters are entered. The number of found results is displayed in the search bar.
+
+Click **x** on the search bar to reset the search.
 
 ## Filter a result
 
-In addition to the search bar, filters that refine results are available on various pages.
-
-Filters are located on the left of main pages (Products / Applications / Subscriptions), as well as on some detail pages (Product resources / Category details). Each filter is a collapsible panel.
+In addition to the search bar, filters that refine results are available on the left of the main pages (Products / Applications / Subscriptions), as well as on some detail pages (Product resources / Category details). Each filter is a collapsible panel.
 
 Filter input controls:
 
@@ -49,7 +62,13 @@ Search is available when the home page is activated from the Marketplace setting
   
 ### Product search
 
-By default, the product search uses what is entered in the search bar to find a match in product title / description / specification content / Documentation (markdown only) / category title assigned to a product.
+Use the search bar to find products by keywords with a match in:
+
+* Product title
+* Description
+* API Specification
+* Documentation (markdown only)
+* Categories
 
 #### Advanced search
 
@@ -112,7 +131,7 @@ Use the filter located at the left of the subscription page to filter by categor
 
 ### Consumer Insights filters
 
- Uses the drop-down filters located at the top of each Consumer insights page.
+Use the drop-down filters located at the top of each Consumer insights page.
 
 Filter functionality:
 
