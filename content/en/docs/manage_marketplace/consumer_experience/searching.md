@@ -8,7 +8,7 @@ Learn how to search through content in the Marketplace.
 
 ## Search by keyword
 
-Each main page has a search bar that allows you to type a keyword and refine the results. 
+Each main page has a search bar that allows you to type a keyword and refine the results.
 
 **Products search** allows you to look for terms in:
 
