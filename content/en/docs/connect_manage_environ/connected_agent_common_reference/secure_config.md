@@ -20,7 +20,7 @@ Learn how to secure credentials in the agent configuration with one of the follo
 * Reference data keys within secret resource created in Amplify
 * Script the agent startup with openSSL
 
-{{< alert title="Warning" color="warning" >}}If you are running your agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you are running your agent in [offline mode](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/), you cannot secure your password with @Secret because there is no connectivity from the agent to Amplify platform where the secret is stored.{{< /alert >}}
 
 ## Use the Secret resources in Amplify
 

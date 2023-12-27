@@ -78,7 +78,7 @@ You must be a member of the owning team to archive an application.
 
 Archive an application if it is no longer needed but you still want to see the corresponding metrics in Consumer Insights. This action cannot be undone.
 
-{{< alert title="Warning" color="warning" >}}Archiving an application will remove all related access and credentials. An archived application cannot be used to consume APIs.{{< /alert >}}
+{{< alert title="Caution" color="danger" >}}Archiving an application will remove all related access and credentials. An archived application cannot be used to consume APIs.{{< /alert >}}
 
 1. Navigate to the *Marketplace*.
 2. Select **Applications** and find the application you need to be archive.
@@ -91,7 +91,7 @@ You must be a member of the owning team to delete an application.
 
 An application must be in Archived state to be deleted. This action cannot be undone.
 
-{{< alert title="Warning" color="warning" >}}Deleting an application will remove access to related Consumer Insights metrics.{{< /alert >}}
+{{< alert title="Caution" color="danger" >}}Deleting an application will remove access to related Consumer Insights metrics.{{< /alert >}}
 
 1. Navigate to the *Marketplace*.
 2. Select **Applications** and find the application you want to delete.

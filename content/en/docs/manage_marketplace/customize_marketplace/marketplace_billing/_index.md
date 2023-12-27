@@ -27,7 +27,7 @@ When billing integration is enabled for a specific Marketplace, each subscriptio
 
 The invoices must be paid using a third-party payment tool. The first implementation is using [Stripe](https://stripe.com) for the invoice payment.
 
-{{< alert title="" color="primary" >}}
+{{< alert title="Note" color="primary" >}}
 Until the first invoice is fully paid, the customer can request access to the resources but the access itself will not be granted until the provider collects the payment.
 {{< /alert >}}
 

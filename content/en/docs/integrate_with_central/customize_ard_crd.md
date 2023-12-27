@@ -1,9 +1,9 @@
 ---
-title: Customize access request and credentials request screens
-linkTitle: Customize access request and credentials request screens
+title: Customize access request, credentials request and subscription screens
+linkTitle: Customize access request, credentials request and subscription screens
 weight: 300
 ---
-Amplify allows you to personalize the *access request* and *credential* screens by customizing consumer questions that return appropriate responses.
+Amplify allows you to personalize the *access request*, *credential* and *subscription* screens by customizing consumer questions that return appropriate responses.
 
 ## Before you start
 
@@ -16,10 +16,19 @@ Learn how to customize the access request and credentials request screen in Mark
 
 ## Use cases
 
-* A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to access a resource or create credentials, the definition of the access or credentials may require extra parameters.
+* A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to subscribe, access a resource or create credentials, the definition of the subscription, access or credentials may require extra parameters.
 * A provider may want to send back extra information to the consumer. For example, credential information or public keys, etc.
 
 In both cases, a schema definition based on **react-jsonschema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
+
+{{< alert title="Note" color="primary" >}}
+There is no `provision` schema available for the subscription screen. It is one way only, from consumer to provider.
+{{< /alert >}}
+
+{{< alert title="Caution" color="danger" >}}
+Be cautious of the information you are asking your consumer to provide, as nothing is encoded at rest while transmitting from the consumer to the provider.
+Only the provider can transmit encrypted data.
+{{< /alert >}}
 
 By default when using Discovery Agents, the extra information is integrated when the agent discovers APIs based on the security type of the API (APIKey / OAuth - internal / OAuth - external).
 
@@ -29,16 +38,20 @@ By default when using Discovery Agents, the extra information is integrated when
 
 Various simple components are available to use: string text, date, number, arrays, dropdown, file selector and more. It is also possible to define your own object by combining multiple simple components.
 
-In addition, there are two special parameters `x-axway-order` and `x-axway-encrypted` that extend this framework:
+In addition, there are several special parameters labeled `x-axway-*` that extend this framework:
 
-* **x-axway-order** - use to determine the order in which the selected fields will be presented in the UI
-* **x-axway-encrypted** - use to tell the system that the field must be encrypted for security purpose
-
+* **x-axway-order** - determines the order in which the selected fields will be presented in the WebUI
+* **x-axway-label** - sets a label in front of the component
+* **x-axway-widget** - defines how the WebUI should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
+* **x-axway-encrypted** - tells the system that the field must be encrypted for security purpose (only se when sending information from Provider to Consumer)
+* **x-axway-hidden** - indicates that this field will not be visible
+* **x-axway-copyable** - adds the copy button to copy the value from the WebUI
+  
 Each item is described using json format. Below is a non-exhaustive list:
 
 * type: string, integer, number, boolean
 * format: date-time, date, time
-* title: the title used to display the component in the UI
+* title: the title used to display the component in the WebUI
 * description (optional): text that will appear below the title to help the user understand the field component
 * default (optional): the default value
 * enum: list of text to display
@@ -49,7 +62,7 @@ Each item is described using json format. Below is a non-exhaustive list:
 You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/react-jsonschema-form/) to try out the various combination.
 
 {{< alert title="Note" color="primary" >}}
-The playground allows you to change the UI components (UISchema section of the playground); however, the Marketplace UI does not use these components. As a result, the Marketplace UI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
+The playground allows you to change the WebUI components (UISchema section of the playground); however, the Marketplace WebUI does not use these components. As a result, the Marketplace WebUI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
 {{< /alert >}}
 
 #### Text component
@@ -197,6 +210,126 @@ The playground allows you to change the UI components (UISchema section of the p
 }
 ```
 
+## Customize Subscription screen
+
+To customize the subscription screen, you need a `SubscriptionRequestDefinition`. This object will contain the screen definition of the information required to subscribe to a service. This object is not scoped and are globally available.
+
+Name of the object: **SubscriptionRequestDefinition**
+
+Object skeleton (json format):
+
+```json
+{
+    "group": "management",
+    "apiVersion": "v1alpha1",
+    "kind": "SubscriptionRequestDefinition",
+    "name": "name-for-subscription-request-definition",
+    "title": "title-for-subscription-request-definition",
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+          ...
+        }
+    }
+}
+```
+
+The SubscriptionRequestDefinition contains only one schema in its specification section:
+
+* **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
+
+This schema follows the component framework describe in the [Available components](#available-components) section.
+
+This SubscriptionRequestDefinition needs to be attached to a product plan in order to display the required fields when the consumer subscribe to this specific plan.
+
+Once the subscription is created, both consumer and provider will be able to see the information from the *subscription details* page and navigating to the **Additional information** section.
+
+### SubscriptionRequestDefinition samples
+
+Sample of the consumer giving a required email contact and billing address:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "SubscriptionRequestDefinition",
+    "name": "srd-1",
+    "title": "Subscription definition email consumer",
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+                "email", "billingAddress"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "title": "Email",
+                    "description": "The best email to reach you"
+                },
+                "billingAddress": {
+                    "type": "string",
+                    "title": "Billing address",
+                    "description": "Physical address with postal code and city"
+                }
+            }
+        }
+    }
+}
+```
+
+Once the SubscriptionRequestDefinition object is created using the Axway Central CLI (`axway central apply -f srd.json`), you must link it to a draft product plan.
+
+The linkage can either be done using the WebUI and selecting the subscription definition request from the dropdown in the plan profile page or using the Axway Central CLI by adding `"definition": "subscriptionrequestdefinition-name"` under the *spec.subscription* section.
+
+Sample of plan and subscription definition request association:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "ProductPlan",
+    "name": "plan-name",
+    "title": "Plan title",
+    "metadata": {
+        "acl": [],
+    },
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "type": "paid",
+        "billing": {
+            "cycle": "recurring",
+            "price": 15,
+            "currency": "USD",
+            "interval": "monthly"
+        },
+        "product": "product-name",
+        "description": "",
+        "subscription": {
+            "renewal": "automatic",
+            "approval": "automatic",
+            "interval": {
+                "type": "months",
+                "length": 1
+            }
+            "definition": "srd-1"
+        }
+    }
+}
+```
+
+When subscribing to the plan, you will be able to see the emails and billing address:
+
+![Subscription Request screen](/Images/central/integrate_with_central/SubscriptionRequestDefinition.png)
+
 ## Customize access request screen
 
 To customize the access request screen, you need an `AccessRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to the consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
@@ -239,7 +372,7 @@ Object skeleton (json format):
 * **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
 * **provision** - for sending information back to the consumer.
 
-These above two schemas follow the component framework describe in the [Highlight](#highlights) section.
+These above two schemas follow the component framework describe in the [Available components](#available-components) section.
 
 Once the access request is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *access request detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
@@ -386,7 +519,7 @@ The CredentialRequestDefinition contains two optional schemas in its specificati
 * **schema** - to define the information that is required from the consumer and how it is displayed on the screen.
 * **provision** - for sending information back to the consumer.
 
-Those above two schemas follow the component framework describe in the [Highlight](#highlights) section.
+Those above two schemas follow the component framework describe in the [Available components](#available-components) section.
 
 Once the credential is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *credential detail* page and navigating to the **Credential value** section.
 

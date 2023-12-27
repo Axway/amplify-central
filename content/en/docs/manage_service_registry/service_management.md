@@ -59,7 +59,7 @@ Click on the Service name or icon to view the following detailed information for
 * The general Products tab displays the products that contain this API service, the state and status of the products, and when they were last modified.
 * The Versions tab displays version information for the specific service. Every version of the service is displayed by Service Revision name, specification type, and created/updated date, making it easy to view all versions of an API service. This tab also displays the number of endpoints, assets, products, and if enabled, Security and Design compliance validation scores for each of the API Service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
 
-    {{< alert title="Tip" color="primary" >}} Enter the name of a version in the search bar to quickly find a specific version. <br /> <br/>Click Compliance Score **Details** to open the Compliance tab and view the Security and Design Compliance details, download results in CSV format, and run linting tests. {{< /alert >}}
+    {{< alert title="Tip" color="secondary" >}} Enter the name of a version in the search bar to quickly find a specific version. <br /> <br/>Click Compliance Score **Details** to open the Compliance tab and view the Security and Design Compliance details, download results in CSV format, and run linting tests. {{< /alert >}}
 
 * With the version specific tab, there are other tabs to view the API Specification & Methods, Endpoints listening for requests to the service, Tags & Attributes, Compliance, Assets, and Products which are related to the version of the service.
 

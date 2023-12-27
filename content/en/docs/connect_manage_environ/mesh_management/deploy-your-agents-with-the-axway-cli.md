@@ -35,7 +35,7 @@ Use the following procedures to deploy the agent using Axway CLI.
 
 ### Log into the Axway Central CLI
 
-{{< alert title="Notes" color="primary" >}}The most recently validated Kubernetes version was 1.19.8. For more information about installing the CLI, see [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+{{< alert title="Note" color="primary" >}}The most recently validated Kubernetes version was 1.19.8. For more information about installing the CLI, see [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
 Istio agents are compatible with RedHat OpenShift 4.7 and later. For more information see [Using RedHat OpenShift](/docs/connect_manage_environ/mesh_management/using_redhat_openshift/).{{< /alert >}}
 
