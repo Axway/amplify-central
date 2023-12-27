@@ -18,7 +18,7 @@ For example, an API can be checked for compliance in terms of the API methods su
 
 ## How to perform compliance validation
 
-API compliance validation can be enabled/disabled per environment. Navigate to the Topology screen then create/edit an environment. The environment wizard has a **Compliance Profile** step, where you can enable the Design rules and/or Security rules for compliance (**Robert**, this needs a link to the appropriate section in the Add environments topic). A default [Design ruleset](#design-rulesets) (default-design-ruleset) and a default [Security ruleset](#security-rulesets) (default-security-ruleset) are available. Changes take effect as soon as the environment settings are saved.
+API compliance validation can be enabled/disabled per environment. Navigate to the Topology screen then create/edit an environment. The environment wizard has a **Compliance Profile** step, where you can enable the Design rules and/or Security rules for compliance. A default [Design ruleset](#design-rulesets) and a default [Security ruleset](#security-rulesets) are available. Changes take effect as soon as the environment settings are saved.
 
 Once enabled for the environment, all current APIs and future API updates within the selected environment are automatically compliance validated.
 
