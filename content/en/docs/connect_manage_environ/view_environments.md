@@ -87,7 +87,7 @@ Agents associated to the environment are listed with their Agent Kind, Agent Nam
 To view the details of your API Service and its versions:
 
 1. Click an API service from the list. *The Version tab is displayed*.
-2. Select a version. The most recent version is displayed by default. (**Robert**, the following image is outdated)
+2. Select a version. The most recent version is displayed by default.
 
 The API Service details page includes:
 
@@ -106,6 +106,26 @@ The API Service details page includes:
 * **Tags & Attributes tab**: Contains a list of tags and attributes assigned to the selected API service version.
 * **Assets tab**: Contains a list of the assets linked to selected API service.
 * **Products tab**: Contains the details of products linked to the selected API service.
+
+#### Access Rights
+
+Add content
+
+#### Tags and Attributes
+
+Add content
+
+#### Assets
+
+Add content
+
+#### Products
+
+Add content
+
+#### Dependency Graph
+
+Add content
 
 ### Publish endpoint
 
