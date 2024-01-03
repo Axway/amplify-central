@@ -54,7 +54,7 @@ Click on the support contact name to view more information, such as office hours
 6. Select the assigned product where this contact will be displayed. Selected products will be added to the *Associated products* section.
 7. click **Save**.
 
-The product support contact is saved and assigned to all selected products. Consumers can view the support contact information on the right side of the product details screen in the Marketplace UI.
+The product support contact is saved and assigned to all selected products. Consumers can view the support contact information on the right of the product details screen in the Marketplace UI.
 
 ### Edit a product support contact
 

@@ -9,7 +9,7 @@ Get started with the Axway Central CLI to support a DevOps approach to API Manag
 
 ## What is the Axway Central CLI
 
-Axway Central CLI is an add on package to the [Axway CLI tool](https://www.npmjs.com/package/axway).  The Central CLI provides a command line tool for communicating with Amplify Central’s management plane, using the API Server’s API. The CLI is a client of the API and can get and set resources on the management plane to facilitate universal API Management. The API Server’s API lets you query and manipulate the state of resources in Amplify Central (for example: environments, API services, assets, products, secrets, webhooks etc.). All resources in the API Server can be manipulated in the same way by fetching, updating, creating and deleting, as outlined below.
+Axway Central CLI is an add on package to the [Axway CLI tool](https://www.npmjs.com/package/axway).  The Central CLI provides a command line tool for communicating with Enterprise Marketplace’s management plane, using the API Server’s API. The CLI is a client of the API and can get and set resources on the management plane to facilitate universal API Management. The API Server’s API lets you query and manipulate the state of resources in Enterprise Marketplace (for example: environments, API services, assets, products, secrets, webhooks etc.). All resources in the API Server can be manipulated in the same way by fetching, updating, creating and deleting, as outlined below.
 
 If you need help with any of the Axway Central CLI commands, add the `--help` argument to the command to output the help:
 

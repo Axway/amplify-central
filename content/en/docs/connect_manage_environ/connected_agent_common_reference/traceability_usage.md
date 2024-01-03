@@ -107,7 +107,7 @@ For more information regarding agents' installation, see [Axway Gateway agents](
 
 ### Reporting Gateway usage event - automatic reporting for online mode
 
-You can view the environment in **Amplify Central > Environment** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
+You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
 Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. The Traceability Agent sends the usage counter to the platform on a regular basis (default is 15 minutes).
 
@@ -174,7 +174,7 @@ For more information regarding agents installation, see [Axway Gateway agents](/
 
 ### Reporting Gateway usage event - manual reporting for offline mode
 
-You can view the environment in **Amplify Central > Environment** once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
+You can view the environment in *Enterprise Marketplace > Topology > Environment* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
 The offline report is generated every month and saved to the \[agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
 

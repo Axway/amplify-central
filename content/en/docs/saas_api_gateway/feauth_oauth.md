@@ -26,7 +26,7 @@ Follow these steps to require an OAuth policy on an API proxy:
 4. On the dialog box, select **OAuth Token** from the **Authentication type** list.
 5. On the **Deployments** tab, click **Deploy** to deploy or update a runtime group with the OAuth security.
 
-Watch the animation to learn how to do this in Amplify Central UI.
+Watch the animation to learn how to do this in Enterprise Marketplace WebUI.
 
 ![Add OAuth security](/Images/central/OAuthaddproxyauth_animation.gif)
 

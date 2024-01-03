@@ -30,7 +30,7 @@ Upload the file downloaded from the catalog and generate a Postman Collection fr
 
 ![Postman generate a collection](/Images/central/catalog/postman-generate-collection.png)
 
-After the Postman Collection has been created, from the catalog item specification, click the **three dots** on the right side when hovering over the collection, then click **Edit**.
+After the Postman Collection has been created, from the catalog item specification, click the **three dots** on the right when hovering over the collection, then click **Edit**.
 
 This will open up a dialog box where you can edit the authorization for the API.
 

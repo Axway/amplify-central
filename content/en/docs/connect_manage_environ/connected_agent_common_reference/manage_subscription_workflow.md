@@ -281,7 +281,7 @@ customPropertiesConfig: {
 
    * The API can be consumed once the API credential details are received.
 
-{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user subscribes an API to an application/usage plan/subscription until Amplify Central Web UI shows the subscription state of **Active**. This is because of the time it takes to send events back and forth between the Gateway and Amplify.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user subscribes an API to an application/usage plan/subscription until Enterprise Marketplace WebUI shows the subscription state of **Active**. This is because of the time it takes to send events back and forth between the Gateway and Amplify.{{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}If the FrontEnd API on API Manager corresponding to the Catalog item is set to **unpublished** at the time the subscription is initiated, the Discovery Agent will receive the event, but will not allow the subscription to be completed. Instead, it will send back a subscription status of **Subscribe failed**.{{< /alert >}}
 
@@ -317,7 +317,7 @@ customPropertiesConfig: {
    * The subscription ID is removed from the application's Custom field.
    * The subscription status is set to **Unsubscribed**.
 
-{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Amplify Central Web UI shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Depending on the poll interval settings for the Discovery Agent, it will take a little time from when the user unsubscribes an API until Enterprise Marketplace WebUI shows the subscription state of **Unsubscribed**. This is because of the time it takes to discover the change on API Manager and send events back and forth between API Manager and Amplify.{{< /alert >}}
 
 ## Impact of subscription approval mode on subscription workflow
 

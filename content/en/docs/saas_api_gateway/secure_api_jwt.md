@@ -54,7 +54,7 @@ To test your API proxy in Amplify:
 4. Paste your JWT token in the **JWT Token** field.
 5. Execute an API method. It should be successful and return a `200 OK` response.
 
-Watch the animation to learn how to do this in Amplify Central UI.
+Watch the animation to learn how to do this in Enterprise Marketplace UI.
 
 ![Test API with JWT](/Images/central/JWTtestapi_animation.gif)
 
