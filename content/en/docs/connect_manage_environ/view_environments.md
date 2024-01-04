@@ -101,7 +101,7 @@ The API Service details page includes:
 
 * **Version Information**: Contains information specific to the version that you have selected. Includes the type of specification (OAS2, OAS3, WSDL, Protobuf, etc.) and the version string from the API Specification file.
 * **Specifications tab**: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
-* **Endpoints tab**: Contains the URLs pointing to deployed instances of the API service.
+* **Endpoints tab**: Contains the URLs pointing to deployed instances of the API service along with their associated stage and state.
 * **Catalog Items tab**
 * **Tags & Attributes tab**: Contains a list of tags and attributes assigned to the selected API service version.
 * **Assets tab**: Contains a list of the assets linked to selected API service.
@@ -113,15 +113,15 @@ Shared teams can have different types of access to this API service
 
 #### Tags and Attributes
 
-Contains a list of tags and attributes assigned to the selected API service version.
+Contains a list of tags and attributes assigned to the API service.
 
 #### Assets
 
-Contains a list of the assets linked to selected API service.
+Contains a list of the assets linked to the API service.
 
 #### Products
 
-Contains the details of products linked to the selected API service.
+Contains the details of products linked to the API service.
 
 #### Dependency Graph
 
@@ -146,7 +146,7 @@ Contains details about all of the API service endpoint's dependencies.
    * Stable: API is released and ready for production use.
    * Deprecated: API is deprecated in favor of a newer version or another API.
    * Archived: API is retired and no longer available for use.
-5. On the second step of the wizard labelled *Endpoint*, specific endpoints can be added, edited, or deleted.
+5. On the second step of the wizard labelled **Endpoint**, specific endpoints can be added, edited, or deleted.
 
 ### Delete endpoints and catalog items
 
