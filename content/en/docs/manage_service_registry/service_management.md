@@ -96,6 +96,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
+    * Included Endpoints - Select API service endpoints to be included.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility - The proposed visibility is set to the currently logged in team to facilitate collaboration with internal teams to edit the product documentation or product plan.  If you are logged in as a Central Admin, the proposed Product Visibility is set to None.
     * The default product plan is a free unlimited plan which can be edited after the product is created.
