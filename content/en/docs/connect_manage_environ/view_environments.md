@@ -109,23 +109,23 @@ The API Service details page includes:
 
 #### Access Rights
 
-Add content
+Shared teams can have different types of access to this API service
 
 #### Tags and Attributes
 
-Add content
+Contains a list of tags and attributes assigned to the selected API service version.
 
 #### Assets
 
-Add content
+Contains a list of the assets linked to selected API service.
 
 #### Products
 
-Add content
+Contains the details of products linked to the selected API service.
 
 #### Dependency Graph
 
-Add content
+Contains details about all of the API service endpoint's dependencies.
 
 ### Publish endpoint
 
@@ -138,6 +138,15 @@ Add content
 1. Click the **Endpoints** tab.
 2. Click the associated **Ellipsis** icon.
 3. Click **Edit Endpoint**. An *Endpoint Edit* wizard is displayed to assist with changing the stage of an endpoint.
+4. The wizard will also assist with setting the state of an endpoint.
+   * None: No state set.
+   * Design: Reserved for endpoints tied to a mockup service.
+   * Experimental: API published for preliminary testing. It might not be feature complete and has bugs.
+   * Pre-released: API is published for beta testing. It is mostly feature complete but has bugs.
+   * Stable: API is released and ready for production use.
+   * Deprecated: API is deprecated in favor of a newer version or another API.
+   * Archived: API is retired and no longer available for use.
+5. On the second step of the wizard labelled *Endpoint*, specific endpoints can be added, edited, or deleted.
 
 ### Delete endpoints and catalog items
 
