@@ -101,18 +101,24 @@ Learn how to create an environment to represent your API services and other disc
 
 ### Embedded GitHub environment
 
-(**Add missing content**)
+1.  Configure (these configuration steps are displayed only if there is Embedded agent support for the environment type selected above):
+    * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
+      * **Embedded** - Axway to host the agent.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as an Embedded agent.
 
-Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
+    GitHub settings:
+         * **Access Token** - the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
 
-* **Agent Type** - select the type of agent that will connect to this API Gateway.
-    * **Embedded** - Axway to host the agent.
-    * **Remotely Hosted**  the customer to host the agent.
-* **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as an Embedded agent.
+2.  Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
-GitHub settings:
-
-* **Access Token**: the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
+    * **Frequency** - set how often the Embedded agent should check for changes in your GitHub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover GitHub Gateway resources after environment creation and Embedded agent configuration are complete.
+    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Paths** - values defined here are used to look into those paths to discover the API service(s).
+    * **Filename Filters** - values defined here are used to filter the discovered API service(s) using filenames.
+    * **GitHub Repository Name** - name of the GitHub Repository used to discover the API service(s).
+    * **GitHub Repository Owner** - owner of the GitHub Repository used to discover the API service(s).
+    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
 ### Compliance Profile
 
