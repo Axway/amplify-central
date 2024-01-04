@@ -99,33 +99,27 @@ The API Service details page includes:
     * Products: The total count of products linked to this service
     * Consumers: The total count of asset requests to this service
 
+* **Compliance Score**: Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a ruleset. Both an API Design and Security ruleset can be applied to all the APIs in a selected environment. The API is checked for compliance in terms of the API methods supported or the presence of a security policy. The grading results of the compliance are measured in the number of errors, warnings, info, or hints found. In the Service Registry, two columns visualize the compliance grading of each API. The first one shows the grade from a Security perspective, the second one visualized the Design compliance level. Hover over the grading letter to see the summary of the analysis that resulted in the current grading. A circular spinner is displayed in either grading column once the API is queued for Design or Security compliance validation. An N/A is displayed in either grading column if the API is not one of the supported API types. A red icon is displayed in the grading column if the API specification file is missing a required value.
+
+![Error results](/Images/compliance/error_results.png)
+
 * **Version Information**: Contains information specific to the version that you have selected. Includes the type of specification (OAS2, OAS3, WSDL, Protobuf, etc.) and the version string from the API Specification file.
-* **Specifications tab**: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
-* **Endpoints tab**: Contains the URLs pointing to deployed instances of the API service along with their associated stage and state.
-* **Catalog Items tab**
-* **Tags & Attributes tab**: Contains a list of tags and attributes assigned to the selected API service version.
-* **Assets tab**: Contains a list of the assets linked to selected API service.
-* **Products tab**: Contains the details of products linked to the selected API service.
+   * Specifications tab: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see       additional information by clicking to open relevant methods or models.
+   * Endpoints tab: Contains the URLs pointing to deployed instances of the API service version along with their associated stage and state.
+   * Tags & Attributes tab: Contains a list of tags and attributes assigned to the selected API service version.
+   * Compliance:  
+   * Assets tab: Contains a list of the assets linked to selected API service version.
+   * Products tab: Contains the details of products linked to the selected API service version.
 
-#### Access Rights
+* **Access Rights**: Shared teams can have different types of access to this API service
 
-Shared teams can have different types of access to this API service
+* **Tags and Attributes**: Contains a list of tags and attributes assigned to the API service.
 
-#### Tags and Attributes
+* **Assets**: Contains a list of the assets linked to the API service.
 
-Contains a list of tags and attributes assigned to the API service.
+* **Products**: Contains the details of products linked to the API service.
 
-#### Assets
-
-Contains a list of the assets linked to the API service.
-
-#### Products
-
-Contains the details of products linked to the API service.
-
-#### Dependency Graph
-
-Contains details about all of the API service endpoint's dependencies.
+* **Dependency Graph**: Contains details about all of the API service endpoint's dependencies.
 
 ### Publish endpoint
 
