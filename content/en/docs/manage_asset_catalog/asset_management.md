@@ -58,7 +58,7 @@ To view asset details:
     * Modified By - The user who last modified the asset
     * Created On - Date, Time, and Username of who created this asset
     * Description - A short description of the asset
-    * Resources - API services or other resource types that are linked to this asset
+    * Resources - Displays asset resources which are created from API service endpoints. Will also display any associated stages or states.
     * Products - Information on products that are linked to this asset
     * Access Rights - Shared teams can have different types of access to this asset
     * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
