@@ -31,7 +31,7 @@ Connecting a GitHub Repository to Amplify will provide you with a global central
 
 ## Configure the agents with Axway Central CLI and GitHub
 
-Use Axway Central CLI to install the agents. This CLI will prompt you for answers regarding GitHub access information and where to store the discovered APIs in the Amplify platform.
+Use Axway Central CLI to install the agents. The CLI will prompt you for answers regarding GitHub access information and where to store the discovered APIs in the Amplify platform.
 
 ### Step 1: Install Axway Central CLI
 
