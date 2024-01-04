@@ -146,7 +146,7 @@ Contains details about all of the API service endpoint's dependencies.
    * Stable: API is released and ready for production use.
    * Deprecated: API is deprecated in favor of a newer version or another API.
    * Archived: API is retired and no longer available for use.
-5. On the second step of the wizard labelled **Endpoint**, specific endpoints can be added, edited, or deleted.
+5. On the second step of the wizard, labelled **Endpoint**, specific endpoints can be added, edited, or deleted.
 
 ### Delete endpoints and catalog items
 
