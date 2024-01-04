@@ -101,6 +101,8 @@ Learn how to create an environment to represent your API services and other disc
 
 ### Embedded GitHub environment
 
+(**Add missing content**)
+
 Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
 
 * **Agent Type** - select the type of agent that will connect to this API Gateway.
