@@ -102,12 +102,12 @@ The installation procedure will prompt for the following:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
    * **Team**: select an existing team
 3. GitHub Configuration Setup:
-   * **Access Token**: the access token the agent will use to read the files in the repository
+   * **Access Token**: the access token the agent will use to read the files in the repository (GitHub's Personal Access Token (classic) is used here)
    * Set how often the Embedded agent should check GitHub for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover GitHub resources after installation is complete
-   * **Repository Owner Name**: the name of the owner of the repository
-   * **Repository Name**: the name of the repository
-   * **Paths**: the paths that the agent will look for specs in, paths should start with a `/` character
+   * **Repository Owner Name**: the name of the owner of the GitHub repository
+   * **Repository Name**: the name of the GitHub repository
+   * **Paths**: the paths that the agent will look for specs in, paths should start with a `/` character (example: `/apis`)
    * **Filename Patterns**: the patterns that a filename must match to be discovered
      * The pattens here are regular expressions [RE2 Syntax](https://github.com/google/re2/wiki/Syntax), only one pattern must match to discover a specification file
      * The pattern will pass if it matches any part of the filename. To match the whole name, add anchors to the expression (example: `^spec\.json$`, this will match only files that are literally named `spec.json`)
