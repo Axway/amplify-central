@@ -99,7 +99,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
     * Included Endpoints - By default all endpints are selected. Remove any endpoints that are not to be included in the asset.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility -  Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
-      
+  
         * **Authenticated users** visibility - indicates if the user must be authenticated to see the product:
             * **unchecked** - anonymous user can view any product in the Public Marketplace (default behavior). This option is not available for Private Marketplace.
             * **checked** - user must be authenticated to see the product and can be restricted farther with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
@@ -115,7 +115,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
             * **Selected organizations** - only users registered with a Marketplace account and a member of the selected consumer organization can see the product in the Marketplace.
             * **None** - the product is not visible to any user registered with a Marketplace account or anonymous users.
                 * From the list of available consumer organizations in your provider organization, select the consumer organization you want to give product visibility or remove visibility from.
-   
+
     * The default product plan is a free unlimited plan which can be edited after the product is created.
 
 5. Click **Publish** to quickly make an API service available from consumption in the Marketplace.
