@@ -38,7 +38,7 @@ Each environment in the list contains some basic information:
 
 ## View environment details
 
-To view environment detials, click the environment name.
+To view environment details, click the environment name.
 
 The following information is displayed for environments created using the API service model:
 
