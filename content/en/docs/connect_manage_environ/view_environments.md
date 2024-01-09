@@ -107,7 +107,7 @@ The API Service details page includes:
     * Specifications tab: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
     * Endpoints tab: Contains the URLs pointing to deployed instances of the API service version and their associated stage and state.
     * Tags & Attributes tab: Contains a list of tags and attributes assigned to the selected API service version.
-    * Compliance: Security and Design compliance scores are visualized. Click *Download Results* to receive a file with details of each error or click *Run Linting Test* to rerun the validation profile.
+    * Compliance: Security and Design compliance scores are visualized. Click **Download Results** to receive a file with details of each error or click **Run Linting Test** to rerun the validation profile.
     * Assets tab: Contains a list of the assets linked to selected API service version.
     * Products tab: Contains the details of products linked to the selected API service version.
 
