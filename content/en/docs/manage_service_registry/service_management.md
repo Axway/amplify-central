@@ -102,7 +102,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
   
         * **Authenticated users** visibility - indicates if the user must be authenticated to see the product:
             * **unchecked** - anonymous user can view any product in the Public Marketplace (default behavior). This option is not available for Private Marketplace.
-            * **checked** - user must be authenticated to see the product and can be restricted farther with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
+            * **checked** - user must be authenticated to see the product and can be restricted further with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
         * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
             * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
             * **Selected teams** - only members of the selected teams can see the product in the Marketplace.
