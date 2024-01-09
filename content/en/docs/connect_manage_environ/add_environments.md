@@ -82,20 +82,22 @@ Learn how to create an environment to represent your API services and other disc
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted**  the customer to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as as Embedded agents.
+    
     Apigee X API Gateway settings:
+   
          * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires a Client Email address in the Apigee X Authentication.
          * **Project ID**: the Project ID for your Google Cloud Platform (GCP) project.
          * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all applications.
          * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discover Apigee resources.
 
-2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
+3. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
    * **Frequency** - set how often the Embedded agent should check for changes in your Apigee X API Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Apigee X API Gateway resources after environment creation and Embedded agent configuration are complete.
    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
-3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
+4. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
 
@@ -107,13 +109,14 @@ Learn how to create an environment to represent your API services and other disc
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as an Embedded agent.
 
     GitHub settings:
-         * **Access Token** - the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
+
+        * **Access Token** - the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
     * **Frequency** - set how often the Embedded agent should check for changes in your GitHub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
     * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover GitHub Gateway resources after environment creation and Embedded agent configuration are complete.
-    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
     * **Paths** - values defined here are used to look into those paths to discover the API service(s).
     * **Filename Filters** - values defined here are used to filter the discovered API service(s) using filenames.
     * **GitHub Repository Name** - name of the GitHub Repository used to discover the API service(s).
