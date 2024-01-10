@@ -36,9 +36,9 @@ Each environment in the list contains some basic information:
 8. The user who last modified the environment, and when
 9. Trash bin to delete the environment
 
-Click the environment name to view additional details.
-
 ## View environment details
+
+To view environment details, click the environment name.
 
 The following information is displayed for environments created using the API service model:
 
@@ -87,7 +87,7 @@ Agents associated to the environment are listed with their Agent Kind, Agent Nam
 To view the details of your API Service and its versions:
 
 1. Click an API service from the list. *The Version tab is displayed*.
-2. Select a version. The most recent version is displayed by default. (**Robert**, the following image is outdated)
+2. Select a version. The most recent version is displayed by default.
 
 The API Service details page includes:
 
@@ -99,13 +99,27 @@ The API Service details page includes:
     * Products: The total count of products linked to this service
     * Consumers: The total count of asset requests to this service
 
-* **Version Information**: Contains information specific to the version that you have selected. Includes the type of specification (OAS2, OAS3, WSDL, Protobuf, etc.) and the version string from the API Specification file.
-* **Specifications tab**: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
-* **Endpoints tab**: Contains the URLs pointing to deployed instances of the API service.
-* **Catalog Items tab**
-* **Tags & Attributes tab**: Contains a list of tags and attributes assigned to the selected API service version.
-* **Assets tab**: Contains a list of the assets linked to selected API service.
-* **Products tab**: Contains the details of products linked to the selected API service.
+* **Compliance Score**: Compliance validation is an optional entitlement, API Compliance, which can be purchased with the Amplify API Management Platform product.  Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a ruleset. Both an API Design and Security ruleset can be applied to all the APIs in a selected environment. The API is checked for compliance in terms of the API methods supported or the presence of a security policy. The grading results of the compliance are measured in the number of errors, warnings, info, or hints found. In the Services tab, two columns visualize the compliance grading of each API. The first one shows the grade from a Security perspective, the second is the Design compliance level. An activity indicator is displayed in either grading column once the API is queued for Design or Security compliance validation. An N/A is displayed in either grading column if the API is not one of the supported API types. A red icon is displayed in the grading column if the API specification file is missing a required value.
+
+![Error results](/Images/compliance/error_results.png)
+
+* **Versions information**: Contains information specific to the version that you have selected. Includes the type of specification (OAS2, OAS3, WSDL, Protobuf, etc.) and the version string from the API Specification file.
+    * Specifications tab: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
+    * Endpoints tab: Contains the URLs pointing to deployed instances of the API service version and their associated stage and state.
+    * Tags & Attributes tab: Contains a list of tags and attributes assigned to the selected API service version.
+    * Compliance: Security and Design compliance scores are visualized. Click **Download Results** to receive a file with details of each error or click **Run Linting Test** to rerun the validation profile.
+    * Assets tab: Contains a list of the assets linked to selected API service version.
+    * Products tab: Contains the details of products linked to the selected API service version.
+
+* **Access Rights**: Shared teams can have different types of access to this API service
+
+* **Tags and Attributes**: Contains a list of tags and attributes assigned to the API service.
+
+* **Assets**: Contains a list of the assets linked to the API service.
+
+* **Products**: Contains the details of products linked to the API service.
+
+* **Dependency Graph**: Contains details about all of the API service endpoint's dependencies.
 
 ### Publish endpoint
 
@@ -118,6 +132,15 @@ The API Service details page includes:
 1. Click the **Endpoints** tab.
 2. Click the associated **Ellipsis** icon.
 3. Click **Edit Endpoint**. An *Endpoint Edit* wizard is displayed to assist with changing the stage of an endpoint.
+4. The wizard will also assist with setting the state of an endpoint:
+   * None: No state set.
+   * Design: Reserved for endpoints tied to a mockup service.
+   * Experimental: API published for preliminary testing. It might not be feature complete and has bugs.
+   * Pre-released: API is published for beta testing. It is mostly feature complete but has bugs.
+   * Stable: API is released and ready for production use.
+   * Deprecated: API is deprecated in favor of a newer version or another API.
+   * Archived: API is retired and no longer available for use.
+5. On the second step of the wizard, labelled **Endpoint**, specific endpoints can be added, edited, or deleted.
 
 ### Delete endpoints and catalog items
 

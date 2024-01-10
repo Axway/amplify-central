@@ -41,38 +41,38 @@ Learn how to create an environment to represent your API services and other disc
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
-   * **Frequency** - set how often the Embedded agent should check for changes to your API resources. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery).
-   * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover AWS API Gateway resources after environment creation and Embedded agent configuration are complete.
-   * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
-   * **API Discovery Filter** - filter conditions for discovery of API services based on tags. See [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
-   * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
-   * **Exclude Tags** - if a tag listed here is on an API in the gateway, then it will not be added as a tag in the API service (only available for AWS API Gateway).
+    * **Frequency** - set how often the Embedded agent should check for changes to your API resources. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery).
+    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover AWS API Gateway resources after environment creation and Embedded agent configuration are complete.
+    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **API Discovery Filter** - filter conditions for discovery of API services based on tags. See [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
+    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
+    * **Exclude Tags** - if a tag listed here is on an API in the gateway, then it will not be added as a tag in the API service (only available for AWS API Gateway).
 
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
-   * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
-   * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
-   * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane.
-       * **URL Path** - all URL paths, or path regular expressions, which may be reported to Enterprise Marketplace. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
-       * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
-           * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and send to platform.
-           * **Sanitization Patterns**
-               * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
-               * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
+    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
+    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
+    * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane.
+        * **URL Path** - all URL paths, or path regular expressions, which may be reported to Central. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
+        * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
+            * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and send to platform.
+            * **Sanitization Patterns**
+                * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
+                * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
                For example, to sanitize the whole value of "id" query argument, keyMatch:"^id$",valueMatch:".*" will return the query arguments with their key set to "id" and value set to {*}.
-       * **Request Headers** - regular expressions applied to the request headers in the transactional data.
-           * **Allowed Patterns** - request headers keys that match any of these expressions will be reported. For example, "authorization" value will find all the request headers that have "authorization" anywhere in the key and send to platform.
-           * **Sanitization Patterns**
-               * **Key Match** - request headers keys that match any of these expressions will have the valueMatch sanitized.
-               * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+        * **Request Headers** - regular expressions applied to the request headers in the transactional data.
+            * **Allowed Patterns** - request headers keys that match any of these expressions will be reported. For example, "authorization" value will find all the request headers that have "authorization" anywhere in the key and send to platform.
+            * **Sanitization Patterns**
+                * **Key Match** - request headers keys that match any of these expressions will have the valueMatch sanitized.
+                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
                For example, to sanitize the first five characters of any request header with a key that has "authorization" in it, keyMatch:"authorization",valueMatch:"^.{0,5}" will return the request headers with their "key" set to "authorization" and "value" set to a value whose first five characters replaced by the masking character value.
-       * **Response Headers** - regular expressions applied to the response headers in the transactional data.
-           * **Allowed Patterns** - response headers keys that match any of these expressions will be reported. For example, ".*" value will find all the response headers and send to platform.
-           * **Sanitization Patterns**
-               * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
-               * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+        * **Response Headers** - regular expressions applied to the response headers in the transactional data.
+            * **Allowed Patterns** - response headers keys that match any of these expressions will be reported. For example, ".*" value will find all the response headers and send to platform.
+            * **Sanitization Patterns**
+                * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
+                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
                For example, to sanitize the response headers of the word "data" wherever it is found, in any header that starts with ‘content', keyMatch:"^content",valueMatch:"data", and maskingCharacter: ""{##}"" will return the response headers with their "key" starting with "content" and "value" set to a value in which the "data" occurrences are replaced by "{##}" masking character.
-   * **Masking Characters** - the set of character(s) that will replace any value matched while sanitizing.
+    * **Masking Characters** - the set of character(s) that will replace any value matched while sanitizing.
 
 ### Embedded Apigee X API Gateway environment
 
@@ -82,35 +82,43 @@ Learn how to create an environment to represent your API services and other disc
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted**  the customer to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as as Embedded agents.
-    Apigee X API Gateway settings:
-         * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires a Client Email address in the Apigee X Authentication.
-         * **Project ID**: the Project ID for your Google Cloud Platform (GCP) project.
-         * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all applications.
-         * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discover Apigee resources.
+        * Apigee X API Gateway settings:
+            * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires a Client Email address in the Apigee X Authentication.
+            * **Project ID**: the Project ID for your Google Cloud Platform (GCP) project.
+            * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all applications.
+            * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discover Apigee resources.
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
-   * **Frequency** - set how often the Embedded agent should check for changes in your Apigee X API Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
-   * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Apigee X API Gateway resources after environment creation and Embedded agent configuration are complete.
-   * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
-   * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
+    * **Frequency** - set how often the Embedded agent should check for changes in your Apigee X API Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Apigee X API Gateway resources after environment creation and Embedded agent configuration are complete.
+    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
-   * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
+    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
 
 ### Embedded GitHub environment
 
-Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
+1. Configure (these configuration steps are displayed only if there is Embedded agent support for the environment type selected above):
 
-* **Agent Type** - select the type of agent that will connect to this API Gateway.
-    * **Embedded** - Axway to host the agent.
-    * **Remotely Hosted**  the customer to host the agent.
-* **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as an Embedded agent.
+    * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
+        * **Embedded** - Axway to host the agent.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as an Embedded agent.
+        * GitHub settings:
+            * **Access Token** - the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
 
-GitHub settings:
+2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
-* **Access Token**: the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
+    * **Frequency** - set how often the Embedded agent should check for changes in your GitHub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover GitHub Gateway resources after environment creation and Embedded agent configuration are complete.
+    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Paths** - values defined here are used to look into those paths to discover the API service(s).
+    * **Filename Filters** - values defined here are used to filter the discovered API service(s) using filenames.
+    * **GitHub Repository Name** - name of the GitHub Repository used to discover the API service(s).
+    * **GitHub Repository Owner** - owner of the GitHub Repository used to discover the API service(s).
+    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
 ### Compliance Profile
 
