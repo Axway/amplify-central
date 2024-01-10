@@ -357,7 +357,7 @@ An empty result means the agent is not running; otherwise, you should receive th
       }
     },
     "central": {
-      "name": "Enterprise Marketplace",
+      "name": "Amplify Central",
       "endpoint": "central",
       "status": {
         "result": "OK"
@@ -398,7 +398,7 @@ An empty result means the agent is not running; otherwise, you should receive th
       }
     },
     "central": {
-      "name": "Enterprise Marketplace",
+      "name": "Amplify Central",
       "endpoint": "central",
       "status": {
         "result": "OK"

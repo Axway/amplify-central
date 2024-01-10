@@ -228,7 +228,7 @@ AWS_LOGGROUP=<YOUR LOG GROUP NAME>
 AWS_FILTER=tag.PushToAmplify == true
 AWS_PUSHTAGS=true
 
-# Central connectivity
+# Amplify connectivity
 # organization config:
 CENTRAL_ORGANIZATIONID=<YOUR ORGANIZATION ID>
 CENTRAL_TEAM=<THE TEAM NAME>
@@ -362,7 +362,7 @@ AWS_QUEUENAME=aws-apigw-traceability-us-east-2
 AWS_AUTH_ACCESSKEY=<YOUR AWS ACCESS KEY HERE>
 AWS_AUTH_SECRETKEY=<YOUR AWS SECRET KEY HERE>
 
-# Central connectivity
+# Amplify connectivity
 # organisation config:
 CENTRAL_ORGANIZATIONID=<YOUR ORGANIZATION ID>
 CENTRAL_TEAM=<THE TEAM NAME>

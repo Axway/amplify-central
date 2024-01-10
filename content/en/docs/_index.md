@@ -1,17 +1,17 @@
 ---
-title: "Welcome to Enterprise Marketplace"
-linkTitle: "Welcome to Enterprise Marketplace"
+title: "Welcome to Amplify Enterprise Marketplace"
+linkTitle: "Welcome to Amplify Enterprise Marketplace"
 weight: 03
 no_list: true
 menu:
   main:
     weight: 20
 ---
-This website contains the entire documentation set for Enterprise Marketplace.
+This website contains the entire documentation set for Amplify Enterprise Marketplace.
 
-## Amplify documentation
+## Amplify Enterprise Marketplace documentation
 
-Browse all documentation for Enterprise Marketplace under the left navigation menu.
+Browse all documentation for Amplify Enterprise Marketplace under the left navigation menu.
 
 Here are some suggestions to get started:
 

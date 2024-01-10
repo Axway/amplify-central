@@ -77,7 +77,7 @@ APIGATEWAY_HOST=<HOST>
 APIGATEWAY_AUTH_USERNAME=<USER>
 APIGATEWAY_AUTH_PASSWORD=<PASSWORD>
 
-# central connectivity
+# Amplify connectivity
 CENTRAL_ORGANIZATIONID=<ORGANIZATIONID>
 CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 ```
@@ -100,7 +100,7 @@ The `da_env_vars.env` configuration file contain 3 sections to personalize: API 
 
 #### Customizing Discovery Agent API Manager connectivity variables
 
-This section connects the agent to API Manager and determines which APIs should be discovered and published to Amplify .
+This section connects the agent to API Manager and determines which APIs should be discovered and published to Amplify.
 
 `APIMANAGER_HOST`: Machine name where API Manager is running. Use a hostname according to the certificate returned by the API-Manager.
 
@@ -138,7 +138,7 @@ APIMANAGER_FILTER=tag.APITAG==value
 #APIMANAGER_ALLOWAPPLICATIONAUTOCREATION=true
 ```
 
-#### Customizing Discovery Central connectivity variables
+#### Customizing Discovery Agent Amplify connectivity variables
 
 This section connects the agent to Enterprise Marketplace and determines how to published the discovered APIs.
 
@@ -490,7 +490,7 @@ cd /home/APIC-agents
       }
     },
     "central"={
-      "name"="Enterprise Marketplace",
+      "name"="Amplify Central",
       "endpoint"="central",
       "status"={
         "result"="OK"
@@ -568,7 +568,7 @@ APIGATEWAY_AUTH_PASSWORD=<PASSWORD>
 # Uncomment this value if APIM is installed in a Docker environment as headers are not accessible in this configuration.
 #APIGATEWAY_GETHEADERS=false
 
-# central connectivity
+# Amplify connectivity
 CENTRAL_ORGANIZATIONID=<ORGANIZATIONID>
 CENTRAL_TEAM=<TEAM>
 CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
