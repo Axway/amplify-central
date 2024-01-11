@@ -842,6 +842,16 @@ LOG_FILE_PATH=/path/to/logs
 LOG_FILE_NAME=traceability_agent.log
 ```
 
+### Recommended Environment Variable Settings
+
+It is recommended to use the following environment variables for Gateways that process a high volume of transactions per second:
+
+```shell
+TRACEABILITY_BULKMAXSIZE=1500
+QUEUE_MEM_EVENTS=6000
+QUEUE_MEM_FLUSH_MINEVENTS=3000
+```
+
 ### Running the binary Traceability Agent
 
 Open a shell and run one of the following commands to start your agent:

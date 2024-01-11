@@ -35,6 +35,10 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
     * You can use Kubernetes 1.19 (Helm install only)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
+* An API Manager user assigned as an API Manager Admin
+
+{{< alert title="Note" color="primary" >}} Run only one Discovery Agent for the deployment of an API Manager cluster.
+{{< /alert >}}
 
 ## Agent runner machine pre-requisites
 
