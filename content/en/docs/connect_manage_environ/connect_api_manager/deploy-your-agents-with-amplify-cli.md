@@ -37,14 +37,14 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 * An Amplify platform service account to run the configuration in headless mode (optional)
 * An API Manager user assigned as an API Manager Admin
 
+{{< alert title="Note" color="primary" >}} Run only one Discovery Agent for the deployment of an API Manager cluster.
+{{< /alert >}}
+
 ## Agent runner machine pre-requisites
 
 The agents run on the same machine as the gateway or API Manager when the gateway is deployed in a classic mode.
 
 The agents run on the same Docker environment as the Gateway or API Manager when the gateway is deployed in EMT mode.
-
-{{< alert title="Note" color="primary" >}} Run only one Discovery Agent for the deployment of an API Manager cluster.
-{{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}The Traceability Agent must use the same volume where the event logs or open traffic logs are written by the Gateway (refer to `anm` container).
 {{< /alert >}}
