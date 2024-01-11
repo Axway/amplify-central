@@ -844,7 +844,7 @@ LOG_FILE_NAME=traceability_agent.log
 
 ### Recommended Environment Variable Settings
 
-For Gateways that process a high volume of transactions per second it is recomended to use the following environment variables.
+It is recommended to use the following environment variables for Gateways that process a high volume of transactions per second:
 
 ```shell
 TRACEABILITY_BULKMAXSIZE=1500
