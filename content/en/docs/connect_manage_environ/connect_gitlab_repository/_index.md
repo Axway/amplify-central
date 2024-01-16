@@ -99,7 +99,7 @@ axway central install agents
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (GitLab in this scenario).
-2. 2. Platform connectivity:
+2. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
    * **Team**: select an existing team
    * **Service account**: select an existing service account or create a new one
