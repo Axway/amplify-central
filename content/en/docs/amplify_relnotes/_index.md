@@ -7,7 +7,7 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-This page displays brief summaries of feature updates for each release of Amplify, including:
+This page displays brief summaries of feature updates for each release of Amplify Enterprise Marketplace, including:
 
 * Provider experience: Agents, Service Registry, Asset Catalog, Product Foundry, Business insights
 * Consumer experience: Marketplace, Consumer insights
@@ -20,7 +20,7 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify January 12 2024](/docs/amplify_relnotes/20240112_amplify/)
+## [Amplify Enterprise Marketplace January 12 2024](/docs/amplify_relnotes/20240112_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.71. This version is compatible with:
 
