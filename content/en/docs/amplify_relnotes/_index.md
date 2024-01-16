@@ -57,7 +57,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.72. This version is 
 | What's new: | Category hierarchy. |
 | Bug fixes: | See release note. |
 | <br />**Business insights** |         |
-| What's new: | Subscription chart API. <br />Subscription table API. <br />Fetch consumer engagement events from PEM US in PROD. |
+| What's new: | Subscription chart API. <br />Subscription table API. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
 | What's new: | Filter per resource state. <br />Category hierarchy filter. <br />Advanced search filter. <br />Unlimited credential view during the 3 days time frame. |
