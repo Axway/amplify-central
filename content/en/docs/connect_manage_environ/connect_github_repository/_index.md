@@ -21,6 +21,7 @@ Connecting a GitHub Repository to Amplify will provide you with a global central
     * The access token that the agent will use to connect to GitHub
     * The repository owner name that the agent will connect to
     * The repository name that the agent will connect to
+    * The repository branch where the agent should discover
     * The paths and filename patterns that the agent should discover
 * Ensure your machine (Windows / Linux / Mac) meets the Embedded agent configuration prerequisites, where:
     * You can access platform.axway.com and login.axway.com on port 443
@@ -87,7 +88,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. See [Embedded GitHub agents' setup](/docs/connect_manage_environ/connect_github_repository/embedded-agent-setup/) for the prerequisite setup on GCP and Apigee.
+The Axway Central CLI will guide you through the configuration of the agents. See [Embedded GitHub agents' setup](/docs/connect_manage_environ/connect_github_repository/embedded-agent-setup/) for the prerequisite setup on GitHub agent.
 
 Run the following command to start the configuration procedure:
 
@@ -107,6 +108,7 @@ The installation procedure will prompt for the following:
    * Set if the agent should discover GitHub resources after installation is complete
    * **Repository Owner Name**: the name of the owner of the GitHub repository
    * **Repository Name**: the name of the GitHub repository
+   * **Branch**:  the repository branch where the agent will discover API specs
    * **Paths**: the paths that the agent will look for specs in, paths should start with a `/` character (example: `/apis`)
    * **Filename Patterns**: the patterns that a filename must match to be discovered
      * The pattens here are regular expressions [RE2 Syntax](https://github.com/google/re2/wiki/Syntax), only one pattern must match to discover a specification file
