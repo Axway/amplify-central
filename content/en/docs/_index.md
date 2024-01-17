@@ -15,8 +15,8 @@ Browse all documentation for Amplify Enterprise Marketplace under the left navig
 
 Here are some suggestions to get started:
 
-* [Enterprise Marketplace overview](/docs/overview/)
-* [Integrate with Enterprise Marketplace](/docs/integrate_with_central/)
+* [Amplify overview](/docs/overview/)
+* [Integrate with Amplify](/docs/integrate_with_central/)
 * [Connect and manage your environment](/docs/connect_manage_environ/)
 * [Manage your Marketplace](/docs/manage_marketplace)
 
