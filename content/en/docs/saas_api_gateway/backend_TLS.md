@@ -16,7 +16,7 @@ Configure TLS for requests to your back-end API.
 Learn how Transport Layer Security (TLS) is applied to requests to the back-end API:
 
 * Understand what TLS is and how it can be useful
-* Use the Amplify Central Web UI to to confirm TLS is negotiated for your API
+* Use the Enterprise Marketplace WebUI to to confirm TLS is negotiated for your API
 
 ## What is Transport Layer Security?
 
@@ -28,11 +28,11 @@ There are two versions of TLS Protocol. Version 1.2 is described in [RFC 5246](h
 
 Amplify provides one-way TLS from the API proxy to the back-end API. One-way TLS is automatically negotiated for each API registered to a HTTPS back-end URL endpoint.
 
-TLS versions 1.2 and 1.3 are both supported by Amplify Central. Advanced Encryption Standard (AES) using both 128-bit and 256-bit keys are supported. RSA 1024-bit public key lengths are supported for X.509v3 certificates.
+TLS versions 1.2 and 1.3 are both supported by Enterprise Marketplace. Advanced Encryption Standard (AES) using both 128-bit and 256-bit keys are supported. RSA 1024-bit public key lengths are supported for X.509v3 certificates.
 
 ## Confirm that TLS is negotiated for your API
 
-1. [Register an API proxy](/docs/saas_api_gateway/quickstart/#register-an-api) for a HTTPS API endpoint in the Amplify Central UI.
+1. [Register an API proxy](/docs/saas_api_gateway/quickstart/#register-an-api) for a HTTPS API endpoint in the Enterprise Marketplace WebUI.
 2. Navigate to the **API Proxies** tab.
 3. Click the API proxy name to open the API proxy details page.
 4. Click the **Policies** tab, and verify the following under the **Request to backend** section:

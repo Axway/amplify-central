@@ -29,7 +29,7 @@ There are two operating modes of the Discovery Agent, one is receiving continuou
 
 ### Continuous Discovery Overview
 
-In this mode the agent will receive change events for configuration changes to AWS API Gateway resources. These events will be processed and sent to Amplify Central. This mode is also required to manage subscriptions and subscription notifications.
+In this mode the agent will receive change events for configuration changes to AWS API Gateway resources. These events will be processed and sent to Enterprise Marketplace. This mode is also required to manage subscriptions and subscription notifications.
 
 ### Synchronous Discovery Overview
 
@@ -66,7 +66,7 @@ The configuration of the AWS_QUEUENAME is not used in this mode.
 | LOG_OUTPUT                                                         | The output for the log lines (stdout, file, both). When set to `both` for the Traceability Agent, only the file output will appear.                                                                                                                                                                                                                                                                                                                                                |
 | **Status variables**                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | STATUS_HEALTHCHECKPERIOD                                           | Time in minutes allotted for services to be ready before exiting the agent. Allowed values are from 1 to 5 minutes.                                                                                                                                                                                                                                                                                                                                                                |
-| **Amplify Central variables**                                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Enterprise Marketplace variables**                                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | CENTRAL_ADDITIONALTAGS                                             | Additional tag names to publish separated by a comma.                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | CENTRAL_AGENTNAME                                                  | The agent name of this agent on Amplify.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | CENTRAL_APISERVERENVIRONMENT                                       | Environment eventually set by download kit in APIC.                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -228,7 +228,7 @@ AWS_LOGGROUP=<YOUR LOG GROUP NAME>
 AWS_FILTER=tag.PushToAmplify == true
 AWS_PUSHTAGS=true
 
-#Amplify Central connectivity
+# Amplify connectivity
 # organization config:
 CENTRAL_ORGANIZATIONID=<YOUR ORGANIZATION ID>
 CENTRAL_TEAM=<THE TEAM NAME>
@@ -299,7 +299,7 @@ The Traceability Agent is used to filter the AWS CloudWatch logs that are relate
 | AWS_QUEUENAME                                  | The name of the queue (TraceabilityQueueName) from Step 5. This is used for logging custom access log entries. See [Prepare AWS Gateway to deploy the Discovery Agent AWS config setup](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/).                                                                    |
 | AWS_REGION                                     | The region where AWS APIs are stored.                                                                                                                                                                                                                                                                                                         |
 | AWS_SQSPOLLINTERVAL                            | How often SQS queue is polled.                                                                                                                                                                                                                                                                                                                |
-| **Amplify Central variables**                  |                                                                                                                                                                                                                                                                                                                                               |
+| **Amplify variables**                  |                                                                                                                                                                                                                                                                                                                                               |
 | CENTRAL_APIVALIDATIONFREQUENCY                 | The frequency at which the agent validates each API Instance and Service against the data plane (ns - default, us, ms, s, m, h). Set to 1h, minimum value of 5m.                                                                                                                                                                               |
 | CENTRAL_AUTH_CLIENTID                          | The name of the Service Account created in Amplify. Locate this in Amplify > Organization > Service Accounts. DOSA_XXXXXXXXXx                                                                                                                                                                                                                 |
 | CENTRAL_AUTH_KEYPASSWORD                       | The path to the file with the password for the private key, if applicable.                                                                                                                                                                                                                                                                    |
@@ -362,7 +362,7 @@ AWS_QUEUENAME=aws-apigw-traceability-us-east-2
 AWS_AUTH_ACCESSKEY=<YOUR AWS ACCESS KEY HERE>
 AWS_AUTH_SECRETKEY=<YOUR AWS SECRET KEY HERE>
 
-#Amplify Central connectivity
+# Amplify connectivity
 # organisation config:
 CENTRAL_ORGANIZATIONID=<YOUR ORGANIZATION ID>
 CENTRAL_TEAM=<THE TEAM NAME>

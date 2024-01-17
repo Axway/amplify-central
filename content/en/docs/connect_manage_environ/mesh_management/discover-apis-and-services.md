@@ -73,7 +73,7 @@ By default, a `RequestAuthentication` resource applies to all K8S services runni
 
 The `RequestAuthentication` can be configured to select specific services by providing labels for the `RequestAuthentication` to match on. Refer to the [Istio documentation](https://istio.io/v1.9/docs/reference/config/security/request_authentication/) to learn more.
 
-The agent will create an Amplify resource called `CredentialRequestDefinition` for each JWT rule found in a `RequestAuthentication`. If a service is discovered, and it it is determined that Istio is applying a `RequestAuthentication` resource to secure that service, then the agent will publish an `APIService` in central with the authentication policy set as OAuth, and link the `APIServiceInstance` it creates to the `CredentialRequestDefinition` that was created from the Istio `RequestAuthentication`.
+The agent will create an Amplify resource called `CredentialRequestDefinition` for each JWT rule found in a `RequestAuthentication`. If a service is discovered, and it it is determined that Istio is applying a `RequestAuthentication` resource to secure that service, then the agent will publish an `APIService` in Enterprise Marketplace with the authentication policy set as OAuth, and link the `APIServiceInstance` it creates to the `CredentialRequestDefinition` that was created from the Istio `RequestAuthentication`.
 
 Discovery of `RequestAuthentication` is the same as the discovery of `VirtualServices`. Update `da.discovery.requestAuth.namespaces` with a list of namespaces for the agent to find the `RequestAuthentication` resources in. Optionally provide a list of labels to restrict the discovery to only resources with the provided label key.
 

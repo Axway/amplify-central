@@ -5,7 +5,7 @@ weight: 120
 draft: yes
 date: 2021-01-13T00:00:00.000Z
 ---
-Create and fetch different Amplify Central resources using the CLI.
+Create and fetch different Enterprise Marketplace resources using the CLI.
 
 ## Before You Start
 

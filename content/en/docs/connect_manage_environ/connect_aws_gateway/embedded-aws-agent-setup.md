@@ -39,7 +39,7 @@ The role created here is given to AWS API Gateway, allowing it to create and wri
 
 ### AWS CloudWatch Log Group
 
-This CloudWatch Log Group will be used by both agents. Upon discovery of a Rest API stage, the Discovery Agent configures the logging to send details to CloudWatch. The Traceability Agent then watches the CloudWatch for new entries and sends usage, metric, and transactional data to Amplify Central.
+This CloudWatch Log Group will be used by both agents. Upon discovery of a Rest API stage, the Discovery Agent configures the logging to send details to CloudWatch. The Traceability Agent then watches the CloudWatch for new entries and sends usage, metric, and transactional data to Amplify, where you can access it from Business insights.
 
 1. Within the AWS CloudWatch Console, select **Log groups** on the left and start the *Create log group* wizard.
 2. Set the log group name, such as `amplify-agents-access-log`, and retention settings. Note the log group name for use in setting up the AWS IAM policy.

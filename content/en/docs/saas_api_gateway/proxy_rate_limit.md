@@ -16,7 +16,7 @@ Apply a rate limit configuration to your API.
 Learn how to apply a rate limit configuration to your API:
 
 * Understand what API rate limiting is and how it can be useful
-* Configure and test rate limiting on your API using the Amplify Central UI
+* Configure and test rate limiting on your API using the Enterprise Marketplace WebUI
 * Configure and test rate limiting on your API using the Axway Central CLI
 
 ## What is API rate limiting?
@@ -36,7 +36,7 @@ Amplify allows for two levels of enforcement for rate limiting:
 
 You can enforce one or both levels together.
 
-## Use the Amplify Central UI to configure rate limiting
+## Use the Enterprise Marketplace UI to configure rate limiting
 
 To begin, [register an api proxy](/docs/saas_api_gateway/quickstart/#register-an-api).
 
@@ -222,7 +222,7 @@ Promote the proxy to the test runtime group:
 axway central proxies promote /myservices/my_service_config.yaml --target="Test Runtime"
 ```
 
-To visualize the API proxy in Amplify Central UI, select **API Proxies** in the left navigation bar, and click the appropriate API proxy in the list. Verify the rate limit configuration in the **Policies** tab.
+To visualize the API proxy in Enterprise Marketplace UI, select **API Proxies** in the left navigation bar, and click the appropriate API proxy in the list. Verify the rate limit configuration in the **Policies** tab.
 
 ### Apply a rate limit for each application consuming your API
 
@@ -420,4 +420,4 @@ Promote the new API version and verify that the API proxy is not rate limited an
 
 ## Review
 
-You have learned how rate limiting can help you provide a better API experience to consumers and how to configure a rate limit on your API using both the Amplify Central UI and the Axway Central CLI.
+You have learned how rate limiting can help you provide a better API experience to consumers and how to configure a rate limit on your API using both the Enterprise Marketplace UI and the Axway Central CLI.

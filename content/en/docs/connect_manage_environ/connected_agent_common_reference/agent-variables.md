@@ -10,7 +10,7 @@ The variables common to all agents are described here in more detail.
 
 ## CENTRAL_APISERVICEREVISIONPATTERN
 
-This variable sets the pattern used when creating API service revisions on Amplify Central.  The default pattern is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
+This variable sets the pattern used when creating API service revisions on Enterprise Marketplace.  The default pattern is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
 
 ### Default pattern
 

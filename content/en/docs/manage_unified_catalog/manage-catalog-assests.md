@@ -31,7 +31,7 @@ Follow these steps to delete a catalog asset.
 Tags are keywords that you can assign to catalog assets and use them in the search for assets. You can create tags using both lowercase and uppercase. The search, however, converts everything to lowercase. For example, a search for `MyCatalog` returns both tags: `mycatalog` and `MyCatalog`. You can also use the `_ - () \ []` special characters to create your tags. Follow these steps to add or remove tags.
 
 1. Select an asset in the **Unified Catalog.**
-2. In the right-side details panel, click **+** sign by the Tags section. A dialog screen is displayed where you can enter your keywords.
+2. In the right details panel, click **+** sign by the Tags section. A dialog screen is displayed where you can enter your keywords.
 3. Press `Enter` to add the new tags to the list of tags.
 4. Click **Save**.
 
@@ -40,7 +40,7 @@ Tags are keywords that you can assign to catalog assets and use them in the sear
 Unified Catalog allows you to control who can view and subscribe to catalog assets. You can make your asset public to all members in your organization or share it with specific teams. Follow these steps to share your catalog asset.
 
 1. Select an asset in the **Unified Catalog**.
-2. In the right-side details panel, click the **Share** icon and choose one of the following options:
+2. In the right details panel, click the **Share** icon and choose one of the following options:
 
    * **All members if this team** - Only members of the owning team can view and subscribe to the catalog asset.
    * **Specific teams** - Only members of the selected teams can view and subscribe to the catalog asset.
@@ -77,7 +77,7 @@ Follow these steps to create a category.
 Follow these steps to assign a category.
 
 1. Select an asset in the **Unified Catalog**.
-2. In the right side details panel, click **+** sign by the Categories group. This will bring up a dialog screen with the list of available categories.
+2. In the right details panel, click **+** sign by the Categories group. This will bring up a dialog screen with the list of available categories.
 3. Choose the categories from the list. By default, the list will display the fist 10 categories in alphabetical order. To view the next 10 available categories, click **+ Show more**.
 
 ### Edit/Delete a category

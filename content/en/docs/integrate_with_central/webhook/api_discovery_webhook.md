@@ -135,7 +135,7 @@ The webhook listener will receive the following JSON payload:
    "id": "9a4be695-f1a6......4b",
    "time": "2022-08-26T04:16:05.338+0000",
    "version": "v1",
-   "product": "AmplifyCentral",
+   "product": "EnterpriseMarketplace",
    "correlationId": "fc0996fe-41ee......20",
    "organization": {
       "id": "org id number"
