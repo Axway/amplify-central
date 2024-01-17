@@ -58,7 +58,7 @@ To view asset details:
     * Modified By - The user who last modified the asset
     * Created On - Date, Time, and Username of who created this asset
     * Description - A short description of the asset
-    * Resources - API services or other resource types that are linked to this asset
+    * Resources - Displays asset resources which are created from API service endpoints. Will also display any associated stages or states.
     * Products - Information on products that are linked to this asset
     * Access Rights - Shared teams can have different types of access to this asset
     * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
@@ -88,7 +88,7 @@ To create an asset:
     * Auto-Release - Enable / disable the auto-release of new Asset versions. If auto-release is **enabled**, a new asset will be automatically released with each change to any one of the grouped resources (i.e., API services). For example, auto-release enabled will trigger an automatic asset release every time a new grouped API service revision is discovered or created. This enables a more automated and hands-off experience. If you want more control of the asset release process, set auto-release to **disabled**.
     * Auto-Release Type - The default is set to Patch release versions and you can select another type of asset release versioning (i.e., major or minor).
 
-6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the appropriate version. Default is **Latest**. Click **Link Versions**.
+6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the endpoints to link. Endpoints can be filtered by state and any associated stages. Each endpoint lists the API service version, url(s), stage, and state.
 
     * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
 
