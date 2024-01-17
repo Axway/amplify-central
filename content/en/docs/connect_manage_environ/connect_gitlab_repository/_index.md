@@ -21,8 +21,8 @@ Connecting a GitLab Repository to Amplify will provide you with a global central
     * The access token that the agent will use to connect to GitLab
     * The organization base URL where the GitLab instance is hosted
     * The repository id that the agent will connect to
-    * The repository branch where the agent should discover
-    * The paths and filename patterns that the agent should discover
+    * The repository branch where the agent should discover API specifications
+    * The paths and filename patterns that the agent should discover API specifications
 * Ensure your machine (Windows / Linux / Mac) meets the Ground agent configuration prerequisites, where:
     * You can access platform.axway.com and login.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)

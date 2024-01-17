@@ -21,7 +21,7 @@ Connecting a GitHub Repository to Amplify will provide you with a global central
     * The access token that the agent will use to connect to GitHub
     * The repository owner name that the agent will connect to
     * The repository name that the agent will connect to
-    * The repository branch where the agent should discover
+    * The repository branch where the agent should discover API specifications
     * The paths and filename patterns that the agent should discover
 * Ensure your machine (Windows / Linux / Mac) meets the Embedded agent configuration prerequisites, where:
     * You can access platform.axway.com and login.axway.com on port 443
