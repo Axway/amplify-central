@@ -7,7 +7,7 @@ Connect a GitHub Repository to Amplify so you can discover your API specificatio
 
 ## Why do you want to connect GitHub and Amplify?
 
-Connecting a GitHub Repository to Amplify will provide you with a global centralized view of your APIs. Once connected, Discovery Agent will detect changes to a GitHub specification file and push the specification file as an API Service for the environment. The Discovery Agent discovers new specification files within the configured paths that match any of the configured file name patterns:
+Connecting a GitHub Repository to Amplify will provide you with a global centralized view of your APIs. Once connected, Discovery Agent will detect changes to a GitHub specification file and push the specification file as an API service for the environment. The Discovery Agent discovers new specification files within the configured paths that match any of the configured file name patterns:
 
 * Finds all files within the paths configured
 * From those files, validates that they match at least one of the patterns configured. If no patterns are configured, then all files are discovered
