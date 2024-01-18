@@ -14,7 +14,7 @@ Set up GitLab so a Ground agent can connect to and discover API specifications t
 
 Learn how to quickly set up a GitLab access token to allow the agent to discover API specification files in your repository.
 
-## Gitlab setup
+## GitLab setup
 
 1. Log into your GitLab account.
 2. Click the user icon, select **Preferences**.
