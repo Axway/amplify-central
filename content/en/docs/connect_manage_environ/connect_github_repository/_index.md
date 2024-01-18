@@ -3,7 +3,7 @@ title: Connect GitHub Repository
 linkTitle: Connect GitHub Repository
 weight: 110
 ---
-Connect a GitHub Repository and Amplify so you can discover your API specifications within your repository.
+Connect a GitHub Repository to Amplify so you can discover your API specifications within your repository.
 
 ## Why do you want to connect GitHub and Amplify?
 

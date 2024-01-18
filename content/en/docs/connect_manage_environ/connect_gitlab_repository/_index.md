@@ -3,7 +3,7 @@ title: Connect GitLab Repository
 linkTitle: Connect GitLab Repository
 weight: 110
 ---
-Connect a GitLab Repository and Amplify so you can discover your API specifications within your repository.
+Connect a GitLab Repository to Amplify so you can discover your API specifications within your repository.
 
 ## Why do you want to connect Gitlab and Amplify?
 
