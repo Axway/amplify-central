@@ -17,7 +17,7 @@ If the desired resource type is scoped, you must specify the scope name by provi
 
 You can search for more than one resource if you use comma-separated resources in a command. The search for multiple resources will display multiple result tables, one result table for each resource you fetch.
 
-To see the list of all available resources from Amplify Central, including information about whether those resources are scoped or unscoped, run:
+To see the list of all available resources from Enterprise Marketplace, including information about whether those resources are scoped or unscoped, run:
 
 ```bash
 axway central get

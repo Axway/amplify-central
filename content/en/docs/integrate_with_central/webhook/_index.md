@@ -40,7 +40,7 @@ Each event payload that your webhook server receives is structured similar to th
     "id": "af7cd036-e57a-4275-9ab3-2bf1d04757ce",
     "time": "2020-09-04T22:41:31.608+0000",
     "version": "v1",
-    "product": "AmplifyCentral",
+    "product": "EnterpriseMarketplace",
     "correlationId": "b013871b-05ce-4ea2-b4c3-148b702b3e55",
     "organization": {
         "id": "916640157564164"

@@ -149,7 +149,7 @@ axway central delete secret secret1 --scope env1 --wait   ## Delete secret named
 
 ## Create a webhook
 
-A webhook defines a webhook URL to communicate events (for example, subscription or registration changes) back to an API service. In Amplify Central and Unified Catalog, a webhook can be used in a custom subscription or registration process. A webhook is a combination of a URL and any custom parameters (for example, a secret) needed to subscribe and register to  your API service.
+A webhook defines a webhook URL to communicate events (for example, subscription or registration changes) back to an API service. In Enterprise Marketplace and Unified Catalog, a webhook can be used in a custom subscription or registration process. A webhook is a combination of a URL and any custom parameters (for example, a secret) needed to subscribe and register to  your API service.
 
 The following is an example of how to create a webhook for an environment by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (Webhook in the Amplify data model).
 
@@ -191,7 +191,7 @@ axway central delete webhook webhook1 --scope env1 --wait   ## Delete webhook na
 
 ## Create a subscription definition
 
-A subscription definition allows the configuration of the data needed from a consumer to subscribe or register to an API service in the Unified Catalog.  In Amplify Central and Unified Catalog, a subscription definition has a reference to a webhook that will be invoked on a subscription or registration event. The subscription definition is referenced in the Catalog item (ConsumerInstance resource in the Amplify data model).
+A subscription definition allows the configuration of the data needed from a consumer to subscribe or register to an API service in the Unified Catalog.  In Enterprise Marketplace and Unified Catalog, a subscription definition has a reference to a webhook that will be invoked on a subscription or registration event. The subscription definition is referenced in the Catalog item (ConsumerInstance resource in the Amplify data model).
 
 The following is an example of how to create a subscription definition for an environment by providing a path to a valid .yaml, .yml, or .json file that defines a specific resource (ConsumerSubscriptionDefinition).
 
