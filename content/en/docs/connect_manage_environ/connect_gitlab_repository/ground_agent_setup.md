@@ -16,22 +16,13 @@ Learn how to quickly set up a GitLab access token to allow the agent to discover
 
 ## Gitlab setup
 
-The following sections will guide through the Gitlab Agent setup
-
-### Gitlab personal access token
-
-1. Log into Gitlab account
-2. On the left-top side, under user icon, select **Preferences**
-3. Under *User Settings* on the left side, select **Access Tokens**
-4. Select **Add new token** and set the following:
+1. Log into your GitLab account.
+2. Click the user icon, select **Preferences**.
+3. On the left under *User Settings*, select **Access Tokens**.
+4. Click **Add new token** and set the following:
     * Token name: *gitlab-agent*, for example
     * Expiration date: set the wanted date
-    * Select scopes: *api*, *read_api*, *read_repository*
+    * Select scopes: **api**, **read_api**, **read_repository**
     * Click **Create personal access token**
 
----
-**NOTE:**
-
-Copy the token value and keep it safe, you won't be able to see it again
-
----
+{{< alert title="Note" color="primary" >}}Copy the token value and keep it safe, you won't be able to see it again.{{< /alert >}}
