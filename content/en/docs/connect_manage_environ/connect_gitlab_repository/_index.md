@@ -107,7 +107,7 @@ If your Amplify subscription is hosted in the APAC region, run the following ins
 ```shell
 axway central install agents --region=AP
 ```
-    
+
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (GitLab in this scenario).
