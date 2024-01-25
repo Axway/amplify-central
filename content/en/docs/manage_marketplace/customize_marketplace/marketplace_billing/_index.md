@@ -98,9 +98,9 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 7. Enter the Customer portal URL. This is the Stripe billing portal URL.
 8. Click **Save**.
 
-Each time a consumer from the consumer organization of the Marketplace subscribe to a product, a first invoice with the base price plan is generated. The consumer cannot request access to product resources until this first invoice is paid within Stripe portal.
+Each time a consumer from the consumer organization of the Marketplace subscribe to a product, a first invoice with the base price plan (setup cost and/or recurring fees) is generated. The consumer cannot request access to product resources until this first invoice is paid within Stripe portal.
 
-On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption. The invoice is added to the subscription invoices list with the link to pay it.
+On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price if any. The invoice is added to the subscription invoices list with the link to pay it.
 
 Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.
 
