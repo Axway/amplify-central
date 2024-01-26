@@ -83,7 +83,6 @@ It is possible that your Stripe account does not allow you to create a webhooks 
 For that, you will need to use the [Postman Stripe API collection](https://www.postman.com/stripedev/workspace/stripe-developers/request/665823-60d86321-4c13-47be-a1f1-77f80443ab50?tab=body) to create the webhook and precise **2022-11-15** in the *api_version* field.
 {{< /alert >}}
 
-
 ### Enable the Billing Customer portal to use with your Stripe account
 
 This portal will help the Stripe customers to see their information: billing address / payment information and invoices.
