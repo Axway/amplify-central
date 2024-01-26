@@ -42,7 +42,9 @@ All customer payments are done using the Stripe billing portal.
 
 ### Accessing Stripe using Stripe API and API Key
 
-You must first check that Stripe is set to use the 2022-11-15 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+Marketplace Stripe billing integration is currently using Stripe 2022-11-15 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+
+In case your Stripe account does not have this version as most recent have been delivered, you might need to use the Stripe API directly instead of Stripe UI for certain actions explain in this documentation.
 
 For Marketplace to access the Stripe account, an API key is required. For security constraints we use a restricted API Key with minimum access: Customer:Write and Invoices:Write rights.
 
