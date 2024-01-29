@@ -57,10 +57,10 @@ copy *.pem full-chain.pem
 cat certificate.pem private-key.pem > full-chain.pem
 ```
 
-### Step 3 - Upload the `certificate-key.pem` file into the Marketplace Settings
+### Step 3 - Upload the `full-chain.pem` file into the Marketplace Settings
 
 1. Navigate to *platform.axway.com > Organization > Marketplace > Settings*.
-2. Click **Choose file** to select the `certificate-key.pem` file.
+2. Click **Choose file** to select the `full-chain.pem` file.
 3. Click **Open**.
 
 When saving the settings, the platform will validate that the certificate is correct and store it internally.
