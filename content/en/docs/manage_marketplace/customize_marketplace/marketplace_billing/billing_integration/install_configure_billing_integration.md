@@ -9,7 +9,7 @@ Configure the Enterprise Billing integration solution to link Amplify product pl
 ## Before you start
 
 * Contact the Axway Global Support team to Download the AIP Billing Integration project. Email `support@axway.com` or visit [Axway Support](https://support.axway.com/)
-* Create an [Amplify account](https://docs.axway.com/bundle/platform-management/page/docs/getting_started_with_amplify_platform_management/sign_up/index.html) with a defined [product](/docs/manage_product_foundry) that you can add plans to. The product must have associated [assets](/docs/manage_unified_catalog/discover-and-consume-catalog-assets) that require an access request (i.e., secure APIs)
+* Create an [Amplify account](https://docs.axway.com/bundle/platform-management/page/docs/getting_started_with_amplify_platform_management/sign_in/index.html) with a defined [product](/docs/manage_product_foundry) that you can add plans to. The product must have associated [assets](/docs/manage_unified_catalog/discover-and-consume-catalog-assets) that require an access request (i.e., secure APIs)
 * Create an [Amplify service account](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/managing_service_accounts/index.html) client ID and client secret (Admin role)
 * Create a billing platform account, such as [Recurly](https://recurly.com/), with an associated API Key
 * Create an MS Teams channel with an [incoming webhook connector](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) (and its associated URL) for getting status update notifications on plan creation, subscription failure, etc.
