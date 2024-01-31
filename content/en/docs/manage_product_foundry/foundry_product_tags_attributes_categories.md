@@ -38,7 +38,7 @@ The product specific categories have two types of visibility:
 * Private: Visible in the Product Foundry only.
 * Public: Visible in both the Product Foundry and the Marketplace.
 
-Additionally, the product category can be organize into hierarchy. It is now possible to set a parent to a category. A hierarchy up to 3 levels can be created. Once a category is assigned to a parent, its visibility or ownership can no longer be changes; it will follow the definition of its parent. The Category listing shows the Parent of each category (if exists), as well as the number of its children.
+Additionally, the product category can be organized into a hierarchy (up to threee levels), where a parent can be set to a category. Once a category is assigned to a parent, its visibility or ownership can no longer be changed; it will follow the definition of its parent. The Category listing shows the Parent of each category (if it exists), as well as the number of its children.
 
 A public category can be set to **Featured** by providers to highlight and advertise the category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of featured categories is **five**.
 
@@ -50,19 +50,17 @@ A public category can be Visible / Featured in one or multiple Marketplaces depe
 2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories with the following information:
 
     * The category name
-    * The Parent category if exist
-    * The sub categories ie. the number of children of the category
+    * The parent category (if it exists)
+    * The subcategories (i.e., the number of children of the category)
     * The number of products the category is assigned to
     * The category visibility (Product Foundry or Marketplace)
     * The number of times the category is featured in Marketplaces
     * The category description
     * The ellipsis menu for additional actions: Edit / Delete
 
-Click the category name or the category parent name to open the category details page. From the details page, you can [edit the category](#editing-a-category) or [convert to a featured category](#setting-a-product-category-as-featured-in-a-marketplace).
-
-Global category name is not clickable. You can use the ellipsis menu to edit a global category and transform it into a product category.
-
-Click on the sub category number open the details of these children.
+* Click the category name or the category parent name to open the category details where you can [edit the category](#editing-a-category) or [convert to a featured category](#setting-a-product-category-as-featured-in-a-marketplace).
+* The global category name is not clickable. Use the ellipsis menu to edit a global category and transform it into a product category.
+* Click on the subcategory number to open the details of the children.
 
 ### Creating a global category
 
@@ -79,10 +77,10 @@ If the product is already published to a Marketplace, the change of category wil
 3. Click **+ Add New Category** to start the category creation wizard:
 
     * Category Profile page: Enter the category definition (Name, Parent, Description, and an optional image). The category logical name will be computed based on the category name.
-    * When associating a parent, the Access rights and Marketplace association are disabled as the children category will automatically follow its parent rights and visiblity.
+    * When associating a parent, the Access rights and Marketplace association are disabled because the children category automatically follows its parent rights and visiblity.
     * Product Association page: Assign/unassign product to this category.
-    * Access rights: Assign/unassign who manage/see the category.
-    * Marketplace association page: Assign/unassign all Marketplaces or specific ones where this category will be visible and/or featured.
+    * Access rights: Assign/unassign who manages/views the category.
+    * Marketplace association page: Assign/unassign all Marketplaces, or specific Marketplaces, where this category will be visible and/or featured.
 
 4. Save the category.
 
