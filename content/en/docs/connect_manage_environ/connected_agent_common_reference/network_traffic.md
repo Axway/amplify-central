@@ -112,6 +112,18 @@ Data Fields:
 
 {{< alert title="Note" color="primary" >}}You can disable sending the headers by using the following property:  `APIGATEWAY_GETHEADERS=false`. By default, the property is set to true. If collecting the headers is disabled, they will not be visible in Axway Amplify platform Observability module, as the Traceability Agent will send only the transaction summary data (status / url / duration / timestamp / transaction service called) to the platform.{{< /alert >}}
 
+#### Retention and archival periods
+
+The data collected by the Traceability agent are kept for a while and then automatically archived.
+
+| Source            | Retention period                               | Archival period |
+|-------------------|------------------------------------------------|-----------------|
+| Usage data        | 731 Days (Two years + 1)                       | 7 years         |
+| Metrics data      | 731 Days (Two years + 1)                       | 7 years         |
+| Transactions data | 7 Days (Business Insights / Consumer Insights) | N/A             |
+
+From the table above, it means the transaction data will be available in the Business/Consumer Insights API Traffic for only 1 week prior being deleted from Amplify Entreprise Marketplace. But the data might still be available on the Gateway that hosted them initially.
+
 ## Communication ports
 
 All outbound traffic is sent over SSL via TCP / UDP.
