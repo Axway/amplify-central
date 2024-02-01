@@ -122,7 +122,7 @@ The Usage and Metrics data collected by the Traceability Agent are retained for 
 | Metrics data      | 731 Days (Two years + 1)                       | 7 years         |
 | Transactions data | 7 Days (Business Insights / Consumer Insights) | N/A             |
 
-The Transactions data is available in the Business/Consumer Insights API Traffic for only one week before being deleted from Amplify Enterprise Marketplace. 
+The Transactions data is available in the Business/Consumer Insights API Traffic for only one week before being deleted from Amplify Enterprise Marketplace.
 
 {{< alert title="Note" color="primary" >}}Transactions data is not archived; however, the data may still be available on the gateway that hosted them initially.{{< /alert >}}
 
