@@ -114,7 +114,7 @@ Data Fields:
 
 #### Retention and archival periods
 
-The data collected by the Traceability agent are kept for a while and then automatically archived.
+The data collected by the Traceability Agent are retained for specified amounts of time before being automatically archived.
 
 | Source            | Retention period                               | Archival period |
 |-------------------|------------------------------------------------|-----------------|
@@ -122,7 +122,7 @@ The data collected by the Traceability agent are kept for a while and then autom
 | Metrics data      | 731 Days (Two years + 1)                       | 7 years         |
 | Transactions data | 7 Days (Business Insights / Consumer Insights) | N/A             |
 
-From the table above, it means the transaction data will be available in the Business/Consumer Insights API Traffic for only 1 week prior being deleted from Amplify Entreprise Marketplace. But the data might still be available on the Gateway that hosted them initially.
+As shown in the table above, the transaction data is available in the Business/Consumer Insights API Traffic for only one week before being deleted from Amplify Enterprise Marketplace. However, the data might still be available on the gateway that hosted them initially.
 
 ## Communication ports
 
