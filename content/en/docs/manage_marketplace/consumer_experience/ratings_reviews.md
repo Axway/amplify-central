@@ -4,11 +4,11 @@ linkTitle: Rate a product
 weight: 55
 ---
 
-Rate a product to help other consumers make their choice
+Rate a product to help other consumers make their choice.
 
 ## What is a rating
 
-Rating is a note from 1 to 5 showing the product apreciation (1 being the less apreciated and 5 the most).
+Rating is a note from 1 to 5 showing the product apreciation (1 being the less apreciated and 5 the most appreciated).
 
 ## Before you start
 
@@ -16,13 +16,13 @@ Browse and find a product in the Marketplace.
 
 ## Objectives
 
-Any users (consumer / subscriber or catalog manager) logged into a Marketplace is able to leave a product rating.
+Any users (consumer / subscriber or catalog manager) logged into a Marketplace is able to rate any product visible to him.
 
 ## View the product ratings
 
-The product ratings are visible uder the Ratings section of any product.
+The product ratings are visible under the Ratings section of any product.
 
-If there are no rating yet, the view displays only the Rate button
+If there are no rating yet, the view displays only the *Rate the product* button
 
 The view displays:
 
@@ -32,7 +32,7 @@ The view displays:
         * the date when the rating was submitted
         * the rating value represented with the star symbol
 
-## Leave a product rating
+## Rate a product
 
 1. search for product you want to rate 
 2. navigate to the Ratings section
