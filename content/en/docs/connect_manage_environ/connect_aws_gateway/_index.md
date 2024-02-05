@@ -62,16 +62,23 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 
 Amplify supports two regions, US (default), EU and APAC. The data (APIs, traffic) that the agents send to Amplify is stored in one of those regions based on the agent configuration.
 
-Use one of the following URLs to access the Amplify UI **Needs changes** :
+Use one of the following URLs to access the Amplify UI:
 
 * US: [https://apicentral.axway.com](https://apicentral.axway.com)
 * EU: [https://central.eu-fr.axway.com](https://central.eu-fr.axway.com)
-
+* APAC: [https://central.ap-sg.axway.com](https://central.ap-sg.axway.com)
+  
 Update the following variables to move data to the EU region:
 
 * `CENTRAL_DEPLOYMENT`= **prod-eu**
 * `CENTRAL_URL`= **<https://central.eu-fr.axway.com>**
 * `TRACEABILITY_HOST`= **ingestion.visibility.eu-fr.axway.com:5044**
+
+Update the following variables to move data to the EU region:
+
+* `CENTRAL_DEPLOYMENT`= **prod-ap**
+* `CENTRAL_URL`= **<https://central.ap-sg.axway.com>**
+* `TRACEABILITY_HOST`= **ingestion.visibility.ap-sg.axway.com:5044**
 
 ## Connect AWS API Gateway to Amplify using CLI
 
