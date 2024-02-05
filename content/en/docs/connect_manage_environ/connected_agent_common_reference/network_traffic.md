@@ -146,7 +146,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                                    | 15.197.242.120 |      |          |                 |
 
 {{< alert title="Note" color="primary" >}}
-*Region* column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding *Host*/*Port* for your agents to operate correctly. <br />*Data* for both US and EU Regions include: API usage statistics, version check for new releases, API definitions and subscription information, API event data. <br />The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
+*Region* column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding *Host*/*Port* for your agents to operate correctly. <br />*Data* for the US, EU and APAC Regions include: API usage statistics, version check for new releases, API definitions and subscription information, API event data. <br />The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
 {{< /alert >}}
 
 ### Axway API Gateway - other ports
@@ -209,9 +209,10 @@ Proxy will use one of two authentication mechanisms, none or username/password a
 ```shell
 # US region
 curl -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
-or
 # EU region
 curl -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
+# APAC region
+curl -s -o /dev/null -w "%{http_code}"  https://ingestion-ap-sg.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
@@ -225,6 +226,8 @@ A return of **"200"** validates the connection was established.
 curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
 # EU region
 curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
+# APAC region
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion-ap-sg.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.

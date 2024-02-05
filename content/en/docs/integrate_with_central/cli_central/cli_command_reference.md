@@ -40,10 +40,10 @@ The following table describes the usage, options, and arguments for the `get` co
 |`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.<br/>*(Added: v1.28.0)*|
 |`--client-id=<value>`                                          |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
 |`--no-cache`                                                   |Refresh system definition cache.<br/>*(Added: v1.8.0)*|
-|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)
+|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)|
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
 |`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters.<br/>*(Added: v1.23.0)*|
-|`--region=<value>`                                             |Override region configuration. Set to `US` or `EU`.|
+|`--region=<value>`                                             |Override region configuration. Set to `US`, `EU` or `AP`.|
 |`-s,--scope=<name>`                                            |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
 |`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.<br/>*(Added: v1.28.0)*|
 |`--team <name`\|`guid>`                                        |Filter results by owner using team name or team guid. Overrides `--no-owner`.<br/>*(Added: v2.6.0)*|
@@ -164,7 +164,7 @@ The following table describes the usage, options, and arguments for the `create`
 |`-f,--file=<path>`                                       |Filename to use to create the resource  |
 |`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
 |`-o,--output=<value>`                                    |Additional output formats, YAML or JSON|
-|`--region=<value>`                                       |Override region configuration. Set to `US` or `EU`.|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
 |`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v2.3.0)*|
 |**Arguments**                                            |                   |
 |`name`                                                   |Name of the new environment |
@@ -200,7 +200,7 @@ The following table describes the usage and options for the `apply` command:
 |`-f,--file=<path>`                                       |Filename to use to create the resource  |
 |`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
 |`-o,--output=<value>`                                    |Additional output formats, YAML or JSON|
-|`--region=<value>`                                       |Override region configuration. Set to `US` or `EU`.|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
 |`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v2.3.0)*|
 
 The following examples show how to use the `apply` command:
@@ -227,7 +227,7 @@ The following table describes the usage, options, and arguments for the `delete`
 |`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
 |`-f,--file=<path>`                                       |Filename to use to delete the resource   |
 |`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
-|`--region=<value>`                                       |Override region configuration. Set to `US` or `EU`.|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
 |`-s,--scope=<name>`                                      |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
 |`--wait`                                                 |Wait for the resources to be completely deleted          |
 |`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v1.17.0)*|
@@ -262,7 +262,7 @@ The following table describes the usage, options, and arguments for the `edit` c
 |`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
 |`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
 |`-o,--output=<value>`                                       |Additional output formats, YAML or JSON |
-|`--region=<value>`                                       |Override region configuration. Set to `US` or `EU`.|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
 |**Arguments**                                            |                   |
 |`name`                                                  |Name of the environment |
 
@@ -287,7 +287,7 @@ The following table describes the usage, options, and arguments for the `edit` c
 |`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
 |`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
 |`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
-|`--region=<value>`                                       |Override region configuration. Set to `US` or `EU`.|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
 |**Arguments**                                            |                   |
 |`args...`                                                  |Command arguments, run `axway central install` to see the examples |
 

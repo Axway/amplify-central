@@ -118,10 +118,16 @@ To start the configuration procedure, run the following command:
 axway central install agents
 ```
 
-If your Amplify subscription is hosted in the EU region, run the following installation command to configure the agents:
+If your Amplify subscription is hosted in the EU region, run the following installation command to start the configuration procedure:
 
 ```shell
 axway central install agents --region=EU
+```
+
+If your Amplify subscription is hosted in the APAC region, run the following installation command to start the configuration procedure:
+
+```shell
+axway central install agents --region=AP
 ```
 
 The installation procedure will prompt for the following:

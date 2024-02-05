@@ -122,10 +122,16 @@ Agents configuration will be installed in the directory from where the CLI runs.
 axway central install agents
 ```
 
-If your Amplify subscription is hosted in the EU region, then the following installation command must be used to correctly configure the agents:
+If your Amplify subscription is hosted in the EU region, run the following installation command to start the configuration procedure:
 
 ```shell
 axway central install agents --region=EU
+```
+
+If your Amplify subscription is hosted in the APAC region, run the following installation command to start the configuration procedure:
+
+```shell
+axway central install agents --region=AP
 ```
 
 The installation procedure will prompt for the following:
