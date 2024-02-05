@@ -43,7 +43,7 @@ The following table describes the usage, options, and arguments for the `get` co
 |`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)|
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
 |`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters.<br/>*(Added: v1.23.0)*|
-|`--region=<value>`                                             |Override region configuration. Set to `US`, `EU` or `APAC`.|
+|`--region=<value>`                                             |Override region configuration. Set to `US`, `EU` or `AP`.|
 |`-s,--scope=<name>`                                            |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
 |`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.<br/>*(Added: v1.28.0)*|
 |`--team <name`\|`guid>`                                        |Filter results by owner using team name or team guid. Overrides `--no-owner`.<br/>*(Added: v2.6.0)*|
