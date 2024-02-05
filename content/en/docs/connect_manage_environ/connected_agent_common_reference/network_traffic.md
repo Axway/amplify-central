@@ -209,11 +209,10 @@ Proxy will use one of two authentication mechanisms, none or username/password a
 ```shell
 # US region
 curl -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
-or
 # EU region
 curl -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
 # APAC region
-curl -s -o /dev/null -w "%{http_code}"  **Need changes**
+curl -s -o /dev/null -w "%{http_code}"  https://ingestion-ap-sg.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
@@ -228,7 +227,7 @@ curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https:/
 # EU region
 curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
 # APAC region
-curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  **Need changes***
+curl -x {{proxy_host}}:{{proxy_port}} -s -o /dev/null -w "%{http_code}"  https://ingestion-ap-sg.platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
