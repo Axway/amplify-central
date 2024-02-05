@@ -68,6 +68,8 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
         * Root CA certificate (`AGENTFEATURES_IDP_SSL_ROOTCACERTPATH`): The path of the root CA certificate to be used for the mTLS connection.
         * Client certificate (`AGENTFEATURES_IDP_SSL_CLIENTCERTPATH`): The path of the client certificate to be used for the mTLS connection.
         * Client key (`AGENTFEATURES_IDP_SSL_CLIENTKEYPATH`): The path of the client key to be used for the mTLS connection.
+ 
+{{< alert title="Note" color="primary" >}}If your IDP is configured to use Client Registration Policies ensure that the scopes defined in the API are allowed in the policy. See [Keycloak Client Registration](https://www.keycloak.org/docs/23.0.6/securing_apps/#_client_registration_policies){{< /alert >}}
 
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
