@@ -195,6 +195,12 @@ When using OAuth (External) inbound security, API Manager requires a custom OAut
 
 When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider)
 
+#### Invoke Policy authentication handling in the Discovery Agent
+
+When virtualizing a REST API in API Manager, you can configure inbound security to invoke a policy defined in Policy Studio, see [Invoke Policy](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). In cases like these the Discovery Agent will recognize the security being used and create an Access Request Definition that will display the authentication being used as well as the description of the policy being used.
+
+If the policy does not have a description, or the policy references an external link or markdown file the Discovery Agent will use the value defined by the `APIMANAGER_INVOKEPOLICYDEFAULTDESCRIPTION` environment variable.
+
 #### Customizing Discovery Agent to manage subscription approval and notifications
 
 Various use cases are supported to approve a subscription using the `CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE` variable:
