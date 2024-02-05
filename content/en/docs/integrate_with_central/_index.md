@@ -7,7 +7,7 @@ Amplify is built using the API-first pattern, then CLI, and lastly UI. Because o
 
 ## Amplify Central APIs definition and usage
 
-Amplify APIs are described in the OAS 3.0 specification:
+Amplify APIs are described in the OAS 3.0 specification **Need changes**:
 
 * (US region) <https://apicentral.axway.com/apis/docs>
 * (EU region) <https://central.eu-fr.axway.com/apis/docs>
