@@ -164,7 +164,7 @@ The following table describes the usage, options, and arguments for the `create`
 |`-f,--file=<path>`                                       |Filename to use to create the resource  |
 |`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
 |`-o,--output=<value>`                                    |Additional output formats, YAML or JSON|
-|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `APAC`.|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
 |`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v2.3.0)*|
 |**Arguments**                                            |                   |
 |`name`                                                   |Name of the new environment |
