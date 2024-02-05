@@ -201,6 +201,8 @@ When virtualizing a REST API in API Manager, you can configure inbound security 
 
 If the policy does not have a description, or the policy references an external link or markdown file the Discovery Agent will use the value defined by the `APIMANAGER_INVOKEPOLICYDEFAULTDESCRIPTION` environment variable.
 
+For the Traceability to properly associate a Marketplace Consumer with a transaction the Invoke Policy must set the subject id as documented in the Invoke Policy link above. Updating the client application in API Manager has to be completed outside of the Discovery Agent for the Traceability to be able to make this association.
+
 #### Customizing Discovery Agent to manage subscription approval and notifications
 
 Various use cases are supported to approve a subscription using the `CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE` variable:
