@@ -74,7 +74,7 @@ Update the following variables to move data to the EU region:
 * `CENTRAL_URL`= **<https://central.eu-fr.axway.com>**
 * `TRACEABILITY_HOST`= **ingestion.visibility.eu-fr.axway.com:5044**
 
-Update the following variables to move data to the EU region:
+Update the following variables to move data to the APAC region:
 
 * `CENTRAL_DEPLOYMENT`= **prod-ap**
 * `CENTRAL_URL`= **<https://central.ap-sg.axway.com>**
