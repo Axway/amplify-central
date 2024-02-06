@@ -42,7 +42,9 @@ All customer payments are done using the Stripe billing portal.
 
 ### Accessing Stripe using Stripe API and API Key
 
-You must first check that Stripe is set to use the 2022-11-15 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+Marketplace Stripe billing integration is currently using Stripe 2022-11-15 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+
+If your Stripe account does not use this version, you might need to use the Stripe API directly instead of the Stripe UI for certain actions explained in this documentation.
 
 For Marketplace to access the Stripe account, an API key is required. For security constraints we use a restricted API Key with minimum access: Customer:Write and Invoices:Write rights.
 
@@ -75,7 +77,13 @@ The invoice source of record is located in Stripe, so a webhook is used to commu
 7. Click **Add events**.
 8. Click **Add endpoint** to save your endpoint.
 
-Reveal the Signing secret as you will need it later on the Marketplace side.
+Reveal the Signing secret, as you will need it later on the Marketplace side.
+
+{{< alert title="Note" color="primary" >}}
+Your Stripe account might not allow you to create a webhook with version 2022-11-15 of the Stripe API.
+
+Instead, use the [Postman Stripe API collection](https://www.postman.com/stripedev/workspace/stripe-developers/request/665823-60d86321-4c13-47be-a1f1-77f80443ab50?tab=body) to create the webhook and precise **2022-11-15** in the *api_version* field.
+{{< /alert >}}
 
 ### Enable the Billing Customer portal to use with your Stripe account
 
@@ -98,9 +106,9 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 7. Enter the Customer portal URL. This is the Stripe billing portal URL.
 8. Click **Save**.
 
-Each time a consumer from the consumer organization of the Marketplace subscribe to a product, a first invoice with the base price plan is generated. The consumer cannot request access to product resources until this first invoice is paid within Stripe portal.
+Each time a consumer from the consumer organization of the Marketplace subscribes to a product, a first invoice with the base price plan (setup cost and/or recurring fees) is generated. The consumer cannot request access to product resources until this first invoice is paid within the Stripe portal.
 
-On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption. The invoice is added to the subscription invoices list with the link to pay it.
+On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it.
 
 Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.
 

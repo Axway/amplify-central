@@ -119,7 +119,8 @@ To configure a quota for a **paid plan**, enter values for the following propert
 
 * **Base price**:
     * **Currency** - the currency that will be used by the billing system (US Dollar, Euro, ...). The most common currencies are available in the drop-down.
-    * **Amount** - the plan price value.
+    * **Setup Cost** - (optional) the initial cost of the plan that will be billed at the first invoice.
+    * **Recurring cost** - (optional) the plan price value that will be billed each billing cycle.
     * **Billing period** - select either **Monthly** or **Annually**. This is the period used for billing cycle, which is based on the calendar month for Monthly plans or calendar year for Annually plans.
     * **Subscription Term Length** - the length of the subscription for a limited period of time or **Unlimited** (default). If a number of terms is selected, the subscription will be automatically cancelled once the term is reached.
 * **Quota type** - select either **Standard** or **Tiered** or **Pay Per Use**:
