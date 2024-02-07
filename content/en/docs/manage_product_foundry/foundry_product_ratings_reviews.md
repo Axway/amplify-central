@@ -20,8 +20,8 @@ Learn how to view the ratings left by the consumer on the product you own.
 2. Open the product details
 3. Navigate to Ratings & Reviews
 4. The page displays:
-   1.  the Average Ratings and the number of them
-   2.  the list of ratings with the consumer email who left the rating and the Marketptlace name where the rating originates
-   3.  the filters: Ratings / Marketplace
+   1. the Average Ratings and the number of them
+   2. the list of ratings with the consumer email who left the rating and the Marketptlace name where the rating originates
+   3. the filters: Ratings / Marketplace
 
 When filtering the ratings, the Average rating and the number of ratings are updated accordingly.

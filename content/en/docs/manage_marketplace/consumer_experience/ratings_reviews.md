@@ -31,17 +31,17 @@ The view displays:
 
 * on the left side the Average rating and the distribution of the ratings and the **Rate the product** button.
 * on the right side the list of all the ratings including:
-        * the user that left the rating
-        * the date when the rating was submitted
-        * the rating value represented with the star symbol
+  * the user that left the rating
+  * the date when the rating was submitted
+  * the rating value represented with the star symbol
 
 ## Rate a product
 
-1. search for product you want to rate 
+1. search for product you want to rate
 2. navigate to the Ratings section
 3. click the **Rate the product**
 4. a side panel is open where you can choose the number of star you want to attribute to the product
 5. once you selected the appropriate number of star, **Submit** your ratings.
 6. you are redirected to the ratings list where your rating is displayed. The average rating value is updated.
 
-As soon as you have submitted a rating, you cannot submit another rating for the same product. 
+As soon as you have submitted a rating, you cannot submit another rating for the same product.
