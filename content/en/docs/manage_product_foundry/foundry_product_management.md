@@ -93,7 +93,7 @@ View the following detailed information for a specific product in any state (Dra
 
     * Auto-Release - Enable / Disable the auto-release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e., Assets). For example, auto-release enabled will trigger an automatic product release every time a new grouped asset version is discovered or created. This enables a more automated and hands-off experience. If you want more control of the product release process, set auto-release to **disabled**.
     * Auto-Release Type - The default is set to Patch release versions and you can select another type of product release versioning (i.e., major or minor). The system will automatically compute the next version name based on the semVer pattern.
-    * (Optional) Custom release label - a free text (up to 50 characters) that could be displayed on Marketplace. Refer to [Marketplace Custom version settings](/docs/manage_marketplace/customize_marketplace/marketplace_settings#configure-settings)
+    * (Optional) Custom release label - a free text (up to 50 characters) that could be displayed on Marketplace. Refer to [Marketplace Custom Version Display settings](/docs/manage_marketplace/customize_marketplace/marketplace_settings#configure-settings)
     * (Optional) Release description - a free text (up to 350 characters) that describes the release
     * (Optional) Archive previous version - a toggle to automatically archive the previous version when releasing a product. Disabled by default.
 
