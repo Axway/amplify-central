@@ -199,7 +199,7 @@ When discovering and publishing the virtualized APIs with OAuth (External) inbou
 
 When virtualizing a REST API in API Manager, you can configure inbound security to invoke a policy defined in Policy Studio, see [Invoke Policy](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). In cases like these, the Discovery Agent will recognize the security being used and create an Access Request Definition (ARD). The ARD will display the authentication being used as well as the description of the policy being used.
 
-The Discovery Agent will use the value defined by the `APIMANAGER_INVOKEPOLICYDEFAULTDESCRIPTION` environment variable if:
+The Discovery Agent will use the value defined by the `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` environment variable if:
 
 * The policy does not have a description
 * The policy references an external link
