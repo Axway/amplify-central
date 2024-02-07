@@ -92,7 +92,10 @@ View the following detailed information for a specific product in any state (Dra
 5. Add the following Release Management information and then click **Next**:
 
     * Auto-Release - Enable / Disable the auto-release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e., Assets). For example, auto-release enabled will trigger an automatic product release every time a new grouped asset version is discovered or created. This enables a more automated and hands-off experience. If you want more control of the product release process, set auto-release to **disabled**.
-    * Auto-Release Type - The default is set to Patch release versions and you can select another type of product release versioning (i.e., major or minor).
+    * Auto-Release Type - The default is set to Patch release versions and you can select another type of product release versioning (i.e., major or minor). The system will automatically compute the next version name based on the semVer pattern.
+    * (Optional) Custom release label - a free text (up to 50 characters) that could be displayed on Marketplace. Refer to [Marketplace Custom version settings](/docs/manage_marketplace/customize_marketplace/marketplace_settings#configure-settings)
+    * (Optional) Release description - a free text (up to 350 characters) that describes the release
+    * (Optional) Archive previous version - a toggle to automatically archive the previous version when releasing a product. Disabled by default.
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
 7. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.

@@ -22,3 +22,11 @@ Lifecycle management provides control of the product's states as it progresses t
 Version management tracks all historical changes and controls what will be released in the Marketplace for consumption.
 
 Product versions are immutable, so direct changes are not allowed. All changes, such as adding / removing an asset and documentation changes, require that the product be in Draft state. To expose the changes in the Marketplace, a new version must be created by releasing the changes.
+
+Any other changes (name, icon, description, category, plans, support contact) does not require a new version and are automatically visible in all the Marketplaces the product is published to.
+
+The product version name is computed by the system based on the provider instructions (Major / Minor / Patch). This versioning is following the semVer pattern.
+
+Optionally, it is possible to provide your own version name if the generated one does not comply with your compliance rules.
+
+Each version can be enrich with a short description (350 characters) to highlight the changes.
