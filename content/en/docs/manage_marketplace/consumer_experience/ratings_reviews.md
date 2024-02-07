@@ -31,9 +31,9 @@ The view displays:
 
 * on the left side the Average rating and the distribution of the ratings and the **Rate the product** button.
 * on the right side the list of all the ratings including:
-  * the user that left the rating
-  * the date when the rating was submitted
-  * the rating value represented with the star symbol
+    * the user that left the rating
+    * the date when the rating was submitted
+    * the rating value represented with the star symbol
 
 ## Rate a product
 
