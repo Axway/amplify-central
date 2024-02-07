@@ -197,15 +197,15 @@ When discovering and publishing the virtualized APIs with OAuth (External) inbou
 
 #### Invoke Policy authentication handling in the Discovery Agent
 
-When virtualizing a REST API in API Manager, you can configure inbound security to invoke a policy defined in Policy Studio, see [Invoke Policy](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). In cases like these, the Discovery Agent will recognize the security being used and create an Access Request Definition (ARD). The ARD will display the authentication being used as well as the description of the policy being used.
+When virtualizing a REST API in API Manager, you can configure inbound security to invoke a policy defined in Policy Studio, see [Invoke Policy](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). In cases like these, the Discovery Agent will recognize the security being used and create an Access Request Definition (ARD). The ARD will display the authentication being used, as well as the description of the policy being used.
 
 The Discovery Agent will use the value defined by the `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` environment variable if:
 
 * The policy does not have a description
 * The policy references an external link
-* The policy references a markdown file.
+* The policy references a markdown file
 
-For the Traceability to properly associate a Marketplace Consumer with a transaction, the Invoke Policy must set the subject id as documented [here](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). Updating the client application in API Manager has to be completed outside of the Discovery Agent for the Traceability to be able to make this association.
+For the Traceability to properly associate a Marketplace Consumer with a transaction, the Invoke Policy must set the subject id as documented [here](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). The client application in API Manager must be updated outside of the Discovery Agent. Otherwise, the Traceability won't be able to make this association.
 
 #### Customizing Discovery Agent to manage subscription approval and notifications
 
