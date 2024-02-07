@@ -20,7 +20,10 @@ Any users (consumer / subscriber or catalog manager) logged into a Marketplace i
 
 ## View the product ratings
 
-The product ratings are visible under the Ratings section of any product.
+The product ratings are visible in product details screen:
+
+* on the right side of the Overview, Resources, Document and Plans sections
+* under the Ratings section itself
 
 If there are no rating yet, the view displays only the *Rate the product* button
 
@@ -28,7 +31,7 @@ The view displays:
 
 * on the left side the Average rating and the distribution of the ratings and the **Rate the product** button.
 * on the right side the list of all the ratings including:
-        * the user that left rating
+        * the user that left the rating
         * the date when the rating was submitted
         * the rating value represented with the star symbol
 
@@ -39,4 +42,6 @@ The view displays:
 3. click the **Rate the product**
 4. a side panel is open where you can choose the number of star you want to attribute to the product
 5. once you selected the appropriate number of star, **Submit** your ratings.
-6. you are redirected to the ratings list where your rating is displayed. The average rating value is updated. 
+6. you are redirected to the ratings list where your rating is displayed. The average rating value is updated.
+
+As soon as you have submitted a rating, you cannot submit another rating for the same product. 
