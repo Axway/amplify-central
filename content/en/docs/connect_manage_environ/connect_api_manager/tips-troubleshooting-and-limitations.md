@@ -199,7 +199,7 @@ Below is the list of error codes and possible remediations.
 
 ## Limitations
 
-APIs including AWS signing / HTTP Basic / 2-way SSL security cannot be discovered, as these features are not currently supported in Enterprise Marketplace.
+APIs including AWS signing / 2-way SSL security cannot be discovered, as these features are not currently supported in Enterprise Marketplace.
 
 A change of front-end image only is not detected. Changing the name of the API will create one on Enterprise Marketplace and not delete the previous one.
 
