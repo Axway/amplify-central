@@ -22,9 +22,9 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace February 9 2024](/docs/amplify_relnotes/20240209_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.73. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.74. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.69 / TA=v1.1.71
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.70 / TA=v1.1.72
 * **AWS Gateway using SDK 2.0** - DA=v1.1.58 / TA-v1.1.60
 * **Azure latest release** - DA=v1.1.64 / TA=v1.1.69
 * **Istio 1.9.5** - DA=v1.0.30 / TA=v2.0.74
@@ -36,14 +36,14 @@ Current agent versions are based on Amplify Agents SDK v1.1.73. This version is 
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
+| What's new: | Additional testing option. |
 | Bug fixes: | None. |
 | <br />**On-premise agents** |         |
-| What's new: | **All** - Updated with the Axway Agent SDK. <br />**Axway API Management Agent** - None. <br/>**Kong Gateway Agents** - None. |
+| What's new: | **Axway API Management Agent** - Invoke Policy. <br />Default poll interval increased. |
 | Bug fixes: | **All** - None. |
 | <br />**SaaS (embedded) agents** |    |
-| What's new: | **GitHub Embedded Agent** - None. |
-| Bug fixes: | **All** - None. |
+| What's new: | None. |
+| Bug fixes: | None. |
 | <br />**Axway CLI** |       |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -51,14 +51,14 @@ Current agent versions are based on Amplify Agents SDK v1.1.73. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - Selected version UX improvement. <br />**Topology** - None. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
-| What's new: | None. |
+| What's new: | Selected version UX improvement. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Selected version UX improvement. <br />One-time product plans. |
+| Bug fixes: | See release note. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
