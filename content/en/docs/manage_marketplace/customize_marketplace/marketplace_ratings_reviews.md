@@ -22,5 +22,5 @@ Learn how to enable the Marketplace ratings so that consumer can give feeback on
 4. switch the toggle to **Enabled** (Disabled by default) to allow consumer to rate the Marketplace products.
 
 {{< alert title="Note" color="primary" >}}
-Although there are review settings deployed (moderation and Reviews guideline), those settings are not yet applied.
+Although there are review settings deployed (Moderation and Reviews guideline), those settings are not yet applied.
 {{< /alert >}}
