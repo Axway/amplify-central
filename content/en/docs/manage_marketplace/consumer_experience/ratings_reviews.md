@@ -36,6 +36,6 @@ If the product has been rated, the view displays:
 
 1. Navigate to the *Ratings* section of the product you want to rate.
 2. click **Rate the product**. A side panel opens where you can choose the the rating of product.
-4. Selected the appropriate number of stars and click **Submit**. You are redirected to the ratings list where your rating is displayed. The average rating value is updated.
+3. Selected the appropriate number of stars and click **Submit**. You are redirected to the ratings list where your rating is displayed. The average rating value is updated.
 
 Once you have submitted a rating, you cannot submit another rating for the same product.
