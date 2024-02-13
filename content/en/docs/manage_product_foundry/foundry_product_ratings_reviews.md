@@ -8,21 +8,20 @@ View and filter the product ratings.
 
 ## Before you start
 
-* You must have a user account with Catalog Manager rights to be able to view the product.
-* Ratings needs to be enable for the Marketplace. Refer to [Marketpalce settings](/docs/manage_marketplace/customize_marketplace/marketplace_ratings_reviews)
+* You must have a user account with Catalog Manager rights to view the product.
+* **Ratings & Reviews** must be enable for the Marketplace. Refer to [Marketpalce settings](/docs/manage_marketplace/customize_marketplace/marketplace_ratings_reviews)
 
 ## Objectives
 
-Learn how to view the ratings left by the consumer on the product you own.
+Learn how to view the custmer ratings for the product you own.
 
 ## View the Ratings
 
-1. Navigate to Product Foundry > Product
-2. Open the product details
-3. Navigate to Ratings & Reviews
-4. The page displays:
-   1. the Average Ratings and the number of them
-   2. the list of ratings with the consumer email who left the rating and the Marketptlace name where the rating originates
-   3. the filters: Ratings / Marketplace
+1. Navigate to *Product Foundry > Product*.
+2. Open the product details.
+3. Select **Ratings & Reviews**. The page displays:
+   * The Average Rating and the number of Total Ratings
+   * The list of ratings, the consumer email who left the rating, and the Marketplace name where the rating originated
+   * The filters: Ratings / Marketplace
 
-When filtering the ratings, the Average rating and the number of ratings are updated accordingly.
+When filtering the ratings, the **Average Rating** and the number of **Total Ratings** are updated accordingly.
