@@ -13,7 +13,7 @@ View and filter the product ratings.
 
 ## Objectives
 
-Learn how to view the custmer ratings for the product you own.
+Learn how to view the customer ratings for the product you own.
 
 ## View the Ratings
 
