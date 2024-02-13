@@ -86,8 +86,6 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 
         * If enabled, you must provide the Terms & Conditions by either uploading a PDF file or entering a URL where it is available.
 
-    * **Ratings & Reviews** - enable it to allow consumer to rate the Marketplace products.
-
     * **Administration preference** - indicates who will be able to update the Marketplace settings:
         * **All teams** (default) - anyone having a Marketplace Manager role in any team is allowed to manage the Marketplace settings or any Administrator user.
         * **None** - only an Administrator user can manage the Marketplace settings.

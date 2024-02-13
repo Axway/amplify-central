@@ -16,7 +16,7 @@ Browse and find a product in the Marketplace.
 
 ## Objectives
 
-Any users (consumer / subscriber or catalog manager) logged into a Marketplace is able to rate any product visible to him.
+Any users (consumer / subscriber or catalog manager) logged into a Marketplace is able to rate any product visible to him if provider has enabled the ratings on the [Marketplace settings](/docs/manage_marketplace/customize_marketplace/marketplace_ratings_reviews).
 
 ## View the product ratings
 
