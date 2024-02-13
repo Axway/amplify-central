@@ -51,7 +51,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.74. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - Selected version UX improvement. <br />**Topology** - None. |
+| What's new: | **Service Registry** - Selected version UX improvement. <br />**Topology** - Compliance validation ruleset. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | Selected version UX improvement. |
