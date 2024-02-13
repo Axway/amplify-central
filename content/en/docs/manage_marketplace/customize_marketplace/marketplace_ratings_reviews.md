@@ -1,6 +1,6 @@
 ---
-title: Marketplace Ratings & Reviews
-linkTitle: Marketplace Ratings & Reviews
+title: Marketplace Ratings & reviews
+linkTitle: Marketplace Ratings & reviews
 weight: 45
 ---
 
