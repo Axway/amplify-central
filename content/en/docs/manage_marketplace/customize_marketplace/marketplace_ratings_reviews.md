@@ -1,6 +1,6 @@
 ---
-title: Marketplace Ratings & reviews
-linkTitle: Marketplace Ratings & reviews
+title: Marketplace Ratings & Reviews
+linkTitle: Marketplace Ratings & Reviews
 weight: 45
 ---
 
@@ -19,7 +19,7 @@ Learn how to enable the Marketplace ratings so that consumers can give feeback o
 1. Navigate to *platform.axway.com > Organization > Marketplaces*.
 2. Open the desired Marketplace **Settings**.
 3. Select **Ratings & reviews**.
-4. Switch the toggle to **Enabled** (Disabled by default) to allow consumers to rate the Marketplace products.
+4. Switch the **Ratings & Reviews** toggle to **Enabled** (Disabled by default) to allow consumers to rate the Marketplace products.
 
 {{< alert title="Note" color="primary" >}}
 Although there are review settings deployed (Moderation and Reviews Guidelines), those settings are not yet applied.
