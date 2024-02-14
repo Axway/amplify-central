@@ -54,7 +54,7 @@ The Traceability Agent sends log information about APIs that have been discovere
 
 ## Region support
 
-Amplify supports two regions, US (default), EU and APAC. The data (APIs, traffic) that the agents send to Amplify is stored in one of those regions based on the agent configuration.
+Amplify supports three regions, US (default), EU and APAC. The data (APIs, traffic) that the agents send to Amplify is stored in one of those regions based on the agent configuration.
 
 Use one of the following URLs to access the Amplify UI:
 
