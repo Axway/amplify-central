@@ -26,6 +26,13 @@ At the right of each line in the Service Registry is an ellipsis where you can s
 
 ### Design rulesets
 
+| Ruleset Name | Version |
+|--------------|---------|
+|              |         |
+|              |         |
+|              |         |
+|              |         |
+
 The system has a built-in `default-design-ruleset` which validates OpenAPI and AsyncAPI specifications. This ruleset is configured as follows.
 
 ```yaml
@@ -51,6 +58,11 @@ extends: ["@stoplight/spectral-url-versioning"]
 ```
 
 ### Security rulesets
+
+| Ruleset Name | Version |
+|--------------|---------|
+|              |         |
+|              |         |
 
 The system has a built-in `default-security-ruleset` which scans OpenAPI and AsyncAPI for security issues. This ruleset is configured as follows.
 
