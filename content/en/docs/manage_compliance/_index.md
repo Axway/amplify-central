@@ -34,7 +34,7 @@ At the right of each line in the Service Registry is an ellipsis where you can s
 | spectral-documentation          |  v1.3.1  |
 | spectral-url-versioning         |  v1.0.6  |
 
-The system has a built-in `default-design-ruleset` which validates OpenAPI and AsyncAPI specifications.  These rulesets are included with the integration of the Spectral Javascript API library ( [@stoplight/spectral-core] (https://www.npmjs.com/package/@stoplight/spectral-core)) version 1.18.3. This rulesets are configured as follows.
+The system has a built-in `default-design-ruleset` which validates OpenAPI and AsyncAPI specifications. These rulesets are included with the integration of the Spectral Javascript API library [@stoplight/spectral-core](https://www.npmjs.com/package/@stoplight/spectral-core) version 1.18.3. These rulesets are configured as follows.
 
 ```yaml
 extends: ["spectral:oas", "spectral:asyncapi"]
@@ -63,7 +63,6 @@ extends: ["@stoplight/spectral-url-versioning"]
 | Ruleset Name | Version |
 |--------------|---------|
 | spectral-owasp-ruleset     |  v1.4.3   |
-
 
 The system has a built-in `default-security-ruleset` which scans OpenAPI and AsyncAPI for security issues. This ruleset is configured as follows.
 
