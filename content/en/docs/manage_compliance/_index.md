@@ -28,10 +28,11 @@ At the right of each line in the Service Registry is an ellipsis where you can s
 
 | Ruleset Name | Version |
 |--------------|---------|
-|              |         |
-|              |         |
-|              |         |
-|              |         |
+| oas                             |         |
+| asyncapi                        |         |
+| spectral-aws-apigateway-ruleset |  v2.2.0  |
+| spectral-documentation          |  v1.3.1  |
+| spectral-url-versioning         |  v1.0.6  |
 
 The system has a built-in `default-design-ruleset` which validates OpenAPI and AsyncAPI specifications. This ruleset is configured as follows.
 
@@ -61,8 +62,8 @@ extends: ["@stoplight/spectral-url-versioning"]
 
 | Ruleset Name | Version |
 |--------------|---------|
-|              |         |
-|              |         |
+| spectral-url-versioning       |  v1.4.3   |
+
 
 The system has a built-in `default-security-ruleset` which scans OpenAPI and AsyncAPI for security issues. This ruleset is configured as follows.
 
