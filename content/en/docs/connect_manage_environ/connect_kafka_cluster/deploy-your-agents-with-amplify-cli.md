@@ -22,8 +22,6 @@ Deploy your agents using Axway CLI so you can manage your Kafka cluster environm
         * SASL Mechanism (PLAIN, SCRAM-SHA-256 or SCRAM-SHA-512)
         * Schema Registry URL
 
-* It is recommended that you have access to the Azure CLI command line to run the necessary setup commands
-
 ## Objectives
 
 Learn how to quickly configure, install, and run your Discovery and Traceability agents with basic configuration using Axway Central CLI.
@@ -153,7 +151,7 @@ axway central install agents --region=AP
 
 The installation procedure will prompt for the following:
 
-1. Select the type of gateway you want to connect to (Azure API Gateway in this scenario).
+1. Select the type of gateway you want to connect to (Kafka in this scenario).
 2. Select the agents you want to install: Discovery / Traceability / All Agents. **Note**: If you select Traceability **ONLY**, you must provide configurations for both Steps 4 and 5.
 3. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
