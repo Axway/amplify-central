@@ -97,6 +97,8 @@ Where `asset.json` contains the following content:
 
 ### Link an existing API to the created asset
 
+Robert, please update.
+
 To link an API to an asset you must create an AssetResource. AssetResources are the business value that the asset is wrapping - these may be SDKs, scripts, APIs, etc. Similar to an APIServiceRevision, API Server is not opinionated about what the AssetResource is.
 
 Create the AssetResource in the scope of the previously created Asset. Group the asset in the stage created previously.
