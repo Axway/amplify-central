@@ -23,7 +23,7 @@ The Traceability Agent is attached to a Gateway and monitors the traffic crossin
 
 * **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Transaction Metrics to the database storage for display on Business Insights -> API Health (default is 15 minutes).  For more information on how to see an aggregate view of all Trasactions, refer to [Business Insights](https://docs.axway.com/bundle/amplify-central/page/docs/get_actionable_insights/business_insights/index.html)
 * **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on Organization -> Usage (default is daily).  To clarify, the Platform Usage for a day is normally sent after a day has passed.  This would make Platform Usage a lagging indicatore compared to API Health by at worst a whole day. 
-* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report Gateway usage.
+* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report Gateway usage. The transaction events are sent as soon as the Tracability Agent processes the transaction event logs.  
 
 ## Set up usage reporting in online mode
 
