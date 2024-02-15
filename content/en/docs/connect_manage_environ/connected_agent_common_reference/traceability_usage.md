@@ -134,6 +134,8 @@ Use the following instructions to set up usage reporting in offline mode.
 
 ### Install Traceability Agent for offline mode
 
+Robert, add content.
+
 To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the Gateway to be monitored.
 
 To configure the agent, Amplify platform connectivity is required for creating the installables. This action can be performed from any machine that has the correct Amplify platform access (refer to above urls and IPs). The installables can be copied to a machine with no external connections and the agents can be used without connectivity to the Amplify platform. The Lighthouse URL is not required for this mode. Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
