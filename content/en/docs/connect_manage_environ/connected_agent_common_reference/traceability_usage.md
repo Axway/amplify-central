@@ -19,11 +19,17 @@ Learn how to install and set up the Traceability Agent, using either the online 
 
 ## Traceability Agent overview
 
-The Traceability Agent is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
+The On-premise Traceability Agent is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
-* **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Transaction Metrics to the database storage for display on Business Insights -> API Health (default is 15 minutes).  For more information on how to see an aggregate view of all Trasactions, refer to [Business Insights](https://docs.axway.com/bundle/amplify-central/page/docs/get_actionable_insights/business_insights/index.html)
+* **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Transaction Metrics to the database storage for display on Business Insights -> API Health (default is 15 minutes).  For more information on how to see an aggregate view of all Transactions, refer to [Business Insights](https://docs.axway.com/bundle/amplify-central/page/docs/get_actionable_insights/business_insights/index.html)
 * **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on Organization -> Usage (default is daily).  To clarify, the Platform Usage for a day is normally sent after a day has passed.  This would make Platform Usage a lagging indicatore compared to API Health by at worst a whole day. 
 * **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report Gateway usage. The transaction events are sent as soon as the Tracability Agent processes the transaction event logs.  
+
+The SaaS (Embedded) Traceability Service is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
+
+* **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Service sends the Transaction Metrics to the database storage for display on Business Insights -> API Health.  The default frequency is 30 minutes after the Traceability Service is enabled.  For more information on how to see an aggregate view of all Transactions, refer to [Business Insights](https://docs.axway.com/bundle/amplify-central/page/docs/get_actionable_insights/business_insights/index.html)
+* **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on Organization -> Usage (default is daily after the Traceability Service is enabled).  To clarify, the Platform Usage for a day is normally sent after a day has passed.  This would make Platform Usage a lagging indicatore compared to API Health by at worst a whole day. 
+* **Transaction** event: These reports are NOT supported for SaaS (Embedded) Traceability Service.  
 
 ## Set up usage reporting in online mode
 
@@ -112,7 +118,7 @@ You can view the environment in *Enterprise Marketplace > Topology > Environment
 
 Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. The Traceability Agent sends the Transaction Metrics to the platform on a regular basis (default is 15 minutes).
 
-To change the reporting interval, use the `CENTRAL_USAGEREPORTING_INTERVAL` variable with either a second, minute or hour notation:
+To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_USAGEREPORTING_INTERVAL` variable with either a second, minute or hour notation:
 
 ```shell
 # report every 5 minutes expressed in second unit
@@ -125,7 +131,7 @@ CENTRAL_USAGEREPORTING_INTERVAL=15m
 CENTRAL_USAGEREPORTING_INTERVAL=1h
 ```
 
-If for any reason the tranaction metrics report cannot be uploaded to Amplify platform, the data are kept in memory and will be pushed at the next trigger interval.
+If for any reason the transaction metrics report cannot be uploaded to Amplify platform, the data are kept in memory and will be pushed at the next trigger interval.
 
 If the Traceability Agent is stopped while there are remaining usage events to be sent, the report is saved on the disk where the Traceability Agent is located. The data will be sent to Amplify platform at the next Traceability Agent startup.
 
@@ -135,7 +141,7 @@ You can view the environment in *Enterprise Marketplace > Topology > Environment
 
 Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. The Traceability Agent sends the Platform Usage metrics to the platform on a regular basis (default is daily).
 
-To change the reporting interval, use the `CENTRAL_USAGEREPORTING_USAGESCHEDULE` variable with either a second, minute or hour notation:
+To change the reporting interval for the On-premise Traeability Agent, use the `CENTRAL_USAGEREPORTING_USAGESCHEDULE` variable with either a second, minute or hour notation:
 
 ```shell
 # report every 60 minutes expressed in hourly value
