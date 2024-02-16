@@ -29,7 +29,7 @@ The SaaS (Embedded) Traceability Service is attached to a Gateway and monitors t
 
 * **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Service sends the Transaction Metrics to the database storage for display on Business Insights -> API Health.  The default frequency is 30 minutes after the Traceability Service is enabled.  For more information on how to see an aggregate view of all Transactions, refer to [Business Insights](https://docs.axway.com/bundle/amplify-central/page/docs/get_actionable_insights/business_insights/index.html)
 * **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on Organization -> Usage (default is daily after the Traceability Service is enabled).  To clarify, the Platform Usage for a day is normally sent after a day has passed.  This would make Platform Usage a lagging indicatore compared to API Health by at worst a whole day. 
-* **Transaction** event: These reports are NOT supported for SaaS (Embedded) Traceability Service.  
+* **Transaction** event: These reports are only supported for the AWS Gateway SaaS (Embedded) Traceability Service.  The reports include the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report Gateway usage. The transaction events are sent as soon as the Tracability Service processes the transaction event logs.
 
 ## Set up usage reporting in online mode
 
