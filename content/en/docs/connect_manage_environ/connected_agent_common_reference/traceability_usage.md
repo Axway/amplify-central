@@ -148,7 +148,7 @@ To change the reporting interval for the On-premise Traeability Agent, use the `
 CENTRAL_USAGEREPORTING_USAGESCHEDULE=@hourly
 
 # report every 24 hours expressed in daily value
-CENTRAL_USAGEREPORTING_INTERVALUSAGESCHEDULE=@daily
+CENTRAL_USAGEREPORTING_USAGESCHEDULE=@daily
 
 # report every 7 days expressed in weekly value
 CENTRAL_USAGEREPORTING_USAGESCHEDULE=@weekly
