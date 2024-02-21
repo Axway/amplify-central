@@ -1,35 +1,35 @@
 ---
-title: Use Traceability Agent to report Gateway usage
-linkTitle: Use Traceability Agent to report Gateway usage
+title: Use Traceability Agent to report gateway usage
+linkTitle: Use Traceability Agent to report gateway usage
 draft: false
 weight: 10
 ---
-The Traceability Agent reports the Gateway usage to Amplify platform. Learn how to configure the Traceability Agent to report usage data.
+The Traceability Agent reports the gateway usage to Amplify platform. Learn how to configure the Traceability Agent to report usage data.
 
 ## Before you start
 
-* Make sure your entitlement is correctly set up, based on your Gateway (AWS / Axway v7 / Azure). Refer to your Axway CSM for more information.
+* Make sure your entitlement is correctly set up, based on your gateway (AWS / Axway v7 / Azure). Refer to your Axway CSM for more information.
 
 ## Objectives
 
-Learn how to install and set up the Traceability Agent, using either the online or offline mode, to report the Gateway usage data to Amplify platform. Gateway usage data counts all API calls going through the Gateway.
+Learn how to install and set up the Traceability Agent, using either the online or offline mode, to report the gateway usage data to Amplify platform. Gateway usage data counts all API calls going through the gateway.
 
 * Online mode - Automatic (connected): The agent produces the report and sends it to the Amplify platform at regular intervals
 * Offline mode - Manual (offline): The agent produces the report locally, but it must be manually uploaded to the Amplify platform
 
 ## Traceability Agent overview
 
-The On-premise Traceability Agent is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
+The On-premise Traceability Agent is attached to a gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
-* **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Transaction Metrics to the database storage for display on Business Insights -> API Health (default is 15 minutes).  For more information on how to see an aggregate view of all Transactions, refer to [Business Insights](https://docs.axway.com/bundle/amplify-central/page/docs/get_actionable_insights/business_insights/index.html)
-* **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on Organization -> Usage (default is daily).  To clarify, the Platform Usage for a day is normally sent after a day has passed.  This would make Platform Usage a lagging indicator compared to API Health by at worst a whole day.
-* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report Gateway usage. The transaction events are sent as soon as the Traceability Agent processes the transaction event logs.  
+* **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be deactivated.  The Traceability Agent sends the Transaction Metrics to the database storage for display on *Business Insights > API Health* (default is 15 minutes). For more information on how to see an aggregate view of all transactions, see [Business Insights](/docs/get_actionable_insights/business_insights/).
+* **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be deactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on *Organization > Usage* (default is daily). To clarify, the Platform Usage for a day is typically sent after a day has passed. This would make Platform Usage a lagging indicator compared to API Health by at most a whole day.
+* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report gateway usage. The Transaction events are sent as soon as the Traceability Agent processes the transaction event logs.  
 
-The SaaS (Embedded) Traceability Service is attached to a Gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
+The SaaS (Embedded) Traceability Service is attached to a gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
-* **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Service sends the Transaction Metrics to the database storage for display on Business Insights -> API Health.  The default frequency is 30 minutes after the Traceability Service is enabled.  For more information on how to see an aggregate view of all Transactions, refer to [Business Insights](https://docs.axway.com/bundle/amplify-central/page/docs/get_actionable_insights/business_insights/index.html)
-* **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be inactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on Organization -> Usage (default is daily after the Traceability Service is enabled).  To clarify, the Platform Usage for a day is normally sent after a day has passed.  This would make Platform Usage a lagging indicator compared to API Health by at worst a whole day.
-* **Transaction** event: These reports are only supported for the AWS Gateway SaaS (Embedded) Traceability Service.  The reports include the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report Gateway usage. The transaction events are sent as soon as the Traceability Service processes the transaction event logs.
+* **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be deactivated. The Traceability Service sends the Transaction Metrics to the database storage for display on *Business Insights > API Health*. The default frequency is 30 minutes after the Traceability Service is enabled. For more information on how to see an aggregate view of all transactions, see [Business Insights](/docs/get_actionable_insights/business_insights/).
+* **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be deactivated. The Traceability Agent sends the Platform Usage counts to the database storage for display on *Organization > Usage* (default is daily after the Traceability Service is enabled). To clarify, the Platform Usage for a day is typically sent after a day has passed. This would make Platform Usage a lagging indicator compared to API Health by at most a whole day.
+* **Transaction** event: These reports are only supported for the AWS Gateway SaaS (Embedded) Traceability Service. The reports include the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report gateway usage. The Transaction events are sent as soon as the Traceability Service processes the transaction event logs.
 
 ## Set up usage reporting in online mode
 
@@ -69,9 +69,9 @@ OPTIONAL - To monitor transactions additional ports need to be opened. They are 
 
 ### Install Traceability Agent for online mode
 
-To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the Gateway to be monitored.
+To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the gateway to be monitored.
 
-To configure the agent, Amplify platform connectivity is required and can be performed from any machine having the correct Amplify platform access (refer to above URLs and IPs). Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
+To configure the agent, Amplify platform connectivity is required and can be performed from any machine having the correct Amplify platform access (refer to above URLs and IPs). Once configured, the agent and its configuration must be copied to the gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
 
 This procedure will help you to configure and install the Traceability Agent:
 
@@ -98,7 +98,7 @@ Step 4. Configure the Traceability Agent using Axway Central CLI: `axway central
   Traceability offline mode
 ```
 
-* Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure.
+* Answer ALL questions when prompted (environment / team / connectivity with gateway) to correctly configure.
 
 Step 5. Install the agent.
 
@@ -106,17 +106,17 @@ After all questions are answered, the Axway Central CLI will create an Amplify p
 
 {{< alert title="Note" color="primary" >}}If you plan to use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file produced by the CLI to disable the transaction report.{{< /alert >}}
 
-The local files must be copied to the Gateway machine, as mentioned in the CLI output.
+The local files must be copied to the gateway machine, as mentioned in the CLI output.
 
 After all files are copied, start Traceability Agent: `./traceability_agent ./ta_env_vars.env`
 
-For more information regarding agents' installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
+For more information regarding agents' installation, see [Axway gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
 
 ### Reporting Gateway Transaction Metrics event - automatic reporting for online mode
 
 You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Business Insights -> API Health** menu.
 
-Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. The Traceability Agent sends the Transaction Metrics to the platform on a regular basis (default is 15 minutes).
+Once Traceability Agent starts, it detects the gateway traffic, and begins counting the transactions. The Traceability Agent sends the Transaction Metrics to the platform on a regular basis (default is 15 minutes).
 
 To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_USAGEREPORTING_INTERVAL` variable with either a second, minute or hour notation:
 
@@ -131,15 +131,15 @@ CENTRAL_USAGEREPORTING_INTERVAL=15m
 CENTRAL_USAGEREPORTING_INTERVAL=1h
 ```
 
-If for any reason the transaction metrics report cannot be uploaded to Amplify platform, the data are kept in memory and will be pushed at the next trigger interval.
+If for any reason the Transaction Metrics report cannot be uploaded to Amplify platform, the data are kept in memory and will be pushed at the next trigger interval.
 
 If the Traceability Agent is stopped while there are remaining usage events to be sent, the report is saved on the disk where the Traceability Agent is located. The data will be sent to Amplify platform at the next Traceability Agent startup.
 
 ### Reporting Gateway Platform Usage event - automatic reporting for online mode
 
-You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization -> Usage** menu.
+You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under *Organization > Usage*.
 
-Once Traceability Agent starts, it detects the Gateway traffic, and begins counting the transactions. The Traceability Agent sends the Platform Usage metrics to the platform on a regular basis (default is daily).
+Once Traceability Agent starts, it detects the gateway traffic and begins counting the transactions. The Traceability Agent sends the Platform Usage metrics to the platform on a regular basis (default is daily).
 
 To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_USAGEREPORTING_USAGESCHEDULE` variable with either a second, minute or hour notation:
 
@@ -160,9 +160,9 @@ Use the following instructions to set up usage reporting in offline mode.
 
 ### Install Traceability Agent for offline mode
 
-To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the Gateway to be monitored.
+To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the gateway to be monitored.
 
-To configure the agent, Amplify platform connectivity is required for creating the installables. This action can be performed from any machine that has the correct Amplify platform access (refer to above urls and IPs). The installables can be copied to a machine with no external connections and the agents can be used without connectivity to the Amplify platform. The Lighthouse URL is not required for this mode. Once configured, the agent and its configuration must be copied to the Gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
+To configure the agent, Amplify platform connectivity is required for creating the installables. This action can be performed from any machine that has the correct Amplify platform access (refer to above urls and IPs). The installables can be copied to a machine with no external connections and the agents can be used without connectivity to the Amplify platform. The Lighthouse URL is not required for this mode. Once configured, the agent and its configuration must be copied to the gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
 
 This procedure will help you to configure and install the traceability agent:
 
@@ -186,19 +186,19 @@ Step 4. Configure the Traceability Agent using Axway Central CLI: `axway central
 > Traceability offline mode
 ```
 
-* Answer ALL questions when prompted (environment / team / connectivity with Gateway) to correctly configure the agent. By Default, the API Gateway and API Manager passwords are stored in cleartext in a configuration file in the agent installation folder. To secure your passwords, see [Administer Agent Security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/).
+* Answer ALL questions when prompted (environment / team / connectivity with gateway) to correctly configure the agent. By Default, the API Gateway and API Manager passwords are stored in cleartext in a configuration file in the agent installation folder. To secure your passwords, see [Administer Agent Security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/).
 
 Step 5. Install the agent
 
 After all questions are answered, the Axway Central CLI will create an Amplify platform environment that will host the usage report, as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration), based on the provided answers.
 
-The local files must be copied to the Gateway machine, as mentioned in the CLI output.
+The local files must be copied to the gateway machine, as mentioned in the CLI output.
 
 After all files are copied, start the Traceability Agent: `./traceability_agent ./ta_env_vars.env`
 
-For more information regarding agents installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
+For more information regarding agents installation, see [Axway gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
 
-### Reporting Gateway usage event - manual reporting for offline mode
+### Reporting Gateway Usage event - manual reporting for offline mode
 
 You can view the environment in *Enterprise Marketplace > Topology > Environment* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
@@ -241,12 +241,12 @@ Based on the frequency you choose, the Traceability Agent reports to the platfor
 The following known limitations exist in the current implementation.
 
 {{< alert title="Note" color="primary" >}}
-The usage report is based on the transactions the Traceability Agent monitors. If the transactions are not provided by the Gateway, the usage report will be inaccurate.
+The usage report is based on the transactions the Traceability Agent monitors. If the transactions are not provided by the gateway, the usage report will be inaccurate.
 {{< /alert >}}
 
 ### Axway API Gateway
 
-In the case of high demand, Axway recommends turning off the trace event logging of the Gateway. In this situation, the Traceability Agent will not be able to monitor the transactions or report the corresponding traffic.
+In the case of high demand, Axway recommends turning off the trace event logging of the gateway. In this situation, the Traceability Agent will not be able to monitor the transactions or report the corresponding traffic.
 
 ### AWS API Gateway
 
