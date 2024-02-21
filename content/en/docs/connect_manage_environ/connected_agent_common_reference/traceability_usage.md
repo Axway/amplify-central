@@ -112,7 +112,7 @@ After all files are copied, start Traceability Agent: `./traceability_agent ./ta
 
 For more information regarding agents' installation, see [Axway Gateway agents](/docs/connect_manage_environ/connect_api_manager/deploy-your-agents-with-amplify-cli), [AWS Gateway agents](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-with-amplify-cli), [Azure Gateway agent](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) and [Istio Gateway agents](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli).
 
-### Reporting Gateway Transaction event - automatic reporting for online mode
+### Reporting Gateway Transaction Metrics event - automatic reporting for online mode
 
 You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Business Insights -> API Health** menu.
 
