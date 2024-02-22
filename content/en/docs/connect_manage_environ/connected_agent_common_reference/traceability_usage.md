@@ -41,6 +41,8 @@ All outbound traffic is sent over SSL via TCP / UDP.
 
 Open the following ports so that agents can communicate to the Amplify platform:
 
+Robert, please update table.
+
 | Region | Host                       | IP             | port | Protocol | data                                 |
 | ------ | -------------------------- | -------------- | ---- | -------- | ------------------------------------ |
 |        |                            |                |      |          |                                      |

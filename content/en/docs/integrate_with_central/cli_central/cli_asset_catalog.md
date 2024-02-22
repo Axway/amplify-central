@@ -30,6 +30,8 @@ You'll also learn how to create an asset for an SDK.
 
 Assets can represent any digital entity – SDKs, docs, REST API, WSDL, gif etc. – whatever you want to catalog and productize, APIs being the primary use case for assets in the system. The lifecycle of those productizable APIs is nebulous, as the decisions on how they can be grouped and managed is a business decision. A “stage” is a grouping mechanism, but it’s not got a concrete physical representation (i.e., tied to an environment). It could be dev/test/prod, it could be eu/us/cn, it could be R&D/Sales/Marketing.
 
+Robert, please update this section. See references to eu/us/cn above.
+
 Run the following command to list the available stages in the system:
 
 ```bash
