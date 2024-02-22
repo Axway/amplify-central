@@ -131,11 +131,7 @@ If the product was created in a **Draft** state, you must move it to an **Active
 4. Click **Create New Version** on the Versions panel to start the product wizard. See [Create a product](#create-a-product) for details.
 5. Save the product version. A Draft version will be created if product release management is manual, or an active release will be created if product release management is automatic.
 
-{{< alert title="Note" color="information" >}}
-A Draft version can be edited until it is activated.
-
-When releasing the product version, it is optional to enter the product custom version and description.
-{{< /alert >}}
+{{< alert title="Note" color="primary" >}}A Draft version can be edited until it is activated. When releasing the product version, it is optional to enter the product custom version and description.{{< /alert >}}
 
 ## Activate a product release
 
