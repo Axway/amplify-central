@@ -58,22 +58,29 @@ View the following detailed information for a specific product in any state (Dra
 * Product icon - The icon / image representing the product, if any
 * Logical Name - Uniquely identifies the product
 * Owning Team - The team owner of the product
-* Modified On - Date, Time, and Username of who last modified this product
-* Modified By - The user who last modified the product
-* Created On - Date, Time, and Username of who created this product
-* Created By - The user who last modified the product
+* Release Management - The Product is set for either **Automatic** or **Manual release** of new versions
+* Publication button - Publish / Unpublish the product to a specific Marketplace
 * Description - A short description of the product
-* Resources - List of assets linked to the product
+* Version panel - Shows all the existings product releases
+    * Version name / Custom version name (if any) / release type as a tooltip
+    * Version state - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
+    * Version created date
+    * Version updated date
+    * Ellipsis menu to manage the version (Edit / Activate / Deprecate / Archived)
+    * Additional information for each version:
+        * Version description, if any
+        * Modified On - Date, Time of the last version modification
+        * Modified By - The user who last modified the product version
+        * Resources list (i.e., asset link to the product)
+        * Documentation - The product documentation
+* Visibility - All Marketplaces where the product is published to, and the associated visibility restriction (for everyone / specific teams / specific team with a specific tag / Nobody)
 * Plans - Plan list associated to the product
-* Documentation - Documentation associated with the product
-* Access Rights - List the team(s) the product is shared with that can have a different type of access to this product
-* Subscriptions - List the subscription attached to the product
-* Visibility - Set the product visibility in the Marketplace (for everyone / specific teams / specific team with a specific tag / Nobody)
-* Version State - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
+* Support Contact - The contact information the consumer uses to reach the provider
+* Subscriptions - All subscriptions attached to the product
+* Access Rights - Team(s) the product is shared with that can have a different type of access to this product
 * Category - Categories to help classify product into groups and find the asset by filtering on the Category
 * Tags - Labels to help find product in the catalog
 * Attributes - Key and value pair to allow customers to attach / query for custom information
-* Release Management - The Product details page has a badge below the title indicating the Product is set for **Automatic** or **Manual release** of new versions.
 
 {{< alert title="Note" color="primary" >}}Tags, Attributes, Categories, and plans can be added or removed in the product details view without impacting the product lifecycle.{{< /alert >}}
 
@@ -92,7 +99,10 @@ View the following detailed information for a specific product in any state (Dra
 5. Add the following Release Management information and then click **Next**:
 
     * Auto-Release - Enable / Disable the auto-release of new Product versions. If auto-release is **enabled**, a new product will be automatically released with each change to any one of the linked resources (i.e., Assets). For example, auto-release enabled will trigger an automatic product release every time a new grouped asset version is discovered or created. This enables a more automated and hands-off experience. If you want more control of the product release process, set auto-release to **disabled**.
-    * Auto-Release Type - The default is set to Patch release versions and you can select another type of product release versioning (i.e., major or minor).
+    * Auto-Release Type - The default is set to Patch release versions, but you can select another type of product release versioning (i.e., major or minor). The system will automatically compute the next version name based on the semVer pattern.
+    * (Optional) Custom release label - Free text (up to 50 characters) that can be displayed on the Marketplace. See [Marketplace Custom Version Display settings](/docs/manage_marketplace/customize_marketplace/marketplace_settings#configure-settings).
+    * (Optional) Release description - Free text (up to 350 characters) that describes the release
+    * (Optional) Archive previous version - Automatically archives the previous version when releasing a product. Disabled by default.
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
 7. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
@@ -113,9 +123,23 @@ If you want your product shared with a specific team, select a team owner, and t
 
 If the product was created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published in the Marketplace.
 
-## Activate a product
+## Create a product release
 
-The product must be in **Draft** state.
+1. Navigate to *Catalog > Product Foundry*.
+2. Select **All Products**.
+3. Search for the product to edit and open it.
+4. Click **Create New Version** on the Versions panel to start the product wizard. See [Create a product](#create-a-product) for details.
+5. Save the product version. A Draft version will be created if product release management is manual, or an active release will be created if product release management is automatic.
+
+{{< alert title="Note" color="information" >}}
+A Draft version can be edited until it is activated.
+
+When releasing the product version, it is optional to enter the product custom version and description.
+{{< /alert >}}
+
+## Activate a product release
+
+The product release must be in **Draft** state.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
@@ -123,7 +147,8 @@ The product must be in **Draft** state.
 4. Select the **Version** tab and search for the Draft version to activate.
 5. Click **Activate** from the version ellipsis menu.
 6. Select a Release Type of either **Major**, **Minor**, or **Patch**.
-7. Click **Update**.
+7. Enter the custom version information, if needed.
+8. Click **Update**.
 
 Once your product is active, you can [publish it to any Marketplace](/docs/manage_marketplace/publish_to_marketplace) your user is [allowed to publish to](/docs/manage_marketplace/customize_marketplace/marketplace_settings#configure-settings).
 
@@ -157,7 +182,7 @@ You can offer multiple free and paid consumption options for your product. As a 
 7. Select a Plan Type of either **Free** or **Paid** and click **Next**.
 8. Configure a Quota group and then click **Next**. Note that you can define a quota per group of resources in the product.
 
-    * Select the Unit. The default is **Transactions**. In the first release stage, only Transactions can be selected. Custom billable units cannot be defined
+    * Select the Unit. The default is **Transactions**. In the first release stage, only Transactions can be selected. Custom billable units cannot be defined.
     * Limit - Enter a quantity. For example, 1000, 15.
     * Quota type - **Daily**, **Weekly**, **Monthly**, or **Annually**
     * Limit Type:
@@ -180,7 +205,7 @@ You can offer multiple free and paid consumption options for your product. As a 
 
 ## Deprecate a product release
 
-The product must have at least one **Active** version.
+The product release must have at least one **Active** version.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.

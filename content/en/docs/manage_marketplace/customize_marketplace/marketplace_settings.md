@@ -86,6 +86,15 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
 
         * If enabled, you must provide the Terms & Conditions by either uploading a PDF file or entering a URL where it is available.
 
+    * **Custom Version Display** - indicates which product version will be visible in the Marketplace (the generated one or the custom one).
+
+        * **Disabled** - default. The consumer will see the system generated version of the product.
+        * **Enabled** - the consumer will see the custom product version, if any, set by the provider. If the provider does not supply a custom version, the system generated version will be displayed.
+
+        * **Product Version display** - select which version to show in the Marketplace.
+          * **Show all versions** - all available versions will be displayed.
+          * **Show only latest version** - only the most recent version will be visible to the consumer.
+
     * **Administration preference** - indicates who will be able to update the Marketplace settings:
         * **All teams** (default) - anyone having a Marketplace Manager role in any team is allowed to manage the Marketplace settings or any Administrator user.
         * **None** - only an Administrator user can manage the Marketplace settings.
