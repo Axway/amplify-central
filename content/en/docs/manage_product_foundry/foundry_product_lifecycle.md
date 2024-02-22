@@ -27,6 +27,6 @@ All other changes (name, icon, description, category, plans, support contact) do
 
 The product version name is computed by the system and based on the provider instructions (Major / Minor / Patch). This versioning follows the semVer pattern.
 
-{{< alert title="Note" color="information" >}}You can provide your own version name if the generated name does not comply with your compliance rules.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}You can provide your own version name if the generated name does not comply with your compliance rules.{{< /alert >}}
 
 Each version can be enrich with a short description (350 characters) to highlight the changes.
