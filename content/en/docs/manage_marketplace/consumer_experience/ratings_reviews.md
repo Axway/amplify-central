@@ -20,7 +20,7 @@ The review can have one of the 3 possible statuses:
 |---------------|----------------------------------------------------------------------------|
 | **Approved**  | The product review is visible to anyone who has access to the Marketplace. |
 | **Pending**   | The product review is pending an approval fron provider. Consumer other than the review owner are not able to see the review in that state. |
-| **Declined**  | The product review does not comply with the Provider review instruction. Consumer other than the review owner are not able to see the review. |
+| **Declined**  | The product review does not comply with the Provider review guidance. Consumer other than the review owner are not able to see the review. |
 
 ## Before you start
 
@@ -72,7 +72,7 @@ You will be enable to rate/review a product in the following cases:
 
 1. Navigate to the *Ratings & Reviews* section of the product you want to rate/review.
 2. click **Write a review**. A side panel opens where you can choose the rate/review the product.
-3. Selected the appropriate number of stars, optionally enter your review comment. Note that below the review comment area the **See review instruction** link will open a popup and display the review instruction the provider gave. Then click **Submit**.
+3. Selected the appropriate number of stars, optionally enter your review comment. Note that below the review comment area the **See review guidance** link will open a popup and display the review guidance the provider gave. Then click **Submit**.
 4. The panel displays the state of the review: either **Pending** in case provider has put in place manual review moderation or **Approved** otherwise.
 5. You can choose to go back to the product or view the review using the dedicated button in the panel.
 
