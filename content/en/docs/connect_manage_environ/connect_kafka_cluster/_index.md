@@ -40,7 +40,7 @@ The Discovery Agent is used to discover topic and associated schemas in Kafka cl
 
 ### Traceability Agent
 
-The Traceability Agent gathers consumer metrics for topics defined in Kafka cluster. The agent based on the configured frequency, will query the topic consumer offset stats for consumer group that identifies the created applications.
+The Traceability Agent gathers consumer metrics for topics defined in Kafka cluster. The agent based on the configured frequency, will query the topic consumer offset stats for consumer group that identifies the created applications. The consumer metric will identify the total number of messages read by the clients within the consumer group associated with Marketplace application.
 
 ## Prerequisites
 
