@@ -426,6 +426,7 @@ axway central get acl -s doc-env -o json | jq -r '.[0],matedata.id'
 ```
 
 Then add the aclId in the acl definition
+
 ```yaml
 ---
 group: management
