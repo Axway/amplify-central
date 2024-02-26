@@ -244,8 +244,8 @@ owner:
 Access Control List or ACL allows an object owner to share it with other teams. The sharing can be:
 
 * read only: any member of the team the object is shared with will only see it if its team role permit.
-* edit: any member of the team the object is shared with will b able to modify it if its team role permit.
-* delete: any member of the team the object is shared with will b able to modify it if its team role permit.
+* edit: any member of the team the object is shared with will be able to modify it if its team role permit.
+* delete: any member of the team the object is shared with will be able to modify it if its team role permit.
 
 Anatomy of an ACL object:
 
@@ -298,6 +298,15 @@ For the subject, you can use '*' for giving access to all team or use the teamId
 When object is scoped to another, the sharing of the depending objects is not automatic.
 
 For instance API Service is scoped to environment. One can decide to share his environment with another team. That does not imply that the other team will gain access to the API of the environment.
+
+General rule:
+
+| Parent object ownership | Scoped object ownership | Applied ownership to the scoped object |
+|-------------------------|-------------------------|----------------------------------------|
+| Owner A                 | None                    | Owner A                                |
+| Owner A                 | Owner B                 | Owner B                                |
+
+In previous table, when an object is added to a parent one (or scope), the ownership will either be the one from the parent or the one from the scoped object.
 
 This should be an explicit will of the owner of the object.
 
@@ -405,7 +414,32 @@ spec:
 
 #### Attaching ACL to an object
 
-Once the ACL is defined, you need to attach it to the object.
+Once the ACL is defined, you need to attach it to the scope object using the `acl` property in metadata of the object. The acl object needs to be created first and then get its id to add it into the metadata.acl.aclId
 
-TODO - check with Josh.
-The ACL is attached to the main object and to its dependents.
+Sample to add an ACL to an environment:
+
+First get the aclId:
+
+```bash
+# get the ACL Id
+axway central get acl -s doc-env -o json | jq -r '.[0],matedata.id'
+```
+
+Then add the aclId in the acl definition
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: Environment
+name: doc-env
+title: Environment for documentation tutorial
+metadata:
+  acl:
+    - subjectType: team
+      subjectId: d9120f39-88d1-4977-bc56-5dd7d7335a18
+      aclId: 8a2e92f084b161380184c9735a212987
+      scopedResourceKind: '*'
+      scopedResourceName: '*'
+      scopedResourceOwnerId: '*'
+...
+```
