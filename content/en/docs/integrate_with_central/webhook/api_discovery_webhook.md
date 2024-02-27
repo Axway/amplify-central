@@ -80,6 +80,10 @@ The webhook resource has been created and this will be used to create the trigge
 jq '.[0].name' webhook-details.json
 ```
 
+{{< alert title="Note" color="warning" >}}
+For an HTTPS webhook endpoint, you must have a certificate issued by a valid certificate authority, not a self-signed certificate. Otherwise, no events will be received by the webhook endpoint.
+{{< /alert >}}
+
 ## Create the trigger
 
 Create the ResourceHook that will call the webhook when a API service revision has been changed in an environment. Run the following command to create a ResourceHook:
