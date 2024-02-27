@@ -9,12 +9,12 @@ Deploy your agents using Axway CLI so you can manage your Kafka cluster environm
 ## Before you start
 
 * Read [Amplify Kafka cluster connected overview](/docs/connect_manage_environ/connect_kafka_cluster/)
-* Based on Kafka cluster deployment type you will need following information:
+* Based on the Kafka cluster deployment type, you will need following information:
     * Confluent Cloud
         * Confluent Cloud environment identifier
         * Confluent Cloud cluster identifier
         * Cloud API Key
-        * Resource API Key for Cluster
+        * Resource API Key for cluster
         * Resource API Key for Schema Registry
     * Confluent Platform
         * Cluster bootstrap server
@@ -28,8 +28,8 @@ Learn how to quickly configure, install, and run your Discovery and Traceability
 
 Axway Central CLI and Amplify platform connectivity are required to configure the agent.
 
-1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
-2. For docker based agent once the configuration is complete, the agent configuration must be copied to a Docker machine so that the Docker runner will find them.
+* Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
+* For a Docker-based agent, once the configuration is complete, the agent configuration must be copied to a Docker machine so that the Docker runner will find them.
 
 ## Agent configuration machine pre-requisites
 
@@ -58,7 +58,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 * SASL Mechanism (PLAIN, SCRAM-SHA-256 or SCRAM-SHA-512)
 * Schema Registry URL
 
-## Agent runner machine pre-requisites
+## Agent runner machine prerequisites
 
 Kafka agents are delivered as a Docker image provided by Axway.
 
@@ -69,7 +69,7 @@ The agents must have access to:
 
 ## Configure the agents with Axway Central CLI
 
-Use Axway Central CLI to configure the agents. This CLI will prompt you for answers regarding your Gateway installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
+Use Axway Central CLI to configure the agents. This CLI will prompt you for answers regarding your gateway installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
 
 ### Step 1: Install Axway Central CLI
 
@@ -161,28 +161,28 @@ The installation procedure will prompt for the following:
    * **Deployment Type** select between `Confluent Cloud` or `Confluent Platform`
 
    * Confluent Cloud Deployment Prompts
-     * **Environment ID** is the unique identifier for your environment on Confluent Cloud
-     * **Cluster ID** is the unique identifier for your cluster in the selected environment on Confluent Cloud
-     * **Cloud API Key ID** the Cloud API Key ID that agent will use to authenticate with Confluent Cloud
-     * **Cloud API Key Secret** the secret for Cloud API Key
-     * **Cluster API Key ID** the Resource API Key ID for your cluster in the selected environment on Confluent Cloud
-     * **Cluster API Key Secret** the secret for cluster API Key
-     * **Schema Registry API Key ID** the Resource API Key ID for your Schema Registry in the selected environment on Confluent Cloud
-     * **Schema Registry API Key Secret** the secret for Schema Registry API Key
+     * **Environment ID**: the unique identifier for your environment on Confluent Cloud
+     * **Cluster ID**: the unique identifier for your cluster in the selected environment on Confluent Cloud
+     * **Cloud API Key ID**: the Cloud API Key ID that agent will use to authenticate with Confluent Cloud
+     * **Cloud API Key Secret**: the secret for Cloud API Key
+     * **Cluster API Key ID**: the Resource API Key ID for your cluster in the selected environment on Confluent Cloud
+     * **Cluster API Key Secret**: the secret for cluster API Key
+     * **Schema Registry API Key ID**: the Resource API Key ID for your Schema Registry in the selected environment on Confluent Cloud
+     * **Schema Registry API Key Secret**: the secret for Schema Registry API Key
 
    * Confluent Platform Deployment Prompts
-     * **Cluster Server** is the bootstrap server name of the cluster in Confluent Platform
-     * **SASL Authentication Mechanism** select between `PLAIN`, `SCRAM-SHA-256` or `SCRAM-SHA-512`
-     * **SASL Username** is the SASL user used by the agent to authenticate with Kafka broker using the selected SASL mechanism
-     * **SASL Password** is the password for the SASL user
-     * **Use Schema Registry** defaulted to `Yes`, set to `No` to not use Schema Registry
-     * **Schema Registry URL** is the base URL for Schema Registry in Confluent Platform
-     * **Use SASL Authentication for Schema Registry** defaulted to `Yes`, set to `No` to not use SASL authentication with Schema Registry
+     * **Cluster Server**: the bootstrap server name of the cluster in Confluent Platform
+     * **SASL Authentication Mechanism**: select between `PLAIN`, `SCRAM-SHA-256` or `SCRAM-SHA-512`
+     * **SASL Username**: the SASL user used by the agent to authenticate with Kafka broker using the selected SASL mechanism
+     * **SASL Password**: the password for the SASL user
+     * **Use Schema Registry**: defaulted to `Yes`, set to `No` to not use Schema Registry
+     * **Schema Registry URL**: the base URL for Schema Registry in Confluent Platform
+     * **Use SASL Authentication for Schema Registry**: defaulted to `Yes`, set to `No` to not use SASL authentication with Schema Registry
 
 5. Traceability module connectivity:
    * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack`, or `HTTPS`
 
-Once you have answered all questions, the agents' configuration files are updated, the Enterprise Marketplace resources are created and the key pair is generated (if you chose to create a new service account).
+Once you have answered all questions, the agents' configuration files are updated, the Enterprise Marketplace resources are created, and the key pair is generated (if you chose to create a new service account).
 
 The current directory contains the following files:
 
@@ -202,7 +202,7 @@ public_key.pem           *newly created service account only
 
 The installation summary contains the Docker commands needed to finish the installation.
 
-By default, the Docker commands are configured to use the latest available agents version. If you want to use a different version, verify the available version in the agent release note.
+By default, the Docker commands are configured to use the latest available agent version. If you want to use a different version, verify the available version in the agent release note.
 
 Sample:
 
@@ -227,11 +227,11 @@ docker run -it --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
 * Pull the latest images of the Discovery/Traceability Agents:
     * These two commands pull the most recent released agents from docker pull axway.jfrog.io/ampc-public-docker-release/agent.
 * Run the latest images of the Discovery/Traceability Agents:
-    * These two commands run the Docker Containers using the created environment files, and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
+    * These two commands run the Docker containers using the created environment files and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
 
 Once the pull and run commands are completed, the agents should be running in the Docker infrastructure.
 
-See [Connect Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/) for additional information about connecting Kafka cluster to Enterprise Marketplace.
+See [Connect Kafka cluster](/docs/connect_manage_environ/connect_kafka_cluster/) for additional information about connecting Kafka cluster to Enterprise Marketplace.
 
 ## Check that agents are running with Axway Central CLI
 
@@ -260,4 +260,4 @@ confluent-cloud-ta     2 hours ago  confluent-cloud-ta     TraceabilityAgent  En
 confluent-platform-ta  2 hours ago  confluent-platform-ta  TraceabilityAgent  Environment  confluent-platform  management      Kafka
 ```
 
-See [Connect Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/) for additional information about connecting Kafka cluster to Enterprise Marketplace.
+See [Connect Kafka cluster](/docs/connect_manage_environ/connect_kafka_cluster/) for additional information about connecting Kafka cluster to Enterprise Marketplace.
