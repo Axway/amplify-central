@@ -39,7 +39,7 @@ The product ratings is visible in the product details screen, located at the rig
 If the product has not been rated yet, the view displays only the **Write a review** button.
 
 This button will remain disable in case only a subscription owner for the product can rate/review it.
- In that situation in the product Ratings & Reviews section, the **Write a review** buttom will be disabled with a tooltip indicating: "No subscription found". The button will become enable as soon as consumer has an approved subscription for the product.
+ In that situation in the product Ratings & Reviews section, the **Write a review** buttom will be disabled with a tooltip indicating: "You must be subscribed to the product to submit reviews.". The button will become enable as soon as consumer has an approved subscription for the product.
 
 If the product has been already rated, the view displays:
 
