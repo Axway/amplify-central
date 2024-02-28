@@ -147,7 +147,7 @@ axway central apply -f webhook.yaml
 ✔ "Webhook/invoke-jira-webhook" in the scope "Environment/azure-apiman-service" has successfully been updated.
 ```
 
-{{< alert title="Note" color="warning" >}}
+{{< alert title="Note" color="danger" >}}
 For an HTTPS webhook endpoint, you must have a certificate issued by a valid certificate authority, not a self-signed certificate. Otherwise, no events will be received by the webhook endpoint.
 {{< /alert >}}
 
