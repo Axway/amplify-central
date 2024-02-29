@@ -99,16 +99,17 @@ Where `asset.json` contains the following content:
 
 To link an environment's API to an asset, you must create an AssetMapping. This mapping will automatically create an
 AssetResource providing a synchronized copy of the API revision's specification, version, and endpoints to be used
-by marketplace. This mapping will monitor all changes to an environment's APIServiceInstance such as when a new
-APIServiceRevision gets deployed to it or when the endpoints have changed, keeping the AssetResource up-to-date.
-Every time an API change is detected, the asset will also be put back into a "draft" state so the updated
-AssetResource can be released to marketplace.
+by Marketplace. This mapping will monitor all changes to an environment's APIServiceInstance such as, when a new
+APIServiceRevision gets deployed to it or when the endpoints have changed, keeping the AssetResource up to date.
+Every time an API change is detected, the asset will also be put back into a "draft" state, so the updated
+AssetResource can be released to Marketplace.
 
-Note that an AssetResource keeps a copy of the API in case the environment's API service or revision gets deleted.
-A copy is needed in case marketplace is referencing it.
+{{< alert title="Note" color="primary" >}}An AssetResource keeps a copy of the API in case the environment's API service or revision gets deleted.
+A copy is needed in case the Marketplace is referencing it.
+{{< /alert >}}
 
-Create a YAML (or JSON) file as shown below to create a new AssetMapping, replacing the `<assetName>` with the asset
-you want to scope. Also replace the `<environmentName>`, `<apiServiceName>`, and `<apiServiceIsntanceName>` with
+Create a YAML (or JSON) file as shown below to create a new AssetMapping. Replace `<assetName>` with the asset
+you want to scope. Also replace `<environmentName>`, `<apiServiceName>`, and `<apiServiceInstanceName>` with
 the API you want to monitor under environment.
 
 ```yaml
@@ -131,7 +132,7 @@ spec:
     assetResourceTitle: My Custom API Name
 ```
 
-Run the following command to create the AssetMapping with the above file.
+Run the following command to create the AssetMapping with the above file:
 
 ```bash
 axway central create -f ${aboveAssetMapping.yaml}
@@ -139,17 +140,18 @@ axway central create -f ${aboveAssetMapping.yaml}
 
 ### Unlink an API from an asset
 
-To unlink an API, you must delete its AssetMapping and its generated AssetResource. Note that deleting an
-AssetResource will automatically delete the AssetMapping that generated it. However, the reverse is not true
-where deleting an AssetMapping will not automatically delete its assoicated AssetResource, leaving it orphaned.
+To unlink an API, you must delete its AssetMapping and its generated AssetResource.
 
-To find out the name of the AssetResource created by an AssetMapping, run the following command.
+{{< alert title="Note" color="primary" >}}Deleting an AssetResource will automatically delete the AssetMapping that generated it. However, the reverse is not true. Deleting an AssetMapping will not automatically delete its associated AssetResource, leaving it orphaned.
+{{< /alert >}}
+
+Run the following command to find out the name of the AssetResource created by an AssetMapping:
 
 ```bash
 axway central get assetmapping -s ${myAssetName} -o json
 ```
 
-The above command will output AssetMapping info similar to the below. The "status/outputs/reesource/assetResource/ref"
+The above command will output AssetMapping info similar to the following example. The "status/outputs/resource/assetResource/ref"
 will provide the name of the AssetResource it generated. This is the name of the AssetResource you need to delete.
 If the outputs section is missing, then the mapping did not generate an AssetResource.
 
@@ -171,7 +173,7 @@ status:
           operationType: updated
 ```
 
-You can then delete the AssetResource with the name fetched above as follows.
+Now run the following command to delete the AssetResource with the name fetched above:
 
 ```bash
 axway central delete assetresource ${assetResourceName} -s ${assetName}
