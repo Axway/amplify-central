@@ -99,10 +99,10 @@ Where `asset.json` contains the following content:
 
 To link an environment's API to an asset, you must create an AssetMapping. This mapping will automatically create an
 AssetResource providing a synchronized copy of the API revision's specification, version, and endpoints to be used
-by Marketplace. This mapping will monitor all changes to an environment's APIServiceInstance such as, when a new
+by the Marketplace. This mapping will monitor all changes to an environment's APIServiceInstance such as, when a new
 APIServiceRevision gets deployed to it or when the endpoints have changed, keeping the AssetResource up to date.
 Every time an API change is detected, the asset will also be put back into a "draft" state, so the updated
-AssetResource can be released to Marketplace.
+AssetResource can be released to the Marketplace.
 
 {{< alert title="Note" color="primary" >}}An AssetResource keeps a copy of the API in case the environment's API service or revision gets deleted.
 A copy is needed in case the Marketplace is referencing it.
