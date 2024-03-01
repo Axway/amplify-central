@@ -74,9 +74,9 @@ Sample to categorize APIs having a tag name API_TYPE and does not have 'Finance'
 
 `tag.<tagName>.contains(<value>)`
 
-Sample to categorize APIs having a tag name API_TYPE with a value containing API: `tag.API_TYPE.contains(API)`
+Sample to categorize APIs having a tag name API_TYPE with a value containing API: `tag.API_TYPE.contains("API")`
 
-Sample to categorize APIs having a tag name API_TYPE with a value not containing API: `tag.API_TYPE.contains(API) == false`
+Sample to categorize APIs having a tag name API_TYPE with a value not containing API: `tag.API_TYPE.contains("API") == false`
 
 ### Categorize using MatchRegEx
 

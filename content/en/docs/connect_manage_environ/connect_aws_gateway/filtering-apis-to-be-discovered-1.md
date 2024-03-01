@@ -38,9 +38,9 @@ Sample to discover all APIs having a tag name API_TYPE that does not have ‘Fin
 
 `tag.<tagName>.contains(<value>) == true |  false`
 
-Sample to discover all APIs having a tag name containing API: `AWS_FILTER=tag.API_TYPE.contains(API) == true`
+Sample to discover all APIs having a tag name containing API: `AWS_FILTER=tag.API_TYPE.contains("API") == true`
 
-Sample to discover all APIs having a tag name not containing API: `AWS_FILTER=tag.API_TYPE.contains(API) == false`
+Sample to discover all APIs having a tag name not containing API: `AWS_FILTER=tag.API_TYPE.contains("API") == false`
 
 ## Filter using MatchRegEx
 
