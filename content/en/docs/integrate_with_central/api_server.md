@@ -207,22 +207,22 @@ finalizers: []
 
 #### Ownership
 
-There are 2 kinds of user interacting with API Server objects:
+Two kinds of users interact with API Server objects:
 
-* **Central Admin** user: a powerful user that can do anything.
-* **Regular team** user: a user belongings to one or multiple teams with specific roles in each team. These roles will limit his interaction with the system.
+* **Central Admin**: a powerful user that can do anything.
+* **Regular team**: a user belongings to one or multiple teams with specific roles in each team. The roles limit the the user's interaction with the system.
 
-For more information about the role, refer to [Role and Capabilities](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#roles-and-capabilities) / [Team roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) documentation.
+For more information about roles, see [Role and Capabilities](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#roles-and-capabilities) / [Team roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) documentation.
 
 {{< alert title="Note" color="primary" >}}
-Service account for CI/CD purpose can have either be a Central Admin role or a team role based on their need of interaction
+A service account for CI/CD can have either a Central Admin role or a team role based on the need of interaction.
 {{< /alert >}}
 
-The person (or service account) creating an object in the system automatically becomes the owner of it via the team he created the object with. Which mean all user of the same team can manage any object created by a team member. Users from a team are not be able to see the objects created by another team unless the owning team decides to share the object with them. Refer to [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing object across team.
+The person (or service account) creating an object in the system automatically becomes the owner of the object through the team it was created with. Meaning all users of the same team can manage any object created by a team member. Users from a team cannot see objects created by another team unless the owning team decides to share the object with them. See [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing an object across teams.
 
-The exception for this is related to Central Admin role. Since this role does not belongs to any team, all objects created by Central Admin user will be only visible by other Central Admin users. A user part of a team will not be able to see objects created by Central Admin unless Central Admin decides to share the object with that team. Refer to [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing object across team.
+The exception for this is related to the Central Admin role. Since this role does not belongs to any team, all objects created by a Central Admin user will only be visible by other Central Admin users. A user that is part of a team will not be able to see objects created by the Central Admin unless the Central Admin shares the object with that team. See [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing an object across teams.
 
-Object owner is located in the `owner` property of each object. This property is absent if the object is created by a Central Admin user.
+The object owner is located in the `owner` property of each object. This property is absent if the object is created by a Central Admin user.
 
 Sample of environment owned by the *API Development* team:
 
@@ -241,11 +241,11 @@ owner:
 
 #### Access Control List
 
-Access Control List or ACL allows an object owner to share it with other teams. The sharing can be:
+An Access Control List or ACL allows an object owner to share the object with other teams. The sharing can be:
 
-* read only: any member of the team the object is shared with will only see it if its team role permit.
-* edit: any member of the team the object is shared with will be able to modify it if its team role permit.
-* delete: any member of the team the object is shared with will be able to modify it if its team role permit.
+* read only: any member of the team the object is shared with can see it if its team role permits.
+* edit: any member of the team the object is shared with can modify it if its team role permits.
+* delete: any member of the team the object is shared with can modify it if its team role permits.
 
 Anatomy of an ACL object:
 
@@ -287,17 +287,17 @@ If you have multiple permissions referencing the same resource, then it will be 
 
 * **false** takes precedence over **true** and **null**/**undefined**.
 * **true** takes precedence over **null**/**undefined**.
-* If **null**/**undefined**, then default to **false** for resources you do NOT own and **true** for resources you do own.
+* **null**/**undefined** defaults to **false** for resources you do NOT own or **true** for resources you do own.
 
 {{< alert title="Note" color="primary" >}}
-For the subject, you can use '*' for giving access to all team or use the teamId to specify specific team
+For the subject, you can use '*' to give access to all teams, or use the teamId to specify a specific team.
 {{< /alert >}}
 
 #### ACL and scoped objects
 
-When object is scoped to another, the sharing of the depending objects is not automatic.
+When an object is scoped to another, the sharing of the depending objects is not automatic.
 
-For instance API Service is scoped to environment. One can decide to share his environment with another team. That does not imply that the other team will gain access to the API of the environment.
+For instance, when an API Service is scoped to environment and that environment is shared with another team, it does not imply that the other team will gain access to the API of the environment.
 
 General rule:
 
@@ -306,9 +306,7 @@ General rule:
 | Owner A                 | None                    | Owner A                                |
 | Owner A                 | Owner B                 | Owner B                                |
 
-In previous table, when an object is added to a parent one (or scope), the ownership will either be the one from the parent or the one from the scoped object.
-
-This should be an explicit will of the owner of the object.
+When an object is added to a parent (or scope), the ownership will either be from the parent or from the scoped object. It is the explicit will of the owner of the object.
 
 Sample for sharing only environment with team1 and team2:
 
