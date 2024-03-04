@@ -202,3 +202,243 @@ attributes:
   externalAPIID: ace84b76-2207-4bd8-a78e-44d170302a77
 finalizers: []
 ```
+
+### Ownership and sharing
+
+#### Ownership
+
+Two kinds of users interact with API Server objects:
+
+* **Central Admin**: a powerful user that can do anything.
+* **Regular team**: a user belongings to one or multiple teams with specific roles in each team. The roles limit the the user's interaction with the system.
+
+For more information about roles, see [Role and Capabilities](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#roles-and-capabilities) / [Team roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) documentation.
+
+{{< alert title="Note" color="primary" >}}
+A service account for CI/CD can have either a Central Admin role or a team role based on the need of interaction.
+{{< /alert >}}
+
+The person (or service account) creating an object in the system automatically becomes the owner of the object through the team it was created with. Meaning all users of the same team can manage any object created by a team member. Users from a team cannot see objects created by another team unless the owning team decides to share the object with them. See [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing an object across teams.
+
+The exception for this is related to the Central Admin role. Since this role does not belongs to any team, all objects created by a Central Admin user will only be visible by other Central Admin users. A user that is part of a team will not be able to see objects created by the Central Admin unless the Central Admin shares the object with that team. See [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing an object across teams.
+
+The object owner is located in the `owner` property of each object. This property is absent if the object is created by a Central Admin user.
+
+Sample of environment owned by the *API Development* team:
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: Environment
+name: doc-tutorial
+title: Doc tutorial
+owner:
+  type: team
+  id: d9120f39*****************
+  teamName: API Development
+...
+```
+
+#### Access Control List
+
+An Access Control List or ACL allows an object owner to share the object with other teams. The sharing can be:
+
+* read only: any member of the team the object is shared with can see it if its team role permits.
+* edit: any member of the team the object is shared with can modify it if its team role permits.
+* delete: any member of the team the object is shared with can modify it if its team role permits.
+
+Anatomy of an ACL object:
+
+```yaml
+group: catalog
+apiVersion: v1alpha1
+kind: AccessControlList
+name: acl-tutorial-doc
+metadata:
+  scope:
+    kind: _MainObjectKind_
+    name: main-object-name
+spec:
+  rules:
+    - access:
+      # Allow users to update/delete the unscoped resource this ACL is scoped under.
+      - level: scope
+        allowDelete: true/false/null
+        allowWrite: true/false/null
+      # Allows users to create/update/delete scoped resources. Does not apply to unscoped resource.
+      - level: scopedKind
+        kind: "*"
+        allowCreate: true/false/null
+        allowDelete: true/false/null
+        allowWrite: true/false/null
+      # Allows users to update/delete the 1 referenced scoped resource.
+      - level: scopedResource
+        kind: APIService
+        name: my-api
+        allowDelete: true/false/null
+        allowWrite: true/false/null
+  subjects:
+    # list of team the ACL applies to
+    - type: team
+      id: "*"
+```
+
+If you have multiple permissions referencing the same resource, then it will be resolved as follows:
+
+* **false** takes precedence over **true** and **null**/**undefined**.
+* **true** takes precedence over **null**/**undefined**.
+* **null**/**undefined** defaults to **false** for resources you do NOT own or **true** for resources you do own.
+
+{{< alert title="Note" color="primary" >}}
+For the subject, you can use '*' to give access to all teams, or use the teamId to specify a specific team.
+{{< /alert >}}
+
+#### ACL and scoped objects
+
+When an object is scoped to another, the sharing of the depending objects is not automatic.
+
+For instance, when an API Service is scoped to environment and that environment is shared with another team, it does not imply that the other team will gain access to the API of the environment.
+
+General rule:
+
+| Parent object ownership | Scoped object ownership | Applied ownership to the scoped object |
+|-------------------------|-------------------------|----------------------------------------|
+| Owner A                 | None                    | Owner A                                |
+| Owner A                 | Owner B                 | Owner B                                |
+
+When an object is added to a parent (or scope), the ownership will either be from the parent or from the scoped object. It is the explicit will of the owner of the object.
+
+Sample for sharing only environment with team1 and team2:
+
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: AccessControlList
+name: doc-sharing-env
+title: Doc sharing doc-env only with team1 and team2
+metadata:
+  scope:
+    kind: Environment
+    name: doc-env
+  acl: []
+  accessRights:
+    canChangeOwner: true
+    canDelete: true
+    canWrite: true
+    canRead: true
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  rules:
+    - access:
+        - level: scope
+  subjects:
+    - id: 37cea73d-9d63-*********
+      type: team
+    - id: bf5c20e9-a2a9-*********
+      type: team
+```
+
+Sample for sharing environment and depending API Service with team1 and team2:
+
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: AccessControlList
+name: doc-sharing-apiservice
+title: Doc sharing API Service from doc-env with team1 and team2
+metadata:
+  scope:
+    kind: Environment
+    name: doc-env
+  acl: []
+  accessRights:
+    canChangeOwner: true
+    canDelete: true
+    canWrite: true
+    canRead: true
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  rules:
+    - access:
+        - level: scopedKind
+          kind: "apiservice"
+  subjects:
+    - id: 37cea73d-9d63-*********
+      type: team
+    - id: bf5c20e9-a2a9-*********
+      type: team
+```
+
+Sample for sharing environment and specific depending API Service with team1 and team2:
+
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: AccessControlList
+name: doc-sharing-apiservice-instance
+title: Doc sharing API Service service1 from doc-env with team1 and team2
+metadata:
+  scope:
+    kind: Environment
+    name: doc-env
+  acl: []
+  accessRights:
+    canChangeOwner: true
+    canDelete: true
+    canWrite: true
+    canRead: true
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  rules:
+    - access:
+        - level: scopedKind
+          kind: "apiservice"
+          name: "service1"
+  subjects:
+    - id: 37cea73d-9d63-*********
+      type: team
+    - id: bf5c20e9-a2a9-*********
+      type: team
+```
+
+#### Attaching ACL to an object
+
+Once the ACL is defined, you need to attach it to the scope object using the `acl` property in metadata of the object. The acl object needs to be created first and then get its id to add it into the metadata.acl.aclId
+
+Sample to add an ACL to an environment:
+
+First get the aclId:
+
+```bash
+# get the ACL Id
+axway central get acl -s doc-env -o json | jq -r '.[0],matedata.id'
+```
+
+Then add the aclId in the acl definition
+
+```yaml
+---
+group: management
+apiVersion: v1alpha1
+kind: Environment
+name: doc-env
+title: Environment for documentation tutorial
+metadata:
+  acl:
+    - subjectType: team
+      subjectId: d9120f39-88d1-4977-bc56-5dd7d7335a18
+      aclId: 8a2e92f084b161380184c9735a212987
+      scopedResourceKind: '*'
+      scopedResourceName: '*'
+      scopedResourceOwnerId: '*'
+...
+```
