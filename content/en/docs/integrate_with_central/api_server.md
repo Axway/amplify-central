@@ -205,8 +205,6 @@ finalizers: []
 
 ### Ownership and sharing
 
-#### Ownership
-
 Two kinds of users interact with API Server objects:
 
 * **Central Admin**: a powerful user that can do anything.
