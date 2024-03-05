@@ -12,7 +12,7 @@ A rating is a ranking from 1 to 5 showing the product assessment (1 being a low 
 
 ## What is a review
 
-A user's evaluation of a product. Review guidance may be available to assist in providing relative feedback. 
+A user's evaluation of a product. Review guidance may be available to assist in providing relative feedback.
 
 {{< alert title="Note" color="primary" >}}Reviews may be subject to moderation before approval.{{< /alert >}}
 
@@ -53,9 +53,7 @@ Once a product has been rated, the view displays:
     * The review comment left by the reviewer (the comment can be truncated). Clicking the review to open the details panel where you can view the entire review comment.
 
 {{< alert title="Note" color="primary" >}}
-A review comment is visible once approved by the product owner, otherwise: <br />
-* Comment value is replaced with: "This review's comment is under validation process" when the review is in pending approval state.
-* Comment value is replaced with: "This review's comment did not meet our community guidelines and has not been published, only your rating is taken into account" when the review is declined by the provider.
+A review comment is visible once approved by the product owner, otherwise: <br />* Comment value is replaced with: "This review's comment is under validation process" when the review is in pending approval state. <br />* Comment value is replaced with: "This review's comment did not meet our community guidelines and has not been published, only your rating is taken into account" when the review is declined by the provider.
 {{< /alert >}}
 
 Once you submit a review, it will appear slightly different from the other reviews; two icons will diplay at the right:
