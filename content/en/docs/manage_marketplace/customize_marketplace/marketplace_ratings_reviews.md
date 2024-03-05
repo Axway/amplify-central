@@ -20,11 +20,11 @@ Learn how to enable the Marketplace ratings and reviews so that consumers can gi
 2. Open the desired Marketplace by clicking the Marletplace name.
 3. Select **Ratings & reviews** tab.
 4. Switch the **Ratings & Reviews** toggle to **Enabled** (Disabled by default) to allow consumers to rate and review the Marketplace products.
-5. Select who is able to rate and review the product:
-   1. Subscribers Only - any member part of the team that own a product subscripotion can rate and review the product
-   2. Any Registered User - any authenticated user connected to the Marketplace can rate and review the product
+5. Select who can rate and review the product:
+   * **Subscribers Only** - any member who is part of the team that owns a product subscription.
+   * **Any Registered User** - any authenticated user that is connected to the Marketplace.
 6. Select the Moderation Process:
-   1. **Manual Moderation** - the Catalog Manager owning the product will have to manually approve the review before the review being visible by every body.
-   2. **Automatic Moderation** - there is no moderation and the review is automatically approved.
-7. Select the review size a consumer can leave - choice between **Short** (up to 280 characters), **Medium** (up to 1,000 characters) or **Long** (up to 4,00 characters)
-8. Add your Review instructions that can guide the consumer and help them to enter a good review.
+   * **Manual Moderation** - the Catalog Manager owning the product must manually approve the review before it is visible to all users.
+   * **Automatic Moderation** - there is no moderation and the review is automatically approved.
+7. Select the length of a review that a consumer can leave - **Short** (up to 280 characters), **Medium** (up to 1,000 characters), or **Long** (up to 4,00 characters)
+8. Add review instructions / policy to guide consumers with reviews.
