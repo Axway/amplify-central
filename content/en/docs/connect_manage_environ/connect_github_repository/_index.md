@@ -115,3 +115,7 @@ The installation procedure will prompt for the following:
      * The pattern will pass if it matches any part of the filename. To match the whole name, add anchors to the expression (example: `^spec\.json$`, this will match only files that are literally named `spec.json`)
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GitHub. If set to discover GitHub resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
+
+## Related topics
+
+See the following topics for related information.
