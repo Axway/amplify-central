@@ -88,6 +88,6 @@ Only a Central Administrator user can delete reviews.
 1. Navigate to *Product Foundry > Product*.
 2. Open the product details.
 3. Select **Ratings & Reviews**.
-4. Select **Delete** from the ellipsis menu corresponding to the review. *A confirmation is displayed*. 
+4. Select **Delete** from the ellipsis menu corresponding to the review. *A confirmation is displayed*.
 5. Enter DELETE in the confirmation field and click **Delete** to validate your choice, or Cancel to abort the review deletion.
 6. Once the confirmation is closed, the review is deleted and the review list is updated.
