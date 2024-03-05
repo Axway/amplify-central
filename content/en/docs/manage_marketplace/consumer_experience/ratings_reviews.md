@@ -12,15 +12,17 @@ A rating is a ranking from 1 to 5 showing the product assessment (1 being a low 
 
 ## What is a review
 
-A review is a free text entered by the reviewer to explain his sentiment about the product. As review are sensitive, most of the time provider provides guidance to help consumer provides good review. The review may also be subject to moderation by the provider based on his choice to apply manual moderation approval or not.
+A user's evaluation of a product. Review guidance may be available to assist in providing relative feedback. 
 
-The review can have one of the 3 possible statuses:
+{{< alert title="Note" color="primary" >}}Reviews may be subject to moderation before approval.{{< /alert >}}
+
+Possible review statuses:
 
 | Status        | Description                                                                |
 |---------------|----------------------------------------------------------------------------|
 | **Approved**  | The product review is visible to anyone who has access to the Marketplace. |
-| **Pending**   | The product review is pending an approval fron provider. Consumer other than the review owner are not able to see the review in that state. |
-| **Declined**  | The product review does not comply with the Provider review guidance. Consumer other than the review owner are not able to see the review. |
+| **Pending**   | The product review is pending an approval from the provider. Users, other than the reviewer, cannot see the the review. |
+| **Declined**  | The product review does not comply with the provider's review guidance. Users, other than the review owner, cannot see the review. |
 
 ## Before you start
 
@@ -28,63 +30,61 @@ Browse and find a product in the Marketplace.
 
 ## Objectives
 
-Any user (consumer / subscriber / catalog manager) logged into a Marketplace can rate/review any product that is visible to them if the provider has enabled the rating/review on the Marketplace.
+Any user (consumer / subscriber / catalog manager) logged into a Marketplace can rate/review any product that is visible to them if the provider has enabled ratings and reviews in the Marketplace.
 
-There could be a restriction to the above rule based on provider choice: you may not be able to rate/review a product you are not part of team having a subscription for that product.
+{{< alert title="Note" color="primary" >}}Ratings and reviews may be restricted to members of teams that have product subscriptions.{{< /alert >}}
 
-## View the product ratings & reviews
+## View the product rating and reviews
 
-The product ratings is visible in the product details screen, located at the right of the *Overview*, *Resources*, *Document* and *Plans* sections, or on the *Ratings & Reviews* section itself.
+A Product's rating and reviews is visible in the *product details* screen, located at the right of the *Overview*, *Resources*, *Document* and *Plans* sections, or in the *Ratings & Reviews* section.
 
-If the product has not been rated yet, the view displays only the **Write a review** button.
+If the product has not been rated, only the **Write a review** button is displayed in the view. This button will be disable if the product's ratings/reviews are restricted.
 
-This button will remain disable in case only a subscription owner for the product can rate/review it.
- In that situation in the product Ratings & Reviews section, the **Write a review** buttom will be disabled with a tooltip indicating: "You must be subscribed to the product to submit reviews.". The button will become enable as soon as consumer has an approved subscription for the product.
+If ratings and reviews are restricted to product subscription owners, then the **Write a review** button in the *Ratings & Reviews* section is disabled. A tooltip is available that indicates that you must be subscribed to the product to submit reviews. The **Write a review** button is enable once the user's product subscription is approved.
 
-If the product has been already rated, the view displays:
+Once a product has been rated, the view displays:
 
 * The average rating, the distribution of the ratings, and the **Write a review** button.
-* A list of all the already existing reviews, including:
+* A list of the existing reviews, including:
     * The user that left the review
     * The date when the review was submitted
     * The rating value represented with star symbols
     * The review title
-    * The review comment left by the reviewer - the comment can be tuncated. But clicking it will open the review details panel where you can view the entire comment.
+    * The review comment left by the reviewer (the comment can be truncated). Clicking the review to open the details panel where you can view the entire review comment.
 
 {{< alert title="Note" color="primary" >}}
-The comment will not be visible until approved by the product owner:
-
-* comment value is replaced with: "This review's comment is under validation process." when the review is in pending approval state.
-* domment value is replaced with: "This review's comment did not meet our community guidelines and has not been published, only your rating is taken into account" when the review is declined by the provider.
+A review comment is visible once approved by the product owner, otherwise: <br />
+* Comment value is replaced with: "This review's comment is under validation process" when the review is in pending approval state.
+* Comment value is replaced with: "This review's comment did not meet our community guidelines and has not been published, only your rating is taken into account" when the review is declined by the provider.
 {{< /alert >}}
 
-If you already submitted a review, that review will appear slightly different from the others as 2 icons are added on the top right corner:
+Once you submit a review, it will appear slightly different from the other reviews; two icons will diplay at the right:
 
-* **Eye** icon - allow to view the details of the review
-* **Pen** icon - allow to edit the review
+* **Eye** - to view the details of the review
+* **Pen** - to edit the review
 
-## Rate/Review a product
+## Rate and review a product
 
-You will be enable to rate/review a product in the following cases:
+You can rate/review a product if:
 
 * you have not rated it yet
-* you are allowed by the provider to rate/review a product
+* the provider allows you to rate/review a product
 
 1. Navigate to the *Ratings & Reviews* section of the product you want to rate/review.
-2. click **Write a review**. A side panel opens where you can choose the rate/review the product.
-3. Selected the appropriate number of stars, optionally enter your review comment. Note that below the review comment area the **See review guidance** link will open a popup and display the review guidance the provider gave. Then click **Submit**.
-4. The panel displays the state of the review: either **Pending** in case provider has put in place manual review moderation or **Approved** otherwise.
-5. You can choose to go back to the product or view the review using the dedicated button in the panel.
+2. Click **Write a review**. A side panel opens where you can rate/review the product.
+3. Select the appropriate number of stars and optionally enter your review comment (click **See review guidance** to display the review guidance, if any). Then click **Submit**.
+4. The review state is displayed: **Pending** if the review is subject to moderation before approval, or **Approved**.
+5. You can go back to the product or view the review using the dedicated button in the panel.
 
-Once you have submitted a rating/review, you cannot submit another rating/review for the same product. The **Write a review** is changed to **Show my review** button.
+Once you have submitted a rating/review, you cannot submit another rating/review for the same product. The **Write a review** button changes to **Show my review**.
 
-## Editing a Rating/Review
+## Editing a rating/review
 
-One can edit his own review to make any change he wants. Once edited, the review will go to the approval process again if the provider has set one.
+You can only edit your own rating/review. Once edited, the review will go through the approval process again if the provider has set one.
 
 1. Navigate to the *Ratings* section of the product you want to rate.
-2. click **Show my review** buttom. A side panel opens where you can edit you review using the **Edit** button.
-3. In case the review has been declined by the product provider, the message from the provider is displayed helping you to correct the review.
-4. Once you are done with the change, click **Save**.
-5. The panel displays the state of the review: either **Pending** in case provider has put in place manual review moderation or **Approved** otherwise.
-6. You can choose to go back to the product or view the review using the dedicated button in the panel.
+2. Click **Show my review**. A side panel opens where you can edit you review. Click **Edit**.
+3. If the review has been declined by the product provider, a message from the provider is displayed to help you correct the review.
+4. Once you are done with the edits, click **Save**.
+5. The panel displays the state of the review:  **Pending** if the review is subject to moderation before approval, or **Approved**.
+6. You can go back to the product or view the review using the dedicated button in the panel.
