@@ -39,7 +39,7 @@ Status transitions:
 | Approved       | Declined or Pending  |
 | Declined       | Approved or Pending  |
 
-A review can be edited by the review owner regardless of the review state. Once edited and saved, the review status changes to **Pending** or **Approved**, depending on the moderation process. Refer to [Moderation process settings](/docs/manage_marketplace/customize_marketplace#enable-the-marketplace-ratings-and-reviews)
+A review can be edited by the review owner regardless of the review state. Once edited and saved, the review status changes to **Pending** or **Approved**, depending on the moderation process. Refer to [Moderation process settings](/docs/manage_marketplace/customize_marketplace/marketplace_ratings_reviews#enable-the-marketplace-ratings-and-reviews)
 
 The review state does not impact the average ratings computation.
 
