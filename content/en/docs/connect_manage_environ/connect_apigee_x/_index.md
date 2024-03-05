@@ -145,3 +145,7 @@ The installation procedure will prompt for the following:
    * Set if the agent should discover Apigee resources after installation is complete
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GCP and Apigee. If set to discover Apigee resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
+
+## Related topics
+
+See the following topics for related information.
