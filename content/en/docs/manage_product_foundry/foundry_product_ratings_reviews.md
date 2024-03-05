@@ -1,6 +1,6 @@
 ---
-title: Manage product ratings
-linkTitle: Manage product ratings
+title: Manage product ratings & reviews
+linkTitle: Manage product ratings & reviews
 weight: 60
 ---
 
