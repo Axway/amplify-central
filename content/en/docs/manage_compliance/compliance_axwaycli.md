@@ -251,3 +251,6 @@ axway central create -f <PathToAboveYamlFile>
 ## Custom JavaScript ruleset
 
 You can create your own custom JavaScript ruleset ...
+
+To start the process of enabling custom Javascript function support, please submit a request on [support.axway.com](https://support.axway.com).
+
