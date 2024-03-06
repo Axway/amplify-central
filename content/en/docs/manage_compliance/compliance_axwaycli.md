@@ -278,8 +278,41 @@ list.
 • JavaScript files cannot be obfuscated.
 • JavaScript can only import/require-in modules that are available to the
 Spectral CLI.
-• JavaScript files are not allowed to bundle/rollup dependencies.
 
 ### Custom Rulesets and Functions
 
+Your custom Spectral ruleset files should be in this folder. Rulesets can be
+written in JSON, YAML, and JavaScript file formats. Your custom Spectral
+JavaScript linting functions should be added to the ./functions subdirectory.
+See the Spectral documentation on how to write “Custom Functions”.
+You can test your custom rulesets and files in this folder via the Spectral CLI.
+For example…
+spectral lint --ruleset example.yaml ./tests/openapi-v2.yaml
+
+• JavaScript files are not allowed to bundle/rollup dependencies.
+
+Your file changes to this repository must be submitted via a GitLab merge
+request, which can only be merged by Axway after a review process.
+[- Axway reserves the right to not approve a merge request if it does
+not comply with the above “Amplify Extension Restrictions”. -]
+
+#### Access Custom Ruleset in Amplify
+
+To use a custom ruleset in this repository in Amplify, you’ll need to create a
+separate ruleset file which “links” to it as shown below. You’ll need to replace
+<your-repo-name> with the name of this repository and the example.yaml file
+name with the one you want to use in Amplify. (Tip: In GitLab, click on a file
+and then click the “Open Raw” button to get the raw file URL to use.)
+extends: ["https://git-ext.ecd.axway.com/amplify-extension/<your-repo-name>/-/raw/main/api-linting/example.yaml"]
+Next, you’ll add the above ruleset file to Amplify in the UI as follows.
+1. Log in as an Administrator on: https://platform.axway.com
+2. Click on “Central”.
+3. Go to the “Topology/Compliance Profiles” webpage.
+4. Click on the “Upload Ruleset” button.
+5. Drag and drop the above “link” ruleset file into the “Upload File” box.
+6. Finish entering the rest of the configuration in the UI and click the “Upload” button.
+7. Edit an “Environment” and select the ruleset you just set up.
+Your new Amplify ruleset which “links” to the custom ruleset in this repository
+can now be used in Amplify. Since it links via a URL, you don’t have to update
+anything in Amplify when you make changes in this repository.
 
