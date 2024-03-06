@@ -304,7 +304,9 @@ separate ruleset file which “links” to it as shown below. You’ll need to r
 name with the one you want to use in Amplify. (Tip: In GitLab, click on a file
 and then click the “Open Raw” button to get the raw file URL to use.)
 extends: ["https://git-ext.ecd.axway.com/amplify-extension/<your-repo-name>/-/raw/main/api-linting/example.yaml"]
+
 Next, you’ll add the above ruleset file to Amplify in the UI as follows.
+
 1. Log in as an Administrator on: https://platform.axway.com
 2. Click on “Central”.
 3. Go to the “Topology/Compliance Profiles” webpage.
@@ -312,6 +314,7 @@ Next, you’ll add the above ruleset file to Amplify in the UI as follows.
 5. Drag and drop the above “link” ruleset file into the “Upload File” box.
 6. Finish entering the rest of the configuration in the UI and click the “Upload” button.
 7. Edit an “Environment” and select the ruleset you just set up.
+
 Your new Amplify ruleset which “links” to the custom ruleset in this repository
 can now be used in Amplify. Since it links via a URL, you don’t have to update
 anything in Amplify when you make changes in this repository.
