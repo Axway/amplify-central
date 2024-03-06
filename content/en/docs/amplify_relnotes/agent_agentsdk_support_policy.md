@@ -18,7 +18,7 @@ Discovery Agents automate the process of finding assets that are deployed in a G
 
 Traceability Agents collect usage, metrics, and data plane traffic details and send them to the Amplify platform. In the platform, API consumers and API providers can view the performance and behavior of the assets discovered in the data plane.
 
-Agents are classified in two categories, agents that are supported by Axway and agents supported by the Community: 
+Agents are classified in two categories, agents that are supported by Axway and agents supported by the Community:
 
 | Environment                | Support   | Agent type                                 |
 | -------------------------- | --------- | ------------------------------------------ |
@@ -36,7 +36,6 @@ Agents are classified in two categories, agents that are supported by Axway and 
 | Apigee Edge API Management | Axway/Community | <https://github.com/Axway/agents-apigee>       |
 | Software AG webMethods     | Axway/Community | <https://github.com/Axway/agents-webmethods>   |
 | WSO2 API Management        | Community       | <https://github.com/Axway/agents-wso2>         |
-
 
 All Amplify agents are built using the Amplify Agent SDK.
 
@@ -71,7 +70,7 @@ As per the current (3.1) version of [Axway’s PLC](https://cdn.axway.com/u/Axwa
 
 ### Support for Community delivered Amplify agents and Agent SDK
 
-Community delivered agents are open-source and are built using the Amplify Agent SDK.  For the specified Agents, Axway or the community can provide the support.   Where no Axway support is provided, the specific Agent (e.g. WS02) was a proof of concept agent. 
+Community delivered agents are open-source and are built using the Amplify Agent SDK.  For the specified Agents, Axway or the community can provide the support.   Where no Axway support is provided, the specific Agent (e.g. WS02) was a proof of concept agent.
 
 A completed agent could be visually represented as per figure 1 below. Items shown in red, namely the Amplify platform and the Agent SDK, are fully supported by Axway. The support of items in blue, namely the code written to connect to the 3rd party Gateway / data plane and the 3rd party Gateway, are addressed in this section.
 
