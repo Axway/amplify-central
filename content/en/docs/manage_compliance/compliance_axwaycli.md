@@ -250,7 +250,36 @@ axway central create -f <PathToAboveYamlFile>
 
 ## Custom JavaScript ruleset
 
-You can create your own custom JavaScript ruleset ...
+You can write your own custom JavaScript functions if the core function is not enough for your custom ruleset.  
 
 To start the process of enabling custom Javascript function support, please submit a request on [support.axway.com](https://support.axway.com).
+
+### Amplify Limitations
+
+By default, Amplify’s “Compliance Profile” UI and CLI applies limitations on
+what kind of custom linting rulesets you can submit. These limitations are:
+• Cannot submit JavaScript rulesets or functions.
+– Rulesets are limited to JSON and YAML files.
+• Amplify ruleset cannot “extend” another Amplify ruleset.
+• Amplify ruleset cannot reference another file via an “unapproved” URL.
+– For security reasons, Amplify blocks all URLs except for what’s on
+its “approved” URL list.
+– Raw file access to this “Amplify Extension” repository’s main branch
+is on the “approved” list.
+This “Amplify Extension” repository allows you to bypass most of these limitations.
+
+### Amplify Extension Restrictions
+
+Ruleset files are not allowed to reference other rulesets via “unapproved”
+URLs.
+– A URL to this repository’s main branch is on Amplify’s “approved”
+list.
+• JavaScript files are not allowed to access the network or filesystem.
+• JavaScript files cannot be obfuscated.
+• JavaScript can only import/require-in modules that are available to the
+Spectral CLI.
+• JavaScript files are not allowed to bundle/rollup dependencies.
+
+### Custom Rulesets and Functions
+
 
