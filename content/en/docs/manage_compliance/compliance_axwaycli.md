@@ -247,3 +247,7 @@ You can create the above `APISpecLintingRuleset` via the CLI as follows.
 ```
 axway central create -f <PathToAboveYamlFile>
 ```
+
+## Custom JavaScript ruleset
+
+You can create your own custom JavaScript ruleset ...
