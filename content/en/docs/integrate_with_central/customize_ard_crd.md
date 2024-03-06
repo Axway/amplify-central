@@ -40,10 +40,10 @@ Various simple components are available to use: string text, date, number, array
 
 In addition, there are several special parameters labeled `x-axway-*` that extend this framework:
 
-* **x-axway-order** - determines the order in which the selected fields will be presented in the WebUI
+* **x-axway-order** - determines the order in which the selected fields will be presented in the WebUI (this parameter must be added to the schema spec definition)
 * **x-axway-label** - sets a label in front of the component
 * **x-axway-widget** - defines how the WebUI should render a string field in case you don't want a text input (`"x-axway-widget": "textarea"`)
-* **x-axway-encrypted** - tells the system that the field must be encrypted for security purpose (only se when sending information from Provider to Consumer)
+* **x-axway-encrypted** - tells the system that the field must be encrypted for security purpose (only see when sending information from Provider to Consumer)
 * **x-axway-hidden** - indicates that this field will not be visible
 * **x-axway-copyable** - adds the copy button to copy the value from the WebUI
   
@@ -546,6 +546,9 @@ Sample of the consumer giving the Javascript origin values and the provider retu
             "schema": {
                 "type": "object",
                 "$schema": "http://json-schema.org/draft-07/schema#",
+                "x-axway-order": [
+                    "cors"
+                ],
                 "properties": {
                     "cors": {
                         "type": "array",
@@ -561,9 +564,6 @@ Sample of the consumer giving the Javascript origin values and the provider retu
                     }
                 },
                 "description": "",
-                "x-axway-order": [
-                    "cors"
-                ]
             },
             "provision": {
                 "schema": {
@@ -572,6 +572,9 @@ Sample of the consumer giving the Javascript origin values and the provider retu
                     "required": [
                         "apiKey"
                     ],
+                    "x-axway-order": [
+                        "apiKey"
+                    ]
                     "properties": {
                         "apiKey": {
                             "type": "string",
@@ -579,10 +582,7 @@ Sample of the consumer giving the Javascript origin values and the provider retu
                             "x-axway-encrypted": true
                         }
                     },
-                    "description": "",
-                    "x-axway-order": [
-                        "apiKey"
-                    ]
+                    "description": ""
                 }
             }
         }
