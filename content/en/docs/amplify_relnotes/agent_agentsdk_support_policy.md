@@ -70,7 +70,7 @@ As per the current (3.1) version of [Axway’s PLC](https://cdn.axway.com/u/Axwa
 
 ### Support for Community delivered Amplify agents and Agent SDK
 
-Community delivered agents are open-source and are built using the Amplify Agent SDK.  For the specified Agents, Axway or the community can provide the support.   Where no Axway support is provided, the specific Agent (e.g. WS02) was a proof of concept agent.
+Community delivered agents are open-source and are built using the Amplify Agent SDK.  For the specified Agents, Axway or the community can provide the support.   For community only agents (e.g. WS02), the community is able to use and extend the functionality.
 
 A completed agent could be visually represented as per figure 1 below. Items shown in red, namely the Amplify platform and the Agent SDK, are fully supported by Axway. The support of items in blue, namely the code written to connect to the 3rd party Gateway / data plane and the 3rd party Gateway, are addressed in this section.
 
