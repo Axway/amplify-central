@@ -18,19 +18,23 @@ Discovery Agents automate the process of finding assets that are deployed in a G
 
 Traceability Agents collect usage, metrics, and data plane traffic details and send them to the Amplify platform. In the platform, API consumers and API providers can view the performance and behavior of the assets discovered in the data plane.
 
-Agents are classified in two categories, agents that are built by Axway and agents provided by the Community:
+Agents are classified into two categories, agents supported by Axway and agents supported by the community:
 
-| Environment                | Support   |                                            |
+| Environment                | Support   | Agent type                                 |
 | -------------------------- | --------- | ------------------------------------------ |
-| Axway API Management       | Axway     |                                            |
-| AWS API Gateway            | Axway     |                                            |
-| Azure API Management       | Axway     |                                            |
-| Istio service mesh         | Axway     |                                            |
-|                            |           |                                            |
-| MuleSoft Anypoint platform | Community | <https://github.com/Axway/agents-mulesoft> |
-| Kong Gateway               | Community | <https://github.com/Axway/agents-kong>     |
-| WSO2 API Management        | Community | <https://github.com/Axway/agents-wso2>     |
-| Apigee API Management      | Community | <https://github.com/Axway/agents-apigee>   |
+| Axway API Management       | Axway     | On-premise                                 |
+| AWS API Gateway            | Axway     | On-premise and SaaS                        |
+| Azure API Management       | Axway     | On-premise                                 |
+| Istio                      | Axway     | On-premise                                 |
+| Github                     | Axway     | On-premise and SaaS                        |
+| Gitlab                     | Axway     | On-premise                                 |
+| Kafka Cluster              | Axway     | On-premise                                 |
+| Apigee X API Management    | Axway     | SaaS                                       |
+| MuleSoft Anypoint platform | Axway/Community | <https://github.com/Axway/agents-mulesoft>     |
+| Kong Gateway               | Axway/Community | <https://github.com/Axway/agents-kong>         |
+| Apigee Edge API Management | Axway/Community | <https://github.com/Axway/agents-apigee>       |
+| Software AG webMethods     | Axway/Community | <https://github.com/Axway/agents-webmethods>   |
+| WSO2 API Management        | Community       | <https://github.com/Axway/agents-wso2>         |
 
 All Amplify agents are built using the Amplify Agent SDK.
 
@@ -46,7 +50,7 @@ Support for the following components is addressed in this document:
 
 * Amplify Agent SDK
 * Amplify agents - delivered by Axway
-* Amplify agents - delivered by the Community
+* Amplify agents - delivered by the community
 
 ### Support for Axway delivered Amplify agents
 
@@ -63,11 +67,11 @@ As per the current (3.1) version of [Axway’s PLC](https://cdn.axway.com/u/Axwa
 
 {{< alert title="Note" color="primary" >}}The agent releases will be available on [support.axway.com](https://support.axway.com).{{< /alert >}}
 
-### Support for Community delivered Amplify agents and Agent SDK
+### Support for community delivered Amplify agents and Agent SDK
 
-Community delivered agents are open-source and are built using the Amplify Agent SDK.
+Community delivered agents are open source and are built using the Amplify Agent SDK. For the specified Agents, Axway or the community can provide the support. For community only agents (e.g., WS02), the community can use and extend the functionality.
 
-A completed agent could be visually represented as per figure 1 below. Items shown in red, namely the Amplify platform and the Agent SDK, are fully supported by Axway. The support of items in blue, namely the code written to connect to the 3rd party Gateway / data plane and the 3rd party Gateway, are addressed in this section.
+A completed agent could be visually represented as per figure 1 below. Items shown in red, namely the Amplify platform and the Agent SDK, are fully supported by Axway. The support of items in blue, namely the code written to connect to the 3rd-party Gateway / data plane and the 3rd-party Gateway, are addressed in this section.
 
 ![Axway supported and community supported parts of an open-source agent](/Images/central/community_agents_sdk.png)
 
