@@ -24,7 +24,7 @@ These two agents will help you to represent and expose your API Management eco-s
 
 ### Discovery Agent
 
-The Discovery Agent is used to discover new published APIs. The Discovery Agent pushes both REST and SOAP API definitions to Amplify.
+The Discovery Agent is used to discover new published APIs. The Discovery Agent pushes REST, ASync, SOAP and GraphQL API definitions to Amplify.
 
 If the Discovery Agent discovers an API where the inbound security is not set to PassThrough / API Key / OAuth, the correlating catalog asset will not be created. Discovered APIs that do not have the correct inbound security will only be available in the environment.
 
