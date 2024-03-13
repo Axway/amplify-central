@@ -22,17 +22,18 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace March 8 2024](/docs/amplify_relnotes/20240308_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.75. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.76. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.71 / TA=v1.1.73
-* **AWS Gateway using SDK 2.0** - DA=v1.1.59 / TA-v1.1.61
-* **Azure latest release** - DA=v1.1.65 / TA=v1.1.70
-* **Istio 1.9.5** - DA=v1.0.31 / TA=v2.0.75
-* **Apigee Edge** - Agent version 0.1.31
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.42
-* **Software AG webMethods** - 0.0.19
-* **Kong Gateway** - 1.0.2
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.72 / TA=v1.1.74
+* **AWS Gateway using SDK 2.0** - DA=v1.1.60 / TA-v1.1.62
+* **Azure latest release** - DA=v1.1.66 / TA=v1.1.71
+* **Istio 1.9.5** - DA=v1.0.32 / TA=v2.0.77
+* **Apigee Edge** - Agent version 0.1.32
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.43
+* **Software AG webMethods** - 0.0.20
+* **Kong Gateway** - 1.0.3
 * **GitLab** - 1.0.2
+* **Kafka Cluster** - DA=v1.0.1 / TA=v1.0.1
 
 Supported Saas (embedded) Agents:
 
@@ -42,13 +43,13 @@ Supported Saas (embedded) Agents:
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
+| What's new: | Traceability Agent sampling rate enhancement. |
 | Bug fixes: | None. |
 | <br />**On-premise agents** |         |
-| What's new: | **All** - Updated with the Axway Agent SDK. |
-| Bug fixes: | **Agent** - See release note. |
+| What's new: | **All** - Updated with the Axway Agent SDK. <br />**Axway API Management Agent** - Clean variable settings. <br />**Apigee Edge Gateway Agent** - Discovery From a local file. Discovery of APIs with no specification. |
+| Bug fixes: | **Axway API Management Gateway** - See release note. <br />**Azure Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
-| What's new: | None. |
+| What's new: | Traceability Service sampling rate. |
 | Bug fixes: | None. |
 | <br />**Axway CLI** |       |
 | What's new: | None. |
@@ -57,19 +58,19 @@ Supported Saas (embedded) Agents:
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
-| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - None. <br />**Topology** - Edit SaaS AWS Service configuration for the WebUI. |
+| Bug fixes: | **Service Registry** - See release note. <br />**Topology** - See release note. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
+| What's new: | Product review moderation. <br />Make changes to a document in the Document Library. |
 | Bug fixes: | None. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
+| What's new: | Product reviews. <br />Consumer sees Active status for subscription until cancelled. |
 | Bug fixes: | None. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
