@@ -29,18 +29,27 @@ You can define the API service specification by uploading a file or by fetching 
 
 The following table shows the accepted file extensions listed by accepted file type versus service specification type:
 
-|           |   OAS2   |           |   OAS3   |           | Protobuf |           |   WSDL   |           |
-| --------- | :------: | :-------: | :------: | :-------: | :------: | :-------: | :------: | :-------: |
-| File Type | Expected | Supported | Expected | Supported | Expected | Supported | Expected | Supported |
-| .json     |   YES    |    YES    |   YES    |    YES    |    NO    |    NO     |    NO    |    NO     |
-| .yml/yaml |   YES    |    NO     |   YES    |    NO     |    NO    |    NO     |    NO    |    NO     |
-| .wsdl     |    NO    |    NO     |    NO    |    NO     |    NO    |    NO     |   YES    |    YES    |
-| .proto    |    NO    |    NO     |    NO    |    NO     |   YES    |    YES    |    NO    |    NO     |
-| .xml      |    NO    |    NO     |    NO    |    NO     |    NO    |    NO     |    NO    |    YES    |
+|           |   OAS2   |           |   OAS3   |           | Protobuf |           |   WSDL   |           |  GraphQL  |           |  ASync API  |           |
+| --------- | :------: | :-------: | :------: | :-------: | :------: | :-------: | :------: | :-------: | :-------: | :-------: | :---------: | :-------: |
+| File Type | Expected | Supported | Expected | Supported | Expected | Supported | Expected | Supported | Expected  | Supported | Expected    | Supported |
+| .json     |   YES    |    YES    |   YES    |    YES    |    NO    |    NO     |    NO    |    NO     |    NO     |    NO     |    YES      |    YES    |
+| .yml/yaml |   YES    |    NO     |   YES    |    NO     |    NO    |    NO     |    NO    |    NO     |    NO     |    NO     |    YES      |    YES    |
+| .wsdl     |    NO    |    NO     |    NO    |    NO     |    NO    |    NO     |   YES    |    YES    |    NO     |    NO     |    NO       |    NO     |
+| .proto    |    NO    |    NO     |    NO    |    NO     |   YES    |    YES    |    NO    |    NO     |    NO     |    NO     |    NO       |    NO     |
+| .xml      |    NO    |    NO     |    NO    |    NO     |    NO    |    NO     |    NO    |    YES    |    NO     |    NO     |    NO       |    NO     |
+| .graphql  |    NO    |    NO     |    NO    |    NO     |    NO    |    NO     |    NO    |    NO     |    YES    |    YES    |    NO       |    NO     |
 
 You can assign any uploaded specification file as an unstructured specification type. This is useful if your specification type is not officially supported.
 
 On upload, the file is automatically parsed and the recommended **Specification Type** is set. Optionally, if the recommended specification type is incorrect, you can override the selection by choosing a different specification type.
+
+{{< alert title="Note" color="primary" >}}
+Supported version:
+
+* OAS2 API: 2.x
+* OAS3 API: 3.0.x, 3.1.0
+* ASync API: 2.x, 3.0.0
+{{< /alert >}}
 
 ### Errors and debugging
 
