@@ -46,7 +46,7 @@ Supported Saas (embedded) Agents:
 | What's new: | Traceability Agent sampling rate enhancement. |
 | Bug fixes: | None. |
 | <br />**On-premise agents** |         |
-| What's new: | **All** - Updated with the Axway Agent SDK. <br />**Axway API Management Agent** - Clean variable settings. <br />**Apigee Edge Gateway Agent** - Discovery From a local file. Discovery of APIs with no specification. |
+| What's new: | **All** - Updated with the Axway Agent SDK. <br />**Axway API Management Gateway** - Clean variable settings. <br />**Apigee Edge Gateway Agent** - Discovery From a local file. Discovery of APIs with no specification. |
 | Bug fixes: | **Axway API Management Gateway** - See release note. <br />**Azure Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
 | What's new: | Traceability Service sampling rate. |
