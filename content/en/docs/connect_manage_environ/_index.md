@@ -31,6 +31,18 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
+| Description | AWS | Azure | Axway API Gateway | Istio | Mulesoft | Apigee |
+|-------------|-----|-------|-------------------|-------|----------|--------|
+| **Traceability** | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with application content associated to Managed Applications | Transactions with OAuth client content associated to Credential | Not implemented yet | API Usage Statistics |
+| **Discovery** | Rest APIs in API Gateway | APIs | Frontend Proxies | Virtual Services | APIs | API Products / Proxies |
+| **Managed Application** | Usage plan | Create Product | Application | N/A | Client App | Application |
+| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | Associated Frontend Proxy with Application | N/A | Associated Client App with Contract | Products associated to Application |
+| **Credential** | Associate API Key with Usage plan | Associate credential with Product | Relationship added in Application | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Client Application | Associate credentials with Application |
+| **Credential Management** | Suspend/Enable | Suspend/Enable | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Not implemented yet | Rotate | Suspend/Enable |
+| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | Quota per Frontend Proxy | Envoy Filters | SLA contracts | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
+| **Traceability** | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscription associated to Credential | Transactions with application content associated to Managed Applications | Transactions with OAuth client content associated to Credential | Not implemented yet | API Usage Statistics |
+| **Discovery** | Rest APIs in API Gateway | APIs | Frontend Proxies | Virtual Services | APIs | API Products / Proxies |
+
 For more information about the agents, see:
 
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
