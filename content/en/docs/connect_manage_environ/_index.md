@@ -40,8 +40,6 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Credential** | Associate API Key with Usage plan | Associate credential with Product | Relationship added in Application | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Client Application | Associate credentials with Application |
 | **Credential Management** | Suspend/Enable | Suspend/Enable | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Not implemented yet | Rotate | Suspend/Enable |
 | **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | Quota per Frontend Proxy | Envoy Filters | SLA contracts | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
-| **Traceability** | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscription associated to Credential | Transactions with application content associated to Managed Applications | Transactions with OAuth client content associated to Credential | Not implemented yet | API Usage Statistics |
-| **Discovery** | Rest APIs in API Gateway | APIs | Frontend Proxies | Virtual Services | APIs | API Products / Proxies |
 
 For more information about the agents, see:
 
