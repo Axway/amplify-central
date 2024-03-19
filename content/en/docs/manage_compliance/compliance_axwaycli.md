@@ -262,8 +262,8 @@ By default, Amplify’s “Compliance Profile” UI and CLI applies limitations 
 * Amplify ruleset cannot “extend” another Amplify ruleset.
 * Amplify ruleset cannot reference another file via an “unapproved” URL.
 – For security reasons, Amplify blocks all URLs except for what’s on its “approved” URL list.
-– Raw file access to this “Amplify Extension” repository’s main branchis on the “approved” list.
-This “Amplify Extension” repository allows you to bypass most of these limitations.
+– Raw file access to this “Amplify Extension” repository’s main branch is on the “approved” list.
+This “Amplify Extension” repository allows you to bypass most of these limitations.
 
 ### Amplify Extension Restrictions
 
@@ -300,7 +300,7 @@ Next, you’ll add the above ruleset file to Amplify in the UI as follows.
 3. Go to the “Topology/Compliance Profiles” webpage.
 4. Click on the “Upload Ruleset” button.
 5. Drag and drop the above “link” ruleset file into the “Upload File” box.
-6. Finish entering the rest of the configuration in the UI and click the “Upload” button.
+6. Finish entering the rest of the configuration in the UI and click the “Upload” button.
 7. Edit an “Environment” and select the ruleset you just set up.
 
 Your new Amplify ruleset which “links” to the custom ruleset in this repository
