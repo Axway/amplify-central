@@ -258,11 +258,11 @@ To start the process of enabling custom Javascript function support, please subm
 
 By default, Amplify’s “Compliance Profile” UI and CLI applies limitations on what kind of custom linting rulesets you can submit. These limitations are:
 * Cannot submit JavaScript rulesets or functions.
-– Rulesets are limited to JSON and YAML files.
+  – Rulesets are limited to JSON and YAML files.
 * Amplify ruleset cannot “extend” another Amplify ruleset.
 * Amplify ruleset cannot reference another file via an “unapproved” URL.
-– For security reasons, Amplify blocks all URLs except for what’s on its “approved” URL list.
-– Raw file access to this “Amplify Extension” repository’s main branch is on the “approved” list.
+  – For security reasons, Amplify blocks all URLs except for what’s on its “approved” URL list.
+  – Raw file access to this “Amplify Extension” repository’s main branch is on the “approved” list.
 This “Amplify Extension” repository allows you to bypass most of these limitations.
 
 ### Amplify Extension Restrictions
