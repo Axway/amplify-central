@@ -46,7 +46,7 @@ Robert, please update table.
 | Region | Host                       | IP             | port | Protocol | data                                 |
 | ------ | -------------------------- | -------------- | ---- | -------- | ------------------------------------ |
 |        |                            |                |      |          |                                      |
-| EU/US  | login.axway.com            | 52.58.132.2    | 443  | HTTPS    | Platform authentication              |
+| AP/EU/US | login.axway.com            | 52.58.132.2    | 443  | HTTPS    | Platform authentication              |
 |        |                            | 52.29.4.35     |      |          |                                      |
 |        |                            | 54.93.140.145  |      |          |                                      |
 |        |                            |                |      |          |                                      |
@@ -60,9 +60,11 @@ Robert, please update table.
 |        |                            |                |      |          |                                      |
 | EU/US  | lighthouse.admin.axway.com |                | 443  | HTTPS    | API usage event for online mode only |
 |        |                            |                |      |          |                                      |
+| AP     | central.ap-sg.axway.com    | ?.?.?.?        | 443  | HTTPS    | API definitions, Subscription info   |
+|        |                            |                |      |          |                                      |
 
 {{< alert title="Note" color="primary" >}}
-*Region* column represents the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. You must use the corresponding *Host*/*Port* for your agents to operate correctly.
+*Region* column represents the region where your Amplify organization is deployed. EU means deployed in European data center, AP means deployed in Asia Pacific data center and US meaning deployed in US data center. You must use the corresponding *Host*/*Port* for your agents to operate correctly.
 {{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}
