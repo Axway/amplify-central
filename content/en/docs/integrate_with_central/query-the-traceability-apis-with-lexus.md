@@ -619,7 +619,7 @@ Extend the previous call to also include the API paths called.
 
 ### Transactions by status code
 
-The count of transactionSummaries for a particular environment, grouped by status code. Note statuses are 1XX, 2XX, 3XX, so the interval of "100" will group them into those buckets.
+The count of transactionSummaries for a particular environment, grouped by status code. Note that statuses are 1XX, 2XX, 3XX, so the interval of "100" will group them into those buckets.
 
 ```json
 {

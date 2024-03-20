@@ -23,7 +23,9 @@ Before you start, you must have credentials or a service account to use the CLI.
 
 ## Overview of the Axway Central CLI capabilities
 
-### Fetching resources
+Manage your resources with Axway Central CLI.
+
+### Fetch resources
 
 To view all resource types that are available in the system, run the following `get` command and provide an argument as to which type to get:
 
@@ -56,7 +58,7 @@ axway central get <Resource1>,<Resource2>,...,<ResourceN> # Get a list of multip
 axway central get <Resource> <Name> -s/--scope <Scope Name> # Get a specific resource by name in a named scope
 ```
 
-### Fetching all the details of a resource
+### Fetch all the details of a resource
 
 By default, results of the `get` command are outputted in table format. You can see additional information for the resource if you use the `-output` argument and request for the result to be rendered in yaml or json.
 
@@ -96,7 +98,7 @@ spec:
   description: Azure Environment
 ```
 
-### Creating resources
+### Create resources
 
 Create resources using the `create` command. To create a resource, provided the `create` a resource definition in a file. json and yaml formats are accepted. Note that multiple resources can be in a single file if each resource is separated by three dashes `---`.
 Alternatively, an empty resource can be created by providing only a value for the resource's name.
@@ -130,7 +132,7 @@ To create an empty resource that represents an environment resource type with a 
 axway central create environment helloworld
 ```
 
-### Updating resources
+### Update resources
 
 Update resources using the `apply` command. The apply command accepts a file containing the resource(s) to be updated. json and yaml formats are accepted.
 
@@ -138,7 +140,7 @@ Update resources using the `apply` command. The apply command accepts a file con
 axway central apply -f delete.yaml
 ```
 
-### Deleting resources
+### Delete resources
 
 Delete resources from the API Server using the `delete command`. The Delete command can accept resource name or file name containing the resource definition. json and yaml formats are accepted.
 
