@@ -252,64 +252,65 @@ axway central create -f <PathToAboveYamlFile>
 
 You can write your own custom JavaScript functions if the core function is not enough for your custom ruleset.  
 
-To start the process of enabling custom Javascript function support, please submit a request on [support.axway.com](https://support.axway.com) with your Organization ID and list of email contacts who have permission to access the customer Javascript functions.
+To start the process of enabling custom Javascript function support, please submit a request on [support.axway.com](https://support.axway.com) with your Organization ID and list of email contacts who have permission to access the customer Javascript functions. Once your request is accepted, you will be given access to the Amplify Extension repository.
 
-### Amplify Limitations
+### Amplify limitations
 
-By default, Amplify’s “Compliance Profile” UI and CLI applies limitations on what kind of custom linting rulesets you can submit. These limitations are:
+By default, Amplify’s *Compliance Profile* WebUI and CLI applies limitations on what kind of custom linting rulesets you can submit:
+
 * Cannot submit JavaScript rulesets or functions.
-  – Rulesets are limited to JSON and YAML files.
-* Amplify ruleset cannot “extend” another Amplify ruleset.
-* Amplify ruleset cannot reference another file via an “unapproved” URL.
-  – For security reasons, Amplify blocks all URLs except for what’s on its “approved” URL list.
-  – Raw file access to this “Amplify Extension” repository’s main branch is on the “approved” list.
-This “Amplify Extension” repository allows you to bypass most of these limitations.
+    * Rulesets are limited to JSON and YAML files.
+* Amplify ruleset cannot extend another Amplify ruleset.
+* Amplify ruleset cannot reference another file via an unapproved URL.
+    * For security, Amplify blocks all URLs except for what is on its approved URL list.
+    * Raw file access to the Amplify Extension repository’s main branch is on the approved list.
 
-### Amplify Extension Restrictions
+The Amplify Extension repository allows you to bypass most of these limitations.
 
-* Ruleset files are not allowed to reference other rulesets via “unapproved” URLs.
-  – A URL to this repository’s main branch is on Amplify’s “approved” list.
+### Amplify Extension restrictions
+
+* Ruleset files are not allowed to reference other rulesets via unapproved URLs.
+    * A URL to this repository’s main branch is on Amplify’s approved list.
 * JavaScript files are not allowed to access the network or filesystem.
 * JavaScript files cannot be obfuscated.
 * JavaScript can only import/require-in modules that are available to the Spectral CLI.
 
-### Custom Rulesets and Functions
+### Custom rulesets and functions
 
-Your custom Spectral ruleset files should be in this folder. Rulesets can be written in JSON, YAML, and JavaScript file formats. Your custom Spectral
-JavaScript linting functions should be added to the ./functions subdirectory. See the Spectral documentation on how to write “Custom Functions”.
-You can test your custom rulesets and files in this folder via the Spectral CLI.
-For example…
+Your custom Spectral ruleset files must be in this folder. Rulesets can be written in JSON, YAML, and JavaScript file formats. Your custom Spectral JavaScript linting functions must be added to the ./functions subdirectory. See the [Spectral documentation](https://docs.stoplight.io/docs/spectral/a781e290eb9f9-custom-functions) on how to write Custom Functions.
+
+You can test your custom rulesets and files in this folder via the Spectral CLI. For example:
 
 ```
 spectral lint --ruleset example.yaml ./tests/openapi-v2.yaml
 ```
 
-* JavaScript files are not allowed to bundle/rollup dependencies.
+{{< alert title="Note" color="primary" >}}JavaScript files are not allowed to bundle/rollup dependencies.{{< /alert >}}
 
-Your file changes to this repository must be submitted via a GitLab merge request, which can only be merged by Axway after a review process.
-{{< alert title="Note" color="primary" >}}Axway reserves the right to not approve a merge request if it does not comply with the above “Amplify Extension Restrictions”.{{< /alert >}}
+Your file changes to the Amplify Extension repository must be submitted via a GitLab merge request, which can only be merged by Axway after a review process.
 
-#### Access Custom Ruleset in Amplify
+{{< alert title="Note" color="primary" >}}Axway reserves the right to not approve a merge request if it does not comply with the above [Amplify Extension restrictions](#amplify-extension-restrictions).{{< /alert >}}
 
-To use a custom ruleset in this repository in Amplify, you’ll need to create a separate ruleset file which “links” to it as shown below. You’ll need to replace
-`<your-repo-name>` with the name of this repository and the example.yaml file name with the one you want to use in Amplify. (Tip: In GitLab, click on a file
-and then click the “Open Raw” button to get the raw file URL to use.)
+#### Access custom ruleset in Amplify
+
+To use a custom ruleset in the Amplify Extension repository, you must create a separate ruleset file that links to it, as shown below. Replace `<your-repo-name>` with the name of this repository and the `example.yaml` file name with the one you want to use in Amplify.
+
+{{< alert title="Tip" color="secondary" >}}In GitLab, click on a file
+and then click **Open Raw** to get the raw file URL.{{< /alert >}}
 
 ```yaml
 extends: ["https://git-ext.ecd.axway.com/amplify-extension/<your-repo-name>/-/raw/main/api-linting/example.yaml"]
 ```
 
-Next, you’ll add the above ruleset file to Amplify in the UI as follows.
+Add the above ruleset file to Amplify:
 
-1. Log in as an Administrator on: https://platform.axway.com
-2. Click on “Central”.
-3. Go to the “Topology/Compliance Profiles” webpage.
-4. Click on the “Upload Ruleset” button.
-5. Drag and drop the above “link” ruleset file into the “Upload File” box.
-6. Finish entering the rest of the configuration in the UI and click the “Upload” button.
-7. Edit an “Environment” and select the ruleset you just set up.
+1. Log in to <https://platform.axway.com> as an Administrator.
+2. Go to *Central > Topology > Compliance Profiles*.
+3. Click **Upload Ruleset**.
+4. Drag and drop the above "link" ruleset file into the **Upload File** box.
+5. Finish the configuration in the WebUI and click **Upload**.
+6. Edit an Environment and select the ruleset you just set up.
 
-Your new Amplify ruleset which “links” to the custom ruleset in this repository
+Your new Amplify ruleset that links to the custom ruleset in the Amplify Extension repository
 can now be used in Amplify. Since it links via a URL, you don’t have to update
-anything in Amplify when you make changes in this repository.
-
+Amplify when you make changes in Amplify Extension repository.
