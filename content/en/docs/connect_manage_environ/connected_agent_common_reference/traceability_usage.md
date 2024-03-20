@@ -41,8 +41,6 @@ All outbound traffic is sent over SSL via TCP / UDP.
 
 Open the following ports so that agents can communicate to the Amplify platform:
 
-Robert, please update table.
-
 | Region | Host                       | IP             | port | Protocol | data                                 |
 | ------ | -------------------------- | -------------- | ---- | -------- | ------------------------------------ |
 |        |                            |                |      |          |                                      |
@@ -57,8 +55,6 @@ Robert, please update table.
 | EU     | central.eu-fr.axway.com    | 52.47.84.198   | 443  | HTTPS    | API definitions, Subscription info   |
 |        |                            | 13.36.25.69    |      |          |                                      |
 |        |                            | 35.181.21.87   |      |          |                                      |
-|        |                            |                |      |          |                                      |
-| AP/EU/US | lighthouse.admin.axway.com |                | 443  | HTTPS    | API usage event for online mode only |
 |        |                            |                |      |          |                                      |
 | AP     | central.ap-sg.axway.com    | 122.248.205.123 | 443  | HTTPS    | API definitions, Subscription info   |
 |        |                            | 18.138.187.120  |      |          |                                      |
