@@ -60,6 +60,8 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                            | 18.138.187.120  |      |          |                                      |
 |        |                            | 52.220.146.36   |      |          |                                      |
 |        |                            |                |      |          |                                      |
+| AP/EU/US | platform.axway.com/usage | ?.?.?.?        | 443  | HTTPS    | Usage metrics                                     |
+|        |                            |                |      |          |                                      |
 
 
 {{< alert title="Note" color="primary" >}}
