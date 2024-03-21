@@ -1,6 +1,6 @@
 ---
-title: Custom JavaScript Functions
-linkTitle: Custom JavaScript Functions
+title: Custom JavaScript functions
+linkTitle: Custom JavaScript functions
 weight: 40
 ---
 Manage custom linting JavaScript functions to be used for Web API compliance.
@@ -17,16 +17,14 @@ By default, Amplify’s *Compliance Profile* WebUI and CLI applies limitations o
 
 ## Bypass limitations with Amplify Extension repository
 
-In order to bypass the above limitations, such as the ability to use custom JavaScript functions,
-you'll need to request tech-support for an "Amplify Extension" GitLab repository. This repository is used
-to host custom rulesets and JavaScript functions to be used by Amplfiy.
+To bypass the above limitations, such as the ability to use custom JavaScript functions,
+you'll need to request tech-support for an "Amplify Extension" GitLab repository. This repository is used to host custom rulesets and JavaScript functions to be used by Amplify.
 
-Please submit request to [support.axway.com](https://support.axway.com) and provide your Orgnaization ID
-and a list of email contacts to be given access to this repository.
+Please submit request to [support.axway.com](https://support.axway.com) and provide your Organization ID and a list of email contacts to be given access to this repository.
 
 ## Amplify Extension restrictions
 
-The Amplify Extension GitLab repository will have the following restrictions applied to it.
+The Amplify Extension GitLab repository has the following restrictions:
 
 * Ruleset files are not allowed to reference other rulesets via unapproved URLs.
     * A URL to the repository’s main branch is on Amplify’s approved list.
@@ -36,10 +34,7 @@ The Amplify Extension GitLab repository will have the following restrictions app
 
 ## Custom rulesets and functions
 
-Your custom Spectral ruleset files must be placed in the repository's `./api-linting` folder. Rulesets can be
-written in JSON, YAML, and JavaScript file formats. Your custom Spectral JavaScript linting functions must be
-added to the repository's `./api-linting/functions` subdirectory.
-See the [Spectral documentation](https://docs.stoplight.io/docs/spectral/a781e290eb9f9-custom-functions)
+Your custom Spectral ruleset files must be placed in the repository's `./api-linting` folder. Rulesets can be written in JSON, YAML, and JavaScript file formats. Your custom Spectral JavaScript linting functions must be added to the repository's `./api-linting/functions` subdirectory. See the [Spectral documentation](https://docs.stoplight.io/docs/spectral/a781e290eb9f9-custom-functions)
 on how to write Custom Functions.
 
 You can test your custom rulesets and files in the `./api-linting` folder via the Spectral CLI. For example:
@@ -54,8 +49,7 @@ Your file changes to the Amplify Extension repository must be submitted via a Gi
 
 ## Access custom ruleset in Amplify
 
-To use a custom ruleset in the Amplify Extension repository, you must create a separate ruleset file that links to it,
-as shown below. Replace `<your-repo-name>` with the name of your Amplify Extension repository and the `example.yaml` file
+To use a custom ruleset in the Amplify Extension repository, you must create a separate ruleset file that links to it, as shown below. Replace `<your-repo-name>` with the name of your Amplify Extension repository and the `example.yaml` file
 name with the one you want to use in Amplify.
 
 {{< alert title="Tip" color="secondary" >}}In GitLab, click on a file
