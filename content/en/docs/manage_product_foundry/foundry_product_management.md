@@ -58,7 +58,7 @@ View the following detailed information for a specific product in any state (Dra
 * Product icon - The icon / image representing the product, if any
 * Logical Name - Uniquely identifies the product
 * Owning Team - The team owner of the product
-* Release Management - The Product is set for either **Automatic** or **Manual release** of new versions
+* Release Management - The Product is set for either **Automatic** or **Manual release** of new versions. The setting **Automatic (on hold)** is possible if the product is in a draft state with auto-release set to **Automatic**. The product draft must be manually "activated" to resume auto-release handling.
 * Publication button - Publish / Unpublish the product to a specific Marketplace
 * Description - A short description of the product
 * Version panel - Shows all the existings product releases
@@ -66,7 +66,7 @@ View the following detailed information for a specific product in any state (Dra
     * Version state - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
     * Version created date
     * Version updated date
-    * Ellipsis menu to manage the version (Edit / Activate / Deprecate / Archived)
+    * Ellipsis menu to manage the version (Edit / Activate / Deprecate / Archived) and editing version specific documentation.
     * Additional information for each version:
         * Version description, if any
         * Modified On - Date, Time of the last version modification
@@ -155,10 +155,12 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
 3. From the list view, select the product to edit.
-4. Click **Edit Product**. *The Edit Product wizard is displayed*. All edits will be based on the latest draft version or release version of the Product.
-5. You can edit the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, and Attributes.
-6. You can edit the assets linked to this product in the Link Asset step and release a new product version so it is available for consumption in the Marketplace.
-7. Click **Preview Product** to view your product changes prior to taking effect. If you made edits that do not require a new product release, click **Save Draft & Exit** to update changes to the product in a new draft. If you have made edits that require a new asset release in the Link Asset step, click **Save** to update changes to the product. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release in the Link Asset step with Auto-release disabled, you can click **Save & Activate** to update changes in a product version release.
+4. From here there are two way to edit the product. All edits will be based on the latest draft version or release version of the asset.
+   * The top right pencil icon handles editing the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, Attributes, and Support Contacts, without creating a draft or releasing a new product version. This takes effect immediately.
+        * If the product is in a draft state, setting auto-release to **Automatic** will result in release management being in an "on hold" setting. The product draft must be manually "activated" to resume auto-release handling.
+   * Depending on the state of the product either **Edit Draft** or **Create New Version** allows editing the assets linked to this product in the Link Asset step, editing documentation, and releasing a new product version to make it available for consumption in the Marketplace.
+        * **Preview Product** is available to view your product changes prior to taking effect. If you have made edits that require a new product release in the Group Resources step, click **Save** to update changes to the product in a new draft. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
+Alternatively, if you made edits that require a new product release in the Link Asset step with Auto-release disabled, you can click **Save & Activate** to update changes in a product version release.
 
 ## Create a plan
 
