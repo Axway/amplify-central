@@ -155,7 +155,7 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
 3. From the list view, select the product to edit.
-4. From here there are two way to edit the product. All edits will be based on the latest draft version or release version of the asset.
+4. From here there are two way to edit the product. All edits will be based on the latest draft version or release version of the product.
    * The top right pencil icon handles editing the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, Attributes, and Support Contacts, without creating a draft or releasing a new product version. This takes effect immediately.
         * If the product is in a draft state, setting auto-release to **Automatic** will result in release management being in an "on hold" setting. The product draft must be manually "activated" to resume auto-release handling.
    * Depending on the state of the product either **Edit Draft** or **Create New Version** allows editing the assets linked to this product in the Link Asset step, editing documentation, and releasing a new product version to make it available for consumption in the Marketplace.
