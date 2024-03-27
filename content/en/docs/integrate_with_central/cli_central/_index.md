@@ -33,6 +33,20 @@ To view all resource types that are available in the system, run the following `
 axway central get 
 ```
 
+To view all resource types that are available in the system if your organization is in the EU region, run the following `get` command and provide an argument as to which type to get:
+
+```bash
+axway central get --region=EU
+```
+
+To view all resource types that are available in the system if your organization is in the APAC region, run the following `get` command and provide an argument as to which type to get:
+
+```bash
+axway central get --region=AP
+```
+
+NOTE: The additional parameter of '--region=EU' or --region=AP will execute Axway Central commnand in the EU or APAC region specifically.  
+
 The result from the `get` command lists the available types in the API Server and the results are displayed in a table with the following columns:
 
 | Name      | Description |
