@@ -83,6 +83,14 @@ The following command will fulfill the authorization flow and cause the client I
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
 
+The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services in the EU region:
+
+```shell
+axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json --region=EU
+```
+
+NOTE: The additional parameter of '--region=EU' or --region=AP will execute any Axway Central commnand in the EU or APAC region specifically.
+
 You can extract and use the token from the resulting JSON response:
 
 ```json
