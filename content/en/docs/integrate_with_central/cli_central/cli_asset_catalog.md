@@ -41,7 +41,8 @@ Run the following command to list the available stages for an organization in th
 ```bash
 axway central get stg --region=EU
 ```
-NOTE: The additional parameter of '--region=EU' or --region=AP will execute any Axway Central commnand in the EU or APAC region specifically.
+
+{{< alert title="Note" color="primary" >}}The additional parameter of '--region=EU' or --region=AP will execute any Axway Central commannd in the EU or APAC region specifically.{{< /alert >}}
 
 Run the following command to get details of the stages, including their logical name:
 
