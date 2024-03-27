@@ -58,7 +58,7 @@ View the following detailed information for a specific product in any state (Dra
 * Product icon - The icon / image representing the product, if any
 * Logical Name - Uniquely identifies the product
 * Owning Team - The team owner of the product
-* Release Management - The Product is set for either **Automatic** or **Manual release** of new versions. The setting **Automatic (on hold)** is possible if the product is in a draft state with auto-release set to **Automatic**. The product draft must be manually "activated" to resume auto-release handling.
+* Release Management - The Product is set for either **Automatic** or **Manual release** of new versions. The setting **Automatic (On hold)** is possible if the product is in a draft state with auto-release set to **Automatic**. The product draft must be manually "activated" to resume auto-release handling.
 * Publication button - Publish / Unpublish the product to a specific Marketplace
 * Description - A short description of the product
 * Version panel - Shows all the existings product releases
