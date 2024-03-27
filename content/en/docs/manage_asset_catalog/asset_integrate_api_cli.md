@@ -26,7 +26,7 @@ Learn how to use the Axway Central CLI to create and manage assets in the Asset 
 
 ## Group an asset in a stage
 
-Assets can represent any digital entity (sdks, docs, REST API, WSDL, gif, etc.) that you want to catalog and productize, with APIs being the primary use case for assets in the system. The lifecycle of the APIs that can be productized is a business decision which determines how they are grouped and managed. A “stage” is a grouping mechanism, which isn't tied to an environment and does not have a concrete physical representation. It could be, for example, dev/test/prod, eu/us/cn/ap, or R&D/Sales/Marketing.
+Assets can represent any digital entity (SDKs, docs, REST APIs, WSDL, GIF, etc.), whatever you want to catalog and productize, with APIs being the primary use case for assets in the system. The lifecycle of those productizable APIs is nebulous, as the decisions on how they can be grouped and managed is a business decision. A "stage" is a grouping mechanism, which isn't tied to an environment and does not have a concrete physical representation. It could be, for example, dev/test/prod, eu/us/cn/ap, or R&D/Sales/Marketing.
 
 ### List available stages
 
@@ -42,7 +42,7 @@ To see the list of currently available stages in the system for an organization 
 axway central get stg --region=EU
 ```
 
-NOTE: The additional parameter of '--region=EU' or --region=AP will execute any Axway Central commnand in the EU or APAC region specifically.
+{{< alert title="Note" color="primary" >}}The additional parameter of `--region=EU` or `--region=AP` will execute any Axway Central command in the EU or APAC region specifically.{{< /alert >}}
 
 ### Get details
 

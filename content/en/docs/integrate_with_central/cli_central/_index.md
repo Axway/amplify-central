@@ -45,7 +45,7 @@ To view all resource types that are available in the system if your organization
 axway central get --region=AP
 ```
 
-NOTE: The additional parameter of '--region=EU' or --region=AP will execute any Axway Central commnand in the EU or APAC region specifically.  
+{{< alert title="Note" color="primary" >}}The additional parameter of `--region=EU` or `--region=AP` will execute any Axway Central command in the EU or APAC region specifically.{{< /alert >}}  
 
 The result from the `get` command lists the available types in the API Server and the results are displayed in a table with the following columns:
 
