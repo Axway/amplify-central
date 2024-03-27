@@ -65,7 +65,7 @@ To view asset details:
     * Categories - Help classify assets into groups and find the asset by filtering on the Category
     * Tags - Labels to help find assets in the catalog
     * Attributes - Key and value pair to allow customers to attach/query for custom information
-    * Release Management - The Asset details page has a badge below the title indicating the asset is set for **Automatic** or **Manual** release of new versions. The setting **Automatic (on hold)** is possible if the asset is in a draft state with auto-release set to **Automatic**. The asset draft must be manually "activated" to resume auto-release handling.
+    * Release Management - The Asset details page has a badge below the title indicating the asset is set for **Automatic** or **Manual** release of new versions. The setting **Automatic (On hold)** is possible if the asset is in a draft state with auto-release set to **Automatic**. The asset draft must be manually "activated" to resume auto-release handling.
 
 {{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the asset details view.{{< /alert >}}
 
