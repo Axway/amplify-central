@@ -31,12 +31,12 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
-### On-primse Agent Features
+### On-premise Agent Features
 
-| Description |  Axway API Gateway | AWS | Azure | Axway API Gateway | Istio | Apigee Edge |
+| Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
 |-------------|--------------------|-----|-------|-------------------|-------|-------------|
 | **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
-| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with OAuth client content associated to Credential | API Usage Statistics |
+| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with OAuth client content associated to Credential | Not Implemented | API Usage Statistics |
 | **Platform Usage** | Yes | Yes | Yes | Yes | Yes | Yes |
 | **Transaction Metrics** | Yes | Yes | Yes | Yes | No | Yes |
 | **Application** | Client App | Application | Usage plan | Create Product | N/A | Application |
