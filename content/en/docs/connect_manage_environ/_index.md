@@ -47,15 +47,15 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 | Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
-| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | APIs |
-| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | 
-| **Platform Usage** | No  | Yes | Yes | Yes 
-| **Transaction Metrics** | No  |Yes | Yes | Yes |
-| **Application** | Associated Client App with Contract | Client App | Application | Usage plan | Create Product |
-| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product |
-| **Credential Type** | Associate credentials with Client Application | 
-| **Credential Actions** | Rotate | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable |
-| **Quota Enforcement** | SLA contracts | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product |
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | N/A | Topics |
+| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | N/A | TBD | 
+| **Platform Usage** | No  | Yes | Yes |  N/A | Yes | 
+| **Transaction Metrics** | No  |Yes | Yes | N/A | Yes |
+| **Application** | Associated Client App with Contract | Client App | Application | N/A | Create Product |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | TBD |
+| **Credential Type** | Associate credentials with Client Application |  TBD  |  TBD  | N/A | TBD |
+| **Credential Actions** | Rotate | Not Implmented | Suspend/Enable | n/A |Suspend/Enable |
+| **Quota Enforcement** | SLA contracts | Quota per Frontend Proxy | Quotas are attached to a Usage plan | N/A | Quota Policy associated to Product |
 
 ### SaaS (Embedded) Agent Features
 
