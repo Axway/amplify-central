@@ -47,7 +47,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 | Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
-| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | N/A | Topics |
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | Pulib/Private Rest APIs | Topics |
 | **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | N/A | TBD | 
 | **Platform Usage** | No  | Yes | Yes |  N/A | Yes | 
 | **Transaction Metrics** | No  |Yes | Yes | N/A | Yes |
@@ -61,14 +61,14 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 | Description |  AWS | Apigee X | Github |
 |-------------|-----|-------|-------------------|
-| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway |
-| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | 
-| **Platform Usage** | No  |Yes | Yes |
-| **Transaction Metrics** | No  |Yes | Yes |
-| **Application** | Associated Client App with Contract | Client App | Application |
-| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product |
-| **Credential Type** | APIKey | APIKey | APIKey | 
-| **Credential Actions** | Suspend/Enable | Suspend/Enable | Suspend/Enable |
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Public/Private Rest APIs |
+| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | N/A |
+| **Platform Usage** | No  |Yes | N/A |
+| **Transaction Metrics** | No  |Yes | N/A |
+| **Application** | Associated Client App with Contract | Client App | N/A |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | N/A |
+| **Credential Type** | APIKey | APIKey | N/A | 
+| **Credential Actions** | Suspend/Enable | Suspend/Enable | N/A |
 | **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
 
 For more information about the agents, see:
