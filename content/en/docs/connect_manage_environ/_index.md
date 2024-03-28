@@ -67,7 +67,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics** | No  | Yes | N/A |
 | **Application** | Associated Client App with Contract | Client App | N/A |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | N/A |
-| **Credential Type** | APIKey | APIKey | N/A | 
+| **Credential Type** | APIKey | APIKey / OAuth | N/A | 
 | **Credential Actions** | Suspend/Enable | Suspend/Enable | N/A |
 | **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
 
