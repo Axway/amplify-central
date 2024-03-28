@@ -39,6 +39,15 @@ CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromEnterpriseMarketplace
 CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
+#
+#Marketplace Provisioning and Deprovisioning
+#
+# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+CENTRAL_GRPC_ENABLED=true
+# activate the Marketplace provisioning feature
+AGENTFEATURES_MARKETPLACEPROVISIONING=true
+# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
+AGENTFEATURES_PERSISTCACHE=true
 ```
 
 ### Traceability Agent
@@ -66,6 +75,17 @@ CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromEnterpriseMarketplace
 CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
+#
+#Reporting Traffic to Consumer Insights
+#
+# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+CENTRAL_GRPC_ENABLED=true
+# activate the Marketplace provisioning feature
+AGENTFEATURES_MARKETPLACEPROVISIONING=true
+# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
+AGENTFEATURES_PERSISTCACHE=true
+# enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
+TRACEABILITY_PER_SUBSCRIPTION=true
 ```
 
 If you are either struggling with a variable value or want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes the variables the agents (Discovery / Traceability) rely on.
@@ -192,7 +212,7 @@ You can extend the previous minimum variable list with the following variables. 
 | TRACEABILITY_CLIENTTIMEOUT                     | The time to wait for ingestion response (default value: `60s`).                                                                                                                                                                                                                                                                            |
 | TRACEABILITY_COMPRESSIONLEVEL                  | The gzip compression level for the output event (default value: `3`).                                                                                                                                                                                                                                                                      |
 | TRACEABILITY_EXCEPTION_LIST                    | Determines what API paths the agent will dismiss and not process for usage or transaction reporting. Valid regular expressions can be configured. Example: `["/api/v\\d+/ping.*$", "^/qa.*$", "/qa.*" ]`. Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent.            |
-| TRACEABILITY_HOST                              | The host name and port of the ingestion service to forward the transaction log entries (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044`).                                                                                                                                   |
+| TRACEABILITY_HOST                              | The host name and port of the ingestion service to forward the transaction log entries (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044`). **Robert**, update this variable.                                                                                                                                  |
 | TRACEABILITY_PROTOCOL                          | Protocol (https or tcp) to be used for communicating with ingestion service (default value: `tcp`).                                                                                                                                                                                                                                        |
 | TRACEABILITY_PROXYURL                          | The socks5 or http URL of the proxy server for ingestion service (`<socks5://hostname:port>`). If empty, no proxy is defined.                                                                                                                                                                                                              |
 | TRACEABILITY_REDACTION_JMSPROPERTIES_SANITIZE  | Determines what portions of a JMS Property value to sanitize. Example: `[{keyMatch:"jmsProviderURL",valueMatch:".{0,10}$"}]` to sanitize the `jmsProviderURL` property to mask the last ten characters or less.                                                                                                                            |
