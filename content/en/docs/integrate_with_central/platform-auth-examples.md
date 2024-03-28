@@ -33,7 +33,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 5. Select the appropriate role for this service account. In this example, Central Admin is used. Your service account should now be created.
 
-    ![service acoount dialog screen](/Images/integration/create-service-account.png)
+    ![service account dialog screen](/Images/integration/create-service-account.png)
   
 6. Take note of the Client ID and Secret. You will need to remember or store the secret securely, as this is the only time it will ever be displayed.
 
@@ -45,7 +45,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 ### Create the service account with the UI
 
-1. Sign into the Amplify platform and select **Organization** from the User drop-down menu.
+1. Sign in to the Amplify platform and select **Organization** from the User drop-down menu.
 
     ![organization drop down screen](/Images/integration/organization-drop-down.png)
 
@@ -82,6 +82,14 @@ The following command will fulfill the authorization flow and cause the client I
 ```shell
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
+
+The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services in the EU region:
+
+```shell
+axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json --region=EU
+```
+
+{{< alert title="Note" color="primary" >}}The additional parameter of `--region=EU` or `--region=AP` will execute any Axway Central command in the EU or APAC region specifically.{{< /alert >}}
 
 You can extract and use the token from the resulting JSON response:
 

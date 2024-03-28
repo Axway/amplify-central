@@ -44,7 +44,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 | Region | Host                       | IP             | port | Protocol | data                                 |
 | ------ | -------------------------- | -------------- | ---- | -------- | ------------------------------------ |
 |        |                            |                |      |          |                                      |
-| EU/US  | login.axway.com            | 52.58.132.2    | 443  | HTTPS    | Platform authentication              |
+| AP/EU/US | login.axway.com            | 52.58.132.2    | 443  | HTTPS    | Platform authentication              |
 |        |                            | 52.29.4.35     |      |          |                                      |
 |        |                            | 54.93.140.145  |      |          |                                      |
 |        |                            |                |      |          |                                      |
@@ -56,11 +56,15 @@ Open the following ports so that agents can communicate to the Amplify platform:
 |        |                            | 13.36.25.69    |      |          |                                      |
 |        |                            | 35.181.21.87   |      |          |                                      |
 |        |                            |                |      |          |                                      |
-| EU/US  | lighthouse.admin.axway.com |                | 443  | HTTPS    | API usage event for online mode only |
+| AP     | central.ap-sg.axway.com    | 122.248.205.123 | 443  | HTTPS    | API definitions, Subscription info   |
+|        |                            | 18.138.187.120  |      |          |                                      |
+|        |                            | 52.220.146.36   |      |          |                                      |
+|        |                            |                |      |          |                                      |
+| AP/EU/US | platform.axway.com       | Dynamic        | 443  | HTTPS    | Usage metrics                                     |
 |        |                            |                |      |          |                                      |
 
 {{< alert title="Note" color="primary" >}}
-*Region* column represents the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. You must use the corresponding *Host*/*Port* for your agents to operate correctly.
+*Region* column represents the region where your Amplify organization is deployed. EU means deployed in European data center, AP means deployed in Asia Pacific data center and US meaning deployed in US data center. You must use the corresponding *Host* / *Port* for your agents to operate correctly.
 {{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}
