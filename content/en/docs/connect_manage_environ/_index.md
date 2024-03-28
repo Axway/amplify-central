@@ -31,17 +31,17 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
-| Description | AWS | Azure | Axway API Gateway | Istio | Mulesoft | Apigee |
+| Description |  Axway API Gateway | AWS | Azure | Axway API Gateway | Istio | Mulesoft | Apigee |
 |-------------|-----|-------|-------------------|-------|----------|--------|
-| **Discovery** | Rest APIs in API Gateway | APIs | Published Frontend Proxies | Virtual Services | Rest APIs (+RAML) | API Products / Proxies |
-| **Traceability** | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with application content associated to Managed Applications | Transactions with OAuth client content associated to Credential | Not implemented yet | API Usage Statistics |
+| **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | Rest APIs (+RAML) | API Products / Proxies |
+| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with OAuth client content associated to Credential | Not implemented yet | API Usage Statistics |
 | **Platform Usage** | Yes | Yes | Yes | Yes | No  | Yes |
 | **Transaction Metrics** | Yes | Yes | Yes | Yes | No  | No |
-| **Managed Application** | Usage plan | Create Product | Application | N/A | Client App | Application |
-| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | Associated Frontend Proxy with Application | N/A | Associated Client App with Contract | Products associated to Application |
-| **Credential** | Associate API Key with Usage plan | Associate credential with Product | Relationship added in Application | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Client Application | Associate credentials with Application |
-| **Credential Management** | Suspend/Enable | Suspend/Enable | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Not implemented yet | Rotate | Suspend/Enable |
-| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | Quota per Frontend Proxy | Envoy Filters | SLA contracts | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
+| **Application** | Application | Usage plan | Create Product | N/A | Client App | Application |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Associated Client App with Contract | Products associated to Application |
+| **Credential Type** | Relationship added in Application | Associate API Key with Usage plan | Associate credential with Product | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Client Application | Associate credentials with Application |
+| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Rotate | Suspend/Enable |
+| **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | SLA contracts | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
 
 For more information about the agents, see:
 
