@@ -33,7 +33,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 | Description | AWS | Azure | Axway API Gateway | Istio | Mulesoft | Apigee |
 |-------------|-----|-------|-------------------|-------|----------|--------|
-| **Discovery** | Rest APIs in API Gateway | APIs | Published Frontend Proxies | Virtual Services | APIs | API Products / Proxies |
+| **Discovery** | Rest APIs in API Gateway | APIs | Published Frontend Proxies | Virtual Services | Rest APIs (+RAML) | API Products / Proxies |
 | **Traceability** | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with application content associated to Managed Applications | Transactions with OAuth client content associated to Credential | Not implemented yet | API Usage Statistics |
 | **Platform Usage** | Yes | Yes | Yes | Yes | No  | Yes |
 | **Transaction Metrics** | Yes | Yes | Yes | Yes | No  | No |
