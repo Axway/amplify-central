@@ -48,8 +48,8 @@ Using agents is the recommended way to add API services to your environment. Whe
 | Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | Pulib/Private Rest APIs | Topics |
-| **Traceability** | Not implemented yet | Not Implmented yet | Transactions with API Key associated with Usage plan | N/A | TBD | 
-| **Platform Usage** | Yes  | Not Implemented yet | Yes |  N/A | Yes | 
+| **Traceability** | Not implemented yet | Not Implmented yet | Transactions with API Key associated with Usage plan | N/A | TBD |
+| **Platform Usage** | Yes  | Not Implemented yet | Yes |  N/A | Yes |
 | **Transaction Metrics** | No  | Not Implmented yet | Yes | N/A | Yes |
 | **Application** | Associated Client App with Contract | Not Implemented | Application | N/A | Create Product |
 | **Access Request** | Associated Frontend Proxy with Application | Not Implemented | Associated API with Product | N/A | TBD |
@@ -67,7 +67,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics** | No  | Yes | N/A |
 | **Application** | Associated Client App with Contract | Client App | N/A |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | N/A |
-| **Credential Type** | APIKey | APIKey / OAuth | N/A | 
+| **Credential Type** | APIKey | APIKey / OAuth | N/A |
 | **Credential Actions** | Suspend/Enable | Suspend/Enable | N/A |
 | **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
 
