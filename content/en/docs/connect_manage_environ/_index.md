@@ -41,21 +41,21 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 | **Application** | Client App | Application | Usage plan | N/A | Application |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
-| **Credential Type** | Relationship added in Application | Associate API Key with Usage plan | Associate credential with Product | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Application |
+| **Credential Type** | APIKey / OAuth / BasicAuth | APIKey | APIKey | N/A | APIKey |
 | **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
 | **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
 
 | Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | Pulib/Private Rest APIs | Topics |
-| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | N/A | TBD | 
-| **Platform Usage** | No  | Yes | Yes |  N/A | Yes | 
-| **Transaction Metrics** | No  |Yes | Yes | N/A | Yes |
-| **Application** | Associated Client App with Contract | Client App | Application | N/A | Create Product |
-| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | TBD |
-| **Credential Type** | Associate credentials with Client Application |  TBD  |  TBD  | N/A | TBD |
-| **Credential Actions** | Rotate | Not Implmented | Suspend/Enable | n/A |Suspend/Enable |
-| **Quota Enforcement** | SLA contracts | Quota per Frontend Proxy | Quotas are attached to a Usage plan | N/A | Quota Policy associated to Product |
+| **Traceability** | Not implemented yet | Not Implmented yet | Transactions with API Key associated with Usage plan | N/A | TBD | 
+| **Platform Usage** | Yes  | Not Implemented yet | Yes |  N/A | Yes | 
+| **Transaction Metrics** | No  | Not Implmented yet | Yes | N/A | Yes |
+| **Application** | Associated Client App with Contract | Not Implemented | Application | N/A | Create Product |
+| **Access Request** | Associated Frontend Proxy with Application | Not Implemented | Associated API with Product | N/A | TBD |
+| **Credential Type** | APIKey |  Not Implemented yet | APIKey  | N/A | APIKey |
+| **Credential Actions** |  Suspend/Enable |  Not Implemented yet| Suspend/Enable | N/A |Suspend/Enable |
+| **Quota Enforcement** | TBD | Not Implemented yet | Quotas are attached to a Usage plan | N/A | Quota Policy associated to Product |
 
 ### SaaS (Embedded) Agent Features
 
@@ -63,8 +63,8 @@ Using agents is the recommended way to add API services to your environment. Whe
 |-------------|-----|-------|-------------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Public/Private Rest APIs |
 | **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | N/A |
-| **Platform Usage** | No  |Yes | N/A |
-| **Transaction Metrics** | No  |Yes | N/A |
+| **Platform Usage** | No  | Yes | N/A |
+| **Transaction Metrics** | No  | Yes | N/A |
 | **Application** | Associated Client App with Contract | Client App | N/A |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | N/A |
 | **Credential Type** | APIKey | APIKey | N/A | 
