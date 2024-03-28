@@ -34,12 +34,12 @@ Using agents is the recommended way to add API services to your environment. Whe
 ### On-premise Agent Features
 
 | Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
-|-------------|--------------------|-----|-------|-------------------|-------|-------------|
+|-------------|--------------------|-----|-------|-------|-------------|
 | **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
-| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with OAuth client content associated to Credential | Not Implemented | API Usage Statistics |
-| **Platform Usage** | Yes | Yes | Yes | Yes | Yes | Yes |
-| **Transaction Metrics** | Yes | Yes | Yes | Yes | No | Yes |
-| **Application** | Client App | Application | Usage plan | Create Product | N/A | Application |
+| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Not Implemented | API Usage Statistics |
+| **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
+| **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
+| **Application** | Client App | Application | Usage plan | N/A | Application |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
 | **Credential Type** | Relationship added in Application | Associate API Key with Usage plan | Associate credential with Product | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Application |
 | **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
