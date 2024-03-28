@@ -31,17 +31,45 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
-| Description |  Axway API Gateway | AWS | Azure | Axway API Gateway | Istio | Mulesoft | Apigee |
-|-------------|-----|-------|-------------------|-------|----------|--------|
-| **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | Rest APIs (+RAML) | API Products / Proxies |
-| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with OAuth client content associated to Credential | Not implemented yet | API Usage Statistics |
-| **Platform Usage** | Yes | Yes | Yes | Yes | No  | Yes |
-| **Transaction Metrics** | Yes | Yes | Yes | Yes | No  | No |
-| **Application** | Application | Usage plan | Create Product | N/A | Client App | Application |
-| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Associated Client App with Contract | Products associated to Application |
-| **Credential Type** | Relationship added in Application | Associate API Key with Usage plan | Associate credential with Product | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Client Application | Associate credentials with Application |
-| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Rotate | Suspend/Enable |
-| **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | SLA contracts | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
+### On-primse Agent Features
+
+| Description |  Axway API Gateway | AWS | Azure | Axway API Gateway | Istio | Apigee Edge |
+|-------------|--------------------|-----|-------|-------------------|-------|-------------|
+| **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
+| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Transactions with OAuth client content associated to Credential | API Usage Statistics |
+| **Platform Usage** | Yes | Yes | Yes | Yes | Yes | Yes |
+| **Transaction Metrics** | Yes | Yes | Yes | Yes | No | Yes |
+| **Application** | Client App | Application | Usage plan | Create Product | N/A | Application |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
+| **Credential Type** | Relationship added in Application | Associate API Key with Usage plan | Associate credential with Product | AuthorizationPolicy to allow access based on matching claim and ClientID | Associate credentials with Application |
+| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
+| **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
+
+| Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
+|-------------|-----------|------------------------|--------------|--------|---------------|
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | APIs |
+| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | 
+| **Platform Usage** | No  | Yes | Yes | Yes 
+| **Transaction Metrics** | No  |Yes | Yes | Yes |
+| **Application** | Associated Client App with Contract | Client App | Application | Usage plan | Create Product |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product |
+| **Credential Type** | Associate credentials with Client Application | 
+| **Credential Actions** | Rotate | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable |
+| **Quota Enforcement** | SLA contracts | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product |
+
+### SaaS (Embedded) Agent Features
+
+| Description |  AWS | Apigee X | Github |
+|-------------|-----|-------|-------------------|
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway |
+| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | 
+| **Platform Usage** | No  |Yes | Yes |
+| **Transaction Metrics** | No  |Yes | Yes |
+| **Application** | Associated Client App with Contract | Client App | Application |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product |
+| **Credential Type** | APIKey | APIKey | APIKey | 
+| **Credential Actions** | Suspend/Enable | Suspend/Enable | Suspend/Enable |
+| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
 
 For more information about the agents, see:
 
