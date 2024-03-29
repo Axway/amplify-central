@@ -33,7 +33,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 ### On-premise Agent Features
 
-| Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
+| Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge* |
 |-------------|--------------------|-----|-------|-------|-------------|
 | **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
 | **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Not Implemented | API Usage Statistics |
@@ -45,7 +45,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
 | **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
 
-| Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
+| Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | Pulib/Private Rest APIs | Topics |
 | **Traceability** | Not implemented yet | Not Implmented yet | Transactions with API Key associated with Usage plan | N/A | TBD |
@@ -81,6 +81,7 @@ For more information about the agents, see:
 * [Discovery Agents for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/).
 * [Discovery Agents for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/).
 * [Discovery Agents for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/).
+RENG:  Add links to Github repos for the tables.
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 
