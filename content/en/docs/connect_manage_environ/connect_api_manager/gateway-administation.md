@@ -144,7 +144,7 @@ This section connects the agent to Enterprise Marketplace and determines how to 
 
 `CENTRAL_URL`: The Enterprise Marketplace url. Default value is **<https://apicentral.axway.com>**.
 
-`CENTRAL_SINGLEURL`: Alternate Enterprise Marketplace url connection if using a static IP. Default value for US is **<https://ingestion.platform.axway.com>**, and for EU is **<http://ingestion-eu.platform.axway.com>**.
+`CENTRAL_SINGLEURL`: Alternate Enterprise Marketplace url connection if using a static IP (default value: US =  `<https://ingestion.platform.axway.com>` / EU = `https://ingestion-eu.platform.axway.com` / APAC = `https://ingestion-ap-sg.platform.axway.com`).
 
 `CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.
 
@@ -740,7 +740,7 @@ CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 
 This section describes where the logs should be sent on Enterprise Marketplace.
 
-`TRACEABILITY_HOST`: The host and port of the ingestion service to forward the transaction log entries. Default value is **ingestion.datasearch.axway.com:5044**.
+`TRACEABILITY_HOST`: The host and port of the ingestion service to forward the transaction log entries. (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044` / APAC = `<ingestion.visibility.ap-sg.axway.com:5044>` ).
 
 `TRACEABILITY_PROTOCOL`: The protocol (https or tcp) to be used for communicating with ingestion service. Default value is **tcp**.
 
