@@ -41,8 +41,8 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 | **Application** | Client App | Application | Usage plan | N/A | Application |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
-| **Credential Type** | APIKey / OAuth / BasicAuth | APIKey | APIKey | N/A | APIKey |
-| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
+| **Credential Type** | APIKey / OAuth / BasicAuth / IDP | APIKey | APIKey | IDP | APIKey / OAuth |
+| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
 | **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
 
 | Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
