@@ -36,40 +36,40 @@ Using agents is the recommended way to add API services to your environment. Whe
 | Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge* |
 |-------------|--------------------|-----|-------|-------|-------------|
 | **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
-| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Not Implemented | API Usage Statistics |
-| **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
-| **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 | **Application** | Client App | Application | Usage plan | N/A | Application |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
 | **Credential Type** | APIKey / OAuth / BasicAuth / IDP | APIKey | APIKey | IDP | APIKey / OAuth |
 | **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
 | **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
+| **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Not Implemented | API Usage Statistics |
+| **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
+| **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 
 | Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | Pulib/Private Rest APIs | Topics |
-| **Traceability** | Not implemented yet | Not Implmented yet | Transactions with API Key associated with Usage plan | N/A | TBD |
-| **Platform Usage** | Yes  | Not Implemented yet | Yes |  N/A | Yes |
-| **Transaction Metrics** | No  | Not Implmented yet | Yes | N/A | Yes |
 | **Application** | Associated Client App with Contract | Not Implemented | Application | N/A | Create Product |
 | **Access Request** | Associated Frontend Proxy with Application | Not Implemented | Associated API with Product | N/A | TBD |
 | **Credential Type** | APIKey |  Not Implemented yet | APIKey  | N/A | APIKey |
 | **Credential Actions** |  Suspend/Enable |  Not Implemented yet| Suspend/Enable | N/A |Suspend/Enable |
 | **Quota Enforcement** | TBD | Not Implemented yet | Quotas are attached to a Usage plan | N/A | Quota Policy associated to Product |
+| **Traceability** | Not implemented yet | Not Implmented yet | Transactions with API Key associated with Usage plan | N/A | TBD |
+| **Platform Usage** | Yes  | Not Implemented yet | Yes |  N/A | Yes |
+| **Transaction Metrics** | No  | Not Implmented yet | Yes | N/A | Yes |
 
 ### SaaS (Embedded) Agent Features
 
 | Description |  AWS | Apigee X | Github |
 |-------------|-----|-------|-------------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Public/Private Rest APIs |
-| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | N/A |
-| **Platform Usage** | No  | Yes | N/A |
-| **Transaction Metrics** | No  | Yes | N/A |
 | **Application** | Associated Client App with Contract | Client App | N/A |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | N/A |
 | **Credential Type** | APIKey | APIKey / OAuth | N/A |
 | **Credential Actions** | Suspend/Enable | Suspend/Enable | N/A |
 | **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
+| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | N/A |
+| **Platform Usage** | No  | Yes | N/A |
+| **Transaction Metrics** | No  | Yes | N/A |
 
 For more information about the agents, see:
 
