@@ -39,6 +39,15 @@ CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromEnterpriseMarketplace
 CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
+#
+#Marketplace Provisioning and Deprovisioning
+#
+# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+CENTRAL_GRPC_ENABLED=true
+# activate the Marketplace provisioning feature
+AGENTFEATURES_MARKETPLACEPROVISIONING=true
+# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
+AGENTFEATURES_PERSISTCACHE=true
 ```
 
 ### Traceability Agent
@@ -66,6 +75,17 @@ CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromEnterpriseMarketplace
 CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
+#
+#Reporting Traffic to Consumer Insights
+#
+# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+CENTRAL_GRPC_ENABLED=true
+# activate the Marketplace provisioning feature
+AGENTFEATURES_MARKETPLACEPROVISIONING=true
+# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
+AGENTFEATURES_PERSISTCACHE=true
+# enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
+TRACEABILITY_PER_SUBSCRIPTION=true
 ```
 
 If you are either struggling with a variable value or want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes the variables the agents (Discovery / Traceability) rely on.
@@ -121,7 +141,7 @@ You can extend the previous minimum variable list with the following variables. 
 | CENTRAL_ORGANIZATIONID                                             | The Organization ID from Amplify Central. Locate this at Platform > User > Organization.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | CENTRAL_PROXYURL                                                   | The URL for the proxy for Amplify Central `<http://username:password@hostname:port>`. If empty, no proxy is defined.                                                                                                                                                                                                                                                                                                                                                                                       |
 | CENTRAL_REPORTACTIVITYFREQUENCY                                    | The frequency at which the agent polls for event changes for the periodic agent status updater (ns - default, us, ms, s, m, h). Set to 5m.                                                                                                                                                                                                                                                                                                                                                                 |
-| CENTRAL_SINGLEURL                                                  | Alternate URL connection to the Amplify Central instance being used for agents if using a static IP (default value: US =  `<https://ingestion.platform.axway.com>` / EU = `http://ingestion-eu.platform.axway.com`).                                                                                                                                                                                                                                                                                       |
+| CENTRAL_SINGLEURL                                                  | Alternate URL connection to the Amplify Central instance being used for agents if using a static IP (default value: US =  `<https://ingestion.platform.axway.com>` / EU = `https://ingestion-eu.platform.axway.com` / APAC = `https://ingestion-ap-sg.platform.axway.com`).                                                                                                                                                                                                                                                                                       |
 | CENTRAL_SSL_CIPHERSUITES                                           | An array of strings. It is a list of supported cipher suites for TLS versions up to TLS 1.2. If CipherSuites is nil, a default list of secure cipher suites is used, with a preference order based on hardware performance. See [Supported Cipher Suites](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/).                                                                                                                                                                  |
 | CENTRAL_SSL_INSECURESKIPVERIFY                                     | Controls whether a client verifies the server's certificate chain and host name. If true, TLS accepts any certificate presented by the server and any host name in that certificate. In this mode, TLS is susceptible to man-in-the-middle attacks.                                                                                                                                                                                                                                                        |
 | CENTRAL_SSL_MAXVERSION                                             | String value for the maximum SSL/TLS version that is acceptable. If empty, then the maximum version supported by this package is used, which is currently TLS 1.3. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                                                                                                                                     |
@@ -192,7 +212,7 @@ You can extend the previous minimum variable list with the following variables. 
 | TRACEABILITY_CLIENTTIMEOUT                     | The time to wait for ingestion response (default value: `60s`).                                                                                                                                                                                                                                                                            |
 | TRACEABILITY_COMPRESSIONLEVEL                  | The gzip compression level for the output event (default value: `3`).                                                                                                                                                                                                                                                                      |
 | TRACEABILITY_EXCEPTION_LIST                    | Determines what API paths the agent will dismiss and not process for usage or transaction reporting. Valid regular expressions can be configured. Example: `["/api/v\\d+/ping.*$", "^/qa.*$", "/qa.*" ]`. Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent.            |
-| TRACEABILITY_HOST                              | The host name and port of the ingestion service to forward the transaction log entries (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044`).                                                                                                                                   |
+| TRACEABILITY_HOST                              | The host name and port of the ingestion service to forward the transaction log entries (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044` / APAC = `<ingestion.visibility.ap-sg.axway.com:5044>` ).                                                                                                                                  |
 | TRACEABILITY_PROTOCOL                          | Protocol (https or tcp) to be used for communicating with ingestion service (default value: `tcp`).                                                                                                                                                                                                                                        |
 | TRACEABILITY_PROXYURL                          | The socks5 or http URL of the proxy server for ingestion service (`<socks5://hostname:port>`). If empty, no proxy is defined.                                                                                                                                                                                                              |
 | TRACEABILITY_REDACTION_JMSPROPERTIES_SANITIZE  | Determines what portions of a JMS Property value to sanitize. Example: `[{keyMatch:"jmsProviderURL",valueMatch:".{0,10}$"}]` to sanitize the `jmsProviderURL` property to mask the last ten characters or less.                                                                                                                            |
