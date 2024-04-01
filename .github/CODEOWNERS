@@ -55,6 +55,9 @@
 # Documentation files for SAAS
 /content/en/docs/saas_api_gateway/ @lbadenhop @robertengaxway
 
+# Documentation files for Runtime Compliance
+/content/en/docs/runtime_security/ @lbadenhop @robertengaxway
+
 # Documentation files for Marketplace
 /content/en/docs/manage_marketplace/ @lbadenhop @cbordier
 
