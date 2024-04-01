@@ -118,6 +118,7 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
 3. From the list view, click on the asset to edit. All edits will be based on the latest draft version or release version of the asset.
+
 ### Edit an asset without a draft or release
 
 * The top right pencil icon handles editing the Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes, without creating a draft or releasing a new asset version. This takes effect immediately.
