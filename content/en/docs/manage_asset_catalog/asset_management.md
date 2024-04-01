@@ -121,13 +121,13 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 ### Edit an asset without a draft or release
 
 * The top right pencil icon handles editing the Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes, without creating a draft or releasing a new asset version. This takes effect immediately.
-   * If the asset is in a draft state, setting auto-release to **Automatic** will result in release management being in an "on hold" setting. The asset draft must be manually "activated" to resume auto-release handling.
+    * If the asset is in a draft state, setting auto-release to **Automatic** will result in release management being in an "on hold" setting. The asset draft must be manually "activated" to resume auto-release handling.
 
 ### Edit an asset with the option to create a draft or release a new version
 
 * Depending on the state of the asset either **Edit Draft** or **Create New Version** allows editing the API services linked to this asset in the Group Resources step and releasing a new asset version to make it available for consumption by a product.
-   * **Preview Asset** is available to view your asset changes prior to taking effect. If you have made edits that require a new asset release in the Group Resources step, click **Save** to update changes to the asset. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release in the Group Resources step with Auto-release disabled, you can click **Save & Activate** to update changes in an asset version release.
-   * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+    * **Preview Asset** is available to view your asset changes prior to taking effect. If you have made edits that require a new asset release in the Group Resources step, click **Save** to update changes to the asset. The **Save** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release in the Group Resources step with Auto-release disabled, you can click **Save & Activate** to update changes in an asset version release.
+    * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
 
 ## Delete an asset
 
