@@ -17,11 +17,11 @@
 #*.js @js-owner
 
 # Config files
-*.html @lbadenhop @winghonlai
-*.js    @lbadenhop @winghonlai
-*.toml @lbadenhop @winghonlai
-*.yml @lbadenhop @winghonlai
-*.json @lbadenhop @winghonlai
+*.html @lbadenhop
+*.js    @lbadenhop
+*.toml @lbadenhop
+*.yml @lbadenhop
+*.json @lbadenhop
 
 # You can also use email addresses if you prefer. They'll be
 # used to look up users just like we do for commit author
@@ -34,14 +34,14 @@
 #/build/logs/ @doctocat
 
 # Theme and CMS config files
-/layouts/ @lbadenhop @winghonlai
-/static/admin/ @lbadenhop @winghonlai
+/layouts/ @lbadenhop
+/static/admin/ @lbadenhop
 
 # Documentation files for Actionable Insights
-/content/en/docs/get_actionable_insights/ @sallylanda6
+/content/en/docs/get_actionable_insights/ @lbadenhop
 
 # Documentation files for Consumer Insights
-/content/en/docs/manage_marketplace/consumer_experience/get_actionable_insights/consumer_insights/ @sallylanda6
+/content/en/docs/manage_marketplace/consumer_experience/get_actionable_insights/consumer_insights/ @lbadenhop
 
 # Documentation files for Integrate with Amplify
 /content/en/docs/integrate_with_central/ @lbadenhop @robertengaxway
