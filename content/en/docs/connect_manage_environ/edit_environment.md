@@ -22,7 +22,7 @@ Learn how to edit an environment to represent your API services and other discov
 
 ### Embedded AWS environment
 
-These configuration steps are displayed only if there is Embedded AWS support for this  environment.
+These configuration steps are displayed only if an Embedded AWS environment is selected.
 
 1. Agent Configuration: Initiate editing by clicking **Edit Agent Configuration**. Edit the AWS Region, AWS Authentication, and Cloud Watch Settings. If AssumeRole is selected you can edit the Role ARN and External ID. If Access Key ID and Secret Access Key is selected you can edit the Access Key and Secret Key. Note any changes made will not be saved unless **Apply** is clicked. If you wish to cancel the changes, click **Cancel**.
 2. Embedded Discovery Agent Settings: 2. Embedded Discovery Agent Settings: Edit Frequency, Team Ownership, API Discovery Filter, Additional tags, and Exclude Tags. Initiate Immediate Discovery can also be set.
@@ -30,7 +30,7 @@ These configuration steps are displayed only if there is Embedded AWS support fo
 
 ### Embedded Apigee X API Gateway environment
 
-These configuration steps are displayed only if there is Embedded Apigee X support for this  environment.
+These configuration steps are displayed only if an Embedded Apigee X environment is selected.
 
 1. Agent Configuration: Initiate editing by clicking **Edit Agent Configuration**. Edit Project ID, Developer Email Address, and Client Email Address. The Traceability Agent may be toggled on or off. Note any changes made will not be saved unless **Apply** is clicked. If you wish to cancel the changes, click **Cancel**.
 2. Embedded Discovery Agent Settings: Edit Frequency, Team Ownership, and Additional tags. Initiate Immediate Discovery can also be set.
@@ -38,10 +38,12 @@ These configuration steps are displayed only if there is Embedded Apigee X suppo
 
 ### Embedded GitHub environment
 
-These configuration steps are displayed only if there is Embedded Github support for this  environment.
+These configuration steps are displayed only if an Embedded Github environment is selected.
 
 1. Agent Configuration: Initiate editing by clicking **Edit Agent Configuration**. Edit the Github Access Token. Note any changes made will not be saved unless **Apply** is clicked. If you wish to cancel the changes, click **Cancel**.
 2. Embedded Discovery Agent Settings: 2. Embedded Discovery Agent Settings: Edit Frequency, Team Ownership, Paths, Filename Filters, Github Repository Name, Github Repository Owner, and Additional tags. Initiate Immediate Discovery can also be set.
+
+{{< alert title="Note" color="primary" >}}All the items below are optional but applicable to all environments.{{< /alert >}}
 
 ### Compliance Profile
 
