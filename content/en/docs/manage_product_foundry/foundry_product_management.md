@@ -159,7 +159,7 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 ### Edit a product without a draft or release
 
 * The top right pencil icon handles editing the Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, Attributes, and Support Contacts, without creating a draft or releasing a new product version. This takes effect immediately.
-    * If the product is in a draft state, setting auto-release to **Automatic** will result in release management being in an "on hold" setting. The product draft must be manually "activated" to resume auto-release handling.
+    * If the product is in a draft state, enabling auto-release will result in release management being in an "on hold" setting. The product draft must be manually "activated" to resume auto-release handling.
 
 ### Edit a product with the option to create a draft or make a new release
 
