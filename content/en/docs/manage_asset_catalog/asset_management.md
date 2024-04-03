@@ -65,7 +65,7 @@ To view asset details:
     * Categories - Help classify assets into groups and find the asset by filtering on the Category
     * Tags - Labels to help find assets in the catalog
     * Attributes - Key and value pair to allow customers to attach/query for custom information
-    * Release Management - The Asset details page has a badge below the title indicating the asset is set for **Automatic** or **Manual** release of new versions. The setting **Automatic (On hold)** is possible if the asset is in a draft state with auto-release set to **Automatic**. The asset draft must be manually "activated" to resume auto-release handling.
+    * Release Management - The *Asset details* page displays a badge below the title indicating that the asset is set for **Automatic** or **Manual** release of new versions. The setting **Automatic (On hold)** only applies when the asset is in a draft state with auto-release set to **Automatic**. The asset draft must be manually "activated" to resume auto-release handling.
 
 {{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the asset details view.{{< /alert >}}
 
@@ -121,14 +121,20 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 
 ### Edit an asset without a draft or release
 
-* The top right pencil icon handles editing the Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes, without creating a draft or releasing a new asset version. This will take effect immediately for the asset and any Marketplace products associated with this asset.
-    * If the asset is in a draft state, enabling auto-release will result in release management being in an "on hold" setting. The asset draft must be manually "activated" to resume auto-release handling.
+Click **Edit** (pencil button) at top right to edit the following without creating a draft or releasing a new asset version: Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes. The edits will take effect immediately for the asset and any Marketplace products associated with this asset.
+    
+{{< alert title="Note" color="primary" >}}If the asset is in a draft state, enabling auto-release will result in release management being in an "on hold" setting. The asset draft must be manually "activated" to resume auto-release handling.{{< /alert >}}
 
 ### Edit an asset with the option to create a draft or release a new version
 
-* Depending on the state of the asset either **Edit Draft** or **Create New Version** allows editing the API services linked to this asset in the Group Resources step and releasing a new asset version to make it available for consumption by a product.
-    * **Preview Asset** is available to view your asset changes prior to taking effect. If you have made edits that require a new asset release in the Group Resources step, click **Save as Draft** to update changes to the asset. The **Save as Draft** action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled. Alternatively, if you made edits that require a new asset release in the Group Resources step with Auto-release disabled, you can click **Save & Activate** to update changes in an asset version release.
-    * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+1. Depending on the state of the asset, click either **Edit Draft** or **Create New Version** to edit the API services linked to this asset in the Group Resources step and release a new asset version to make it available for consumption by a product.
+2. Select a preview or save option:
+
+    * **Preview Asset** - view your asset changes prior to taking effect.
+    * **Save as Draft** - update changes to an asset when edits require a new asset release (Group Resources edits). This action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
+    * **Save & Activate** - update changes in an asset version release when edits require a new asset release (Group Resources edits) and Auto-release is disablesdisabled.
+
+{{< alert title="Note" color="primary" >}}If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.{{< /alert >}}
 
 ## Delete an asset
 
