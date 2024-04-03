@@ -68,7 +68,7 @@ These configuration steps are displayed only if an Embedded Github environment i
     * Edit the Github Access Token.
     * Click **Apply** to save changes or click **Cancel** to cancel changes.
 
-2. Embedded Discovery Agent Settings: 
+2. Embedded Discovery Agent Settings:
 
     * Edit: Frequency, Team Ownership, Paths, Filename Filters, Github Repository Name, Github Repository Owner, and Additional tags. Initiate Immediate Discovery can also be set.
 
