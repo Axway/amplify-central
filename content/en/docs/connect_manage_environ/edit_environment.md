@@ -32,7 +32,7 @@ These configuration steps are displayed only if an Embedded AWS environment is s
         * If Access Key ID and Secret Access Key is selected you can edit the Access Key and Secret Key.
     * Click **Apply** to save changes or click **Cancel** to cancel the changes.
 
-2. Embedded Discovery Agent Settings: 
+2. Embedded Discovery Agent Settings:
 
     * Edit: Frequency, Team Ownership, API Discovery Filter, Additional tags, and Exclude Tags. Initiate Immediate Discovery can also be set.
 
