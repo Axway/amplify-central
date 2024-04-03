@@ -24,9 +24,21 @@ Learn how to edit an environment to represent your API services and other discov
 
 These configuration steps are displayed only if an Embedded AWS environment is selected.
 
-1. Agent Configuration: Initiate editing by clicking **Edit Agent Configuration**. Edit the AWS Region, AWS Authentication, and Cloud Watch Settings. If AssumeRole is selected you can edit the Role ARN and External ID. If Access Key ID and Secret Access Key is selected you can edit the Access Key and Secret Key. Note any changes made will not be saved unless **Apply** is clicked. If you wish to cancel the changes, click **Cancel**.
-2. Embedded Discovery Agent Settings: 2. Embedded Discovery Agent Settings: Edit Frequency, Team Ownership, API Discovery Filter, Additional tags, and Exclude Tags. Initiate Immediate Discovery can also be set.
-3. Embedded Traceability Agent Settings: If enabled, edit Frequency, Sampling Percentage, URL Path Allowed Patterns, Query Arguments Allowed Patterns, Query Arguments Sanitization Patterns, Request Headers Allowed Patterns, Request Headers Sanitization Patterns, Response Headers Allowed Patterns, Response Headers Sanitization Patterns, and Masking Characters. Sample All Errors can also be set.
+1. Agent Configuration:
+
+    * Click **Edit Agent Configuration**.
+    * Edit the AWS Region, AWS Authentication, and Cloud Watch Settings.
+        * If AssumeRole is selected you can edit the Role ARN and External ID.
+        * If Access Key ID and Secret Access Key is selected you can edit the Access Key and Secret Key.
+    * Click **Apply** to save changes or click **Cancel** to cancel the changes.
+
+2. Embedded Discovery Agent Settings: 
+
+    * Edit: Frequency, Team Ownership, API Discovery Filter, Additional tags, and Exclude Tags. Initiate Immediate Discovery can also be set.
+
+3. Embedded Traceability Agent Settings:
+
+    * If enabled, edit: Frequency, Sampling Percentage, URL Path Allowed Patterns, Query Arguments Allowed Patterns, Query Arguments Sanitization Patterns, Request Headers Allowed Patterns, Request Headers Sanitization Patterns, Response Headers Allowed Patterns, Response Headers Sanitization Patterns, and Masking Characters. Sample All Errors can also be set.
 
 ### Embedded Apigee X API Gateway environment
 
