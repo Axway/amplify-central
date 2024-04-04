@@ -122,7 +122,7 @@ The asset can be in **Draft**, **Active**, or **Deprecated** state.
 ### Edit an asset without a draft or release
 
 Click **Edit** (pencil button) at top right to edit the following without creating a draft or releasing a new asset version: Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes. The edits will take effect immediately for the asset and any Marketplace products associated with this asset.
-    
+  
 {{< alert title="Note" color="primary" >}}If the asset is in a draft state, enabling auto-release will result in release management being in an "on hold" setting. The asset draft must be manually "activated" to resume auto-release handling.{{< /alert >}}
 
 ### Edit an asset with the option to create a draft or release a new version
