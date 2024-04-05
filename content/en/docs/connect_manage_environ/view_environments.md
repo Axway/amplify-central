@@ -137,7 +137,7 @@ The API Service details page includes:
    * Design: Reserved for endpoints tied to a mockup service.
    * Experimental: API published for preliminary testing. It might not be feature complete and has bugs.
    * Pre-released: API is published for beta testing. It is mostly feature complete but has bugs.
-   * Stable: API is released and ready for production use.
+   * Active: API is released and ready for production use.
    * Deprecated: API is deprecated in favor of a newer version or another API.
    * Archived: API is retired and no longer available for use.
 5. On the second step of the wizard, labelled **Endpoint**, specific endpoints can be added, edited, or deleted.
