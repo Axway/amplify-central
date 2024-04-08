@@ -197,9 +197,17 @@ When discovering and publishing the virtualized APIs with OAuth (External) inbou
 
 #### Invoke Policy authentication handling in the Discovery Agent
 
-When virtualizing a REST API in API Manager, you can configure inbound security to invoke a policy defined in Policy Studio, see [Invoke Policy](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). In cases like these, the Discovery Agent will recognize the security being used and create an Access Request Definition (ARD). The ARD will display the authentication being used, as well as the description of the policy being used.
+When virtualizing a REST API in API Manager, you can configure inbound security to invoke a policy defined in Policy Studio, see [Invoke Policy](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). In cases like these, the Discovery Agent has the ability to map the policy being used for authentication to another supported authentication type.
 
-The Discovery Agent will use the value defined by the `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` environment variable if:
+{{< alert title="Note" color="primary" >}}The agent will handle the mapped authentication type as if the proxy were configured to use it. The agent will not validate that the policy uses the mapped authentication type. That responsibility belongs to the policy creator.{{< /alert >}}
+
+To map a policy to an authentication type (OAuth, Basic Auth, API Key), use the following environment variables, incrementing the index as needed:
+
+* `APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_1=Invoke API Key` where *Invoke API Key* is the name of the policy attached to the proxy.
+* `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=APIKey` where *APIKey* is the authentication type that the agent should handle the proxy as. Options are APIKey, Basic, OAuth.
+* Additional mappings should have env vars, such as `APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_2`, `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_2`, etc.
+
+In cases where a policy is used but not mapped to a specific authentication type, the agent will create an Access Request Definition (ARD) that will display the authentication details and the description of the policy being used. If a description cannot be found, the agent will use the value defined by the `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` environment variable if:
 
 * The policy does not have a description
 * The policy references an external link
