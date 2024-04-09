@@ -22,9 +22,9 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace April 5 2024](/docs/amplify_relnotes/20240405_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.77. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.78. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.73 / TA=v1.1.75
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.74 / TA=v1.1.76
 * **AWS Gateway using SDK 2.0** - DA=v1.1.61 / TA-v1.1.63
 * **Azure latest release** - DA=v1.1.67 / TA=v1.1.72
 * **Istio 1.9.5** - DA=v1.0.33 / TA=v2.0.78
@@ -44,10 +44,10 @@ Supported Saas (embedded) Agents:
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**On-premise agents** |         |
-| What's new: | **All** - Updated with the Axway Agent SDK security patches. |
-| Bug fixes: | None. |
+| What's new: | **Axway API Management Gateway Agent** - Invoke Policy mapping to Amplify Marketplace credential. Deduplication of metric transactions |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -65,13 +65,13 @@ Supported Saas (embedded) Agents:
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Product rating filter. |
+| Bug fixes: | See release note. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
