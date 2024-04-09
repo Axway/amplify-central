@@ -46,7 +46,7 @@ Supported Saas (embedded) Agents:
 | What's new: | None. |
 | Bug fixes: | See release note. |
 | <br />**On-premise agents** |         |
-| What's new: | **Axway API Management Gateway Agent** - Invoke Policy mapping to Amplify Marketplace credential. Deduplication of metric transactions |
+| What's new: | **Axway API Management Gateway Agent** - Invoke Policy mapping to Amplify Marketplace credential. Deduplication of metric transactions. |
 | Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
 | What's new: | None. |
