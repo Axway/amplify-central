@@ -46,7 +46,6 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 | **Transaction Event Sampling** | Yes | Yes | Yes | No | No |
 
-
 | Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Pulib/Private Rest APIs | Topics |
