@@ -33,35 +33,38 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 ### On-premise Agent Features
 
-| Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge* |
+| Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
 |-------------|--------------------|-----|-------|-------|-------------|
 | **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
-| **Application** | Client App | Application | Usage plan | N/A | Application |
+| **Application** | Client App | Usage plan | Product | N/A | Application |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
 | **Credential Type** | APIKey / OAuth / BasicAuth / IDP | APIKey | APIKey | IDP | APIKey / OAuth |
 | **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable | Suspend/Enable | Not implemented yet | Suspend/Enable |
-| **Quota Enforcement** | Quota per Frontend Proxy | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | For Products, a Quota is associated to the Product. For Proxies, we create a product with an associated Quota |
+| **Quota Enforcement** | Quota per Frontend Proxy set in Client App | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | Quota added to a Product, underlying proxy must enforce Quota |
 | **Traceability** | Transactions with application content associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | Not Implemented | API Usage Statistics |
 | **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
 | **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
+| **Transaction Event Sampling** | Yes | Yes | Yes | No | No |
+
 
 | Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
-| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Rest APIs in API Gateway | Pulib/Private Rest APIs | Topics |
-| **Application** | Associated Client App with Contract | Not Implemented | Application | N/A | Create Product |
-| **Access Request** | Associated Frontend Proxy with Application | Not Implemented | Associated API with Product | N/A | TBD |
-| **Credential Type** | APIKey |  Not Implemented yet | APIKey  | N/A | APIKey |
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Pulib/Private Rest APIs | Topics |
+| **Application** | Associated Client App with Contract | Not Implemented | Consumer | N/A | Create Product |
+| **Access Request** | Associated Frontend Proxy with Application | Not Implemented | If ACL plugin is required to give consumer access to Route | N/A | TBD |
+| **Credential Type** | OAuth Client ID and Secret |  Not Implemented yet | APIKey, Basic Auth, OAuth added to Consumer | N/A | APIKey |
 | **Credential Actions** |  Suspend/Enable |  Not Implemented yet| Suspend/Enable | N/A |Suspend/Enable |
-| **Quota Enforcement** | TBD | Not Implemented yet | Quotas are attached to a Usage plan | N/A | Quota Policy associated to Product |
-| **Traceability** | Not implemented yet | Not Implmented yet | Transactions with API Key associated with Usage plan | N/A | TBD |
+| **Quota Enforcement** | TBD | Not Implemented yet | Rate limiting plubin added to Consumer | N/A | Quota Policy associated to Product |
+| **Traceability** | Not implemented yet | Not Implmented yet | Using the Kong HTTP log plugin | N/A | TBD |
 | **Platform Usage** | Yes  | Not Implemented yet | Yes |  N/A | Yes |
 | **Transaction Metrics** | No  | Not Implmented yet | Yes | N/A | Yes |
+| **Transaction Event Sampling** | No | Not Implemented yet | Yes | N/A | N/A |
 
 ### SaaS (Embedded) Agent Features
 
 | Description |  AWS | Apigee X | Github |
 |-------------|-----|-------|-------------------|
-| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Public/Private Rest APIs |
+| **Discovery** | Rest APIs | Published Frontend Proxies | Public/Private Rest APIs |
 | **Application** | Associated Client App with Contract | Client App | N/A |
 | **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | N/A |
 | **Credential Type** | APIKey | APIKey / OAuth | N/A |
@@ -70,6 +73,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | N/A |
 | **Platform Usage** | No  | Yes | N/A |
 | **Transaction Metrics** | No  | Yes | N/A |
+| **Transaction Event Sampling** | No | No | N/A |
 
 For more information about the agents, see:
 
