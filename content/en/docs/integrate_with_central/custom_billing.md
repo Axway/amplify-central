@@ -166,11 +166,11 @@ Invoice can have the following state:
 
 Each state can be associated to one of the following status:
 
-* **pending**: action is in progress
-* **success**: action is successful
-* **error**: action in unsuccessful
+* **Pending**: action is in progress
+* **Success**: action is successful
+* **Error**: action in unsuccessful
 
-For success and error, an additional message is available to help understand the status.
+For Success and Error, an additional message is available to help understand the status.
 
 For listening to the invoices event, there are 2 possibilities:
 
@@ -218,7 +218,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 ```
 
 {{< alert title="Note" color="primary" >}}
-A secret can be used and attached to the webhook specification so that each time en event is received you know it is coming from Axway. Refer to [webhook advanced setup](/docs/integrate_with_central/webhook#using-a-secret)
+A secret can be used and attached to the webhook specification so that each time en event is received you know it is coming from this specific webhook. Refer to [webhook advanced setup](/docs/integrate_with_central/webhook#using-a-secret)
 {{< /alert >}}
 
 curl command to create the resource hook definition:
@@ -289,7 +289,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopi
 
 Reading event from WatchTopic:
 
-Event in the WatchTopic are sequential. They remain in the WatchTopic for XX days. You can ask for all the events (no filter in the query) or events after a specific sequence number (`?query=sequence>=xxx`).
+Event in the WatchTopic are sequential. They remain in the WatchTopic for 7 days. You can ask for all the events (no filter in the query) or events after a specific sequence number (`?query=sequence>=xxx`).
 
 ```json
 curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/track-subscriptions-invoices?sort=sequenceID%2CDESC' \
@@ -321,11 +321,11 @@ Now that you can receive the invoice events, it is time to manage them and creat
 
 When receiving a new invoices via webhook or watchTopic, it is the responsibility of the implementation to correctly create the invoice on the billing Gateway with the supplied information (currency / amount / details) and then report back to Amplify Enterprise Marketplace the billing link and the invoice state/status.
 
-First check that the received event has an invoice with `state=draft` and `status=pending`.
+First check that the received event has an invoice with `state=draft` and `metadata.subresource.status=pending`.
 
-Then the flow needs to create the corresponding invoice in the Billing Gateway. This step depends on the billing Gateway.
+Then the flow needs to create the corresponding invoice in the Billing Gateway. This step depends on the billing Gateway capabilities.
 
-Lastly, the flow need to update the invoice on the Amplify Enterprise Marketplace to reflect the information.
+Lastly, the flow needs to update the invoice on the Amplify Enterprise Marketplace to reflect the information.
 
 Adding the invoice link payment so that the consumer will be able to navigate from the Marketplace to the billing Gateway payment screen.
 
@@ -343,16 +343,22 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
             },
             "link": "{BILLING GATEWAY PAYMENT LINK}",
             "amount": {
-                "due": {AMOUNT DUE FROM MARKETPLACE},
+                "due": {AMOUNT DUE COMING FROM BILLING GATEWAY}
                 "currency": "{CURRENCY}",
-                "total": {TOTAL AMOUNT DUE}
+                "total": {TOTAL AMOUNT DUE COMING FROM MARKETPLACE}
             }
         }
     }
 }'
 ```
 
-And updating the invoice state/status
+{{< alert title="What is the difference between `due` and `total`?" color="primary" >}}
+The **total** property is the current invoice amount originated from Marketplace invoicing system.  
+
+The **due** is total amount plus any extra amount (taxes / past due invoices...) that needs to be billed to the consumer.
+{{< /alert >}}
+
+And updating the invoice state:
 
 ```json
 curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_ID}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_ID}/state' \
@@ -380,7 +386,7 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 ### Invoice past due flow
 
-Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event: `state=pastDue` / `status=pending`.
+Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event: `state=pastDue` / `metadata.subresource.status=pending`.
 
 it is possible to take action on the provider side to reach out the consumer to see why the invoice is not paid yet. Once the clarification has been made with the consumer, we recommend to change the status to Success as follows:
 
@@ -404,4 +410,28 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 When the initial subscription invoice has never been paid and the consumer decided to terminate his subscription, the existing invoice is put in the **void** state.
 
-When receiving such event: `state=void` / `status=pending`, you can decide what to do on the billing Gateway. For instance, set the invoice as not collectible or completely delete it from the billing Gateway.
+When receiving such event: `state=void` / `metadata.subresource.status=pending`, you can decide what to do on the billing Gateway. For instance, set the invoice as not collectible or completely delete it from the billing Gateway.
+
+Once done on the Billing Gateway, the corresponding invoice in Amplify Entreprise Marketplace needs to be updated to whichever status make sense `Success` or `Error` as follows:
+
+```json
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_ID}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_ID}/status' \
+--data '{   
+     "status": {
+        "level": "Success",
+        "reasons": [
+            {
+                "type": "Success",
+                "detail": "Action taken to clarify the situation with the consumer",
+                "timestamp": "2024-04-04T22:29:46.256+0000"
+            }
+        ]
+    }
+}'
+```
+
+### Troubleshooting and error management
+
+In case the invoice status is set to `Error` and you want to process it again, simply change the status back to `Pending` so that an event will be trigger again and caught by the webhook/WatchTopic.
+
+If you need to reprocess pending invoice, you can still call this API: `AMPLIFY_CENTRAL_URL/apis/catalog/v1alpha1/subscriptioninvoices?query=billing.payment.type==custom;state.name==draft;status.level==Pending`
