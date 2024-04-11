@@ -24,7 +24,12 @@ Step 1: [Activate the custom billing integration](#activate-the-custom-billing-i
 
 Step 2: [Listen to invoices event](#listen-to-invoices-event)
 
-Step 3 [Managing the flows between the Marketplace and the payment Gateway](#managing-the-flows-between-the-marketplace-and-the-payment-gateway)
+Step 3 [Managing the flows between the Marketplace and the payment Gateway](#managing-the-flows-between-the-marketplace-and-the-payment-gateway):
+
+* Invoice creation flow in the billing Gateway
+* Invoice paid flow
+* Invoice past due flow
+* Invoice void flow
 
 {{< alert title="Note" color="primary" >}}
 All the query sample in this section are based on the US region for Amplify. The URL needs to be changed to the following:
