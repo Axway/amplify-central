@@ -12,7 +12,7 @@ Use billing integration to help manage the invoices for consumer organization su
 
 When billing integration is enabled for a specific Marketplace, each subscription originating from a consumer organization of this Marketplace will produce invoices:
 
-* One at subscription time to start the trusted period with the customer and pay the base price plan cost
+* One after the subscription approval time to start the trusted period with the customer and pay the base price plan cost
 * One at the end of each plan metering period to pay for the base plan price + the metering period consumption
 * A final one when the subscription is cancelled to pay the remaining consumption (from last metering period until the cancellation time)
 
@@ -183,7 +183,7 @@ The webhook method is simple but there is no retry mechanism which mean if you f
 
 You can use either the Amplify central CLI or Amplify central API to manage the webhook.
 
-More information regarding webhooks can be found [here](/docs/integrate_with_central/integrate_with_webhooks)
+More information regarding webhooks and their security can be found [here](/docs/integrate_with_central/integrate_with_webhooks)
 
 curl command to create the Integration:
 
@@ -216,6 +216,11 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
     }
 }'
 ```
+
+{{< alert title="Note" color="primary" >}}
+A secret can be used and attached to the webhook specification so that each time en event is received you know it is coming from Axway. Refer to [webhook advance setup](/docs/integrate_with_central/webhook#using-a-secret)
+{{< /alert >}}
+
 
 curl command to create the resource hook definition:
 
