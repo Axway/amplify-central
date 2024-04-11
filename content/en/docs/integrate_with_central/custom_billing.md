@@ -1,6 +1,6 @@
 ---
-title: Custom billing integration
-linkTitle: Custom billing integration
+title: Custom Marketplace billing integration
+linkTitle: Custom Marketplace billing integration
 weight: 310
 ---
 
@@ -42,11 +42,11 @@ All the query sample in this section are based on the US region for Amplify. The
 
 To activate the billing integration, you need to change the Marketplace settings.
 
-Navigate to Marketplace settings page.
-Select the Billing tab
-Enable the billing toggle
-From the Vendor dropdown, select **Custom**
-Save your changes
+1. Navigate to Marketplace settings page.
+2. Select the Billing tab
+3. Enable the billing toggle
+4. From the Vendor dropdown, select **Custom**
+5. Save your changes
 
 Now that the billing integration is activated, you can start listening for invoices generation
 
