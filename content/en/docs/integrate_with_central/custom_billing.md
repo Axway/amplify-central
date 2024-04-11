@@ -45,8 +45,6 @@ To activate the billing integration, you need to change the Marketplace settings
 Navigate to Marketplace settings page.
 Select the Billing tab
 Enable the billing toggle
-From the Vendor dropdown, select **Custom**
-Name your vendor in the dedicated field
 Save your changes
 
 Now that the billing integration is activated, you can start listening for invoices generation
