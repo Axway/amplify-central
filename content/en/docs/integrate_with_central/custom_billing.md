@@ -218,9 +218,8 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 ```
 
 {{< alert title="Note" color="primary" >}}
-A secret can be used and attached to the webhook specification so that each time en event is received you know it is coming from Axway. Refer to [webhook advance setup](/docs/integrate_with_central/webhook#using-a-secret)
+A secret can be used and attached to the webhook specification so that each time en event is received you know it is coming from Axway. Refer to [webhook advanced setup](/docs/integrate_with_central/webhook#using-a-secret)
 {{< /alert >}}
-
 
 curl command to create the resource hook definition:
 
@@ -258,15 +257,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 
 The gRPC connectivity is more complex than the webhook but more robust as you can keep track on the incoming events.
 
-For that you need to build a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk).
-
-Sample of gRPC client:
-
-```go
-TODO sample here
-```
-
-In order to receive the event, you will need to create a **WatchTopic**. This WatchTopic (works similarly to the resourceHook) will receive all the invoice event and this is the place the gRPC client will listen to.
+In order to receive the event via a gRPC connection, you will need to create a **WatchTopic** . This WatchTopic (works similarly to the resourceHook) will receive all the invoice event and this is the place a gRPC client will listen to.
 
 ```json
 curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopics' \
@@ -305,7 +296,22 @@ curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchto
 --data ''
 ```
 
-Using the above queries, the gRPC client can process any event and manage some failover by keeping track of the event sequence number. Like this, you can for instance save locally the latest processed sequence and, on client restart process the event that may have been missed while the client was down.
+Then you need to build a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk) to listen to the WatchTopic.
+
+Sample of gRPC client source code: <https://github.com/Axway/agent-sdk/tree/main/samples/watchclient>
+
+You must compile this source code with go compiler to get the executable: `go make`
+
+For this client to run you will need an Amplify Service Account with Central Admin rights. The service account key pair needs to be in the same directory than the gRPC client.
+
+Starting the gRPC client
+
+```cmd
+./watchclient --auth.client_id=<sa_client_id> --tenant_id=<organization_id> --host=apicentral.axway.com --port=443 --topic_self_link=/management/v1alpha1/watchtopics/track-subscriptions-invoices --log_level=debug --auth.url="
+https://login.axway.com/auth"
+```
+
+Using the above queries, the gRPC client can process any event and manage some failover by keeping track of the event sequence number. Like this, you can for instance save locally the latest processed sequence and, on client restart, process the event that may have been missed while the client was down.
 
 Now that you can receive the invoice events, it is time to manage them and create the corresponding flows on the payment Gateway
 
