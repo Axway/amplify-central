@@ -51,7 +51,102 @@ Now that the billing integration is activated, you can start listening for invoi
 Every time an invoice object is changed on Amplify Enterprise Marketplace for any reason, an event is triggered. That event will contain the invoice information (amount / currency / state and status)
 
 ```json
-TODO Add event sample here.
+{
+  "id": "d2744f2b-6d0d-4fa8-87f6-05fa26a7d6f5",
+  "time": "2024-04-05T15:30:50.200+0000",
+  "version": "v1",
+  "product": "AmplifyCentral",
+  "correlationId": "c6b7067a-2e82-45f7-972f-420fe6f105d4",
+  "organization": {
+    "id": "8243xxxxx"
+  },
+  "type": "SubResourceUpdated",
+  "payload": {
+    "finalizers": [],
+    "metadata": {
+      "id": "8ac98ee28ea29652018eaee2253601ac",
+      "audit": {
+        "createTimestamp": "2024-04-05T15:30:40.054+0000",
+        "createUserId": "69a10405-6fd2-4dd1-8df5-c444934166ec",
+        "modifyTimestamp": "2024-04-05T15:30:40.054+0000",
+        "modifyUserId": "69a10405-6fd2-4dd1-8df5-c444934166ec"
+      },
+      "scope": {
+        "id": "8ac98ee28ea29652018eaee223810197",
+        "kind": "Subscription",
+        "name": "demo-custom-flow",
+        "title": "demo custom flow",
+        "selfLink": "/catalog/v1alpha1/subscriptions/demo-custom-flow"
+      },
+      "acl": [],
+      "resourceVersion": "0",
+      "references": [
+        {
+          "id": "8ac9853a8e9a7b5b018e9a9695a90119",
+          "kind": "ProductPlan",
+          "name": "with-setup-cost",
+          "type": "hard",
+          "selfLink": "/catalog/v1alpha1/productplans/with-setup-cost",
+          "group": "catalog"
+        },
+        {
+          "id": "8ac992a58b976549018b97a29ce102c3",
+          "kind": "Marketplace",
+          "name": "8275212a-fb48-4b55-9305-473fbd507817",
+          "type": "hard",
+          "selfLink": "/catalog/v1/marketplaces/8275212a-fb48-4b55-9305-473fbd507817",
+          "group": "catalog"
+        }
+      ],
+      "selfLink": "/catalog/v1alpha1/subscriptions/demo-custom-flow/subscriptioninvoices/8ac98ee28ea29652018eaee223810197"
+    },
+    "marketplace": {
+      "name": "8275212a-fb48-4b55-9305-473fbd507817",
+      "resource": {
+        "owner": {
+          "id": "cd824ab7-af8d-4933-83f8-450662cca4d4",
+          "type": "team",
+          "organization": {
+            "id": "419190740785802"
+          }
+        }
+      }
+    },
+    "kind": "SubscriptionInvoice",
+    "title": "Initial Payment",
+    "spec": {
+      "cost": {
+        "plan": {
+          "cost": 20,
+          "name": "with-setup-cost",
+          "setup": {
+            "cost": 100
+          }
+        },
+        "total": 120
+      }
+    },
+    "tags": [],
+    "billing": {
+      "payment": {
+        "type": "custom"
+      }
+    },
+    "apiVersion": "v1alpha1",
+    "name": "8ac98ee28ea29652018eaee223810197",
+    "attributes": {},
+    "state": {
+      "name": "draft"
+    },
+    "group": "catalog",
+    "status": {
+      "level": "Pending"
+    }
+  },
+  "metadata": {
+    "subresource": "status"
+  }
+}
 ```
 
 ### Invoice state and status
