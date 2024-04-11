@@ -52,7 +52,7 @@ Now that the billing integration is activated, you can start listening for invoi
 
 ## Listen to invoices event
 
-Every time an invoice object is changed on Amplify Enterprise Marketplace for any reason, an event is triggered. That event will contain the invoice information (amount / currency / state and status / reference to the plan / Marketplace)
+Every time an invoice object is changed on Amplify Enterprise Marketplace for any reason, an event is triggered. That event will contain the invoice information (amount / currency / state and status / reference to the plan / Marketplace....):
 
 ```json
 {
@@ -152,6 +152,13 @@ Every time an invoice object is changed on Amplify Enterprise Marketplace for an
   }
 }
 ```
+
+But not all events will be interesting, only the one having the status subresource updated. In other word, events with the following characteristic:
+
+* `type` == "SubResourceUpdated"
+* `metadata.subsresource` == "status"
+
+Then you can look at the `state.name` and `status.level` to know what flow to trigger.
 
 ### Invoice state and status
 
@@ -313,7 +320,7 @@ https://login.axway.com/auth"
 
 Using the above queries, the gRPC client can process any event and manage some failover by keeping track of the event sequence number. Like this, you can for instance save locally the latest processed sequence and, on client restart, process the event that may have been missed while the client was down.
 
-Now that you can receive the invoice events, it is time to manage them and create the corresponding flows on the payment Gateway
+Now that you can receive the invoice events, it is time to manage them and create the corresponding flows on the payment Gateway.
 
 ## Managing the flows between the Marketplace and the payment Gateway
 
@@ -321,9 +328,7 @@ Now that you can receive the invoice events, it is time to manage them and creat
 
 When receiving a new invoices via webhook or watchTopic, it is the responsibility of the implementation to correctly create the invoice on the billing Gateway with the supplied information (currency / amount / details) and then report back to Amplify Enterprise Marketplace the billing link and the invoice state/status.
 
-First check that the received event has an invoice with `state=draft` and `status=pending`.
-Must also include metadata.subresource=status
- 
+First check the event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=draft` and `status=pending`.
 
 Then the flow needs to create the corresponding invoice in the Billing Gateway. This step depends on the billing Gateway capabilities.
 
@@ -388,9 +393,11 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 ### Invoice past due flow
 
-Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event: `state=pastDue` / `status=pending`.
+Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event.
 
-it is possible to take action on the provider side to reach out the consumer to see why the invoice is not paid yet. Once the clarification has been made with the consumer, we recommend to change the status to Success as follows:
+Check for event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=pastDue` and `status=pending`
+
+Tt is possible to take action on the provider side to reach out the consumer to see why the invoice is not paid yet. Once the clarification has been made with the consumer, we recommend to change the status to Success as follows:
 
 ```json
 curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_ID}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_ID}/status' \
@@ -412,7 +419,9 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 When the initial subscription invoice has never been paid and the consumer decided to terminate his subscription, the existing invoice is put in the **void** state.
 
-When receiving such event: `state=void` / `status=pending`, you can decide what to do on the billing Gateway. For instance, set the invoice as not collectible or completely delete it from the billing Gateway.
+First check the event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=void` and `status=pending`
+
+Then you can decide what to do on the billing Gateway. For instance, set the invoice as not collectible or completely delete it from the billing Gateway.
 
 Once done on the Billing Gateway, the corresponding invoice in Amplify Entreprise Marketplace needs to be updated to whichever status make sense `Success` or `Error` as follows:
 
