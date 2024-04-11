@@ -264,7 +264,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 
 The gRPC connectivity is more complex than the webhook but more robust as you can keep track on the incoming events.
 
-In order to receive the event via a gRPC connection, you will need to create a **WatchTopic** . This WatchTopic (works similarly to the resourceHook) will receive all the invoice event and this is the place a gRPC client will listen to.
+In order to receive the event via a gRPC connection, you will need to create a **WatchTopic** . This WatchTopic (works similarly to the resourceHook) will receive all the invoice events and this is the place a gRPC client will listen to.
 
 ```json
 curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopics' \
@@ -397,7 +397,7 @@ Once the invoice due date is reached, Amplify Enterprise Marketplace will raise 
 
 Check for event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=pastDue` and `status=pending`
 
-Tt is possible to take action on the provider side to reach out the consumer to see why the invoice is not paid yet. Once the clarification has been made with the consumer, we recommend to change the status to Success as follows:
+It is possible to take action on the provider side to reach out the consumer to see why the invoice is not paid yet. Once the clarification has been made with the consumer, we recommend to change the status to Success as follows:
 
 ```json
 curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_ID}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_ID}/status' \
@@ -445,4 +445,6 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 In case the invoice status is set to `Error` and you want to process it again, simply change the status back to `Pending` so that an event will be trigger again and caught by the webhook/WatchTopic.
 
-If you need to reprocess pending invoice, you can still call this API: `AMPLIFY_CENTRAL_URL/apis/catalog/v1alpha1/subscriptioninvoices?query=billing.payment.type==custom;state.name==draft;status.level==Pending`
+Using the subscriptioninvoices API, you can detect invoices that are pending actions or in specific state: `AMPLIFY_CENTRAL_URL/apis/catalog/v1alpha1/subscriptioninvoices?query=billing.payment.type==custom;state.name==draft;status.level==Pending`
+
+API Specifications reference can be found here: <https://generator.swagger.io/?url=https://apicentral.axway.com/apis/docs#/catalog/list_catalog_v1alpha1_Subscription_SubscriptionInvoice>
