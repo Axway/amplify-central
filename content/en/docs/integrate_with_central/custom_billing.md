@@ -183,7 +183,7 @@ The webhook method is simple but there is no retry mechanism which mean if you f
 
 You can use either the Amplify central CLI or Amplify central API to manage the webhook.
 
-More information regarding webhooks and their security can be found [here](/docs/integrate_with_central/integrate_with_webhooks)
+More information regarding webhooks and their security can be found [here](/docs/integrate_with_central/webhook)
 
 curl command to create the Integration:
 
