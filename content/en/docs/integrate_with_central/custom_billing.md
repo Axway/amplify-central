@@ -321,7 +321,7 @@ Now that you can receive the invoice events, it is time to manage them and creat
 
 When receiving a new invoices via webhook or watchTopic, it is the responsibility of the implementation to correctly create the invoice on the billing Gateway with the supplied information (currency / amount / details) and then report back to Amplify Enterprise Marketplace the billing link and the invoice state/status.
 
-First check that the received event has an invoice with `state=draft` and `metadata.subresource.status=pending`.
+First check that the received event has an invoice with `state=draft` and `status=pending`.
 
 Then the flow needs to create the corresponding invoice in the Billing Gateway. This step depends on the billing Gateway capabilities.
 
@@ -352,7 +352,7 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 }'
 ```
 
-{{< alert title="What is the difference between `due` and `total`?" color="primary" >}}
+{{< alert title="What is the difference between 'due' and 'total'?" color="primary" >}}
 The **total** property is the current invoice amount originated from Marketplace invoicing system.  
 
 The **due** is total amount plus any extra amount (taxes / past due invoices...) that needs to be billed to the consumer.
@@ -386,7 +386,7 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 ### Invoice past due flow
 
-Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event: `state=pastDue` / `metadata.subresource.status=pending`.
+Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event: `state=pastDue` / `status=pending`.
 
 it is possible to take action on the provider side to reach out the consumer to see why the invoice is not paid yet. Once the clarification has been made with the consumer, we recommend to change the status to Success as follows:
 
@@ -410,7 +410,7 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 When the initial subscription invoice has never been paid and the consumer decided to terminate his subscription, the existing invoice is put in the **void** state.
 
-When receiving such event: `state=void` / `metadata.subresource.status=pending`, you can decide what to do on the billing Gateway. For instance, set the invoice as not collectible or completely delete it from the billing Gateway.
+When receiving such event: `state=void` / `status=pending`, you can decide what to do on the billing Gateway. For instance, set the invoice as not collectible or completely delete it from the billing Gateway.
 
 Once done on the Billing Gateway, the corresponding invoice in Amplify Entreprise Marketplace needs to be updated to whichever status make sense `Success` or `Error` as follows:
 
