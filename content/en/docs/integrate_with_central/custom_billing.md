@@ -1,7 +1,7 @@
 ---
 title: Custom billing integration
 linkTitle: Custom billing integration
-weight: 110
+weight: 310
 ---
 
 Learn how to implement a billing integration system to manage your consumer subscription invoices created from the Amplify Enterprise Marketplace.
