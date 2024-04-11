@@ -33,7 +33,7 @@ Until the first invoice is fully paid, the customer can request access to the re
 
 ## Choosing your integration: native or custom
 
-Amplify Enterprise Marketplace native billing integration is based on Stripe[Stripe](https://stripe.com). The setup is explained in the following section.
+Amplify Enterprise Marketplace native billing integration is based on [Stripe](https://stripe.com). The setup is explained in the following section.
 
 If you are not working with Stripe, you can also choose to implement your own integration based on the Amplify Enterprise Marketplace APIs and the 3rd party payment Gateway of your choice. This custom integration and the mandatory steps is describe here: [Custom billing integration](/docs/integrate_with_central/custom_billing)
 
