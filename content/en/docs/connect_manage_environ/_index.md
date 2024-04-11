@@ -45,6 +45,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
 | **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 | **Transaction Event Sampling** | Yes | Yes | Yes | No | No |
+| **Limitations** |  |  |  |  |  |
 
 | Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
@@ -58,6 +59,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Platform Usage** | Yes  | Not Implemented yet | Yes |  N/A | Yes |
 | **Transaction Metrics** | No  | Not Implmented yet | Yes | N/A | Yes |
 | **Transaction Event Sampling** | No | Not Implemented yet | Yes | N/A | N/A |
+| **Limitations** |  |  |  |  |  |
 
 ### SaaS (Embedded) Agent Features
 
@@ -73,8 +75,9 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Platform Usage** | No  | Yes | N/A |
 | **Transaction Metrics** | No  | Yes | N/A |
 | **Transaction Event Sampling** | No | No | N/A |
+| **Limitations** |  | No Discovery of APIs via API Hub |  |
 
-For more information about the agents, see:
+For more deatiled information about the agents configuration, features and limitations, see:
 
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
 * [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/).
