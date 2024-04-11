@@ -52,7 +52,7 @@ Now that the billing integration is activated, you can start listening for invoi
 
 ## Listen to invoices event
 
-Every time an invoice object is changed on Amplify Enterprise Marketplace for any reason, an event is triggered. That event will contain the invoice information (amount / currency / state and status)
+Every time an invoice object is changed on Amplify Enterprise Marketplace for any reason, an event is triggered. That event will contain the invoice information (amount / currency / state and status / reference to the plan / Marketplace)
 
 ```json
 {
@@ -322,6 +322,8 @@ Now that you can receive the invoice events, it is time to manage them and creat
 When receiving a new invoices via webhook or watchTopic, it is the responsibility of the implementation to correctly create the invoice on the billing Gateway with the supplied information (currency / amount / details) and then report back to Amplify Enterprise Marketplace the billing link and the invoice state/status.
 
 First check that the received event has an invoice with `state=draft` and `status=pending`.
+Must also include metadata.subresource=status
+ 
 
 Then the flow needs to create the corresponding invoice in the Billing Gateway. This step depends on the billing Gateway capabilities.
 
