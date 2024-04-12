@@ -48,12 +48,12 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 | **Transaction Event Sampling** | Yes | Yes | Yes | No | No |
 
-| Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
+| Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Pulib/Private Rest APIs | Topics |
 | **Application** | Associated Client App with Contract | N/A | Consumer | N/A | Create Product |
 | **Access Request** | Associated Frontend Proxy with Appication | N/A | If ACL plugin is required to give consumer access to Route | N/A | N/A |
-| **Credential Type** | OAuth Client ID and Secret | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey |
+| **Credential Type** | Basic Auth / OAuth | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey |
 | **Credential Actions** |  Suspend/Enable | N/A | Suspend/Enable | N/A |Suspend/Enable |
 | **Quota Enforcement** | N/A | N/A | Rate limiting plugin added to Consumer | N/A | Quota Policy associated to Product |
 | **Traceability** | N/A | N/A | Using the Kong HTTP log plugin | N/A | N/A |
