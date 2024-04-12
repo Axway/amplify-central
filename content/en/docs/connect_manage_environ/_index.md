@@ -33,6 +33,8 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 ### On-premise Agent Features
 
+* **N/A** in the Agent features table is to indicate that the feature is Not Available at this time.
+
 | Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
 |-------------|--------------------|-----|-------|-------|-------------|
 | **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
@@ -49,14 +51,14 @@ Using agents is the recommended way to add API services to your environment. Whe
 | Description |  Mulesoft* | Software AG webMethods* | Kong Gateway* | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Pulib/Private Rest APIs | Topics |
-| **Application** | Associated Client App with Contract |  | Consumer | N/A | Create Product |
-| **Access Request** | Associated Frontend Proxy with Appication |  | If ACL plugin is required to give consumer access to Route | N/A | TBD |
-| **Credential Type** | OAuth Client ID and Secret |   | APIKey / Basic Auth / OAuth | N/A | APIKey |
-| **Credential Actions** |  Suspend/Enable |  | Suspend/Enable | N/A |Suspend/Enable |
-| **Quota Enforcement** |  |  | Rate limiting plugin added to Consumer | N/A | Quota Policy associated to Product |
-| **Traceability** |  | | Using the Kong HTTP log plugin | N/A | TBD |
-| **Platform Usage** | Yes  |  | Yes |  N/A | Yes |
-| **Transaction Metrics** | No  |  | Yes | N/A | Yes |
+| **Application** | Associated Client App with Contract | N/A | Consumer | N/A | Create Product |
+| **Access Request** | Associated Frontend Proxy with Appication | N/A | If ACL plugin is required to give consumer access to Route | N/A | TBD |
+| **Credential Type** | OAuth Client ID and Secret | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey |
+| **Credential Actions** |  Suspend/Enable | N/A | Suspend/Enable | N/A |Suspend/Enable |
+| **Quota Enforcement** | N/A | N/A | Rate limiting plugin added to Consumer | N/A | Quota Policy associated to Product |
+| **Traceability** | N/A | | Using the Kong HTTP log plugin | N/A | TBD |
+| **Platform Usage** | Yes  | N/A | Yes |  N/A | Yes |
+| **Transaction Metrics** | No  | N/A | Yes | N/A | Yes |
 | **Transaction Event Sampling** | No | | Yes | N/A | N/A |
 
 ### SaaS (Embedded) Agent Features
