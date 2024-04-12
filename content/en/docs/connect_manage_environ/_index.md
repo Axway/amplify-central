@@ -53,9 +53,9 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Pulib/Private Rest APIs | Topics |
 | **Application** | Associated Client App with Contract | N/A | Consumer | N/A | Create Product |
 | **Access Request** | Associated Frontend Proxy with Appication | N/A | If ACL plugin is required to give consumer access to Route | N/A | N/A |
-| **Credential Type** | Basic Auth / OAuth | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey |
+| **Credential Type** | Basic Auth / OAuth | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey / SASL |
 | **Credential Actions** |  Suspend/Enable | N/A | Suspend/Enable | N/A |Suspend/Enable |
-| **Quota Enforcement** | N/A | N/A | Rate limiting plugin added to Consumer | N/A | Quota Policy associated to Product |
+| **Quota Enforcement** | N/A | N/A | Rate limiting plugin added to Consumer | N/A | N/A |
 | **Traceability** | N/A | N/A | Using the Kong HTTP log plugin | N/A | N/A |
 | **Platform Usage** | Yes  | N/A | Yes |  N/A | Yes |
 | **Transaction Metrics** | No  | N/A | Yes | N/A | Yes |
