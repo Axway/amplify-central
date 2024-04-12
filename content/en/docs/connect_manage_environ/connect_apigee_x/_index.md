@@ -141,8 +141,8 @@ The installation procedure will prompt for the following:
    * **Project ID**: the Project ID for your Google Cloud Platform project
    * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
    * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
-   * **Filter APIs**: defaults to false, set to true if api metrics filtering is wanted
-   * **Filtered APIs**: list that should contain apis for which metrics are wanted. Leave empty to use all the discovered apis instead.
+   * **Filter Metrics**: this field determines if api metrics filtering is wanted. Defaults to true
+   * **Filtered APIs**: list that should contain apis for which metrics are wanted. Leave empty to use all the discovered apis instead
    * Set how often the Embedded agent should check Apigee for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover Apigee resources after installation is complete
 
