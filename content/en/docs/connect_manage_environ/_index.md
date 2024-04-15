@@ -65,16 +65,16 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 | Description |  AWS | Apigee X | Github |
 |-------------|-----|-------|-------------------|
-| **Discovery** | Rest APIs in API Gateway | API Products / Proxies | Public/Private Rest APIs |
-| **Application** | Associated Client App with Contract | Client App | N/A |
-| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | N/A |
+| **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs |
+| **Application** | Usage plan | Application | N/A |
+| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | N/A |
 | **Credential Type** | APIKey | APIKey / OAuth | N/A |
 | **Credential Actions** | Suspend/Enable | Suspend/Enable | N/A |
 | **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
-| **Traceability** | Not implemented yet | Transactions with application content associated to Managed Applications | N/A |
-| **Platform Usage** | No  | Yes | N/A |
-| **Transaction Metrics** | No  | Yes | N/A |
-| **Transaction Event Sampling** | No | No | N/A |
+| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | N/A |
+| **Platform Usage** | Yes | Yes | N/A |
+| **Transaction Metrics** | Yes  | Yes | N/A |
+| **Transaction Event Sampling** | Yes | No | N/A |
 
 For more deatiled information about the agents configuration, features and limitations, see:
 
