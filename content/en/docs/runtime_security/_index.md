@@ -6,7 +6,7 @@ date: 2024-04-01
 hide_readingtime: true
 ---
 
-With an increasing number of APIs, API providers and consumers of APIs, there is a pressing need to capture API traffic and scan the API traffic to assess the security threat(s).
+With an increasing number of APIs, API providers and consumers of APIs, there is a pressing need to capture and scan API traffic to assess security threats.
 
 The Amplify API Management platform allows you to assess the runtime compliance of your APIs from a secruity threat perspective. This is known as API Runtime Compliance and has been integrated into the Amplify API Management. Runtime Compliance is an entitlement you can purchase from Axway as part of the API Management platform.
 
