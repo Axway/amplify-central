@@ -33,7 +33,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 ### On-premise Agent Features
 
-* **N/A** in the Agent features table is to indicate that the feature is Not Available at this time.
+{{< alert title="Note" color="primary" >}}**N/A** is to indicate that the feature is not available at this time.{{< /alert >}}
 
 | Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
 |-------------|--------------------|-----|-------|-------|-------------|
@@ -50,9 +50,9 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 | Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
-| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Pulib/Private Rest APIs | Topics |
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Public/Private Rest APIs | Topics |
 | **Application** | Associated Client App with Contract | N/A | Consumer | N/A | Create Product |
-| **Access Request** | Associated Frontend Proxy with Appication | N/A | If ACL plugin is required to give consumer access to Route | N/A | N/A |
+| **Access Request** | Associated Frontend Proxy with Application | N/A | If ACL plugin is required to give consumer access to Route | N/A | N/A |
 | **Credential Type** | Basic Auth / OAuth | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey / SASL |
 | **Credential Actions** |  Suspend/Enable | N/A | Suspend/Enable | N/A |Suspend/Enable |
 | **Quota Enforcement** | N/A | N/A | Rate limiting plugin added to Consumer | N/A | N/A |
@@ -76,7 +76,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics** | Yes  | Yes | N/A |
 | **Transaction Event Sampling** | Yes | No | N/A |
 
-For more deatiled information about the agents configuration, features and limitations, see:
+For detailed information about the agents configuration, features and limitations, see:
 
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
 * [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/).
