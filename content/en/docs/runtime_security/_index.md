@@ -13,7 +13,9 @@ The Amplify API Management platform allows you to assess the runtime compliance 
 ## What is runtime compliance
 
 Runtime compliance is assessment of the potential security risk based on the real API traffic.  Amplify has integrated with Graylog API Security to monitor and assess the security threats from real captured API traffic.  For example, the captured API traffic is scanned by Graylog API security to detect real attacts, leaks, and other threats to your APIs.
-To get started, you have to create an Amplify environment which connects to Graylog API Security and to retrieve the security results.   The Graylog API Security data is correlated with the Managed APIs from the API Gateways connected to the Amplify Enterprise Marketplace to determine a security grading.   For APIs not found as a match to the API Gateways in the Amplify Enterprise Marketplace, these APIs are represented as Runtime Unmanaged APIs with a security grading.  These unmanaged runtime APIs are the group of unknown APIs not registed with an API Gateway. 
+To get started, must create an Amplify environment that connects to Graylog API Security and to retrieve the security results.   The Graylog API Security retrieves the security results and correlates the data with the Managed APIs from the API Gateways connected to the Amplify Enterprise Marketplace to determine a security grading.  
+
+{{< alert title="Note" color="primary" >}} APIs that do not match the API Gateways in the Amplify Enterprise Marketplace are represented as Runtime Unmanaged APIs with a security grading.  These unmanaged runtime APIs are unknown APIs not registered with an API Gateway. See (link) for security grading details.{{< /alert >}} 
 
 ## Related topics
 
