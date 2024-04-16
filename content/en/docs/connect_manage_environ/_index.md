@@ -31,13 +31,61 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
-For more information about the agents, see:
+### On-premise Agent Features
+
+{{< alert title="Note" color="primary" >}}**N/A** is to indicate that the feature is not available at this time.{{< /alert >}}
+
+| Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
+|-------------|--------------------|-----|-------|-------|-------------|
+| **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
+| **Application** | Client App | Usage plan | Product | N/A | Application |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
+| **Credential Type** | APIKey / OAuth / BasicAuth / IDP | APIKey | APIKey | IDP | APIKey / OAuth |
+| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable | Suspend/Enable | N/A | Suspend/Enable |
+| **Quota Enforcement** | Quota per Frontend Proxy set in Client App | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | Quota added to a Product, underlying proxy must enforce Quota |
+| **Traceability** | Transactions with application context associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | N/A | API Usage Statistics |
+| **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
+| **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
+| **Transaction Event Sampling** | Yes | Yes | Yes | No | No |
+
+| Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
+|-------------|-----------|------------------------|--------------|--------|---------------|
+| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Public/Private Rest APIs | Topics |
+| **Application** | Associated Client App with Contract | N/A | Consumer | N/A | Create Product |
+| **Access Request** | Associated Frontend Proxy with Application | N/A | If ACL plugin is required to give consumer access to Route | N/A | N/A |
+| **Credential Type** | Basic Auth / OAuth | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey / SASL |
+| **Credential Actions** |  Suspend/Enable | N/A | Suspend/Enable | N/A |Suspend/Enable |
+| **Quota Enforcement** | N/A | N/A | Rate limiting plugin added to Consumer | N/A | N/A |
+| **Traceability** | N/A | N/A | Using the Kong HTTP log plugin | N/A | N/A |
+| **Platform Usage** | Yes  | N/A | Yes |  N/A | Yes |
+| **Transaction Metrics** | No  | N/A | Yes | N/A | Yes |
+| **Transaction Event Sampling** | No | | Yes | N/A | N/A |
+
+### SaaS (Embedded) Agent Features
+
+| Description |  AWS | Apigee X | Github |
+|-------------|-----|-------|-------------------|
+| **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs |
+| **Application** | Usage plan | Application | N/A |
+| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | N/A |
+| **Credential Type** | APIKey | APIKey / OAuth | N/A |
+| **Credential Actions** | Suspend/Enable | Suspend/Enable | N/A |
+| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
+| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | N/A |
+| **Platform Usage** | Yes | Yes | N/A |
+| **Transaction Metrics** | Yes  | Yes | N/A |
+| **Transaction Event Sampling** | Yes | No | N/A |
+
+For detailed information about the agents configuration, features and limitations, see:
 
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
 * [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/).
 * [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/).
 * [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_manage_environ/connect_azure_gateway/).
 * [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/).
+* [Discovery and Traceability Agents for Mulesoft Gateway](https://github.com/Axway/agents-mulesoft).
+* [Discovery and Traceability Agents for Software AG Webmethods](https://github.com/Axway/agents-webmethods).
+* [Discovery and Traceability Agents for Kong Gateway](https://github.com/Axway/agents-kong).
 * [Discovery Agents for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/).
 * [Discovery Agents for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/).
 * [Discovery Agents for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/).
