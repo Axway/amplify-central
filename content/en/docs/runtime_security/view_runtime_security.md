@@ -15,7 +15,7 @@ View.
 
 Learn how to
 
-The Runtime Compliance score is represented as grade from A to F to indicate the level of Runtime Security risk for an API.  Te randge fro each grading are: 
+The Runtime Compliance score is represented as grade from A based on the Average Risk Score for each API.  The range for each grading are: 
 
 | Grading score | Average Risk Score |
 |---------------|--------------------|
@@ -24,4 +24,4 @@ The Runtime Compliance score is represented as grade from A to F to indicate the
 | C | Score >= 2 and Score < 3 |
 | D | Score >= 3 and Score < 4 |
 | E | Score >= 4 and Score < 5 |
-| F | Score > 5 |
+| F | Score >= 5 |
