@@ -80,17 +80,17 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 For detailed information about agent configuration, features and limitations, see:
 
-* [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
-* [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/).
-* [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/).
-* [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_manage_environ/connect_azure_gateway/).
-* [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/).
-* [Discovery and Traceability Agents for Mulesoft Gateway](https://github.com/Axway/agents-mulesoft).
-* [Discovery and Traceability Agents for Software AG Webmethods](https://github.com/Axway/agents-webmethods).
-* [Discovery and Traceability Agents for Kong Gateway](https://github.com/Axway/agents-kong).
-* [Discovery Agents for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/).
-* [Discovery Agents for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/).
-* [Discovery Agents for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/).
+* [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/)
+* [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/)
+* [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/)
+* [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_manage_environ/connect_azure_gateway/)
+* [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/)
+* [Discovery and Traceability Agents for Mulesoft Gateway](https://github.com/Axway/agents-mulesoft)
+* [Discovery and Traceability Agents for Software AG Webmethods](https://github.com/Axway/agents-webmethods)
+* [Discovery and Traceability Agents for Kong Gateway](https://github.com/Axway/agents-kong)
+* [Discovery Agents for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/)
+* [Discovery Agents for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
+* [Discovery Agents for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 
