@@ -33,17 +33,17 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 ### On-premise Agent Features
 
-{{< alert title="Note" color="primary" >}}**N/A** is to indicate that the feature is not available at this time.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
 | Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
 |-------------|--------------------|-----|-------|-------|-------------|
 | **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
-| **Application** | Client App | Usage plan | Product | N/A | Application |
-| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | N/A | Products associated to Application |
+| **Application** | Client App | Usage plan | Product | No | Application |
+| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | No | Products associated to Application |
 | **Credential Type** | APIKey / OAuth / BasicAuth / IDP | APIKey | APIKey | IDP | APIKey / OAuth |
-| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable | Suspend/Enable | N/A | Suspend/Enable |
+| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable | Suspend/Enable | No | Suspend/Enable |
 | **Quota Enforcement** | Quota per Frontend Proxy set in Client App | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | Quota added to a Product, underlying proxy must enforce Quota |
-| **Traceability** | Transactions with application context associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | N/A | API Usage Statistics |
+| **Traceability** | Transactions with application context associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | No | API Usage Statistics |
 | **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
 | **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
 | **Transaction Event Sampling** | Yes | Yes | Yes | No | No |
@@ -51,32 +51,34 @@ Using agents is the recommended way to add API services to your environment. Whe
 | Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
 |-------------|-----------|------------------------|--------------|--------|---------------|
 | **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Public/Private Rest APIs | Topics |
-| **Application** | Associated Client App with Contract | N/A | Consumer | N/A | Create Product |
-| **Access Request** | Associated Frontend Proxy with Application | N/A | If ACL plugin is required to give consumer access to Route | N/A | N/A |
-| **Credential Type** | Basic Auth / OAuth | N/A  | APIKey / Basic Auth / OAuth | N/A | APIKey / SASL |
-| **Credential Actions** |  Suspend/Enable | N/A | Suspend/Enable | N/A |Suspend/Enable |
-| **Quota Enforcement** | N/A | N/A | Rate limiting plugin added to Consumer | N/A | N/A |
-| **Traceability** | N/A | N/A | Using the Kong HTTP log plugin | N/A | N/A |
-| **Platform Usage** | Yes  | N/A | Yes |  N/A | Yes |
-| **Transaction Metrics** | No  | N/A | Yes | N/A | Yes |
-| **Transaction Event Sampling** | No | | Yes | N/A | N/A |
+| **Application** | Associated Client App with Contract | No | Consumer | No | Create Product |
+| **Access Request** | Associated Frontend Proxy with Application | No | If ACL plugin is required to give consumer access to Route | No | No |
+| **Credential Type** | Basic Auth / OAuth | No  | APIKey / Basic Auth / OAuth | No | APIKey / SASL |
+| **Credential Actions** |  Suspend/Enable |No | Suspend/Enable | No |Suspend/Enable |
+| **Quota Enforcement** | No | No | Rate limiting plugin added to Consumer | No | No |
+| **Traceability** | No | No | Using the Kong HTTP log plugin | No | No |
+| **Platform Usage** | Yes  | No | Yes |  No | Yes |
+| **Transaction Metrics** | No  | No | Yes | No | Yes |
+| **Transaction Event Sampling** | No | No | Yes | No | No |
 
 ### SaaS (Embedded) Agent Features
+
+{{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
 | Description |  AWS | Apigee X | Github |
 |-------------|-----|-------|-------------------|
 | **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs |
-| **Application** | Usage plan | Application | N/A |
-| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | N/A |
-| **Credential Type** | APIKey | APIKey / OAuth | N/A |
-| **Credential Actions** | Suspend/Enable | Suspend/Enable | N/A |
-| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | N/A |
-| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | N/A |
-| **Platform Usage** | Yes | Yes | N/A |
-| **Transaction Metrics** | Yes  | Yes | N/A |
-| **Transaction Event Sampling** | Yes | No | N/A |
+| **Application** | Usage plan | Application | No |
+| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | No |
+| **Credential Type** | APIKey | APIKey / OAuth | No |
+| **Credential Actions** | Suspend/Enable | Suspend/Enable | No |
+| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | No |
+| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | No |
+| **Platform Usage** | Yes | Yes | No |
+| **Transaction Metrics** | Yes  | Yes | No |
+| **Transaction Event Sampling** | Yes | No | No |
 
-For detailed information about the agents configuration, features and limitations, see:
+For detailed information about agent configuration, features and limitations, see:
 
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/).
 * [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/).
