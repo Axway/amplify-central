@@ -70,7 +70,7 @@ TRACEABILITY_SAMPLING_PER_API=false
 TRACEABILITY_SAMPLING_REPORTALLERRORS=true
 ```
 
-If the agent receives 100 transactions, evenly between 2 APIs, the first 10 will be sent to Amplify Analytics. If of the 90 that are not sent sampled any error codes exist then they too will be sent to Amplify Analytics
+If the agent receives 100 transactions, evenly between 2 APIs, the first 10 (five from each API) will be sent to Amplify Analytics. If error codes exist in the remaining non-sampled percentage, then those transactions will also be sent.
 
 #### 10% of events per API ID
 
