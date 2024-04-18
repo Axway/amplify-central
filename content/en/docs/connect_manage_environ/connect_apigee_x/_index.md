@@ -144,7 +144,7 @@ The installation procedure will prompt for the following:
    * **Filter Metrics**: set to true (default) for API metrics filtering
    * **Filtered APIs**: enter APIs for which metrics are wanted, or leave empty to use all discovered APIs:
      * to filter discovered APIs: filterAPIs: []
-     * to filter specific APIs: filterAPIs: ["PetStore", "CatFacts"] (will filter metrics only for these API)
+     * to filter specific APIs: filterAPIs: ["PetStore", "CatFacts"]
    * Set how often the Embedded agent should check Apigee for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover Apigee resources after installation is complete
 
