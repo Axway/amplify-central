@@ -60,7 +60,6 @@ TRACEABILITY_SAMPLING_PER_API=false
 
 If the agent receives 100 transactions, evenly between 2 APIs, only the first 10 will be sent to Amplify Analytics.
 
-
 #### 10% of all events and all errors, regardless of API
 
 The following is a sample value that is added to `ta_env_vars.env`, which will send 10% of the gateway transactions to Amplify Analytics. Including all errors.
