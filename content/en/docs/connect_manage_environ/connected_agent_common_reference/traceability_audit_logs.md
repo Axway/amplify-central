@@ -103,7 +103,7 @@ The audit log in these cases would look like the following.
 {"id":"2fc1f178-abb3-4b3f-8edc-41edc6932c70","level":"info","message":"published","time":"2024-04-19T22:31:08Z"}
 ```
 
-Notice that each metric event is linked to the same api, however other fields have adjusted for new transactions. A field to note is the startTimestamp, in both cases the observation period for the event was at the same time. This is another clue that the metric counts from the first event were sent with the second event. 
+Notice that each metric event is linked to the same api, however other fields have adjusted for new transactions. A field to note is the startTimestamp, in both cases the observation period for the event was at the same time. This is another clue that the metric counts from the first event were sent with the second event.
 
 ### Axway API Manager Traceability transaction audit log
 
