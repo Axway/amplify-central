@@ -92,6 +92,19 @@ But it is also possible that an event may encounter an error causing the metric 
 
 As can be seen above all lines contain the same `id`, new `generated` events take precedence over any previous events. These are the events that will be reflected in Amplify.
 
+In rare cases, such as an agent restart at the time of event generation and publishing, a `generating` log but no additional logs may be seen. In these cases the metric event was not lost, but rather included in the followup event. Compare with the agent logs at the same time to check for errors or restarts.
+
+The audit log in these cases would look like the following.
+
+```bash
+{"apiID":"remoteApiId_store","avgResponse":6.658536585365853,"count":164,"endTimestamp":1713564740997,"id":"286639d4-af0b-4bd9-8912-71a8cb99dccd","level":"info","maxResponse":9,"message":"generated","minResponse":6,"startTimestamp":1713558936461,"status":"403","time":"2024-04-19T22:12:20Z"}
+{"apiID":"remoteApiId_store","avgResponse":6.702265372168285,"count":309,"endTimestamp":1713565867138,"id":"2fc1f178-abb3-4b3f-8edc-41edc6932c70","level":"info","maxResponse":17,"message":"generated","minResponse":6,"startTimestamp":1713558936461,"status":"403","time":"2024-04-19T22:31:07Z"}
+{"id":"2fc1f178-abb3-4b3f-8edc-41edc6932c70","level":"info","message":"publishing","time":"2024-04-19T22:31:07Z"}
+{"id":"2fc1f178-abb3-4b3f-8edc-41edc6932c70","level":"info","message":"published","time":"2024-04-19T22:31:08Z"}
+```
+
+Notice that each metric event is linked to the same api, however other fields have adjusted for new transactions. A field to note is the startTimestamp, in both cases the observation period for the event was at the same time. This is another clue that the metric counts from the first event were sent with the second event. 
+
 ### Axway API Manager Traceability transaction audit log
 
 The transaction audit log is used to reconcile the transactions the agent has seen in the event log. This can be helpful to find any specific transaction the agent may have missed.  Each new correlation id the agent sees will create a single log entry in the transaction log file.
