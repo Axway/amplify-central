@@ -14,7 +14,7 @@ Each main page has a search bar that allows you to type a keyword and refine the
 
 * Product title
 * Product description
-* Markdown documentation
+* Markdown documentation (description / content)
 * Product categories
 * API specification
 
@@ -59,6 +59,8 @@ Search is available when the home page is activated from the Marketplace setting
 
 * Search bar from Hero Content (if activated): search with any words matching a product title / description / specification content / Documentation (markdown only) / category title assigned to a product.
 * Browse product: filter the recently published list of products based on product title / description / title assigned to a product.
+
+Once the search is run, the user is redirected to the [Advanced search result page](#advanced-search-result-page).
   
 ### Product search
 
@@ -70,6 +72,8 @@ Use the search bar to find products by keywords with a match in:
 * Documentation (markdown only)
 * Categories
 
+Once you hit Enter, the corresponding matching product are displayed. You can use the [filters](#refine-your-findings-with-filters) to farther refine the search or use the [Advanced search](#advanced-search) to create more complex queries.
+
 #### Advanced search
 
 When viewing the product list, refine your search with Advanced Search.
@@ -80,11 +84,25 @@ When viewing the product list, refine your search with Advanced Search.
     * When entering multiple words, you can decide the operator between those words: **OR** or **AND**. The drop-down on the matching parameter and on the operator allows you to adjust your criteria.
     * Click the **-** to remove the criteria. Click **Clear all** To reset the component.
 
-2. Once you are satisfied with your criteria, click **Search**. The corresponding matching products are displayed.
+2. Once you are satisfied with your criteria, click **Search**. You are redirected to the [Advanced search result page](#advanced-search-result-page).
 
 Click **Reset** to remove the selected criteria and refresh the product list to the one that is visible by the user.
 
 Click **Basic Search** to return to the Basic Search bar at any time.
+
+#### Advanced search result page
+
+When reaching that page, the search result is split to help you understand where the result were found:
+
+* in the product itself
+* in the product resources
+* in the product documentation
+
+By default the All tab is visible and regroup all result in the same place. If there is no match for one type, the corresponding section remain collapsed and cannot be expanded. This view is limited to the first 25 results. You can see more details by using the **View all** buttons or by navigating via the tab menu (All -> Products - Resources - Documents).
+
+Each result, the name is a link that redirect you to the appropriate page in the product details page.
+
+The breadcrumb at the top of the page enables to navigate from where you came (Home page / Browse product page).
 
 #### Refine your findings with filters
 
