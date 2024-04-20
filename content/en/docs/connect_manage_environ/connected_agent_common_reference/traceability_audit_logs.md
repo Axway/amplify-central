@@ -23,10 +23,10 @@ In all traceability agents the metric audit log is turned on by default it is us
 | LOG_METRICFILE_ENABLED          | Enable or disable the metric audit log (default: `true`)                            |
 | LOG_METRICFILE_NAME             | The name of the metric log file that will be created (default: `metric.log`)        |
 | LOG_METRICFILE_KEEPFILES        | The maximum number of metric audit log files to keep (default: `7`)                 |
-| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size, in megabytes a metric audit log can grow to (default: `10485760`) |
+| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (megabytes) a metric audit log can grow to (default: `10485760`) |
 | LOG_METRICFILE_CLEANBACKUPS     | The max age of a metric audit log backup file, in days (default: `0` unlimited)     |
 
-With the default settings the traceability agent will keep, at most, `7` files each a total of `10485760` megabytes.
+With the default settings, the traceability agent will keep, at most, `7` files each a total of `10485760` megabytes.
 
 ### Additional Axway API Manager Traceability agent audit log
 
@@ -37,7 +37,7 @@ The Traceability agent that connects to Axway API Manager includes an additional
 | LOG_TRANSACTION_ENABLED          | Enable or disable the transaction audit log (default: `true`)                            |
 | LOG_TRANSACTION_NAME             | The name of the transaction log file that will be created (default: `transaction.log`)   |
 | LOG_TRANSACTION_KEEPFILES        | The maximum number of transaction audit log files to keep (default: `7`)                 |
-| LOG_TRANSACTION_ROTATEEVERYBYTES | The maximum size, in megabytes a transaction audit log can grow to (default: `10485760`) |
+| LOG_TRANSACTION_ROTATEEVERYBYTES | The maximum size, (megabytes) a transaction audit log can grow to (default: `10485760`) |
 | LOG_TRANSACTION_CLEANBACKUPS     | The max age of a transaction audit log backup file, in days (default: `0` unlimited)     |
 
 ## Access
@@ -50,7 +50,7 @@ The audit logs will be within an `audit` directory found in the logs directory.
 
 ### Docker agents
 
-For all docker agents a new volume has been added, which when mounted will save the log directory outside of the container. All that is needed is to supply a volume argument to the start command `-v /path/outside/container:/logs`.
+For all docker agents, a new volume has been added. Which, when mounted, will save the log directory outside of the container. All that is needed is to supply a volume argument to the start command `-v /path/outside/container:/logs`.
 
 ### Helm agents
 
@@ -90,7 +90,7 @@ But it is also possible that an event may encounter an error causing the metric 
 {"id":"ea2be3b3-5931-47b2-b5eb-851036b9b9f0","level":"info","message":"published","time":"2024-04-12T07:54:25-07:00"}
 ```
 
-As can be seen above all lines contain the same `id`, new `generated` events take precedence over any previous events. These are the events that will be reflected in Amplify.
+As can be seen above, all lines contain the same `id`, new `generated` events take precedence over any previous events. These are the events that will be reflected in Amplify.
 
 In rare cases, such as an agent restart at the time of event generation and publishing, a `generating` log but no additional logs may be seen. In these cases the metric event was not lost, but rather included in the followup event. Compare with the agent logs at the same time to check for errors or restarts.
 
@@ -103,7 +103,7 @@ The audit log in these cases would look like the following.
 {"id":"2fc1f178-abb3-4b3f-8edc-41edc6932c70","level":"info","message":"published","time":"2024-04-19T22:31:08Z"}
 ```
 
-Notice that each metric event is linked to the same api, however other fields have adjusted for new transactions. A field to note is the startTimestamp, in both cases the observation period for the event was at the same time. This is another clue that the metric counts from the first event were sent with the second event.
+Notice that each metric event is linked to the same api, however other fields have adjusted for new transactions. A field to note is the startTimestamp. In both cases the observation period for the event was at the same time. This is another clue that the metric counts from the first event were sent with the second event.
 
 ### Axway API Manager Traceability transaction audit log
 
