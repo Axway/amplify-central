@@ -4,7 +4,7 @@ linkTitle: Traceability Agent audit logs
 draft: false
 weight: 10
 ---
-The Traceability Agent has the ability to keep audit logs for tracking information about what the agent has processed.  The following requires agents built with Agent SDK v1.1.80 or later.
+The Traceability Agent has the ability to keep audit logs for tracking information about what the agent has processed.  The following requires agents with Agent SDK v1.1.80 or later.
 
 ## Objectives
 
@@ -16,7 +16,7 @@ Learn how to configure, access, and read the Traceability agent audit logs.
 
 ## Configure
 
-In all traceability agents the metric audit log is turned on by default it is used to track all metric events that the agent has generated and the status of that event as known to the agent. The following tables lists the environment variables available to configure the metric audit logs.
+In all traceability agents, the metric audit log is turned on by default it is used to track all metric events that the agent has generated and the status of that event as known to the agent. The following tables lists the environment variables available to configure the metric audit logs.
 
 | Environment Variable            | Description                                                                         |
 | ------------------------------- | ----------------------------------------------------------------------------------- |
