@@ -54,7 +54,7 @@ For all docker agents, a new volume has been added. Which, when mounted, will sa
 
 ### Helm agents
 
-For agents that a helm chart is supplied, Axway API Manager Traceability agent, a new Persistent Volume Claim is created with the helm chart which will be used for the logs directory.
+For agents that have a helm chart is supplied, Axway API Manager Traceability agent, a new Persistent Volume Claim is created with the helm chart, which will be used for the logs directory.
 
 ## Understand
 
@@ -70,9 +70,9 @@ The first line for each metric event is the `generated` line. This line gives al
 {"apiID":"remoteApiId_store","avgResponse":8,"count":1,"endTimestamp":1713556832244,"id":"47293432-7f9a-4f12-ba67-2338be048cb0","level":"info","maxResponse":8,"message":"generated","minResponse":8,"startTimestamp":1713556375134,"status":"403","time":"2024-04-19T20:00:32Z"}
 ```
 
-After an event is `generated` the following types of events may be seen, giving information about the state of that metric event.
+After an event is `generated`, the following types of events may be seen, giving information about the state of that metric event.
 
-For instance in a good path situation the audit log will have the following.
+For instance, in a good path situation the audit log will have the following.
 
 ```bash
 {"id":"47293432-7f9a-4f12-ba67-2338be048cb0","level":"info","message":"publishing","time":"2024-04-19T20:00:32Z"}
