@@ -188,7 +188,7 @@ The webhook method is simple, but there is no retry mechanism. Therefore, if you
 
 You can use either the Amplify Central CLI or Amplify Central API to manage the webhook.
 
-See [Webhooks](/docs/integrate_with_central/webhook) for more information regarding webhooks and their security. 
+See [Webhooks](/docs/integrate_with_central/webhook) for more information regarding webhooks and their security.
 
 Create the integration:
 
@@ -296,7 +296,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopi
 
 Read events from WatchTopic:
 
-Events in the WatchTopic are sequential. They remain in the WatchTopic for seven days. 
+Events in the WatchTopic are sequential. They remain in the WatchTopic for seven days.
 
 1. You can ask for all the events (no filter in the query), or events after a specific sequence number (`?query=sequence>=xxx`):
 
