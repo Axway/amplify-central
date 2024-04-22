@@ -21,15 +21,21 @@ Use billing integration to help manage the invoices for consumer organization su
 
 When billing integration is enabled for a specific Marketplace, each subscription originating from a consumer organization of this Marketplace will produce invoices:
 
-* One at subscription time to start the trusted period with the customer and pay the base price plan cost
+* One after the subscription approval time to start the trusted period with the customer and pay the base price plan cost
 * One at the end of each plan metering period to pay for the base plan price + the metering period consumption
 * A final one when the subscription is cancelled to pay the remaining consumption (from last metering period until the cancellation time)
 
-The invoices must be paid using a third-party payment tool. The first implementation is using [Stripe](https://stripe.com) for the invoice payment.
+The invoices must be paid using a third-party payment tool. The available implementations are [Stripe](https://stripe.com) or a custom implementation.
 
 {{< alert title="Note" color="primary" >}}
 Until the first invoice is fully paid, the customer can request access to the resources but the access itself will not be granted until the provider collects the payment.
 {{< /alert >}}
+
+## Choosing your integration: native or custom
+
+Amplify Enterprise Marketplace native billing integration is based on [Stripe](https://stripe.com). The setup is explained in the following section.
+
+If you are not working with Stripe, you can also choose to implement your own integration based on the Amplify Enterprise Marketplace APIs and the 3rd party payment Gateway of your choice. This custom integration and the mandatory steps is describe here: [Custom billing integration](/docs/integrate_with_central/custom_billing)
 
 ## Stripe account configuration
 
