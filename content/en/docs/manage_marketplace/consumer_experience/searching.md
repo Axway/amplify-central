@@ -72,7 +72,7 @@ Use the search bar to find products by keywords with a match in:
 * Documentation (markdown only)
 * Categories
 
-Once you hit Enter, the corresponding matching product are displayed. You can use the [filters](#refine-your-findings-with-filters) to farther refine the search or use the [Advanced search](#advanced-search) to create more complex queries.
+Press Enter to display the corresponding product. You can use [filters](#refine-your-findings-with-filters) to refine the search, or the [Advanced search](#advanced-search) to create more complex queries.
 
 #### Advanced search
 
