@@ -92,7 +92,7 @@ Click **Basic Search** to return to the Basic Search bar at any time.
 
 #### Advanced search result page
 
-When reaching that page, the search result is split to help you understand where the result were found:
+To help you understand where your advanced search results were found, the results are displayed by product, product resources, and product documentation.
 
 * in the product itself
 * in the product resources
