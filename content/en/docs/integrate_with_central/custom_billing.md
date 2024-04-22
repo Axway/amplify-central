@@ -20,11 +20,11 @@ Until the payment of the first invoice, the consumer cannot request access to an
 
 Complete following steps to activate custom billing integration:
 
-Step 1: [Activate the custom billing integration](#activate-the-custom-billing-integration)
+Step 1: [Activate the custom billing integration](#step-1-activate-the-custom-billing-integration)
 
-Step 2: [Listen to invoices event](#listen-to-invoices-event)
+Step 2: [Listen to invoices event](#step-2-listen-to-invoices-event)
 
-Step 3 [Manage the flows between the Marketplace and the payment Gateway](#managing-the-flows-between-the-marketplace-and-the-payment-gateway):
+Step 3 [Manage the flows between the Marketplace and the payment Gateway](#step-3-manage-the-flows-between-the-marketplace-and-the-payment-gateway):
 
 * Invoice creation flow in the billing Gateway
 * Invoice paid flow
