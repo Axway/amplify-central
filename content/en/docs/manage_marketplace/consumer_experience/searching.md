@@ -98,7 +98,7 @@ To help you understand where your advanced search results were found, the result
 * in the product resources
 * in the product documentation
 
-By default the All tab is visible and regroup all result in the same place. If there is no match for one type, the corresponding section remain collapsed and cannot be expanded. This view is limited to the first 25 results. You can see more details by using the **View all** buttons or by navigating via the tab menu (All -> Products - Resources - Documents).
+By default, the *All* tab displays the advanced search results. If no match is found in an area of search (product/product resources/product documentation), then the corresponding results section will not expand to display the results. If results are found, the view will be limited to the first 25. Click **View all** or navigate the tab menu (All > Products/Resources/Documents) to view all results.
 
 Each result, the name is a link that redirect you to the appropriate page in the product details page.
 
