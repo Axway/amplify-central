@@ -24,7 +24,7 @@ Step 1: [Activate the custom billing integration](#step-1-activate-the-custom-bi
 
 Step 2: [Listen to invoices event](#step-2-listen-to-invoices-event)
 
-Step 3 [Manage the flows between the Marketplace and the payment Gateway](#step-3-manage-the-flows-between-the-marketplace-and-the-payment-gateway):
+Step 3: [Manage the flows between the Marketplace and the payment Gateway](#step-3-manage-the-flows-between-the-marketplace-and-the-payment-gateway):
 
 * Invoice creation flow in the billing Gateway
 * Invoice paid flow
@@ -223,7 +223,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 ```
 
 {{< alert title="Note" color="primary" >}}
-You can attach a secret to the webhook specification to indicate that the incoming events are from the specific webhook. Refer to [webhook advanced setup](/docs/integrate_with_central/webhook#using-a-secret)
+You can attach a secret to the webhook specification to indicate that the incoming events are from the specific webhook. See [webhook advanced setup](/docs/integrate_with_central/webhook#using-a-secret).
 {{< /alert >}}
 
 Create the resource hook definition:
