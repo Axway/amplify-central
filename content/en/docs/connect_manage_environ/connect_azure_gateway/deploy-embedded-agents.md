@@ -42,11 +42,6 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 * An Azure Service principal
 * An Azure Event Hub
 
-The agents must have access to:
-
-* The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
-* Azure Gateway
-
 ## Configure the Embedded agents with Axway Central CLI
 
 Use Axway Central CLI to configure the Embedded agents. This CLI will prompt you for answers regarding your Gateway installation, the service account used to ensure the connectivity from the Embedded agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
