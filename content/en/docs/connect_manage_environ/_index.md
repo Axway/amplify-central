@@ -4,6 +4,8 @@ linkTitle: Connect and manage your environment
 weight: 350
 date: 2020-11-18
 ---
+*Update appropriate table with SwaggerHub*
+
 Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
 
 The following is an example of a simple environment with an API service asset:

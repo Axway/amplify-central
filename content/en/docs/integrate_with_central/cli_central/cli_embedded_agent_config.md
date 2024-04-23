@@ -3,6 +3,8 @@ title: Add configuration to your Embedded agents
 linkTitle: Add configuration to your Embedded agents
 weight: 300
 ---
+*Update with SwaggerHub*
+
 Use the Axway Central CLI to update the configuration settings for an Embedded agent.
 
 ## Before you start
