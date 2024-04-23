@@ -142,7 +142,7 @@ The installation procedure will prompt for the following:
    * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
    * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
    * **Environment**: filter proxies (discovery)/filter metrics (traceability)
-     * discovery: set to discover proxies that are deployed only in a specific environment. If not set, proxies in all environments will be discovered.
+     * discovery: set to discover proxies that are deployed only in a specific environment. If not set, proxies in all environments will be discovered
      * traceability: set to filter metrics for proxies deployed in a specific environment. If not set, metrics will be gathered for all environments
    * **Filter Metrics**: set to true (default) for API metrics filtering
    * **Filtered APIs**: enter APIs to filter for metrics, or leave empty to use all discovered APIs:
