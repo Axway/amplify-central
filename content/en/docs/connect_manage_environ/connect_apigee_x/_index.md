@@ -141,6 +141,9 @@ The installation procedure will prompt for the following:
    * **Project ID**: the Project ID for your Google Cloud Platform project
    * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
    * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
+   * **Environment**: filter proxies (discovery)/filter metrics (traceability)
+     * discovery: set to discover proxies that are deployed only in a specific environment, if not set discover all environments
+     * traceability: set to filter metrics for proxies deployed in a specific environment, if not set gather metrics from all environments
    * **Filter Metrics**: set to true (default) for API metrics filtering
    * **Filtered APIs**: enter APIs to filter for metrics, or leave empty to use all discovered APIs:
      * to filter discovered APIs: filterAPIs: []
