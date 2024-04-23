@@ -22,18 +22,18 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace April 19 2024](/docs/amplify_relnotes/20240419_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.78. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.81. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.74 / TA=v1.1.76
-* **AWS Gateway using SDK 2.0** - DA=v1.1.61 / TA-v1.1.63
-* **Azure latest release** - DA=v1.1.67 / TA=v1.1.72
-* **Istio 1.9.5** - DA=v1.0.33 / TA=v2.0.78
-* **Apigee Edge** - Agent version 0.1.33
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.44
-* **Software AG webMethods** - 0.0.21
-* **Kong Gateway** - 1.0.4
-* **GitLab** - 1.0.3
-* **Kafka Cluster** - DA=v1.0.2 / TA=v1.0.2
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.77 / TA=v1.1.79
+* **AWS Gateway using SDK 2.0** - DA=v1.1.62 / TA-v1.1.65
+* **Azure latest release** - DA=v1.1.68 / TA=v1.1.74
+* **Istio 1.9.5** - DA=v1.0.34 / TA=v2.0.80
+* **Apigee Edge** - Agent version 0.1.35
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.46
+* **Software AG webMethods** - 0.0.23
+* **Kong Gateway** - 1.0.6
+* **GitLab** - 1.0.4
+* **Kafka Cluster** - DA=v1.0.4 / TA=v1.0.4
 
 Supported Saas (embedded) Agents:
 
@@ -43,11 +43,11 @@ Supported Saas (embedded) Agents:
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
+| What's new: | Data models updates. <br />New audit logs. |
 | Bug fixes: | None. |
 | <br />**On-premise agents** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | **Axway API Management Gateway Agent** - Transaction Audit log. <br /> |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. <br />**Apigee Edge Agent** - See release note. <br />**Mulesoft Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -55,23 +55,23 @@ Supported Saas (embedded) Agents:
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Axway Central CLI** |       |
-| What's new: | None. |
+| What's new: | SwaggerHub installation. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
-| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - Enhanced display using tabs. Service Registry API calls. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - See release note. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
+| What's new: | Resource count when assigning an asset to a product has been removed. |
 | Bug fixes: | None. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Advanced search result page. <br />Custom billing integration. |
+| Bug fixes: | See release notes. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
