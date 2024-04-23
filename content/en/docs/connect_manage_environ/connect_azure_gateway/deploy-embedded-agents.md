@@ -42,8 +42,6 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 * An Azure Service principal
 * An Azure Event Hub
 
-## Agent runner machine pre-requisites
-
 The agents must have access to:
 
 * The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
@@ -149,7 +147,6 @@ The installation procedure will prompt for the following:
    * **Policy Name** associated with the Event Hub
    * **Policy Key** associated with the Policy Name
    * **Consuer Group** associated with the Event Hub consumer group
-7. Traceability module connectivity:
-   * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack`, or `HTTPS`
+7. Select **Yes** if you want to discover Azure APIM resources immediately after installation
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your Azure APIM. If set to discover the Azure APIM resources upon installation, the Embedded agent will immediately discover your resources and show them in the Service Registry.
