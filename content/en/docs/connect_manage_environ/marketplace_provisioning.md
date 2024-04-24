@@ -185,9 +185,9 @@ From the Marketplace, a consumer can delete an existing application or an existi
 
 Each time a call to an API is made on a data plane monitored by a Traceability Agent, the agent correlates the traffic to the appropriate Marketplace subscription and product based on the credentials used to call the API.
 
-If a correlation is found, then the corresponding traffic will be visible in [Consumer Insights](/docs/manage_marketplace/consumer_experience/consumer_insights), as well as in [Business Insights](/docs/get_actionable_insights).
+If a correlation is found, then the corresponding traffic will be visible in [Consumer Insights](/docs/get_actionable_insights/consumer_insights), as well as in [Business Insights](/docs/get_actionable_insights/business_insights).
 
-If no correlation is found, then the traffic will only be visible in [Business Insights](/docs/get_actionable_insights).
+If no correlation is found, then the traffic will only be visible in [Business Insights](/docs/get_actionable_insights/business_insights).
 
 ## Discovery Agent configuration for Marketplace provisioning and deprovisioning
 

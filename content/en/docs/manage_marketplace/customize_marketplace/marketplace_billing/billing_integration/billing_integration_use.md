@@ -8,7 +8,7 @@ Use the Enterprise Billing integration solution to monetize your API usage.
 
 ## Before you start
 
-You must have an [installed and configured](/docs/manage_marketplace/customize_marketplace/marketplace_billing/billing_integration/intall_configure_billing_integration) Enterprise Billing integration solution.
+You must have an [installed and configured](docs/manage_marketplace/customize_marketplace/marketplace_billing/billing_integration/install_configure_billing_integration) Enterprise Billing integration solution.
 
 ## Usage
 
