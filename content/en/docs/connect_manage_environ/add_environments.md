@@ -203,7 +203,7 @@ Learn how to create an environment to represent your API services and other disc
 
 ### Credential Preferences
 
-(Optional) Select the duration of time when all credentials to Marketplace subscriptions are set to expire. The default is for credential to never expire, but you can select from 7 days, 30 days, 60 days, 90 days, or a configurable number of days (range from 7 to 365 days) for expiration. This step is not available for SwaggerHub environments.
+(Optional) Select the duration of time when all credentials to Marketplace subscriptions are set to expire. The default is for credential to never expire, but you can select from 7 days, 30 days, 60 days, 90 days, or a configurable number of days (range from 7 to 365 days) for expiration. This step is not available for Github and SwaggerHub environments.
 
 ### Stage Assignment
 
