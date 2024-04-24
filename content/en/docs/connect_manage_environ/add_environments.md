@@ -120,6 +120,26 @@ Learn how to create an environment to represent your API services and other disc
     * **GitHub Repository Owner** - owner of the GitHub Repository used to discover the API service(s).
     * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
+### Embedded Swaggerhub  environment
+
+1. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
+
+    * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
+        * **Embedded** - Axway to host the agent.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as as Embedded agents.
+        * SwaggerHub API Gateway settings:
+            * **API Key**: the API key for your SwaggerHub project.
+
+2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
+
+    * **Frequency** - set how often the Embedded agent should check for changes in your GitHub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover GitHub Gateway resources after environment creation and Embedded agent configuration are complete.
+    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **SwaggerHub Organization Owner** - owner name of an organization in SwaggerHub.
+    * **Visibility Filter** - the visibility state of the APIs on SwaggerHub. Not selecting anything will discover both Public and Private APIs.
+    * **Publication Filter** - the publication state of the APIs on SwaggerHub. Not selecting anything will discover both Published and UnPublished APIs.
+    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
+
 ### Compliance Profile
 
 (Optional) Enable API Compliance Design Rules or Security Rule for environment.   For example, API Specification discovered on GitHub prior to deployment can be checked for Compliance to your organization's Center of Excellence.  Once enabled, you can select a default design or security ruleset to be used for all the API services associated with the environment. Custom rulesets can be uploaded from *Compliance Profiles* within the *Topology* section of the WebUI.
