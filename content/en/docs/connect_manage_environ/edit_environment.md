@@ -71,7 +71,7 @@ These configuration steps are displayed only if an Embedded Azure environment is
 
 2. Embedded Discovery Agent Settings:
 
-    * Edit: Frequency, Team Ownership, API Discovery Filter, Additional tags, and Exclude Tags. Initiate Immediate Discovery can also be set.
+    * Edit: Frequency, Team Ownership, and Additional tags. Initiate Immediate Discovery can also be set.
 
 3. Embedded Traceability Agent Settings:
 
@@ -115,7 +115,7 @@ Enable API Compliance Design Rules or Security Rule for environment. For example
 
 #### Credential Preferences
 
-Select the duration of time when all credentials to Marketplace subscriptions are set to expire.
+Select the duration of time when all credentials to Marketplace subscriptions are set to expire. This step is not available for SwaggerHub environments.
 
 #### Stage Assignment
 
