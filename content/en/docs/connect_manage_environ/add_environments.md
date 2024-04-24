@@ -133,6 +133,28 @@ Learn how to create an environment to represent your API services and other disc
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
     * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
+    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
+    * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane.
+        * **URL Path** - all URL paths, or path regular expressions, which may be reported to Enterprise Marketplace. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
+        * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
+            * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and send to platform.
+            * **Sanitization Patterns**
+                * **Key Match** - query argument names that match any of these expressions will have the valueMatch sanitized.
+                * **Value Match** - when the query argument name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the query argument value with the masking character value.
+               For example, to sanitize the whole value of "id" query argument, keyMatch:"^id$",valueMatch:".*" will return the query arguments with their key set to "id" and value set to {*}.
+        * **Request Headers** - regular expressions applied to the request headers in the transactional data.
+            * **Allowed Patterns** - request headers keys that match any of these expressions will be reported. For example, "authorization" value will find all the request headers that have "authorization" anywhere in the key and send to platform.
+            * **Sanitization Patterns**
+                * **Key Match** - request headers keys that match any of these expressions will have the valueMatch sanitized.
+                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+               For example, to sanitize the first five characters of any request header with a key that has "authorization" in it, keyMatch:"authorization",valueMatch:"^.{0,5}" will return the request headers with their "key" set to "authorization" and "value" set to a value whose first five characters replaced by the masking character value.
+        * **Response Headers** - regular expressions applied to the response headers in the transactional data.
+            * **Allowed Patterns** - response headers keys that match any of these expressions will be reported. For example, ".*" value will find all the response headers and send to platform.
+            * **Sanitization Patterns**
+                * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
+                * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
+               For example, to sanitize the response headers of the word "data" wherever it is found, in any header that starts with ‘content', keyMatch:"^content",valueMatch:"data", and maskingCharacter: ""{##}"" will return the response headers with their "key" starting with "content" and "value" set to a value in which the "data" occurrences are replaced by "{##}" masking character.
+    * **Masking Characters** - the set of character(s) that will replace any value matched while sanitizing.
 
 ### Embedded GitHub environment
 
