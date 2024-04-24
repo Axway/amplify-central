@@ -115,7 +115,7 @@ Enable API Compliance Design Rules or Security Rule for environment. For example
 
 #### Credential Preferences
 
-Select the duration of time when all credentials to Marketplace subscriptions are set to expire. This step is not available for SwaggerHub environments.
+Select the duration of time when all credentials to Marketplace subscriptions are set to expire. This step is not available for Github and SwaggerHub environments.
 
 #### Stage Assignment
 
