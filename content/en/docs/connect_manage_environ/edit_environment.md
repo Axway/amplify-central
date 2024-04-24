@@ -72,6 +72,20 @@ These configuration steps are displayed only if an Embedded Github environment i
 
     * Edit: Frequency, Team Ownership, Paths, Filename Filters, Github Repository Name, Github Repository Owner, and Additional tags. Initiate Immediate Discovery can also be set.
 
+### Embedded SwaggerHub environment
+
+These configuration steps are displayed only if an Embedded SwaggerHub environment is selected.
+
+1. Agent Configuration:
+
+    * Click **Edit Agent Configuration**.
+    * Edit the Swaggerhub API Key.
+    * Click **Apply** to save changes or click **Cancel** to cancel changes.
+
+2. Embedded Discovery Agent Settings:
+
+    * Edit: Frequency, Team Ownership, SwaggerHub Organization Owner, Visibility Filter, Publication Filter, and Additional tags. Initiate Immediate Discovery can also be set.
+
 ### Optional configuration
 
 {{< alert title="Note" color="primary" >}}The following items are optional but applicable to all environments.{{< /alert >}}
