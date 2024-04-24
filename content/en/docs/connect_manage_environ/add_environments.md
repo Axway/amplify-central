@@ -20,7 +20,7 @@ Learn how to create an environment to represent your API services and other disc
 3. Add the following environment profile information and then click **Next**:
 
     * **Environment Name** - enter a display name for the environment in the WebUI.
-    * **Environment Type** - select the type of API Gateway (Amplify API Gateway, Apigee X Gateway, AWS API Gateway, Azure API Gateway, GitHub, Istio) which Axway provides Connected agent support. The Custom/SDK option is for community supported agents or agents developed with the Agent SDK. The Manual option is for a manual sync environment that does not use an agent.
+    * **Environment Type** - select the type of API Gateway (Amplify API Gateway, Apigee X Gateway, AWS API Gateway, Azure API Gateway, GitHub, Istio, SwaggerHub) which Axway provides Connected agent support. The Custom/SDK option is for community supported agents or agents developed with the Agent SDK. The Manual option is for a manual sync environment that does not use an agent.
     * **Production** - select **Yes** if this environment will perform production processing or connects to a non-Axway gateway. The usage will count against your entitled quota.
     * **Governance** - select **Axway Manage** if the environment is hosted in Axway Managed Cloud.
     * **Description** - enter a brief description of the environment.
@@ -33,7 +33,7 @@ Learn how to create an environment to represent your API services and other disc
     * **Agent Type** - select the type of agent that will connect to this API Gateway.
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted** - the customer to host the agent.
-    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as an Embedded agent.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as an Embedded agent.
          * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires an Access Log ARN in the CloudWatch settings below.
          * **AWS Region** - select or enter the AWS region if not in the list where the AWS API Gateway is located.
          * **AWS Authentication** - select the method of AWS authentication to use, AssumeRole or Access Key/Secret Key. For additional information on how to create either the AssumeRole (AWS IAM role) or AWS IAM user, see [Set up AWS for Embedded agents](/docs/connect_manage_environ/connect_aws_gateway/#embedded-aws-agent-setup).
@@ -81,7 +81,7 @@ Learn how to create an environment to represent your API services and other disc
     * **Agent Type** - select the type of agent that will connect to this API Gateway.
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted**  the customer to host the agent.
-    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as as Embedded agents.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as as Embedded agents.
         * Apigee X API Gateway settings:
             * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires a Client Email address in the Apigee X Authentication.
             * **Project ID**: the Project ID for your Google Cloud Platform (GCP) project.
@@ -105,7 +105,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
         * **Embedded** - Axway to host the agent.
-    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway and GitHub are supported as an Embedded agent.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as an Embedded agent.
         * GitHub settings:
             * **Access Token** - the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
 
