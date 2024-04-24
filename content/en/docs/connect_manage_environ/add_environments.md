@@ -108,20 +108,20 @@ Learn how to create an environment to represent your API services and other disc
         * **Remotely Hosted**  the customer to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as as Embedded agents.
         * Azure API Gateway settings:
-            * **Tenant ID**: -
-            * **Subscription ID**: -
-            * **Resource Group Name**: -
-            * **APIM Service Name**: -
+            * **Tenant ID**: - a unique identifier associated with an Azure AD tenant.
+            * **Subscription ID**: - a unique identifier associated with an Azure subscription.
+            * **Resource Group Name**: - the name given to a logical container that holds related Azure resources.
+            * **APIM Service Name**: - the name for an instance of the API Management service in Azure.
         * Azure Authentication:
+            * **Client ID**: - a unique identifier assigned to an Azure AD application registered for authentication purposes in Azure API Management.
+            * **Client Secret**: - a confidential string used for authenticating an Azure AD application.
             * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires the EventHub Name, EventHub Namespace, Shared Access Key Name, and Shared Access Key Value in the Azure EventHub Settings below.
-            * **Client ID**: -
-            * **Client Secret**: -
         * Azure EventHub Settings:
-            * **EventHub Name**: -
-            * **EventHub Namespace**: -
-            * **EventHub Consumer Group**: -
-            * **Shared Access Key Name**: -
-            * **Shared Access Key Value**: -
+            * **EventHub Name**: - azure event hub name.
+            * **EventHub Namespace**: - azure event hub namespace name.
+            * **EventHub Consumer Group**: - azure event hub consumer group name.
+            * **Shared Access Key Name**: - an identifier associated with shared access policies.
+            * **Shared Access Key Value**: -  a cryptographic token used for authentication when accessing Azure Event Hubs
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
