@@ -99,6 +99,41 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
 
+### Embedded Azure API Gateway environment
+
+1. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
+
+    * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
+        * **Embedded** - Axway to host the agent.
+        * **Remotely Hosted**  the customer to host the agent.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as as Embedded agents.
+        * Azure API Gateway settings:
+            * **Tenant ID**: -
+            * **Subscription ID**: -
+            * **Resource Group Name**: -
+            * **APIM Service Name**: -
+        * Azure Authentication:
+            * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires the EventHub Name, EventHub Namespace, Shared Access Key Name, and Shared Access Key Value in the Azure EventHub Settings below.
+            * **Client ID**: -
+            * **Client Secret**: -
+        * Azure EventHub Settings:
+            * **EventHub Name**: -
+            * **EventHub Namespace**: -
+            * **EventHub Consumer Group**: -
+            * **Shared Access Key Name**: -
+            * **Shared Access Key Value**: -
+
+2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
+
+    * **Frequency** - set how often the Embedded agent should check for changes in your Azure API Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Azure API Gateway resources after environment creation and Embedded agent configuration are complete.
+    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
+
+3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
+
+    * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
+
 ### Embedded GitHub environment
 
 1. Configure (these configuration steps are displayed only if there is Embedded agent support for the environment type selected above):
@@ -132,8 +167,8 @@ Learn how to create an environment to represent your API services and other disc
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
-    * **Frequency** - set how often the Embedded agent should check for changes in your GitHub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
-    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover GitHub Gateway resources after environment creation and Embedded agent configuration are complete.
+    * **Frequency** - set how often the Embedded agent should check for changes in your Swaggerhub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
+    * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Swaggerhub Gateway resources after environment creation and Embedded agent configuration are complete.
     * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
     * **SwaggerHub Organization Owner** - owner name of an organization in SwaggerHub.
     * **Visibility Filter** - the visibility state of the APIs on SwaggerHub. Not selecting anything will discover both Public and Private APIs.
