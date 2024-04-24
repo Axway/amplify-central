@@ -58,6 +58,25 @@ These configuration steps are displayed only if an Embedded Apigee X environment
 
     * If enabled, edit Frequency.
 
+### Embedded Azure API Gateway environment
+
+These configuration steps are displayed only if an Embedded Azure environment is selected.
+
+1. Agent Configuration:
+
+    * Click **Edit Agent Configuration**.
+    * Edit the Tenant ID, Subscription ID, Resource Group Name, APIM Service Name, Client ID, and Client Secret.  The Traceability Agent may be toggled on or off.
+        * If the Traceability Agent is toggled on you can edit the EventHub Name, EventHub Namespace, EventHub Consumer Group, Shared Access Key Name, and Shared Access Key Value
+    * Click **Apply** to save changes or click **Cancel** to cancel changes.
+
+2. Embedded Discovery Agent Settings:
+
+    * Edit: Frequency, Team Ownership, API Discovery Filter, Additional tags, and Exclude Tags. Initiate Immediate Discovery can also be set.
+
+3. Embedded Traceability Agent Settings:
+
+    * If enabled, edit: Frequency, Sampling Percentage, URL Path Allowed Patterns, Query Arguments Allowed Patterns, Query Arguments Sanitization Patterns, Request Headers Allowed Patterns, Request Headers Sanitization Patterns, Response Headers Allowed Patterns, Response Headers Sanitization Patterns, and Masking Characters. Sample All Errors can also be set.
+
 ### Embedded GitHub environment
 
 These configuration steps are displayed only if an Embedded Github environment is selected.
