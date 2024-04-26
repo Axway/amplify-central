@@ -23,9 +23,6 @@ Learn how to quickly configure, install, and run your Embedded  agents with basi
 
 Axway Central CLI and Amplify platform connectivity are required to configure the agent.
 
-1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
-2. Once the configuration is complete, the agent configuration must be copied to a Docker machine so that the Docker runner will find them.
-
 ## Embedded agent configuration machine pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
