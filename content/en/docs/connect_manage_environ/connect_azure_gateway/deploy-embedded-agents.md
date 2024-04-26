@@ -62,7 +62,7 @@ There are two ways to authenticate with Axway CLI:
 
 #### Default mode with browser authentication
 
-Run the following command to use Central CLI to log in with your Amplify platform credentials:
+Run the following command to use Axway Central CLI to log in with your Amplify platform credentials:
 
 ```shell
 axway auth login
