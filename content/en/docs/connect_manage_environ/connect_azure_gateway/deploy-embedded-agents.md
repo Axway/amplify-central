@@ -9,21 +9,25 @@ Deploy your Embedded agents using Axway CLI so you can manage your Azure Gateway
 ## Before you start
 
 * Read [Amplify Azure Gateway connected overview](/docs/connect_manage_environ/connect_azure_gateway/)
-* You will need information on Azure:
+* Gather the following Azure information:
 
-    * where the API service management is located (resource group name / API Management service name)
-    * service principal for using to Azure APIs
-    * event hub definition (namespace / name / policy / consumer group)
+    * Where the API service management is located (resource group name / API Management service name)
+    * Service principal for using Azure APIs
+    * Event hub definition (namespace / name / policy / consumer group)
 
 * It is recommended that you have access to the Azure CLI command line to run the necessary setup commands
 
 ## Objectives
 
-Learn how to quickly configure, install, and run your Embedded  agents with basic configuration using Axway Central CLI.
+Learn how to quickly configure, install, and run your Embedded agents using Axway Central CLI.
 
-Axway Central CLI and Amplify platform connectivity are required to configure the agent.
+{{< alert title="Note" color="primary" >}}Axway Central CLI and Amplify platform connectivity are required to configure the agent.{{< /alert >}}
 
-## Embedded agent configuration machine pre-requisites
+## Prerequisites
+
+Before installing and configuring your Embedded agents, make sure you have the following Embedded agent and Azure prerequisites.
+
+### Embedded agent configuration machine pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
     * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
@@ -34,7 +38,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
 
-## Azure prerequisites
+### Azure prerequisites
 
 * An Azure Service principal
 * An Azure Event Hub
@@ -53,8 +57,8 @@ You can validate that your installation is correct by running: `axway central --
 
 There are two ways to authenticate with Axway CLI:
 
-* With an administrator username/password via a browser
-* With a platform service account and a username/password via a prompt
+* Default mode: with an administrator username (email address) / password via a browser
+* Headlessmode: with a platform service account and a username / password via a prompt
 
 #### Default mode with browser authentication
 
@@ -65,7 +69,7 @@ axway auth login
 ```
 
 A browser will automatically open.
-Enter your valid credentials (email address and password). Once the *Authorization Successful* message is displayed, go back to Axway CLI.
+Enter your valid credentials (email address / password). Once the *Authorization Successful* message is displayed, go back to Axway CLI.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization.
 
@@ -95,11 +99,11 @@ The current region is set to US.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
 
-### Step 4: Run the agents' configure procedure
+### Step 3: Run the agents' configure procedure
 
 The Axway Central CLI will guide you through the configuration of the agents.
 
-Agents configuration will be installed in the directory from where the CLI runs.
+Agents' configurations will be installed in the directory from where the CLI runs.
 
 ```shell
 axway central install agents
@@ -121,15 +125,15 @@ The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (Azure API Gateway in this scenario).
 2. Select **Yes** when asked if the agent will be embedded.
-3. Select the agents you want to install: All / Discovery. **Note**: If you select All **ONLY**, you must provide configurations for both Steps 4 and 5.
+3. Select the agents you want to install: All / Discovery. **Note**: If you select All **ONLY**, you must provide configurations for both steps 4 and 5.
 4. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
    * **Team**: can be an existing team or one that will be created by the installation procedure
    * **Service account**: can be an existing service account (from platform or Enterprise Marketplace). The installation procedure creates a service account that can be used only with Enterprise Marketplace. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 5. Azure Discovery Agent Configuration Setup options:
-   * **Tenant ID** can be found in the *Directory ID* box on the Properties page
+   * **Tenant ID** can be found in the **Directory ID** box on the *Properties* page
    * **Subscription ID** is a GUID that uniquely identifies your subscription to use Azure services
-   * **Service Principal Client ID** represents the application that needs to deploy or configure resources through Azure Resource Manager
+   * **Service Principal Client ID** represents the application that deploys or configures resources through Azure Resource Manager
    * **Service Principal Client Secret** is the authentication used for service principals
    * **Resource Group Name** is the representation of group related resources for your application
    * **API Management Service Name** refers to both the service and the corresponding Azure resource
@@ -138,7 +142,7 @@ The installation procedure will prompt for the following:
    * **Event Hub Name** associated with the subscription
    * **Policy Name** associated with the Event Hub
    * **Policy Key** associated with the Policy Name
-   * **Consuer Group** associated with the Event Hub consumer group
+   * **Consumer Group** associated with the Event Hub consumer group
 7. Select **Yes** if you want to discover Azure APIM resources immediately after installation
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to your Azure APIM. If set to discover the Azure APIM resources upon installation, the Embedded agent will immediately discover your resources and show them in the Service Registry.
