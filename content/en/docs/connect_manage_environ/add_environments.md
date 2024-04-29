@@ -32,7 +32,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Agent Type** - select the type of agent that will connect to this API Gateway.
         * **Embedded** - Axway to host the agent.
-        * **Remotely Hosted** - the customer to host the agent.
+        * **Remotely Hosted** - customer to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as an Embedded agent.
          * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires an Access Log ARN in the CloudWatch settings below.
          * **AWS Region** - select or enter the AWS region if not in the list where the AWS API Gateway is located.
@@ -52,7 +52,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
     * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
-    * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane.
+    * **Redaction and Sanitization** - redaction and sanitization settings to use when reporting transactions from the data plane.
         * **URL Path** - all URL paths, or path regular expressions, which may be reported to Enterprise Marketplace. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
         * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
             * **Allowed Patterns** - query argument names that match any of these expressions will be reported. For example, "^id$" value will find all the query arguments with their key set to "id" and send to platform.
@@ -72,7 +72,7 @@ Learn how to create an environment to represent your API services and other disc
                 * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
                 * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
                For example, to sanitize the response headers of the word "data" wherever it is found, in any header that starts with ‘content', keyMatch:"^content",valueMatch:"data", and maskingCharacter: ""{##}"" will return the response headers with their "key" starting with "content" and "value" set to a value in which the "data" occurrences are replaced by "{##}" masking character.
-    * **Masking Characters** - the set of character(s) that will replace any value matched while sanitizing.
+    * **Masking Characters** - set of character(s) that will replace any value matched while sanitizing.
 
 ### Embedded Apigee X API Gateway environment
 
@@ -80,13 +80,13 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Agent Type** - select the type of agent that will connect to this API Gateway.
         * **Embedded** - Axway to host the agent.
-        * **Remotely Hosted**  the customer to host the agent.
+        * **Remotely Hosted** - customer to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as as Embedded agents.
         * Apigee X API Gateway settings:
             * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires a Client Email address in the Apigee X Authentication.
-            * **Project ID**: the Project ID for your Google Cloud Platform (GCP) project.
-            * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all applications.
-            * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discover Apigee resources.
+            * **Project ID** - Project ID for your Google Cloud Platform (GCP) project.
+            * **Developer Email** - email address of a developer, defined in Apigee, that will be given ownership of all applications.
+            * **Client Email** - email address, principal name, for the service account in GCP that has the role to discover Apigee resources.
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
@@ -103,25 +103,25 @@ Learn how to create an environment to represent your API services and other disc
 
 1. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
 
-    * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
+    * **Agent Type** - type of agent that will connect to this API Gateway (defaulted to Embedded).
         * **Embedded** - Axway to host the agent.
-        * **Remotely Hosted**  the customer to host the agent.
-    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as as Embedded agents.
+        * **Remotely Hosted** - customer to host the agent.
+    * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as Embedded agents.
         * Azure API Gateway settings:
-            * **Tenant ID**: - a unique identifier associated with an Azure AD tenant.
-            * **Subscription ID**: - a unique identifier associated with an Azure subscription.
-            * **Resource Group Name**: - the name given to a logical container that holds related Azure resources.
-            * **APIM Service Name**: - the name for an instance of the API Management service in Azure.
+            * **Tenant ID** - unique identifier associated with an Azure AD tenant.
+            * **Subscription ID** - unique identifier associated with an Azure subscription.
+            * **Resource Group Name** - name given to a logical container that holds related Azure resources.
+            * **APIM Service Name** - name for an instance of the API Management service in Azure.
         * Azure Authentication:
-            * **Client ID**: - a unique identifier assigned to an Azure AD application registered for authentication purposes in Azure API Management.
-            * **Client Secret**: - a confidential string used for authenticating an Azure AD application.
+            * **Client ID** - unique identifier assigned to an Azure AD application registered for authentication purposes in Azure API Management.
+            * **Client Secret** - confidential string used for authenticating an Azure AD application.
             * **Enable Traceability Agent** - to optionally configure the Traceability Agent, select to enable the Embedded Traceability Agent setup. This requires the EventHub Name, EventHub Namespace, Shared Access Key Name, and Shared Access Key Value in the Azure EventHub Settings below.
         * Azure EventHub Settings:
-            * **EventHub Name**: - azure event hub name.
-            * **EventHub Namespace**: - azure event hub namespace name.
-            * **EventHub Consumer Group**: - azure event hub consumer group name.
-            * **Shared Access Key Name**: - an identifier associated with shared access policies.
-            * **Shared Access Key Value**: -  a cryptographic token used for authentication when accessing Azure Event Hubs
+            * **EventHub Name** - azure event hub name.
+            * **EventHub Namespace** - azure event hub namespace name.
+            * **EventHub Consumer Group** - azure event hub consumer group name.
+            * **Shared Access Key Name** - identifier associated with shared access policies.
+            * **Shared Access Key Value** -  cryptographic token used for authentication when accessing Azure Event Hubs
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
@@ -154,17 +154,17 @@ Learn how to create an environment to represent your API services and other disc
                 * **Key Match** - response headers keys that match any of these expressions will have the valueMatch sanitized.
                 * **Value Match** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
                For example, to sanitize the response headers of the word "data" wherever it is found, in any header that starts with ‘content', keyMatch:"^content",valueMatch:"data", and maskingCharacter: ""{##}"" will return the response headers with their "key" starting with "content" and "value" set to a value in which the "data" occurrences are replaced by "{##}" masking character.
-    * **Masking Characters** - the set of character(s) that will replace any value matched while sanitizing.
+    * **Masking Characters** - set of character(s) that will replace any value matched while sanitizing.
 
 ### Embedded GitHub environment
 
 1. Configure (these configuration steps are displayed only if there is Embedded agent support for the environment type selected above):
 
-    * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
+    * **Agent Type** - type of agent that will connect to this API Gateway (defaulted to Embedded).
         * **Embedded** - Axway to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as an Embedded agent.
         * GitHub settings:
-            * **Access Token** - the Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
+            * **Access Token** - Personal Access Token (classic) for GitHub authentication. This allows us to discover API service specifications in design prior to deployment (e.g., to determine API Compliance).
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
@@ -181,11 +181,11 @@ Learn how to create an environment to represent your API services and other disc
 
 1. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
 
-    * **Agent Type** - the type of the agent that will connect to this API Gateway (defaulted to Embedded).
+    * **Agent Type** - type of agent that will connect to this API Gateway (defaulted to Embedded).
         * **Embedded** - Axway to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, and SwaggerHub are supported as as Embedded agents.
         * SwaggerHub API Gateway settings:
-            * **API Key**: the API key for your SwaggerHub project.
+            * **API Key** - API key for your SwaggerHub project.
 
 2. Embedded Discovery Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
@@ -193,8 +193,8 @@ Learn how to create an environment to represent your API services and other disc
     * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Swaggerhub Gateway resources after environment creation and Embedded agent configuration are complete.
     * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
     * **SwaggerHub Organization Owner** - owner name of an organization in SwaggerHub.
-    * **Visibility Filter** - the visibility state of the APIs on SwaggerHub. Not selecting anything will discover both Public and Private APIs.
-    * **Publication Filter** - the publication state of the APIs on SwaggerHub. Not selecting anything will discover both Published and UnPublished APIs.
+    * **Visibility Filter** - visibility state of the APIs on SwaggerHub. Not selecting anything will discover both Public and Private APIs.
+    * **Publication Filter** - publication state of the APIs on SwaggerHub. Not selecting anything will discover both Published and UnPublished APIs.
     * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
 ### Compliance Profile
