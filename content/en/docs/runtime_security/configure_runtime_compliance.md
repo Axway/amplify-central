@@ -145,6 +145,7 @@ The installation procedure will prompt for the following:
    * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack`, or `HTTPS`
 
 Once you have answered all questions, the agent installation performs the following operations
+
 * The Amplify Marketplace resources are created/updated.
 * If you chose, a new Amplify Platform Service Account is created and public/private key-pair is generated.
 * If you chose, a new namespace is created in the kubernetes cluster.
