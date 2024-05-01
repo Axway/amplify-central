@@ -54,7 +54,7 @@ You can validate that your installation is correct by running: `axway central --
 
 ### Step 2: Folder preparation
 
-Create an empty directory where Axway CLI will generate files. Run all Axway Central CLI from this directory.
+Create an empty directory where Axway Central CLI will generate files. Run all Axway Central CLI from this directory.
 
 ### Step 3: Identify yourself to Amplify platform with Axway CLI
 
