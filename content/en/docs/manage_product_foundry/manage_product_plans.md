@@ -168,6 +168,23 @@ You can also use the ellipsis menu on the plan list and select **Activate**. Onl
 
 {{< alert title="Note" color="primary" >}}A plan can only be listed in the Marketplace when the product the plan is associated to is ACTIVE and PUBLISHED in the Marketplace.{{< /alert >}}
 
+## Duplicate a product plan
+
+Instead of creating a plan from scratch, and to save time, it is possible to duplicate any existing plan (active or not) into a new plan. The new plan will be named after the original one + Copy (x). The new plan state is Draft so that you can update it as you want (changing the name, changing the plan type Free/Paid, changing the quotas or pricing).
+
+{{< alert title="Note" color="primary" >}}
+All corrupted resources from the original plan will not be copy into the duplicated plan.
+In case this operation leaves orphan quotas, the quotas will not be added to the duplicated plan.
+{{< /alert >}}
+
+To duplicate a plan:
+
+1. Navigate to the *Product Foundry* and select a product.
+2. Click the **Plans** tab. All plans configured for this product are displayed.
+3. Click the ellipsis menu of the plan you want to duplicate and select **Duplicate**.
+4. A warning message is displayed to inform that the corrupted resources will be removed from the new created plan and if a quotas become empty due to that removal, the quota will not tbe added to the new plan. Click **Duplicate**
+5. A popup showing the various step is displayed. When the duplication is done the popup is updated and show the name of the new plan. An Edit button is available to let the user editing the new plan. See [Edit product plan](#edit-product-plans).
+
 ## Deprecate a product plan
 
 A provider can deprecate an active plan when the terms of the plan change, or it is no longer relevant, and they would like to prevent new subscriptions under the plan. When deprecating a plan, the provider can choose one of the following:
