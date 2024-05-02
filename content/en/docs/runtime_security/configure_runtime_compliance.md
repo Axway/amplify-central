@@ -21,7 +21,11 @@ Configure your Runtime Compliance with the Axway Central CLI.
 
 Learn how to install and configure the Graylog Agent for Runtime Compliance.
 
-## Agent configuration pre-requisites
+## Prerequisites
+
+Before installing and configuring, make sure you have the following agent prerequisites.
+
+### Agent configuration prerequisites
 
 * Any machine (Windows / Linux / Mac) where:
     * You can access platform.axway.com, login.axway.com and repository.axway.com on port 443
@@ -31,20 +35,20 @@ Learn how to install and configure the Graylog Agent for Runtime Compliance.
     * There is a graphical environment (optional)
 * An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
-* Kubernetes context is set for the Kubernetes cluster where Agent will to be deployed.
+* Kubernetes context is set for the Kubernetes cluster where the agent will be deployed
 
-## Agent deployment prerequisites
+### Agent deployment prerequisites
 
-Graylog Agent is delivered as a Helm chart that can be deployed in the same kubernetes cluster where Graylog API Security is deployed.
+Graylog Agent is delivered as a Helm chart that can be deployed in the same Kubernetes cluster where Graylog API Security is deployed.
 
-The Agent must have access to:
+The agent must have access to:
 
 * The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
-* Graylog Ingress service running within the kubernetes cluster where Agent will be deployed
+* Graylog Ingress service running within the Kubernetes cluster where the agent will be deployed
 
 ## Configure the agents with Axway Central CLI
 
-Use Axway Central CLI to configure the Agent. This CLI will prompt you for answers regarding Graylog installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
+Use Axway Central CLI to configure the agent. The CLI will prompt you for answers regarding Graylog installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
 
 ### Step 1: Install Axway Central CLI
 
@@ -60,8 +64,8 @@ Create an empty directory where Axway Central CLI will generate files. Run all A
 
 There are two ways to authenticate with Axway CLI:
 
-* With an administrator username/password via a browser
-* With a platform service account and a username/password via a prompt
+* Default mode: with an administrator username (email address) / password via a browser
+* Headless mode: with a platform service account and a username /password via a prompt
 
 #### Default mode with browser authentication
 
@@ -102,11 +106,11 @@ The current region is set to US.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
 
-### Step 4: Run the agents configure procedure
+### Step 4: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the Agent.
+The Axway Central CLI will guide you through the configuration of the agents.
 
-Agents configuration will be installed in the directory from where the CLI runs.
+The agents' configuration will be installed in the directory from where the CLI runs.
 
 ```shell
 axway central install agents
@@ -130,28 +134,28 @@ The installation procedure will prompt for the following:
 
 2. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
-        * **Referenced Environments**: you can choose list of existing environments that have Managed APIs for the Graylog agent to correlate with the API calls monitored by Graylog API Security.
+        * **Referenced Environments**: choose from existing environments that have Managed APIs for the Graylog agent to correlate with the API calls monitored by Graylog API Security
    * **Team**: can be an existing team or one that will be created by the installation procedure
    * **Service account**: can be an existing service account (from platform or Enterprise Marketplace). The installation procedure creates a service account that can be used only with Enterprise Marketplace. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 
 3. Graylog API Security configuration setup options:
-   * **Namespace**: can be an existing namespace or new one that will be created by the installation procedure in the Kubernetes cluster.
-   * **Graylog API Security URL**: the URL for Graylog.
-   * **Username**: the username for Graylog API Security.
-   * **Password**: the password for specified user.
-   * **Base path segment length**: the number of base path segments that agent will use to correlate monitored API from Graylog to Managed API in existing environments. Default to `2`.
+   * **Namespace**: can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster
+   * **Graylog API Security URL**: the URL for Graylog
+   * **Username**: the username for Graylog API Security
+   * **Password**: the password for the specified user
+   * **Base path segment length**: the number of base path segments that the agent will use to correlate monitored APIs from Graylog to Managed APIs in existing environments. Default to `2`.
 
 4. Traceability module connectivity:
-   * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack`, or `HTTPS`
+   * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack` or `HTTPS`
 
-Once you have answered all questions, the agent installation performs the following operations
+Once you have answered all questions, the agent installation performs the following operations:
 
 * The Amplify Marketplace resources are created/updated.
-* If you chose, a new Amplify Platform Service Account is created and public/private key-pair is generated.
-* If you chose, a new namespace is created in the kubernetes cluster.
-* The kubernetes secret with key pair for Amplify Platform Service Account is created in the selected namespace.
-* The kubernetes secret with Graylog authentication config is created in the selected namespace.
-* The agent helm override file is generated.
+* If chose, a new Amplify Platform service account is created and public/private key-pair is generated.
+* If chose, a new namespace is created in the Kubernetes cluster.
+* The Kubernetes secret with key pair for Amplify Platform service account is created in the selected namespace.
+* The Kubernetes secret with Graylog authentication config is created in the selected namespace.
+* The agent Helm override file is generated.
 
 The current directory will contain the following files after the agent installation is completed:
 
@@ -183,7 +187,7 @@ To complete the Graylog Agent installation run the following commands:
 * client_secret - service account secret for your Amplify Platform organization
 ```
 
-Once the helm commands are completed, the agents should be running in the Kubernetes cluster.
+Once the Helm commands are completed, the agents should be running in the Kubernetes cluster.
 
 ## Check that agents are running with Axway Central CLI
 
