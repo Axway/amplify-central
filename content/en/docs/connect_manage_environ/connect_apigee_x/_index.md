@@ -180,7 +180,7 @@ spec:
         - PetStore
 ```
 
-With the settings above the agent will only discover any API Proxies deployed to the `test` environment. While gathering API Metrics the agent will filter by the `test` environment and additionally check that the API Proxy name is included in the `filteredAPIs` list. 
+With the settings above the agent will only discover any API Proxies deployed to the `test` environment. While gathering API Metrics the agent will filter by the `test` environment and additionally check that the API Proxy name is included in the `filteredAPIs` list.
 
 ## Related topics
 
