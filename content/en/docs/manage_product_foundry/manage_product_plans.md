@@ -170,20 +170,22 @@ You can also use the ellipsis menu on the plan list and select **Activate**. Onl
 
 ## Duplicate a product plan
 
-Instead of creating a plan from scratch, and to save time, it is possible to duplicate any existing plan (active or not) into a new plan. The new plan will be named after the original one + Copy (x). The new plan state is Draft so that you can update it as you want (changing the name, changing the plan type Free/Paid, changing the quotas or pricing).
+Instead of creating a plan from scratch, you can save time by duplicating any existing plan (active or not) into a new plan.
+
+* The duplicated plan will be named the same as the original plan + Copy (x).
+* The duplicated plan will be created in Draft state so that it can be updated (changes can include the name, plan type Free/Paid, quotas, pricing).
 
 {{< alert title="Note" color="primary" >}}
 All corrupted resources from the original plan will not be copy into the duplicated plan.
-In case this operation leaves orphan quotas, the quotas will not be added to the duplicated plan either.
+In case this operation leaves orphan quotas, the quotas will not be added to the duplicated plan.
 {{< /alert >}}
 
 To duplicate a plan:
 
 1. Navigate to the *Product Foundry* and select a product.
 2. Click the **Plans** tab. All plans configured for this product are displayed.
-3. Click the ellipsis menu of the plan you want to duplicate and select **Duplicate**.
-4. A warning message is displayed to inform that the corrupted resources will be removed from the new created plan and if a quotas become empty due to that removal, the quota will not tbe added to the new plan. Click **Duplicate**
-5. A popup showing the various step is displayed. When the duplication is done the popup is updated and show the name of the new plan. An Edit button is available to let the user editing the new plan. See [Edit product plan](#edit-product-plans).
+3. Click the ellipsis menu of the plan you want to duplicate and select **Duplicate**. A warning message may display: *Corrupted resources will be removed from the new plan. If a quota becomes empty due to the removal, the quota will not be added to the new plan*. Click **Duplicate** to continue.
+5. The name of the new plan is displayed when the duplication process is complete. Click **Edit** to make changes to the new plan. See [Edit product plan](#edit-product-plans).
 
 ## Deprecate a product plan
 
