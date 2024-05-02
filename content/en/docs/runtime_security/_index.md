@@ -8,14 +8,19 @@ hide_readingtime: true
 
 With an increasing number of APIs, API providers and consumers of APIs, there is a pressing need to capture and scan API traffic to assess security threats.
 
-Amplify's Runtime Compliance entitlement for the API Management platform  allows you to assess the runtime compliance of your APIs from a security threat perspective.
+Amplify's runtime Compliance entitlement for the API Management platform allows you to assess the runtime compliance of your APIs from a security threat perspective.
 
 ## What is runtime compliance
 
 Runtime compliance is the assessment of potential security risks based on real-time API traffic. Amplify has integrated with Graylog API Security to monitor and assess API traffic for security threats. For example, the captured API traffic is scanned by Graylog API security to detect real attacks, leaks, and other threats.
-To get started, must create an Amplify environment that connects to Graylog API Security and to retrieve the security results for multiple endpoints. The Graylog API Security retrieves the security results and correlates the endpoints with the Managed API endpoints from the API Gateways connected to the Amplify Enterprise Marketplace to determine a security grading.  
 
-{{< alert title="Note" color="primary" >}} APIs that do not match the API Gateways in the Amplify Enterprise Marketplace are represented as Runtime Unmanaged APIs with a security grading. These unmanaged runtime APIs are unknown APIs not registered with an API Gateway. See (link) for security grading details.{{< /alert >}}
+## How it works
+
+* An Amplify environment is created that connects to Graylog API Security. 
+* The Graylog API Security retrieves the security results and correlates the endpoints with the Managed API endpoints from the API Gateways connected to the Amplify Enterprise Marketplace. 
+* Graylog API Security assesses and determines a security grading.  
+
+{{< alert title="Note" color="primary" >}} APIs that do not match the API Gateways in the Amplify Enterprise Marketplace are represented as Runtime Unmanaged APIs with a security grading. These unmanaged runtime APIs are unknown APIs not registered with an API Gateway.
 
 ## Related topics
 
