@@ -425,7 +425,7 @@ When receiving new invoices via webhook or watchTopic, it is the responsibility 
 Add the invoice link payment so that the consumer can navigate from the Marketplace to the billing Gateway payment screen:
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_LOGICAL_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/billing' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/billing' \
 --data '{
     "billing": {
         "payment": {
@@ -456,7 +456,7 @@ The **due** property is the total amount plus any extra amount (taxes / past due
 Update the invoice state:
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_LOGICAL_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
 --data '{   
     "state": {
         "name": "open",
@@ -472,7 +472,7 @@ Once the payment is received on the billing Gateway, the corresponding invoice s
 To update the invoice:
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_LOGICAL_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
 --data '{   
     "state": {
         "name": "paid",
@@ -490,7 +490,7 @@ To check for event characteristics: `type=SubResourceUpdated` and `metadata.subs
 It is possible to take action on the provider side to reach out the consumer to see why the invoice has not been paid. Once the clarification has been made with the consumer, we recommend changing the status to Success:
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_LOGICAL_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
 --data '{   
      "status": {
         "level": "Success",
@@ -514,7 +514,7 @@ If the initial subscription invoice was never paid and the consumer terminated h
 3. Once done on the Billing Gateway, the corresponding invoice in Amplify Entreprise Marketplace must be updated to whichever status make sense (`Success` or `Error`):
 
     ```json
-    curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_LOGICAL_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
+    curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
     --data '{   
          "status": {
             "level": "Success",
