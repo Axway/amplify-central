@@ -206,7 +206,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 }'
 ```
 
-Create the integration using the Axway CLI: add the following in a file and apply the file `axway central apply -f {filename.yaml}`
+Or create the integration using the Axway CLI: add the following in a file and apply the file `axway central apply -f {filename.yaml}`
 
 ```yaml
 group: management
@@ -238,7 +238,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 }'
 ```
 
-Create the webhook using Axway CLI: add the following in a file and apply the file `axway central apply -f {filename.yaml}`
+Or create the webhook using Axway CLI: add the following in a file and apply the file `axway central apply -f {filename.yaml}`
 
 ```yaml
 group: management
@@ -297,7 +297,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrati
 }'
 ```
 
-Create the resource hook definition using API: add the following in a file and apply the file `axway central apply -f {filename.yaml}`
+Or create the resource hook definition using Axway CLI: add the following in a file and apply the file `axway central apply -f {filename.yaml}`
 
 ```yaml
 group: management
@@ -362,7 +362,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopi
 }'
 ```
 
-Create a watchtopic using the Axway CLI: Add the following in a file and apply the file `axway central apply -f {filename.yaml}`
+Or create a watchtopic using the Axway CLI: Add the following in a file and apply the file `axway central apply -f {filename.yaml}`
 
 ```yaml
 Create the integration using the Axway CLI:
