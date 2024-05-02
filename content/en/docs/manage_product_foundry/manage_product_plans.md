@@ -185,7 +185,7 @@ To duplicate a plan:
 1. Navigate to the *Product Foundry* and select a product.
 2. Click the **Plans** tab. All plans configured for this product are displayed.
 3. Click the ellipsis menu of the plan you want to duplicate and select **Duplicate**. A warning message may display: *Corrupted resources will be removed from the new plan. If a quota becomes empty due to the removal, the quota will not be added to the new plan*. Click **Duplicate** to continue.
-5. The name of the new plan is displayed when the duplication process is complete. Click **Edit** to make changes to the new plan. See [Edit product plan](#edit-product-plans).
+4. The name of the new plan is displayed when the duplication process is complete. Click **Edit** to make changes to the new plan. See [Edit product plan](#edit-product-plans).
 
 ## Deprecate a product plan
 
