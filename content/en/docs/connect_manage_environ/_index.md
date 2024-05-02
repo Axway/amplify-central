@@ -4,7 +4,6 @@ linkTitle: Connect and manage your environment
 weight: 350
 date: 2020-11-18
 ---
-*Update appropriate table with SwaggerHub*
 
 Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
 
@@ -67,18 +66,18 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
-| Description |  AWS | Apigee X | Github |
-|-------------|-----|-------|-------------------|
-| **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs |
-| **Application** | Usage plan | Application | No |
-| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | No |
-| **Credential Type** | APIKey | APIKey / OAuth | No |
-| **Credential Actions** | Suspend/Enable | Suspend/Enable | No |
-| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | No |
-| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | No |
-| **Platform Usage** | Yes | Yes | No |
-| **Transaction Metrics** | Yes  | Yes | No |
-| **Transaction Event Sampling** | Yes | No | No |
+| Description |  AWS | Apigee X | Github | Swaggerhub |
+|-------------|-----|-------|-------------------|-------------------|
+| **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs | Public/Private Rest APIs |
+| **Application** | Usage plan | Application | No | No |
+| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | No | No |
+| **Credential Type** | APIKey | APIKey / OAuth | No | No |
+| **Credential Actions** | Suspend/Enable | Suspend/Enable | No | No |
+| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | No | No |
+| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | No | No |
+| **Platform Usage** | Yes | Yes | No | No |
+| **Transaction Metrics** | Yes  | Yes | No | No |
+| **Transaction Event Sampling** | Yes | No | No | No |
 
 For detailed information about agent configuration, features and limitations, see:
 
@@ -93,6 +92,7 @@ For detailed information about agent configuration, features and limitations, se
 * [Discovery Agents for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/)
 * [Discovery Agents for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
 * [Discovery Agents for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
+* * [Discovery Agents for SwaggerHub](/docs/connect_manage_environ/connect_kafka_cluster/)
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 

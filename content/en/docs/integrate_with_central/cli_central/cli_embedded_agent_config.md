@@ -3,7 +3,6 @@ title: Add configuration to your Embedded agents
 linkTitle: Add configuration to your Embedded agents
 weight: 300
 ---
-*Update with SwaggerHub*
 
 Use the Axway Central CLI to update the configuration settings for an Embedded agent.
 
@@ -152,3 +151,59 @@ Configured to set if headers should be processed, redact certain information, sa
 Redaction settings can be added to the Embedded Traceability Agent that will be used when finding and reporting transactional data to Enterprise Marketplace. The settings include the ability to customize the URL path of the transaction, the query arguments in the transaction, as well as the request and response headers.
 
 * Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent.
+
+### SwaggerHub
+
+* **owner** - the owner of the organization in SwaggerHub
+* **filter** - the filters to determine what kind of APIs to discover. Not setting the filter will discover all the APIs.
+  * **visibility** - the visbility state of the API in   SwaggerHub, it can be either public, private, or both.
+  * **publication** - the publication state of the API in SwaggerHub, it can be either published, unpublished, or both.
+
+  ```yaml
+  spec:
+  type: SwaggerHub
+  config:
+    type: SwaggerHub
+    owner: <org_owner>
+    filter: { 
+      visibility: Public,
+      publication: Both 
+    }
+  ```
+
+## Embedded Discovery Agent
+
+Add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
+
+* Pull the existing Discovery Agent from your environment and direct it to a file:
+
+    ```bash
+    axway central get -o yaml -s <environment> discoveryagent <agent-name> > agent.yaml
+    ```
+
+* Using an editor of your choice, open the `agent.yaml` file and add/change any or all values:
+    * **additionalTags** - a list of strings that will be added to Enterprise Marketplace resources that are created
+    * **ignoreTags** - tags that, if found on the data plane resource, will not be added to Enterprise Marketplace resources
+    * **owner** - the team owner that will be set when creating resources in Enterprise Marketplace
+        * type - set to `team`
+        * id - the id value found when viewing the team in Enterprise Marketplace
+
+    ```yaml
+    spec:
+      config:
+        additionalTags:
+          - addTagName1
+          - addTagName2
+        ignoreTags:
+          - sensitive
+          - SENSITIVE
+        owner:
+          type: team
+          id: <team-id>
+    ```
+
+* After editing is complete and the file is saved, run the command to push the changes:
+
+    ```bash
+    axway central apply -f agent.yaml
+    ```
