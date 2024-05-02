@@ -174,7 +174,7 @@ Instead of creating a plan from scratch, and to save time, it is possible to dup
 
 {{< alert title="Note" color="primary" >}}
 All corrupted resources from the original plan will not be copy into the duplicated plan.
-In case this operation leaves orphan quotas, the quotas will not be added to the duplicated plan.
+In case this operation leaves orphan quotas, the quotas will not be added to the duplicated plan either.
 {{< /alert >}}
 
 To duplicate a plan:
