@@ -4,7 +4,7 @@ linkTitle: Configure runtime compliance
 weight: 20
 ---
 
-Configure your Runtime Compliance with the Axway Central CLI.
+Configure your Runtime compliance with the Axway Central CLI.
 
 ## Before you start
 
@@ -19,7 +19,7 @@ Configure your Runtime Compliance with the Axway Central CLI.
 
 ## Objectives
 
-Learn how to install and configure the Graylog Agent for Runtime Compliance.
+Learn how to install and configure the Graylog Agent for runtime compliance.
 
 ## Prerequisites
 
