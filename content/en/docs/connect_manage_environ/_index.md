@@ -66,18 +66,18 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
-| Description |  AWS | Apigee X | Github | Swaggerhub |
-|-------------|-----|-------|-------------------|-------------------|
-| **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs | Public/Private Rest APIs |
-| **Application** | Usage plan | Application | No | No |
-| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | No | No |
-| **Credential Type** | APIKey | APIKey / OAuth | No | No |
-| **Credential Actions** | Suspend/Enable | Suspend/Enable | No | No |
-| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | No | No |
-| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | No | No |
-| **Platform Usage** | Yes | Yes | No | No |
-| **Transaction Metrics** | Yes  | Yes | No | No |
-| **Transaction Event Sampling** | Yes | No | No | No |
+| Description |  AWS | Apigee X | Github | Swaggerhub | Azure |
+|-------------|-----|-------|-------------------|-------------------|----|
+| **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs | Public/Private Rest APIs | APIs |
+| **Application** | Usage plan | Application | No | No | Product |
+| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | No | No | Associated API with Product |
+| **Credential Type** | APIKey | APIKey / OAuth | No | No | APIKey |
+| **Credential Actions** | Suspend/Enable | Suspend/Enable | No | No | Suspend/Enable  |
+| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | No | No | Quota Policy associated to Product |
+| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | No | No | Transactions with Azure Product subscription associated to Credential |
+| **Platform Usage** | Yes | Yes | No | No | Yes |
+| **Transaction Metrics** | Yes  | Yes | No | No | Yes |
+| **Transaction Event Sampling** | Yes | No | No | No | Yes |
 
 For detailed information about agent configuration, features and limitations, see:
 
