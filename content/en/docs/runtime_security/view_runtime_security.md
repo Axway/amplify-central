@@ -1,21 +1,21 @@
 ---
-title: View Runtime Compliance
-linkTitle: View Runtime Compliance
+title: View runtime compliance
+linkTitle: View runtime compliance
 weight: 40
 ---
 
-View.
+Understand the runtime compliance score.
 
 ## Before you start
 
-* You understand what security risks at detected with the Runtime Compliance.
-* You know how to view more details about the security risks identified.
+* You understand what security risks are detected with the runtime compliance
+* You know how to view more details about the security risks identified
 
 ## Objectives
 
-Learn how to view and interpret the Runtime Compliance score.
+Learn how to view and interpret the runtime compliance score.
 
-The Runtime Compliance score is represented as grade from A based on the Average Risk Score for each API. The range for each grading are:
+The runtime compliance score is represented as a grade from A to F based on the Average Risk Score for each API. The range for each grading are:
 
 | Grading score | Average Risk Score |
 |---------------|--------------------|
