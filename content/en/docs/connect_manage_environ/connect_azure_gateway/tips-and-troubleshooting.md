@@ -55,8 +55,8 @@ LOG_FILE_PATH=/home/APIC-agents/logs
 LOG_FILE=agent-da-resgrp1.log
 
 # Additional configuration for log rotation and backups
-# The max size, in megabytes that a log file can grow to - no limit by default.
-LOG_FILE_ROTATEEVERYMEGABYTES
+# The max size, in bytes that a log file can grow to - no limit by default.
+LOG_FILE_ROTATEEVERYBYTES
 # The max number of log file backups to keep - no limit by default.
 LOG_FILE_KEEPFILES
 # The max age of a backup file, in days - no limit by default.
