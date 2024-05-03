@@ -8,7 +8,7 @@ hide_readingtime: true
 
 With an increasing number of APIs, API providers and consumers of APIs, there is a pressing need to capture and scan API traffic to assess security threats.
 
-Amplify's runtime compliance entitlement for the API Management platform allows you to assess the runtime compliance of your APIs from a security threat perspective.
+Amplify's runtime compliance entitlement for the API Management platform allows you to assess the runtime compliance of your APIs from a security threat perspective. Runtime Compliance is an entitlement you can purchase from Axway as part of the API Management platform.
 
 ## What is runtime compliance
 
