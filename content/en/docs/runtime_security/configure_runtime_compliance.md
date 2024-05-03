@@ -4,7 +4,7 @@ linkTitle: Configure runtime compliance
 weight: 20
 ---
 
-Configure your Runtime compliance with the Axway Central CLI.
+Configure your runtime compliance with the Axway Central CLI.
 
 ## Before you start
 
