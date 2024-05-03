@@ -29,18 +29,25 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 To list API services:
 
 1. Navigate to *Catalog > Service Registry*.
-2. View the following information for all services:
+2. Click on a tab to select a view:
 
-   * Environment
-   * Assets
-   * Owner
+   * All - View all API services from all API Gateways and environments
+   * Design - View all API services from all Design repository environments
+   * Runtime Managed - View all API Services from all Runtime Managed API Gateways
+   * Runtime Unmanaged - View all API Services in all Runtime Unmanaged environments
+
+3. View the following information for all services:
+
    * Version
-   * Tags
-   * Created/Updated date by User
+   * Assets
+   * Environment
+   * Owner
+   * Modified date by user
    * Security compliance grading
    * Design compliance grading
+   * Runtime compliance grading
 
-You can filter the services by the Service type, Environment, Team Ownership, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
+You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
 ## View API service details
 
@@ -57,7 +64,7 @@ Click on the Service name or icon to view the following detailed information for
 * The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
 * The general Assets tab displays the assets that contain this API service, the state of the assets, and when they were last modified.
 * The general Products tab displays the products that contain this API service, the state and status of the products, and when they were last modified.
-* The Versions tab displays version information for the specific service. Every version of the service is displayed by Service Revision name, specification type, and created/updated date, making it easy to view all versions of an API service. This tab also displays the number of endpoints, assets, products, and if enabled, Security and Design compliance validation scores for each of the API Service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+* The Versions tab displays version information for the specific service. Every version of the service is displayed by Service Revision name, specification type, and created/updated date, making it easy to view all versions of an API service. This tab also displays the number of endpoints, assets, products, and if enabled, Security, Design, and Runtime compliance validation scores for each of the API Service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
 
     {{< alert title="Tip" color="secondary" >}} Enter the name of a version in the search bar to quickly find a specific version. <br /> <br/>Click Compliance Score **Details** to open the Compliance tab and view the Security and Design Compliance details, download results in CSV format, and run linting tests. {{< /alert >}}
 
