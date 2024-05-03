@@ -8,15 +8,15 @@ hide_readingtime: true
 
 With an increasing number of APIs, API providers and consumers of APIs, there is a pressing need to capture and scan API traffic to assess security threats.
 
-Amplify's runtime compliance feature allows you to assess the runtime compliance of your APIs from a security threat perspective. Contact Axway Support at support.axway.com or reach out to your Axway representative to learn how to enable the Runtime Compliance for your organization.
+Amplify's runtime compliance feature allows you to assess the runtime compliance of your APIs from a security threat perspective. Contact Axway Support at support.axway.com or reach out to your Axway representative to learn how to enable runtime compliance for your organization.
 
 ## What is runtime compliance
 
-Runtime compliance is the assessment of potential security risks based on real-time API traffic. Amplify has integrated with [Graylog API Security](https://graylog.org/products/api-security/) to monitor and assess API traffic for security threats. For example, the captured real-time API traffic is continuously scanned by Graylog API security to detect real attacks, leaks, and other threats.
+Runtime compliance is the assessment of potential security risks based on real-time API traffic. Amplify has integrated with [Graylog API Security](https://graylog.org/products/api-security/) to monitor and assess API traffic for security threats. For example, the captured real-time API traffic is continuously scanned by Graylog API Security to detect real attacks, leaks, and other threats.
 
 ## What are Unmanaged APIs
 
-There is a grouping of "Runtime Managed" APIs that are discovered from all the API gateways connected to the Amplify Marketplace.  The group of "Runtime Unmanaged" APIs are discovered from Graylog API Security.  Both can be visualized on the [Service Registry](/docs/manage_service_registry/service_management). The combination of "Runtime Managed" and "Runtime Unmanaged" APIs is a representation of all the APIs. As a result of the runtime Compliance, APIs can be prioritized for remediation based on the security grading.
+There is a grouping of "Runtime Managed" APIs that are discovered from all the API gateways connected to the Amplify Marketplace. The group of "Runtime Unmanaged" APIs are discovered from Graylog API Security. Both can be visualized on the [Service Registry](/docs/manage_service_registry/service_management). The combination of "Runtime Managed" and "Runtime Unmanaged" APIs is a representation of all the APIs. As a result of the runtime compliance, APIs can be prioritized for remediation based on the security grading.
 
 ## How runtime compliance works
 
