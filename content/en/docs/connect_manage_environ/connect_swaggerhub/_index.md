@@ -5,7 +5,7 @@ weight: 125
 date: 2024-04-23
 ---
 
-Connect SwaggerHub to Amplify so you can publish to the Amplify Catalog from your SwaggerHub services in order to obtain a global view of your APIs and present the catalog to your consumers.
+Connect SwaggerHub to Amplify to publish to the Amplify Catalog from your SwaggerHub services, obtain a global view of your APIs, and present the catalog to your consumers.
 
 ## What is SwaggerHub connected?
 
@@ -20,9 +20,9 @@ Connecting a SwaggerHub Repository to Amplify will provide you with a global cen
 
 * Read [Embedded SwaggerHub agent setup](/docs/connect_manage_environ/connect_swaggerhub_repository/embedded-agent-setup/)
 * Gather information on SwaggerHub:
-    * The api key that the agent will use to connect to SwaggerHub
-    * The oragization name that the agent will connect to
-    * The visibility and publication filters that the agent should use to discover api spec files
+    * The API key that the agent will use to connect to SwaggerHub
+    * The organization name that the agent will connect to
+    * The visibility and publication filters that the agent should use to discover API spec files
 * Ensure your machine (Windows / Linux / Mac) meets the Embedded agent configuration prerequisites, where:
     * You can access platform.axway.com and login.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
@@ -106,7 +106,7 @@ The installation procedure will prompt for the following:
 
 3. SwaggerHub Configuration Setup:
 
-    * **API Key**: the api key the agent will use to read the files in the repository (SwaggerHub's API Key is used here)
+    * **API Key**: the API key the agent will use to read the files in the repository (SwaggerHub's API Key is used here)
     * Set how often the Embedded agent should check SwaggerHub for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
     * Set if the agent should discover SwaggerHub resources after installation is complete
     * **Organization Owner Name**: the name of the organization of the SwaggerHub repository
