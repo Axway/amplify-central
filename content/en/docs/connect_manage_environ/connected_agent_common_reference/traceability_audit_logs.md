@@ -30,7 +30,7 @@ In all Traceability Agents, the metric audit log is turned on by default. It is 
 | LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`) |
 | LOG_METRICFILE_CLEANBACKUPS     | The max age of a metric audit log backup file, in days (default: `0` unlimited)               |
 
-With the default settings, the Traceability Agent will keep a maximum of `7` files, each a total of `10485760` megabytes.
+With the default settings, the Traceability Agent will keep a maximum of `7` files, each a total of `10485760` bytes.
 
 ### Additional Axway API Manager Traceability Agent audit log
 
