@@ -39,7 +39,7 @@ Set the access log group ARN value so that the Discovery Agent can set up loggin
 
 * **accessLogARN** - the ARN needed in both agents. When a Discovery Agent discovers a Stage, this arn will be set for its logging. The Traceability Agent will also read this log for reporting usage, metrics, and traffic events.
 
-## Embedded Discovery Agent (AWS)
+## Embedded Discovery Agent
 
 Configure to apply a filter to the dataplane resource for discovery, add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
 
@@ -78,7 +78,44 @@ Configure to apply a filter to the dataplane resource for discovery, add additio
     axway central apply -f agent.yaml
     ```
 
-## Embedded Traceability Agent (AWS)
+### SwaggerHub configuration
+
+Add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
+
+* Pull the existing Discovery Agent from your environment and direct it to a file:
+
+    ```bash
+    axway central get -o yaml -s <environment> discoveryagent <agent-name> > agent.yaml
+    ```
+
+* Using an editor of your choice, open the `agent.yaml` file and add/change any or all values:
+    * **additionalTags** - a list of strings that will be added to Enterprise Marketplace resources that are created
+    * **ignoreTags** - tags that, if found on the data plane resource, will not be added to Enterprise Marketplace resources
+    * **owner** - the team owner that will be set when creating resources in Enterprise Marketplace
+        * type - set to `team`
+        * id - the id value found when viewing the team in Enterprise Marketplace
+
+    ```yaml
+    spec:
+      config:
+        additionalTags:
+          - addTagName1
+          - addTagName2
+        ignoreTags:
+          - sensitive
+          - SENSITIVE
+        owner:
+          type: team
+          id: <team-id>
+    ```
+
+* After editing is complete and the file is saved, run the command to push the changes:
+
+    ```bash
+    axway central apply -f agent.yaml
+    ```
+
+## Embedded Traceability Agent
 
 Configured to set if headers should be processed, redact certain information, sample an amount of the transactional data, and set the owner for the transactional data.
 
@@ -154,6 +191,8 @@ Redaction settings can be added to the Embedded Traceability Agent that will be 
 
 ### SwaggerHub
 
+SwaggerHub requires additional configuration:
+
 * **owner** - the owner of the organization in SwaggerHub
 * **filter** - the filters to determine what kind of APIs to discover. Not setting the filter will discover all the APIs.
     * **visibility** - the visbility state of the API in   SwaggerHub, it can be either public, private, or both.
@@ -170,40 +209,3 @@ Redaction settings can be added to the Embedded Traceability Agent that will be 
       publication: Both 
     }
   ```
-
-## Embedded Discovery Agent (SwaggerHub)
-
-Add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
-
-* Pull the existing Discovery Agent from your environment and direct it to a file:
-
-    ```bash
-    axway central get -o yaml -s <environment> discoveryagent <agent-name> > agent.yaml
-    ```
-
-* Using an editor of your choice, open the `agent.yaml` file and add/change any or all values:
-    * **additionalTags** - a list of strings that will be added to Enterprise Marketplace resources that are created
-    * **ignoreTags** - tags that, if found on the data plane resource, will not be added to Enterprise Marketplace resources
-    * **owner** - the team owner that will be set when creating resources in Enterprise Marketplace
-        * type - set to `team`
-        * id - the id value found when viewing the team in Enterprise Marketplace
-
-    ```yaml
-    spec:
-      config:
-        additionalTags:
-          - addTagName1
-          - addTagName2
-        ignoreTags:
-          - sensitive
-          - SENSITIVE
-        owner:
-          type: team
-          id: <team-id>
-    ```
-
-* After editing is complete and the file is saved, run the command to push the changes:
-
-    ```bash
-    axway central apply -f agent.yaml
-    ```
