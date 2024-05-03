@@ -30,7 +30,7 @@ To list API services:
 
 1. Navigate to *Catalog > Service Registry*.
 2. The Service Registry can be filtered by:
-   
+
    * All - View all API services from all API Gateways and environments.
    * Design - View all API services from all Design repository environments.
    * Runtime Managed - View all API Services from all Runtime Managed API Gateways.
