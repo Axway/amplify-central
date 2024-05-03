@@ -8,13 +8,13 @@ Configure your runtime compliance with the Axway Central CLI.
 
 ## Before you start
 
-* Identify existing Amplify environments that have Managed APIs for the Graylog agent to correlate with the API calls monitored by Graylog API Security.
-* Gather following information that will be used by Agent to communicate with Graylog API Security.
+* Identify existing Amplify environments that have Managed APIs for the Graylog agent to correlate with the API calls monitored by Graylog API Security
+* Gather the following information that will be used by the agent to communicate with Graylog API Security:
     * The URL for Graylog
     * Username and password for authenticating with Graylog API Security
 * Ensure you have the following tools installed:
-    * The Axway Central CLI must be installed and Amplify platform connectivity are required to configure the Graylog agent.
-    * Kubectl - compatible version with your Kubernetes cluster with Graylog deployment.
+    * The Axway Central CLI must be installed and Amplify platform connectivity is required to configure the Graylog agent
+    * Kubectl - compatible version with your Kubernetes cluster with Graylog deployment
     * Helm 3.2.4 or later
 
 ## Objectives
@@ -150,12 +150,12 @@ The installation procedure will prompt for the following:
 
 Once you have answered all questions, the agent installation performs the following operations:
 
-* The Amplify Marketplace resources are created/updated.
-* If chose, a new Amplify Platform service account is created and public/private key-pair is generated.
+* The Amplify Marketplace resources are created/updated
+* If chose, a new Amplify Platform service account is created and public/private key-pair is generated
 * If chose, a new namespace is created in the Kubernetes cluster.
-* The Kubernetes secret with key pair for Amplify Platform service account is created in the selected namespace.
-* The Kubernetes secret with Graylog authentication config is created in the selected namespace.
-* The agent Helm override file is generated.
+* The Kubernetes secret with key pair for Amplify Platform service account is created in the selected namespace
+* The Kubernetes secret with Graylog authentication config is created in the selected namespace
+* The agent Helm override file is generated
 
 The current directory will contain the following files after the agent installation is completed:
 
