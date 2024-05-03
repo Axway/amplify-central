@@ -39,7 +39,7 @@ Set the access log group ARN value so that the Discovery Agent can set up loggin
 
 * **accessLogARN** - the ARN needed in both agents. When a Discovery Agent discovers a Stage, this arn will be set for its logging. The Traceability Agent will also read this log for reporting usage, metrics, and traffic events.
 
-## Embedded Discovery Agent
+## Embedded Discovery Agent (AWS)
 
 Configure to apply a filter to the dataplane resource for discovery, add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
 
@@ -78,7 +78,7 @@ Configure to apply a filter to the dataplane resource for discovery, add additio
     axway central apply -f agent.yaml
     ```
 
-## Embedded Traceability Agent
+## Embedded Traceability Agent (AWS)
 
 Configured to set if headers should be processed, redact certain information, sample an amount of the transactional data, and set the owner for the transactional data.
 
@@ -156,8 +156,8 @@ Redaction settings can be added to the Embedded Traceability Agent that will be 
 
 * **owner** - the owner of the organization in SwaggerHub
 * **filter** - the filters to determine what kind of APIs to discover. Not setting the filter will discover all the APIs.
-  * **visibility** - the visbility state of the API in   SwaggerHub, it can be either public, private, or both.
-  * **publication** - the publication state of the API in SwaggerHub, it can be either published, unpublished, or both.
+    * **visibility** - the visbility state of the API in   SwaggerHub, it can be either public, private, or both.
+    * **publication** - the publication state of the API in SwaggerHub, it can be either published, unpublished, or both.
 
   ```yaml
   spec:
@@ -171,7 +171,7 @@ Redaction settings can be added to the Embedded Traceability Agent that will be 
     }
   ```
 
-## Embedded Discovery Agent
+## Embedded Discovery Agent (SwaggerHub)
 
 Add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
 
