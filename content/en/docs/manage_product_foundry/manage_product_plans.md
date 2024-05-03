@@ -180,6 +180,10 @@ All corrupted resources from the original plan will not be copy into the duplica
 In case this operation leaves orphan quotas, the quotas will not be added to the duplicated plan.
 {{< /alert >}}
 
+{{< alert title="Note" color="primary" >}}
+When the original plan contains only one resource in error, the duplicate action is not avaialble as it will leave the plan without resources.
+{{< /alert >}}
+
 To duplicate a plan:
 
 1. Navigate to the *Product Foundry* and select a product.
