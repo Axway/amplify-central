@@ -177,11 +177,11 @@ Instead of creating a plan from scratch, you can save time by duplicating any ex
 
 {{< alert title="Note" color="primary" >}}
 All corrupted resources from the original plan will not be copy into the duplicated plan.
-In case this operation leaves orphan quotas, the quotas will not be added to the duplicated plan.
+If this operation leaves orphan quotas, the quotas will not be added to the duplicated plan.
 {{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}
-When the original plan contains only one resource in error, the duplicate action is not avaialble as it will leave the plan without resources.
+When the original plan contains only one resource in error, the duplicate action is not available as it will leave the plan without a resource.
 {{< /alert >}}
 
 To duplicate a plan:
