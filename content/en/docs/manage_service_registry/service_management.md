@@ -29,25 +29,25 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 To list API services:
 
 1. Navigate to *Catalog > Service Registry*.
-2. The Service Registry can be filtered by:
+2. Click on a tab to select a view:
 
-   * All - View all API services from all API Gateways and environments.
-   * Design - View all API services from all Design repository environments.
-   * Runtime Managed - View all API Services from all Runtime Managed API Gateways.
-   * Runtime Unmanaged - View all API Services in all Runtime Unmanaged environments.
+   * All - View all API services from all API Gateways and environments
+   * Design - View all API services from all Design repository environments
+   * Runtime Managed - View all API Services from all Runtime Managed API Gateways
+   * Runtime Unmanaged - View all API Services in all Runtime Unmanaged environments
 
 3. View the following information for all services:
 
-   * Environment
-   * Assets
-   * Owner
    * Version
-   * Modified date by User
+   * Assets
+   * Environment
+   * Owner
+   * Modified date by user
    * Security compliance grading
    * Design compliance grading
    * Runtime compliance grading
 
-You can filter the services by the Service type, Environment, Team Ownership, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
+You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
 ## View API service details
 
