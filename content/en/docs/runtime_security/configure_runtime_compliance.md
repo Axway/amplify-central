@@ -8,7 +8,7 @@ Configure your Runtime compliance with the Axway Central CLI.
 
 ## Before you start
 
-* Identify existing Amplify environments that have Managed APIs for the Graylog Agent to correlate with the API calls monitored by Graylog API Security.
+* Identify existing Amplify environments that have Managed APIs for the Graylog agent to correlate with the API calls monitored by Graylog API Security.
 * Gather following information that will be used by Agent to communicate with Graylog API Security.
     * The URL for Graylog
     * Username and password for authenticating with Graylog API Security
@@ -19,7 +19,7 @@ Configure your Runtime compliance with the Axway Central CLI.
 
 ## Objectives
 
-Learn how to install and configure the Graylog Agent for runtime compliance.
+Learn how to install and configure the Graylog agent for runtime compliance.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Before installing and configuring, make sure you have the following agent prereq
 
 ### Agent deployment prerequisites
 
-Graylog Agent is delivered as a Helm chart that can be deployed in the same Kubernetes cluster where Graylog API Security is deployed.
+Graylog agent is delivered as a Helm chart that can be deployed in the same Kubernetes cluster where Graylog API Security is deployed.
 
 The agent must have access to:
 
@@ -178,7 +178,7 @@ By default, the Helm commands are configured to use the latest available agent v
 Sample:
 
 ```shell
-To complete the Graylog Agent installation run the following commands:
+To complete the Graylog agent installation run the following commands:
   helm repo add axway https://helm.repository.axway.com --username=<client_id> --password=<client_secret>
   helm repo update
   helm upgrade --install --namespace agents-amplify graylog-agent axway/graylog-agent -f agent-overrides.yaml
