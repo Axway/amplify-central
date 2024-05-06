@@ -114,7 +114,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 4: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents.
+The Axway Central CLI will guide you through the configuration of the agents. For additional information, see [Add configuration to your Embedded agents with Axway Central CLI](/docs/integrate_with_central/cli_central/cli_embedded_agent_config/).
 
 Agents configuration will be installed in the directory from where the CLI runs.
 
