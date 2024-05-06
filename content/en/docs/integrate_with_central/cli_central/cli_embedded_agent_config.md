@@ -109,6 +109,23 @@ Add additional tags to resources on Enterprise Marketplace, ignore tags on datap
           id: <team-id>
     ```
 
+* Set the filter values:
+    * **filter** - the filters to determine what kind of APIs to discover. Not setting the filter will discover all the APIs.
+        * **visibility** - the visbility state of the API in   SwaggerHub, it can be either public, private, or both.
+        * **publication** - the publication state of the API in SwaggerHub, it can be either published, unpublished, or both.
+
+    ```yaml
+    spec:
+    type: SwaggerHub
+    config:
+      type: SwaggerHub
+      owner: <org_owner>
+      filter: { 
+        visibility: Public,
+        publication: Both 
+      }
+    ```
+
 * After editing is complete and the file is saved, run the command to push the changes:
 
     ```bash
@@ -188,24 +205,3 @@ Configured to set if headers should be processed, redact certain information, sa
 Redaction settings can be added to the Embedded Traceability Agent that will be used when finding and reporting transactional data to Enterprise Marketplace. The settings include the ability to customize the URL path of the transaction, the query arguments in the transaction, as well as the request and response headers.
 
 * Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent.
-
-### SwaggerHub
-
-SwaggerHub requires additional configuration:
-
-* **owner** - the owner of the organization in SwaggerHub
-* **filter** - the filters to determine what kind of APIs to discover. Not setting the filter will discover all the APIs.
-    * **visibility** - the visbility state of the API in   SwaggerHub, it can be either public, private, or both.
-    * **publication** - the publication state of the API in SwaggerHub, it can be either published, unpublished, or both.
-
-  ```yaml
-  spec:
-  type: SwaggerHub
-  config:
-    type: SwaggerHub
-    owner: <org_owner>
-    filter: { 
-      visibility: Public,
-      publication: Both 
-    }
-  ```
