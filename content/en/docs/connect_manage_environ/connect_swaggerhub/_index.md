@@ -88,7 +88,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. See [Embedded SwaggerHub agents' setup](/docs/connect_manage_environ/connect_swaggerhub_repository/embedded-agent-setup/) for the prerequisite setup on SwaggerHub agent.
+The Axway Central CLI will guide you through the configuration of the agents. See [Embedded SwaggerHub agents' setup](/docs/connect_manage_environ/connect_swaggerhub_repository/embedded-agent-setup/) for the prerequisite setup on SwaggerHub agent. For additional information, see [Add configuration to your Embedded agents with Axway Central CLI](/docs/integrate_with_central/cli_central/cli_embedded_agent_config/).
 
 Run the following command to start the configuration procedure:
 

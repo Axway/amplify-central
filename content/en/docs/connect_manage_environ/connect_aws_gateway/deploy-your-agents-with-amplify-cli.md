@@ -112,6 +112,8 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 AWS agents are delivered in a Docker image provided by Axway. You can run them from any Docker container that can access the Amplify Platform and AWS API Gateway.
 The Axway Central CLI will guide you through the configuration of the agents. Cloud formation templates are provided to help you setup either an EC2 architecture or an ECS-fargate architecture. You can also decide to not use any of them and deploy the Docker images in your own Docker container architecture.
 
+For additional information, see [Add configuration to your Embedded agents with Axway Central CLI](/docs/integrate_with_central/cli_central/cli_embedded_agent_config/).
+
 To start the configuration procedure, run the following command:
 
 ```shell
