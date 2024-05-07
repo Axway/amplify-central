@@ -153,9 +153,9 @@ Once you have answered all questions, the Embedded agent will be created. The pr
 
 While configuring Apigee settings you can add options that will limit what the agent discovers and tracks for API Metrics.
 
-* Environment filtering - By default, the agent will discover all API proxies within your Apigee, regardless of the Apigee environment they are deployed to. To modify this behavior: 
+* Environment filtering - By default, the agent will discover all API proxies within your Apigee, regardless of the Apigee environment they are deployed to. To modify this behavior:
     * **environment**: the agent will only discover proxies deployed to the specified environment. This will also restrict the agent to gather API metric data for only the environment that is configured.
-* Metric filtering - By default, the agent will gather all API metric data for all discovered APIs. To modify this behavior: 
+* Metric filtering - By default, the agent will gather all API metric data for all discovered APIs. To modify this behavior:
     * **filterMetrics**: set to true (default) to restrict gathering API metrics for only discovered APIs. Set to false for the opposite behavior.
     * **filteredAPIs**: list of API names that may be provided to further restrict the APIs that the agent gathers metrics for.
 
