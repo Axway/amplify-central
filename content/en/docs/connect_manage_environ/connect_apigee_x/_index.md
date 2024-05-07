@@ -141,14 +141,47 @@ The installation procedure will prompt for the following:
    * **Project ID**: the Project ID for your Google Cloud Platform project
    * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
    * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
-   * **Filter Metrics**: set to true (default) for API metrics filtering
-   * **Filtered APIs**: enter APIs to filter for metrics, or leave empty to use all discovered APIs:
-     * to filter discovered APIs: filterAPIs: []
-     * to filter specific APIs: filterAPIs: ["PetStore", "CatFacts"]
-   * Set how often the Embedded agent should check Apigee for changes, preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
+   * **Environment**: filter proxies (discovery)/filter metrics (traceability). For more information see [Filter settings](#filter-settings)
+   * **Filter Metrics**: set to true (default) for API metrics filtering. For more information see [Filter settings](#filter-settings)
+   * **Filtered APIs**: enter APIs names that metrics should be gathered for. If blank, gathers metrics for all discovered APIs. For more information see [Filter settings](#filter-settings)
+   * Set how often the Embedded agent should check Apigee for changes. Preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover Apigee resources after installation is complete
 
 Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GCP and Apigee. If set to discover Apigee resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
+
+### Filter settings
+
+While configuring Apigee settings you can add options that will limit what the agent discovers and tracks for API Metrics.
+
+* Environment filtering - By default, the agent will discover all API proxies within your Apigee, regardless of the Apigee environment they are deployed to. To modify this behavior:
+    * **environment**: the agent will only discover proxies deployed to the specified environment. This will also restrict the agent to gather API metric data for only the environment that is configured.
+* Metric filtering - By default, the agent will gather all API metric data for all discovered APIs. To modify this behavior:
+    * **filterMetrics**: set to true (default) to restrict gathering API metrics for only discovered APIs. Set to false for the opposite behavior.
+    * **filteredAPIs**: list of API names that may be provided to further restrict the APIs that the agent gathers metrics for.
+
+Here is an example of using these settings in the Dataplane resource file.
+
+```yaml
+...
+group: management
+apiVersion: v1alpha1
+kind: Dataplane
+...
+spec:
+  type: Apigee
+  config:
+    mode: proxy
+    type: Apigee
+    projectId: rd-amplify-apigee-x
+    developerEmail: axway-agent@axway.com
+    environment: test
+    metricsFilter:
+      filterMetrics: true
+      filteredAPIs:
+        - PetStore
+```
+
+{{< alert title="Note" color="primary" >}}The agent will only discover API Proxies deployed to the `test` environment. While gathering API metrics, the agent will filter by the `test` environment and additionally check that the API Proxy name is included in the `filteredAPIs` list.{{< /alert >}}
 
 ## Related topics
 
