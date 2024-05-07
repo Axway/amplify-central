@@ -157,7 +157,7 @@ While configuring Apigee settings you can add options that will limit what the a
     * **environment**: the agent will only discover proxies deployed to the specified environment. This will also restrict the agent to gather API metric data for only the environment that is configured.
 * Metric filtering - By default, the agent will gather all API metric data for all discovered APIs. To modify this behavior: 
     * **filterMetrics**: set to true (default) to restrict gathering API metrics for only discovered APIs. Set to false for the opposite behavior.
-    * **filterAPIS**: list of API names that may be provided to further restrict the APIs that the agent gathers metrics for.
+    * **filterAPIs**: list of API names that may be provided to further restrict the APIs that the agent gathers metrics for.
 
 Here is an example of using these settings in the Dataplane resource file.
 
