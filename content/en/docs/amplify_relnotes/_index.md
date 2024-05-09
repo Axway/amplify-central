@@ -22,37 +22,43 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace May 3 2024](/docs/amplify_relnotes/20240503_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.81. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.82. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.77 / TA=v1.1.79
-* **AWS Gateway using SDK 2.0** - DA=v1.1.62 / TA-v1.1.65
-* **Azure latest release** - DA=v1.1.68 / TA=v1.1.74
-* **Istio 1.9.5** - DA=v1.0.34 / TA=v2.0.80
-* **Apigee Edge** - Agent version 0.1.35
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.46
-* **Software AG webMethods** - 0.0.23
-* **Kong Gateway** - 1.0.6
-* **GitLab** - 1.0.4
-* **Kafka Cluster** - DA=v1.0.4 / TA=v1.0.4
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.79 / TA=v1.1.80
+* **AWS Gateway using SDK 2.0** - DA=v1.1.63 / TA-v1.1.66
+* **Azure latest release** - DA=v1.1.69 / TA=v1.1.75
+* **Istio 1.9.5** - DA=v1.0.35 / TA=v2.0.81
+* **Apigee Edge** - Agent version 0.1.37
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.47
+* **Software AG webMethods** - 0.0.24
+* **Kong Gateway** - 1.0.8
+* **GitLab** - 1.0.5
+* **Kafka Cluster** - DA=v1.0.5 / TA=v1.0.45
 
-Supported Saas (embedded) Agents:
+Supported SaaS (embedded) Agents:
 
 * **AWS Embedded Service**
 * **Apigee X Embedded Service**
 * **GitHub Embedded Service**
+* **Azure Embedded Service**
+* **SwaggerHub Embedded Service**
+
+Runtime Compliance Agent:
+
+* **Graylog API Security** - On-premise Agent version 1.0.4
 
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**On-premise agents** |         |
-| What's new: | None |
-| Bug fixes: | None. |
+| What's new: | **Axway API Management Gateway Agent** - SOAP API subscriptions. <br />**Graylog API Security Agent** - New agent. |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. <br />**Mulesoft Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | **Azure Discovery and Traceability Agents** - New agents. <br />**SwaggerHub Agent** - New agent. |
+| Bug fixes: | **Apigee X SaaS Agent** - See release note. |
 | <br />**Axway CLI** |       |
-| What's new: | None. |
+| What's new: | Graylog and Azure SaaS agent support. <br />Metrics filtering for Apigee X. |
 | Bug fixes: | None. |
 | <br />**Axway Central CLI** |       |
 | What's new: | None. |
@@ -62,15 +68,15 @@ Supported Saas (embedded) Agents:
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Duplicate plan. |
+| Bug fixes: | See release note. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
+| What's new: | Custom billing integration. <br />Advanced search result page. <br />Script to migrate API Manager applications to Amplify Enterprise Marketplace applications. |
 | Bug fixes: | None. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
