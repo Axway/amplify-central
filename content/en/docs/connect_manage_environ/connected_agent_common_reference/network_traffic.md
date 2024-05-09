@@ -18,7 +18,7 @@ The destination for:
 * API definition (Swagger or WSDL) and API documentation data is `apicentral.axway.com`
 * API Event data, the transaction summary and headers, is `ingestion.datasearch.axway.com` or `ingestion.visibility.eu-fr.axway.com`
 * Subscription notification for getting platform user information is `platform.axway.com`
-* API usage statistics, the number of calls placed to, is `https://lighthouse.admin.axway.com`
+* Usage reporting, the number of API transactions, is `platform.axway.com`
 
 ## Data exchanged
 

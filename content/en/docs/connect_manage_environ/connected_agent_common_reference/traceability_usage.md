@@ -23,7 +23,7 @@ The On-premise Traceability Agent is attached to a gateway and monitors the traf
 
 * **Transaction Metrics** event: reports the total number of API calls during a period of time. This feature cannot be deactivated.  The Traceability Agent sends the Transaction Metrics to the database storage for display on *Business Insights > API Health* (default is 15 minutes). For more information on how to see an aggregate view of all transactions, see [Business Insights](/docs/get_actionable_insights/business_insights/).
 * **Platform Usage** event: reports the total number of API calls during a period of time. This feature cannot be deactivated.  The Traceability Agent sends the Platform Usage counts to the database storage for display on *Organization > Usage* (default is daily). To clarify, the Platform Usage for a day is typically sent after a day has passed. This would make Platform Usage a lagging indicator compared to API Health by at most a whole day.
-* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report gateway usage. The Transaction events are sent as soon as the Traceability Agent processes the transaction event logs.  
+* **Transaction** event: reports the transaction summary (API name, duration, status), and the transaction details (request/response headers from the frontend and backend of the API). This feature is optional and not required to report gateway usage. The Transaction events are sent as soon as the Traceability Agent processes the transaction event logs.
 
 The SaaS (Embedded) Traceability Service is attached to a gateway and monitors the traffic crossing it. The collected traffic is reported to Amplify platform in different events:
 
@@ -166,7 +166,7 @@ Use the following instructions to set up usage reporting in offline mode.
 
 To report usage to Amplify platform, the Traceability Agent must be configured, installed, and connected to the gateway to be monitored.
 
-To configure the agent, Amplify platform connectivity is required for creating the installables. This action can be performed from any machine that has the correct Amplify platform access (refer to above urls and IPs). The installables can be copied to a machine with no external connections and the agents can be used without connectivity to the Amplify platform. The Lighthouse URL is not required for this mode. Once configured, the agent and its configuration must be copied to the gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
+To configure the agent, Amplify platform connectivity is required for creating the installables. This action can be performed from any machine that has the correct Amplify platform access (refer to above urls and IPs). The installables can be copied to a machine with no external connections and the agents can be used without connectivity to the Amplify platform. Once configured, the agent and its configuration must be copied to the gateway machine so that it can access the event logs or open traffic logs to start collecting the usage.
 
 This procedure will help you to configure and install the traceability agent:
 
