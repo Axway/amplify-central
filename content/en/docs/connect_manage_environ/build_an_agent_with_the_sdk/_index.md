@@ -42,11 +42,11 @@ go install github.com/Axway/agent-sdk/
 | util         | This package has SDK utility packages for use by all agents                                                                                          |
 | watchmanager | This package provides tooling to subscribe to API server resource events over gRPC [Watch manager library](./pkg/watchmanager/README.md)            |
 
-[Getting started to build discovery agent](./docs/discovery/index.md)  **Lisa, will need a separate section for just this topic**
+[Getting started to build discovery agent](./docs/discovery/index.md)  **Lisa, will need his to link to the separate section for just this topic**
 
-[Getting started to build traceability agent](./docs/traceability/index.md) **Lisa, will need a separate section for just this topic**
+[Getting started to build traceability agent](./docs/traceability/index.md) **Lisa, will this to link to the separate section for this topic**
 
-[Additional Libraries](./docs/utilities/index.md) **Lisa, will need a separate section for just this topic**
+[Additional Libraries](./docs/utilities/index.md) **Lisa, will need this to link to the separate section for this topic**
 
 ### Sample projects
 
