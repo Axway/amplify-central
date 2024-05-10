@@ -399,7 +399,7 @@ Events in the WatchTopic are sequential. They remain in the WatchTopic for seven
 
 2. You must now build a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk) to listen to the WatchTopic.
 
-    * Sample of gRPC client source code: <https://github.com/Axway/agent-sdk/tree/main/samples/watchclient>
+    * [Sample of gRPC client source code](https://github.com/Axway/agent-sdk/tree/main/samples/watchclient)
 
 3. You must compile this source code with go compiler to get the executable: `go make`
 4. For this client to run, you must have an Amplify Service Account with Central Admin rights. The service account key pair must be in the same directory with the gRPC client.
@@ -535,4 +535,4 @@ If the invoice status is set to `Error` and you want to process it again, simply
 
 * Use the subscriptioninvoices API to detect invoices that are pending actions or in specific state: `AMPLIFY_CENTRAL_URL/apis/catalog/v1alpha1/subscriptioninvoices?query=billing.payment.type==custom;state.name==draft;status.level==Pending`
 
-The API Specifications reference can be found here: <https://generator.swagger.io/?url=https://apicentral.axway.com/apis/docs#/catalog/list_catalog_v1alpha1_Subscription_SubscriptionInvoice>
+The API Specifications reference can be found [here](https://generator.swagger.io/?url=https://apicentral.axway.com/apis/docs#/catalog/list_catalog_v1alpha1_Subscription_SubscriptionInvoice).
