@@ -39,7 +39,7 @@ Click **API Traffic** to view the traffic information for the API or App. This v
 
 You can filter by environments, APIs, apps, methods, status codes, and a pre-configured time range or customize your own.
 
-The total number of items displayed below the filters are based on the configuration of agents and my not represent maximum 10% of transactions. Each individual item provides the following data:
+The total number of items displayed below the filters are based on the configuration of agents and may not represent maximum 10% of transactions. Each individual item provides the following data:
 
 * Status
 * Method
