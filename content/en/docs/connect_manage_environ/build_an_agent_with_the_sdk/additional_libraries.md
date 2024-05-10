@@ -5,11 +5,11 @@ draft: false
 weight: 30
 ---
 
-# Amplify Agents SDK Additional Libraries
+## Amplify Agents SDK Additional Libraries
 
 In addition to the core features provided by Amplify Agents SDK around API discovery and traceability, it also provides some of the helpful libraries that developers can use while building agent as and where needed.
 
-# REST API HTTP Client
+## REST API HTTP Client
 
 The agent provides support for creating HTTP clients with *api* package that can be used for making HTTP request and processing the response. The HTTP Client can be initialized with TLS security (*config.TLSConfig*) and can use proxy.
 
@@ -22,17 +22,17 @@ The package provides *NewClient()* method to create a new HTTP client. This meth
 
 The HTTP client interface provides *Send()* method which takes an object of *api.Request* struct. The *api.Request* identifies the HTTP request to be sent and holds following properties
 
-- Method : Identifies the HTTP method to be used for the request. Supported values are "GET", "PUT", "POST" and "DELETE"
-- URL : Specifies the target HTTP endpoint where the request will be sent
-- QueryParams: : Map of key-value pairs that will be added as query parameter to HTTP request
-- Headers : Map of key-value pairs that will be added as request headers
-- Body: Represents the body that is used for PUT and POST requests.
+* Method : Identifies the HTTP method to be used for the request. Supported values are "GET", "PUT", "POST" and "DELETE"
+* URL : Specifies the target HTTP endpoint where the request will be sent
+* QueryParams: : Map of key-value pairs that will be added as query parameter to HTTP request
+* Headers : Map of key-value pairs that will be added as request headers
+* Body: Represents the body that is used for PUT and POST requests.
 
 The *Send()* method of the HTTP client returns an object of type *api.Response* which holds following properties
 
-- Code : Represents the HTTP response code returned for HTTP request
-- Header : Map of key-value pairs that represents HTTP response headers
-- Body : Represents the body returned as HTTP response.
+* Code : Represents the HTTP response code returned for HTTP request
+* Header : Map of key-value pairs that represents HTTP response headers
+* Body : Represents the body returned as HTTP response.
 
 Below is a sample of constructing the request, use the HTTP client to send the request and receive response
 
@@ -60,7 +60,7 @@ Below is a sample of constructing the request, use the HTTP client to send the r
     log.Debug("Body : " + string(response.Body))
 ```
 
-# Cache
+## Cache
 
 The Amplify Agents SDK provides an in-memory cache using *cache* package that developers can use to store items that are frequently used for faster access. The cache stores items based on key and optionally secondary key if needed by the implementation. The items can be queried using either key or secondary key assigned to the item. The Amplify Agents SDK exposes the following interface which that describes the methods provided by *cache*
 
@@ -122,7 +122,7 @@ obj.prop = 222
 isChanged, err := objCache.HasItemChanged("key", obj)
 ```
 
-# Health checker
+## Health checker
 
 The Amplify Agents SDK implements a health check service that gets initialized during agent initialization. The service calls the list of registered callbacks to perform the check on the corresponding service. The service also exposed an endpoint over port 8080, that users can use to make HTTP based call to verify health check of the agent overall and of individual components (registered health check callbacks). The health check endpoint port is configurable using *status.port* config.
 
@@ -153,7 +153,7 @@ func (c *v7Client) healthcheck(name string) (status *hc.Status) {
 }
 ```
 
-# Logging
+## Logging
 
 The Amplify Agents SDK utilizes [logrus](https://github.com/sirupsen/logrus/blob/master/README.md) and provides a structured logger that can be used by agent implementation to have unified logging. The Amplify Agents SDK setup the logger during the initialization. Below are the list of configuration properties that Amplify Agents SDK provides to configure the logger. The logger supports both stdout and file outputs and can log in line or JSON format. The logger provided by Amplify Agents SDK supports log rotation based on size and can keep the configured number of backups of old log files.
 

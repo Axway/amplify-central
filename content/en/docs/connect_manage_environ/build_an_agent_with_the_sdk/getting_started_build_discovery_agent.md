@@ -5,47 +5,46 @@ draft: false
 weight: 10
 ---
 
-# Building Discovery Agent
+## Building Discovery Agent
 
 The Amplify Central Discovery Agents can be used for discovering APIs managed by external API Gateway and publish API Server resources to Amplify Central. The Amplify Agents SDK helps in building discovery agent by providing the necessary config, command line parser and interfaces to manage the communication with Amplify Central.
 
-## Table of Contents
+### Table of Contents
 
-- [Building Discovery Agent](#building-discovery-agent)
-  - [Table of Contents](#table-of-contents)
-  - [Central Configuration](#central-configuration)
-    - [Configuration interfaces](#configuration-interfaces)
-  - [Agent Configuration](#agent-configuration)
-    - [Sample Agent configuration definition](#sample-agent-configuration-definition)
-    - [Sample Agent YAML configuration](#sample-agent-yaml-configuration)
-  - [Setting up command line parser and binding agent config](#setting-up-command-line-parser-and-binding-agent-config)
-    - [Sample of agent command initialization and agent config setup](#sample-of-agent-command-initialization-and-agent-config-setup)
-  - [Filtering](#filtering)
-    - [Exists](#exists)
-    - [Any](#any)
-    - [Contains](#contains)
-    - [MatchRegEx](#matchregex)
-  - [Processing Discovery](#processing-discovery)
-    - [Unstructured data additional properties](#unstructured-data-additional-properties)
-    - [Sample of creating service body using the builder](#sample-of-creating-service-body-using-the-builder)
-  - [Publishing changes to Central](#publishing-changes-to-central)
-    - [Sample of publishing API to Amplify Central](#sample-of-publishing-api-to-amplify-central)
-    - [Sample of published API server resources](#sample-of-published-api-server-resources)
-  - [Subscriptions](#subscriptions)
-  - [Marketplace Provisioning](#marketplace-provisioning)
-  - [Validating ConsumerInstance](#validating-consumerinstance)
-  - [Registering handler for API Server events](#registering-handler-for-api-server-events)
-    - [Example](#example)
-  - [Building the Agent](#building-the-agent)
-    - [Pre-requisites for executing the agent](#pre-requisites-for-executing-the-agent)
-  - [Executing Discovery Agent](#executing-discovery-agent)
+* [Building Discovery Agent](#building-discovery-agent)
+    * [Table of Contents](#table-of-contents)
+    * [Central Configuration](#central-configuration)
+        * [Configuration interfaces](#configuration-interfaces)
+    * [Agent Configuration](#agent-configuration)
+        * [Sample Agent configuration definition](#sample-agent-configuration-definition)
+        * [Sample Agent YAML configuration](#sample-agent-yaml-configuration)
+    * [Setting up command line parser and binding agent config](#setting-up-command-line-parser-and-binding-agent-config)
+        * [Sample of agent command initialization and agent config setup](#sample-of-agent-command-initialization-and-agent-config-setup)
+    * [Filtering](#filtering)
+        * [Exists](#exists)
+        * [Any](#any)
+        * [Contains](#contains)
+        * [MatchRegEx](#matchregex)
+    * [Processing Discovery](#processing-discovery)
+        * [Unstructured data additional properties](#unstructured-data-additional-properties)
+        * [Sample of creating service body using the builder](#sample-of-creating-service-body-using-the-builder)
+    * [Publishing changes to Central](#publishing-changes-to-central)
+        * [Sample of publishing API to Amplify Central](#sample-of-publishing-api-to-amplify-central)
+        * [Sample of published API server resources](#sample-of-published-api-server-resources)
+    * [Subscriptions](#subscriptions)
+    * [Marketplace Provisioning](#marketplace-provisioning)
+    * [Validating ConsumerInstance](#validating-consumerinstance)
+    * [Registering handler for API Server events](#registering-handler-for-api-server-events)
+        * [Example](#example)
+    * [Building the Agent](#building-the-agent)
+        * [Pre-requisites for executing the agent](#pre-requisites-for-executing-the-agent)
+    * [Executing Discovery Agent](#executing-discovery-agent)
 
-## Central Configuration
+### Central Configuration
 
 The Amplify Agents SDK provides a predefined configuration that can be set up based on yaml file, using environment variables or passed as command line flags. This configuration is used for setting up parameter that will be used for communicating with Amplify Central. In addition, it is also used to set up subscription processing, see [subscriptions](./subscriptions.md)
 
 Below is the list of Central configuration properties in YAML and their corresponding environment variables that can be set to override the config in YAML.
-
 
 | YAML property                  | Variable name                  | Description                                                                                                                                                                                                                                                                                                              |
 | ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -86,7 +85,7 @@ central:
         publicKey: ./public_key.pem
 ```
 
-### Configuration interfaces
+#### Configuration interfaces
 
 Amplify Agents SDK expose the following interfaces to retrieve the configuration items.
 
@@ -164,11 +163,11 @@ type TLSConfig interface {
 }
 ```
 
-## Agent Configuration
+### Agent Configuration
 
 The agent can define a struct that holds the configuration it needs specifically to communicate with the external API Gateway. The agent config struct properties can be bound to command line processor to set up config, see [Setting up command line parser and binding agent config](#setting-up-command-line-parser-and-binding-agent-config)
 
-### Sample Agent configuration definition
+#### Sample Agent configuration definition
 
 ```
 type AgentConfig struct {
@@ -243,7 +242,7 @@ func (a *AgentConfig) ApplyResources(agentResource *v1.ResourceInstance) error {
 
 ```
 
-### Sample Agent YAML configuration
+#### Sample Agent YAML configuration
 
 ```
 central:
@@ -267,11 +266,11 @@ azure:
     filter: tag.Contains("somevalue")
 ```
 
-## Setting up command line parser and binding agent config
+### Setting up command line parser and binding agent config
 
 Amplify Agents SDK internally uses [Cobra](https://github.com/spf13/cobra) for providing command line processing and [Viper](https://github.com/spf13/viper) to bind the configuration with command line processing and YAML based config file. The Amplify Agents SDK exposes an  interface for predefined configured root command for Agent that set up Central Configuration. The Agent root command allows to hook in the main routine for agent execution and a callback method that get called on initialization to set up agent specific config. The Amplify Agents SDK root command also allows the agent to set up command line flags and properties that are agent specific and bind these flag/properties to agent config.
 
-### Sample of agent command initialization and agent config setup
+#### Sample of agent command initialization and agent config setup
 
 ```
 
@@ -330,7 +329,7 @@ func initConfig(centralConfig corecfg.CentralConfig) (interface{}, error) {
 
 ```
 
-## Filtering
+### Filtering
 
 The Amplify Agents SDK provides github.com/Axway/agent-sdk/pkg/filter package to allow setting up config for filtering the discovered APIS for publishing them to Amplify Central. The filter expression to be evaluated for discovering the API from Axway Edge API Gateway. The filter value is a conditional expression that can use logical operators to compare two value.
 The conditional expression must have "tag" as the prefix/selector in the symbol name. For e.g.
@@ -351,7 +350,7 @@ azure:
 
 In addition to logical expression, the filter can hold call based expressions. Below are the list of supported call expressions
 
-### Exists
+#### Exists
 
 Exists call can be made to evaluate if the tag name exists in the list of tags on API. This call expression can be used as unary expression
 For e.g.
@@ -361,7 +360,7 @@ azure:
    filter: tag.SOME_TAG.Exists()
 ```
 
-### Any
+#### Any
 
 Any call can be made in a simple expression to evaluate if the tag with any name has specified value or not in the list of tags on the API.
 For e.g.
@@ -371,7 +370,7 @@ azure:
    filter: tag.Any() == "Tag with some value" || tag.Any() != "Tag with other value"
 ```
 
-### Contains
+#### Contains
 
 Contains call can be made in a simple expression to evaluate if the the specified tag contains specified argument as value. This call expression requires string argument that will be used to perform lookup in tag value
 For e.g.
@@ -380,7 +379,7 @@ For e.g.
 tag.Contains("somevalue")
 ```
 
-### MatchRegEx
+#### MatchRegEx
 
 MatchRegEx call can be used for evaluating the specified tag value to match specified regular expression. This call expression requires a regular expression as the argument.
 For e.g.
@@ -389,10 +388,9 @@ For e.g.
 tag.MatchRegEx("(some){1}")
 ```
 
-## Processing Discovery
+### Processing Discovery
 
 The agent can discover APIs in external API Gateway based on the capability it provides. This could be event based mechanism where config change from API gateway can be received or agent can query/poll for the API specification using the dataplane specific SDK. To process the discovery and publishing the definitions to Amplify Central the following properties are needed.
-
 
 | API Service property | Description                                                                                                                                |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -417,10 +415,9 @@ To set these properties the Amplify Agents SDK provides a builder (ServiceBodyBu
 
 In case where the *SetResourceType* method is not explicitly invoked, the builder uses the spec content to discovers the type ("swaggerv2", "oas2", "oas3", "wsdl", "protobuf", "asyncapi" or "unstructured").
 
-### Unstructured data additional properties
+#### Unstructured data additional properties
 
 Along with the above properties the following properties are on the ServiceBodyBuilder for unstructured data only.
-
 
 | API Service property    | Description                              | Default (not set)   |
 | ----------------------- | ---------------------------------------- | ------------------- |
@@ -431,7 +428,7 @@ Along with the above properties the following properties are on the ServiceBodyB
 
 The builder will use these properties when set, or use the default if not.
 
-### Sample of creating service body using the builder
+#### Sample of creating service body using the builder
 
 ```
 func (a *AzureClient) buildServiceBody(azAPI apim.APIContract, apiSpec []byte) (apic.ServiceBody, error) {
@@ -493,24 +490,24 @@ func (a *AzureClient) getAzureAPIAuthPolicy(azAPI apim.APIContract) string {
 
 ```
 
-## Publishing changes to Central
+### Publishing changes to Central
 
 The Agent can use the service body definition built by earlier set up and call the *PublishAPI* method in the *agent* package to publish the discovered API to Amplify Central. The method uses the service body to create following API server resources
 
-- APIService: Resource representing an Amplify Central API Service.
-- APIServiceRevision: Resource representing an Amplify Central API Service Revision
-- APIServiceInstance: Resource representing the deployed instance of the revision
-- ConsumerInstance: Represents the resources holding information about publishing assets to Amplify Unified Catalog
+* APIService: Resource representing an Amplify Central API Service.
+* APIServiceRevision: Resource representing an Amplify Central API Service Revision
+* APIServiceInstance: Resource representing the deployed instance of the revision
+* ConsumerInstance: Represents the resources holding information about publishing assets to Amplify Unified Catalog
 
 When *PublishAPI* is called for the first time for the discovered API, each of the above mentioned resources gets created with generated names. On subsequent calls to the method for the same discovered API, the *APIService* and *ConsumerInstance* resources are updated, while a new resource for *APIServiceRevision* is created to represent the updated revision of the API. For update, the *APIServiceInstance* resources is updated unless the endpoint in the service definitions are changed which triggers a creation of a new *APIServiceInstance* resource.
 
 The *PublishAPI* method while creating/updating the API server resources set the following attributes.
 
-- externalAPIID: Holds the ID of API discovered from remote API Gateway
-- externalAPIName: Holds the name of the API discovered from remote API Gateway
-- createdBy: Holds the name of the Agent creating the resource
+* externalAPIID: Holds the ID of API discovered from remote API Gateway
+* externalAPIName: Holds the name of the API discovered from remote API Gateway
+* createdBy: Holds the name of the Agent creating the resource
 
-### Sample of publishing API to Amplify Central
+#### Sample of publishing API to Amplify Central
 
 ```
  serviceBody, err := buildServiceBody(azAPI, exportResponse.Body)
@@ -521,7 +518,7 @@ The *PublishAPI* method while creating/updating the API server resources set the
  }
 ```
 
-### Sample of published API server resources
+#### Sample of published API server resources
 
 *Note:* Few details are removed/updated in the sample resource definitions below for simplicity.
 
@@ -613,15 +610,15 @@ spec:
 
 ```
 
-## Subscriptions
+### Subscriptions
 
 See [Subscriptions](./subscriptions.md)
 
-## Marketplace Provisioning
+### Marketplace Provisioning
 
 See [Provisioning](./provisioning.md)
 
-## Validating ConsumerInstance
+### Validating ConsumerInstance
 
 Amplify Central *ConsumerInstance* resources hold information about the assets published to Amplify Unified Catalog. In order to keep these assets in sync with the associated discovered API, a background job runs to validate each *ConsumerInstance*. If the resource is no longer valid, it is an indication that the API has likely been removed and the resource can be cleaned up.
 
@@ -642,35 +639,39 @@ func (a *Agent) validateAPI(apiID, stageName string) bool {
 
 Returning true from the validator will indicate that the *ConsumerInstance* is still valid. The Amplify Agents SDK will not remove the resource. Returning false will indicate to the Amplify Agents SDK that the resource should be removed, thereby keeping the resources and the APIs in sync.
 
-## Registering handler for API Server events
+### Registering handler for API Server events
+
 The Agent SDK maintains a cache of API server resources for its internal processing. These caches are populated by fetching the API server resource using an API call. The API call is performed at a regular interval. With the support for streaming API server resource events over gRPC, the Agent SDK does not require periodic API calls. The SDK will instead use the gRPC based watch service to receive events on API server resources. The Agent SDK creates a gRPC connection with the service and subscribes to the service based on a WatchTopic resource in the API server. The Agent SDK initialization creates the WatchTopic resource which defines the filters based on the type of agent, and the type of API server resources it needs for its internal processing.
 
 When running in gRPC mode to watch for API server resource events, the agent specific implementation can choose to register an event handler to receive the API server resource event based on a watch topic filter that the Agent SDK registers.
 
 The registration requires clients to implement the following interface as the event handler
+
 ```
 type Handler interface {
-	// Handle receives the type of the event (add, update, delete), event metadata and the API Server resource.
-	Handle(action proto.Event_Type, eventMetadata *proto.EventMeta, resource *v1.ResourceInstance) error
+    // Handle receives the type of the event (add, update, delete), event metadata and the API Server resource.
+    Handle(action proto.Event_Type, eventMetadata *proto.EventMeta, resource *v1.ResourceInstance) error
 }
 ```
 
-The handler receives the following as parameters to the callback 
-- Event type:  specifies the type of operation on the API server resource("CREATED", "UPDATED", "DELETED" and "SUBRESOURCEUPDATED")
-- Event Metadata: holds the following metadata associated with the event
-  - WatchTopicID: ID of the subscribed watch topic resource
-  - WatchTopicSelfLink: Self link to the subscribed WatchTopic API server resource
-  - SequenceID: Sequence identifier for the event
-  - Subresource: Holds the name of the sub resource updated when the event type is "SUBRESOURCEUPDATED"
-- Resource Instance: The API server resource
+The handler receives the following as parameters to the callback
 
+* Event type:  specifies the type of operation on the API server resource("CREATED", "UPDATED", "DELETED" and "SUBRESOURCEUPDATED")
+* Event Metadata: holds the following metadata associated with the event
+    * WatchTopicID: ID of the subscribed watch topic resource
+    * WatchTopicSelfLink: Self link to the subscribed WatchTopic API server resource
+    * SequenceID: Sequence identifier for the event
+    * Subresource: Holds the name of the sub resource updated when the event type is "SUBRESOURCEUPDATED"
+* Resource Instance: The API server resource
 
 The agent specific implementation can use the following method in the agent package to register an event handler
+
 ```
 RegisterResourceEventHandler(name string, resourceEventHandler handler.Handler)
 ```
 
-### Example
+#### Example
+
 ```
 type ResourceClient struct {
   ...
@@ -707,7 +708,7 @@ func initConfig(centralConfig corecfg.CentralConfig) (interface{}, error) {
 }
 ```
 
-## Building the Agent
+### Building the Agent
 
 The agents are applications built using [Go programming language](https://golang.org/). Go is open source programming language that gets statically compiled and comes with a rich toolset to obtain packages and building executables. The Amplify Agents SDK uses the Go module as the dependency management which was introduced in Go 1.11. Go modules is collection of packages with go.mod file in its root directory which defines the modules source paths used in the packages as imports.
 
@@ -723,12 +724,12 @@ go mod verify
 After resolving the dependencies, run *make build* to compile the source and generate the binary executable for the target system.
 The Amplify Agents SDK provides support for specifying the version of the agent at the build time. The following variables can be set by compile flags to set up agent name, version, commit SHA and build time.
 
-- github.com/Axway/agent-sdk/pkg/cmd.BuildTime
-- github.com/Axway/agent-sdk/pkg/cmd.BuildVersion
-- github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha
-- github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName - this is an internal name
-- github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription - this is a friendly description that will be displayed in the --version and --help commands
-- github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion
+* github.com/Axway/agent-sdk/pkg/cmd.BuildTime
+* github.com/Axway/agent-sdk/pkg/cmd.BuildVersion
+* github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha
+* github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName - this is an internal name
+* github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription - this is a friendly description that will be displayed in the --version and --help commands
+* github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion
 
 The following is an example of the build command that can be configured in the Makefile
 
@@ -738,22 +739,22 @@ export version=`cat version` && \
 export commit_id=`git rev-parse --short HEAD` && \
 export sdk_version=`go list -m github.com/Axway/agent-sdk | awk '{print $$2}' | awk -F'-' '{print substr($$1, 2)}'` && \
 go build -tags static_all \
-	-ldflags="-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildTime=$${time}' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildVersion=$${version}' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha=$${commit_id}' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName=SampleDiscoveryAgent' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription=Sample Discovery Agent' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion=$${sdk_version}'" \
-	-a -o ${WORKSPACE}/bin/discovery_agent ${WORKSPACE}/main.go
+    -ldflags="-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildTime=$${time}' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildVersion=$${version}' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha=$${commit_id}' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName=SampleDiscoveryAgent' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription=Sample Discovery Agent' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion=$${sdk_version}'" \
+    -a -o ${WORKSPACE}/bin/discovery_agent ${WORKSPACE}/main.go
 ```
 
-### Pre-requisites for executing the agent
+#### Pre-requisites for executing the agent
 
-- An Axway Amplify Central subscription in the Amplify™ platform. See [Get started with Amplify Central](https://axway-open-docs.netlify.app/docs/central/quickstart).
-- An Amplify Central Service Account. See [Create a service account](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_install/#22-create-a-service-account-using-the-amplify-central-ui).
-- An Amplify Central environment. See [Create environment](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_environments/#create-an-environment).
+* An Axway Amplify Central subscription in the Amplify™ platform. See [Get started with Amplify Central](https://axway-open-docs.netlify.app/docs/central/quickstart).
+* An Amplify Central Service Account. See [Create a service account](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_install/#22-create-a-service-account-using-the-amplify-central-ui).
+* An Amplify Central environment. See [Create environment](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_environments/#create-an-environment).
 
-## Executing Discovery Agent
+### Executing Discovery Agent
 
 The Agent built using Amplify Agents SDK can be executed by running the executable. The agent on initialization tries to load the configuration from following sources and applies the configuration properties in the order described below.
 

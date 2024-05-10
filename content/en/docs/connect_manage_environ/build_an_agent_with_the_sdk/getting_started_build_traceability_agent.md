@@ -5,55 +5,55 @@ draft: false
 weight: 20
 ---
 
-# Building Traceability Agent
+## Building Traceability Agent
 
 The Amplify Central Traceability Agents can be used for monitoring the traffic for APIs that were discovered by Amplify Central Discovery Agent and publishing the traffic event to Amplify Central API Observer. The Amplify Agents SDK helps in building custom elastic beat as Amplify Central traceability agent by providing the necessary config, supported transports and interfaces to manage the communication with Amplify Central.
 
 The traceability agents are custom elastic beats which generally has two main components
 
-- a component that collects data
-- a component that publishes the data to specified output
+* a component that collects data
+* a component that publishes the data to specified output
 
 The Amplify Agents SDK provides implementation for component to publish the data to Amplify ingestion service either using lumberjack or HTTP protocol. The agent developers can implement the component to collect the data or use existing beat implementations (e.g. filebeat) to collect the data.
 
-To ingest the traffic related events for the Amplify Central Observer, the event is required to be in a specific structure. The Amplify Agents SDK provides definition for the log event (transaction.LogEvent) that can be used to setup the event data required by Amplify Central Observer service. The log event can be either of summary or transaction type. Refer to section [](#log_event_format) for the details. The agent developer can choose to implement the mapping from the collected data to log event required by Amplify Central Observer service either while the data is collected by the custom beat logic or by setup output event processor to perform the mapping. The output event processor are invoked when the publisher is processing the event to be published over specified transport.
+To ingest the traffic related events for the Amplify Central Observer, the event is required to be in a specific structure. The Amplify Agents SDK provides definition for the log event (transaction.LogEvent) that can be used to setup the event data required by Amplify Central Observer service. The log event can be either of summary or transaction type. Refer to section `[](#log_event_format)` for the details. The agent developer can choose to implement the mapping from the collected data to log event required by Amplify Central Observer service either while the data is collected by the custom beat logic or by setup output event processor to perform the mapping. The output event processor are invoked when the publisher is processing the event to be published over specified transport.
 
 The Amplify ingestion service authenticates the publish request using the token issued by AxwayID. For the lumberjack protocol the token is required as a field in event getting published. With HTTP, the ingestion service authenticates the request using bearer token in "Authorization" header.
 
 The Amplify Agents SDK provides a component for generating beat event from the mapped log event. This component take care of setting up the beat event with fields required by Amplify Central Observer service.
 
-## Table of Contents
+### Table of Contents
 
-- [Building Traceability Agent](#building-traceability-agent)
-  - [Table of Contents](#table-of-contents)
-    - [Central Configuration](#central-configuration)
-      - [Configuration interfaces](#configuration-interfaces)
-    - [Agent Specific Configuration](#agent-specific-configuration)
-      - [Sample Agent specific configuration definition](#sample-agent-specific-configuration-definition)
-    - [Amplify Ingestion output configuration](#amplify-ingestion-output-configuration)
-      - [Sample Agent YAML configuration](#sample-agent-yaml-configuration)
-    - [Setting up command line parser and binding agent config](#setting-up-command-line-parser-and-binding-agent-config)
-      - [Sample of agent command initialization and agent config setup](#sample-of-agent-command-initialization-and-agent-config-setup)
-    - [Initializing Agent/Custom elastic beat](#initializing-agentcustom-elastic-beat)
-    - [Transaction Event processing and Event Generation](#transaction-event-processing-and-event-generation)
-      - [Sample Transaction Summary](#sample-transaction-summary)
-      - [Sample Transaction Event](#sample-transaction-event)
-      - [Common Log Entry attributes](#common-log-entry-attributes)
-      - [Transaction Summary attributes](#transaction-summary-attributes)
-      - [Transaction Event attributes](#transaction-event-attributes)
-        - [HTTP Protocol specific attributes](#http-protocol-specific-attributes)
-    - [Traceability redaction](#traceability-redaction)
-      - [Setting up redaction and sanitization](#setting-up-redaction-and-sanitization)
-      - [Setting up redaction in YAML](#setting-up-redaction-in-yaml)
-      - [Using environment variables for redaction](#using-environment-variables-for-redaction)
-    - [Traceability sampling](#traceability-sampling)
-    - [Traceability usage reporting](#traceability-usage-reporting)
-      - [Offline usage reporting](#offline-usage-reporting)
-    - [Building the Agent](#building-the-agent)
-      - [Pre-requisites for executing the agent](#pre-requisites-for-executing-the-agent)
-    - [Executing Traceability Agent](#executing-traceability-agent)
+* [Building Traceability Agent](#building-traceability-agent)
+    * [Table of Contents](#table-of-contents)
+        * [Central Configuration](#central-configuration)
+            * [Configuration interfaces](#configuration-interfaces)
+        * [Agent Specific Configuration](#agent-specific-configuration)
+            * [Sample Agent specific configuration definition](#sample-agent-specific-configuration-definition)
+        * [Amplify Ingestion output configuration](#amplify-ingestion-output-configuration)
+            * [Sample Agent YAML configuration](#sample-agent-yaml-configuration)
+        * [Setting up command line parser and binding agent config](#setting-up-command-line-parser-and-binding-agent-config)
+            * [Sample of agent command initialization and agent config setup](#sample-of-agent-command-initialization-and-agent-config-setup)
+        * [Initializing Agent/Custom elastic beat](#initializing-agentcustom-elastic-beat)
+        * [Transaction Event processing and Event Generation](#transaction-event-processing-and-event-generation)
+            * [Sample Transaction Summary](#sample-transaction-summary)
+            * [Sample Transaction Event](#sample-transaction-event)
+            * [Common Log Entry attributes](#common-log-entry-attributes)
+            * [Transaction Summary attributes](#transaction-summary-attributes)
+            * [Transaction Event attributes](#transaction-event-attributes)
+                * [HTTP Protocol specific attributes](#http-protocol-specific-attributes)
+        * [Traceability redaction](#traceability-redaction)
+            * [Setting up redaction and sanitization](#setting-up-redaction-and-sanitization)
+            * [Setting up redaction in YAML](#setting-up-redaction-in-yaml)
+            * [Using environment variables for redaction](#using-environment-variables-for-redaction)
+        * Traceability sampling](#traceability-sampling)
+        * [Traceability usage reporting](#traceability-usage-reporting)
+            * [Offline usage reporting](#offline-usage-reporting)
+        * [Building the Agent](#building-the-agent)
+            * [Pre-requisites for executing the agent](#pre-requisites-for-executing-the-agent)
+        * [Executing Traceability Agent](#executing-traceability-agent)
 
-### Central Configuration
+#### Central Configuration
 
 The Amplify Agents SDK provides a predefined configuration that can be setup based on yaml file, using environment variables or passed as command line option. This configuration is used for setting up parameter that will be used for communicating with Amplify Central.
 
@@ -93,7 +93,6 @@ Below is the list of Central configuration properties in YAML and their correspo
 | central.cacheStoragePath       | CENTRAL_CACHESTORAGEPATH       | The file path the agent will use to persist internal cache (default value: ./data)                                                                 |
 | central.cacheStorageInterval   | CENTRAL_CACHESTORAGEINTERVAL   | The interval the agent will use to periodically check if the internal agent cache needs to be persisted (default value : 30 seconds)          |
 
-
 The following is a sample of Central configuration in YAML
 
 ```
@@ -110,7 +109,7 @@ central:
         publicKey: ./public_key.pem
 ```
 
-#### Configuration interfaces
+##### Configuration interfaces
 
 Amplify Agents SDK expose the following interfaces to retrieve the configuration items.
 
@@ -188,11 +187,11 @@ type TLSConfig interface {
 }
 ```
 
-### Agent Specific Configuration
+#### Agent Specific Configuration
 
 The agent can define a struct that holds the configuration it needs specifically to communicate with the external API Gateway. The agent config struct properties can be bound to command line processor to setup config, see [Setting up command line parser and binding agent config](#setting-up-command-line-parser-and-binding-agent-config)
 
-#### Sample Agent specific configuration definition
+##### Sample Agent specific configuration definition
 
 ```
 type GatewayConfig struct {
@@ -264,7 +263,7 @@ func (c *GatewayConfig) ApplyResources(agentResource *v1.ResourceInstance) error
 }
 ```
 
-### Amplify Ingestion output configuration
+#### Amplify Ingestion output configuration
 
 The Amplify Agents SDK provides a predefined configuration for setting up the output transport the agent is going to use for publishing the events.
 
@@ -285,7 +284,7 @@ Below is the list of traceability output transport configuration properties in Y
 | output.traceability.proxy_url         | TRACEABILITY_PROXYURL         | The URL for the HTTP or SOCK5 proxy for Amplify ingestion service for e.g.`<http://username:password@hostname:port>`. If empty, no proxy is defined. |
 | output.traceability.redaction         |                               | Refer to[Traceability redaction](#traceability-redaction)                                                                                            |
 
-#### Sample Agent YAML configuration
+##### Sample Agent YAML configuration
 
 ```
 apic_traceability_agent:
@@ -330,13 +329,13 @@ output.traceability:
 
 ```
 
-### Setting up command line parser and binding agent config
+#### Setting up command line parser and binding agent config
 
 Amplify Agents SDK internally uses [Cobra](https://github.com/spf13/cobra) for providing command line processing and [Viper](https://github.com/spf13/viper) to bind the configuration with command line processing and YAML based config file. The SDAmplify Agents K exposes an  interface for predefined configured root command for Agent that setup Central Configuration. The Agent root command allows to hook in the main routine for agent execution and a callback method that get called on initialization to setup agent specific config. The Amplify Agents SDK root command also allows the agent to setup command line flags and properties that are agent specific and bind these flag/properties to agent config.
 
 As traceability agents are custom elastic beat, the agent root command can be setup by wrapping beat root command which sets up the command flags/properties and command execution required by elastic beat.
 
-#### Sample of agent command initialization and agent config setup
+##### Sample of agent command initialization and agent config setup
 
 ```
 // RootCmd - Agent root command
@@ -397,7 +396,7 @@ func initConfig(centralConfig corecfg.CentralConfig) (interface{}, error) {
 
 ```
 
-### Initializing Agent/Custom elastic beat
+#### Initializing Agent/Custom elastic beat
 
 The traceability agent are custom beat which needs to implement the Beater interface defined in libbeat
 
@@ -462,16 +461,16 @@ func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
 }
 ```
 
-### Transaction Event processing and Event Generation
+#### Transaction Event processing and Event Generation
 
 The goal of the traceability agents is to publish API traffic events to Amplify ingestion service to allow computing statistics and monitor the transactions. To achieve this there are two kinds of log events that can be published thru traceability agents.
 
-- Transaction Summary : Summarizes the interaction between the client application and discovered API. The transaction summary log entry is used for computing the API Usage statistics and display the list of transactions on API Traffic page.
-- Transaction Event: Represents the interaction between services involved in the API transaction and provides details on the protocol being used in the interaction.
+* Transaction Summary : Summarizes the interaction between the client application and discovered API. The transaction summary log entry is used for computing the API Usage statistics and display the list of transactions on API Traffic page.
+* Transaction Event: Represents the interaction between services involved in the API transaction and provides details on the protocol being used in the interaction.
 
 This means that there will be a transaction summary log entry for API transaction flow from client but there could be multiple transaction events log entries involved in a transaction flow, first (leg 0) identifying the inbound interaction from client app to API endpoint exposed by the API Gateway and second(leg 1) identifying outbound interaction from API Gateway to backend API.
 
-#### Sample Transaction Summary
+##### Sample Transaction Summary
 
 ```
 {
@@ -503,7 +502,7 @@ This means that there will be a transaction summary log entry for API transactio
 }
 ```
 
-#### Sample Transaction Event
+##### Sample Transaction Event
 
 ```
 {
@@ -541,7 +540,7 @@ This means that there will be a transaction summary log entry for API transactio
 }
 ```
 
-#### Common Log Entry attributes
+##### Common Log Entry attributes
 
 The attributes below are to be included in both type of events.
 
@@ -557,7 +556,7 @@ The attributes below are to be included in both type of events.
 | trcbltPartitionId | Amplify platform organization identifier. Used by Amplify Ingestion service to send events to appropriate tenant |
 | type              | Identifies the type of log event (transactionSummary or transactionEvent)                                        |
 
-#### Transaction Summary attributes
+##### Transaction Summary attributes
 
 | Attribute Name    | Description                                                                                                    |
 |-------------------|----------------------------------------------------------------------------------------------------------------|
@@ -574,7 +573,7 @@ The attributes below are to be included in both type of events.
 | entryPoint.path   | HTTP Path                                                                                                      |
 | entryPoint.host   | HTTP Host request header                                                                                       |
 
-#### Transaction Event attributes
+##### Transaction Event attributes
 
 | Attribute Name | Description                                                                                          |
 |----------------|------------------------------------------------------------------------------------------------------|
@@ -587,7 +586,7 @@ The attributes below are to be included in both type of events.
 | status         | The status of the transaction leg                                                                    |
 | protocol       | Protocol(http or jms) specific details                                                               |
 
-##### HTTP Protocol specific attributes
+###### HTTP Protocol specific attributes
 
 | Attribute Name  | Description                                |
 |-----------------|--------------------------------------------|
@@ -885,7 +884,7 @@ func (p *EventProcessor) Process(events []publisher.Event) []publisher.Event {
 
 ```
 
-### Traceability redaction
+#### Traceability redaction
 
 The Amplify Agents SDK has the ability to handle redaction and sanitization of URL path, Query Arguments, Request and Response headers.  When building the transaction summary and protocol events the Amplify Agents SDK will apply these rules before sending to Amplify Central.
 
@@ -904,7 +903,7 @@ Below is the list of the redaction configuration properties in a YAML and their 
 | responseHeader.sanitize | TRACEABILITY_REDACTION_RESPONSEHEADER_SANITIZE | Determines what response header values to sanitize before sending to Amplify                |
 | maskingCharacters       | TRACEABILITY_REDACTION_MASKING_CHARACTERS      | Determines what characters are displayed as the sanitized response header values on Amplify |
 
-#### Setting up redaction and sanitization
+##### Setting up redaction and sanitization
 
 All of the SHOW properties above accept a keyMatch attribute that is a regular expressions to determine what path value, argument, or header may be sent to Amplify.
 
@@ -914,7 +913,7 @@ In order for the Sanitization to take place the argument name or header key must
 
 The regular expression syntax that may be applied can be found [here](https://golang.org/pkg/regexp/syntax/)
 
-#### Setting up redaction in YAML
+##### Setting up redaction in YAML
 
 ```yaml
 output.traceability:
@@ -944,7 +943,7 @@ output.traceability:
     maskingCharacters: "{*}" # sanitize using these characters to mask values 
 ```
 
-#### Using environment variables for redaction
+##### Using environment variables for redaction
 
 The default YAML in the example has the following setup for the redaction section. As long as this is not changed the environment variables below can set up the redaction.
 
@@ -978,7 +977,7 @@ TRACEABILITY_REDACTION_RESPONSEHEADER_SHOW=[{keyMatch:".*"}]
 TRACEABILITY_REDACTION_RESPONSEHEADER_SANITIZE=[{keyMatch:"^response",valueMatch:"password"}]
 ```
 
-### Traceability sampling
+#### Traceability sampling
 
 The Amplify Agents SDK has the ability to handle sampling of transactions that are processed.  This sampling controls what transaction events are sent to Amplify.
 
@@ -986,14 +985,13 @@ By default all transaction data is sent to Amplify.
 
 Below is the list of the sampling configuration properties in a YAML and their corresponding environment variables that can be set to override the config in YAML.  All of these are children of output.traceability.sampling
 
-| YAML property   | Variable name                         | Description                                                                                       				 |
+| YAML property   | Variable name                         | Description                                                                                  |
 |-----------------|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | percentage      | TRACEABILITY_SAMPLING_PERCENTAGE      | Defines the percentage of events (0-10. Decimals allowed. Any value above will default it to 1) that are sent to Amplify     |
-| per_api         | TRACEABILITY_SAMPLING_PER_API         | Defines if the percentage above is applied to all events or separate based on API ID in the event 				 |
-| reportAllErrors | TRACEABILITY_SAMPLING_REPORTALLERRORS | Defines if all error transaction events are sent to Amplify                                       				 |
+| per_api         | TRACEABILITY_SAMPLING_PER_API         | Defines if the percentage above is applied to all events or separate based on API ID in the event |
+| reportAllErrors | TRACEABILITY_SAMPLING_REPORTALLERRORS | Defines if all error transaction events are sent to Amplify                                        |
 
-
-### Traceability usage reporting
+#### Traceability usage reporting
 
 The Amplify Agents SDK has the ability to track API usages and report them back to the Amplify platform.
 
@@ -1003,14 +1001,14 @@ Below is the list of the usage reporting configuration properties, all of these 
 
 | YAML property   | Variable name                          | Default                            | Description                                                                                                                                                  |
 |-----------------|----------------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| url                         | CENTRAL_USAGEREPORTING_URL                         | https://lighthouse.admin.axway.com  | Defines the url on the Amplify platform that usage events are sent to                                                                                        |
+| url                         | CENTRAL_USAGEREPORTING_URL                         | `https://lighthouse.admin.axway.com`  | Defines the url on the Amplify platform that usage events are sent to                                                                                        |
 | publish                     | CENTRAL_USAGEREPORTING_PUBLISH                     | `true`                              | Defines if API usage numbers will be published to Amplify                                                                                                      |
 | publishMetric               | CENTRAL_USAGEREPORTING_PUBLISHMETRIC               | `true`                              | Defines if individual API Metrics will be published to Amplify                                                                                            |
 | interval                    | CENTRAL_USAGEREPORTING_INTERVAL                    | _15m_                               | Defines the interval, in the default online mode, that usage data is sent to Amplify                                                                        |
 | offline                     | CENTRAL_USAGEREPORTING_OFFLINE                     | `false`                             | Defines if the agent is working in offline mode for generating usage reports, see [Offline usage reporting](#offline-usage-reporting)                           |
 | offlineSchedule             | CENTRAL_USAGEREPORTING_OFFLINESCHEDULE             | `@hourly`                           | Defines the schedule in which the usage numbers are determined when in offline mode, see [Defining a schedule](../../pkg/jobs/README.md#defining-a-schedule)    |
 
-#### Offline usage reporting
+##### Offline usage reporting
 
 If it is desired to create usage reports without connecting the agent to the Amplify platform offline usage reports may be used.  When in offline mode the agent will create a reports directory ([[agent_dir]]/data/reports) and at the end of every month create a report file.
 
@@ -1018,11 +1016,11 @@ To operate in offline mode set `CENTRAL_USAGEREPORTING_OFFLINE=true` in addition
 
 By default this will save usages to a cache every hour, `CENTRAL_USAGEREPORTING_OFFLINESCHEDULE`, and that will be saved to the report file at the end of the month.
 
-### Building the Agent
+#### Building the Agent
 
 The agents are applications built using [Go programming language](https://golang.org/). Go is open source programming language that gets statically compiled and comes with a rich toolset to obtain packages and building executables. The Amplify Agents SDK uses the Go module as the dependency management which was introduced in Go 1.11. Go modules is collection of packages with go.mod file in its root directory which defines the modules source paths used in the packages as imports.
 
-The *go mod tidy* command will prune any unused dependencies from your *go.mod* and update the files to include used dependencies. The *go mod verify* command checks the dependencies, downloads them from the source repository and updates the cryptographic hashes in your go.sum file.
+The `go mod tidy` command will prune any unused dependencies from your `go.mod` and update the files to include used dependencies. The `go mod verify` command checks the dependencies, downloads them from the source repository and updates the cryptographic hashes in your go.sum file.
 
 Run the following commands to resolve the dependencies
 
@@ -1031,15 +1029,15 @@ go mod tidy
 go mod verify
 ```
 
-After resolving the dependencies, run *make build* to compile the source and generate the binary executable for the target system.
+After resolving the dependencies, run `make build` to compile the source and generate the binary executable for the target system.
 The Amplify Agents SDK provides support for specifying the version of the agent at the build time. The following variables can be set by compile flags to setup agent name, version, commit SHA and build time.
 
-- github.com/Axway/agent-sdk/pkg/cmd.BuildTime
-- github.com/Axway/agent-sdk/pkg/cmd.BuildVersion
-- github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha
-- github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName - this is an internal name
-- github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription - this is a friendly description that will be displayed in the --version and --help commands
-- github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion
+* github.com/Axway/agent-sdk/pkg/cmd.BuildTime
+* github.com/Axway/agent-sdk/pkg/cmd.BuildVersion
+* github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha
+* github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName - this is an internal name
+* github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription - this is a friendly description that will be displayed in the --version and --help commands
+* github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion
 
 The following is an example of the build command that can be configured in the Makefile
 
@@ -1049,22 +1047,22 @@ export version=`cat version` && \
 export commit_id=`git rev-parse --short HEAD` && \
 export sdk_version=`go list -m github.com/Axway/agent-sdk | awk '{print $$2}' | awk -F'-' '{print substr($$1, 2)}'` && \
 go build -tags static_all \
-	-ldflags="-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildTime=$${time}' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildVersion=$${version}' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha=$${commit_id}' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName=SampleTraceabilityAgent' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription=Sample Traceability Agent' \
-			-X 'github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion=$${sdk_version}'" \
-	-a -o ${WORKSPACE}/bin/apic_traceability_agent ${WORKSPACE}/main.go
+    -ldflags="-X 'github.com/Axway/agent-sdk/pkg/cmd.BuildTime=$${time}' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildVersion=$${version}' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildCommitSha=$${commit_id}' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentName=SampleTraceabilityAgent' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.BuildAgentDescription=Sample Traceability Agent' \
+            -X 'github.com/Axway/agent-sdk/pkg/cmd.SDKBuildVersion=$${sdk_version}'" \
+    -a -o ${WORKSPACE}/bin/apic_traceability_agent ${WORKSPACE}/main.go
 ```
 
-#### Pre-requisites for executing the agent
+##### Pre-requisites for executing the agent
 
-- An Axway Amplify Central subscription in the Amplify™ platform. See [Get started with Amplify Central](https://axway-open-docs.netlify.app/docs/central/quickstart).
-- An Amplify Central Service Account. See [Create a service account](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_install/#22-create-a-service-account-using-the-Amplify-central-ui).
-- An Amplify Central environment. See [Create environment](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_environments/#create-an-environment).
+* An Axway Amplify Central subscription in the Amplify™ platform. See [Get started with Amplify Central](https://axway-open-docs.netlify.app/docs/central/quickstart).
+* An Amplify Central Service Account. See [Create a service account](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_install/#22-create-a-service-account-using-the-Amplify-central-ui).
+* An Amplify Central environment. See [Create environment](https://axway-open-docs.netlify.app/docs/central/cli_central/cli_environments/#create-an-environment).
 
-### Executing Traceability Agent
+#### Executing Traceability Agent
 
 The Agent built using Amplify Agents SDK can be executed by running the executable. The agent on initialization tries to load the configuration from following sources and applies the configuration properties in the order described below.
 
@@ -1080,7 +1078,7 @@ cd <path-to-agent-install-directory>
 ./apic_traceability_agent
 ```
 
-Typically, the configuration YAML can be placed in the same directory as the agent executable, but alternatively the YAML file could be placed in another directory and then *pathConfig* command line flags can be used to specify the directory path containing the YAML file.
+Typically, the configuration YAML can be placed in the same directory as the agent executable, but alternatively the YAML file could be placed in another directory and then `pathConfig` command line flags can be used to specify the directory path containing the YAML file.
 
 ```
 <path-to-agent-install-directory>/apic_traceability_agent --pathConfig <directory-path-for-agent-yaml-config-file>
