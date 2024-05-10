@@ -46,7 +46,7 @@ go install github.com/Axway/agent-sdk/
 
 [Getting started to build traceability agent](./docs/traceability/index.md) **Lisa, will need a separate section for just this topic**
 
-[Additional Librarire](./docs/utilities/index.md) **Lisa, will need a separate section for just this topic**
+[Additional Libraries](./docs/utilities/index.md) **Lisa, will need a separate section for just this topic**
 
 
 ### Sample projects
