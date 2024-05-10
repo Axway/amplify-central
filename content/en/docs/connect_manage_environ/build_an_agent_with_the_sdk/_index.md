@@ -2,7 +2,7 @@
 title: Build an Agent with the SDK
 linkTitle: Build an Agent with the SDK
 draft: false
-weight: 140
+weight: 145
 ---
 
 ### What is the Amplify Agent SDK
@@ -23,7 +23,7 @@ Make sure you have [Go installed](https://golang.org/doc/install) and then use t
 
 go install github.com/Axway/agent-sdk/
 
-##@ Packages need to build the Agent SDK
+## Packages needed to build the Agent SDK
 
 | Name         | Description                                                                                                                                          |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +48,6 @@ go install github.com/Axway/agent-sdk/
 
 [Additional Libraries](./docs/utilities/index.md) **Lisa, will need a separate section for just this topic**
 
-
 ### Sample projects
 
 The developers can use the stubs packaged as zip file to build agents using the Amplify Agents SDK. The zip files contains code for sample discovery and traceability agent respectively, build scripts and instructions in README.md to make modifications to implement their own agents.
@@ -57,3 +56,6 @@ The developers can use the stubs packaged as zip file to build agents using the 
 
 [Download the stub project with sample traceability agent](https://github.com/Axway/agent-sdk/raw/main/samples/apic_traceability_agent.zip)
 
+## Related topics
+
+See the following topics for related information.
