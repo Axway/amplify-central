@@ -1,6 +1,6 @@
 ---
-title: Build an Agent with the SDK
-linkTitle: Build an Agent with the SDK
+title: Build an agent with the SDK
+linkTitle: Build an agent with the SDK
 draft: false
 weight: 145
 ---
@@ -41,12 +41,6 @@ go install github.com/Axway/agent-sdk/
 | traceability | This package provides the transport lumberjack/HTTP clients that can be used for building traceability agent                                         |
 | util         | This package has SDK utility packages for use by all agents                                                                                          |
 | watchmanager | This package provides tooling to subscribe to API server resource events over gRPC [Watch manager library](./pkg/watchmanager/README.md)            |
-
-[Getting started to build discovery agent](./docs/discovery/index.md)  **Lisa, will need his to link to the separate section for just this topic**
-
-[Getting started to build traceability agent](./docs/traceability/index.md) **Lisa, will this to link to the separate section for this topic**
-
-[Additional Libraries](./docs/utilities/index.md) **Lisa, will need this to link to the separate section for this topic**
 
 ### Sample projects
 
