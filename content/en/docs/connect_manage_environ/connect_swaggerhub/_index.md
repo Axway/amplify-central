@@ -19,7 +19,7 @@ Connecting a SwaggerHub Repository to Amplify will provide you with a global cen
 ## Before you start
 
 * Gather information on SwaggerHub:
-    * The API key that the agent will use to connect to SwaggerHub
+    * The API key that the agent will use to connect to SwaggerHub, this can be found under your users settings on SwaggerHub
     * The organization name that the agent will connect to
     * The visibility and publication filters that the agent should use to discover API spec files
 * Ensure your machine (Windows / Linux / Mac) meets the Embedded agent configuration prerequisites, where:
