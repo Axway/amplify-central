@@ -18,9 +18,8 @@ Connecting a SwaggerHub Repository to Amplify will provide you with a global cen
 
 ## Before you start
 
-* Read [Embedded SwaggerHub agent setup](/docs/connect_manage_environ/connect_swaggerhub_repository/embedded-agent-setup/)
 * Gather information on SwaggerHub:
-    * The API key that the agent will use to connect to SwaggerHub
+    * The API key that the agent will use to connect to SwaggerHub, this can be found under your users settings on SwaggerHub
     * The organization name that the agent will connect to
     * The visibility and publication filters that the agent should use to discover API spec files
 * Ensure your machine (Windows / Linux / Mac) meets the Embedded agent configuration prerequisites, where:
@@ -88,7 +87,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. See [Embedded SwaggerHub agents' setup](/docs/connect_manage_environ/connect_swaggerhub_repository/embedded-agent-setup/) for the prerequisite setup on SwaggerHub agent. For additional information, see [Add configuration to your Embedded agents with Axway Central CLI](/docs/integrate_with_central/cli_central/cli_embedded_agent_config/).
+The Axway Central CLI will guide you through the configuration of the agents. For additional information, see [Add configuration to your Embedded agents with Axway Central CLI](/docs/integrate_with_central/cli_central/cli_embedded_agent_config/).
 
 Run the following command to start the configuration procedure:
 
