@@ -20,7 +20,7 @@ Learn how to configure, access, and read the Traceability Agent's audit logs.
 
 ## Configure
 
-In all Traceability Agents, the metric and the usage audit log is turned on by default. The metric is used to track all metric events that the agent has generated and the status of the events (as known to the agent), while the usage tracks the date, the transactions and the volume from the generated report before it is published. The following tables lists the environment variables that are available to configure the metric and the usage audit logs.
+In all Traceability Agents, the metric and the usage audit logs are turned on by default. The metric is used to track all metric events that the agent has generated and the status of the events (as known to the agent), while the usage tracks the date, the transactions and the volume from the generated report before it is published. The following tables lists the environment variables that are available to configure the metric and the usage audit logs.
 
 | Environment Variable            | Description                                                                                   |
 | ------------------------------- | --------------------------------------------------------------------------------------------- |
