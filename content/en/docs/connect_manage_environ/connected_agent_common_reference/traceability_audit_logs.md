@@ -20,15 +20,20 @@ Learn how to configure, access, and read the Traceability Agent's audit logs.
 
 ## Configure
 
-In all Traceability Agents, the metric audit log is turned on by default. It is used to track all metric events that the agent has generated, and the status of the events (as known to the agent). The following tables lists the environment variables that are available to configure the metric audit logs.
+In all Traceability Agents, the metric and the usage audit log is turned on by default. The metric is used to track all metric events that the agent has generated and the status of the events (as known to the agent), while the usage tracks the date, the transactions and the volume from the generated report before it is published. The following tables lists the environment variables that are available to configure the metric and the usage audit logs.
 
 | Environment Variable            | Description                                                                                   |
 | ------------------------------- | --------------------------------------------------------------------------------------------- |
 | LOG_METRICFILE_ENABLED          | Enable or disable the metric audit log (default: `true`)                                      |
 | LOG_METRICFILE_NAME             | The name of the metric log file that will be created (default: `metric.log`)                  |
 | LOG_METRICFILE_KEEPFILES        | The maximum number of metric audit log files to keep (default: `7`)                           |
-| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`) |
+| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`)  |
 | LOG_METRICFILE_CLEANBACKUPS     | The max age of a metric audit log backup file, in days (default: `0` unlimited)               |
+| LOG_USAGEFILE_ENABLED           | Enable or disable the usage audit log (default: `true`)                                       |
+| LOG_USAGEFILE_NAME              | The name of the usage log file that will be created (default: `usagefile.log`)                |
+| LOG_USAGEFILE_KEEPFILES         | The maximum number of usage audit log files to keep (default: `7`)                            |
+| LOG_USAGEFILE_ROTATEEVERYBYTES  | The maximum size (bytes) a usage audit log can grow to (default: `10485760`=`10 megabytes`)   |
+| LOG_USAGEFILE_CLEANBACKUPS      | The max age of a usage audit log backup file, in days (default: `365` days)                   |
 
 With the default settings, the Traceability Agent will keep a maximum of `7` files, each a total of `10485760` bytes.
 
