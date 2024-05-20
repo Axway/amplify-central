@@ -22,18 +22,18 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace May 17 2024](/docs/amplify_relnotes/20240517_amplify/)
 
-Current agent versions are based on Amplify Agents SDK v1.1.82. This version is compatible with:
+Current agent versions are based on Amplify Agents SDK v1.1.83. This version is compatible with:
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.79 / TA=v1.1.80
-* **AWS Gateway using SDK 2.0** - DA=v1.1.63 / TA-v1.1.66
-* **Azure latest release** - DA=v1.1.69 / TA=v1.1.75
-* **Istio 1.9.5** - DA=v1.0.35 / TA=v2.0.81
-* **Apigee Edge** - Agent version 0.1.37
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.47
-* **Software AG webMethods** - 0.0.24
-* **Kong Gateway** - 1.0.8
-* **GitLab** - 1.0.5
-* **Kafka Cluster** - DA=v1.0.5 / TA=v1.0.45
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.80 / TA=v1.1.81
+* **AWS Gateway using SDK 2.0** - DA=v1.1.64 / TA-v1.1.67
+* **Azure latest release** - DA=v1.1.70 / TA=v1.1.76
+* **Istio 1.9.5** - DA=v1.0.36 / TA=v2.0.82
+* **Apigee Edge** - Agent version 0.1.38
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.48
+* **Software AG webMethods** - 0.0.25
+* **Kong Gateway** - 1.0.9
+* **GitLab** - 1.0.6
+* **Kafka Cluster** - DA=v1.0.6 / TA=v1.0.6
 
 Supported SaaS (embedded) Agents:
 
@@ -45,18 +45,18 @@ Supported SaaS (embedded) Agents:
 
 Runtime Compliance Agent:
 
-* **Graylog API Security** - On-premise Agent version 1.0.4
+* **Graylog API Security** - On-premise Agent version 1.0.5
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Usage Audit Log. |
+| Bug fixes: | See release note. |
 | <br />**On-premise agents** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
-| What's new: | None |
-| Bug fixes: | **Apigee X SaaS Agent** - None. |
+| What's new: | **Azure SaaS Agent** - Updated with the Axway Agent SDK. <br />**SwaggerHub Agent** - Released and updated with the Axway Agent SDK. |
+| Bug fixes: | **Azure SaaS Agent** - See release note. <br />**Apigee X SaaS Agent** - See release note. |
 | <br />**Axway CLI** |       |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -65,19 +65,19 @@ Runtime Compliance Agent:
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
 | What's new: | **Service Registry** - None. <br />**Topology** - None. |
-| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - See release note. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Product Foundry** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
@@ -95,7 +95,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.82. This version is 
 * **Software AG webMethods** - 0.0.24
 * **Kong Gateway** - 1.0.8
 * **GitLab** - 1.0.5
-* **Kafka Cluster** - DA=v1.0.5 / TA=v1.0.45
+* **Kafka Cluster** - DA=v1.0.5 / TA=v1.0.5
 
 Supported SaaS (embedded) Agents:
 
