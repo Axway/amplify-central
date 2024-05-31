@@ -58,3 +58,7 @@ On the Browse product page, a new icon is available on the search bar to launch 
    2. the answer section at the top
 
 From the prompt you can ask questions and the AI Search Assistant will run the query against the collected data and answer accordingly. On the answer, there will be some references. Those references are clickable and will redirect you to the appropriate object in the Marketplace on a new browser tab.
+
+## Limitations
+
+TBD
