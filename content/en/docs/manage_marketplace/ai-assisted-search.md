@@ -59,6 +59,10 @@ On the Browse product page, a new icon is available on the search bar to launch 
 
 From the prompt you can ask questions and the AI Search Assistant will run the query against the collected data and answer accordingly. On the answer, there will be some references. Those references are clickable and will redirect you to the appropriate object in the Marketplace on a new browser tab.
 
+Since it is an assistant, the context between questions is kept. This mean you can ask a first question. When asking the second question, it automatically takes into the context the first question. Like this the model combine the first answer and what is found on the second question together to get a more relevant information.
+
+For instance, you may ask "Is there a product to do X and Y". The model will answer you what has been found and then you can ask "Write an http client in Java using that API". The model will automatically understand that you want Java code using one of the product from the first answer.
+
 ## Limitations
 
 TBD
