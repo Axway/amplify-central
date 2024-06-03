@@ -31,14 +31,19 @@ But to provide high quality information, the models needs to contains data. To a
 
 * **Training**: this phase helps to push data into the various model used by the RAG. Each time a product is published to a Marketplace, an ingestion process happens to chunk the product resources specification and the product documentation. Theses chunks are summarized by an Large Language Model (LLM) and then vectorized by another LLM to be finally stored in a vector/embeddings database.
 
+**TBD** - schema of the architecture..
+
 ## Where are located the models?
 
 Axway does not provide yet all infrastructure to leverage the RAG models. Each customer must have their own implementation. Like this their data stays under their control. They can also add more relevant data into their models (for instance extra documentation pages, samples...) that could benefits their consumers.
 
 ## How do I integrate my own model?
 
-TBD
+**TBD**
 Settings...
+Contract description
+
+### Ingestion process
 
 ## Activating the AI Search assistant
 
@@ -65,4 +70,4 @@ For instance, you may ask "Is there a product to do X and Y". The model will ans
 
 ## Limitations
 
-TBD
+**TBD**
