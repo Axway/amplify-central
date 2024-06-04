@@ -64,7 +64,7 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - OWASP security ruleset upgrade. <br />**Topology** - None. |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
