@@ -154,7 +154,7 @@ If an invoice object is changed (for any reason) on Amplify Enterprise Marketpla
 You only need to be concerned with events having the following characteristic:
 
 * `type` == "SubResourceUpdated"
-* `metadata.subsresource` == "status"
+* `metadata.subresource` == "status"
 
 Look at the `state.name` and `status.level` to identify the flow to trigger.
 
@@ -508,7 +508,7 @@ If the initial subscription invoice was never paid and the consumer terminated h
 
 1. Check the event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=void` and `status=pending`
 2. Decide what to do on the billing Gateway. For instance, set the invoice as *not collectible* or completely delete it from the billing Gateway.
-3. Once done on the Billing Gateway, the corresponding invoice in Amplify Entreprise Marketplace must be updated to whichever status make sense (`Success` or `Error`):
+3. Once done on the Billing Gateway, the corresponding invoice in Amplify Enterprise Marketplace must be updated to whichever status make sense (`Success` or `Error`):
 
     ```json
     curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
@@ -532,4 +532,4 @@ If the invoice status is set to `Error` and you want to process it again, simply
 
 * Use the subscriptioninvoices API to detect invoices that are pending actions or in specific state: `AMPLIFY_CENTRAL_URL/apis/catalog/v1alpha1/subscriptioninvoices?query=billing.payment.type==custom;state.name==draft;status.level==Pending`
 
-The API Specifications reference can be found at <https://generator.swagger.io/?url=https://apicentral.axway.com/apis/docs#/catalog/list_catalog_v1alpha1_Subscription_SubscriptionInvoice>.
+See the API Specifications reference [SubscriptionInvoice](https://generator.swagger.io/?url=https://apicentral.axway.com/apis/docs#/catalog/list_catalog_v1alpha1_Subscription_SubscriptionInvoice).
