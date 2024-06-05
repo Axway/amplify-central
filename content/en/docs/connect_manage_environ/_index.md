@@ -85,6 +85,7 @@ For detailed information about agent configuration, features and limitations, se
 * [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/)
 * [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/)
 * [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_manage_environ/connect_azure_gateway/)
+* [Discovery and Traceability Agents for IBM API Connect](/docs/connect_manage_environ/connect_ibm_api_connect/)
 * [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/)
 * [Discovery and Traceability Agents for Mulesoft Gateway](https://github.com/Axway/agents-mulesoft)
 * [Discovery and Traceability Agents for Software AG Webmethods](https://github.com/Axway/agents-webmethods)

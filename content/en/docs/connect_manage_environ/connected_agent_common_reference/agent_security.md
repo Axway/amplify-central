@@ -80,7 +80,7 @@ TLS_AES_256_GCM_SHA384
 
 TLS_CHACHA20_POLY1305_SHA256
 
-The Traceability Agents also communicate to the Amplify search logs service using the Lumberjack protocol over a TCP connection. The connection host and port can be configured by changing the TRACEABILITY_HOST in your configuration file. For additional information, see [API Manager's Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent), [AWS Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#traceability-agent) and  [Azure Gateway's Traceability Agent variables](/docs/connect_manage_environ/connect_azure_gateway/agent-variables/#specific-variables-for-traceability-agent).
+The Traceability Agents also communicate to the Amplify search logs service using the Lumberjack protocol over a TCP connection. The connection host and port can be configured by changing the TRACEABILITY_HOST in your configuration file. For additional information, see [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting).
 
 ## Proxying - Axway API Gateway only
 

@@ -142,9 +142,7 @@ APIMANAGER_FILTER=tag.APITAG==value
 
 This section connects the agent to Enterprise Marketplace and determines how to published the discovered APIs.
 
-`CENTRAL_URL`: The Enterprise Marketplace url. Default value is **<https://apicentral.axway.com>**.
-
-`CENTRAL_SINGLEURL`: Alternate Enterprise Marketplace url connection if using a static IP (default value: US =  `<https://ingestion.platform.axway.com>` / EU = `https://ingestion-eu.platform.axway.com` / APAC = `https://ingestion-ap-sg.platform.axway.com`).
+`CENTRAL_REGION`: The Enterprise Marketplace url. Default value is **<https://apicentral.axway.com>**.
 
 `CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.
 
@@ -153,8 +151,6 @@ This section connects the agent to Enterprise Marketplace and determines how to 
 `CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/).
 
 `CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.ß
-
-`CENTRAL_AUTH_URL`: The Amplify login URL. Default value is **<https://login.axway.com/auth>**.
 
 `CENTRAL_AUTH_REALM`: The Realm used to authenticate for Enterprise Marketplace. Default value is **Broker**.
 
@@ -171,15 +167,13 @@ This section connects the agent to Enterprise Marketplace and determines how to 
 Once all data is gathered, this section should look like:
 
 ```shell
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
-CENTRAL_AUTH_CLIENTID=DOSA_66743...
+CENTRAL_AUTH_CLIENTID=service_acount...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 #CENTRAL_AUTH_KEYPASSWORD:
@@ -319,12 +313,10 @@ APIMANAGER_FILTER=tag.APITAG==value
 #APIMANAGER_ALLOWAPPLICATIONAUTOCREATION=true
 
 # Central connectivity 
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
@@ -729,13 +721,11 @@ Once all data is gathered, the variable list should look like:
 
 ```shell
 # Central connectivity
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
@@ -833,13 +823,11 @@ APIGATEWAY_SENDALLTRAFFIC=true
 #APIGATEWAY_POLLINTERVAL
 
 # Central connectivity
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem

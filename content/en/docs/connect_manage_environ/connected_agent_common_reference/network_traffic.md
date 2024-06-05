@@ -32,7 +32,7 @@ The Discovery Agent sends the following information to the Axway Amplify platfor
 It is also possible to filter the API to be discover using the filter capabilities of the agent:
 
 | Gateway type      | Variable name       | Description                                                                                                            | Reference                                                                                            |
-|-------------------|---------------------|------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| ----------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Axway API Gateway | `APIMANAGER_FILTER` | filter APIs based on the API tags                                                                                      | [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/)   |
 | AWS               | `AWS_FILTER`        | filter APIs based on the Stage tags                                                                                    | [Discover APIs](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/) |
 | Azure             | `AZURE_FILTER`      | filter APIs based on the API tags. Only exists condition is available: `AZURE_FILTER=tag.{someTagName}.Exists()==true` |                                                                                                      |
@@ -117,7 +117,7 @@ Data Fields:
 The Usage and Metrics data collected by the Traceability Agent are retained for specified amounts of time before being automatically archived.
 
 | Source            | Retention period                               | Archival period |
-|-------------------|------------------------------------------------|-----------------|
+| ----------------- | ---------------------------------------------- | --------------- |
 | Usage data        | 731 Days (Two years + 1)                       | 7 years         |
 | Metrics data      | 731 Days (Two years + 1)                       | 7 years         |
 | Transactions data | 7 Days (Business Insights / Consumer Insights) | N/A             |
@@ -126,7 +126,35 @@ The Transactions data is available in the Business/Consumer Insights API Traffic
 
 {{< alert title="Note" color="primary" >}}Transactions data is not archived; however, the data may still be available on the gateway that hosted them initially.{{< /alert >}}
 
-## Communication ports
+## Communication ports and URLs
+
+### CENTRAL_REGION setting
+
+The `CENTRAL_REGION` setting for all agents can be used to quickly set all region specific settings for the agent. If these URLs need to be modified, simply override the following variables. Take caution with these overrides.
+
+| Variable              | US Default                           | EU Default                                | AP Default                                 | Usage                                                                 |
+| --------------------- | ------------------------------------ | ----------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------- |
+| CENTRAL_SINGLEURL     | https://ingestion.platform.axway.com | https://ingestion-eu.platform.axway.com   | https://ingestion-ap-sg.platform.axway.com | Alternate Enterprise Marketplace URL connection                       |
+| CENTRAL_URL           | https://apicentral.axway.com         | https://central.eu-fr.axway.com           | https://central.ap-sg.axway.com            | The URL to the Amplify instance being used                            |
+| CENTRAL_AUTH_URL      | https://login.axway.com/auth         | https://login.axway.com/auth              | https://login.axway.com/auth               | The Amplify authentication login URL                                  |
+| CENTRAL_PLATFORMURL   | https://platform.axway.com           | https://platform.axway.com                | https://platform.axway.com                 | The URL to the Amplify platform being used                            |
+| CENTRAL_DEPLOYMENT    | prod                                 | prod-eu                                   | prod-ap                                    | The ingestion region for Traceability events                          |
+| TRACEABILITY_HOST     | ingestion.datasearch.axway.com:5044  | ingestion.visibility.eu-fr.axway.com:5044 | ingestion.visibility.ap-sg.axway.com:5044  | The host and port of the ingestion service for Traceability events    |
+| TRACEABILITY_PROTOCOL | tcp                                  | tcp                                       | tcp                                        | The protocol in which the agent communicates to the TRACEABILITY_HOST |
+
+### TRACEABILITY_HOST and TRACEABILITY_PROTOCOL
+
+It is possible to override the TRACEABILITY_HOST and TRACEABILITY_PROTOCOL environment variables. When using the 
+
+If the agent is not using the CENTRAL_SINGLEURL setting then it is possible to change these values. Setting the TRACEABILITY_PROTOCOL to `https` requires the TRACEABILITY_HOST to be set to one of the following values.
+
+| Region | Value |
+| ------ | ----- |
+| US     | ingestion.datasearch.axway.com:443      |
+| EU     | ingestion.visibility.eu-fr.axway.com:443      |
+| AP     | ingestion.visibility.ap-sg.axway.com:443      |
+
+### Communication ports
 
 All outbound traffic is sent over SSL via TCP / UDP.
 
@@ -134,16 +162,16 @@ Open the following ports so that agents can communicate to the Amplify platform:
 
 **Single Entry Point**:
 
-| Region | Host                               | IP             | port | Protocol | data            |
-|--------|------------------------------------|----------------|------|----------|-----------------|
-| US     | ingestion.platform.axway.com       | 35.71.150.229  | 443  | HTTPS    | See note below  |
-|        |                                    | 52.223.61.108  |      |          |                 |
-|        |                                    |                |      |          |                 |
-| EU     | ingestion-eu.platform.axway.com    | 76.223.107.214 | 443  | HTTPS    | See note below  |
-|        |                                    | 13.248.240.123 |      |          |                 |
-|        |                                    |                |      |          |                 |
-| APAC   | ingestion-ap-sg.platform.axway.com | 3.33.213.199   | 443  | HTTPS    | See note below  |
-|        |                                    | 15.197.242.120 |      |          |                 |
+| Region | Host                               | IP             | port | Protocol | data           |
+| ------ | ---------------------------------- | -------------- | ---- | -------- | -------------- |
+| US     | ingestion.platform.axway.com       | 35.71.150.229  | 443  | HTTPS    | See note below |
+|        |                                    | 52.223.61.108  |      |          |                |
+|        |                                    |                |      |          |                |
+| EU     | ingestion-eu.platform.axway.com    | 76.223.107.214 | 443  | HTTPS    | See note below |
+|        |                                    | 13.248.240.123 |      |          |                |
+|        |                                    |                |      |          |                |
+| APAC   | ingestion-ap-sg.platform.axway.com | 3.33.213.199   | 443  | HTTPS    | See note below |
+|        |                                    | 15.197.242.120 |      |          |                |
 
 {{< alert title="Note" color="primary" >}}
 *Region* column is representing the region where your Amplify organization is deployed. EU means deployed in European data center and US meaning deployed in US data center. Be sure to use the corresponding *Host*/*Port* for your agents to operate correctly. <br />*Data* for the US, EU and APAC Regions include: API usage statistics, version check for new releases, API definitions and subscription information, API event data. <br />The connection to axway.jfrog.io is optional. If the agent cannot reach this URL, then the agent cannot check for new agent releases. Other than this, the agent will function correctly.
@@ -156,14 +184,14 @@ Other ports which may need to be opened so that the Agent may monitor API Gatewa
 **Internal**:
 
 | Host             | Port           | Protocol | Data                                                                                                                                                                   |
-|------------------|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------- | -------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | API Manager Host | 8075 (default) | HTTPS    | API Discovery                                                                                                                                                          |
 | API Gateway Host | 8090 (default) | HTTPS    | API Transaction Header data (see [APIGATEWAY GETHEADERS](/docs/connect_manage_environ/connect_api_manager/agent-variables/#specific-variables-for-traceability-agent)) |
 
 **Inbound (used for the agent status server)**:
 
 | Host          | Port           | Protocol | Data                                                               |
-|---------------|----------------|----------|--------------------------------------------------------------------|
+| ------------- | -------------- | -------- | ------------------------------------------------------------------ |
 | Agent Host(s) | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
 ### AWS Gateway and Azure Gateway - other ports
@@ -173,7 +201,7 @@ The docker container does not expose any ports outside of the container. Within 
 **Inbound**:
 
 | Host             | Port           | Protocol | Data                                                               |
-|------------------|----------------|----------|--------------------------------------------------------------------|
+| ---------------- | -------------- | -------- | ------------------------------------------------------------------ |
 | Docker Container | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
 ## Subscription notifications
