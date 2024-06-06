@@ -36,7 +36,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
-| Description                    | Axway API Gateway                                                                                                       | AWS                                                  | Azure                                                                  | Istio            | Apigee Edge                                                   | IBM API Connect                                     |
+| Description                    | Axway API Gateway                                                                                                       | AWS API Gateway                                      | Azure API Management                                                   | Istio            | Apigee Edge                                                   | IBM API Connect                                     |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------- | --------------------------------------------------- |
 | **Discovery**                  | Published Frontend Proxies                                                                                              | Rest APIs in API Gateway                             | APIs                                                                   | Virtual Services | API Products / Proxies                                        | Catalog APIs                                        |
 | **Application**                | Client App                                                                                                              | Usage plan                                           | Product                                                                | No               | Application                                                   | Catalog Application                                 |
@@ -49,7 +49,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics**        | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | Yes                                                           | Yes                                                 |
 | **Transaction Event Sampling** | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | No                                                            | Yes                                                 |
 
-| Description                    | Mulesoft                                   | Software AG webMethods     | Kong Gateway                                               | Gitlab                   | Kafka Cluster  |
+| Description                    | MuleSoft Gateway                           | Software AG webMethods     | Kong Gateway                                               | GitLab Repository        | Kafka Cluster  |
 | ------------------------------ | ------------------------------------------ | -------------------------- | ---------------------------------------------------------- | ------------------------ | -------------- |
 | **Discovery**                  | Rest APIs (+RAML)                          | Published Frontend Proxies | Services and attached Routes                               | Public/Private Rest APIs | Topics         |
 | **Application**                | Associated Client App with Contract        | No                         | Consumer                                                   | No                       | Create Product |
@@ -66,7 +66,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
-| Description                    | AWS                                                  | Apigee X                           | Github                   | Swaggerhub               | Azure                                                                 |
+| Description                    | AWS                                                  | GCP Apigee X                       | GitHub Repository        | SwaggerHub               | Azure API Management                                                  |
 | ------------------------------ | ---------------------------------------------------- | ---------------------------------- | ------------------------ | ------------------------ | --------------------------------------------------------------------- |
 | **Discovery**                  | Rest APIs in API Gateway                             | API Proxies                        | Public/Private Rest APIs | Public/Private Rest APIs | APIs                                                                  |
 | **Application**                | Usage plan                                           | Application                        | No                       | No                       | Product                                                               |
@@ -84,16 +84,16 @@ For detailed information about agent configuration, features and limitations, se
 * [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/)
 * [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/)
 * [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/)
-* [Discovery and Traceability Agents for Azure API Management Services](/docs/connect_manage_environ/connect_azure_gateway/)
+* [Discovery and Traceability Agents for Azure API Management](/docs/connect_manage_environ/connect_azure_gateway/)
 * [Discovery and Traceability Agents for IBM API Connect](/docs/connect_manage_environ/connect_ibm_api_connect/)
 * [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/)
-* [Discovery and Traceability Agents for Mulesoft Gateway](https://github.com/Axway/agents-mulesoft)
-* [Discovery and Traceability Agents for Software AG Webmethods](https://github.com/Axway/agents-webmethods)
+* [Discovery and Traceability Agents for MuleSoft Gateway](https://github.com/Axway/agents-mulesoft)
+* [Discovery and Traceability Agents for Software AG webMethods](https://github.com/Axway/agents-webmethods)
 * [Discovery and Traceability Agents for Kong Gateway](https://github.com/Axway/agents-kong)
-* [Discovery Agents for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/)
-* [Discovery Agents for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
-* [Discovery Agents for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
-* [Discovery Agents for SwaggerHub](/docs/connect_manage_environ/connect_swaggerhub/)
+* [Discovery Agent for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/)
+* [Discovery Agent for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
+* [Discovery Agent for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
+* [Discovery Agent for SwaggerHub](/docs/connect_manage_environ/connect_swaggerhub/)
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 
