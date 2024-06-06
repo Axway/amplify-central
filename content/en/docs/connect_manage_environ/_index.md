@@ -36,48 +36,48 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
-| Description |  Axway API Gateway | AWS | Azure | Istio | Apigee Edge |
-|-------------|--------------------|-----|-------|-------|-------------|
-| **Discovery** | Published Frontend Proxies | Rest APIs in API Gateway | APIs | Virtual Services | API Products / Proxies |
-| **Application** | Client App | Usage plan | Product | No | Application |
-| **Access Request** | Associated Frontend Proxy with Application | Associated API Stage with Usage plan | Associated API with Product | No | Products associated to Application |
-| **Credential Type** | APIKey / OAuth / BasicAuth / IDP | APIKey | APIKey | IDP | APIKey / OAuth |
-| **Credential Actions** | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable | Suspend/Enable | No | Suspend/Enable |
-| **Quota Enforcement** | Quota per Frontend Proxy set in Client App | Quotas are attached to a Usage plan | Quota Policy associated to Product | Envoy Filters | Quota added to a Product, underlying proxy must enforce Quota |
-| **Traceability** | Transactions with application context associated to Managed Applications | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | No | API Usage Statistics |
-| **Platform Usage** | Yes | Yes | Yes | Yes | Yes |
-| **Transaction Metrics** | Yes | Yes | Yes | No | Yes |
-| **Transaction Event Sampling** | Yes | Yes | Yes | No | No |
+| Description                    | Axway API Gateway                                                                                                       | AWS                                                  | Azure                                                                  | Istio            | Apigee Edge                                                   | IBM API Connect                                     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------- | --------------------------------------------------- |
+| **Discovery**                  | Published Frontend Proxies                                                                                              | Rest APIs in API Gateway                             | APIs                                                                   | Virtual Services | API Products / Proxies                                        | Catalog APIs                                        |
+| **Application**                | Client App                                                                                                              | Usage plan                                           | Product                                                                | No               | Application                                                   | Catalog Application                                 |
+| **Access Request**             | Associated Frontend Proxy with Application                                                                              | Associated API Stage with Usage plan                 | Associated API with Product                                            | No               | Products associated to Application                            | Product access in Application                       |
+| **Credential Type**            | APIKey / OAuth / BasicAuth / IDP                                                                                        | APIKey                                               | APIKey                                                                 | IDP              | APIKey / OAuth                                                | APIKey / OAuth                                      |
+| **Credential Actions**         | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable                                       | Suspend/Enable                                                         | No               | Suspend/Enable                                                | No                                                  |
+| **Quota Enforcement**          | Quota per Frontend Proxy set in Client App                                                                              | Quotas are attached to a Usage plan                  | Quota Policy associated to Product                                     | Envoy Filters    | Quota added to a Product, underlying proxy must enforce Quota | Plan added to Product                               |
+| **Traceability**               | Transactions with application context associated to Managed Applications                                                | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | No               | API Usage Statistics                                          | Transaction Count for APIs and API/App relationship |
+| **Platform Usage**             | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | Yes              | Yes                                                           | Yes                                                 |
+| **Transaction Metrics**        | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | Yes                                                           | Yes                                                 |
+| **Transaction Event Sampling** | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | No                                                            | Yes                                                 |
 
-| Description |  Mulesoft | Software AG webMethods | Kong Gateway | Gitlab | Kafka Cluster |
-|-------------|-----------|------------------------|--------------|--------|---------------|
-| **Discovery** | Rest APIs (+RAML) | Published Frontend Proxies | Services and attached Routes | Public/Private Rest APIs | Topics |
-| **Application** | Associated Client App with Contract | No | Consumer | No | Create Product |
-| **Access Request** | Associated Frontend Proxy with Application | No | If ACL plugin is required to give consumer access to Route | No | No |
-| **Credential Type** | Basic Auth / OAuth | No  | APIKey / Basic Auth / OAuth | No | APIKey / SASL |
-| **Credential Actions** |  Suspend/Enable |No | Suspend/Enable | No |Suspend/Enable |
-| **Quota Enforcement** | No | No | Rate limiting plugin added to Consumer | No | No |
-| **Traceability** | No | No | Using the Kong HTTP log plugin | No | No |
-| **Platform Usage** | Yes  | No | Yes |  No | Yes |
-| **Transaction Metrics** | No  | No | Yes | No | Yes |
-| **Transaction Event Sampling** | No | No | Yes | No | No |
+| Description                    | Mulesoft                                   | Software AG webMethods     | Kong Gateway                                               | Gitlab                   | Kafka Cluster  |
+| ------------------------------ | ------------------------------------------ | -------------------------- | ---------------------------------------------------------- | ------------------------ | -------------- |
+| **Discovery**                  | Rest APIs (+RAML)                          | Published Frontend Proxies | Services and attached Routes                               | Public/Private Rest APIs | Topics         |
+| **Application**                | Associated Client App with Contract        | No                         | Consumer                                                   | No                       | Create Product |
+| **Access Request**             | Associated Frontend Proxy with Application | No                         | If ACL plugin is required to give consumer access to Route | No                       | No             |
+| **Credential Type**            | Basic Auth / OAuth                         | No                         | APIKey / Basic Auth / OAuth                                | No                       | APIKey / SASL  |
+| **Credential Actions**         | Suspend/Enable                             | No                         | Suspend/Enable                                             | No                       | Suspend/Enable |
+| **Quota Enforcement**          | No                                         | No                         | Rate limiting plugin added to Consumer                     | No                       | No             |
+| **Traceability**               | No                                         | No                         | Using the Kong HTTP log plugin                             | No                       | No             |
+| **Platform Usage**             | Yes                                        | No                         | Yes                                                        | No                       | Yes            |
+| **Transaction Metrics**        | No                                         | No                         | Yes                                                        | No                       | Yes            |
+| **Transaction Event Sampling** | No                                         | No                         | Yes                                                        | No                       | No             |
 
 ### SaaS (Embedded) Agent Features
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
-| Description |  AWS | Apigee X | Github | Swaggerhub | Azure |
-|-------------|-----|-------|-------------------|-------------------|----|
-| **Discovery** | Rest APIs in API Gateway | API Proxies | Public/Private Rest APIs | Public/Private Rest APIs | APIs |
-| **Application** | Usage plan | Application | No | No | Product |
-| **Access Request** | Associated API Stage with Usage plan | Associated API with Product | No | No | Associated API with Product |
-| **Credential Type** | APIKey | APIKey / OAuth | No | No | APIKey |
-| **Credential Actions** | Suspend/Enable | Suspend/Enable | No | No | Suspend/Enable  |
-| **Quota Enforcement** | Quotas are attached to a Usage plan | Quota Policy associated to Product | No | No | Quota Policy associated to Product |
-| **Traceability** | Transactions with API Key associated with Usage plan | API Usage Statistics | No | No | Transactions with Azure Product subscription associated to Credential |
-| **Platform Usage** | Yes | Yes | No | No | Yes |
-| **Transaction Metrics** | Yes  | Yes | No | No | Yes |
-| **Transaction Event Sampling** | Yes | No | No | No | Yes |
+| Description                    | AWS                                                  | Apigee X                           | Github                   | Swaggerhub               | Azure                                                                 |
+| ------------------------------ | ---------------------------------------------------- | ---------------------------------- | ------------------------ | ------------------------ | --------------------------------------------------------------------- |
+| **Discovery**                  | Rest APIs in API Gateway                             | API Proxies                        | Public/Private Rest APIs | Public/Private Rest APIs | APIs                                                                  |
+| **Application**                | Usage plan                                           | Application                        | No                       | No                       | Product                                                               |
+| **Access Request**             | Associated API Stage with Usage plan                 | Associated API with Product        | No                       | No                       | Associated API with Product                                           |
+| **Credential Type**            | APIKey                                               | APIKey / OAuth                     | No                       | No                       | APIKey                                                                |
+| **Credential Actions**         | Suspend/Enable                                       | Suspend/Enable                     | No                       | No                       | Suspend/Enable                                                        |
+| **Quota Enforcement**          | Quotas are attached to a Usage plan                  | Quota Policy associated to Product | No                       | No                       | Quota Policy associated to Product                                    |
+| **Traceability**               | Transactions with API Key associated with Usage plan | API Usage Statistics               | No                       | No                       | Transactions with Azure Product subscription associated to Credential |
+| **Platform Usage**             | Yes                                                  | Yes                                | No                       | No                       | Yes                                                                   |
+| **Transaction Metrics**        | Yes                                                  | Yes                                | No                       | No                       | Yes                                                                   |
+| **Transaction Event Sampling** | Yes                                                  | No                                 | No                       | No                       | Yes                                                                   |
 
 For detailed information about agent configuration, features and limitations, see:
 
