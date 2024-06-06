@@ -137,7 +137,7 @@ The `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` and `APIMANAGER_INVOKEPOLICY_TI
 
 The `APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME` and `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE` settings may be repeated for every mapping that is required. For each new mapping being added increase the index at the end of the variable name.
 
-Here is an example of multiple invoke policy mappings, notice how the index number was incremented for each successive mapping.
+Here is an example of multiple invoke policy mappings. Notice how the index number was incremented for each successive mapping.
 
 ```shell
 APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_1=BasicAuthPolicy
