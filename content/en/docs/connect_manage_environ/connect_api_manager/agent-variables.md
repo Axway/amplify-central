@@ -150,7 +150,6 @@ APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_3=ThisAuthPolicy
 APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_3=APIKey
 ```
 
-
 ### Specific variables for Traceability Agent
 
 {{< alert title="Note" color="primary" >}}To exclude health checks from being counted towards the number of transactions for the purpose of entitlement, use the variable TRACEABILITY_EXCEPTION_LIST to identify the API path that the health check transactions use. The agent will then dismiss the transactions and not process them for usage in transaction reporting.{{< /alert >}}
