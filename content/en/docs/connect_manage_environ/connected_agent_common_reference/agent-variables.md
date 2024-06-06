@@ -6,17 +6,17 @@ weight: 40
 ---
 The variables common to all agents are described here in more detail.
 
-- [Agent Variables](#agent-variables)
-  - [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
-    - [Status endpoint variables](#status-endpoint-variables)
-    - [Logging variables](#logging-variables)
-  - [Discovery agent only variables](#discovery-agent-only-variables)
-    - [IdP configuration variables](#idp-configuration-variables)
-  - [Traceability agent only variables](#traceability-agent-only-variables)
-- [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
-  - [Default pattern](#default-pattern)
-  - [Available variables](#available-variables)
-  - [Date Formats](#date-formats)
+* [Agent Variables](#agent-variables)
+    * [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
+        * [Status endpoint variables](#status-endpoint-variables)
+        * [Logging variables](#logging-variables)
+    * [Discovery agent only variables](#discovery-agent-only-variables)
+        * [IdP configuration variables](#idp-configuration-variables)
+    * [Traceability agent only variables](#traceability-agent-only-variables)
+* [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
+    * [Default pattern](#default-pattern)
+    * [Available variables](#available-variables)
+    * [Date Formats](#date-formats)
 
 ## Agent Variables
 
@@ -50,7 +50,6 @@ The variables common to all agents are described here in more detail.
 | AGENTFEATURES_VERSIONCHECKER          | Set to false to turn off the agent job that checks if the running agent is the latest available (default: `true`).                                                                                                                                                                                                                            |
 | AGENTFEATURES_PERSISTCACHE            | Set to true to turn on the agent's persisted cache (default: `false`).                                                                                                                                                                                                                                                                        |
 | AGENTFEATURES_MARKETPLACEPROVISIONING | Set to true to enable the use of Amplify Marketplace and all of it's resources (default: `false`)                                                                                                                                                                                                                                             |
-
 
 #### Status endpoint variables
 

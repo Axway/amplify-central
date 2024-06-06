@@ -132,27 +132,27 @@ The Transactions data is available in the Business/Consumer Insights API Traffic
 
 The `CENTRAL_REGION` setting for all agents can be used to quickly set all region specific settings for the agent. If these URLs need to be modified, simply override the following variables. Take caution with these overrides.
 
-| Variable              | US Default                           | EU Default                                | AP Default                                 | Usage                                                                 |
-| --------------------- | ------------------------------------ | ----------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------- |
-| CENTRAL_SINGLEURL     | https://ingestion.platform.axway.com | https://ingestion-eu.platform.axway.com   | https://ingestion-ap-sg.platform.axway.com | Alternate Enterprise Marketplace URL connection                       |
-| CENTRAL_URL           | https://apicentral.axway.com         | https://central.eu-fr.axway.com           | https://central.ap-sg.axway.com            | The URL to the Amplify instance being used                            |
-| CENTRAL_AUTH_URL      | https://login.axway.com/auth         | https://login.axway.com/auth              | https://login.axway.com/auth               | The Amplify authentication login URL                                  |
-| CENTRAL_PLATFORMURL   | https://platform.axway.com           | https://platform.axway.com                | https://platform.axway.com                 | The URL to the Amplify platform being used                            |
-| CENTRAL_DEPLOYMENT    | prod                                 | prod-eu                                   | prod-ap                                    | The ingestion region for Traceability events                          |
-| TRACEABILITY_HOST     | ingestion.datasearch.axway.com:5044  | ingestion.visibility.eu-fr.axway.com:5044 | ingestion.visibility.ap-sg.axway.com:5044  | The host and port of the ingestion service for Traceability events    |
-| TRACEABILITY_PROTOCOL | tcp                                  | tcp                                       | tcp                                        | The protocol in which the agent communicates to the TRACEABILITY_HOST |
+| Variable              | US Default                             | EU Default                                  | AP Default                                   | Usage                                                                 |
+| --------------------- | -------------------------------------- | ------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
+| CENTRAL_SINGLEURL     | `https://ingestion.platform.axway.com` | `https://ingestion-eu.platform.axway.com`   | `https://ingestion-ap-sg.platform.axway.com` | Alternate Enterprise Marketplace URL connection                       |
+| CENTRAL_URL           | `https://apicentral.axway.com`         | `https://central.eu-fr.axway.com`           | `https://central.ap-sg.axway.com`            | The URL to the Amplify instance being used                            |
+| CENTRAL_AUTH_URL      | `https://login.axway.com/auth`         | `https://login.axway.com/auth`              | `https://login.axway.com/auth`               | The Amplify authentication login URL                                  |
+| CENTRAL_PLATFORMURL   | `https://platform.axway.com`           | `https://platform.axway.com`                | `https://platform.axway.com`                 | The URL to the Amplify platform being used                            |
+| CENTRAL_DEPLOYMENT    | prod                                   | prod-eu                                     | prod-ap                                      | The ingestion region for Traceability events                          |
+| TRACEABILITY_HOST     | `ingestion.datasearch.axway.com:5044`  | `ingestion.visibility.eu-fr.axway.com:5044` | `ingestion.visibility.ap-sg.axway.com:5044`  | The host and port of the ingestion service for Traceability events    |
+| TRACEABILITY_PROTOCOL | tcp                                    | tcp                                         | tcp                                          | The protocol in which the agent communicates to the TRACEABILITY_HOST |
 
 ### TRACEABILITY_HOST and TRACEABILITY_PROTOCOL
 
-It is possible to override the TRACEABILITY_HOST and TRACEABILITY_PROTOCOL environment variables. When using the 
+It is possible to override the TRACEABILITY_HOST and TRACEABILITY_PROTOCOL environment variables.
 
 If the agent is not using the CENTRAL_SINGLEURL setting then it is possible to change these values. Setting the TRACEABILITY_PROTOCOL to `https` requires the TRACEABILITY_HOST to be set to one of the following values.
 
-| Region | Value |
-| ------ | ----- |
-| US     | ingestion.datasearch.axway.com:443      |
-| EU     | ingestion.visibility.eu-fr.axway.com:443      |
-| AP     | ingestion.visibility.ap-sg.axway.com:443      |
+| Region | Value                                      |
+| ------ | ------------------------------------------ |
+| US     | `ingestion.datasearch.axway.com:443`       |
+| EU     | `ingestion.visibility.eu-fr.axway.com:443` |
+| AP     | `ingestion.visibility.ap-sg.axway.com:443` |
 
 ### Communication ports
 
