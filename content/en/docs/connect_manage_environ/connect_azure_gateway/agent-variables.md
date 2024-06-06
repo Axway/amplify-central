@@ -4,17 +4,13 @@ linkTitle: Reference - Agent configuration
 draft: false
 weight: 30
 ---
-Use variables to control your Discovery and Traceability agents.
+Use the following environment variables to control your Discovery and Traceability agents.
 
 As the Discovery and Traceability agents share many parameters, it is more efficient to use environment variables and reference these parameters, instead of declaring parameters twice.
 
-To maintain a shareable collection of environment files, you can create a `da_env_vars.env` (Discovery Agent) and `ta_env_vars.env` (Traceability Agent) file per environment, which contains simple key value pairs.  By default, agent configuration files are looking for corresponding environment variables before looking on the configuration file property. This file can be used for both modes of the agent (binary VS Docker container).
-  
-Note that the agent (binary mode) will accept an argument pointing to the environment variables file, which you can point to the `da_env_vars.env` or `ta_env_vars.env` file. Use the --envFile `da_env_vars.env` argument with either agent, pointing to the file for that agent.
+To maintain a shareable collection of environment files, you can create a `da_env_vars.env` (Discovery Agent) and `ta_env_vars.env` (Traceability Agent) file per environment, which contains simple key value pairs.  By default, agent configuration files are looking for corresponding environment variables before looking on the configuration file property.
 
 Note that the Docker image of the agent is expecting this `da_env_vars.env` or `ta_env_vars.env` as an argument of the Docker runner `docker run --env-file <PATH>/da_env_vars.env...`
-
-Some variables/properties have a default known value so that there is no need to parameter them.
 
 If you are either struggling with a variable value or you want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describe all the variables the agents (Discovery / Traceability) rely on.
 
