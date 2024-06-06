@@ -16,7 +16,7 @@ Connecting a GitLab Repository to Amplify will provide you with a global central
 
 ## Before you start
 
-* Read [GitLab Ground agent setup](/docs/connect_manage_environ/connect_gitlab_repository/ground_agent_setup/)
+* Read [GitLab discovery agent setup](/docs/connect_manage_environ/connect_gitlab_repository/ground_agent_setup/)
 * Gather information on GitLab:
     * The access token that the agent will use to connect to GitLab
     * The organization base URL where the GitLab instance is hosted

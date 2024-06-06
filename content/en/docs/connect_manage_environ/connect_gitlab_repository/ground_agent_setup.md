@@ -1,6 +1,6 @@
 ---
-title: Set up GitLab for Ground agents
-linkTitle: Set up GitLab for Ground agents
+title: Set up your GitLab discovery agent
+linkTitle: Set up GitLab discovery agent
 draft: false
 weight: 100
 ---
@@ -26,3 +26,16 @@ Learn how to quickly set up a GitLab access token to allow the agent to discover
     * Click **Create personal access token**
 
 {{< alert title="Note" color="primary" >}}Copy the token value and keep it safe, you won't be able to see it again.{{< /alert >}}
+
+## Agent variables
+
+All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
+
+| Variable name                  | Description                                                                                                  |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| GITLAB_TOKEN                   | The token that the agent will use to authenticate to GitLab.                                                 |
+| GITLAB_BASE_URL                | The base URL that the agent will use to communicate to GitLab.                                               |
+| GITLAB_REPOSITORY_ID           | The ID of the repository on GitLab.                                                                          |
+| GITLAB_REPOSITORY_BRANCH       | The name of the branch within the repository that the agent should look for spec files  in                   |
+| GITLAB_REPOSITORY_SPEC_PATHS   | A comma separated list of paths within the repository to look for spec files in                              |
+| GITLAB_REPOSITORY_SPEC_FILTERS | Regular expression filters to apply to files in order to determine if it should be discovered as a spec file |
