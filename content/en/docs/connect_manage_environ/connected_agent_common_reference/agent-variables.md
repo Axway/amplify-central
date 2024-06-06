@@ -112,6 +112,8 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 | AGENTFEATURES_IDP_SSL_MAXVERSION            | String value for the maximum SSL/TLS version that is acceptable. If empty, then the maximum version supported by this package is used, which is currently TLS 1.3. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                    |
 | AGENTFEATURES_IDP_SSL_MINVERSION            | String value for the minimum SSL/TLS version that is acceptable. If zero, empty TLS 1.2 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                      |
 
+{{< alert title="Note" color="primary" >}}Not all agents support these IdP settings.{{< /alert >}}
+
 ### Traceability agent only variables
 
 | Variable name                                  | Description                                                                                                                                                                                                                                                                                                                     |
