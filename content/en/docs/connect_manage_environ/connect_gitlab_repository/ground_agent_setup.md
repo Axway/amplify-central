@@ -39,3 +39,16 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | GITLAB_REPOSITORY_BRANCH       | The name of the branch within the repository that the agent should look for spec files  in                   |
 | GITLAB_REPOSITORY_SPEC_PATHS   | A comma separated list of paths within the repository to look for spec files in                              |
 | GITLAB_REPOSITORY_SPEC_FILTERS | Regular expression filters to apply to files in order to determine if it should be discovered as a spec file |
+
+### GITLAB_REPOSITORY_SPEC_PATHS and GITLAB_REPOSITORY_SPEC_FILTERS
+
+While setting up your agent it is possible to limit where the agent will look for specification files as well as limit the file names that the agent will discover.
+
+Below is an example of how to use both of these settings in the agent environment configuration.
+
+```shell
+GITLAB_REPOSITORY_SPEC_PATHS="rest-apis,wsdl-apis"
+GITLAB_REPOSITORY_SPEC_FILTERS=".*.json$,.*.yaml$,.*.xml$"
+```
+
+These settings will configure the agent to look only for files that end in `json`, `yaml`, or `xml`. Furthermore only the folders named `rest-apis` and `wsdl-apis` will be searched.

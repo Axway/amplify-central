@@ -42,7 +42,7 @@ For deprovisioning the created subscription will be removed.
 
 #### Credential
 
-When handling a new credential event, for a given applicaiton, the following steps are taken
+When handling a new credential event, for a given application, the following steps are taken
 
 * Create a new Client ID for the related Application
 
@@ -100,7 +100,7 @@ Use this [Procedure](https://www.ibm.com/docs/en/api-connect/saas?topic=applicat
 
 ### Organization Name
 
-To retrieve you IBM API Connect Organization Name follow the following steps:
+To retrieve your IBM API Connect Organization Name follow these steps:
 
 * Log into IBM API Connect
 * Click the Settings (gear) icon on the left navigation bar
@@ -110,7 +110,7 @@ To retrieve you IBM API Connect Organization Name follow the following steps:
 
 The IBM API Connect agents discovery APIs and track transactions for APIs that are published to a specific catalog within IBM API Connect. The Catalog to use needs to be given as a setting to the agent.
 
-To retrieve your IBM API Connect Catalog Name follow the following steps:
+To retrieve your IBM API Connect Catalog Name follow these steps:
 
 * Log into IBM API Connect
 * Click the Manage (four squares) icon on the left navigation bar
@@ -122,7 +122,7 @@ To retrieve your IBM API Connect Catalog Name follow the following steps:
 
 The IBM API Connect traceability agent is able to track transactions for APIs by querying a specific Analytics Server in your IBM API Connect installation.
 
-To retrieve your IBM API Connect Analytics Server ID follow the following steps:
+To retrieve your IBM API Connect Analytics Server ID follow these steps:
 
 * Log into IBM API Connect
 * Click the Analytics (graph) icon on the left navigation bar
