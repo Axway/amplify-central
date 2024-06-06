@@ -33,10 +33,10 @@ For deprovisioning the created application will be removed.
 
 When handling a new access request event, for a given application, the following steps are taken.
 
-* If not previously created, create a new Product for the API within the request
-* Within the Product, if needed, create a new plan to match the Amplify Marketplace plan details
-* Publish the Product back to the Catalog
-* Create a subscription with the related Application for the newly published product.
+* If not previously created, create a new Draft Product for the API within the request
+* In the Draft Product create a new plan to match the Amplify Marketplace plan details
+* Publish the Draft Product and Plan to the Catalog as a Product
+* Create a subscription with the related Application for the newly published product
 
 For deprovisioning the created subscription will be removed.
 
