@@ -62,7 +62,7 @@ The transaction data collected will only be a sample of the overall number of tr
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * Access to IBM API Connect to retrieve details from the service and CLI Toolkit
-* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
+* The [Traceability Agent](#traceability) requires a connected and running [Discovery Agent](#discovery)
 
 ## System requirements
 

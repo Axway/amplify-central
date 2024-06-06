@@ -142,7 +142,7 @@ APIMANAGER_FILTER=tag.APITAG==value
 
 This section connects the agent to Enterprise Marketplace and determines how to published the discovered APIs.
 
-`CENTRAL_REGION`: The Enterprise Marketplace url. Default value is **<https://apicentral.axway.com>**.
+`CENTRAL_REGION`: The Enterprise Marketplace region. Default value is **<US>**.
 
 `CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.
 
@@ -154,7 +154,7 @@ This section connects the agent to Enterprise Marketplace and determines how to 
 
 `CENTRAL_AUTH_REALM`: The Realm used to authenticate for Enterprise Marketplace. Default value is **Broker**.
 
-`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify > Organization > Service Accounts.
+`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify > Organization > Service Accounts.
 
 `CENTRAL_AUTH_PRIVATEKEY`: The location of the private key file you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.
 
