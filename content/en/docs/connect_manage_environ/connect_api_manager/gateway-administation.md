@@ -142,7 +142,7 @@ APIMANAGER_FILTER=tag.APITAG==value
 
 This section connects the agent to Enterprise Marketplace and determines how to published the discovered APIs.
 
-`CENTRAL_REGION`: The Enterprise Marketplace region. Default value is **<US>**.
+`CENTRAL_REGION`: The Enterprise Marketplace region. Default value is **US**.
 
 `CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.
 
