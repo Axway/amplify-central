@@ -130,8 +130,8 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION     | When a proxy is secured by a policy, this description is added to the Access Request Definition if no description text is found in API Manager (default: `Contact your provider about authenticating to this API`). |
 | APIMANAGER_INVOKEPOLICY_TITLE                  | When a proxy is secured by a policy, this title is added to the Access Request Definition (default: `Authentication Details`)                                                                                       |
-| APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME     | The policy name that should be mapped to a specific credential type                                                                                                            |
-| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, and OAuth                                                                                  |
+| APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME     | The policy name that should be mapped to a specific credential type                                                                                                                                                 |
+| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, and OAuth                                                                                                                      |
 
 The `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` and `APIMANAGER_INVOKEPOLICY_TITLE` settings are used when the Discovery Agent cannot find a Mapping to apply. These values are set in the Access Request to give the end consumer a hint on authenticating to the API.
 
