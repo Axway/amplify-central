@@ -259,7 +259,7 @@ persistentVolumeClaimConfig:
 The agents can be deployed with the following commands, which are mentioned at the end of the CLI install prompts:
 
 ```bash
-helm repo add axway https://charts.axway.com/charts
+helm repo add axway https://repository.axway.com/charts
 helm repo update
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-discovery axway/v7-discovery -f da-overrides.yaml
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/v7-traceability -f ta-overrides.yaml

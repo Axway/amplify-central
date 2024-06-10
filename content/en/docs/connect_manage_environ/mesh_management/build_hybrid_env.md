@@ -79,7 +79,7 @@ Install Helm on your cluster and add the Axway public repository to Helm:
 2. Add the Axway public Helm repository to your installation:
 
    ```bash
-   helm repo add axway https://charts.axway.com/charts
+   helm repo add axway https://repository.axway.com/charts
    "axway" has been added to your repositories
    ```
 3. Verify that the Axway public repository has been added:
@@ -89,7 +89,7 @@ Install Helm on your cluster and add the Axway public repository to Helm:
    NAME            URL
    stable          https://kubernetes-charts.storage.googleapis.com
    local           http://127.0.0.1:8879/charts
-   axway           https://charts.axway.com/charts
+   axway           https://repository.axway.com/charts
    ```
 
 ## Validate the Amazon EC2 hybrid environment

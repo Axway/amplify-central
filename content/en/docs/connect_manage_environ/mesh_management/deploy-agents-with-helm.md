@@ -382,7 +382,7 @@ There are several fields that must be updated in order to properly connect to Am
 ## Deploy the agent
 
 ```bash
-helm repo add axway https://charts.axway.com/charts
+helm repo add axway https://repository.axway.com/charts
 helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
 ```
