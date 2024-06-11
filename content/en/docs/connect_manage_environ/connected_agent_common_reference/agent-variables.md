@@ -68,7 +68,7 @@ The variables common to all agents are described here in more detail.
 | LOG_FILE_PATH             | The path to save logs files, if output type file or both. Traceablity agents require this to be an absolute path.                                                                         |
 | LOG_FILE_ROTATEEVERYBYTES | The max size, in bytes that a log file can grow to.                                                                                                                                       |
 | LOG_FORMAT                | The format to print log messages (json, line, package).                                                                                                                                   |
-| LOG_LEVEL                 | The log level for output messages (debug, info, warn, error).                                                                                                                             |
+| LOG_LEVEL                 | The log level for output messages (trace, debug, info, warn, error).                                                                                                                             |
 | LOG_MASKEDVALUES          | Comma-separated list of keywords to identify within the agent config, which is used to mask its corresponding sensitive data. Keywords are matched by whole words and are case-sensitive. |
 | LOG_OUTPUT                | The output for the log lines (stdout, file, both). When set to `both` for the Traceability Agent, only the file output will appear.                                                       |
 
