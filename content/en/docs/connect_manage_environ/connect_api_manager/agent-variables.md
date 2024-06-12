@@ -153,17 +153,17 @@ APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_3=APIKey
 
 #### Custom OAuth External Policy Handling
 
-When a Front End Proxy is secured by OAuth External policy for an identity provider that does not support OAuth 2.0 Dynamic Client Registration Protocol, the agent will link the API to a Credential Request definition for specifying the identifier of the OAuth client provisioned outside the context of agent.
+When a Front End Proxy is secured by an OAuth External policy for an identity provider that does not support OAuth 2.0 Dynamic Client Registration Protocol, the agent will link the API to a Credential Request definition for specifying the identifier of the OAuth client provisioned outside the context of an agent.
 
 | Variable name                                  | Description                                                                                                                                                                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | APIMANAGER_CUSTOM_OAUTHEXT_TITLE               | This title is added to the Credential Request Definition for custom OAuth External handling (default: `Custom OAuth External`)                                                                                      |
 | APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION         | This description is added to the Credential Request Definition for custom OAuth External handling (default: `Contact your provider to get the credentials`).                                                        |
-| APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL      | This label is added for client identifier field in the Credential Request Definition for custom OAuth External handling (default: `Client Id`).                                                                     |
+| APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL      | This label is added for the client identifier field in the Credential Request Definition for custom OAuth External handling (default: `Client Id`).                                                                     |
 
 The value for `APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION` in the Credential Request gives the end consumer a hint on how to get the OAuth client details.
 
-Here is an example of configuration to override the custom OAuth External handling.
+Here is an example of the configuration to override the custom OAuth External handling.
 
 ```shell
 APIMANAGER_CUSTOM_OAUTHEXT_TITLE="Azure AD"
