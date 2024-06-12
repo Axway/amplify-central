@@ -151,6 +151,26 @@ APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_3=ThisAuthPolicy
 APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_3=APIKey
 ```
 
+#### Custom OAuth External Policy Handling
+
+When a Front End Proxy is secured by OAuth External policy for an identity provider that does not support OAuth 2.0 Dynamic Client Registration Protocol, the agent will link the API to a Credential Request definition for specifying the identifier of the OAuth client provisioned outside the context of agent.
+
+| Variable name                                  | Description                                                                                                                                                                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| APIMANAGER_CUSTOM_OAUTHEXT_TITLE               | This title is added to the Credential Request Definition for custom OAuth External handling (default: `Custom OAuth External`)                                                                                      |
+| APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION         | This description is added to the Credential Request Definition for custom OAuth External handling (default: `Contact your provider to get the credentials`).                                                        |
+| APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL      | This label is added for client identifier field in the Credential Request Definition for custom OAuth External handling (default: `Client Id`).                                                                     |
+
+The value for `APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION` in the Credential Request gives the end consumer a hint on how to get the OAuth client details.
+
+Here is an example of configuration to override the custom OAuth External handling.
+
+```shell
+APIMANAGER_CUSTOM_OAUTHEXT_TITLE="Azure AD"
+APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION="Contact your Azure AD administrator to get the credentials"
+APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
+```
+
 ### Specific variables for Traceability Agent
 
 {{< alert title="Note" color="primary" >}}To exclude health checks from being counted towards the number of transactions for the purpose of entitlement, use the variable TRACEABILITY_EXCEPTION_LIST to identify the API path that the health check transactions use. The agent will then dismiss the transactions and not process them for usage in transaction reporting.{{< /alert >}}
