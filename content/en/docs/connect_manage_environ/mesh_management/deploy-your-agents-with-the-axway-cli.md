@@ -341,7 +341,7 @@ where namespaces 1 through N is a list of all the namespaces on your cluster tha
 Once you save the `hybrid-override.yaml` file with the changes made above, run the following command to finish the installation of the agents:
 
 ```bash
-helm repo add axway https://repository.axway.com --username==<client-id> --password=<client_secret>
+helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
 helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
 ```
