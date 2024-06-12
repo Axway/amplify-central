@@ -23,6 +23,8 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 * Create a new API service
 * Delete an API service
 * Publish a service to the Marketplace
+* Create mock endpoints
+* Edit mock endpoints
 
 ## List API services
 
@@ -103,7 +105,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
-    * Included Endpoints - By default all endpints are selected. Remove any endpoints that are not to be included in the asset.
+    * Included Endpoints - By default all endpoints are selected. Remove any endpoints that are not to be included in the asset.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility -  Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
   
@@ -126,3 +128,11 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
     * The default product plan is a free unlimited plan which can be edited after the product is created.
 
 5. Click **Publish** to quickly make an API service available from consumption in the Marketplace.
+
+## Create a mock endpoint
+
+Create a mock endpoint to simulate the behavior of an API ....
+
+## Edit a mock endpoint
+
+...
