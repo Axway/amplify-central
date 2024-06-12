@@ -256,10 +256,11 @@ persistentVolumeClaimConfig:
     storageClass: gp2-csi
 ```
 
+The helm charts for the agents and download instructions can be found at https:/repository.axway.com/catalog.
 The agents can be deployed with the following commands, which are mentioned at the end of the CLI install prompts:
 
 ```bash
-helm repo add axway https://repository.axway.com --username==<client-id> --password=<client_secret>
+helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
 helm repo pull <agent_filename>
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-discovery axway/v7-discovery -f da-overrides.yaml
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/v7-traceability -f ta-overrides.yaml
