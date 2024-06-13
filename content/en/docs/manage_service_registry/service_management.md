@@ -131,8 +131,13 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
 ## Create a mock endpoint
 
-Create a mock endpoint to simulate the behavior of an API ....
+Create a mock endpoint to simulate the behavior of an API.
+In order for an API Service to create a mock endpoint 4 requirements must be met:
+1. The Service must be OAS2/3
+2. The organization must have the API Mocking entitlement.
+3. The Service must have an associated spec file (API Service Revision).
+4. The Service must be a design/runtime managed service. Cannot be runtime unmanaged.
 
 ## Edit a mock endpoint
 
-...
+Edit a mock endpoint to simulate the behavior of an API.
