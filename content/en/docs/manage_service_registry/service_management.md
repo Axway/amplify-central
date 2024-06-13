@@ -54,7 +54,6 @@ You can filter the services by the Service type, Stages, Environments, Owners, a
 A mock endpoint can be created, if the Service meets the [requirements](#create-mock-endpoint), by clicking the 3 ellipsis button and selecting **Create Mock Endpoint**.
 * Once the **Create Mock Endpoint** sideblade appears there are 3 input fields present. Fill these inputs out according to the information [provided](#create-mock-endpoint).
 * When finished, click **Save**. If successfull a success screen will give the option to close the sideblade or go to the API Service.
-  
 
 ## View API service details
 
@@ -114,7 +113,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
     * Included Endpoints - By default all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column as ever mock endpoint has the state **MOCKED**.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility -  Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
-  
+
         * **Authenticated users** visibility - indicates if the user must be authenticated to see the product:
             * **unchecked** - anonymous user can view any product in the Public Marketplace (default behavior). This option is not available for Private Marketplace.
             * **checked** - user must be authenticated to see the product and can be restricted further with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
@@ -138,26 +137,31 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 ## Create a mock endpoint
 
 Create a mock endpoint to simulate the behavior of an API. Contact Axway Support at support.axway.com or reach out to your Axway representative to learn how to enable the API Mocking Service for your organization.
+
 * Mocked endpoints will always be created with the state "MOCKED" as to be easily identifiable.
 
 In order for an API Service to create a mock endpoint 4 requirements must be met:
+
 1. The Service must be OAS2/3
 2. The organization must have the API Mocking entitlement.
 3. The Service must have an associated spec file (API Service Revision).
 4. The Service must be a design/runtime managed service. Cannot be runtime unmanaged.
 
 When creating a mock endpoint there will be 3 input fields, **Endpoint Name**, **API Service Version**, and **Mock Endpoint Name**. Only **API Service Version**, and **Mock Endpoint Name** are required.
+
 * **Endpoint Name**: A friendly name, or title, for this Mock Endpoint. Not required.
 * **API Service Version**: Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
 * **Mock Endpoint Name**: Provide a unique name to be appended to the mock URL. Must be unique for your organization.
 
 There are 4 areas that a mock endpoint can be created:
+
 1. [Service Registry](#list-api-services)
 2. [Service Wizard](#create-an-api-service)
 3. [Service Details Endpoints Tab](#view-api-service-details)
 4. [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
 
 Mock endpioints can be viewed in 3 locations:
+
 1. [Service Details Endpoints Tab](#view-api-service-details)
 2. [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
 3. Marketplace Product Resources Tab
