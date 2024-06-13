@@ -131,12 +131,25 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
 ## Create a mock endpoint
 
-Create a mock endpoint to simulate the behavior of an API.
+Create a mock endpoint to simulate the behavior of an API. Contact Axway Support at support.axway.com or reach out to your Axway representative to learn how to enable the API Mocking Service for your organization.
+* Mocked endpoints will always be created with the state "MOCKED" as to be easily identifiable.
+
 In order for an API Service to create a mock endpoint 4 requirements must be met:
 1. The Service must be OAS2/3
 2. The organization must have the API Mocking entitlement.
 3. The Service must have an associated spec file (API Service Revision).
 4. The Service must be a design/runtime managed service. Cannot be runtime unmanaged.
+
+There are 4 areas that a mock endpoint can be created:
+1. [Service Registry](#list-api-services)
+2. [Service Wizard](#create-an-api-service)
+3. [Service Details Endpoints Tab](#view-api-service-details)
+4. [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
+
+Mock endpioints can be viewed in 3 locations:
+1. [Service Details Endpoints Tab](#view-api-service-details)
+2. [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
+3. Marketplace Product Resources Tab
 
 ## Edit a mock endpoint
 
