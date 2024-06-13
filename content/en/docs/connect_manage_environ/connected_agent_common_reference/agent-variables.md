@@ -10,6 +10,7 @@ The variables common to all agents are described here in more detail.
     * [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
         * [Status endpoint variables](#status-endpoint-variables)
         * [Logging variables](#logging-variables)
+        * [Audit log variables](#audit-log-variables)
     * [Discovery agent only variables](#discovery-agent-only-variables)
         * [IdP configuration variables](#idp-configuration-variables)
     * [Traceability agent only variables](#traceability-agent-only-variables)
@@ -65,7 +66,7 @@ The variables common to all agents are described here in more detail.
 | LOG_FILE_CLEANBACKUPS     | The max age of a backup file, in days.                                                                                                                                                    |
 | LOG_FILE_KEEPFILES        | The max number of log file backups to keep.                                                                                                                                               |
 | LOG_FILE_NAME             | The name of the log files.                                                                                                                                                                |
-| LOG_FILE_PATH             | The path to save logs files, if output type file or both. Traceablity agents require this to be an absolute path.                                                                         |
+| LOG_FILE_PATH             | The path to save logs files, if output type file or both. Traceability agents require this to be an absolute path.                                                                         |
 | LOG_FILE_ROTATEEVERYBYTES | The max size, in bytes that a log file can grow to.                                                                                                                                       |
 | LOG_FORMAT                | The format to print log messages (json, line, package).                                                                                                                                   |
 | LOG_LEVEL                 | The log level for output messages (trace, debug, info, warn, error).                                                                                                                             |
@@ -73,6 +74,23 @@ The variables common to all agents are described here in more detail.
 | LOG_OUTPUT                | The output for the log lines (stdout, file, both). When set to `both` for the Traceability Agent, only the file output will appear.                                                       |
 
 {{< alert title="Note" color="primary" >}}It is recommended to set up logging in the agent configuration file to keep the logs separated for each agent.{{< /alert >}}
+
+#### Audit log variables
+
+For a full explanation on how to use the Traceability agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
+
+| Environment Variable            | Description                                                                                   |
+| ------------------------------- | --------------------------------------------------------------------------------------------- |
+| LOG_METRICFILE_ENABLED          | Enable or disable the metric audit log (default: `true`)                                      |
+| LOG_METRICFILE_NAME             | The name of the metric log file that will be created (default: `metric.log`)                  |
+| LOG_METRICFILE_KEEPFILES        | The maximum number of metric audit log files to keep (default: `7`)                           |
+| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`)  |
+| LOG_METRICFILE_CLEANBACKUPS     | The max age of a metric audit log backup file, in days (default: `0` unlimited)               |
+| LOG_USAGEFILE_ENABLED           | Enable or disable the usage audit log (default: `true`)                                       |
+| LOG_USAGEFILE_NAME              | The name of the usage log file that will be created (default: `usagefile.log`)                |
+| LOG_USAGEFILE_KEEPFILES         | The maximum number of usage audit log files to keep (default: `7`)                            |
+| LOG_USAGEFILE_ROTATEEVERYBYTES  | The maximum size (bytes) a usage audit log can grow to (default: `10485760`=`10 megabytes`)   |
+| LOG_USAGEFILE_CLEANBACKUPS      | The max age of a usage audit log backup file, in days (default: `365` days)                   |
 
 ### Discovery agent only variables
 
