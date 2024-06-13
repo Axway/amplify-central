@@ -118,6 +118,20 @@ To retrieve your IBM API Connect Catalog Name follow these steps:
 * Select the `Catalog settings` link on the Catalog's page
 * Save the Catalog Name value to use when setting up your agents
 
+### Consumer Organization Settings
+
+In order for the agent to provision access in the IBM API Connect catalog the agent will need to have a user which owns any of the created consumer organizations.
+
+To find the registry name follow these steps:
+
+* Log into IBM API Connect
+* Click the Resources (file cabinet) icon on the left navigation bar
+* Select `User registries`
+* Click the user registry that will be used
+* Find the registry name on the page
+
+Additionally a username, which will own all consumer organizations must also be determined. 
+
 ### Analytics Server Name or ID
 
 The IBM API Connect traceability agent is able to track transactions for APIs by querying a specific Analytics Server in your IBM API Connect installation.

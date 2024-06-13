@@ -24,14 +24,16 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 ### Common variables to both agents
 
-| Variable name                  | Description                                                                                                                                                               |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| APICONNECT_URL                 | The base URL for connect to IBM API Connect.                                                                                                                              |
-| APICONNECT_ORGANIZATIONNAME    | The IBM API Connect organization name, or ID, the agents will connect to.                                                                                                 |
-| APICONNECT_CATALOGNAME         | The catalog name, or ID, that the agents will discover apis and transactions from.                                                                                        |
-| APICONNECT_ANALYTICSSERVERNAME | The analytics server name, or ID, that the traceability agent will query for transaction data.                                                                            |
-| APICONNECT_TIMEOUT             | The connection timeout for querying IBM API Connect's API (default: `1m`)                                                                                                 |
-| APICONNECT_POLLINTERVAL        | The interval in which the agent will query IBM API Connect for new APIs or transactions. (Discovery default: `5m`, `1m` minimum, Traceability default and minimum: `15m`) |
-| APICONNECT_AUTH_APIKEY         | The API Key to use when authenticating API calls to IBM API Connect.                                                                                                                                    |
-| APICONNECT_AUTH_CLIENTID       | The Client ID to use when authenticating API calls to IBM API Connect.                                                                                                                                    |
-| APICONNECT_AUTH_CLIENTSECRET   | The Client Secret to use when authenticating API calls to IBM API Connect.                                                                                                                                   |
+| Variable name                        | Description                                                                                                                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| APICONNECT_URL                       | The base URL for connect to IBM API Connect.                                                                                                                              |
+| APICONNECT_ORGANIZATIONNAME          | The IBM API Connect organization name, or ID, the agents will connect to.                                                                                                 |
+| APICONNECT_CATALOGNAME               | The catalog name, or ID, that the agents will discover apis and transactions from.                                                                                        |
+| APICONNECT_ANALYTICSSERVERNAME       | The analytics server name, or ID, that the traceability agent will query for transaction data.                                                                            |
+| APICONNECT_CONSUMERORGOWNER_REGISTRY | The user registry name, or ID, that owns the user defined in APICONNECT_CONSUMERORGOWNER_USER                                                                             |
+| APICONNECT_CONSUMERORGOWNER_USER     | The user name of the user that the agent will set as the owner of all created Consumer organizations                                                                      |
+| APICONNECT_TIMEOUT                   | The connection timeout for querying IBM API Connect's API (default: `1m`)                                                                                                 |
+| APICONNECT_POLLINTERVAL              | The interval in which the agent will query IBM API Connect for new APIs or transactions. (Discovery default: `5m`, `1m` minimum, Traceability default and minimum: `15m`) |
+| APICONNECT_AUTH_APIKEY               | The API Key to use when authenticating API calls to IBM API Connect.                                                                                                      |
+| APICONNECT_AUTH_CLIENTID             | The Client ID to use when authenticating API calls to IBM API Connect.                                                                                                    |
+| APICONNECT_AUTH_CLIENTSECRET         | The Client Secret to use when authenticating API calls to IBM API Connect.                                                                                                |
