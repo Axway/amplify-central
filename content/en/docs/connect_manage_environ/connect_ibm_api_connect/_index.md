@@ -130,7 +130,7 @@ To find the registry name, follow these steps:
 * Click the user registry that will be used
 * Find the registry name on the page
 
-Additionally a username, which will own all consumer organizations must also be determined. 
+Additionally a username, which will own all consumer organizations, must also be determined.
 
 ### Analytics Server Name or ID
 
