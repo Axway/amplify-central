@@ -343,7 +343,7 @@ Once you save the `hybrid-override.yaml` file with the changes made above, run t
 ```bash
 helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
 helm repo update
-helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
+helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-beano-helm-prod-ampc-hybrid -f hybrid-override.yaml
 ```
 
 {{< alert title="Note" color="primary" >}}By default, the Amplify Istio Discovery Agent polls every 60 seconds for the discovery resources. To change this, you must pass a helm override in the form of `--set da.poll.interval` or `--set da.pollInterval` accordingly with the desired agents.{{< /alert >}}
@@ -351,5 +351,5 @@ helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid 
 For example, if you want the Discovery Agent to poll every 10 seconds for the discovery resources, run the following command to install the agents:
 
 ```bash
-helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set da.pollInterval=10s
+helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-beano-helm-prod-ampc-hybrid -f hybrid-override.yaml --set da.pollInterval=10s
 ```
