@@ -382,9 +382,9 @@ There are several fields that must be updated in order to properly connect to Am
 ## Deploy the agent
 
 ```bash
-helm repo add axway https://charts.axway.com/charts
+helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
 helm repo update
-helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
+helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-beano-helm-prod-ampc-hybrid -f hybrid-override.yaml
 ```
 
 ## Verify that the pods are running

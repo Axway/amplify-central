@@ -68,6 +68,7 @@ kops export kubecfg --name kubernetes-cluster.example.com --state s3://amazonaws
 
 ### Configure Helm on Amazon EC2
 
+The helm charts for the agents and download instructions can be found at https:/repository.axway.com/catalog.
 Install Helm on your cluster and add the Axway public repository to Helm:
 
 1. Verify the Helm version:
@@ -79,7 +80,7 @@ Install Helm on your cluster and add the Axway public repository to Helm:
 2. Add the Axway public Helm repository to your installation:
 
    ```bash
-   helm repo add axway https://charts.axway.com/charts
+   helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
    "axway" has been added to your repositories
    ```
 3. Verify that the Axway public repository has been added:
@@ -89,7 +90,7 @@ Install Helm on your cluster and add the Axway public repository to Helm:
    NAME            URL
    stable          https://kubernetes-charts.storage.googleapis.com
    local           http://127.0.0.1:8879/charts
-   axway           https://charts.axway.com/charts
+   axway           https://helm.repository.axway.com
    ```
 
 ## Validate the Amazon EC2 hybrid environment
