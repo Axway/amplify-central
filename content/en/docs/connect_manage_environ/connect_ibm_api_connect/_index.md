@@ -120,7 +120,7 @@ To retrieve your IBM API Connect Catalog Name follow these steps:
 
 ### Consumer Organization Settings
 
-In order to provision access in IBM API Connect the agent will need know a user which will won all of the created consumer organizations.
+In order to provision access in IBM API Connect, the agent will need know a user which will won all of the created consumer organizations.
 
 To find the registry name, follow these steps:
 
