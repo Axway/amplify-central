@@ -100,7 +100,7 @@ Use this [Procedure](https://www.ibm.com/docs/en/api-connect/saas?topic=applicat
 
 ### Organization Name
 
-To retrieve your IBM API Connect Organization Name follow these steps:
+To retrieve your IBM API Connect Organization Name, follow these steps:
 
 * Log into IBM API Connect
 * Click the Settings (gear) icon on the left navigation bar
@@ -122,7 +122,7 @@ To retrieve your IBM API Connect Catalog Name follow these steps:
 
 In order to provision access in IBM API Connect the agent will need know a user which will won all of the created consumer organizations.
 
-To find the registry name follow these steps:
+To find the registry name, follow these steps:
 
 * Log into IBM API Connect
 * Click the Resources (file cabinet) icon on the left navigation bar
@@ -136,7 +136,7 @@ Additionally a username, which will own all consumer organizations must also be 
 
 The IBM API Connect traceability agent is able to track transactions for APIs by querying a specific Analytics Server in your IBM API Connect installation.
 
-To retrieve your IBM API Connect Analytics Server ID follow these steps:
+To retrieve your IBM API Connect Analytics Server ID, follow these steps:
 
 * Log into IBM API Connect
 * Click the Analytics (graph) icon on the left navigation bar
