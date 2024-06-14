@@ -51,7 +51,7 @@ To list API services:
 
 You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
-* Once the **Create Mock Endpoint** sideblade appears there are 3 input fields present. Fill these inputs out according to the information [provided](#create-mock-endpoint).
+* Once the **Create Mock Endpoint** sideblade appears there are 3 input fields present. Fill these inputs out according to the information [provided](#create-a-mock-endpoint).
 * When finished, click **Save**. If successfull a success screen will give the option to close the sideblade or go to the API Service.
 
 ## View API service details
@@ -65,7 +65,7 @@ Click on the Service name or icon to view the following detailed information for
 
 * General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Endpoints, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
 * The metrics area displays the number of teams the General Service is shared with, the number of assets and products related to the General Service, and the number of active asset requests to the General Service.
-* The general Endpoints tab displays a list of endpoints associated with the API service. If the API service is not  within the scope of an environment with agent, the user can create and edit runtime endpoints. This can be done through the **Create Runtime Endpoint** button or dropdown. Editing is done by clicking the 3 ellipsis and selecting **Edit Endpoint**. If [requirements](#create-mock-endpoint) are met the user can create and edit mocked endpoints. Creation can be done through the **Create Mock Endpoint** button or dropdown. Editing is done by clicking the 3 ellipsis and selecting **Edit Mock Endpoint**.
+* The general Endpoints tab displays a list of endpoints associated with the API service. If the API service is not  within the scope of an environment with agent, the user can create and edit runtime endpoints. This can be done through the **Create Runtime Endpoint** button or dropdown. Editing is done by clicking the 3 ellipsis and selecting **Edit Endpoint**. If [requirements](#create-a-mock-endpoint) are met the user can create and edit mocked endpoints. Creation can be done through the **Create Mock Endpoint** button or dropdown. Editing is done by clicking the 3 ellipsis and selecting **Edit Mock Endpoint**.
 * The general Access Rights tab displays all teams the API service is shared with.
 * The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
 * The general Assets tab displays the assets that contain this API service, the state of the assets, and when they were last modified.
@@ -87,7 +87,7 @@ Click on the Service name or icon to view the following detailed information for
     * Description - A short description of the service
     * Image - An icon or image to be associated with the service
 
-5. If [requirements](#create-mock-endpoint) are met there will be an option to choose to create a mock or runtime endpoint. If mock endpoint creation is selected then fill the mock endpoint inputs out according to the information [provided](#create-mock-endpoint).If requirements are not met the only option available will be runtime endpoint. Simply add / edit Endpoint information, if available, and then click **Next**.
+5. If [requirements](#create-a-mock-endpoint) are met there will be an option to choose to create a mock or runtime endpoint. If mock endpoint creation is selected then fill the mock endpoint inputs out according to the information [provided](#create-a-mock-endpoint).If requirements are not met the only option available will be runtime endpoint. Simply add / edit Endpoint information, if available, and then click **Next**.
 6. Click **Save**.
 
 ## Delete an API service
@@ -109,7 +109,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
-    * Included Endpoints - By default all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column as ever mock endpoint has the state **MOCKED**.
+    * Included Endpoints - By default all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column as ever mock endpoint has the state **MOCKED**.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility -  Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
 
