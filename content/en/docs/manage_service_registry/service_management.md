@@ -51,8 +51,6 @@ To list API services:
 
 You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
-A mock endpoint can be created, if the Service meets the [requirements](#create-mock-endpoint), by clicking the 3 ellipsis button and selecting **Create Mock Endpoint**.
-
 * Once the **Create Mock Endpoint** sideblade appears there are 3 input fields present. Fill these inputs out according to the information [provided](#create-mock-endpoint).
 * When finished, click **Save**. If successfull a success screen will give the option to close the sideblade or go to the API Service.
 
