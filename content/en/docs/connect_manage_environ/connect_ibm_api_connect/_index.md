@@ -90,7 +90,7 @@ Use one of the following settings, for both agents, to set the region the agent 
 
 ### Client ID and Secret
 
-Both agents will use the credentials provided by the IBM API Connect CLI Toolkit to connect discover APIs and track transactions. Additionally an API Key is will need to be retrieved
+Both agents will use the credentials provided by the IBM API Connect CLI Toolkit to connect discover APIs and track transactions. Additionally, an API Key must be retrieved
 
 Use this [Procedure](https://www.ibm.com/docs/en/api-connect/10.0.x?topic=toolkit-installing#tasktask_qsv_cgq_nt__steps__1) to retrieve the Client ID and Client Secret for the agent. The values under toolkit will be used for the agent.
 
@@ -100,46 +100,46 @@ Use this [Procedure](https://www.ibm.com/docs/en/api-connect/saas?topic=applicat
 
 ### Organization Name
 
-To retrieve your IBM API Connect Organization Name, follow these steps:
+Follow these steps to retrieve your IBM API Connect Organization Name:
 
-* Log into IBM API Connect
-* Click the Settings (gear) icon on the left navigation bar
-* Save the Organization Name value to use when setting up your agents
+1. Log in to IBM API Connect.
+2. Click the Settings (gear) icon on the left navigation bar.
+3. Save the Organization Name value to use when setting up your agents.
 
 ### Catalog Name
 
-The IBM API Connect agents discovery APIs and track transactions for APIs that are published to a specific catalog within IBM API Connect. The Catalog to use needs to be given as a setting to the agent.
+The IBM API Connect agents discover APIs and track transactions for APIs that are published to a specific catalog within IBM API Connect. The Catalog to use needs to be given as a setting to the agent.
 
-To retrieve your IBM API Connect Catalog Name follow these steps:
+Follow these steps to retrieve your IBM API Connect Catalog Name:
 
-* Log into IBM API Connect
-* Click the Manage (four squares) icon on the left navigation bar
-* Select the Catalog that will be linked to the agents
-* Select the `Catalog settings` link on the Catalog's page
-* Save the Catalog Name value to use when setting up your agents
+1. Log in to IBM API Connect.
+2. Click the Manage (four squares) icon on the left navigation bar.
+3. Select the Catalog that will be linked to the agents.
+4. Select the `Catalog settings` link on the Catalog's page.
+5. Save the Catalog Name value to use when setting up your agents.
 
 ### Consumer Organization Settings
 
-In order to provision access in IBM API Connect, the agent will need know a user which will won all of the created consumer organizations.
+To provision access in IBM API Connect, the agent needs to know the user that will own all the created consumer organizations.
 
-To find the registry name, follow these steps:
+Follow these steps to find the registry name:
 
-* Log into IBM API Connect
-* Click the Resources (file cabinet) icon on the left navigation bar
-* Select `User registries`
-* Click the user registry that will be used
-* Find the registry name on the page
+1. Log in to IBM API Connect.
+2. Click the Resources (file cabinet) icon on the left navigation bar.
+3. Select `User registries`.
+4. Click the user registry that will be used.
+5. Find the registry name on the page.
 
-Additionally a username, which will own all consumer organizations, must also be determined.
+Additionally, a username that will own all consumer organizations must also be determined.
 
 ### Analytics Server Name or ID
 
-The IBM API Connect traceability agent is able to track transactions for APIs by querying a specific Analytics Server in your IBM API Connect installation.
+The IBM API Connect Traceability Agent can track transactions for APIs by querying a specific Analytics Server in your IBM API Connect installation.
 
-To retrieve your IBM API Connect Analytics Server ID, follow these steps:
+Follow these steps to retrieve your IBM API Connect Analytics Server ID:
 
-* Log into IBM API Connect
-* Click the Analytics (graph) icon on the left navigation bar
-* Within the URL bar of the browser the Analytics ID can be retrieved, see the UUID value `1111111-1111-1111-1111-111111111111` after `analytics/` and before `/dashboards` below
+1. Log in to IBM API Connect.
+2. Click the Analytics (graph) icon on the left navigation bar.
+3. The Analytics ID can be retrieved within the URL bar of the browser. See the UUID value `1111111-1111-1111-1111-111111111111` after `analytics/` and before `/dashboards` below:
 
 Ex: `https://apiconnect.host.com/manager/orgname/analytics/1111111-1111-1111-1111-111111111111/dashboards`
