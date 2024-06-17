@@ -82,7 +82,7 @@ Learn how to use the Amplify Enterprise Marketplace WebUI to configure your orga
                 * **Google Client ID** - Client ID of your registered OAuth 2.0 Credentials within Google.
                 * **Google Client Secret** - Client secret for your registered OAuth 2.0 Credentials within Google.
 
-    * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
+    * **Terms and Conditions** - enable **Require acceptance of Terms & Conditions** to require *consumer organization* users to acknowledge the Terms & Conditions the first time they navigate to the Marketplace. Otherwise, acknowledgement is never required.
 
         * If enabled, you must provide the Terms & Conditions by either uploading a PDF file or entering a URL where it is available.
 
