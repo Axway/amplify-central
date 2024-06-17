@@ -69,7 +69,7 @@ Use one of the following settings, for both agents, to set the region the agent 
 * `CENTRAL_REGION`= **EU**
 * `CENTRAL_REGION`= **AP**
 
-{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets{{< /alert >}}
+{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets.{{< /alert >}}
 
 ## Connect Axway API Manager to Amplify using Axway Central CLI
 
