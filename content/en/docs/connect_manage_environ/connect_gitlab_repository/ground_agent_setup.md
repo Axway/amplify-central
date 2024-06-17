@@ -1,6 +1,6 @@
 ---
-title: Set up your GitLab discovery agent
-linkTitle: Set up GitLab discovery agent
+title: Set up your GitLab Discovery Agent
+linkTitle: Set up GitLab Discovery Agent
 draft: false
 weight: 100
 ---
@@ -36,9 +36,9 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | GITLAB_TOKEN                   | The token that the agent will use to authenticate to GitLab.                                                 |
 | GITLAB_BASE_URL                | The base URL that the agent will use to communicate to GitLab.                                               |
 | GITLAB_REPOSITORY_ID           | The ID of the repository on GitLab.                                                                          |
-| GITLAB_REPOSITORY_BRANCH       | The name of the branch within the repository that the agent should look for spec files  in                   |
-| GITLAB_REPOSITORY_SPEC_PATHS   | A comma separated list of paths within the repository to look for spec files in                              |
-| GITLAB_REPOSITORY_SPEC_FILTERS | Regular expression filters to apply to files in order to determine if it should be discovered as a spec file |
+| GITLAB_REPOSITORY_BRANCH       | The name of the branch within the repository that the agent should look for spec files in.                   |
+| GITLAB_REPOSITORY_SPEC_PATHS   | A comma separated list of paths within the repository to look for spec files in.                             |
+| GITLAB_REPOSITORY_SPEC_FILTERS | Regular expression filters to apply to files in order to determine if it should be discovered as a spec file.|
 
 ### GITLAB_REPOSITORY_SPEC_PATHS and GITLAB_REPOSITORY_SPEC_FILTERS
 
@@ -51,4 +51,4 @@ GITLAB_REPOSITORY_SPEC_PATHS="rest-apis,wsdl-apis"
 GITLAB_REPOSITORY_SPEC_FILTERS=".*.json$,.*.yaml$,.*.xml$"
 ```
 
-These settings will configure the agent to look only for files that end in `json`, `yaml`, or `xml`. Furthermore only the folders named `rest-apis` and `wsdl-apis` will be searched.
+These settings will configure the agent to look only for files that end in `json`, `yaml`, or `xml`. Furthermore, only the folders named `rest-apis` and `wsdl-apis` will be searched.
