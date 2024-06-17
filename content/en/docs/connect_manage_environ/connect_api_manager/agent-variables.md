@@ -123,18 +123,18 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | APIMANAGER_DISCOVERYIGNORETAGS | Comma-separated blacklist of tags that should not be on a proxy before sending to Enterprise Marketplace. Takes precedence over APIMANAGER_FILTER.                   |
 | APIMANAGER_FILTER              | Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/). |
 
-#### Invoke Policy Handling
+#### Invoke policy handling
 
 When a Front End Proxy is secured by invoking a policy the agent will not know what the actual policy does. When the policy itself applies a known security type it is possible to have the agent map a policy name to a credential type, this credential type is what consumers will be prompted to create in Marketplace.
 
 | Variable name                                  | Description                                                                                                                                                                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION     | When a proxy is secured by a policy, this description is added to the Access Request Definition if no description text is found in API Manager (default: `Contact your provider about authenticating to this API`). |
-| APIMANAGER_INVOKEPOLICY_TITLE                  | When a proxy is secured by a policy, this title is added to the Access Request Definition (default: `Authentication Details`)                                                                                       |
-| APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME     | The policy name that should be mapped to a specific credential type                                                                                                                                                 |
-| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, and OAuth                                                                                                                      |
+| APIMANAGER_INVOKEPOLICY_TITLE                  | When a proxy is secured by a policy, this title is added to the Access Request Definition (default: `Authentication Details`).                                                                                       |
+| APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME     | The policy name that should be mapped to a specific credential type.                                                                                                                                                 |
+| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, and OAuth.                                                                                                                      |
 
-The `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` and `APIMANAGER_INVOKEPOLICY_TITLE` settings are used when the Discovery Agent cannot find a Mapping to apply. These values are set in the Access Request to give the end consumer a hint on authenticating to the API.
+The `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` and `APIMANAGER_INVOKEPOLICY_TITLE` settings are used when the Discovery Agent cannot find a mapping to apply. These values are set in the Access Request to give the end consumer a hint on authenticating to the API.
 
 The `APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME` and `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE` settings may be repeated for every mapping that is required. For each new mapping being added increase the index at the end of the variable name.
 
@@ -151,13 +151,13 @@ APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_3=ThisAuthPolicy
 APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_3=APIKey
 ```
 
-#### Custom OAuth External Policy Handling
+#### Custom OAuth External policy handling
 
 When a Front End Proxy is secured by an OAuth External policy for an identity provider that does not support OAuth 2.0 Dynamic Client Registration Protocol, the agent will link the API to a Credential Request definition for specifying the identifier of the OAuth client provisioned outside the context of an agent.
 
 | Variable name                                  | Description                                                                                                                                                                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| APIMANAGER_CUSTOM_OAUTHEXT_TITLE               | This title is added to the Credential Request Definition for custom OAuth External handling (default: `Custom OAuth External`)                                                                                      |
+| APIMANAGER_CUSTOM_OAUTHEXT_TITLE               | This title is added to the Credential Request Definition for custom OAuth External handling (default: `Custom OAuth External`).                                                                                      |
 | APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION         | This description is added to the Credential Request Definition for custom OAuth External handling (default: `Contact your provider to get the credentials`).                                                        |
 | APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL      | This label is added for the client identifier field in the Credential Request Definition for custom OAuth External handling (default: `Client Id`).                                                                     |
 
