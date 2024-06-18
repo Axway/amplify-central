@@ -20,6 +20,68 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify Enterprise Marketplace June 14 2024](/docs/amplify_relnotes/20240614_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.87. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.83 / TA=v1.1.83
+* **AWS Gateway using SDK 2.0** - DA=v1.1.67 / TA-v1.1.70
+* **Azure latest release** - DA=v1.1.72 / TA=v1.1.78
+* **Istio 1.9.5** - DA=v1.0.39 / TA=v2.0.83
+* **Apigee Edge** - Agent version 0.1.40
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.50
+* **Software AG webMethods** - 0.0.27
+* **Kong Gateway** - 1.0.11
+* **GitLab** - 1.0.8
+* **Kafka Cluster** - DA=v1.0.8 / TA=v1.0.8
+
+Supported SaaS (embedded) Agents:
+
+* **AWS Embedded Service**
+* **Apigee X Embedded Service**
+* **GitHub Embedded Service**
+* **Azure Embedded Service**
+* **SwaggerHub Embedded Service**
+
+Runtime Compliance Agent:
+
+* **Graylog API Security** - On-premise Agent version 1.0.7
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | Region variable setting. <br />Dynamic Client Registration settings. |
+| Bug fixes: | None. |
+| <br />**On-premise agents** |         |
+| What's new: | **Axway API Management Gateway Agent** - External credential support. |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
+| <br />**SaaS (embedded) agents** |    |
+| What's new: | None. |
+| Bug fixes:  | None. |
+| <br />**Axway CLI** |       |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Axway Central CLI** |       |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Service Registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - Mock Service support. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Product Foundry** |         |
+| What's new: | New URL to access the subscription details information. <br />New URL to access the access request details information. |
+| Bug fixes: | See release note. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Marketplace** |         |
+| What's new: | None. |
+| Bug fixes: | See release note. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify Enterprise Marketplace May 31 2024](/docs/amplify_relnotes/20240531_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.85. This version is compatible with:
