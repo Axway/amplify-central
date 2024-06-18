@@ -57,8 +57,12 @@ The following information is displayed for environments created using the API se
     * **Tags & Attributes**: This section shows any tags (keywords) and attributes (key and value pairs) that are specific to the environment asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third-party systems.
     * **Services, Access Rights, Credential Managment**: This section shows all API services, access rights, and when credentails expire within the environment. It is sortable by logical name, Version Count, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the user who last modified the API service, and when the API service was last modified.
 
-        * Mock Endpoints: If requirements are met a mock endpoint can be created from the **Services** tab. Simply click the 3 ellipsis and select **Create Mock Endpoint**. Once the **Create Mock Endpoint** sideblade appears there are 3 input fields present. Fill these inputs out according to the information [provided](/docs/manage_service_registry/service_management/#create-mock-endpoint). When finished, click **Save**. If successfull a success screen will give the option to close the sideblade or go to the API Service.
-        * Note: In order for an API Service to create a mock endpoint 4 requirements must be met:
+        * Mock Endpoints: If requirements are met, a mock endpoint can be created from the **Services** tab:
+            * Click the three ellipsis and select **Create Mock Endpoint**.
+            * Once the **Create Mock Endpoint** side panel appears, fill in the three inputs according to the information [provided](/docs/manage_service_registry/service_management/#create-mock-endpoint). 
+            * Click **Save**. If successful, a success screen will give the option to close the side panel or go to the API Service.
+        
+        The following requirements must be met before an API Service can create a mock endpoint:
 
             1. The Service must be OAS2/3
             2. The organization must have the API Mocking entitlement.
