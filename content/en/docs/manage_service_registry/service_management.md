@@ -12,7 +12,7 @@ Use the Topology WebUI to select an environment and then manage your API service
 
 ## Before you start
 
-You must have credentials or a user account from your org Administrator to use the Service Registry WebUI.  Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+You must have credentials or a user account from your org Administrator to use the Service Registry WebUI. Please follow the steps [here](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
 
 ## Objectives
 
@@ -23,6 +23,8 @@ Learn how to use the Service Registry WebUI to create and manage services, inclu
 * Create a new API service
 * Delete an API service
 * Publish a service to the Marketplace
+* Create mock endpoints
+* Edit mock endpoints
 
 ## List API services
 
@@ -49,6 +51,9 @@ To list API services:
 
 You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
+* Once the **Create Mock Endpoint** side panel appears fill out the three input fields according to the information [provided](#create-a-mock-endpoint).
+* When finished, click **Save**. If successfull, a success screen will give the option to close the sideblade or go to the API Service.
+
 ## View API service details
 
 To view service details:
@@ -58,8 +63,9 @@ To view service details:
 
 Click on the Service name or icon to view the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
+* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Endpoints, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
 * The metrics area displays the number of teams the General Service is shared with, the number of assets and products related to the General Service, and the number of active asset requests to the General Service.
+* The general Endpoints tab displays a list of endpoints associated with the API service. If the API service is not within the scope of an environment with agent, the user can create and edit runtime endpoints by using the **Create Runtime Endpoint** button or dropdown. Editing is done by clicking the three ellipsis and selecting **Edit Endpoint**. If [requirements](#create-a-mock-endpoint) are met, the user can create and edit mocked endpoints by using the **Create Mock Endpoint** button or dropdown. Editing is done by clicking the three ellipsis and selecting **Edit Mock Endpoint**.
 * The general Access Rights tab displays all teams the API service is shared with.
 * The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
 * The general Assets tab displays the assets that contain this API service, the state of the assets, and when they were last modified.
@@ -68,7 +74,7 @@ Click on the Service name or icon to view the following detailed information for
 
     {{< alert title="Tip" color="secondary" >}} Enter the name of a version in the search bar to quickly find a specific version. <br /> <br/>Click Compliance Score **Details** to open the Compliance tab and view the Security and Design Compliance details, download results in CSV format, and run linting tests. {{< /alert >}}
 
-* With the version specific tab, there are other tabs to view the API Specification & Methods, Endpoints listening for requests to the service, Tags & Attributes, Compliance, Assets, and Products which are related to the version of the service.
+* With the version specific tab, there are other tabs to view the API Specification & Methods, Tags & Attributes, Compliance, Assets, and Products, which are related to the version of the service.
 
 ## Create an API service
 
@@ -81,7 +87,7 @@ Click on the Service name or icon to view the following detailed information for
     * Description - A short description of the service
     * Image - An icon or image to be associated with the service
 
-5. Add / edit Endpoint information, if available, and then click **Next**.
+5. If [requirements](#create-a-mock-endpoint) are met, there will be an option to create a mock or runtime endpoint. If mock endpoint creation is selected, then fill in the mock endpoint inputs according to the information [provided](#create-a-mock-endpoint).If requirements are not met, then the only option available will be runtime endpoint. Simply add / edit Endpoint information, if available, and click **Next**.
 6. Click **Save**.
 
 ## Delete an API service
@@ -103,26 +109,62 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
-    * Included Endpoints - By default all endpints are selected. Remove any endpoints that are not to be included in the asset.
+    * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column, as the mock endpoint has the state **MOCKED**.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility -  Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
-  
-        * **Authenticated users** visibility - indicates if the user must be authenticated to see the product:
-            * **unchecked** - anonymous user can view any product in the Public Marketplace (default behavior). This option is not available for Private Marketplace.
-            * **checked** - user must be authenticated to see the product and can be restricted further with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
-        * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
-            * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
-            * **Selected teams** - only members of the selected teams can see the product in the Marketplace.
-            * **Exclude selected teams** - only members that are not part of selected teams can see the product in the Marketplace.
-            * **Include teams having tag** - only members of the team that have the selected tag can see the product in the Marketplace.
-            * **None** - the product is not visible to anyone in the Marketplace.
+
+        * **Authenticated users** visibility - Indicates if the user must be authenticated to see the product:
+            * **unchecked** - Anonymous user can view any product in the Public Marketplace (default behavior). This option is not available for Private Marketplace.
+            * **checked** - User must be authenticated to see the product and can be restricted further with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
+        * **Platform Users** visibility - Under **Platform Users**, select one of the following options from the **Visible To** menu:
+            * **Everyone** - (default) The product is visible in the Marketplace by all registered users in your provider organization.
+            * **Selected teams** - Only members of the selected teams can see the product in the Marketplace.
+            * **Exclude selected teams** - Only members that are not part of selected teams can see the product in the Marketplace.
+            * **Include teams having tag** - Only members of the team that have the selected tag can see the product in the Marketplace.
+            * **None** - The product is not visible to anyone in the Marketplace.
                 * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from.
-        * **Marketplace Users** visibility: under **Marketplace User**, select one of the following options from the **Visible To** menu:
-            * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
-            * **Selected organizations** - only users registered with a Marketplace account and a member of the selected consumer organization can see the product in the Marketplace.
-            * **None** - the product is not visible to any user registered with a Marketplace account or anonymous users.
+        * **Marketplace Users** visibility - Under **Marketplace User**, select one of the following options from the **Visible To** menu:
+            * **Everyone** - (default) The product is visible in the Marketplace by all registered users in your provider organization.
+            * **Selected organizations** - Only users registered with a Marketplace account and a member of the selected consumer organization can see the product in the Marketplace.
+            * **None** - The product is not visible to any user registered with a Marketplace account or anonymous users.
                 * From the list of available consumer organizations in your provider organization, select the consumer organization you want to give product visibility or remove visibility from.
 
     * The default product plan is a free unlimited plan which can be edited after the product is created.
 
 5. Click **Publish** to quickly make an API service available from consumption in the Marketplace.
+
+## Create a mock endpoint
+
+Create a mock endpoint to simulate the behavior of an API. Contact Axway Support at support.axway.com or reach out to your Axway representative to learn how to enable the API Mocking Service for your organization.
+
+* Mocked endpoints will always be created with the state "MOCKED" as to be easily identifiable.
+
+These requirements must be met before an API Service can create a mock endpoint:
+
+1. The Service must be OAS2/3.
+2. The organization must have the API Mocking entitlement.
+3. The Service must have an associated spec file (API Service Revision).
+4. The Service must be a design/runtime managed service. Cannot be runtime unmanaged.
+
+When creating a mock endpoint, there will be three input fields, **Endpoint Name**, **API Service Version**, and **Mock Endpoint Name**. Only **API Service Version**, and **Mock Endpoint Name** are required.
+
+* **Endpoint Name** - A friendly name, or title, for this Mock Endpoint.
+* **API Service Version** - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
+* **Mock Endpoint Name** - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
+
+Mock endpoints can be created in:
+
+1. [Service Registry](#list-api-services)
+2. [Service Wizard](#create-an-api-service)
+3. [Service Details Endpoints Tab](#view-api-service-details)
+4. [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
+
+Mock endpoints can be viewed in:
+
+1. [Service Details Endpoints Tab](#view-api-service-details)
+2. [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
+3. Marketplace Product Resources Tab
+
+## Edit a mock endpoint
+
+Edit a mock endpoint to simulate the behavior of an API. Editing can only be done in the [Service Details Endpoints Tab](#view-api-service-details).

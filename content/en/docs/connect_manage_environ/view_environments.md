@@ -57,6 +57,19 @@ The following information is displayed for environments created using the API se
     * **Tags & Attributes**: This section shows any tags (keywords) and attributes (key and value pairs) that are specific to the environment asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third-party systems.
     * **Services, Access Rights, Credential Managment**: This section shows all API services, access rights, and when credentails expire within the environment. It is sortable by logical name, Version Count, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the user who last modified the API service, and when the API service was last modified.
 
+        * Mock Endpoints: If requirements are met, a mock endpoint can be created from the **Services** tab:
+
+            1. Click the three ellipsis and select **Create Mock Endpoint**.
+            2. Once the **Create Mock Endpoint** side panel appears, fill in the three inputs according to the information [provided](/docs/manage_service_registry/service_management/#create-mock-endpoint).
+            3. Click **Save**. If successful, a success screen will give the option to close the side panel or go to the API Service.
+
+        The following requirements must be met before an API Service can create a mock endpoint:
+
+        * The Service must be OAS2/3
+        * The organization must have the API Mocking entitlement.
+        * The Service must have an associated spec file (API Service Revision).
+        * The Service must be a design/runtime managed service. Cannot be runtime unmanaged.
+
     {{< alert title="Note" color="primary" >}}If enabled, Security and Design compliance validation scores are displayed for each of the API Service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.{{< /alert >}}
 
 For more information about Axway Cloud SaaS environment, refer to [Axway Cloud SaaS: Get Started](/docs/saas_api_gateway/quickstart/)
