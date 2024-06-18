@@ -122,6 +122,8 @@ On a monthly or annual basis, depending on the plan metering period, a new invoi
 
 Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.
 
+{{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates his subscription, the invoice status will remain as Open.{{< /alert >}}
+
 ### Troubleshooting Stripe integration
 
 It is recommended that you test the communication between Stripe and the Marketplace once the billing integration setup is done:
@@ -203,6 +205,8 @@ Each time a consumer from the consumer organization of the Marketplace subscribe
 On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it.
 
 Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.
+
+{{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates his subscription, the invoice status will remain as Open.{{< /alert >}}
 
 ### Troubleshooting MyFatoorah integration
 
