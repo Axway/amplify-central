@@ -33,19 +33,19 @@ Until the first invoice is fully paid, the customer can request access to the re
 
 Each invoice will follow this lifecycle status:
 
-* **Draft**: the invoice is generated on the Marketplace side and not yet submitted to the billing system
+* **Draft**: the invoice has been generated on the Marketplace side but not submitted to the billing system
 * **Open**: the invoice has been successfully submitted to the billing system
 * **Paid**: the invoice has been paid in the billing system and its status is synchronized in the Marketplace
 
 ## Choosing your integration: natives or custom
 
-Amplify Enterprise Marketplace natives billing integration are based on [Stripe](#stripe-billing-integration) or [MyFatoorah](#myfatoorah-billing-integration). Follow the previous link to see how to setup and use those billing systems.
+Amplify Enterprise Marketplace natives billing integrations are based on [Stripe](#stripe-billing-integration) or [MyFatoorah](#myfatoorah-billing-integration). Follow the previous links to learn how to set up and use those billing systems.
 
-If you are not working with Stripe or MyFatoorah, you can also choose to implement your own integration based on the Amplify Enterprise Marketplace APIs and the 3rd party payment Gateway of your choice. This custom integration and the mandatory steps is describe here: [Custom billing integration](/docs/integrate_with_central/custom_billing)
+If you are not working with Stripe or MyFatoorah, you can choose to implement your own integration based on the Amplify Enterprise Marketplace APIs and the 3rd party payment Gateway of your choice. This custom integration and the mandatory steps is described in [Custom billing integration](/docs/integrate_with_central/custom_billing).
 
 ## Stripe billing integration
 
-Stripe platform is available [here](https://stripe.com).
+The Stripe platform is available at [stripe.com](https://stripe.com).
 
 ### Stripe account configuration
 
@@ -62,10 +62,10 @@ Marketplace Stripe billing integration is currently using Stripe 2022-11-15 API 
 
 If your Stripe account does not use this version, you might need to use the Stripe API directly instead of the Stripe UI for certain actions explained in this documentation.
 
-For Marketplace to access the Stripe account, an API key is required. For security constraints we use a restricted API Key with minimum access: Customer:Write and Invoices:Write rights.
+For Marketplace to access the Stripe account, an API Key is required. For security constraints a restricted API Key with minimum access is used: Customer:Write and Invoices:Write rights.
 
 1. Log into Stripe.
-2. Search for API key and navigate to the link **Developers > API Keys**.
+2. Search for API Key and navigate to the link **Developers > API Keys**.
 3. Create a new restricted key:
     * Name it *Amplify Marketplace Integration*
     * Add the following permissions: Core resource: **Customers -Write-** / All billing resources: **Invoices -Write-**
@@ -77,7 +77,7 @@ For Marketplace to access the Stripe account, an API key is required. For securi
 
 #### Sending Stripe events to Marketplace
 
-The invoice source of record is located in Stripe, so a webhook is used to communicate invoice status / changes from Stripe to the Marketplace.
+The invoice source of record is in Stripe, so a webhook is used to communicate invoice status / changes from Stripe to the Marketplace.
 
 1. Log into Stripe.
 2. Search for webhook and navigate to the link **Developers > Webhooks**.
@@ -101,7 +101,7 @@ Your Stripe account might not allow you to create a webhook with version 2022-11
 Instead, use the [Postman Stripe API collection](https://www.postman.com/stripedev/workspace/stripe-developers/request/665823-60d86321-4c13-47be-a1f1-77f80443ab50?tab=body) to create the webhook and precise **2022-11-15** in the *api_version* field.
 {{< /alert >}}
 
-#### Enable the Billing Customer portal to use with your Stripe account
+#### Enabling the Billing Customer portal to use with your Stripe account
 
 This portal will help the Stripe customers to see their information: billing address / payment information and invoices.
 
@@ -116,7 +116,7 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 1. Navigate to *Organization > Marketplaces*
 2. Select the **Billing** tab.
 3. Enable the billing integration
-4. Select the Vendor **Stripe** from the drop down.
+4. Select the Vendor **Stripe** from the dropdown.
 5. Enter the Restricted Key. This is the Stripe API Key you generated earlier.
 6. Enter the webhook Signature. This is the Signing secret of the Stripe webhook. This will be added by Stripe, as the header, when posting the event to Marketplace. Marketplace can then validate the incoming event and reject it if the signature does not match.
 7. Enter the Customer portal URL. This is the Stripe billing portal URL.
@@ -124,13 +124,13 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 
 Each time a consumer from the consumer organization of the Marketplace subscribes to a product, a first invoice with the base price plan (setup cost and/or recurring fees) is generated. The consumer cannot request access to product resources until this first invoice is paid within the Stripe portal.
 
-On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it. The invoice status will be **Open** until the consumer pay for it. Once paid and the event from Stripe received, the invoice status will become **Paid**.
+On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it. The invoice status is **Open** until the consumer pays the invoice. Once paid and the event from Stripe received, the invoice status changes to **Paid**.
 
-Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination. Again the invoice status will be Open until the consumer pays for it in Stripe system.
+Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination. The invoice status is **Open** until the consumer pays the invoice in the Stripe system.
 
-{{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates his subscription, the invoice status will remain as Open.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates their subscription, the invoice status will remain **Open**.{{< /alert >}}
 
-### Troubleshooting Stripe integration
+### Troubleshooting the Stripe integration
 
 It is recommended that you test the communication between Stripe and the Marketplace once the billing integration setup is done:
 
@@ -146,14 +146,14 @@ If something went wrong, see the following:
 
 | Question                                                                             | Answer                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| What if the invoice is not generated?                                                | The Marketplace is not communicating properly with Stripe. Check the Stripe API key value and validate that the corresponding key value is used under the Marketplace > Billing > Restricted key. Refer to [Accessing Stripe using Stripe API and API Key](#accessing-stripe-using-stripe-api-and-api-key) to get the Stripe API Key.                                                         |
-| Why is the invoice status in Stripe different from the one I see on the Marketplace? | Stripe cannot communicate back to the Marketplace using the Stripe Webhook. Either the webhook is disabled, the webhook url is incorrect or the Signing signature is different. Check the parameters in Stripe (Refer to [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature.   |
+| What if the invoice is not generated?                                                | The Marketplace is not communicating properly with Stripe. Check the Stripe API Key value and validate that the corresponding key value is used under the Marketplace > Billing > Restricted key. See [Accessing Stripe using Stripe API and API Key](#accessing-stripe-using-stripe-api-and-api-key) to get the Stripe API Key.                                                         |
+| Why is the invoice status in Stripe different from the one I see on the Marketplace? | Stripe cannot communicate back to the Marketplace using the Stripe Webhook. Either the webhook is disabled, the webhook URL is incorrect or the Signing signature is different. Check the parameters in Stripe (see [Sending Stripe events to Marketplace](#sending-stripe-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature.   |
 | My provider user does not have access to the invoice checkout.                       | This is normal behavior. Only Consumer organization users will be billed for their subscription usage.                                                                                                                                                                                                                                                                                        |
 | Why is my invoice automatically paid?                                                |  Depending on the plan currency, Stripe will automatically mark the invoice as paid if the invoice total in under the minimum charted. Refer to [Minimum and maximum charge amounts](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). |
 
 ## MyFatoorah billing integration
 
-MyFatoorah platform is available [here](https://portal.myfatoorah.com/En/All/Account/LogIn).
+The MyFatoorah platform is available at [myfatoorah.com](https://portal.myfatoorah.com/En/All/Account/LogIn).
 
 ### MyFatoorah account configuration
 
@@ -168,23 +168,23 @@ All customer payments are done using the MyFatoorah billing portal.
 
 Marketplace MyFatoorah billing integration is currently using MyFatoorah v2 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
 
-For Marketplace to access the MyFatoorah account, an API key is required. For security constraints we use a restricted API Key with minimum access: Customer:Write and Invoices:Write rights.
+For Marketplace to access the MyFatoorah account, an API Key is required. For security constraints a restricted API Key with minimum access is used: Customer:Write and Invoices:Write rights.
 
 1. Log into MyFatoorah.
 2. Navigate to the API Key menu **Home > Integration Settings > Api Key**.
-3. Click **+ Create** button. The key is created and and available for copy its value.
+3. Click **+ Create**. The key is created and available to copy its value.
 
 {{< alert title="Note" color="primary" >}}When the key is changed on the MyFatoorah account, be sure to update it on the Marketplace > Billing > Restricted Key value.{{< /alert >}}
 
 #### Sending MyFatoorah events to Marketplace
 
-The invoice source of record is located in MyFatoorah, so a webhook is used to communicate invoice status / changes from MyFatoorah to the Marketplace.
+The invoice source of record is in MyFatoorah, so a webhook is used to communicate invoice status / changes from MyFatoorah to the Marketplace.
 
 1. Log into MyFatoorah.
 2. Navigate to the webhooks settings **Home > Integration settings > Webhook settings**.
 3. Enable the webhook events.
-4. Enter the endpoint url: `https://apicentral.axway.com/integrations/myfatoorah` or `https://central.ap-sg.axway.com/integrations/myfatoorah` or `https://central.eu-fr.axway.com/integrations/myfatoorah`, based on your Amplify organization location.
-5. Enable the Secret Key so that all events will be signed with that key and Marketplace can confirm the even origin.
+4. Enter the endpoint URL: `https://apicentral.axway.com/integrations/myfatoorah` or `https://central.ap-sg.axway.com/integrations/myfatoorah` or `https://central.eu-fr.axway.com/integrations/myfatoorah`, based on your Amplify organization location.
+5. Enable the Secret Key so that all events will be signed with that key and Marketplace can confirm the event origin.
 6. Select the events to listen to:
     * Transaction Status Changed
 7. Click **Save**.
@@ -197,20 +197,20 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 
 1. Navigate to *Organization > Marketplaces*
 2. Select the **Billing** tab.
-3. Enable the billing integration
-4. Select the Vendor **MyFatoorah** from the drop down.
-5. Select the url endpoint you want to use based on your region of interest (Qatar / Saudi Arabia / Other regions)
+3. Enable the billing integration.
+4. Select the Vendor **MyFatoorah** from the dropdown.
+5. Select the URL endpoint you want to use based on your region of interest (Qatar / Saudi Arabia / Other regions)
 6. Enter the API Key. This is the MyFatoorah token you created earlier.
-7. Enter the webhook Secret Key. This is the Signing Secret Key of MyFatoorah webhook. This will be added by MyFatoorah, as the header, when posting the event to Marketplace. Marketplace can then validate the incoming event and reject it if the signature does not match.
+7. Enter the Webhook Secret Key. This is the Signing Secret Key of MyFatoorah webhook. This will be added by MyFatoorah, as the header, when posting the event to Marketplace. Marketplace can then validate the incoming event and reject it if the signature does not match.
 8. Click **Save**.
 
 Each time a consumer from the consumer organization of the Marketplace subscribes to a product, a first invoice with the base price plan (setup cost and/or recurring fees) is generated. The consumer cannot request access to product resources until this first invoice is paid within MyFatoorah portal.
 
-On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it. The invoice status will be **Open** until the consumer pay for it. Once paid and the event from MyFatoorah received, the invoice status will become **Paid**.
+On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it. The invoice status is **Open** until the consumer pays the invoice. Once paid and the event from MyFatoorah received, the invoice status changes to **Paid**.
 
-Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.Again the invoice status will be Open until the consumer pays for it in MyFatoorah system.
+Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination. The invoice status is **Open** until the consumer pays the invoice in the MyFatoorah system.
 
-{{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates his subscription, the invoice status will remain as Open.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates their subscription, the invoice status will remain **Open**.{{< /alert >}}
 
 ### Troubleshooting MyFatoorah integration
 
@@ -228,8 +228,8 @@ If something went wrong, see the following:
 
 | Question                                                                                 | Answer                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| What if the invoice is not generated?                                                    | The Marketplace is not communicating properly with MyFatoorah. Check MyFatoorah API key value and validate that the corresponding key value is used under the Marketplace > Billing > API Key. Refer to [Accessing MyFatoorah using MyFatoorah API and API Key](#accessing-myfatoorah-using-myfatoorah-api-and-api-key) to get MyFatoorah API Key.                                                                         |
-| Why is the invoice status in MyFatoorah different from the one I see on the Marketplace? | MyFatoorah cannot communicate back to the Marketplace using the MyFatoorah Webhook. Either the webhook is disabled, the webhook url is incorrect or the Signing signature is different. Check the parameters in MyFatoorah (Refer to [Sending MyFatoorah events to Marketplace](#sending-myfatoorah-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature.            |
+| What if the invoice is not generated?                                                    | The Marketplace is not communicating properly with MyFatoorah. Check MyFatoorah API Key value and validate that the corresponding key value is used under the Marketplace > Billing > API Key. See [Accessing MyFatoorah using MyFatoorah API and API Key](#accessing-myfatoorah-using-myfatoorah-api-and-api-key) to get the MyFatoorah API Key.                                                                         |
+| Why is the invoice status in MyFatoorah different from the one I see on the Marketplace? | MyFatoorah cannot communicate back to the Marketplace using the MyFatoorah Webhook. Either the webhook is disabled, the webhook URL is incorrect or the Signing signature is different. Check the parameters in MyFatoorah (see [Sending MyFatoorah events to Marketplace](#sending-myfatoorah-events-to-marketplace)) and compare the Signing signature in the Marketplace > Billing > Webhook Signature.            |
 | My provider user does not have access to the invoice checkout.                           | This is normal behavior. Only Consumer organization users will be billed for their subscription usage.                                                                                                                                                                                                                                                                                                                     |
 
 ## Related topic
