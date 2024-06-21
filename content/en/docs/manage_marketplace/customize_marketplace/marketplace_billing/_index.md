@@ -118,9 +118,9 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 
 Each time a consumer from the consumer organization of the Marketplace subscribes to a product, a first invoice with the base price plan (setup cost and/or recurring fees) is generated. The consumer cannot request access to product resources until this first invoice is paid within the Stripe portal.
 
-On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it.
+On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it. The invoice status will be **Open** until the consumer pay for it. Once paid and the event from Stripe received, the invoice status will become **Paid**.
 
-Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.
+Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination. Again the invoice status will be Open until the consumer pays for it in Stripe system.
 
 {{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates his subscription, the invoice status will remain as Open.{{< /alert >}}
 
@@ -162,9 +162,7 @@ All customer payments are done using the MyFatoorah billing portal.
 
 Marketplace MyFatoorah billing integration is currently using MyFatoorah v2 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
 
-If your Stripe account does not use this version, you might need to use the Stripe API directly instead of the Stripe UI for certain actions explained in this documentation.
-
-For Marketplace to access the Stripe account, an API key is required. For security constraints we use a restricted API Key with minimum access: Customer:Write and Invoices:Write rights.
+For Marketplace to access the MyFatoorah account, an API key is required. For security constraints we use a restricted API Key with minimum access: Customer:Write and Invoices:Write rights.
 
 1. Log into MyFatoorah.
 2. Navigate to the API Key menu **Home > Integration Settings > Api Key**.
@@ -180,7 +178,7 @@ The invoice source of record is located in MyFatoorah, so a webhook is used to c
 2. Navigate to the webhooks settings **Home > Integration settings > Webhook settings**.
 3. Enable the webhook events.
 4. Enter the endpoint url: `https://apicentral.axway.com/integrations/myfatoorah` or `https://central.ap-sg.axway.com/integrations/myfatoorah` or `https://central.eu-fr.axway.com/integrations/myfatoorah`, based on your Amplify organization location.
-5. Enable the Secret Key so that all events will be singed with that key and Marketplace can confirm the even origin.
+5. Enable the Secret Key so that all events will be signed with that key and Marketplace can confirm the even origin.
 6. Select the events to listen to:
     * Transaction Status Changed
 7. Click **Save**.
@@ -202,9 +200,9 @@ You must be either an Administrator or a Marketplace Manager to update the setti
 
 Each time a consumer from the consumer organization of the Marketplace subscribes to a product, a first invoice with the base price plan (setup cost and/or recurring fees) is generated. The consumer cannot request access to product resources until this first invoice is paid within MyFatoorah portal.
 
-On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it.
+On a monthly or annual basis, depending on the plan metering period, a new invoice is generated that is based on the consumer consumption and the recurring plan base price (if any). The invoice is added to the subscription invoices list, along with the link to pay it. The invoice status will be **Open** until the consumer pay for it. Once paid and the event from MyFatoorah received, the invoice status will become **Paid**.
 
-Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.
+Once the consumer terminates the subscription, a final invoice is generated based on the usage consumed between the last invoice and termination.Again the invoice status will be Open until the consumer pays for it in MyFatoorah system.
 
 {{< alert title="Note" color="primary" >}}If the first invoice is not paid before the consumer terminates his subscription, the invoice status will remain as Open.{{< /alert >}}
 
