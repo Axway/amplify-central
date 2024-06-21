@@ -17,7 +17,7 @@ Learn how to enable the Marketplace ratings and reviews so that consumers can gi
 ## Enable the Marketplace ratings and reviews
 
 1. Navigate to *platform.axway.com > Organization > Marketplaces*.
-2. Open the desired Marketplace by clicking the Marletplace name.
+2. Open the desired Marketplace by clicking the Marketplace name.
 3. Select **Ratings & reviews** tab.
 4. Switch the **Ratings & Reviews** toggle to **Enabled** (Disabled by default) to allow consumers to rate and review the Marketplace products.
 5. Select who can rate and review the product:
