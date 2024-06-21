@@ -25,11 +25,17 @@ When billing integration is enabled for a specific Marketplace, each subscriptio
 * One at the end of each plan metering period to pay for the base plan price + the metering period consumption
 * A final one when the subscription is cancelled to pay the remaining consumption (from last metering period until the cancellation time)
 
-The invoices must be paid using a third-party payment tool. The available implementations are [Stripe](https://stripe.com) or a custom implementation.
+The invoices must be paid using a third-party payment tool. The available implementations are [Stripe](#stripe-billing-integration), [MyFatoorah](#myfatoorah-billing-integration) or a [custom integration](/docs/integrate_with_central/custom_billing).
 
 {{< alert title="Note" color="primary" >}}
 Until the first invoice is fully paid, the customer can request access to the resources but the access itself will not be granted until the provider collects the payment.
 {{< /alert >}}
+
+Each invoice will follow this lifecycle status:
+
+* **Draft**: the invoice is generated on the Marketplace side and not yet submitted to the billing system
+* **Open**: the invoice has been successfully submitted to the billing system
+* **Paid**: the invoice has been paid in the billing system and its status is synchronized in the Marketplace
 
 ## Choosing your integration: natives or custom
 
