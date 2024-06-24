@@ -44,10 +44,7 @@ Open the following ports so that agents can communicate to the Amplify platform:
 | Region | Host                       | IP             | port | Protocol | data                                 |
 | ------ | -------------------------- | -------------- | ---- | -------- | ------------------------------------ |
 |        |                            |                |      |          |                                      |
-| AP/EU/US | login.axway.com            | 52.58.132.2    | 443  | HTTPS    | Platform authentication              |
-|        |                            | 52.29.4.35     |      |          |                                      |
-|        |                            | 54.93.140.145  |      |          |                                      |
-|        |                            |                |      |          |                                      |
+| AP/EU/US | login.axway.com            | Dynamic    | 443  | HTTPS    | Platform authentication |
 | US     | apicentral.axway.com       | 3.94.245.118   | 443  | HTTPS    | API definitions, Subscription info   |
 |        |                            | 54.208.199.251 |      |          |                                      |
 |        |                            | 3.212.78.217   |      |          |                                      |
