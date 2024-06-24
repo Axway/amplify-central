@@ -34,6 +34,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.87. This version is 
 * **Kong Gateway** - 1.0.11
 * **GitLab** - 1.0.8
 * **Kafka Cluster** - DA=v1.0.8 / TA=v1.0.8
+* **IBM API Connect Gateway** - DA=v1.0.0 / TA=v1.0.0
 
 Supported SaaS (embedded) Agents:
 
@@ -52,16 +53,16 @@ Runtime Compliance Agent:
 | What's new: | Region variable setting. <br />Dynamic Client Registration settings. |
 | Bug fixes: | None. |
 | <br />**On-premise agents** |         |
-| What's new: | **Axway API Management Gateway Agent** - External credential support. |
+| What's new: | **Axway API Management Gateway Agent** - External credential support. <br />**IBM API Connect Agent** - New IBM API Connect Discovery and Traceability agents. |
 | Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
 | What's new: | None. |
-| Bug fixes:  | None. |
+| Bug fixes:  | **Azure SaaS Agent** - See release note. |
 | <br />**Axway CLI** |       |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Axway Central CLI** |       |
-| What's new: | None. |
+| What's new: | IBM API Connect installation. <br />Region variable setting. <br />Security patches. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
 | What's new: | **Service Registry** - Mock Service support. <br />**Topology** - None. |
