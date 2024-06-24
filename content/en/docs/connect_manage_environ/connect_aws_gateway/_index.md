@@ -50,7 +50,7 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 
 * An Axway Amplify subscription in the Amplify platform
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
-* (Optional) An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
+* An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * API Key credentials on AWS. Allow for CLI access
 * Amazon CloudWatch Service
 * Amazon Simple Queue Service (AWS SQS)
@@ -60,7 +60,7 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 
 ## Region support
 
-Amplify supports three regions, US (default), EU and APAC. The data (APIs, traffic) that the agents send to Amplify is stored in one of those regions based on the agent configuration.
+Amplify supports three regions, US (default), EU and APAC. The data (APIs, traffic) that the agents send to Amplify are stored in one of those regions based on the agent configuration.
 
 Use one of the following URLs to access the Amplify UI:
 
@@ -68,17 +68,13 @@ Use one of the following URLs to access the Amplify UI:
 * EU: [https://central.eu-fr.axway.com](https://central.eu-fr.axway.com)
 * APAC: [https://central.ap-sg.axway.com](https://central.ap-sg.axway.com)
   
-Update the following variables to move data to the EU region:
+Use one of the following settings, for both agents, to set the region the agent will connect to:
 
-* `CENTRAL_DEPLOYMENT`= **prod-eu**
-* `CENTRAL_URL`= **<https://central.eu-fr.axway.com>**
-* `TRACEABILITY_HOST`= **ingestion.visibility.eu-fr.axway.com:5044**
+* `CENTRAL_REGION`= **US**
+* `CENTRAL_REGION`= **EU**
+* `CENTRAL_REGION`= **AP**
 
-Update the following variables to move data to the APAC region:
-
-* `CENTRAL_DEPLOYMENT`= **prod-ap**
-* `CENTRAL_URL`= **<https://central.ap-sg.axway.com>**
-* `TRACEABILITY_HOST`= **ingestion.visibility.ap-sg.axway.com:5044**
+{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets.{{< /alert >}}
 
 ## Connect AWS API Gateway to Amplify using CLI
 

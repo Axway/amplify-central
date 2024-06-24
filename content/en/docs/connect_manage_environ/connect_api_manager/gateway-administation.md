@@ -142,9 +142,7 @@ APIMANAGER_FILTER=tag.APITAG==value
 
 This section connects the agent to Enterprise Marketplace and determines how to published the discovered APIs.
 
-`CENTRAL_URL`: The Enterprise Marketplace url. Default value is **<https://apicentral.axway.com>**.
-
-`CENTRAL_SINGLEURL`: Alternate Enterprise Marketplace url connection if using a static IP (default value: US =  `<https://ingestion.platform.axway.com>` / EU = `https://ingestion-eu.platform.axway.com` / APAC = `https://ingestion-ap-sg.platform.axway.com`).
+`CENTRAL_REGION`: The Enterprise Marketplace region. Default value is **US**.
 
 `CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.
 
@@ -154,11 +152,9 @@ This section connects the agent to Enterprise Marketplace and determines how to 
 
 `CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.ß
 
-`CENTRAL_AUTH_URL`: The Amplify login URL. Default value is **<https://login.axway.com/auth>**.
-
 `CENTRAL_AUTH_REALM`: The Realm used to authenticate for Enterprise Marketplace. Default value is **Broker**.
 
-`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account (DOSA_....) you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify > Organization > Service Accounts.
+`CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify > Organization > Service Accounts.
 
 `CENTRAL_AUTH_PRIVATEKEY`: The location of the private key file you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Absolute file path is recommended to avoid confusion.
 
@@ -171,15 +167,13 @@ This section connects the agent to Enterprise Marketplace and determines how to 
 Once all data is gathered, this section should look like:
 
 ```shell
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
-CENTRAL_AUTH_CLIENTID=DOSA_66743...
+CENTRAL_AUTH_CLIENTID=service_acount...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 #CENTRAL_AUTH_KEYPASSWORD:
@@ -193,7 +187,9 @@ When virtualizing a REST API in API Manager, you can configure inbound security 
 
 When using OAuth (External) inbound security, API Manager requires a custom OAuth token information policy to extract the token information from the request and perform verification. For an example on how to add OAuth token information policies, see [Configure OAuth (External) security for a front-end API](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/example_oauth_external/index.html).
 
-When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider)
+When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
+
+When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Enterprise Marketplace to Credential Request Definition(CRD) that will allow Marketplace consumers to specify identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
 
 #### Invoke Policy authentication handling in the Discovery Agent
 
@@ -319,12 +315,10 @@ APIMANAGER_FILTER=tag.APITAG==value
 #APIMANAGER_ALLOWAPPLICATIONAUTOCREATION=true
 
 # Central connectivity 
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
@@ -729,13 +723,11 @@ Once all data is gathered, the variable list should look like:
 
 ```shell
 # Central connectivity
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
@@ -833,13 +825,11 @@ APIGATEWAY_SENDALLTRAFFIC=true
 #APIGATEWAY_POLLINTERVAL
 
 # Central connectivity
-#CENTRAL_URL=https://apicentral.axway.com
-CENTRAL_SINGLEURL=https://ingestion.platform.axway.com
+CENTRAL_REGION=US
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
-#CENTRAL_AUTH_URL=https://login.axway.com/auth
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem

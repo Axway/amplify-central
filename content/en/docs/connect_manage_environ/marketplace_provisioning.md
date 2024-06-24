@@ -42,6 +42,7 @@ From the Marketplace, a consumer first requests access to a resource and then re
 The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated data plane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
 * Name (`AGENTFEATURES_IDP_NAME`): The name of the OAuth identity provider.
+* Title (`AGENTFEATURES_IDP_TITLE`): The title of the Credential Request Definition that will be shown to consumers in Amplify Marketplace.
 * Type (`AGENTFEATURES_IDP_TYPE`): The type of OAuth identity provider (`generic`, `keycloak` or `okta`).
 * Metadata URL (`AGENTFEATURES_IDP_METADATAURL`): The URL exposed by the OAuth authorization server to provide metadata information.
 * Authentication Config: Used by the agent to communicate with the OAuth identity provider.
@@ -63,6 +64,7 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
     * Private Key password (`AGENTFEATURES_IDP_AUTH_KEYPASSWORD`): Password for the private key.
     * Token Signing Algorithm (`AGENTFEATURES_IDP_AUTH_TOKENSIGNINGMETHOD`): Algorithm used for signing the token for `client_secret_jwt` or `private_key_jwt`. Defaults to `HS256` for `client_secret_jwt` and `RS256` for `private_key_jwt`.
     * Flag for re-using cached token (`AGENTFEATURES_IDP_AUTH_USECACHEDTOKEN`): Boolean flag to enable / disable the agent to cache the token until the expiry of the access token.
+    * Flag for using the user registration token (`AGENTFEATURES_IDP_AUTH_USEREGISTRATIONTOKEN`): Boolean flag to enable / disable the agent to save and use the Credential specific registration token when modifying the client in the IDP.
     * mTLS Config:
         * Skip host verification (`AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY`): Flag to control verification of the TLS server certificate chain and host name.
         * Root CA certificate (`AGENTFEATURES_IDP_SSL_ROOTCACERTPATH`): The path of the root CA certificate to be used for the mTLS connection.

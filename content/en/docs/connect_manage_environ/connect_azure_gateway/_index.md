@@ -9,7 +9,7 @@ Connect Azure API Management Services to Amplify so you can:
 * Publish to the Amplify Catalog from your API Management Services in order to obtain a global view of your APIs and present this catalog to your consumers
 * Collect the traffic of all your gateways and see it in a single place in Amplify Observability
 
-## What is Azure API Management Service connected?
+## Why do you want to connect Azure API Management Service and Amplify?
 
 Connect your Azure Management Services to Amplify by using two agents: Discovery and Traceability.
 
@@ -26,7 +26,7 @@ These two agents will help you to represent and expose your API Management eco-s
 
 The Discovery Agent is used to discover new published APIs. The Discovery Agent pushes both REST and SOAP API definitions to Amplify.
 
-The related APIs are published to Amplify either as an API service in environment or an API service in environment and optionally as Catalog item (default behavior).
+The related APIs are published to Amplify as an API service in the selected environment and then can be published to Marketplace within a product.
 
 ![Service Discovery](/Images/central/connect-azure-gateway/discoveryagent.png)
 
@@ -39,18 +39,15 @@ The Traceability Agent sends log information about APIs that have been discovere
 ## Prerequisites
 
 * An Axway Amplify subscription in the Amplify platform
-* (Optional) A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
-* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
-
-{{< alert title="Note" color="primary" >}}Although both service account types are currently supported, the Amplify Service Account will soon be retired. For this reason, it is recommended that you use the Platform Service Account.{{< /alert >}}
-
-* An Amplify environment
+* A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
+* An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * An Azure Service principal for the Discovery Agent to use Azure APIs
 * An Azure Event Hub for the Traceability Agent to report API traffic to Amplify platform
+* The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
 ## System requirements
 
-* A Docker container where the agent images will run
+* An environment to run the agent Docker containers
 
 ## Region support
 
@@ -58,21 +55,17 @@ Amplify supports three regions, US (default), EU and APAC. The data (APIs, traff
 
 Use one of the following URLs to access the Amplify UI:
 
-* US: <https://apicentral.axway.com>
-* EU: <https://central.eu-fr.axway.com>
-* APAC: <https://central.ap-sg-fr.axway.com>
+* US: [https://apicentral.axway.com](https://apicentral.axway.com)
+* EU: [https://central.eu-fr.axway.com](https://central.eu-fr.axway.com)
+* APAC: [https://central.ap-sg.axway.com](https://central.ap-sg.axway.com)
 
-Update the following variables to move data to the EU region:
+Use one of the following settings, for both agents, to set the region the agent will connect to:
 
-* `CENTRAL_DEPLOYMENT`= **prod-eu**
-* `CENTRAL_URL`= **<https://central.eu-fr.axway.com>**
-* `TRACEABILITY_HOST`= **ingestion.visibility.eu-fr.axway.com:5044**
+* `CENTRAL_REGION`= **US**
+* `CENTRAL_REGION`= **EU**
+* `CENTRAL_REGION`= **AP**
 
-Update the following variables to move data to the APAC region:
-
-* `CENTRAL_DEPLOYMENT`= **prod-ap**
-* `CENTRAL_URL`= **<https://central.ap-sg.axway.com>**
-* `TRACEABILITY_HOST`= **ingestion.visibility.ap-sg.axway.com:5044**
+{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets.{{< /alert >}}
 
 ## Creating an Azure service principal for Discovery Agent
 

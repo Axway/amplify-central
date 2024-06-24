@@ -63,17 +63,13 @@ Use one of the following URLs to access the Amplify UI:
 * EU: [https://central.eu-fr.axway.com](https://central.eu-fr.axway.com)
 * APAC: [https://central.ap-sg.axway.com](https://central.ap-sg.axway.com)
 
-Update the following variables to move data to the EU region:
+Use one of the following settings, for both agents, to set the region the agent will connect to:
 
-* `CENTRAL_DEPLOYMENT`= **prod-eu**
-* `CENTRAL_URL`= **<https://central.eu-fr.axway.com>**
-* `TRACEABILITY_HOST`= **ingestion.visibility.eu-fr.axway.com:5044**
+* `CENTRAL_REGION`= **US**
+* `CENTRAL_REGION`= **EU**
+* `CENTRAL_REGION`= **AP**
 
-Update the following variables to move data to the APAC region:
-
-* `CENTRAL_DEPLOYMENT`= **prod-ap**
-* `CENTRAL_URL`= **<https://central.ap-sg.axway.com>**
-* `TRACEABILITY_HOST`= **ingestion.visibility.ap-sg.axway.com:5044**
+{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets.{{< /alert >}}
 
 ## Connect Axway API Manager to Amplify using Axway Central CLI
 
