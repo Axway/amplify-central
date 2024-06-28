@@ -18,7 +18,7 @@ Discovery Agents automate the process of finding assets that are deployed in a G
 
 Traceability Agents collect usage, metrics, and data plane traffic details and send them to the Amplify platform. In the platform, API consumers and API providers can view the performance and behavior of the assets discovered in the data plane.
 
-Agents are classified into two categories, agents supported by Axway and agents supported by the community:
+Agents are classified into two categories, agents supported by Axway and agents supported by the community: **Update table**
 
 | Environment                | Support   | Agent type                                 |
 | -------------------------- | --------- | ------------------------------------------ |
