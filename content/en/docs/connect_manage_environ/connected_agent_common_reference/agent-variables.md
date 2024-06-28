@@ -149,7 +149,7 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 | TRACEABILITY_SAMPLING_REPORTALLERRORS          | When true, all API transactions that have an http error code will be sent to Amplify (default value: `true`).                                                                                                                                                                                                                  |
 | TRACEABILITY_WORKER                            | The number of workers collecting events and sending them to Enterprise Marketplace (default value: `1`).                                                                                                                                                                                                                        |
 
-## Audit log variables
+#### Audit log variables
 
 For a full explanation on how to use the Traceability agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
 
@@ -168,7 +168,7 @@ For a full explanation on how to use the Traceability agent audit logs see [Trac
 
 With the default settings, the Traceability Agent will keep a maximum of `7` files, each a total of `10485760` bytes.
 
-# Additional Axway API Manager Traceability Agent audit log
+#### Additional Axway API Manager Traceability Agent audit log
 
 The Traceability Agent that connects to Axway API Manager includes an additional transaction audit log to track the correlation IDs of each transaction the agent has seen and recorded. The following table lists the environment variables that are available to configure the transaction audit logs.
 
