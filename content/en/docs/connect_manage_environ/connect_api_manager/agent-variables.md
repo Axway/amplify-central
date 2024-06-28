@@ -212,19 +212,6 @@ APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 
 For a full explanation on how to use the Traceability agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
 
-| Environment Variable            | Description                                                                                   |
-| ------------------------------- | --------------------------------------------------------------------------------------------- |
-| LOG_METRICFILE_ENABLED          | Enable or disable the metric audit log (default: `true`)                                      |
-| LOG_METRICFILE_NAME             | The name of the metric log file that will be created (default: `metric.log`)                  |
-| LOG_METRICFILE_KEEPFILES        | The maximum number of metric audit log files to keep (default: `7`)                           |
-| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`)  |
-| LOG_METRICFILE_CLEANBACKUPS     | The max age of a metric audit log backup file, in days (default: `0` unlimited)               |
-| LOG_USAGEFILE_ENABLED           | Enable or disable the usage audit log (default: `true`)                                       |
-| LOG_USAGEFILE_NAME              | The name of the usage log file that will be created (default: `usagefile.log`)                |
-| LOG_USAGEFILE_KEEPFILES         | The maximum number of usage audit log files to keep (default: `7`)                            |
-| LOG_USAGEFILE_ROTATEEVERYBYTES  | The maximum size (bytes) a usage audit log can grow to (default: `10485760`=`10 megabytes`)   |
-| LOG_USAGEFILE_CLEANBACKUPS      | The max age of a usage audit log backup file, in days (default: `365` days)                   |
-
 {{< alert title="Note" color="primary" >}}The following variables are available but not recommended for production purposes.{{< /alert >}}
 
 | Variable name           | Description                                                                                                                          |
