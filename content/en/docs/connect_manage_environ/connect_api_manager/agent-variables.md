@@ -208,6 +208,23 @@ APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 | APIGATEWAY_SSL_MINVERSION                     | String value for the minimum SSL / TLS version that is acceptable. If zero, empty TLS 1.0 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                     |
 | APIGATEWAY_SSL_NEXTPROTOS                     | An array of strings. It is a list of supported application level protocols, in order of preference, based on the ALPN protocol list. Allowed values are: h2, http/1.0, http/1.1, h2c.                                                                                                                                                      |
 
+#### Audit log variables
+
+For a full explanation on how to use the Traceability agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
+
+| Environment Variable            | Description                                                                                   |
+| ------------------------------- | --------------------------------------------------------------------------------------------- |
+| LOG_METRICFILE_ENABLED          | Enable or disable the metric audit log (default: `true`)                                      |
+| LOG_METRICFILE_NAME             | The name of the metric log file that will be created (default: `metric.log`)                  |
+| LOG_METRICFILE_KEEPFILES        | The maximum number of metric audit log files to keep (default: `7`)                           |
+| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`)  |
+| LOG_METRICFILE_CLEANBACKUPS     | The max age of a metric audit log backup file, in days (default: `0` unlimited)               |
+| LOG_USAGEFILE_ENABLED           | Enable or disable the usage audit log (default: `true`)                                       |
+| LOG_USAGEFILE_NAME              | The name of the usage log file that will be created (default: `usagefile.log`)                |
+| LOG_USAGEFILE_KEEPFILES         | The maximum number of usage audit log files to keep (default: `7`)                            |
+| LOG_USAGEFILE_ROTATEEVERYBYTES  | The maximum size (bytes) a usage audit log can grow to (default: `10485760`=`10 megabytes`)   |
+| LOG_USAGEFILE_CLEANBACKUPS      | The max age of a usage audit log backup file, in days (default: `365` days)                   |
+
 {{< alert title="Note" color="primary" >}}The following variables are available but not recommended for production purposes.{{< /alert >}}
 
 | Variable name           | Description                                                                                                                          |
