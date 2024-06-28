@@ -180,7 +180,6 @@ The Traceability Agent that connects to Axway API Manager includes an additional
 | LOG_TRANSACTION_ROTATEEVERYBYTES | The maximum size, (bytes) a transaction audit log can grow to (default: `10485760`=`10 megabytes`) |
 | LOG_TRANSACTION_CLEANBACKUPS     | The max age of a transaction audit log backup file, in days (default: `0` unlimited)                   |
 
-
 ## CENTRAL_APISERVICEREVISIONPATTERN
 
 This variable sets the pattern used when creating API service revisions on Enterprise Marketplace.  The default pattern is `{{.APIServiceName}}{{if ne .Stage ""}} ({{.StageLabel}}: {{.Stage}}){{end}} - {{.Date:YYYY/MM/DD}} - r {{.Revision}}`.
