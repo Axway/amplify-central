@@ -11,7 +11,6 @@ The variables common to all agents are described here in more detail.
     - [Status endpoint variables](#status-endpoint-variables)
     - [Logging variables](#logging-variables)
     - [Audit log variables](#audit-log-variables)
-  - [Additional Axway API Manager Traceability Agent audit log](#additional-axway-api-manager-traceability-agent-audit-log)
   - [Discovery agent only variables](#discovery-agent-only-variables)
     - [IdP configuration variables](#idp-configuration-variables)
   - [Traceability agent only variables](#traceability-agent-only-variables)
@@ -92,18 +91,6 @@ For a full explanation on how to use the Traceability agent audit logs see [Trac
 | LOG_USAGEFILE_KEEPFILES         | The maximum number of usage audit log files to keep (default: `7`)                            |
 | LOG_USAGEFILE_ROTATEEVERYBYTES  | The maximum size (bytes) a usage audit log can grow to (default: `10485760`=`10 megabytes`)   |
 | LOG_USAGEFILE_CLEANBACKUPS      | The max age of a usage audit log backup file, in days (default: `365` days)                   |
-
-### Additional Axway API Manager Traceability Agent audit log
-
-The Traceability Agent that connects to Axway API Manager includes an additional transaction audit log to track the correlation IDs of each transaction the agent has seen and recorded. The following table lists the environment variables that are available to configure the transaction audit logs.
-
-| Environment Variable             | Description                                                                                            |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| LOG_TRANSACTION_ENABLED          | Enable or disable the transaction audit log (default: `true`)                                          |
-| LOG_TRANSACTION_NAME             | The name of the transaction log file that will be created (default: `transaction.log`)                 |
-| LOG_TRANSACTION_KEEPFILES        | The maximum number of transaction audit log files to keep (default: `7`)                               |
-| LOG_TRANSACTION_ROTATEEVERYBYTES | The maximum size, (bytes) a transaction audit log can grow to (default: `10485760`=`10 megabytes`) |
-| LOG_TRANSACTION_CLEANBACKUPS     | The max age of a transaction audit log backup file, in days (default: `0` unlimited)                   |
 
 ### Discovery agent only variables
 
