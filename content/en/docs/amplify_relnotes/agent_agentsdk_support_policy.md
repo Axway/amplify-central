@@ -18,7 +18,10 @@ Discovery Agents automate the process of finding assets that are deployed in a G
 
 Traceability Agents collect usage, metrics, and data plane traffic details and send them to the Amplify platform. In the platform, API consumers and API providers can view the performance and behavior of the assets discovered in the data plane.
 
-Agents are classified into two categories, agents supported by Axway and agents supported by the community: **Update table**
+### Runtime Compliance Agents
+
+Runtime Compliance Agents collect date from an third party which captures and scans real-time API traffic to assess security threats.  The APIs are represented as Runtime Unmanaged APIs with a Runtime Compliance score based on the security risk assessment.
+Agents are classified into two categories, agents supported by Axway and agents supported by the community: 
 
 | Environment                | Support   | Agent type                                 |
 | -------------------------- | --------- | ------------------------------------------ |
@@ -32,6 +35,7 @@ Agents are classified into two categories, agents supported by Axway and agents 
 | Apigee X API Management    | Axway     | SaaS                                       |
 | SwaggerHub                 | Axway     | SaaS                                       |
 | IBM API Connect            | Axway     | On-premise                                 |
+| Graylog API Security       | Axway     | On-premise                                 |
 | MuleSoft Anypoint platform | Axway/Community | <https://github.com/Axway/agents-mulesoft>     |
 | Kong Gateway               | Axway/Community | <https://github.com/Axway/agents-kong>         |
 | Apigee Edge API Management | Axway/Community | <https://github.com/Axway/agents-apigee>       |
