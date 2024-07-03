@@ -22,7 +22,7 @@ Traceability Agents collect usage, metrics, and data plane traffic details and s
 
 Runtime Compliance Agents collect data from a third party that captures and scans real-time API traffic to assess security threats. The APIs are represented as Runtime Unmanaged APIs with a Runtime Compliance score based on the security risk assessment.
 
-### Supported Agent List
+### Supported agent list
 
 Agents are classified into two categories, agents supported by Axway and agents supported by the community:
 
