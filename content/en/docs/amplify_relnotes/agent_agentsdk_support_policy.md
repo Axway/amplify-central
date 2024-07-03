@@ -30,6 +30,8 @@ Agents are classified into two categories, agents supported by Axway and agents 
 | Gitlab                     | Axway     | On-premise                                 |
 | Kafka Cluster              | Axway     | On-premise                                 |
 | Apigee X API Management    | Axway     | SaaS                                       |
+| SwaggerHub                 | Axway     | SaaS                                       |
+| IBM API Connect            | Axway     | On-premise                                 |
 | MuleSoft Anypoint platform | Axway/Community | <https://github.com/Axway/agents-mulesoft>     |
 | Kong Gateway               | Axway/Community | <https://github.com/Axway/agents-kong>         |
 | Apigee Edge API Management | Axway/Community | <https://github.com/Axway/agents-apigee>       |
