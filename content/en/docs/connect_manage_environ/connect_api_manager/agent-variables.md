@@ -208,6 +208,10 @@ APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 | APIGATEWAY_SSL_MINVERSION                     | String value for the minimum SSL / TLS version that is acceptable. If zero, empty TLS 1.0 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                     |
 | APIGATEWAY_SSL_NEXTPROTOS                     | An array of strings. It is a list of supported application level protocols, in order of preference, based on the ALPN protocol list. Allowed values are: h2, http/1.0, http/1.1, h2c.                                                                                                                                                      |
 
+#### Audit log variables
+
+For a full explanation on how to use the Traceability Agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
+
 {{< alert title="Note" color="primary" >}}The following variables are available but not recommended for production purposes.{{< /alert >}}
 
 | Variable name           | Description                                                                                                                          |
