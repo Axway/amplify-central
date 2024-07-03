@@ -210,7 +210,7 @@ APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 
 #### Audit log variables
 
-For a full explanation on how to use the Traceability agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
+For a full explanation on how to use the Traceability Agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
 
 {{< alert title="Note" color="primary" >}}The following variables are available but not recommended for production purposes.{{< /alert >}}
 
