@@ -75,7 +75,7 @@ The variables common to all agents are described here in more detail.
 
 {{< alert title="Note" color="primary" >}}It is recommended to set up logging in the agent configuration file to keep the logs separated for each agent.{{< /alert >}}
 
-### Discovery agent only variables
+### Discovery Agent only variables
 
 | Variable name                    | Description                                                                                                                                 |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -118,7 +118,7 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 
 {{< alert title="Note" color="primary" >}}Not all agents support these IdP settings.{{< /alert >}}
 
-### Traceability agent only variables
+### Traceability Agent only variables
 
 | Variable name                                  | Description                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -151,20 +151,20 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 
 #### Audit log variables
 
-For a full explanation on how to use the Traceability agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
+For a full explanation on how to use the Traceability Agent audit logs see [Traceability Agent audit logs](/docs/connect_manage_environ/connected_agent_common_reference/traceability_audit_logs).
 
 | Environment Variable            | Description                                                                                   |
 | ------------------------------- | --------------------------------------------------------------------------------------------- |
-| LOG_METRICFILE_ENABLED          | Enable or disable the metric audit log (default: `true`)                                      |
-| LOG_METRICFILE_NAME             | The name of the metric log file that will be created (default: `metric.log`)                  |
-| LOG_METRICFILE_KEEPFILES        | The maximum number of metric audit log files to keep (default: `7`)                           |
-| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`)  |
-| LOG_METRICFILE_CLEANBACKUPS     | The max age of a metric audit log backup file, in days (default: `0` unlimited)               |
-| LOG_USAGEFILE_ENABLED           | Enable or disable the usage audit log (default: `true`)                                       |
-| LOG_USAGEFILE_NAME              | The name of the usage log file that will be created (default: `usagefile.log`)                |
-| LOG_USAGEFILE_KEEPFILES         | The maximum number of usage audit log files to keep (default: `7`)                            |
-| LOG_USAGEFILE_ROTATEEVERYBYTES  | The maximum size (bytes) a usage audit log can grow to (default: `10485760`=`10 megabytes`)   |
-| LOG_USAGEFILE_CLEANBACKUPS      | The max age of a usage audit log backup file, in days (default: `365` days)                   |
+| LOG_METRICFILE_ENABLED          | Enable or disable the metric audit log (default: `true`).                                      |
+| LOG_METRICFILE_NAME             | The name of the metric log file that will be created (default: `metric.log`).                  |
+| LOG_METRICFILE_KEEPFILES        | The maximum number of metric audit log files to keep (default: `7`).                           |
+| LOG_METRICFILE_ROTATEEVERYBYTES | The maximum size (bytes) a metric audit log can grow to (default: `10485760`=`10 megabytes`).  |
+| LOG_METRICFILE_CLEANBACKUPS     | The maximum age of a metric audit log backup file, in days (default: `0` unlimited).               |
+| LOG_USAGEFILE_ENABLED           | Enable or disable the usage audit log (default: `true`).                                       |
+| LOG_USAGEFILE_NAME              | The name of the usage log file that will be created (default: `usagefile.log`).                |
+| LOG_USAGEFILE_KEEPFILES         | The maximum number of usage audit log files to keep (default: `7`).                            |
+| LOG_USAGEFILE_ROTATEEVERYBYTES  | The maximum size (bytes) a usage audit log can grow to (default: `10485760`=`10 megabytes`).   |
+| LOG_USAGEFILE_CLEANBACKUPS      | The maximum age of a usage audit log backup file, in days (default: `365` days).                   |
 
 With the default settings, the Traceability Agent will keep a maximum of `7` files, each a total of `10485760` bytes.
 
@@ -174,11 +174,11 @@ The Traceability Agent that connects to Axway API Manager includes an additional
 
 | Environment Variable             | Description                                                                                            |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| LOG_TRANSACTION_ENABLED          | Enable or disable the transaction audit log (default: `true`)                                          |
-| LOG_TRANSACTION_NAME             | The name of the transaction log file that will be created (default: `transaction.log`)                 |
-| LOG_TRANSACTION_KEEPFILES        | The maximum number of transaction audit log files to keep (default: `7`)                               |
-| LOG_TRANSACTION_ROTATEEVERYBYTES | The maximum size, (bytes) a transaction audit log can grow to (default: `10485760`=`10 megabytes`) |
-| LOG_TRANSACTION_CLEANBACKUPS     | The max age of a transaction audit log backup file, in days (default: `0` unlimited)                   |
+| LOG_TRANSACTION_ENABLED          | Enable or disable the transaction audit log (default: `true`).                                          |
+| LOG_TRANSACTION_NAME             | The name of the transaction log file that will be created (default: `transaction.log`).                 |
+| LOG_TRANSACTION_KEEPFILES        | The maximum number of transaction audit log files to keep (default: `7`).                               |
+| LOG_TRANSACTION_ROTATEEVERYBYTES | The maximum size, (bytes) a transaction audit log can grow to (default: `10485760`=`10 megabytes`). |
+| LOG_TRANSACTION_CLEANBACKUPS     | The maximum age of a transaction audit log backup file, in days (default: `0` unlimited).                   |
 
 ## CENTRAL_APISERVICEREVISIONPATTERN
 
