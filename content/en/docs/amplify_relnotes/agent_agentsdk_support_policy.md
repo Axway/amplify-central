@@ -39,11 +39,11 @@ Agents are classified into two categories, agents supported by Axway and agents 
 | SwaggerHub                 | Axway     | Discovery                                                    | SaaS                |
 | IBM API Connect            | Axway     | Discovery and Traceability                                   | On-premise          |
 | Graylog API Security       | Axway     | Runtime Compliance                                           | On-premise          |
-| MuleSoft Anypoint platform | Axway/Community | Discovery and Traceability                             | On-premise <https://github.com/Axway/agents-mulesoft>   |
-| Kong Gateway               | Axway/Community | Discovery and Traceability                             | On-premise <https://github.com/Axway/agents-kong>       |
-| Apigee Edge API Management | Axway/Community | Discovery and Traceability                             | On-premise <https://github.com/Axway/agents-apigee>     |
-| Software AG webMethods     | Axway/Community | Discovery                                              | On-premise <https://github.com/Axway/agents-webmethods> |
-| WSO2 API Management        | Community       | Discovery                                              | On-premise <https://github.com/Axway/agents-wso2>       |
+| MuleSoft Anypoint platform | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-mulesoft>   |
+| Kong Gateway               | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-kong>       |
+| Apigee Edge API Management | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-apigee>     |
+| Software AG webMethods     | Axway/Community | Discovery                                              | On-premise <br /><https://github.com/Axway/agents-webmethods> |
+| WSO2 API Management        | Community       | Discovery                                              | On-premise <br /><https://github.com/Axway/agents-wso2>       |
 
 All Amplify agents are built using the Amplify Agent SDK.
 
