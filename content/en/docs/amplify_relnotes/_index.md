@@ -59,7 +59,7 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes:  | See release note. |
 | <br />**Axway CLI** |       |
-| What's new: | None. |
+| What's new: | Axway Central CLI installation improvement. |
 | Bug fixes: | None. |
 | <br />**Axway Central CLI** |       |
 | What's new: | None. |
