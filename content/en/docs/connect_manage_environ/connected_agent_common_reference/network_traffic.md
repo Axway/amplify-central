@@ -47,7 +47,7 @@ The Traceability Agent reports two sets of data to Amplify platform:
 
 #### Usage data
 
-The usage data represent the total number of APIs called during a certain period of time. This usage is automatically reported every 15 minutes by default to Amplify platform and cannot be inactivated. See [Reporting Gateway usage event](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/#reporting-gateway-usage-event).
+The usage data represents the total number of APIs called during a certain period of time. This usage is automatically reported daily by default to Amplify platform and cannot be inactivated. See [Reporting Gateway usage event](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage/#reporting-gateway-usage-event).
 
 It contains the following information:
 
@@ -66,7 +66,7 @@ Data Fields:
 
 #### Metrics data
 
-The metrics data represent an aggregation of the transaction data made during a certain period of time. The aggregation is based on the API name and API response code. The metrics are automatically reported every 15 minutes, by default, to Amplify platform and cannot be inactivated. The data can be viewed at **Amplify platform > Analytics > API Usage**.
+The metrics data represents an aggregation of the transaction data made during a certain period of time. The aggregation is based on the API name and API response code. The metrics are automatically reported every 15 minutes for on-premise agents (30 minutes by default for SaaS agents), by default, to Amplify platform and cannot be inactivated. The data can be viewed at **Amplify platform > Analytics > API Usage**.
 
 It contains the following information:
 
@@ -86,7 +86,7 @@ Data Fields:
 
 #### Transactions data
 
-The transaction data represent the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Trace Sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling/#sampling).
+The transaction data represents the number and details of transactions processed by the Gateway during a period of time. You can limit the number of transactions sent to the platform, or completely turn this feature off, by applying a sampling configuration to the Traceability Agent. See [Trace Sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling/#sampling).
 
 The transactions can be redacted (by default) and/or sanitized, according to your need, before sending the information to Amplify platform. See [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/).
 
