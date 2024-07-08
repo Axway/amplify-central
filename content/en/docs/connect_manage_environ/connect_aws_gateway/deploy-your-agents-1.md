@@ -25,18 +25,6 @@ The Discovery Agent is used to discover new deployments and stage updates to exi
 
 The Discovery Agent only discovers published APIs where the stage has tags defined in the agent configuration file. See AWS_DISCOVERYTAGS.
 
-There are two operating modes of the Discovery Agent, one is receiving continuous changes from AWS API Gateway and pushing to Amplify. The other synchronizing all APIs and then exits.
-
-### Continuous Discovery Overview
-
-In this mode the agent will receive change events for configuration changes to AWS API Gateway resources. These events will be processed and sent to Enterprise Marketplace. This mode is also required to manage subscriptions and subscription notifications.
-
-### Synchronous Discovery Overview
-
-In this mode the agent will read the configuration on AWS API Gateway and send all REST APIs to Amplify API Service Registry. Once it has completed this task it will exit and no additional changes will be sent to Amplify until the agent is executed again. This mode does not handle any subscription events.
-
-The configuration of the AWS_QUEUENAME is not used in this mode.
-
 ### Create your Discovery Agent configuration
 
 All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
@@ -50,11 +38,8 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | AWS_CLIENTTIMEOUT                    | The amount of time a single AWS transaction may wait to process (default value: `30s`).                                                                                                                                                                                                                                                                                                                                                                                            |
 | AWS_FILTER                           | Filter conditions for discovery based on AWS Stage tags to determine adding the API to API Service Registry. [See Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/filtering-apis-to-be-discovered-1/).                                                                                                                                                                                                                          |
 | AWS_LOGGROUP                         | The log group name where API Gateway will send Execution events (output of Step 5). See [Prepare AWS Gateway to deploy the Discovery Agent AWS config setup](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/).                                                                                                                                                                                                                                    |
-| AWS_PROCESSINGMODE                   | The processing mode that the agent, Discovery and Traceability, will operate in. Valid options are `sqs` (default) and `poll`.                                                                                                                                                                                                                                                                                                                                                     |
 | AWS_PUSHTAGS                         | Determines whether the AWS Stage tags should be pushed to Amplify along with the API definition. Value must be true or false. Default is false.                                                                                                                                                                                                                                                                                                                                    |
-| AWS_QUEUENAME                        | The name of the queue where Discovery Agent will read relevant AWS events. It is the QueueName provided during installation.                                                                                                                                                                                                                                                                                                                                                       |
 | AWS_REGION                           | The region where AWS APIs are stored.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| AWS_SQSPOLLINTERVAL                  | The interval at which to poll SQS for messages (ns - default, us, ms, s). Set to 20s. Max value is 20s.                                                                                                                                                                                                                                                                                                                                                                            |
 
 ### Create your Discovery Agent environment file
 
@@ -65,7 +50,6 @@ For example:
 ```yaml
 # AWS connectivity
 AWS_REGION=us-east-2
-AWS_QUEUENAME=aws-apigw-discovery-us-east-2
 AWS_AUTH_ACCESSKEY=<YOUR AWS ACCESS KEY HERE>
 AWS_AUTH_SECRETKEY=<YOUR AWS SECRET KEY HERE>
 AWS_LOGGROUP=<YOUR LOG GROUP NAME>
@@ -101,22 +85,12 @@ LOG_PATH=logs
    ```
 
 4. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
+    ```bash
+    docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:{agentVersion}
+    ```
 
-    * Continuous Discovery mode:
+    `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-        ```bash
-       docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:{agentVersion}
-        ```
-
-        `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
-
-    * Synchronous Discovery mode:
-  
-        ```bash
-        docker run --env-file ./env_vars -v <pwd>/keys:/keys  axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-discovery-agent:{agentVersion} --synchronize
-        ```
-
-        `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
 5. Run the following health check command to ensure the agent is up and running (continuous mode):
 
@@ -141,9 +115,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | AWS_AUTH_ACCESSKEY                             | If not deploying in an EC2 instance, the access key of the AWS account where APIs are stored.                                                                                                                                                                                                                                                 |
 | AWS_AUTH_SECRETKEY                             | If not deploying in an EC2 instance, the secret access key of the AWS account where APIs are stored.                                                                                                                                                                                                                                          |
 | AWS_CLIENTTIMEOUT                              | The amount of time a single AWS transaction may wait to process (default value: `30s`).                                                                                                                                                                                                                                                       |
-| AWS_QUEUENAME                                  | The name of the queue (TraceabilityQueueName) from Step 5. This is used for logging custom access log entries. See [Prepare AWS Gateway to deploy the Discovery Agent AWS config setup](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/).                                                                    |
 | AWS_REGION                                     | The region where AWS APIs are stored.                                                                                                                                                                                                                                                                                                         |
-| AWS_SQSPOLLINTERVAL                            | How often SQS queue is polled.                                                                                                                                                                                                                                                                                                                |
 
 ### Create your Traceability Agent environment file
 
@@ -154,7 +126,6 @@ For example:
 ```yaml
 # AWS connectivity
 AWS_REGION=us-east-2
-AWS_QUEUENAME=aws-apigw-traceability-us-east-2
 AWS_AUTH_ACCESSKEY=<YOUR AWS ACCESS KEY HERE>
 AWS_AUTH_SECRETKEY=<YOUR AWS SECRET KEY HERE>
 
