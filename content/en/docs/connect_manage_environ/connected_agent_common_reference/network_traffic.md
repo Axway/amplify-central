@@ -39,8 +39,6 @@ It is also possible to filter the API to be discover using the filter capabiliti
 
 ### Traceability Agent
 
-Robert to update
-
 The Traceability Agent reports two sets of data to Amplify platform:
 
 * Usage data
