@@ -91,7 +91,6 @@ LOG_PATH=logs
 
     `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-
 5. Run the following health check command to ensure the agent is up and running (continuous mode):
 
    ```bash
