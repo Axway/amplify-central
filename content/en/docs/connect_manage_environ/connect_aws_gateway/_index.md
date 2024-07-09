@@ -21,11 +21,11 @@ Each AWS Gateway can be represented by an Amplify environment allowing you to be
 
 ### Discovery Agent
 
-The Discovery Agent is used to discover new deployments and stage updates to existing deployments for publishing related APIs in Amplify as an API service. It will regularly check AWS API Gateway and check for modifications on these resources to push updates to Amplify.
+The Discovery Agent is used to discover new deployments and stage updates to existing deployments for publishing related APIs in Amplify as an API service. It will regularly check AWS API Gateway for modifications on these resources to push updates to Amplify.
 
 ### Traceability Agent
 
-The Traceability Agent is used to filter the AWS CloudWatch logs and prepare the metric, usage and transaction events that are sent to Amplify and visible in Business Insights. Viewing your traffic helps you to identify the bottleneck and errors. The traffic can be filtered by environment in case multiples are involved in your topography. As part of the deployment package, you can use cloud formation scripts to set up the following agent-dependent AWS Services:
+The Traceability Agent is used to filter the AWS CloudWatch logs and prepare the metric, usage and transaction events that are sent to Amplify and visible in Business Insights. Viewing your traffic helps you to identify possible bottlenecks and errors. The traffic can be filtered by environment in case multiples are involved in your topography. As part of the deployment package, you can use cloud formation scripts to set up the following agent-dependent AWS Services:
 
 * AWS CloudWatch - Monitors resources and AWS applications in real time. Receives and routes supported AWS Service events.
 
