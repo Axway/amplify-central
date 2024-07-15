@@ -23,27 +23,35 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 ### Common variables to both agents
 
 | Variable name           | Description                              |
-| ----------------------- | ---------------------------------------- |
+|-------------------------|------------------------------------------|
 | AZURE_CLIENTID          | The appId of the service principal.      |
 | AZURE_CLIENTSECRET      | The password of the service principal.   |
 | AZURE_RESOURCEGROUPNAME | The container name that holds resources. |
 | AZURE_SUBSCRIPTIONID    | The Azure subscription identifier.       |
-| AZURE_TENANTID          | The tenantID of the service principal.   |  |
+| AZURE_TENANTID          | The tenantID of the service principal.   |
 
 {{< alert title="Note" color="primary" >}}For logging, it is recommended to set it up in the agent configuration file to keep the log separated for each agent.{{< /alert >}}
 
 ### Specific variables for Discovery Agent
 
 | Variable name         |                                                                                                                                                                                                                                                                        |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AZURE_APIMSERVICENAME | The container that holds the API you want the agent to discover.                                                                                                                                                                                                       |
 | AZURE_FILTER          | Filter condition expression for discovering APIs based on tags. The conditional expression must have \"tag\" as the prefix/selector. Azure Discovery Agent supports only Exists() call expression-based conditions. For example, `tag.some_tag_name.Exists() == true`. |
 | AZURE_PUSHTAGS        | When set to TRUE, the Azure API tags will be pushed to Amplify API service.                                                                                                                                                                                            |
 
+### Discovery Agent to manage OAuth External credentials
+
+{{< alert title="Note" color="primary" >}}OAuth (External) inbound security was made available with version v1.1.73 and later.{{< /alert >}}
+
+When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credentials to the specified OAuth identity providers. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
+
+When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Enterprise Marketplace to Credential Request Definition(CRD) that will allow Marketplace consumers to specify the identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
+
 ### Specific variables for Traceability Agent
 
 | Variable name               | Description                                                                                                                                                                                                                                                                                                                              |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AZURE_GETHEADERS            | Call the Azure Gateway API to get additional transaction details (headers, useragent). Default is True.                                                                                                                                                                                                                                  |
 | AZURE_EVENTHUBNAME          | The management container for event hub in Azure.                                                                                                                                                                                                                                                                                         |
 | AZURE_EVENTHUBNAMESPACE     | The entity that provides a unique scoping container in which you create one or more event hubs.                                                                                                                                                                                                                                          |
