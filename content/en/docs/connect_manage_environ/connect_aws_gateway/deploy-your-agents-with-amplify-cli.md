@@ -14,7 +14,6 @@ Deploy your agents using Axway CLI so you can manage your AWS API Gateway enviro
     * The region that the AWS API Gateway resources are hosted in
     * The bucket that the Resources will be uploaded to
     * The logging configuration setup on AWS API Gateway
-    * The configuration of AWS Config Service
 * It is recommended that you have access to the AWS CLI command line to run the necessary setup commands
 
 ## Objectives
@@ -45,7 +44,7 @@ The agents run on an EC2 instance, ECS Fargate cluster, or directly on a Docker 
 The agents must have access to:
 
 * The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
-* AWS API Gateway / AWS CloudWatch / AWS SQS
+* AWS API Gateway / AWS CloudWatch
 
 ## Configure the agents with Axway Central CLI
 
@@ -145,11 +144,6 @@ The installation procedure will prompt for the following:
    * **S3 Bucket Name** within the same region as the AWS API Gateway resources
    * **API Gateway Cloud Watch Setup** defaulted to `Yes`, sets up the IAM role and configures API Gateway to log API Gateway transactions to CloudWatch
    * **APIGW Log Group** defaulted to `aws-apigw-traffic-logs`, where API Gateway transactions will be logged within CloudWatch
-   * **Config Service Setup** defaulted to `Yes`, set to `No` if this is already in use
-   * **Config Service Bucket** defaulted to **S3 bucket Name**, where Config Service stores its data
-   * **Config Bucket Exists** defaulted to `Yes`, set to `No` to have the CloudFormation create the bucket
-   * **Discovery Agent Queue** defaulted to `aws-apigw-discovery`, the SQS Queue where events for the Discovery Agent are sent
-   * **Traceability Agent Queue** defaulted to `aws-apigw-traceability`, the SQS Queue where events for the Traceability Agent are sent
 
    * EC2 Deployment Prompts
      * **Instance Type** defaulted to `t3.micro`
@@ -183,20 +177,17 @@ public_key.pem
 amplify-agents-deploy-all.yaml
 amplify-agents-ec2.yaml           *EC2 Deployment Only
 amplify-agents-ecs-fargate.yaml   *ECS Fargate Deployment Only
-amplify-agents-resources.yaml
+amplify-agents-setup.yaml
 cloudformation_properties.json
-traceability_lambda.zip
 ```
 
 `da_env_vars.env` / `ta_env_vars.env` contains the specific configuration you entered during the installation procedure. These files are required to start the agents.
 
 `private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify platform (if you choose to let the installation generate them).
 
-`amplify-agents-deploy-all.yaml` / `amplify-agents-ec2.yaml` / `amplify-agents-ecs-fargate.yaml` / `amplify-agents-resources.yaml` are the CloudFormation files to configure AWS services / infrastructure.
+`amplify-agents-deploy-all.yaml` / `amplify-agents-ec2.yaml` / `amplify-agents-ecs-fargate.yaml` / `amplify-agents-setup.yaml` are the CloudFormation files to configure AWS services / infrastructure.
 
 `cloudformation_properties.json` contains the parameter values required as input to the CloudFormation execution.
-
-`traceability_lambda.zip` is referenced in the CloudFormation scripts to setup the AWS Lambda function required.
 
 ### Step 5a: Deploy the agent in EC2 or ECS Fargate infrastructure
 
@@ -210,7 +201,7 @@ Example:
 To complete the install, run the following AWS CLI command:
   - Create, if necessary, and upload all files to your S3 bucket:
     aws s3api create-bucket --bucket my-bucket-name --create-bucket-configuration LocationConstraint=eu-west-1
-    aws s3 sync --exclude "*" --include "traceability_lambda.zip" --include "amplify-agents-deploy-all.yaml" --include "amplify-agents-resources.yaml" --include "amplify-agents-ec2.yaml"  ./ s3://my-bucket-name
+    aws s3 sync --exclude "*" --include "amplify-agents-deploy-all.yaml" --include "amplify-agents-setup.yaml" --include "amplify-agents-ec2.yaml"  ./ s3://my-bucket-name
     aws s3 sync --exclude "*" --include "da_env_vars.env" --include "ta_env_vars.env"  ./ s3://my-bucket-name/resources
   - If necessary, create EC2 KeyPair, for EC2 login:
     aws ec2 create-key-pair --key-name keypair --query KeyMaterial --output text > MyKeyPair.pem
@@ -247,7 +238,7 @@ Example:
 To complete the install, run the following AWS CLI command:
   - Create, if necessary, and upload all files to your S3 bucket:
     aws s3api create-bucket --bucket my-bucket-name --create-bucket-configuration LocationConstraint=eu-west-1
-    aws s3 sync --exclude "*" --include "traceability_lambda.zip" --include "amplify-agents-deploy-all.yaml" --include "amplify-agents-resources.yaml" ./ s3://my-bucket-name
+    aws s3 sync --exclude "*" --include "amplify-agents-deploy-all.yaml" --include "amplify-agents-setup.yaml" ./ s3://my-bucket-name
     
   - Deploy the CloudFormation Stack:
     aws cloudformation create-stack --stack-name AxwayAmplifyAgents \

@@ -21,21 +21,13 @@ Each AWS Gateway can be represented by an Amplify environment allowing you to be
 
 ### Discovery Agent
 
-The Discovery Agent is used to discover new deployments and stage updates to existing deployments for publishing related APIs in Amplify (either as a catalog item or as an API service). As part of the deployment package, use the provided cloud formation scripts to set up the following agent-dependent AWS Services:
-
-* AWS Config - Administers, audits and monitors resource configurations. Records and validates configuration changes.
-* AWS CloudWatch - Monitors resources and AWS applications in real time. Receives and routes supported AWS Service events.
-* AWS SQS - Decouples and scales microservices, distributed systems and serverless applications.
-
-![Service Discovery](/Images/central/connect-aws-gateway/aws-discovery-agent_v2.png)
+The Discovery Agent is used to discover new deployments and stage updates to existing deployments for publishing related APIs in Amplify as an API service. It will regularly check AWS API Gateway for modifications on these resources to push updates to Amplify.
 
 ### Traceability Agent
 
-The Traceability Agent is used to filter the AWS CloudWatch logs and prepare the transaction events that are sent to Amplify and visible in Business Insights. Viewing your traffic helps you to identify the bottleneck and errors. The traffic can be filtered by environment in case multiples are involved in your topography. As part of the deployment package, you can use cloud formation scripts to set up the following agent-dependent AWS Services:
+The Traceability Agent is used to filter the AWS CloudWatch logs and prepare the metric, usage and transaction events that are sent to Amplify and made visible in Business Insights. Viewing your traffic helps you to identify possible bottlenecks and errors. The traffic can be filtered by environment in case multiples are involved in your topography. As part of the deployment package, you can use the cloud formation scripts to set up the following agent-dependent AWS Service:
 
 * AWS CloudWatch - Monitors resources and AWS applications in real time. Receives and routes supported AWS Service events.
-* AWS Lamda - Runs code in response to events and automatically manages the computing resources required by that code.
-* AWS SQS - Decouples and scales microservices, distributed systems and serverless applications.
 
 The types of logging you can do with API Gateway to CloudWatch:
 
@@ -44,8 +36,6 @@ The types of logging you can do with API Gateway to CloudWatch:
 
 For additional logging information, see <https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html>.
 
-![Service Discovery](/Images/central/connect-aws-gateway/aws-traceability-agent_v2.png)
-
 ## Prerequisites
 
 * An Axway Amplify subscription in the Amplify platform
@@ -53,8 +43,6 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * API Key credentials on AWS. Allow for CLI access
 * Amazon CloudWatch Service
-* Amazon Simple Queue Service (AWS SQS)
-* AWS Lambda
 * CloudFormation template. Download from [https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config](<https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config>)
 * The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
