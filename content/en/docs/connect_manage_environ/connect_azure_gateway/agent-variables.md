@@ -42,11 +42,11 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 ### Discovery Agent to manage OAuth External credentials
 
-{{< alert title="Note" color="primary" >}}OAuth (External) inbound security was made available with Version v1.1.73 and later{{< /alert >}}
+{{< alert title="Note" color="primary" >}}OAuth (External) inbound security was made available with version v1.1.73 and later.{{< /alert >}}
 
-When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
+When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credentials to the specified OAuth identity providers. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
 
-When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Enterprise Marketplace to Credential Request Definition(CRD) that will allow Marketplace consumers to specify identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
+When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Enterprise Marketplace to Credential Request Definition(CRD) that will allow Marketplace consumers to specify the identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
 
 ### Specific variables for Traceability Agent
 
