@@ -164,7 +164,7 @@ The communication between MyFatoorah and the Marketplace is bi-directional:
 
 All customer payments are done using the MyFatoorah billing portal.
 
-{{< alert title="Warning" color="primary" >}}
+{{< alert title="Warning about currency conversion" color="primary" >}}
 My Fatoorah is using currencies that could be converted by the system. In case MyFatoorah account is setup with a currency which is not the one defined in the product plan, the system will apply the current rating conversion between the plan currency and the account default currency to generate the invoice prices. This can lead to some mismatch as the converting rate is rounding the values after the third digit.
 
 To avoid this you can use the same currency from the product plan than the once configured in the account currency.
@@ -195,7 +195,7 @@ The invoice source of record is in MyFatoorah, so a webhook is used to communica
     * Transaction Status Changed
 7. Click **Save**.
 
-{{< alert title="Note about currency comversion" color="primary" >}}When the Webhook Secret key is changed on the MyFatoorah account, be sure to update it on the Marketplace > Billing > Webhook Secret Key value.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}When the Webhook Secret key is changed on the MyFatoorah account, be sure to update it on the Marketplace > Billing > Webhook Secret Key value.{{< /alert >}}
 
 ### Enable the MyFatoorah integration in Marketplace
 
