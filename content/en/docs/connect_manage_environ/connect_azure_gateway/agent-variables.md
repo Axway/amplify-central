@@ -28,7 +28,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | AZURE_CLIENTSECRET      | The password of the service principal.   |
 | AZURE_RESOURCEGROUPNAME | The container name that holds resources. |
 | AZURE_SUBSCRIPTIONID    | The Azure subscription identifier.       |
-| AZURE_TENANTID          | The tenantID of the service principal.   |  |
+| AZURE_TENANTID          | The tenantID of the service principal.   |
 
 {{< alert title="Note" color="primary" >}}For logging, it is recommended to set it up in the agent configuration file to keep the log separated for each agent.{{< /alert >}}
 
