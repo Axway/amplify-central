@@ -165,8 +165,10 @@ The communication between MyFatoorah and the Marketplace is bi-directional:
 
 All customer payments are done using the MyFatoorah billing portal.
 
-{{< alert title="Warning about currency conversion" color="primary" >}}
-My Fatoorah uses currencies that could be converted by the system. If the MyFatoorah account is set up with a currency that is not the one defined in the product plan, the system will apply the current rating conversion between the plan currency and the account default currency to generate the invoice prices. This can lead to inconsistencies, as the converting rate is rounding the values after the third digit.
+{{< alert title="Note" color="primary" >}}
+**Warning about currency conversion**
+
+My Fatoorah uses currencies that could be converted by the system. If the MyFatoorah account is set up with a currency that is not the one defined in the product plan, the system will apply the current rating conversion between the plan currency and the account default currency to generate the invoice prices. This can lead to inaccuracies, as the rate conversion rounds the values after the third digit.
 
 To avoid this, use the same currency from the product plan instead of the one configured in the account currency.
 {{< /alert >}}
