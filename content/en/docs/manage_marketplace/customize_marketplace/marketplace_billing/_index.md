@@ -175,7 +175,7 @@ To avoid this, use the same currency from the product plan instead of the one co
 
 #### Accessing MyFatoorah using MyFatoorah API and API Key
 
-Marketplace MyFatoorah billing integration is currently using MyFatoorah v2 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+Marketplace MyFatoorah billing integration is currently using MyFatoorah v2 API version. Refer to [this page](https://docs.myfatoorah.com/docs/overview).
 
 For Marketplace to access the MyFatoorah account, an API Key is required. For security constraints a restricted API Key with minimum access is used: Customer:Write and Invoices:Write rights.
 
