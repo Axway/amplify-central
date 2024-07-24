@@ -24,7 +24,7 @@ These two agents will help you to represent and expose your API Management eco-s
 
 ### Discovery Agent
 
-The Discovery Agent is used to discover new published APIs. The Discovery Agent pushes both REST and SOAP API definitions to Amplify.
+The Discovery Agent is used to discover new published APIs. The Discovery Agent functions in two modes, default mode where all APIs are discovered from the API Manager, and the EventHub mode where the APIs are discovered from the Event Hub Schema Registry. After the discovery process, the agent pushes both REST and SOAP API definitions to Amplify.
 
 The related APIs are published to Amplify as an API service in the selected environment and then can be published to Marketplace within a product.
 
@@ -41,7 +41,7 @@ The Traceability Agent sends log information about APIs that have been discovere
 * An Axway Amplify subscription in the Amplify platform
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
-* An Azure Service principal for the Discovery Agent to use Azure APIs
+* An Azure Service principal for the Discovery Agent to use Azure APIs in default mode or an Event Hub for when the agent runs in EventHub mode
 * An Azure Event Hub for the Traceability Agent to report API traffic to Amplify platform
 * The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
