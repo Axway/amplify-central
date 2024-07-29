@@ -149,7 +149,7 @@ The installation procedure will prompt for the following:
    * **Service Principal Client Secret** is the authentication used for service principals
    * **Resource Group Name** is the representation of group related resources for your application
    * **API Management Service Name** refers to both the service and the corresponding Azure resource
-   * **Agent Mode** refers to the mode the agent will run in. If left empty, the agent will run in default mode (API Manager). Other modes accepted: EventHub
+   * **Agent Mode** refers to the discovery mode the agent will run in. Supported values: APIM - Azure API Manager (default),  EventHub - Azure Event Hub Namespace
    * **Event Hub Namespace** is the management container for one of multiple Event Hub instances (only in EventHub mode)
 
 5. Azure Traceability Agent Configuration Setup options:
