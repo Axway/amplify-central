@@ -42,7 +42,6 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | AZURE_FILTER            | Filter condition expression for discovering APIs based on tags. The conditional expression must have \"tag\" as the prefix/selector. Azure Discovery Agent supports only Exists() call expression-based conditions. For example, `tag.some_tag_name.Exists() == true`. |
 | AZURE_PUSHTAGS          | When set to TRUE, the Azure API tags will be pushed to Amplify API service.                                                                                                                                                                                            |
 
-
 ### Discovery Agent to manage OAuth External credentials
 
 {{< alert title="Note" color="primary" >}}OAuth (External) inbound security was made available with v1.1.73 and later.{{< /alert >}}
