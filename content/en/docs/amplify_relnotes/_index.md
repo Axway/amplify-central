@@ -20,6 +20,69 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify Enterprise Marketplace July 26 2024](/docs/amplify_relnotes/20240726_amplify/)
+
+Current agent versions are based on Amplify Agents SDK v1.1.92. This version is compatible with:
+
+* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.86 / TA=v1.1.86
+* **AWS Gateway using SDK 2.0** - DA=v1.1.71 / TA-v1.1.74
+* **Azure latest release** - DA=v1.1.75 / TA=v1.1.81
+* **Istio 1.9.5** - DA=v1.0.42 / TA=v2.0.87
+* **Apigee Edge** - Agent version 0.1.44
+* **Mulesoft Anypoint platform v3** - Agent version 1.1.54
+* **Software AG webMethods** - 0.0.29
+* **Kong Gateway** - 1.0.15
+* **GitLab** - 1.0.11
+* **Kafka Cluster** - DA=v1.0.11 / TA=v1.0.11
+* **IBM API Connect Gateway** - DA=v1.0.3 / TA=v1.0.3
+
+Supported SaaS (embedded) Agents:
+
+* **AWS Embedded Service**
+* **Apigee X Embedded Service**
+* **GitHub Embedded Service**
+* **Azure Embedded Service**
+* **SwaggerHub Embedded Service**
+
+Runtime Compliance Agent:
+
+* **Graylog API Security** - On-premise Agent version 1.0.9
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | Enhanced identity provider support. <br />Async API specification generation. |
+| Bug fixes: | None. |
+| <br />**On-premise agents** |         |
+| What's new: | None. |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
+| <br />**SaaS (embedded) agents** |    |
+| What's new: | None. |
+| Bug fixes:  | None. |
+| <br />**Axway CLI** |       |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Axway Central CLI** |       |
+| What's new: | External OAuth identity provider support. |
+| Bug fixes: | None. |
+| <br />**Service Registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Product Foundry** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Marketplace** |         |
+| What's new: | New Application registration screen. <br />MyFatoorah billing integration. |
+| Bug fixes: | See release note. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ## [Amplify Enterprise Marketplace July 12 2024](/docs/amplify_relnotes/20240712_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.90. This version is compatible with:
