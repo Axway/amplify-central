@@ -1,7 +1,7 @@
 ---
 title: Use Discovery Agent to manage Unified Catalog subscription workflow
 linkTitle: Use Discovery Agent to manage Unified Catalog subscription workflow
-draft: false
+draft: true
 weight: 30
 ---
 A subscription provides the consumer, or subscriber, with the required security and endpoint materials to correctly consume the API.

@@ -13,14 +13,14 @@ The *API Service* details page has multiple tabs to view:
 
 * **Specifications** for the contract or API methods for the API service version.
 * **Endpoints** for the list of URLs of each deployed instance of the API service version.
-* **Catalog Items** for the list of consumable API services available in the Unified Catalog.
+* **Catalog Items** for the list of consumable API services available in the Marketplace.
 * **Dependency Analysis** for the related items to the API service version.
 
 The **Dependency Analysis** tab displays the following, if available, for the selected API service version:
 
 * Endpoint
-* available Unified Catalog Items
-* Subscriptions to the published Unified Catalog items
+* available Marketplace items
+* Subscriptions to the published Marketplace items
 
 To view Dependency Analysis details:
 
@@ -28,7 +28,7 @@ To view Dependency Analysis details:
 
     * view the number of dependent Catalog items to each endpoint
     * add or delete more endpoints
-    * publish an endpoint to the Unified Catalog
+    * publish an endpoint to the Marketplace
 
 * Click on the **Catalog Items** node to focus on the API service dependent Catalog items. Click **view info** to display a list of Catalog items where you can:
 

@@ -206,8 +206,6 @@ AGENTFEATURES_PERSISTCACHE=true
 
 Restart your agent once the variables are updated.
 
-{{< alert title="Note" color="primary" >}}Enabling the Marketplace provisioning feature disables the Unified Catalog subscription workflow and the creation of Unified Catalog item{{< /alert >}}
-
 ## Traceability Agent configuration for reporting the traffic to Consumer Insights
 
 Add the following Traceability Agent variables to the agent configuration:

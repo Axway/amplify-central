@@ -2,6 +2,7 @@
 title: Publish an endpoint to Unified Catalog
 linkTitle: Publish an endpoint to Unified Catalog
 weight: 40
+draft: true
 date: 2021-02-11
 ---
 Publish an API service endpoint to Unified Catalog.
