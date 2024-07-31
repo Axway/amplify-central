@@ -2,6 +2,7 @@
 title: Create and publish other resource types to the Unified Catalog
 linkTitle: Create and publish other resource types to the Unified Catalog
 weight: 115
+draft: yes
 date: 2020-06-10T00:00:00.000Z
 ---
 Use the Axway Central CLI to create other resource types, which are used by your API service, and publish the API service to the Unified Catalog. You can use the scripting of CLI commands to automate the process to create multiple resource types in your environment.

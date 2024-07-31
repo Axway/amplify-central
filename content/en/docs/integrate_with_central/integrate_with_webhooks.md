@@ -329,7 +329,7 @@ Example of a webhook payload referencing a secret:
 
 ## Configure webhooks on catalog asset subscriptions
 
-Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
+(Robert, should this whole section be removed?) Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
 
 To publish an asset to the Amplify Unified Catalog with a custom subscription flow that will be triggered on any subscription events, you must:
 
@@ -444,7 +444,7 @@ For the example provided, the following information will be required when a cons
 
 ## Subscription events
 
-A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog.
+A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog. (Robert, should this section be removed?)
 
 Click [subscriptionEventSchema.json](https://amplify-central.netlify.app/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
 
@@ -466,4 +466,3 @@ Click [subscriptionEventPayload.json](https://amplify-central.netlify.app/sample
 ## Examples of webhooks
 
 * [Custom subscription approval from Marketplace](/docs/integrate_with_central/webhook/marketplace_subscription_webhook)
-* [Custom subscription approval from Unified Catalog](/docs/integrate_with_central/webhook/unified_catalog_webhook/).

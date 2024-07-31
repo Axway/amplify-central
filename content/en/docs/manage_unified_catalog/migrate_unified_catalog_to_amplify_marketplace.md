@@ -1,6 +1,7 @@
 ---
 title: Migrate Unified Catalog to Amplify Marketplace
 linkTitle: Migrate Unified Catalog to Amplify Marketplace
+draft: yes
 weight: 145
 ---
 
