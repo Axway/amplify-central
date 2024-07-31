@@ -2,7 +2,7 @@
 title: Set up integrations through Webhooks
 linkTitle: Set up integrations through Webhooks
 weight: 100
-draft: yes
+draft: true
 date: 2019-07-30
 ---
 Configure webhooks to receive notifications from Amplify.
@@ -329,7 +329,7 @@ Example of a webhook payload referencing a secret:
 
 ## Configure webhooks on catalog asset subscriptions
 
-(Robert, should this whole section be removed?) Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
+Amplify Unified Catalog provides event-driven subscription management capabilities that enable you to create custom subscription flows for each registered environment in Amplify, enabling complex approval flows and integration with existing systems to streamline the experience and reduce the time for approval.
 
 To publish an asset to the Amplify Unified Catalog with a custom subscription flow that will be triggered on any subscription events, you must:
 

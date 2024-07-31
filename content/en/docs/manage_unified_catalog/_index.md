@@ -1,7 +1,7 @@
 ---
 title: Manage your Unified Catalog
 linkTitle: Manage your Unified Catalog
-draft: yes
+draft: true
 weight: 535
 ---
 Normalize discovery for APIs from multiple gateways, classify your services to support multiple audiences (partners, IT, business), control consumer subscription to access your APIs, and extend your APIs to be reused in other integration flows.

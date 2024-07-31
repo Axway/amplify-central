@@ -1,7 +1,7 @@
 ---
 title: Manage catalog assets
 linkTitle: Manage catalog assets
-draft: yes
+draft: true
 weight: 110
 date: 2020-06-03
 ---

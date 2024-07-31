@@ -1,7 +1,7 @@
 ---
 title: Manage subscriptions
 linkTitle: Manage subscriptions
-draft: yes
+draft: true
 weight: 130
 date: 2019-12-16T00:00:00.000Z
 ---

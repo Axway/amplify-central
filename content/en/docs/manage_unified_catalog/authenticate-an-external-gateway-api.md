@@ -2,7 +2,7 @@
 title: Authenticate an external API secured with OAuth
 linkTitle: Authenticate an API secured with OAuth
 weight: 40
-draft: yes
+draft: true
 date: 2020-04-28T00:00:00.000Z
 ---
 Authenticate an API secured with OAuth credentials, which was published from an external gateway.
