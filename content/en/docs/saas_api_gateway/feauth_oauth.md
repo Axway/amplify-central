@@ -1,6 +1,7 @@
 ---
 title: Secure an API with OAuth
 linkTitle: Secure an API with OAuth
+draft: true
 weight: 40
 date: 2019-07-30T00:00:00.000Z
 ---

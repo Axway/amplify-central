@@ -28,9 +28,9 @@ A team is linked to multiple components in the Amplify platform:
     * **Consumer** - can only consume the assets of the team.
 * **Marketplace**:
 
-    * Every item in the Marketplace, which represents an API, is owned by a specific team. That team has full control over their APIs.
+    * Every item in the Marketplace, which represents the API(s) in a product, is owned by a specific team. That team has full control over their APIs.
     * An API can be shared with another team. The other team can only consume the API and has no other rights.
-    * The team can consume the API by subscribing to it. An approval step can be configured, but the owning team must approve the subscription.
+    * The team can consume the API(s) by subscribing to it. An approval step can be configured, but the owning team must approve the subscription.
 
 ## Types of teams
 
@@ -59,7 +59,7 @@ A global and centralized API team strategy consists of:
 * **Amplify platform**:
 
     * **Amplify Topology** - hosts the environments which represent the different gateways in the data planes. It also contains the definitions of the APIs that were discovered by the agents.
-    * **Marketplace** - use to view and consume APIs. Use provider and consumer teams with Marketplace:
+    * **Marketplace** - use to view and consume products with an API resource(s). Use provider and consumer teams with Marketplace:
 
         * **Provider** - these teams can, for example, be linked to a department or a project and are used for all APIs that the provider team owns. The members of the provider team are the users of the project or the department.<br /> An API in a provider team can either be shared with other provider teams or  with the Global team. If it is shared with the Global team, then it becomes part of the global catalog and everyone has access to the API.<br /> There are three approaches to add APIs to a provider team:
 

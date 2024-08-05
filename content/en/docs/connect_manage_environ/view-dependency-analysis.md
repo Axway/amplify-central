@@ -1,6 +1,7 @@
 ---
 title: View Dependency Analysis
 linkTitle: View Dependency Analysis
+draft: true
 weight: 60
 ---
 The *Dependency Analysis* view displays details about the relationships to the selected API service version. The relationship details enable the API Provider to make informed decisions and take actions on any of the dependencies.
@@ -14,7 +15,7 @@ The *API Service* details page has multiple tabs to view:
 * **Specifications** for the contract or API methods for the API service version.
 * **Endpoints** for the list of URLs of each deployed instance of the API service version.
 * **Catalog Items** for the list of consumable API services available in the Marketplace.
-* **Dependency Analysis** for the related items to the API service version.
+* **Dependency Analysis** tab for the related items to the API service version.
 
 The **Dependency Analysis** tab displays the following, if available, for the selected API service version:
 

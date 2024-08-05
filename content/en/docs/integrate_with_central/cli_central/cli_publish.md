@@ -333,8 +333,3 @@ The following are some of the `"unstructuredDataProperties" : "contentTypes"` su
 ## Review
 
 You have learned how to publish your API service to Unified Catalog using the Axway Central CLI. You have also learned how to create other resource types which can be used by your API service and how to publish SDK docs to the Unified Catalog.
-
-## For Further information
-
-* See [Amplify Unified Catalog](/docs/manage_unified_catalog/).
-* See more examples of [Unified Catalog Integrations](https://github.com/Axway/unified-catalog-integrations).

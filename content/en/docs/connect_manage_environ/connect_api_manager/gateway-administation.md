@@ -219,16 +219,12 @@ Various use cases are supported to approve a subscription using the `CENTRAL_SUB
 * auto: all subscription are automatically approved
 * webhook: a webhook can be added to the agent configuration. The webhook endpoint will be trigger each time the subscription state is updated. For this, there are 2 additional variables required: `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL` and `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS`.
 
-More information can be found in [Supported use cases for subscription approval](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/#supported-use-case-for-issuing-consumer-credentials) section.
-
 We also support two use cases to send API credentials to the subscriber:
 
 * via an email: you must configure the email server, as well as the various email templates the agent can send (Subscription success / Subscription failure / Unsubscribing success / Unsubscribing failure)
 * via a webhook: a webhook can be triggered with the subscription credentials payload.
 
 These options are mutually exclusive.
-
-More information can be found in [Supported use cases for receiving API credentials](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials) section.
 
 Once all data is gathered, this subscription section should look like this:
 

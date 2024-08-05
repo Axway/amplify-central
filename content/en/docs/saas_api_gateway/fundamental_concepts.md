@@ -1,6 +1,7 @@
 ---
 title: SaaS API Gateway concepts
 linkTitle: Concepts
+draft: true
 weight: 10
 date: 2019-07-30T00:00:00.000Z
 ---
