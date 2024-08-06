@@ -264,7 +264,7 @@ customPropertiesConfig: {
 
    1. Open an Amplify Catalog item.
    2. Click **Subscribe**.
-   3. Select the Team and API Manager Application name / Usage Plan for which you want to subscribe. 
+   3. Select the Team and API Manager Application name / Usage Plan for which you want to subscribe.
 2. Based on the API subscription approval (manual vs. automatic), an API provider has to approve the subscription.
 
 3. The Discovery Agent receives the subscription event:
