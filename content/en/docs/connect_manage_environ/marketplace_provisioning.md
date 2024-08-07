@@ -198,7 +198,7 @@ Add the following Discovery Agent variables to the agent configuration:
 ```powershell
 # enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
-# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
+# enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true
 ```
 
@@ -211,7 +211,7 @@ Add the following Traceability Agent variables to the agent configuration:
 ```powershell
 # enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
-# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
+# enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true
 # enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
 TRACEABILITY_PER_SUBSCRIPTION=true
