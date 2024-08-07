@@ -211,60 +211,6 @@ In cases where a policy is used but not mapped to a specific authentication type
 
 For the Traceability to properly associate a Marketplace Consumer with a transaction, the Invoke Policy must set the subject id as documented [here](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). The client application in API Manager must be updated outside of the Discovery Agent. Otherwise, the Traceability won't be able to make this association.
 
-#### Customizing Discovery Agent to manage subscription approval and notifications
-
-Various use cases are supported to approve a subscription using the `CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE` variable:
-
-* manual (default): a provider must manually approve the subscription
-* auto: all subscription are automatically approved
-* webhook: a webhook can be added to the agent configuration. The webhook endpoint will be trigger each time the subscription state is updated. For this, there are 2 additional variables required: `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL` and `CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS`.
-
-More information can be found in [Supported use cases for subscription approval](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/#supported-use-case-for-issuing-consumer-credentials) section.
-
-We also support two use cases to send API credentials to the subscriber:
-
-* via an email: you must configure the email server, as well as the various email templates the agent can send (Subscription success / Subscription failure / Unsubscribing success / Unsubscribing failure)
-* via a webhook: a webhook can be triggered with the subscription credentials payload.
-
-These options are mutually exclusive.
-
-More information can be found in [Supported use cases for receiving API credentials](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/#supported-use-cases-for-receiving-api-credentials) section.
-
-Once all data is gathered, this subscription section should look like this:
-
-```shell
-# Subscription approval mode
-CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE=[webhook|auto|manual]
-CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL=http://mywebhookurl.com
-CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS=contentType,Value=application/json
-
-# Subscription notification via email - to be commented or removed if you don't want to use it
-## SMTP server
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_HOST=smtpServerHost
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PORT=smtpServerPort
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_USERNAME=userName
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PASSWORD=userPassword
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_AUTHTYPE=PLAIN
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_FROMADDRESS=agentSubscription@email.com
-
-## email templates
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_SUBJECT=Subscription Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_BODY=Subscription created for Catalog Item:  <a href= {{.CatalogItemURL}}> {{.CatalogItemName}} {{.CatalogItemID}}.</br></a>{{if .IsAPIKey}} Your API is secured using an APIKey credential:header:<b>{{.KeyHeaderName}}</b>/value:<b>{{.Key}}</b>{{else}} Your API is secured using OAuth token. You can obtain your token using grant_type=client_credentials with the following client_id=<b>{{.ClientID}}</b> and client_secret=<b>{{.ClientSecret}}</b>{{end}}
-
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_SUBJECT=Subscription Removal Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_BODY=Subscription for Catalog Item=<a href= {{.CatalogItemURL}}> {{.CatalogItemName}}</a> has been unsubscribed
-
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_SUBJECT=Subscription Failed Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_BODY=Could not unsubscribe to Catalog Item=<a href= {{.CatalogItemURL}}> {{.CatalogItemName}}</a>.<br/> Error encountered: ${message}
-
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_SUBJECT=Subscription Removal Failed Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_BODY=Could not unsubscribe to Catalog Item=<a href= {{.CatalogItemURL}}> {{.CatalogItemName}}</a>.<br/> Error encountered: ${message}
-
-## webhook notification - to be un-commented if you want to use it
-#CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_URL=subscriptionNotificationWebhookURL
-#CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_WEBHOOK_HEADERS=subscriptionWebHookHeader
-```
-
 #### Customizing Discovery Agent logging variables
 
 The log section defines how the agent is managing its logs.
@@ -325,32 +271,6 @@ CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 #CENTRAL_AUTH_KEYPASSWORD:
 #CENTRAL_AUTH_TIMEOUT=10s
-
-# Subscription approval
-CENTRAL_SUBSCRIPTIONS_APPROVAL_MODE=webhook
-CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_URL=http://mywebhookurl.com
-CENTRAL_SUBSCRIPTIONS_APPROVAL_WEBHOOK_HEADERS=contentType,Value=application/json
-
-# Subscription SMTP definition
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_HOST=smtpServerHost
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PORT=smtpServerPort
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_USERNAME=userName
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_PASSWORD=userPassword
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_AUTHTYPE=PLAIN
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_FROMADDRESS=agentSubscription@email.com
-
-# Subscription email notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_SUBJECT==Custom Subscription Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBE_BODY=Subscription created for Catalog Item:  <a href= {{.CatalogItemURL}}> {{.CatalogItemName}} {{.CatalogItemID}}.</br></a>{{if .IsAPIKey}} Your API is secured using an APIKey credential:header:<b>{{.KeyHeaderName}}</b>/value:<b>{{.Key}}</b>{{else}} Your API is secured using OAuth token. You can obtain your token using grant_type=client_credentials with the following client_id=<b>{{.ClientID}}</b> and client_secret=<b>{{.ClientSecret}}</b>{{end}}
-
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_SUBJECT=Custom subscription Removal Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBE_BODY=Subscription for Catalog Item=<a href= {{.CatalogItemURL}}> {{.CatalogItemName}}</a> has been unsubscribed
-
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_SUBJECT=Custom Subscription Failed Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_SUBSCRIBEFAILED_BODY=Could not unsubscribe to Catalog Item=<a href= {{.CatalogItemURL}}> {{.CatalogItemName}}</a> with following error: {{.Message}}
-
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_SUBJECT=Custom Subscription Removal Failed Notification
-CENTRAL_SUBSCRIPTIONS_NOTIFICATIONS_SMTP_UNSUBSCRIBEFAILED_BODY=Could not unsubscribe to Catalog Item=<a href= {{.CatalogItemURL}}> {{.CatalogItemName}}</a> with following error: {{.Message}}
 
 # logging
 LOG_LEVEL=info

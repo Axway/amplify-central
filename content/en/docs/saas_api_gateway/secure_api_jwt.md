@@ -1,6 +1,7 @@
 ---
 title: Secure an API with JWT
 linkTitle: Secure an API with JWT
+draft: true
 weight: 30
 date: 2019-07-30
 ---
