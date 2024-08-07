@@ -198,8 +198,6 @@ Add the following Discovery Agent variables to the agent configuration:
 ```powershell
 # enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
-# activate the Marketplace provisioning feature
-AGENTFEATURES_MARKETPLACEPROVISIONING=true
 # enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
 AGENTFEATURES_PERSISTCACHE=true
 ```
@@ -213,8 +211,6 @@ Add the following Traceability Agent variables to the agent configuration:
 ```powershell
 # enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
-# activate the Marketplace provisioning feature
-AGENTFEATURES_MARKETPLACEPROVISIONING=true
 # enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
 AGENTFEATURES_PERSISTCACHE=true
 # enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
@@ -229,6 +225,5 @@ These are the more common error cases you can encounter when using agents for th
 
 | Question                                                  | Answer                                                                                                                                                                                                                                                                                                                                          |
 |-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Why doesn't agent provisioning work?                      | Make sure the Marketplace provisioning feature (`AGENTFEATURES_MARKETPLACEPROVISIONING`) is enabled.                                                                                                                                                                                                                                            |
 | Why can't Traceability Agent connect to Amplify platform? | Make sure the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) /  `curl --http2 htpps://central.ap-sg.axway.com` (APAC region) to check the http/2 connectivity.     |
 | Why can't Discovery Agent connect to Amplify platform?    | Make sure that the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) / `curl --http2 htpps://central.sg-ap.axway.com` (APAC region) to check the http/2 connectivity. |
