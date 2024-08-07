@@ -42,7 +42,7 @@ CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
 #
 #Marketplace Provisioning and Deprovisioning
 #
-# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+# enable (default) the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
 # enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true
@@ -76,7 +76,7 @@ CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
 #
 #Reporting Traffic to Consumer Insights
 #
-# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+# enable (default) the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
 # enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true

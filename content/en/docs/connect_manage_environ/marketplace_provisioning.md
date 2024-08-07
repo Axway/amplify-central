@@ -196,7 +196,7 @@ If no correlation is found, then the traffic will only be visible in [Business I
 Add the following Discovery Agent variables to the agent configuration:
 
 ```powershell
-# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+# enable (default) the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
 # enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true
@@ -209,7 +209,7 @@ Restart your agent once the variables are updated.
 Add the following Traceability Agent variables to the agent configuration:
 
 ```powershell
-# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+# enable (default) the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
 # enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true
@@ -225,5 +225,5 @@ These are the more common error cases you can encounter when using agents for th
 
 | Question                                                  | Answer                                                                                                                                                                                                                                                                                                                                          |
 |-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Why can't Traceability Agent connect to Amplify platform? | Make sure the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) /  `curl --http2 htpps://central.ap-sg.axway.com` (APAC region) to check the http/2 connectivity.     |
-| Why can't Discovery Agent connect to Amplify platform?    | Make sure that the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled. Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) / `curl --http2 htpps://central.sg-ap.axway.com` (APAC region) to check the http/2 connectivity. |
+| Why can't Traceability Agent connect to Amplify platform? | Make sure the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled (default). Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) /  `curl --http2 htpps://central.ap-sg.axway.com` (APAC region) to check the http/2 connectivity.     |
+| Why can't Discovery Agent connect to Amplify platform?    | Make sure that the gRPC communication with Amplify platform (`CENTRAL_GRPC_ENABLED`) is enabled (default=true). Make sure the http/2 connectivity is allowed to cross your firewall/proxy, if any. Use `curl --http2 htpps://apircentral.axway.com` (US region) / `curl --http2 htpps://central.eu-fr.axway.com` (EU region) / `curl --http2 htpps://central.sg-ap.axway.com` (APAC region) to check the http/2 connectivity. |
