@@ -96,9 +96,9 @@ The invoice source of record is in Stripe, so a webhook is used to communicate i
 Reveal the Signing secret, as you will need it later on the Marketplace side.
 
 {{< alert title="Note" color="primary" >}}
-Your Stripe account might not allow you to create a webhook with version 2022-11-15 of the Stripe API.
+Your Stripe account might not allow you to create a webhook with version 2024-06-20 of the Stripe API.
 
-Instead, use the [Postman Stripe API collection](https://www.postman.com/stripedev/workspace/stripe-developers/request/665823-60d86321-4c13-47be-a1f1-77f80443ab50?tab=body) to create the webhook and precise **2022-11-15** in the *api_version* field.
+Instead, use the [Postman Stripe API collection](https://www.postman.com/stripedev/workspace/stripe-developers/request/665823-60d86321-4c13-47be-a1f1-77f80443ab50?tab=body) to create the webhook and precise **2024-06-20** in the *api_version* field.
 {{< /alert >}}
 
 #### Enabling the Billing Customer portal to use with your Stripe account
