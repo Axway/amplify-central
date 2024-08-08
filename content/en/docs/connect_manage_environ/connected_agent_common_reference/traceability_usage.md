@@ -105,7 +105,7 @@ Step 5. Install the agent.
 
 After all questions are answered, the Axway Central CLI will create an Amplify platform environment that will host the usage report, as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration / the public-private key to manage the communication from the agent to the Platform), based on the provided answers.
 
-{{< alert title="Note" color="primary" >}}If you plan to use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_REPORTALLERRORS=false` in the `ta_env_vars.env` file produced by the CLI to disable the transaction report.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you plan to use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_ONLYERRORS=false` in the `ta_env_vars.env` file produced by the CLI to disable the transaction report.{{< /alert >}}
 
 The local files must be copied to the gateway machine, as mentioned in the CLI output.
 
@@ -119,17 +119,15 @@ You can view the environment in *Enterprise Marketplace > Topology > Environment
 
 Once Traceability Agent starts, it detects the gateway traffic, and begins counting the transactions. The Traceability Agent sends the Transaction Metrics to the platform on a regular basis (default is 15 minutes).
 
-To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_USAGEREPORTING_INTERVAL` variable with either a second, minute or hour notation:
+To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_METRICREPORTING_SCHEDULE` variable with cron expressions:
 
 ```shell
-# report every 5 minutes expressed in second unit
-CENTRAL_USAGEREPORTING_INTERVAL=900s
+# report every hour
+CENTRAL_METRICREPORTING_SCHEDULE=@hourly
 
-# report every 15 minutes expressed in minute unit
-CENTRAL_USAGEREPORTING_INTERVAL=15m
+# report every 15 minutes
+CENTRAL_METRICREPORTING_SCHEDULE="*/15 * * * *"
 
-# report every hour expressed in hour unit
-CENTRAL_USAGEREPORTING_INTERVAL=1h
 ```
 
 If for any reason the Transaction Metrics report cannot be uploaded to Amplify platform, the data are kept in memory and will be pushed at the next trigger interval.
@@ -142,17 +140,17 @@ You can view the environment in *Enterprise Marketplace > Topology > Environment
 
 Once Traceability Agent starts, it detects the gateway traffic and begins counting the transactions. The Traceability Agent sends the Platform Usage metrics to the platform on a regular basis (default is daily).
 
-To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_USAGEREPORTING_USAGESCHEDULE` variable with either a second, minute or hour notation:
+To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_USAGEREPORTING_SCHEDULE` variable with cron expressions:
 
 ```shell
 # report every 60 minutes expressed in hourly value
-CENTRAL_USAGEREPORTING_USAGESCHEDULE=@hourly
+CENTRAL_USAGEREPORTING_SCHEDULE=@hourly
 
 # report every 24 hours expressed in daily value
-CENTRAL_USAGEREPORTING_USAGESCHEDULE=@daily
+CENTRAL_USAGEREPORTING_SCHEDULE=@daily
 
 # report every 7 days expressed in weekly value
-CENTRAL_USAGEREPORTING_USAGESCHEDULE=@weekly
+CENTRAL_USAGEREPORTING_SCHEDULE=@weekly
 ```
 
 ## Set up Transaction reporting in offline mode
