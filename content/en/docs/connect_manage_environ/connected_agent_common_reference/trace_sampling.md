@@ -69,6 +69,7 @@ TRACEABILITY_SAMPLING_PERCENTAGE=10
 TRACEABILITY_SAMPLING_PER_API=false
 TRACEABILITY_SAMPLING_ONLYERRORS=false
 ```
+
 #### 10% of error events, regardless of API
 
 The following is a sample value that is added to `ta_env_vars.env`, which will send 10% of the gateway transactions to Amplify Analytics. Including all errors.
