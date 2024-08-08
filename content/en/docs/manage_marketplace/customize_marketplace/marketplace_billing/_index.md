@@ -58,7 +58,7 @@ All customer payments are done using the Stripe billing portal.
 
 #### Accessing Stripe using Stripe API and API Key
 
-Marketplace Stripe billing integration is currently using Stripe 2022-11-15 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+Marketplace Stripe billing integration is currently using Stripe 2024-06-20 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
 
 If your Stripe account does not use this version, you might need to use the Stripe API directly instead of the Stripe UI for certain actions explained in this documentation.
 
