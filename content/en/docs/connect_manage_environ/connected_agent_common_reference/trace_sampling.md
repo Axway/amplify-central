@@ -30,11 +30,11 @@ The `TRACEABILITY_SAMPLING_PER_API` variable, defaulted to `true`, may be change
 * A value of `true` means that the percentage is applied to each API ID within the transaction. In this case, regardless of usage, all APIs will have transaction representation in Business Insights.
 * A value of `false` means that the percentage is applied globally to all APIs. In this case, APIs with lower utilization may never be seen in Business Insights, as the sampling is always the first x of each 100 transactions.
 
-#### Report All Errors
+#### Report Only Errors
 
-The `TRACEABILITY_SAMPLING_REPORTALLERRORS` variable, defaulted to `true`, may be changed to send all error transaction events to Condor.
+The `TRACEABILITY_SAMPLING_ONLYERRORS` variable, defaulted to `false`, may be changed to send only error transaction events to ingestion service.
 
-* A value of `true` means that all transaction events with a transaction status of *Failure* are sent to Condor and may be seen in Business Insights, regardless of the sampling percentage.
+* A value of `true` means that only the transaction events with a transaction status of *Failure* are sent to ingestion service based on the sampling percentage and may be seen in Business Insights.
 * A value of `false` means that transaction events with a transaction status of *Failure* will follow the sampling percentage and may or may not not be seen in Business Insights, as the sampling is always the first x of each 100 transactions.
 
 ### Preparing Traceability Agent
@@ -60,17 +60,26 @@ TRACEABILITY_SAMPLING_PER_API=false
 
 If the agent receives 100 transactions, evenly between 2 APIs, only the first 10 will be sent to Amplify Analytics.
 
-#### 10% of all events and all errors, regardless of API
+#### 10% of all events, regardless of API and error status
+
+The following is a sample value that is added to `ta_env_vars.env`, which will send 10% of the gateway transactions including errors to Amplify Analytics.
+
+```shell
+TRACEABILITY_SAMPLING_PERCENTAGE=10
+TRACEABILITY_SAMPLING_PER_API=false
+TRACEABILITY_SAMPLING_ONLYERRORS=false
+```
+#### 10% of error events, regardless of API
 
 The following is a sample value that is added to `ta_env_vars.env`, which will send 10% of the gateway transactions to Amplify Analytics. Including all errors.
 
 ```shell
 TRACEABILITY_SAMPLING_PERCENTAGE=10
 TRACEABILITY_SAMPLING_PER_API=false
-TRACEABILITY_SAMPLING_REPORTALLERRORS=true
+TRACEABILITY_SAMPLING_ONLYERRORS=true
 ```
 
-If the agent receives 100 transactions, evenly between 2 APIs, the first 10 (five from each API) will be sent to Amplify Analytics. If error codes exist in the remaining non-sampled percentage, then those transactions will also be sent.
+If the agent receives 100 transactions, evenly between 2 APIs, the first 10 (five from each API) with error status will be sent to Amplify Analytics.
 
 #### 10% of events per API ID
 
