@@ -2,7 +2,7 @@
 title: Create and fetch resources with Axway Central CLI
 linkTitle: Create and fetch resources with the CLI
 weight: 120
-draft: yes
+draft: true
 date: 2021-01-13T00:00:00.000Z
 ---
 Create and fetch different Enterprise Marketplace resources using the CLI.
@@ -64,27 +64,6 @@ Resource(s) successfully retrieved:
 ```bash
 NAME           AGE           TITLE                RESOURCE KIND    SCOPE KIND   SCOPE NAME          RESOURCE GROUP
 consumerinst1  a month ago   consumerinst1 title  ConsumerInstance Environment  awsgtw-us-east-2    management
-```
-
-### Consumer subscription definitions
-
-You can use the [apisubscription.json](/samples/central/apisubscription.json) sample to create a consumer subscription definition. Then, you can fetch information about your consumer subscription definitions as follows:
-
-```bash
-axway central get consumersubscriptiondefs
-```
-
-Alternatively, you can use a short name:
-
-```bash
-axway central get consumersd
-```
-
-Resource(s) successfully retrieved:
-
-```bash
-NAME             AGE           TITLE                 RESOURCE KIND                  SCOPE KIND   SCOPE NAME         RESOURCE GROUP
-consumersubdef1  a month ago   consumersubdef1 title ConsumerSubscriptionDefinition Environment  awsgtw-us-east-2   management
 ```
 
 ### Secrets

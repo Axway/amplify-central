@@ -196,9 +196,9 @@ If no correlation is found, then the traffic will only be visible in [Business I
 Add the following Discovery Agent variables to the agent configuration:
 
 ```powershell
-# enable (default) the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+# disable to turn off the gRPC communication with Amplify platform (default=true). Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
-# enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
+# enable to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting. (default=true)
 AGENTFEATURES_PERSISTCACHE=true
 ```
 
@@ -209,9 +209,9 @@ Restart your agent once the variables are updated.
 Add the following Traceability Agent variables to the agent configuration:
 
 ```powershell
-# enable (default) the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+# disable to turn off the gRPC communication with Amplify platform (default=true). Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
-# enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
+# enable to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting. (default=true)
 AGENTFEATURES_PERSISTCACHE=true
 # enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
 TRACEABILITY_PER_SUBSCRIPTION=true
