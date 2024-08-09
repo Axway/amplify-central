@@ -58,9 +58,9 @@ All customer payments are done using the Stripe billing portal.
 
 #### Accessing Stripe using Stripe API and API Key
 
-Marketplace Stripe billing integration is currently using Stripe 2024-06-20 API version. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+Marketplace Stripe billing integration supports both 2024-06-20 and 2022-11-15 API versions, but we recommended that you use the latest 2024-06-20. Refer to [this page](https://stripe.com/docs/libraries/set-version).
 
-If your Stripe account does not use this version, you might need to use the Stripe API directly instead of the Stripe UI for certain actions explained in this documentation.
+If your Stripe account does not use either of these versions, you might need to use the Stripe API directly instead of the Stripe UI for certain actions explained in this documentation.
 
 For Marketplace to access the Stripe account, an API Key is required. For security constraints a restricted API Key with minimum access is used: Customer:Write and Invoices:Write rights.
 
@@ -96,9 +96,9 @@ The invoice source of record is in Stripe, so a webhook is used to communicate i
 Reveal the Signing secret, as you will need it later on the Marketplace side.
 
 {{< alert title="Note" color="primary" >}}
-Your Stripe account might not allow you to create a webhook with version 2024-06-20 of the Stripe API.
+Although both 2022-11-15 and 2024-06-20 API versions are supported, your Stripe account might not allow you to create a webhook with either of these versions.
 
-Instead, use the [Postman Stripe API collection](https://www.postman.com/stripedev/workspace/stripe-developers/request/665823-60d86321-4c13-47be-a1f1-77f80443ab50?tab=body) to create the webhook and precise **2024-06-20** in the *api_version* field.
+Instead, use the [Postman Stripe API collection](https://www.postman.com/stripedev/workspace/stripe-developers/request/665823-60d86321-4c13-47be-a1f1-77f80443ab50?tab=body) to create the webhook and enter **2024-06-20** in the *api_version* field.
 {{< /alert >}}
 
 #### Enabling the Billing Customer portal to use with your Stripe account
