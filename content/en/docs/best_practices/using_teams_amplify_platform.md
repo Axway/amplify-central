@@ -1,7 +1,7 @@
 ---
 title: Using teams in Amplify platform
 linkTitle: Using teams in Amplify platform
-draft: false
+draft: true
 weight: 10
 ---
 Use this information as a guide for setting up and using your teams in the Amplify platform, which will provide a global and centralized approach to managing your APIs.
