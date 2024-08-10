@@ -39,15 +39,6 @@ CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
 CENTRAL_ORGANIZATIONID=TheOrganizationIDfromEnterpriseMarketplace
 CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
-#
-#Marketplace Provisioning and Deprovisioning
-#
-# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
-CENTRAL_GRPC_ENABLED=true
-# activate the Marketplace provisioning feature
-AGENTFEATURES_MARKETPLACEPROVISIONING=true
-# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
-AGENTFEATURES_PERSISTCACHE=true
 ```
 
 ### Traceability Agent
@@ -78,11 +69,9 @@ CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
 #
 #Reporting Traffic to Consumer Insights
 #
-# enable the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
+# enable (default) the gRPC communication with Amplify platform. Be sure the http/2 connectivity is allowed to cross your firewall/proxy if any.
 CENTRAL_GRPC_ENABLED=true
-# activate the Marketplace provisioning feature
-AGENTFEATURES_MARKETPLACEPROVISIONING=true
-# enable to store a cache locally when agent is stopped. It enables the agent to resume his treatment from where it left when restarting.
+# enable (default) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true
 # enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
 TRACEABILITY_PER_SUBSCRIPTION=true

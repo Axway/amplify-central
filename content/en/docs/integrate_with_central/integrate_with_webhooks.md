@@ -2,7 +2,7 @@
 title: Set up integrations through Webhooks
 linkTitle: Set up integrations through Webhooks
 weight: 100
-draft: yes
+draft: true
 date: 2019-07-30
 ---
 Configure webhooks to receive notifications from Amplify.
@@ -444,7 +444,7 @@ For the example provided, the following information will be required when a cons
 
 ## Subscription events
 
-A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog.
+A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog. (Robert, should this section be removed?)
 
 Click [subscriptionEventSchema.json](https://amplify-central.netlify.app/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
 
@@ -466,4 +466,3 @@ Click [subscriptionEventPayload.json](https://amplify-central.netlify.app/sample
 ## Examples of webhooks
 
 * [Custom subscription approval from Marketplace](/docs/integrate_with_central/webhook/marketplace_subscription_webhook)
-* [Custom subscription approval from Unified Catalog](/docs/integrate_with_central/webhook/unified_catalog_webhook/).

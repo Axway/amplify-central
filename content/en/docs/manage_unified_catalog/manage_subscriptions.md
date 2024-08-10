@@ -1,6 +1,7 @@
 ---
 title: Manage subscriptions
 linkTitle: Manage subscriptions
+draft: true
 weight: 130
 date: 2019-12-16T00:00:00.000Z
 ---
@@ -116,7 +117,3 @@ Deleting a subscription will remove it from the system. You can only delete subs
 Watch this quick animation to delete your subscription.
 
 ![delete subscription](/Images/catalog/delete_subscription.gif)
-
-## Further information
-
-* [Manage Unified Catalog subscription workflow](/docs/connect_manage_environ/connected_agent_common_reference/manage_subscription_workflow/)

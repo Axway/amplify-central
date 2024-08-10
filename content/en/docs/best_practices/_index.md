@@ -2,6 +2,7 @@
 title: Amplify platform best practices
 linkTitle: Amplify platform best practices
 weight: 600
+draft: true
 date: 2021-12-03
 ---
 

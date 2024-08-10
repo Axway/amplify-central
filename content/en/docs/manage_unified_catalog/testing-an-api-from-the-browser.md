@@ -1,6 +1,7 @@
 ---
 title: Test an API from the browser
 linkTitle: Test an API from the browser
+draft: true
 weight: 140
 ---
 Explore the API documentation and test an API from the browser using the built-in test capability.

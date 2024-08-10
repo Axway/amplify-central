@@ -1,6 +1,7 @@
 ---
 title: SaaS API Gateway concepts
 linkTitle: Concepts
+draft: true
 weight: 10
 date: 2019-07-30T00:00:00.000Z
 ---
@@ -38,13 +39,13 @@ Managing your API in Amplify by way of an API proxy offers the following benefit
 
 ## Roles and teams
 
-Amplify has its own set of roles in addition to the Amplify platform roles. These Amplify roles include Amplify **Central Admin**, **Developer**, and **Consumer** type roles to manage and use assets (for example, API proxies, applications, environments, Unified Catalog, and so on).  
+Amplify has its own set of roles in addition to the Amplify platform roles. These Amplify roles include Amplify **Central Admin**, **Developer**, and **Consumer** type roles to manage and use assets (for example, API proxies, applications, environments, Marketplace, and so on).  
 
-* Amplify **Central Admin** has full access to manage Amplify and the Unified Catalog.
-* Amplify **Central Developer** has access to the Unified Catalog, Application management, and traffic monitoring.
-* Amplify **Central Consumer** has access to the Unified Catalog and its Applications.
+* Amplify **Central Admin** has full access to manage Amplify and the Marketplace.
+* Amplify **Central Developer** has access to the Marketplace, Application management, and traffic monitoring.
+* Amplify **Central Consumer** has access to the Marketplace and its Applications.
 
-An Amplify team is a group of users with varying abilities to manage and use assets. For example, a team member can share assets and their promotion to the Unified Catalog.
+An Amplify team is a group of users with varying abilities to manage and use assets. For example, a team member can share assets and their promotion to the Marketplace.
 
 Users and teams of Amplify are managed by the Amplify platform. For more information, see [Managing Organizations](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html).
 

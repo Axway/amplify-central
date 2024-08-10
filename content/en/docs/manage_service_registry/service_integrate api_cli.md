@@ -19,7 +19,7 @@ Register an API in Amplify using the Axway Central CLI, including:
 
 * Create a new API service in an environment
 * Register an API to the service
-* Publish the API to the Unified Catalog
+* Publish the API to the Marketplace
 
 ## Steps
 
@@ -185,7 +185,7 @@ axway central apply -f upload.json
 
 ### Publish the API to the Unified Catalog
 
-Now that the API has been registered in Amplify, make it available to API consumers in the Unified Catalog. To do this, create a resource of kind `ConsumerInstance`:
+(Robert, this needs to be rewritten for publishing to the Marketplace). Now that the API has been registered in Amplify, make it available to API consumers in the Unified Catalog. To do this, create a resource of kind `ConsumerInstance`:
 
 ```bash
 jq --slurp -f consumer-instance.jq openapi.json api-service-instance-created.json > consumer-instance.json

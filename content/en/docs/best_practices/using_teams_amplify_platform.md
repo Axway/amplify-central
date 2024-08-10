@@ -1,7 +1,7 @@
 ---
 title: Using teams in Amplify platform
 linkTitle: Using teams in Amplify platform
-draft: false
+draft: true
 weight: 10
 ---
 Use this information as a guide for setting up and using your teams in the Amplify platform, which will provide a global and centralized approach to managing your APIs.
@@ -15,7 +15,7 @@ A team is a concept in the Amplify platform that is used to group users and asse
 
 A team is linked to multiple components in the Amplify platform:
 
-* **Agents** - publish API services in an environment and can transform these API services into Unified Catalog items. These Unified Catalog Items represent an API in the data plane and are owned by a specific team. APIs coming from AWS, Azure and Istio must be linked to a specific team. APIs coming from the Axway API Gateway can either be linked to a specific team or the Agent can link the API to the same team as the Organization that the API belongs to in the API Gateway. Creating Unified Catalog items is optional, and you can choose to create your own Unified Catalog items through the API or CLI and assign them to the team of your choice.
+* **Agents** - publish API services in an environment and can transform these API services into Marketplace items. These Marketplace items represent an API in the data plane and are owned by a specific team. APIs coming from AWS, Azure and Istio must be linked to a specific team. APIs coming from the Axway API Gateway can either be linked to a specific team or the Agent can link the API to the same team as the Organization that the API belongs to in the API Gateway. You can choose to create your own Marketplace items through the API or CLI and assign them to the team of your choice.
 * **Users and service accounts** - users and service accounts can be a member of one or more teams. A user and a service account are assigned one role per team. Assigning this membership and the role can be done manually or automatically:
 
     * **Manually** - use the UI to add users and service accounts to one or more teams and assign team roles.
@@ -26,11 +26,11 @@ A team is linked to multiple components in the Amplify platform:
     * **Catalog Manager** - has full control of the assets of the team, but cannot manage the users of the team.
     * **Developer** - edits and consumes assets of the team, but cannot manage the users of the team.
     * **Consumer** - can only consume the assets of the team.
-* **Unified Catalog**:
+* **Marketplace**:
 
-    * Every item in the Unified Catalog, which represents an API, is owned by a specific team. That team has full control over their APIs.
+    * Every item in the Marketplace, which represents the API(s) in a product, is owned by a specific team. That team has full control over their APIs.
     * An API can be shared with another team. The other team can only consume the API and has no other rights.
-    * The team can consume the API by subscribing to it. An approval step can be configured, but the owning team must approve the subscription.
+    * The team can consume the API(s) by subscribing to it. An approval step can be configured, but the owning team must approve the subscription.
 
 ## Types of teams
 
@@ -59,7 +59,7 @@ A global and centralized API team strategy consists of:
 * **Amplify platform**:
 
     * **Amplify Topology** - hosts the environments which represent the different gateways in the data planes. It also contains the definitions of the APIs that were discovered by the agents.
-    * **Unified Catalog** - use to view and consume APIs. Use provider and consumer teams with Unified Catalog:
+    * **Marketplace** - use to view and consume products with an API resource(s). Use provider and consumer teams with Marketplace:
 
         * **Provider** - these teams can, for example, be linked to a department or a project and are used for all APIs that the provider team owns. The members of the provider team are the users of the project or the department.<br /> An API in a provider team can either be shared with other provider teams or  with the Global team. If it is shared with the Global team, then it becomes part of the global catalog and everyone has access to the API.<br /> There are three approaches to add APIs to a provider team:
 

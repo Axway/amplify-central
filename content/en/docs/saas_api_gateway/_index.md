@@ -2,6 +2,7 @@
 title: SaaS API Gateway Management
 linkTitle: SaaS API Gateway Management
 weight: 550
+draft: true
 date: 2021-08-18T00:00:00.000Z
 hide_readingtime: true
 ---
@@ -11,7 +12,7 @@ Amplify provides the Amplify SaaS API Gateway as a single point of entry for all
 * Register an API as an API Proxy
 * Deploy the API Proxy to test and production run-time environments
 * Apply policies to the API Proxy for security or rate limiting
-* Publish the API in the Amplify Unified Catalog for consumers to discover
+* Publish the API in the Amplify Marketplace for consumers to discover
 * Monitor the API traffic usage
 * DevOps integration for configuration and deployment
 
