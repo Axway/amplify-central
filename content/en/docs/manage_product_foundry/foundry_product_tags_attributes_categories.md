@@ -30,7 +30,7 @@ Categories allow for a broader grouping of products into different topics or the
 
 The category types are:
 
-* **Global**: Either legacy categories that were created using the Unified Catalog category management system, or categories added while creating products. They can be used with either asset or products. (robert?)
+* **Global**: Either legacy categories that were created using the deprecated Unified Catalog category management system, or categories added while creating products. They can be used with either asset or products. (robert?)
 * **Product specific**: Categories that can only be assigned to a product.
 
 The product specific categories have two types of visibility:
