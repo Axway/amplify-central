@@ -24,6 +24,8 @@ Runtime Compliance Agents collect data from a third party that captures and scan
 
 ### Supported agent list
 
+{{< alert title="Note" color="primary" >}}See the *Amplify Enterprise Marketplace Release Notes* for the minimum and currently supported agent versions.{{< /alert >}}
+
 Agents are classified into two categories, agents supported by Axway and agents supported by the community:
 
 | Environment                | Support   | Agent type                                 | Deployment |
