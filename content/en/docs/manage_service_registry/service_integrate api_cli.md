@@ -4,7 +4,7 @@ linkTitle: Integrate with API / CLI
 weight: 30
 ---
 
-Manually register an API with the Amplify Management Plane using an existing OpenAPI Specification so that it appears in the Service Registry.
+unifiedManually register an API with the Amplify Management Plane using an existing OpenAPI Specification so that it appears in the Service Registry.
 
 ## Before you start
 
@@ -185,7 +185,7 @@ axway central apply -f upload.json
 
 ### Publish the API to the Unified Catalog
 
-(Robert, this needs to be rewritten for publishing to the Marketplace). Now that the API has been registered in Amplify, make it available to API consumers in the Unified Catalog. To do this, create a resource of kind `ConsumerInstance`:
+(Robert this needs to be rewritten for publishing to the Marketplace). Now that the API has been registered in Amplify, make it available to API consumers in the Unified Catalog. To do this, create a resource of kind `ConsumerInstance`:
 
 ```bash
 jq --slurp -f consumer-instance.jq openapi.json api-service-instance-created.json > consumer-instance.json
