@@ -267,7 +267,7 @@ als:
     percentage: 100
     per_api: true
     per_subscription: true
-    reportAllErrors: true
+    onlyErrors: false
   # The tracing provider configured for Istio
   istioTracer: "zipkin"
   # Name of the secret containing the public & private keys used by the provided service account client ID
