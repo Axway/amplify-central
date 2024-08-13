@@ -20,43 +20,49 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+---
+
 ## [Amplify Enterprise Marketplace August 9 2024](/docs/amplify_relnotes/20240809_amplify/)
 
-{{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - The Unified Catalog will no longer be supported as of August 8th 2024.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of 20240808, the Unified Catalog is no longer supported.{{< /alert >}}
 
-Current agent versions are based on Amplify Agents SDK v1.1.92. This version is compatible with:
+### Supported agents
 
-* **Axway API Management 7.6.2 SPx and 7.7 SPx** - DA=v1.1.86 / TA=v1.1.86
-* **AWS Gateway using SDK 2.0** - DA=v1.1.71 / TA-v1.1.74
-* **Azure latest release** - DA=v1.1.75 / TA=v1.1.81
-* **Istio 1.9.5** - DA=v1.0.42 / TA=v2.0.87
-* **Apigee Edge** - Agent version 0.1.44
-* **Mulesoft Anypoint platform v3** - Agent version 1.1.54
-* **Software AG webMethods** - 0.0.29
-* **Kong Gateway** - 1.0.15
-* **GitLab** - 1.0.11
-* **Kafka Cluster** - DA=v1.0.11 / TA=v1.0.11
-* **IBM API Connect Gateway** - DA=v1.0.3 / TA=v1.0.3
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.94) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
+|--------------------------------------------|--------------------------|------------------|
+| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.0 / TA=v1.2.0    | DA=v1.1.80 / TA=v1.1.81          |
+| AWS Gateway using SDK 2.0                  | DA=v1.2.0 / TA-v1.2.0    | DA=v1.1.64 / TA-v1.1.67          |
+| Azure latest release                       | DA=v1.1.75 / TA=v1.1.81  | DA=v1.1.70 / TA=v1.1.76          |
+| Istio 1.9.5                                | DA=v1.0.42 / TA=v2.0.87  | DA=v1.0.36 / TA=v2.0.82          |
+| Apigee Edge                                | 0.2.0                    | 0.1.38                           |
+| Mulesoft Anypoint platform v3              | 1.2.0                    | 1.1.48                           |
+| Software AG webMethods                     | 0.0.29                   | 0.0.25                           |
+| Kong Gateway                               | 1.1.0                    | 1.0.9                            |
+| GitLab                                     | 1.1.0                    | 1.0.6                            |
+| Kafka Cluster                              | DA=v1.1.0 / TA=v1.1.0    | DA=v1.0.6 / TA=v1.0.6            |
+| IBM API Connect Gateway                    | DA=v1.1.0 / TA=v1.1.0    | DA=v1.0.0 / TA=v1.0.0            |
 
-Supported SaaS (embedded) Agents:
+| Supported SaaS (embedded) agents           |
+|--------------------------------------------|
+| AWS Embedded Service                       |
+| Apigee X Embedded Service                  |
+| GitHub Embedded Service                    |
+| Azure Embedded Service                     |
+| SwaggerHub Embedded Service                |
 
-* **AWS Embedded Service**
-* **Apigee X Embedded Service**
-* **GitHub Embedded Service**
-* **Azure Embedded Service**
-* **SwaggerHub Embedded Service**
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.94)  | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83)  |
+|--------------------------------------------|--------------------------|------------------|
+| Graylog API Security                       | 1.1.0                   | 1.0.5                           |
 
-Runtime Compliance Agent:
-
-* **Graylog API Security** - On-premise Agent version 1.0.9
+### Release summary
 
 | Axway Agent SDK |        |
 |--------|---------|
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Marketplace only support <br />Improved transaction processing. |
+| Bug fixes: | See release note. |
 | <br />**On-premise agents** |         |
 | What's new: | None. |
-| Bug fixes: | **Axway API Management Gateway Agent** - None. |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
 | What's new: | None. |
 | Bug fixes:  | None. |
@@ -64,26 +70,28 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Axway Central CLI** |       |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Marketplace only support. |
+| Bug fixes: | See release note. |
 | <br />**Service Registry** <br />**Topology** |         |
-| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| What's new: | **Service Registry** - RAML display support. <br />**Topology** - External Identify Provider support. Azure Event Hub support.  |
 | Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
 | <br />**Asset Catalog** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | See release note. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Stripe billing integration. |
+| Bug fixes: | See release note. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
+
+---
 
 ## [Amplify Enterprise Marketplace July 26 2024](/docs/amplify_relnotes/20240726_amplify/)
 
@@ -148,6 +156,8 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace July 12 2024](/docs/amplify_relnotes/20240712_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.90. This version is compatible with:
@@ -210,6 +220,8 @@ Runtime Compliance Agent:
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
+
+---
 
 ## [Amplify Enterprise Marketplace June 28 2024](/docs/amplify_relnotes/20240628_amplify/)
 
@@ -274,6 +286,8 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace June 14 2024](/docs/amplify_relnotes/20240614_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.87. This version is compatible with:
@@ -337,6 +351,8 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace May 31 2024](/docs/amplify_relnotes/20240531_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.85. This version is compatible with:
@@ -398,6 +414,8 @@ Runtime Compliance Agent:
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
+
+---
 
 ## [Amplify Enterprise Marketplace May 17 2024](/docs/amplify_relnotes/20240517_amplify/)
 
@@ -461,6 +479,8 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace May 3 2024](/docs/amplify_relnotes/20240503_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.82. This version is compatible with:
@@ -523,6 +543,8 @@ Runtime Compliance Agent:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace April 19 2024](/docs/amplify_relnotes/20240419_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.81. This version is compatible with:
@@ -578,6 +600,8 @@ Supported Saas (embedded) Agents:
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
+
+---
 
 ## [Amplify Enterprise Marketplace April 5 2024](/docs/amplify_relnotes/20240405_amplify/)
 
@@ -635,6 +659,8 @@ Supported Saas (embedded) Agents:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace March 22 2024](/docs/amplify_relnotes/20240322_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.77. This version is compatible with:
@@ -690,6 +716,8 @@ Supported Saas (embedded) Agents:
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
+
+---
 
 ## [Amplify Enterprise Marketplace March 8 2024](/docs/amplify_relnotes/20240308_amplify/)
 
@@ -747,6 +775,8 @@ Supported Saas (embedded) Agents:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace February 23 2024](/docs/amplify_relnotes/20240223_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.75. This version is compatible with:
@@ -802,6 +832,8 @@ Supported Saas (embedded) Agents:
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace February 9 2024](/docs/amplify_relnotes/20240209_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.74. This version is compatible with:
@@ -851,6 +883,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.74. This version is 
 | What's new: | None. |
 | Bug fixes: | None. |
 
+---
+
 ## [Amplify Enterprise Marketplace January 26 2024](/docs/amplify_relnotes/20240126_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.73. This version is compatible with:
@@ -899,6 +933,8 @@ Current agent versions are based on Amplify Agents SDK v1.1.73. This version is 
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
+
+---
 
 ## [Amplify Enterprise Marketplace January 12 2024](/docs/amplify_relnotes/20240112_amplify/)
 
