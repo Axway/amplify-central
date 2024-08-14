@@ -8,18 +8,18 @@ Manually register an API with the Amplify Management Plane using an existing Ope
 
 ## Before you start
 
-- You must have credentials or a service account to use the CLI. Please follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
-- Understand the concepts of the Axway Central CLI presented in the overview
-- Make sure [curl](https://curl.se/) is installed on the system
-- Make sure [jq](https://stedolan.github.io/jq/) is installed on the system
+* You must have credentials or a service account to use the CLI. Please follow the steps in [Authorize your CLI to use the Amplify Central APIs](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis)
+* Understand the concepts of the Axway Central CLI presented in the overview
+* Make sure [curl](https://curl.se/) is installed on the system
+* Make sure [jq](https://stedolan.github.io/jq/) is installed on the system
 
 ## Objectives
 
 Register an API in Amplify using the Axway Central CLI, including:
 
-- Create a new API service in an environment
-- Register an API to the service
-- Publish the API to the Marketplace
+* Create a new API service in an environment
+* Register an API to the service
+* Publish the API to the Marketplace
 
 ## Steps
 
@@ -185,9 +185,9 @@ axway central apply -f upload.json
 
 ### Publish the API to the Amplify Marketplace
 
-Now that the API has been registered in Amplify, make it available to API consumers in the Amplify Marketpalce. To do this, create the resources in the following order:
+Now that the API has been registered in Amplify, make it available to API consumers in the Amplify Marketplace. To do this, create the resources in the following order:
 
-- Create Asset
+* Create Asset
 
 ```bash
 axway central create -f asset.json -o json -y > asset-created.json
@@ -215,7 +215,7 @@ Where `asset.json` has the following content:
 }
 ```
 
-- Create Asset Icon if needed (Optional)
+* Create Asset Icon if needed (Optional)
 
 Provide the Asset with an image / avatar, making it visually appealing to the API consumer. The following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedAssetImage`. It will query the API Server for the Asset resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the Asset has an image attached.
 
@@ -227,9 +227,9 @@ axway central get asset $assetName -o json | jq '.spec.icon.data = $ENV.encodedA
 axway central apply -f upload-asset.json
 ```
 
-- Create AssetResource
+* Create AssetResource
 
-To create the AssetMappings, the following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will create the AssetResource resourcevwith the create command.
+To create the AssetMappings, the following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will create the AssetResource resource with the create command.
 
 ```bash
 #!/bin/bash
@@ -270,7 +270,7 @@ Where `asset-resource.json` has the following content:
 }
 ```
 
-- Create AssetMapping
+* Create AssetMapping
 
 To create the AssetMapping, the following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will create the AssetMapping resource with the create command.
 
@@ -309,7 +309,7 @@ Where `asset-mappings.json` has the following content:
 }
 ```
 
-- Create Asset Access Approval
+* Create Asset Access Approval
 
 We need to set the asset access approval to automatic.
 
@@ -320,7 +320,7 @@ axway central get asset $assetName -o json | jq '.access.approval = "automatic"'
 axway central apply -f upload-asset-access.json
 ```
 
-- Create Asset ReleaseTag
+* Create Asset ReleaseTag
 
 To create the Asset ReleaseTag, the following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will create the ReleaseTag resource with the create command.
 
@@ -358,7 +358,7 @@ Where `asset-release-tag.json` has the following content:
 }
 ```
 
-- Create Product
+_ Create Product
 
 ```bash
 axway central create -f product.json -o json -y > product-created.json
@@ -387,7 +387,7 @@ Where `product.json` has the following content:
 }
 ```
 
-- Create Product Icon if needed (Optional)
+* Create Product Icon if needed (Optional)
 
 Provide the Product with an image / avatar, making it visually appealing to the API consumer. The following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedProductName`. It will query the API Server for the Product resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the Product has an image attached.
 
@@ -399,7 +399,7 @@ axway central get product $productName -o json | jq '.spec.icon.data = $ENV.enco
 axway central apply -f upload-product.json
 ```
 
-- Create Product ReleaseTag
+* Create Product ReleaseTag
 
 To create the Product ReleaseTag, the following script queries the created resources on disk using `jq` and stores the result in the environment variables. It will create the ReleaseTag resource with the create command.
 
@@ -437,7 +437,7 @@ Where `product-release-tag.json` has the following content:
 }
 ```
 
-- Create ProductPlan
+* Create ProductPlan
 
 ```bash
 #!/bin/bash
@@ -479,7 +479,7 @@ Where `product-plan.json` has the following content:
 }
 ```
 
-- Create Product Quota
+* Create Product Quota
 
 ```bash
 export assetResourceName=`jq -r .[0].name asset-resource-created.json`
@@ -514,7 +514,7 @@ Where `product-quota.json` has the following content:
 }
 ```
 
-- Setup Product & Consumer Visibilities
+* Setup Product & Consumer Visibilities
 
 The product and consumer visibilities can be set based on whether the authentication is required or not.
 
@@ -548,7 +548,7 @@ Where `product-visibility.json` has the following content:
 
 ```bash
 export productOwner=`jq -r .[0].owner product-created.json`
-axway central create -f consumer-product-visibility.json -o json -y > consumer-product-visbility-created.json
+axway central create -f consumer-product-visibility.json -o json -y > consumer-product-visibility-created.json
 ```
 
 Where `consumer-product-visibility.json` has the following content:
@@ -574,7 +574,7 @@ Where `consumer-product-visibility.json` has the following content:
 }
 ```
 
-- Update ProductPlan 'state' to "active"
+* Update ProductPlan 'state' to "active"
 
 To update the ProductPlan state to 'active, use `jq` to get the ProductPlan name and store in the env variable and using the name fetch the ProductPlan resource and update the state to 'active'.
 
@@ -584,7 +584,7 @@ axway central get productplan $productPlanName -o json | jq '.state = "active"' 
 axway central apply -f upload-product-plan-state.json
 ```
 
-- Publish Product to Amplify Marketplace
+* Publish Product to Amplify Marketplace
 
 Finally, we can publish this product to the Amplify Marketplace of our choice.
 
@@ -619,4 +619,4 @@ Where `published-product.json` has the following content:
 }
 ```
 
-- NOTE: Please replace the above environment variables for all the steps in the '.json' files accrodingly.
+NOTE: Please replace the above environment variables for all the steps in the '.json' files accordingly.
