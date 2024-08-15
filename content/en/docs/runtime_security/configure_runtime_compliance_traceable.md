@@ -14,7 +14,7 @@ Configure your runtime compliance with the Axway Central CLI and Traceable
     * Platform API token for authenticating with Traceable
 * Ensure you have the following tools installed:
     * The Axway Central CLI must be installed and Amplify platform connectivity is required to configure the Traceable agent
-    * Kubectl - compatible version with your Kubernetes cluster with Graylog deployment
+    * Kubectl - compatible version with your Kubernetes cluster with Traceable deployment
     * Helm 3.2.4 or later
 
 ## Objectives
@@ -130,19 +130,19 @@ axway central install agents --region=AP
 
 The installation procedure will prompt for the following:
 
-1. Select the type of gateway you want to connect to (Graylog in this scenario).
+1. Select the type of gateway you want to connect to (Traceable in this scenario).
 
 2. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
-        * **Referenced Environments**: choose from existing environments that have Managed APIs for the Graylog agent to correlate with the API calls monitored by Graylog API Security
+        * **Referenced Environments**: choose from existing environments that have Managed APIs for the Traceable agent to correlate with the API calls monitored by Traceable API Security
    * **Team**: can be an existing team or one that will be created by the installation procedure
    * **Service account**: can be an existing service account (from platform or Enterprise Marketplace). The installation procedure creates a service account that can be used only with Enterprise Marketplace. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 
-3. Graylog API Security configuration setup options:
+3. Traceable API Security configuration setup options:
    * **Namespace**: can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster
    * **Traceable Region**: the region for Traceable
    * **Token**: the Platform API token for Traceable
-   * **Base path segment length**: the number of base path segments that the agent will use to correlate monitored APIs from Graylog to Managed APIs in existing environments. Default to `2`.
+   * **Base path segment length**: the number of base path segments that the agent will use to correlate monitored APIs from Traceable to Managed APIs in existing environments. Default to `2`.
 
 4. Traceability module connectivity:
    * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack` or `HTTPS`
@@ -153,7 +153,7 @@ Once you have answered all questions, the agent installation performs the follow
 * If chose, a new Amplify Platform service account is created and public/private key-pair is generated
 * If chose, a new namespace is created in the Kubernetes cluster.
 * The Kubernetes secret with key pair for Amplify Platform service account is created in the selected namespace
-* The Kubernetes secret with Graylog authentication config is created in the selected namespace
+* The Kubernetes secret with Traceable authentication config is created in the selected namespace
 * The agent Helm override file is generated
 
 The current directory will contain the following files after the agent installation is completed:
