@@ -13,7 +13,7 @@ Configure your runtime compliance with the Axway Central CLI and Traceable
     * The Region for the Traceable app
     * Platform API token for authenticating with Traceable
 * Ensure you have the following tools installed:
-    * The Axway Central CLI must be installed and Amplify platform connectivity is required to configure the Graylog agent
+    * The Axway Central CLI must be installed and Amplify platform connectivity is required to configure the Traceable agent
     * Kubectl - compatible version with your Kubernetes cluster with Graylog deployment
     * Helm 3.2.4 or later
 
