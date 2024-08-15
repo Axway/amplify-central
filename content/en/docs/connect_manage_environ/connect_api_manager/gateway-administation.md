@@ -45,7 +45,7 @@ The containerized agent can run in the following mode:
 
 **Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
-**Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
+**Step 2**: Download the current version of the zip file from the Axway public repository using the following command: (Robert, even if I replace axway.jfrog.io with repository.axway.com, it is not valid)
 
 ```shell
 curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/{agentVersion}/discovery_agent-{agentVersion}.zip" -o discovery_agent-{agentVersion}.zip
@@ -88,7 +88,7 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 
 Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
-Pull the Docker image of the Discovery Agent:
+Pull the Docker image of the Discovery Agent: (Robert??)
 
 ```shell
 docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
@@ -439,7 +439,7 @@ cd /home/APIC-agents
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Start the Docker Discovery Agent pointing to the `da_env_vars.env` file and the keys directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-   ```shell
+   ```shell (Robert?)
    docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
    ```
 
@@ -468,7 +468,7 @@ The containerized agent can run in the following mode:
 
 **Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
-**Step 2**: Download the current version of the zip file from the Axway public repository using the following command:
+**Step 2**: Download the current version of the zip file from the Axway public repository using the following command: (Robert, even if I replace axway.jfrog.io with repository.axway.com, it is not valid)
 
 ```shell
 curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/{agentVersion}/traceability_agent-{agentVersion}.zip" -o traceability_agent-{agentVersion}.zip
@@ -515,7 +515,7 @@ CENTRAL_ENVIRONMENT=<Environment>
 
 Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
 
-Pull the Docker image of the Traceability Agent:
+Pull the Docker image of the Traceability Agent: (Robert?)
 
 ```shell
 docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability-agent:{agentVersion}
@@ -915,7 +915,7 @@ cd /home/APIC-agents
 See "To install the Dockerized Discovery Agent" section above for the `ta_env_vars.env` configuration.
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
+2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred. (Robert?)
 
    ```shell
    docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v <pwd>/data:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:{agentVersion}

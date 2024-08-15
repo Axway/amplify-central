@@ -43,7 +43,7 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * API Key credentials on AWS. Allow for CLI access
 * Amazon CloudWatch Service
-* CloudFormation template. Download from [https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config](<https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config>)
+* CloudFormation template. Download from [https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config](<https://axway.jfrog.io/ui/repos/tree/General/ampc-public-generic-release%2Faws-agents%2Faws_apigw_agent_config>) (Robert, even if I replace axway.jfrog.io with repository.axway.com, it is not valid)
 * The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
 ## Region support

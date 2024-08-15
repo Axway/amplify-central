@@ -29,7 +29,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 ## Agent configuration machine pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
+    * You can access platform.axway.com, login.axway.com and repository.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
@@ -182,7 +182,7 @@ The installation summary contains the Docker commands needed to finish the insta
 
 By default, the Docker commands are configured to use the latest available agents version. If you want to use a different version, verify the available version in the agent release note.
 
-Sample:
+Sample: (Robert?)
 
 ```shell
 To utilize the agents, pull the latest Docker images and
@@ -203,7 +203,7 @@ run them using the appropriate supplied environment files, (da_env_vars.env & ta
         axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:1.1.6
 ```
 
-* Pull the latest images of the Discovery/Traceability Agents:
+* Pull the latest images of the Discovery/Traceability Agents: (Robert?)
     * These two commands pull the most recent released agents from docker pull axway.jfrog.io/ampc-public-docker-release/agent.
 * Run the latest images of the Discovery/Traceability Agents:
     * These two commands run the Docker Containers using the created environment files, and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.

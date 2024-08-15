@@ -147,7 +147,7 @@ The steps are as follows:
           labels:
             app: hybrid-list
         spec:
-          containers:
+          containers: (Robert?)
             - name: hybrid-list
               image: axway.jfrog.io/ampc-public-docker-release/hybrid/list:latest_dev
               imagePullPolicy: IfNotPresent
