@@ -25,7 +25,7 @@ Use this tutorial to register an API in Amplify using the Axway Central CLI, inc
 The **Petstore OpenAPI Specification** is used in this tutorial and is available at:
 [https://petstore3.swagger.io/api/v3/openapi.json](https://petstore3.swagger.io/api/v3/openapi.json).
 
-Please replace the environment variables in the '.json' files accordingly.{{< /alert >}}
+Please replace the environment variables in the `.json` files accordingly.{{< /alert >}}
 
 ## Download API
 
