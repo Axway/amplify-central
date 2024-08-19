@@ -99,12 +99,12 @@ The *subscription details* page provides:
 
 ### Terminate a subscription
 
-When a subscription is no longer needed, it should be terminated to prevent access requests to the resources that are using that subscription.
+When a subscription is no longer needed, it should be terminated to prevent access to the resources that are using that subscription.
 
 1. Navigate to the *Marketplace*.
 2. Select **Subscriptions**. *A list of Marketplace products that have subscriptions owned by your team(s) is displayed*.
 3. Search for a specific product and open it. *The subscription list is displayed*.
 4. Find the subscription to terminate and click **Unsubscribe** from the ellipsis menu to trigger the subscription termination.
-5. The state of the subscription is updated to **Cancelled**. The subscription can no longer be used from the access request screen.
+5. The state of the subscription is updated to **Cancelled**. The subscription can no longer be used from the Application Registrations screen.
 
 A cancelled subscription remains in the system and is visible in the Consumer Insights screens. Only the provider can completely remove the subscription from the system. Once removed, the subscription will no long be visible in the Consumer Insights screens.

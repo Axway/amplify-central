@@ -229,7 +229,7 @@ To migrate subscriptions to a new plan:
 The **Migrate** action is available only for plans with subscriptions.
 {{< /alert >}}
 
-Once you validate your choice, the original plan is deprecated and a new subscription is added to the target plan. *The new subscription inherits the approval status of the original subscription*. If there were access requests / credentials under the original subscription, they are marked as deleted and a new access request is created. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent is running to minimize the service disruption.
+Once you validate your choice, the original plan is deprecated and a new subscription is added to the target plan. *The new subscription inherits the approval status of the original subscription*. If there were application registrations / credentials under the original subscription, they are marked as deleted and a new application registration is created. The Discovery Agent will deprovision the original subscription and provision the new one. Be sure your agent is running to minimize the service disruption.
 
 The original subscription status will become "**Migration scheduled**" in case the migration is planned at a future date or "**Cancelled**" in case the migration is planned immediately.
 

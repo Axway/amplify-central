@@ -52,7 +52,7 @@ View the following product information associated with the application:
 * For each subscription/plan, all resources that are accessible with the subscription
 * For each resource, all credentials requested by the consumers with their statuses (Pending / Active / Inactive - see [Credential lifecycle](/docs/manage_marketplace/consumer_experience/credential_management#credential-lifecycle)) and its expiration, date if any
 
-    * Click the resource name to view the resource details (Methods / Credentials / Access Requests)
+    * Click the resource name to view the resource details (Methods / Credentials / Application Registrations)
     * Click **Create Credential** to request new credentials. Once the credential is provisioned on the data plane, click the **eye** icon to view it. **Important**: For security, the value of a credential can be viewed only once inside the Marketplace, but it will remain on the data plane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, you can request a new one.
     * Click the credential ellipsis menu to:
 
