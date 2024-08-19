@@ -56,7 +56,7 @@ To request access to an API from the product resource:
     * Fill out any other fields that are displayed on the form.
     * Click **Register Application**.
 
-If the access is automatically approved, you will be directed to the *Create Credential* screen. 
+If the access is automatically approved, you will be directed to the *Create Credential* screen.
 If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
 {{< alert title="Note" color="primary" >}}
