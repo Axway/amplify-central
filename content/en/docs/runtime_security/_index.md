@@ -25,9 +25,9 @@ There is a grouping of "Runtime Managed" APIs that are discovered from all the A
 
 ## How runtime compliance works
 
-* An Amplify environment is created that connects to real-time API traffic monitoring tool.  
-* The Amplify agent retrieves the security results and correlates the endpoints with the Managed API endpoints from the API Gateways connected to the Amplify Enterprise Marketplace.
-* The API Security monitoring tool assesses and determines a security grading.  
+* An Amplify environment is created that connects to a real-time API traffic monitoring tool.  
+* The Amplify agent retrieves the security results and correlates the endpoints with the managed API endpoints from the API Gateways connected to the Amplify Enterprise Marketplace.
+* The API Security monitoring tool assesses and determines a security grade.  
 
 {{< alert title="Note" color="primary" >}}APIs that do not match the API Gateways in the Amplify Enterprise Marketplace are represented as Runtime Unmanaged APIs with a security grading. These unmanaged runtime APIs are unknown APIs not registered with an API Gateway.{{< /alert >}}
 
