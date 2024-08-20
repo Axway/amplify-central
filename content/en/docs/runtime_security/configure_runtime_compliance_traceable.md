@@ -13,8 +13,8 @@ Configure your runtime compliance with the Axway Central CLI and Traceable
     * The Region for the Traceable app
     * Platform API token for authenticating with Traceable
 * Ensure you have the following tools installed:
-    * The Axway Central CLI must be installed and Amplify platform connectivity is required to configure the Traceable agent
-    * Kubectl - compatible version with your Kubernetes cluster with Traceable deployment
+    * The Axway Central CLI must be installed, and Amplify platform connectivity is required to configure the Traceable agent
+    * Kubectl version that is compatible with your Kubernetes cluster with Traceable deployment
     * Helm 3.2.4 or later
 
 ## Objectives
@@ -54,7 +54,7 @@ Use Axway Central CLI to configure the agent. The CLI will prompt you for answer
 
 Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
-You can validate that your installation is correct by running: `axway central --version`.
+Run `axway central --version` to validate your installation.
 
 ### Step 2: Folder preparation
 
@@ -65,11 +65,11 @@ Create an empty directory where Axway Central CLI will generate files. Run all A
 There are two ways to authenticate with Axway CLI:
 
 * Default mode: with an administrator username (email address) / password via a browser
-* Headless mode: with a platform service account and a username /password via a prompt
+* Headless mode: with a platform service account and a username / password via a prompt
 
 #### Default mode with browser authentication
 
-Run the following command to use Central CLI to log in with your Amplify platform credentials:
+Run this command to use Central CLI to log in with your Amplify platform credentials:
 
 ```shell
 axway auth login
@@ -88,7 +88,7 @@ You must have a platform service account and a regular administrator account for
 # command syntax: Log into a service account with platform tooling credentials:
 axway auth login --client-id <id> --secret-file <path> --username <email>
 
-# the command will prompt you to enter your username password
+# the command will prompt you to enter your username and password
 ```
 
 Sample:
@@ -116,13 +116,13 @@ The agents' configuration will be installed in the directory from where the CLI 
 axway central install agents
 ```
 
-If your Amplify subscription is hosted in the EU region, run the following installation command to start the configuration procedure:
+If your Amplify subscription is hosted in the EU region, run this command to start the configuration procedure:
 
 ```shell
 axway central install agents --region=EU
 ```
 
-If your Amplify subscription is hosted in the APAC region, run the following installation command to start the configuration procedure:
+If your Amplify subscription is hosted in the APAC region, run this command to start the configuration procedure:
 
 ```shell
 axway central install agents --region=AP
@@ -150,10 +150,10 @@ The installation procedure will prompt for the following:
 Once you have answered all questions, the agent installation performs the following operations:
 
 * The Amplify Marketplace resources are created/updated
-* If chose, a new Amplify Platform service account is created and public/private key-pair is generated
-* If chose, a new namespace is created in the Kubernetes cluster.
-* The Kubernetes secret with key pair for Amplify Platform service account is created in the selected namespace
-* The Kubernetes secret with Traceable authentication config is created in the selected namespace
+* If chosen, a new Amplify Platform service account is created and a public/private key pair is generated
+* If chosen, a new namespace is created in the Kubernetes cluster
+* The Kubernetes secret with key pair for the Amplify Platform service account is created in the selected namespace
+* The Kubernetes secret with a Traceable authentication configuration is created in the selected namespace
 * The agent Helm override file is generated
 
 The current directory will contain the following files after the agent installation is completed:
@@ -177,7 +177,7 @@ By default, the Helm commands are configured to use the latest available agent v
 Sample:
 
 ```shell
-To complete the Traceable agent installation run the following commands:
+To complete the Traceable agent installation, run the following commands:
   helm repo add axway https://helm.repository.axway.com --username=<client_id> --password=<client_secret>
   helm repo update
   helm upgrade --install --namespace agents-amplify traceable-agent axway/traceable-agent -f agent-overrides.yaml
@@ -190,7 +190,7 @@ Once the Helm commands are completed, the agents should be running in the Kubern
 
 ## Check that agents are running with Axway Central CLI
 
-After being authenticated to the platform with `axway auth login` command, run the following:
+After being authenticated to the platform with `axway auth login` command, run the following to check that the agents are running:
 
 * `axway central get ta` to get all Traceability Agent information
 
