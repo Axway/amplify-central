@@ -26,7 +26,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of 20240808, the Unified Catalog is no longer supported.{{< /alert >}}
 
-### Supported agents
+### August 23 Supported agents
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.94 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -54,7 +54,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 |--------------------------------------------|--------------------------|------------------|
 | Graylog API Security                       | 1.1.0                   | 1.0.5                           |
 
-### Release summary
+### August 23 Release summary
 
 | Axway Agent SDK |        |
 |--------|---------|
@@ -97,7 +97,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of 20240808, the Unified Catalog is no longer supported.{{< /alert >}}
 
-### Supported agents
+### August 9 Supported agents
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.94 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -125,7 +125,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 |--------------------------------------------|--------------------------|------------------|
 | Graylog API Security                       | 1.1.0                   | 1.0.5                           |
 
-### Release summary
+### August 9 Release summary
 
 | Axway Agent SDK |        |
 |--------|---------|
