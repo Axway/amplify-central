@@ -202,15 +202,25 @@ Traceability Agent:
 
 ### Docker mode
 
-As mentioned in the installation procedure, agents can be started with the following commands (installation procedure will replace `{agentVersion}` below with the most recent version available):
+The first step is to access the list of available agents from your organization:
 
-Discovery Agent: (Robert?)
+* Go to *Help menus > Downloads > Repository* 
+
+     -or-
+
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+
+and search for Docker Image for the most recent agents '{agentImage}'.
+  
+As mentioned in the installation procedure, agents can be started with the following commands where `{agentImage}` below is the most recent agent image version available):
+
+Discovery Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
+docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys {agentImage}
 ```
 
-Traceability Agent: (Robert?)
+Traceability Agent: (Jason for Data mount??)
 
 ```shell
 docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:{agentVersion}
