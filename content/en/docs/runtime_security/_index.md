@@ -21,15 +21,15 @@ Runtime compliance is the assessment of potential security risks based on real-t
 
 ## What are Unmanaged APIs
 
-There is a grouping of "Runtime Managed" APIs that are discovered from all the API gateways connected to the Amplify Marketplace. The group of "Runtime Unmanaged" APIs are discovered from Graylog API Security. Both can be visualized on the [Service Registry](/docs/manage_service_registry/service_management). The combination of "Runtime Managed" and "Runtime Unmanaged" APIs is a representation of all the APIs. As a result of the runtime compliance, APIs can be prioritized for remediation based on the security grading.
+There is a grouping of "Runtime Managed" APIs that are discovered from all the API Gateways connected to the Amplify Marketplace. The group of "Runtime Unmanaged" APIs are discovered from Graylog API Security. Both can be visualized on the [Service Registry](/docs/manage_service_registry/service_management). The combination of Runtime Managed and Runtime Unmanaged APIs is a representation of all the APIs. As a result of the runtime compliance, APIs can be prioritized for remediation based on the security grading.
 
 ## How runtime compliance works
 
 * An Amplify environment is created that connects to a real-time API traffic monitoring tool.  
-* The Amplify agent retrieves the security results and correlates the endpoints with the managed API endpoints from the API Gateways connected to the Amplify Enterprise Marketplace.
+* The Amplify agent retrieves the security results and correlates the endpoints with the Managed API endpoints from the API Gateways connected to the Amplify Enterprise Marketplace.
 * The API Security monitoring tool assesses and determines a security grade.  
 
-{{< alert title="Note" color="primary" >}}APIs that do not match the API Gateways in the Amplify Enterprise Marketplace are represented as Runtime Unmanaged APIs with a security grading. These unmanaged runtime APIs are unknown APIs not registered with an API Gateway.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}APIs that do not match the API Gateways in the Amplify Enterprise Marketplace are represented as Runtime Unmanaged APIs with a security grading. These Runtime Unmanaged APIs are unknown APIs not registered with an API Gateway.{{< /alert >}}
 
 ## Related topics
 
