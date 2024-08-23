@@ -210,7 +210,7 @@ The first step is to access the list of available agents from your organization:
 
 * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 
-and search for Docker Image for the most recent agents '{agentImage}'.
+and search for Docker Image for the most recent agents `{agentImage}`.
   
 As mentioned in the installation procedure, agents can be started with the following commands where `{agentImage}` below is the most recent agent image version available):
 
