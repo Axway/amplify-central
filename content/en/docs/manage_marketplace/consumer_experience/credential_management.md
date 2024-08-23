@@ -27,7 +27,7 @@ Note that an access is not required if the corresponding API does not support an
 There are two ways to request access:
 
 * from the product by using the **Register Application** button
-* from a product resource tab using the **Key** icon
+* from a product resource tab using the **Door with lock** icon
 
 To request access to an API from the product:
 
@@ -48,7 +48,7 @@ If the access is manually approved, you will see the pending status panel from w
 To request access to an API from the product resource:
 
 1. From the Marketplace *Home* screen, open a product and select the **Resources** tab.
-2. Click the **Key** icon that is displayed next to the resource.
+2. Click the **Door with lock** icon that is displayed next to the resource.
 3. Complete the Request access form. Note that **Request access name** is auto populated.
 
     * Select a subscription.
