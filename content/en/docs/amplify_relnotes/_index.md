@@ -30,7 +30,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.94 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.0 / TA=v1.2.0    | DA=v1.1.80 / TA=v1.1.81          |
+| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.0 / TA=v1.2.1    | DA=v1.1.80 / TA=v1.1.81          |
 | AWS Gateway using SDK 2.0                  | DA=v1.2.0 / TA-v1.2.0    | DA=v1.1.64 / TA-v1.1.67          |
 | Azure latest release                       | DA=v1.2.0 / TA=v1.2.0    | DA=v1.1.70 / TA=v1.1.76          |
 | Istio 1.9.5                                | DA=v1.1.0 / TA=v2.1.0    | DA=v1.0.36 / TA=v2.0.82          |
@@ -62,7 +62,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Bug fixes: | None. |
 | <br />**On-premise agents** |         |
 | What's new: | None. |
-| Bug fixes: | **Axway API Management Gateway Agent** - None. |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
 | <br />**SaaS (embedded) agents** |    |
 | What's new: | None. |
 | Bug fixes:  | None. |
@@ -70,7 +70,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Axway Central CLI** |       |
-| What's new: | None. |
+| What's new: | Internationalization language support. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
 | What's new: | **Service Registry** - None. <br />**Topology** - None. |
@@ -79,14 +79,14 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Product Foundry** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Product version error display. |
+| Bug fixes: | See release note. |
 | <br />**Business insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | None. |
+| What's new: | Customization of the signup screen for consumer organization. |
+| Bug fixes: | See release note. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
