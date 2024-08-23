@@ -28,7 +28,7 @@ Click an individual item to see the usage data of individual transactions of tha
 
 {{< alert title="Note" color="primary" >}} The API Usage is based on either the aggregated metrics the Traceability Agent is sending (agent using Agents SDK version higher than 1.1.14) or the aggregation of transactions sent by Traceability Agent (agent using Agents SDK version lower than 1.1.14).
 Depending on the Agent version you are using, the API Usage reporting for transactions on the data plane may not be in real time. This is because metrics are aggregated on the agent side and sent to the platform on regular intervals (@hourly by default).
-See the agent variable git branchRICREPORTING_SCHEDULE if you want to lower the interval value.{{< /alert >}}
+See the agent variable CENTRAL_METRICREPORTING_SCHEDULE if you want to lower the interval value.{{< /alert >}}
 
 ## API Traffic
 
