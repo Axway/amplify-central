@@ -297,3 +297,7 @@ The following example shows how to use the `install` command:
 # install agent configuration in interactive mode
 axway central install agents
 ```
+
+## language
+
+Show languages associated to products.
