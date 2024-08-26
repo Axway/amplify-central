@@ -92,6 +92,25 @@ axway central get env,apisvc commonname -s env1 -o json
 axway central get apisvc testsvc -s Environment/testenv
 ```
 
+The following are examples on how to use the get command to fetch the i18 information for a resource using the --language argument:
+
+```bash
+# To get a product with name "test-product" with all the available language translations in JSON format
+axway central get products test-product --language="*" -o json
+
+# To get a product with name "test-product" with French language translation if available in YAML format
+axway central get products test-product --language="fr-fr" -o yaml
+
+# To get a product with name "test-product" with German language translation if available in YAML format
+axway central get products test-product --language="de-de" -o yaml
+
+# To get a product with name "test-product" with US English language translation if available in YAML format
+axway central get products test-product --language="en-us" -o yaml
+
+# To get a product with name "test-product" with Portugal language translation if available in YAML format
+axway central get products test-product --language="pt-br" -o yaml
+```
+
 The following are examples on how to use the get command with RSQL queries using the -q flag:
 
 ```bash
