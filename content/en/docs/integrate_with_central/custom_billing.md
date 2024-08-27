@@ -38,6 +38,8 @@ The query samples in this section are based on the US region for Amplify. For ot
 * APAC region: <https://central.ap-sg.axway.com>
 {{< /alert >}}
 
+![Custom billing integration](/Images/central/integrate_with_central/custom_billing_integration.png)
+
 ## Step 1: Activate the custom billing integration
 
 To activate the billing integration, change the Marketplace settings.
