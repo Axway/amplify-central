@@ -92,12 +92,13 @@ axway central get env,apisvc commonname -s env1 -o json
 axway central get apisvc testsvc -s Environment/testenv
 ```
 
-The following are examples on how to use the get command to fetch the i18 information for a resource using the --language argument:
+The following example shows how to use the get command to fetch the i18 information for a resource using the --language argument:
 
 ```bash
 # To get a product with name "test-product" with all the available language translations in JSON format
 axway central get products test-product --language="*" -o json
 ```
+
 The sample output for the 'get' command with '--language="*"' argument is as follows:
 
 ```json
@@ -217,7 +218,7 @@ axway central get products test-product --language="en-us" -o yaml
 axway central get products test-product --language="pt-br" -o yaml
 ```
 
-The following are examples on how to use the get command with RSQL queries using the -q flag:
+The following examples show how to use the get command with RSQL queries using the -q flag:
 
 ```bash
 # To get assets with titles that start with "a"
@@ -242,7 +243,7 @@ axway central get assets -q "name=='i*';tags==test123"
 axway central get assets -q "name=='i*' or name=='a*';tags=in=(test,prod)"
 ```
 
-The following are examples on how to use the get command with simple filters:
+The following examples show how to use the get command with simple filters:
 
 ```bash
 # To get assets and filter the list to assets that have a specific title "test123"
