@@ -97,7 +97,113 @@ The following are examples on how to use the get command to fetch the i18 inform
 ```bash
 # To get a product with name "test-product" with all the available language translations in JSON format
 axway central get products test-product --language="*" -o json
+```
+The sample output for the 'get' command with '--language="*"' argument is as follows:
 
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "Product",
+    "name": "test-product",
+    "title": "test-product",
+    "metadata": {
+        "id": "8a2e8aaa9126f35801912dd66cbe4517",
+        "acl": [],
+        "accessRights": {
+            "canChangeOwner": true,
+            "canDelete": true,
+            "canWrite": true,
+            "canRead": true
+        },
+        "resourceVersion": "3",
+        "references": [
+            {
+                "id": "8a2e89ce9126f24c01912dd66fe746c6",
+                "kind": "ProductRelease",
+                "name": "test-product-1.0.0",
+                "selfLink": "/catalog/v1/productreleases/test-product-1.0.0",
+                "type": "soft",
+                "group": "catalog"
+            },
+            {
+                "id": "8a2e83f29127009001912dd66f1a63b7",
+                "kind": "ReleaseTag",
+                "name": "test-product",
+                "scopeKind": "Product",
+                "scopeName": "test-product",
+                "selfLink": "/catalog/v1alpha1/products/test-product/releasetags/test-product",
+                "type": "soft",
+                "group": "catalog"
+            }
+        ],
+        "selfLink": "/catalog/v1alpha1/products/test-product"
+    },
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "assets": [],
+        "categories": []
+    },
+    "latestrelease": {
+        "name": "test-product-1.0.0",
+        "tagName": "test-product/test-product",
+        "version": "1.0.0"
+    },
+    "references": {
+        "assets": [],
+        "marketplaces": []
+    },
+    "state": "active",
+    "languages": {
+        "resource": {
+            "code": "fr-fr"
+        },
+        "metadata": {
+            "additional": [
+                {
+                    "code": "en-us",
+                    "status": "complete"
+                },
+                {
+                    "code": "de-de",
+                    "status": "complete"
+                }
+            ]
+        }
+    },
+    "languages-en-us": {
+        "metadata": {
+            "code": "en-us",
+            "status": "complete"
+        },
+        "values": [
+            {
+                "path": "/title",
+                "value": "This is the product title",
+                "status": "complete"
+            }
+        ]
+    },
+    "languages-de-de": {
+        "metadata": {
+            "code": "de-de",
+            "status": "complete"
+        },
+        "values": [
+            {
+                "path": "/title",
+                "value": "La souscription demande un identifiant de département",
+                "status": "complete"
+            }
+        ]
+    }
+}
+
+```
+
+```bash
 # To get a product with name "test-product" with French language translation if available in YAML format
 axway central get products test-product --language="fr-fr" -o yaml
 
