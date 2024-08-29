@@ -13,7 +13,7 @@ An environment might be linked to a specific gateway managing one or more identi
 
 Currently identity providers can be used with the following:
 
-    * Azure embedded agent.
+   * Azure embedded agent.
 
 Multiple identity providers can be assigned to an environment.
 
