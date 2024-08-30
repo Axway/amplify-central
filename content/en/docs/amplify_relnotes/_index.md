@@ -85,8 +85,8 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | None. |
-| Bug fixes: | SNone. |
+| What's new: | Customization of the signup screen for consumer organization. <br/> Streamlined Marketplace subscription experience.|
+| Bug fixes: | None. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
 | Bug fixes: | None. |
