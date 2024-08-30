@@ -24,7 +24,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace August 30 2024](/docs/amplify_relnotes/20240830_amplify/)
 
-{{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of 20240808, the Unified Catalog is no longer supported.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of August 8, 2024, the Unified Catalog is no longer supported.{{< /alert >}}
 
 ### August 30 Supported agents
 
