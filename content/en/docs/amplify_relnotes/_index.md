@@ -70,7 +70,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Axway Central CLI** |       |
-| What's new: | nONE. |
+| What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Service Registry** <br />**Topology** |         |
 | What's new: | **Service Registry** - None. <br />**Topology** - None. |
