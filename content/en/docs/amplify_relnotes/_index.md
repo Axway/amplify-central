@@ -28,19 +28,19 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ### August 30 Supported agents
 
-| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.94 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.95 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.2 / TA=v1.2.2 <br /> SDK v1.1.95    | DA=v1.1.80 / TA=v1.1.81          |
-| AWS Gateway using SDK 2.0                  | DA=v1.2.1 / TA-v1.2.1 <br /> SDK v1.1.95    | DA=v1.1.64 / TA-v1.1.67          |
-| Azure latest release                       | DA=v1.2.0 / TA=v1.2.0    | DA=v1.1.70 / TA=v1.1.76          |
-| Istio 1.9.5                                | DA=v1.1.0 / TA=v2.1.0    | DA=v1.0.36 / TA=v2.0.82          |
-| Apigee Edge                                | 0.2.0                    | 0.1.38                           |
-| Mulesoft Anypoint platform v3              | 1.2.0                    | 1.1.48                           |
+| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.2 / TA=v1.2.2    | DA=v1.1.80 / TA=v1.1.81          |
+| AWS Gateway using SDK 2.0                  | DA=v1.2.1 / TA-v1.2.1    | DA=v1.1.64 / TA-v1.1.67          |
+| Azure latest release                       | DA=v1.2.1 / TA=v1.2.1    | DA=v1.1.70 / TA=v1.1.76          |
+| Istio 1.9.5                                | DA=v1.1.1 / TA=v2.1.1    | DA=v1.0.36 / TA=v2.0.82          |
+| Apigee Edge                                | 0.2.1                    | 0.1.38                           |
+| Mulesoft Anypoint platform v3              | 1.2.1                    | 1.1.48                           |
 | Software AG webMethods                     | 0.0.29                   | 0.0.25                           |
-| Kong Gateway                               | 1.1.0                    | 1.0.9                            |
-| GitLab                                     | 1.1.0                    | 1.0.6                            |
-| Kafka Cluster                              | DA=v1.1.0 / TA=v1.1.0    | DA=v1.0.6 / TA=v1.0.6            |
-| IBM API Connect Gateway                    | DA=v1.1.0 / TA=v1.1.0    | DA=v1.0.0 / TA=v1.0.0            |
+| Kong Gateway                               | 1.1.1                    | 1.0.1                            |
+| GitLab                                     | 1.1.1                    | 1.0.6                            |
+| Kafka Cluster                              | DA=v1.1.1 / TA=v1.1.1    | DA=v1.0.6 / TA=v1.0.6            |
+| IBM API Connect Gateway                    | DA=v1.1.1 / TA=v1.1.1    | DA=v1.0.0 / TA=v1.0.0            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -50,9 +50,9 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Azure Embedded Service                     |
 | SwaggerHub Embedded Service                |
 
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.94)  | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83)  |
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.95)  | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
-| Graylog API Security                       | 1.1.0                   | 1.0.5                           |
+| Graylog API Security                       | 1.1.1                   | 1.0.5                           |
 
 ### August 30 Release summary
 
