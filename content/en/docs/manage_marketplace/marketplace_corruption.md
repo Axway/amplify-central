@@ -56,4 +56,4 @@ A corrupted product is highlighted as follows in any Marketplace the product is 
 
 * Consumers who do not already have a subscription to a corrupted product will not be able to see it when the product contains a single resource.
 * Consumers are able to see a corrupted product if it contains multiple resources and some of the resources are not corrupted.
-* Consumers are allowed to subscribe to a corrupted product. However, access requests to corrupted resources are blocked, but they can request access to the resources that are not corrupted.
+* Consumers are allowed to subscribe to a corrupted product. However, application registration to corrupted resources are blocked, but they can request access to the resources that are not corrupted.

@@ -20,27 +20,56 @@ As a consumer, learn how to request access to an API to be issued credentials, a
 
 ## Request access to an API
 
-You must request access to the API before you can use an API resource in a product that you have an approved subscription on. Access requests are approved by the provider. Note that an API cannot be used if it is not included in a usage plan associated with an active subscription.
+For requesting Access to an API and be able to use it, you will need an application and an approved product subscription (Refer to [Create a subscription](/docs/manage_marketplace/consumer_experience/subscription_management#create-a-new-subscription)). Your access will be approved by the provider either manually or automatically. The application can be pre-existing or you can create it during the Application Registration flow.
 
-To request access to an API:
+Note that an access is not required if the corresponding API does not support any credential type (Oauth, API Key, Invoke Policy, ...).
+
+There are two ways to request access:
+
+* from the product by using the **Register Application** button
+* from a product resource tab using the **Door with lock** icon
+
+To request access to an API from the product:
+
+1. From the Marketplace *Home* screen, open a product.
+2. Click the **Register Application** button that is displayed below the product description. This button is accessible from any tab of the product (resources, Documentation, Plans, Ratings & Reviews).
+3. It opens the side panel with the requested information.
+4. Complete the Request access form. Note that **Request access name** is auto populated.
+
+    * Select a resource
+    * Select an application. If you are a member in multiple teams, the subscriptions and the application must be owned by the same team.
+    * Select a subscription.
+    * Fill out any other fields that are displayed on the form.
+    * Click **Register Application**.
+
+If the access is automatically approved, you will be directed to the *Create Credential* screen.
+If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
+
+To request access to an API from the product resource:
 
 1. From the Marketplace *Home* screen, open a product and select the **Resources** tab.
-2. Click the **Key** icon that is displayed next to the resource.
+2. Click the **Door with lock** icon that is displayed next to the resource.
 3. Complete the Request access form. Note that **Request access name** is auto populated.
 
     * Select a subscription.
     * Select an application. If you are a member in multiple teams, the subscriptions and the application must be owned by the same team.
     * Fill out any other fields that are displayed on the form.
-    * Click **Request Access**.
+    * Click **Register Application**.
 
-Once access is approved, you will be directed to the *Create Credential* screen.
+If the access is automatically approved, you will be directed to the *Create Credential* screen.
+If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
-## Track access requests to an API
+{{< alert title="Note" color="primary" >}}
+To preserve the quota limitation associated with the selected API and the selected plan from the subscription, you are not allowed to register multiple applications to the same product resource and using the same subscription. In other word, one API can be accessed by a single application using a single subscription.
+{{< /alert >}}
 
-View and track the status of the access requests:
+## Track access to an API
 
-* From the application: *Marketplace* > Application > navigate to the appropriate resource.
-* From the product: *Marketplace* > Product > Resource > Access > navigate to the appropriate application.
+View and track the status of the Application Registrations:
+
+* From the Register Applications: *Marketplace* > Application Registrations. View all access accros all products/applications your team has access to.
+* From the application: *Marketplace* > Application > navigate to the appropriate resource. View specific access linked to an application
+* From the product: *Marketplace* > Product > Resource > Application Registrations > navigate to the appropriate application. View specific access linked to an API.
 
 ## Credential lifecycle
 
@@ -65,12 +94,19 @@ Once the credential is generated, make sure to copy and paste it in a secure loc
 
 To delete the existing credential, click the trash bin icon.
 
+## List the credentials
+
+The *Marketplace* > Credentials view displays all the credentials your team has access to. This list van be filtered by State, Expiration date and Application.
+
+Note that Central Admin user is able to see all Credentials regardless the team they belongs to.
+
 ## View credential value
 
 Once the credential is provisioned by the provider (either manually or using Discovery Agent), you can view your credential secret. The secret is encrypted and available for only three days to be viewed from inside the Marketplace. After this period, the credential secret will be removed from Amplify, but will remain on the data plane.
 
 To view the clear value of the credential:
 
+* From the credentials list: *Marketplace* > Credentials > Select the appropriate credentials > **View Credential** button
 * From the application: *Marketplace* > Application > navigate to the appropriate resource > **View Credential** button
 * From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > **View Credential** button
 

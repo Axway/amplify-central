@@ -1,9 +1,9 @@
 ---
-title: Customize access request, credentials request and subscription screens
-linkTitle: Customize access request, credentials request and subscription screens
+title: Customize Application Registration, credentials request and subscription screens
+linkTitle: Customize Application Registration, credentials request and subscription screens
 weight: 300
 ---
-Amplify allows you to personalize the *access request*, *credential* and *subscription* screens by customizing consumer questions that return appropriate responses.
+Amplify allows you to personalize the *Application Registration*, *credential* and *subscription* screens by customizing consumer questions that return appropriate responses.
 
 ## Before you start
 
@@ -12,7 +12,7 @@ Amplify allows you to personalize the *access request*, *credential* and *subscr
 
 ## Objectives
 
-Learn how to customize the access request and credentials request screen in Marketplace using [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form) framework.
+Learn how to customize the Application Registration and credentials request screen in Marketplace using [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form) framework.
 
 ## Use cases
 
@@ -330,9 +330,9 @@ When subscribing to the plan, you will be able to see the emails and billing add
 
 ![Subscription Request screen](/Images/central/integrate_with_central/SubscriptionRequestDefinition.png)
 
-## Customize access request screen
+## Customize Application Registration screen
 
-To customize the access request screen, you need an `AccessRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to the consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
+To customize the Application Registration screen, you need an `AccessRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to the consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the Application Registration definition for each individual environment.
 
 Name of the object: **AccessRequestDefinition**
 
@@ -374,7 +374,7 @@ Object skeleton (json format):
 
 These above two schemas follow the component framework describe in the [Available components](#available-components) section.
 
-Once the access request is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *access request detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
+Once the Application Registration is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *Application Registration detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
 ### AccessRequestDefinition sample
 
@@ -471,17 +471,17 @@ Sample of an APIServiceInstance (json format) using the previous accessRequestDe
 }
 ```
 
-If the APIService instance is already linked to an asset prior to adding the access request definition, you must create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
+If the APIService instance is already linked to an asset prior to adding the Application Registration definition, you must create a new release of the asset and a new release of the product to take the modification into consideration in the Marketplace.
 
 Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the marketplace, subscribe to it to get an active subscription, and then request access.
 
-![Access Request screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
+![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
 
 ## Customize credential request screen
 
-To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the access request definition for each individual environment.
+To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the credential request definition for each individual environment.
 
 Name of the object: **CredentialRequestDefinition**
 
@@ -748,7 +748,7 @@ Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
-![Access Request screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
+![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
 
 Once your access is granted, you can ask for credential. You should be able to see the file selector:
 

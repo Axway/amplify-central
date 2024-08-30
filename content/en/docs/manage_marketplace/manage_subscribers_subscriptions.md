@@ -15,7 +15,7 @@ You must have a published product in the Marketplace. See [Publish to Marketplac
 Learn how to manage Marketplace subscriptions, request access and credentials to resources, including:
 
 * Approving / rejecting subscription
-* Approving / rejecting access requests
+* Approving / rejecting Application Registration
 * Provisioning / deleting / renewing credentials
 
 ## Concepts
@@ -36,7 +36,7 @@ Three personas are identified:
 
 **Application**: represents one (or multiple) business facet of a product that a consumer will use.
 
-**Access request**: represents an authorization to use certain services for an application under the constraint of a subscription plan. Access request can be automatically (default) or manually approved.
+**Application Registration**: represents an authorization to use certain services for an application under the constraint of a subscription plan. Application Registration can be automatically (default) or manually approved.
 
 **Credentials**: API Key or Oauth client credential / secret to allow access to a service.
 
@@ -102,44 +102,46 @@ The Catalog Manager can access their consumer email from:
 Both Subscription approver and Catalog Manager can access their consumer email from:
 
 * Marketplace > Subscriptions list > subscription details: use the **Copy** icon located next to the consumer email address.
-* Marketplace > Access Requests list > access requests details: use the **Copy** icon located next to the consumer email address.
+* Marketplace > Application Registrations list > Application Registrations details: use the **Copy** icon located next to the consumer email address.
 * Marketplace > Credentials list > Credential details: use the **Copy** icon located next to the consumer email address.
 
 With these emails, you can reach out to the consumer using your regular messaging system.
 
-## Manage access requests
+## Manage Application Registration
 
 Persona: **Subscription Approver** team role or **Catalog Manager** team role
 
-{{< alert title="Note" color="primary" >}}The Central Admin role can be used. This user can see all access requests without team constraint.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}
+The Central Admin role can be used. This user can see all Application Registrations without team constraint.
+{{< /alert >}}
 
-Access requests are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the Catalog Manager can see only the access requests associated to a product owned by the team(s) he is a part of.
+Application Registrations are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the Catalog Manager can see only the application registrations associated to a product owned by the team(s) he is a part of.
 
-Access request have three approval states:
+Application Registrations have three approval states:
 
 * Pending: subscription has been initiated by a consumer. Subscription approver can approve/reject a pending subscription.
 * Approved: subscription has been approved by a provider. Subscription approver can reject an approved subscription.
 * Rejected: subscription has been rejected by a provider. Subscription approver can approve a rejected subscription.
 
-Access requests also contain a provisioning status:
+Application Registrations also contain a provisioning status:
 
-* Pending: the access request has not been provisioned yet.
+* Pending: the access has not been provisioned yet.
 * Success: the provisioning access has been successfully granted.
 * Error: an error occurred during the provisioning process.
 
-### Approving an access request
+### Approving an Application Registration
 
-1. As a subscription approver, navigate to *Amplify Central > Marketplace > Access Requests* to view all access requests associated to product(s) owned by your team.
-2. Filter the access requests by approval state (Pending / Approved / Rejected) and/or provisioning state (Pending / Success / Error) and/or team. Each access request displays the name, the associated product, the organization of the team, the approval status and the provisioning status.
-3. Click on the access request name to open the access request details. From this page, click **Approve** to approve the access request.
+1. As a subscription approver, navigate to *Amplify Central > Marketplace > Application Registrations* to view all Application Registrations associated to product(s) owned by your team.
+2. Filter the Application Registrations by approval state (Pending / Approved / Rejected) and/or provisioning state (Pending / Success / Error) and/or team. Each Application Registration displays the name, the associated product, the organization of the team, the approval status and the provisioning status.
+3. Click on the Application Registration name to open the request details. From this page, click **Approve** to approve the Application Registration.
 
-This will trigger an event to inform of the access request approval. Based on this event, the provisioning process can start. Once the provisioning process is completed, the access request provisioning state can be enriched with the appropriate value. This provisioning can be manual or automated with the Discovery Agent associated to the environment data plane hosting the API that the consumer wants to use.
+This will trigger an event to inform of the Application Registration approval. Based on this event, the provisioning process can start. Once the provisioning process is completed, the Application Registration provisioning state can be enriched with the appropriate value. This provisioning can be manual or automated with the Discovery Agent associated to the environment data plane hosting the API that the consumer wants to use.
 
-### Rejecting an access request
+### Rejecting an Application Registration
 
-1. As the Catalog Manager or subscription approver, navigate to *Amplify Central > Marketplace > Access Requests* to view all access requests associated to the   product(s) owned by your team.
-2. Filter the access request list by approval state (Pending / Approved / Rejected) and/or provisioning state (Pending / Success / Error) and/or team. Each access request displays its name, the associated asset, the organization of the team that owned the request, the approval status and the provisioning status.
-3. Click on the access request name to display the access request details. From this page, click either **Revoke** to reject the access request that was previously approved, or **Decline** if the access request is pending.
+1. As the Catalog Manager or subscription approver, navigate to *Amplify Central > Marketplace > Application Registrations* to view all Application Registrations associated to the product(s) owned by your team.
+2. Filter the Application Registration list by approval state (Pending / Approved / Rejected) and/or provisioning state (Pending / Success / Error) and/or team. Each Application Registration displays its name, the associated asset, the organization of the team that owned the request, the approval status and the provisioning status.
+3. Click on the Application Registration name to display the Application Registration details. From this page, click either **Revoke** to reject the Application Registration that was previously approved, or **Decline** if the Application Registration is pending.
 
 ## Manage credentials
 
