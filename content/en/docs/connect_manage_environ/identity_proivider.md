@@ -13,12 +13,11 @@ An environment might be linked to a specific gateway managing one or more identi
 
 Currently identity providers can be used with the following:
 
-   * Azure embedded agent.
+* Azure embedded agent.
 
 Multiple identity providers can be assigned to an environment.
 
 {{< alert title="Note" color="primary" >}}Identity provider management is optional.{{< /alert >}}
-
 
 ### Viewing available identity providers
 
@@ -57,21 +56,20 @@ Only the Central Admin role can create identity providers.
     * **Authorization Type** - Select the type of authentication method.
 
         * **Client Secret** - (Default):
-     
+
             * **Authorization Method** - select the client secret authentication method. Choose from client_secret_post (default), client_secret_basic, or client_secret_jwt.
             * **Client ID** - provide the Client ID of the OAuth client. This is used by the agent to authenticate and register OAuth clients.
             * **Client Secret** - provide the OAuth client secret. This is used by the agent to authenticate and register OAuth clients.
             * **Client Scopes** (Optional) - enter a list of client scopes to be used for dynamic client registration.
   
         * **Access Token**:
-     
+  
             * **Access Token** - provide the access token to be used for authenticating.
-   
+
     * **Request Headers** (Optional) - enter name and value pairs to add request headers to the token request calls.
     * **Query Parameters** (Optional) - enter name and value pairs to add query paramaters to the token request calls.
 
-
-6. Click **Save** to create the identity provider and return to the list of identity providers.
+5. Click **Save** to create the identity provider and return to the list of identity providers.
 
 ### Deleting an identity provider
 
@@ -80,4 +78,3 @@ Only the Central Admin role can delete identity providers.
 1. Navigate to *Topology > Idenitity Providers*.
 2. Select the identity provider(s).
 3. Click the three ellipsis and select **Delete** for single delete, or select multiple identity providers and click **Delete** above the table. A popup is displayed informing how many environments use the selected identity provider(s).
-
