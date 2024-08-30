@@ -59,7 +59,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | None. |
+| Bug fixes: | Remove all the Unified Catalog API call. |
 | <br />**On-premise agents** |         |
 | What's new: | None. |
 | Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
