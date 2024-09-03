@@ -114,14 +114,14 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 #### Invoke policy handling
 
-When a Front End Proxy is secured by invoking a policy the agent will not know what the actual policy does. When the policy itself applies a known security type it is possible to have the agent map a policy name to a credential type, this credential type is what consumers will be prompted to create in Marketplace.
+When a Front End Proxy is secured by invoking a policy the agent will not know what the actual policy does. When the policy itself applies a known security type it is possible to have the agent map a policy name to a credential type, this credential type is what consumers will be prompted to create in Marketplace. In addition to the internal API Manager security types the Credential Type may reference the name of an an External IDP.
 
 | Variable name                                  | Description                                                                                                                                                                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION     | When a proxy is secured by a policy, this description is added to the Access Request Definition if no description text is found in API Manager (default: `Contact your provider about authenticating to this API`). |
 | APIMANAGER_INVOKEPOLICY_TITLE                  | When a proxy is secured by a policy, this title is added to the Access Request Definition (default: `Authentication Details`).                                                                                      |
 | APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME     | The policy name that should be mapped to a specific credential type.                                                                                                                                                |
-| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, and OAuth.                                                                                                                     |
+| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, Oauth and any value set in `AGENTFEATURES_IDP_NAME` variables.                                                                                                                     |
 
 The `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` and `APIMANAGER_INVOKEPOLICY_TITLE` settings are used when the Discovery Agent cannot find a mapping to apply. These values are set in the Access Request to give the end consumer a hint on authenticating to the API.
 
@@ -139,6 +139,27 @@ APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_2=OAuth
 APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_3=ThisAuthPolicy
 APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_3=APIKey
 ```
+
+##### Invoke policy mapping to External IDP configuration example
+
+An invoke policy mapping may reference any IDP name set in the configuration, below is a sample of the environment variable setup to handle this mapping.
+
+Given the configuration below, a proxy secured by the `IDPAuthPolicy` policy will map the credential type to the `idp-name` Okta IDP. For more information on the IDP environment variables see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning#provisioning-OAuth-credential-to-an-identity-provider).
+
+```shell
+APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_1=IDPAuthPolicy
+APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=idp-name
+
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="okta"
+AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
+
+AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
+
+AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
+```
+
+{{< alert title="Note" color="primary" >}}This setup will only enable the ability to request a credential in Amplify Marketplace. It will not update the specification to include the IDP definition.{{< /alert >}}
 
 #### Custom OAuth External policy handling
 
