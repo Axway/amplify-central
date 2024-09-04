@@ -108,8 +108,35 @@ Each event payload that your webhook server receives is structured similar to th
 
 To receive webhook event notifications from the API Server, you must complete the following steps:
 
-1. Create a webhook which will be called on a particular event.
-2. Create the trigger which will invoke the webhook URL that was defined in the previous step.
+1. Create an integration which will act as the scope of the webhook.
+2. Create a webhook which will be called on a particular event.
+3. Create the trigger which will invoke the webhook URL that was defined in the previous step.
+
+### Create the integration
+
+The integration is a simple name to group webhooks together. For instance, you can have an integration for managing the Subscription notification where several webhooks are involved.
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: Integration
+name: monitor-resources
+title: Monitor any resources
+attributes: {}
+finalizers: []
+tags:
+  - integration
+spec:
+  description: >-
+    Monitors any objects across all Environments.
+```
+
+You can create the integration resource using the CLI:
+
+```shell
+axway central apply -f integration.yaml
+✔ "Integration/monitor-resources" has successfully been created.
+```
 
 ### Create a webhook
 
@@ -123,8 +150,8 @@ name: invoke-jira-webhook
 title: JIRA approval webhook
 metadata:
   scope:
-    kind: Environment
-    name: azure-apiman-service
+    kind: Integration
+    name: monitor-resources
 spec:
   url: >-
     https://webhook.site/9cb87457-04ad-4db4-830f-2da5dc46e0bb
@@ -144,7 +171,7 @@ You can create the webhook resource using the CLI:
 
 ```shell
 axway central apply -f webhook.yaml
-✔ "Webhook/invoke-jira-webhook" in the scope "Environment/azure-apiman-service" has successfully been updated.
+✔ "Webhook/invoke-jira-webhook" in the scope "Integration/monitor-resources" has successfully been created.
 ```
 
 {{< alert title="Note" color="danger" >}}
@@ -157,7 +184,7 @@ After the webhook has been created, you must specify when the webhook will be in
 
 The following are examples of the **Resource Hook** payload.
 
-Monitor all API service revisions in *invoke-jira-webhook* environment:
+Monitor all API service revisions from *invoke-jira-webhook*:
 
 ```json
 {
