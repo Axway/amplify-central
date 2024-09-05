@@ -32,6 +32,6 @@ Learn how to enable and configure Marketplace *Onboarding* so that administrator
     * **Select** - Enter the selection **label**, toggle to set field to either **required** or **optional**. Note that the hover **Hint** and **Default selected text** are not required, but **Options** must have at least two values and corresponding labels.
     * Multi-Select - Enter the multi-select **label**, toggle to set field to either **required** or **optional**. Note that the hover **Hint** and **Default selected text** are not required, but **Options** must have at least two values and corresponding labels.
 
-7. Click **+** to add another field to the Consumer Org registration form. Click **Save** to add the field(s) to the Consumer Org registration form.
+7. Click **+** to add another field to the Consumer Org registration form. Click **Save** to add the field(s) to the Consumer Org registration form. Once saved, a preview is displayed so that you can verify the additional fields.
 
 {{< alert title="Note" color="primary" >}}Only an admin user can add/edit additional onboarding information. Use the editing toolbar on the **Onboarding** tab to move, edit and delete the configured field(s).{{< /alert >}}
