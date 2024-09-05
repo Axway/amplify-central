@@ -186,107 +186,102 @@ The following are examples of the **Resource Hook** payload.
 
 Monitor all API service revisions from *invoke-jira-webhook*:
 
-```json
-{
-   "group": "management",
-   "apiVersion": "v1alpha1",
-   "kind": "ResourceHook",
-   "name": "apiservicerevisions-hook",
-   "title": "Monitor API Service Revision changes from 'azure-apiman-service' Environment",
-   "spec": {
-      "triggers": [
-         {
-            "group": "management",
-            "kind": "APIServiceRevision",
-            "name": "*",
-            "type": [
-               "updated",
-               "created",
-               "deleted"
-            ],
-            "scope": {
-               "kind": "Environment",
-               "name": "azure-apiman-service"
-            }
-         }
-      ],
-      "webhooks": [
-         "invoke-jira-webhook"
-      ]
-   }
-}
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: ResourceHook
+name: apiservicerevisions-hook
+title: Monitor API Service Revision changes from 'azure-apiman-service' Environment
+metadata:
+  scope:
+    kind: Integration
+    name: monitor-resources
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  triggers:
+    - kind: APIServiceRevision
+      group: management
+      name: '*'
+      type:
+        - created
+        - updated
+        - deleted
+      scope:
+        kind: Environment
+        name: 'azure-apiman-service'
+  webhooks:
+    - invoke-jira-webhook
 ```
 
 Monitor changes on all environment resources:
 
-```json
-{
-   "group": "management",
-   "apiVersion": "v1alpha1",
-   "kind": "ResourceHook",
-   "name": "environments-hook",
-   "title": "Monitor all Environment resources",
-   "spec": {
-      "triggers": [
-         {
-            "group": "management",
-            "kind": "Environment",
-            "name": "*",
-            "type": [
-               "created",
-               "updated",
-               "deleted"
-            ]
-         }
-      ],
-      "webhooks": [
-         "invoke-jira-webhook"
-      ]
-   }
-}
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: ResourceHook
+name: environments-hook
+title: Monitor all Environment resources
+metadata:
+  scope:
+    kind: Integration
+    name: monitor-resources
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  triggers:
+    - kind: Environment
+      group: management
+      name: '*'
+      type:
+        - created
+        - updated
+        - deleted
+      scope:
+        kind: Environment
+        name: 'azure-apiman-service'
+  webhooks:
+    - invoke-jira-webhook
 ```
 
 Monitor changes in a specific environment "azure-apiman-service" and on all its resources:
 
-```json
-{
-   "group": "management",
-   "apiVersion": "v1alpha1",
-   "kind": "ResourceHook",
-   "name": "environments-hook",
-   "title": "Monitor Environment azure-apiman-service and all its resources",
-   "spec": {
-      "triggers": [
-         {
-            "group": "management",
-            "kind": "Environment",
-            "name": "azure-apiman-service",
-            "type": [
-               "created",
-               "updated",
-               "deleted"
-            ]
-         },
-         {
-            "group": "management",
-            "kind": "*",
-            "name": "*",
-            "type": [
-               "created",
-               "updated",
-               "deleted"
-            ],
-            "scope": {
-               "kind": "Environment",
-               "name": "azure-apiman-service"
-            }
-         }
-      ],
-      "webhooks": [
-         "invoke-jira-webhook"
-      ]
-   }
-}
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: ResourceHook
+name: environments-hook
+title: Monitor Environment azure-apiman-service and all its resources
+metadata:
+  scope:
+    kind: Integration
+    name: monitor-resources
+attributes: {}
+finalizers: []
+tags: []
+spec:
+  triggers:
+    - kind: Environment
+      group: management
+      name: 'azure-apiman-service'
+      type:
+        - created
+        - updated
+        - deleted
+    - kind: '*'
+      group: management
+      name: '*'
+      type:
+        - created
+        - updated
+        - deleted
+      scope:
+        kind: Environment
+        name: 'azure-apiman-service'
+  webhooks:
+    - invoke-jira-webhook
 ```
 
 * **$name**: resource hook unique name.
@@ -302,21 +297,17 @@ Monitor changes in a specific environment "azure-apiman-service" and on all its 
 
 The following is an example of "When resource type of kind `APIService` with any name is created, updated, or deleted in any group, with any scope kind and name", the webhooks defined in the resource hook will be invoked:
 
-```json
-{
-    "group": "*",
-    "scope": {
-        "kind": "*",
-        "name": "*"
-    },
-    "kind": "APIService",
-    "name": "*",
-    "type": [
-        "created",
-        "updated",
-        "deleted"
-    ]
-}
+```yaml
+    - kind: 'APIService'
+      group: management
+      name: '*'
+      type:
+        - created
+        - updated
+        - deleted
+      scope:
+        kind: '*'
+        name: '*'
 ```
 
 ## Advanced setup
@@ -327,16 +318,16 @@ A secret is a key-value pair associated with a webhook to secure it. By setting 
 
 Example of a payload:
 
-```json
-{
-    "name": "secrettest",
-    "title": "Axway Environment Test",
-    "spec": {
-        "data": {
-            "apikey": "secret"
-        }
-    }
-}
+```yaml
+name: secrettest
+title: Axway Environment Test
+metadata:
+  scope:
+    kind: Integration
+    name: monitor-resources
+spec:
+  data:
+    apikey: secret
 ```
 
 * **$name**: the secret unique name.
@@ -345,21 +336,23 @@ Example of a payload:
 
 Example of a webhook payload referencing a secret:
 
-```json
-{
-    "name": "webhook",
-    "title": "Webhook to invoke requestbin.com",
-    "spec": {
-        "auth": {
-            "secret": {
-                "name": "webhooksecret",
-                "key": "apikey"
-            }
-        },
-        "enabled": true,
-        "url": "https://enveb85y26nv.x.pipedream.net"
-    }
-}
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: Webhook
+name: webhook
+title: Webhook to invoke requestbin.com
+metadata:
+  scope:
+    kind: Integration
+    name: monitor-resources
+spec:
+  auth:
+    secret:
+      name: webhooksecret
+      key: apikey
+  enabled: true
+  url: https://enveb85y26nv.x.pipedream.net
 ```
 
 * **$name**: webhook unique identifier.
