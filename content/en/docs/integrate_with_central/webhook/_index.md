@@ -114,7 +114,7 @@ To receive webhook event notifications from the API Server, you must complete th
 
 ### Create the integration
 
-The integration is a simple name to group webhooks together. For instance, you can have an integration for managing the Subscription notification where several webhooks are involved.
+The integration is a simple name to group webhooks together. For instance, you can have an integration for managing the subscription notification where several webhooks are involved.
 
 ```yaml
 group: management
