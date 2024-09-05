@@ -164,6 +164,7 @@ Key fields in the Webhook resource:
 
 * **$name**: webhook unique identifier.
 * **$title**: webhook friendly name.
+* **$metadata.scope.name**: webhook integration scope name.
 * **$spec.url**: URL of the server that will receive the webhook `POST`requests.
 * **$spec.enabled**: when enabled will invoke the webhook.
 
@@ -286,6 +287,7 @@ spec:
 
 * **$name**: resource hook unique name.
 * **$title**: resource hook friendly name.
+* **$metadata.scope.name**: resource hook integration scope name.
 * **$spec.triggers.group**: value for the group of the resource.
 * **$spec.triggers.scope**: resource scope trigger details.
 * **$spec.triggers.scope.kind**: the type of the resource. For example, the webhook will be invoked on any events on resources of type **Environment**.
@@ -332,6 +334,7 @@ spec:
 
 * **$name**: the secret unique name.
 * **$title**: the secret friendly name.
+* **$metadata.scope.name**: secret integration scope name.
 * **$spec.data**: key value pairs.
 
 Example of a webhook payload referencing a secret:
@@ -357,6 +360,7 @@ spec:
 
 * **$name**: webhook unique identifier.
 * **$title**: webhook friendly name.
+* **$metadata.scope.name**: webhook integration scope name.
 * **$spec.url**: URL of the server that will receive the webhook `POST`requests.
 * **$spec.auth.secret**: use when the webhook is secured and needs a secret to invoke.
 * **$spec.auth.secret.name**: name of the secret, as defined in the payload.
