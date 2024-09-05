@@ -8,16 +8,16 @@ Customize the Marketplace to enable consumers to rate the product.
 
 ## Before you start
 
-You must have Platform Administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Ratings* content.
+You must have Platform Administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure Marketplace *Ratings & reviews* content.
 
 ## Objectives
 
-Learn how to enable the Marketplace ratings and reviews so that consumers can give feeback on your digital products. Once feedback is given, the rating and review is visible in the [Marketplace](/docs/manage_marketplace/consumer_experience/ratings_reviews) and in the [Product Foundry](/docs/manage_product_foundry/foundry_product_ratings_reviews).
+Learn how to enable the Marketplace ratings and reviews so that consumers can give feedback on your digital products. Once feedback is given, the rating and review is visible in the [Marketplace](/docs/manage_marketplace/consumer_experience/ratings_reviews) and in the [Product Foundry](/docs/manage_product_foundry/foundry_product_ratings_reviews).
 
 ## Enable the Marketplace ratings and reviews
 
 1. Navigate to *platform.axway.com > Organization > Marketplaces*.
-2. Open the desired Marketplace by clicking the Marletplace name.
+2. Open the desired Marketplace by clicking the Marketplace name.
 3. Select **Ratings & reviews** tab.
 4. Switch the **Ratings & Reviews** toggle to **Enabled** (Disabled by default) to allow consumers to rate and review the Marketplace products.
 5. Select who can rate and review the product:
