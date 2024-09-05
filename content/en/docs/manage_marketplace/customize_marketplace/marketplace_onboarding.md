@@ -21,7 +21,7 @@ Learn how to enable and configure Marketplace *Onboarding* so that administrator
 3. Select **Onboarding** tab.
 4. Switch the **Onboarding** toggle to **Enabled** (Disabled by default) to enable additional data to be captured for your Marketplace consumer organizations during onboarding.
 5. Click **+ Field** to configure a field type.
-6. Select a **type** from the dropdown menu:
+6. Select a **Type** from the dropdown menu:
 
     * **Header** - Enter the header **label**.
     * **Text** - Enter the field **label**, toggle to set field to either **required** or **optional**. Note that the hover **Hint**, **Max Length** of field and field **Place holder** are not required.
