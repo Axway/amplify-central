@@ -121,4 +121,3 @@ Both agents will use the credentials used to login in the SoftwareAG WebMethods 
 ## Related topics
 
 See the following topics for related information.
-
