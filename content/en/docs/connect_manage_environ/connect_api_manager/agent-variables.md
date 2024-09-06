@@ -114,14 +114,14 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 #### Invoke policy handling
 
-When a Front End Proxy is secured by invoking a policy the agent will not know what the actual policy does. When the policy itself applies a known security type it is possible to have the agent map a policy name to a credential type, this credential type is what consumers will be prompted to create in Marketplace.
+When a Front End Proxy is secured by invoking a policy, the agent will not know what the actual policy does. When the policy itself applies a known security type, it is possible to have the agent map a policy name to a credential type. This credential type is what consumers will be prompted to create in Marketplace. In addition to the internal API Manager security types, the Credential Type may reference the name of an external IDP.
 
 | Variable name                                  | Description                                                                                                                                                                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION     | When a proxy is secured by a policy, this description is added to the Access Request Definition if no description text is found in API Manager (default: `Contact your provider about authenticating to this API`). |
 | APIMANAGER_INVOKEPOLICY_TITLE                  | When a proxy is secured by a policy, this title is added to the Access Request Definition (default: `Authentication Details`).                                                                                      |
 | APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME     | The policy name that should be mapped to a specific credential type.                                                                                                                                                |
-| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, and OAuth.                                                                                                                     |
+| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, Oauth and any value set in the `AGENTFEATURES_IDP_NAME` variables.                                                             |
 
 The `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` and `APIMANAGER_INVOKEPOLICY_TITLE` settings are used when the Discovery Agent cannot find a mapping to apply. These values are set in the Access Request to give the end consumer a hint on authenticating to the API.
 
@@ -139,6 +139,26 @@ APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_2=OAuth
 APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_3=ThisAuthPolicy
 APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_3=APIKey
 ```
+
+##### Invoke policy mapping to External IDP configuration example
+
+An invoke policy mapping may reference any IDP name set in the configuration, below is a sample of the environment variable setup to handle this mapping.
+
+Given the configuration below, a proxy secured by the `IDPAuthPolicy` policy will map the credential type to the `idp-name` Okta IDP. For more information on the IDP environment variables, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning#provisioning-OAuth-credential-to-an-identity-provider).
+
+```shell
+APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_1=IDPAuthPolicy
+APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=idp-name
+
+# IDP configuration variables
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="okta"
+AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
+AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
+AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
+```
+
+{{< alert title="Note" color="primary" >}}This setup will only enable the ability to request a credential in Amplify Marketplace. It will not update the specification to include the IDP definition.{{< /alert >}}
 
 #### Custom OAuth External policy handling
 
@@ -170,7 +190,7 @@ APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 | EVENT_LOG_PATHS                               | The paths, comma separated, to the event logs that need to be watched.                                                                                                                                                                                                                                                                     |
 | OPENTRAFFIC_LOG_INPUT                         | Used to disable/enable the event log input for the Traceability Agent (default value: `false`). Use this or `EVENT_LOG_INPUT`.                                                                                                                                                                                                             |
 | OPENTRAFFIC_LOG_PATHS                         | The paths, comma separated, to the open traffic logs that need to be watched.                                                                                                                                                                                                                                                              |
-| INPUTS_IGNORE_OLDER                           | When set, the agent will not track files that were modified before the set duration (default value: `1h`). See [ignore_older](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html#filebeat-input-log-ignore-older).                                                                                          |
+| INPUTS_IGNORE_OLDER                           | When set, the agent will not track files that were modified before the set duration (default value: `1h`). See [ignore_older](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html#filebeat-input-log-ignore-older).                                                                                             |
 | INPUTS_CLOSE_INACTIVE                         | The agent will close the harvester when the file has not been modified for the duration specified (default value: `10m`). See [close_inactive](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html#filebeat-input-log-close-inactive).                                                                          |
 | INPUTS_CLEAN_INACTIVE                         | The agent will remove the state of the file when it has not been modified for the duration specified (default value: `2h`). See [clean_inactive](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html#filebeat-input-log-clean-inactive).                                                                        |
 | INPUTS_CLOSE_REMOVED                          | The agent will close the harvester of the file when it has been removed from disk (default value: `2h`). See [close_removed](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html#filebeat-input-log-close-removed).                                                                                             |
@@ -205,6 +225,6 @@ For a full explanation on how to use the Traceability Agent audit logs see [Trac
 
 | Variable name           | Description                                                                                                                          |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| DEDUPLICATION_ENABLE    | When enabled, the agent will keep track of correlation IDs for log events that have been harvested (default value: `false`).          |
+| DEDUPLICATION_ENABLE    | When enabled, the agent will keep track of correlation IDs for log events that have been harvested (default value: `false`).         |
 | DEDUPLICATION_QUEUESIZE | The number of correlation IDs the agent will keep in memory and compare to while processing a new log event (default value: `1024`). |
-| DEDUPLICATION_EXPIRY    | Time to live for each correlation ID in the agent's memory (default value: `5m`).                                                      |
+| DEDUPLICATION_EXPIRY    | Time to live for each correlation ID in the agent's memory (default value: `5m`).                                                    |
