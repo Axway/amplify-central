@@ -26,7 +26,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 | Variable name                        | Description                                                                                                                                                                     |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WEBMETHODS_URL                       | The base URL for connect to SoftwareAG WebMethods.                                                                                                                              |
+| WEBMETHODS_URL                       | The base URL for connect to SoftwareAG WebMethods                                                                                                                              |
 | WEBMETHODS_AUTH_USERNAME             | The username used to authenticate the calls to SoftwareAG WebMethods gateway (same as the one used to login)                                                                    |
 | WEBMETHODS_AUTH_PASSWORD             | The password used to authenticate the calls to SoftwareAG WebMethods gateway (same as the one used to login)                                                                    |
 | WEBMETHODS_TIMEOUT                   | The connection timeout for querying SoftwareAG WebMethods's API (default: `1m`)                                                                                                 |
