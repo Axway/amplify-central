@@ -114,7 +114,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 #### Invoke policy handling
 
-When a Front End Proxy is secured by invoking a policy the agent will not know what the actual policy does. When the policy itself applies a known security type it is possible to have the agent map a policy name to a credential type, this credential type is what consumers will be prompted to create in Marketplace. In addition to the internal API Manager security types the Credential Type may reference the name of an an External IDP.
+When a Front End Proxy is secured by invoking a policy, the agent will not know what the actual policy does. When the policy itself applies a known security type, it is possible to have the agent map a policy name to a credential type. This credential type is what consumers will be prompted to create in Marketplace. In addition to the internal API Manager security types, the Credential Type may reference the name of an external IDP.
 
 | Variable name                                  | Description                                                                                                                                                                                                         |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -144,7 +144,7 @@ APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_3=APIKey
 
 An invoke policy mapping may reference any IDP name set in the configuration, below is a sample of the environment variable setup to handle this mapping.
 
-Given the configuration below, a proxy secured by the `IDPAuthPolicy` policy will map the credential type to the `idp-name` Okta IDP. For more information on the IDP environment variables see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning#provisioning-OAuth-credential-to-an-identity-provider).
+Given the configuration below, a proxy secured by the `IDPAuthPolicy` policy will map the credential type to the `idp-name` Okta IDP. For more information on the IDP environment variables, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning#provisioning-OAuth-credential-to-an-identity-provider).
 
 ```shell
 APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_1=IDPAuthPolicy
