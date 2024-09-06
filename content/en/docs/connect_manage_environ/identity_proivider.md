@@ -71,6 +71,12 @@ Only the Central Admin role can create identity providers.
 
 5. Click **Save** to create the identity provider and return to the list of identity providers.
 
+### Editing an identity provider
+
+1. On the Identity Provider list view click the three ellipsis for identity provider you would like to edit the and select **Edit**.
+2. Edit any fields you would like to change.
+3. Once finished click **Save**.
+
 ### Deleting an identity provider
 
 Only the Central Admin role can delete identity providers.
