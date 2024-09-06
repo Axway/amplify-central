@@ -1,10 +1,10 @@
 ---
-title: Configure runtime compliance
-linkTitle: Configure runtime compliance
+title: Configure Graylog runtime compliance
+linkTitle: Configure Graylog runtime compliance
 weight: 20
 ---
 
-Configure your runtime compliance with the Axway Central CLI.
+Configure your runtime compliance with the Axway Central CLI and Graylog.
 
 ## Before you start
 
