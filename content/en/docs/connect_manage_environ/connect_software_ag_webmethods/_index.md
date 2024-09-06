@@ -46,13 +46,13 @@ For deprovisioning:
 
 For the credential to work, a credential policy action needs to be configured first. These are the steps:
 
-* Identify the API you want to secure
-* Go to the `Policies` tab
-* Enter edit mode by pressing `Edit` button in the right corner
-* Select `Identify & Access` category from the left list
-* Create a `Identify & Authorize` policy action by pressing the `+` next to it
-* Select the condition type: `AND` or `OR` and select the wanted authorization method(s)
-* Save the configuration by pressing the `Save` button in the right corner
+1. Identify the API you want to secure.
+2. Select the **Policies** tab.
+3. Click **Edit** in the right corner to enter edit mode.
+4. Select the **Identify & Access** category from the left list.
+5. Create an Identify & Authorize policy action by clicking the **+** next to it.
+6. Select the condition type: **AND** or **OR** and select the wanted authorization method(s).
+7 Click **Save** in the right corner to save the configuration.
 
 When handling a new credential event, for a given application, the following steps are taken:
 
@@ -117,3 +117,8 @@ Use one of the following settings, for both agents, to set the region the agent 
 ## Connect to SoftwareAG WebMethods gateway
 
 Both agents will use the credentials used to login in the SoftwareAG WebMethods gateway, the email address and password
+
+## Related topics
+
+See the following topics for related information.
+
