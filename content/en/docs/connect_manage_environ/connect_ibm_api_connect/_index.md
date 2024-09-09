@@ -143,3 +143,7 @@ Follow these steps to retrieve your IBM API Connect Analytics Server ID:
 3. The Analytics ID can be retrieved within the URL bar of the browser. See the UUID value `1111111-1111-1111-1111-111111111111` after `analytics/` and before `/dashboards` below:
 
 Ex: `https://apiconnect.host.com/manager/orgname/analytics/1111111-1111-1111-1111-111111111111/dashboards`
+
+## Related topics
+
+See the following topics for related information.
