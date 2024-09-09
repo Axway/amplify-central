@@ -113,7 +113,3 @@ The installation procedure will prompt for the following:
     * **Publication Filter**: the publication state of the API on SwaggerHub (published or unpublished). If nothing is selected, the agent discovers both published and unpublished APIs
 
     Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to SwaggerHub. If set to discover SwaggerHub resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
-
-## Related topics
-
-See the following topics for related information.
