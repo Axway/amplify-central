@@ -5,8 +5,6 @@ weight: 350
 date: 2020-11-18
 ---
 
-(Add Software AG)
-
 Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
 
 The following is an example of a simple environment with an API service asset:
@@ -58,10 +56,10 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Access Request**             | Associated Frontend Proxy with Application | No                         | If ACL plugin is required to give consumer access to Route | No                       | No             |
 | **Credential Type**            | Basic Auth / OAuth                         | No                         | APIKey / Basic Auth / OAuth                                | No                       | APIKey / SASL  |
 | **Credential Actions**         | Suspend/Enable                             | No                         | Suspend/Enable                                             | No                       | Suspend/Enable |
-| **Quota Enforcement**          | No                                         | No                         | Rate limiting plugin added to Consumer                     | No                       | No             |
-| **Traceability**               | No                                         | No                         | Using the Kong HTTP log plugin                             | No                       | No             |
-| **Platform Usage**             | Yes                                        | No                         | Yes                                                        | No                       | Yes            |
-| **Transaction Metrics**        | No                                         | No                         | Yes                                                        | No                       | Yes            |
+| **Quota Enforcement**          | No                                         | Quotas are attached to a Usage plan                         | Rate limiting plugin added to Consumer                     | No                       | No             |
+| **Traceability**               | No                                         | Yes                         | Using the Kong HTTP log plugin                             | No                       | No             |
+| **Platform Usage**             | Yes                                        | Yes                         | Yes                                                        | No                       | Yes            |
+| **Transaction Metrics**        | No                                         | Yes                         | Yes                                                        | No                       | Yes            |
 | **Transaction Event Sampling** | No                                         | No                         | Yes                                                        | No                       | No             |
 
 ### SaaS (Embedded) Agent Features
@@ -90,7 +88,7 @@ For detailed information about agent configuration, features and limitations, se
 * [Discovery and Traceability Agents for IBM API Connect](/docs/connect_manage_environ/connect_ibm_api_connect/)
 * [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/)
 * [Discovery and Traceability Agents for MuleSoft Gateway](https://github.com/Axway/agents-mulesoft)
-* [Discovery and Traceability Agents for Software AG webMethods](https://github.com/Axway/agents-webmethods)
+* [Discovery and Traceability Agents for Software AG webMethods](https:///docs/connect_software_ag_webmethods/)
 * [Discovery and Traceability Agents for Kong Gateway](https://github.com/Axway/agents-kong)
 * [Discovery Agent for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/)
 * [Discovery Agent for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
