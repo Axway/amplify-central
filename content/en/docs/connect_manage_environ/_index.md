@@ -56,11 +56,11 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Access Request**             | Associated Frontend Proxy with Application | No                         | If ACL plugin is required to give consumer access to Route | No                       | No             |
 | **Credential Type**            | Basic Auth / OAuth                         | No                         | APIKey / Basic Auth / OAuth                                | No                       | APIKey / SASL  |
 | **Credential Actions**         | Suspend/Enable                             | No                         | Suspend/Enable                                             | No                       | Suspend/Enable |
-| **Quota Enforcement**          | No                                         | Quotas are attached to a Usage plan                         | Rate limiting plugin added to Consumer                     | No                       | No             |
+| **Quota Enforcement**          | No                                         | Quotas are attached to a Policy in the API                         | Rate limiting plugin added to Consumer                     | No                       | No             |
 | **Traceability**               | No                                         | Yes                         | Using the Kong HTTP log plugin                             | No                       | No             |
 | **Platform Usage**             | Yes                                        | Yes                         | Yes                                                        | No                       | Yes            |
 | **Transaction Metrics**        | No                                         | Yes                         | Yes                                                        | No                       | Yes            |
-| **Transaction Event Sampling** | No                                         | No                         | Yes                                                        | No                       | No             |
+| **Transaction Event Sampling** | No                                         | Yes                         | Yes                                                        | No                       | No             |
 
 ### SaaS (Embedded) Agent Features
 
