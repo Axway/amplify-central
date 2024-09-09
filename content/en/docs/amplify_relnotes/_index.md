@@ -51,6 +51,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.95)  | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
 | Graylog API Security                       | 1.1.1                   | 1.0.5                           |
+| Traceable API Security                       | 1.1.0                   | 1.0.0                           |
 
 ### September 6 Release summary
 
