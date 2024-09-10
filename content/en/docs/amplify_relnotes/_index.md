@@ -20,6 +20,76 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify Enterprise Marketplace September 6 2024](/docs/amplify_relnotes/20240906_amplify/)
+
+{{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of August 8, 2024, the Unified Catalog is no longer supported.{{< /alert >}}
+
+### September 6 Supported agents
+
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.96 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
+|--------------------------------------------|--------------------------|------------------|
+| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.3 / TA=v1.2.3    | DA=v1.1.80 / TA=v1.1.81          |
+| AWS Gateway using SDK 2.0                  | DA=v1.2.2 / TA-v1.2.2    | DA=v1.1.64 / TA-v1.1.67          |
+| Azure latest release                       | DA=v1.2.2 / TA=v1.2.2    | DA=v1.1.70 / TA=v1.1.76          |
+| Istio 1.9.5                                | DA=v1.1.2 / TA=v2.1.2    | DA=v1.0.36 / TA=v2.0.82          |
+| Apigee Edge                                | 0.2.2                    | 0.1.38                           |
+| Mulesoft Anypoint platform v3              | 1.2.2                    | 1.1.48                           |
+| Software AG webMethods                     | 1.0.0                    | 1.0.0                            |
+| Kong Gateway                               | 1.1.2                    | 1.0.9                            |
+| GitLab                                     | 1.1.2                    | 1.0.6                            |
+| Kafka Cluster                              | DA=v1.1.2 / TA=v1.1.2    | DA=v1.0.6 / TA=v1.0.6            |
+| IBM API Connect Gateway                    | DA=v1.1.2 / TA=v1.1.2    | DA=v1.0.0 / TA=v1.0.0            |
+
+| Supported SaaS (embedded) agents           |
+|--------------------------------------------|
+| AWS Embedded Service                       |
+| Apigee X Embedded Service                  |
+| GitHub Embedded Service                    |
+| Azure Embedded Service                     |
+| SwaggerHub Embedded Service                |
+
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.96)  | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83)  |
+|--------------------------------------------|--------------------------|------------------|
+| Graylog API Security                       | 1.1.2                    | 1.0.5            |
+| Traceable API Security                     | 1.0.0                    | 1.0.0            |
+
+### September 6 Release summary
+
+| Axway Agent SDK |        |
+|--------|---------|
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**On-premise agents** |         |
+| What's new: | **Software AG webMethods Agent** - Software AG Quota Enforcement. <br />**Traceable Agent** - New Traceable API Security Agent. |
+| Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
+| <br />**SaaS (embedded) agents** |    |
+| What's new: | None. |
+| Bug fixes:  | None. |
+| <br />**Axway CLI** |       |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Axway Central CLI** |       |
+| What's new: | Software AG and Traceable Agent installation. |
+| Bug fixes: | None. |
+| <br />**Service Registry** <br />**Topology** |         |
+| What's new: | **Service Registry** - None. <br />**Topology** - None. |
+| Bug fixes: | **Service Registry** - None. <br />**Topology** - None. |
+| <br />**Asset Catalog** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Product Foundry** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Business insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+| <br />**Marketplace** |         |
+| What's new: | Resource dropdown shows additional information.|
+| Bug fixes: | See release note. |
+| <br />**Consumer insights** |         |
+| What's new: | None. |
+| Bug fixes: | None. |
+
 ---
 
 ## [Amplify Enterprise Marketplace August 30 2024](/docs/amplify_relnotes/20240830_amplify/)
@@ -59,7 +129,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Axway Agent SDK |        |
 |--------|---------|
 | What's new: | None. |
-| Bug fixes: | Remove all the Unified Catalog API call. |
+| Bug fixes: | See release note. |
 | <br />**On-premise agents** |         |
 | What's new: | None. |
 | Bug fixes: | **Axway API Management Gateway Agent** - See release note. |
