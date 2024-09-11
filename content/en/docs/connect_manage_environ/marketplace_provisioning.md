@@ -175,7 +175,8 @@ AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
 #### Show / Hide the values in the Credential Request OAuth type drop-down menu
 
 This feature allows you to toggle between displaying or hiding the specific options within the OAuth credential type dropdown menu on the Request Credential screen in the Marketplace.
-![Alt image](/static/Images/marketplace/Oauth.png)
+
+![Alt image](/Images/marketplace/Oauth.png)
 
 The Discovery Agent for Axway API Management 7.6.2 SPx and 7.7 SPx provides the ability to control the OAuth credential type drop-down values in the Marketplace based on environment variable configuration.
 The following is an example to limit the drop-down value to 'OAuth Client ID & Secret".
