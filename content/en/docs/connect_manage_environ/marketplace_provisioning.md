@@ -80,20 +80,19 @@ The Discovery Agent for Axway API Management 7.6.2 SPx and 7.7 SPx provides abil
 CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_secret
 ```
 
-The following is an example of registering the provider using environment variable based configuration to limit the drop-down value to 'OAuth Client ID & Private Key".
+The following is an example of registering the provider using environment variable based configuration to limit the drop-down value to 'OAuth Client ID & Private Key". The Discovery Agent variable is set to 'oauth_public_key' because that is what the agent need to send to the Axway API Management Gateway.
 
 ```shell
 # create credential drop-down menu with only the OAuth Client ID & Private Key credential type
 CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key
 ```
 
-The following is an example of registering the provider using the deault environment variable based configuration to allow the drop-down values of both 'OAuth Client ID & Secret" and 'OAuth Client ID & Private Key".
+The following is an example of registering the provider using the default environment variable based configuration to allow the drop-down values of both 'OAuth Client ID & Secret" and 'OAuth Client ID & Private Key".
 
 ```shell
 # create credential drop-down menu with both the OAuth Client ID & Private Key and OAuth Client ID & Secret credential types
 CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key,oauth_secret
 ```
-
 
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
