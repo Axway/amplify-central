@@ -41,6 +41,8 @@ From the Marketplace, a consumer first requests access to a resource and then re
 
 The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated data plane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
+(Robert - update)
+
 * Name (`AGENTFEATURES_IDP_NAME`): The name of the OAuth identity provider.
 * Title (`AGENTFEATURES_IDP_TITLE`): The title of the Credential Request Definition that will be shown to consumers in Amplify Marketplace.
 * Type (`AGENTFEATURES_IDP_TYPE`): The type of OAuth identity provider (`generic`, `keycloak` or `okta`).
