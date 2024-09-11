@@ -81,7 +81,7 @@ The variables common to all agents are described here in more detail.
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CENTRAL_ADDITIONALTAGS           | Additional tag names to publish while publishing the API. Could help to identified the API source. It is a comma separated list.                                           |
 | CENTRAL_MIGRATION_CLEANINSTANCES | When set to true, the agent, on startup, will clean all except the latest API service instance for every API service and Stage combination.                                |
-| CENTRAL_CREDENTIALS_OAUTHMETHODS | Agents will add all OAuth credential types which the Gateway supports on discovery. To limit the types added set this variable. (default: `oauth_public_key,oauth_secret`) |
+| CENTRAL_CREDENTIALS_OAUTHMETHODS | Agents will add all OAuth credential types that the Gateway supports on discovery. To limit the types added, set this variable (default: `oauth_public_key,oauth_secret`). |
 
 #### IdP configuration variables
 
