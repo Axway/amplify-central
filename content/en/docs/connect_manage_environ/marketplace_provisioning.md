@@ -24,6 +24,7 @@ Provisioning use cases include:
 * Deprovision data plane when a consumer deletes an application or credentials
 * Enforce an expiration date for provisioned credential
 * Report traffic to Consumer Insights
+* Provisioning OAuth credential to an identity provider
 
 ### Provision data plane when consumer requests access to a product resource
 
@@ -37,7 +38,7 @@ From the Marketplace, a consumer first requests access to a resource and then re
     * API key (Axway API Manager / AWS Gateway / Azure)
     * OAuth credential (Axway API Manager only)
 
-#### Provisioning OAuth credential to an identity provider
+### Provisioning OAuth credential to an identity provider
 
 The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated data plane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
@@ -169,6 +170,34 @@ AGENTFEATURES_IDP_AUTH_CLIENTID_1="id-for-client"
 AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY_1=true
 AGENTFEATURES_IDP_SSL_CLIENTCERTPATH_1=/path-of-self-signed-client-certificate
 AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
+```
+
+#### Show / Hide the values in the credential request OAuth Type dropdown menu
+
+This feature allows you to toggle between displaying or hiding the specific options within the OAuth credential Type dropdown menu on the Request Credential screen in the Marketplace.
+
+![Alt image](/Images/marketplace/Oauth.png)
+
+The Discovery Agent for Axway API Management 7.6.2 SPx and 7.7 SPx provides the ability to control the OAuth credential Type dropdown values in the Marketplace based on environment variable configuration.
+The following is an example to limit the dropdown value to "OAuth Client ID & Secret."
+
+```shell
+# create credential dropdown menu with only the OAuth Client ID & Secret credential type
+CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_secret
+```
+
+The following is an example to limit the dropdown value to "OAuth Client ID & Private Key."
+
+```shell
+# create credential dropdown menu with only the OAuth Client ID & Private Key credential type
+CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key
+```
+
+The following is an example to allow the dropdown values of both "OAuth Client ID & Secret" and "OAuth Client ID & Private Key." This is also the default setting if the CENTRAL_CREDENTIALS_OAUTHMETHODS environment variable is not set.
+
+```shell
+# create credential dropdown menu with both the OAuth Client ID & Private Key and OAuth Client ID & Secret credential types
+CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key,oauth_secret
 ```
 
 ### Deprovision data plane when consumer deletes an application or credentials
