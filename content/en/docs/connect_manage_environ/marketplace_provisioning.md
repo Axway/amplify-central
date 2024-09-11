@@ -41,8 +41,6 @@ From the Marketplace, a consumer first requests access to a resource and then re
 
 The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated data plane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
-(Robert - update)
-
 * Name (`AGENTFEATURES_IDP_NAME`): The name of the OAuth identity provider.
 * Title (`AGENTFEATURES_IDP_TITLE`): The title of the Credential Request Definition that will be shown to consumers in Amplify Marketplace.
 * Type (`AGENTFEATURES_IDP_TYPE`): The type of OAuth identity provider (`generic`, `keycloak` or `okta`).
@@ -74,6 +72,28 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
         * Client key (`AGENTFEATURES_IDP_SSL_CLIENTKEYPATH`): The path of the client key to be used for the mTLS connection.
 
 {{< alert title="Note" color="primary" >}}If your IDP is configured to use Client Registration Policies, ensure that the scopes defined in the API are allowed in the policy. See [Keycloak Client Registration](https://www.keycloak.org/docs/23.0.6/securing_apps/#_client_registration_policies).{{< /alert >}}
+
+The Discovery Agent for Axway API Management 7.6.2 SPx and 7.7 SPx provides ability to control the create OAuth credential type drop-down values in the Marketplace based on environment variable configuration. The following is an example of registering the provider using environment variable based configuration to limit the drop-down value to 'OAuth Client ID & Secret".
+
+```shell
+# create credential drop-down menu with only the OAuth Client ID & Secret credential type
+CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_secret
+```
+
+The following is an example of registering the provider using environment variable based configuration to limit the drop-down value to 'OAuth Client ID & Private Key".
+
+```shell
+# create credential drop-down menu with only the OAuth Client ID & Private Key credential type
+CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key
+```
+
+The following is an example of registering the provider using the deault environment variable based configuration to allow the drop-down values of both 'OAuth Client ID & Secret" and 'OAuth Client ID & Private Key".
+
+```shell
+# create credential drop-down menu with only the OAuth Client ID & Secret credential type
+CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key,oauth_secret
+```
+
 
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
