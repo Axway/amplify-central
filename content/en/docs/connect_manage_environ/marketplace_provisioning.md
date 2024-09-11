@@ -90,7 +90,7 @@ CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key
 The following is an example of registering the provider using the deault environment variable based configuration to allow the drop-down values of both 'OAuth Client ID & Secret" and 'OAuth Client ID & Private Key".
 
 ```shell
-# create credential drop-down menu with only the OAuth Client ID & Secret credential type
+# create credential drop-down menu with both the OAuth Client ID & Private Key and OAuth Client ID & Secret credential types
 CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key,oauth_secret
 ```
 
