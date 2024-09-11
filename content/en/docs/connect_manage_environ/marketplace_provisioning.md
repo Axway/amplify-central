@@ -172,31 +172,31 @@ AGENTFEATURES_IDP_SSL_CLIENTCERTPATH_1=/path-of-self-signed-client-certificate
 AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
 ```
 
-#### Show / Hide the values in the Credential Request OAuth type drop-down menu
+#### Show / Hide the values in the credential request OAuth Type dropdown menu
 
-This feature allows you to toggle between displaying or hiding the specific options within the OAuth credential type dropdown menu on the Request Credential screen in the Marketplace.
+This feature allows you to toggle between displaying or hiding the specific options within the OAuth credential Type dropdown menu on the Request Credential screen in the Marketplace.
 
 ![Alt image](/Images/marketplace/Oauth.png)
 
-The Discovery Agent for Axway API Management 7.6.2 SPx and 7.7 SPx provides the ability to control the OAuth credential type drop-down values in the Marketplace based on environment variable configuration.
-The following is an example to limit the drop-down value to 'OAuth Client ID & Secret".
+The Discovery Agent for Axway API Management 7.6.2 SPx and 7.7 SPx provides the ability to control the OAuth credential Type dropdown values in the Marketplace based on environment variable configuration.
+The following is an example to limit the dropdown value to "OAuth Client ID & Secret."
 
 ```shell
-# create credential drop-down menu with only the OAuth Client ID & Secret credential type
+# create credential dropdown menu with only the OAuth Client ID & Secret credential type
 CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_secret
 ```
 
-The following is an example to limit the drop-down value to 'OAuth Client ID & Private Key".
+The following is an example to limit the dropdown value to "OAuth Client ID & Private Key."
 
 ```shell
-# create credential drop-down menu with only the OAuth Client ID & Private Key credential type
+# create credential dropdown menu with only the OAuth Client ID & Private Key credential type
 CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key
 ```
 
-The following is an example to allow the drop-down values of both 'OAuth Client ID & Secret" and 'OAuth Client ID & Private Key".  This is also the default setting if the CENTRAL_CREDENTIALS_OAUTHMETHODS environment variable is not set.
+The following is an example to allow the dropdown values of both "OAuth Client ID & Secret" and "OAuth Client ID & Private Key." This is also the default setting if the CENTRAL_CREDENTIALS_OAUTHMETHODS environment variable is not set.
 
 ```shell
-# create credential drop-down menu with both the OAuth Client ID & Private Key and OAuth Client ID & Secret credential types
+# create credential dropdown menu with both the OAuth Client ID & Private Key and OAuth Client ID & Secret credential types
 CENTRAL_CREDENTIALS_OAUTHMETHODS=oauth_public_key,oauth_secret
 ```
 
