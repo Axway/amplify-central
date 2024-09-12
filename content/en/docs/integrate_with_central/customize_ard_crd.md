@@ -753,3 +753,180 @@ You will be able to see the purpose selector once you publish the product to the
 Once your access is granted, you can ask for credential. You should be able to see the file selector:
 
 ![Credential Request screen](/Images/central/integrate_with_central/CredentialRequestDefinition.png)
+
+## localize the screen customization
+
+Now that we know how to create and use those resources, you may want them to be shown in the same language as the product in a specific Marketplace. For that we will need to add additional sub-resources to those objects so that the title of the additional fields can store their translation.
+
+References:
+
+* [Marketplace localization](/docs/manage_marketplace/customize_marketplace/maketplace_localization)
+* [Manage product localization](/docs/manage_product_foundry/foundry_localization)
+* [Api Server object in multi-language](/docs/integrate_with_central/api_server#multi-language-support)
+
+The procedure describe below works for SubscriptionRequestDefinition, AccessRequestDefinition and CredentialRequestDefinition. You will need to translate the title of the custom screen and any field (title/description) present in the custom schema.
+
+The sub-resource handling the language definition should match the exact same schema as the custom screen definition. Otherwise the translation will be rejected.
+
+Step 1: adding the default language:
+
+Add the below sub-resource to an existing screen definition will tell that now the default language for this screen is English:
+
+```json
+{
+    "languages": {
+        "resource": {
+            "code": "en-us"
+        }
+    }
+}
+```
+
+Step 2: retrieve current custom schema from previous example related to subscription specific screen
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "SubscriptionRequestDefinition",
+    "name": "srd-1",
+    "title": "Subscription definition email consumer",
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+                "email", "billingAddress"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "title": "Email",
+                    "description": "The best email to reach you"
+                },
+                "billingAddress": {
+                    "type": "string",
+                    "title": "Billing address",
+                    "description": "Physical address with postal code and city"
+                }
+            }
+        }
+    }
+}
+```
+
+and Copy it into the language resource definition.
+
+Step 3: creating the additional language:
+
+```json
+{
+    "languages-fr-fr": {
+        "values": [
+            {
+                "path": "/title",
+                "value": "La souscription demande un email et une adresse de facturation"
+            },
+            {
+                "path": "/spec/schema",
+                "value": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "required": [
+                        "email", "billingAddress"
+                    ],
+                    "properties": {
+                        "email": {
+                            "type": "string",
+                            "title": "Email",
+                            "description": "The best email to reach you"
+                        },
+                        "billingAddress": {
+                            "type": "string",
+                            "title": "Billing address",
+                            "description": "Physical address with postal code and city"
+                        }
+                    }
+                },
+                "status": "complete"
+            }
+        ]
+    }
+}
+```
+
+Step 4: putting all together:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "SubscriptionRequestDefinition",
+    "name": "srd-1",
+    "title": "Subscription definition email consumer",
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+                "email", "billingAddress"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "title": "Email",
+                    "description": "The best email to reach you"
+                },
+                "billingAddress": {
+                    "type": "string",
+                    "title": "Billing address",
+                    "description": "Physical address with postal code and city"
+                }
+            }
+        }
+    },
+    "languages": {
+        "resource": {
+            "code": "en-us"
+        }
+    },
+    "languages-fr-fr": {
+        "values": [
+            {
+                "path": "/title",
+                "value": "La souscription demande un identifiant de département"
+            },
+            {
+                "path": "/spec/schema",
+                "value": {
+                    "type": "object",
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "required": [
+                        "email", "billingAddress"
+                    ],
+                    "properties": {
+                        "email": {
+                            "type": "string",
+                            "title": "Courriel",
+                            "description": "Le meilleur email pour vous joindre"
+                        },
+                        "billingAddress": {
+                            "type": "string",
+                            "title": "Adresse de facturation",
+                            "description": "Adresse de facturation incluant le code postal et la ville"
+                        }
+                    }
+                },
+            }
+        ]
+    }
+}
+```
+
+Now using the CLI, you should be able to post the above and you now have this custom subscription screen in both languages: English and French.

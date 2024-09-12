@@ -90,7 +90,15 @@ Cancelling the wizard will not remove the uploaded files. If you don't need an u
 
 ## Edit a document
 
-Functionality under development.
+All document library document are editable.
+
+To edit a document:
+
+1. Navigate to *Document Library*.
+2. Find the document you want to edit
+3. Click the document name to open the document details
+4. Click the Pencil icon to enter the document wizard where you can change things as you see fit. The only restriction is that you are not able to change the document type.
+5. Click **Save & Exit** when you are done with your modification
 
 ## Delete a document
 
@@ -106,3 +114,16 @@ To delete a document:
 2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete multiple documents, select the checkboxes in front of the documents and click **Delete**.
 3. A popup displays the selected document name(s) as well as all affected references (product / Marketplace). Type **DELETE** in the confirmation field.
 4. Click **Delete** to validate the action.
+
+## Multi-languages
+
+If your Document can be seen on the Marketplace (either because used in a manu or in product documentation), it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
+
+By default 4 languages are available : English / French / German / Brazilian Portuguese
+
+You will need 2 things:
+
+* the Document default language
+* the Document translation languages
+
+The feature is not yet available in the UI, but you can use the CLI or API to add the Document available languages.
