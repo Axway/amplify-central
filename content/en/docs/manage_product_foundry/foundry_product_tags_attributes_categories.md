@@ -168,3 +168,14 @@ Catalog Manager users can only assign existing categories.
 1. Select a product in the *Product Foundry* and open it.
 2. Click on the Categories field in the details panel and select the category from the list. The list contains global categories and product specific categories.
 3. Click the **X** next to the category name to remove a category.
+
+### Multi-languages
+
+If you use Category to be seen on the Marketplace, it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
+
+By default 4 languages are available : English / French / German / Brazilian Portuguese
+
+You will need 2 things:
+
+* the category default language
+* the category translation languages
