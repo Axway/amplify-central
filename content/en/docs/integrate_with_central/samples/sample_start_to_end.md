@@ -18,7 +18,7 @@ The scenario is the following: we have an API Service that will move from Dev, Q
 
 The product and his various components (category, documentation, stage, plan) will be internationalized using two languages: US (default) and FR. So that it can be displayed differently based on the Marketplace language settings.
 
-The scenario is available here for [download](/static/samples/e2e/e2e.zip)
+The scenario is available here for [download](/samples/e2e/e2e.zip)
 
 The zip structure is the following:
 
