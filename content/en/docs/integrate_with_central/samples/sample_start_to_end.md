@@ -63,7 +63,7 @@ The file *J0-2-stage-visibility.json* needs to be updated with the Marketplace n
 
 You can find the Marketplace name using this CLI command: `axway central get marketplace`.
 
-Grab the name and replace _MKT_NAME_GOES_HERE_ inside the file with the appropriate name you want. Save it and apply it as the other files. Now, the stages should be visible in the Marketplace you selected.
+Grab the name and replace `_MKT_NAME_GOES_HERE_` inside the file with the appropriate name you want. Save it and apply it as the other files. Now, the stages should be visible in the Marketplace you selected.
 {{< /alert >}}
 
 {{< alert title="Category visibility" color="primary" >}}
@@ -71,7 +71,7 @@ The file *J0-5-category-visibility.json* needs to be updated with the Marketplac
 
 You can find the Marketplace name using this CLI command: `axway central get marketplace`.
 
-Grab the name and replace _MKT_NAME_GOES_HERE_ inside the file with the appropriate name you want. Save it and apply it as the other files. Now, the category should be visible in the Marketplace you selected.
+Grab the name and replace `_MKT_NAME_GOES_HERE_` inside the file with the appropriate name you want. Save it and apply it as the other files. Now, the category should be visible in the Marketplace you selected.
 {{< /alert >}}
 
 {{< alert title="Marketplace publication" color="primary" >}}
@@ -79,7 +79,7 @@ The file *J1-11-productPublish.json* needs to be updated with the Marketplace na
 
 You can find the Marketplace name using this CLI command: `axway central get marketplace`.
 
-Grab the name and replace _MKT_NAME_GOES_HERE_ inside the file with the appropriate name you want. Save it and apply it as the other files. Now, your product should be visible in the Marketplace you selected.
+Grab the name and replace `_MKT_NAME_GOES_HERE_` inside the file with the appropriate name you want. Save it and apply it as the other files. Now, your product should be visible in the Marketplace you selected.
 {{< /alert >}}
 
 ## Tips
