@@ -16,22 +16,34 @@ Learn how to manage your Marketplace language(s) so that consumer can see produc
 
 ## Marketplace localization setup
 
-Setup the language of your choice - 4 are available: English / French / German / Brazilian Portuguese
+Setup the language of your choice - 4 are available: **English** / **French** / **German** / **Brazilian Portuguese**
 
-By default, English is the default Marketplace language. The default language is the one that will be use if a product translation cannot be found. Otherwise the Marketplace will display the product in its own default language if that language is available in the Marketplace.
+By default, English is the default Marketplace language. Provider can change the default language to any supported one as needed. The default language is the one that will be used for displaying the Marketplace visual elements (menus / buttons / static labels) in case the browser language does not match any Marketplace language definition. For instance having a browser language in Spanish will result in displaying the Marketplace element in the default Marketplace language as Spanish is not a known language managed by the Marketplace.
 
-{{< alert title="Note" color="warning" >}}
-In case a product is not fully localized ie not all product fields (title / description / plan / quota / markdown documentation) are translated to a specific language, the default Marketplace language will be applied to the missing field translation.
-{{< /alert >}}
+Samples:
 
-How Marketplace product display language is determined?
+| Marketplace available language(s) | Browser language(s)           | Marketplace graphic elements display |
+| --------------------------------- | ----------------------------- |------------------------------------- |
+| English (Default)                 | English                       | English                              |
+| English (Default) </br> French    | Spanish                       | English                              |
+| English (Default) </br> French    | French                        | French                               |
+| German (Default) </br> Portuguese | French                        | German                               |
+
+Product definition can have his own language definition different from the Marketplace language definition. The system will try to match the product language based on the browser language definition and if a product translation cannot be found, it will default to the default product language to show those missing translation. This mean consumer may see as partial translated product in the Marketplace.
+
+Let's see with examples how Marketplace product display language is determined?
 
 | Marketplace available language(s) | Product available language(s) | Marketplace product language display |
 | --------------------------------- | ----------------------------- | ------------------------------------ |
 | English (Default)                 | English (Default)             | English                              |
 | English (Default) </br> French    | French (Default)              | French                               |
-| English (Default) </br> German    | French (Default) </br> no other translation provided | English       |
+| English (Default) </br> German    | French (Default) </br> no other translation provided | French (product default)       |
 | German (Default) </br> Portuguese | French (Default) </br> German translation | German                   |
+| German (Default) </br> Portuguese | French (Default) </br> English translation | French (product default)                   |
+
+{{< alert title="Note" color="warning" >}}
+It is highly recommended to align the Marketplace default language with product default language to avoid inconsistencies in translation.
+{{< /alert >}}
 
 To setup the Marketplace accepted languages:
 
@@ -51,11 +63,10 @@ The Default language cannot be disabled.
 
 ## Consumer experience
 
-Consumer will see the translated product.
+Consumer will see the translated product according to the rules above.
 
 {{< alert title="Limitation" color="warning" >}}
 Although most of the static elements of the Marketplace will be translated, some will not:
 
 * swagger UI component that render the API specification
-* Additional fields available for Subscription Request, Access Request or Credential Request
 {{< /alert >}}
