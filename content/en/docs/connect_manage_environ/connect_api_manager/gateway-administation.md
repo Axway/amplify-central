@@ -43,18 +43,20 @@ The containerized agent can run in the following mode:
 
 #### To install the Binary Discovery Agent
 
-**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
 
-**Step 2**: Download the current version of the zip file from the Axway public repository using the following command: (Robert, even if I replace axway.jfrog.io with repository.axway.com, it is not valid)
+* Go to *Help menus > Downloads > Repository* 
+     -or-
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+
+**Step 2**: Download the install version of the zip file from the Axway repository. 
+
+
+
+**Step 3**: Unzip the file agent zip file to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
 
 ```shell
-curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_discovery_agent/{agentVersion}/discovery_agent-{agentVersion}.zip" -o discovery_agent-{agentVersion}.zip
-```
-
-**Step 3**: Unzip the file discovery_agent-{agentVersion}.zip to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
-
-```shell
-unzip discovery_agent-{agentVersion}.zip
+unzip AmplifyCentralAgents_{agentVersion}_Install_v7-da_allOS_BN1.zip
 ```
 
 **Step 4**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
