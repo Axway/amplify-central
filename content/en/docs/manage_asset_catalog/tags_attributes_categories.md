@@ -46,14 +46,3 @@ Only users that are assigned the **Central Admin** role can create, edit, and 
 
 3. Press **Enter** or click **+** to add the new category to the list of categories.
 4. Click **Save** or **Save Draft & Exit**.
-
-### Multi-languages
-
-If you use Category to be seen on the Marketplace, it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
-
-By default 4 languages are available : English / French / German / Brazilian Portuguese
-
-You will need 2 things:
-
-* the category default language
-* the category translation languages
