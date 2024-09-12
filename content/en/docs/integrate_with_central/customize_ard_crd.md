@@ -754,7 +754,7 @@ Once your access is granted, you can ask for credential. You should be able to s
 
 ![Credential Request screen](/Images/central/integrate_with_central/CredentialRequestDefinition.png)
 
-## localize the screen customization
+## Multi-languages
 
 Now that we know how to create and use those resources, you may want them to be shown in the same language as the product in a specific Marketplace. For that we will need to add additional sub-resources to those objects so that the title of the additional fields can store their translation.
 
