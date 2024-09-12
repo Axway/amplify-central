@@ -223,7 +223,7 @@ docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys {agentImage}
 Traceability Agent: (Jason for Data mount??)
 
 ```shell
-docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:{agentVersion}
+docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data {agentImage}
 ```
 
 ### Helm deployment
