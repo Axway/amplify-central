@@ -5,7 +5,7 @@ linkTitle: e2e scenario
 
 ## Before you start
 
-* You understand the concepts involved in the [API Server](/docs/integrate_with_central/api_server/).
+* You understand the concepts involved in the [API Server](/docs/integrate_with_central/api_server/) and specifically the [multi-languages support](/docs/integrate_with_central/api_server/#multi-languages-support)
 * You know how to use [Amplify Central CLI](/docs/integrate_with_central/cli_central)
 
 ## Objectives
