@@ -92,6 +92,8 @@ The list of stages is displayed with the following information:
 * Assets - the number of assets that have a service the stage is associated to.
 * Description - the stage description.
 
+The stage name is a clickable link that opens the translation information. Refer to [Multi-languages](#multi-languages)
+
 ### Creating a stage
 
 Only the Central Admin role can create Stages.
@@ -158,3 +160,16 @@ The stage is visible when:
 * Subscribing to a plan through the plan preview.
 
 {{< alert title="Note" color="primary" >}}If a consumer from a provider organization is part of multiple teams that can subscribe to a product, then a warning is displayed when attempting to subscribe. It informs the consumer that what is seen in the plan is not necessarily what will be accessible to the specified team. The consumer is encouraged to review the plan details before proceeding to the subscription.{{< /alert >}}
+
+## Multi-languages
+
+If the Stage is visible on the Marketplace, it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
+
+By default 4 languages are available : English / French / German / Brazilian Portuguese
+
+You will need 2 things:
+
+* the stage default language
+* the stage translation languages
+
+The language can be set using the List view ellipsis menU **Translate**. This will open the translation details screen where you can set the Default Lanaguage as well as the other needed languages.
