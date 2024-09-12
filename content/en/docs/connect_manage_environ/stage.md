@@ -92,7 +92,7 @@ The list of stages is displayed with the following information:
 * Assets - the number of assets that have a service the stage is associated to.
 * Description - the stage description.
 
-The stage name is a clickable link that opens the translation information. Refer to [Multi-languages](#multi-languages)
+The stage name is a clickable link that opens the translation information panel. Refer to [Multi-languages](#multi-languages)
 
 ### Creating a stage
 
@@ -172,4 +172,4 @@ You will need 2 things:
 * the stage default language
 * the stage translation languages
 
-The language can be set using the List view ellipsis menU **Translate**. This will open the translation details screen where you can set the Default Lanaguage as well as the other needed languages.
+The language can be set using the List view ellipsis menu **Translate**. This will open the translation details screen where you can set the Default Language as well as the other needed languages.
