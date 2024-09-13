@@ -438,3 +438,245 @@ metadata:
       scopedResourceOwnerId: '*'
 ...
 ```
+
+### Multi-languages support
+
+Some objects support translation definition to visualize them differently based on the language context used:
+
+List of the object and fields that support translation:
+
+* **Product**: title, description
+* **Product Plan**: title, description
+* **Product Plan Quota**: name
+* **Product Documentation**: topic name, topic description, section name, section description, article name, article description, article markdown
+* **Document library document**: document title, document description, markdown content, binary content (PDF/PPTX,...), url
+* **Category**: title, description
+* **Stage**: title, description
+* **SubscriptionRequestDefinition**: title, each object in the schema having title and/or description
+* **AccessRequestDefinition**: title, each object in the schema having title and/or description
+* **CredentialRequestDefinition**: title, each object in the schema having title and/or description
+
+These translations are provided using 2 different sub-resources attached to the object:
+
+* the default language sub-resources
+* the language specific sub-resource (one for each translated languages)
+
+Sample sub-resource for setting the object default language as English:
+
+```json
+{
+    "languages": {
+        "resource": {
+            "code": "en-us"
+        }
+    }
+}
+```
+
+Similar resource in yaml format:
+
+```yaml
+---
+languages:
+  resource:
+    code: en-us
+```
+
+This default sub-resource tells that each individual fields of the object are now describe using the referenced language code.
+
+Available supported language codes are:
+
+* **en-us** for English
+* **fr-fr** for French
+* **de-de** for German
+* **pt-br** for Brazilian Portuguese
+
+Any other code will be rejected by the system.
+
+Each translated field has its existing path in the object and the associated translated value. The path is determine using the place of the field in the object. For instance title is at the top level whereas description is located under spec section of an object. Consequently, the path for **title** would be *"/title"* and the path for **description** is *"/spec/description"*.
+
+Sample sub-resource for setting a French language translation to any object having a *title* and *description*:
+
+```json
+{
+    "languages-fr-fr": {
+        "values": [
+            {
+                "path": "/title",
+                "value": "Produit de démonstration (FR)"
+            },
+            {
+                "path": "/spec/description",
+                "value": "Ce produit fait ceci et cela... (FR)"
+            }
+        ]
+    }
+}
+```
+
+Similar resource in yaml format:
+
+```yaml
+---
+languages-fr-fr:
+  values:
+  - path: "/title"
+    value: Produit de démonstration (FR)
+  - path: "/spec/description"
+    value: Ce produit fait ceci et cela... (FR)
+```
+
+Let's try to internationalise a product using the above definitions - the product default language is english and translated into French and German:
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "Product",
+    "title": "Product in English",
+    "spec": {
+        "assets": [
+            {
+                "name": "petstore"
+            }
+        ],
+        "description": "That product does this and that..."
+    },
+    "languages": {
+        "resource": {
+            "code": "en-us"
+        }
+    },
+    "languages-fr-fr": {
+        "values": [
+            {
+                "path": "/title",
+                "value": "Produit en Français"
+            },
+            {
+                "path": "/spec/description",
+                "value": "Ce produit fait ceci et cela..."
+            }
+        ]
+    },
+    "languages-de-de": {
+        "values": [
+            {
+                "path": "/title",
+                "value": "Produkt auf Deutsch"
+            },
+            {
+                "path": "/spec/description",
+                "value": "Dieses Produkt macht dies und das..."
+            }
+        ]
+    }    
+}
+```
+
+Using Amplify CLI or the Amplify API, you can import the above and your product is now ready to be view in 3 languages: English, French and German.
+
+By default when requesting an object using the CLI or API, the languages are not returned. You need to add amn extra parameter to your command to get those information: --language
+
+Getting all languages information from product called product-i18n:
+
+```cmd
+axway central get product product-i18n --language=* -o json
+```
+
+Getting a single language information from product called product-i18n:
+
+```cmd
+axway central get product product-i18n --language=fr-fr -o json
+```
+
+Getting multiple language information from product called product-i18n:
+
+```cmd
+axway central get product product-i18n --language=fr-fr,en-us -o json
+```
+
+It is also possible to get all the constraints of the fields that needs to be translated:
+
+* from CLI, using **--languageDefinition={languageCode}** parameter
+* from API, using **embed=languages-{languageCode}.resource&expand=languages-{languageCode}&fields=languages-{languageCode}.values** query parameters when getting the object
+
+Sample for getting all fields from product called product-i18n:
+
+```cmd
+axway central get product product-i18n --languageDefinition=fr-fr -o json 
+```
+
+will return:
+
+```json
+{
+    "languages-fr-fr": {
+        "values": [
+            {
+                "path": "/title",
+                "status": "undefined",
+                "_embedded": {
+                    "resource": {
+                        "schema": {
+                            "type": "string",
+                            "maxLength": 350,
+                            "description": "The resource title."
+                        },
+                        "value": "Product i18n"
+                    }
+                }
+            },
+            {
+                "path": "/spec/description",
+                "status": "undefined",
+                "_embedded": {
+                    "resource": {
+                        "schema": {
+                            "type": "string",
+                            "description": "Description of the Product.",
+                            "maxLength": 350
+                        },
+                        "value": "Help me there"
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
+Each time an object is updated, the system compute the completeness status of each individual fields. In case a field is not mandatory, the missing translated field status is not impacting. In case a mandatory field is missing in the translation sub-resource, the status of that field is incomplete and the global status of the sub-resource is incomplete too.
+
+Sub-resource possible statuses:
+
+* **complete**: translation is available
+* **incomplete**: some translations are missing
+* **undefined**: no translation provided
+
+#### Changing the default language
+
+To update the default language to a new one, you have to first to ensure that the new default language is not already part of the language specific resource.
+
+For instance, if your current default language is English and you have additional language as Portuguese, you are not allowed to change the default language to Portuguese until the Portuguese additional resources are removed.
+
+To remove an additional language, you need to mark all the properties of this language as undefined:
+
+```json
+{
+    "languages-fr-fr": {
+        "values": [
+            {
+                "path": "/title",
+                "status": "undefined"
+            },
+            {
+                "path": "/spec/description",
+                "status": "undefined"
+            }
+        ]
+    }
+}
+```
+
+Once this is done, you can change the default language to the new language using the same as explained earlier.
