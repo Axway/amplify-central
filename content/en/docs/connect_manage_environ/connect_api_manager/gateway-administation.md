@@ -49,9 +49,9 @@ The containerized agent can run in the following mode:
      -or-
 * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 
+and search for Install Image for the most recent agents `{agentImage}`.
+
 **Step 2**: Download the install version of the zip file from the Axway repository. 
-
-
 
 **Step 3**: Unzip the file agent zip file to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
 
@@ -88,13 +88,15 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 * The value for *organizationID* can be found in Enterprise Marketplace Platform > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-enterprise-central-apis).
 
-Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+Find the current agent release in the [agent release note](/docs/amplify_relnotes).
 
-Pull the Docker image of the Discovery Agent: (Robert??)
+Then access the list of available agents from your organization:
+* Go to *Help menus > Downloads > Repository* 
+     -or-
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+and search for Docker Image for the most recent agents `{agentImage}`.
 
-```shell
-docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
-```
+Follow the instructions to download the Docker image of the Discovery Agent.
 
 ### Customizing the Discovery Agent environment variable file
 
@@ -441,8 +443,8 @@ cd /home/APIC-agents
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Start the Docker Discovery Agent pointing to the `da_env_vars.env` file and the keys directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-   ```shell (Robert?)
-   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
+   ```shell
+   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v /data {agentImage}
    ```
 
 3. Run the following health check command to ensure the agent is up and running:
@@ -468,18 +470,18 @@ The containerized agent can run in the following mode:
 
 #### To install the binary Traceability Agent
 
-**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+**Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
 
-**Step 2**: Download the current version of the zip file from the Axway public repository using the following command: (Robert, even if I replace axway.jfrog.io with repository.axway.com, it is not valid)
+* Go to *Help menus > Downloads > Repository* 
+     -or-
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 
-```shell
-curl -L "https://axway.jfrog.io/artifactory/ampc-public-generic-release/v7-agents/v7_traceability_agent/{agentVersion}/traceability_agent-{agentVersion}.zip" -o traceability_agent-{agentVersion}.zip
-```
+**Step 2**: Download the install version of the zip file from the Axway repository. 
 
 **Step 3**: Unzip the file traceability_agent-{agentVersion}.zip to get the agent binary (traceability_agent) and a template configuration file (traceability_agent.yml):
 
 ```shell
-unzip traceability_agent-{agentVersion}.zip
+unzip AmplifyCentralAgents_{agentVersion}_Install_v7-ta_allOS_BN1.zip
 ```
 
 **Step 4**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
@@ -515,13 +517,16 @@ CENTRAL_ENVIRONMENT=<Environment>
 * The value for *organizationID* can be found in Amplify > Organization.
 * The value for *clientId* can be found in  Amplify > Service Accounts. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis).
 
-Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release in following sections.
+Find the current agent release in the [agent release note](/docs/amplify_relnotes).
+Then access the list of available agents from your organization:
+* Go to *Help menus > Downloads > Repository* 
+     -or-
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+and search for Docker Image for the most recent agents `{agentImage}`.
 
-Pull the Docker image of the Traceability Agent: (Robert?)
-
-```shell
-docker pull axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability-agent:{agentVersion}
-```
+Download the Docker image of the Traceability Agent.
+  
+As mentioned in the installation procedure, agents can be started with the following commands where `{agentImage}` below is the most recent agent image version available):
 
 ### Customizing the Traceability Agent environment variable file
 
@@ -920,7 +925,7 @@ See "To install the Dockerized Discovery Agent" section above for the `ta_env_va
 2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred. (Robert?)
 
    ```shell
-   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v <pwd>/data:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:{agentVersion}
+   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v /data -v {agentImage}
    ```
 
    * See [Create and start API Gateway Docker container](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_installation/apigw_containers/docker_script_gwimage/index.html#mount-volumes-to-persist-logs-outside-the-api-gateway-container) for more  information regarding the persistent API Gateway trace and event logs to a directory on your host machine.
