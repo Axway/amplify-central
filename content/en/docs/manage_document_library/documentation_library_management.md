@@ -115,7 +115,7 @@ To delete a document:
 3. A popup displays the selected document name(s) as well as all affected references (product / Marketplace). Type **DELETE** in the confirmation field.
 4. Click **Delete** to validate the action.
 
-## Multi-languages suppoort
+## Multi-languages support
 
 If your Document can be seen on the Marketplace (either because used in a manu or in product documentation), it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
 
