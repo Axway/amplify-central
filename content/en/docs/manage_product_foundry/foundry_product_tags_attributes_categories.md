@@ -169,7 +169,7 @@ Catalog Manager users can only assign existing categories.
 2. Click on the Categories field in the details panel and select the category from the list. The list contains global categories and product specific categories.
 3. Click the **X** next to the category name to remove a category.
 
-### Multi-languages
+### Multi-languages support
 
 If you use Category to be seen on the Marketplace, it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
 
@@ -179,3 +179,5 @@ You will need 2 things:
 
 * the category default language
 * the category translation languages
+
+The language can be accessed using either the List view ellipsis menu **Translate** or the Category edition wizard. This will open the translation details screen where you can set the Default Language as well as the other needed languages.

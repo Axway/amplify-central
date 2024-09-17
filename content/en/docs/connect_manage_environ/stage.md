@@ -159,7 +159,7 @@ The stage is visible when:
 
 {{< alert title="Note" color="primary" >}}If a consumer from a provider organization is part of multiple teams that can subscribe to a product, then a warning is displayed when attempting to subscribe. It informs the consumer that what is seen in the plan is not necessarily what will be accessible to the specified team. The consumer is encouraged to review the plan details before proceeding to the subscription.{{< /alert >}}
 
-## Multi-languages
+## Multi-languages support
 
 If the Stage is visible on the Marketplace, it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
 

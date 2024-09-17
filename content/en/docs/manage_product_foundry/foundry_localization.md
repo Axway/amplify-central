@@ -70,7 +70,7 @@ When creating a new product release, the existing documentation and associated t
 {{< /alert >}}
 
 {{< alert title="Product documentation using Document Library" color="warning" >}}
-A document from the Document Library can be used in the product documentation. In case the document has a default language, only the additional languages can be added/updated via the product document translation screens. We recommend to update the default language information from the Document Library itself. Refer to [Document library multi-language](/docs/manage_document_library/documentation_library_management#multi-languages)
+A document from the Document Library can be used in the product documentation. In case the document has a default language, only the additional languages can be added/updated via the product document translation screens. We recommend to update the default language information from the Document Library itself. Refer to [Document library multi-language](/docs/manage_document_library/documentation_library_management#multi-languages-support)
 {{< /alert >}}
 
 ## Product publication check
@@ -79,7 +79,7 @@ When you publish a product to a Marketplace, a new dialog is displayed to show y
 
 ## Screen customization specific translation
 
-It is possible to customize the Subscription, Access Request and Credentials screens using SubscriptionRequestDefinition, AccessRequestDefinition and CredentialsRequestDefinition to ask more information from the consumer. Refer to [Customize access request, credentials request and subscription screens](/docs/integrate_with_central/customize_ard_crd#multi-languages)
+It is possible to customize the Subscription, Access Request and Credentials screens using SubscriptionRequestDefinition, AccessRequestDefinition and CredentialsRequestDefinition to ask more information from the consumer. Refer to [Customize access request, credentials request and subscription screens](/docs/integrate_with_central/customize_ard_crd#multi-languages-support)
 
 We allow the provider to translate the *title* and *description* of individual fields used in those definition.
 
