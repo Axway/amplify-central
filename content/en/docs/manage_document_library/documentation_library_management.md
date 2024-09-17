@@ -117,7 +117,13 @@ To delete a document:
 
 ## Multi-languages support
 
-If your Document can be seen on the Marketplace (either because used in a manu or in product documentation), it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
+If your Document can be seen on the Marketplace (either because used in a menu or in product documentation), it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
+
+Adding the translation means you have your original copy of the document and as many additional copies in the languages you need. For instance, my original copy is in French, I can link English copy, German copy and Portuguese copy as I see the need.
+
+{{< alert title="Note" color="warning" >}}
+The translation will follow the original document type. If my original document is a file, all translations need to be a file as well. Same goes for Markdown and URL document type.
+{{< /alert >}}
 
 By default 4 languages are available : English / French / German / Brazilian Portuguese
 
@@ -126,4 +132,4 @@ You will need 2 things:
 * the Document default language
 * the Document translation languages
 
-The feature is not yet available in the UI, but you can use the CLI or API to add the Document available languages.
+The feature is not yet available from the UI, but you can use the CLI or API to add the Document available languages. Refer to [API Server multi languages support](/docs/integrate_with-central/api_server#multi-languages-support) and the [sample data](/docs/integrate_with_central/samples/sample_start_to_end#scenario-description) where there is an example of Document Library document using 2 languages.
