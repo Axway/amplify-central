@@ -189,7 +189,7 @@ To utilize the agents, pull the latest Docker images and
 run them using the appropriate supplied environment files, (da_env_vars.env & ta_env_vars.env):
 
   - Pull the latest image of the Discovery Agent:
-    docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-discovery-agent:1.1.6
+    Find the current agent release in the [agent release note](/docs/amplify_relnotes).
 
   - Start the Discovery Agent:
     docker run --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
