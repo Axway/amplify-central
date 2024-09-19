@@ -81,11 +81,11 @@ LOG_PATH=logs
    Go to *Help menus > Downloads > Repository* 
      -or-
    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-   and search for Docker Image for the most recent agents `{agentImage}
+   and search for Docker Image for the most recent agents to download as `{agentImage}`
    Then replace `{agentImage}` with the current agent release in following sections.
 3. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
     ```bash
-    docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v data {agentImage}
+    docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v data {age}
     ```
 
     `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
@@ -152,7 +152,7 @@ LOG_PATH=logs
    Go to *Help menus > Downloads > Repository* 
      -or-
    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-   and search for Docker Image for the most recent agents `{agentImage}
+   and search for Docker Image for the most recent agents to download as `{agentImage}`
    Then replace `{agentImage}` with the current agent release in following sections.
 3. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
