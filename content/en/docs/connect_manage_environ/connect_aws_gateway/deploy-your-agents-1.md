@@ -83,7 +83,7 @@ LOG_PATH=logs
    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
    and search for Docker Image for the most recent agents `{agentImage}
    Then replace `{agentImage}` with the current agent release in following sections.
-3. Start the Discovery Agent pointing to the `env_vars` file and the keys directory: (Robert?)
+3. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
     ```bash
     docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v data {agentImage}
     ```
@@ -154,13 +154,7 @@ LOG_PATH=logs
    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
    and search for Docker Image for the most recent agents `{agentImage}
    Then replace `{agentImage}` with the current agent release in following sections.
-3. Pull the current image of the Traceability Agent: (Robert?)
-
-   ```bash
-   docker pull docker pull axway.jfrog.io/ampc-public-docker-release/agent/aws-apigw-traceability-agent:{agentVersion}
-   ```
-
-4. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred. (Robert?)
+3. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```bash
    docker run --env-file ./env_vars -v <pwd>/keys:/keys -v /data {agentImage}
