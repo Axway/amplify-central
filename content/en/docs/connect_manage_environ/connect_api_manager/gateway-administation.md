@@ -49,7 +49,7 @@ The containerized agent can run in the following mode:
      -or-
 * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 
-and search for Install Image for the most recent agents `{agentImage}`.
+and search for Install Image for the most recent agents to download as `{agentImage}`.
 
 **Step 2**: Download the install version of the zip file from the Axway repository. 
 
@@ -94,7 +94,7 @@ Then access the list of available agents from your organization:
 * Go to *Help menus > Downloads > Repository* 
      -or-
 * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-and search for Docker Image for the most recent agents `{agentImage}`.
+and search for Docker Image for the most recent agents to download as `{agentImage}`.
 
 Follow the instructions to download the Docker image of the Discovery Agent.
 
@@ -522,7 +522,7 @@ Then access the list of available agents from your organization:
 * Go to *Help menus > Downloads > Repository* 
      -or-
 * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-and search for Docker Image for the most recent agents `{agentImage}`.
+and search for Docker Image for the most recent agents to download as `{agentImage}`.
 
 Download the Docker image of the Traceability Agent.
   
