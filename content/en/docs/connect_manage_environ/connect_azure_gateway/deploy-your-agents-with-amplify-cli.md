@@ -182,33 +182,43 @@ The installation summary contains the Docker commands needed to finish the insta
 
 By default, the Docker commands are configured to use the latest available agents version. If you want to use a different version, verify the available version in the agent release note.
 
-Sample: (Robert?)
+Sample:
 
 ```shell
 To utilize the agents, pull the latest Docker images and
 run them using the appropriate supplied environment files, (da_env_vars.env & ta_env_vars.env):
 
-  - Pull the latest image of the Discovery Agent:
-    Find the current agent release in the [agent release note](/docs/amplify_relnotes).
+  - Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
+    * Go to *Help menus > Downloads > Repository* 
+     -or-
+    * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+
+    and search for Docker Image for the most recent agents to download as `{agentImage}`.
+    Follow the instructions to download the Docker image of the Discovery Agent.
 
   - Start the Discovery Agent:
     docker run --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
-        axway.jfrog.io/ampc-public-docker-release/agent/azure-discovery-agent:1.1.6
+        -v /data {agentImage}
 
-  - Pull the latest image of the Traceability Agent:
-    docker pull axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:1.1.6
+  - Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
+    * Go to *Help menus > Downloads > Repository* 
+     -or-
+    * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+
+    and search for Docker Image for the most recent agents to download as `{agentImage}`.
+    Follow the instructions to download the Docker image of the Traceability Agent.
 
   - Start the Traceability Agent:
     docker run --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
-        axway.jfrog.io/ampc-public-docker-release/agent/azure-traceability-agent:1.1.6
+        -v /data {agentImage}
 ```
 
-* Pull the latest images of the Discovery/Traceability Agents: (Robert?)
-    * These two commands pull the most recent released agents from docker pull axway.jfrog.io/ampc-public-docker-release/agent.
+* Download the latest images of the Discovery/Traceability Agents:
+    * You must manually download the most recent released agents from [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 * Run the latest images of the Discovery/Traceability Agents:
     * These two commands run the Docker Containers using the created environment files, and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
 
-Once the pull and run commands are completed, the agents should be running in the Docker infrastructure.
+Once you have downloaded the most recent Agent Docker images and run commands are completed, the agents should be running in the Docker infrastructure.
 
 See [Connect Azure Gateway](/docs/connect_manage_environ/connect_azure_gateway/) for additional information about connecting Azure API Management Services to Enterprise Marketplace.
 
