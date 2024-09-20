@@ -116,7 +116,7 @@ To configure the plan billing, enter values for the following properties:
 * **Subscription Term length** - the length of the subscription for a limited period of time or **Unlimited** (default). Uncheck the Auto-renew to select the period of time after which the subscription will be automatically cancelled once the term is reached.
 * **Cancel subscription with past due invoice** - only available for Paid plan - a choice if you want to activate this option in case of billing integration to ensure that the consumer cannot abuse of his subscription if invoices are unpaid.
 
-{{< alert title="Impact on Cancelling subscription" color="warning" >}}
+{{< alert title="Impact on cancelling subscription" color="warning" >}}
 When a subscription is cancelled, the system initiates event to deprovision of corresponding Access and Credentials to prevent the consumer abusing his subscription. These events will be processed automatically if a discovery agent is managing the underline Gateway or manually when no agent is connected.
 {{< /alert >}}
 
