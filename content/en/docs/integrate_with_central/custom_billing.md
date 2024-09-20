@@ -506,6 +506,8 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 }'
 ```
 
+If the plan is set to cancel the subscription having past due invoice (refer to [Plan billing option](/docs/manage_product_foundry/manage_product_plans#billing-information)), the system will automatically cancel the corresponding subscription and initiate the deprovisioning of corresponding Access and Credentials to prevent the consumer abusing his subscription.
+
 ### Invoice void flow
 
 If the initial subscription invoice was never paid and the consumer terminated his subscription, the existing invoice is put in the **void** state.

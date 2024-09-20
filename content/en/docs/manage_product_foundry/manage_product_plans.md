@@ -27,7 +27,7 @@ Learn how to create and configure the product plan using the Product Foundry Web
 | Deprecated | New subscriptions on this plan are not allowed. Consumers with an existing subscription can continue to stay on this plan until their subscription expires.                |
 | Archived   | After a plan is deprecated with an auto-expiration date, the plan will automatically move to Archived when the last subscription moves to expired.                         |
 
-## Product plan type and consumption cost
+## Product plan type and quota consumption cost
 
 There are two types of plans:
 
@@ -75,9 +75,11 @@ Plans can be created anytime, regardless of the product state (draft / active / 
 
 The plan wizard is composed of three pages:
 
-* Page 1: the plan profile - title, description, type (Free / Paid)
-* Page 2: [the plan quotas definition](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
-* Page 3: [the approval mode](/docs/manage_product_foundry/manage_product_plans#configure-access)
+* Page 1: the plan profile - title (mandatory), name (optional), description (optional)
+* Page 2: [the plan billing configuration](/docs/manage_product_foundry/manage_product_plans#billing-information)
+* Page 3: [the plan quotas definition](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
+* Page 4: [the subscription configuration](/docs/manage_product_foundry/manage_product_plans#configure-access)
+* Page 5: Tags & Attributes
 
 To configure a product plan from the create product wizard:
 
@@ -88,7 +90,7 @@ To configure a product plan from the create product wizard:
     * **Logical name** - a logical name to uniquely identity the plan in the system. If no value is entered, one will be auto generated for you.
     * **Description** - describe the product plan in few words so the consumer will know what the offering is.
 
-3. Select either **Free** or **Paid** plan type and proceed to the **Next** step to configure the plan quota.
+3. Proceed to the **Next** step to configure the plan billing, quota and subscription information.
 
 To configure a product plan from the product detail:
 
@@ -96,11 +98,33 @@ To configure a product plan from the product detail:
 2. Click **+ Add Plan** to open the plan creation wizard.
 3. Follow the plan wizard and enter the required information.
 
+### Billing information
+
+The billing information describe if the plan has financial aspect. It can be a Free plan or a Paid plan. The Free plan has no cost whereas the Paid plan has 2 kind of costs: a setup cost occurring at the creation of the subscription and a recurring cost happening at each billing cycle. Those field are optional: you can use one or the other or both. The Paid plan requires a currency so that the billing system will know how to bill the consumer.
+
+You can also introduce if the subscription will be a never ended one or if the subscription will be automatically cancelled after a certain period of time (for instance a trial period before moving to a different plan). This is available for the Free and Paid plan.
+
+Lastly, for Paid plan, it is possible to setup an automatic subscription cancellation when the subscription has past-due invoices. Ie, if an invoice has not been paid in a timely manner, this will automatically cancel the subscription and terminate all associated access and credentials.
+
+To configure the plan billing, enter values for the following properties:
+
+* **Plan Type** - Free or Paid
+* **Currency** - only available for Paid plan - choose the currency that will be used to charge the subscription.
+* **Setup Fee** - only available for Paid plan - the initial fee when subscription is created. It is the fees that will appear on the first invoice the consumer has to pay before being able to request access to any resource.
+* **Basic Price** - only available for Paid plan - the recurring price that will be added to the billing period invoices.
+* **Billing period** - a choice between Monthly or Annually that will determine how often the consumer will receive an invoice if the billing system integration is setup.
+* **Subscription Term length** - the length of the subscription for a limited period of time or **Unlimited** (default). Uncheck the Auto-renew to select the period of time after which the subscription will be automatically cancelled once the term is reached.
+* **Cancel subscription with past due invoice** - only available for Paid plan - a choice if you want to activate this option in case of billing integration to ensure that the consumer cannot abuse of his subscription if invoices are unpaid.
+
+{{< alert title="Impact on Cancelling subscription" color="warning" >}}
+When a subscription is cancelled, the system initiates event to deprovision of corresponding Access and Credentials to prevent the consumer abusing his subscription. These events will be processed automatically if a discovery agent is managing the underline Gateway or manually when no agent is connected.
+{{< /alert >}}
+
 ### Configure a quota
 
 A quota describes the itemized units per resource or group of resources in a product, and how much of those units they are entitled to use over a period of time.
 
-For paid plan quota, it also describes the base pricing of the plan and the pricing of the quota based on the quota type (Standard / Tier). See [Product plan type and consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-consumption-cost).
+For paid plan, each quota can be associated with a cost depending on the quota type (Standard / Tier / Pay Per Use). See [Product plan type and quota consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-quota-consumption-cost).
 
 To configure a quota for a **free plan**, enter values for the following properties:
 
@@ -117,18 +141,15 @@ To configure a quota for a **free plan**, enter values for the following propert
 
 To configure a quota for a **paid plan**, enter values for the following properties:
 
-* **Base price**:
-    * **Currency** - the currency that will be used by the billing system (US Dollar, Euro, ...). The most common currencies are available in the drop-down.
-    * **Setup Cost** - (optional) the initial cost of the plan that will be billed at the first invoice.
-    * **Recurring cost** - (optional) the plan price value that will be billed each billing cycle.
-    * **Billing period** - select either **Monthly** or **Annually**. This is the period used for billing cycle, which is based on the calendar month for Monthly plans or calendar year for Annually plans.
-    * **Subscription Term Length** - the length of the subscription for a limited period of time or **Unlimited** (default). If a number of terms is selected, the subscription will be automatically cancelled once the term is reached.
+* **Quota name** - a name for the quota.
 * **Quota type** - select either **Standard** or **Tiered** or **Pay Per Use**:
     * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota type**, **Limit type**, **Overage** for loose limit type).
     * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 and automatically added to the last tier **upper limit**.
     * Pay per Use - select the transaction unit cost.
 
-{{< alert title="Note" color="primary" >}}For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}
+For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.
+{{< /alert >}}
 
 Click **+ Add Quota** to create another quota group for a different resource. Once a resource is assigned to a quota group, it is no longer available for another quota group.
 
