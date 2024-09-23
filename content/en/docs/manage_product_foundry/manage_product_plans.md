@@ -33,70 +33,60 @@ There are two types of plans:
 
 * **Free plan** - consumer will not be charged for their API consumption.
 * **Paid plan**:
-    * **Standard** - consumer will be charged a base price for the consumption of a guaranteed set of quotas.
-    * **Pay per use** - consumer will be charged a fixed amount for each consumed transaction. There is no consumption limit.
-    * **Tier - volume** - consumer will be charged based on the volume corresponding to the tier quota + flat tier fee, if any.
-    * **Tier - graduated** - consumer will be charged based on the volume corresponding to each tier quota that includes their consumption + flat tier fee, if any.
+    * **Standard** - consumer will be charged a recurrent base price for a set amount of units. Quota limit applies.
+    * **Pay per use** - charge a fixed price for each unit. There is no consumption limit.
+    * **Tier - volume** - charge all units based on the price of the final tier reached + flat tier fee, if any.
+    * **Tier - graduated** - charge each unit based on the price of its corresponding tier + flat tier fee, if any.
 
-Illustrative pricing samples for paid plans:
+Illustrative paid plans examples:
 
-* Standard paid plan cost: plan base price, if any
+* Standard paid plan cost: Base price: $100, Quota limit: unlimited.
 
-* Pay per use paid plan cost: plan base price, if any + cost per consumed transaction
+| *Consumed transactions* | *Based price*       | *Total price*         |
+|-------------------------|---------------------|-----------------------|
+| 1,000                   | $100                | $100   |
+| 10,000                  | $100                | $100   |
 
-| *Consumed transactions* | *Transaction price* | *Billing price*       |
+* Pay per use: Based price: $0, Price per unit: $0.01 / transaction
+
+| *Consumed transactions* | *Transaction price* | *Total price*       |
 |-------------------------|---------------------|-----------------------|
 | 1,000                   | 0.01                | 1,000 \* 0.01 = $10   |
 | 10,000                  | 0.01                | 10,000 \* 0.01 = $100 |
 
-* Tier paid plan cost: plan base price, if any + tier cost
+* Tier - Graduated: Based price: $0; Total cost for **5001** transactions would be: **$5530.50**
 
-| *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   |
-|--------------|----------------|--------------|-------------------|
-| 1            | 500            | $2           | $0                |
-| 501          | 5000           | $1           | $10               |
-| 5001         | unlimited      | $0.5         | $20               |
+| *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   | *Amount*                |
+|--------------|----------------|--------------|-------------------|-------------------------|
+| 1            | 500            | $2           | $0                | 500 x $2 = $1,000       |
+| 501          | 5000           | $1           | $10               | 4500 x $1 + $10 = $4510 |
+| 5001         | unlimited      | $0.5         | $20               | 1 x $0.5 + $20 = $20.50 |
 
-Associated costs:
+* Tier - Volume: Based price: $0; Total cost for **5001** transactions would be: **$2520.50**
 
-| *Plan Type*      | *Consumed transactions* | *Cost*                                                                                                                                                                                  |
-|------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| tier - volume    | 1,975                   | Second tier applied as matching the number of transactions + flat fee tier 2 -> 1975 \* 1 + 10 = **$ 1,985**                                                                            |
-| tier - volume    | 10,000                  | Third tier applied + flat fee tier 3 -> 10,000 \* 0.5 + 20 = **$ 5,020**                                                                                                                |
-|                  |                         |                                                                                                                                                                                         |
-| tier - graduated | 1,975                   | Cost of the first 500 trs + cost of the remaining transactions + flat fee from tier 1 and 2 -> 500 \* 2 + 1,474 \* 1 + 10 = **$ 2,484**                                                 |
-| tier - graduated | 10,000                  | Cost of the first 500 trs + cost of the next 5000 + cost of the remaining transactions + flat fee from tier 1,2 and 3 -> 500 \* 2 + 4,499 \* 1 + 4,999 \* 0.5 + 10 + 20 = **$ 8,528.5** |
+| *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   | *Amount*                     |
+|--------------|----------------|--------------|-------------------|------------------------------|
+| 1            | 500            | $2           | $0                | 0 x $2 = $0                  |
+| 501          | 5000           | $1           | $10               | 0 x $1 + $10 = $0            |
+| 5001         | unlimited      | $0.5         | $20               | 5001 x $0.5 + $20 = $2520.50 |
 
 ## Create a product plan
 
-When you create a new product, you have the option to configure one **Free** or **paid** product plan. If you skip this step, a default free plan will be auto generated, which you can edit / modify later.
+You can create new product plans at any time, regardless of the product lifecycle state or whether the product is published in a Marketplace.
 
-Plans can be created anytime, regardless of the product state (draft / active / deprecated) and the product publication on the Marketplace.
-
-The plan wizard is composed of three pages:
-
-* Page 1: the plan profile - title (mandatory), name (optional), description (optional)
-* Page 2: [the plan billing configuration](/docs/manage_product_foundry/manage_product_plans#billing-information)
-* Page 3: [the plan quotas definition](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
-* Page 4: [the subscription configuration](/docs/manage_product_foundry/manage_product_plans#configure-access)
-* Page 5: Tags & Attributes
-
-To configure a product plan from the create product wizard:
-
-1. [Create a new product](/docs/manage_product_foundry/foundry_product_management/#create-a-product). *The Create product wizard is displayed*.
-2. Enter the following properties in **Usage plan**:
-
-    * **Plan title** - the display name of the plan that will be listed in the Marketplace to identify the plan.
-    * **Logical name** - a logical name to uniquely identity the plan in the system. If no value is entered, one will be auto generated for you.
-    * **Description** - describe the product plan in few words so the consumer will know what the offering is.
-
-3. Proceed to the **Next** step to configure the plan billing, quota and subscription information.
+When you create a new product, you have the option to configure a **Free** or **paid** product plan. If you skip this step, a default free plan will be auto generated, which you can edit / modify later.
 
 To configure a product plan from the product detail:
 
 1. Navigate to the Plans section.
 2. Click **+ Add Plan** to open the plan creation wizard.
 3. Follow the plan wizard and enter the required information.
+   * Plan profile - title (mandatory), name (optional), description (optional)
+   * [Billing configuration](/docs/manage_product_foundry/manage_product_plans#billing-information)
+   * [Plan quotas](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
+   * [Add custom metadata](/docs/manage_product_foundry/manage_product_plans#configure-access)
+   * Add optional tags and attributes
+
 
 ### Billing information
 
