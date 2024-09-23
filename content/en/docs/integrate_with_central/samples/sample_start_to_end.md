@@ -30,9 +30,9 @@ The zip structure is the following:
     * *J1-3-env.json*: the environment definition (non-prod and prod) and their stage access.
     * *J1-4-category-multi-language.json*: the category definition that will be assigned to the product.
     * *J1-5-category-visibility.json*: the category visibility for specific Marketplace. See note below.
-    * *J1-5-srd-billing-multi-language.json*: the subscription additional data asked when subscriber subscribe to the product plan.
-    * *J1-6-ard-scopes-multi-language.json*: the application registration additional data asked when consumer wants to link an API to an Application.
-    * *J1-7-crd-externalCredential-multi-language.json*: the credential additional data asked when consumer request for credentials.
+    * *J1-6-srd-billing-multi-language.json*: the subscription additional data asked when subscriber subscribe to the product plan.
+    * *J1-7-ard-scopes-multi-language.json*: the application registration additional data asked when consumer wants to link an API to an Application.
+    * *J1-8-crd-externalCredential-multi-language.json*: the credential additional data asked when consumer request for credentials.
 * folder **2.v1.0.0-dev**: contains API Service for Dev stage, Asset and Product
     * *J2-1-apiservice.json*: the API Service definition for v1.0.0 in Dev stage.
     * *J2-2-asset.json*: the Asset definition.
