@@ -100,7 +100,7 @@ To configure a product plan from the product detail:
 
 ### Billing information
 
-The billing information describe if the plan has financial aspect. It can be a Free plan or a Paid plan. The Free plan has no cost whereas the Paid plan has 2 kind of costs: a setup cost occurring at the creation of the subscription and a recurring cost happening at each billing cycle. Those field are optional: you can use one or the other or both. The Paid plan requires a currency so that the billing system will know how to bill the consumer.
+The billing information describe if the plan has a financial aspect. It can be a Free plan or a Paid plan. The Free plan has no cost whereas the Paid plan has 2 kind of costs: a setup cost occurring at the creation of the subscription and a recurring cost happening at each billing cycle. Those fields are optional: you can use one or the other or both. The Paid plan requires a currency so that the billing system will know how to bill the consumer.
 
 You can also introduce if the subscription will be a never ended one or if the subscription will be automatically cancelled after a certain period of time (for instance a trial period before moving to a different plan). This is available for the Free and Paid plan.
 
