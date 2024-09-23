@@ -488,7 +488,7 @@ Once the invoice due date is reached, Amplify Enterprise Marketplace will raise 
 
 To check for event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=pastDue` and `status=pending`.
 
-If the payment has been settled outside of the billing system, we recommend to change the status of the invoice to Success.
+If the payment has been settled outside of the billing system, we recommend that you change the status of the invoice to Success.
 
 ```json
 curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
@@ -506,7 +506,7 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 }'
 ```
 
-If the plan is configured to cancel subscriptions with an overdue invoice (as outlined in our [Plan billing option](/docs/manage_product_foundry/manage_product_plans#billing-information) documentation), the system will automatically cancel the subscription and initiate the deprovisioning of the corresponding Application Registrations and Credentials, to prevent further usage of the product.  associated access and credentials to prevent unauthorized use.
+If the plan is configured to cancel a subscriptions with an overdue invoice (as outlined in our [Plan billing option](/docs/manage_product_foundry/manage_product_plans#billing-information) documentation), the system will automatically cancel the subscription and initiate the deprovisioning of the associated access and credentials to prevent unauthorized use.
 
 ### Invoice void flow
 
