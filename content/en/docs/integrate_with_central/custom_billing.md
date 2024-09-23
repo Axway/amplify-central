@@ -486,9 +486,10 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event.
 
-To check for event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=pastDue` and `status=pending`
+To check for event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=pastDue` and `status=pending`.
 
-It is possible to take action on the provider side to reach out the consumer to see why the invoice has not been paid. Once the clarification has been made with the consumer, we recommend changing the status to Success:
+If the payment has been settled outside of the billing system, we recommend to change the status of the invoice to Success.
+
 
 ```json
 curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
@@ -505,8 +506,8 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
     }
 }'
 ```
+If the plan is configured to cancel subscriptions with an overdue invoice (as outlined in our [Plan billing option](/docs/manage_product_foundry/manage_product_plans#billing-information) documentation), the system will automatically cancel the subscription and initiate the deprovisioning of the corresponding Application Registrations and Credentials, to prevent further usage of the product.  associated access and credentials to prevent unauthorized use.
 
-If the plan is set to cancel the subscription having past due invoice (refer to [Plan billing option](/docs/manage_product_foundry/manage_product_plans#billing-information)), the system will automatically cancel the corresponding subscription and initiate the deprovisioning of corresponding Access and Credentials to prevent the consumer abusing his subscription.
 
 ### Invoice void flow
 
