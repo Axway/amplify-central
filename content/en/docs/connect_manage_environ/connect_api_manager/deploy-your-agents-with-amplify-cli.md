@@ -220,10 +220,10 @@ Discovery Agent:
 docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v /data {agentImage}
 ```
 
-Traceability Agent: (Jason for Data mount??)
+Traceability Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data {agentImage}
+docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v /data {agentImage}
 ```
 
 ### Helm deployment
