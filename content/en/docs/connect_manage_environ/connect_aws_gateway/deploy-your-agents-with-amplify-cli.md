@@ -266,7 +266,7 @@ To complete the install, run the following AWS CLI command:
         -v /data {agentDAImage}
   - Run the latest Traceability Agent:
     docker run --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
-        -v /data {agentDAImage}
+        -v /data {agentTAImage}
 ```
 
 In the sample above, installation procedure will replace {agentXXImage} with the most recent version available.
