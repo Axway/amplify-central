@@ -43,7 +43,7 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * API Key credentials on AWS. Allow for CLI access
 * Amazon CloudWatch Service
-* CloudFormation template. Download the latest "Amplify AWS Agents CloudFormation" install zip file from [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+* CloudFormation template. Download the latest "Amplify AWS Agents CloudFormation" install zip file from [https://repository.axway.com/catalog?q=aws](https://repository.axway.com/catalog?q=aws).
 * The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
 
 ## Region support
