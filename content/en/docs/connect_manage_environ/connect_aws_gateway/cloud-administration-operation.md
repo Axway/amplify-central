@@ -18,7 +18,7 @@ Each AWS Gateway is represented by an Amplify environment allowing you to better
 * [Amplify Platform Service Account](/docs/integrate_with_central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
 * [API Key credentials on AWS](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html). Allowing for CLI access.
 * [Amazon CloudWatch Service](https://aws.amazon.com/cloudwatch/)
-* CloudFormation template. Download the latest "Amplify AWS Agents CloudFormation" install zip file from [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+* CloudFormation template. Download the latest "Amplify AWS Agents CloudFormation" install zip file from [https://repository.axway.com/catalog?q=aws](https://repository.axway.com/catalog?q=aws).
 
 ### CloudFormation templates
 
