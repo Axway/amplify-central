@@ -4,7 +4,7 @@ linkTitle: Trace sampling
 draft: false
 weight: 10
 ---
-The Traceability Agent can sample the transaction information that is sent to Amplify Analytics . Learn how to set up sampling rules used to send only certain transactions to Amplify Analytics. With the agent default configuration, all transactions are sent to Amplify Analytics.
+The Traceability Agent can sample the transaction information that is sent to Amplify Analytics . Learn how to set up sampling rules used to send only certain transactions to Amplify Analytics. With the agent default configuration, all transactions are sent to Amplify Analytics. (Update for high traffic)
 
 ## Sampling
 
