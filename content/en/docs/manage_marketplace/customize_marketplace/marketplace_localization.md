@@ -45,7 +45,30 @@ Let's see with examples how Marketplace product display language is determined?
 It is highly recommended to align the Marketplace default language with product default language to avoid inconsistencies in translation.
 {{< /alert >}}
 
-To setup the Marketplace accepted languages:
+You can define the appropriate translation of some Marketplace elements:
+
+* Marketplace settings: Name (mandatory), Site name (optional), Description (optional)
+* Marketplace footer content.
+* Marketplace help and navigation menus.
+
+To setup multiple language for the Marketplace:
+
+1. Navigate to *platform.axway.com > Organization > Marketplaces*.
+2. Open the desired Marketplace by clicking the Marketplace name.
+3. Select the *Settings* tab
+4. The Name, Sitemane and Description field contain values for specific language and an icon. Enter the value you need:
+
+   * checkmark icon: this language is the default one
+   * pencil icon: this language is an additional language
+   * forbidden icon: this language is not used by the Marketplace.
+
+By selecting a language, you can enter the corresponding value. Once your value are all set, don't forget to hit the **Save** button to validate your changes.
+
+You do the same for the Marketplace footer by navigating to the Footer tab. Be sure to select the appropriate language before entering the corresponding elements
+
+Again similarly, the Marketplace menus can be customized based on the language you need. Navigate to the Menus tab and add the Help and Navigation menus as desired.
+
+Now that the languages translation are available, it is time to setup the Marketplace accepted languages:
 
 1. Navigate to *platform.axway.com > Organization > Marketplaces*.
 2. Open the desired Marketplace by clicking the Marketplace name.
@@ -59,21 +82,9 @@ To setup the Marketplace accepted languages:
 
 {{< alert title="Note" color="primary" >}}
 The Default language cannot be disabled.
+
+If no translation for the Marketplace name is available for a specific language, you are not allowed to use this language: the enable button is disabled.
 {{< /alert >}}
-
-Now that you have selected the appropriate languages, you can define the appropriate translation of some Marketplace elements:
-
-* Marketplace settings: Name, Site name, Description
-* Marketplace footer content.
-* Marketplace help and navigation menus.
-
-For that, navigate to the dedicated tab and you will see on top of the field the language list with an icon:
-
-* checkmark icon: this language is the default one
-* pencil icon: this language is an additional language
-* forbidden icon: this language is not used by the Marketplace.
-
-By selecting a language, you can enter the corresponding value. Once your value are all set, don't forget to hit the **Save** button to validate your changes.
 
 ## Consumer experience
 
