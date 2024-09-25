@@ -258,9 +258,9 @@ To complete the install, run the following AWS CLI command:
   - Find the current agent release for the Discovery and Traceability agents in the [agent release note](/docs/amplify_relnotes).
     Go to *Help menus > Downloads > Repository* 
      -or-
-    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
     and search for Docker Image for the most recent agents.
-    Download the image of each Dicovery agent `{agentDAImage}` and Traceability agent `{agentTAImage}`.  Then replace the `{agentXXImage}` with the current agent release in following sections.
+    Download the image of each Discovery Agent `{agentDAImage}` and Traceability Agent `{agentTAImage}`.  Then replace the `{agentXXImage}` with the current agent release in the following sections.
   - Run the latest Discovery Agent:
     docker run --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
         -v /data {agentDAImage}
@@ -269,7 +269,7 @@ To complete the install, run the following AWS CLI command:
         -v /data {agentTAImage}
 ```
 
-In the sample above, installation procedure will replace {agentXXImage} with the most recent version available.
+In the sample above, the installation procedure will replace `{agentXXImage}` with the most recent version available.
 
 * Create, if necessary, and upload all files to your S3 bucket:
     * These commands create the bucket, if needed, then uploads all resources to the bucket.
@@ -277,11 +277,11 @@ In the sample above, installation procedure will replace {agentXXImage} with the
     * This command creates the Access and Secret Key Pair.
 * Add the results from the Key Pair creation above into the environment files, da_env_vars.env & ta_env_vars.env, after the appropriate variables, `AWS_AUTH_ACCESSKEY=` and `AWS_AUTH_SECRETKEY=`.
 * Find the current agent release for the Discovery and Traceability agents in the [agent release note](/docs/amplify_relnotes).
-    Go to *Help menus > Downloads > Repository* 
+    Go to *Help menus > Downloads > Repository*
      -or-
-    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-    and search for Docker Image for the most recent agents.
-    Download the image of each Dicovery agent `{agentDAImage}` and Traceability agent `{agentTAImage}`.  Then replace the `{agentXXImage}` with the current agent release in following sections.
+    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
+    and search for the Docker image for the most recent agents.
+    Download the image of each Discovery Agent `{agentDAImage}` and Traceability Agent `{agentTAImage}`.  Then replace the `{agentXXImage}` with the current agent release in the following sections.
 * Run the current images of the Discovery/Traceability Agents:
     * These two commands run the Docker Containers using the created environment files, and mounting the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
 

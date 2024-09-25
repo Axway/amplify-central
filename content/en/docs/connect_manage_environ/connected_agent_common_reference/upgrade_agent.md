@@ -72,9 +72,9 @@ When you restart your agent, the API services ownership will be set according to
 The following steps will guide your through the upgrade procedure:
 
 1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentXXImage}` with the current agent release, below.
-2. Go to *Help menus > Downloads > Repository* 
+2. Go to *Help menus > Downloads > Repository*
      -or-
-  Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+  Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
   and search for the latest agent binaries to download.
 3. Download the agent binaries as `{agentDAImage}` and `{agentTAImage}`.
 4. Stop the agent or the agent service.
@@ -89,11 +89,11 @@ The following steps will guide your through the upgrade procedure:
 The following steps will guide you through the upgrade procedure:
 
 1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentVersion}` with the current agent release, below.
-2. Go to *Help menus > Downloads > Repository* 
+2. Go to *Help menus > Downloads > Repository*
      -or-
-  Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+  Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
   and search for the latest Docker images to download.
-  Download the Docker image for the Discovery Agent referred to as `{agentDAImage}` and Traceability Agent referred to as `{agentTAImage}`.
+  Download the Docker image for the Discovery Agent (referred to as `{agentDAImage}`) and Traceability Agent (referred to as `{agentTAImage}`).
 3. Stop and delete the existing container:
     * Find the container identifier: `docker container ls`
     * `docker container stop {container id}`
@@ -126,11 +126,11 @@ Otherwise, if the command shows an actual version and not `latest`, then restart
 * If your AWS agents are running in a Docker container, use the following upgrade procedure:
 
     1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentXXImage}` with the current agent release, below.
-    2.  Go to *Help menus > Downloads > Repository* 
+    2. Go to *Help menus > Downloads > Repository*
      -or-
-       Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+       Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
      and search for the latest Docker images to download.
-     Download the Docker image for the Discovery Agent referred to as `{agentDAImage}` and Traceability Agent referred to as `{agentTAImage}`.
+     Download the Docker image for the Discovery Agent (referred to as `{agentDAImage}`) and Traceability Agent (referred to as `{agentTAImage}`).
     3. Stop and delete the existing container:
        * find the container identifier: `docker container ls`
        * `docker container stop {container id}`
@@ -144,11 +144,11 @@ Otherwise, if the command shows an actual version and not `latest`, then restart
 The following steps will guide you through the upgrade procedure:
 
 1. Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then replace `{agentXXImage}` with the current agent release, below.
-2. Go to *Help menus > Downloads > Repository* 
+2. Go to *Help menus > Downloads > Repository*
      -or-
-   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
    and search for the latest Docker images to download.
-   Download the Docker image for the Discovery Agent referred to as `{agentDAImage}` and Traceability Agent referred to as `{agentTAImage}`.
+   Download the Docker image for the Discovery Agent (referred to as `{agentDAImage}`) and Traceability Agent (referred to as `{agentTAImage}`).
 3. Stop and delete the existing container:
     * find the container identifier: `docker container ls`
     * `docker container stop {container id}`

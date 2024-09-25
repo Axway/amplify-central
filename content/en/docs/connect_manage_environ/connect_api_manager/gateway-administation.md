@@ -45,21 +45,21 @@ The containerized agent can run in the following mode:
 
 **Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
 
-* Go to *Help menus > Downloads > Repository* 
+* Go to *Help menus > Downloads > Repository*
      -or-
-* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
 
-and search for Install Image for the most recent agents to download as `{agentImage}`.
+and search for the install image for the most recent agents to download as `{agentImage}`.
 
-**Step 2**: Download the install version of the zip file from the Axway repository. 
+**Step 2**: Download the install version of the zip file from the Axway repository.
 
-**Step 3**: Unzip the file agent zip file to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml).
+**Step 3**: Unzip the agent zip file to get the agent binary (discovery_agent) and a template configuration file (discovery_agent.yml):
 
 ```shell
 unzip AmplifyCentralAgents_{agentVersion}_Install_v7-da_allOS_BN1.zip
 ```
 
-**Step 4**: Copy those 2 files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
+**Step 4**: Copy those two files into a folder (/home/APIC-agents for instance) on the machine where the API Manager environment is located.
 
 **Step 5**: Move the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to the agent directory (APIC-agents). Note that the `public_key.pem` comes from Steps 3 or 4 of [Create a Service Account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-amplify-central-apis) depending if you choose to use the `der` format or not.
 
@@ -91,10 +91,11 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 Find the current agent release in the [agent release note](/docs/amplify_relnotes).
 
 Then access the list of available agents from your organization:
-* Go to *Help menus > Downloads > Repository* 
+
+* Go to *Help menus > Downloads > Repository*
      -or-
-* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-and search for Docker Image for the most recent agents to download as `{agentImage}`.
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
+and search for the Docker image for the most recent agents to download as `{agentImage}`.
 
 Follow the instructions to download the Docker image of the Discovery Agent.
 
@@ -177,7 +178,7 @@ CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
 #CENTRAL_APISERVERVERSION=v1alpha1
 #CENTRAL_AUTH_REALM=Broker
-CENTRAL_AUTH_CLIENTID=service_acount...
+CENTRAL_AUTH_CLIENTID=service_account...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 #CENTRAL_AUTH_KEYPASSWORD:
@@ -186,8 +187,7 @@ CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 
 #### Configure API Manager and Discovery Agent to manage OAuth External credentials
 
-When virtualizing a REST API in API Manager, you can configure inbound security of OAuth (External) type that allows clients to use credentials using an external OAuth identity provider to authenticate the requests. For details on how to setup OAuth (External) inbound security, see OAuth (External) section under [Inbound security settings
-](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html#oauth-external).
+When virtualizing a REST API in API Manager, you can configure inbound security of OAuth (External) type that allows clients to use credentials using an external OAuth identity provider to authenticate the requests. For details on how to setup OAuth (External) inbound security, see OAuth (External) section under [Inbound security settings](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html#oauth-external).
 
 When using OAuth (External) inbound security, API Manager requires a custom OAuth token information policy to extract the token information from the request and perform verification. For an example on how to add OAuth token information policies, see [Configure OAuth (External) security for a front-end API](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/example_oauth_external/index.html).
 
@@ -472,11 +472,11 @@ The containerized agent can run in the following mode:
 
 **Step 1**: Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
 
-* Go to *Help menus > Downloads > Repository* 
+* Go to *Help menus > Downloads > Repository*
      -or-
 * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 
-**Step 2**: Download the install version of the zip file from the Axway repository. 
+**Step 2**: Download the install version of the zip file from the Axway repository.
 
 **Step 3**: Unzip the file traceability_agent-{agentVersion}.zip to get the agent binary (traceability_agent) and a template configuration file (traceability_agent.yml):
 
@@ -519,14 +519,15 @@ CENTRAL_ENVIRONMENT=<Environment>
 
 Find the current agent release in the [agent release note](/docs/amplify_relnotes).
 Then access the list of available agents from your organization:
-* Go to *Help menus > Downloads > Repository* 
+
+* Go to *Help menus > Downloads > Repository*
      -or-
-* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
 and search for Docker Image for the most recent agents to download as `{agentImage}`.
 
 Download the Docker image of the Traceability Agent.
   
-As mentioned in the installation procedure, agents can be started with the following commands where `{agentImage}` below is the most recent agent image version available):
+As mentioned in the installation procedure, agents can be started with the following commands, where `{agentImage}` is the most recent agent image version available.
 
 ### Customizing the Traceability Agent environment variable file
 
@@ -919,10 +920,10 @@ cd /home/APIC-agents
 
 ##### Run the Dockerized Traceability Agent
 
-See "To install the Dockerized Discovery Agent" section above for the `ta_env_vars.env` configuration.
+See [To install the Dockerized Discovery Agent](#installing-the-discovery-agent) section for the `ta_env_vars.env` configuration.
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred. (Robert?)
+2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
    docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v /data -v {agentImage}

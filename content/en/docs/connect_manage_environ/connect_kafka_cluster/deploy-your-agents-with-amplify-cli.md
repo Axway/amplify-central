@@ -212,9 +212,9 @@ To utilize the agents, pull the latest Docker images and run them using the appr
  Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
  * Go to *Help menus > Downloads > Repository* 
      -or-
- * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+ * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
 
- and search for Docker Image for the most recent agents to download as `{agentImage}`.
+ and search for the Docker image for the most recent agents to download as `{agentImage}`.
  Follow the instructions to download the Docker image of the Discovery Agent.
 
 Start the Discovery Agent on a Linux based machine
@@ -224,9 +224,9 @@ docker run -it --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
 Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
  * Go to *Help menus > Downloads > Repository* 
      -or-
- * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+ * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
 
- and search for Docker Image for the most recent agents to download as `{agentImage}`.
+ and search for the Docker image for the most recent agents to download as `{agentImage}`.
  Follow the instructions to download the Docker image of the Traceability Agent.
 
 Start the Traceability Agent on a Linux based machine
@@ -234,12 +234,12 @@ docker run -it --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
     -v /data {agentImage}
 ```
 
-* Download the latest images of the Discovery/Traceability Agents:
+* Download the latest images of the Discovery/Traceability agents:
     * You must manually download the most recent released agents from [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-* Run the latest images of the Discovery/Traceability Agents:
+* Run the latest images of the Discovery/Traceability agents:
     * These two commands run the Docker containers using the created environment files and mount the directory of the location of the appropriate keys, `public_key.pem` & `private_key.pem`, which were either generated during the installation, or available from an existing service account.
 
-Once you have downloaded the most recent Agent Docker images and run commands are completed, the agents should be running in the Docker infrastructure.
+Once you have downloaded the most recent agent Docker images and run commands are completed, the agents should be running in the Docker infrastructure.
 
 See [Connect Kafka cluster](/docs/connect_manage_environ/connect_kafka_cluster/) for additional information about connecting Kafka cluster to Enterprise Marketplace.
 

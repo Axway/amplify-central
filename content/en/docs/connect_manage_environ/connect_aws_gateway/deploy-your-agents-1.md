@@ -78,12 +78,13 @@ LOG_PATH=logs
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment. Note that the `public_key.pem` comes from Steps 3 and 4 of [Prepare AWS Gateway to deploy the Discovery Agent AWS config setup](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/).
 2. Find the current agent release in the [agent release note](/docs/amplify_relnotes).
-   Go to *Help menus > Downloads > Repository* 
+   Go to *Help menus > Downloads > Repository*
      -or-
-   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-   and search for Docker Image for the most recent agents to download as `{agentImage}`
-   Then replace `{agentImage}` with the current agent release in following sections.
+   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
+   and search for the Docker image for the most recent agents to download as `{agentImage}`.
+   Then replace `{agentImage}` with the current agent release in the following sections.
 3. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
+
     ```bash
     docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v data {age}
     ```
@@ -128,7 +129,7 @@ AWS_AUTH_ACCESSKEY=<YOUR AWS ACCESS KEY HERE>
 AWS_AUTH_SECRETKEY=<YOUR AWS SECRET KEY HERE>
 
 # Amplify connectivity
-# organisation config:
+# organization config:
 CENTRAL_ORGANIZATIONID=<YOUR ORGANIZATION ID>
 CENTRAL_TEAM=<THE TEAM NAME>
 CENTRAL_ENVIRONMENT=<NAME OF THE CENTRAL TOPOLOGY ENVIRONMENT>
@@ -149,10 +150,10 @@ LOG_PATH=logs
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Find the current agent release in the [agent release note](/docs/amplify_relnotes).
-   Go to *Help menus > Downloads > Repository* 
+   Go to *Help menus > Downloads > Repository*
      -or-
-   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
-   and search for Docker Image for the most recent agents to download as `{agentImage}`
+   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
+   and search for the Docker image for the most recent agents to download as `{agentImage}`
    Then replace `{agentImage}` with the current agent release in following sections.
 3. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
@@ -160,7 +161,7 @@ LOG_PATH=logs
    docker run --env-file ./env_vars -v <pwd>/keys:/keys -v /data {agentImage}
    ```
 
-5. Run the following health check command to ensure the agent is up and running:
+4. Run the following health check command to ensure the agent is up and running:
 
    ```bash
    docker inspect --format='{{json .State.Health}}' <container>

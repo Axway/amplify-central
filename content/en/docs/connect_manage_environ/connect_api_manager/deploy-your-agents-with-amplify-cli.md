@@ -202,17 +202,17 @@ Traceability Agent:
 
 ### Docker mode
 
-The first step is to access the list of available agents from your organization:
+Access the list of available agents from your organization:
 
-* Go to *Help menus > Downloads > Repository* 
+* Go to *Help menus > Downloads > Repository*
 
      -or-
 
-* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
 
-and search for Docker Image for the most recent agents to download as `{agentImage}`.
-   
-As mentioned in the installation procedure, agents can be started with the following commands where `{agentImage}` below is the most recent agent image version available):
+and search for the Docker image for the most recent agents to download as `{agentImage}`.
+
+As mentioned in the installation procedure, agents can be started with the following commands, where `{agentImage}` is the most recent agent image version available:
 
 Discovery Agent:
 
