@@ -27,108 +27,119 @@ Learn how to create and configure the product plan using the Product Foundry Web
 | Deprecated | New subscriptions on this plan are not allowed. Consumers with an existing subscription can continue to stay on this plan until their subscription expires.                |
 | Archived   | After a plan is deprecated with an auto-expiration date, the plan will automatically move to Archived when the last subscription moves to expired.                         |
 
-## Product plan type and consumption cost
+## Product plan types and quota consumption costs
 
-There are two types of plans:
+There are two types of consumer product plans:
 
-* **Free plan** - consumer will not be charged for their API consumption.
+* **Free plan** - no charge for API consumption.
 * **Paid plan**:
-    * **Standard** - consumer will be charged a base price for the consumption of a guaranteed set of quotas.
-    * **Pay per use** - consumer will be charged a fixed amount for each consumed transaction. There is no consumption limit.
-    * **Tier - volume** - consumer will be charged based on the volume corresponding to the tier quota + flat tier fee, if any.
-    * **Tier - graduated** - consumer will be charged based on the volume corresponding to each tier quota that includes their consumption + flat tier fee, if any.
+    * **Standard** - charged a recurrent base price for a set amount of units. Quota limit applies.
+    * **Pay per use** - charged a fixed price for each unit. There is no consumption limit.
+    * **Tier - Graduated** - charged for each unit based on the price of its corresponding tier + flat tier fee, if any.
+    * **Tier - Volume** - charged for all units based on the price of the final tier reached + flat tier fee, if any.
 
-Illustrative pricing samples for paid plans:
+Examples of paid plans (illustrative only):
 
-* Standard paid plan cost: plan base price, if any
+* Standard paid plan cost: Base price: $100, Quota limit: unlimited.
 
-* Pay per use paid plan cost: plan base price, if any + cost per consumed transaction
+| *Consumed transactions* | *Based price*       | *Total price*         |
+|-------------------------|---------------------|-----------------------|
+| 1,000                   | $100                | $100   |
+| 10,000                  | $100                | $100   |
 
-| *Consumed transactions* | *Transaction price* | *Billing price*       |
+* Pay per use: Based price: $0, Price per unit: $0.01 / transaction
+
+| *Consumed transactions* | *Transaction price* | *Total price*       |
 |-------------------------|---------------------|-----------------------|
 | 1,000                   | 0.01                | 1,000 \* 0.01 = $10   |
 | 10,000                  | 0.01                | 10,000 \* 0.01 = $100 |
 
-* Tier paid plan cost: plan base price, if any + tier cost
+* Tier - Graduated: Based price: $0; Total cost for **5001** transactions would be: **$5530.50**
 
-| *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   |
-|--------------|----------------|--------------|-------------------|
-| 1            | 500            | $2           | $0                |
-| 501          | 5000           | $1           | $10               |
-| 5001         | unlimited      | $0.5         | $20               |
+| *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   | *Amount*                |
+|--------------|----------------|--------------|-------------------|-------------------------|
+| 1            | 500            | $2           | $0                | 500 x $2 = $1,000       |
+| 501          | 5000           | $1           | $10               | 4500 x $1 + $10 = $4510 |
+| 5001         | unlimited      | $0.5         | $20               | 1 x $0.5 + $20 = $20.50 |
 
-Associated costs:
+* Tier - Volume: Based price: $0; Total cost for **5001** transactions would be: **$2520.50**
 
-| *Plan Type*      | *Consumed transactions* | *Cost*                                                                                                                                                                                  |
-|------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| tier - volume    | 1,975                   | Second tier applied as matching the number of transactions + flat fee tier 2 -> 1975 \* 1 + 10 = **$ 1,985**                                                                            |
-| tier - volume    | 10,000                  | Third tier applied + flat fee tier 3 -> 10,000 \* 0.5 + 20 = **$ 5,020**                                                                                                                |
-|                  |                         |                                                                                                                                                                                         |
-| tier - graduated | 1,975                   | Cost of the first 500 trs + cost of the remaining transactions + flat fee from tier 1 and 2 -> 500 \* 2 + 1,474 \* 1 + 10 = **$ 2,484**                                                 |
-| tier - graduated | 10,000                  | Cost of the first 500 trs + cost of the next 5000 + cost of the remaining transactions + flat fee from tier 1,2 and 3 -> 500 \* 2 + 4,499 \* 1 + 4,999 \* 0.5 + 10 + 20 = **$ 8,528.5** |
+| *Limit from* | *Limit to*     | *Unit price* | *Tier Flat fee*   | *Amount*                     |
+|--------------|----------------|--------------|-------------------|------------------------------|
+| 1            | 500            | $2           | $0                | 0 x $2 = $0                  |
+| 501          | 5000           | $1           | $10               | 0 x $1 + $10 = $0            |
+| 5001         | unlimited      | $0.5         | $20               | 5001 x $0.5 + $20 = $2520.50 |
 
 ## Create a product plan
 
-When you create a new product, you have the option to configure one **Free** or **paid** product plan. If you skip this step, a default free plan will be auto generated, which you can edit / modify later.
+You can create new product plans at any time, regardless of the product lifecycle state or whether the product is published in a Marketplace.
 
-Plans can be created anytime, regardless of the product state (draft / active / deprecated) and the product publication on the Marketplace.
+When you create a new product, you have the option to configure a **Free** or **paid** product plan. If you skip this step, a free plan will be auto generated by default, which you can edit / modify later.
 
-The plan wizard is composed of three pages:
-
-* Page 1: the plan profile - title, description, type (Free / Paid)
-* Page 2: [the plan quotas definition](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
-* Page 3: [the approval mode](/docs/manage_product_foundry/manage_product_plans#configure-access)
-
-To configure a product plan from the create product wizard:
-
-1. [Create a new product](/docs/manage_product_foundry/foundry_product_management/#create-a-product). *The Create product wizard is displayed*.
-2. Enter the following properties in **Usage plan**:
-
-    * **Plan title** - the display name of the plan that will be listed in the Marketplace to identify the plan.
-    * **Logical name** - a logical name to uniquely identity the plan in the system. If no value is entered, one will be auto generated for you.
-    * **Description** - describe the product plan in few words so the consumer will know what the offering is.
-
-3. Select either **Free** or **Paid** plan type and proceed to the **Next** step to configure the plan quota.
-
-To configure a product plan from the product detail:
+To configure a product plan from the *product details* page:
 
 1. Navigate to the Plans section.
 2. Click **+ Add Plan** to open the plan creation wizard.
-3. Follow the plan wizard and enter the required information.
+3. Follow the plan wizard and enter the required information:
+   * Plan profile - title (mandatory), name (optional), description (optional)
+   * [Billing configuration](/docs/manage_product_foundry/manage_product_plans#billing-information)
+   * [Plan quotas](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
+   * [Add custom metadata](/docs/manage_product_foundry/manage_product_plans#configure-access)
+   * Add optional tags and attributes
+
+### Billing information
+
+The billing information describes whether the plan has a financial aspect. It can be a Free plan or a Paid plan. The Free plan has no cost; whereas, the Paid plan has two costs: a setup cost occurring at the creation of the subscription, and a recurring cost at each billing cycle. The plan fields are optional: you can use one or the other, or both. The Paid plan requires a currency so that the billing system will know how to bill the consumer.
+
+You can also determine whether the subscription will be never ending, or if it will be automatically cancelled after a certain period of time (for instance, a trial period before moving to a different plan). This is available for both Free and Paid plans.
+
+Lastly, for a Paid plan, an automatic subscription cancellation can be set up for when the subscription has past-due invoices. For example, if an invoice has not been paid in a timely manner, this will automatically cancel the subscription and terminate all associated access and credentials.
+
+To configure plan billing, enter the values for the following properties:
+
+* **Plan Type** - Free or Paid.
+* **Currency** (Paid plan only) - choose the currency that will be used to charge the subscription.
+* **Setup Fee** (Paid plan only) - the initial fee when subscription is created. These fees appear on the first invoice the consumer pays before being able to request access to any resource.
+* **Basic Price** (Paid plan only) - the recurring price that is added to the billing period invoices.
+* **Billing Period** - choose between Monthly or Annually. This determines how often the consumer receives an invoice if the billing system integration is setup.
+* **Subscription Term Length** - the length of the subscription for a limited period of time or **Unlimited** (default). Uncheck Auto-renew to select the period of time after which the subscription will be automatically cancelled once the term is reached.
+* **Cancel Subscription with Past Due Invoice** (Paid plan only) - select if you want to activate this option with billing integration to ensure that the consumer cannot abuse the subscription when invoices are unpaid.
+
+{{< alert title="Caution" color="danger" >}}
+**Impact on cancelling subscription**
+When a subscription is cancelled, the system initiates events to deprovision corresponding Access and Credentials to prevent the consumer from abusing the subscription. These events will be processed automatically if a Discovery Agent is managing the underlying gateway or manually when no agent is connected.
+{{< /alert >}}
 
 ### Configure a quota
 
-A quota describes the itemized units per resource or group of resources in a product, and how much of those units they are entitled to use over a period of time.
+A quota describes the itemized units per resource, or group of resources, in a product, and how much of those units the consumer is entitled to use over a period of time.
 
-For paid plan quota, it also describes the base pricing of the plan and the pricing of the quota based on the quota type (Standard / Tier). See [Product plan type and consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-consumption-cost).
+For a Paid plan, each quota can be associated with a cost depending on the quota type (Standard / Tier / Pay Per Use). See [Product plan type and quota consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-quota-consumption-cost).
 
-To configure a quota for a **free plan**, enter values for the following properties:
+To configure a quota for a **Free plan**, enter the values for the following properties:
 
-* **Quota name** - a name for the quota.
-* **Quota type** - only **Standard** is available.
+* **Quota Name** - a name for the quota.
+* **Quota Type** (only **Standard** is available).
 * **Unit** - the default is **Transactions**. This non-configurable field defines a quota for Transaction units only.
 * **Limit** - enter a quantity (for example, 1000, 15) or check Unlimited to not specify any limitation.
-* **Quota type** - select either **Daily**, **Weekly** or **Monthly**.
-* **Limit Type** - only **Strict** is available - the gateway enforces a hard stop when the quota limit is exceeded.
+* **Quota Type** - select either **Daily**, **Weekly** or **Monthly**.
+* **Limit Type** (only **Strict** is available) - the gateway enforces a hard stop when the quota limit is exceeded.
 * **Assign Resources** - the list of resources the provider will charge for by a measured unit. Only the resources included in the plan can be selected.
 
 {{< alert title="Note" color="primary" >}}When Limit Type is set to Strict, make sure the quota is enforced on the underlying gateway.{{< /alert >}}
-{{< alert title="Note" color="primary" >}}When selecting **Unlimited**, Limit, Quota Type and Limit Type are disabled. Be sure the underlying gateway will be able to support the load.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}When selecting **Unlimited**, Limit, Quota Type and Limit Type are disabled. Be sure the underlying gateway can support the load.{{< /alert >}}
 
-To configure a quota for a **paid plan**, enter values for the following properties:
+To configure a quota for a **Paid plan**, enter the values for the following properties:
 
-* **Base price**:
-    * **Currency** - the currency that will be used by the billing system (US Dollar, Euro, ...). The most common currencies are available in the drop-down.
-    * **Setup Cost** - (optional) the initial cost of the plan that will be billed at the first invoice.
-    * **Recurring cost** - (optional) the plan price value that will be billed each billing cycle.
-    * **Billing period** - select either **Monthly** or **Annually**. This is the period used for billing cycle, which is based on the calendar month for Monthly plans or calendar year for Annually plans.
-    * **Subscription Term Length** - the length of the subscription for a limited period of time or **Unlimited** (default). If a number of terms is selected, the subscription will be automatically cancelled once the term is reached.
-* **Quota type** - select either **Standard** or **Tiered** or **Pay Per Use**:
-    * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota type**, **Limit type**, **Overage** for loose limit type).
+* **Quota Name** - a name for the quota.
+* **Quota Type** - select either **Standard**, **Tiered** or **Pay Per Use**:
+    * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota Type**, **Limit Type**, **Overage** for loose limit type).
     * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 and automatically added to the last tier **upper limit**.
-    * Pay per Use - select the transaction unit cost.
+    * Pay Per Use - select the transaction unit cost.
 
-{{< alert title="Note" color="primary" >}}For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}
+For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.
+{{< /alert >}}
 
 Click **+ Add Quota** to create another quota group for a different resource. Once a resource is assigned to a quota group, it is no longer available for another quota group.
 
