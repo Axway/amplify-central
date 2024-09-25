@@ -5,8 +5,6 @@ weight: 130
 date: 2021-01-13T00:00:00.000Z
 ---
 
-Update page to use the CLI and return the i18 information and its constraint to help wih translation
-
 Use Axway Central CLI basic commands for creating, fetching, updating, and deleting various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
 ### The accessibility of resources
@@ -42,7 +40,7 @@ The following table describes the usage, options, and arguments for the `get` co
 |`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.<br/>*(Added: v1.28.0)*|
 |`--client-id=<value>`                                          |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
 |`--no-cache`                                                   |Refresh system definition cache.<br/>*(Added: v1.8.0)*|
-|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)|
+|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)*|
 |`--language=<value>`                                           |Get the language translation requested along with the resource.<br/>*(Added: v3.2.0)*|
 |`--languageDefinition=<value>`                                 |Get the language translation requested.<br/>*(Added: v3.4.0)*|
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
@@ -96,14 +94,14 @@ axway central get env,apisvc commonname -s env1 -o json
 axway central get apisvc testsvc -s Environment/testenv
 ```
 
-The following example shows how to use the get command to fetch the internationalization information for a resource using the --language argument:
+The following example shows how to use the `get` command to fetch the internationalization information for a resource using the `--language` argument:
 
 ```bash
 # To get a product with name "test-product" with all the available language translations in JSON format
 axway central get products test-product --language="*" -o json
 ```
 
-The sample output for the 'get' command with '--language="*"' argument is as follows:
+The sample output for the `get` command with the `--language="*"` argument is as follows:
 
 ```json
 {
@@ -222,14 +220,14 @@ axway central get products test-product --language="en-us" -o yaml
 axway central get products test-product --language="pt-br" -o yaml
 ```
 
-The following example shows how to use the get command to fetch just the internationalization information to facilitate a translation using the --languageDefinition argument:
+The following example shows how to use the `get` command to fetch just the internationalization information to facilitate a translation using the `--languageDefinition` argument:
 
 ```bash
 # To get a stage with name "demo-stage" with the French language translation in JSON format
 axway central get stages demo-stage --languageDefinition="fr-fr" -o json
 ```
 
-The sample output for the 'get' command with '--languageDefinition="fr-fr"' argument is as follows:
+The sample output for the `get` command with `--languageDefinition="fr-fr"` argument is as follows:
 
 ```json
 {
@@ -295,7 +293,7 @@ axway central get stages demo-stage --languageDefinition="de-de" -o json
 axway central get stages demo-stage --languageDefinition="pt-br" -o json
 ```
 
-The following examples show how to use the get command with RSQL queries using the -q flag:
+The following examples show how to use the `get` command with RSQL queries using the `-q` flag:
 
 ```bash
 # To get assets with titles that start with "a"
@@ -320,7 +318,7 @@ axway central get assets -q "name=='i*';tags==test123"
 axway central get assets -q "name=='i*' or name=='a*';tags=in=(test,prod)"
 ```
 
-The following examples show how to use the get command with simple filters:
+The following examples show how to use the `get` command with simple filters:
 
 ```bash
 # To get assets and filter the list to assets that have a specific title "test123"
@@ -417,7 +415,7 @@ axway central apply -f ./some/folder/resources.yaml
 axway central apply -f ./some/folder/resources.json -o yaml
 ```
 
-The following examples show how to use the `apply` command to apply just the language translation requested using '--language' argument :
+The following examples show how to use the `apply` command to apply just the language translation requested using `--language` argument :
 
 ```bash
 # apply french language translation to the resource from file if the translation exists
@@ -427,7 +425,7 @@ axway central apply -f ./some/folder/lang-resources.json --language="fr-fr"
 axway central apply -f ./some/folder/lang-resources.json --language="de-de,pt-br,en-us" -o yaml
 ```
 
-The 'lang-resources.json' file contents are as follows :
+The `lang-resources.json` file contents are as follows :
 
 ```json
 {
