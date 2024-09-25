@@ -18,11 +18,11 @@ Learn how to manage your Marketplace language(s) so that consumer can see produc
 
 Setup the language of your choice - 4 are available: **English** / **French** / **German** / **Brazilian Portuguese**
 
-By default, English is the default Marketplace language. Provider can change the default language to any supported one as needed. The default language is the one that will be used for displaying the Marketplace visual elements (menus / buttons / static labels) in case the browser language does not match any Marketplace language definition. For instance having a browser language in Spanish will result in displaying the Marketplace element in the default Marketplace language as Spanish is not a known language managed by the Marketplace.
+By default, English is the default Marketplace language. Provider can change the default language to any supported one as needed. The default language is the one that will be used for displaying the Marketplace visual elements (menus / buttons / static labels) in case the user language does not match any Marketplace language definition. For instance having a user language in Spanish will result in displaying the Marketplace element in the default Marketplace language as Spanish is not a known language managed by the Marketplace.
 
 Samples:
 
-| Marketplace available language(s) | Browser language(s)           | Marketplace graphic elements display |
+| Marketplace available language(s) | User language selection       | Marketplace graphic elements display |
 | --------------------------------- | ----------------------------- |------------------------------------- |
 | English (Default)                 | English                       | English                              |
 | English (Default) </br> French    | Spanish                       | English                              |
