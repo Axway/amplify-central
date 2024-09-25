@@ -444,7 +444,7 @@ For the example provided, the following information will be required when a cons
 
 ## Subscription events
 
-A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog. (Robert, should this section be removed?)
+A `SubscriptionUpdatedEvent` event is triggered when an action is taken on a subscription to a catalog asset in the Amplify Unified Catalog. (Robert, remove section?)
 
 Click [subscriptionEventSchema.json](https://amplify-central.netlify.app/samples/central/subscriptionEventSchema.json) to download a sample of a subscription event schema.
 

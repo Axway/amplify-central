@@ -108,7 +108,7 @@ The following steps will guide you through the upgrade procedure:
 
 * If your AWS agents are running in an EC2 instance or ECS-fargate, restart the instance to get the latest agent release.
 
-{{< alert title="Note" color="primary">}}It is possible that an old installation contains the latest tags attached to the Docker pull command. If you do not want the instance restart to pull the latest agent, connect to your instance and edit the file `start-agents.sh`. Comment the line that removes the container and pulls the new image: (Robert? Jason, need some advice on how to change this to not use jfrog for latest)
+{{< alert title="Note" color="primary">}}It is possible that an old installation contains the latest tags attached to the Docker pull command. If you do not want the instance restart to pull the latest agent, connect to your instance and edit the file `start-agents.sh`. Comment the line that removes the container and pulls the new image:
 
 ```shell
 #echo "Pulling docker images"
