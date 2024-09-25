@@ -96,7 +96,7 @@ axway central get env,apisvc commonname -s env1 -o json
 axway central get apisvc testsvc -s Environment/testenv
 ```
 
-The following example shows how to use the get command to fetch the i18 information for a resource using the --language argument:
+The following example shows how to use the get command to fetch the internationalization information for a resource using the --language argument:
 
 ```bash
 # To get a product with name "test-product" with all the available language translations in JSON format
@@ -222,7 +222,7 @@ axway central get products test-product --language="en-us" -o yaml
 axway central get products test-product --language="pt-br" -o yaml
 ```
 
-The following example shows how to use the get command to fetch the i18 information to facilitate a translation using the --languageDefinition argument:
+The following example shows how to use the get command to fetch just the internationalization information to facilitate a translation using the --languageDefinition argument:
 
 ```bash
 # To get a stage with name "demo-stage" with the French language translation in JSON format
@@ -421,11 +421,101 @@ The following examples show how to use the `apply` command to apply just the lan
 
 ```bash
 # apply french language translation to the resource from file if the translation exists
-axway central apply -f ./some/folder/resources.yaml --language="fr-fr"
+axway central apply -f ./some/folder/lang-resources.json --language="fr-fr"
 
-# apply german, portugese, and english language translation to the resource from file if the translations eixts and output results in YAML format
-axway central apply -f ./some/folder/resources.json --language="de-de,pt-br,en-us" -o yaml
+# apply german and portugese translation to the resource from file if the translations eixts and output results in YAML format
+axway central apply -f ./some/folder/lang-resources.json --language="de-de,pt-br,en-us" -o yaml
 ```
+
+The 'lang-resources.json' file contents are as follows :
+
+```json
+{
+    "group": "catalog",
+    "apiVersion": "v1alpha1",
+    "kind": "Stage",
+    "name": "demo-stage",
+    "metadata": {
+        "id": "8a2e834391fb249101920c6a860d07e1",
+        "resourceVersion": "1",
+        "selfLink": "/catalog/v1alpha1/stages/demo-test"
+    },
+    "languages": {
+        "resource": {
+            "code": "en-us"
+        }
+    },
+    "languages-de-de": {
+        "values": [
+            {
+                "path": "/title",
+                "value": "Qualification Edited.....",
+                "status": "complete",
+                "_embedded": {
+                    "resource": {
+                        "schema": {
+                            "type": "string",
+                            "maxLength": 350,
+                            "description": "The resource title."
+                        },
+                        "value": "Test/QA stage"
+                    }
+                }
+            },
+            {
+                "path": "/spec/description",
+                "value": "Regroupe les assets disponibles en Test",
+                "status": "complete",
+                "_embedded": {
+                    "resource": {
+                        "schema": {
+                            "type": "string",
+                            "description": "description of the stage",
+                            "maxLength": 350
+                        },
+                        "value": "Groups Assets available in QA"
+                    }
+                }
+            }
+        ]
+    },
+    "languages-pt-br": {
+        "values": [
+            {
+                "path": "/title",
+                "value": "Qualification",
+                "status": "complete",
+                "_embedded": {
+                    "resource": {
+                        "schema": {
+                            "type": "string",
+                            "maxLength": 350,
+                            "description": "The resource title."
+                        },
+                        "value": "Test/QA stage"
+                    }
+                }
+            },
+            {
+                "path": "/spec/description",
+                "value": "Regroupe les assets disponibles en Test",
+                "status": "complete",
+                "_embedded": {
+                    "resource": {
+                        "schema": {
+                            "type": "string",
+                            "description": "description of the stage",
+                            "maxLength": 350
+                        },
+                        "value": "Groups Assets available in QA"
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
 
 ## delete
 
