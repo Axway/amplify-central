@@ -516,7 +516,6 @@ The 'lang-resources.json' file contents are as follows :
 }
 ```
 
-
 ## delete
 
 Delete resources by type name or file name. When deleting a single resource by its name, if the desired resource type is scoped, you must specify the scope name by adding the `-s, --scope <name>` flag.
