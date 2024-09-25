@@ -30,7 +30,7 @@ Before installing and configuring your Embedded agents, make sure you have the f
 ### Embedded agent configuration machine pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
+    * You can access platform.axway.com, login.axway.com and repository.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL

@@ -27,7 +27,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 ## Agent configuration machine pre-requisites
 
 * Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com, login.axway.com and axway.jfrog.io on port 443
+    * You can access platform.axway.com, login.axway.com and repository.axway.com on port 443
     * You can install and run Axway Central CLI (node.js module)
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL (make sure it is in the path for the CLI to use it if needed)
@@ -202,18 +202,28 @@ Traceability Agent:
 
 ### Docker mode
 
-As mentioned in the installation procedure, agents can be started with the following commands (installation procedure will replace `{agentVersion}` below with the most recent version available):
+Access the list of available agents from your organization:
+
+* Go to *Help menus > Downloads > Repository*
+
+     -or-
+
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
+
+and search for the Docker image for the most recent agents to download as `{agentImage}`.
+
+As mentioned in the installation procedure, agents can be started with the following commands, where `{agentImage}` is the most recent agent image version available:
 
 Discovery Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys axway.jfrog.io/ampc-public-docker-release/agent/v7-discovery-agent:{agentVersion}
+docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v /data {agentImage}
 ```
 
 Traceability Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v /data -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v USAGE_METRICS_PATH:/data axway.jfrog.io/ampc-public-docker-release/agent/v7-traceability:{agentVersion}
+docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v /data {agentImage}
 ```
 
 ### Helm deployment
