@@ -44,14 +44,32 @@ Filter input controls:
 
 * Radio button: single filter criteria
 * Checkbox: multiple filter criteria
-* Checkbox and search: multiple filter criteria and search capability to find the correct filter name
+* Checkbox and search: multiple filter criteria and search capability to find the correct filter name.
 
 {{< alert title="Note" color="primary" >}}
 When the screen is too small to display the filter and the page content at the same time, the filter displays as an icon on the left of the search bar.
 Click the icon to expand the filter over the page content. Click it again to hide the filter.
 {{< /alert >}}
 
-The filter allows search values to reduce the number of items. Once selected, the page content is displayed according to the filter restriction.
+The filter allows to reduce the number of items. Once a filter value is selected, the page content is displayed according to the filter restriction.
+
+The filter also contains the indication of selected value out of the total value numbers displayed at the right of the filter name. Each time a value is selected, the counter is increased. When a value is deselected, the counter decreases. Clicking on the counter allows to view only the selected value in the filter list. When only the selected values are displayed, clicking again the number will display back all the loaded filter values.
+
+The reset button on the filter will simply remove any selection and put back the filter to its original state.
+
+### Filter with Search capabilities
+
+By default, filter values are paginated which means that potentially the user is not viewing all the available values. The number of total values is indicated on the right of the filter name. 3 scroll are allowed to load more values. Then a **Load more** button on the filter value. This button will be available as soon as there are more values to load.
+
+Search is done on server side which mean you could find something that is not displayed yet on the screen. When the search match a filter value, this value is highlighted in bold. To remove the search input, simply press the **X** button present in the search bar.
+
+The **Select All** button is only available when all filter values are loaded on the screen.
+
+{{< alert title="Category filter" color="primary" >}}
+Since the Category can have children and grand-children, there is no count displayed.
+
+Each level is also paginated, meaning that you can have the 3 scroll before seeing the **Load more** button on a child category.
+{{< /alert >}}
 
 ### Home page search
 
