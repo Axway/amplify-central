@@ -93,8 +93,9 @@ TRACEABILITY_SAMPLING_PER_API=true
 
 If the agent receives 100 transactions, evenly between 2 APIs, only 10 (5 from each API) will be sent to Amplify Analytics.
 
-See [Configure API Gateway Analytics](https://docs.axway.com/bundle/axway-open-docs/page/docs/apimanager_analytics/index.html).
+{{< alert title="Note" color="primary" >}}It is recommended that you use the Business Insights API Health screen to identify the APIs that have status errors. Then view the API details with the tools provided by your API Gateway vendor.{{< /alert >}}
 
-{{< alert title="Note" color="primary" >}}It is recommended to use the Business Insights API Health screen to identify the APIs that have status errors. Then view API details with the tools provided by your API Gateway vendor.{{< /alert >}}
+For details on how to configure and view API Traffic Insights on the Axway API Management Gateway, see:
 
-For the Axway API Management Gateway, refer to [Amplify Analytics Operational Insights](https://docs.axway.com/bundle/axway-open-docs/page/docs/operational_insights/index.html) for additional details on how to configure and view API Traffic Insights.
+* [Amplify Analytics Operational Insights](https://docs.axway.com/bundle/axway-open-docs/page/docs/operational_insights/index.html)
+* [Configure API Gateway Analytics](https://docs.axway.com/bundle/axway-open-docs/page/docs/apimanager_analytics/index.html).
