@@ -4,7 +4,7 @@ linkTitle: Trace sampling
 draft: false
 weight: 10
 ---
-The Traceability Agent can sample the transaction information that is sent to Amplify Analytics . Learn how to set up sampling rules used to send only certain transactions to Amplify Analytics. With the agent default configuration, all transactions are sent to Amplify Analytics. (Update for high traffic)
+The Traceability Agent can sample the transaction information that is sent to Amplify Analytics . Learn how to set up sampling rules used to send only certain transactions to Amplify Analytics. With the agent default configuration, all transactions are sent to Amplify Analytics.
 
 ## Sampling
 
@@ -16,10 +16,10 @@ The following settings can be used to control the sampling.  A percentage can be
 
 #### Percentage
 
-The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to `1`, may be set to any value between 0 and 10.  
+The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to **`0`**, may be set to any value between 0 and 10.  
 
-* A value of `0` results in no transactions sent to Amplify Analytics
-* A value of `10` results in 10% of all transactions sent to Amplify Analytics
+* A value of `0` results in no transactions sent to Amplify Analytics for the API Traffic display within Business Insights.  The API Health display will still show the API metrics even with sampling set to zero percent.
+* A value of `10` results in 10% of all transactions sent to Amplify Analytics for the API Traffic display.
 
 The agent uses a counter to apply the sampling. When a value (other than 0 and 10) is set, the agent will send all transactions up to that value and then not send any until it reaches 100.  Therefore, this percentage results in the first x of each 100 transactions being sampled.
 
@@ -92,3 +92,10 @@ TRACEABILITY_SAMPLING_PER_API=true
 ```
 
 If the agent receives 100 transactions, evenly between 2 APIs, only 10 (5 from each API) will be sent to Amplify Analytics.
+
+- [Configure API Gateway Analytics](https://docs.axway.com/bundle/axway-open-docs/page/docs/apimanager_analytics/index.html}{{< /alert >}}
+{{< alert title="Note" color="primary" >}}NOTE: It is recommended that in high volume API Traffic situations to use the API Health screen to identfiy the APIs which have status errors. Then to view API details with the tools provided by your API Gateway vendor.
+
+For the Axway API Management Gateway, please refer to the thee documents for additional details on how to configure and view API Traffic Insights:
+- [Amplify Analytics Operational Insights](https://docs.axway.com/bundle/axway-open-docs/page/docs/operational_insights/index.html)
+
