@@ -60,8 +60,8 @@ In order to make calls to Backstage, the agent needs a valid url. It uses 4 part
 
 1. Scheme: Either "http" or "https" (mandatory)
 2. Host: Where Backstage is hosted. Example: "demo.backstage.io" (mandatory)
-3. BackendPort: In case of, for example, locally hosting Backstage, the agent needs to know the port where the Backstage backend runs (optional)
-4. Path: Path of the URL, in case there is any. Example: "/path/v2"
+3. BackendPort: In case where Backstage is hosted locally, the agent needs to know the port where the Backstage backend runs (optional)
+4. Path: Path of the URL, in case there is any. Example: "/path/v2" (optional)
 
 ### Authentication Parts
 
