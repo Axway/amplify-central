@@ -56,7 +56,7 @@ The Discovery agent will use the credentials provided. If Backstage requires no 
 
 ### URL Parts
 
-In order to make calls to Backstage, the agent needs a valid url. It required 4 parts, 2 of which are mandatory
+In order to make calls to Backstage, the agent needs a valid url. It uses 4 parts, 2 of which are mandatory
 
 1. Scheme: Either "http" or "https" (mandatory)
 2. Host: Where Backstage is hosted. Example: "demo.backstage.io" (mandatory)
