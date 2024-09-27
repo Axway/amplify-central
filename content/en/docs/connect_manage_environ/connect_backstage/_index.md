@@ -15,7 +15,7 @@ Backstage can be represented by an Amplify environment allowing you to better fi
 
 ### Discovery
 
-The Discovery Agent is used to discover new published APIs for a specific Backstage catalog. The Discovery Agent pushes all API definitions from Backstage to Amplify. If the spec type is unknown by Amplify, the service will have a type of `Unstructured`
+The Discovery Agent is used to discover new published APIs for a specific Backstage Software Catalog. The Discovery Agent pushes all API definitions from Backstage to Amplify. If the spec type is unknown by Amplify, the service will have a type of `Unstructured`
 
 The related APIs are published to Amplify as an API service in the selected environment.
 
@@ -32,7 +32,7 @@ The related APIs are published to Amplify as an API service in the selected envi
 
 ## Region support
 
-Amplify supports three regions, US (default), EU and APAC. The data (APIs, traffic) that the agents send to Amplify are stored in one of those regions based on the agent configuration.
+Amplify supports three regions, US (default), EU and APAC. The data (i.e. APIs) that the Discovery agent sends to Amplify is stored in one of those regions based on the agent configuration.
 
 Use one of the following URLs to access the Amplify UI:
 
@@ -40,7 +40,7 @@ Use one of the following URLs to access the Amplify UI:
 * EU: [https://central.eu-fr.axway.com](https://central.eu-fr.axway.com)
 * APAC: [https://central.ap-sg.axway.com](https://central.ap-sg.axway.com)
 
-Use one of the following settings, for both agents, to set the region the agent will connect to:
+Use one of the following settings, for the Discovery Agent, to set the region the agent will connect to:
 
 * `CENTRAL_REGION`= **US**
 * `CENTRAL_REGION`= **EU**
