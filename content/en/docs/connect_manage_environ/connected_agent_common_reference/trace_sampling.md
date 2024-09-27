@@ -16,10 +16,10 @@ The following settings can be used to control the sampling.  A percentage can be
 
 #### Percentage
 
-The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to `1`, may be set to any value between 0 and 10.  
+The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to **`0`**, may be set to any value between 0 and 10.  
 
-* A value of `0` results in no transactions sent to Amplify Analytics
-* A value of `10` results in 10% of all transactions sent to Amplify Analytics
+* A value of `0` results in no transactions sent to Amplify Analytics for the API Traffic display within Business Insights.  The API Health display will still show the API metrics even with sampling set to zero percent.
+* A value of `10` results in 10% of all transactions sent to Amplify Analytics for the API Traffic display.
 
 The agent uses a counter to apply the sampling. When a value (other than 0 and 10) is set, the agent will send all transactions up to that value and then not send any until it reaches 100.  Therefore, this percentage results in the first x of each 100 transactions being sampled.
 
@@ -92,3 +92,10 @@ TRACEABILITY_SAMPLING_PER_API=true
 ```
 
 If the agent receives 100 transactions, evenly between 2 APIs, only 10 (5 from each API) will be sent to Amplify Analytics.
+
+{{< alert title="Note" color="primary" >}}It is recommended that you use the Business Insights API Health screen to identify the APIs that have status errors. Then view the API details with the tools provided by your API Gateway vendor.{{< /alert >}}
+
+For details on how to configure and view API Traffic Insights on the Axway API Management Gateway, see:
+
+* [Amplify Analytics Operational Insights](https://docs.axway.com/bundle/axway-open-docs/page/docs/operational_insights/index.html)
+* [Configure API Gateway Analytics](https://docs.axway.com/bundle/axway-open-docs/page/docs/apimanager_analytics/index.html).
