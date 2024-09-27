@@ -17,6 +17,7 @@ In this guide you will learn how to configure a Marketplace with multiple langua
 ## Configure a Marketplace with multiple languages
 
 Besides English, the Marketplace can now be translated to any of the following languages:
+
 * **French**
 * **German**
 * **Brazilian Portuguese**
@@ -25,6 +26,7 @@ English is the default language for the Marketplace. However, you can choose a d
 In addition to translating the Marketplace content in multiple languages, you can translate the product definition and its related configuration that is displayed to consumers.
 
 While Marketplace pages are automatically translated, custom fields and content require manual translation. To ensure a fully localized experience, you must manually translated the following fields:
+
 * Marketplace settings: Name (mandatory), Site name (optional), Description (optional)
 * Marketplace footer content.
 * Marketplace menus: Help menu items and Navigation menu items.
@@ -34,6 +36,7 @@ While Marketplace pages are automatically translated, custom fields and content 
 * Onboarding Form.
 
 You can translated these fields directly from inside the targeted screens. For instance, to translate the Marketplace Settings:
+
 1. Navigate to *platform.axway.com > Organization > Marketplaces*.
 2. Click the a Marketplace title to access the settings screen.
 3. Go to the *Settings* tab.
@@ -58,7 +61,7 @@ For a Marketplace to be displayed in a certain language, you must enable it firs
    2. Using the ellipsis menu you can set a language as default.
 
 {{< alert title="Note" color="primary" >}}
-The Default language cannot be disabled, however you can set a different language as default. 
+The Default language cannot be disabled, however you can set a different language as default.
 The "Enable" button will be disabled for languages without a corresponding Marketplace name translation.
 {{< /alert >}}
 
