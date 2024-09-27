@@ -4,75 +4,52 @@ linkTitle: Marketplace localization
 weight: 42
 ---
 
-Configure your Marketplace to accept multiple languages and present product in the appropriate one.
+**Configure the Enterprise Marketplace to support multiple languages.** Allow users to select their preferred language and seamlessly present the product information, documentation, and user interfaces in their selected language.
 
 ## Before you start
 
-You must have Platform Administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Localization* content.
+To enable and configure Marketplace Localization, you'll need Platform Administrator permissions and ensure your organization has the necessary Public Marketplace entitlement.
 
 ## Objectives
 
-Learn how to manage your Marketplace language(s) so that consumer can see product in their own language if product are translated.
+In this guide you will learn how to configure a Marketplace with multiple languages.
 
-## Marketplace localization setup
+## Configure a Marketplace with multiple languages
 
-Setup the language of your choice - 4 are available: **English** / **French** / **German** / **Brazilian Portuguese**
+Besides English, the Marketplace can now be translated to any of the following languages:
+* **French**
+* **German**
+* **Brazilian Portuguese**
 
-By default, English is the default Marketplace language. Provider can change the default language to any supported one as needed. The default language is the one that will be used for displaying the Marketplace visual elements (menus / buttons / static labels) in case the user language does not match any Marketplace language definition. For instance having a user language in Spanish will result in displaying the Marketplace element in the default Marketplace language as Spanish is not a known language managed by the Marketplace.
+English is the default language for the Marketplace. However, you can choose a different default language if desired.
+In addition to translating the Marketplace content in multiple languages, you can translate the product definition and its related configuration that is displayed to consumers.
 
-Samples:
-
-| Marketplace available language(s) | User language selection       | Marketplace graphic elements display |
-| --------------------------------- | ----------------------------- |------------------------------------- |
-| English (Default)                 | English                       | English                              |
-| English (Default) </br> French    | Spanish                       | English                              |
-| English (Default) </br> French    | French                        | French                               |
-| German (Default) </br> Portuguese | French                        | German                               |
-
-Product definition can have his own language definition different from the Marketplace language definition. The system will try to match the product language based on the browser language definition and if a product translation cannot be found, it will default to the default product language to show those missing translation. This mean consumer may see as partial translated product in the Marketplace.
-
-Let's see with examples how Marketplace product display language is determined?
-
-| Marketplace available language(s) | Product available language(s) | Marketplace product language display |
-| --------------------------------- | ----------------------------- | ------------------------------------ |
-| English (Default)                 | English (Default)             | English                              |
-| English (Default) </br> French    | French (Default)              | French                               |
-| English (Default) </br> German    | French (Default) </br> no other translation provided | French (product default)       |
-| German (Default) </br> Portuguese | French (Default) </br> German translation | German                   |
-| German (Default) </br> Portuguese | French (Default) </br> English translation | French (product default)                   |
-
-{{< alert title="Note" color="warning" >}}
-It is highly recommended to align the Marketplace default language with product default language to avoid inconsistencies in translation.
-{{< /alert >}}
-
-You can define the appropriate translation of some Marketplace elements:
-
+While Marketplace pages are automatically translated, custom fields and content require manual translation. To ensure a fully localized experience, you must manually translated the following fields:
 * Marketplace settings: Name (mandatory), Site name (optional), Description (optional)
 * Marketplace footer content.
-* Marketplace help and navigation menus.
+* Marketplace menus: Help menu items and Navigation menu items.
+* Marketplace and navigation menus.
+* Marketplace homepage: Hero banner content, Featured content title, Call to action content.
+* Ratings & Reviews: Review Instructions.
+* Onboarding Form.
 
-To setup multiple language for the Marketplace:
+You can translated these fields directly from inside the targeted screens. For instance, to translate the Marketplace Settings:
+1. Navigate to *platform.axway.com > Organization > Marketplaces*.
+2. Click the a Marketplace title to access the settings screen.
+3. Go to the *Settings* tab.
+4. Enter the translated values for each of the displayed languages. Eeach language will have a visual indicator:
+
+   * checkmark icon: indicates this is the default language
+   * pencil icon: this language was enabled / activated for the Marketplace
+   * disabled icon: this language is not activated, which means consumers cannot select it as a preferred language.
+
+5. Click **Save** button to save your changes.
+
+For a Marketplace to be displayed in a certain language, you must enable it first:
 
 1. Navigate to *platform.axway.com > Organization > Marketplaces*.
 2. Open the desired Marketplace by clicking the Marketplace name.
-3. Select the *Settings* tab
-4. The Name, Sitemane and Description field contain values for specific language and an icon. Enter the value you need:
-
-   * checkmark icon: this language is the default one
-   * pencil icon: this language is an additional language
-   * forbidden icon: this language is not used by the Marketplace.
-
-By selecting a language, you can enter the corresponding value. Once your value are all set, don't forget to hit the **Save** button to validate your changes.
-
-You do the same for the Marketplace footer by navigating to the Footer tab. Be sure to select the appropriate language before entering the corresponding elements
-
-Again similarly, the Marketplace menus can be customized based on the language you need. Navigate to the Menus tab and add the Help and Navigation menus as desired.
-
-Now that the languages translation are available, it is time to setup the Marketplace accepted languages:
-
-1. Navigate to *platform.axway.com > Organization > Marketplaces*.
-2. Open the desired Marketplace by clicking the Marketplace name.
-3. Select to *Internationalization* tab
+3. Go to the *Internationalization* tab
 4. Choose the product display: a choice between 2 options:
    1. *All products* - products that are internationalized or not will be visible in the Marketplace
    2. *Only fully-localized products* - only the internationalized products will be visible in the Marketplace
@@ -81,19 +58,20 @@ Now that the languages translation are available, it is time to setup the Market
    2. Using the ellipsis menu you can set a language as default.
 
 {{< alert title="Note" color="primary" >}}
-The Default language cannot be disabled.
-
-If no translation for the Marketplace name is available for a specific language, you are not allowed to use this language: the enable button is disabled.
+The Default language cannot be disabled, however you can set a different language as default. 
+The "Enable" button will be disabled for languages without a corresponding Marketplace name translation.
 {{< /alert >}}
 
-## Consumer experience
+## Select the preferred language as a consumer
 
-On the Marketplace navigation bar, a language selector is available. This selector contains the default language and available languages for the Marketplace. Default language is the selected one. Consumer can use the language he wants from the selection.
+When you access a Marketplace, if multiple languages are enabled, you can change the language from the Language drop-down menu that is located in the top right corned of the Maketplace navigation bar.
 
-Consumer will see the translated product according to the selected language and rules above if ever the product does not support the selected language.
+Products will be shown in the user's preferred language whenever possible. If a translation is missing, the default product language will be displayed. This might lead to consumers seeing a partially translated product.
+
+{{< alert title="Note" color="warning" >}}
+We highly recommended you aligning the Marketplace default language with the product default language to avoid inconsistencies in translation.
+{{< /alert >}}
 
 {{< alert title="Limitation" color="warning" >}}
-Although most of the static elements of the Marketplace will be translated, some will not:
-
-* swagger UI component that render the API specification
+The API specification are not translated.
 {{< /alert >}}
