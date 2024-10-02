@@ -9,7 +9,7 @@ Connect Backstage and Amplify so you can govern and monitor the creation of the 
 
 Connecting Backstage to Amplify will provide you with a global, centralized view of your APIs.
 
-Backstage can be represented by an Amplify environment, allowing you to better filter APIs and their traffic. Supplied with the environment, the Discovery Agent interacts with Backstage and Amplify to detect changes to Backstage APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
+Backstage can be represented by an Amplify environment, allowing you to better filter APIs. Supplied with the environment, the Discovery Agent interacts with Backstage and Amplify to detect changes to Backstage APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
 
 ### Discovery
 
