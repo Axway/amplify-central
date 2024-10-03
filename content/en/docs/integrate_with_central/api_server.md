@@ -441,25 +441,25 @@ metadata:
 
 ### Multi-languages support
 
-Some objects support translation definition to visualize them differently based on the language context used:
+Some objects support translation definitions to visualize them based on the language context used:
 
-List of the object and fields that support translation:
+List of objects and fields that support translation:
 
 * **Product**: title, description
 * **Product Plan**: title, description
 * **Product Plan Quota**: name
 * **Product Documentation**: topic name, topic description, section name, section description, article name, article description, article markdown
-* **Document library document**: document title, document description, markdown content, binary content (PDF/PPTX,...), url
+* **Document Library Document**: document title, document description, markdown content, binary content (PDF/PPTX,...), url
 * **Category**: title, description
 * **Stage**: title, description
 * **SubscriptionRequestDefinition**: title, each object in the schema having title and/or description
 * **AccessRequestDefinition**: title, each object in the schema having title and/or description
 * **CredentialRequestDefinition**: title, each object in the schema having title and/or description
 
-These translations are provided using 2 different sub-resources attached to the object:
+These translations are provided using two different sub-resources attached to the object:
 
-* the default language sub-resources
-* the language specific sub-resource (one for each translated languages)
+* The default language sub-resources
+* The language specific sub-resource (one for each translated languages)
 
 Sample sub-resource for setting the object default language as English:
 
@@ -482,7 +482,7 @@ languages:
     code: en-us
 ```
 
-This default sub-resource tells that each individual fields of the object are now describe using the referenced language code.
+This default sub-resource indicates that each individual field of the object is now using the referenced language code.
 
 Available supported language codes are:
 
@@ -493,7 +493,7 @@ Available supported language codes are:
 
 Any other code will be rejected by the system.
 
-Each translated field has its existing path in the object and the associated translated value. The path is determine using the place of the field in the object. For instance title is at the top level whereas description is located under spec section of an object. Consequently, the path for **title** would be *"/title"* and the path for **description** is *"/spec/description"*.
+Each translated field has its existing path in the object and the associated translated value. The path is determine using the place of the field in the object. For instance, title is at the top level; whereas, description is located under the spec section of an object. Consequently, the path for **title** would be *"/title"* and the path for **description** is *"/spec/description"*.
 
 Sample sub-resource for setting a French language translation to any object having a *title* and *description*:
 
@@ -503,7 +503,7 @@ Sample sub-resource for setting a French language translation to any object havi
         "values": [
             {
                 "path": "/title",
-                "value": "Produit de démonstration (FR)"
+                "value": "Produit de dï¿½monstration (FR)"
             },
             {
                 "path": "/spec/description",
@@ -521,12 +521,12 @@ Similar resource in yaml format:
 languages-fr-fr:
   values:
   - path: "/title"
-    value: Produit de démonstration (FR)
+    value: Produit de dï¿½monstration (FR)
   - path: "/spec/description"
     value: Ce produit fait ceci et cela... (FR)
 ```
 
-Let's try to internationalise a product using the above definitions - the product default language is english and translated into French and German:
+Using the above definitions, the following code internationalizes a product with the default language of English and translated into French and German:
 
 ```json
 {
@@ -551,7 +551,7 @@ Let's try to internationalise a product using the above definitions - the produc
         "values": [
             {
                 "path": "/title",
-                "value": "Produit en Français"
+                "value": "Produit en Franï¿½ais"
             },
             {
                 "path": "/spec/description",
@@ -574,11 +574,11 @@ Let's try to internationalise a product using the above definitions - the produc
 }
 ```
 
-Using Amplify CLI or the Amplify API, you can import the above and your product is now ready to be view in 3 languages: English, French and German.
+Once the above settings are imported, using either Amplify CLI or the Amplify API, the product can be view in three languages: English, French and German.
 
-By default when requesting an object using the CLI or API, the languages are not returned. You need to add amn extra parameter to your command to get those information: --language
+By default, when requesting an object using the CLI or API, the languages are not returned. You must add an extra parameter to your command to get that information: `--language`
 
-Getting all languages information from product called product-i18n:
+Sample to get all language information from the product called "product-i18n":
 
 ```cmd
 axway central get product product-i18n --language=* -o json
@@ -596,12 +596,12 @@ Getting multiple language information from product called product-i18n:
 axway central get product product-i18n --language=fr-fr,en-us -o json
 ```
 
-It is also possible to get all the constraints of the fields that needs to be translated:
+It is also possible to get all the constraints of the fields that need to be translated:
 
-* from CLI, using **--languageDefinition={languageCode}** parameter
-* from API, using **embed=languages-{languageCode}.resource&expand=languages-{languageCode}&fields=languages-{languageCode}.values** query parameters when getting the object
+* CLI - use **--languageDefinition={languageCode}** parameter
+* API - use **embed=languages-{languageCode}.resource&expand=languages-{languageCode}&fields=languages-{languageCode}.values** to query parameters when getting the object
 
-Sample for getting all fields from product called product-i18n:
+Sample for getting all fields from product called "product-i18n":
 
 ```cmd
 axway central get product product-i18n --languageDefinition=fr-fr -o json 
@@ -646,21 +646,21 @@ will return:
 }
 ```
 
-Each time an object is updated, the system compute the completeness status of each individual fields. In case a field is not mandatory, the missing translated field status is not impacting. In case a mandatory field is missing in the translation sub-resource, the status of that field is incomplete and the global status of the sub-resource is incomplete too.
+Each time an object is updated, the system computes the completeness status of each individual field. If a field is not mandatory, then the missing translated field status is not impacting. If a mandatory field is missing in the translation sub-resource, then the status of that field is incomplete and the global status of the sub-resource is incomplete.
 
 Sub-resource possible statuses:
 
-* **complete**: translation is available
-* **incomplete**: some translations are missing
-* **undefined**: no translation provided
+* **Complete**: translation is available
+* **Incomplete**: some translations are missing
+* **Undefined**: no translation provided
 
 #### Changing the default language
 
-To update the default language to a new one, you have to first to ensure that the new default language is not already part of the language specific resource.
+To update the default language, you must first to ensure that the new default language is not already part of the language-specific resource.
 
-For instance, if your current default language is English and you have additional language as Portuguese, you are not allowed to change the default language to Portuguese until the Portuguese additional resources are removed.
+For instance, if your current default language is English and you have the additional language as Portuguese, then you are not allowed to change the default language to Portuguese until the Portuguese additional resources are removed.
 
-To remove an additional language, you need to mark all the properties of this language as undefined:
+To remove an additional language, you must mark all the properties of the language as undefined:
 
 ```json
 {
@@ -679,4 +679,4 @@ To remove an additional language, you need to mark all the properties of this la
 }
 ```
 
-Once this is done, you can change the default language to the new language using the same as explained earlier.
+Once this is done, you can change the default language to the new language, as described previously.

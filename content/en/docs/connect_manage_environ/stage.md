@@ -39,7 +39,7 @@ group: management
 apiVersion: v1alpha1
 kind: APIServiceInstance
 name: customer-data-instance-prod-v2
-title: Cutomer Data Service Instance PROD V2
+title: Customer Data Service Instance PROD V2
 metadata:
   scope:
     kind: Environment
