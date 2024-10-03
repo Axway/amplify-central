@@ -31,7 +31,7 @@ View the following information for all documents:
 * Access - the document visibility (Public / Protected)
 * Referenced - the number of times the document is referenced (product document / Marketplace settings)
 * Type - the document type:
-    * Files format: Portable Document Format - PDF / Word documents - DOC, DOCX / Markdown - MD / PowerPoint - PPTX / Excel - XLSX 
+    * Files format: Portable Document Format - PDF / Word documents - DOC, DOCX / Markdown - MD / PowerPoint - PPTX / Excel - XLSX
     * URL
 * Modified - the last time the document was updated
 * Ellipsis menu: Edit / Delete
