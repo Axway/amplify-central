@@ -553,7 +553,7 @@ axway central delete apisvc someapisvc -s newenv
 axway central delete -f ./some/folder/resources.yaml
 ```
 
-The `delete` command can be used with the `--forceDelete` argument to perform a force deletion on a resource. This argument can be helpful when the resource is stuck in `Deleting` state because of the finalizers being set, and using this argument can delete the resource. It prompts the user with a confirmation to delete the resource, but the prompt can be ignored by passing `--yes` argument. The following examples show how to use the `delete` command with `--forceDelete` argument:
+The `delete` command can be used with the `--forceDelete` argument to perform a force deletion on any resource. This argument can be helpful when the resource is stuck in `Deleting` state because of the finalizers being set on the resource itself or the resources scoped under it, and using this argument can delete the resource and all the scoped resources if present. It prompts the user with a confirmation to delete the resource, but the prompt can be ignored by passing `--yes` argument. The following examples show how to use the `delete` command with `--forceDelete` argument:
 
 ```bash
 # force delete environment by name with a prompt
