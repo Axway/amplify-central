@@ -5,7 +5,7 @@ weight: 130
 date: 2021-01-13T00:00:00.000Z
 ---
 
-Document how to remove finalizers when subscriptions are in "deleting" state.
+Document how to remove finalizers when subscriptions are in the "deleting" state.
 
 Use Axway Central CLI basic commands for creating, fetching, updating, and deleting various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
@@ -29,7 +29,7 @@ axway central get
 
 This command lists one or more resources. It also prints a table of the most important information about an specified resource.
 
-If a resource is in `Deleting` state, the entry in the table is shown in `yellow` color to warn the user that the resource is in a `Deleting` state. The user can fetch that particular resource using `--output` argument to see if there are any finalizers set and can perform a force deletion operation using `--forceDelete` argument as mentioned in the <a class="link active css-ettsdk" href="#delete" id="miniTOC-delete">delete</a> section.
+If a resource is in the "Deleting" state, the entry in the table is displayed in the color *yellow* to warn the user that the resource is in the "Deleting" state. The user can fetch that particular resource using the `--output` argument to see if there are any finalizers set and can perform a force deletion operation using the `--forceDelete` argument, as mentioned in the <a class="link active css-ettsdk" href="#delete" id="miniTOC-delete">delete</a> section.
 
 The following table describes the usage, options, and arguments for the `get` command:
 
@@ -553,7 +553,7 @@ axway central delete apisvc someapisvc -s newenv
 axway central delete -f ./some/folder/resources.yaml
 ```
 
-The `delete` command can be used with the `--forceDelete` argument to perform a force deletion on any resource. This argument can be helpful when the resource is stuck in `Deleting` state because of the finalizers being set on the resource itself or the resources scoped under it, and using this argument can delete the resource and all the scoped resources if present. It prompts the user with a confirmation to delete the resource, but the prompt can be ignored by passing `--yes` argument. The following examples show how to use the `delete` command with `--forceDelete` argument:
+The `delete` command can be used with the `--forceDelete` argument to perform a force deletion on any resource. This argument can be helpful when the resource is stuck in the "Deleting" state because of the finalizers being set on the resource itself or the resources scoped under it, and using this argument can delete the resource and all the scoped resources if present. It prompts the user with a confirmation to delete the resource, but the prompt can be ignored by passing a `--yes` argument. The following examples show how to use the `delete` command with the `--forceDelete` argument:
 
 ```bash
 # force delete environment by name with a prompt
