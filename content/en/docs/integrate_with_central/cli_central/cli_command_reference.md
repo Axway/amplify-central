@@ -5,8 +5,6 @@ weight: 130
 date: 2021-01-13T00:00:00.000Z
 ---
 
-Document how to remove finalizers when subscriptions are in the "deleting" state.
-
 Use Axway Central CLI basic commands for creating, fetching, updating, and deleting various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
 ### The accessibility of resources
@@ -425,7 +423,7 @@ The following examples show how to use the `apply` command to apply just the lan
 # apply french language translation to the resource from file if the translation exists
 axway central apply -f ./some/folder/lang-resources.json --language="fr-fr"
 
-# apply german and portugese translation to the resource from file if the translations eixts and output results in YAML format
+# apply german and portuguese translation to the resource from file if the translations exists and output results in YAML format
 axway central apply -f ./some/folder/lang-resources.json --language="de-de,pt-br,en-us" -o yaml
 ```
 
