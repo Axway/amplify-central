@@ -536,7 +536,7 @@ The following table describes the usage, options, and arguments for the `delete`
 |`-s,--scope=<name>`                                      |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
 |`--wait`                                                 |Wait for the resources to be completely deleted          |
 |`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v1.17.0)*|
-|`--forceDelete`                                          |Force delete a resource (Warning: Ignores finalizers).<br/>*(Added: v3.6.0)*|
+|`--forceDelete`                                          |Force delete a resource (Warning: Ignores finalizers on the resource and the resources scoped under it).<br/>*(Added: v3.6.0)*|
 |**Arguments**                                            |                   |
 |`args...`                                                |Command arguments, run `axway central delete` to see the examples |
 
