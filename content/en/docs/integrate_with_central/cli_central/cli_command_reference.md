@@ -27,7 +27,7 @@ axway central get
 
 This command lists one or more resources. It also prints a table of the most important information about an specified resource.
 
-If a resource is in the "Deleting" state, the entry in the table is displayed in the color *yellow* to warn the user that the resource is in the "Deleting" state. The user can fetch that particular resource using the `--output` argument to see if there are any finalizers set and can perform a force deletion operation using the `--forceDelete` argument, as mentioned in the [Delete](#delete) section.
+If a resource is in the "Deleting" state, the entry in the table is displayed in the color *yellow* to warn the user that the resource is in the "Deleting" state. The user can fetch that particular resource using the `--output` argument to see if there are any finalizers set and can perform a force deletion operation using the `--forceDelete` argument, as mentioned in the [delete](#delete) section.
 
 The following table describes the usage, options, and arguments for the `get` command:
 
