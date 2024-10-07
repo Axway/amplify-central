@@ -29,8 +29,16 @@ From the **Applications** page, you can search applications by:
 
 From the **Subscriptions** page, you can search subscriptions by:
 
-* Product title
-* Product description
+* Name
+
+From **Credentials** page, you can search by:
+
+* Credential name
+* Application name
+
+From **Application Registration** page, you can search by:
+
+* Application Registration name
 
 The search looks for a partial or complete match with the keyword that is entered in the search bar. The search is refined as characters are entered. The number of found results is displayed in the search bar.
 
@@ -53,22 +61,22 @@ Click the icon to expand the filter over the page content. Click it again to hid
 
 The filter allows to reduce the number of items. Once a filter value is selected, the page content is displayed according to the filter restriction.
 
-The filter also contains the indication of selected value out of the total value numbers displayed at the right of the filter name. Each time a value is selected, the counter is increased. When a value is deselected, the counter decreases. Clicking on the counter allows to view only the selected value in the filter list. When only the selected values are displayed, clicking again the number will display back all the loaded filter values.
+The filter also contains the indication of the number of selected value out of the total number of values displayed at the right of the filter name. Each time a value is selected, the counter is increased. When a value is deselected, the counter decreases. Clicking on the counter allows to view only the selected value in the filter list. When only the selected values are displayed, clicking again the number will display back all the loaded filter values.
 
 The reset button on the filter will simply remove any selection and put back the filter to its original state.
 
 ### Filter with Search capabilities
 
-By default, filter values are paginated which means that potentially the user is not viewing all the available values. The number of total values is indicated on the right of the filter name. 3 scroll are allowed to load more values. Then a **Load more** button on the filter value in displayed. This button will be available as soon as there are more values to be loaded. Once everything is loaded, the load more button is no more displayed.
+By default, filter values are paginated which means that potentially the user is not viewing all the available values. The number of total values is indicated on the right of the filter name. 3 scroll are allowed to load more values. Then a **Load more** button is displayed. This button will be available as soon as there are more values to be loaded. Once everything is loaded, the load more button is no longer displayed.
 
-Search is done on server side which mean you could find something that is not displayed yet on the screen. When the search match a filter value, this value is highlighted in bold. To remove the search input, simply press the **X** button present in the search bar.
+Search is done on server side which means you could find something that is not displayed yet on the screen. When the search matches a filter value, this value is highlighted in bold. To remove the search input, simply press the **X** button present in the search bar.
 
 The **Select All** button is only available when all filter values are loaded on the screen.
 
 {{< alert title="Category filter" color="primary" >}}
 Since the Category can have children and grand-children, there is no count displayed.
 
-Each level is also paginated, meaning that you can have the 3 scroll before seeing the **Load more** button on a child category. A scroll bar is available for each level too.
+Each level is also paginated, meaning that you can have the 3 scroll before seeing the **Load more** button on a child category. The scroll bar is available for main category and invisible one for the sub-levels.
 {{< /alert >}}
 
 ### Home page search
@@ -159,11 +167,36 @@ Use the filter located at the left of the application page to filter by applicat
 
 ### Subscriptions search
 
-Find a subscription by entering the product title and/or description.
+Find a subscription by entering the subscription name.
 
 #### Refine your findings with category filter
 
 Use the filter located at the left of the subscription page to filter by category. If a category contains children, expand the category to view the children.
+
+### Credential search
+
+Find credential by entering the credential name or the application name
+
+#### Refine your findings with credential filters
+
+Use the filter located on the left of the credential page to filter by:
+
+* State of the credential: Pending, Active and Inactive.
+* Expiration date: Expired, Expiring in less than 45 days, Expiring in less than 15 days, Expiring in less than 3 days
+* Application
+
+### Application registration search
+
+Find Application registration by name.
+
+#### Refine your findings with application registration filters
+
+Use the filter located on the left of the application registration page to filter by:
+
+* Approval state: Pending, Approve, Declined
+* Product to view one linked to the selected product
+* Subscription to view the one linked to the selected subscription
+* Application to view the one linked to the selected application
 
 ### Consumer Insights filters
 
