@@ -90,15 +90,15 @@ Cancelling the wizard will not remove the uploaded files. If you don't need an u
 
 ## Edit a document
 
-All document library document are editable.
+All document library documents are editable.
 
 To edit a document:
 
 1. Navigate to *Document Library*.
 2. Find the document you want to edit
 3. Click the document name to open the document details
-4. Click the Pencil icon to enter the document wizard where you can change things as you see fit. The only restriction is that you are not able to change the document type.
-5. Click **Save & Exit** when you are done with your modification
+4. Click the Pencil icon to enter the document wizard where you can make changes. The only restriction is that you cannot change the document type.
+5. Click **Save & Exit** when you are done with your changes.
 
 ## Delete a document
 
@@ -117,19 +117,19 @@ To delete a document:
 
 ## Multi-languages support
 
-If your Document can be seen on the Marketplace (either because used in a menu or in product documentation), it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
+If your document can be seen on the Marketplace (either because it is used in a menu or in product documentation), translation can be added so that it can be viewed differently based on the Marketplace language settings.
 
-Adding the translation means you have your original copy of the document and as many additional copies in the languages you need. For instance, my original copy is in French, I can link English copy, German copy and Portuguese copy as I see the need.
+Adding the translation means you have your original copy of the document and as many additional copies in the languages you need. For instance, the original copy is in French, and English, German and Portuguese copies can be added as needed.
 
 {{< alert title="Note" color="warning" >}}
-The translation will follow the original document type. If my original document is a file, all translations need to be a file as well. Same goes for Markdown and URL document type.
+The translation will follow the original document type. If the original document type is a file, all translations must be files as well. Same applies for Markdown and URL document types.
 {{< /alert >}}
 
-By default 4 languages are available : English / French / German / Brazilian Portuguese
+By default, four languages are available : English / French / German / Brazilian Portuguese
 
 You will need 2 things:
 
 * the Document default language
 * the Document translation languages
 
-The feature is not yet available from the UI, but you can use the CLI or API to add the Document available languages. Refer to [API Server multi languages support](/docs/integrate_with_central/api_server#multi-languages-support) and the [sample data](/docs/integrate_with_central/samples/sample_start_to_end#scenario-description) where there is an example of Document Library document using 2 languages.
+This feature is not yet available from the UI, but you can use the CLI or API to add the Document available languages. Refer to [API Server multi languages support](/docs/integrate_with_central/api_server#multi-languages-support) and the [sample data](/docs/integrate_with_central/samples/sample_start_to_end#scenario-description) where there is an example of Document Library document using two languages.

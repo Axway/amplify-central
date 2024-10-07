@@ -756,7 +756,7 @@ Once your access is granted, you can ask for credential. You should be able to s
 
 ## Multi-languages support
 
-Now that we know how to create and use those resources, you may want them to be shown in the same language as the product in a specific Marketplace. For that we will need to add additional sub-resources to those objects so that the title of the additional fields can store their translation.
+Once the resources have been created and used, you may want them to be shown in the same language as the product in a specific Marketplace. To do this, you can add additional sub-resources to those objects so that the title of the additional fields can store their translation.
 
 References:
 
@@ -764,13 +764,13 @@ References:
 * [Manage product localization](/docs/manage_product_foundry/foundry_localization)
 * [Api Server object in multi-language](/docs/integrate_with_central/api_server#multi-language-support)
 
-The procedure describe below works for SubscriptionRequestDefinition, AccessRequestDefinition and CredentialRequestDefinition. You will need to translate the title of the custom screen and any field (title/description) present in the custom schema.
+The following procedure works for SubscriptionRequestDefinition, AccessRequestDefinition and CredentialRequestDefinition. You must translate the title of the custom screen and any fields (title/description) present in the custom schema.
 
-The sub-resource handling the language definition should match the exact same schema as the custom screen definition. Otherwise the translation will be rejected.
+The sub-resource handling the language definition must match the schema of the custom screen definition. Otherwise, the translation will be rejected.
 
-Step 1: adding the default language:
+Step 1: Add the default language:
 
-Add the below sub-resource to an existing screen definition will tell that now the default language for this screen is English:
+Add the below sub-resource to an existing screen definition to indicate that the default language for this screen is English:
 
 ```json
 {
@@ -782,7 +782,7 @@ Add the below sub-resource to an existing screen definition will tell that now t
 }
 ```
 
-Step 2: retrieve current custom schema from previous example related to subscription specific screen
+Step 2: Retrieve current custom schema from previous example related to subscription specific screen:
 
 ```json
 {
@@ -818,9 +818,9 @@ Step 2: retrieve current custom schema from previous example related to subscrip
 }
 ```
 
-and Copy it into the language resource definition.
+and copy it into the language resource definition.
 
-Step 3: creating the additional language:
+Step 3: Create the additional language:
 
 ```json
 {
@@ -858,7 +858,7 @@ Step 3: creating the additional language:
 }
 ```
 
-Step 4: putting all together:
+Step 4: Put it all together:
 
 ```json
 {
@@ -929,4 +929,4 @@ Step 4: putting all together:
 }
 ```
 
-Now using the CLI, you should be able to post the above and you now have this custom subscription screen in both languages: English and French.
+Using the CLI, you should now be able to post the above to have a custom subscription screen in both languages: English and French.

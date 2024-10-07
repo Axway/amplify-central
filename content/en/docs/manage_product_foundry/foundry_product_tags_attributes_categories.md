@@ -173,11 +173,11 @@ Catalog Manager users can only assign existing categories.
 
 If you use Category to be seen on the Marketplace, it is possible to add their translation so that they can be viewed differently based on the Marketplace language settings.
 
-By default 4 languages are available : English / French / German / Brazilian Portuguese
+By default four languages are available : English / French / German / Brazilian Portuguese
 
 You will need 2 things:
 
-* the category default language
-* the category translation languages
+* The category default language
+* The category translation languages
 
-The language can be accessed using either the List view ellipsis menu **Translate** or the Category edition wizard. This will open the translation details screen where you can set the Default Language as well as the other needed languages.
+The language can be accessed using either the List view ellipsis menu **Translate** or the Category edition wizard. This will open the *translation details* screen where you can set the Default Language as well as the other needed languages.

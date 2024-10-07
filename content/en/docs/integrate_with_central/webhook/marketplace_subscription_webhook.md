@@ -90,7 +90,7 @@ The webhook resource has been created and this will be used to create the trigge
 jq '.[0].name' webhook-details.json
 ```
 
-{{< alert title="Note" color="danger" >}}
+{{< alert title="Caution" color="danger" >}}
 For an HTTPS webhook endpoint, you must have a certificate issued by a valid certificate authority, not a self-signed certificate. Otherwise, no events will be received by the webhook endpoint.
 {{< /alert >}}
 

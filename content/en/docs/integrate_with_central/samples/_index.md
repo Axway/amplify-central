@@ -4,4 +4,4 @@ linkTitle: Sample resources
 weight: 450
 ---
 
-A collection of various resources to help you getting familiar with the Amplify Enterprise Marketplace objects definition and interaction.
+A collection of various resources to get you familiar with the Amplify Enterprise Marketplace objects definition and interaction.
