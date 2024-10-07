@@ -59,7 +59,7 @@ The reset button on the filter will simply remove any selection and put back the
 
 ### Filter with Search capabilities
 
-By default, filter values are paginated which means that potentially the user is not viewing all the available values. The number of total values is indicated on the right of the filter name. 3 scroll are allowed to load more values. Then a **Load more** button on the filter value. This button will be available as soon as there are more values to load.
+By default, filter values are paginated which means that potentially the user is not viewing all the available values. The number of total values is indicated on the right of the filter name. 3 scroll are allowed to load more values. Then a **Load more** button on the filter value in displayed. This button will be available as soon as there are more values to be loaded. Once everything is loaded, the load more button is no more displayed.
 
 Search is done on server side which mean you could find something that is not displayed yet on the screen. When the search match a filter value, this value is highlighted in bold. To remove the search input, simply press the **X** button present in the search bar.
 
@@ -68,7 +68,7 @@ The **Select All** button is only available when all filter values are loaded on
 {{< alert title="Category filter" color="primary" >}}
 Since the Category can have children and grand-children, there is no count displayed.
 
-Each level is also paginated, meaning that you can have the 3 scroll before seeing the **Load more** button on a child category.
+Each level is also paginated, meaning that you can have the 3 scroll before seeing the **Load more** button on a child category. A scroll bar is available for each level too.
 {{< /alert >}}
 
 ### Home page search
