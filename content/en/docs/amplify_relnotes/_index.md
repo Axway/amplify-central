@@ -85,7 +85,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | What's new: | None. |
 | Bug fixes: | None. |
 | <br />**Marketplace** |         |
-| What's new: | Credential creation from product details.|
+| What's new: | Credential creation from product details. <br />Marketplace internationalization.|
 | Bug fixes: | See release note. |
 | <br />**Consumer insights** |         |
 | What's new: | None. |
