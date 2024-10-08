@@ -39,7 +39,7 @@ group: management
 apiVersion: v1alpha1
 kind: APIServiceInstance
 name: customer-data-instance-prod-v2
-title: Cutomer Data Service Instance PROD V2
+title: Customer Data Service Instance PROD V2
 metadata:
   scope:
     kind: Environment
@@ -158,3 +158,16 @@ The stage is visible when:
 * Subscribing to a plan through the plan preview.
 
 {{< alert title="Note" color="primary" >}}If a consumer from a provider organization is part of multiple teams that can subscribe to a product, then a warning is displayed when attempting to subscribe. It informs the consumer that what is seen in the plan is not necessarily what will be accessible to the specified team. The consumer is encouraged to review the plan details before proceeding to the subscription.{{< /alert >}}
+
+## Multi-languages support
+
+If the stage is visible on the Marketplace, then it's translation(s) can be added so that it can be viewed based on the Marketplace language settings.
+
+By default, four languages are available : English / French / German / Brazilian Portuguese
+
+To set multi-languages support, you need:
+
+* The stage default language
+* The stage translation languages
+
+The language(s) can be set using the *List view* ellipsis menu **Translate**. This will open the *translation details* screen where you can set the default language as well as the other needed languages.
