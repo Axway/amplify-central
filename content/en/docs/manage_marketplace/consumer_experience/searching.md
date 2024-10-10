@@ -18,19 +18,27 @@ Each main page has a search bar that allows you to type a keyword and refine the
 * Product categories
 * API specification
 
-From the **Category** page, you can search categories by:
+From the *Category* page, you can search categories by:
 
 * Title
 * Description
 
-From the **Applications** page, you can search applications by:
+From the *Applications* page, you can search applications by:
 
 * Title
 
-From the **Subscriptions** page, you can search subscriptions by:
+From the *Subscriptions* page, you can search subscriptions by:
 
-* Product title
-* Product description
+* Name
+
+From the *Credentials* page, you can search by:
+
+* Credential name
+* Application name
+
+From the *Application Registration* page, you can search by:
+
+* Application Registration name
 
 The search looks for a partial or complete match with the keyword that is entered in the search bar. The search is refined as characters are entered. The number of found results is displayed in the search bar.
 
@@ -51,14 +59,32 @@ When the screen is too small to display the filter and the page content at the s
 Click the icon to expand the filter over the page content. Click it again to hide the filter.
 {{< /alert >}}
 
-The filter allows search values to reduce the number of items. Once selected, the page content is displayed according to the filter restriction.
+The filter reduces the number of items. Once a filter value is selected, the page content is displayed according to the filter restriction.
+
+The filter displays a counter indicating the number of selected values out of the total number of values displayed at the right of the filter name. Each time a value is selected, the counter is increased. When a value is deselected, the counter decreases. Clicking on the counter displays only the selected values in the filter list. When only the selected values are displayed, clicking on the counter again displays all the loaded filter values.
+
+The filter's **Reset** button removes any selection and sets the filter to its original state.
+
+### Filter with Search capabilities
+
+By default, filter values are paginated, which means that potentially the user is not viewing all the available values. The number of total values is indicated on the right of the filter name. More values can be added by scrolling up to three times, after which a **Load more** button is displayed if there are more values to be loaded. The Load more button is no longer displayed once all values have been loaded.
+
+The search is done on server side, which means you could find something that is not displayed yet on the screen. When the search matches a filter value, this value is highlighted in **bold**. To remove the search input, press **X** in the search bar.
+
+The **Select All** button is only available when all filter values are loaded on the screen.
+
+{{< alert title="Category filter" color="primary" >}}
+Since a Category can have children and grand-children, there is no count displayed.
+
+Each level is also paginated, meaning that you can scroll three pages before seeing the **Load more** button on a child category. The scroll bar is available for the main category, but not for the sub-levels.
+{{< /alert >}}
 
 ### Home page search
 
 Search is available when the home page is activated from the Marketplace settings.
 
-* Search bar from Hero Content (if activated): search with any words matching a product title / description / specification content / Documentation (markdown only) / category title assigned to a product.
-* Browse product: filter the recently published list of products based on product title / description / title assigned to a product.
+* Search bar from Hero Content (if activated): search with any words matching a product title / description / specification content / Documentation (markdown only) / category title assigned to a product
+* Browse product: filter the recently published list of products based on product title / description / title assigned to a product
 
 Once the search is run, the user is redirected to the [Advanced search result page](#advanced-search-result-page).
   
@@ -80,7 +106,7 @@ When viewing the product list, refine your search with Advanced Search.
 
 1. Click **Advanced Search** to replace the search bar with the Advanced Search component.
 
-    * Enter multiple words and then select the appropriate matching parameter via a dropdown: **EQUALS**, **NOT EQUALS**.
+    * Enter multiple words and then select the appropriate matching parameter via a drop-down: **EQUALS**, **NOT EQUALS**.
     * When entering multiple words, you can decide the operator between those words: **OR** or **AND**. The drop-down on the matching parameter and on the operator allows you to adjust your criteria.
     * Click the **-** to remove the criteria. Click **Clear all** To reset the component.
 
@@ -100,7 +126,7 @@ To help you understand where your advanced search results were found, the result
 
 By default, the *All* tab displays the advanced search results. If no match is found in an area of search (product/product resources/product documentation), then the corresponding results section will not expand to display the results. If results are found, the view will be limited to the first 25. Click **View all** or navigate the tab menu (All > Products/Resources/Documents) to view all results.
 
-Each result, the name is a link that redirect you to the appropriate page in the product details page.
+Each result, the name is a link that redirect you to the appropriate page in the *product details* page.
 
 The breadcrumb at the top of the page enables to navigate from where you came (Home page / Browse product page).
 
@@ -122,7 +148,7 @@ When the provider assigns multiple assets to a single product, the resources can
 
 #### Refine your findings with children category filters
 
-Use the filters located at the left of the category detail page to filter the children categories of the currently displayed category.
+Use the filters located at the left of the *Category detail* page to filter the children categories of the currently displayed category.
 
 * **Show sub-category products**: (selected by default) view all products linked to a children category of the current category. When not selected, all products associated to a children category are removed from the result list and only the products associated to the displayed category are listed.
 * search bar: refine the children category list. When the filter matches several categories, the filter is highlighted in bold on the category names.
@@ -137,19 +163,44 @@ Find an application by entering the application title in the search bar.
 
 #### Refine your findings with application state filter
 
-Use the filter located at the left of the application page to filter by application state. Once a state is selected, applications matching the selected state are displayed.
+Use the filter located at the left of the *Applications* page to filter by application state. Once a state is selected, applications matching the selected state are displayed.
 
 ### Subscriptions search
 
-Find a subscription by entering the product title and/or description.
+Find a subscription by entering the subscription name.
 
 #### Refine your findings with category filter
 
-Use the filter located at the left of the subscription page to filter by category. If a category contains children, expand the category to view the children.
+Use the filter located at the left of the *Subscriptions* page to filter by category. If a category contains children, expand the category to view the children.
+
+### Credential search
+
+Find a credential by entering the credential name or the application name.
+
+#### Refine your findings with credential filters
+
+Use the filter located on the left of the *Credentials* page to filter by:
+
+* State of the credential: Pending, Active and Inactive
+* Expiration date: Expired, Expiring in less than 45 days, Expiring in less than 15 days, Expiring in less than 3 days
+* Application
+
+### Application registration search
+
+Find an application registration by name.
+
+#### Refine your findings with application registration filters
+
+Use the filter located on the left of the *Application registration* page to filter by:
+
+* Approval state: Pending, Approve, Declined
+* Product to view one linked to the selected product
+* Subscription to view the one linked to the selected subscription
+* Application to view the one linked to the selected application
 
 ### Consumer Insights filters
 
-Use the drop-down filters located at the top of each Consumer insights page.
+Use the drop-down filters located at the top of each *Consumer insights* page.
 
 Filter functionality:
 
