@@ -13,6 +13,10 @@ Only the Central Admin can view the agents list.
 
 1. Navigate to *Topology > Agents*.
 
+If there are any unsupported agents an alert will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or learn the [Upgrade Procedures](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/index.html) and view the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
+
+There are 5 tabs that can be selected in the agents list view. Connected, Unhealthy, Stopped, Update Available, and Unsupported. View below for more details on all of them.
+
 A list of agents is displayed with the following information:
 
 * **Agent state** - Displays the current state of the agent. Can be one of three states. Connected, Unhealthy, or Stopped.
@@ -25,7 +29,7 @@ A list of agents is displayed with the following information:
 * **Agent Version** - the agent version number.
 * **Agent Type** - can be either a DiscoveryAgent or a TraceabilityAgent.
 * **Agent Host** - can be either on-premise or saas(Axway managed).
-* **Agent Version Status** - Applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses. Up to date, update available, or outdated. View the latest versions [here](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html)
+* **Agent Version Status** - Applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses. Up to date, update available, or outdated. View the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
 
    * **Up To Date** - the agent is up to date.
    * **Update Available** - A new version is available.
