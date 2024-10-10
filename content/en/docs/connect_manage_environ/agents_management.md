@@ -5,77 +5,38 @@ weight: 20
 date: 2024-10-10
 ---
 
-Within topology, identity providers can be used with environments to issue OAuth access tokens. They are restricted only to environments that are connected through an Embedded agent.
+In topology, agents configured within your organization can be viewed to identify if any actions are to be taken.
 
-## Identity providers and environments
+### Viewing available agents
 
-An environment might be linked to a specific gateway managing one or more identity providers.
+Only the Central Admin can view the agents list.
 
-Currently, identity providers can be used with the Azure Embedded agent.
+1. Navigate to *Topology > Agents*.
 
-Multiple identity providers can be assigned to an environment.
+A list of agents is displayed with the following information:
 
-{{< alert title="Note" color="primary" >}}Identity provider management is optional.{{< /alert >}}
+* **Agent state** - Displays the current state of the agent. Can be one of three states. Connected, Unhealthy, or Stopped.
 
-### Viewing available identity providers
+   * **Connected** - the agent is running smoothly and has been updated in the last 24 hours.
+   * **Unhealthy** -  the agent is in a unhealthy or failed state and/or has not communicated in the last 24 hours or more.
+   * **Stopped** - the agent is no longer functioning.
 
-Only the Central Admin can view identity providers.
+* **Environment & Agent name** - the title of the agent and the environment it is a part of.
+* **Agent Version** - the agent version number.
+* **Agent Type** - can be either a DiscoveryAgent or a TraceabilityAgent.
+* **Agent Host** - can be either on-premise or saas(Axway managed).
+* **Agent Version Status** - Applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses. Up to date, update available, or outdated.
 
-1. Navigate to *Topology > Identity Providers*.
+   * **Up To Date** - the agent is up to date.
+   * **Update Available** - A new version is available.
+   * **Outdated** - the current versio of the agent is outdated.
 
-A list of identity providers is displayed with the following information:
+* **Agent Dataplane** - the specific type of agent that is being used.
+* **Agent's Last Activity** - the last time the agent was updated. By default this field is selected to show agents in descending order based upon the last activity time.
 
-* Identity provider name - the title of the identity provider.
-* Environment - the number of environments the identity provider is associated to.
-* Updated - the last time the identity provider has been updated.
 
-### Creating an identity provider
+### Viewing agent details
 
-Only the Central Admin role can create identity providers.
-
-1. Navigate to *Topology > Identity Providers*.
-2. Click **+ Add New Identity Provider**. *The Add a Identity Provider wizard is displayed*.
-3. Add the following identity provider general information:
-
-    * **Identity Provider Name** - enter a friendly name for the identity provider in the WebUI.
-    * **Type** - select which type of identity provider. Choose between Generic (default), Keycloak, or Okta.
-    * **Metadata URL** - provide the URL to connect to the identity provider authorization server to provide metadata information. The OAuth authorization server exposes the URL.
-    * **Request Headers** (Optional) - enter name and value pairs to add request headers to the registration calls.
-    * **Query Parameters** (Optional) - enter name and value pairs to add query parameters to the registration calls.
-    * **Additional Client Properties** (Optional) - enter name and value pairs to add to the client metadata for registering the OAuth client
-    * **Client Timeout** - enter the client timeout in seconds until the client registration call remains active (default 60 seconds).
-    * **Use Registration Access Token** (Optional) - toggle to allow the agent to save and use the credential-specific registration token when modifying the client in the identity provider.
-
-4. Add the following identity provider authorization information:
-
-    * **Authorization Type** - Select the type of authentication method.
-
-        * **Client Secret** - (Default):
-
-            * **Authorization Method** - select the client secret authentication method. Choose from client_secret_post (default), client_secret_basic, or client_secret_jwt.
-            * **Client ID** - provide the client ID of the OAuth client. The agent uses this to authenticate and register OAuth clients.
-            * **Client Secret** - provide the OAuth client secret. The agent uses this to authenticate and register OAuth clients.
-            * **Client Scopes** (Optional) - enter a list of client scopes to be used for dynamic client registration.
-  
-        * **Access Token**:
-  
-            * **Access Token** - provide the access token to be used for authenticating.
-
-    * **Request Headers** (Optional) - enter name and value pairs to add request headers to the token request calls.
-    * **Query Parameters** (Optional) - enter name and value pairs to add query parameters to the token request calls.
-
-5. Click **Save** to create the identity provider and return to the list of identity providers.
-
-### Editing an identity provider
-
-1. On the Identity Provider list view, click the three ellipsis for the identity provider you would like to edit and select **Edit**.
-2. Edit any fields you would like to change.
-3. Click **Save**.
-
-### Deleting an identity provider
-
-Only the Central Admin role can delete identity providers.
-
-1. Navigate to *Topology > Identity Providers*.
-2. Select the identity provider(s).
-3. Click the three ellipsis and select **Delete** for single delete or select multiple identity providers and click **Delete** above the table. A popup is displayed informing how many environments use the selected identity provider(s).
+1. Navigate to *Topology > Agents*.
+2. **Click** on the agent you wish to see more details for.
+3. Basic details will be listed about the specific agent chosen.
