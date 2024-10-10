@@ -21,9 +21,9 @@ A list of agents is displayed with the following information:
 
 * **Agent state** - Displays the current state of the agent. Can be one of three states. Connected, Unhealthy, or Stopped.
 
-   * **Connected** - the agent is running smoothly and has been updated in the last 24 hours.
-   * **Unhealthy** -  the agent is in a unhealthy or failed state and/or has not communicated in the last 24 hours or more.
-   * **Stopped** - the agent is no longer functioning.
+    * **Connected** - the agent is running smoothly and has been updated in the last 24 hours.
+    * **Unhealthy** -  the agent is in a unhealthy or failed state and/or has not communicated in the last 24 hours or more.
+    * **Stopped** - the agent is no longer functioning.
 
 * **Environment & Agent name** - the title of the agent and the environment it is a part of.
 * **Agent Version** - the agent version number.
@@ -31,13 +31,12 @@ A list of agents is displayed with the following information:
 * **Agent Host** - can be either on-premise or saas(Axway managed).
 * **Agent Version Status** - Applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses. Up to date, update available, or outdated. View the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
 
-   * **Up To Date** - the agent is up to date.
-   * **Update Available** - A new version is available.
-   * **Outdated** - the current versio of the agent is outdated.
+    * **Up To Date** - the agent is up to date.
+    * **Update Available** - A new version is available.
+    * **Outdated** - the current versio of the agent is outdated.
 
 * **Agent Dataplane** - the specific type of agent that is being used.
 * **Agent's Last Activity** - the last time the agent was updated. By default this field is selected to show agents in descending order based upon the last activity time.
-
 
 ### Viewing agent details
 
