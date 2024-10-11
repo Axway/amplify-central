@@ -36,6 +36,8 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
+**Robert** Update table
+
 | Description                    | Axway API Gateway                                                                                                       | AWS API Gateway                                      | Azure API Management                                                   | Istio            | Apigee Edge                                                   | IBM API Connect                                     |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------- | --------------------------------------------------- |
 | **Discovery**                  | Published Frontend Proxies                                                                                              | Rest APIs in API Gateway                             | APIs                                                                   | Virtual Services | API Products / Proxies                                        | Catalog APIs                                        |
