@@ -109,7 +109,7 @@ For detailed information about agent configuration, features and limitations, se
 * [Discovery Agent for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
 * [Discovery Agent for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
 * [Discovery Agent for SwaggerHub](/docs/connect_manage_environ/connect_swaggerhub/)
-* [Discovery Agent for Backstageb](/docs/connect_manage_environ/connect_backstage/)
+* [Discovery Agent for Backstage](/docs/connect_manage_environ/connect_backstage/)
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 
