@@ -198,9 +198,9 @@ Kubernetes command to create secret:
 ```bash
 kubectl create secret docker-registry <SECRET_NAME> --namespace <YOUR_NAMESPACE> --docker-server=docker.repository.axway.com --docker-username=<client_id> --docker-password=<client_secret>
 ```
+
 `client_id` - service account id for an Amplify Platform organization that has access to that artifact
 `client_secret` - service account secret for an Amplify Platform organization that has access to that artifact
-
 
 In overrides.yaml:
 
