@@ -189,6 +189,35 @@ To complete the Graylog agent installation run the following commands:
 
 Once the Helm commands are completed, the agents should be running in the Kubernetes cluster.
 
+#### Optional setup for private repositories
+
+If you want to deploy an image stored in a private repository, is essential to create a kubernetes secret and set up the `pullSecret` field in `image` section in the override file.
+This is necessary for both the discovery and traceability agents.
+
+Kubernetes command to create secret:
+
+```bash
+kubectl create secret docker-registry <SECRET_NAME> --namespace <YOUR_NAMESPACE> --docker-server=docker.repository.axway.com --docker-username=<client_id> --docker-password=<client_secret>
+```
+`client_id` - service account id for an Amplify Platform organization that has access to that artifact
+`client_secret` - service account secret for an Amplify Platform organization that has access to that artifact
+
+
+In overrides.yaml:
+
+```bash
+image:
+  pullSecret: <SECRET_NAME>
+```
+
+Agent deployment commands:
+
+```bash
+helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
+helm repo update
+helm upgrade --install --namespace <YOUR_NAMESPACE> graylog-agent axway/graylog-agent -f agent-overrides.yaml --set image.pullSecret=<image-pull-secret-name>
+```
+
 ## Check that agents are running with Axway Central CLI
 
 After being authenticated to the platform with `axway auth login` command, run the following:
