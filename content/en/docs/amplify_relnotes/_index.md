@@ -7,18 +7,26 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-This page now displays the supported agents for each release of Amplify Enterprise Marketplace. To learn more about what's in a release, click on the release note title to go to the corresponding release note.
+The release note summaries will no longer be documented here. This page now displays the supported agents for each release of Amplify Enterprise Marketplace. To learn more about what's in a release, click on the release note title to go to the corresponding release note.
 
-{{< alert title="Note" color="primary" >}}The supported agents will no longer be documented on the corresponding release note page. Please note the agents' versions on this page before navigating to the corresponding release note.
+{{< alert title="Note" color="primary" >}}The supported agents will no longer be documented on the corresponding release note pages. Please take note of the agents' versions on this page before navigating to the corresponding release note.
 
 You must log in to this portal and be authenticated as an Axway customer to have access to release notes.
 {{< /alert >}}
+
+Access the list of available agents from your organization:
+
+* Go to *Help menus > Downloads > Repository* and search for agents.
+
+    -or-
+
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 
 To view the *Administration Release Notes* [click here](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html).
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify Enterprise Marketplace November 2024 template](/docs/amplify_relnotes/2024temp_amplify/)
+## [Amplify Enterprise Marketplace November ?? 2024 (template)](/docs/amplify_relnotes/2024temp_amplify/)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.101 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
