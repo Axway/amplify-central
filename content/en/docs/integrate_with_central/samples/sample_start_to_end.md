@@ -1,6 +1,7 @@
 ---
 title: End-to-end scenario from Environment to Marketplace and Internationalization
-linkTitle: e2e scenario
+linkTitle: End-to-end scenario
+weight: 10
 ---
 
 ## Before you start
