@@ -12,7 +12,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ## November 8 2024
 
-### Agents updates for Novemember 8
+### Agents updates for November 8
 
 #### New Backstage Discovery Agent
 
@@ -47,19 +47,19 @@ The ability to get and set the language definition information for Marketplace r
 <mark>PROVIDER EXPERIENCE</mark>; <mark>ENHANCEMENT</mark> <br />
 The `install agent` command has been enhanced to include Backstage and Azure Event hub agent options.
 
-<!--### Axway Central CLI known issues for Novemeber 8 (hidden if none)-->
+<!--### Axway Central CLI known issues for November 8 (hidden if none)-->
 
-<!--### Axway Central CLI bug fixes for Novemeber 8  (hidden if none)-->
+<!--### Axway Central CLI bug fixes for November 8  (hidden if none)-->
 
-### Axway CLI updates
+### Axway CLI updates for November 8
 
 The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/package/@axway/axway/v/3.2.14).
 
-<!--### Axway CLI known issues for Novemeber 8  (hidden if none)-->
+<!--### Axway CLI known issues for November 8  (hidden if none)-->
 
-<!--### Axway CLI bug fixes for Novemeber 8  (hidden if none)-->
+<!--### Axway CLI bug fixes for November 8  (hidden if none)-->
 
-### Marketplace updates for Novemeber 8 
+### Marketplace updates for November 8
 
 #### Credential creation from product details
 
@@ -68,7 +68,7 @@ A new button **Request Credential** is available from the *product details* scre
 
 <!--### Marketplace known issues for Novemeber 8  (hidden if none)-->
 
-### Marketplace bug fixes for Novemeber 8 
+### Marketplace bug fixes for November 8
 
 | Case ID   | Internal ID  | Description                                       |
 |-----------|--------------|---------------------------------------------------|
@@ -79,7 +79,7 @@ A new button **Request Credential** is available from the *product details* scre
 
 ## November 1 2024
 
-### Agents updates for November 1 
+### Agents updates for November 1
 
 #### Enhancement 1 title
 
