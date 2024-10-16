@@ -12,7 +12,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ## November 8 2024
 
-### Agents updates
+### Agents updates for Novemember 8
 
 #### New Backstage Discovery Agent
 
@@ -26,14 +26,14 @@ A new Identity Provider status has been added to indicate a Pending, Success, or
 
 <!--### Agents known issues (hidden if none)-->
 
-### Agents bug fixes
+### Agents bug fixes for November 8
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
 | 01637526    | APIGOV-28860 | **Issue**: *Axway API Management Gateway Agent* - In cases where multiple quotas exist on an application, the agent would not retain all quotas when removing a quota from the application. <br />**Resolution**: A fix was made to retain all necessary quotas in removal and migration scenarios. |
 | -           | APIGOV-28899 |**Issue**: *Software AG webMethods Agent* - If there was an access request issue, then the agent would not record sufficient details in the logs. <br />**Resolution**: A fix was made to include more detailed information in the agent logs. |
 
-### Axway Central CLI updates
+### Axway Central CLI updates for November 8
 
 The latest version of the [Axway Central CLI is v3.6.0 on NPM](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.6.0). For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
 
@@ -47,28 +47,28 @@ The ability to get and set the language definition information for Marketplace r
 <mark>PROVIDER EXPERIENCE</mark>; <mark>ENHANCEMENT</mark> <br />
 The `install agent` command has been enhanced to include Backstage and Azure Event hub agent options.
 
-<!--### Axway Central CLI known issues (hidden if none)-->
+<!--### Axway Central CLI known issues for Novemeber 8 (hidden if none)-->
 
-<!--### Axway Central CLI bug fixes (hidden if none)-->
+<!--### Axway Central CLI bug fixes for Novemeber 8  (hidden if none)-->
 
 ### Axway CLI updates
 
 The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/package/@axway/axway/v/3.2.14).
 
-<!--### Axway CLI known issues (hidden if none)-->
+<!--### Axway CLI known issues for Novemeber 8  (hidden if none)-->
 
-<!--### Axway CLI bug fixes (hidden if none)-->
+<!--### Axway CLI bug fixes for Novemeber 8  (hidden if none)-->
 
-### Marketplace updates
+### Marketplace updates for Novemeber 8 
 
 #### Credential creation from product details
 
 <mark>CONSUMER EXPERIENCE</mark>; <mark>MARKETPLACE</mark>; <mark>ENHANCEMENT</mark> <br />
 A new button **Request Credential** is available from the *product details* screen. This will trigger the create credentials flow where you will need to provide: the resource you want a credential for, the owning team and the associated application where the credential will be attached to.
 
-<!--### Marketplace known issues (hidden if none)-->
+<!--### Marketplace known issues for Novemeber 8  (hidden if none)-->
 
-### Marketplace bug fixes
+### Marketplace bug fixes for Novemeber 8 
 
 | Case ID   | Internal ID  | Description                                       |
 |-----------|--------------|---------------------------------------------------|
@@ -79,58 +79,58 @@ A new button **Request Credential** is available from the *product details* scre
 
 ## November 1 2024
 
-### Agents updates
+### Agents updates for November 1 
 
-#### Enhancement title
-
-<mark>PROVIDER EXPERIENCE</mark>; <mark>AGENT TYPE</mark>; <mark>ENHANCEMENT</mark> <br />Feature description.
-
-#### Enhancement title
+#### Enhancement 1 title
 
 <mark>PROVIDER EXPERIENCE</mark>; <mark>AGENT TYPE</mark>; <mark>ENHANCEMENT</mark> <br />Feature description.
 
-<!--### Agents known issues (hidden if none)-->
+#### Enhancement 2 title
 
-### Agents bug fixes
+<mark>PROVIDER EXPERIENCE</mark>; <mark>AGENT TYPE</mark>; <mark>ENHANCEMENT</mark> <br />Feature description.
+
+<!--### Agents known issues for November 1 (hidden if none)-->
+
+### Agents bug fixes for November 1
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
 | xxxxxxxx    | APIGOV-xxxxx | **Issue**: *Agent Type* - Description. <br />**Resolution**: Description. |
 | -           | APIGOV-xxxxx |**Issue**: *Agent type* - Description. <br />**Resolution**: Description. |
 
-### Axway Central CLI updates
+### Axway Central CLI updates for November 1
 
 The latest version of the [Axway Central CLI is v3.6.0 on NPM](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.6.0).
 
 For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
 
-#### Update title
+#### Update 1 title
 
 <mark>PROVIDER EXPERIENCE</mark>; <mark>ENHANCEMENT</mark> <br />
 Enhancement description.
 
-<!--### Axway Central CLI known issues (hidden if none)-->
+<!--### Axway Central CLI known issues for November 1 (hidden if none)-->
 
-<!--### Axway Central CLI bug fixes (hidden if none)-->
+<!--### Axway Central CLI bug fixes for November 1 (hidden if none)-->
 
-### Axway CLI updates
+### Axway CLI updates for November 1
 
 The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/package/@axway/axway/v/3.2.14).
 
-<!--### Axway CLI known issues (hidden if none)-->
+<!--### Axway CLI known issues for November 1 (hidden if none)-->
 
-<!--### Axway CLI bug fixes (hidden if none)-->
+<!--### Axway CLI bug fixes for November 1 (hidden if none)-->
 
-### Marketplace updates
+### Marketplace updates for November 1
 
-#### Enahncement title
+#### Enahncement 1 title
 
 <mark>CONSUMER EXPERIENCE</mark>; <mark>MARKETPLACE</mark>; <mark>ENHANCEMENT</mark> <br />
 Enhancement descripion
 
-<!--### Marketplace known issues (hidden if none)-->
+<!--### Marketplace known issues for November 1 (hidden if none)-->
 
-### Marketplace bug fixes
+### Marketplace bug fixes for November 1
 
 | Case ID   | Internal ID  | Description                                       |
 |-----------|--------------|---------------------------------------------------|
