@@ -6,6 +6,6 @@ weight: 450
 
 A collection of various resources to get you familiar with the Amplify Enterprise Marketplace objects definition and interaction.
 
-## Related topics
+## Related topic
 
-See the following topics for related information.
+See the following topic for related information.
