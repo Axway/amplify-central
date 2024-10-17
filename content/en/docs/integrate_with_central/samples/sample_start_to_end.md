@@ -1,8 +1,9 @@
 ---
 title: End to end scenario from Environment to Marketplace and Internationalization
 linkTitle: End to end scenario
-weight: 10
+weight: 60
 ---
+Use the sample e2e.zip file to move an API Service from Dev to Production.
 
 ## Before you start
 
