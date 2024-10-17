@@ -216,20 +216,6 @@ The Environment ID from the command above is `8ac9924581ed71fa0181ef817e9b0976`.
 
 ```yaml
 ---
-global:
-  # Amplify Central Configuration
-  central:
-    url: https://apicentral.axway.com:443
-    clientTimeout: 10s
-    envID: 8ac9924581ed71fa0181ef817e9b0976
-    envName: "istio"
-    tenantID: "123456789912345"
-    grpcEnabled: "true"
-    marketplaceProvisioningEnabled: "true"
-    auth:
-      baseUrl: "https://login.axway.com/auth"
-      clientTimeout: 10s
-
 # Configuration for creating the K8S Secret that holds the Amplify Platform service account details as part of the helm chart deployment
 secret:
   # Set to true, and provide the following values to enable the creation of the K8S Secret. als.keysSecretName and da.keysSecretName should receive the same name if this is enabled.
@@ -249,33 +235,41 @@ secret:
 # Configures the ALS Traceability Agent
 als:
   enabled: true
+
+  # # Traceability Agent image overrides
+  # image:
+  #   fullPath:
+  #   registry: docker.repository.axway.com
+  #   repository: ampc-beano-docker-prod/2.1
+  #   name: als-traceability-agent
+  #   tag:
+  #   pullPolicy: IfNotPresent
+  #   pullSecret:
+
+  # Amplify Central Configuration
+  env:
+    LOG_LEVEL: info
+    # Amplify Central Deployment (prod, prod-eu, prod-ap)
+    CENTRAL_DEPLOYMENT: prod
+    # Amplify Central Region (US, EU, AP)
+    CENTRAL_REGION: US
+    CENTRAL_ENVIRONMENT: istio
+    CENTRAL_AGENTNAME: istio-ta
+    CENTRAL_AUTH_CLIENTID: istio-service-account_12345678-0000-4444-99e9
+    CENTRAL_ORGANIZATIONID: "123456789912345"
+
   # Header publishing mode. Set to default or verbose.
   mode: default
-  # Name of the k8scluster
+  # Name for the Istio cluster
   clusterName: istio-k8scluster
-  # Name of the Traceability Agent resource
-  agentName: istio-ta
-  # Amplify Central Deployment (prod, prod-eu)
-  apicDeployment: prod
-  # Amplify Platform service account client ID
-  clientID: istio-service-account_12345678-0000-4444-99e9
-  # Amplify ingestion service endpoint
-  condorUrl: ingestion.datasearch.axway.com:5044
-  condorSslVerification: full
-  # Sampling configuration
-  sampling:
-    percentage: 100
-    per_api: true
-    per_subscription: true
-    onlyErrors: false
   # The tracing provider configured for Istio
   istioTracer: "zipkin"
   # Name of the secret containing the public & private keys used by the provided service account client ID
   keysSecretName: amplify-agents-keys
-  publishHeaders: true
   # List of namespaces where the ALS Envoy filters should be applied
   envoyFilterNamespaces:
   - default
+  publishHeaders: true
   # A list of request headers that are sent to the agent
   defaultModeRequestHeaders:
   - "accept"
@@ -299,19 +293,6 @@ als:
   - "server"
   - "start-time"
   - "vary"
-  # Redaction configuration
-  redaction:
-    path:
-      show:
-    queryArgument:
-      show:
-      sanitize:
-    requestHeader:
-      show:
-      sanitize:
-    responseHeader:
-      show:
-      sanitize:
   # Config to override default values set by the ALS agent by extracting them from the Access Log Entry filter metadata.
   # To override the apiID or clientID, filterName and filterKeyMeta must be set.
   metadataOverride:
@@ -333,16 +314,31 @@ als:
 # Configures the Discovery Agent
 da:
   enabled: true
-  # Name of the Discovery Agent resource
-  agentName: istio-da
-  # Amplify Platform service account client ID
-  clientID: istio-service-account_12345678-0000-4444-99e9
+
+  # # Discovery Agent image overrides
+  # image:
+  #   fullPath:
+  #   registry: docker.repository.axway.com
+  #   repository: ampc-beano-docker-prod/1.1
+  #   name: istio-discovery-agent
+  #   tag:
+  #   pullPolicy: IfNotPresent
+  #   pullSecret:
+
+  # Amplify Central Configuration
+  env:
+    LOG_LEVEL: info
+    # Amplify Central Region (US, EU, AP)
+    CENTRAL_REGION: US
+    CENTRAL_ENVIRONMENT: istio
+    CENTRAL_AGENTNAME: istio-da
+    CENTRAL_AUTH_CLIENTID: istio-service-account_12345678-0000-4444-99e9
+    CENTRAL_ORGANIZATIONID: "123456789912345"
+
+  # Name for the Istio cluster
+  clusterName: istio-k8scluster
   # Name of the k8s secret for private/public key pair
   keysSecretName: amplify-agents-keys
-  # Name of the K8SCluster the agent is connected to
-  clusterName: istio-k8scluster
-  # Polling interval for events
-  pollInterval: "60s"
   # Discovery configuration
   discovery:
     # List of http endpoints to discover api specs from
