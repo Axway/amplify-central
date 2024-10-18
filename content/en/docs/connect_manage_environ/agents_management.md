@@ -15,7 +15,9 @@ Only the Central Admin can view the agents list.
 
 If there are any unsupported agents an alert will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or learn the [Upgrade Procedures](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/index.html) and view the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
 
-There are 5 tabs that can be selected in the agents list view. Connected, Unhealthy, Stopped, Update Available, and Unsupported. View below for more details on all of them.
+There are 5 cards in the agents list view. Connected, Unhealthy, Stopped, Update Available, and Unsupported. View below for more details on all of them.
+
+The list of agents can be filtered using the filter side bar located on the left side of the screen. Agents may be filtered by Dataplanes, Hosting, Agent State, Version Status, and Last Activity.
 
 A list of agents is displayed with the following information:
 
