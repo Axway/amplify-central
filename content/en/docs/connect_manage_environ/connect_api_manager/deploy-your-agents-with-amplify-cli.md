@@ -276,9 +276,9 @@ helm upgrade --install --namespace <YOUR_NAMESPACE> v7-discovery axway/ampc-bean
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/ampc-beano-helm-v7-traceability -f ta-overrides.yaml
 ```
 
-#### Setup secrets for private repositories
+#### Set up secrets for private repositories
 
-If you want to deploy an image stored in a private repository, is essential to create a kubernetes secret and set up the `pullSecret` field in `image` section in the override file.
+To deploy an image stored in a private repository, you must create a kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
 This is necessary for both the discovery and traceability agents.
 
 Kubernetes command to create secret:
