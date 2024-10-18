@@ -89,7 +89,7 @@ To create a document:
 3. Select the Document type you need: a choice between **Upload a document**, **Create Markdown** or **External link**. Based on your choice the next screen will present you the appropriate things to do:
    * **Upload a document**: use the **BROWSE FILES** button or drop file(s) in the drop area. The successfully uploaded file is displayed in the Manage Uploads area. If a file does not respect the limitations, it will appear in an error message area. Check the box in front of the uploaded file to edit the file details: Document name, Description, Version. Once your document information is correct, click **Next**.
    * **Create Markdown**: enter the document details (Name, description, Version) and click **Next** to display the Markdown editor. Once you markdown content is ready, click **Next**.
-   * **External Link**: enter the document details (URL, Name, description, version) and click **Next**.dsad
+   * **External Link**: enter the document details (URL, Name, description, version) and click **Next**.
 4. Add your document visibility: Product and/or Marketplace. Product visibility allow any Catalog Manager that can access the document to use it in their product. Marketplace visibility can be refined by selecting on which Marketplace the document will be available. In case you upload multiple documents, this visibility will be applied to all document(s). If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
 5. Add the team permissions: Restricted (only the Central Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
 6. Review your uploaded files. Click **Prev** to return to any of the previous pages. Once everything looks good, click **Save**.
@@ -112,7 +112,7 @@ To Edit a document:
 
 1. Navigate to *Document Library*.
 2. Select the ellipsis menu associated with the document you want to edit and click **Edit**. This will open the document wizard. You cannot change the document type but you can edit any field.
-3. When you are satisfied with the changes, ckick **Save & Exit** button.
+3. When you are satisfied with the changes, click **Save & Exit** button.
 
 {{< alert title="Note about the Product / Marketplace visibility" color="primary" >}}
 When a document is used in a product or in a Marketplace menu, you are not allowed to change its visibility. You have first to remove the Document from any product / Marketplace and then you can change the document visibility.
