@@ -35,7 +35,7 @@ A list of agents is displayed with the following information:
 
     * **Up To Date** - the agent is up to date.
     * **Update Available** - A new version is available.
-    * **Outdated** - the current versio of the agent is outdated.
+    * **Outdated** - the current version of the agent is outdated.
 
 * **Agent Dataplane** - the specific type of agent that is being used.
 * **Agent's Last Activity** - the last time the agent was updated. By default this field is selected to show agents in descending order based upon the last activity time.
