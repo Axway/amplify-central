@@ -132,3 +132,22 @@ To delete a document:
 2. Select the ellipsis menu associated with the document you want to delete and click **Delete**. To delete multiple documents, select the checkboxes in front of the documents and click **Delete**.
 3. A popup displays the selected document name(s) as well as all affected references (product / Marketplace). Type **DELETE** in the confirmation field.
 4. Click **Delete** to validate the action.
+
+## Multi-languages support
+
+If your document can be seen on the Marketplace (either because it is used in a menu or in product documentation), translation can be added so that it can be viewed differently based on the Marketplace language settings.
+
+Adding the translation means you have your original copy of the document and as many additional copies in the languages you need. For instance, the original copy is in French, and English, German and Portuguese copies can be added as needed.
+
+{{< alert title="Note" color="warning" >}}
+The translation will follow the original document type. If the original document type is a file, all translations must be files as well. Same applies for Markdown and URL document types.
+{{< /alert >}}
+
+By default, four languages are available : English / French / German / Brazilian Portuguese
+
+You will need 2 things:
+
+* the Document default language
+* the Document translation languages
+
+This feature is not yet available from the UI, but you can use the CLI or API to add the Document available languages. Refer to [API Server multi languages support](/docs/integrate_with_central/api_server#multi-languages-support) and the [sample data](/docs/integrate_with_central/samples/sample_start_to_end#scenario-description) where there is an example of Document Library document using two languages.

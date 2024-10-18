@@ -49,18 +49,31 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics**        | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | Yes                                                           | Yes                                                 |
 | **Transaction Event Sampling** | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | No                                                            | Yes                                                 |
 
-| Description                    | MuleSoft Gateway                           | Software AG webMethods     | Kong Gateway                                               | GitLab Repository        | Kafka Cluster  |
-| ------------------------------ | ------------------------------------------ | -------------------------- | ---------------------------------------------------------- | ------------------------ | -------------- |
-| **Discovery**                  | Rest APIs (+RAML)                          | Published Frontend Proxies | Services and attached Routes                               | Public/Private Rest APIs | Topics         |
-| **Application**                | Associated Client App with Contract        | No                         | Consumer                                                   | No                       | Create Product |
-| **Access Request**             | Associated Frontend Proxy with Application | No                         | If ACL plugin is required to give consumer access to Route | No                       | No             |
-| **Credential Type**            | Basic Auth / OAuth                         | No                         | APIKey / Basic Auth / OAuth                                | No                       | APIKey / SASL  |
-| **Credential Actions**         | Suspend/Enable                             | No                         | Suspend/Enable                                             | No                       | Suspend/Enable |
-| **Quota Enforcement**          | No                                         | Quotas are attached to a Policy in the API                         | Rate limiting plugin added to Consumer                     | No                       | No             |
-| **Traceability**               | No                                         | Yes                         | Using the Kong HTTP log plugin                             | No                       | No             |
-| **Platform Usage**             | Yes                                        | Yes                         | Yes                                                        | No                       | Yes            |
-| **Transaction Metrics**        | No                                         | Yes                         | Yes                                                        | No                       | Yes            |
-| **Transaction Event Sampling** | No                                         | Yes                         | Yes                                                        | No                       | No             |
+| Description                    | MuleSoft Gateway                           | Software AG webMethods     | Kong Gateway                                               | Kafka Cluster  |
+| ------------------------------ | ------------------------------------------ | -------------------------- | ---------------------------------------------------------- | -------------- |
+| **Discovery**                  | Rest APIs (+RAML)                          | Published Frontend Proxies | Services and attached Routes                               | Topics         |
+| **Application**                | Associated Client App with Contract        | No                         | Consumer                                                   | Create Product |
+| **Access Request**             | Associated Frontend Proxy with Application | No                         | If ACL plugin is required to give consumer access to Route | No             |
+| **Credential Type**            | Basic Auth / OAuth                         | No                         | APIKey / Basic Auth / OAuth                                | APIKey / SASL  |
+| **Credential Actions**         | Suspend/Enable                             | No                         | Suspend/Enable                                             | Suspend/Enable |
+| **Quota Enforcement**          | No                                         | Quotas are attached to a Policy in the API                         | Rate limiting plugin added to Consumer                     | No             |
+| **Traceability**               | No                                         | Yes                         | Using the Kong HTTP log plugin                             | No             |
+| **Platform Usage**             | Yes                                        | Yes                         | Yes                                                        | Yes            |
+| **Transaction Metrics**        | No                                         | Yes                         | Yes                                                        | Yes            |
+| **Transaction Event Sampling** | No                                         | Yes                         | Yes                                                        | No             |
+
+| Description                    | Backstage Software Catalog                 | GitLab Repository        |
+| ------------------------------ | ------------------------------------------ | ------------------------ |
+| **Discovery**                  | All API types                              | Public/Private Rest APIs |
+| **Application**                | No                                         | No                       |
+| **Access Request**             | No                                         | No                       |
+| **Credential Type**            | No                                         | No                       |
+| **Credential Actions**         | No                                         | No                       |
+| **Quota Enforcement**          | No                                         | No                       |
+| **Traceability**               | No                                         | No                       |
+| **Platform Usage**             | No                                         | No                       |
+| **Transaction Metrics**        | No                                         | No                       |
+| **Transaction Event Sampling** | No                                         | No                       |
 
 ### SaaS (Embedded) Agent Features
 
@@ -94,6 +107,7 @@ For detailed information about agent configuration, features and limitations, se
 * [Discovery Agent for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
 * [Discovery Agent for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
 * [Discovery Agent for SwaggerHub](/docs/connect_manage_environ/connect_swaggerhub/)
+* [Discovery Agent for Backstage](/docs/connect_manage_environ/connect_backstage/)
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 

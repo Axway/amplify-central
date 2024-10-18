@@ -175,7 +175,7 @@ axway central apply -f webhook.yaml
 ✔ "Webhook/invoke-jira-webhook" in the scope "Integration/monitor-resources" has successfully been created.
 ```
 
-{{< alert title="Note" color="danger" >}}
+{{< alert title="Caution" color="danger" >}}
 For an HTTPS webhook endpoint, you must have a certificate issued by a valid certificate authority, not a self-signed certificate. Otherwise, no events will be received by the webhook endpoint.
 {{< /alert >}}
 

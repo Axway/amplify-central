@@ -276,6 +276,36 @@ helm upgrade --install --namespace <YOUR_NAMESPACE> v7-discovery axway/ampc-bean
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/ampc-beano-helm-v7-traceability -f ta-overrides.yaml
 ```
 
+#### Set up secrets for private repositories
+
+To deploy an image stored in a private repository, you must create a kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
+This is necessary for both the Discovery and Traceability agents.
+
+Kubernetes command to create secret:
+
+```bash
+kubectl create secret docker-registry <SECRET_NAME> --namespace <YOUR_NAMESPACE> --docker-server=docker.repository.axway.com --docker-username=<client_id> --docker-password=<client_secret>
+```
+
+`client_id` - service account id for an Amplify Platform organization that has access to that artifact
+`client_secret` - service account secret for an Amplify Platform organization that has access to that artifact
+
+In overrides.yaml:
+
+```bash
+image:
+  pullSecret: <SECRET_NAME>
+```
+
+Agent deployment commands:
+
+```bash
+helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
+helm repo update
+helm upgrade --install --namespace <YOUR_NAMESPACE> v7-discovery axway/ampc-beano-help-prod-v7-discovery -f da-overrides.yaml --set image.pullSecret=<image-pull-secret-name>
+helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/ampc-beano-helm-v7-traceability -f ta-overrides.yaml --set image.pullSecret=<image-pull-secret-name>
+```
+
 ### Linux Service mode for binary agent
 
 The agent can be installed as a Linux service with systemd. The following commands will help you utilize the service. These commands install the service abilities and must be run as a root user.
