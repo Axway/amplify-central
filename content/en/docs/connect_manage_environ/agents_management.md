@@ -13,7 +13,7 @@ Only the Central Admin can view the agents list.
 
 1. Navigate to *Topology > Agents*.
 
-If there are any unsupported agents an alert will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or learn the [Upgrade Procedures](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/index.html) and view the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
+If there are any unsupported agents an alert/banner will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or learn the [Upgrade Procedures](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/index.html) and view the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
 
 There are 5 cards in the agents list view. Connected, Unhealthy, Stopped, Update Available, and Unsupported. View below for more details on all of them.
 
@@ -30,12 +30,12 @@ A list of agents is displayed with the following information:
 * **Environment & Agent name** - the title of the agent and the environment it is a part of.
 * **Agent Version** - the agent version number.
 * **Agent Type** - can be either a DiscoveryAgent or a TraceabilityAgent.
-* **Agent Host** - can be either on-premise or saas(Axway managed).
+* **Agent Host** - can be either On-premise or SAAS(embedded agent).
 * **Agent Version Status** - Applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses. Up to date, update available, or outdated. View the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
 
     * **Up To Date** - the agent is up to date.
     * **Update Available** - A new version is available.
-    * **Outdated** - the current version of the agent is outdated.
+    * **Outdated** - the current version of the agent is outdated. If there are any unsupported agents an alert/banner will appear at the top of the screen.
 
 * **Agent Dataplane** - the specific type of agent that is being used.
 * **Agent's Last Activity** - the last time the agent was updated. By default this field is selected to show agents in descending order based upon the last activity time.
