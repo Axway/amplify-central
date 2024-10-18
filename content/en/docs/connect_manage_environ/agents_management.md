@@ -30,7 +30,7 @@ A list of agents is displayed with the following information:
 * **Environment & Agent name** - the title of the agent and the environment it is a part of.
 * **Agent Version** - the agent version number.
 * **Agent Type** - can be either a DiscoveryAgent or a TraceabilityAgent.
-* **Agent Host** - can be either On-premise or SAAS(embedded agent).
+* **Agent Host** - can be either On-premise or SaaS(embedded agent).
 * **Agent Version Status** - Applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses. Up to date, update available, or outdated. View the [Latest Vesions](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html).
 
     * **Up To Date** - the agent is up to date.
