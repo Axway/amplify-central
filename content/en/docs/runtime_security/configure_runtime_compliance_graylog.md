@@ -189,9 +189,9 @@ To complete the Graylog agent installation run the following commands:
 
 Once the Helm commands are completed, the agents should be running in the Kubernetes cluster.
 
-#### Setup secrets for private repositories
+#### Set up secrets for private repositories
 
-If you want to deploy an image stored in a private repository, is essential to create a kubernetes secret and set up the `pullSecret` field in `image` section in the override file.
+To deploy an image stored in a private repository, you must create a kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
 This is necessary for both the discovery and traceability agents.
 
 Kubernetes command to create secret:
