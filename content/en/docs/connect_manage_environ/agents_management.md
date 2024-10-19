@@ -17,7 +17,7 @@ If there are unsupported agents, an alert/banner will appear at the top of the s
 
 There are five cards in the *agents list* view. Connected, Unhealthy, Stopped, Update Available, and Unsupported.
 
-The list of agents can be filtered by Dataplanes, Hosting, Agent State, Version Status and Last Activity by using the filter located at the left of the screen. 
+The list of agents can be filtered by Dataplanes, Hosting, Agent State, Version Status and Last Activity by using the filter located at the left of the screen.
 
 A list of agents is displayed with the following information:
 
