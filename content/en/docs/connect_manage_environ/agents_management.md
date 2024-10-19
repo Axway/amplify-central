@@ -11,7 +11,7 @@ In topology, agents configured within your organization can be viewed to identif
 
 Only the Central Admin can view the *agents list*.
 
-1. Navigate to *Topology > Agents*. There are five cards in the *agents list* view. Connected, Unhealthy, Stopped, Update Available, and Unsupported.
+1. Navigate to *Topology > Agents*. There are five cards in the *agents list* view: Connected, Unhealthy, Stopped, Update Available, and Unsupported.
 
 {{< alert title="Note" color="primary" >}}If there are unsupported agents, an alert/banner will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or see the [upgrade procedures](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent) documentation and view the [latest agent versions in the release notes](/docs/amplify_relnotes).{{< /alert >}}
 
