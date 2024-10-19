@@ -5,7 +5,7 @@ weight: 20
 date: 2024-10-10
 ---
 
-In topology, agents configured within your organization can be viewed to identify if any actions are to be taken.
+In Topology, agents configured within your organization can be viewed to identify if any actions are to be taken.
 
 ## View available agents
 
