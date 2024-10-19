@@ -11,13 +11,11 @@ In topology, agents configured within your organization can be viewed to identif
 
 Only the Central Admin can view the *agents list*.
 
-1. Navigate to *Topology > Agents*.
+1. Navigate to *Topology > Agents*. There are five cards in the *agents list* view. Connected, Unhealthy, Stopped, Update Available, and Unsupported.
 
-If there are unsupported agents, an alert/banner will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or see the [upgrade procedures](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent) documentation and view the [latest agent versions in the release notes](/docs/amplify_relnotes).
+{{< alert title="Note" color="primary" >}}If there are unsupported agents, an alert/banner will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or see the [upgrade procedures](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent) documentation and view the [latest agent versions in the release notes](/docs/amplify_relnotes).{{< /alert >}}
 
-There are five cards in the *agents list* view. Connected, Unhealthy, Stopped, Update Available, and Unsupported.
-
-The list of agents can be filtered by Dataplanes, Hosting, Agent State, Version Status and Last Activity by using the filter located at the left of the screen.
+{{< alert title="Tip" color="secondary" >}}The list of agents can be filtered by Dataplanes, Hosting, Agent State, Version Status and Last Activity by using the filter located at the left of the screen.{{< /alert >}}
 
 A list of agents is displayed with the following information:
 
@@ -43,4 +41,4 @@ A list of agents is displayed with the following information:
 ## View agent details
 
 1. Navigate to *Topology > Agents*.
-2. **Click** on the agent. Basic details are displayed about the agent.
+2. Click on the agent. *Basic details are displayed about the agent*.
