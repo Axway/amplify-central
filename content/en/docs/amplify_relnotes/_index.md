@@ -7,14 +7,20 @@ date: 2020-10-28
 hide_readingtime: true
 ---
 
-This page displays brief summaries of feature updates for each release of Amplify Enterprise Marketplace, including:
+The release note summaries will no longer be documented here. This page now displays the supported agents for each release of Amplify Enterprise Marketplace. To learn more about what's in a release, click on the release note title to go to the corresponding release note.
 
-* Provider experience: Agents, Service Registry, Asset Catalog, Product Foundry, Business insights
-* Consumer experience: Marketplace, Consumer insights
+{{< alert title="Note" color="primary" >}}The supported agents will no longer be documented on the corresponding release note pages. Please take note of the agents' versions on this page before navigating to the corresponding release note.
 
-For more details, click on the release note title to go to the corresponding release note.
+You must log in to this portal and be authenticated as an Axway customer to have access to release notes.
+{{< /alert >}}
 
-{{< alert title="Note" color="primary" >}}You must log in to this portal and be authenticated as an Axway customer to have access to release notes.{{< /alert >}}
+Access the list of available agents from your organization:
+
+* Go to *Help menus > Downloads > Repository* and search for agents.
+
+    -or-
+
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents).
 
 To view the *Administration Release Notes* [click here](https://docs.axway.com/bundle/platform-management/page/docs/release_notes/index.html).
 
