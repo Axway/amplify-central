@@ -1,7 +1,7 @@
 ---
 title: Amplify Enterprise Marketplace November 2024 (template)
 linkTitle: Amplify Enterprise Marketplace November 2024
-weight: 6
+weight: 4
 date: 2024-10-08
 ---
 We work hard to improve the Amplify Enterprise Marketplace experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of November. It is always recommended to update the latest agents' versions.
