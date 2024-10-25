@@ -26,6 +26,8 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ### October 18 Supported agents
 
+Update
+
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.101 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
 | Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.7 / TA=v1.2.6    | DA=v1.1.80 / TA=v1.1.81          |
@@ -33,7 +35,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Azure latest release                       | 1.3.4                    | DA=v1.1.70 / TA=v1.1.76          |
 | Istio 1.9.5                                | DA=v1.1.5 / TA=v2.1.5    | DA=v1.0.36 / TA=v2.0.82          |
 | Apigee Edge                                | 1.0.1                    | 0.1.38                           |
-| Mulesoft Anypoint platform v3              | 1.2.4                    | 1.1.48                           |
+| Mulesoft Anypoint platform v3              | 1.2.5                    | 1.1.48                           |
 | Software AG webMethods                     | 1.0.3                    | 1.0.0                            |
 | Kong Gateway                               | 1.1.4                    | 1.0.9                            |
 | GitLab                                     | 1.1.4                    | 1.0.6                            |
