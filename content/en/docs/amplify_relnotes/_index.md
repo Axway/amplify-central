@@ -35,7 +35,7 @@ Update
 | Azure latest release                       | 1.3.4                    | DA=v1.1.70 / TA=v1.1.76          |
 | Istio 1.9.5                                | DA=v1.1.5 / TA=v2.1.5    | DA=v1.0.36 / TA=v2.0.82          |
 | Apigee Edge                                | 1.0.1                    | 0.1.38                           |
-| Mulesoft Anypoint platform v3              | 1.2.4                    | 1.1.48                           |
+| Mulesoft Anypoint platform v3              | 1.2.5                    | 1.1.48                           |
 | Software AG webMethods                     | 1.0.3                    | 1.0.0                            |
 | Kong Gateway                               | 1.1.4                    | 1.0.9                            |
 | GitLab                                     | 1.1.4                    | 1.0.6                            |
