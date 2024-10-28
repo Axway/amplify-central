@@ -26,8 +26,6 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ### October 18 Supported agents
 
-Update
-
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK v1.1.101 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK v1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
 | Axway API Management 7.6.2 SPx and 7.7 SPx | DA=v1.2.7 / TA=v1.2.6    | DA=v1.1.80 / TA=v1.1.81          |
