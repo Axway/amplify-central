@@ -121,11 +121,14 @@ When a Front End Proxy is secured by invoking a policy, the agent will not know 
 | APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION     | When a proxy is secured by a policy, this description is added to the Access Request Definition if no description text is found in API Manager (default: `Contact your provider about authenticating to this API`). |
 | APIMANAGER_INVOKEPOLICY_TITLE                  | When a proxy is secured by a policy, this title is added to the Access Request Definition (default: `Authentication Details`).                                                                                      |
 | APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME     | The policy name that should be mapped to a specific credential type.                                                                                                                                                |
-| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, Oauth and any value set in the `AGENTFEATURES_IDP_NAME` variables.                                                             |
+| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE | The credential type to map for the policy name specified. Options are APIKey, Basic, Oauth, external and any value set in the `AGENTFEATURES_IDP_NAME` variables.                                                             |
+| APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME | The credential request definition names to map for the policy name specified when using the external credential type. |
 
 The `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` and `APIMANAGER_INVOKEPOLICY_TITLE` settings are used when the Discovery Agent cannot find a mapping to apply. These values are set in the Access Request to give the end consumer a hint on authenticating to the API.
 
 The `APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME` and `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE` settings may be repeated for every mapping that is required. For each new mapping being added increase the index at the end of the variable name.
+
+The `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME` setting is used when the agent should not handle a CRD which is managed externally.
 
 Here is an example of multiple invoke policy mappings. Notice how the index number was incremented for each successive mapping.
 
@@ -158,7 +161,17 @@ AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
 ```
 
-{{< alert title="Note" color="primary" >}}This setup will only enable the ability to request a credential in Amplify Marketplace. It will not update the specification to include the IDP definition.{{< /alert >}}
+##### Invoke policy mapping to externally managed credential request definition example
+
+An invoke policy mapping may reference an externally managed credential request definition. Below is a sample of the environment variable setup to handle this mapping.
+
+Given the configuration below, an agent will ignore events which trigger the credential provisioning because it is assumed to be handled externally. The credential type for this must be set as external.
+
+```shell
+APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_1=ExternalPolicy
+APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=external
+APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME_1=external-crd-name
+```
 
 #### Custom OAuth External policy handling
 
