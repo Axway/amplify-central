@@ -60,7 +60,7 @@ The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/pa
 * **Custom unit quota**
 
    PROVIDER BILLING<br />
-   Currently only Transactions unit are monitored. But with the rising of LLM model, new units are necessary to charge consumer. TBD + link to current documentation
+   Currently only Transactions unit are monitored. But with the rising of LLM model, new units are necessary to charge consumer. By default the system manages only **Transaction** unit. When defining your plan quota, you can select any other consumption unit available in the system. Refer to [Manage consumption unit](/docs/manage_product_foundry/manage_consumption_units).
 
 * **Async API 3.0.0 support**
 
