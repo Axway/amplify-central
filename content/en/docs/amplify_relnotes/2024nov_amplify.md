@@ -55,7 +55,7 @@ The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/pa
 
 <!--### Axway CLI bug fixes for November ?  (hidden if none)-->
 
-### Marketplace updates for November ?
+### Marketplace updates for November 1st
 
 * **Custom unit quota**
 
