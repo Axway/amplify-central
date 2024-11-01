@@ -33,11 +33,10 @@ New features, enhancements, and bug fixes for the November ? update.
     ENHANCEMENT<br />
     The Agent Management screen has been moved to a subpage under Topology -> Environments.  The first column displays the Agent Title and logical name and the Dataplane column has been renamed to Environment to improve the User Experience.
 
-* **UI for Service Regostry**
+* **UI for Service Registry**
 
     ENHANCEMENT<br />
     The Service Registry has improved the UX navigation between pages.  When multiple pages are available for the Service Registry to display, the ellipsis for the pages displays a page number option to make it easier to switch to a specific page.
-
 
 ### Agents bug fixes for November ?
 
