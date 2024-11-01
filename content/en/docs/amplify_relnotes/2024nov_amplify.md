@@ -10,35 +10,41 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
-## November ? 2024
+## November 1st 2024
 
 New features, enhancements, and bug fixes for the November ? update.
 
-### Agents updates for November ?
+### Agents updates for November 1st
 
-* **Custom Credential support on Axway API Management Agent**
+* **Provisioning Handling of Custom Credential Requests in APIM Discovery Agent**
+
+    ENHANCEMENT; APIM AGENT<br />
+    A new feature enhancement has been added in the APIM Agent that providers greater control over the provisioning of custom credential requests. This update introduces the ability to override the default Credential Request Definition (CRD) and manage the credential provisioning externally. Here's what you need to know about the new capability:
+     * **Override Default CRD**: Users can define and implement their own custom CRD insted of relying on the default definitioin provided by the agent. This allows for a tailored request handling that aligns with unique integration requirements.
+     * **Ignore Automatic Credential Provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager, when a custom CRD is enabled. Users must manage the entire provisioning process externally, enabling integration with 3rd-party systems or custom authentication mechanisms. 
+
+    To enable the override feature, update the releant settings in the APIM agent configuration and ensure you have the external credential provisioning flow in place, as the agent will not manage credentials when this feature is active.
+
+* **All Agents Defaults to GRPC communication mode**
 
     ENHANCEMENT<br />
-    The custom credential support has been released in a the Axway API Management agents to ignore handling of a custom credential (CRD).  The will enable customers to perform their own credential handling.
-
-* **Agent SDK defaults to GRPC mode**
-
-    ENHANCEMENT<br />
-    The Agent SDK v1.1.102 has been updated so all agents default to use GRPC mode instead of polled mode (CENTRAL_GRPC_ENABLED=true).  This will improve the efficiency of the communication between the agents and the platform
+    This update in the Agent SDK v1.1.102 enables all existing agents to use the GRPC communication mode by default. By enabling this mode, agents can communicate with the platform more efficiently, compared to the traditional polled mode. To switch to the poll mode, you can set the CENTRAL_GRPC_ENABLED=false.
 
 <!--### Agents known issues (hidden if none)-->
 
-* **UI for Agent Management**
+* **Agents screen update**
 
     ENHANCEMENT<br />
-    The Agent Management screen has been moved to a subpage under Topology -> Environments.  The first column displays the Agent Title and logical name and the Dataplane column has been renamed to Environment to improve the User Experience.
+    Several enhancements have been added to the Agents screen to enhance the user experience and navigation within the platform. Here's what has changed:
+     * **Agent Management Screen Relocation**: The **Agents** screen has been moved and is now accessible under **Topology -> Environments**.
+     * **Updated columns for clarity**: The first column of the Agents screen now displays both the **Agent Title** and its **Logical Name**. The Dataplane column has been replaced with **Environments**, allowing user to see in which environment the agent is deployed.
 
-* **UI for Service Registry**
+* **Jump to a specific page in Service Registry**
 
     ENHANCEMENT<br />
-    The Service Registry has improved the UX navigation between pages.  When multiple pages are available for the Service Registry to display, the ellipsis for the pages displays a page number option to make it easier to switch to a specific page.
+    When multiple pages are available for the **Service Registry** to display, simply click the "..." in the pagination controls that is place at the button of the page and select tha page you want to navigate to. This makes it easier to browse large lists of Services in the Service Registry.
 
-### Agents bug fixes for November ?
+### Agents bug fixes for November 1st
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
@@ -55,26 +61,26 @@ New features, enhancements, and bug fixes for the November ? update.
 
 The latest version of the [Axway Central CLI is v3.7.0 on NPM](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.7.0). For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
 
-### Axway CLI updates for November ?
+### Axway CLI updates for November 1st
 
 The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/package/@axway/axway/v/3.2.14).
 
 ### Marketplace updates for November 1st
 
-* **Custom unit quota**
+* **Custom consumption units for billing and usage tracking**
 
    PROVIDER BILLING<br />
-   Currently only Transactions unit are monitored. But with the rising of LLM model, new units are necessary to charge consumer. By default the system manages only **Transaction** unit. When defining your plan quota, you can select any other consumption unit available in the system. Refer to [Manage consumption unit](/docs/manage_product_foundry/manage_consumption_units).
+   We are thrilled to introduce a powerful new feature that gives users the flexibility to define custom consumption units for more accurate and adaptable usage-based charging. This enhancement is designed to meet the evolving needs of service providers, particularly with the rise of generative AI and Large Language Model (LLM) services.
+    * **Custom Consumption Unit**: Users can now define custom units for measuring and charging API usage. Previously, usage metrics were limited to charging by transactions only. This feature is especially valuable for providers offering generative AI services, where usage metrics like tokens are more appropriate.
+    * **Use custom unit in plan quota**: Custom consumption units can now be used in the **product plan quota** definitions.
+ 
+    Refer to [Manage consumption unit](/docs/manage_product_foundry/manage_consumption_units) for more details.
 
 * **Async API 3.0.0 support**
 
    CONSUMER EXPERIENCE, ENHANCEMENT<br />
-   The component managing the display of API specification has been upgrades to display the Async API v3.0.0. The component validate the specification definition while importing the specification in Service Registry and allow a nice visual on the Marketplace.
-
-* **Enhancement title**
-
-    (Add tags here and remove hidden text<!--For example, CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT-->) <br />
-   Feature description.
+   The component responsible for rendering API specifications has been upgraded to support **AsyncAPI v3.0.0**.
+Users can now enjoy a visually appealing and well-structured presentation of AsyncAPI specifications directly in the Marketplace. In addition, when importing an AsyncAPI 3.0.0 specification into the **Service Registry**, the system will now automatically validate the definition. This ensures that only properly defined and compliant specifications are registered.
 
 <!--### Marketplace known issues for November ?  (hidden if none)-->
 
