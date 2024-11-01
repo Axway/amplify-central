@@ -16,15 +16,15 @@ New features, enhancements, and bug fixes for the November ? update.
 
 ### Agents updates for November ?
 
-* **Enhancement title**
+* **Custom Credential support on Axway API Management Agent**
 
-    (Add tags here and remove hidden text<!--For example, PROVIDER EXPERIENCE, BACKSTAGE, ENHANCEMENT-->) <br />
-    Enhancement description.
+    ENHANCEMENT<br />
+    The custom credential support has been released in a the Axway API Management agents to ignore handling of a custom credential (CRD).  The will enable customers to perform their own credential handling.
 
-* **Enhancement title**
+* **Agent SDK defaults to GRPC mode**
 
-    (Add tags here and remove hidden text<!--For example, PROVIDER EXPERIENCE, SAAS, EMBEDDED AGENT, ENHANCEMENT-->) <br />
-    Enhancement description.
+    ENHANCEMENT<br />
+    The Agent SDK v1.1.102 has been updated so all agents default to use GRPC mode instead of polled mode (CENTRAL_GRPC_ENABLED=true).  his will improve the efficiency of the communication between the agents and the platform
 
 <!--### Agents known issues (hidden if none)-->
 
@@ -32,28 +32,16 @@ New features, enhancements, and bug fixes for the November ? update.
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
-| xxxxxxxx    | APIGOV-xxxxx | **Issue**: (Agent name goes here) Issue description. <br />**Resolution**: Resolution description. |
+|             | APIGOV-29069 | **Issue**: Axway API Management agent did not reflect the transision from "unhealthy" to a "running" states on the Ui. <br />**Resolution**: A fix was made to the agent state correctly. |
+|             | APIGOV-29054 | **Issue**: Mulsoft Agent was using the incorrect timestamps for queries. <br />**Resolution**: A fix was made to the timestamps being used for the Mulesoft Monitoring API queries. |
 
 ### Axway Central CLI updates for November ?
 
-The latest version of the [Axway Central CLI is v3.6.0 on NPM](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.6.0). For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
-
-* **Enhancement title**
-
-    (Add tags here and remove hidden text<!--For example, PROVIDER EXPERIENCE, ENHANCEMENT-->) <br />
-    Enhancement description.
-
-<!--### Axway Central CLI known issues for November ? (hidden if none)-->
-
-<!--### Axway Central CLI bug fixes for November ?  (hidden if none)-->
+The latest version of the [Axway Central CLI is v3.7.0 on NPM](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.7.0). For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
 
 ### Axway CLI updates for November ?
 
 The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/package/@axway/axway/v/3.2.14).
-
-<!--### Axway CLI known issues for November ?  (hidden if none)-->
-
-<!--### Axway CLI bug fixes for November ?  (hidden if none)-->
 
 ### Marketplace updates for November 1st
 
