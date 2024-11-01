@@ -59,12 +59,12 @@ The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/pa
 
 * **Custom unit quota**
 
-    (Add tags here and remove hidden text<!--For example, CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT-->) <br />
+   PROVIDER BILLING<br />
    Currently only Transactions unit are monitored. But with the rising of LLM model, new units are necessary to charge consumer. TBD + link to current documentation
 
 * **Async API 3.0.0 support**
 
-    (Add tags here and remove hidden text<!--For example, CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT-->) <br />
+   CONSUMER EXPERIENCE, ENHANCEMENT<br />
    The component managing the display of API specification has been upgrades to display the Async API v3.0.0. The component validate the specification definition while importing the specification in Service Registry and allow a nice visual on the Marketplace.
 
 * **Enhancement title**
