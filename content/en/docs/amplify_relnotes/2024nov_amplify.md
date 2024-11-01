@@ -24,7 +24,14 @@ New features, enhancements, and bug fixes for the November ? update.
 * **Agent SDK defaults to GRPC mode**
 
     ENHANCEMENT<br />
-    The Agent SDK v1.1.102 has been updated so all agents default to use GRPC mode instead of polled mode (CENTRAL_GRPC_ENABLED=true).  his will improve the efficiency of the communication between the agents and the platform
+    The Agent SDK v1.1.102 has been updated so all agents default to use GRPC mode instead of polled mode (CENTRAL_GRPC_ENABLED=true).  This will improve the efficiency of the communication between the agents and the platform
+
+<!--### Agents known issues (hidden if none)-->
+
+* **UI for Agent Management**
+
+    ENHANCEMENT<br />
+    The Agent Management screen has been moved to a subpage under Topology -> Environments.  The first column displays the Agent Title and logical name and the Dataplane column has been renamed to Environment to improve the User Experience.
 
 <!--### Agents known issues (hidden if none)-->
 
@@ -33,6 +40,7 @@ New features, enhancements, and bug fixes for the November ? update.
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
 |             | APIGOV-29069 | **Issue**: Axway API Management agent did not reflect the transision from "unhealthy" to a "running" states on the Ui. <br />**Resolution**: A fix was made to the agent state correctly. |
+|             | APIGOV-29048 | **Issue**: Auto-release of a new asset version was not being triggered by CRD or ARD changes. <br />**Resolution**: A fix was made to the auto-release an asset version when ARD or CRD changes are made. |
 |             | APIGOV-29054 | **Issue**: Mulsoft Agent was using the incorrect timestamps for queries. <br />**Resolution**: A fix was made to the timestamps being used for the Mulesoft Monitoring API queries. |
 
 ### Axway Central CLI updates for November ?
