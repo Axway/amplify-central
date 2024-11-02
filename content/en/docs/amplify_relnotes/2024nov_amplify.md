@@ -59,7 +59,7 @@ New features, enhancements, and bug fixes for the November ? update.
 |             | APIGOV-29150 | **Issue**: AWS Dicovery agent would encounter access request provisioning error because the credentials list API call failed. <br />**Resolution**: A fix was made to the call to get the credentials list. |
 |             | APIGOV-29162 | **Issue**: Agent Management version detection would report an "Outdated" agent incorrectly. <br />**Resolution**: A fix was made to the ignore the hash value when comparing agent versions to the latest available version. |
 
-### Axway Central CLI updates for November ?
+### Axway Central CLI updates for November 1st
 
 The latest version of the [Axway Central CLI is v3.7.0 on NPM](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.7.0). For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
 
