@@ -12,7 +12,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ## November 1st 2024
 
-New features, enhancements, and bug fixes for the November ? update.
+New features, enhancements, and bug fixes for the November 1st update.
 
 ### Agents updates for November 1st
 
