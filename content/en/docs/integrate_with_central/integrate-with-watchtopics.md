@@ -4,7 +4,7 @@ linkTitle: Set up integrations through Watch Topics
 weight: 100
 hide_readingtime: true
 ---
-Amplify enables the user to augment the default functionality through the integration of third-party systems and functionality. One of the ways this can be accomplished is with inbuilt events in combination with watch topics.
+Amplify enables the user to augment the default functionality through the integration of third-party systems. One of the ways this can be accomplished is with inbuilt events in combination with watch topics.
 
 Common scenarios to integrate through watch topics are the following items:
 
@@ -27,7 +27,7 @@ A watch topic is an API resource that is defined in such a way that a single top
 
 Create a watchtopic using API:
 
-```json
+```bash
 curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopics' \
 --data '{
     "group": "management",
