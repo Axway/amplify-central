@@ -16,7 +16,7 @@ New features, enhancements, and bug fixes for the November 4th update.
 
 ### Agents updates for November 4, 2024
 
-* **New version v1.2.8 available for Axway API Management Discovery Agent**
+* **New version v1.2.9 available for Axway API Management Discovery Agent**
 
     BUG FIX; APIM AGENT<br />
     This update contains a fix for a critical issue where the agent would encounter a null pointer exception error if it was started without a cache. It is recommended to update to this version if your agent has encountered issues related to cache initialization. For upgrade instructions, please refer to [Upgrade an agent](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/index.html) document.
