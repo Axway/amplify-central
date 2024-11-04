@@ -69,7 +69,7 @@ The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/pa
 
 ### Marketplace updates for November 1st
 
-<!-->
+<!--
 * **Custom consumption units for billing and usage tracking**
 
    PROVIDER BILLING<br />
