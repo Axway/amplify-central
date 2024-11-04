@@ -50,10 +50,10 @@ New features, enhancements, and bug fixes for the November ? update.
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
-| 01647785<br /> 01650304 | APIGOV-29069 | **Issue**: Axway API Management agent did not reflect the transision from "unhealthy" to a "running" states on the Ui. <br />**Resolution**: A fix was made to the agent state correctly. |
-|             | APIGOV-29048 | **Issue**: Auto-release of a new asset version was not being triggered by CRD or ARD changes. <br />**Resolution**: A fix was made to the auto-release an asset version when ARD or CRD changes are made. |
+| 01647785<br /> 01650304 | APIGOV-29069 | **Issue**: Axway API Management agent did not reflect the agent state on the Ui. <br />**Resolution**: A fix was made to represent the agent state correctly. |
+|             | APIGOV-29048 | **Issue**: Auto-release of a new asset version was not being triggered by request definition changes (CRD or ARD). <br />**Resolution**: A fix was made to the auto-release an asset version when request definition changes are made. |
 | 01640474    | APIGOV-29157 | **Issue**: Axway API Management agent did not report metrics for a specific API. <br />**Resolution**: A fix was made to the handling of application name to check that the base path matches the path reported in the event. |
-|             | APIGOV-29142 | **Issue**: Axway API Management Discovery agent would not be able to get the information needed to publish a proxy. <br />**Resolution**: A fix was made add retry logic to make additional attempts to get the information needed to publish a proxy. |
+|             | APIGOV-29142 | **Issue**: Axway API Management Discovery agent would not be able to get the information needed to publish a proxy. <br />**Resolution**: A fix was made to add retry logic to make additional attempts to get the information needed to publish a proxy. |
 |             | APIGOV-29109 | **Issue**: Axway API Management Traceability agent helm chart deployment for StatefulSet would fail. <br />**Resolution**: A fix was made to the StatefulSet helm chart to include the missing required "serviceName"' field. |
 |             | APIGOV-29054 | **Issue**: Mulsoft agent was using the incorrect timestamps for queries. <br />**Resolution**: A fix was made to the timestamps being used for the Mulesoft Monitoring API queries. |
 |             | APIGOV-29150 | **Issue**: AWS Dicovery agent would encounter access request provisioning error because the credentials list API call failed. <br />**Resolution**: A fix was made to the call to get the credentials list. |
