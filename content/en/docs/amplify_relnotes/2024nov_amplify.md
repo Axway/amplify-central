@@ -19,7 +19,7 @@ New features, enhancements, and bug fixes for the November ? update.
 * **Provisioning Handling of Custom Credential Requests in APIM Discovery Agent**
 
     ENHANCEMENT; APIM AGENT<br />
-    A new feature enhancement has been added in the APIM Agent that providers greater control over the provisioning of custom credential requests. This update introduces the ability to override the default Credential Request Definition (CRD) and manage the credential provisioning externally. Here's what you need to know about the new capability:
+    A new feature enhancement has been added in the APIM Agent that provides greater control over the provisioning of custom credential requests. This update introduces the ability to override the default Credential Request Definition (CRD) and manage the credential provisioning externally. Here's what you need to know about the new capability:
 
     * **Override Default CRD**: Users can define and implement their own custom CRD insted of relying on the default definitioin provided by the agent. This allows for a tailored request handling that aligns with unique integration requirements.
     * **Ignore Automatic Credential Provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager, when a custom CRD is enabled. Users must manage the entire provisioning process externally, enabling integration with 3rd-party systems or custom authentication mechanisms.
@@ -44,7 +44,7 @@ New features, enhancements, and bug fixes for the November ? update.
 * **Jump to a specific page in Service Registry**
 
     ENHANCEMENT<br />
-    When multiple pages are available for the **Service Registry** to display, simply click the "..." in the pagination controls that is place at the button of the page and select tha page you want to navigate to. This makes it easier to browse large lists of Services in the Service Registry.
+    When multiple pages are available for the **Service Registry** to display, simply click the "..." in the pagination controls that is place at the button of the page and select the page you want to navigate to. This makes it easier to browse large lists of Services in the Service Registry.
 
 ### Agents bug fixes for November 1st
 
