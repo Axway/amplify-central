@@ -6,15 +6,26 @@ date: 2024-10-28
 ---
 We work hard to improve the Amplify Enterprise Marketplace experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of November. It is always recommended to update to the latest agents' versions.
 
-{{< alert title="Note" color="primary" >}}The supported agents' versions will no longer be documented here. See [Release Notes](/docs/amplify_relnotes) for the corresponding agent versions.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
 
-## November 1st 2024
+## November 4, 2024
+
+New features, enhancements, and bug fixes for the November 4th update.
+
+### Agents updates for November 4, 2024
+
+* **New version v1.2.8 available for Axway API Management Discovery Agent**
+
+    BUG FIX; APIM AGENT<br />
+    This update contains a fix for a critical issue where the agent would encounter a null pointer exception error if it was started without a cache. It is recommended to update to this version if your agent has encountered issues related to cache initialization. For upgrade instructions, please refer to [Upgrade an agent](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/index.html) document.
+
+## November 1, 2024
 
 New features, enhancements, and bug fixes for the November 1st update.
 
-### Agents updates for November 1st
+### Agents updates for November 1, 2024
 
 * **Provisioning Handling of Custom Credential Requests in APIM Discovery Agent**
 
@@ -29,7 +40,7 @@ New features, enhancements, and bug fixes for the November 1st update.
 * **All Agents Defaults to GRPC communication mode**
 
     ENHANCEMENT<br />
-    This update in the Agent SDK v1.1.102 enables all existing agents to use the GRPC communication mode by default. By enabling this mode, agents can communicate with the platform more efficiently, compared to the traditional polled mode. To switch to the poll mode, you can set the CENTRAL_GRPC_ENABLED=false.
+    This update in the Agent SDK v1.1.102 enables all existing agents to use the GRPC communication mode by default. By enabling this mode, agents can communicate with the platform more efficiently, compared to the traditional polled mode. To switch to the poll mode, you can set the CENTRAL_GRPC_ENABLED=false. Please refer to this page for all available agent versions
 
 <!--### Agents known issues (hidden if none)-->
 
@@ -46,7 +57,7 @@ New features, enhancements, and bug fixes for the November 1st update.
     ENHANCEMENT<br />
     When multiple pages are available for the **Service Registry** to display, simply click the "..." in the pagination controls that is place at the button of the page and select the page you want to navigate to. This makes it easier to browse large lists of Services in the Service Registry.
 
-### Agents bug fixes for November 1st
+### Agents bug fixes for November 1, 2024
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
@@ -59,15 +70,15 @@ New features, enhancements, and bug fixes for the November 1st update.
 |             | APIGOV-29150 | **Issue**: AWS Discovery agent would encounter access request provisioning error because the credentials list API call failed. <br />**Resolution**: A fix was made to the call to get the credentials list. |
 |             | APIGOV-29162 | **Issue**: Agent Management version detection would report an "Outdated" agent incorrectly. <br />**Resolution**: A fix was made to the ignore the hash value when comparing agent versions to the latest available version. |
 
-### Axway Central CLI updates for November 1st
+### Axway Central CLI updates for November 1, 2024
 
 The latest version of the [Axway Central CLI is v3.7.0 on NPM](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.7.0). For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
 
-### Axway CLI updates for November 1st
+### Axway CLI updates for November 1, 2024
 
 The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/package/@axway/axway/v/3.2.14).
 
-### Marketplace updates for November 1st
+### Marketplace updates for November 1, 2024
 
 <!--
 * **Custom consumption units for billing and usage tracking**
@@ -87,15 +98,14 @@ Users can now enjoy a visually appealing and well-structured presentation of Asy
 
 <!--### Marketplace known issues for November ?  (hidden if none)-->
 
-### Marketplace bug fixes for November 1st
+### Marketplace bug fixes for November 1, 2024
 
 | Case ID   | Internal ID  | Description                                       |
 |-----------|--------------|---------------------------------------------------|
 | 01651879 | APIGOV-29133 | **Issue**: Edit plan name not possible <br />**Resolution**: Duplicate product plans has been fixed to allow plan name edition. |
-|          | APIGOV-29081 | **Issue**: [Product Foundry] Product plan names can not be changed from the UI <br />**Resolution**: Duplicate of APIGOV-29133 |
-|          | APIGOV-29100 | **Issue**: Error when editing plan quotas and saving <br />**Resolution**: creating a paid plan without the setting up plan cost is now working. |
-|          | APIGOV-29103 | **Issue**: Advanced Search Functionality Issue <br />**Resolution**: Plan search backend query has been change to to match terms that do not need to be in exact order or consecutive. |
-| 01640474 | APIGOV-29088 | **Issue**: No transactions of BO800OPENBO@SENTBANKTRANSFER in BI/CI under Consumer Org <br />**Resolution**: the Subscription / Application metrics enrichment is done even if the related asset/product release is not the latest so that it does not prevent to display the metrics data. |
-|          | APIGOV-28102 | **Issue**: [Marketplace UI] Authorize side-blade crashes when selecting auth type <br />**Resolution**: swagger UI component is now initialized correctly based on the authorization definition of the specification. |
+|          | APIGOV-29100 | **Issue**: Error when editing plan quotas and saving <br />**Resolution**:A fix was added to allow creating a paid plan with a plan cost set to 0. |
+|          | APIGOV-29103 | **Issue**: Advanced Search Functionality Issue <br />**Resolution**: Plan search backend query has been changed to match terms that do not need to be in exact order or consecutive. |
+| 01640474 | APIGOV-29088 | **Issue**: No transactions show for an API Business Insights/Consumer Insights under Consumer Org <br />**Resolution**: the Subscription / Application metrics enrichment is done even if the related asset/product release is not the latest so that it does not prevent to display the metrics data. |
+|          | APIGOV-28102 | **Issue**: [Marketplace UI] Authorize side-blade crashes when selecting auth type <br />**Resolution**: A fix was made so that the Swagger UI component is now initialized correctly based on the authorization definition of the specification. |
 
 ---
