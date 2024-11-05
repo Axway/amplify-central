@@ -42,7 +42,6 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopi
                 "name": "*",
                 "type": [
                     "created",
-                    "deleted",
                     "updated"
                 ],
                 "scope": {
@@ -73,7 +72,6 @@ spec:
       name: '*'
       type:
         - created
-        - deleted
         - updated
       group: management
       scope:

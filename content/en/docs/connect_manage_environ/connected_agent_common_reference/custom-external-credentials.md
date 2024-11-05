@@ -29,7 +29,7 @@ Each agent will support setting a custom credential differently, please see the 
 
 ## Integrating with Marketplace for handling a custom credential
 
-In both cases, Watch Topic or Webhook, the integration should be setup for create, update, and delete events on the Credential resource in your specific Environment.
+In both cases, Watch Topic or Webhook, the integration should be setup for create and update events on the Credential resource in your specific Environment.
 
 Upon receiving an event the process should check a few data points to know that it should handle the event.
 
@@ -43,7 +43,7 @@ Handle provisioning a new credential when...
     * Check `status.level` for the status
 * The Credential does not have the finalizer that the process will add
 
-Handle a credential update event when...
+Handle a credential update event for updates when...
 
 * The Credential resource references the custom Credential Request Definition
     * Check `spec.credentialRequestDefinition` for the referenced Credential Request Definition
@@ -54,7 +54,7 @@ Handle a credential update event when...
 * If the `state.name` is `inactive` and the `spec.state.name` is `active` the Credential should be enabled
 * If `state.name` and `spec.state.name` are `active` and `spec.state.rotate` is true then the Credential should be rotated
 
-Handle a credential delete event when...
+Handle a credential update event for deletes when...
 
 * The Credential resource references the custom Credential Request Definition
     * Check `spec.credentialRequestDefinition` for the referenced Credential Request Definition
