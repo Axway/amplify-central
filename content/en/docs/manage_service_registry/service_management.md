@@ -176,8 +176,9 @@ Mock endpoints can be created in:
 Mock endpoints can be viewed in:
 
 1. [Service Details Endpoints Tab](#view-api-service-details)
-2. [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
-3. Marketplace Product Resources Tab
+2. [Create Product Endpoints Tab](#create-product)
+3. [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
+4. Marketplace Product Resources Tab
 
 ## Edit a mock endpoint
 
