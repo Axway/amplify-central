@@ -18,8 +18,8 @@ New features, enhancements, and bug fixes for the November 4th update.
 
 * **New version v1.2.9 available for Axway API Management Discovery Agent**
 
-    BUG FIX; APIM AGENT<br />
-    This update contains a fix for a critical issue where the agent would encounter a null pointer exception error if it was started without a cache. It is recommended to update to this version if your agent has encountered issues related to cache initialization. For upgrade instructions, please refer to [Upgrade an agent](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/index.html) document.
+    (BUG FIX, APIM AGENT)<br />
+    This update contains a fix for a critical issue where the agent would encounter a null pointer exception error if it was started without a cache. It is recommended to update to this version if your agent has encountered issues related to cache initialization. For upgrade instructions, refer to [Upgrade an agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/).
 
 ## November 1, 2024
 
@@ -27,48 +27,48 @@ New features, enhancements, and bug fixes for the November 1st update.
 
 ### Agents updates for November 1, 2024
 
-* **Provisioning Handling of Custom Credential Requests in APIM Discovery Agent**
+* **Provisioning handling of custom credential requests in APIM Discovery Agent**
 
-    ENHANCEMENT; APIM AGENT<br />
+    (ENHANCEMENT, APIM AGENT)<br />
     A new feature enhancement has been added in the APIM Agent that provides greater control over the provisioning of custom credential requests. This update introduces the ability to override the default Credential Request Definition (CRD) and manage the credential provisioning externally. Here's what you need to know about the new capability:
 
-    * **Override Default CRD**: Users can define and implement their own custom CRD instead of relying on the default definition provided by the agent. This allows for a tailored request handling that aligns with unique integration requirements.
-    * **Ignore Automatic Credential Provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager, when a custom CRD is enabled. Users must manage the entire provisioning process externally, enabling integration with 3rd-party systems or custom authentication mechanisms.
+    * **Override default CRD**: Users can define and implement their own custom CRD instead of relying on the default definition provided by the agent. This allows for a tailored request handling that aligns with unique integration requirements.
+    * **Ignore automatic credential provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager when a custom CRD is enabled. Users must manage the entire provisioning process externally, enabling integration with 3rd-party systems or custom authentication mechanisms.
 
     To enable the override feature, update the relevant settings in the APIM agent configuration and ensure you have the external credential provisioning flow in place, as the agent will not manage credentials when this feature is active.
 
-* **All Agents Defaults to GRPC communication mode**
+* **All agents default to GRPC communication mode**
 
-    ENHANCEMENT<br />
-    This update in the Agent SDK v1.1.102 enables all existing agents to use the GRPC communication mode by default. By enabling this mode, agents can communicate with the platform more efficiently, compared to the traditional polled mode. To switch to the poll mode, you can set the CENTRAL_GRPC_ENABLED=false. Please refer to this page for all available agent versions
+    (ENHANCEMENT)<br />
+    This update in the Agent SDK v1.1.102 enables all existing agents to use the GRPC communication mode by default. By enabling this mode, agents can communicate with the platform more efficiently, compared to the traditional polled mode. To switch to the poll mode, you can set the CENTRAL_GRPC_ENABLED=false. Please refer to this page for all available agent versions.
 
 <!--### Agents known issues (hidden if none)-->
 
 * **Agents screen update**
 
-    ENHANCEMENT<br />
+    (ENHANCEMENT)<br />
     Several enhancements have been added to the Agents screen to enhance the user experience and navigation within the platform. Here's what has changed:
 
-    * **Agent Management Screen Relocation**: The **Agents** screen has been moved and is now accessible under **Topology -> Environments**.
-    * **Updated columns for clarity**: The first column of the Agents screen now displays both the **Agent Title** and its **Logical Name**. The Dataplane column has been replaced with **Environments**, allowing user to see in which environment the agent is deployed.
+    * **Agent Management screen relocation**: The *Agents* screen has been moved and is now accessible under *Topology > Environments*.
+    * **Updated columns for clarity**: The first column of the *Agents* screen now displays both the **Agent Title** and its **Logical Name**. The Dataplane column has been replaced with **Environments**, allowing the user to see in which environment the agent is deployed.
 
 * **Jump to a specific page in Service Registry**
 
-    ENHANCEMENT<br />
-    When multiple pages are available for the **Service Registry** to display, simply click the "..." in the pagination controls that is place at the button of the page and select the page you want to navigate to. This makes it easier to browse large lists of Services in the Service Registry.
+    (ENHANCEMENT)<br />
+    When multiple pages are available for the *Service Registry* to display, simply click **...** in the pagination controls that is place at the bottom of the page and select the page you want to navigate to. This makes it easier to browse large lists of services in the Service Registry.
 
 ### Agents bug fixes for November 1, 2024
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
-| 01647785<br /> 01650304 | APIGOV-29069 | **Issue**: Axway API Management agent did not reflect the agent state on the Ui. <br />**Resolution**: A fix was made to represent the agent state correctly. |
-|             | APIGOV-29048 | **Issue**: Auto-release of a new asset version was not being triggered by request definition changes (CRD or ARD). <br />**Resolution**: A fix was made to the auto-release an asset version when request definition changes are made. |
-| 01640474    | APIGOV-29157 | **Issue**: Axway API Management agent did not report metrics for a specific API. <br />**Resolution**: A fix was made to the handling of application name to check that the base path matches the path reported in the event. |
-|             | APIGOV-29142 | **Issue**: Axway API Management Discovery agent would not be able to get the information needed to publish a proxy. <br />**Resolution**: A fix was made to add retry logic to make additional attempts to get the information needed to publish a proxy. |
-|             | APIGOV-29109 | **Issue**: Axway API Management Traceability agent helm chart deployment for StatefulSet would fail. <br />**Resolution**: A fix was made to the StatefulSet helm chart to include the missing required "serviceName"' field. |
+| 01647785<br /> 01650304 | APIGOV-29069 | **Issue**: Axway API Management agent did not reflect the agent state on the UI. <br />**Resolution**: A fix was made to represent the agent state correctly. |
+|             | APIGOV-29048 | **Issue**: Auto-release of a new asset version was not being triggered by request definition changes (CRD or ARD). <br />**Resolution**: A fix was made to auto-release an asset version when request definition changes are made. |
+| 01640474    | APIGOV-29157 | **Issue**: Axway API Management agent did not report metrics for a specific API. <br />**Resolution**: A fix was made to the handling of the application name to check that the base path matches the path reported in the event. |
+|             | APIGOV-29142 | **Issue**: Axway API Management Discovery Agent could not get the information needed to publish a proxy. <br />**Resolution**: A fix was made to add retry logic to make additional attempts to get the information needed to publish a proxy. |
+|             | APIGOV-29109 | **Issue**: Axway API Management Traceability Agent helm chart deployment for StatefulSet would fail. <br />**Resolution**: A fix was made to the StatefulSet helm chart to include the missing required **serviceName** field. |
 |             | APIGOV-29054 | **Issue**: Mulesoft agent was using the incorrect timestamps for queries. <br />**Resolution**: A fix was made to the timestamps being used for the Mulesoft Monitoring API queries. |
-|             | APIGOV-29150 | **Issue**: AWS Discovery agent would encounter access request provisioning error because the credentials list API call failed. <br />**Resolution**: A fix was made to the call to get the credentials list. |
-|             | APIGOV-29162 | **Issue**: Agent Management version detection would report an "Outdated" agent incorrectly. <br />**Resolution**: A fix was made to the ignore the hash value when comparing agent versions to the latest available version. |
+|             | APIGOV-29150 | **Issue**: AWS Discovery Agent encountered an access request provisioning error because the credentials list API call failed. <br />**Resolution**: A fix was made to the call to get the credentials list. |
+|             | APIGOV-29162 | **Issue**: Agent Management version detection reported an "Outdated" agent incorrectly. <br />**Resolution**: A fix was made to ignore the hash value when comparing agent versions to the latest available versions. |
 
 ### Axway Central CLI updates for November 1, 2024
 
@@ -92,7 +92,7 @@ The latest version of the [Axway CLI is v3.2.14 on NPM](https://www.npmjs.com/pa
 -->
 * **Async API 3.0.0 support**
 
-   CONSUMER EXPERIENCE, ENHANCEMENT<br />
+   (CONSUMER EXPERIENCE, ENHANCEMENT)<br />
    The component responsible for rendering API specifications has been upgraded to support **AsyncAPI v3.0.0**.
 Users can now enjoy a visually appealing and well-structured presentation of AsyncAPI specifications directly in the Marketplace. In addition, when importing an AsyncAPI 3.0.0 specification into the **Service Registry**, the system will now automatically validate the definition. This ensures that only properly defined and compliant specifications are registered.
 
@@ -103,9 +103,9 @@ Users can now enjoy a visually appealing and well-structured presentation of Asy
 | Case ID   | Internal ID  | Description                                       |
 |-----------|--------------|---------------------------------------------------|
 | 01651879 | APIGOV-29133 | **Issue**: Edit plan name not possible <br />**Resolution**: Duplicate product plans has been fixed to allow plan name edition. |
-|          | APIGOV-29100 | **Issue**: Error when editing plan quotas and saving <br />**Resolution**:A fix was added to allow creating a paid plan with a plan cost set to 0. |
-|          | APIGOV-29103 | **Issue**: Advanced Search Functionality Issue <br />**Resolution**: Plan search backend query has been changed to match terms that do not need to be in exact order or consecutive. |
-| 01640474 | APIGOV-29088 | **Issue**: No transactions show for an API Business Insights/Consumer Insights under Consumer Org <br />**Resolution**: the Subscription / Application metrics enrichment is done even if the related asset/product release is not the latest so that it does not prevent to display the metrics data. |
-|          | APIGOV-28102 | **Issue**: [Marketplace UI] Authorize side-blade crashes when selecting auth type <br />**Resolution**: A fix was made so that the Swagger UI component is now initialized correctly based on the authorization definition of the specification. |
+|          | APIGOV-29100 | **Issue**: Error when editing plan quotas and saving <br />**Resolution**: A fix was added that allows creating a paid plan with a plan cost set to 0. |
+|          | APIGOV-29103 | **Issue**: Advanced Search functionality issue <br />**Resolution**: Plan search backend query has been changed to match terms that do not need to be in the exact order or consecutive. |
+| 01640474 | APIGOV-29088 | **Issue**: No transactions show for API Business Insights / Consumer Insights under Consumer Org <br />**Resolution**: The Subscription / Application metrics enrichment is done even if the related asset / product release is not the latest so that it does not prevent the display of the metrics data. |
+|          | APIGOV-28102 | **Issue**: [Marketplace UI] Authorize side panel crashes when selecting auth type <br />**Resolution**: A fix was made so that the Swagger UI component is now initialized correctly based on the authorization definition of the specification. |
 
 ---
