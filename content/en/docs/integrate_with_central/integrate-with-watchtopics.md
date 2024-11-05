@@ -21,7 +21,7 @@ Learn how to create and configure watch topics in Amplify, as well as the event 
 
 ## Watch Topic
 
-A watch topic is an API resource that is defined in such a way that a single topic may be used to keep track of changes on other specific API Server resources. For example when a new Credential is created in a given environment any watch topics that are set to track those credential resources will have a new event to handle.
+A watch topic is an API resource that is defined in such a way that a single topic may be used to keep track of changes on other specific API Server resources. For example, when a new Credential is created in a given environment any watch topics that are set to track those credential resources will have a new event to handle.
 
 ### Create a watch topic
 
@@ -84,7 +84,7 @@ spec:
 
 ### Read events form a watch topic
 
-Events in the WatchTopic are sequential and will available for seven days.
+Events in the WatchTopic are sequential and will be available for seven days.
 
 To request for all events in the watch topic query the API as below. It will return all events from oldest to newest.
 
@@ -92,13 +92,13 @@ To request for all events in the watch topic query the API as below. It will ret
 curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
 ```
 
-After handling the events follow up calls to the API should include a query using the sequenceID parameter as well as sequenceID for the last handled event `query=sequenceID>[id]`. Including the parameter argument will give only events that have been created after that sequenceID.
+After handling the events, follow up calls to the API should include a query using the sequenceID parameter as well as sequenceID for the last handled event `query=sequenceID>[id]`. Including the parameter argument will give only events that have been created after that sequenceID.
 
 ```bash
 curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
 ```
 
-Each of the above calls well return an array of events that have occurred for a given watch topic.
+Each of the above calls will return an array of events that have occurred for a given watch topic.
 
 ```json
 [

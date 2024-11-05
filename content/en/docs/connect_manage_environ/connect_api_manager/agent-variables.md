@@ -173,7 +173,7 @@ APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=external
 APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME_1=external-crd-name
 ```
 
-For how to handle these custom credentials see [Use Custom Credentials with the Discovery Agent](/docs/connected_agent_common_reference/custom-external-credentials).
+For detailed instructions on (handling/managing) these custom credentials, refer to [Use Custom Credentials with the Discovery Agent](/docs/connected_agent_common_reference/custom-external-credentials).
 
 #### Custom OAuth External policy handling
 

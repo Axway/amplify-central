@@ -15,7 +15,7 @@ The Discovery Agent, for certain Gateways, can be configured to allow for handli
 ## Objectives
 
 * Setup your custom credential request definition
-* Set your agent configuration to notify it that the credential request definition is to be handled externally
+* Set your configuration to notify the agent that the credential request definition is to be handled externally
 * Create a Watch Topic or Webhook that an external process may use to subscribe to credential requests
 * Update the requested credential in the proper order to notify the Marketplace consumer
 
@@ -72,11 +72,11 @@ See [Set up integrations through Webhooks](/docs/integrate_with_central/webhooks
 
 ## Updating the Credential resource after provisioning
 
-After the Credential is handled by the custom processing the following updates should be made to the Resource.
+After the Credential is handled by the custom processing, the following updates should be made to the Resource.
 
 ### Encrypting sensitive data within the credential
 
-In order to encrypt any sensitive data, marked *x-axway-encrypted*, in the credential request definition, the custom processing will need public key information. This key can be easily retrieved by retrieving the Managed Application resource that the Credential resource refers to.
+In order to encrypt any sensitive data, marked *x-axway-encrypted*, in the credential request definition, the custom processing will need public key information. This key can be easily obtained by retrieving the Managed Application resource that the Credential resource refers to.
 
 Here is an example of a Managed Application with public key information.
 
@@ -112,7 +112,7 @@ Here is an example of a Managed Application with public key information.
 
 ### Updating the Credential resource
 
-After encrypting any sensitive data the custom handling will make the following updates to the Credential resource.
+After encrypting any sensitive data, the custom handling will make the following updates to the Credential resource.
 
 1. Update the base resource with a new finalizer.
     * A finalizer is a way to tell Marketplace to not immediately remove a resource on delete. In this case the finalizer will allow the custom credential handling to cleanup anything it needs to when the Credential resouce is deleted.
@@ -121,7 +121,7 @@ After encrypting any sensitive data the custom handling will make the following 
 4. Add any data needed for updating or removing the credential in a custom sub-resource
 5. Finally update the status sub-resource marking the credential as Success
 
-Below is an example of the a Credentail resource with the finalizer, encrypted data, custom sub-resource, and updated status added. Simply update the Credential resource like below using the API. This includes a PUT call on the base resource and each of the sub-resource URLs.
+Below is an example of a Credential resource with the finalizer, encrypted data, custom sub-resource, and updated status added. Simply update the Credential resource like below using the API. This includes a PUT call on the base resource and each of the sub-resource URLs.
 
 {{< alert title="Note" color="primary" >}}
 The last API call made must *always* be the status sub-resource
