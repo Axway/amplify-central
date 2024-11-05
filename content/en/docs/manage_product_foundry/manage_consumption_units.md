@@ -87,3 +87,11 @@ You will need 2 things:
 The language can be accessed using the List view ellipsis menu **Translate**. This will open the *translation details* screen where you can set the Default Language.
 
 Once a default language is selection, you can add the other needed languages by using the translation icon. This will open the translation panel where you can add the translated name and description.
+
+## Report a consumption unit
+
+TBD
+
+## Visualize consumption unit in Business or Consumer Insights
+
+TBD
