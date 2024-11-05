@@ -198,3 +198,23 @@ Each of the above calls will return an array of events that have occurred for a 
     }
 ]
 ```
+
+### Integrating with gRPC
+
+In addition to receiving events by querying the above API at a specific duration, it is also possible to create a gRPC service that connects to Amplify directly.
+
+The Agent SDK can be referenced on how to build a watch client using Go, see the steps below for implementing.
+
+1. Building a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk) to listen to the WatchTopic. See the [Sample of gRPC client source code](https://github.com/Axway/agent-sdk/tree/main/samples/watchclient).
+2. Compile this source code with go compiler to get the executable: `go make`
+3. An Amplify Service Account with Central Admin rights is needed to run the client. The service account key pair should be in the same directory with the gRPC client.
+4. Start the gRPC client
+
+    ```cmd
+    ./watchclient --auth.client_id=<sa_client_id> --tenant_id=<organization_id> --host=apicentral.axway.com --port=443 --topic_self_link=/management/v1alpha1/watchtopics/track-subscriptions-invoices --log_level=debug --auth.url="
+    https://login.axway.com/auth"
+    ```
+
+Using the above queries, the gRPC client can process all events, and manage some failover, by keeping track of the event sequence numbers. For instance, you can save locally the latest processed sequence and, on client restart, process the event that may have been missed while the client was down.
+
+Go is not required as the [Agent SDK](https://github.com/Axway/agent-sdk) does provide the [protobuf definition](https://github.com/Axway/agent-sdk/blob/main/proto/watch.proto). Use this definition and implement a watch client in any language that [Protocol Buffers](https://protobuf.dev/) supports.
