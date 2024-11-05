@@ -98,6 +98,20 @@ Click on the Service name or icon to view the following detailed information for
 4. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
 5. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.” **All versions of the service are deleted.**
 
+## Create Product
+
+Use Create Product to quickly create a product in draft. An asset and a product will automatically be generated. Changes can be made to the product from the Product Foundry if needed.
+
+1. Navigate to *Catalog > Service Registry*.
+2. From the list view, click the ellipsis that is associated to the service.
+3. Select **Create Product**. Note there must be endpoints associated with this service and the asset quota must not have been reached in order to have access to this action.
+4. Add / edit information where applicable:
+
+    * Asset Name - The proposed asset name is set to the API service name.  
+    * Product Name - The proposed asset name is set to the API service name.
+    * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column, as the mock endpoint has the state **MOCKED**.
+    * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
+
 ## Publish to the Marketplace
 
 Use Publish to Marketplace to quickly promote an API to the Marketplace for internal consumption as a product under a free plan. An asset and a product will automatically be generated. The publication is initially restricted to teams in the provider organization, but changes can be made to the product from the Product Foundry.
