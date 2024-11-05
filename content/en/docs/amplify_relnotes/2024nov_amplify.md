@@ -40,7 +40,7 @@ New features, enhancements, and bug fixes for the November 1st update.
 * **All agents default to GRPC communication mode**
 
     (ENHANCEMENT)<br />
-    This update in the Agent SDK v1.1.102 enables all existing agents to use the GRPC communication mode by default. By enabling this mode, agents can communicate with the platform more efficiently, compared to the traditional polled mode. To switch to the poll mode, you can set the CENTRAL_GRPC_ENABLED=false. Please refer to this page for all available agent versions.
+    This update in the Agent SDK v1.1.102 enables all existing agents to use the GRPC communication mode by default. By enabling this mode, agents can communicate with the platform more efficiently, compared to the traditional polled mode. To switch to the poll mode, you can set the CENTRAL_GRPC_ENABLED=false. Please refer to this page for all available [agent versions](/docs/amplify_relnotes/#amplify-enterprise-marketplace-november-1-2024).
 
 <!--### Agents known issues (hidden if none)-->
 
