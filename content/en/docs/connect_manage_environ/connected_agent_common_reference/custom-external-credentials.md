@@ -8,30 +8,30 @@ The Discovery Agent, for certain Gateways, can be configured to allow for handli
 
 ## Before you start
 
-* [Install and authenticate yourself via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+* [Install and authenticate yourself via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/)
 * Familiarize yourself with [JSON schemas](https://json-schema.org/)
 * Validate that the specific Agent you want to use supports the handling of custom credential types
 
 ## Objectives
 
-* Setup your custom credential request definition
+* Set up your custom credential request definition
 * Set your configuration to notify the agent that the credential request definition is to be handled externally
 * Create a Watch Topic or Webhook that an external process may use to subscribe to credential requests
 * Update the requested credential in the proper order to notify the Marketplace consumer
 
 ## Creating a credential request definition
 
-See [Customize Application Registration, credentials request and subscription screens](/docs/integrate_with_central/customize_ard_crd)
+See [Customize Application Registration, credentials request and subscription screens](/docs/integrate_with_central/customize_ard_crd).
 
 ## Set the agent to ignore the custom credential
 
-Each agent will support setting a custom credential differently, please see the specific agent configuration for how to set this up.
+Each agent will support setting a custom credential differently. See the specific agent configuration for how to set this up.
 
 ## Integrating with Marketplace for handling a custom credential
 
-In both cases, Watch Topic or Webhook, the integration should be setup for create and update events on the Credential resource in your specific Environment.
+In both cases, Watch Topic or Webhook, the integration should be set up for create and update events on the Credential resource in your specific Environment.
 
-Upon receiving an event the process should check a few data points to know that it should handle the event.
+Upon receiving an event, the process checks a few data points to determine whether it should handle the event.
 
 Handle provisioning a new credential when...
 
@@ -68,15 +68,15 @@ See [Set up integrations through Watch Topics](/docs/integrate_with_central/inte
 
 ### Integrating using a Webhook
 
-See [Set up integrations through Webhooks](/docs/integrate_with_central/webhooks) for a full description of setting up Webhooks.
+See [Set up integrations through Webhooks](/docs/integrate_with_central/webhook) for a full description of setting up Webhooks.
 
 ## Updating the Credential resource after provisioning
 
-After the Credential is handled by the custom processing, the following updates should be made to the Resource.
+After the Credential is handled by the custom processing, make the following updates to the Resource.
 
 ### Encrypting sensitive data within the credential
 
-In order to encrypt any sensitive data, marked *x-axway-encrypted*, in the credential request definition, the custom processing will need public key information. This key can be easily obtained by retrieving the Managed Application resource that the Credential resource refers to.
+In order to encrypt any sensitive data, marked *x-axway-encrypted*, in the credential request definition, the custom processing needs public key information. This key can be easily obtained by retrieving the Managed Application resource that the Credential resource refers to.
 
 Here is an example of a Managed Application with public key information.
 
@@ -112,16 +112,16 @@ Here is an example of a Managed Application with public key information.
 
 ### Updating the Credential resource
 
-After encrypting any sensitive data, the custom handling will make the following updates to the Credential resource.
+After encrypting any sensitive data, the custom handling makes the following updates to the Credential resource.
 
 1. Update the base resource with a new finalizer.
-    * A finalizer is a way to tell Marketplace to not immediately remove a resource on delete. In this case the finalizer will allow the custom credential handling to cleanup anything it needs to when the Credential resouce is deleted.
-2. Update the data sub-resource with the provisioned data, inclduing the encrypted and base64 encoded data  
-3. Update the state sub-resource marking the credential as "active"
-4. Add any data needed for updating or removing the credential in a custom sub-resource
-5. Finally update the status sub-resource marking the credential as Success
+    * A finalizer is a way to tell Marketplace to not immediately remove a resource on delete. In this case, the finalizer will allow the custom credential handling to do a cleanup when the Credential resouce is deleted.
+2. Update the data sub-resource with the provisioned data, inclduing the encrypted and base64 encoded data.
+3. Update the state sub-resource marking the credential as "active."
+4. Add any data needed for updating or removing the credential in a custom sub-resource.
+5. Finally, update the status sub-resource marking the credential as "Success."
 
-Below is an example of a Credential resource with the finalizer, encrypted data, custom sub-resource, and updated status added. Simply update the Credential resource like below using the API. This includes a PUT call on the base resource and each of the sub-resource URLs.
+Below is an example of a Credential resource with the finalizer, encrypted data, custom sub-resource, and updated status added. Simply update the Credential resource, as below, using the API. This includes a PUT call on the base resource and each of the sub-resource URLs.
 
 {{< alert title="Note" color="primary" >}}
 The last API call made must *always* be the status sub-resource
@@ -175,4 +175,4 @@ The last API call made must *always* be the status sub-resource
 
 ### Deleting the Credential resource
 
-If the process is handling a delete event the only step that needs to be taken on the resource, after successful handling, is to remove the finalizer that the process added. Doing so will inform Amplify that the Credential resource may be completely removed from the system.
+If the process is handling a delete event, the only step that needs to be taken on the resource, after successful handling, is to remove the finalizer that the process added. Doing so will inform Amplify that the Credential resource may be completely removed from the system.
