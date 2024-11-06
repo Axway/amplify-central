@@ -87,7 +87,7 @@ Click on the Service name or icon to view the following detailed information for
     * Description - A short description of the service
     * Image - An icon or image to be associated with the service
 
-5. If [requirements](#create-a-mock-endpoint) are met, there will be an option to create a mock or runtime endpoint. If mock endpoint creation is selected, then fill in the mock endpoint inputs according to the information [provided](#create-a-mock-endpoint).If requirements are not met, then the only option available will be runtime endpoint. Simply add / edit Endpoint information, if available, and click **Next**.
+5. If [requirements](#create-a-mock-endpoint) are met, there will be an option to create a mock or runtime endpoint. If mock endpoint creation is selected, then fill in the mock endpoint inputs according to the information [provided](#create-a-mock-endpoint). If requirements are not met, then the only option available will be runtime endpoint. Simply add / edit Endpoint information, if available, and click **Next**.
 6. Click **Save**.
 
 ## Delete an API service
@@ -97,6 +97,20 @@ Click on the Service name or icon to view the following detailed information for
 3. Click on the environment name breadcrumb at the top of the page (i.e., the name to the right of **ENVIRONMENTS / NAME**).
 4. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
 5. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.” **All versions of the service are deleted.**
+
+## Create Product
+
+Use Create Product to quickly create a product in draft. An asset and a product will automatically be generated. Changes can be made to the product from the Product Foundry if needed.
+
+1. Navigate to *Catalog > Service Registry*.
+2. From the list view, click the ellipsis that is associated to the service.
+3. Select **Create Product**. Note there must be endpoints associated with this service and the asset quota must not have been reached in order to have access to this action.
+4. Add / edit information where applicable:
+
+    * Asset Name - The proposed asset name is set to the API service name.  
+    * Product Name - The proposed asset name is set to the API service name.
+    * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column, as the mock endpoint has the state **MOCKED**.
+    * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
 
 ## Publish to the Marketplace
 
@@ -148,23 +162,24 @@ These requirements must be met before an API Service can create a mock endpoint:
 
 When creating a mock endpoint, there will be three input fields, **Endpoint Name**, **API Service Version**, and **Mock Endpoint Name**. Only **API Service Version**, and **Mock Endpoint Name** are required.
 
-* **Endpoint Name** - A friendly name, or title, for this Mock Endpoint.
-* **API Service Version** - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
-* **Mock Endpoint Name** - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
+* Endpoint Name - A friendly name, or title, for this Mock Endpoint.
+* API Service Version - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
+* Mock Endpoint Name - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
 
 Mock endpoints can be created in:
 
-1. [Service Registry](#list-api-services)
-2. [Service Wizard](#create-an-api-service)
-3. [Service Details Endpoints Tab](#view-api-service-details)
-4. [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
+* [Service Registry](#list-api-services)
+* [Service Wizard](#create-an-api-service)
+* [Service Details Endpoints Tab](#view-api-service-details)
+* [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
 
 Mock endpoints can be viewed in:
 
-1. [Service Details Endpoints Tab](#view-api-service-details)
-2. [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
-3. Marketplace Product Resources Tab
+* [Service Details Endpoints tab](#view-api-service-details)
+* [Create Product Endpoints tab](#create-product)
+* [Publish To Marketplace Endpoints tab](#publish-to-the-marketplace)
+* Marketplace Product Resources tab
 
 ## Edit a mock endpoint
 
-Edit a mock endpoint to simulate the behavior of an API. Editing can only be done in the [Service Details Endpoints Tab](#view-api-service-details).
+Edit a mock endpoint to simulate the behavior of an API. Editing can only be done in the [Service Details Endpoints tab](#view-api-service-details).
