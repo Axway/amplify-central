@@ -168,18 +168,18 @@ When creating a mock endpoint, there will be three input fields, **Endpoint Name
 
 Mock endpoints can be created in:
 
-1. [Service Registry](#list-api-services)
-2. [Service Wizard](#create-an-api-service)
-3. [Service Details Endpoints Tab](#view-api-service-details)
-4. [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
+* [Service Registry](#list-api-services)
+* [Service Wizard](#create-an-api-service)
+* [Service Details Endpoints Tab](#view-api-service-details)
+* [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
 
 Mock endpoints can be viewed in:
 
-1. [Service Details Endpoints Tab](#view-api-service-details)
-2. [Create Product Endpoints Tab](#create-product)
-3. [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
-4. Marketplace Product Resources Tab
+* [Service Details Endpoints Tab](#view-api-service-details)
+* [Create Product Endpoints Tab](#create-product)
+* [Publish To Marketplace Endpoints Tab](#publish-to-the-marketplace)
+* Marketplace Product Resources Tab
 
 ## Edit a mock endpoint
 
-Edit a mock endpoint to simulate the behavior of an API. Editing can only be done in the [Service Details Endpoints Tab](#view-api-service-details).
+Edit a mock endpoint to simulate the behavior of an API. Editing can only be done in the [Service Details Endpoints tab](#view-api-service-details).
