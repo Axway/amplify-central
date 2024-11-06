@@ -1,6 +1,6 @@
 ---
-title: Set up integrations through Watch Topics
-linkTitle: Set up integrations through Watch Topics
+title: Set up integrations through watch topics
+linkTitle: Set up integrations through watch topics
 weight: 100
 hide_readingtime: true
 ---
@@ -19,13 +19,13 @@ Common scenarios to integrate through watch topics are the following items:
 
 Learn how to create and configure watch topics in Amplify, as well as the event structure that corresponds to a set of actions.
 
-## Watch Topic
+## Watch topic
 
 A watch topic is an API resource that is defined in such a way that a single topic may be used to keep track of changes on other specific API Server resources. For example, when a new Credential is created in a given environment any watch topics that are set to track those credential resources will have a new event to handle.
 
 ### Create a watch topic
 
-Create a watchtopic using API:
+Create a watch topic using API:
 
 ```bash
 curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopics' \
@@ -56,7 +56,7 @@ curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopi
 }'
 ```
 
-Or create a watchtopic using the Axway CLI: Add the following in a file and apply the file `axway central apply -f {filename.yaml}`
+Or create a watch topic using the Axway CLI. Add the following in a file and apply the file `axway central apply -f {filename.yaml}`:
 
 ```yaml
 group: management
@@ -80,17 +80,17 @@ spec:
   description: "Watch Topic for handling custom credentials."
 ```
 
-### Read events form a watch topic
+### Read events from a watch topic
 
-Events in the WatchTopic are sequential and will be available for seven days.
+Events in the watch topic are sequential and will be available for seven days.
 
-To request for all events in the watch topic query the API as below. It will return all events from oldest to newest.
+To request all events in the watch topic, query the API as shown below. It will return all events from oldest to newest.
 
 ```bash
 curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
 ```
 
-After handling the events, follow up calls to the API should include a query using the sequenceID parameter as well as sequenceID for the last handled event `query=sequenceID>[id]`. Including the parameter argument will give only events that have been created after that sequenceID.
+After handling the events, follow up calls to the API should include a query using the sequenceID parameter, as well as sequenceID for the last handled event `query=sequenceID>[id]`. Including the parameter argument will give only events that have been created after that sequenceID.
 
 ```bash
 curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
@@ -203,12 +203,12 @@ Each of the above calls will return an array of events that have occurred for a 
 
 In addition to receiving events by querying the above API at a specific duration, it is also possible to create a gRPC service that connects to Amplify directly.
 
-The Agent SDK can be referenced on how to build a watch client using Go, see the steps below for implementing.
+The Agent SDK can be referenced on how to build a watch client using Go. To implement:
 
-1. Building a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk) to listen to the WatchTopic. See the [Sample of gRPC client source code](https://github.com/Axway/agent-sdk/tree/main/samples/watchclient).
-2. Compile this source code with go compiler to get the executable: `go make`
-3. An Amplify Service Account with Central Admin rights is needed to run the client. The service account key pair should be in the same directory with the gRPC client.
-4. Start the gRPC client
+1. Building a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk) to listen to the watch topic. See the [Sample of gRPC client source code](https://github.com/Axway/agent-sdk/tree/main/samples/watchclient).
+2. Compile this source code with go compiler to get the executable: `go make`.
+3. An Amplify Service Account with Central Admin rights is needed to run the client. The service account key pair must be in the same directory with the gRPC client.
+4. Start the gRPC client:
 
     ```cmd
     ./watchclient --auth.client_id=<sa_client_id> --tenant_id=<organization_id> --host=apicentral.axway.com --port=443 --topic_self_link=/management/v1alpha1/watchtopics/track-subscriptions-invoices --log_level=debug --auth.url="
@@ -217,4 +217,4 @@ The Agent SDK can be referenced on how to build a watch client using Go, see the
 
 Using the above queries, the gRPC client can process all events, and manage some failover, by keeping track of the event sequence numbers. For instance, you can save locally the latest processed sequence and, on client restart, process the event that may have been missed while the client was down.
 
-Go is not required as the [Agent SDK](https://github.com/Axway/agent-sdk) does provide the [protobuf definition](https://github.com/Axway/agent-sdk/blob/main/proto/watch.proto). Use this definition and implement a watch client in any language that [Protocol Buffers](https://protobuf.dev/) supports.
+Go is not required, as the [Agent SDK](https://github.com/Axway/agent-sdk) does provide the [protobuf definition](https://github.com/Axway/agent-sdk/blob/main/proto/watch.proto). Use this definition and implement a watch client in any language that [Protocol Buffers](https://protobuf.dev/) supports.
