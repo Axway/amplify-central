@@ -62,9 +62,9 @@ Handle a credential update event for deletes when...
 * The Credential is marked as `DELETING`
     * Check the `metadata.state` value for `DELETING`
 
-### Integrate using a Watch Topic
+### Integrate using a watch topic
 
-See [Set up integrations through Watch Topics](/docs/integrate_with_central/integrate-with-watchtopics) for a full description of setting up Watch Topics.
+See [Set up integrations through watch topics](/docs/integrate_with_central/integrate-with-watchtopics) for a full description of setting up watch topics.
 
 ### Integrating using a Webhook
 
