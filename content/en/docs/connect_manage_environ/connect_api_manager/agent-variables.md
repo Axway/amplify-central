@@ -173,6 +173,8 @@ APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=external
 APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME_1=external-crd-name
 ```
 
+For detailed instructions on handling these custom credentials, see [Use Custom Credentials with the Discovery Agent](/docs/connect_manage_environ/connected_agent_common_reference/custom-external-credentials).
+
 #### Custom OAuth External policy handling
 
 When a Front End Proxy is secured by an OAuth External policy for an identity provider that does not support OAuth 2.0 Dynamic Client Registration Protocol, the agent will link the API to a Credential Request definition for specifying the identifier of the OAuth client provisioned outside the context of an agent.
