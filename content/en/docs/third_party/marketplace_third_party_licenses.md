@@ -10,4 +10,4 @@ Information about the third-party open source and commercial/proprietary librari
 
 {{< alert title="Note" color="primary" >}}The third-party software and licenses information is published monthly. For up-to-date information, contact your account representative.{{< /alert >}}
 
-* [Enterprise Marketplace November 2024 Third-party Software and Licenses](/marketplace_third_party/marketplace_third-party_licenses_20241101.zip)
+* [Enterprise Marketplace November 2024 Third-party Software and Licenses](/samples/thirdparty/20241101.zip)
