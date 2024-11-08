@@ -8,7 +8,7 @@ Learn how to use the credentials for trying out APIs.
 
 ## Where do I start?
 
-Once your credentials have been [created](/docs/manage_marketplace/consumer_experience/credentials_management#create-crednetials) and provisioned by the provider, it is time to ensure that this credentials works as expected.
+Once your credentials have been [created](/docs/manage_marketplace/consumer_experience/credential_management#create-credentials) and provisioned by the provider, it is time to ensure that this credentials works as expected.
 
 First, you have to find the Product / APis you want to test. Browse the product list and find the appropriate one. You can use the [search capabilities](/docs/manage_marketplace/consumer_experience/searching)
 
