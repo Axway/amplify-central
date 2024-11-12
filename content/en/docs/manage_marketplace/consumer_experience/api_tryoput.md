@@ -12,13 +12,13 @@ Once your credentials have been [created](/docs/manage_marketplace/consumer_expe
 
 First, you have to find the Product / APIs you want to test. Browse the product list and find the appropriate one. You can use the [search capabilities](/docs/manage_marketplace/consumer_experience/searching).
 
-Once you find the product, select the appropriate resources to open the *resources details* page. By default, the **Methods** tab is visible. This tab shows all the methods and models the API is using.
+Once you find the product, select the appropriate resources to open the *resource details* page. By default, the **Methods** tab is visible. This tab shows all the methods and models the API is using.
 
 To call an API, you will need to first select the credentials you want to use to access the API and then call the API itself.
 
 ## Select your credentials
 
-To select the credentials for calling an API, you must either click **Authorize** to globally use credentials or **lock**, located beside the method, to use a credentials for that specific method.
+To select the credentials for calling an API, you must either click **Authorize** to globally use credentials or **lock** icon, located beside the method, to use a credentials for that specific method.
 
 In the side panel, select the Authorization type. This authorization list depends on the provided API Security and includes one or more of the following:
 
@@ -75,7 +75,7 @@ The Bearer authorization is not linked to a credential managed in the Marketplac
 
 When selecting this authorization type, you are presented a value box where you can paste your token.
 
-Once pasted, click **Authorize** button. The value is change to stars, and **Authorize** changes to **Logout**. If you logout, the bearer is erased and you must paste it again. If you click **Close**, the side panel is closed and you are now ready to [try a method](#try-a-method).
+Once pasted, click **Authorize** button. The value is changed to stars, and **Authorize** changes to **Logout**. If you logout, the bearer is erased and you must paste it again. If you click **Close**, the side panel is closed and you are now ready to [try a method](#try-a-method).
 
 ## Try a method
 
