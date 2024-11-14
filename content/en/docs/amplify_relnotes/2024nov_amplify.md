@@ -9,6 +9,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+
 ## November 14, 2024
 
 New features, enhancements, and bug fixes for the November 14 update.
@@ -19,10 +20,10 @@ New features, enhancements, and bug fixes for the November 14 update.
 
   (ENHANCEMENT,CONSUMER EXPERIENCE)<br />
   We have made several improvements to the **Try it out** experience, designed to make the testing of an API easier and more intuitive. Here's what is new in this release:
-   * **Credential Origin Selection**: We've introduced a new field called **Credential Origin**. This will allow you to select if you wish to use credentials managed and issued directly from the Marketplace or a credential generated externally.
-   * **Automatic Client ID and Secret population**: Now, the **Client ID** and **Client Secret** fields will be automatically populated based on the selected credential. Previously, the values had to be manually entered after selecting the credential. This reduces the unnecessary clicks and speeds up the try it out process.
-   * **Bearer Authorization**: The **Provide your token** option in **Credential Type** has been renamed to **Bearer Authorization** to better reflect the credential type used. Bearer Authorization is a widely used HTTP authentication scheme that allows secure access by sending a token with each request. In this setup, the token (or “bearer token”) is included in the Authorization header, eliminating the need to share sensitive credentials like a username and password for each request.
-   * **Override Token URL**: You now have the option to **override the default Token URL** with your own token.
+    * **Credential Origin Selection**: We've introduced a new field called **Credential Origin**. This will allow you to select if you wish to use credentials managed and issued directly from the Marketplace or a credential generated externally.
+    * **Automatic Client ID and Secret population**: Now, the **Client ID** and **Client Secret** fields will be automatically populated based on the selected credential. Previously, the values had to be manually entered after selecting the credential. This reduces the unnecessary clicks and speeds up the try it out process.
+    * **Bearer Authorization**: The **Provide your token** option in **Credential Type** has been renamed to **Bearer Authorization** to better reflect the credential type used. Bearer Authorization is a widely used HTTP authentication scheme that allows secure access by sending a token with each request. In this setup, the token (or “bearer token”) is included in the Authorization header, eliminating the need to share sensitive credentials like a username and password for each request.
+    * **Override Token URL**: You now have the option to **override the default Token URL** with your own token.
 
 ## November 13, 2024
 
@@ -33,7 +34,7 @@ New features, enhancements, and bug fixes for the November 13 update.
 * **Track an invoice**
 
   (NEW FEATURE, PROVIDER EXPERIENCE)<br />
-  When the Marketplace is configured with a billing provider, you can now track the status of all consumer invoices on the **Invoices sceen**. This page enables providers to monitor consumer payments and ensure timely follow-ups on overdue accounts. You can quickly check the invoice status, amount, due date and more. Using the filtering by invoice status option (e.g Paid, Past Due) you can easily locate oustanding invoices that need attention or confirm payment on recently paid invoices. You can refine your view with **Created** and **Due Date** filters to see invoices generated or due within a specific time frame. To access the Invoices page, navigate to your platform organization, Marketplace -> Invoices. You will need either a Central Admin or Catalog Manager role to be able to access this feature.  
+  When the Marketplace is configured with a billing provider, you can now track the status of all consumer invoices on the **Invoices screen**. This page enables providers to monitor consumer payments and ensure timely follow-ups on overdue accounts. You can quickly check the invoice status, amount, due date and more. Using the filtering by invoice status option (e.g Paid, Past Due) you can easily locate outstanding invoices that need attention or confirm payment on recently paid invoices. You can refine your view with **Created** and **Due Date** filters to see invoices generated or due within a specific time frame. To access the Invoices page, navigate to your platform organization, Marketplace -> Invoices. You will need either a Central Admin or Catalog Manager role to be able to access this feature.  
 
 ## November 6, 2024
 
