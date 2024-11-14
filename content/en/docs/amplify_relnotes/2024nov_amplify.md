@@ -25,6 +25,15 @@ New features, enhancements, and bug fixes for the November 14 update.
     * **Bearer Authorization**: The **Provide your token** option in **Credential Type** has been renamed to **Bearer Authorization** to better reflect the credential type used. Bearer Authorization is a widely used HTTP authentication scheme that allows secure access by sending a token with each request. In this setup, the token (or “bearer token”) is included in the Authorization header, eliminating the need to share sensitive credentials like a username and password for each request.
     * **Override Token URL**: You now have the option to **override the default Token URL** with your own token.
 
+### Marketplace bug fixes for November 14, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| | APIGOV-29192 | **Issue**: Error (400) when editing paid plan billing and saving <br/>**Resolution**: Switching from paid to free and vice-versa is now correctly handling the billing information of each plan type |
+| 01653208 | APIGOV-29172 | **Issue**: Marketplace Advanced Search Error <br/>**Resolution**: Marketplace resources search api should not fail the calls in case the same product is found published in the same marketplace twice. |
+| 01651887 | APIGOV-29158 | **Issue**: Subscription migration ends with duplicates <br/>**Resolution**: Internal subscription migration events reprocessing won't cause duplicate subscriptions. |
+| | APIGOV-29121 | **Issue**: [Invoices] Subscription invoices do not contain the setup cost if there is no base price defined <br/>**Resolution**: Invoice contain all information of the plan cost (setup fee + recurring fee). |
+
 ## November 13, 2024
 
 New features, enhancements, and bug fixes for the November 13 update.
