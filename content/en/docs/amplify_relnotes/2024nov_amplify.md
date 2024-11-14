@@ -10,6 +10,10 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## November 14, 2024
+
+blah,,,
+
 ## November 4, 2024
 
 New features, enhancements, and bug fixes for the November 4th update.
