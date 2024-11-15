@@ -10,6 +10,75 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## November 15, 2024
+
+New features, enhancements, and bug fixes for the November 15 update.
+
+### Agents updates for November 15, 2024
+
+* **New agent versions available**
+
+    (NEW AGENT RELEASES)<br />
+    New versions are available for our on-prem agents. Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes and improvements to the Agent SDK.
+
+## November 14, 2024
+
+New features, enhancements, and bug fixes for the November 14 update.
+
+### Marketplace updates for November 14, 2024
+
+* **Try It Out Experience Enhancements**
+
+  (ENHANCEMENT,CONSUMER EXPERIENCE)<br />
+  We have made several improvements to the **Try it out** experience, designed to make the testing of an API easier and more intuitive. Here's what is new in this release:
+    * **Credential Origin Selection**: We've introduced a new field called **Credential Origin**. This will allow you to select if you wish to use credentials managed and issued directly from the Marketplace or a credential generated externally.
+    * **Automatic Client ID and Secret population**: Now, the **Client ID** and **Client Secret** fields will be automatically populated based on the selected credential. Previously, the values had to be manually entered after selecting the credential. This reduces the unnecessary clicks and speeds up the try it out process.
+    * **Bearer Authorization**: The **Provide your token** option in **Credential Type** has been renamed to **Bearer Authorization** to better reflect the credential type used. Bearer Authorization is a widely used HTTP authentication scheme that allows secure access by sending a token with each request. In this setup, the token (or “bearer token”) is included in the Authorization header, eliminating the need to share sensitive credentials like a username and password for each request.
+    * **Override Token URL**: You now have the option to **override the default Token URL** with your own token.
+
+### Marketplace bug fixes for November 14, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| | APIGOV-29192 | **Issue**: Error (400) when editing paid plan billing and saving <br/>**Resolution**: Switching from paid to free and vice-versa is now correctly handling the billing information of each plan type |
+| 01653208 | APIGOV-29172 | **Issue**: Marketplace Advanced Search Error <br/>**Resolution**: A fix has been added to Advanced Search feature to return the search results when a product is published in the same marketplace twice. |
+| 01651887 | APIGOV-29158 | **Issue**: Subscription migration ends with duplicates <br/>**Resolution**: A fix was release to not duplicate subscriptions when duplicating a plan and migration subscriptions. |
+| | APIGOV-29121 | **Issue**: [Invoices] Subscription invoices do not contain the setup cost if there is no base price defined <br/>**Resolution**: The invoice now contains all information of the plan cost (setup fee + recurring fee). |
+
+## November 13, 2024
+
+New features, enhancements, and bug fixes for the November 13 update.
+
+### Marketplace updates for November 13, 2024
+
+* **Track an invoice**
+
+  (NEW FEATURE, PROVIDER EXPERIENCE)<br />
+  When the Marketplace is configured with a billing provider, you can now track the status of all consumer invoices on the **Invoices screen**. This page enables providers to monitor consumer payments and ensure timely follow-ups on overdue accounts. You can quickly check the invoice status, amount, due date and more. Using the filtering by invoice status option (e.g Paid, Past Due) you can easily locate outstanding invoices that need attention or confirm payment on recently paid invoices. You can refine your view with **Created** and **Due Date** filters to see invoices generated or due within a specific time frame. To access the Invoices page, navigate to your platform organization, Marketplace -> Invoices. You will need either a Central Admin or Catalog Manager role to be able to access this feature.
+
+* **Edit an active plan**
+
+  (ENHANCEMENT, PROVIDER EXPERIENCE)<br />
+  A new feature enhancement has been added to the product plans to allow users to **edit active plans**, enabling grater flexibility and control over plan management. With this update, you can:
+    * **Add new API resources** to an existing quota definition.
+    * **Create a new quota** to accomodate additional resources.
+    * **Remove corrupted resources** from the plan to ensure accuracy and valid plan entitlements.
+
+  **Limitations**:
+    * Plan **pricing** cannot be modified.
+    * The **quota model** remains fixed and cannot be adjusted.
+
+## November 6, 2024
+
+New features, enhancements, and bug fixes for the November 6 update.
+
+### Marketplace updates for November 6, 2024
+
+* **Create DRAFT Product from Service Registry**
+
+  (ENHANCEMENT, APIM AGENT)<br />
+  You can quickly create an API product without immediately publishing it to the Marketplace. This fast lane allows you to create the product directly from the Service Registry. All you need to do is go to the **Service Registry**, select an API and click **Create Product** in the action menu. Once the draft product is created, you can continue to refine and complete the product definition within the **Product Foundry**.
+
 ## November 4, 2024
 
 New features, enhancements, and bug fixes for the November 4th update.
