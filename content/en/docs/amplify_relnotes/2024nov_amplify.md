@@ -9,6 +9,16 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+## November 15, 2024
+
+New features, enhancements, and bug fixes for the November 15 update.
+
+### Agents updates for November 15, 2024
+
+* **New agent versions available**
+
+    (NEW AGENT RELEASES)<br />
+    New versions are available for our on-prem agents. Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes and improvements to the Agent SDK.
 
 ## November 14, 2024
 
@@ -30,9 +40,9 @@ New features, enhancements, and bug fixes for the November 14 update.
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | | APIGOV-29192 | **Issue**: Error (400) when editing paid plan billing and saving <br/>**Resolution**: Switching from paid to free and vice-versa is now correctly handling the billing information of each plan type |
-| 01653208 | APIGOV-29172 | **Issue**: Marketplace Advanced Search Error <br/>**Resolution**: Marketplace resources search api should not fail the calls in case the same product is found published in the same marketplace twice. |
-| 01651887 | APIGOV-29158 | **Issue**: Subscription migration ends with duplicates <br/>**Resolution**: Internal subscription migration events reprocessing won't cause duplicate subscriptions. |
-| | APIGOV-29121 | **Issue**: [Invoices] Subscription invoices do not contain the setup cost if there is no base price defined <br/>**Resolution**: Invoice contain all information of the plan cost (setup fee + recurring fee). |
+| 01653208 | APIGOV-29172 | **Issue**: Marketplace Advanced Search Error <br/>**Resolution**: A fix has been added to Advanced Search feature to return the search results when a product is published in the same marketplace twice. |
+| 01651887 | APIGOV-29158 | **Issue**: Subscription migration ends with duplicates <br/>**Resolution**: A fix was release to not duplicate subscriptions when duplicating a plan and migration subscriptions. |
+| | APIGOV-29121 | **Issue**: [Invoices] Subscription invoices do not contain the setup cost if there is no base price defined <br/>**Resolution**: The invoice now contains all information of the plan cost (setup fee + recurring fee). |
 
 ## November 13, 2024
 
@@ -43,7 +53,19 @@ New features, enhancements, and bug fixes for the November 13 update.
 * **Track an invoice**
 
   (NEW FEATURE, PROVIDER EXPERIENCE)<br />
-  When the Marketplace is configured with a billing provider, you can now track the status of all consumer invoices on the **Invoices screen**. This page enables providers to monitor consumer payments and ensure timely follow-ups on overdue accounts. You can quickly check the invoice status, amount, due date and more. Using the filtering by invoice status option (e.g Paid, Past Due) you can easily locate outstanding invoices that need attention or confirm payment on recently paid invoices. You can refine your view with **Created** and **Due Date** filters to see invoices generated or due within a specific time frame. To access the Invoices page, navigate to your platform organization, Marketplace -> Invoices. You will need either a Central Admin or Catalog Manager role to be able to access this feature.  
+  When the Marketplace is configured with a billing provider, you can now track the status of all consumer invoices on the **Invoices screen**. This page enables providers to monitor consumer payments and ensure timely follow-ups on overdue accounts. You can quickly check the invoice status, amount, due date and more. Using the filtering by invoice status option (e.g Paid, Past Due) you can easily locate outstanding invoices that need attention or confirm payment on recently paid invoices. You can refine your view with **Created** and **Due Date** filters to see invoices generated or due within a specific time frame. To access the Invoices page, navigate to your platform organization, Marketplace -> Invoices. You will need either a Central Admin or Catalog Manager role to be able to access this feature.
+
+* **Edit an active plan**
+
+  (ENHANCEMENT, PROVIDER EXPERIENCE)<br />
+  A new feature enhancement has been added to the product plans to allow users to **edit active plans**, enabling grater flexibility and control over plan management. With this update, you can:
+  * **Add new API resources** to an existing quota definition.
+  * **Create a new quota** to accomodate additional resources.
+  * **Remove corrupted resources** from the plan to ensure accuracy and valid plan entitlements.
+    
+  **Limitations**:
+   * Plan **pricing** cannot be modified.
+   * The **quota model** remains fixed and cannot be adjusted.
 
 ## November 6, 2024
 
