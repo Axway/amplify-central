@@ -9,6 +9,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+
 ## November 15, 2024
 
 New features, enhancements, and bug fixes for the November 15 update.
@@ -59,13 +60,13 @@ New features, enhancements, and bug fixes for the November 13 update.
 
   (ENHANCEMENT, PROVIDER EXPERIENCE)<br />
   A new feature enhancement has been added to the product plans to allow users to **edit active plans**, enabling grater flexibility and control over plan management. With this update, you can:
-  * **Add new API resources** to an existing quota definition.
-  * **Create a new quota** to accomodate additional resources.
-  * **Remove corrupted resources** from the plan to ensure accuracy and valid plan entitlements.
-    
+    * **Add new API resources** to an existing quota definition.
+    * **Create a new quota** to accomodate additional resources.
+    * **Remove corrupted resources** from the plan to ensure accuracy and valid plan entitlements.
+
   **Limitations**:
-   * Plan **pricing** cannot be modified.
-   * The **quota model** remains fixed and cannot be adjusted.
+    * Plan **pricing** cannot be modified.
+    * The **quota model** remains fixed and cannot be adjusted.
 
 ## November 6, 2024
 
