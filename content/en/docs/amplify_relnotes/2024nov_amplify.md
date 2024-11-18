@@ -9,6 +9,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+
 ## November 16, 2024
 
 New features, enhancements, and bug fixes for the November 16 update.
@@ -39,7 +40,6 @@ New features, enhancements, and bug fixes for the November 15 update.
 | 01640474 | APIGOV-29229 | **Issue**: Transactions for the an API that contains '-' in the path are not visible in Consumer Insights or in the Business Insights for a consumer organization. <br/>**Resolution**: A fix has been to show transaction data for APIs that contain **-** in the path name. |
 |  | APIGOV-29158 | **Issue**: The publish to marketplace button in service details brings up the create product sideblade <br/>**Resolution**: The **Publish to Marketplace** button now opens up the appropriate sideblade. |
 | | APIGOV-29121 | **Issue**: When adding a new endpoint in UI, it shows an error for a valid IP address <br/>**Resolution**: A fix has been released to allow configuring an endpoint with a valid IP address. |
-
 
 ## November 14, 2024
 
