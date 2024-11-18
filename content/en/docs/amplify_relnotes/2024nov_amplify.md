@@ -9,6 +9,16 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+## November 16, 2024
+
+New features, enhancements, and bug fixes for the November 16 update.
+
+### Marketplace updates for November 16, 2024
+
+* **Introducing the table view in Product Foundry**
+
+  (NEW FEATURE, PROVIDER EXPERIENCE, PRODUCT FOUNDRY)<br />
+  Users now have the flexibility to switch between the existing **Card Layout** and the new default **Table Layout** using the toggle buttons at the top of the product list page. The action menu contains options to **Publish** to Marketplace, **Translate** into a language of your choice, **Create plan** to monetize the product, **Archive** to retire the product and allow for **Delete**.
 
 ## November 15, 2024
 
@@ -20,6 +30,16 @@ New features, enhancements, and bug fixes for the November 15 update.
 
     (NEW AGENT RELEASES)<br />
     New versions are available for our on-prem agents. Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes and improvements to the Agent SDK.
+
+### Agents bug fixes for November 15, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01649100 | APIGOV-29100 | **Issue**: Not able to view analytics data for v7 migrated applications with uppercase names <br/>**Resolution**: The agents have been updated to allow handling of application names that contain uppercase characters. |
+| 01640474 | APIGOV-29229 | **Issue**: Transactions for the an API that contains '-' in the path are not visible in Consumer Insights or in the Business Insights for a consumer organization. <br/>**Resolution**: A fix has been to show transaction data for APIs that contain **-** in the path name. |
+|  | APIGOV-29158 | **Issue**: The publish to marketplace button in service details brings up the create product sideblade <br/>**Resolution**: The **Publish to Marketplace** button now opens up the appropriate sideblade. |
+| | APIGOV-29121 | **Issue**: When adding a new endpoint in UI, it shows an error for a valid IP address <br/>**Resolution**: A fix has been released to allow configuring an endpoint with a valid IP address. |
+
 
 ## November 14, 2024
 
