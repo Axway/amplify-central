@@ -38,8 +38,8 @@ New features, enhancements, and bug fixes for the November 15 update.
 |-------------|--------------|---------------------------------------------------|
 | 01649100 | APIGOV-29100 | **Issue**: Not able to view analytics data for v7 migrated applications with uppercase names <br/>**Resolution**: The agents have been updated to allow handling of application names that contain uppercase characters. |
 | 01640474 | APIGOV-29229 | **Issue**: Transactions for the an API that contains '-' in the path are not visible in Consumer Insights or in the Business Insights for a consumer organization. <br/>**Resolution**: A fix has been to show transaction data for APIs that contain **-** in the path name. |
-|  | APIGOV-29158 | **Issue**: The publish to marketplace button in service details brings up the create product sideblade <br/>**Resolution**: The **Publish to Marketplace** button now opens up the appropriate sideblade. |
-| | APIGOV-29121 | **Issue**: When adding a new endpoint in UI, it shows an error for a valid IP address <br/>**Resolution**: A fix has been released to allow configuring an endpoint with a valid IP address. |
+|  | APIGOV-29201 | **Issue**: The publish to marketplace button in service details brings up the create product sideblade <br/>**Resolution**: The **Publish to Marketplace** button now opens up the appropriate sideblade. |
+| | APIGOV-29184 | **Issue**: When adding a new endpoint in UI, it shows an error for a valid IP address <br/>**Resolution**: A fix has been released to allow configuring an endpoint with a valid IP address. |
 
 ## November 14, 2024
 
