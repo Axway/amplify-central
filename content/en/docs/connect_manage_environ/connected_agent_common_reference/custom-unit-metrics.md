@@ -1,6 +1,6 @@
 ---
-title: Custom Units with Discovery and Traceability Agents
-linkTitle: Custom Units with Discovery and Traceability Agents
+title: Use Custom Units with Discovery and Traceability Agents
+linkTitle: Use Custom Units with Discovery and Traceability Agents
 draft: false
 weight: 10
 ---
