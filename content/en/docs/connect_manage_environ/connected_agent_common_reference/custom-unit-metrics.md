@@ -30,7 +30,7 @@ The protobuf file can be found within the Agent SDK repo [here](https://github.c
 
 The QuotaEnforcement service is used by Discovery Agents. Upon receiving an AccessRequest resource event the Discovery Agent will make a call to this service. This will provide the metric service information about each Application and API combination as well as any quota that is set for custom units as part of this access request.
 
-The RPC will be called for each and every access request event the Discovery Agent receives. Uf the metric service does not need to handle the event, it may simply reply with an empty response. If the metric service does need to handle the event, it can do so then send an empty response for success or an error message if there was a failure. The Discovery Agent will handle communicating that response back to Marketplace.
+The RPC will be called for each and every access request event the Discovery Agent receives. If the metric service does not need to handle the event, it may simply reply with an empty response. If the metric service does need to handle the event, it can do so then send an empty response for success or an error message if there was a failure. The Discovery Agent will handle communicating that response back to Marketplace.
 
 In the sample below, the metric service receives the quotaInfo message. If within that QuotaInfo message, quota data is provided, the service will handle it as needed. In all cases the service stores the Application and API IDs, the ones which relate to the gateway the agent connects to, in order to use that info for [sending metric usage data](#metric-reporting-service).
 
