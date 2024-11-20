@@ -87,7 +87,7 @@ All of the variables in this list may be repeated for each metric service to be 
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | AGENTFEATURES_METRICSERVICES_ENABLE       | Set to true to enable this metric service URL                                                       |
 | AGENTFEATURES_METRICSERVICES_URL          | The URL, host and port number, that the metric service is listening on                              |
-| AGENTFEATURES_METRICSERVICES_REJECTONFAIL | If set to true any error with the quota enforcement will fail the provisioning event in Marketplace |
+| AGENTFEATURES_METRICSERVICES_REJECTONFAIL | If set to true, any error with the quota enforcement will fail the provisioning event in Marketplace |
 
 ### Discovery Agent only variables
 
