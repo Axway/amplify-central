@@ -10,6 +10,7 @@ The variables common to all agents are described here in more detail.
     * [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
         * [Status endpoint variables](#status-endpoint-variables)
         * [Logging variables](#logging-variables)
+        * [Custom unit metric service variables](#custom-unit-metric-service-variables)
     * [Discovery Agent only variables](#discovery-agent-only-variables)
         * [IdP configuration variables](#idp-configuration-variables)
     * [Traceability Agent only variables](#traceability-agent-only-variables)
@@ -50,8 +51,8 @@ The variables common to all agents are described here in more detail.
 | CENTRAL_SSL_MINVERSION            | String value for the minimum SSL/TLS version that is acceptable. If zero, empty TLS 1.2 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                          |
 | CENTRAL_TEAM                      | Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank. |
 | AGENTFEATURES_VERSIONCHECKER      | Set to false to turn off the agent job that checks if the running agent is the latest available (default: `true`).                                                                                                                                                                                                                            |
-| AGENTFEATURES_PERSISTCACHE        | Set to false to turn off the agent's persisted cache (default: `true`).                                                                                                                                                                                                                            |
-| CENTRAL_GRPC_ENABLED              | Set to false to make agent function in poll mode (default: `true`)                                                                                                                            |
+| AGENTFEATURES_PERSISTCACHE        | Set to false to turn off the agent's persisted cache (default: `true`).                                                                                                                                                                                                                                                                       |
+| CENTRAL_GRPC_ENABLED              | Set to false to make agent function in poll mode (default: `true`)                                                                                                                                                                                                                                                                            |
 
 #### Status endpoint variables
 
@@ -75,6 +76,17 @@ The variables common to all agents are described here in more detail.
 | LOG_OUTPUT                | The output for the log lines (stdout, file, both). When set to `both` for the Traceability Agent, only the file output will appear.                                                       |
 
 {{< alert title="Note" color="primary" >}}It is recommended to set up logging in the agent configuration file to keep the logs separated for each agent.{{< /alert >}}
+
+#### Custom unit metric service variables
+
+For more information about the following variables see [Custom Units with Discovery and Traceability Agents](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics).
+
+All of the variables in this list may be repeated for each metric service to be used. Each set of variables should be appended with an index number (ie. `AGENTFEATURES_METRICSERVICES_ENABLE_1=true`)
+
+| Variable name                       | Description                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------- |
+| AGENTFEATURES_METRICSERVICES_ENABLE | Set to true to enable this metric service URL                          |
+| AGENTFEATURES_METRICSERVICES_URL    | The URL, host and port number, that the metric service is listening on |
 
 ### Discovery Agent only variables
 
