@@ -4,7 +4,7 @@ linkTitle: Use Custom Units with Discovery and Traceability Agents
 draft: false
 weight: 10
 ---
-Marketplace has the ability to create and track usage of custom units. These custom units may also be used in a Product Plan Quota. To enable the tracking of the usage and associating it to a proper quota the Discovery and Traceability agents have been enhanced to connect to a custom metric reporting service that may be implemented to provide this information.
+Marketplace has the ability to create and track usage of custom units. These custom units may also be used in a Product Plan Quota. To enable the tracking of the usage and associating it to a proper quota, the Discovery and Traceability agents have been enhanced to connect to a custom metric reporting service that may be implemented to provide this information.
 
 {{< alert title="Note" color="primary" >}}
 This functionality requires agents that have been built with SDK version 1.1.104 or newer.
@@ -30,9 +30,9 @@ The protobuf file can be found within the Agent SDK repo [here](https://github.c
 
 The QuotaEnforcement service is used by Discovery Agents. Upon receiving an AccessRequest resource event the Discovery Agent will make a call to this service. This will provide the metric service information about each Application and API combination as well as any quota that is set for custom units as part of this access request.
 
-The RPC will be called for each and every access request event the Discovery Agent receives, if the metric service doe snot need to handle the event it may simply reply with an empty response. If the metric service does need to handle the request it can do so then send an empty response for success or an error message if their was a failure. The Discovery Agent will handle communicating that response back to Marketplace.
+The RPC will be called for each and every access request event the Discovery Agent receives. Uf the metric service does not need to handle the event, it may simply reply with an empty response. If the metric service does need to handle the event, it can do so then send an empty response for success or an error message if there was a failure. The Discovery Agent will handle communicating that response back to Marketplace.
 
-In the sample below the metric service receives the quotaInfo message. If within that info custom unit and quota data is provided the service will handle it as needed. In all cases the service stores the Application and API IDs, the ones which relate to the gateway the agent connects to, in order to use that info for [sending metric usage data](#metric-reporting-service).
+In the sample below, the metric service receives the quotaInfo message. If within that QuotaInfo message, quota data is provided, the service will handle it as needed. In all cases the service stores the Application and API IDs, the ones which relate to the gateway the agent connects to, in order to use that info for [sending metric usage data](#metric-reporting-service).
 
 ```go
 package services
@@ -179,7 +179,7 @@ func (s *metricReportingServiceServer) createMetricReport(report data) *customun
 
 ## Setup the agent configuration
 
-Since this service will be used by both the Discovery and Traceability agents. Below are the environment variables that can be added to the agents, given the metric service is on the same machine as the agents, listening on port 50011. The configuration variables may be replicated for as many services as needed, incrementing the index.
+Since this service will be used by both the Discovery and Traceability agents the environment variables below can be added to the agents configuration. In this example the metric service is on the same machine as the agents, localhost, listening on port 50011. The configuration variables may be replicated for as many services as needed, incrementing the index.
 
 ```shell
 AGENTFEATURES_METRICSERVICES_ENABLE_1=true

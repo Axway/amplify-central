@@ -79,7 +79,7 @@ The variables common to all agents are described here in more detail.
 
 #### Custom unit metric service variables
 
-For more information about the following variables see [Custom Units with Discovery and Traceability Agents](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics).
+For more information about the following variables see [Use Custom Units with Discovery and Traceability Agents](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics).
 
 All of the variables in this list may be repeated for each metric service to be used. Each set of variables should be appended with an index number (ie. `AGENTFEATURES_METRICSERVICES_ENABLE_1=true`)
 
