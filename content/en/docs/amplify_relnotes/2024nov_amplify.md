@@ -10,6 +10,16 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## November 20, 2024
+
+### Marketplace bug fixes for November 20, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| | APIGOV-29152 | **Issue**: Not all access request are visible in the application details <br/>**Resolution**: Limit increased to view 50 access request per application. |
+| 01607206 | APIGOV-28846 | **Issue**: Web server version disclosure <br/>**Resolution**: Remove the server information when no path match the request. |
+| 01607206 | APIGOV-28845 | **Issue**: Failure to sanitize parameters <br/>**Resolution**: Remove input value from validation message for query parameters |
+
 ## November 16, 2024
 
 New features, enhancements, and bug fixes for the November 16 update.
