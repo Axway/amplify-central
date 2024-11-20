@@ -83,10 +83,11 @@ For more information about the following variables see [Use Custom Units with Di
 
 All of the variables in this list may be repeated for each metric service to be used. Each set of variables should be appended with an index number (ie. `AGENTFEATURES_METRICSERVICES_ENABLE_1=true`)
 
-| Variable name                       | Description                                                            |
-| ----------------------------------- | ---------------------------------------------------------------------- |
-| AGENTFEATURES_METRICSERVICES_ENABLE | Set to true to enable this metric service URL                          |
-| AGENTFEATURES_METRICSERVICES_URL    | The URL, host and port number, that the metric service is listening on |
+| Variable name                             | Description                                                                                         |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| AGENTFEATURES_METRICSERVICES_ENABLE       | Set to true to enable this metric service URL                                                       |
+| AGENTFEATURES_METRICSERVICES_URL          | The URL, host and port number, that the metric service is listening on                              |
+| AGENTFEATURES_METRICSERVICES_REJECTONFAIL | If set to true any error with the quota enforcement will fail the provisioning event in Marketplace |
 
 ### Discovery Agent only variables
 
