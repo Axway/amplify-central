@@ -116,7 +116,7 @@ A quota describes the itemized units per resource, or group of resources, in a p
 
 For a Paid plan, each quota can be associated with a cost depending on the quota type (Standard / Tier / Pay Per Use). See [Product plan type and quota consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-quota-consumption-cost).
 
-By default, the billing period of the plan is used as the quota enforcement. But, you can override this behavior so that quota enforcement and billing period are not linked together. For instance you can set a monthly billing period and have weekly or daily quota enforcement meaning the invoice is generated each month and each day/week there is a certain amount of API calls allowed.
+By default, the billing period of the plan is used as the quota enforcement period. But, you can override this behavior so that quota enforcement and billing period are not linked together. For instance you can set a monthly billing period and have weekly or daily quota enforcement meaning the invoice is generated each month and each day/week there is a certain amount of API calls allowed.
 
 {{< alert title="Note" color="primary" >}}
 When you choose to de-correlate the billing period and the quota enforcement period, certain rules for the pricing model of paid plans are applied:
@@ -131,9 +131,9 @@ To configure a quota for a **Free plan**, enter the values for the following pro
     * **Quota Name** - a name for the quota.
     * **Consumption Unit** - the default is **Transactions**.
 * Quota usage limit:
-    * **Toggle** = activate a separate quota enforcement than the plan billing period.
+    * **Toggle** - activate a separate quota enforcement than the plan billing period.
     * **Interval** - the quotas period enforcement on the Gateway: a choice between Daily, Weekly, Monthly or Annually
-    * **Limit** = the maximum API call allowed for the selected period.
+    * **Limit** - the maximum API call allowed for the selected period.
 * Quota pricing model:
     * **Pricing Model** (only **Standard** is available).
     * **Limit** - enter a quantity (for example, 1000, 15) or check Unlimited to not specify any limitation.
@@ -151,9 +151,9 @@ To configure a quota for a **Paid plan**, enter the values for the following pro
     * **Quota Name** - a name for the quota.
     * **Consumption Unit** - the default is **Transactions**.
 * Quota usage limit:
-    * **Toggle** = activate a separate quota enforcement than the plan billing period.
+    * **Toggle** - activate a separate quota enforcement than the plan billing period.
     * **Interval** - the quotas period enforcement on the Gateway: a choice between Daily, Weekly, Monthly or Annually
-    * **Limit** = the maximum API call allowed for the selected period.
+    * **Limit** - the maximum API call allowed for the selected period.
 * Quota pricing model:
     * **Pricing model** - select either **Standard**, **Tiered - Volume**, **Tiered - Graduated** or **Pay Per Use**:
         * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota Type**, **Limit Type**, **Overage** for loose limit type).
@@ -176,6 +176,10 @@ To configure the type of approval when a subscriber submits a request to purchas
 When you are finished creating the plan, click **Save Draft and Exit** to save the product plan in DRAFT state.
 
 ## Edit product plans
+
+Plan that are in Draft state can be edited.
+
+Plan that are in Active state can be edited too but is limited to add new resource to an existing quota or add une quota with resource that are not already part of an existing quota of the current plan.
 
 1. Navigate to the *Product Foundry* and select a product.
 2. Click on the **Plans** tab. All plans configured for this product are displayed.
