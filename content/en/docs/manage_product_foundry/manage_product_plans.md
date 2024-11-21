@@ -179,7 +179,7 @@ When you are finished creating the plan, click **Save Draft and Exit** to save t
 
 Plan that are in Draft state can be edited.
 
-Plan that are in Active state can be edited too but is limited to add new resource to an existing quota or add une quota with resource that are not already part of an existing quota of the current plan.
+Plan that are in Active state can be edited too but is limited to add new resource to an existing quota or add a new quota with resource that are not already part of an existing quota.
 
 1. Navigate to the *Product Foundry* and select a product.
 2. Click on the **Plans** tab. All plans configured for this product are displayed.
