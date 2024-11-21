@@ -114,7 +114,7 @@ When a subscription is cancelled, the system initiates events to deprovision cor
 
 A quota describes the itemized units per resource, or group of resources, in a product, and how much of those units the consumer is entitled to use over a period of time.
 
-For a Paid plan, each quota can be associated with a cost depending on the quota type (Standard / Tier / Pay Per Use). See [Product plan type and quota consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-quota-consumption-cost).
+For a Paid plan, each quota can be associated with a cost depending on the quota type (Standard / Tier / Pay Per Use). See [Product plan type and quota consumption cost](#product-plan-types-and-quota-consumption-costs).
 
 By default, the billing period of the plan is used as the quota enforcement period. But, you can override this behavior so that quota enforcement and billing period are not linked together. For instance you can set a monthly billing period and have weekly or daily quota enforcement meaning the invoice is generated each month and each day/week there is a certain amount of API calls allowed.
 
