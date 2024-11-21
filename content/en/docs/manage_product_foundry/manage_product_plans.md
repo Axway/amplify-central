@@ -116,30 +116,49 @@ A quota describes the itemized units per resource, or group of resources, in a p
 
 For a Paid plan, each quota can be associated with a cost depending on the quota type (Standard / Tier / Pay Per Use). See [Product plan type and quota consumption cost](/docs/manage_product_foundry/manage_product_plans/#product-plan-type-and-quota-consumption-cost).
 
+By default, the billing period of the plan is used as the quota enforcement. But, you can override this behavior so that quota enforcement and billing period are not linked together. For instance you can set a monthly billing period and have weekly or daily quota enforcement meaning the invoice is generated each month and each day/week there is a certain amount of API calls allowed.
+
+{{< alert title="Note" color="primary" >}}
+When you choose to de-correlate the billing period and the quota enforcement period, certain rules for the pricing model of paid plans are applied:
+
+* **Standard pricing model**: unless the number of call is unlimited, the loose limit will be applied so that you can collect money in case the quota limit is exceeded.
+* **Tiered pricing model**: unless the last tier has the unlimited value, an additional tier with the maximum upper limit is added so that you can collect money in case the quota limit is exceeded.
+{{< /alert >}}
+
 To configure a quota for a **Free plan**, enter the values for the following properties:
 
-* **Quota Name** - a name for the quota.
-* **Quota Type** (only **Standard** is available).
-* **Unit** - the default is **Transactions**. This non-configurable field defines a quota for Transaction units only.
-* **Limit** - enter a quantity (for example, 1000, 15) or check Unlimited to not specify any limitation.
-* **Quota Type** - select either **Daily**, **Weekly** or **Monthly**.
-* **Limit Type** (only **Strict** is available) - the gateway enforces a hard stop when the quota limit is exceeded.
-* **Assign Resources** - the list of resources the provider will charge for by a measured unit. Only the resources included in the plan can be selected.
+* Quota profile:
+    * **Quota Name** - a name for the quota.
+    * **Consumption Unit** - the default is **Transactions**.
+* Quota usage limit:
+    * **Toggle** = activate a separate quota enforcement than the plan billing period.
+    * **Interval** - the quotas period enforcement on the Gateway: a choice between Daily, Weekly, Monthly or Annually
+    * **Limit** = the maximum API call allowed for the selected period.
+* Quota pricing model:
+    * **Pricing Model** (only **Standard** is available).
+    * **Limit** - enter a quantity (for example, 1000, 15) or check Unlimited to not specify any limitation.
+    * **Quota Type** - select either **Daily**, **Weekly** or **Monthly**.
+    * **Limit Type** (only **Strict** is available) - the gateway enforces a hard stop when the quota limit is exceeded.
+* Quota resources:
+    * **Assign Resources** - the list of resources the provider will charge for by a measured unit. Only the resources included in the plan can be selected.
 
 {{< alert title="Note" color="primary" >}}When Limit Type is set to Strict, make sure the quota is enforced on the underlying gateway.{{< /alert >}}
 {{< alert title="Note" color="primary" >}}When selecting **Unlimited**, Limit, Quota Type and Limit Type are disabled. Be sure the underlying gateway can support the load.{{< /alert >}}
 
 To configure a quota for a **Paid plan**, enter the values for the following properties:
 
-* **Quota Name** - a name for the quota.
-* **Quota Type** - select either **Standard**, **Tiered** or **Pay Per Use**:
-    * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota Type**, **Limit Type**, **Overage** for loose limit type).
-    * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 and automatically added to the last tier **upper limit**.
-    * Pay Per Use - select the transaction unit cost.
-
-{{< alert title="Note" color="primary" >}}
-For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.
-{{< /alert >}}
+* Quota profile:
+    * **Quota Name** - a name for the quota.
+    * **Consumption Unit** - the default is **Transactions**.
+* Quota usage limit:
+    * **Toggle** = activate a separate quota enforcement than the plan billing period.
+    * **Interval** - the quotas period enforcement on the Gateway: a choice between Daily, Weekly, Monthly or Annually
+    * **Limit** = the maximum API call allowed for the selected period.
+* Quota pricing model:
+    * **Pricing model** - select either **Standard**, **Tiered - Volume**, **Tiered - Graduated** or **Pay Per Use**:
+        * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota Type**, **Limit Type**, **Overage** for loose limit type).
+        * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 and automatically added to the last tier **upper limit**.
+        * Pay Per Use - select the transaction unit cost.
 
 Click **+ Add Quota** to create another quota group for a different resource. Once a resource is assigned to a quota group, it is no longer available for another quota group.
 
