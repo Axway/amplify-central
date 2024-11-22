@@ -9,12 +9,14 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+
 ## November 22, 2024
-New features, enhancements, and bug fixes for the November 16 update.
+
+New features, enhancements, and bug fixes for the November 22 update.
 
 ### Agents updates for November 22, 2024
 
-* **Azure Discovery Agents - Entra ID Integration**
+* **Azure Discovery Agent - Entra ID Integration**
 
   (NEW FEATURE, ON-PREM DISCOVERY AGENT, EMBEDDED DISCOVERY AGENT,)<br />
   The Azure Discovery agent now supports managing **ClientID** and **ClientSecret** credentials in **Entra ID (formerly Azure AD)**. When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and CLientSecret to the published resources on Enterprise Marketplace. Marketplace consumers can seamlessly obtain the necessary credentials for their applications without additional setup. This feature is available for both Azure On-prem and Embedded Agents. To enable this feature, ensure that your Discovery Agent is updated to the latest version. Follow the updated documentation for guidance on configuring and managing Entra ID credentials for your APIs.
