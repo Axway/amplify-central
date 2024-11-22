@@ -10,6 +10,28 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## November 22, 2024
+
+New features, enhancements, and bug fixes for the November 22 update.
+
+### Agents updates for November 22, 2024
+
+* **Azure Discovery Agent v1.3.8 - Entra ID Integration**
+
+  (NEW FEATURE, ON-PREM DISCOVERY AGENT, EMBEDDED DISCOVERY AGENT,)<br />
+  The Azure Discovery agent now supports managing **ClientID** and **ClientSecret** credentials in **Entra ID (formerly Azure AD)**. When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and CLientSecret to the published resources on Enterprise Marketplace. Marketplace consumers can seamlessly obtain the necessary credentials for their applications without additional setup. This feature is available for both Azure On-prem and Embedded Agents. To enable this feature, ensure that your Discovery Agent is updated to the latest version. Follow the updated documentation for guidance on configuring and managing Entra ID credentials for your APIs.
+
+### Axway CLI updates for November 22, 2024
+
+The latest version of the [Axway CLI is v3.2.15 on NPM](https://www.npmjs.com/package/axway/v/3.2.15).
+This release contains a fix that removes the unnecessary Platform logout confirmation dialog.
+
+### Marketplace bug fixes for November 22, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01656035 | APIGOV-29220 | **Issue**: Marketplace footer issue <br/>**Resolution**: A fix was added so taht the footer section does not overlap with the resource list when the table contains large number of resources.|
+
 ## November 20, 2024
 
 ### Marketplace bug fixes for November 20, 2024
