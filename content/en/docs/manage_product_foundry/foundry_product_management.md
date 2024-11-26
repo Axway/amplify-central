@@ -50,7 +50,6 @@ In List View, following product information is displayed:
     * Archive - Archive the product
     * Delete - Delete the product
 
-
 In Card View, following product information is displayed:
 
 * Product icon - The icon / image representing the product, if any
