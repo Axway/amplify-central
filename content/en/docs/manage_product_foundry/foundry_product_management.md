@@ -29,16 +29,16 @@ To view products:
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
 
-There are two different views to view products, List View and Card View. The List View is the default option when you visit the page.
+There are two different product views, List View and Card View. The List View is the default option when you visit the page.
 
-In List View, following product information is displayed:
+In List View, the following product information is displayed:
 
 * Product icon - The icon / image representing the product, if any
 * Product Name - The display name for the product in the WebUI
 * Product Description - A short description of the product
 * Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
-* State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
-* Current version - The most recent version number. Can be `---` if the product is not released
+* State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
+* Current version - The most recent version number. Can be `---` if the product is not released.
 * Asset - The number of asset(s) linked to the product
 * Subscriptions - Shows how many subscriptions there are for the product
 * Owning Team - The team responsible for the product
@@ -50,18 +50,18 @@ In List View, following product information is displayed:
     * Archive - Archive the product
     * Delete - Delete the product
 
-In Card View, following product information is displayed:
+In Card View, the following product information is displayed:
 
 * Product icon - The icon / image representing the product, if any
 * Product Name - The display name for the product in the WebUI
 * Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
-* State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
-* Current version - The most recent version number. Can be `---` if the product is not released
+* State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
+* Current version - The most recent version number. Can be `---` if the product is not released.
 * Asset Name and Type - The asset(s) linked to the product
 * Trash icon - Activated only when the product can be deleted
-* Marketplace icon - Enable to publish the product to the Marketplace. Disable to not publish
+* Marketplace icon - Enable to publish the product to the Marketplace. Disable to not publish.
 
-Click the view switch icon at the top-right corner of the page to switch between the Card View and List View.
+Click the view switch icon at the top-right to switch between the Card View and List View.
 
 You can also filter the products by categories, state and owning team using the **Filter By** controls. Search by name, title and tag with the search bar.
 
