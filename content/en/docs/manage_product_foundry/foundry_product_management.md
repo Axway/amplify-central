@@ -37,7 +37,7 @@ In List View, the following product information is displayed:
 * Product Name - The display name for the product in the WebUI
 * Product Description - A short description of the product
 * Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
-* State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
+* State - Current state of a product - Draft, Active, Deprecated. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
 * Current version - The most recent version number. Can be `---` if the product is not released.
 * Asset - The number of asset(s) linked to the product
 * Subscriptions - Shows how many subscriptions there are for the product
@@ -55,7 +55,7 @@ In Card View, the following product information is displayed:
 * Product icon - The icon / image representing the product, if any
 * Product Name - The display name for the product in the WebUI
 * Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
-* State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
+* State - Current state of a product - Draft, Active, Deprecated. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
 * Current version - The most recent version number. Can be `---` if the product is not released.
 * Asset Name and Type - The asset(s) linked to the product
 * Trash icon - Activated only when the product can be deleted
