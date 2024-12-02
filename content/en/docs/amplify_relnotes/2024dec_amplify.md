@@ -16,18 +16,7 @@ New features, enhancements, and bug fixes for the December 2 update.
 
 ### Agents updates for December 2, 2024
 
-* **Agent v?.? - Feature**
+* **New Agents Versions Available**
 
-  (NEW FEATURE, ON-PREM DISCOVERY AGENT, EMBEDDED DISCOVERY AGENT,)<br />
-  Description paragraph.
-
-### Axway CLI updates for December 2, 2024
-
-The latest version of the [Axway CLI is v3.2.15 on NPM](https://www.npmjs.com/package/axway/v/3.2.15).
-This release contains a fix that removes the unnecessary Platform logout confirmation dialog.
-
-### Marketplace bug fixes for December 2, 2024
-
-| Case ID | Internal ID | Description |
-|-------------|--------------|---------------------------------------------------|
-| xxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description.|
+  (AGENT SDK UPDATE, DISCOVERY AGENT, TRACEABILITY AGENT,)<br />
+  New versions are available for our on-prem agents. Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes to the **Agent SDK v1.1.104**.
