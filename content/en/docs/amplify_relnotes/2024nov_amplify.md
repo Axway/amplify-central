@@ -18,7 +18,7 @@ New features, enhancements, and bug fixes for the November 22 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01640474 | APIGOV-29229 | **Issue**: Transactions for the an API that contains '-' in the path are not visible in Consumer Insights or in the Business Insights for a consumer organization. <br/>**Resolution**: A fix is now available in **Axway API Management Traceability Agent v1.2.9**. It is recommended to update to this version if your agent has encountered this issue. For upgrade instructions, refer to [Upgrade an agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/). |
+| 01640474 | APIGOV-29229 | **Issue**: Transactions for an API that contain '-' in the path are not visible in Consumer Insights or Business Insights for a consumer organization. <br/>**Resolution**: A fix is now available in **Axway API Management Traceability Agent v1.2.9**. It is recommended to update to this version if your agent has encountered this issue. For upgrade instructions, refer to [Upgrade an agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/). |
 
 ## November 22, 2024
 
