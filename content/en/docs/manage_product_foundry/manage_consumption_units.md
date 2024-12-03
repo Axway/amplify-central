@@ -30,7 +30,7 @@ View the following information for all consumption units:
 * Plans - number of plan that are currently using that unit.
 * Modified date - last know modification date
 
-The Ellipsis menu allows to:
+The ellipsis menu allows to:
 
 * Edit - for [updating](#edit-a-consumption-unit) the consumption unit
 * Translate - for [translating](#consumption-unit-multi-language) the title and description of the consumption unit
@@ -61,7 +61,7 @@ Catalog Manager or Central Administrator can create consumption unit.
 
 ## Delete a consumption unit
 
-Catalog Manager or Central Administrator can create consumption unit.
+Catalog Manager or Central Administrator can delete consumption unit.
 
 Delete is only allowed if the consumption unit is not used in any plan quota.
 
@@ -90,8 +90,26 @@ Once a default language is selection, you can add the other needed languages by 
 
 ## Report a consumption unit
 
-TBD
+To report custom unit, a service (Custom Unit Service) will have to be implemented in order to compute the information the Traceability Agent will send back to Amplify Platform.
+
+### Flow
+
+Once a consumer request an access to an API via a Marketplace application, an event is generated. This event can be listen so that anyone can react on it.
+
+When an API call is made, the Gateway logs the information in eventlog or openlog. Traceability agent is listening these logs to create the corresponding metrics and send those metrics to Amplify Platform.
+
+The Custom Unit Service will have to listen to these too in order to compute the number of unit used and transfer this to the Traceability Agent so that then it reports it to the AMplify Platform.
+
+### Service implementation
+
+This service will be accessed by the Discovery Agent to inform when a quota having custom unit is provisioned.
+
+This service will send information related to custom unit consumption to the Traceability Agent so that the Traceability Agent can report the metrics to the Amplify Platform.
+
+Refer to [Use Custom Units with Discovery and Traceability Agents](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics) for more information about its implementation.
 
 ## Visualize consumption unit in Business or Consumer Insights
 
-TBD
+An additional filter has been added to the Business/Consumer Insights Applications and Subscriptions screens to be able to filter using the consumption units.
+
+The filter contains the list of all available consumption units. Once a consumption unit is selected, the corresponding data if any are displayed.
