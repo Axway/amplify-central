@@ -16,7 +16,7 @@ Learn how to create and configure the product plan using the Product Foundry Web
 
 **Quotas** - describes the itemized units per resource or group of resources in the product, and how much of those units they are entitled to use over a billing period.
 
-**Units** - defines the billable units. For example: Transactions, Seats, Messages. Used with the quotas to describe the pricing and how many units a consumer is entitled to use.
+**Consumption Units** - defines the billable units. For example: Transactions, Seats, Messages. Used with the quotas to describe the pricing and how many units a consumer is entitled to use.
 
 ## Product plan states
 
@@ -119,12 +119,12 @@ For a Paid plan, each quota can be associated with a cost depending on the quota
 To configure a quota for a **Free plan**, enter the values for the following properties:
 
 * **Quota Name** - a name for the quota.
-* **Quota Type** (only **Standard** is available).
-* **Unit** - the default is **Transactions**. This non-configurable field defines a quota for Transaction units only.
+* **Consumption Unit** - the default is **Transactions**. You can select a different consumption unit if any is available in the system. Refer to [create a consumption unit](/docs/manage_product_foundry/manage_consumption_units#create-a-consumption-unit)
+* **Pricing model** (only **Standard** is available).
 * **Limit** - enter a quantity (for example, 1000, 15) or check Unlimited to not specify any limitation.
 * **Quota Type** - select either **Daily**, **Weekly** or **Monthly**.
 * **Limit Type** (only **Strict** is available) - the gateway enforces a hard stop when the quota limit is exceeded.
-* **Assign Resources** - the list of resources the provider will charge for by a measured unit. Only the resources included in the plan can be selected.
+* **Assign Resources** - the list of resources the provider will charge for by a measured unit. Only the resources included in the plan can be selected. For that click the **+ Add Resources** button to open the resource selector screen.
 
 {{< alert title="Note" color="primary" >}}When Limit Type is set to Strict, make sure the quota is enforced on the underlying gateway.{{< /alert >}}
 {{< alert title="Note" color="primary" >}}When selecting **Unlimited**, Limit, Quota Type and Limit Type are disabled. Be sure the underlying gateway can support the load.{{< /alert >}}
@@ -132,10 +132,12 @@ To configure a quota for a **Free plan**, enter the values for the following pro
 To configure a quota for a **Paid plan**, enter the values for the following properties:
 
 * **Quota Name** - a name for the quota.
-* **Quota Type** - select either **Standard**, **Tiered** or **Pay Per Use**:
+* **Consumption Unit** - the default is **Transactions**. You can select a different consumption unit if any is available in the system. Refer to [create a consumption unit](/docs/manage_product_foundry/manage_consumption_units#create-a-consumption-unit)*
+* **Pricing model** - select either **Standard**, **Tiered - volune**, **Tiered - graduated** or **Pay Per Use**:
     * Standard - has the same information as the free plan (**Unit**, **Limit**, **Quota Type**, **Limit Type**, **Overage** for loose limit type).
     * Tiered - for each tier, enter the **lower limit**, the **upper limit**, the **unit price**, and the **Standard** fees. There is no limit in the tier number. Click **+** to add another tier, or **-** to remove a tier definition. The lower limit of the next tier is automatically computed based on the upper limit of previous tier. The unlimited value is represented with the number 999999999 and automatically added to the last tier **upper limit**.
     * Pay Per Use - select the transaction unit cost.
+* **Assign Resources** - the list of resources the provider will charge for by a measured unit. Only the resources included in the plan can be selected. For that click the **+ Add Resources** button to open the resource selector screen.
 
 {{< alert title="Note" color="primary" >}}
 For Standard Quota Type, the quota period should be equal or less than the plan metering period. If plan metering period is monthly, you cannot define an annual quota period.
