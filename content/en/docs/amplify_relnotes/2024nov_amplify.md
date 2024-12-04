@@ -10,6 +10,16 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## November 25, 2024
+
+New features, enhancements, and bug fixes for the November 22 update.
+
+### Agents bug fixes for November 25, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01640474 | APIGOV-29229 | **Issue**: Transactions for an API that contain '-' in the path are not visible in Consumer Insights or Business Insights for a consumer organization. <br/>**Resolution**: A fix is now available in **Axway API Management Traceability Agent v1.2.9**. It is recommended to update to this version if your agent has encountered this issue. For upgrade instructions, refer to [Upgrade an agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/). |
+
 ## November 22, 2024
 
 New features, enhancements, and bug fixes for the November 22 update.
@@ -69,7 +79,6 @@ New features, enhancements, and bug fixes for the November 15 update.
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | 01649100 | APIGOV-29100 | **Issue**: Not able to view analytics data for v7 migrated applications with uppercase names <br/>**Resolution**: The agents have been updated to allow handling of application names that contain uppercase characters. |
-| 01640474 | APIGOV-29229 | **Issue**: Transactions for the an API that contains '-' in the path are not visible in Consumer Insights or in the Business Insights for a consumer organization. <br/>**Resolution**: A fix has been to show transaction data for APIs that contain **-** in the path name. |
 |  | APIGOV-29201 | **Issue**: The publish to marketplace button in service details brings up the create product sideblade <br/>**Resolution**: The **Publish to Marketplace** button now opens up the appropriate sideblade. |
 | | APIGOV-29184 | **Issue**: When adding a new endpoint in UI, it shows an error for a valid IP address <br/>**Resolution**: A fix has been released to allow configuring an endpoint with a valid IP address. |
 
