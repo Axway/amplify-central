@@ -94,11 +94,14 @@ To report custom unit, a service (Custom Unit Service) will have to be implement
 
 ### Flow
 
-Once a consumer request an access to an API via a Marketplace application, an event is generated. This event can be listen so that anyone can react on it.
+Once a consumer request an access to an API via a Marketplace application, an event is generated. This event can be listen so that anyone can react on it. Typically our Discovery Agent listen to that event to apply the quota on the Gateway when creating the application/api link.
 
-When an API call is made, the Gateway logs the information in eventlog or openlog. Traceability agent is listening these logs to create the corresponding metrics and send those metrics to Amplify Platform.
+When an API call is made, the Gateway logs the information in eventlog or openlog. Traceability agent is listening these logs to create the corresponding transaction metrics and send those metrics to Amplify Platform.
 
-The Custom Unit Service will have to listen to these too in order to compute the number of unit used and transfer this to the Traceability Agent so that then it reports it to the AMplify Platform.
+Regarding the custom consumption unit, the Custom Unit Service will have to:
+
+* listen to the provisioning quota so that it can be aware of the application/api linking and possibly add some quota enforcement on the Gateway
+* compute the number of unit used for a specific api under the application umbrella and transfer this information to the Traceability Agent to report it to the Amplify Platform.
 
 ### Service implementation
 
