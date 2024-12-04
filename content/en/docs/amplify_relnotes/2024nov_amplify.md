@@ -28,7 +28,7 @@ New features, enhancements, and bug fixes for the November 22 update.
 
 * **Azure Discovery Agent v1.3.8 - Entra ID Integration**
 
-  (NEW FEATURE, ON-PREM DISCOVERY AGENT, EMBEDDED DISCOVERY AGENT,)<br />
+  (NEW FEATURE, ON-PREM DISCOVERY AGENT, EMBEDDED DISCOVERY AGENT)<br />
   The Azure Discovery agent now supports managing **ClientID** and **ClientSecret** credentials in **Entra ID (formerly Azure AD)**. When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and CLientSecret to the published resources on Enterprise Marketplace. Marketplace consumers can seamlessly obtain the necessary credentials for their applications without additional setup. This feature is available for both Azure On-prem and Embedded Agents. To enable this feature, ensure that your Discovery Agent is updated to the latest version. Follow the updated documentation for guidance on configuring and managing Entra ID credentials for your APIs.
 
 ### Axway CLI updates for November 22, 2024
