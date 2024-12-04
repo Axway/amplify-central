@@ -19,4 +19,4 @@ New features, enhancements, and bug fixes for the December 2 update.
 * **New Agents Versions Available**
 
   (AGENT SDK UPDATE, DISCOVERY AGENT, TRACEABILITY AGENT,)<br />
-  New versions are available for our on-prem agents. Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes to the **Agent SDK v1.1.104**.
+  New versions are available for our on-prem agents. See [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes to the **Agent SDK v1.1.104**.
