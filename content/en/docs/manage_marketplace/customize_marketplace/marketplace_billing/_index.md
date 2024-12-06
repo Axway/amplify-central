@@ -22,7 +22,7 @@ Use billing integration to help manage the invoices for consumer organization su
 When billing integration is enabled for a specific Marketplace, each subscription originating from a consumer organization of this Marketplace will produce invoices:
 
 * One after the subscription approval time to start the trusted period with the customer and pay the base price plan cost
-* One at the end of each plan metering period to pay for the base plan price + the metering period consumption. This is automatically triggered at 2am UTC the next day of the last one of the month to accomodate the Traceability Agent to report any usage happening around midnight
+* One at the end of each plan metering period to pay for the base plan price + the metering period consumption. This is automatically triggered at 2 am following the last day of the month to accommodate any end-of-day Traceability Agent usage reporting.
 * A final one when the subscription is cancelled to pay the remaining consumption (from last metering period until the cancellation time)
 
 The invoices must be paid using a third-party payment tool. The available implementations are [Stripe](#stripe-billing-integration), [MyFatoorah](#myfatoorah-billing-integration) or a [custom integration](/docs/integrate_with_central/custom_billing).
