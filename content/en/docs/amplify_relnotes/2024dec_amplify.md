@@ -14,6 +14,12 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ### Agents bug fixes for December4, 2024
 
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-29292 | **Issue**: Environments with an agent without a status.version are throwing an error.<br/>**Resolution**: There is no error displayed in the environment details screen. |
+|  | APIGOV-29228 | **Issue**: The mock-server will 404 on APIs having a "servers" section.<br/>**Resolution**: If an API spec contains a "servers" section under a path, then mock-server will no longer respond with a 404 on it. A fix was added to remove the "servers" section of the loaded API spec before passing it to the prism library.|
+| 01609369 | APIGOV-28448 | **Issue**: The metric for Services discovered by the Discovery Agent is reflected inappropriately as "Registered Services" in the Overview dashboard when it should be under "Discovered Services.<br/>**Resolution**: A fix was made to display only a single metric for Registered Services during the selected time period, which will cover both manually registered and automatically discovered services.|
+
 ### Marketplace updates for December 4, 2024
 
 * **Tiered Plan Quota Limits**
