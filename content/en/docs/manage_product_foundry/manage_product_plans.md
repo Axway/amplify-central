@@ -14,7 +14,7 @@ Learn how to create and configure the product plan using the Product Foundry Web
 
 **Plan** - contains the details about how to charge consumers, how often and how much.
 
-**Quotas** - describes the itemized units per resource or group of resources in the product, and how much of those units they are entitled to use over a billing period.
+**Quotas** - describe the itemized units per resource or group of resources in the product, and how much of those units they are entitled to use over a billing period.
 
 **Consumption Units** - defines the billable units. For example: Transactions, Seats, Messages. Used with the quotas to describe the pricing and how many units a consumer is entitled to use.
 
@@ -176,6 +176,10 @@ To configure the type of approval when a subscriber submits a request to purchas
 When you are finished creating the plan, click **Save Draft and Exit** to save the product plan in DRAFT state.
 
 ## Edit product plans
+
+A plan that is in a Draft state can be edited.
+
+A plan that is in an Active state can also be edited, but is limited to adding a new resource to an existing quota or adding a new quota with resources that are not already part of an existing quota.
 
 1. Navigate to the *Product Foundry* and select a product.
 2. Click on the **Plans** tab. All plans configured for this product are displayed.

@@ -117,17 +117,13 @@ For more information regarding agents' installation, see [Axway gateway agents](
 
 You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Business Insights -> API Health** menu.
 
-Once Traceability Agent starts, it detects the gateway traffic, and begins counting the transactions. The Traceability Agent sends the Transaction Metrics to the platform on a regular basis (default is 15 minutes).
+Once Traceability Agent starts, it detects the gateway traffic, and begins counting the transactions. The Traceability Agent sends the Transaction Metrics to the platform on a regular basis (default is 1 hour).
 
 To change the reporting interval for the On-premise Traceability Agent, use the `CENTRAL_METRICREPORTING_SCHEDULE` variable with cron expressions:
 
 ```shell
 # report every hour
 CENTRAL_METRICREPORTING_SCHEDULE=@hourly
-
-# report every 15 minutes
-CENTRAL_METRICREPORTING_SCHEDULE="*/15 * * * *"
-
 ```
 
 If for any reason the Transaction Metrics report cannot be uploaded to Amplify platform, the data are kept in memory and will be pushed at the next trigger interval.

@@ -29,16 +29,39 @@ To view products:
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
 
-View the following information for all products in any state (Draft, Active, Deprecated, Active):
+There are two different product views, List View and Card View. The List View is the default option when you visit the page.
+
+In List View, the following product information is displayed:
+
+* Product icon - The icon / image representing the product, if any
+* Product Name - The display name for the product in the WebUI
+* Product Description - A short description of the product
+* Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
+* State - Current state of a product - Draft, Active, Deprecated. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
+* Current version - The most recent version number. Can be `---` if the product is not released.
+* Asset - The number of asset(s) linked to the product
+* Subscriptions - Shows how many subscriptions there are for the product
+* Owning Team - The team responsible for the product
+* Modified - Date of the last modification
+* Action menu - The ellipsis menu to manage the product
+    * Publish - Publish the product to the Marketplace
+    * Translate - Translate the product documentation
+    * Create Plan - Create a plan for the product
+    * Archive - Archive the product
+    * Delete - Delete the product
+
+In Card View, the following product information is displayed:
 
 * Product icon - The icon / image representing the product, if any
 * Product Name - The display name for the product in the WebUI
 * Marketplace status - PUBLISHED if the product is available in the Marketplace or UNPUBLISHED if the product is not yet available in the Marketplace
-* State - Current state of a product - Draft, Active, Deprecated, Active. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information
-* Current version - The most recent version number. Can be `---` if the product is not released
+* State - Current state of a product - Draft, Active, Deprecated. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
+* Current version - The most recent version number. Can be `---` if the product is not released.
 * Asset Name and Type - The asset(s) linked to the product
 * Trash icon - Activated only when the product can be deleted
-* Marketplace icon - Enable to publish the product to the Marketplace. Disable to not publish
+* Marketplace icon - Enable to publish the product to the Marketplace. Disable to not publish.
+
+Click the view switch icon at the top-right to switch between the Card View and List View.
 
 You can also filter the products by categories, state and owning team using the **Filter By** controls. Search by name, title and tag with the search bar.
 
@@ -61,7 +84,7 @@ View the following detailed information for a specific product in any state (Dra
 * Release Management - The Product is set for either **Automatic** or **Manual release** of new versions. The setting **Automatic (On hold)** is possible if the product is in a draft state with auto-release set to **Automatic**. The product draft must be manually "activated" to resume auto-release handling.
 * Publication button - Publish / Unpublish the product to a specific Marketplace
 * Description - A short description of the product
-* Version panel - Shows all the existings product releases
+* Version panel - Shows all the existing product releases
     * Version name / Custom version name (if any) / release type as a tooltip
     * Version state - Draft, Active, Deprecated, Archived. See [Product lifecycle](/docs/manage_product_foundry/foundry_product_lifecycle/) for additional information.
     * Version created date
@@ -169,7 +192,7 @@ Click **Edit** (pencil button) at top right to edit the following without creati
 
     * **Preview Asset** - view product changes prior to taking effect.
     * **Save as Draft** - update changes to a product when edits require a new product release (Link Asset edits). This action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
-    * **Save & Activate** - update changes in a product version release when edits require a new product release (Link Asset edits) and Auto-release is disablesdisabled.
+    * **Save & Activate** - update changes in a product version release when edits require a new product release (Link Asset edits) and Auto-release is disabled.
 
 ## Create a plan
 

@@ -10,6 +10,59 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## November 25, 2024
+
+New features, enhancements, and bug fixes for the November 22 update.
+
+### Agents bug fixes for November 25, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01640474 | APIGOV-29229 | **Issue**: Transactions for an API that contain '-' in the path are not visible in Consumer Insights or Business Insights for a consumer organization. <br/>**Resolution**: A fix is now available in **Axway API Management Traceability Agent v1.2.9**. It is recommended to update to this version if your agent has encountered this issue. For upgrade instructions, refer to [Upgrade an agent](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent/). |
+
+## November 22, 2024
+
+New features, enhancements, and bug fixes for the November 22 update.
+
+### Agents updates for November 22, 2024
+
+* **Azure Discovery Agent v1.3.8 - Entra ID Integration**
+
+  (NEW FEATURE, ON-PREM DISCOVERY AGENT, EMBEDDED DISCOVERY AGENT)<br />
+  The Azure Discovery agent now supports managing **ClientID** and **ClientSecret** credentials in **Entra ID (formerly Azure AD)**. When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and CLientSecret to the published resources on Enterprise Marketplace. Marketplace consumers can seamlessly obtain the necessary credentials for their applications without additional setup. This feature is available for both Azure On-prem and Embedded Agents. To enable this feature, ensure that your Discovery Agent is updated to the latest version. Follow the updated documentation for guidance on configuring and managing Entra ID credentials for your APIs.
+
+### Axway CLI updates for November 22, 2024
+
+The latest version of the [Axway CLI is v3.2.15 on NPM](https://www.npmjs.com/package/axway/v/3.2.15).
+This release contains a fix that removes the unnecessary Platform logout confirmation dialog.
+
+### Marketplace bug fixes for November 22, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01656035 | APIGOV-29220 | **Issue**: Marketplace footer issue <br/>**Resolution**: A fix was added so taht the footer section does not overlap with the resource list when the table contains large number of resources.|
+
+## November 20, 2024
+
+### Marketplace bug fixes for November 20, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| | APIGOV-29152 | **Issue**: Not all access request are visible in the application details <br/>**Resolution**: Limit increased to view 50 access request per application. |
+| 01607206 | APIGOV-28846 | **Issue**: Web server version disclosure <br/>**Resolution**: Remove the server information when no path match the request. |
+| 01607206 | APIGOV-28845 | **Issue**: Failure to sanitize parameters <br/>**Resolution**: Remove input value from validation message for query parameters |
+
+## November 16, 2024
+
+New features, enhancements, and bug fixes for the November 16 update.
+
+### Marketplace updates for November 16, 2024
+
+* **Introducing the table view in Product Foundry**
+
+  (NEW FEATURE, PROVIDER EXPERIENCE, PRODUCT FOUNDRY)<br />
+  Users now have the flexibility to switch between the existing **Card Layout** and the new default **Table Layout** using the toggle buttons at the top of the product list page. The action menu contains options to **Publish** to Marketplace, **Translate** into a language of your choice, **Create plan** to monetize the product, **Archive** to retire the product and allow for **Delete**.
+
 ## November 15, 2024
 
 New features, enhancements, and bug fixes for the November 15 update.
@@ -20,6 +73,14 @@ New features, enhancements, and bug fixes for the November 15 update.
 
     (NEW AGENT RELEASES)<br />
     New versions are available for our on-prem agents. Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes and improvements to the Agent SDK.
+
+### Agents bug fixes for November 15, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01649100 | APIGOV-29100 | **Issue**: Not able to view analytics data for v7 migrated applications with uppercase names <br/>**Resolution**: The agents have been updated to allow handling of application names that contain uppercase characters. |
+|  | APIGOV-29201 | **Issue**: The publish to marketplace button in service details brings up the create product sideblade <br/>**Resolution**: The **Publish to Marketplace** button now opens up the appropriate sideblade. |
+| | APIGOV-29184 | **Issue**: When adding a new endpoint in UI, it shows an error for a valid IP address <br/>**Resolution**: A fix has been released to allow configuring an endpoint with a valid IP address. |
 
 ## November 14, 2024
 
