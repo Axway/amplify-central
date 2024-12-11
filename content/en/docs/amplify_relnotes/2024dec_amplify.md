@@ -16,16 +16,16 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-29292 | **Issue**: Environments with an agent without a status.version are throwing an error.<br/>**Resolution**: There is no error displayed in the environment details screen. |
-|  | APIGOV-29228 | **Issue**: The mock-server will 404 on APIs having a "servers" section.<br/>**Resolution**: If an API spec contains a "servers" section under a path, then mock-server will no longer respond with a 404 on it. A fix was added to remove the "servers" section of the loaded API spec before passing it to the prism library.|
-| 01609369 | APIGOV-28448 | **Issue**: The metric for Services discovered by the Discovery Agent is reflected inappropriately as "Registered Services" in the Overview dashboard when it should be under "Discovered Services.<br/>**Resolution**: A fix was made to display only a single metric for Registered Services during the selected time period, which will cover both manually registered and automatically discovered services.|
+|  | APIGOV-29292 | **Issue**: Environments that have an agent without a status.version are throwing an error.<br/>**Resolution**: The error is no longer displayed in *environment details*. |
+|  | APIGOV-29228 | **Issue**: The mock server errors with 404 on APIs having a "servers" section.<br/>**Resolution**: If an API spec contains a "servers" section under a path, then mock-server will no longer respond with a 404. The "servers" section of the loaded API spec is now removed before being passed to the prism library.|
+| 01609369 | APIGOV-28448 | **Issue**: The metric for services discovered by the Discovery Agent is reflected inappropriately as "Registered Services" in the *Overview dashboard* when it should be under "Discovered Services".<br/>**Resolution**: A single metric is now displayed for Registered Services during the selected time period, which will cover both manually registered and automatically discovered services.|
 
 ### Marketplace updates for December 4, 2024
 
 * **Tiered Plan Quota Limits**
 
   (PRODUCT FOUNDRY, ENHANCEMENT)<br />
-  This feature enables users to enforce specific unit quantity limits per **day, week, or month**, regardless of the tiered pricing structure applied to the total usage during a billing cycle. Providers can ensure consumers stay within defined usage lkimits on a daily, weekly, or monthly basis, by capping usage at predefined thresholds.
+  This feature enables users to enforce specific unit quantity limits per **day, week, or month**, regardless of the tiered pricing structure applied to the total usage during a billing cycle. Providers can ensure consumers stay within defined usage limits on a daily, weekly, or monthly basis by capping usage at predefined thresholds.
   
   **Limitation**<br />
   Currently, quota limits **cannot be enforced on a per-minute or per-hour basis**. This limitation will be addressed in a future release to provide even finer granularity for usage controls.
@@ -51,4 +51,4 @@ New features, enhancements, and bug fixes for the December 2 update.
 
 * **Introducing Axway Central CLI version 3.8.0**
   
-The latest version of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.8.0) is **v3.8.0** on NPM. For details on Central CLI commands, see Axway Central CLI Command reference.
+The latest version of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.8.0) is **v3.8.0** on NPM. For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference).
