@@ -174,7 +174,7 @@ This feature is not yet available from the UI, but you can use the CLI or API to
 
 ### Templates
 
-A documentation template is a complete or partial set of Topic/Section and articles that can be use as a basis to create the product documentation.
+A documentation template is a complete or partial set of Topics/Sections and articles that can be use as a basis to create the product documentation.
 
 A topic can have one or more section.
 
