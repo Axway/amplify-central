@@ -21,7 +21,7 @@ Learn how to use the Document Library WebUI to:
 * Delete a document
 * Create a documentation template
 
-## library content
+## Library content
 
 To view the library content, navigate to *Document Library*.
 
@@ -221,16 +221,16 @@ To create a template:
 8. click **Save & Exit**. Save & Exit can be used any time in the wizard and it will save the current state of the template. To update a template use the ellipsis Edit menu.
 
 {{< alert title="Note" color="information" >}}
-Each time you select a topic, section, articles from the documentation structure, its content is visible on the right side of the screen. The pencil icon allows to edit the content from there.
+Each time you select a topic, section, article from the documentation structure, its content is visible on the right side of the screen. The pencil icon allows to edit the content from there.
 
-Topic, Section and articles can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reorder. A section can be move inside a topic or to another topic. An article can be moved inside its section or to another section.
+Topic, Section and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reorder. A section can be move inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
 
-Topic, Section and articles can be deleted using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
+Topic, Section and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
 {{< /alert >}}
 
 #### Edit a template
 
-To create a template:
+To edit a template:
 
 1. Navigate to *Document Library* and select the *Templates* tab
 2. Select the ellipsis menu associated with the document you want to edit and click **Edit**. This will open the template wizard. You can change anything you want using the Pencil icon to edit a topic or a section, the **+ Add topic** to add new topic, the **+ Add section** to add new section and the **+ Add article** to add new articles. Topic, section and articles can be removed using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
