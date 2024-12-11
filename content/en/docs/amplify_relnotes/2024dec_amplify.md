@@ -12,7 +12,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ## December 4, 2024
 
-### Agents bug fixes for December4, 2024
+### Agents bug fixes for December 4, 2024
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
@@ -40,6 +40,12 @@ New features, enhancements, and bug fixes for the December 2 update.
 
   (AGENT SDK UPDATE, DISCOVERY AGENT, TRACEABILITY AGENT)<br />
   New versions are available for our on-prem agents. Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. This update includes several bug fixes to the **Agent SDK v1.1.104**.
+
+### Agents bug fixes for December 2, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01663226 | APIGOV-29338 | **Issue**: Traceability Agent errors with 403 Forbidden upon starting when the proxy's whitelist includes only the FQDN central.eu-fr.axway.com but not its IPs.<br/>**Resolution**: A fix was released with Traceability Agent **v1.2.10** to not error out upon starting when the proxy whitelist does not include the IP. |
 
 ### Axway Central CLI updates for December 2, 2024
 
