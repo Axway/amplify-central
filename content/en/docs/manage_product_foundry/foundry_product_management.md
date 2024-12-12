@@ -128,21 +128,24 @@ View the following detailed information for a specific product in any state (Dra
     * (Optional) Archive previous version - Automatically archives the previous version when releasing a product. Disabled by default.
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
-7. Select a Usage Plan. One free plan will be automatically added to the product. Click **Next**.
-8. Add the quota to the plan. By default, one quota is added. You can assign multiple resource to the quota, but each resource can be part of only one quota. To add a quota, click **+ Add Quota** and select the resources and the limit for the quota. Click **Next**.
-9. Add documentation elements (sections and articles). By default, an empty document is created.
+7. Add documentation: select a document template or start from blank document
 
-    * Update the document name and description.
-    * Click the folder icon to add a new section at the end of the document.
-    * Click the file icon to add an article to the current section (if one is selected); otherwise, it will be added in the last section of the selected document. Note that each section has a name and a description.
-    * Use the markdown editor to format and preview your article to validate the final rendering. The text is automatically saved.
-    * Repeat these steps for all sections and articles you are adding to the product. Once your documentation is ready, click **Next**.
+    * when selecting to start from template, a page displays the available template list visible to your team(s), you can preview the template using the **Preview template** button to get information about the selected template. Once you found the template you want to use, click the corresponding radio button on the template card and then click **Next**. The documentation structure is immediately created based on the template structure and can be updated as needed.
+    * when selecting to start from blank page, you will have to create the documentation structure manually.
+    * if you decide to change your mind, a warning message will be displayed to inform you that you can loose what documentation elements has been created so far. If you whish to keep them, only use th **Next** button and not the button allowing to select from a template or a blank page.
+    * Edit documentation elements (topics, sections and articles).
+        * **+ Add topic** enables to add a new topic
+        * **+ Add section** enables to add a new section into a topic
+        * Once a section is available, **+ Add article** enables to add a Markdown article or link an article from a document library document.
+        * Each time you select a topic, section, article from the documentation structure, its content is visible on the right side of the screen. The pencil icon allows to edit the content from there.
+        * Topic, Section and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reorder. A section can be move inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
+        * Topic, Section and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
+        * Once your documentation is ready, click **Next**.
 
-10. For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it.
-If you want your product shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected product. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your product with the chosen "Rights". This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
-11. (Optional step) Provide one support contact so consumers can get product help, if needed. Click **+ Add new contact** and enter the contact information. Click **Next**.
-12. Provide the Tags, Attribute, and Category details for the product.
-13. Click **Preview Product** to view the details prior to creation. At his point, you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
+8. For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you want your product shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected product. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your product with the chosen "Rights". This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
+9. (Optional step) Provide one support contact so consumers can get product help, if needed. Click **+ Add new contact** and enter the contact information. Click **Next**.
+10. Provide the Tags, Attribute, and Category details for the product.
+11. Click **Preview Product** to view the details prior to creation. At his point, you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
 
 If the product was created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published in the Marketplace.
 
