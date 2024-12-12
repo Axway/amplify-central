@@ -142,12 +142,12 @@ View the following detailed information for a specific product in any state (Dra
         * Topic, Section and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
         * Once your documentation is ready, click **Next**.
 
-8. For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you want your product shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected product. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your product with the chosen "Rights". This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
+8. (Optional step) For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you want your product shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected product. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your product with the chosen "Rights". This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
 9. (Optional step) Provide one support contact so consumers can get product help, if needed. Click **+ Add new contact** and enter the contact information. Click **Next**.
-10. Provide the Tags, Attribute, and Category details for the product.
+10. (Optional step) Provide the Tags, Attribute, and Category details for the product.
 11. Click **Preview Product** to view the details prior to creation. At his point, you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
 
-If the product was created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published in the Marketplace.
+If the product was created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published to a Marketplace.
 
 ## Create a product release
 
