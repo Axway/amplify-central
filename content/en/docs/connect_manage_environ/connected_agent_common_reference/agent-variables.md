@@ -79,15 +79,15 @@ The variables common to all agents are described here in more detail.
 
 #### Custom unit metric service variables
 
-For more information about the following variables see [Use Custom Units with Discovery and Traceability Agents](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics).
+For more information about the following variables, see [Use Custom Units with Discovery and Traceability Agents](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics).
 
-All of the variables in this list may be repeated for each metric service to be used. Each set of variables should be appended with an index number (ie. `AGENTFEATURES_METRICSERVICES_ENABLE_1=true`)
+All of the variables in this list may be repeated for each metric service to be used. Each set of variables should be appended with an index number (i.e., `AGENTFEATURES_METRICSERVICES_ENABLE_1=true`).
 
 | Variable name                             | Description                                                                                         |
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| AGENTFEATURES_METRICSERVICES_ENABLE       | Set to true to enable this metric service URL                                                       |
-| AGENTFEATURES_METRICSERVICES_URL          | The URL, host and port number, that the metric service is listening on                              |
-| AGENTFEATURES_METRICSERVICES_REJECTONFAIL | If set to true, any error with the quota enforcement will fail the provisioning event in Marketplace |
+| AGENTFEATURES_METRICSERVICES_ENABLE       | Set to true to enable this metric service URL.                                                       |
+| AGENTFEATURES_METRICSERVICES_URL          | The URL, host and port number, that the metric service is listening on.                              |
+| AGENTFEATURES_METRICSERVICES_REJECTONFAIL | If set to true, any error with the quota enforcement will fail the provisioning event in Marketplace. |
 
 ### Discovery Agent only variables
 
