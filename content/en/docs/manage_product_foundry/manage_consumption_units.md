@@ -109,7 +109,7 @@ This service will be accessed by the Discovery Agent to inform when a quota havi
 
 This service will send information related to custom unit consumption to the Traceability Agent so that the Traceability Agent can report the metrics to the Amplify Platform.
 
-Refer to [Use Custom Units with Discovery and Traceability Agents](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics) for more information about its implementation.
+Refer to [Reporting custom unit usage](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics) for more information about its implementation.
 
 ## Visualize consumption unit in Business or Consumer Insights
 
