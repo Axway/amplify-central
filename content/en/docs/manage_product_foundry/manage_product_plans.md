@@ -129,7 +129,7 @@ To configure a quota for a **Free plan**, enter the values for the following pro
 
 * Quota profile:
     * **Quota Name** - a name for the quota.
-    * **Consumption Unit** - the default is **Transactions**. You can select a different consumption unit if any is available in the system. Refer to [create a consumption unit](/docs/manage_product_foundry/manage_consumption_units#create-a-consumption-unit)
+    * **Consumption Unit** - the default is **Transactions**. You can select a different consumption unit if any are available in the system. Refer to [create a consumption unit](/docs/manage_product_foundry/manage_consumption_units#create-a-consumption-unit)
 * Quota usage limit:
     * **Toggle** - activate a separate quota enforcement than the plan billing period.
     * **Interval** - the quota's period enforcement on the gateway: choose between Daily, Weekly, Monthly or Annually.
@@ -149,7 +149,7 @@ To configure a quota for a **Paid plan**, enter the values for the following pro
 
 * Quota profile:
     * **Quota Name** - a name for the quota.
-    * **Consumption Unit** - the default is **Transactions**. You can select a different consumption unit if any is available in the system. Refer to [create a consumption unit](/docs/manage_product_foundry/manage_consumption_units#create-a-consumption-unit)
+    * **Consumption Unit** - the default is **Transactions**. You can select a different consumption unit if any are available in the system. Refer to [create a consumption unit](/docs/manage_product_foundry/manage_consumption_units#create-a-consumption-unit)
 * Quota usage limit:
     * **Toggle** - activate a separate quota enforcement than the plan billing period.
     * **Interval** - the quota's period enforcement on the gateway: choose between Daily, Weekly, Monthly, or Annually.
