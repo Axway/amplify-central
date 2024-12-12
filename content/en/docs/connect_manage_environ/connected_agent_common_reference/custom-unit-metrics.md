@@ -33,7 +33,7 @@ It includes two RPC services and the associated message structures.
 
 ### Quota Enforcement service
 
-The Quota Enforcement service works with Discovery Agents to manage quota-related events.
+The **Quota Enforcement service** works with Discovery Agents to manage quota-related events.
 Workflow
 
 1. **Trigger Event**: When an AccessRequest resource event occurs, the Discovery Agent calls the Quota Enforcement service.
