@@ -4,7 +4,7 @@ linkTitle: Manage consumption units
 weight: 75
 ---
 
-MAnage the consumption units you want to monetize.
+Manage the consumption units you want to monetize.
 
 ## Objectives
 
@@ -12,29 +12,34 @@ Learn how to create consumption unit.
 
 ## Concepts
 
-A consumption unit defines the billable units. For example: Transactions, Seats, Messages. Used with the quotas to describe the pricing and how many units a consumer is entitled to use.
+A **consumption unit** represents the billable unit of measurement used to define and track how resources or services are consumed. It is a fundamental concept for managing quotas and determining pricing in usage-based systems. Common consumption units include **Transactions**, **Seats**, **Messages**, or any custom unit defined for specific business needs.
 
-By default the product comes with the **Transaction** consumption unit. This allow to bill consumer based on the number of request they are executing.
+Consumption units are used to:
+
+* Define how many units a consumer is entitled to use (quotas).
+* Establish the basis for billing consumers based on their usage.
+
+By default, the product includes the **Transaction** consumption unit. This allows billing to be based on the number of requests the clients execute.
 
 ## View a consumption unit
 
 Catalog Manager or Central Administrator can view consumption unit.
 
-1. Navigate to *Catalog > Product Foundry* > **Consumption Units**. This open the consumption unit page.
+1. Navigate to *Catalog > Product Foundry* > **Consumption Units**. This open the **Consumption Units** page where you can view the list of all available consumption units.
 
-View the following information for all consumption units:
+On the Consumption Units page, you can view the following information for each consumption unit:
 
-* Unit name - The name displayed to consumer in the plan quota definition.
+* Unit name - The display name of the consumption unit, shown to consumers in the plan quota definition.
 * Logical Name - The technical identifier of the consumption unit.
-* Description - The consumption unit description to help understand its purpose.
-* Plans - number of plan that are currently using that unit.
-* Modified date - last know modification date
+* Description - A brief description explaining the purpose of the consumption unit.
+* Plans - The number of product plans currently using this consumption unit.
+* Modified date - The date when the consumption unit was last updated.
 
-The ellipsis menu allows to:
+The ellipsis (⋮) menu next to each consumption unit offers additional management options:
 
-* Edit - for [updating](#edit-a-consumption-unit) the consumption unit
-* Translate - for [translating](#consumption-unit-multi-language) the title and description of the consumption unit
-* Delete = for [deleting](#delete-a-consumption-unit) the consumption unit
+* **Edit** - Allows you to update the details of a consumption unit. Refer to [Edit a Consumption Unit](#edit-a-consumption-unit) section for detailed instructions.
+* **Translate** - nables you to translate the title and description of the consumption unit into multiple languages. For more information, see  [Consumption Unit multi-language](#consumption-unit-multi-language).
+* **Delete** = To [deleting](#delete-a-consumption-unit) the consumption unit from the product.
 
 ## Create a consumption unit
 
@@ -90,18 +95,23 @@ Once a default language is selection, you can add the other needed languages by 
 
 ## Report a consumption unit
 
-To report custom unit, a service (Custom Unit Service) will have to be implemented in order to compute the information the Traceability Agent will send back to Amplify Platform.
+To report a custom unit, you need to create a Custom Unit Service. This service will calculate the necessary information for the Traceability Agent to send back to the Amplify Platform.
 
 ### Flow
 
-Once a consumer request an access to an API via a Marketplace application, an event is generated. This event can be listen so that anyone can react on it. Typically our Discovery Agent listen to that event to apply the quota on the Gateway when creating the application/api link.
+When a consumer requests access to an API via a Marketplace application, an event is generated. This event can be monitored so that systems can respond to it. For example, the Discovery Agent listens for this event to apply a quota on the Gateway when linking the application to the API.
 
-When an API call is made, the Gateway logs the information in eventlog or openlog. Traceability agent is listening these logs to create the corresponding transaction metrics and send those metrics to Amplify Platform.
+When an API call is made, the Gateway logs the activity in **eventlog** or **openlog**. The Traceability Agent monitors these logs to generate transaction metrics and sends those metrics to the Amplify Platform.
 
-Regarding the custom consumption unit, the Custom Unit Service will have to:
+For custom consumption units, the Custom Unit Service needs to:
 
-* listen to the provisioning quota so that it can be aware of the application/api linking and possibly add some quota enforcement on the Gateway
-* compute the number of unit used for a specific api under the application umbrella and transfer this information to the Traceability Agent to report it to the Amplify Platform.
+1. **Monitor Quota Provisioning**:
+   * Listen for quota provisioning events to track application and API link creation.
+   * Optionally enforce quotas on the Gateway during this process.
+2. **Calculate and Report Usage**:
+   * Compute the number of custom units used for a specific API within the application.
+   * Send this usage data to the Traceability Agent, which reports it to the Amplify Platform.
+   * This process ensures that custom units are properly tracked and integrated with the Amplify Platform for reporting and enforcement.
 
 ### Service implementation
 
