@@ -4,7 +4,7 @@ linkTitle: Reporting custom unit usage
 draft: false
 weight: 10
 ---
-The Marketplace allows the creation and tracking of custom units, which can also be tied to a Product Plan Quota. To enable tracking and associate custom units with the appropriate quotas, the Discovery and Traceability agents have been enhanced to connect to a custom metric reporting service. This guide will help you implement and configure this functionality.
+The Marketplace allows the creation and tracking of custom units, which can also be tied to a Product Plan Quota. To enable tracking and associate custom units with the appropriate quotas, the Discovery and Traceability agents connect to a custom metric reporting service. This guide will help you implement and configure this functionality.
 
 {{< alert title="Note" color="primary" >}}
 This feature requires agents built with SDK version 1.1.104 or later.
@@ -17,21 +17,18 @@ This feature requires agents built with SDK version 1.1.104 or later.
 
 ## Objectives
 
-By the end of this guide, you will be able to:
+Learn how to create a sample custom unit metric service using [Go](https://go.dev/) and then configure your Discovery and Traceability agents to connect to the custom metric service.
 
-1. Create a sample custom unit metric service using [Go](https://go.dev/)
-2. Configure your Discovery and Traceability agents to connect to the custom metric service.
+## Create a custom unit metric service
 
-## Step1: Create a custom unit metric service
+A custom unit metric service allows you to report and manage custom unit usage, and can be implemented in any supported language. This guide uses [Go](https://go.dev/) as an example.
 
-Custom metric service allows you to report and manage custom unit usage. Custom unit metric services can be implemented in any supported language. This guide uses [Go](https://go.dev/) as an example.
-
-Access the Protocol Buffer File
+### Access the Protocol Buffer file
 
 You can find the Protocol Buffer file in the Agent SDK repository [here](https://github.com/Axway/agent-sdk/tree/main/proto/customunits).
-It includes two RPC services and the associated message structures.
+It includes the following two RPC services and the associated message structures.
 
-### Quota Enforcement service
+#### Quota Enforcement service
 
 The **Quota Enforcement service** works with Discovery Agents to manage quota-related events.
 
@@ -46,16 +43,11 @@ The **Quota Enforcement service** works with Discovery Agents to manage quota-re
 
 **Example: Handling Quota Info**:
 
-In this example, the metric service process the `quotaInfo` message
+In this example, the metric service process the `quotaInfo` message.
 
-* it checks for quota data in the message
-* the service performs necessary operations and stores related Applications and API IDs, the ones which relate to the gateway the agent connects to.
-* These IDs will later be used for reporting metric usageExample: Handling Quota Info
-In this example, the metric service processess the quotaInfo message
-
-it checks for quota data in the message
-the service performs necessary operations and stores related Applications and API IDs, the ones which relate to the gateway the agent connects to.
-These IDs will later be used for [reporting metric usage](#metric-reporting-service).
+* It checks for quota data in the message.
+* The service performs necessary operations and stores related applications and API IDs, the ones which relate to the gateway the agent connects to.
+* These IDs will later be used for [reporting metric usage](#metric-reporting-service).
 
 ```go
 package services
@@ -106,18 +98,18 @@ func (s *quotaEnforcementServiceServer) QuotaEnforcementInfo(ctx context.Context
 }
 ```
 
-### Metric Reporting service
+#### Metric Reporting service
 
 The **MetricReporting** service is used by **Traceability Agents** to send custom metric usage reports.
 
-**Key Points**:
+**Key points**:
 
 * Upon startup, the Traceability Agent establishes a persistent connection to each connected service.
 * Metric usage reports are sent via this connection as needed.
 * The agent caches received reports and includes them in its periodic metric reporting cycle.
 * If the connection is lost, the agent retries until the connection is restored.
 
-**Example: Reports metrics events**:
+**Report metrics events example**:
 
 In the following sample the metric service receives a connection from the agent and sends reports back.
 
@@ -209,11 +201,11 @@ func (s *metricReportingServiceServer) createMetricReport(report data) *customun
 }
 ```
 
-## Step 2: Setup the agent configuration
+## Set up the agent configuration
 
 Both Discovery and Traceability agents require configuration to connect to the custom metric service.
 
-**Configuration Example**:
+**Configuration example**:
 
 Assume the metric service is hosted on the same machine as the agents (localhost) and listens on port 50011. Add the following environment variables to the agent's configuration:
 
@@ -224,8 +216,4 @@ AGENTFEATURES_METRICSERVICES_URL_1=localhost:50011
 
 ## Summary
 
-You have now:
-
-* Created a custom unit metric service to manage quotas and track usage.
-* Configured Discovery and Traceability agents to connect to the service.
-With these steps completed, your agents can enforce quotas for custom units and report usage effectively.
+Once you have created a custom unit metric service and configured Discovery and Traceability agents to connect to the service, your agents are ready to enforce quotas for custom units and report usage.
