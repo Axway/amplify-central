@@ -38,8 +38,8 @@ On the Consumption Units page, you can view the following information for each c
 The ellipsis (⋮) menu next to each consumption unit offers additional management options:
 
 * **Edit** - Allows you to update the details of a consumption unit. Refer to [Edit a Consumption Unit](#edit-a-consumption-unit) section for detailed instructions.
-* **Translate** - nables you to translate the title and description of the consumption unit into multiple languages. For more information, see  [Consumption Unit multi-language](#consumption-unit-multi-language).
-* **Delete** = To [deleting](#delete-a-consumption-unit) the consumption unit from the product.
+* **Translate** - Enables you to translate the title and description of the consumption unit into multiple languages. For more information, see  [Consumption Unit multi-language](#consumption-unit-multi-language).
+* **Delete** - To [deleting](#delete-a-consumption-unit) the consumption unit from the product.
 
 ## Create a consumption unit
 
