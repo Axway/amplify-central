@@ -96,7 +96,7 @@ Click **Applications** to see metrics and charts about the performance of API as
 
   ![Example of App usage](/Images/central/app_usage.png)
 
-You can filter by consuming team, application, product, service, and a pre-configured timeframe or customize your own.
+You can filter by consuming team, application, product, service, consumption units and a pre-configured timeframe or customize your own.
 
 Click an individual item to see the products with the service name and number of transactions per service.
 
@@ -108,7 +108,7 @@ Click **Subscriptions** to see a list of the consumer team with their subscripti
 
 ![Example of Subscriptions](/Images/central/subscriptions.png)
 
-You can filter by consuming team, product, resource (API), application, subscription, and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
+You can filter by consuming team, product, resource (API), application, subscription, consumption units and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
 
 Click the **Actions (..) menu** to download the table data.
 
