@@ -56,7 +56,7 @@ New features, enhancements, and bug fixes for the December 12 update.
 |  | APIGOV-29292 | **Issue**: Environments that have an agent without a *status.version* are throwing an error.<br/>**Resolution**: The error is no longer displayed in *environment details*. |
 |  | APIGOV-29228 | **Issue**: The mock server errors with 404 on APIs having a "servers" section.<br/>**Resolution**: If an API spec contains a "servers" section under a path, then the mock server will no longer respond with a 404. The "servers" section of the loaded API spec is now removed before being passed to the prism library.|
 | 01609369 | APIGOV-28448 | **Issue**: The metric for services discovered by the Discovery Agent is reflected inappropriately as "Registered Services" in the *Overview dashboard* when it should be under "Discovered Services".<br/>**Resolution**: A single metric is now displayed for Registered Services during the selected time period, which will cover both manually registered and automatically discovered services.|
-|  | APIGOV-29391 | **Issue**: API calls occasionally fail contacting API Manager.<br/>**Resolution**: Automatic retries for all API calls to v7 was added to the discovery agent. The fix is available in Axway API Management discovery agent **v1.2.11**. |
+|  | APIGOV-29391 | **Issue**: API calls occasionally fail contacting API Manager.<br/>**Resolution**: Automatic retries for all API calls to v7 was added to the Discovery Agent. The fix is available in Axway API Management Discovery Agent **v1.2.11**. |
 
 ### Marketplace updates for December 4, 2024
 
