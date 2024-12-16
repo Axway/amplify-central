@@ -34,7 +34,6 @@ New features, enhancements, and bug fixes for the December 12 update.
   (PRODUCT FOUNDRY, NEW FEATURE, PROVIDER EXPERIECE)<br />
 Enables you to define and manage custom consumption metrics for more tailored monetization strategies that better align with the unique requirements of your offerings. You can incorporate these custom-defined units into your plan for quota allocation to control how many units a consumer is entitled to use, and monitor the usage in Business Insights.<br />
 
-  **How it works**
    * Track and report consumption usage on this custom defined unit. This can be achieved by implementing a Custom Unit Service that will communicate with the Discovery and Traceability Agents. Refer to [Reporting custom unit usage](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics) for more information about its implementation.
 
   This feature empowers you to align your quota system with custom metrics that reflect the value of your services, providing greater flexibility and revenue potential. Refer to [Manage consumption units](/docs/manage_product_foundry/manage_consumption_units) for more details.
