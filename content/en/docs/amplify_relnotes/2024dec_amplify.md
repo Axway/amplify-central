@@ -36,7 +36,6 @@ New features, enhancements, and bug fixes for the December 12 update.
 
   **How it works**
    * Define your custom unit (e.g, AI Token, Messages)
-   * Assign the unit to specific product plan quota
    * Track and report consumption usage on this custom defined unit. This can be achieved by implementing a Custom Unit Service that will communicate with the Discovery and Traceability Agents. Refer to [Reporting custom unit usage](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics) for more information about its implementation.
 
   This feature empowers you to align your quota system with custom metrics that reflect the value of your services, providing greater flexibility and revenue potential. Refer to [Manage consumption units](/docs/manage_product_foundry/manage_consumption_units) for more details.
