@@ -32,9 +32,9 @@ New features, enhancements, and bug fixes for the December 12 update.
   We’ve enhanced the Marketplace product documentation experience to make navigation more intuitive and seamless. Users will now see a **Browse Documents panel**, when they land on the Documentatioan page, that clearly displays the entire documentation structure, including topics, sections, and articles. To the right, an overview of topics and their sections is presented for quick reference.<br />
   **Key improvements include**:
   
-  * Clicking **View Articles** now opens the first article in the section, with the selected article highlighted in the **Browse Documents** panel for clarity.
-  * Users can easily switch between articles within any topic or section and return to the **Overview** screen by clicking **Documents** at the top of Browse product panel.
- 
+   * Clicking **View Articles** now opens the first article in the section, with the selected article highlighted in the **Browse Documents** panel for clarity.
+   * Users can easily switch between articles within any topic or section and return to the **Overview** screen by clicking **Documents** at the top of Browse product panel.
+
   These changes provide a more efficient and frustration-free experience, helping users quickly locate the information they need.
 
 ## December 12, 2024
@@ -65,7 +65,7 @@ New features, enhancements, and bug fixes for the December 12 update.
 
   (PRODUCT FOUNDRY, ENHANCEMENT)<br />
   The bulk **Archive** functionality in the *Product Foundry list view* allows you to archive products in a single action.
-  The bulk **Delete** functionality allows you to remove multiple products at once, simplifying cleanup of your product list. 
+  The bulk **Delete** functionality allows you to remove multiple products at once, simplifying cleanup of your product list.
 
 ### Marketplace bug fixes for December 12, 2024
 
