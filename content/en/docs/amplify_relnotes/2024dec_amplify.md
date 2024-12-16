@@ -41,7 +41,7 @@ See [Reporting custom unit usage](/docs/connect_manage_environ/connected_agent_c
 * **Bulk Archive and Bulk Delete in Product Foundry List View**
 
   (PRODUCT FOUNDRY, ENHANCEMENT)<br />
-  The bulk **Archive** functionality in the Product Foundry list view allows you to archive products in a single action.
+  The bulk **Archive** functionality in the *Product Foundry list view* allows you to archive products in a single action.
   The bulk **Delete** functionality allows you to remove multiple products at once, simplifying cleanup of your product list. 
   
 ## December 4, 2024
