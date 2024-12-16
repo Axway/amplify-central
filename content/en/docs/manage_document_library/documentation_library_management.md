@@ -212,24 +212,24 @@ Follow these steps to create a template:
    * Navigate to *Document Library* and select the *Templates* tab.
    * Click **+ Add New Template** to start the template wizard.
 2. **Enter general information**
-   
+
    * Fill out the required fields:
       * **Template name** (mandatory)
       * **Description** (mandatory)
       * **Version** (mandatory)
    * Click **Next** to proceed.
-4. **Build the documentation structure**
+3. **Build the documentation structure**
 
    * Use the **+ Add topic** button to add a topic. This opens a side planel where you can provide the topic's details. Click **Save** when done.
    * Add section within a topic by clicking **+ Add Section**. This opens a side panel for section details. Click **Save** when finished.
    * Add articles to a section with the **+ Add Article** button. You can:
       * Create a **Markdown Article**: Fill in the Markdown profile (name, description, version) before accessing the markdown editor.
       * **Link a Document**: Select one or more documents from the Document Library to attach.
-5. **Finalize your template**
+4. **Finalize your template**
 
    * Review your template structure. When satisfied, click **Next**.
    * Assign a template owner and decide if the template should be shared with other teams.
-6. **Save & Exit**
+5. **Save & Exit**
 
    * Click **Save & Exit** to save your work and close the wizard. You can use **Save & Exit** at any time to preserve your progress.
    * To update an existing template, use the Edit option from the ellipsis menu.
