@@ -174,13 +174,11 @@ This feature is not yet available from the UI, but you can use the CLI or API to
 
 ### Templates
 
-A documentation template is a complete or partial set of Topics/Sections and articles that can be use as a basis to create the product documentation.
+A documentation template is a complete or partial set of Topics/Sections and/or Articles that can be used as a basis to create the product documentation.
 
-A topic can have one or more section.
-
-A section can have one or more articles (either Markdown or document linked from the document library).
-
-A template can be own by a team and/or share with other team.
+* A topic can have one or more sections.
+* A section can have one or more articles (either Markdown or document linked from the document library).
+* A template can be owned by a team and/or shared with other team(s).
 
 #### View template list
 
@@ -207,25 +205,46 @@ View the following information for all templates:
 
 #### Create a template
 
-To create a template:
+Follow these steps to create a template:
 
-1. Navigate to *Document Library* and select the *Templates* tab
-2. Click **+ Add New Template** to open the template wizard.
-3. Enter the general information (template name - mandatory, description - optional and template version - mandatory)
-4. click **Next**
-5. Create the documentation structure using the **+ Add topic** button to open the topic side blade and add its information. Click **Save** when complete.
-   1. you can add another Topic using the **+ Add topic** button or Add a section to a topic using the **+ Add section** button. This will open the section side panel to add the section information. Click **Save** when complete.
-   2. From a section, you can use the **+ Add article** button to add an article to the selected section (either a Markdown or link a document from the library). When adding a Markdown, you have first to enter your Markdown profile (name, description, version) before viewing the Markdown editor. When linking a document from the library, you to select which document to link (one or multiple). Click **Next** from the Markdown editor screen or the link document screen to validate your choice and return to the documentation structure.
-6. Once satisfied with your template, click **Next**
-7. Select who should be the template owner and if the template needs to be share with other teams
-8. click **Save & Exit**. Save & Exit can be used any time in the wizard and it will save the current state of the template. To update a template use the ellipsis Edit menu.
+1. **Open the template wizard**
+
+   * Navigate to *Document Library* and select the *Templates* tab.
+   *  Click **+ Add New Template** to start the template wizard.
+2. **Enter general information**
+   
+   * Fill out the required fields:      
+      * **Template name** (mandatory)
+      * **Description** (mandatory)
+      * **Version** (mandatory)
+   * Click **Next** to proceed.
+3. **Build the documentation structure**
+
+   *  Use the **+ Add topic** button to add a topic. This opens a side planel where you can provide the topic's details. Click **Save** when done.
+   *  Add section within a topic by clicking **+ Add Section**. This opens a side panel for section details. Click **Save** when finished.
+   *  Add articles to a section with the **+ Add Article** button. You can:
+      * Create a **Markdown Article**: Fill in the Markdown profile (name, description, version) before accessing the markdown editor.
+      * **Link a Document**: Select one or more documents from the Document Library to attach.
+5. **Finalize your template**
+
+   * Review your template structure. When satisfied, click **Next**.
+   * Assign a template owner and decide if the template should be shared with other teams.
+6. **Save & Exit**
+
+   * Click **Save & Exit** to save your work and close the wizard. You can use **Save & Exit** at any time to preserve your progress.
+   * To update an existing template, use the Edit option from the ellipsis menu.
 
 {{< alert title="Note" color="information" >}}
-Each time you select a topic, section, article from the documentation structure, its content is visible on the right side of the screen. The pencil icon allows to edit the content from there.
+**Additional notes**
+Selecting a topic, section, or article in the documentation structure displays its content on the right side of the screen. Use the pencil icon to edit content directly.
 
-Topic, Section and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reorder. A section can be move inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
+Use the drag icon (double horizontal bar with arrows) to reorganize items:
 
-Topic, Section and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
+* Topics can be reordered.
+* Sections can be moved within the same topic or another topic.
+* Articles can be moved within their section, to another section, or to another topic.
+
+Delete topics, sections, or articles using their **Delete** option in the ellipsis menu . A confirmation popup will appear, as deletions cannot be undone.
 {{< /alert >}}
 
 #### Edit a template
@@ -234,13 +253,13 @@ To edit a template:
 
 1. Navigate to *Document Library* and select the *Templates* tab
 2. Select the ellipsis menu associated with the document you want to edit and click **Edit**. This will open the template wizard. You can change anything you want using the Pencil icon to edit a topic or a section, the **+ Add topic** to add new topic, the **+ Add section** to add new section and the **+ Add article** to add new articles. Topic, section and articles can be removed using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
-3. When you are satisfied with the changes, click **Save & Exit**.
+3. Click **Save & Exit**, when you are done.
 
 #### Delete a template
 
-Template can be deleted by a Catalog Manager from the owning team of the template or by Central Administrator.
+Template can be deleted by either a **Catalog Manager** from the team that owns the template or by the Central Administrator.
 
 To delete a template:
 
 1. Navigate to *Document Library* and select the *Templates* tab
-2. Select the ellipsis menu associated with the document you want to edit and click **Delete**. This will open a confirmation popup to validate your choice.
+2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.
