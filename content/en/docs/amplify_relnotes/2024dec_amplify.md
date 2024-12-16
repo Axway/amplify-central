@@ -10,6 +10,33 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## December 16, 2024
+
+New features, enhancements, and bug fixes for the December 12 update.
+
+### Marketplace updates for December 16, 2024
+
+* **Documentation templates**
+
+  (DOCUMENTATION LIBRARY, NEW FEATURE, PROVIDER EXPERIENCE)<br />
+  Designed to simplify and standardize the creation of structured product documents, the **Document template** feature can be used to build reusable templates that include topics, sections, and articles. This ensures products adheres to rigorous documentation standard and can save time across teams by eliminating the need to start from scratch for each document. Templates can be customized with Markdown content or linked documents and shared with multiple teams for collaborative efficiency. Refer to [Documentation Library Management](/docs/manage_document_library/documentation_library_management) for more details.
+
+* **Create product documentation from template**
+
+  (PRODUCT FOUNDRY, ENHANCEMENT, PROVIDER EXPERIENCE)<br />
+  Users can now choose to start with a template or create a blank document for more flexibility. Additionally, the document navigation panel has been enhanced for a smoother, more intuitive experience when adding topics, sections, and articles. Refer to [Create a product](/docs/manage_product_foundry/foundry_product_management) for details.
+
+* **Simplified navigation within Marketplace product documentation**
+
+  (MARKETPLACE, ENHANCEMENT, CONSUMER EXPERIENCE)<br />
+  We’ve enhanced the Marketplace product documentation experience to make navigation more intuitive and seamless. Users will now see a **Browse Documents panel**, when they land on the Documentatioan page, that clearly displays the entire documentation structure, including topics, sections, and articles. To the right, an overview of topics and their sections is presented for quick reference.<br />
+  **Key improvements include**:
+  
+  * Clicking **View Articles** now opens the first article in the section, with the selected article highlighted in the **Browse Documents** panel for clarity.
+  * Users can easily switch between articles within any topic or section and return to the **Overview** screen by clicking **Documents** at the top of Browse product panel.
+ 
+  These changes provide a more efficient and frustration-free experience, helping users quickly locate the information they need.
+
 ## December 12, 2024
 
 New features, enhancements, and bug fixes for the December 12 update.
@@ -32,18 +59,21 @@ New features, enhancements, and bug fixes for the December 12 update.
 * **Custom Consumption Units Support**
 
   (PRODUCT FOUNDRY, NEW FEATURE, PROVIDER EXPERIECE)<br />
-Enables you to define and manage custom consumption metrics for more tailored monetization strategies that better align with the unique requirements of your offerings. You can incorporate these custom-defined units into your plan for quota allocation to control how many units a consumer is entitled to use, and monitor the usage in Business Insights.<br />
-
-See [Reporting custom unit usage](/docs/connect_manage_environ/connected_agent_common_reference/custom-unit-metrics) for more information about its implementation.
-
-  This feature empowers you to align your quota system with custom metrics that reflect the value of your services, providing greater flexibility and revenue potential. Refer to [Manage consumption units](/docs/manage_product_foundry/manage_consumption_units) for more details.
+  Enables you to define and manage custom consumption metrics for more tailored monetization strategies that better align with the unique requirements of your offerings. You can incorporate these custom-defined units into your plan for quota allocation to control how many units a consumer is entitled to use, and monitor the usage in Business Insights. Refer to [Manage consumption units](/docs/manage_product_foundry/manage_consumption_units) for more details.
   
 * **Bulk Archive and Bulk Delete in Product Foundry List View**
 
   (PRODUCT FOUNDRY, ENHANCEMENT)<br />
   The bulk **Archive** functionality in the *Product Foundry list view* allows you to archive products in a single action.
   The bulk **Delete** functionality allows you to remove multiple products at once, simplifying cleanup of your product list. 
-  
+
+### Marketplace bug fixes for December 12, 2024
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| N/A| APIGOV-29312 | **Issue**: [Suport Contact] Error thrown in the console related to email pattern **Resolution**: Email pattern for support contact corrected |
+| N/A | APIGOV-29107 | **Issue**: Incorrect delete application popup message **Resolution**: Delete application popup message updated to a clearer wording |
+
 ## December 4, 2024
 
 ### Agents bug fixes for December 4, 2024
