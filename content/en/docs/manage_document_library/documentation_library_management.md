@@ -27,8 +27,8 @@ To view the library content, navigate to *Document Library*.
 
 The page displays two tabs:
 
-* [Documents](#documents): list available documents in the library
-* [Templates](#templates): list templates that can be used to create product documentation
+* [Documents](#documents) - lists available documents in the library
+* [Templates](#templates) - lists templates that can be used to create product documentation
 
 Catalog Manager and/or Central Administrator can manage the document library content.
 
@@ -36,13 +36,13 @@ Catalog Manager and/or Central Administrator can manage the document library con
 
 A document in the document library can be either:
 
-* an internal Markdown document created from the library
-* an external documents uploaded into the library
-* an URL document
+* An internal Markdown document created from the library
+* An external documents uploaded into the library
+* A URL document
 
 #### View document list
 
-Navigate to *Document Library* and the Documents tab is displayed by default.
+Navigate to *Document Library*. The **Documents** tab is displayed by default.
 
 View the following information for all documents:
 
@@ -59,8 +59,6 @@ View the following information for all documents:
 You can also filter the documents by types using the **Filter by:** controls. Search by document name with the search bar.
 
 #### View document details
-
-To view a document's details:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the *Document Details*:
@@ -80,15 +78,11 @@ Click the **Pencil** icon at the top right to [Edit the document](#edit-a-docume
 
 #### Preview a document
 
-To open a preview of a PDF / MD document:
-
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the document details.
-3. Click **View**, located below the thumbnail, to open the preview of the entire document.
+3. Click **View**, located below the thumbnail, to open the preview of the entire PDF or MD document.
 
 #### Download a document
-
-To download a document:
 
 1. Navigate to *Document Library*.
 2. Click on a document name in the list view to open the document details.
@@ -128,8 +122,6 @@ The version is optional. There is no enforcement of the version format, you can 
 
 You can only edit documents your team owns. Only Central Admin users can edit any document.
 
-To Edit a document:
-
 1. Navigate to *Document Library*.
 2. Select the ellipsis menu associated with the document you want to edit and click **Edit**. This will open the document wizard. You cannot change the document type but you can edit any field.
 3. When you are satisfied with the changes, click **Save & Exit**.
@@ -167,8 +159,8 @@ By default, four languages are available : English / French / German / Brazilian
 
 You will need 2 things:
 
-* the Document default language
-* the Document translation languages
+* The Document default language
+* The Document translation languages
 
 This feature is not yet available from the UI, but you can use the CLI or API to add the Document available languages. Refer to [API Server multi languages support](/docs/integrate_with_central/api_server#multi-languages-support) and the [sample data](/docs/integrate_with_central/samples/sample_start_to_end#scenario-description) where there is an example of Document Library document using two languages.
 
@@ -182,7 +174,7 @@ A documentation template is a complete or partial set of Topics/Sections and/or 
 
 #### View template list
 
-Navigate to *Document Library* and select the *Templates*
+Navigate to *Document Library* and select *Templates*
 
 View the following information for all templates:
 
@@ -194,49 +186,47 @@ View the following information for all templates:
 
 #### View template details
 
-1. Navigate to *Document Library* and select the *Templates* tab
+1. Navigate to *Document Library* and select the **Templates** tab.
 2. Click on a template name in the list view or use the Edit menu from ellipsis menu to open the *Template details* popup:
 
     * On the top, the template name and its owner is visible
     * The screen is then divided into 3 vertical sections:
-      * on the left: the documentation structure (Topic/Section/Article) and a search bar to search that structure
-      * in the middle: the article content (either Markdown, PDF viewer, download option if DOC,XLS,PPT document or URL)
-      * on the right: the MArkdown article table of content if any
+      * Left - the documentation structure (Topic/Section/Article) and a search bar to search that structure
+      * Middle - the article content (either Markdown, PDF viewer, download option if DOC,XLS,PPT document or URL)
+      * Right - the Markdown article table of content if any
 
 #### Create a template
 
-Follow these steps to create a template:
+1. **Open the template wizard**:
 
-1. **Open the template wizard**
-
-   * Navigate to *Document Library* and select the *Templates* tab.
+   * Navigate to *Document Library* and select the **Templates** tab.
    * Click **+ Add New Template** to start the template wizard.
-2. **Enter general information**
+2. **Enter general information**:
 
    * Fill out the required fields:
       * **Template name** (mandatory)
       * **Description** (mandatory)
       * **Version** (mandatory)
    * Click **Next** to proceed.
-3. **Build the documentation structure**
+3. **Build the documentation structure**:
 
-   * Use the **+ Add topic** button to add a topic. This opens a side planel where you can provide the topic's details. Click **Save** when done.
-   * Add section within a topic by clicking **+ Add Section**. This opens a side panel for section details. Click **Save** when finished.
-   * Add articles to a section with the **+ Add Article** button. You can:
+   * Click **+ Add topic** to add a topic. This opens a side planel where you can provide the topic's details. Click **Save** when done.
+   * Click **+ Add Section** to add a section within a topic. This opens a side panel for section details. Click **Save** when finished.
+   * Click **+ Add Article** to add articles to a section. You can:
       * Create a **Markdown Article**: Fill in the Markdown profile (name, description, version) before accessing the markdown editor.
       * **Link a Document**: Select one or more documents from the Document Library to attach.
-4. **Finalize your template**
+4. **Finalize your template**:
 
    * Review your template structure. When satisfied, click **Next**.
    * Assign a template owner and decide if the template should be shared with other teams.
-5. **Save & Exit**
+5. **Save & Exit**:
 
    * Click **Save & Exit** to save your work and close the wizard. You can use **Save & Exit** at any time to preserve your progress.
-   * To update an existing template, use the Edit option from the ellipsis menu.
+   * Use the **Edit** option from the ellipsis menu update an existing template.
 
 {{< alert title="Note" color="information" >}}
 **Additional notes** </br>
-Selecting a topic, section, or article in the documentation structure displays its content on the right side of the screen. Use the pencil icon to edit content directly.
+Selecting a topic, section, or article in the documentation structure displays its content at the right of the screen. Use the pencil icon to edit content directly.
 
 Use the drag icon (double horizontal bar with arrows) to reorganize items:
 
@@ -249,9 +239,7 @@ Delete topics, sections, or articles using their **Delete** option in the ellips
 
 #### Edit a template
 
-To edit a template:
-
-1. Navigate to *Document Library* and select the *Templates* tab
+1. Navigate to *Document Library* and select the **Templates** tab.
 2. Select the ellipsis menu associated with the document you want to edit and click **Edit**. This will open the template wizard. You can change anything you want using the Pencil icon to edit a topic or a section, the **+ Add topic** to add new topic, the **+ Add section** to add new section and the **+ Add article** to add new articles. Topic, section and articles can be removed using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
 3. Click **Save & Exit**, when you are done.
 
@@ -259,7 +247,5 @@ To edit a template:
 
 Template can be deleted by either a **Catalog Manager** from the team that owns the template or by the Central Administrator.
 
-To delete a template:
-
-1. Navigate to *Document Library* and select the *Templates* tab
+1. Navigate to *Document Library* and select the **Templates** tab
 2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.
