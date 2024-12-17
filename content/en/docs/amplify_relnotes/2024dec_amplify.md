@@ -59,7 +59,7 @@ New features, enhancements, and bug fixes for the December 12 update.
 * **Custom Consumption Units Support**
 
   (PRODUCT FOUNDRY, NEW FEATURE, PROVIDER EXPERIECE)<br />
-  Enables you to define and manage custom consumption metrics for more tailored monetization strategies that better align with the unique requirements of your offerings. You can incorporate these custom-defined units into your plan for quota allocation to control how many units a consumer is entitled to use, and monitor the usage in Business Insights. Refer to [Manage consumption units](/docs/manage_product_foundry/manage_consumption_units) for more details.
+  Enables you to define and manage custom consumption metrics for more tailored monetization strategies that better align with the unique requirements of your offerings. You can incorporate these custom-defined units into your plan for quota allocation to control how many units a consumer is entitled to use, and monitor the usage in Business Insights. See [Manage consumption units](/docs/manage_product_foundry/manage_consumption_units) for more details.
   
 * **Bulk Archive and Bulk Delete in Product Foundry List View**
 
