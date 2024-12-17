@@ -128,26 +128,26 @@ View the following detailed information for a specific product in any state (Dra
     * (Optional) Archive previous version - Automatically archives the previous version when releasing a product. Disabled by default.
 
 6. Select the Asset(s) that will be part of this product. Selected assets will be added to the Linked Assets section. You can choose to link the product to the latest release of the asset or select the release you want. Click **Next**.
-7. Add documentation: select a document template or start from blank document
+7. Add documentation: select a document template or start from a blank document:
 
-    * when selecting to start from template, a page displays the available template list visible to your team(s), you can preview the template using the **Preview template** button to get information about the selected template. Once you found the template you want to use, click the corresponding radio button on the template card and then click **Next**. The documentation structure is immediately created based on the template structure and can be updated as needed.
-    * when selecting to start from blank page, you will have to create the documentation structure manually.
-    * if you decide to change your mind, a warning message will be displayed to inform you that you can loose what documentation elements has been created so far. If you whish to keep them, only use th **Next** button and not the button allowing to select from a template or a blank page.
-    * Edit documentation elements (topics, sections and articles).
-        * **+ Add topic** enables to add a new topic
-        * **+ Add section** enables to add a new section into a topic
-        * Once a section is available, **+ Add article** enables to add a Markdown article or link an article from a document library document.
-        * Each time you select a topic, section, article from the documentation structure, its content is visible on the right side of the screen. The pencil icon allows to edit the content from there.
-        * Topic, Section and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reorder. A section can be move inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
-        * Topic, Section and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation popup will be displayed for each deletion as this action is irreversible.
+    * From a template: a page displays the available template list that is visible to your team(s). Click **Preview template** to view information about the selected template. After choosing a template, click the corresponding radio button on the template card and then click **Next**. The documentation structure is immediately created based on the template structure and can be updated as needed.
+    * From a blank document: you must create the documentation structure manually.
+    * If you change methods  part way through creating the document, then a warning is displayed informing you that the documentation elements that have already been created could be lost. If you wish to keep the existing elements, click **Next**. Otherwise, select the new method (either template or a blank document).
+    * Edit documentation elements (topics, sections, and articles).
+        * Click **+ Add topic** to add a new topic.
+        * Click **+ Add section** to add a new section in a topic.
+        * Once a section is available, click **+ Add article** to add a Markdown article or link an article from a document library document.
+        * Each time you select a topic, section, article from the documentation structure, its content is visible at the right of the screen, where you can use the pencil icon to edit the content.
+        * Topic, section, and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reordered. A section can be moved inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
+        * Topic, section, and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation is required for each deletion, as this action is irreversible.
         * Once your documentation is ready, click **Next**.
 
-8. (Optional step) For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. If you want your product shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected product. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your product with the chosen "Rights". This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
+8. (Optional step) For Access Rights, select the team(s) the product can be shared with. By default, a product is not shared and only the **Central Admin** will have access to it. To share your product with specific teams, select a team owner and all teams you want to grant "Rights" to for the selected product. For each of the teams selected, you can choose either **Edit** or **Read** access rights. Each member of the shared team(s) selected will be able to access your product with the chosen rights. This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
 9. (Optional step) Provide one support contact so consumers can get product help, if needed. Click **+ Add new contact** and enter the contact information. Click **Next**.
 10. (Optional step) Provide the Tags, Attribute, and Category details for the product.
-11. Click **Preview Product** to view the details prior to creation. At his point, you can click **Save** to create the product in a draft state. Alternatively, you can click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
+11. Click **Preview Product** to view the details prior to creation. Click **Save** to create the product in a draft state, or click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
 
-If the product was created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published to a Marketplace.
+If the product is created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published to a Marketplace.
 
 ## Create a product release
 
