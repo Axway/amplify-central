@@ -19,21 +19,21 @@ New features, enhancements, and bug fixes for the December 12 update.
 * **Documentation templates**
 
   (DOCUMENTATION LIBRARY, NEW FEATURE, PROVIDER EXPERIENCE)<br />
-  Designed to simplify and standardize the creation of structured product documents, the **Document template** feature can be used to build reusable templates that include topics, sections, and articles. This ensures products adheres to rigorous documentation standard and can save time across teams by eliminating the need to start from scratch for each document. Templates can be customized with Markdown content or linked documents and shared with multiple teams for collaborative efficiency. Refer to [Documentation Library Management](/docs/manage_document_library/documentation_library_management) for more details.
+  Designed to simplify and standardize the creation of structured product documents, the **Document template** feature can be used to build reusable templates that include topics, sections, and articles. This ensures products adhere to rigorous documentation standards and can save time across teams by eliminating the need to start from scratch for each document. Templates can be customized with Markdown content or linked documents and then shared with multiple teams for collaborative efficiency. See [Documentation Library Management](/docs/manage_document_library/documentation_library_management) for more details.
 
 * **Create product documentation from template**
 
   (PRODUCT FOUNDRY, ENHANCEMENT, PROVIDER EXPERIENCE)<br />
-  Users can now choose to start with a template or create a blank document for more flexibility. Additionally, the document navigation panel has been enhanced for a smoother, more intuitive experience when adding topics, sections, and articles. Refer to [Create a product](/docs/manage_product_foundry/foundry_product_management) for details.
+  Users can now choose to start with a template or create a blank document for more flexibility. Additionally, the document navigation panel has been enhanced for a smoother, more intuitive experience when adding topics, sections, and articles. See [Create a product](/docs/manage_product_foundry/foundry_product_management) for details.
 
 * **Simplified navigation within Marketplace product documentation**
 
   (MARKETPLACE, ENHANCEMENT, CONSUMER EXPERIENCE)<br />
-  We’ve enhanced the Marketplace product documentation experience to make navigation more intuitive and seamless. Users will now see a **Browse Documents panel**, when they land on the Documentatioan page, that clearly displays the entire documentation structure, including topics, sections, and articles. To the right, an overview of topics and their sections is presented for quick reference.<br />
+  The navigation of the Marketplace product documentation has been enhanced to be more intuitive and seamless. The *Documentation* page now includes a new **Browse Documents** panel that clearly displays the entire documentation structure, including topics, sections, and articles. To the right, an overview of topics and their sections is presented for quick reference.<br />
   **Key improvements include**:
   
     * Clicking **View Articles** now opens the first article in the section, with the selected article highlighted in the **Browse Documents** panel for clarity.
-    * Users can easily switch between articles within any topic or section and return to the **Overview** screen by clicking **Documents** at the top of Browse product panel.
+    * Users can easily switch between articles within any topic or section and return to the *Overview* screen by clicking **Documents** at the top of **Browse product** panel.
 
   These changes provide a more efficient and frustration-free experience, helping users quickly locate the information they need.
 
@@ -71,8 +71,8 @@ New features, enhancements, and bug fixes for the December 12 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| N/A| APIGOV-29312 | **Issue**: [Suport Contact] Error thrown in the console related to email pattern **Resolution**: Email pattern for support contact corrected |
-| N/A | APIGOV-29107 | **Issue**: Incorrect delete application popup message **Resolution**: Delete application popup message updated to a clearer wording |
+| N/A| APIGOV-29312 | **Issue**: [Suport Contact] Error thrown in the console related to email pattern.<br/>**Resolution**: Email pattern for support contact corrected. |
+| N/A | APIGOV-29107 | **Issue**: Incorrect delete application popup message.<br/>**Resolution**: Delete application popup message updated to a clearer wording. |
 
 ## December 4, 2024
 
