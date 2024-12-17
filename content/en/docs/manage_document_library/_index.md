@@ -18,7 +18,7 @@ The Document Library is a collection of resuable documentation. Use the Document
 * Create documentation templates
 
 {{< alert title="Note" color="primary" >}}
-Document Library is only available if you have the "Public Marketplace" entitlement and more than one marketplaces configured. Refer to [your entitlement](https://platform.axway.com/org) and your commercial representative for further help.
+Document Library is only available if you have the "Public Marketplace" entitlement and more than one marketplace configured. Refer to [your entitlement](https://platform.axway.com/org) and your commercial representative for further help.
 {{< /alert >}}
 
 ## Related topics
