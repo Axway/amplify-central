@@ -13,11 +13,12 @@ The Document Library allows user to centralize their documentation. This central
 The Document Library is a collection of resuable documentation. Use the Document Library WebUI to:
 
 * Upload existing documents into the library
-* Create Markdown documents (coming soon)
-* Use external documentation links (coming soon)
+* Create Markdown documents
+* Use external documentation links
+* Create documentation templates
 
 {{< alert title="Note" color="primary" >}}
-Document Library is only available if you have the "Public Marketplace" entitlement and a number of marketplaces > 0. Refer to [your entitlement](https://platform.axway.com/org) and your commercial representative for further help.
+Document Library is only available if you have the "Public Marketplace" entitlement and more than one marketplace configured. Refer to [your entitlement](https://platform.axway.com/org) and your commercial representative for further help.
 {{< /alert >}}
 
 ## Related topics
