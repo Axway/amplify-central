@@ -17,11 +17,11 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify Enterprise Marketplace December 16 2024](/docs/amplify_relnotes/2024dec_amplify/#december-16-2024)
+## [Amplify Enterprise Marketplace December 16 2024](/docs/amplify_relnotes/archive_2024/2024dec_amplify/#december-16-2024)
 
-No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#december-12-2024) for latest supported agent versions.
+No agent updates. See [December 12](/docs/amplify_relnotes/archive_2024/2024dec_amplify/#december-12-2024) for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace December 12 2024](/docs/amplify_relnotes/2024dec_amplify/#december-12-2024)
+## [Amplify Enterprise Marketplace December 12 2024](/docs/amplify_relnotes/archive_2024/2024dec_amplify/#december-12-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.105 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -51,7 +51,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.9                    | 1.0.5            |
 | Traceable API Security                     | 1.0.7                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace December 4 2024](/docs/amplify_relnotes/2024dec_amplify/#december-4-2024)
+## [Amplify Enterprise Marketplace December 4 2024](/docs/amplify_relnotes/archive_2024/2024dec_amplify/#december-4-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.104 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -81,7 +81,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.8                    | 1.0.5            |
 | Traceable API Security                     | 1.0.6                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace December 2 2024](/docs/amplify_relnotes/2024dec_amplify/#december-2-2024)
+## [Amplify Enterprise Marketplace December 2 2024](/docs/amplify_relnotes/archive_2024/2024dec_amplify/#december-2-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.103 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -111,7 +111,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.8                    | 1.0.5            |
 | Traceable API Security                     | 1.0.6                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace November 25 2024](/docs/amplify_relnotes/2024nov_amplify/#november-25-2024)
+## [Amplify Enterprise Marketplace November 25 2024](/docs/amplify_relnotes/archive_2024/2024nov_amplify/#november-25-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.103 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -141,7 +141,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.7                    | 1.0.5            |
 | Traceable API Security                     | 1.0.5                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace November 22 2024](/docs/amplify_relnotes/2024nov_amplify/#november-22-2024)
+## [Amplify Enterprise Marketplace November 22 2024](/docs/amplify_relnotes/archive_2024/2024nov_amplify/#november-22-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.103 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -171,7 +171,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.7                    | 1.0.5            |
 | Traceable API Security                     | 1.0.5                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace November 15 2024](/docs/amplify_relnotes/2024nov_amplify/#november-15-2024)
+## [Amplify Enterprise Marketplace November 15 2024](/docs/amplify_relnotes/archive_2024/2024nov_amplify/#november-15-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.103 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -201,7 +201,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.7                    | 1.0.5            |
 | Traceable API Security                     | 1.0.5                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace November 4 2024](/docs/amplify_relnotes/2024nov_amplify/#november-4-2024)
+## [Amplify Enterprise Marketplace November 4 2024](/docs/amplify_relnotes/archive_2024/2024nov_amplify/#november-4-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.102 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -231,7 +231,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.6                    | 1.0.5            |
 | Traceable API Security                     | 1.0.4                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace November 1 2024](/docs/amplify_relnotes/2024nov_amplify/#november-1-2024)
+## [Amplify Enterprise Marketplace November 1 2024](/docs/amplify_relnotes/archive_2024/2024nov_amplify/#november-1-2024)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.102 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -261,7 +261,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 | Graylog API Security                       | 1.1.6                    | 1.0.5            |
 | Traceable API Security                     | 1.0.4                    | 1.0.0            |
 
-## [Amplify Enterprise Marketplace October 18 2024](/docs/amplify_relnotes/20241018_amplify/)
+## [Amplify Enterprise Marketplace October 18 2024](/docs/amplify_relnotes/archive_2024/20241018_amplify/)
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of August 8, 2024, the Unified Catalog is no longer supported.{{< /alert >}}
 
@@ -334,7 +334,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 
 ---
 
-## [Amplify Enterprise Marketplace October 4 2024](/docs/amplify_relnotes/20241004_amplify/)
+## [Amplify Enterprise Marketplace October 4 2024](/docs/amplify_relnotes/archive_2024/20241004_amplify/)
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of August 8, 2024, the Unified Catalog is no longer supported.{{< /alert >}}
 
@@ -407,7 +407,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 
 ---
 
-## [Amplify Enterprise Marketplace September 20 2024](/docs/amplify_relnotes/20240920_amplify/)
+## [Amplify Enterprise Marketplace September 20 2024](/docs/amplify_relnotes/archive_2024/20240920_amplify/)
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of August 8, 2024, the Unified Catalog is no longer supported.{{< /alert >}}
 
@@ -479,7 +479,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 
 ---
 
-## [Amplify Enterprise Marketplace September 6 2024](/docs/amplify_relnotes/20240906_amplify/)
+## [Amplify Enterprise Marketplace September 6 2024](/docs/amplify_relnotes/archive_2024/20240906_amplify/)
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of August 8, 2024, the Unified Catalog is no longer supported.{{< /alert >}}
 
@@ -551,7 +551,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 
 ---
 
-## [Amplify Enterprise Marketplace August 30 2024](/docs/amplify_relnotes/20240830_amplify/)
+## [Amplify Enterprise Marketplace August 30 2024](/docs/amplify_relnotes/archive_2024/20240830_amplify/)
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of August 8, 2024, the Unified Catalog is no longer supported.{{< /alert >}}
 
@@ -622,7 +622,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 
 ---
 
-## [Amplify Enterprise Marketplace August 23 2024](/docs/amplify_relnotes/20240823_amplify/)
+## [Amplify Enterprise Marketplace August 23 2024](/docs/amplify_relnotes/archive_2024/20240823_amplify/)
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of 20240808, the Unified Catalog is no longer supported.{{< /alert >}}
 
@@ -693,7 +693,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 
 ---
 
-## [Amplify Enterprise Marketplace August 9 2024](/docs/amplify_relnotes/20240809_amplify/)
+## [Amplify Enterprise Marketplace August 9 2024](/docs/amplify_relnotes/archive_2024/20240809_amplify/)
 
 {{< alert title="Note" color="primary" >}}**Unified Catalog Deprecation Notice** - As of 20240808, the Unified Catalog is no longer supported.{{< /alert >}}
 
@@ -764,7 +764,7 @@ No agent updates. See [December 12](/docs/amplify_relnotes/2024dec_amplify/#dece
 
 ---
 
-## [Amplify Enterprise Marketplace July 26 2024](/docs/amplify_relnotes/20240726_amplify/)
+## [Amplify Enterprise Marketplace July 26 2024](/docs/amplify_relnotes/archive_2024/20240726_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.92. This version is compatible with:
 
@@ -829,7 +829,7 @@ Runtime Compliance Agent:
 
 ---
 
-## [Amplify Enterprise Marketplace July 12 2024](/docs/amplify_relnotes/20240712_amplify/)
+## [Amplify Enterprise Marketplace July 12 2024](/docs/amplify_relnotes/archive_2024/20240712_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.90. This version is compatible with:
 
@@ -894,7 +894,7 @@ Runtime Compliance Agent:
 
 ---
 
-## [Amplify Enterprise Marketplace June 28 2024](/docs/amplify_relnotes/20240628_amplify/)
+## [Amplify Enterprise Marketplace June 28 2024](/docs/amplify_relnotes/archive_2024/20240628_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.89. This version is compatible with:
 
@@ -959,7 +959,7 @@ Runtime Compliance Agent:
 
 ---
 
-## [Amplify Enterprise Marketplace June 14 2024](/docs/amplify_relnotes/20240614_amplify/)
+## [Amplify Enterprise Marketplace June 14 2024](/docs/amplify_relnotes/archive_2024/20240614_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.87. This version is compatible with:
 
@@ -1024,7 +1024,7 @@ Runtime Compliance Agent:
 
 ---
 
-## [Amplify Enterprise Marketplace May 31 2024](/docs/amplify_relnotes/20240531_amplify/)
+## [Amplify Enterprise Marketplace May 31 2024](/docs/amplify_relnotes/archive_2024/20240531_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.85. This version is compatible with:
 
@@ -1088,7 +1088,7 @@ Runtime Compliance Agent:
 
 ---
 
-## [Amplify Enterprise Marketplace May 17 2024](/docs/amplify_relnotes/20240517_amplify/)
+## [Amplify Enterprise Marketplace May 17 2024](/docs/amplify_relnotes/archive_2024/20240517_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.83. This version is compatible with:
 
@@ -1152,7 +1152,7 @@ Runtime Compliance Agent:
 
 ---
 
-## [Amplify Enterprise Marketplace May 3 2024](/docs/amplify_relnotes/20240503_amplify/)
+## [Amplify Enterprise Marketplace May 3 2024](/docs/amplify_relnotes/archive_2024/20240503_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.82. This version is compatible with:
 
@@ -1216,7 +1216,7 @@ Runtime Compliance Agent:
 
 ---
 
-## [Amplify Enterprise Marketplace April 19 2024](/docs/amplify_relnotes/20240419_amplify/)
+## [Amplify Enterprise Marketplace April 19 2024](/docs/amplify_relnotes/archive_2024/20240419_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.81. This version is compatible with:
 
@@ -1274,7 +1274,7 @@ Supported Saas (embedded) Agents:
 
 ---
 
-## [Amplify Enterprise Marketplace April 5 2024](/docs/amplify_relnotes/20240405_amplify/)
+## [Amplify Enterprise Marketplace April 5 2024](/docs/amplify_relnotes/archive_2024/20240405_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.78. This version is compatible with:
 
@@ -1332,7 +1332,7 @@ Supported Saas (embedded) Agents:
 
 ---
 
-## [Amplify Enterprise Marketplace March 22 2024](/docs/amplify_relnotes/20240322_amplify/)
+## [Amplify Enterprise Marketplace March 22 2024](/docs/amplify_relnotes/archive_2024/20240322_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.77. This version is compatible with:
 
@@ -1390,7 +1390,7 @@ Supported Saas (embedded) Agents:
 
 ---
 
-## [Amplify Enterprise Marketplace March 8 2024](/docs/amplify_relnotes/20240308_amplify/)
+## [Amplify Enterprise Marketplace March 8 2024](/docs/amplify_relnotes/archive_2024/20240308_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.76. This version is compatible with:
 
@@ -1448,7 +1448,7 @@ Supported Saas (embedded) Agents:
 
 ---
 
-## [Amplify Enterprise Marketplace February 23 2024](/docs/amplify_relnotes/20240223_amplify/)
+## [Amplify Enterprise Marketplace February 23 2024](/docs/amplify_relnotes/archive_2024/20240223_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.75. This version is compatible with:
 
@@ -1505,7 +1505,7 @@ Supported Saas (embedded) Agents:
 
 ---
 
-## [Amplify Enterprise Marketplace February 9 2024](/docs/amplify_relnotes/20240209_amplify/)
+## [Amplify Enterprise Marketplace February 9 2024](/docs/amplify_relnotes/archive_2024/20240209_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.74. This version is compatible with:
 
@@ -1556,7 +1556,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.74. This version is 
 
 ---
 
-## [Amplify Enterprise Marketplace January 26 2024](/docs/amplify_relnotes/20240126_amplify/)
+## [Amplify Enterprise Marketplace January 26 2024](/docs/amplify_relnotes/archive_2024/20240126_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.73. This version is compatible with:
 
@@ -1607,7 +1607,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.73. This version is 
 
 ---
 
-## [Amplify Enterprise Marketplace January 12 2024](/docs/amplify_relnotes/20240112_amplify/)
+## [Amplify Enterprise Marketplace January 12 2024](/docs/amplify_relnotes/archive_2024/20240112_amplify/)
 
 Current agent versions are based on Amplify Agents SDK v1.1.72. This version is compatible with:
 
