@@ -51,7 +51,7 @@ To list API services:
 
 You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
-* Once the **Create Mock Endpoint** side panel appears fill out the three input fields according to the information [provided](#create-a-mock-endpoint).
+* Once the **Create Mock Endpoint** side panel appears fill out the four input fields according to the information [provided](#create-a-mock-endpoint).
 * When finished, click **Save**. If successfull, a success screen will give the option to close the sideblade or go to the API Service.
 
 ## View API service details
@@ -158,13 +158,14 @@ These requirements must be met before an API Service can create a mock endpoint:
 1. The Service must be OAS2/3.
 2. The organization must have the API Mocking entitlement.
 3. The Service must have an associated spec file (API Service Revision).
-4. The Service must be a design/runtime managed service. Cannot be runtime unmanaged.
 
-When creating a mock endpoint, there will be three input fields, **Endpoint Name**, **API Service Version**, and **Mock Endpoint Name**. Only **API Service Version**, and **Mock Endpoint Name** are required.
+When creating a mock endpoint, there will be four input fields, **Endpoint Name**, **API Service Version**, **Mock Endpoint Name**, and **Secure Mocked Endpoint**. Only **API Service Version** and **Mock Endpoint Name** are required.
 
 * Endpoint Name - A friendly name, or title, for this Mock Endpoint.
 * API Service Version - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
 * Mock Endpoint Name - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
+* Secure Mocked Endpoint - Enable this to require an HTTP request to set an authorization header as shown below with your Axway login token. The marketplace "Try it out" feature will automatically set this header. Disabling this security fature will make the mock service public to everyone on the Internet.
+  * `X-Axway-Authorization: bearer [your-login-token]`
 
 Mock endpoints can be created in:
 
