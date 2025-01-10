@@ -51,9 +51,6 @@ To list API services:
 
 You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
-* Fill out the four fields in the **Create Mock Endpoint** side panel according to the information [provided](#create-a-mock-endpoint).
-* When finished, click **Save**. If successfull, a success screen will give the option to close the side panel or go to the API Service.
-
 ## View API service details
 
 To view service details:
@@ -151,7 +148,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
 Create a mock endpoint to simulate the behavior of an API. Contact Axway Support at support.axway.com or reach out to your Axway representative to learn how to enable the API Mocking Service for your organization.
 
-* Mocked endpoints will always be created with the state "MOCKED" as to be easily identifiable.
+{{< alert title="Tip" color="secondary" >}}Mocked endpoints will always be created with the state "MOCKED" as to be easily identifiable.{{< /alert >}}
 
 These requirements must be met before an API Service can create a mock endpoint:
 
@@ -159,28 +156,36 @@ These requirements must be met before an API Service can create a mock endpoint:
 2. The organization must have the API Mocking entitlement.
 3. The Service must have an associated spec file (API Service Revision).
 
-When creating a mock endpoint, only two of the following four fields are required:
+To create a mock endpoint:
 
-* Endpoint Name - A friendly name, or title, for this Mock Endpoint.
-* API Service Version - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
-* Mock Endpoint Name - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
-* Secure Mocked Endpoint - Enable this to require an HTTP request to set an authorization header, as shown below, with your Axway login token. The Marketplace "Try it out" feature will automatically set this header. Disabling this security feature will make the mock service public to everyone on the Internet.
-    * `X-Axway-Authorization: bearer [your-login-token]`
+1. Click the name of the service in the Registry.
+2. Select the **Endpoints** tab in the service details page.
+3. Click **+ Create Mock Endpoint**.
+4. Enter the information in the *Create Mock Endpoint* side panel. Note that only two of the following fields are required:
 
-Mock endpoints can be created in:
+    * **Endpoint Name** - A friendly name, or title, for this Mock Endpoint.
+    * **API Service Version** - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
+    * **Mock Endpoint Name** - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
 
-* [Service Registry](#list-api-services)
-* [Service Wizard](#create-an-api-service)
-* [Service Details Endpoints Tab](#view-api-service-details)
-* [Environment Details Services Tab](/docs/connect_manage_environ/view_environments/#view-environment-details)
+5. Click **Save** to save your changes. If successful, a success screen will give the option to close the side panel or go to the API Service.
+
+{{< alert title="Note" color="primary" >}}Make sure that your mock endpoint is secured. This requires an HTTP request to set an authorization header, as shown below, with your Axway login token. The Marketplace "Try it out" feature will automatically set this header. Disabling this security feature will make the mock service public to everyone on the Internet.
+
+`X-Axway-Authorization: bearer [your-login-token]`{{< /alert >}}
+
+Mock endpoints can also be created be created in the [Service Wizard](#create-an-api-service) and in [Environment Details Services](/docs/connect_manage_environ/view_environments/#view-environment-details)
 
 Mock endpoints can be viewed in:
 
-* [Service Details Endpoints tab](#view-api-service-details)
-* [Create Product Endpoints tab](#create-product)
-* [Publish To Marketplace Endpoints tab](#publish-to-the-marketplace)
+* [service details Endpoints tab](#view-api-service-details)
+* [Create Product side panel](#create-product)
+* [Publish To Marketplace side panel](#publish-to-the-marketplace)
 * Marketplace Product Resources tab
 
 ## Edit a mock endpoint
 
-Edit a mock endpoint to simulate the behavior of an API. Editing can only be done in the [Service Details Endpoints tab](#view-api-service-details).
+1. Click the name of the service in the Registry.
+2. Select the **Endpoints** tab in the service details page.
+3. Click the ellipsis that is associated to the endpoint.
+4. Select **Edit Endpoint** and edit information where applicable.
+5. Click **Save** to save your edits.
