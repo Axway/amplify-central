@@ -19,20 +19,20 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Enterprise Marketplace January 10 2025](/docs/amplify_relnotes/2025jan_amplify/#january-10-2025)
 
-| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.105 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.106 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=1.2.12/ TA=1.2.11     | DA=1.1.80 / TA=1.1.81            |
-| AWS Gateway using SDK 2.0                  | DA=1.2.9 / TA=1.2.9      | DA=1.1.64 / TA-1.1.67            |
-| Azure latest release                       | DA=1.3.11 / TA=1.3.11    | DA=1.1.70 / TA=1.1.76            |
-| Istio 1.9.5                                | DA=1.1.9 / TA=2.1.9      | DA=1.0.36 / TA=2.0.82            |
-| Apigee Edge                                | 1.0.5                    | 0.1.38                           |
-| Mulesoft Anypoint platform v3              | 1.2.11                    | 1.1.48                           |
-| Software AG webMethods                     | 1.0.8                    | 1.0.0                            |
-| Kong Gateway                               | 1.1.8                    | 1.0.9                            |
-| GitLab                                     | 1.1.8                    | 1.0.6                            |
-| Kafka Cluster                              | 1.1.8                    | 1.0.6                            |
-| IBM API Connect Gateway                    | 1.1.8                    | 1.0.0                            |
-| Backstage                                  | 1.0.4                    | 1.0.0                            |
+| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=1.2.13/ TA=1.2.12     | DA=1.1.80 / TA=1.1.81            |
+| AWS Gateway using SDK 2.0                  | DA=1.2.10/ TA=1.2.10      | DA=1.1.64 / TA-1.1.67            |
+| Azure latest release                       | DA=1.3.12 / TA=1.3.12    | DA=1.1.70 / TA=1.1.76            |
+| Istio 1.9.5                                | DA=1.1.10 / TA=2.1.10      | DA=1.0.36 / TA=2.0.82            |
+| Apigee Edge                                | 1.0.6                    | 0.1.38                           |
+| Mulesoft Anypoint platform v3              | 1.2.12                    | 1.1.48                           |
+| Software AG webMethods                     | 1.0.9                    | 1.0.0                            |
+| Kong Gateway                               | 1.1.9                    | 1.0.9                            |
+| GitLab                                     | 1.1.9                    | 1.0.6                            |
+| Kafka Cluster                              | 1.1.9                    | 1.0.6                            |
+| IBM API Connect Gateway                    | 1.1.9                    | 1.0.0                            |
+| Backstage                                  | 1.0.5                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -44,5 +44,5 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.102)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
-| Graylog API Security                       | 1.1.9                    | 1.0.5            |
-| Traceable API Security                     | 1.0.7                    | 1.0.0            |
+| Graylog API Security                       | 1.1.10                    | 1.0.5            |
+| Traceable API Security                     | 1.0.8                   | 1.0.0            |
