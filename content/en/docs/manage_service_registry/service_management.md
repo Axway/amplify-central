@@ -106,7 +106,7 @@ Use Create Product to quickly create a product in draft. An asset and a product 
 
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
-    * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column, as the mock endpoint has the state **MOCKED**.
+    * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized through the **State** column, as the mock endpoint has the state **MOCKED**.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
 
 ## Publish to the Marketplace
@@ -120,7 +120,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
 
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
-    * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized throught the **State** column, as the mock endpoint has the state **MOCKED**.
+    * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized through the **State** column, as the mock endpoint has the state **MOCKED**.
     * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
     * Product Visibility -  Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
 
@@ -173,7 +173,7 @@ To create a mock endpoint:
 
 `X-Axway-Authorization: bearer [your-login-token]`{{< /alert >}}
 
-Mock endpoints can also be created be created in the [Service Wizard](#create-an-api-service) and in [Environment Details Services](/docs/connect_manage_environ/view_environments/#view-environment-details)
+Mock endpoints can also be created in the [Service Wizard](#create-an-api-service) and in the [Environment Details Services](/docs/connect_manage_environ/view_environments/#view-environment-details).
 
 Mock endpoints can be viewed in:
 
