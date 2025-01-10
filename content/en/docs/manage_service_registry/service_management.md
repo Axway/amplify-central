@@ -180,7 +180,7 @@ Mock endpoints can be viewed in:
 * [service details Endpoints tab](#view-api-service-details)
 * [Create Product side panel](#create-product)
 * [Publish To Marketplace side panel](#publish-to-the-marketplace)
-* Marketplace Product Resources tab
+* [Marketplace product Resources tab](/docs/manage_product_foundry/foundry_product_management/#view-product-details)
 
 ## Edit a mock endpoint
 
