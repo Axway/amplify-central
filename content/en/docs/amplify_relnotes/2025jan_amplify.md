@@ -24,7 +24,7 @@ New features, enhancements, and bug fixes for the January 10 update.
 * **Kafka Discovery Agent - Topics filtering**
 
   (ENHANCEMENT, DISCOVERY AGENT)<br />
-  We’ve introduced a new feature to the Kafka Discovery Agent, providing more control over topic discovery. Providers can now configure the Kafka Discovery Agent to filter and exclude specific Kafka topics from being discovered and registered in the Service Registry. This enhancement is included in agent version **1.1.9**. 
+  We’ve introduced a new feature to the Kafka Discovery Agent, providing more control over topic discovery. Providers can now configure the Kafka Discovery Agent to filter and exclude specific Kafka topics from being discovered and registered in the Service Registry. This enhancement is included in agent version **1.1.9**.
   
 * **Webmethods Discovery Agent - API filtering by tags and maturity state**
 
@@ -36,9 +36,9 @@ New features, enhancements, and bug fixes for the January 10 update.
 * **Introducing Axway Central CLI version 3.9.1**
   
   The latest version of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.8.0) is v3.9.1 on NPM. For details on Central CLI commands, see [Axway Central CLI Command reference](https://docs.axway.com/bundle/amplify-central/page/docs/integrate_with_central/cli_central/cli_command_reference/index.html). This release includes:
-  * The Central CLI can now support both **API Server v1** and **v1alpha1**.
-  * A fix for returning empty columns when running the get command on the following resources: APISpecLintingRuleset, Application, Resource.
- 
+    * The Central CLI can now support both **API Server v1** and **v1alpha1**.
+    * A fix for returning empty columns when running the get command on the following resources: APISpecLintingRuleset, Application, Resource.
+
 ### Marketplace updates for January 10, 2025
 
 * **Delete / Archive buttons in the product details screen**
