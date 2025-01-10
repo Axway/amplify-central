@@ -165,7 +165,7 @@ When creating a mock endpoint, only two of the following four fields are require
 * API Service Version - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
 * Mock Endpoint Name - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
 * Secure Mocked Endpoint - Enable this to require an HTTP request to set an authorization header, as shown below, with your Axway login token. The Marketplace "Try it out" feature will automatically set this header. Disabling this security feature will make the mock service public to everyone on the Internet.
-  * `X-Axway-Authorization: bearer [your-login-token]`
+    * `X-Axway-Authorization: bearer [your-login-token]`
 
 Mock endpoints can be created in:
 
