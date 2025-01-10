@@ -163,10 +163,10 @@ To create a mock endpoint:
 3. Click **+ Create Mock Endpoint**.
 4. Enter the information in the *Create Mock Endpoint* side panel. Note that only two of the following fields are required:
 
-    * **Endpoint Name** - A friendly name, or title, for this Mock Endpoint.
+    * **Endpoint Name** - A friendly name, or title, for this mock endpoint.
     * **API Service Version** - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
     * **Mock Endpoint Name** - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
-    * **Secure Mock Endpoint** - (optionally) By default the mocked endpoint is not secured. Toggle the button on to secure the mocked endpoint with an authorization header.
+    * **Secure Mock Endpoint** - By default, the mocked endpoint is not secured. Toggle the button on to secure the mocked endpoint with an authorization header.
 
 5. Click **Save** to save your changes. If successful, a success screen will give the option to close the side panel or go to the API Service.
 
