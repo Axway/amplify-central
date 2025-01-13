@@ -2,6 +2,7 @@
 title: Visualize the agent status
 linkTitle: Visualize the agent status
 weight: 50
+draft: true
 ---
 Add your agent status to the environment details page.
 
@@ -20,13 +21,13 @@ Refer to `axway central get` to list the resources.
 
 | RESOURCE                  | SHORT NAMES  | RESOURCE KIND                   | SCOPED  | SCOPE KIND    | RESOURCE GROUP  |
 |---------------------------|--------------|---------------------------------|---------|---------------|-----------------|
-| discoveryagents           | da           | DiscoveryAgent                  | true    | Environment   | management
+| discoveryagents           | da           | DiscoveryAgent                  | true    | Environment   | management |
 
 **Traceability Agent resource**:
 
 | RESOURCE                  | SHORT NAMES  | RESOURCE KIND                   | SCOPED  | SCOPE KIND    | RESOURCE GROUP  |
 |---------------------------|--------------|---------------------------------|---------|---------------|-----------------|
-| traceabilityagents        | ta           | TraceabilityAgent               | true    | Environment   | management
+| traceabilityagents        | ta           | TraceabilityAgent               | true    | Environment   | management |
 
 The following samples describe the resources for:
 

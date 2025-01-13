@@ -1,6 +1,6 @@
 ---
-title: View your environments
-linkTitle: View your environments
+title: View an environments
+linkTitle: View an environments
 weight: 10
 date: 2020-12-14
 ---
