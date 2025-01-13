@@ -10,6 +10,37 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## January 13, 2025
+
+New features, enhancements, and bug fixes for the January 13 update.
+
+### Marketplace updates for January 13, 2025
+
+* **Unified Dataplane type management across API, SDK, CLI, UI**
+
+  (ENHANCEMENT, DISCOVERY AGENT)<br />
+  We are now synchronizing the dataplane names (e.g "GitHub", "AWS", "APIM") across our API Server, SDK, CLI and UI. The API Server now acts as the single source of truth for defining the DataPlane types. This improvement eliminates discrepancies between components, providing a unified and reliable DataPlane type configuration across the ecosystem. Key updates include:
+
+  * API Server: Introduced `dataplaneType` as an enum with predefined allowed values.
+  * SDK: Uses the dataplane types defined in the API Server.
+  * UI: Dataplane types are now synced directly from the API Server for consistency.
+  * CLI: Updated to synchronize dataplane types from the API Server.
+  
+* **Protected mocked API endpoints**
+
+  (API MOCKING, ENHANCEMENT, PROVIDER EXPERIENCE)<br />
+  The API Mocking feature has been enhanced to improve security when working with sensitive data in API specifications. API providers can now configure mock endpoints to require platform-level authorization. When enabled, mock-server endpoints will require an Axway/Platform login authentication token to be included in request headers. Unauthorized requests without a valid token will receive an error response. This enhancement ensures sensitive example data remains protected. We strongly recommend following security best practices by avoiding the inclusion of sensitive data in API specification examples.
+
+* **Detect failure to delete environments and subscriptions**
+
+  (ENHANCEMENT, PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, CORE CAPABILITY)<br />
+  We have added a new state to the environments and subscriptions to show when they are in a "Deleting" state. This addresses the situation when these resources appear to be stuck in a deleted loop in the UI. Environments or subscriptions can go in a "Deleting" state when the discovery agent sets up "finalizers" on these resources so they don't get removed before the corresponding configuration is cleaned up from the dataplane. If the agent is down or in an unhealthy state, the removal of those resources is blocked, which will cause them to stay in a **deleting** state. Once the agent is restarted and the finalizers are removed, the resource are deleted from the Marketplace.
+
+* **Responsive Product Foundry page**
+
+  (PRODUCT FOUNDRY, ENHANCEMENT, PROVIDER EXPERIENCE)<br />
+  The Product Foundry has been enhanced to allow the page to adapt to different screen sizes.
+  
 ## January 10, 2025
 
 New features, enhancements, and bug fixes for the January 10 update.
