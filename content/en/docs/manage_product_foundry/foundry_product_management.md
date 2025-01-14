@@ -180,7 +180,7 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
-3. From the list view, select the product to edit. All edits will be based on the latest draft version or release version of the product. 
+3. From the list view, select the product to edit. All edits will be based on the latest draft version or release version of the product.
 
 {{< alert title="Note" color="warning" >}}
 The product documentation cannot be edited from here. You have to select a specific version to edit its corresponding documentation by using the ellipsis menu of the specific version **Edit Documents**.
