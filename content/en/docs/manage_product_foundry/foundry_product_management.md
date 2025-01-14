@@ -182,8 +182,8 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 2. Select **All Products**.
 3. From the list view, select the product to edit. All edits will be based on the latest draft version or release version of the product.
 
-{{< alert title="Note" color="warning" >}}
-The product documentation cannot be edited from here. You have to select a specific version to edit its corresponding documentation by using the ellipsis menu of the specific version **Edit Documents**.
+{{< alert title="Note" color="primary" >}}
+The product documentation cannot be edited from here. You must select the ellipsis menu of the specific version to edit its corresponding documentation by using the **Edit Documents** option.
 {{< /alert >}}
 
 ### Edit a product without a draft or release
@@ -278,7 +278,7 @@ The product can be in any state. Once this action is confirmed, it cannot be und
 6. Click **Update**.
 
 {{< alert title="Note" color="primary" >}}
-The product archival can also be done from the product details itself using the **Archive** icon located in the action bar on the top right corner of the product details screen.
+The product archival can also be done from *product details* screen by using the **Archive** icon located in the action bar on the top right.
 {{< /alert >}}
 
 ## Delete a product
@@ -295,5 +295,5 @@ The product must be in **Archive** state, with no release published to a Marketp
 6. Click **Update**.
 
 {{< alert title="Note" color="primary" >}}
-The product deletion can also be done from the product details itself using the **Bin** icon located in the action bar on the top right corner of the product details screen. The bin icon is present only if the product is already Archived.
+The product deletion can also be done from the *product details* screen by using the **Bin** icon located in the action bar on the top right. The bin icon is present only if the product is already Archived.
 {{< /alert >}}
