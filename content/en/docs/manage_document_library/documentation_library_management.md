@@ -252,4 +252,4 @@ Template can be deleted by either a **Catalog Manager** from the team that owns 
 
 #### Use a template
 
-The template can only be used when creating a new product or a new product release.
+The template can only be used when creating a new product or a new product version.
