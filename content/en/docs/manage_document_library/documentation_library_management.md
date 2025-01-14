@@ -249,3 +249,7 @@ Template can be deleted by either a **Catalog Manager** from the team that owns 
 
 1. Navigate to *Document Library* and select the **Templates** tab
 2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.
+
+#### Use a template
+
+The template can only be used when creating a new product or a new product version.

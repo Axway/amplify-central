@@ -182,6 +182,10 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 2. Select **All Products**.
 3. From the list view, select the product to edit. All edits will be based on the latest draft version or release version of the product.
 
+{{< alert title="Note" color="primary" >}}
+The product documentation cannot be edited from here. You must select the ellipsis menu of the specific version to edit its corresponding documentation by using the **Edit Documents** option.
+{{< /alert >}}
+
 ### Edit a product without a draft or release
 
 Click **Edit** (pencil button) at top right to edit the following without creating a draft or releasing a new product version: Product Name, Description, Image, Release Management settings, documentation, Access Rights, Categories, Tags, Attributes, and Support Contacts. The edits will take effect immediately.
@@ -190,10 +194,10 @@ Click **Edit** (pencil button) at top right to edit the following without creati
 
 ### Edit a product with the option to create a draft or make a new release
 
-1. Depending on the state of the product, click either **Edit Draft** or **Create New Version** to edit the assets linked to this product in the Link Asset step, editing documentation, and release a new product version to make it available for consumption in the Marketplace.
+1. Depending on the state of the product, click either **Edit Draft** or **Create New Version** to edit the assets linked to this product in the Link Asset step, editing documentation (using a documentation template or not), and release a new product version to make it available for consumption in the Marketplace.
 2. Select a preview or save option:
 
-    * **Preview Asset** - view product changes prior to taking effect.
+    * **Preview Product** - view product changes prior to taking effect.
     * **Save as Draft** - update changes to a product when edits require a new product release (Link Asset edits). This action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
     * **Save & Activate** - update changes in a product version release when edits require a new product release (Link Asset edits) and Auto-release is disabled.
 
@@ -273,6 +277,10 @@ The product can be in any state. Once this action is confirmed, it cannot be und
 5. Confirm that the selected product is the one you want to Archive.
 6. Click **Update**.
 
+{{< alert title="Note" color="primary" >}}
+The product archival can also be done from *product details* screen by using the **Archive** icon located in the action bar on the top right.
+{{< /alert >}}
+
 ## Delete a product
 
 The product must be in **Archive** state, with no release published to a Marketplace and no remaining subscriptions. Once this action is confirmed, it cannot be undone.
@@ -286,4 +294,6 @@ The product must be in **Archive** state, with no release published to a Marketp
 5. Confirm that the selected product is the one you want to delete.
 6. Click **Update**.
 
-{{< alert title="Note" color="primary" >}}Products that are in an **Archive** state but part of an active subscription cannot be deleted.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}
+The product deletion can also be done from the *product details* screen by using the **Bin** icon located in the action bar on the top right. The bin icon is present only if the product is already Archived.
+{{< /alert >}}
