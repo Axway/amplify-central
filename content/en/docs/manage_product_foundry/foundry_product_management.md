@@ -180,7 +180,7 @@ The product can be in **Draft**, **Active**, or **Deprecated** state.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
-3. From the list view, select the product to edit. All edits will be based on the latest draft version or release version of the product.
+3. From the list view, select the product to edit. All edits will be based on the latest draft version or release version of the product. The product documentation cannot be edited from here. You have to select a specific version to edit its corresponding documentation. For updating the documentation, use the ellipsis menu of the specific version **Edit Documents**
 
 ### Edit a product without a draft or release
 
@@ -190,10 +190,10 @@ Click **Edit** (pencil button) at top right to edit the following without creati
 
 ### Edit a product with the option to create a draft or make a new release
 
-1. Depending on the state of the product, click either **Edit Draft** or **Create New Version** to edit the assets linked to this product in the Link Asset step, editing documentation, and release a new product version to make it available for consumption in the Marketplace.
+1. Depending on the state of the product, click either **Edit Draft** or **Create New Version** to edit the assets linked to this product in the Link Asset step, editing documentation (using a documentation template or not), and release a new product version to make it available for consumption in the Marketplace.
 2. Select a preview or save option:
 
-    * **Preview Asset** - view product changes prior to taking effect.
+    * **Preview Product** - view product changes prior to taking effect.
     * **Save as Draft** - update changes to a product when edits require a new product release (Link Asset edits). This action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
     * **Save & Activate** - update changes in a product version release when edits require a new product release (Link Asset edits) and Auto-release is disabled.
 
@@ -273,6 +273,10 @@ The product can be in any state. Once this action is confirmed, it cannot be und
 5. Confirm that the selected product is the one you want to Archive.
 6. Click **Update**.
 
+{{< alert title="Note" color="primary" >}}
+The product archival can also be done from the product details itself using the **Archive** icon located in the action bar on the top right corner of the screen.
+{{< /alert >}}
+
 ## Delete a product
 
 The product must be in **Archive** state, with no release published to a Marketplace and no remaining subscriptions. Once this action is confirmed, it cannot be undone.
@@ -286,4 +290,6 @@ The product must be in **Archive** state, with no release published to a Marketp
 5. Confirm that the selected product is the one you want to delete.
 6. Click **Update**.
 
-{{< alert title="Note" color="primary" >}}Products that are in an **Archive** state but part of an active subscription cannot be deleted.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}
+The product deletion can also be done from the product details itself using the **Bin** icon located in the action bar on the top right corner of the screen. The bin icon is present only if the product is already Archived.
+{{< /alert >}}
