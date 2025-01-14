@@ -20,10 +20,10 @@ New features, enhancements, and bug fixes for the January 13 update.
 
   (ENHANCEMENT, DISCOVERY AGENT)<br />
   We are now synchronizing the dataplane names (e.g "GitHub", "AWS", "APIM") across our API Server, SDK, CLI and UI. The API Server now acts as the single source of truth for defining the DataPlane types. This improvement eliminates discrepancies between components, providing a unified and reliable DataPlane type configuration across the ecosystem. Key updates include:
-  * API Server: Introduced `dataplaneType` as an enum with predefined allowed values.
-  * SDK: Uses the dataplane types defined in the API Server.
-  * UI: Dataplane types are now synced directly from the API Server for consistency.
-  * CLI: Updated to synchronize dataplane types from the API Server.
+    * API Server: Introduced `dataplaneType` as an enum with predefined allowed values.
+    * SDK: Uses the dataplane types defined in the API Server.
+    * UI: Dataplane types are now synced directly from the API Server for consistency.
+    * CLI: Updated to synchronize dataplane types from the API Server.
   
 * **Protected mocked API endpoints**
 
