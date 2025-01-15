@@ -19,7 +19,7 @@ New features, enhancements, and bug fixes for the January 13 update.
 * **Unified Dataplane type management across API, SDK, CLI, UI**
 
   (ENHANCEMENT, DISCOVERY AGENT)<br />
-  We are now synchronizing the dataplane names (e.g "GitHub", "AWS", "APIM") across our API Server, SDK, CLI and UI. The API Server now acts as the single source of truth for defining the DataPlane types. This improvement eliminates discrepancies between components, providing a unified and reliable DataPlane type configuration across the ecosystem. Key updates include:
+  We are now synchronizing the dataplane names (e.g "GitHub", "AWS", "APIM") across our API Server, SDK, CLI and UI. The API Server now acts as the single source of truth for defining the dataplane types. This improvement eliminates discrepancies between components, providing a unified and reliable dataplane type configuration across the ecosystem. Key updates include:
     * API Server: Introduced `dataplaneType` as an enum with predefined allowed values.
     * SDK: Uses the dataplane types defined in the API Server.
     * UI: Dataplane types are now synced directly from the API Server for consistency.
@@ -33,7 +33,7 @@ New features, enhancements, and bug fixes for the January 13 update.
 * **Detect failure to delete environments and subscriptions**
 
   (ENHANCEMENT, PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, CORE CAPABILITY)<br />
-  We have added a new state to the environments and subscriptions to show when they are in a "Deleting" state. This addresses the situation when these resources appear to be stuck in a deleted loop in the UI. Environments or subscriptions can go in a "Deleting" state when the discovery agent sets up "finalizers" on these resources so they don't get removed before the corresponding configuration is cleaned up from the dataplane. If the agent is down or in an unhealthy state, the removal of those resources is blocked, which will cause them to stay in a **deleting** state. Once the agent is restarted and the finalizers are removed, the resource are deleted from the Marketplace.
+  We have added a new state to the environments and subscriptions to show when they are in a **Deleting** state. This addresses the situation when these resources appear to be stuck in a deleted loop in the UI. Environments or subscriptions can go in a **Deleting** state when the Discovery Agent sets up "finalizers" on these resources so they don't get removed before the corresponding configuration is cleaned up from the dataplane. If the agent is down or in an unhealthy state, the removal of those resources is blocked, which will cause them to stay in a **deleting** state. Once the agent is restarted and the finalizers are removed, the resource are deleted from the Marketplace.
 
 * **Responsive Product Foundry page**
 
