@@ -132,7 +132,7 @@ This action is not supported by all data planes and may not be available for the
 
 When viewing the credential list from the application or from the product resources details, a **Renew credential** menu can be used if enabled by the underlying data plane.
 
-## delete credential
+## Delete credential
 
 A credential can be deleted:
 
