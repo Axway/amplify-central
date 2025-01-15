@@ -32,7 +32,7 @@ Each environment in the list contains some basic information:
 4. The connection status of any AWS Gateway or API Manager Discovery and Traceability agents that you have connected to the environment. MANUAL SYNC will be displayed if there is no agent connected. See [Agent environment status](#service-synchronization).
 5. The Production/Non-Production status of the environment. PRODUCTION indicates that the environment will be used to perform production processing or connect to a non-Axway gateway. This usage will be reflected in your entitled quota.
 6. The number of assets, API services, housed in the environment
-7. Tags or keywords assigned to the environement
+7. Tags or keywords assigned to the environment
 8. The user who last modified the environment, and when
 9. Trash bin to delete the environment
 
@@ -55,7 +55,7 @@ The following information is displayed for environments created using the API se
         * Subscriptions: The total count of subscribers to all the published Marketplace items.
 
     * **Tags & Attributes**: This section shows any tags (keywords) and attributes (key and value pairs) that are specific to the environment asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third-party systems.
-    * **Services, Access Rights, Credential Managment**: This section shows all API services, access rights, and when credentails expire within the environment. It is sortable by logical name, Version Count, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the user who last modified the API service, and when the API service was last modified.
+    * **Services, Access Rights, Credential Management**: This section shows all API services, access rights, and when credentials expire within the environment. It is sortable by logical name, Version Count, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the user who last modified the API service, and when the API service was last modified.
 
         * Mock Endpoints: If requirements are met, a mock endpoint can be created from the **Services** tab:
 

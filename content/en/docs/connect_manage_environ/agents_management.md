@@ -29,7 +29,7 @@ A list of agents is displayed with the following information:
 * **Agent Version** - the agent version number.
 * **Agent Type** - can be either a Discovery Agent or a Traceability Agent.
 * **Agent Host** - can be either On-premise or SaaS (embedded agent).
-* **Agent Version Status** - applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses: Up To Date, Update Available, or Outdated. View the [latest agent vesions](/docs/amplify_relnotes).
+* **Agent Version Status** - applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses: Up To Date, Update Available, or Outdated. View the [latest agent versions](/docs/amplify_relnotes).
 
     * **Up To Date** - the agent is up to date.
     * **Update Available** - a new version is available.
