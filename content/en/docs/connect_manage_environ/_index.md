@@ -1,6 +1,6 @@
 ---
-title: Connect and manage your environment
-linkTitle: Connect and manage your environment
+title: Connect and manage an environment
+linkTitle: Connect and manage an environment
 weight: 350
 date: 2020-11-18
 ---

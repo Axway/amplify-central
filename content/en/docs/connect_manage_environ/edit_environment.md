@@ -1,6 +1,6 @@
 ---
-title: Edit your environment
-linkTitle: Edit your environment
+title: Edit an environment
+linkTitle: Edit an environment
 weight: 9
 date: 2024-03-29
 ---

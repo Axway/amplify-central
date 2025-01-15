@@ -1,7 +1,7 @@
 ---
-title: Assign an environment owner
-linkTitle: Assign an environment owner
-weight: 5
+title: Environment access rights
+linkTitle: Environment access rights
+weight: 8
 ---
 Limit access to environments and API services by assigning an owning team.
 

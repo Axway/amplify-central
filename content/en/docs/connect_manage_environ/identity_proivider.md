@@ -1,6 +1,6 @@
 ---
-title: Identity Provider management
-linkTitle: Identity Providers management
+title: Set up an Identity Provider for SaaS hosted agent
+linkTitle: Set up an Identity Provider for SaaS hosted agent
 weight: 20
 date: 2024-08-29
 ---

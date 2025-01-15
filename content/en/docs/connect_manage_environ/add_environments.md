@@ -1,7 +1,7 @@
 ---
-title: Add your environment
-linkTitle: Add your environment
-weight: 8
+title: Create an environment
+linkTitle: Create an environment
+weight: 5
 date: 2023-04-27
 ---
 Within topology, environments are used to represent a group of objects discovered from a gateway, a repository, or anything manually added to the environment. These grouped objects (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all objects are scoped within.

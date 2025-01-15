@@ -1,6 +1,6 @@
 ---
-title: Stage management
-linkTitle: Stage management
+title: Add and manage stages
+linkTitle: Add and manage stages
 weight: 20
 date: 2023-10-18
 ---
