@@ -41,7 +41,7 @@ A list of agents is displayed with the following information:
 
 ## View agent details
 
-1. Navigate to *Topology > Agents*.
+1. Navigate to *Topology > Environments > Agents*.
 2. Click on the agent. *Basic details are displayed about the agent*.
 
 ## Add your agent status to the environment details page using the CLI
