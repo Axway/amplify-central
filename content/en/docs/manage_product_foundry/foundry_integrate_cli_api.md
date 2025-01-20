@@ -330,7 +330,7 @@ axway central apply -f product-updated.json
 
 To release a product, you must create a release tag for the product. The Product Foundry enforces sematic versioning, so when you create a release tag you must specify whether it is a major, minor or patch update. The Amplify platform will automatically calculate the semantic version based on the historic release version that has been applied. You can select how the release version number is incremented by selected one of the following values: `major`, `minor`, or `patch` for the `releaseType` field in the `ReleaseTag`. If you the current version number is 1.0.1 then the version will become the following:
 
-| Value provided      | Result | Used when
+| Value provided      | Result | Used when |
 | ----------- | ----------- | ----------- |
 |major|2.0.1|Breaking changes introduced in the product for API Consumers |
 |minor|1.1.1| New feature introduced to the product which does not break existing capabilities being consumed by API Consumers |
