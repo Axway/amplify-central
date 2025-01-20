@@ -38,7 +38,7 @@ The product specific categories have two types of visibility:
 * Private: Visible in the Product Foundry only.
 * Public: Visible in both the Product Foundry and the Marketplace.
 
-Additionally, the product category can be organized into a hierarchy (up to threee levels), where a parent can be set to a category. Once a category is assigned to a parent, its visibility or ownership can no longer be changed; it will follow the definition of its parent. The Category listing shows the Parent of each category (if it exists), as well as the number of its children.
+Additionally, the product category can be organized into a hierarchy (up to three levels), where a parent can be set to a category. Once a category is assigned to a parent, its visibility or ownership can no longer be changed; it will follow the definition of its parent. The Category listing shows the Parent of each category (if it exists), as well as the number of its children.
 
 A public category can be set to **Featured** by providers to highlight and advertise the category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of featured categories is **five**.
 
@@ -77,7 +77,7 @@ If the product is already published to a Marketplace, the change of category wil
 3. Click **+ Add New Category** to start the category creation wizard:
 
     * Category Profile page: Enter the category definition (Name, Parent, Description, and an optional image). The category logical name will be computed based on the category name.
-    * When associating a parent, the Access rights and Marketplace association are disabled because the children category automatically follows its parent rights and visiblity.
+    * When associating a parent, the Access rights and Marketplace association are disabled because the children category automatically follows its parent rights and visibility.
     * Product Association page: Assign/unassign product to this category.
     * Access rights: Assign/unassign who manages/views the category.
     * Marketplace association page: Assign/unassign all Marketplaces, or specific Marketplaces, where this category will be visible and/or featured.

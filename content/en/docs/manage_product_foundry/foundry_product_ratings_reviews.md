@@ -9,7 +9,7 @@ View and filter the product ratings.
 ## Before you start
 
 * You must have a user account with Catalog Manager rights to view the product.
-* **Ratings & Reviews** must be enable for the Marketplace. Refer to [Marketpalce settings](/docs/manage_marketplace/customize_marketplace/marketplace_ratings_reviews)
+* **Ratings & Reviews** must be enable for the Marketplace. Refer to [Marketplace settings](/docs/manage_marketplace/customize_marketplace/marketplace_ratings_reviews)
 
 ## Objectives
 
