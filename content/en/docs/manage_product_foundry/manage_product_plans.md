@@ -167,11 +167,11 @@ When you are finished configuring the quotas, click **Next** to select the appro
 
 ### Configure visibility
 
-By default a plan will be visible to everyone. But you can restrict its visibility based on a provider team, a provider team tag and/or a consumer organization (only available if consumer organization is enable in the Marketplace).
+By default, a plan is visible to everyone. But you can restrict its visibility based on a provider team, a provider team tag, and/or a consumer organization (only available if the consumer organization is enabled in the Marketplace).
 
-Visibility also depends on the Marketplace type (private vs. public). A public Marketplace can be browsed anonymously, but a product plan can be restricted to only authenticated users. Whereas, a private Marketplace always requires authenticated users.
+Visibility also depends on the Marketplace type (private vs. public). A public Marketplace can be browsed anonymously, but a product plan can be restricted to only authenticated users. Whereas a private Marketplace always requires authenticated users.
 
-The plan visibility can be configure either by Catalog Manager or Central admin users.
+The plan visibility can be configured either by the Catalog Manager or Central admin users.
 
 The plan visibility configuration is accessible either when creating a plan or using the ellipsis menu **Edit plan visibility** under the visibility tab of the plan wizard:
 
@@ -184,13 +184,13 @@ The plan visibility configuration is accessible either when creating a plan or u
 
     * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
 
-        * **Everyone** - (default) the product plan is visible in the Marketplace by all registered users in your provider organization.
+        * **Everyone** - (default) the product plan is visible in the Marketplace to all registered users in your provider organization.
         * **Selected teams** - only members of the selected teams can see the product in the Marketplace.
         * **Exclude selected teams** - only members that are not part of selected teams can see the product in the Marketplace.
         * **Include teams having tag** - only members of the team that have the selected tag can see the product in the Marketplace.
         * **None** - the product is not visible to anyone in the Marketplace.
 
-            * From the list of available teams in your provider organization, select the teams you want to give product visibility or remove visibility from. You can also remove from the list the team that cannot access this marketplace using the **Show only teams with access to this marketplace** switcher.
+            * From the list of available teams in your provider organization, select the teams you want to give product visibility to or remove visibility from. You can also remove from the list the team that cannot access this marketplace using the **Show only teams with access to this marketplace** switcher.
 
     * **Marketplace Users** visibility: under **Marketplace User**, select one of the following options from the **Visible To** menu:
 
