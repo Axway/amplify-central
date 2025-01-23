@@ -10,6 +10,27 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## January 15, 2025
+
+New features, enhancements, and bug fixes for the January 15 update.
+
+### Axway CLI updates for January 15, 2024
+
+* **Introducing Axway CLI version 3.2.16**
+  
+  The latest version of the [Axway CLI](https://www.npmjs.com/package/axway/v/3.2.16) is v3.2.16 on NPM. This release includes:
+    * A fix for not allowing a "Service account" with Administrator privilege to manage a team. After the fix, you can now user service account with admin privilege to manage teams.
+
+### Marketplace bug fixes for January 15, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01654349 | APIGOV-29200 | **Issue**: Cannot add more than 50 resources in Plan Creation <br/>**Resolution**: You can now add unlimited resources to a plan. |
+| 01664984, 01670114 | APIGOV-29381 | **Issue**: Unable to save an active plan when user is Central Admin, but the product is owned by a team <br/> **Resolution**: The plan inherits the owner of the product, which no longer results in a failed action.|
+|N/A | APIGOV-29490 | **Issue**: Big gap between the search bar and the table, when the table contains few entries <br/> **Resolution**: There is no longer a large gap between the search bar and the table.|
+|N/A |APIGOV-28357 | **Issue**: The TAG field should allow up to 250 characters for tags <br/> **Resolution**: Now users can add tags up to 250 characters in total.|
+|N/A APIGOV-29453 | **Issue**:  Don't allow users to select in the asset wizard, api services that don't have any endpoints <br/> **Resolution**: After the fix, when creating an asset, users cannot link an api service that has no endpoints.|
+
 ## January 13, 2025
 
 New features, enhancements, and bug fixes for the January 13 update.
