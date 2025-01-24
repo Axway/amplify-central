@@ -20,7 +20,7 @@ The product visibility helps you to control who can see the product in your vari
 
 Visibility can be restricted based on a provider team, a provider team tag and/or a consumer organization (only available if consumer organization is enable in the Marketplace).
 
-Visibility also depends on the Marketplace type (private vs. public). A public Marketplace can be browsed anonymously, but a product can be restriced to only authenticated users. Whereas, a private Marketplace always requires authenticated users.
+Visibility also depends on the Marketplace type (private vs. public). A public Marketplace can be browsed anonymously, but a product can be restricted to only authenticated users. Whereas, a private Marketplace always requires authenticated users.
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**. *The product list view is displayed*.

@@ -84,6 +84,7 @@ To configure a product plan from the *product details* page:
    * Plan profile - title (mandatory), name (optional), description (optional)
    * [Billing configuration](/docs/manage_product_foundry/manage_product_plans#billing-information)
    * [Plan quotas](/docs/manage_product_foundry/manage_product_plans#configure-a-quota)
+   * [Plan visibility](/docs/manage_product_foundry/manage_product_plans#configure-visibility)
    * [Add custom metadata](/docs/manage_product_foundry/manage_product_plans#configure-access)
    * Add optional tags and attributes
 
@@ -163,6 +164,43 @@ To configure a quota for a **Paid plan**, enter the values for the following pro
 Click **+ Add Quota** to create another quota group for a different resource. Once a resource is assigned to a quota group, it is no longer available for another quota group.
 
 When you are finished configuring the quotas, click **Next** to select the approval mode of the plan.
+
+### Configure visibility
+
+By default, a plan is visible to everyone. But you can restrict its visibility based on a provider team, a provider team tag, and/or a consumer organization (only available if the consumer organization is enabled in the Marketplace).
+
+Visibility also depends on the Marketplace type (private vs. public). A public Marketplace can be browsed anonymously, but a product plan can be restricted to only authenticated users. Whereas a private Marketplace always requires authenticated users.
+
+The plan visibility can be configured either by the Catalog Manager or Central admin users.
+
+The plan visibility configuration is accessible either when creating a plan or using the ellipsis menu **Edit plan visibility** under the visibility tab of the plan wizard:
+
+1. Select the Marketplace where you want to publish the product plan, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
+
+    * **Authenticated users** visibility - indicates if the user must be authenticated to see the product:
+
+        * **unchecked** - anonymous user can view any product in the Public Marketplace (default behavior). This option is not available for Private Marketplace.
+        * **checked** - user must be authenticated to see the product and can be restricted farther with the Platform Users or Marketplace Users options. This cannot be unchecked for Private Marketplace.
+
+    * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
+
+        * **Everyone** - (default) the product plan is visible in the Marketplace to all registered users in your provider organization.
+        * **Selected teams** - only members of the selected teams can see the product in the Marketplace.
+        * **Exclude selected teams** - only members that are not part of selected teams can see the product in the Marketplace.
+        * **Include teams having tag** - only members of the team that have the selected tag can see the product in the Marketplace.
+        * **None** - the product is not visible to anyone in the Marketplace.
+
+            * From the list of available teams in your provider organization, select the teams you want to give product visibility to or remove visibility from. You can also remove from the list the team that cannot access this marketplace using the **Show only teams with access to this marketplace** switcher.
+
+    * **Marketplace Users** visibility: under **Marketplace User**, select one of the following options from the **Visible To** menu:
+
+        * **Everyone** - (default) the product is visible in the Marketplace by all registered users in your provider organization.
+        * **Selected organizations** - only users registered with a Marketplace account and a member of the selected consumer organization can see the product in the Marketplace.
+        * **None** - the product is not visible to any user registered with a Marketplace account or anonymous users.
+
+            * From the list of available consumer organizations in your provider organization, select the consumer organization you want to give product visibility or remove visibility from.
+
+2. Click **Save Draft & Exit** to apply the changes or **Cancel** to discard the changes.
 
 ### Configure access
 
