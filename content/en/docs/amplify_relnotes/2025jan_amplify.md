@@ -10,6 +10,41 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## January 24, 2025
+
+New features, enhancements, and bug fixes for the January 15 update.
+
+### Agent updates for January 24, 2025
+
+* **New Agents Versions Available**
+
+  (AGENT SDK UPDATE, DISCOVERY AGENT, TRACEABILITY AGENT)<br />
+  New versions are available for our on-prem agents. Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+* **Kafka Agent Enhancement: SASL/OAUTHBEARER Authentication Support**
+
+  (KAFKA, DISCOVERY AGENT, ENHANCEMENT)<br />
+  We have extended the range of supported authentication types within the Kafka Agent. The agent can now communicate with the Confluent Platform using **SASL/OAUTHBEARER** authentication, enabling integration with Confluent Platform environments configured with Oauth-based security.This enhancement is available in Kafka Discovery Agent **v1.1.10.**.
+
+* **APIM Traceability Enhancement: Optimized Event Processing with Sampling Check**
+
+  (APIM, TRACEABILITY AGENT, ENHANCEMENT)<br />
+  The APIM agent's event processing logic has been optimized to improve efficiency and performance, particularly when sampling is enabled.Previously, the APIM Agent would process the entire summary and leg events for every event it encountered, regardless of whether the event would be sampled. This approach resulted in unnecessary processing overhead for events that were ultimately not sampled. With this enhancement, the agent now checks whether an event should be sampled before performing full summary and leg event processing.For events taht are not samples, the agent will simply update the relevant metric data, avoiding redundant processing. This update is available in APIM Traceability Agent **v1.2.13**.
+
+### Agent bug fixes for January 24, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01676790 | APIGOV-29562 | **Issue**: Offline Traceability - panic: runtime error: invalid memory address or nul pointer dereference <br/>**Resolution**: Fixed to not use custom unit metric processing for offline mode |
+| N/A | APIGOV-29557 | **Issue**: New event mapping does not include the mapping of the response metrics <br/>**Resolution**: The SDK mapping of the old metric event to the new metric event now includes the response metrics.|
+
+### Marketplace updates for January 24, 2025
+
+* **Hourly and Minute quota limits in product plans**
+
+  (PRODUCT FOUNDRY, PLANS, ENHANCEMENT)<br />
+  This enhancements allows users to enforce specific unit quantity limits per **hour** or **minute** in a product plan. These quota limits are currently processed and enforced only by the APIM Discovery Agent.
+
 ## January 15, 2025
 
 New features, enhancements, and bug fixes for the January 15 update.
