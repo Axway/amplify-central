@@ -54,7 +54,7 @@ The Traceability Agent gathers consumer metrics for topics defined in the Kafka 
         * Resource API Key for Cluster. See [Resource API key](https://docs.confluent.io/cloud/current/access-management/authenticate/api-keys/api-keys.html#resource-api-keys)
         * Resource API Key for Schema Registry. See [Resource API key](https://docs.confluent.io/cloud/current/access-management/authenticate/api-keys/api-keys.html#resource-api-keys)
     * Confluent Platform
-        * SASL User. The agent supports SASL/PLAIN and SASL/SCRAM based authentication. See [Authenticate with SASL](https://docs.confluent.io/platform/current/kafka/authentication_sasl/auth-sasl-overview.html)
+        * SASL User or OAuth/OIDC client. The agent supports SASL/PLAIN, SASL/SCRAM and SASL/OAUTHBEARER based authentication. See [Authenticate with SASL](https://docs.confluent.io/platform/current/security/authentication/sasl/overview.html)
 
 ## Region support
 
