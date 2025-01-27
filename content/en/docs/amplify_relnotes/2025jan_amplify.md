@@ -10,6 +10,48 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## January 24, 2025
+
+New features, enhancements, and bug fixes for the January 15 update.
+
+### Agent updates for January 24, 2025
+
+* **New Agents Versions Available**
+
+  (AGENT SDK UPDATE, DISCOVERY AGENT, TRACEABILITY AGENT)<br />
+  New versions are available for our on-prem agents. Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+* **Kafka Agent Enhancement: SASL/OAUTHBEARER Authentication Support**
+
+  (KAFKA, DISCOVERY AGENT, ENHANCEMENT)<br />
+  We have extended the range of supported authentication types within the Kafka Agent. The agent can now communicate with the Confluent Platform using **SASL/OAUTHBEARER** authentication, enabling integration with Confluent Platform environments configured with Oauth-based security.This enhancement is available in Kafka Discovery Agent **v1.1.10.**. This update is supported in the Axway Central CLI **v3.9.2**.
+
+* **APIM Traceability Enhancement: Optimized Event Processing with Sampling Check**
+
+  (APIM, TRACEABILITY AGENT, ENHANCEMENT)<br />
+  The APIM agent's event processing logic has been optimized to improve efficiency and performance, particularly when sampling is enabled.Previously, the APIM Agent would process the entire summary and leg events for every event it encountered, regardless of whether the event would be sampled. This approach resulted in unnecessary processing overhead for events that were ultimately not sampled. With this enhancement, the agent now checks whether an event should be sampled before performing full summary and leg event processing.For events taht are not samples, the agent will simply update the relevant metric data, avoiding redundant processing. This update is available in APIM Traceability Agent **v1.2.13**.
+
+### Agent bug fixes for January 24, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01676790 | APIGOV-29562 | **Issue**: Offline Traceability - panic: runtime error: invalid memory address or nul pointer dereference <br/>**Resolution**: Fixed to not use custom unit metric processing for offline mode |
+| N/A | APIGOV-29557 | **Issue**: New event mapping does not include the mapping of the response metrics <br/>**Resolution**: The SDK mapping of the old metric event to the new metric event now includes the response metrics.|
+
+### Axway CLI updates for January 24, 2024
+
+* **Introducing Axway Central CLI version 3.9.2**
+  
+  The latest version of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.9.2) is v3.9.2 on NPM. For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference/). This release includes:
+    * Kafka install agent command with SASL/AUTHBEARER authentication support
+
+### Marketplace updates for January 24, 2025
+
+* **Hourly and Minute quota limits in product plans**
+
+  (PRODUCT FOUNDRY, PLANS, ENHANCEMENT)<br />
+  This enhancements allows users to enforce specific unit quantity limits per **hour** or **minute** in a product plan. These quota limits are currently processed and enforced only by the APIM Discovery Agent **v1.2.14.**.
+
 ## January 15, 2025
 
 New features, enhancements, and bug fixes for the January 15 update.
@@ -29,7 +71,7 @@ New features, enhancements, and bug fixes for the January 15 update.
 | 01664984, 01670114 | APIGOV-29381 | **Issue**: Unable to save an active plan when user is Central Admin, but the product is owned by a team <br/> **Resolution**: The plan inherits the owner of the product, which no longer results in a failed action.|
 |N/A | APIGOV-29490 | **Issue**: Big gap between the search bar and the table, when the table contains few entries <br/> **Resolution**: There is no longer a large gap between the search bar and the table.|
 |N/A |APIGOV-28357 | **Issue**: The TAG field should allow up to 250 characters for tags <br/> **Resolution**: Now users can add tags up to 250 characters in total.|
-|N/A APIGOV-29453 | **Issue**:  Don't allow users to select in the asset wizard, api services that don't have any endpoints <br/> **Resolution**: After the fix, when creating an asset, users cannot link an api service that has no endpoints.|
+|N/A |APIGOV-29453 | **Issue**:  Don't allow users to select in the asset wizard, api services that don't have any endpoints <br/> **Resolution**: After the fix, when creating an asset, users cannot link an api service that has no endpoints.|
 
 ## January 13, 2025
 
