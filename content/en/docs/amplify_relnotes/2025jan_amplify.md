@@ -24,7 +24,7 @@ New features, enhancements, and bug fixes for the January 15 update.
 * **Kafka Agent Enhancement: SASL/OAUTHBEARER Authentication Support**
 
   (KAFKA, DISCOVERY AGENT, ENHANCEMENT)<br />
-  We have extended the range of supported authentication types within the Kafka Agent. The agent can now communicate with the Confluent Platform using **SASL/OAUTHBEARER** authentication, enabling integration with Confluent Platform environments configured with Oauth-based security.This enhancement is available in Kafka Discovery Agent **v1.1.10.**.
+  We have extended the range of supported authentication types within the Kafka Agent. The agent can now communicate with the Confluent Platform using **SASL/OAUTHBEARER** authentication, enabling integration with Confluent Platform environments configured with Oauth-based security.This enhancement is available in Kafka Discovery Agent **v1.1.10.**. This update is supported in the Axway Central CLI **v3.9.2**.
 
 * **APIM Traceability Enhancement: Optimized Event Processing with Sampling Check**
 
