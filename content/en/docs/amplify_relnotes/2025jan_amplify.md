@@ -38,6 +38,13 @@ New features, enhancements, and bug fixes for the January 15 update.
 | 01676790 | APIGOV-29562 | **Issue**: Offline Traceability - panic: runtime error: invalid memory address or nul pointer dereference <br/>**Resolution**: Fixed to not use custom unit metric processing for offline mode |
 | N/A | APIGOV-29557 | **Issue**: New event mapping does not include the mapping of the response metrics <br/>**Resolution**: The SDK mapping of the old metric event to the new metric event now includes the response metrics.|
 
+### Axway CLI updates for January 24, 2024
+
+* **Introducing Axway Central CLI version 3.9.2**
+  
+  The latest version of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.9.2) is v3.9.2 on NPM. For details on Central CLI commands, see [Axway Central CLI Command reference](/docs/integrate_with_central/cli_central/cli_command_reference/). This release includes:
+    * Kafka install agent command with SASL/AUTHBEARER authentication support
+
 ### Marketplace updates for January 24, 2025
 
 * **Hourly and Minute quota limits in product plans**
