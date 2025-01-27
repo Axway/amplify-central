@@ -43,7 +43,7 @@ New features, enhancements, and bug fixes for the January 15 update.
 * **Hourly and Minute quota limits in product plans**
 
   (PRODUCT FOUNDRY, PLANS, ENHANCEMENT)<br />
-  This enhancements allows users to enforce specific unit quantity limits per **hour** or **minute** in a product plan. These quota limits are currently processed and enforced only by the APIM Discovery Agent.
+  This enhancements allows users to enforce specific unit quantity limits per **hour** or **minute** in a product plan. These quota limits are currently processed and enforced only by the APIM Discovery Agent **v1.2.14.**.
 
 ## January 15, 2025
 
