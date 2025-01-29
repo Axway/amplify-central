@@ -133,7 +133,8 @@ Create an IAM role with a trust relationship that allows the Apigee agents to re
 5. Save the service account email address, as it will be required when setting up your agent.
 
 Now that GCP is all set, you can:
-    * [Deploy your Embedded Apigee agents with Axway CLI](/docs/connect_manage_environ/deploy-embedded-agents/)
-    * [Deploy your Ground Apigee agents with Axway CLI](docs/connect_manage_environ/deploy-ground-agents/)
+
+* [Deploy your Embedded Apigee agents with Axway CLI](/docs/connect_manage_environ/deploy-embedded-agents/)
+* [Deploy your Ground Apigee agents with Axway CLI](docs/connect_manage_environ/deploy-ground-agents/)
 
 See [Agent Variables](/docs/connect_manage_environ/agent-variables/) for more details about the Apigee X agents environment variables
