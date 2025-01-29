@@ -1,6 +1,6 @@
 ---
-title: Connect Apigee X
-linkTitle: Connect Apigee X
+title: Connect Apigee X Gateway
+linkTitle: Connect Apigee X Gateway
 weight: 110
 ---
 Connect Google Cloud Platform Apigee X and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the Apigee X hosted APIs in one central location.
@@ -13,14 +13,6 @@ Each Apigee X organization can be represented by an Amplify environment allowing
 
 * Detect changes to Apigee X proxies deployments using the Discovery Agent. The Discovery Agent pushes the proxy configuration as an API service for the environment, which can then be published as a catalog item to be used by consumers to subscribe to the service.
 * Gather Apigee X statistics that are related to discovered APIs and prepare the metric events that are sent to Amplify platform.
-
-## Before you start
-
-* Read [Embedded Apigee X agents setup](/docs/connect_manage_environ/connect_apigee_x/embedded-agent-setup/)
-* Gather information on GCP and Apigee:
-    * The project ID for the Google Cloud project
-    * The developer email address that will be the owner of the agent created application in Apigee
-    * The principal name of the service account created in setup
 
 ### Discovery Agent
 
@@ -54,135 +46,94 @@ The Discovery Agent is used to discover new API proxies configured in Apigee X, 
 
 The Traceability Agent gathers usage metrics for all proxies defined in Apigee X. The agent will query, based on the configured frequency, the Apigee X stats API for new metrics. The metrics, as noted in the [Apigee X documentation](https://cloud.google.com/apigee/docs/api-platform/analytics/use-analytics-api-measure-api-program-performance), can be delayed up to 10 minutes. Due to this possible delay the Traceability Agent will not gather metrics within the last 10 minutes of executing the stats query. On subsequent runs those metrics will be gathered.
 
-### Installation via CLI
+## Prerequisites
 
-## Embedded agent configuration pre-requisites
+* An Axway Amplify subscription in the Amplify platform
+* A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
+* An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
+* A GCP IAM service account
 
-* Any machine (Windows / Linux / Mac) where:
-    * You can access platform.axway.com and login.axway.com on port 443
-    * You can install and run Axway Central CLI (node.js module)
-    * You can access the npm package (for installing Axway CLI)
-    * You can install OpenSSL
-    * There is a graphical environment (optional)
+## Set up GCP for Apigee agents
 
-## Configure the agents with Axway Central CLI
+Set up Google Cloud Platform (GCP) so an Apigee agents can connect to and managed your Apigee X environment within Amplify.
 
-Use Axway Central CLI to install the agents. This CLI will prompt you for answers regarding GCP and Apigee access information and where to store the discovered APIs in the Amplify platform.
+### Before you start
 
-### Step 1: Install Axway Central CLI
+* You must have access to the GCP console with permissions to create and managed IAM roles and service accounts.
 
-Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+### Objectives
 
-You can validate your installation by running: `axway central --version`.
+Learn how to quickly set up a GCP role and create a service account that the Apigee agents can use to discover and manage Apigee X on your behalf.
 
-### Step 2: Identify yourself to Amplify platform with Axway CLI
+### GCP IAM setup
 
-There are two ways to authenticate with Axway CLI:
+#### Enable IAM Service Account Credentials API
 
-* With an administrator username/password via a browser
-* With a platform service account and a username/password via a prompt
+The IAM Service Account Credentials API allows the creation of short-lived credentials and is required by the Apigee agents to log into your GCP project and request a short-lived credential while placing API calls.
 
-#### Default mode with browser authentication
+1. Navigate to *APIs and Services* in your GPC project.
+2. Click **+ ENABLE APIS AND SERVICES** at the top of *APIs and Services*.
+3. Type `IAM Service Account Credentials API` in the search box and search for it.
+4. Select the **IAM Service Account Credentials API** option that appears in the results and click **ENABLE**. If it had previously been enabled the **MANAGE** button will appear.
 
-Run the following command to use Central CLI to log in with your Amplify platform credentials:
+#### GCP Axway service account (**Embedded agents only**)
 
-```shell
-axway auth login
+Allow the Axway service account to create a token in your GCP project.
+
+1. Navigate to *IAM* in the GCP IAM Console and select **Grant Access**.
+2. Enter `srvc-amplifyagent@rd-amplify-apigee-agent.iam.gserviceaccount.com` in the New principals box.
+3. Select **Service Account Token Creator** under Assign role.
+4. Click **Save**.
+
+The Axway service account can now create short lived tokens within your GCP project.
+
+#### GCP role
+
+Create an IAM role that allows the Apigee agents to discover, provision, and gather stats from your Apigee X deployment.
+
+1. Navigate to *Roles* in the GCP IAM Console and click **+Create Role**.
+2. Set a Title, Description, ID, and launch stage.
+3. Add all of the permissions listed in [GCP role permissions](#gcp-role-permissions).
+4. Click **Create**.
+
+#### GCP role permissions
+
+```
+apigee.apiproducts.create
+apigee.apiproducts.get
+apigee.apiproducts.list
+apigee.appkeys.create
+apigee.appkeys.delete
+apigee.appkeys.get
+apigee.appkeys.manage
+apigee.deployments.list
+apigee.developerapps.create
+apigee.developerapps.delete
+apigee.developerapps.get
+apigee.developerapps.list
+apigee.developerapps.manage
+apigee.developers.create
+apigee.developers.delete
+apigee.developers.get
+apigee.developers.list
+apigee.environments.getStats
+apigee.proxyrevisions.get
+apigee.resourcefiles.get
+apigee.resourcefiles.list
 ```
 
-A browser will automatically open.
-Enter your valid credentials (email address and password). Once the *Authorization Successful* message is displayed, go back to Axway CLI.
+### GCP service account
 
-If you are a member of multiple Amplify organizations, you may have to choose an organization.
+Create an IAM role with a trust relationship that allows the Apigee agents to receive the privileges in the IAM policy.
 
-#### Headless mode authentication with service account
+1. Navigate to *Service Accounts* in the GCP IAM Console and click **+Create Service Account**.
+2. Set a Name, ID, and Description then click **Create and Continue**.
+3. Grant the role, created above, to this service account and click **Continue**.
+4. (**Embedded agents only**) In the *Service account users role* input allow Axway's GCP service account the ability to [Impersonate](https://cloud.google.com/docs/authentication/use-service-account-impersonation) this role by entering `srvc-amplifyagent@rd-amplify-apigee-agent.iam.gserviceaccount.com`.
+5. Save the service account email address, as it will be required when setting up your agent.
 
-You must have a platform service account and a regular administrator account for the headless mode. The permissions of the service account will be overridden by the permission of the administrator account.
+Now that GCP is all set, you can:
+    * [Deploy your Embedded Apigee agents with Axway CLI](/docs/connect_manage_environ/deploy-embedded-agents/)
+    * [Deploy your Ground Apigee agents with Axway CLI](docs/connect_manage_environ/deploy-ground-agents/)
 
-```shell
-# command syntax: Log into a service account with platform tooling credentials:
-axway auth login --client-id <id> --secret-file <path> --username <email>
-
-# the command will prompt you to enter your username password
-```
-
-Sample:
-
-```shell
-axway auth login --client-id plsa_a1d6e0a8-XXXXX --secret-file /home/user/axway/SAKeysPlatformSA/private_key.pem --username admin@mail.com
-AXWAY CLI, version 3.1.0
-Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
-
-√ Password: · **********
-
-You are logged into a platform account in organization Axway (a1d6e0a8-XXXXX) as admin@mail.com.
-The current region is set to US.
-```
-
-If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
-
-### Step 3: Run the agents' configure procedure
-
-The Axway Central CLI will guide you through the configuration of the agents. See [Embedded Apigee X agents setup](/docs/connect_manage_environ/connect_apigee_x/embedded-agent-setup/) for the prerequisite setup on GCP and Apigee.
-
-Run the following command to start the configuration procedure:
-
-```shell
-axway central install agents
-```
-
-The installation procedure will prompt for the following:
-
-1. Select the type of gateway you want to connect to Apigee-X in this scenario.
-2. Platform connectivity:
-   * **Environment**: can be an existing environment or one that will be created by the installation procedure
-   * **Team**: select an existing team
-3. Apigee Configuration Setup:
-   * **Project ID**: the Project ID for your Google Cloud Platform project
-   * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
-   * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
-   * **Environment**: filter proxies (discovery)/filter metrics (traceability). For more information see [Filter settings](#filter-settings)
-   * **Filter Metrics**: set to true (default) for API metrics filtering. For more information see [Filter settings](#filter-settings)
-   * **Filtered APIs**: enter APIs names that metrics should be gathered for. If blank, gathers metrics for all discovered APIs. For more information see [Filter settings](#filter-settings)
-   * Set how often the Embedded agent should check Apigee for changes. Preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
-   * Set if the agent should discover Apigee resources after installation is complete
-
-Once you have answered all questions, the Embedded agent will be created. The process will securely store the authentication data and validate it by connecting to GCP and Apigee. If set to discover Apigee resources upon installation, the agent will immediately discover your resources and show them in the Service Registry.
-
-### Filter settings
-
-While configuring Apigee settings you can add options that will limit what the agent discovers and tracks for API Metrics.
-
-* Environment filtering - By default, the agent will discover all API proxies within your Apigee, regardless of the Apigee environment they are deployed to. To modify this behavior:
-    * **environment**: the agent will only discover proxies deployed to the specified environment. This will also restrict the agent to gather API metric data for only the environment that is configured.
-* Metric filtering - By default, the agent will gather all API metric data for all discovered APIs. To modify this behavior:
-    * **filterMetrics**: set to true (default) to restrict gathering API metrics for only discovered APIs. Set to false for the opposite behavior.
-    * **filteredAPIs**: list of API names that may be provided to further restrict the APIs that the agent gathers metrics for.
-
-Here is an example of using these settings in the Dataplane resource file.
-
-```yaml
-...
-group: management
-apiVersion: v1alpha1
-kind: Dataplane
-...
-spec:
-  type: Apigee
-  config:
-    mode: proxy
-    type: Apigee
-    projectId: rd-amplify-apigee-x
-    developerEmail: axway-agent@axway.com
-    environment: test
-    metricsFilter:
-      filterMetrics: true
-      filteredAPIs:
-        - PetStore
-```
-
-{{< alert title="Note" color="primary" >}}The agent will only discover API Proxies deployed to the `test` environment. While gathering API metrics, the agent will filter by the `test` environment and additionally check that the API Proxy name is included in the `filteredAPIs` list.{{< /alert >}}
-
-## Related topics
-
-See the following topics for related information.
+See [Agent Variables](/docs/connect_manage_environ/agent-variables/) for more details about the Apigee X agents environment variables
