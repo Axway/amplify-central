@@ -55,7 +55,7 @@ The Traceability Agent gathers usage metrics for all proxies defined in Apigee X
 
 ## Set up GCP for Apigee agents
 
-Set up Google Cloud Platform (GCP) so an Apigee agents can connect to and managed your Apigee X environment within Amplify.
+Set up Google Cloud Platform (GCP) so an Apigee agent can connect to and managed your Apigee X environment within Amplify.
 
 ### Before you start
 
@@ -71,7 +71,7 @@ Learn how to quickly set up a GCP role and create a service account that the Api
 
 The IAM Service Account Credentials API allows the creation of short-lived credentials and is required by the Apigee agents to log into your GCP project and request a short-lived credential while placing API calls.
 
-1. Navigate to *APIs and Services* in your GPC project.
+1. Navigate to *APIs and Services* in your GCP project.
 2. Click **+ ENABLE APIS AND SERVICES** at the top of *APIs and Services*.
 3. Type `IAM Service Account Credentials API` in the search box and search for it.
 4. Select the **IAM Service Account Credentials API** option that appears in the results and click **ENABLE**. If it had previously been enabled the **MANAGE** button will appear.

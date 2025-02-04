@@ -12,7 +12,7 @@ To maintain a shareable collection of environment files, you can create a `da_en
 
 Note that the Docker image of the agent is expecting this `da_env_vars.env` or `ta_env_vars.env` as an argument of the Docker runner `docker run --env-file <PATH>/da_env_vars.env...`
 
-If you are either struggling with a variable value or you want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describe all the variables the agents (Discovery / Traceability) rely on.
+If you are either struggling with a variable value or you want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes all the variables the agents (Discovery / Traceability) rely on.
 
 ## Complete variable list for advance features
 
@@ -27,7 +27,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | APIGEE_AUTHFILEPATH     | The path where you put the GCP authentication file in docker container (**Ground agent only**) |
 | APIGEE_PROJECTID        | the Project ID for your GCP project                                                            |
 | APIGEE_DEVELOPEREMAIL   | The Apigee developer email                                                                     |
-| APIGEE_MODE             | Apigee agent running mode                                                                      |
+| APIGEE_MODE             | Apigee agent running mode (*proxy* or *product*; default: *proxy*)                             |
 | APIGEE_ENVIRONMENT      | The environment from which metrics are gathered                                                |
 | APIGEE_CLIENTTIMEOUT    | Maximum amount of time to wait for a reply from the Apigee client (default: 1m)                |
 
