@@ -92,11 +92,11 @@ Two values of baseURLs must be provided for the agent to be able to fullfil API 
 
 ### API Portal Client ID and Secret && Dev Portal ClientID and Secret
 
-Both agents will use the credentials provided by the SAP API Portal CLI Toolkit to connect discover APIs and track transactions. Two sets of ClientID and ClientSecret from API Portal and Dev Portal will be required.
+Both agents will use the credentials provided by the SAP API Portal CLI Toolkit to connect discover APIs and track transactions. Two sets of ClientID and ClientSecret from API Portal and Dev Portal will be required. Please contact your administrator in case you need help gathering this information.
 
 ### Token URL
 
-In order to use the ClientID and Secret, the agent must authenticate to a provider and retrieve a token. The format is similar to the BaseURL from Dev Portal and API Portal BaseURLs
+In order to use the ClientID and Secret, the agent must authenticate to a provider and retrieve a token. The full URL must be provided(Ex: <https://example.com/oauth/token>)
 
 ### Developer Email
 
