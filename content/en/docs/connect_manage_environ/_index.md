@@ -2,7 +2,7 @@
 title: Connect and manage an environment
 linkTitle: Connect and manage an environment
 weight: 350
-date: 2020-11-18
+date: 2025-02-05
 ---
 
 Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
