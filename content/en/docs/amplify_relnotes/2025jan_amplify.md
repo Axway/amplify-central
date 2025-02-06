@@ -19,7 +19,7 @@ New features, enhancements, and bug fixes for the January 29 update.
 * **Product Plan Visibility**
 
   (PRODUCT FOUNDRY, PLANS, PROVIDER EXPERIENCE, NEW FEATURE)<br />
-  Producers can now restrict the visibility of specific product plans by Platform Teams and / or Consumer Organizations, enabling tailored pricing and subscription models for different partners. This allows for more control over who can access free or paid plans based on you organization type. All newly created plans remain public unless explicitly restricted.
+  Providers can now restrict the visibility of specific product plans by Platform Teams and / or Consumer Organizations, enabling tailored pricing and subscription models for different partners. This allows for more control over who can access free or paid plans based on organization type. All newly created plans remain public unless explicitly restricted.
 
 * **Documentation Search Bar in Marketplace**
 
