@@ -10,6 +10,22 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## January 29, 2025
+
+New features, enhancements, and bug fixes for the January 15 update.
+
+### Marketplace updates for January 29, 2025
+
+* **Product Plan Visibility**
+
+  (PRODUCT FOUNDRY, PLANS, PROVIDER EXPERIENCE, NEW FEATURE)<br />
+  Producers can now restrict the visibility of specific product plans by Platform Teams and / or Consumer Organizations, enabling tailored pricing and subscription models for different partners. This allows for more control over who can access free or paid plans based on you organization type. All newly created plans remain public unless explicitly restricted.
+
+* **Documentation Search Bar in Marketplace**
+
+  (MARKETPLACE, CONSUMER EXPERIENCE, ENHANCEMENT, DOCUMENTATION)<br />
+  We have added a search bar to the product documentation navigation panel in the marketplace, making it easier for users to quickly find the content they need. You can search for topics, sections or articles by name in the documentation browse panel.
+
 ## January 24, 2025
 
 New features, enhancements, and bug fixes for the January 15 update.
