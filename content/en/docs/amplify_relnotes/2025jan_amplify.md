@@ -12,7 +12,7 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ## January 29, 2025
 
-New features, enhancements, and bug fixes for the January 15 update.
+New features, enhancements, and bug fixes for the January 29 update.
 
 ### Marketplace updates for January 29, 2025
 
