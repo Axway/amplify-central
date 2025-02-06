@@ -20,21 +20,20 @@ The Discovery Agent is used to discover new published APIs for a specific SAP AP
 
 The related APIs are published to Amplify as an API service in the selected environment and then can be published to Marketplace within a product.
 
-#### Application
+#### Application and Access Request
 
-While handling a new application event, no action will be taken.
-
-For deprovisioning, no action will be taken.
-
-#### Access Request
-
-When handling a new access request event, for a given application, the following steps are taken.
+When handling a new access request event, for an existing managed application, the following steps are taken:
 
 * If not previously created, create a new Product based on the provided quota for the API within the request.
 * New product creation is based on the API and Quota combination.
 * Create an application and link it to the created/existing product from the previous step.
+* The link between an application and a product is a subscription, which is created automatically after the application is linked.
 
-For deprovisioning, the created subscription will be removed.
+For deprovisioning:
+
+* Get the subscriptions for the previously created application
+* Delete the previously created subscription
+* In case the application has a single single subscription, the application is also deleted.
 
 #### Credential
 
@@ -52,7 +51,7 @@ The Traceability Agent collects metric information from SAP API Portal and publi
 
 The metric data collected includes call count, the number of transactions for a specific API or API/Application combination, and latency details.
 
-The transaction data is currently unavailable.
+The Traceability Agent is not able to sample the transaction data for Amplify Analytics
 
 ## Prerequisites
 
@@ -96,7 +95,7 @@ Both agents will use the credentials provided by the SAP API Portal CLI Toolkit 
 
 ### Token URL
 
-In order to use the ClientID and Secret, the agent must authenticate to a provider and retrieve a token. The full URL must be provided(Ex: <https://example.com/oauth/token>)
+In order to use the ClientID and Secret, the agent must authenticate to an identity provider and retrieve a token. The full URL must be provided(Ex: <https://example.com/oauth/token>)
 
 ### Developer Email
 
