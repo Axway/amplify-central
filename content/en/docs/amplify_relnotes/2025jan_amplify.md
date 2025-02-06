@@ -24,7 +24,7 @@ New features, enhancements, and bug fixes for the January 29 update.
 * **Documentation Search Bar in Marketplace**
 
   (MARKETPLACE, CONSUMER EXPERIENCE, ENHANCEMENT, DOCUMENTATION)<br />
-  We have added a search bar to the product documentation navigation panel in the marketplace, making it easier for users to quickly find the content they need. You can search for topics, sections or articles by name in the documentation browse panel.
+  A search bar has been added to the Product Documentation navigation panel in the Marketplace, making it easier to quickly find content. You can search for topics, sections and articles by name in the documentation browse panel.
 
 ## January 24, 2025
 
