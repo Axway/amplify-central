@@ -16,7 +16,7 @@ New features, enhancements, and bug fixes for the January 29 update.
 
 ### Marketplace updates for January 29, 2025
 
-* **Product Plan Visibility**
+* **Product plan visibility**
 
   (PRODUCT FOUNDRY, PLANS, PROVIDER EXPERIENCE, NEW FEATURE)<br />
   Providers can now restrict the visibility of specific product plans by Platform Teams and / or Consumer Organizations, enabling tailored pricing and subscription models for different partners. This allows for more control over who can access free or paid plans based on organization type. All newly created plans remain public unless explicitly restricted.
