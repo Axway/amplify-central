@@ -10,23 +10,39 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ---
 
+## January 29, 2025
+
+New features, enhancements, and bug fixes for the January 29 update.
+
+### Marketplace updates for January 29, 2025
+
+* **Product plan visibility**
+
+  (PRODUCT FOUNDRY, PLANS, PROVIDER EXPERIENCE, NEW FEATURE)<br />
+  Providers can now restrict the visibility of specific product plans by Platform Teams and / or Consumer Organizations, enabling tailored pricing and subscription models for different partners. This allows for more control over who can access free or paid plans based on organization type. All newly created plans remain public unless explicitly restricted.
+
+* **Documentation search bar in Marketplace**
+
+  (MARKETPLACE, CONSUMER EXPERIENCE, ENHANCEMENT, DOCUMENTATION)<br />
+  A search bar has been added to the Product Documentation navigation panel in the Marketplace, making it easier to quickly find content. You can search for topics, sections and articles by name in the documentation browse panel.
+
 ## January 24, 2025
 
 New features, enhancements, and bug fixes for the January 15 update.
 
 ### Agent updates for January 24, 2025
 
-* **New Agents Versions Available**
+* **New agents versions available**
 
   (AGENT SDK UPDATE, DISCOVERY AGENT, TRACEABILITY AGENT)<br />
   New versions are available for our on-prem agents. Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-* **Kafka Agent Enhancement: SASL/OAUTHBEARER Authentication Support**
+* **Kafka agent enhancement: SASL/OAUTHBEARER Authentication support**
 
   (KAFKA, DISCOVERY AGENT, ENHANCEMENT)<br />
   We have extended the range of supported authentication types within the Kafka Agent. The agent can now communicate with the Confluent Platform using **SASL/OAUTHBEARER** authentication, enabling integration with Confluent Platform environments configured with Oauth-based security.This enhancement is available in Kafka Discovery Agent **v1.1.10.**. This update is supported in the Axway Central CLI **v3.9.2**.
 
-* **APIM Traceability Enhancement: Optimized Event Processing with Sampling Check**
+* **APIM Traceability enhancement: Optimized event processing with sampling check**
 
   (APIM, TRACEABILITY AGENT, ENHANCEMENT)<br />
   The APIM agent's event processing logic has been optimized to improve efficiency and performance, particularly when sampling is enabled.Previously, the APIM Agent would process the entire summary and leg events for every event it encountered, regardless of whether the event would be sampled. This approach resulted in unnecessary processing overhead for events that were ultimately not sampled. With this enhancement, the agent now checks whether an event should be sampled before performing full summary and leg event processing.For events taht are not samples, the agent will simply update the relevant metric data, avoiding redundant processing. This update is available in APIM Traceability Agent **v1.2.13**.
@@ -109,7 +125,7 @@ New features, enhancements, and bug fixes for the January 10 update.
 
 ### Agent updates for January 10, 2025
 
-* **New Agents Versions Available**
+* **New agents versions available**
 
   (AGENT SDK UPDATE, DISCOVERY AGENT, TRACEABILITY AGENT)<br />
   New versions are available for our on-prem agents. Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
@@ -139,7 +155,7 @@ New features, enhancements, and bug fixes for the January 10 update.
   (PRODUCT FOUNDRY, ENHANCEMENT, PROVIDER EXPERIENCE)<br />
   You can now **Archive** or **Delete** a product from the *product details* screen. The **Delete** button is available only for products that are in "Archived" state. This allows users to remove or archive a product without having to return to the *product list* page.
 
-* **Try It Out Enhancement**
+* **Try It Out enhancement**
 
   (ENHANCEMENT, CONSUMER EXPERIENCE)<br />
   The **Try-it-out** experience has been improved to show all available credentials for a selected application. Credentials that can no longer be used for authentication can not be selected, and a text is displayed on hover over that describes the reason.
