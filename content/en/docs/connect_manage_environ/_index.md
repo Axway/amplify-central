@@ -68,8 +68,8 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Application**                | No                         | No                       | Yes                      | Application                        |
 | **Access Request**             | No                         | No                       | Yes                      | Associated API with Product        |
 | **Credential Type**            | No                         | No                       | APIKey / OAuth           | APIKey / OAuth                     |
-| **Credential Actions**         | No                         | No                       | Suspend/Enable           | Suspend/Enable                     |
-| **Quota Enforcement**          | No                         | No                       | No                       | Quota Policy associated to Product |
+| **Credential Actions**         | No                         | No                       | Suspend/Enable/Renew     | Suspend/Enable                     |
+| **Quota Enforcement**          | No                         | No                       | Yes                      | Quota Policy associated to Product |
 | **Traceability**               | No                         | No                       | Yes                      | API Usage Statistics               |
 | **Platform Usage**             | No                         | No                       | Yes                      | Yes                                |
 | **Transaction Metrics**        | No                         | No                       | Yes                      | Yes                                |
