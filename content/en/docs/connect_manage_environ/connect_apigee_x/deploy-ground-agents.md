@@ -162,28 +162,6 @@ While configuring Apigee settings you can add options that will limit what the a
     * **filterMetrics**: set to true (default) to restrict gathering API metrics for only discovered APIs. Set to false for the opposite behavior.
     * **filteredAPIs**: list of API names that may be provided to further restrict the APIs that the agent gathers metrics for.
 
-Here is an example of using these settings in the Dataplane resource file.
-
-```yaml
-...
-group: management
-apiVersion: v1alpha1
-kind: Dataplane
-...
-spec:
-  type: Apigee
-  config:
-    mode: proxy
-    type: Apigee
-    projectId: rd-amplify-apigee-x
-    developerEmail: axway-agent@axway.com
-    environment: test
-    metricsFilter:
-      filterMetrics: true
-      filteredAPIs:
-        - PetStore
-```
-
 {{< alert title="Note" color="primary" >}}The agent will only discover API Proxies deployed to the `test` environment. While gathering API metrics, the agent will filter by the `test` environment and additionally check that the API Proxy name is included in the `filteredAPIs` list.{{< /alert >}}
 
 Once you have answered all questions, the agents' configuration files are updated, the Enterprise Marketplace resources are created and the key pair is generated (if you chose to create a new service account).
