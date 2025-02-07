@@ -74,7 +74,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Platform Usage**             | No                         | No                       | Yes                      | Yes                                |
 | **Transaction Metrics**        | No                         | No                       | Yes                      | Yes                                |
 | **Transaction Event Sampling** | No                         | No                       | No                       | No                                 |
- 
+
 ### SaaS (Embedded) Agent Features
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
