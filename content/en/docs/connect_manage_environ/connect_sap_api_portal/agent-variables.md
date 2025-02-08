@@ -12,9 +12,9 @@ To maintain a shareable collection of environment files, you can create a `da_en
   
 Note that the Docker image of the agent is expecting this `da_env_vars.env` or `ta_env_vars.env` as an argument of the Docker runner `docker run --env-file <PATH>/da_env_vars.env...`
 
-Some variables/properties have a default value so that there is no need set them unless they need to change.
+Some variables/properties have default values so it is not necessary to set them unless they need to changed.
 
-If you are either struggling with a variable value or you want to benefit from the advanced agents features (SSL security / logging), the following section describe all the variables the agents (Discovery / Traceability) rely on.
+If you are either struggling with a variable value or you want to benefit from the advanced agents features (SSL security / logging), the following section describes all the variables the agents (Discovery / Traceability) rely on.
 
 ## Complete variable list for advance features
 
