@@ -31,19 +31,19 @@ When handling a new access request event, for an existing managed application, t
 
 For deprovisioning:
 
-* Get the subscriptions for the previously created application
-* Delete the previously created subscription
-* In case the application has a single single subscription, the application is also deleted.
+* Get the subscriptions for the previously created application.
+* Delete the previously created subscription.
+* If the application has a single subscription, the application is also deleted
 
 #### Credential
 
-When handling a new credential event, for a given application, the following steps are taken
+When handling a new credential event, for a given application, the following steps are taken:
 
 * Get the existing ClientID(for an API Key credential type) or ClientID and ClientSecret for an OAuth credential from the application.
 
 For deprovisioning, the credentials will be rotated so no further access is available.
 
-For update, the credentials will be rotated and the new values will be provided.
+For update, the credentials will be rotated, and the new values will be provided.
 
 ### Traceability
 
@@ -81,22 +81,22 @@ Use one of the following settings, for both agents, to set the region the agent 
 * `CENTRAL_REGION`= **EU**
 * `CENTRAL_REGION`= **AP**
 
-{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets{{< /alert >}}
+{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5, 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets{{< /alert >}}
 
 ## Gather the required values from SAP API Portal
 
-### API Portal BaseURL && Dev Portal BaseURL
+### API Portal baseURL and Dev Portal baseURL
 
-Two values of baseURLs must be provided for the agent to be able to fullfil API Calls to SAP.
+Two values of baseURLs must be provided for the agent to be able to fulfill API Calls to SAP.
 
-### API Portal Client ID and Secret && Dev Portal ClientID and Secret
+### API Portal Client ID and Secret & Dev Portal ClientID and Secret
 
-Both agents will use the credentials provided by the SAP API Portal CLI Toolkit to connect discover APIs and track transactions. Two sets of ClientID and ClientSecret from API Portal and Dev Portal will be required. Please contact your administrator in case you need help gathering this information.
+Both agents will use the credentials provided by the SAP API Portal CLI Toolkit to connect discover APIs and track transactions. Two sets of ClientID and ClientSecret from API Portal and Dev Portal will be required. Please contact your administrator if you need help gathering this information.
 
 ### Token URL
 
-In order to use the ClientID and Secret, the agent must authenticate to an identity provider and retrieve a token. The full URL must be provided(Ex: <https://example.com/oauth/token>)
+To use the ClientID and Secret, the agent must authenticate to an identity provider and retrieve a token. The full URL must be provided(Ex: <https://example.com/oauth/token>)
 
 ### Developer Email
 
-In order to create applications, an authorized developer email must be provided.
+To create applications, an authorized developer email must be provided.
