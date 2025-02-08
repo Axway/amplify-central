@@ -134,4 +134,4 @@ Create an IAM role with a trust relationship that allows the Apigee agents to re
 
 Now that GCP is all set, you can deploy your Embedded Apigee agents and Ground Apigee agents with Axway CLI.
 
-See [Agent Variables](/docs/connect_manage_environ/agent-variables/) for more details about the Apigee X agents environment variables
+See [Agent Variables](docs/connect_manage_environ/connected_agent_common_reference) for more details about the Apigee X agents environment variables
