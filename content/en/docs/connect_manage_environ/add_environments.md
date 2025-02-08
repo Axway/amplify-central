@@ -11,11 +11,12 @@ Learn how to create an environment to represent your API services and other disc
 ## Add your environment
 
 1. Navigate to *Topology > Environments*.
-2. Click **+ Environment**.
+2. Click **+ Add New Environment**.
 
     ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
     *The Add an Environment wizard is displayed*.
+    *The **+ Add New Environment** button is disabled and grayed out  once the total number of environments surpasses the environment entitlement quota.
 
 3. Add the following environment profile information and then click **Next**:
 
