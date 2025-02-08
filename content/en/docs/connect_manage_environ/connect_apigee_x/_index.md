@@ -132,9 +132,6 @@ Create an IAM role with a trust relationship that allows the Apigee agents to re
 4. (**Embedded agents only**) In the *Service account users role* input allow Axway's GCP service account the ability to [Impersonate](https://cloud.google.com/docs/authentication/use-service-account-impersonation) this role by entering `srvc-amplifyagent@rd-amplify-apigee-agent.iam.gserviceaccount.com`.
 5. Save the service account email address, as it will be required when setting up your agent.
 
-Now that GCP is all set, you can:
-
-* [Deploy your Embedded Apigee agents with Axway CLI](/docs/connect_manage_environ/deploy-embedded-agents/)
-* [Deploy your Ground Apigee agents with Axway CLI](docs/connect_manage_environ/deploy-ground-agents/)
+Now that GCP is all set, you can deploy your Embedded Apigee agents and Ground Apigee agents with Axway CLI.
 
 See [Agent Variables](/docs/connect_manage_environ/agent-variables/) for more details about the Apigee X agents environment variables
