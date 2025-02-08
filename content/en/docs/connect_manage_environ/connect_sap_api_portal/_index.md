@@ -95,7 +95,7 @@ Both agents will use the credentials provided by the SAP API Portal CLI Toolkit 
 
 ### Token URL
 
-To use the ClientID and Secret, the agent must authenticate to an identity provider and retrieve a token. The full URL must be provided(Ex: <https://example.com/oauth/token>)
+To use the ClientID and Secret, the agent must authenticate to an identity provider and retrieve a token. The full URL must be provided (Ex: <https://example.com/oauth/token>)
 
 ### Developer Email
 
