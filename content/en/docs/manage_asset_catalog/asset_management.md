@@ -99,6 +99,8 @@ To create an asset:
 
 If the asset was created in a **Draft** state, you must move it to an **Active** state (by activating the asset) before you can use it in a product definition.
 
+The **+ Add New Asset** button is disabled and grayed out when the total of active and deprecated assets exceeds the asset entitlement quota.
+
 ## Activate an asset
 
 The asset can be in **Draft** or **Deprecated** state.
