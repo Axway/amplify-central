@@ -16,7 +16,7 @@ Learn how to create an environment to represent your API services and other disc
     ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
     *The Add an Environment wizard is displayed*.
-    *The **+ Add New Environment** button is disabled once the total number of environments surpasses the environment entitlement quota.
+    *The **+ Add New Environment** button is disabled once the total number of environments surpasses the environment entitlement quota.  If no environment entitlement is defined, there is no environment quota enforcement.
 
 3. Add the following environment profile information and then click **Next**:
 
