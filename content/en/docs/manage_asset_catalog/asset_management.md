@@ -8,7 +8,7 @@ Manage your assets, including: view, create, activate, edit, delete, deprecate a
 
 ## Before you start
 
-You must have credentials or a user account from your org administrator to use the Asset Catalog WebUI. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+You must have credentials or a user account from your org administrator to use the Asset Catalog WebUI. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users). 
 
 ## Objectives
 
@@ -99,7 +99,7 @@ To create an asset:
 
 If the asset was created in a **Draft** state, you must move it to an **Active** state (by activating the asset) before you can use it in a product definition.
 
-The **+ Add New Asset** button is disabled once the total number of active and deprecated assets exceeds the asset entitlement quota.
+The **+ Add New Asset** button is disabled once the total number of active and deprecated assets exceeds the asset entitlement quota. If no asset entitlement is defined, there is no asset quota enforcement.
 
 ## Activate an asset
 
