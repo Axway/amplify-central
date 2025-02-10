@@ -108,7 +108,7 @@ The installation procedure will prompt for the following:
    * **Developer Email**: the email address of a developer, defined in Apigee, that will be given ownership of all Applications
    * **Client Email**: the email address, principal name, for the service account in GCP that has the role to discovery Apigee resources
    * **Environment**: filter proxies (discovery)/filter metrics (traceability). For more information see [Filter settings](#filter-settings)
-   * **Filter Metrics**: set to true (default) for API metrics filtering. For more information see [Filter settings](#filter-settings)
+   * **Filter Metrics**: set to true for API metrics filtering. For more information see [Filter settings](#filter-settings)
    * **Filtered APIs**: enter APIs names that metrics should be gathered for. If blank, gathers metrics for all discovered APIs. For more information see [Filter settings](#filter-settings)
    * Set how often the Embedded agent should check Apigee for changes. Preferred is no frequency and triggered via a CI/CD pipeline. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery)
    * Set if the agent should discover Apigee resources after installation is complete
@@ -122,7 +122,7 @@ While configuring Apigee settings you can add options that will limit what the a
 * Environment filtering - By default, the agent will discover all API proxies within your Apigee, regardless of the Apigee environment they are deployed to. To modify this behavior:
     * **environment**: the agent will only discover proxies deployed to the specified environment. This will also restrict the agent to gather API metric data for only the environment that is configured.
 * Metric filtering - By default, the agent will gather all API metric data for all discovered APIs. To modify this behavior:
-    * **filterMetrics**: set to true (default) to restrict gathering API metrics for only discovered APIs. Set to false for the opposite behavior.
+    * **filterMetrics**: set to true to restrict gathering API metrics for only discovered APIs. Set to false (default) for the opposite behavior.
     * **filteredAPIs**: list of API names that may be provided to further restrict the APIs that the agent gathers metrics for.
 
 Here is an example of using these settings in the Dataplane resource file.
