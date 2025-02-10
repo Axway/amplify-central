@@ -8,7 +8,7 @@ Manage your assets, including: view, create, activate, edit, delete, deprecate a
 
 ## Before you start
 
-You must have credentials or a user account from your org administrator to use the Asset Catalog WebUI. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users). 
+You must have credentials or a user account from your org administrator to use the Asset Catalog WebUI. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
 
 ## Objectives
 
