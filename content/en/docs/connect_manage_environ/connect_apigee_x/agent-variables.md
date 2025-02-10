@@ -36,4 +36,4 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | Variable name                        | Description                                                                            |
 |--------------------------------------|----------------------------------------------------------------------------------------|
 | APIGEE_METRICSFILTER_FILTEREDAPIS    | The names of the APIs for which the metrics will be processed                          |
-| APIGEE_METRICSFILTER_FILTERMETRICS   | The flag upon which is decided if the API metrics are filtered or not (default: true)  |
+| APIGEE_METRICSFILTER_FILTERMETRICS   | The flag upon which is decided if the API metrics are filtered or not (default: false) |
