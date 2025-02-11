@@ -46,10 +46,10 @@ New features, enhancements, and bug fixes for the February 7 update.
 * **Introducing Axway Central CLI version 3.10.0**
 
   The latest version **3.10.0** of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.10.0) is now avaiable on NPM. This update includes:
-  * Support for installing the **Apigee X** and **SAP Integration - API Management / API Portal** agents.
+    * Support for installing the **Apigee X** and **SAP Integration - API Management / API Portal** agents.
 
 ### Marketplace bug fixes for February 7, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| N/A | APIGOV-29057 | **Issue**: Images part of description in OAS or ASYNC spec are not rendered <br/>**Resolution**: Images are now rendered in the Product Foundry and Marketplace|.
+| N/A | APIGOV-29057 | **Issue**: Images part of description in OAS or ASYNC spec are not rendered <br/>**Resolution**: Images are now rendered in the Product Foundry and Marketplace|
