@@ -29,11 +29,13 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Apigee X                                   | 1.4.1                    | 1.4.1                            |
 | Mulesoft Anypoint platform v3              | 1.2.14                   | 1.1.48                           |
 | Software AG webMethods                     | 1.0.11                   | 1.0.0                            |
-| Kong Gateway                               | 1.9.11                   | 1.0.9                            |
+| Kong Gateway                               | 1.1.11                   | 1.0.9                            |
 | GitLab                                     | 1.1.11                   | 1.0.6                            |
 | Kafka Cluster                              | 1.1.11                   | 1.0.6                            |
 | IBM API Connect Gateway                    | 1.1.11                   | 1.0.0                            |
 | Backstage                                  | 1.0.7                    | 1.0.0                            |
+| SAP Integration Suite - API Management / API Portal    | 1.0.0                    | 1.0.0                            |
+
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -43,7 +45,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Azure Embedded Service                     |
 | SwaggerHub Embedded Service                |
 
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.107)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.108)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
 | Graylog API Security                       | 1.1.12                   | 1.0.5            |
 | Traceable API Security                     | 1.0.10                   | 1.0.0            |
