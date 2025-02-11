@@ -36,7 +36,6 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Backstage                                  | 1.0.7                    | 1.0.0                            |
 | SAP Integration Suite - API Management / API Portal    | 1.0.0                    | 1.0.0                            |
 
-
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
 | AWS Embedded Service                       |
