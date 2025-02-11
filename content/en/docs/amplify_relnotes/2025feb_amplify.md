@@ -12,15 +12,14 @@ We work hard to improve the Amplify Enterprise Marketplace experience by releasi
 
 ## February 7, 2025
 
-New features, enhancements, and bug fixes for the January 29 update.
+New features, enhancements, and bug fixes for the February 7 update.
 
 ### Agents updates for February 7, 2025
 
-* **New SAP API Management Discovery and Traceability Agents**
+* **New SAP Integration Suite - API Management / API Portal Discovery and Traceability Agents**
 
   (DISCOVERY AGENT, TRACEABILITY AGENT)<br/>
-  You can now use the SAP API Management Discovery and Traceability Agents to connect your SAP evironments to Amplify for automatic discovery of APIs and API metrics reporting. The agents are available as on-prem installation and can be found on Axway Repository[https://repository.axway.com/catalog?q=agents]<br/>.
-**Key Capabilities**
+  You can now use the new discovery and traceability agents to connect SAP Integration Suite - API Management to Amplify for automatic discovery of APIs and API metrics reporting. The agents are available as on-prem installation and can be found on [Axway Repository](https://repository.axway.com/catalog?q=agents). The key capabilities include:
 
   * Automated API Discovery: Automatic API Discovery from SAP API Management, ensuring comprehesive visibility of your API landscape and federated API governance.
   * Enhanced Traceability: Insights into API usage, and performance by integrationg with Amplify for detailed reporting.
@@ -28,12 +27,29 @@ New features, enhancements, and bug fixes for the January 29 update.
 
 * **Apigee X On-prem Discovery and Traceability Agents**
 
-  (NEW AGENT RELEASES)<br/>
-  An Apigee X environment can now be connected to Amplify using an on-prem agent installation. The agent can be found on Axway Repository[https://repository.axway.com/catalog?q=agents]. 
+  (APIGEE X AGENTS)<br/>
+  The Apigee X agents are now available as on-prem installation. The agentS can be found on [Axway Repository](https://repository.axway.com/catalog?q=agents).
 
 * **New agent versions available**
 
   (NEW AGENT RELEASES)<br/>
-  For all other latest agent versions, please refer to Release Notes Index[https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html] or go to Axway Repository[https://repository.axway.com/catalog?q=agents].
-  
-### Marketplace updates for February 7, 2025
+  For all other latest agent versions, please refer to the [Release Notes Index](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents). These updates contain an enhancement to the SDK to improve the processing of IDP Secrets when using the indexed environment variables (i.e. the *_1  in IDP Auth environment variables).
+
+### Agents bug fixes for February 7, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| N/A | APIGOV-29684 | **Issue**: Credential Request Definition (CRD) wrongly updated with custom-oauth-external <br/>**Resolution**: When the agent starts and the CRD for an Okta IDP already exists, the APIs are correctly linked to the OKTA CRD|.
+
+### Axway Central CLI updates for February 7, 2025
+
+* **Introducing Axway Central CLI version 3.10.0**
+
+  The latest version **3.10.0** of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.10.0) is now avaiable on NPM. This update includes:
+  * Support for installing the **Apigee X** and **SAP Integration - API Management / API Portal** agents.
+ 
+### Marketplace bug fixes for February 7, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| N/A | APIGOV-29057 | **Issue**: Images part of description in OAS or ASYNC spec are not rendered <br/>**Resolution**: Images are now rendered in the Product Foundry and Marketplace|.
