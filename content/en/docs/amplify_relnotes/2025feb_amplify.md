@@ -25,10 +25,10 @@ New features, enhancements, and bug fixes for the February 7 update.
     * Enhanced Traceability: Insights into API usage, and performance by integrationg with Amplify for detailed reporting.
     * Improved Governance and Compliance: Apply linting rules to validated the API from an API compliance perspective.
 
-* **Apigee X On-prem Discovery and Traceability Agents**
+* **Apigee X On-premise Discovery and Traceability Agents**
 
   (APIGEE X AGENTS)<br/>
-  The Apigee X agents are now available as on-prem installation. The agentS can be found on [Axway Repository](https://repository.axway.com/catalog?q=agents).
+  The Apigee X agents are now available as on-prem installation. The agents can be found on [Axway Repository](https://repository.axway.com/catalog?q=agents).
 
 * **New agent versions available**
 
