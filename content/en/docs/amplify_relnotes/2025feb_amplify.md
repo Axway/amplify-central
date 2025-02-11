@@ -39,7 +39,7 @@ New features, enhancements, and bug fixes for the February 7 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| N/A | APIGOV-29684 | **Issue**: Credential Request Definition (CRD) wrongly updated with custom-oauth-external <br/>**Resolution**: When the agent starts and the CRD for an Okta IDP already exists, the APIs are correctly linked to the OKTA CRD|.
+| N/A | APIGOV-29684 | **Issue**: Credential Request Definition (CRD) wrongly updated with custom-oauth-external <br/>**Resolution**: When the agent starts and the CRD for an Okta IDP already exists, the APIs are correctly linked to the OKTA CRD|
 
 ### Axway Central CLI updates for February 7, 2025
 
