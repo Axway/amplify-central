@@ -59,10 +59,9 @@ When configuring the owner, you must to specify:
 
 To retrieve the team id:
 
-1. From within Amplify Engage, select **ACCESS** from the left navigation menu.
-2. Select **Team Assets**.
-3. Select a team. The Team details screen is displayed.
-4. Copy the Team ID.
+1. Navigate to *Amplify > Organization > Teams*.
+2. Select a team. The Team details screen is displayed.
+3. Copy the Team ID.
 
 ![Team info](/Images/central/central_teams.png)
 

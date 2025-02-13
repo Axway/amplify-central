@@ -27,4 +27,4 @@ The following steps summarize the provider journey within the Amplify API Manage
     * End of life an asset - see [Deprecate an asset](/docs/manage_asset_catalog/asset_management/#deprecate-an-asset) and [Archive an asset](/docs/manage_asset_catalog/asset_management/#archive-an-asset)
 
 6. Publish / Monetize the product - see [Publish to marketplace](/docs/manage_marketplace/publish_to_marketplace)
-7. Automate subscriber credentials provisioning / deprovisioning - see [Manage your Amplify Engage provisioning](/docs/connect_manage_environ/marketplace_provisioning)
+7. Automate subscriber credentials provisioning / deprovisioning - see [Manage your Marketplace provisioning](/docs/connect_manage_environ/marketplace_provisioning)

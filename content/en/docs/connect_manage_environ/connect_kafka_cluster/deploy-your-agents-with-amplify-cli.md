@@ -156,7 +156,7 @@ The installation procedure will prompt for the following:
 3. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
    * **Team**: can be an existing team or one that will be created by the installation procedure
-   * **Service account**: can be an existing service account (from platform or Amplify Engage). The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
+   * **Service account**: can be an existing service account created in Amplify. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 4. Kafka cluster configuration setup options:
    * **Deployment Type** select between `Confluent Cloud` or `Confluent Platform`
 

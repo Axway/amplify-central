@@ -17,7 +17,7 @@ The Discovery Agent, for certain Gateways, can be configured to allow for handli
 * Set up your custom credential request definition
 * Set your configuration to notify the agent that the credential request definition is to be handled externally
 * Create a Watch Topic or Webhook that an external process may use to subscribe to credential requests
-* Update the requested credential in the proper order to notify the Engage consumer
+* Update the requested credential in the proper order to notify the Marketplace consumer
 
 ## Creating a credential request definition
 

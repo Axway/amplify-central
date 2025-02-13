@@ -117,7 +117,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 #### Invoke policy handling
 
-When a Front End Proxy is secured by invoking a policy, the agent will not know what the actual policy does. When the policy itself applies a known security type, it is possible to have the agent map a policy name to a credential type. This credential type is what consumers will be prompted to create in Engage. In addition to the internal API Manager security types, the Credential Type may reference the name of an external IDP.
+When a Front End Proxy is secured by invoking a policy, the agent will not know what the actual policy does. When the policy itself applies a known security type, it is possible to have the agent map a policy name to a credential type. This credential type is what consumers will be prompted to create in Marketplace. In addition to the internal API Manager security types, the Credential Type may reference the name of an external IDP.
 
 | Variable name                                      | Description                                                                                                                                                                                                         |
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

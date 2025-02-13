@@ -62,7 +62,7 @@ Each item is described using json format. Below is a non-exhaustive list:
 You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/react-jsonschema-form/) to try out the various combination.
 
 {{< alert title="Note" color="primary" >}}
-The playground allows you to change the WebUI components (UISchema section of the playground); however, the Engage WebUI does not use these components. As a result, the Engage WebUI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
+The playground allows you to change the WebUI components (UISchema section of the playground); however, the Marketplace WebUI does not use these components. As a result, the Marketplace WebUI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
 {{< /alert >}}
 
 #### Text component
