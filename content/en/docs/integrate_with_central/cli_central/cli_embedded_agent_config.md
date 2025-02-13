@@ -19,7 +19,7 @@ Learn how to add or change configuration settings for an Embedded agent using th
 
 * Pull the current agent configuration and save it to a file
 * Learn the configuration settings and where to add them in the resource file
-* Apply the updated resource, with configuration changes, to Enterprise Marketplace
+* Apply the updated resource, with configuration changes, to Amplify Engage
 
 ## Dataplane
 
@@ -41,7 +41,7 @@ Set the access log group ARN value so that the Discovery Agent can set up loggin
 
 ## Embedded Discovery Agent
 
-Configure to apply a filter to the dataplane resource for discovery, add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
+Configure to apply a filter to the dataplane resource for discovery, add additional tags to resources on Amplify Engage, ignore tags on dataplane resources before pushing to Amplify Engage, and set the owner of the resources.
 
 * Pull the existing Discovery Agent from your environment and direct it to a file:
 
@@ -51,11 +51,11 @@ Configure to apply a filter to the dataplane resource for discovery, add additio
 
 * Using an editor of your choice, open the `agent.yaml` file and add/change any or all values:
     * **filter** - `tag.DISCOVER.Exists() == true` specifies that the data plane resource must have a tag named DISCOVER
-    * **additionalTags** - a list of strings that will be added to Enterprise Marketplace resources that are created
-    * **ignoreTags** - tags that, if found on the data plane resource, will not be added to Enterprise Marketplace resources
-    * **owner** - the team owner that will be set when creating resources in Enterprise Marketplace
+    * **additionalTags** - a list of strings that will be added to Amplify Engage resources that are created
+    * **ignoreTags** - tags that, if found on the data plane resource, will not be added to Amplify Engage resources
+    * **owner** - the team owner that will be set when creating resources in Amplify Engage
         * type - set to `team`
-        * id - the id value found when viewing the team in Enterprise Marketplace
+        * id - the id value found when viewing the team in Amplify Engage
 
     ```yaml
     spec:
@@ -80,7 +80,7 @@ Configure to apply a filter to the dataplane resource for discovery, add additio
 
 ### SwaggerHub configuration
 
-Add additional tags to resources on Enterprise Marketplace, ignore tags on dataplane resources before pushing to Enterprise Marketplace, and set the owner of the resources.
+Add additional tags to resources on Amplify Engage, ignore tags on dataplane resources before pushing to Amplify Engage, and set the owner of the resources.
 
 * Pull the existing Discovery Agent from your environment and direct it to a file:
 
@@ -89,11 +89,11 @@ Add additional tags to resources on Enterprise Marketplace, ignore tags on datap
     ```
 
 * Using an editor of your choice, open the `agent.yaml` file and add/change any or all values:
-    * **additionalTags** - a list of strings that will be added to Enterprise Marketplace resources that are created
-    * **ignoreTags** - tags that, if found on the data plane resource, will not be added to Enterprise Marketplace resources
-    * **owner** - the team owner that will be set when creating resources in Enterprise Marketplace
+    * **additionalTags** - a list of strings that will be added to Amplify Engage resources that are created
+    * **ignoreTags** - tags that, if found on the data plane resource, will not be added to Amplify Engage resources
+    * **owner** - the team owner that will be set when creating resources in Amplify Engage
         * type - set to `team`
-        * id - the id value found when viewing the team in Enterprise Marketplace
+        * id - the id value found when viewing the team in Amplify Engage
 
     ```yaml
     spec:
@@ -143,7 +143,7 @@ Configured to set if headers should be processed, redact certain information, sa
     ```
 * Using an editor of your choice, open the `agent.yaml` file and add/change any or all values:
     * **redaction** - the redaction settings to use when reporting transactions from the dataplane [Redaction](#redaction)
-        * **path** - a list of all URL paths, or path regular expressions, which may be reported to Enterprise Marketplace
+        * **path** - a list of all URL paths, or path regular expressions, which may be reported to Amplify Engage
         * **queryArgument** - regular expressions applied to the query argument name and query argument value in the transactional data
             * **show** - query argument names that match any of these expressions will be reported
             * **sanitize**
@@ -161,11 +161,11 @@ Configured to set if headers should be processed, redact certain information, sa
                 * **valueMatch** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
         * **maskingCharacter** - the set of character(s) that will replace any value matched while sanitizing
     * **sampling** - the sampling settings that will be applied when reporting transactional data
-        * **percentage** - the percentage of all transactions that will be reported to Enterprise Marketplace for display in Business and Consumer insights
-        * **allErrors** - when set to `true`, regardless of the percentage, all errored transactions will be reported to Enterprise Marketplace
-    * **owner** - the team owner that will be set when creating resources in Enterprise Marketplace
+        * **percentage** - the percentage of all transactions that will be reported to Amplify Engage for display in Business and Consumer insights
+        * **allErrors** - when set to `true`, regardless of the percentage, all errored transactions will be reported to Amplify Engage
+    * **owner** - the team owner that will be set when creating resources in Amplify Engage
         * type - set to `team`
-        * id - the id value found when viewing the team in Enterprise Marketplace
+        * id - the id value found when viewing the team in Amplify Engage
 
     ```yaml
     spec:
@@ -202,6 +202,6 @@ Configured to set if headers should be processed, redact certain information, sa
 
 ### Redaction
 
-Redaction settings can be added to the Embedded Traceability Agent that will be used when finding and reporting transactional data to Enterprise Marketplace. The settings include the ability to customize the URL path of the transaction, the query arguments in the transaction, as well as the request and response headers.
+Redaction settings can be added to the Embedded Traceability Agent that will be used when finding and reporting transactional data to Amplify Engage. The settings include the ability to customize the URL path of the transaction, the query arguments in the transaction, as well as the request and response headers.
 
 * Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent.

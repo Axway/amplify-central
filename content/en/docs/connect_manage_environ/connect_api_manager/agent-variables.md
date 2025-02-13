@@ -37,8 +37,8 @@ APIMANAGER_AUTH_PASSWORD=AnApiManagerUserPassword
 CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
 CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
-CENTRAL_ORGANIZATIONID=TheOrganizationIDfromEnterpriseMarketplace
-CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
+CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyEngage
+CENTRAL_ENVIRONMENT=AmplifyEngageEnvironmentName
 ```
 
 ### Traceability Agent
@@ -64,8 +64,8 @@ APIGATEWAY_AUTH_PASSWORD=AnApiGatewayOperatorUserPassword
 CENTRAL_AUTH_CLIENTID=AnApiCentralServiceAccountClientId
 CENTRAL_AUTH_PRIVATEKEY=<path>/to/private_key.pem
 CENTRAL_AUTH_PUBLICKEY=<path>/to/public_key.pem
-CENTRAL_ORGANIZATIONID=TheOrganizationIDfromEnterpriseMarketplace
-CENTRAL_ENVIRONMENT=EnterpriseMarketplaceEnvironmentName
+CENTRAL_ORGANIZATIONID=TheOrganizationIDfromAmplifyEngage
+CENTRAL_ENVIRONMENT=AmplifyEngageEnvironmentName
 #
 #Reporting Traffic to Consumer Insights
 #
@@ -112,7 +112,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 | Variable name                  | Description                                                                                                                                                          |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| APIMANAGER_DISCOVERYIGNORETAGS | Comma-separated blacklist of tags that should not be on a proxy before sending to Enterprise Marketplace. Takes precedence over APIMANAGER_FILTER.                   |
+| APIMANAGER_DISCOVERYIGNORETAGS | Comma-separated blacklist of tags that should not be on a proxy before sending to Amplify Engage. Takes precedence over APIMANAGER_FILTER.                   |
 | APIMANAGER_FILTER              | Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/). |
 
 #### Invoke policy handling
@@ -214,7 +214,7 @@ APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 | INPUTS_CLOSE_REMOVED                          | The agent will close the harvester of the file when it has been removed from disk (default value: `2h`). See [close_removed](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html#filebeat-input-log-close-removed).                                                                                             |
 | INPUTS_CLEAN_REMOVED                          | The agent will remove the state of the file when it has been removed from from the disk (default value: `2h`). See [clean_removed](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-log.html#filebeat-input-log-clean-removed).                                                                                       |
 | TRACEABILITY_REDACTION_JMSPROPERTIES_SANITIZE | Determines what portions of a JMS Property value to sanitize. Example: `[{keyMatch:"jmsProviderURL",valueMatch:".{0,10}$"}]` to sanitize the `jmsProviderURL` property to mask the last ten characters or less.                                                                                                                            |
-| TRACEABILITY_REDACTION_JMSPROPERTIES_SHOW     | Determines what JMS Properties to send to Enterprise Marketplace. By default, all JMS properties are redacted. Example: `[{keyMatch:".*"}]` to send all JMS properties.                                                                                                                                                                    |
+| TRACEABILITY_REDACTION_JMSPROPERTIES_SHOW     | Determines what JMS Properties to send to Amplify Engage. By default, all JMS properties are redacted. Example: `[{keyMatch:".*"}]` to send all JMS properties.                                                                                                                                                                    |
 | APIGATEWAY_AUTH_USERNAME                      | Your Axway API Gateway username: should have an API Operator role.                                                                                                                                                                                                                                                                         |
 | APIGATEWAY_AUTH_PASSWORD                      | Your Axway API Gateway user password.                                                                                                                                                                                                                                                                                                      |
 | APIGATEWAY_CLIENTTIMEOUT                      | The time interval at which the HTTP client times out making HTTP requests to API Gateway (ns - default, us, ms, s, m, h). Set to 60s.                                                                                                                                                                                                      |

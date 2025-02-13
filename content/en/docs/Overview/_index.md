@@ -44,9 +44,9 @@ Mapping this analogy back to Amplify:
 
 The management plane allows Platform Administrators and API providers to administer users, teams, agents, and other related entities in support of managing your distributed environments and organizations.
 
-#### Marketplace
+#### Amplify Engage
 
-API providers have visibility over the environments that have been connected to the Amplify platform, including services within those environments. Discovery Agents automate the retrieval of information from these systems, but services can also be added manually or via API or CLI. APIs and other assets are curated and published to the Amplify Marketplace. The Enterprise Marketplace caters to both providers and consumers. It enables enterprises to deliver digital experiences with great speed and control by offering a centralized location for discovery and collaboration around assets, maximizing reuse across the enterprise.
+API providers have visibility over the environments that have been connected to the Amplify platform, including services within those environments. Discovery Agents automate the retrieval of information from these systems, but services can also be added manually or via API or CLI. APIs and other assets are curated and published to the Amplify Marketplace. Amplify Engage caters to both providers and consumers. It enables enterprises to deliver digital experiences with great speed and control by offering a centralized location for discovery and collaboration around assets, maximizing reuse across the enterprise.
 
 #### Administration
 

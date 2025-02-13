@@ -15,7 +15,7 @@ Register an API with the Amplify management plane using an existing OpenAPI Spec
 
 ## Objectives
 
-Register an API in Enterprise Marketplace using the Axway Central CLI, including:
+Register an API in Amplify Engage using the Axway Central CLI, including:
 
 * Create a new API service in an environment
 * Register an API to the service
@@ -146,7 +146,7 @@ Where `api-service-instance.jq` has the following content:
 }
 ```
 
-The API service is now registered with its associated API definition in Enterprise Marketplace.
+The API service is now registered with its associated API definition in Amplify Engage.
 
 ### Update with a new version of the API
 

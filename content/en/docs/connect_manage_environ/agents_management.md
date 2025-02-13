@@ -46,7 +46,7 @@ A list of agents is displayed with the following information:
 
 ## Add your agent status to the environment details page using the CLI
 
-If your environment status in **Enterprise Marketplace / Topology** displays `Manual Sync.`, even though you have configured agents that have discovered APIs from your gateway and sent relative traffic to Business Insights, then you either installed the agents manually or with an older version of Axway Central CLI. Axway Central CLI (0.12.0 and later) creates necessary resources for the known agents (AWS, v7, Azure) to report its environment status to Amplify for you to view.
+If your environment status in **Amplify Engage / Topology** displays `Manual Sync.`, even though you have configured agents that have discovered APIs from your gateway and sent relative traffic to Business Insights, then you either installed the agents manually or with an older version of Axway Central CLI. Axway Central CLI (0.12.0 and later) creates necessary resources for the known agents (AWS, v7, Azure) to report its environment status to Amplify for you to view.
 
 If you installed the agents manually or with an older version of Axway Central CLI, you must:
 
@@ -71,7 +71,7 @@ Refer to `axway central get` to list the resources.
 
 The following samples describe the resources for:
 
-* An environment: my-enterprise-marketplace-environment
+* An environment: my-engage-environment
 * A Discovery Agent: my-discovery-agent-name
 * A Traceability Agent: my-traceability-agent-name
 
@@ -81,7 +81,7 @@ Environment sample:
 group: management
 apiVersion: v1alpha1
 kind: Environment
-name: my-enterprise-marketplace-environment
+name: my-engage-environment
 title: My beautiful environment title
 metadata:
 attributes:
@@ -109,7 +109,7 @@ title: My beautiful DiscoveryAgent title
 metadata:
   scope:
     kind: Environment
-    name: my-enterprise-marketplace-environment
+    name: my-engage-environment
 attributes: {}
 finalizers: []
 tags:
@@ -134,7 +134,7 @@ title: My beautiful TraceabilityAgent title
 metadata:
   scope:
     kind: Environment
-    name: my-enterprise-marketplace-environment
+    name: my-engage-environment
 attributes: {}
 finalizers: []
 tags:
@@ -172,7 +172,7 @@ Run `axway central get env`. You should see something similar to this:
 
 ```shell
 NAME                            AGE                TITLE                           RESOURCE KIND    RESOURCE GROUP
-my-enterprise-marketplace-environment  a few seconds ago  My beautiful environment title  Environment      management
+my-engage-environment  a few seconds ago  My beautiful environment title  Environment      management
 ```
 
 #### Step 3: Create the agent resources
@@ -184,7 +184,7 @@ Create agent resources using one of these methods:
 
 Reference the CLI output name `CENTRAL_AGENTNAME` variable in your agent configuration file.
 
-Check that the resources were created correctly by using either the Axway Central CLI or by going to **Enterprise Marketplace WebUI > Topology > Environment**.
+Check that the resources were created correctly by using either the Axway Central CLI or by going to **Amplify Engage WebUI > Topology > Environment**.
 
 Once you are done, verify your work by running the commands `axway central get da` or `axway central get ta` or `axway central get da,ta`
 
@@ -193,11 +193,11 @@ You should see something similar to this:
 ```shell
 // discovery agent
 NAME                     STATUS   AGE           RESOURCE KIND       SCOPE KIND   SCOPE NAME                       RESOURCE GROUP
-my-discovery-agent-name           a minute ago  DiscoveryAgent      Environment  my-enterprise-marketplace-environment   management
+my-discovery-agent-name           a minute ago  DiscoveryAgent      Environment  my-engage-environment   management
 
 // traceability agent
 NAME                        STATUS   AGE                RESOURCE KIND          SCOPE KIND   SCOPE NAME                      RESOURCE GROUP
-my-traceability-agent-name           a few seconds ago  TraceabilityAgent      Environment  my-enterprise-marketplace-environment  management
+my-traceability-agent-name           a few seconds ago  TraceabilityAgent      Environment  my-engage-environment  management
 ```
 
 Notice that each agent has an empty column named `STATUS`. This status column will be updated with either `running` when agent is running, `stopped` when agent is stopped or `failed` when the agent cannot establish the connection with the gateway.
@@ -208,7 +208,7 @@ In order to link agent binary with the appropriate agent resource, you have to u
 
 Sample: CENTRAL_AGENTNAME=my-discovery-agent-name
 
-Once the Discovery Agent successfully starts, the agent status (Enterprise Marketplace / Topology) will change to `Running`. If there are no other agents linked to that environment, then the environment status will change from `Manual Sync` to `Connected`.
+Once the Discovery Agent successfully starts, the agent status (Amplify Engage / Topology) will change to `Running`. If there are no other agents linked to that environment, then the environment status will change from `Manual Sync` to `Connected`.
 {{< alert title="Note" color="primary" >}}
 The environment status is calculated from the aggregate status of all agents linked to that environment:
 

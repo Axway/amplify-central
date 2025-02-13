@@ -164,7 +164,7 @@ While configuring Apigee settings you can add options that will limit what the a
 
 {{< alert title="Note" color="primary" >}}The agent will only discover API Proxies deployed to the `test` environment. While gathering API metrics, the agent will filter by the `test` environment and additionally check that the API Proxy name is included in the `filteredAPIs` list.{{< /alert >}}
 
-Once you have answered all questions, the agents' configuration files are updated, the Enterprise Marketplace resources are created and the key pair is generated (if you chose to create a new service account).
+Once you have answered all questions, the agents' configuration files are updated, the Amplify Engage resources are created and the key pair is generated (if you chose to create a new service account).
 
 The current directory contains the following files:
 
@@ -224,4 +224,4 @@ run them using the appropriate supplied environment files, (da_env_vars.env & ta
 
 Once you have downloaded the most recent agent Docker images and run commands are completed, the agents should be running in the Docker infrastructure.
 
-See [Connect Apigee X Gateway](/docs/connect_manage_environ/connect_apigee_x/) for additional information about connecting Apigee X API Management Services to Enterprise Marketplace.
+See [Connect Apigee X Gateway](/docs/connect_manage_environ/connect_apigee_x/) for additional information about connecting Apigee X API Management Services to Amplify Engage.

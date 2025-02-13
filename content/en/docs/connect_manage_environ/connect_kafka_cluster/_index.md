@@ -24,7 +24,7 @@ The Discovery Agent is used to discover topics and associated schemas in the Kaf
 1. Find all topics from the Kafka cluster.
 2. For those topics, attempt to find associated schema in the Schema registry.
 3. Using the discovered topics, associated schema, and Kafka broker configuration, the agent prepares the AsyncAPI specification.
-4. The agent creates an API service, revision, and instance to represent the topics in Service Registry of the Enterprise Marketplace. The agent uses the broker configuration to associate security policy to the published API service.
+4. The agent creates an API service, revision, and instance to represent the topics in Service Registry of the Amplify Engage. The agent uses the broker configuration to associate security policy to the published API service.
 
 #### Provisioning process
 

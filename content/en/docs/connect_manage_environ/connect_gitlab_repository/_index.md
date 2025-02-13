@@ -11,7 +11,7 @@ Connecting a GitLab Repository to Amplify will provide you with a global central
 
 * Finds all files within the paths configured
 * From those files, validates that they match at least one of the patterns configured. If no patterns are configured, then all files are discovered
-* The agent then creates an API service and revision to represent that specification file in Amplify Enterprise Marketplace
+* The agent then creates an API service and revision to represent that specification file in Amplify Engage
 * If the files are of a known specification type, then the service will be marked with that type. Otherwise, the service will have a type of `Unstructured`
 
 ## Before you start

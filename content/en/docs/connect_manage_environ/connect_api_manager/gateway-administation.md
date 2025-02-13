@@ -32,7 +32,7 @@ The Discovery Agent only discovers APIs that have tags defined in the agent conf
 
 The binary agent can run in the following mode:
 
-* Default: With a yaml configuration file having the same name as the agent binary - `discovery_agent.yml`. Some values (Enterprise Marketplace url / authentication url) are defaulted to avoid mistake and will not be visible in the provided discovery_agent.yml file.
+* Default: With a yaml configuration file having the same name as the agent binary - `discovery_agent.yml`. Some values (Amplify Engage url / authentication url) are defaulted to avoid mistake and will not be visible in the provided discovery_agent.yml file.
 * **Recommended**: With an environment variable file `da_env_vars.env`. All values in the `discovery_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./discovery_agent --envFile /home/config/da_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Discovery Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/) section.
 
 The containerized agent can run in the following mode:
@@ -85,7 +85,7 @@ CENTRAL_AUTH_CLIENTID=<CLIENTID, ie. DOSA_12345...>
 ```
 
 * The value for *team* can be found in [Amplify > Organization > Teams](https://apicentral.axway.com/access/teams/).
-* The value for *organizationID* can be found in Enterprise Marketplace Platform > Organization.
+* The value for *organizationID* can be found in Amplify > Organization.
 * The value for *clientId* can be found in Service Account. See [Create a service account](/docs/integrate_with_central/cli_central/cli_install/#authorize-your-cli-to-use-the-enterprise-central-apis).
 
 Find the current agent release in the [agent release note](/docs/amplify_relnotes).
@@ -111,15 +111,15 @@ This section connects the agent to API Manager and determines which APIs should 
 
 `APIMANAGER_PORT`: API Manager port number (8075 by default).
 
-`APIMANAGER_DISCOVERYIGNORETAGS` (optional): Comma-separated blacklist of tags. If an API has one or several of these blacklist tags, the agent ignores this API and will not publish it to Enterprise Marketplace. This property takes precedence over the filter property below. The default value is empty, which means no API is ignored.
+`APIMANAGER_DISCOVERYIGNORETAGS` (optional): Comma-separated blacklist of tags. If an API has one or several of these blacklist tags, the agent ignores this API and will not publish it to Amplify Engage. This property takes precedence over the filter property below. The default value is empty, which means no API is ignored.
 
 `APIMANAGER_FILTER` (optional): Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/). Leaving this field empty tells the agent to discover all published APIs (REST / SOAP).
 
-`APIMANAGER_SUBSCRIPTIONAPPLICATIONFIELD` (optional): The field name used to store Enterprise Marketplace subscription identifier inside the API Manager application securing the front end proxy. Default value is **subscriptions**. If you do not intend to change it, comment this property. Be aware that the field will not be visible in the API Manager application, as it is a specific configuration. If you want to see that field or customize it, refer to Add a custom property to applications in [Customize API Manager](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#customize-api-manager-data) documentation.
+`APIMANAGER_SUBSCRIPTIONAPPLICATIONFIELD` (optional): The field name used to store Marketplace subscription identifier inside the API Manager application securing the front end proxy. Default value is **subscriptions**. If you do not intend to change it, comment this property. Be aware that the field will not be visible in the API Manager application, as it is a specific configuration. If you want to see that field or customize it, refer to Add a custom property to applications in [Customize API Manager](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#customize-api-manager-data) documentation.
 
 `APIMANAGER_POLLINTERVAL`: The frequency in which API Manager is polled for new endpoints. Default value is 30s.
 
-`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Enterprise Marketplace, setting this value to true will enable a selection in the App name drop-down for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create an application in API Manager. The new application in API Manager will be given the name of the subscription ID from Enterprise Marketplace. A value of false will cause 'Create an application' to not be shown in the drop-down. Default value is **true**.
+`APIMANAGER_ALLOWAPPLICATIONAUTOCREATION` (optional): When creating a subscription on Marketplace, setting this value to true will enable a selection in the App name drop-down for 'Create an application.' This allows the user to either select from an existing API Manager application, or to create an application in API Manager. The new application in API Manager will be given the name of the subscription ID from Marketplace. A value of false will cause 'Create an application' to not be shown in the drop-down. Default value is **true**.
 
 `APIMANAGER_AUTH_USERNAME`: An API Manager user the agent will use to connect to the API Manager. This user must have either the “API Manager Administrator” or “Organization Administrator” role. Based on the role of this user, the agent is able to:
 
@@ -145,19 +145,19 @@ APIMANAGER_FILTER=tag.APITAG==value
 
 #### Customizing Discovery Agent Amplify connectivity variables
 
-This section connects the agent to Enterprise Marketplace and determines how to published the discovered APIs.
+This section connects the agent to Amplify Engage and determines how to published the discovered APIs.
 
-`CENTRAL_REGION`: The Enterprise Marketplace region. Default value is **US**.
+`CENTRAL_REGION`: The Amplify Engage region. Default value is **US**.
 
 `CENTRAL_TEAM`: Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank.
 
-`CENTRAL_ORGANIZATIONID`: The Organization ID from Enterprise Marketplace. Locate this at Platform > User > Organization > Org ID field.
+`CENTRAL_ORGANIZATIONID`: The Organization ID from Amplify Engage. Locate this at Platform > User > Organization > Org ID field.
 
 `CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/).
 
 `CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.ß
 
-`CENTRAL_AUTH_REALM`: The Realm used to authenticate for Enterprise Marketplace. Default value is **Broker**.
+`CENTRAL_AUTH_REALM`: The Realm used to authenticate for Amplify Engage. Default value is **Broker**.
 
 `CENTRAL_AUTH_CLIENTID`: The Client ID of the Service Account you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/). Locate this at Amplify > Organization > Service Accounts.
 
@@ -191,9 +191,9 @@ When virtualizing a REST API in API Manager, you can configure inbound security 
 
 When using OAuth (External) inbound security, API Manager requires a custom OAuth token information policy to extract the token information from the request and perform verification. For an example on how to add OAuth token information policies, see [Configure OAuth (External) security for a front-end API](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/example_oauth_external/index.html).
 
-When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
+When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Amplify Engage that allows Marketplace consumers to provision credential to specified OAuth identity provider. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
 
-When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Enterprise Marketplace to Credential Request Definition(CRD) that will allow Marketplace consumers to specify identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
+When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Amplify Engage to Credential Request Definition(CRD) that will allow Marketplace consumers to specify identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
 
 #### Invoke Policy authentication handling in the Discovery Agent
 
@@ -456,11 +456,11 @@ cd /home/APIC-agents
 
 ## Traceability Agent
 
-The Traceability Agent is used to prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Enterprise Marketplace and is visible in Business Insights.
+The Traceability Agent is used to prepare the transaction events that are sent to Amplify platform. Each time an API is called by a consumer, an event (summary + detail) is sent to Amplify Engage and is visible in Business Insights.
 
 The binary agent can run in the following mode:
 
-* Default: With a yaml configuration file having the same name as the agent binary - `traceability_agent.yml`. Some values (Enterprise Marketplace url / authentication url) are defaulted to avoid mistake and will not be visible in the provided traceability_agent.yml file.
+* Default: With a yaml configuration file having the same name as the agent binary - `traceability_agent.yml`. Some values (Amplify Engage url / authentication url) are defaulted to avoid mistake and will not be visible in the provided traceability_agent.yml file.
 * **Recommended**: With an environment variable file `ta_env_vars.env`. All values in the `traceability_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./traceability_agent --envFile /home/config/ta_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Traceability Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/) section.
 
 The containerized agent can run in the following mode:
@@ -614,7 +614,7 @@ This section helps the agent to collect the request/response headers from the AP
 
 {{< alert title="Note" color="primary" >}}When APIM is installed in a Docker environment, request/response headers will not be available for the Traceability Agent. Set `APIGATEWAY_HEADERS=false` only in this section.{{< /alert >}}
 
-`APIGATEWAY_GETHEADERS`: Tells the agent to  call the API Gateway API to get additional transaction details (headers). Default value is **true**. If false, API Gateway config does not need to be set and no headers will be sent to  Enterprise Marketplace.
+`APIGATEWAY_GETHEADERS`: Tells the agent to  call the API Gateway API to get additional transaction details (headers). Default value is **true**. If false, API Gateway config does not need to be set and no headers will be sent to  Amplify Engage.
 
 `APIGATEWAY_HOST`: The host that Axway API Gateway is running on. Default value is **localhost**.
 
@@ -645,7 +645,7 @@ APIGATEWAY_SENDALLTRAFFIC=false
 
 #### Customizing Traceability Agent Central connectivity variables
 
-This section connects the agent to Enterprise Marketplace.
+This section connects the agent to Amplify Engage.
 This section is exactly the same as the [Discovery Agent - Central connectivity](/docs/connect_manage_environ/connect_api_manager/gateway-administation/#customizing-discovery-agent-central-connectivity-variables).
 
 Once all data is gathered, the variable list should look like:
@@ -667,13 +667,13 @@ CENTRAL_AUTH_PUBLICKEY=/home/APIC-agents/public_key.pem
 
 #### Customizing Traceability Agent output ingestion service variables
 
-This section describes where the logs should be sent on Enterprise Marketplace.
+This section describes where the logs should be sent on Amplify Engage.
 
 `TRACEABILITY_HOST`: The host and port of the ingestion service to forward the transaction log entries. (default value: US = `<ingestion.datasearch.axway.com:5044>` / EU = `ingestion.visibility.eu-fr.axway.com:5044` / APAC = `<ingestion.visibility.ap-sg.axway.com:5044>`).
 
 `TRACEABILITY_PROTOCOL`: The protocol (https or tcp) to be used for communicating with ingestion service. Default value is **tcp**.
 
-`TRACEABILITY_PROXYURL`: The socks5 or http URL of the proxy server for ingestion service (**socks5://username:password@hostname:port**) to use when the API Management eco-system is not allowed to access the internet world where Enterprise Marketplace is installed. **username** and **password** are optional and can be omitted if not required by the proxy configuration. Leaving this value empty means that no proxy will be used to connect to Enterprise Marketplace ingestion service.
+`TRACEABILITY_PROXYURL`: The socks5 or http URL of the proxy server for ingestion service (**socks5://username:password@hostname:port**) to use when the API Management eco-system is not allowed to access the internet world where Amplify Engage is installed. **username** and **password** are optional and can be omitted if not required by the proxy configuration. Leaving this value empty means that no proxy will be used to connect to Amplify Engage ingestion service.
 
 `TRACEABILITY_COMPRESSIONLEVEL`: The gzip compression level for the output event. Default value is **3**.
 

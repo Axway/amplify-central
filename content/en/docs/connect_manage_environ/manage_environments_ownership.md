@@ -21,7 +21,7 @@ When creating an API service, you can assign an owner. However, the API service 
 
 #### How to assign an owner?
 
-{{< alert title="Note" color="primary" >}}This feature is not yet available in the Enterprise Marketplace WebUI; you can see the owner of a service/environment, but you cannot change it.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This feature is not yet available in the Amplify Engage WebUI; you can see the owner of a service/environment, but you cannot change it.{{< /alert >}}
 
 Currently, you can assign an owner by using the Amplify Central CLI. To learn how to create an environment using the CLI, see [Build an environment](/docs/integrate_with_central/cli_central/cli_environments/).
 
@@ -59,22 +59,21 @@ When configuring the owner, you must to specify:
 
 To retrieve the team id:
 
-1. From within Enterprise Marketplace, select **ACCESS** from the left navigation menu.
-2. Select **Team Assets**.
-3. Select a team. The Team details screen is displayed.
-4. Copy the Team ID.
+1. Navigate to *Amplify > Organization > Teams*.
+2. Select a team. The Team details screen is displayed.
+3. Copy the Team ID.
 
 ![Team info](/Images/central/central_teams.png)
 
 #### Resource access by user role
 
-The table below describes the Enterprise Marketplace roles and the resources they have access to.
+The table below describes the Amplify Engage roles and the resources they have access to.
 
 ![Resource Access by Role](/Images/central/env_gw_mgmt/resourcepermissionsbyrole.png)
 
 #### Environment sharing
 
-{{< alert title="Note" color="primary" >}}This feature is not yet available in the Enterprise Marketplace WebUI.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This feature is not yet available in the Amplify Engage WebUI.{{< /alert >}}
 
 If you want to use the same environment (owned or not) with multiple teams, you must share the environment with the appropriate teams. Use an Access Control List (ACL) to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. However, they will not see other teams' work; members can only see the work done inside their team. There is no restriction on the number of teams included in the ACL.
 

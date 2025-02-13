@@ -19,7 +19,7 @@ If you are a current user of the deprecated 'Amplify Central CLI' package, you c
 
 ## Before you start
 
-* You will need an administrator account for Enterprise Marketplace ([Managing Accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
+* You will need an administrator account for Amplify Engage ([Managing Accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
 * You will need [Node.js](https://nodejs.org/en/download/) version 12.13.0 or later.
 
 ### Operating system supported configurations

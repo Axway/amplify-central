@@ -27,7 +27,7 @@ See [Customize Application Registration, credentials request and subscription sc
 
 Each agent will support setting a custom credential differently. See the specific agent configuration for how to set this up.
 
-## Integrating with Marketplace for handling a custom credential
+## Integrating with Engage for handling a custom credential
 
 In both cases, Watch Topic or Webhook, the integration should be set up for create and update events on the Credential resource in your specific Environment.
 
@@ -115,8 +115,8 @@ Here is an example of a Managed Application with public key information.
 After encrypting any sensitive data, the custom handling makes the following updates to the Credential resource.
 
 1. Update the base resource with a new finalizer.
-    * A finalizer is a way to tell Marketplace to not immediately remove a resource on delete. In this case, the finalizer will allow the custom credential handling to do a cleanup when the Credential resouce is deleted.
-2. Update the data sub-resource with the provisioned data, inclduing the encrypted and base64 encoded data.
+    * A finalizer is a way to tell Engage to not immediately remove a resource on delete. In this case, the finalizer will allow the custom credential handling to do a cleanup when the Credential resource is deleted.
+2. Update the data sub-resource with the provisioned data, including the encrypted and base64 encoded data.
 3. Update the state sub-resource marking the credential as "active."
 4. Add any data needed for updating or removing the credential in a custom sub-resource.
 5. Finally, update the status sub-resource marking the credential as "Success."

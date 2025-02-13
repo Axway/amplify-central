@@ -13,7 +13,7 @@ Connecting a SwaggerHub Repository to Amplify will provide you with a global cen
 
 * Find all files as per the configured visibility and publication filters
 * If the filters are not configured, all the files are discovered
-* The agent then creates an API service and revision to represent that specification file in Enterprise Marketplace
+* The agent then creates an API service and revision to represent that specification file in Amplify Engage
 * If the files are of a known specification type, then the service will be marked with that type. Otherwise, the service will have a type of `Unstructured`
 
 ## Before you start
