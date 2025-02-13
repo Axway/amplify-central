@@ -4,7 +4,7 @@ linkTitle: Marketplace appearance
 weight: 30
 ---
 
-Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The Platform Administrator may choose to use the Amplify Enterprise Marketplace WebUI or API to change the settings; however, only changes made with the WebUI can be previewed before they are saved.
+Adjust the branding / appearance of the Marketplace to match the corporate guidelines of the Marketplace owner. The Platform Administrator may choose to use the user interface or API to change the settings; however, only changes made with the WebUI can be previewed before they are saved.
 
 Standard appearance capabilities include:
 
