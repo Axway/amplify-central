@@ -39,9 +39,9 @@ Each invoice will follow this lifecycle status:
 
 ## Choosing your integration: natives or custom
 
-Amplify Enterprise Marketplace natives billing integrations are based on [Stripe](#stripe-billing-integration) or [MyFatoorah](#myfatoorah-billing-integration). Follow the previous links to learn how to set up and use those billing systems.
+Amplify Engage natives billing integrations are based on [Stripe](#stripe-billing-integration) or [MyFatoorah](#myfatoorah-billing-integration). Follow the previous links to learn how to set up and use those billing systems.
 
-If you are not working with Stripe or MyFatoorah, you can choose to implement your own integration based on the Amplify Enterprise Marketplace APIs and the 3rd party payment Gateway of your choice. This custom integration and the mandatory steps is described in [Custom billing integration](/docs/integrate_with_central/custom_billing).
+If you are not working with Stripe or MyFatoorah, you can choose to implement your own integration based on the Amplify Engage APIs and the 3rd party payment Gateway of your choice. This custom integration and the mandatory steps is described in [Custom billing integration](/docs/integrate_with_central/custom_billing).
 
 ## Stripe billing integration
 

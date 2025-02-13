@@ -136,7 +136,7 @@ The installation procedure will prompt for the following:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
         * **Referenced Environments**: choose from existing environments that have Managed APIs for the Graylog agent to correlate with the API calls monitored by Graylog API Security
    * **Team**: can be an existing team or one that will be created by the installation procedure
-   * **Service account**: can be an existing service account (from platform or Enterprise Marketplace). The installation procedure creates a service account that can be used only with Enterprise Marketplace. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
+   * **Service account**: can be an existing service account (from platform or Amplify Engage). The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 
 3. Graylog API Security configuration setup options:
    * **Namespace**: can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster
@@ -150,7 +150,7 @@ The installation procedure will prompt for the following:
 
 Once you have answered all questions, the agent installation performs the following operations:
 
-* The Amplify Marketplace resources are created/updated
+* The Amplify Engage resources are created/updated
 * If chose, a new Amplify Platform service account is created and public/private key-pair is generated
 * If chose, a new namespace is created in the Kubernetes cluster.
 * The Kubernetes secret with key pair for Amplify Platform service account is created in the selected namespace

@@ -4,7 +4,7 @@ linkTitle: Marketplace localization
 weight: 42
 ---
 
-**Configure the Enterprise Marketplace to support multiple languages.** Allow users to select their preferred language and seamlessly present the product information, documentation, and user interfaces in their selected language.
+**Configure Amplify Engage to support multiple languages.** Allow users to select their preferred language and seamlessly present the product information, documentation, and user interfaces in their selected language.
 
 ## Before you start
 

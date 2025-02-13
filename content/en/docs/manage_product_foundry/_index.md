@@ -6,7 +6,7 @@ date: 2022-03-28
 hide_readingtime: true
 ---
 
-The Product Foundry allows users to productize assets and make them ready for consumption / publication in the Amplify Enterprise Marketplace. Users can build API products by linking multiple assets from across distributed platforms, group assets by domain or target audience, and add documentation describing the value and engagement instructions of the Products. Additionally, it allows users to create and manage products with subscription plans and publish them to the Marketplace for consumption.
+The Product Foundry allows users to productize assets and make them ready for consumption / publication in the Amplify Engage. Users can build API products by linking multiple assets from across distributed platforms, group assets by domain or target audience, and add documentation describing the value and engagement instructions of the Products. Additionally, it allows users to create and manage products with subscription plans and publish them to the Marketplace for consumption.
 
 ## What is a product
 

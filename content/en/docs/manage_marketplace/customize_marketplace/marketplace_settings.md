@@ -6,7 +6,7 @@ weight: 10
 
 Configure the Marketplace to publish your products and expose them to consumers for consumption.
 
-The platform Administrator will use the Amplify Enterprise Marketplace WebUI to configure the settings, including the Marketplace URL, access, and Terms & Conditions.
+The platform Administrator will use the Amplify Engage WebUI to configure the settings, including the Marketplace URL, access, and Terms & Conditions.
 
 ## Before you start
 
@@ -14,7 +14,7 @@ You must have platform Administrator credentials.
 
 ## Objectives
 
-Learn how to use the Amplify Enterprise Marketplace WebUI to configure your organization's settings.
+Learn how to use the Amplify Engage WebUI to configure your organization's settings.
 
 ## Configure settings
 
