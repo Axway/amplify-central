@@ -4,7 +4,7 @@ linkTitle: Reporting custom unit usage
 draft: false
 weight: 10
 ---
-The Marketplace allows the creation and tracking of custom units, which can also be tied to a Product Plan Quota. To enable tracking and associate custom units with the appropriate quotas, the Discovery and Traceability agents connect to a custom metric reporting service. This guide will help you implement and configure this functionality.
+Engage allows the creation and tracking of custom units, which can also be tied to a Product Plan Quota. To enable tracking and associate custom units with the appropriate quotas, the Discovery and Traceability agents connect to a custom metric reporting service. This guide will help you implement and configure this functionality.
 
 {{< alert title="Note" color="primary" >}}
 This feature requires agents built with SDK version 1.1.104 or later.
@@ -39,7 +39,7 @@ The **Quota Enforcement service** works with Discovery Agents to manage quota-re
 3. **Handle or Ignore**:
     * If the event does not need to be processed, the service replies with an empty response.
     * If processing is required, handle the event and reply with either an empty response (success) or an error message (failure)
-4. **Communicate response to Marketplace**: The Discovery AGent relays the response to Marketplace.
+4. **Communicate response to Engage**: The Discovery Agent relays the response to Engage.
 
 **Example: Handling Quota Info**:
 

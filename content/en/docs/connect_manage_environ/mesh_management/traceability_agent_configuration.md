@@ -142,9 +142,9 @@ Once configured, use the following command to populate the resources in Amplify:
 axway central apply -f <fileName>.yaml 
  ```
 
-#### Reporting traffic and metric event correlated to Amplify Enterprise Marketplace subscription/application
+#### Reporting traffic and metric event correlated to Amplify Engage subscription/application
 
-To allow Traceability Agent to report traffic and metric events that correlate to the Amplify Enterprise Marketplace subscription/application, resources must be set up with metadata that correlates the client provisioned in external OAuth IdP.
+To allow Traceability Agent to report traffic and metric events that correlate to the Amplify Engage subscription/application, resources must be set up with metadata that correlates the client provisioned in external OAuth IdP.
 
 The Marketplace allows the consumer to create applications, request access to the resource, and create credentials. To allow the Marketplace to request access, an access request definition (AccessRequestDefinition) must be created to define the schema for the information that a consumer may provide for granting access to a discovered API. Similarly, to request credentials for the application, a credential request definition (CredentialRequestDefinition) must be created to define the schema for the information that the consumer will provide to create the credential, and for the provisioned credential information.
 
@@ -357,9 +357,9 @@ status:
   level: Success
 ```
 
-While updating the Credential resource, the data properties can be encrypted if the associated property definition in CredentialRequestDefinition has x-axway-encrypted set to true. To encrypt the data provisioning system, use the public key in the ManagedApplication resource. This allows the Marketplace to secure the secret data so that it can be decrypted only by the private key associated to the organization. The Marketplace manages a separate key for each organization. Once the credential is updated, the consumer can go to Amplify Enterprise Marketplace UI and view the decrypted secret data only once, after which the secret data is not accessible.
+While updating the Credential resource, the data properties can be encrypted if the associated property definition in CredentialRequestDefinition has x-axway-encrypted set to true. To encrypt the data provisioning system, use the public key in the ManagedApplication resource. This allows the Marketplace to secure the secret data so that it can be decrypted only by the private key associated to the organization. The Marketplace manages a separate key for each organization. Once the credential is updated, the consumer can go to Amplify Engage UI and view the decrypted secret data only once, after which the secret data is not accessible.
 
-For Traceability Agent to associate the traffic with the Amplify Enterprise Marketplace application, the sub-resource "x-agent-details" with "clientId" property must be set up in the Credential resource (as shown in the example above).
+For Traceability Agent to associate the traffic with the Amplify Engage application, the sub-resource "x-agent-details" with "clientId" property must be set up in the Credential resource (as shown in the example above).
 
 In addition, create a RequestAuthentication resource in the namespace in which the Istio agents were installed to allow Istio to parse the authentication information. See the following example.
 
@@ -382,7 +382,7 @@ spec:
       jwksUri: https://example.com/.well-known/jwks.json
  ```
 
-When the Traceability Agent receives the traffic it will identify the client id using metadata set up by the Istio envoy filter that is parsed based on the RequestAuthentication definition, and then the agent will perform the lookup for the associated Credential resource that has the reference to the associated Amplify Enterprise Marketplace application.
+When the Traceability Agent receives the traffic it will identify the client id using metadata set up by the Istio envoy filter that is parsed based on the RequestAuthentication definition, and then the agent will perform the lookup for the associated Credential resource that has the reference to the associated Amplify Engage application.
 
 ### Istio CRDs
 

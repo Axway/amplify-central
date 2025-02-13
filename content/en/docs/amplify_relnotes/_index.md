@@ -7,7 +7,7 @@ date: 2025-1-7
 hide_readingtime: true
 ---
 
-This page displays the supported agents for each release of Amplify Enterprise Marketplace. To learn more about what's in a release, click on the release note title / date to go to the corresponding release note.
+This page displays the supported agents for each release of Amplify Engage. To learn more about what's in a release, click on the release note title / date to go to the corresponding release note.
 
 Please take note of the agents' versions on this page before navigating to the corresponding release note.
 

@@ -12,7 +12,7 @@ Use the sample e2e.zip file to move an API Service from Dev to Production.
 
 ## Objectives
 
-Learn how to create and manipulate Amplify Enterprise Marketplace concepts: from the environment to the Marketplace.
+Learn how to create and manipulate Amplify Engage concepts: from the environment to the Marketplace.
 
 ## Scenario description
 

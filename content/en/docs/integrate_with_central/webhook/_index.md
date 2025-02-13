@@ -99,7 +99,7 @@ Each event payload that your webhook server receives is structured similar to th
 
 * **id**: a uid for the webhook event.
 * **time**: indicates the time when the webhook was triggered by a change in resource.
-* **correlationId:** each API request is tagged with an id once it received by Amplify. The correlationId is the id of the originating request which updated the system. Note that an API call into Amplify may result in a number of changes to resources in Amplify. For example, consider the result of deleting an environment request which will result in a cascade delete of all the resources and subresources of that environment.
+* **correlationId:** each API request is tagged with an id once it is received by Amplify. The correlationId is the id of the originating request which updated the system. Note that an API call into Amplify may result in a number of changes to resources in Amplify. For example, consider the result of deleting an environment request which will result in a cascade delete of all the resources and subresources of that environment.
 * **organization:** indicates the organization id that the resource belongs to.
 * **type:** indicates if this is a create, update or delete event. Supported types: ResourceCreated/ResourceUpdated/ResourceDeleted/SubResourceUpdated.
 * **payload:** contains the contents of the resource that changed and resulted in the webhook being triggered.

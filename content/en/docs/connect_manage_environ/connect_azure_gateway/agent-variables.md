@@ -46,15 +46,15 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 {{< alert title="Note" color="primary" >}}OAuth (External) inbound security was made available with v1.1.73 and later.{{< /alert >}}
 
-When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credentials to the specified OAuth identity providers. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
+When discovering and publishing the virtualized APIs with OAuth (External) inbound security, the Discovery Agent can associate the registered external OAuth identity providers to the published resources on Amplify Engage that allows Marketplace consumers to provision credentials to the specified OAuth identity providers. For details on how to register external OAuth identity providers, see [Provisioning OAuth credential to an identity provider](/docs/connect_manage_environ/marketplace_provisioning/#provisioning-oauth-credential-to-an-identity-provider).
 
-When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Enterprise Marketplace to Credential Request Definition(CRD) that will allow Marketplace consumers to specify the identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
+When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Amplify Engage to Credential Request Definition(CRD) that will allow Marketplace consumers to specify the identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
 
 ### Discovery Agent to manage Entra ID ClientID and CLientSecret credentials
 
 {{< alert title="Note" color="primary" >}}Entra ID ClientID and CLientSecret credentials was made available with v1.3.6 and later.{{< /alert >}}
 
-When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and CLientSecret to the published resources on Enterprise Marketplace that allows Marketplace consumers to provision credentials to the specified application registrations.
+When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and CLientSecret to the published resources on Amplify Engage that allows Marketplace consumers to provision credentials to the specified application registrations.
 
 For setting up APIs protected using Entra ID, please refer to [Protect an API in Azure API Management using OAuth 2.0 authorization with Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad).
 

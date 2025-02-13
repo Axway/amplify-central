@@ -4,7 +4,7 @@ linkTitle: Custom Marketplace billing integration
 weight: 310
 ---
 
-Learn how to implement a billing integration system to manage your consumer subscription invoices created from the Amplify Enterprise Marketplace.
+Learn how to implement a billing integration system to manage your consumer subscription invoices created from Engage.
 
 ## Overview
 
@@ -54,7 +54,7 @@ To activate the billing integration, change the Marketplace settings.
 
 ## Step 2: Listen to invoices event
 
-If an invoice object is changed (for any reason) on Amplify Enterprise Marketplace, an event is triggered. The event will contain the invoice information (amount / currency / state and status / reference to the plan / Marketplace....):
+If an invoice object is changed (for any reason) on Amplify Engage, an event is triggered. The event will contain the invoice information (amount / currency / state and status / reference to the plan / Marketplace....):
 
 ```json
 {
@@ -166,10 +166,10 @@ Look at the `state.name` and `status.level` to identify the flow to trigger.
 
 Invoice states:
 
-* **Draft**: invoice has been created by Amplify Enterprise Marketplace system and is ready to be consumed by the billing Gateway flow.
+* **Draft**: invoice has been created by Amplify Engage system and is ready to be consumed by the billing Gateway flow.
 * **Open**: invoice has been created in the billing Gateway and is ready to be paid by the consumer.
 * **Paid**: invoice has been paid by the consumer.
-* **Incomplete**: status set by the Billing System in case of issues. No action will be taken by the Amplify Enterprise Marketplace.
+* **Incomplete**: status set by the Billing System in case of issues. No action will be taken by the Amplify Engage.
 * **PastDue**: the invoice has not been paid on time.
 * **Void**: the invoice will never be paid by the consumer. The consumer cancelled the subscription before paying the first invoice.
 
@@ -417,11 +417,11 @@ Using the above queries, the gRPC client can process all events, and manage some
 
 ### Invoice creation flow in the billing Gateway
 
-When receiving new invoices via webhook or watchTopic, it is the responsibility of the implementation to correctly create the invoice on the billing Gateway with the supplied information (currency / amount / details) and then report back to Amplify Enterprise Marketplace the billing link and the invoice state/status:
+When receiving new invoices via webhook or watchTopic, it is the responsibility of the implementation to correctly create the invoice on the billing Gateway with the supplied information (currency / amount / details) and then report back to Amplify Engage the billing link and the invoice state/status:
 
 1. Check the event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=draft` and `status=pending`.
 2. Create the corresponding invoice in the Billing Gateway. This step depends on the billing Gateway capabilities.
-3. Update the invoice on the Amplify Enterprise Marketplace to reflect the information.
+3. Update the invoice on the Amplify Engage to reflect the information.
 
 Add the invoice link payment so that the consumer can navigate from the Marketplace to the billing Gateway payment screen:
 
@@ -484,7 +484,7 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha
 
 ### Invoice past due flow
 
-Once the invoice due date is reached, Amplify Enterprise Marketplace will raise a new invoice event.
+Once the invoice due date is reached, Amplify Engage will raise a new invoice event.
 
 To check for event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=pastDue` and `status=pending`.
 
@@ -514,7 +514,7 @@ If the initial subscription invoice was never paid and the consumer terminated h
 
 1. Check the event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=void` and `status=pending`
 2. Decide what to do on the billing Gateway. For instance, set the invoice as *not collectible* or completely delete it from the billing Gateway.
-3. Once done on the Billing Gateway, the corresponding invoice in Amplify Enterprise Marketplace must be updated to whichever status make sense (`Success` or `Error`):
+3. Once done on the Billing Gateway, the corresponding invoice in Amplify Engage must be updated to whichever status make sense (`Success` or `Error`):
 
     ```json
     curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \

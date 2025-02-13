@@ -12,7 +12,7 @@ Amplify allows you to personalize the *Application Registration*, *credential* a
 
 ## Objectives
 
-Learn how to customize the Application Registration and credentials request screen in Marketplace using [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form) framework.
+Learn how to customize the Application Registration and credentials request screen in Engage using [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form) framework.
 
 ## Use cases
 
@@ -62,7 +62,7 @@ Each item is described using json format. Below is a non-exhaustive list:
 You can use the [react-jsonschema-form playground](https://rjsf-team.github.io/react-jsonschema-form/) to try out the various combination.
 
 {{< alert title="Note" color="primary" >}}
-The playground allows you to change the WebUI components (UISchema section of the playground); however, the Marketplace WebUI does not use these components. As a result, the Marketplace WebUI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
+The playground allows you to change the WebUI components (UISchema section of the playground); however, the Engage WebUI does not use these components. As a result, the Engage WebUI may render differently than what is reflected in the playground. For this reason, think of the playground as a validator of your schema using the playground JSONSchema section.
 {{< /alert >}}
 
 #### Text component
@@ -475,7 +475,7 @@ If the APIService instance is already linked to an asset prior to adding the App
 
 Otherwise, create an asset based on this service and then a product.
 
-You will be able to see the purpose selector once you publish the product to the marketplace, subscribe to it to get an active subscription, and then request access.
+You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
 ![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
 

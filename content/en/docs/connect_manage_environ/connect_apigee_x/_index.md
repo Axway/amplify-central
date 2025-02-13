@@ -23,7 +23,7 @@ The Discovery Agent is used to discover new API proxies configured in Apigee X, 
 * Find all deployed API proxy revisions
 * From those revisions, attempts to find a specification file
     * To do this the agent looks at the proxy configuration for a resource file of type `oas`
-* Given that a specification file is found, the agent then creates an API service, revision, and instance to represent that proxy in Service Registry of the Enterprise Marketplace. The agent does not validate or configure any policies within the proxy, it will expect the spec to represent what is defined in the proxy.
+* Given that a specification file is found, the agent then creates an API service, revision, and instance to represent that proxy in Service Registry of the Amplify Engage. The agent does not validate or configure any policies within the proxy, it will expect the spec to represent what is defined in the proxy.
 
 {{< alert title="Note" color="primary" >}}An API Proxy without an API Specification will not be discovered by the agent.{{< /alert >}}
 

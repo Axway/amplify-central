@@ -115,7 +115,7 @@ For more information regarding agents' installation, see [Axway gateway agents](
 
 ### Reporting Gateway Transaction Metrics event - automatic reporting for online mode
 
-You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Business Insights -> API Health** menu.
+You can view the environment in *Amplify Engage > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Business Insights -> API Health** menu.
 
 Once Traceability Agent starts, it detects the gateway traffic, and begins counting the transactions. The Traceability Agent sends the Transaction Metrics to the platform on a regular basis (default is 1 hour).
 
@@ -132,7 +132,7 @@ If the Traceability Agent is stopped while there are remaining usage events to b
 
 ### Reporting Gateway Platform Usage event - automatic reporting for online mode
 
-You can view the environment in *Enterprise Marketplace > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under *Organization > Usage*.
+You can view the environment in *Amplify Engage > Topology > Environments* once the Traceability Agent is installed. The same environment is visible in Amplify platform under *Organization > Usage*.
 
 Once Traceability Agent starts, it detects the gateway traffic and begins counting the transactions. The Traceability Agent sends the Platform Usage metrics to the platform on a regular basis (default is daily).
 
@@ -195,7 +195,7 @@ For more information regarding agents installation, see [Axway gateway agents](/
 
 ### Reporting Gateway Usage event - manual reporting for offline mode
 
-You can view the environment in *Enterprise Marketplace > Topology > Environment* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
+You can view the environment in *Amplify Engage > Topology > Environment* once the Traceability Agent is installed. The same environment is visible in Amplify platform under the **Organization** menu.
 
 The offline report is generated every month and saved to the \[agent_dir]/data/reports directory as `YYYY_MM_DD_usage_report.json`.
 

@@ -1,17 +1,17 @@
 ---
-title: "Welcome to Amplify Enterprise Marketplace"
-linkTitle: "Welcome to Amplify Enterprise Marketplace"
+title: "Welcome to Amplify Engage"
+linkTitle: "Welcome to Amplify Engage"
 weight: 03
 no_list: true
 menu:
   main:
     weight: 20
 ---
-This website contains the entire documentation set for Amplify Enterprise Marketplace.
+This website contains the entire documentation set for Amplify Engage.
 
-## Amplify Enterprise Marketplace documentation
+## Amplify Engage documentation
 
-Browse all documentation for Amplify Enterprise Marketplace under the left navigation menu.
+Browse all documentation for Amplify Engage under the left navigation menu.
 
 Here are some suggestions to get started:
 
@@ -27,4 +27,4 @@ Email `support@axway.com` or visit [Axway Support](https://support.axway.com/).
 
 ## Training
 
-Axway offers training across the globe, including on-site instructor-led classes and self-paced online learning. To learn more about Amplify Enterprise Marketplace and other Axway product solutions, browse Axway University's [courses and learning plans](https://university.axway.com/learn).
+Axway offers training across the globe, including on-site instructor-led classes and self-paced online learning. To learn more about Amplify Engage and other Axway product solutions, browse Axway University's [courses and learning plans](https://university.axway.com/learn).
