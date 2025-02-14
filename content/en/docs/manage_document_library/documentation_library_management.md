@@ -250,7 +250,7 @@ Template can be deleted by either a **Catalog Manager** from the team that owns 
 1. Navigate to *Document Library* and select the **Templates** tab
 2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.
 
-#### Providing a default template
+#### Promoting a default template
 
 To be able to help Catalog Manager to write correct and homogeneous product documentation, template can be recommended using the **Set as default** ellipsis menu. Once a template is set as default, **Default** tag is visible in the list of template close to the template name.
 
