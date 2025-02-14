@@ -1,17 +1,19 @@
 ---
-title: "Welcome to Amplify Engage"
-linkTitle: "Welcome to Amplify Engage"
+title: "Amplify Engage Guide"
+linkTitle: "Amplify Engage Guide"
 weight: 03
 no_list: true
 menu:
   main:
     weight: 20
 ---
-This website contains the entire documentation set for Amplify Engage.
+This publication contains the documentation for the latest version of Amplify Engage.
 
-## Amplify Engage documentation
+## Quick Links
 
-Browse all documentation for Amplify Engage under the left navigation menu.
+For information on supported agents and changes for each update, see [Release Notes](/docs/amplify_relnotes) (requires login).
+
+You can use the navigation menu on the left to browse all documentation, and you can search for specific terms using the search field.
 
 Here are some suggestions to get started:
 
