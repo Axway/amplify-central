@@ -245,24 +245,24 @@ Delete topics, sections, or articles using their **Delete** option in the ellips
 
 #### Delete a template
 
-Template can be deleted by either a **Catalog Manager** from the team that owns the template or by the Central Administrator.
+A template can only be deleted by either a **Catalog Manager** from the team that owns the template or by the Central Administrator.
 
 1. Navigate to *Document Library* and select the **Templates** tab
 2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.
 
-#### Promoting a default template
+#### Set a default template
 
-To be able to help Catalog Manager to write correct and homogeneous product documentation, template can be recommended using the **Set as default** ellipsis menu. Once a template is set as default, **Default** tag is visible in the list of template close to the template name.
+To help create standardized, professional-looking product documentation, a Catalog Manager can recommend a template by using the **Set as default** ellipsis menu. Once a template is set as the default, a **Default** tag is attached to the template and displayed in the list of templates.
 
-By default template are not enforced: it is just a recommendation. A default template can be set so that each time a Catalog Manager creates product documentation, the default template will be automatically selected and the Catalog Manager only have to validate the choice to automatically creates his product documentation according to the template.
+By default, templates are not enforced, just recommended. A default template can be set so that whenever product documentation is created, the template is automatically selected. Once the use of the template is validated, the product documentation can be created accordingly.
 
-When setting the default template, user can optionally decide to enforce that default template. When the default template is enforced, it will no more be possible to create product documentation without using the default template. This template will be automatically used when creating a new product release in case the product does not have any documentation yet.
+When setting the default template, the option to enforce it is available. This will ensure that the product documentation can only be created using the default template. When creating a new product release, the template will be automatically applied if the product does not already have documentation.
 
-A check has been added when manually releasing the product to ensure the documentation match the current default enforced template. In case there is a mismatch, user will be informed and can correct his documentation to apply the default enforced template. This check is disable during the auto-release process.
+When manually releasing a product, a check ensures that the documentation matches the current enforced default template. If the enforced template was not applied, then a message is displayed, and the default template can be applied. This check is disabled during the auto-release process.
 
-At any point of time, default template can be reset using the **Set as default** ellipsis menu of another template (a popup will ask you to validate the choice) or using the **Unset default** ellipsis menu of the current template.
+At any time, the default template can be reset by using either the **Set as default** ellipsis menu of another template and validating the choice, or the **Unset default** ellipsis menu of the current template.
 
-In case the default template is created by a specific team member and enforced, automatically, every users will gain access to that template.
+{{< alert title="Note" color="primary" >}}If a default template is created and enforced by a member of a team, then every member in that team will have access to the template.{{< /alert >}}
 
 #### Use a template
 
