@@ -250,6 +250,20 @@ Template can be deleted by either a **Catalog Manager** from the team that owns 
 1. Navigate to *Document Library* and select the **Templates** tab
 2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.
 
+#### Providing a default template
+
+To be able to help Catalog Manager to write correct and homogeneous product documentation, template can be recommended using the **Set as default** ellipsis menu. Once a template is set as default, **Default** tag is visible in the list of template close to the template name.
+
+By default template are not enforced: it is just a recommendation. A default template can be set so that each time a Catalog Manager creates product documentation, the default template will be automatically selected and the Catalog Manager only have to validate the choice to automatically creates his product documentation according to the template.
+
+When setting the default template, user can optionally decide to enforce that default template. When the default template is enforced, it will no more be possible to create product documentation without using the default template. This template will be automatically used when creating a new product release in case the product does not have any documentation yet.
+
+A check has been added when manually releasing the product to ensure the documentation match the current default enforced template. In case there is a mismatch, user will be informed and can correct his documentation to apply the default enforced template. This check is disable during the auto-release process.
+
+At any point of time, default template can be reset using the **Set as default** ellipsis menu of another template (a popup will ask you to validate the choice) or using the **Unset default** ellipsis menu of the current template.
+
+In case the default template is created by a specific team member and enforced, automatically, every users will gain access to that template.
+
 #### Use a template
 
 The template can only be used when creating a new product or a new product version.
