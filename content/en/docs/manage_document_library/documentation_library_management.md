@@ -245,10 +245,24 @@ Delete topics, sections, or articles using their **Delete** option in the ellips
 
 #### Delete a template
 
-Template can be deleted by either a **Catalog Manager** from the team that owns the template or by the Central Administrator.
+A template can only be deleted by either a **Catalog Manager** from the team that owns the template or by the Central Administrator.
 
 1. Navigate to *Document Library* and select the **Templates** tab
 2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.
+
+#### Set a default template
+
+To help create standardized, professional-looking product documentation, a Catalog Manager can recommend a template by using the **Set as default** ellipsis menu. Once a template is set as the default, a **Default** tag is attached to the template and displayed in the list of templates.
+
+By default, templates are not enforced, just recommended. A default template can be set so that whenever product documentation is created, the template is automatically selected. Once the use of the template is validated, the product documentation can be created accordingly.
+
+When setting the default template, the option to enforce it is available. This will ensure that the product documentation can only be created using the default template. When creating a new product release, the template will be automatically applied if the product does not already have documentation.
+
+When manually releasing a product, a check ensures that the documentation matches the current enforced default template. If the enforced template was not applied, then a message is displayed; you must remove the existing documentation and then the default template can be applied. This check is disabled during the auto-release process.
+
+At any time, the default template can be reset by using either the **Set as default** ellipsis menu of another template and validating the choice, or the **Unset default** ellipsis menu of the current template.
+
+{{< alert title="Note" color="primary" >}}If a default template is created and enforced by a member of a team, then every member in any team will have access to the template.{{< /alert >}}
 
 #### Use a template
 
