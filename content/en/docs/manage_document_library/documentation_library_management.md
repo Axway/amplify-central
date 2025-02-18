@@ -258,7 +258,7 @@ By default, templates are not enforced, just recommended. A default template can
 
 When setting the default template, the option to enforce it is available. This will ensure that the product documentation can only be created using the default template. When creating a new product release, the template will be automatically applied if the product does not already have documentation.
 
-When manually releasing a product, a check ensures that the documentation matches the current enforced default template. If the enforced template was not applied, then a message is displayed, you have to remove the existing documentation and then, the default template can be applied. This check is disabled during the auto-release process.
+When manually releasing a product, a check ensures that the documentation matches the current enforced default template. If the enforced template was not applied, then a message is displayed; you must remove the existing documentation and then the default template can be applied. This check is disabled during the auto-release process.
 
 At any time, the default template can be reset by using either the **Set as default** ellipsis menu of another template and validating the choice, or the **Unset default** ellipsis menu of the current template.
 
