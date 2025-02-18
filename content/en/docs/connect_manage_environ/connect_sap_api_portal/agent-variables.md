@@ -27,9 +27,9 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | Variable name                        | Description                                                                                                                                                               |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SAP_AUTH_TOKENURL                    | The token URL used for authenticating  |
-| SAP_AUTH_APIPORTAL_BASEURL           | The SAP API Portal BaseURL that the agent will make API calls to    |
-| SAP_AUTH_APIPORTAL_CLIENTID          | The SAP API Portal ClientID that the agent will use to authenticate to API Portal |
-| SAP_AUTH_APIPORTAL_CLIENTSECRET      | The SAP API Portal ClientSecret that the agent will use to authenticate to API Portal |
+| SAP_AUTH_APIPORTAL_BASEURL           | The SAP API Portal (Robert) BaseURL that the agent will make API calls to    |
+| SAP_AUTH_APIPORTAL_CLIENTID          | The SAP API Portal (Robert) ClientID that the agent will use to authenticate to API Portal |
+| SAP_AUTH_APIPORTAL_CLIENTSECRET      | The SAP API Portal (Robert) ClientSecret that the agent will use to authenticate to API Portal |
 | SAP_AUTH_DEVPORTAL_BASEURL           | The SAP Dev Portal BaseURL that the agent will make API calls to    |
 | SAP_AUTH_DEVPORTAL_CLIENTID          | The SAP Dev Portal ClientID that the agent will use to authenticate to Dev Portal |
 | SAP_AUTH_DEVPORTAL_CLIENTSECRET      | The SAP Dev Portal ClientSecret that the agent will use to authenticate to Dev Portal |

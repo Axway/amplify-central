@@ -1,22 +1,22 @@
 ---
-title: Connect SAP API Portal
-linkTitle: Connect SAP API Portal
+title: Connect SAP API Portal (Robert)
+linkTitle: Connect SAP API Portal (Robert)
 weight: 120
 ---
-Connect SAP API Portal and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the SAP API Portal APIs in one central location.
+Connect SAP API Portal (Robert) and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the SAP API Portal (Robert) APIs in one central location.
 
-## Why do you want to connect SAP API Portal and Amplify?
+## Why do you want to connect SAP API Portal (Robert) and Amplify?
 
-Connecting SAP API Portal to Amplify will provide you with a global centralized view of your APIs and their related traffic.
+Connecting SAP API Portal (Robert) to Amplify will provide you with a global centralized view of your APIs and their related traffic.
 
-The SAP API Portal gateway can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with SAP API Portal and Amplify to:
+The SAP API Portal (Robert) gateway can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with SAP API Portal (Robert) and Amplify to:
 
-* Detect changes to SAP API Portal APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
+* Detect changes to SAP API Portal (Robert) APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
 * Track API metrics and transactions related to discovered APIs, their consumers, and subscriptions.
 
 ### Discovery
 
-The Discovery Agent is used to discover new published APIs for a specific SAP API Portal catalog. The Discovery Agent pushes REST, SOAP, and GraphQL API definitions to Amplify.
+The Discovery Agent is used to discover new published APIs for a specific SAP API Portal (Robert) catalog. The Discovery Agent pushes REST, SOAP, and GraphQL API definitions to Amplify.
 
 The related APIs are published to Amplify as an API service in the selected environment and then can be published to Marketplace within a product.
 
@@ -47,7 +47,7 @@ For update, the credentials will be rotated, and the new values will be provided
 
 ### Traceability
 
-The Traceability Agent collects metric information from SAP API Portal and publishes that data to Amplify.
+The Traceability Agent collects metric information from SAP API Portal (Robert) and publishes that data to Amplify.
 
 The metric data collected includes call count, the number of transactions for a specific API or API/Application combination, and latency details.
 
@@ -58,7 +58,7 @@ The Traceability Agent is not able to sample the transaction data for Amplify An
 * An Axway Amplify subscription in the Amplify platform
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
-* Access to SAP API Portal to retrieve details from the service and CLI Toolkit
+* Access to SAP API Portal (Robert) to retrieve details from the service and CLI Toolkit
 * The [Traceability Agent](#traceability) requires a connected and running [Discovery Agent](#discovery)
 
 ## System requirements
@@ -83,7 +83,7 @@ Use one of the following settings, for both agents, to set the region the agent 
 
 {{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5, 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets{{< /alert >}}
 
-## Gather the required values from SAP API Portal
+## Gather the required values from SAP API Portal (Robert)
 
 ### API Portal baseURL and Dev Portal baseURL
 
@@ -91,7 +91,7 @@ Two values of baseURLs must be provided for the agent to be able to fulfill API 
 
 ### API Portal Client ID and Secret & Dev Portal ClientID and Secret
 
-Both agents will use the credentials provided by the SAP API Portal CLI Toolkit to connect discover APIs and track transactions. Two sets of ClientID and ClientSecret from API Portal and Dev Portal will be required. Please contact your administrator if you need help gathering this information.
+Both agents will use the credentials provided by the SAP API Portal (Robert) CLI Toolkit to connect discover APIs and track transactions. Two sets of ClientID and ClientSecret from API Portal and Dev Portal will be required. Please contact your administrator if you need help gathering this information.
 
 ### Token URL
 
