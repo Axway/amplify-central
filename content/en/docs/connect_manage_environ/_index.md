@@ -62,7 +62,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics**        | No                                         | Yes                                        | Yes                                                        | Yes            |
 | **Transaction Event Sampling** | No                                         | Yes                                        | Yes                                                        | No             |
 
-| Description                    | Backstage Software Catalog | GitLab Repository        | SAP API Portal (Robert)          | GCP Apigee X                       |
+| Description                    | Backstage Software Catalog | GitLab Repository        | SAP Integration Suite - API Management / API Portal          | GCP Apigee X                       |
 |--------------------------------|----------------------------|--------------------------|--------------------------|------------------------------------|
 | **Discovery**                  | All API types              | Public/Private Rest APIs | REST, SOAP, and GraphQL  | API Proxies                        |
 | **Application**                | No                         | No                       | Yes                      | Application                        |
@@ -108,7 +108,7 @@ For detailed information about agent configuration, features and limitations, se
 * [Discovery Agent for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
 * [Discovery Agent for SwaggerHub](/docs/connect_manage_environ/connect_swaggerhub/)
 * [Discovery Agent for Backstage](/docs/connect_manage_environ/connect_backstage/)
-* [Discovery Agent for SAP API Portal (Robert)](/docs/connect_manage_environ/connect_sap_api_portal/)
+* [Discovery Agent for SAP Integration Suite - API Management / API Portal](/docs/connect_manage_environ/connect_sap_api_portal/)
 
 To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
 
