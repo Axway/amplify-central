@@ -1,6 +1,6 @@
 ---
-title: Connect SAP API Portal (Robert)
-linkTitle: Connect SAP API Portal (Robert)
+title: Connect SAP Integration Suite - API Management / API Portal
+linkTitle: Connect SAP Integration Suite - API Management / API Portal
 weight: 120
 ---
 Connect SAP Integration Suite - API Management / API Portal and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the SAP Integration Suite APIs in one central location.
