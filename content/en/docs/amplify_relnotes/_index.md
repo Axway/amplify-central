@@ -23,7 +23,15 @@ No agent updates. See February 21 for latest supported agent versions.
 
 ## [Amplify Enterprise Marketplace February 19 2025](/docs/amplify_relnotes/2025jan_amplify/#february-19-2025)
 
-No agent updates. See February 7 for latest supported agent versions.
+No agent updates. See February 19 for latest supported agent versions.
+
+## [Amplify Enterprise Marketplace February 18 2025](/docs/amplify_relnotes/2025jan_amplify/#february-18-2025)
+
+No agent updates. See February 18 for latest supported agent versions.
+
+## [Amplify Enterprise Marketplace February 13 2025](/docs/amplify_relnotes/2025jan_amplify/#february-13-2025)
+
+No agent updates. See February 13 for latest supported agent versions.
 
 ## [Amplify Enterprise Marketplace February 7 2025](/docs/amplify_relnotes/2025feb_amplify/#february-7-2025)
 

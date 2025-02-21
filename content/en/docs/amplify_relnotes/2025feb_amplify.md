@@ -21,9 +21,9 @@ New features, enhancements, and bug fixes for the February 21 update.
   (PROVIDER EXPERIENCE, ENHANCEMENT, BUSINESS INSIGHTS)<br/>
   A new Revenue Dashboard has been added to Business Insights, providing providers with a comprehensive view of the products financial performance and their contribution to the overall business strategy.
   This dashboard contains key metrics such as:
-   * **Total Charges**: View total charges for a selected timeframe to track revenue trends.
-   * **Invoice Statistics**: Invoice stats as of the current period for real-time financial insights.
-   * **Charges Breakdown**: Allows users to analyze charges by **consumer** or **product** to better understand revenue distribution, and identify top performing products and consumer.
+    * **Total Charges**: View total charges for a selected time frame to track revenue trends.
+    * **Invoice Statistics**: Invoice stats as of the current period for real-time financial insights.
+    * **Charges Breakdown**: Allows users to analyze charges by **consumer** or **product** to better understand revenue distribution, and identify top performing products and consumer.
 
 ## February 19, 2025
 
@@ -34,7 +34,29 @@ New features, enhancements, and bug fixes for the February 19 update.
 * **Environment sharing enhancement**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)<br/>
-  Users can now share an environment with additional teams after it has aleady been set up. This enhancement ensures that multiple teams can access and work with the APIs available within the shared environment.
+  Users can now share an environment with additional teams after it has already been set up. This enhancement ensures that multiple teams can access and work with the APIs available within the shared environment.
+
+## February 18, 2025
+
+New features, enhancements, and bug fixes for the February 19 update.
+
+### Marketplace updates for February 18, 2025
+
+* **Default template enforcement**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)<br/>
+  Users can now set a template to be the default template and additionally enforce it so that everyone creating a product will get the same documentation structure.
+
+## February 13, 2025
+
+New features, enhancements, and bug fixes for the February 19 update.
+
+### Marketplace updates for February 13, 2025
+
+* **Subscription usage split per API**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)<br/>
+  Users can now see the subscription usage split per API so that it is easier to see the API calls individually inside a quota.
 
 ## February 7, 2025
 
