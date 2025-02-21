@@ -32,8 +32,7 @@ The Discovery Agent only discovers APIs that have tags defined in the agent conf
 
 The binary agent can run in the following mode:
 
-* Default: With a yaml configuration file having the same name as the agent binary - `discovery_agent.yml`. Some values (Amplify Engage url / authentication url) are defaulted to avoid mistake and will not be visible in the provided discovery_agent.yml file.
-* **Recommended**: With an environment variable file `da_env_vars.env`. All values in the `discovery_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./discovery_agent --envFile /home/config/da_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Discovery Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/) section.
+* With an environment variable file `da_env_vars.env`. All values in the `discovery_agent.yml` file can be overridden with environment variables. Those environment variables can be stored in a single file and this file can be located anywhere (use --envFile flag in the agent command line to access it=`./discovery_agent --envFile /home/config/da_env_vars.env`). This makes it easy to update the agent (binary/yaml) without loosing the agent configuration. All environment variables are described in [Discovery Agent variables](/docs/connect_manage_environ/connect_api_manager/agent-variables/) section.
 
 The containerized agent can run in the following mode:
 
