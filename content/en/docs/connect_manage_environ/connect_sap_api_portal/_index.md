@@ -11,7 +11,7 @@ Connecting SAP Integration Suite - API Management / API Portal to Amplify will p
 
 The SAP Integration Suite - API Management / API Portal can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with SAP Integration Suite and Amplify to:
 
-* Detect changes to SAP API Portal (Robert) APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
+* Detect changes to SAP API Portal APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
 * Track API metrics and transactions related to discovered APIs, their consumers, and subscriptions.
 
 ### Discovery
@@ -47,7 +47,7 @@ For update, the credentials will be rotated, and the new values will be provided
 
 ### Traceability
 
-The Traceability Agent collects metric information from SAP API Portal (Robert) and publishes that data to Amplify.
+The Traceability Agent collects metric information from SAP API Portal and publishes that data to Amplify.
 
 The metric data collected includes call count, the number of transactions for a specific API or API/Application combination, and latency details.
 
@@ -83,7 +83,7 @@ Use one of the following settings, for both agents, to set the region the agent 
 
 {{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5, 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets{{< /alert >}}
 
-## Gather the required values from SAP API Portal (Robert)
+## Gather the required values from SAP API Portal
 
 ### SAP Integration Suite - API Portal baseURL and Dev Portal baseURL
 
