@@ -46,7 +46,7 @@ Provider prepares API Manager to support Application custom properties
 
 Provider prepares the Discovery Agent to discover the Application custom properties definition
 
-Provider attach the ApplicationDefinitionProfile to AccessRequestDefinition
+Discovery Agent attach the ApplicationDefinitionProfile to AccessRequestDefinition and to relevant API Service
 
 Marketplace Consumer registers his application and provide required information based on the application custom properties definition
 
@@ -63,6 +63,8 @@ Once you added this property, be sure to restart the agent so that it starts dis
 ## Attaching the ApplicationProfileDefinition to AccessRequestDefinition
 
 To be able to collect appropriate data, the discovered ApplicationProfileDefinition needs to be attached to an AccessRequestDefinition. The AccessRequestDefinition needs to be attached to an API Service Instance. This will help the Marketplace WebUI to render the schema and help consumer to enter the requested values.
+
+All this process is automatically handled by the Discovery Agent: after creating the ApplicationProfileDefinition, it creates an empty AccessRequestDefinition and link the ApplicationProfileDefinition and finally update discovered API Service Instance with the appropriate AccessRequestDefinition.
 
 ## Populating ApplicationProfile
 
