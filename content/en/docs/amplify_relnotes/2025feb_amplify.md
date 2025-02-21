@@ -10,6 +10,32 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## February 21, 2025
+
+New features, enhancements, and bug fixes for the February 21 update.
+
+### Marketplace updates for February 21, 2025
+
+* **New Revenue Dashboard in Business Insights**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, BUSINESS INSIGHTS)<br/>
+  A new Revenue Dashboard has been added to Business Insights, providing providers with a comprehensive view of the products financial performance and their contribution to the overall business strategy.
+  This dashboard contains key metrics such as:
+   * **Total Charges**: View total charges for a selected timeframe to track revenue trends.
+   * **Invoice Statistics**: Invoice stats as of the current period for real-time financial insights.
+   * **Charges Breakdown**: Allows users to analyze charges by **consumer** or **product** to better understand revenue distribution, and identify top performing products and consumer.
+
+## February 19, 2025
+
+New features, enhancements, and bug fixes for the February 19 update.
+
+### Marketplace updates for February 19, 2025
+
+* **Environment sharing enhancement**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)<br/>
+  Users can now share an environment with additional teams after it has aleady been set up. This enhancement ensures that multiple teams can access and work with the APIs available within the shared environment.
+
 ## February 7, 2025
 
 New features, enhancements, and bug fixes for the February 7 update.
