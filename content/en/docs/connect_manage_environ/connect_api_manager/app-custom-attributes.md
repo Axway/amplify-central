@@ -235,3 +235,11 @@ lifecycle:
   releaseState: 
     name: experimental
 ```
+
+## Frequently asked questions
+
+What happens when the property `APIMANAGER_APPLICATIONDEFINITIONTITLE` is deleted from the agent configuration file?
+After the agent restarts, the ApplicationProfileDefinition will be deleted and all AccessRequestDefinition will have their reference removed too. This mean consumer will no more enter the values for the application custom properties.
+
+Can I change the title of the custom properties?
+Yes, from the Marketplace application details / Attributes tab, editing an attribute profile will allow to update the title displayed.
