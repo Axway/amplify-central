@@ -243,3 +243,6 @@ After the agent restarts, the ApplicationProfileDefinition will be deleted and a
 
 Can I change the title of the custom properties?
 Yes, from the Marketplace application details / Attributes tab, editing an attribute profile will allow to update the title displayed.
+
+Is a value change in API Manager Application custom property value reflected on the Marketplace corresponding application?
+No, Discovery Agent only synchronize the application custom properties schema and push the values from Marketplace to API Manager.
