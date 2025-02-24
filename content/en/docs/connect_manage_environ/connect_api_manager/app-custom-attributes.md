@@ -5,7 +5,7 @@ draft: false
 weight: 60
 ---
 
-Customize your Discovery Agent so you can discover and provision Application custom attribute from your Axway API Gateway environment within Amplify.
+Customize your Discovery Agent so you can discover and provision Application custom properties from your Axway API Gateway environment within Amplify.
 
 ## Before you start
 
@@ -20,7 +20,7 @@ Learn how to configure your Discovery agent to be able to collect application cu
 
 ### Application custom properties
 
-API Manager application object supports user-defined fields called custom properties. These custom properties allow to extend the default application object content in API Manager to collect additional information and store them into the Application object itself. Those value can then be used during a provisioning process, to perform statistic computation or any additional needs.
+API Manager application object supports user-defined fields called custom properties. These custom properties allow to extend the default application object content in API Manager to collect additional information and store them into the Application object itself. Those value can then be used during a provisioning process, to perform statistical computation or any additional needs.
 
 These properties can be of various type: label, text, number, switch or dropdown. Refer to [API Manager - Custom property options](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#custom-property-options)
 
@@ -32,13 +32,13 @@ This new object is similar to existing SubscriptionRequestDefinition, AccessRequ
 
 Its goal is to contain the schema definition corresponding to the application custom properties the provider needs to collect. For each application custom property, there will be a pending object in the ApplicationProfileDefinition. If a custom property is mandatory, the corresponding field in the schema will be required.
 
-ApplicationProfileDefinition accepts internationalization so that it can be presented in the Marketplace WebUI in the langage the consumer understand.
+ApplicationProfileDefinition accepts internationalization so that it can be presented in the Marketplace WebUI in the langage the consumer understands.
 
 It must be linked to an AccessRequestDefinition to allow the Marketplace WebUI to render it when Consumer will register their application.
 
 ### ApplicationProfile
 
-The application profile host the values entered by a consumer as well as the reference of the ApplicationProfileDefinition that allows to render those values.
+The application profile hosts the values entered by a consumer as well as the reference of the ApplicationProfileDefinition that allows to render those values.
 
 ## Overview of the flow
 
@@ -56,9 +56,9 @@ Whenever a Marketplace consumer update the values, the Discovery Agent will pers
 
 ## Preparing the Discovery Agent to discover the Application custom properties definition
 
-For the discovery agent to discover the application custom attributes and push them into an ApplicationProfileDefinition, you have to add a new property in the agent configuration: `APIMANAGER_APPLICATIONDEFINITIONTITLE=myApplicationProfileName`. The property value will be used to name the ApplicationProfileDefinition that will be created under the environment the agent is monitoring.
+For the discovery agent to discover the application custom properties and push them into an ApplicationProfileDefinition, you have to add a new property in the agent configuration: `APIMANAGER_APPLICATIONDEFINITIONTITLE=myApplicationProfileName`. The property value will be used to name the ApplicationProfileDefinition that will be created under the environment the agent is monitoring.
 
-Once you added this property, be sure to restart the agent so that it starts discovering the application custom properties if any are defined.
+Once you add this property, be sure to restart the agent so that it starts discovering the application custom properties if any are defined.
 
 ## Attaching the ApplicationProfileDefinition to AccessRequestDefinition
 
@@ -68,13 +68,13 @@ All this process is automatically handled by the Discovery Agent: after creating
 
 ## Populating ApplicationProfile
 
-At the time a consumer register an application, if the Marketplace WebUI detects, that there is an ApplicationProfileDefinition required, it will render the corresponding schema to let the consumer enter the requested values.
+At the time a consumer registers an application, if the Marketplace WebUI detects, that there is an ApplicationProfileDefinition required, it will render the corresponding schema to let the consumer enter the requested values.
 
-Once the consumer validates its application registration, an ApplicationProfile is created and the Discovery Agent who monitoring this environment will proceed to first create the application in API Manager, link the selected API to the application and finally add any custom property value enter by the consumer to their corresponding field on the Application.
+Once the consumer validates its application registration, an ApplicationProfile is created and the Discovery Agent who monitoring this environment will proceed to first create the application in API Manager, link the selected API to the application and finally add any custom property value entered by the consumer to their corresponding field on the Application.
 
-Consumer is able to review the content he provided by navigating to the Marketplace > Applications, opening the Application details and going to the Attributes tab. There, he will see a card representing an ApplicationProfile that represent the application custom property. Clicking on the name will open the side blade with the details of the properties. Using the Edit ellipsis menu, he is allowed to change the property values as well as the title of the ApplicationProfile.
+Consumer is able to review the content he provided by navigating to the Marketplace > Applications, opening the Application details and going to the Attributes tab. There, he will see a card representing an ApplicationProfile that represents the application custom property. Clicking on the name will open the side blade with the details of the properties. Using the Edit ellipsis menu, he is allowed to change the property values as well as the title of the ApplicationProfile.
 
-If the application contains API coming from various environment, it is possible that different properties may be needed. In that case, there will be as many ApplicationProfile as environment used by the Application. For instance, you can see an application profile for a dev environment and an application profile for prod environment.
+If the application contains API coming from various environments, it is possible that different properties may be needed. In that case, there will be as many ApplicationProfile as environment used by the Application. For instance, you can see an application profile for a dev environment and an application profile for prod environment.
 
 ## Sample
 
