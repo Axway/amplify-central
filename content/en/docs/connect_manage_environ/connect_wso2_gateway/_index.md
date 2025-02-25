@@ -7,14 +7,6 @@ Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal and Ampl
 
 ## Why do you want to connect Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal and Amplify?
 
-Connecting WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal to Amplify will provide you with a global centralized view of your APIs and their related traffic.
-
-* Overview:[https://apim.docs.wso2.com/en/latest/get-started/overview](https://apim.docs.wso2.com/en/latest/get-started/overview)
-* API Manager:[https://wso2.com/api-manager/](https://wso2.com/api-manager/)
-* Publisher Portal:[https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/](https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/)
-* Dev Portal:[https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/](https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/)
-* Admin Portal:[https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/](https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/)
-
 The WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with WSO2 API Manager and Amplify to:
 
 * Detect changes to WSO2 Publisher APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
@@ -28,38 +20,79 @@ The Discovery Agent is used to discover new published APIs for a specific WSO2 A
 
 The related APIs are published to Amplify as an API service in the selected environment and then can be published to Marketplace within a product.
 
-#### Application and Access Request
+#### Application
+
+While handling a new application event the following steps are taken:
+
+* Create a new application
+
+For deprovisioning the created application will be removed.
+
+#### Access Request
 
 When handling a new access request event, for an existing managed application, the following steps are taken:
 
-* If not previously created, create a new Product based on the provided quota for the API within the request.
-* New product creation is based on the API and Quota combination.
-* Create an application and link it to the created/existing product from the previous step.
-* The link between an application and a product is a subscription, which is created automatically after the application is linked.
+* Add a subscription policy containing a business plan
+* Create a quota plan and assign it to the API policy
+* Identify the API or API Product and interrogate API id
+* Assign API or API Product with the created application
+* Add/update application's identifiers
 
 For deprovisioning:
 
-* Get the subscriptions for the previously created application.
-* Delete the previously created subscription.
-* If the application has a single subscription, the application is also deleted
+* Remove API subscription policy
+* Remove the application
+* If previously created, remove plan from API's policy
+* Remove/update application identifiers
 
 #### Credential
 
 When handling a new credential event, for a given application, the following steps are taken:
 
-* Get the existing ClientID(for an API Key credential type) or ClientID and ClientSecret for an OAuth credential from the application.
-
-For deprovisioning, the credentials will be rotated so no further access is available.
-
-For update, the credentials will be rotated, and the new values will be provided.
+* For API key:
+    * Provision:
+        * Create API key - the API key present on the application is used.
+    * Deprovision:
+        * Application's API key is revoked and removed from the application.
+* For OAuth2:
+    * Provision:
+        * Create Oauth Key - an OAuth2 strategy is created and assigned to the application.
+    * Deprovision:
+        * The OAuth2 strategy is deleted and removed from application.
 
 ### Traceability
 
-The Traceability Agent collects metric information from WSO2 API Portal and publishes that data to Amplify.
+The Traceability Agent sends log information about APIs in WSO2 API Manager and publishes the events to Amplify.
+In order to do so, you will need to create a policy with a synapse sequence that implements a tracing mechanism used to interrogate and track APIs.
 
-The metric data collected includes call count, the number of transactions for a specific API or API/Application combination, and latency details.
+* Create a local policy in WSO2 API Manager to represent your agents traceability flow: [https://your-domain:9443/publisher/policies]
+* Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. See below for a very high level example.
 
-The Traceability Agent is not able to sample the transaction data for Amplify Analytics
+```
+shell
+<sequence name="TrackAPIUsage" xmlns="http://ws.apache.org/ns/synapse">
+    <log level="full">
+        <property name="API_NAME" expression="get-property('REST_API_CONTEXT')" />
+        <property name="RESOURCE" expression="get-property('REST_SUB_REQUEST_PATH')" />
+        <property name="METHOD" expression="get-property('REST_METHOD')" />
+        <property name="TIMESTAMP" expression="fn:format-dateTime(fn:current-dateTime(), '[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')" />
+    </log>
+</sequence>
+
+```
+
+* Upload the policy definition to the local policy.
+    * Save
+* Add a new global policy: [https://your-domain:9443/publisher/global-policies]
+    * Give it a name and description to represent your agents traceability flow that will apply to all APIs and services deployed within your environment.
+    * Drag and drop the Response Flow policy from the local policy you created (click over via Policy List header to RESPONSE).
+    * Drag and drip the Fault Flow policy from the local policy you created (click over via Policy List header to FAULT).
+    * Save and deploy to the necessary Gateway.
+
+If you have trouble generating Synapse sequences, you can refer to the following guidelines below or reach out to your WSO2 API Manager administrator for assistance.
+
+* Synapse Mediation Sequences: [https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/](https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/). This covers how to define and attach custom mediation policies using Synapse sequences.
+* WSO2 Mediation Extensions: [https://apim.docs.wso2.com/en/latest/extend/mediation-extensions/](https://apim.docs.wso2.com/en/latest/extend/mediation-extensions/). This provides a guide on extending WSO2 with custom Synapse mediators.
 
 ## Prerequisites
 
@@ -95,12 +128,63 @@ Use one of the following settings, for both agents, to set the region the agent 
 
 ### WSO2 API Manager - baseURL (will be used for Publisher Portal / Dev Portal / Admin Portal)
 
-Values of the baseURL must be provided for the agent to be able to fulfill API Calls to WSO2.
+Values of the baseURL must be provided for the agent to be able to fulfill API Calls to WSO2.  The baseURL is where the WSO2 APIM resides.
+
+* baseURL: [https:/your-domain:9443]
+* Publisher Portal: [https://your-domain:9443/publisher]
+* Developer Portal: [https://your-domain:9443/devportal]
+* Admin Portal: [https://your-domain:9443/admin]
 
 ### WSO2 API Manager -  API portal Client ID and Secret & Dev Portal ClientID and Secret
 
-Both agents will use the credentials provided by the WSO2 API Manager  to connect discover APIs and track transactions. ClientID and ClientSecret from WSO2 API Manager will be required. Please contact your administrator if you need help gathering this information.
+The Discovery Agent will need to use the credentials provided by calling the dynamic client registration(DCR) to connect to, discover APIs and track transactions.
+WSO2 API Manager uses OAuth 2.0 for security. This means that applications need to be authenticated before they can access the API Manager's resources (like API discovery). The client ID and secret act as your application's credentials, verifying its identity to the API Manager.
 
-### Token URL
+#### How to obtain Client ID and Client Secret
 
-To use the ClientID and Secret, the agent must authenticate to an identity provider and retrieve a token. The full URL must be provided (Ex: <https://example.com/oauth/token>)
+* Understand the DCR Flow
+    * The DCR endpoint allows you to register a client dynamically without prior manual registration. Upon successful registration, the response will contain the client_id (consumer key) and client_secret (secret key).
+* Identify the DCR Endpoint
+    * Example - WSO2: https://wso2-server/client-registration/v0.17/register
+* Make the DCR Request (WSO2 example)
+
+```
+shell
+curl -X POST https://<wso2-server>/client-registration/v0.17/register \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Basic <base64-encoded-credentials>" \
+     -d '{
+          "callbackUrl": "http://localhost/callback",
+          "clientName": "MyDynamicClient",
+          "owner": "admin",
+          "grantType": "client_credentials password refresh_token",
+          "saasApp": true
+         }'
+```
+
+* Parse the Response (WSO2 example)
+    * A successful response will include the client_id (consumer key) and client_secret (secret key).
+
+```
+shell
+{
+  "client_id": "my-dynamic-client",
+  "client_secret": "random-generated-secret",
+  "registration_access_token": "access-token-to-manage-client",
+  "token_endpoint_auth_method": "client_secret_basic"
+}
+
+```
+
+ClientID and ClientSecret from calling the dynamic client registration (DCR) will be required. Further guidance can be found [here](https://apim.docs.wso2.com/en/latest/reference/product-apis/publisher-apis/publisher-v4/publisher-v4/)
+If you're having trouble generating keys, reach out to your WSO2 API Manager administrator for assistance. They should be able to guide you through the process.
+
+### Additional WSO2 references
+
+Connecting WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal to Amplify will provide you with a global centralized view of your APIs and their related traffic.
+
+* Overview:[https://apim.docs.wso2.com/en/latest/get-started/overview](https://apim.docs.wso2.com/en/latest/get-started/overview)
+* API Manager:[https://wso2.com/api-manager/](https://wso2.com/api-manager/)
+* Publisher Portal:[https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/](https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/)
+* Dev Portal:[https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/](https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/)
+* Admin Portal:[https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/](https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/)
