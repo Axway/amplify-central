@@ -70,13 +70,75 @@ In order to do so, you will need to create a policy with a synapse sequence that
 
 ```
 shell
-<sequence name="TrackAPIUsage" xmlns="http://ws.apache.org/ns/synapse">
-    <log level="full">
-        <property name="API_NAME" expression="get-property('REST_API_CONTEXT')" />
-        <property name="RESOURCE" expression="get-property('REST_SUB_REQUEST_PATH')" />
-        <property name="METHOD" expression="get-property('REST_METHOD')" />
-        <property name="TIMESTAMP" expression="fn:format-dateTime(fn:current-dateTime(), '[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]Z')" />
-    </log>
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="TraceabilityTest" statistics="enable" trace="enable" xmlns="http://ws.apache.org/ns/synapse">
+    <clone>
+        <target>
+            <sequence>
+                <property name="HTTP_SC" expression="get-property('axis2', 'HTTP_SC')" scope="default"/>
+                <property name="contentLength" expression="get-property('transport', 'Content-Length')" scope="default"/>
+                <script language="js"><![CDATA[
+mc.setProperty('CONTENT_TYPE', 'application/json');
+var correlationId = mc.getProperty('correlation_id');
+var httpStatusCode = mc.getProperty('HTTP_SC');
+var restMethod = mc.getProperty('REST_METHOD');
+var requestExecutionStartTime = mc.getProperty('request.execution.start.time');
+var uriIn = mc.getProperty('REST_FULL_REQUEST_PATH');
+var uriOut = mc.getProperty('REST_SUB_REQUEST_PATH');
+
+var apiContext = mc.getProperty('api.ut.context');
+var apiName = mc.getProperty('api.ut.api');
+var apiVersion = mc.getProperty('api.ut.api_version');
+var apiAppName = mc.getProperty('api.ut.application.name');
+var apiAppId = mc.getProperty('api.ut.application.id');
+var apiHost = mc.getProperty('api.ut.hostName');
+var apiReqStartTime = mc.getProperty('api.ut.requestTime');
+var apiBackendReqStartTime = mc.getProperty('api.ut.backendRequestTime');
+var apiBackendReqEndTime = mc.getProperty('api.ut.backendRequestEndTime');
+
+mc.setPayloadJSON({
+    correlationId: correlationId,
+    httpStatusCode: httpStatusCode,
+    restMethod:restMethod,
+    uriIn: uriIn,
+    uriOut: uriOut,
+    requestExecutionStartTime: requestExecutionStartTime,
+    apiContext: apiContext,
+    apiName: apiName,
+    apiVersion: apiVersion,
+    apiAppName: apiAppName,
+    apiAppId: apiAppId,
+    apiHost: apiHost,
+    apiReqStartTime: apiReqStartTime,
+    apiBackendReqStartTime: apiBackendReqStartTime,
+    apiBackendReqEndTime: apiBackendReqEndTime,
+});
+
+]]></script>
+                <call blocking="true">
+                    <endpoint>
+                        <http method="POST" uri-template="http://10.129.222.83/trace">
+                            <timeout>1</timeout>
+                            <suspendOnFailure>
+                                <initialDuration>-1</initialDuration>
+                                <progressionFactor>-1</progressionFactor>
+                                <maximumDuration>0</maximumDuration>
+                            </suspendOnFailure>
+                            <markForSuspension>
+                                <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                            </markForSuspension>
+                        </http>
+                    </endpoint>
+                </call>
+                <drop/>
+            </sequence>
+        </target>
+        <target>
+            <sequence>
+                <send/>
+            </sequence>
+        </target>
+    </clone>
 </sequence>
 
 ```
