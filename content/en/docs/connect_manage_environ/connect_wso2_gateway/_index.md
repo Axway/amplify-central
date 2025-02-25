@@ -62,7 +62,7 @@ When handling a new credential event, for a given application, the following ste
 
 ### Traceability
 
-A global WSO2 policy is created and deployed to intercept API requests, collect various details about the request and the API itself, formats this information as a JSON payload, and sends it to a separate tracing service, in this case the Traceability Agent. Crucially, it does this in a non-blocking way, so the original API request/response flow is not affected. 
+A global WSO2 policy is created and deployed to intercept API requests, collect various details about the request and the API itself, formats this information as a JSON payload, and sends it to a separate tracing service, in this case the Traceability Agent. Crucially, it does this in a non-blocking way, so the original API request/response flow is not affected.
 In order to do so, you will need to create a policy with a synapse sequence that implements a tracing mechanism used to interrogate and track APIs.
 
 * Create a local policy in WSO2 API Manager to represent your agents traceability flow: [https://your-domain:9443/publisher/policies]
@@ -207,7 +207,7 @@ WSO2 API Manager uses OAuth 2.0 for security. This means that applications need 
 * Understand the DCR Flow
     * The DCR endpoint allows you to register a client dynamically without prior manual registration. Upon successful registration, the response will contain the client_id (consumer key) and client_secret (secret key).
 * Identify the DCR Endpoint
-    * Example - WSO2: https://wso2-server/client-registration/v0.17/register
+    * Example - WSO2: [https://wso2-server/client-registration/v0.17/register]
 * Make the DCR Request (WSO2 example)
 
 ```
