@@ -62,11 +62,11 @@ When handling a new credential event, for a given application, the following ste
 
 ### Traceability
 
-The Traceability Agent sends log information about APIs in WSO2 API Manager and publishes the events to Amplify.
+A global WSO2 policy is created and deployed to intercept API requests, collect various details about the request and the API itself, formats this information as a JSON payload, and sends it to a separate tracing service, in this case the Traceability Agent. Crucially, it does this in a non-blocking way, so the original API request/response flow is not affected. 
 In order to do so, you will need to create a policy with a synapse sequence that implements a tracing mechanism used to interrogate and track APIs.
 
 * Create a local policy in WSO2 API Manager to represent your agents traceability flow: [https://your-domain:9443/publisher/policies]
-* Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. See below for a very high level example.
+* Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. This policy is designed for monitoring and debugging, allowing you to track API invocations and identify potential issues. See below for a very high level example.
 
 ```
 shell
@@ -117,7 +117,7 @@ mc.setPayloadJSON({
 ]]></script>
                 <call blocking="true">
                     <endpoint>
-                        <http method="POST" uri-template="http://10.129.222.83/trace">
+                        <http method="POST" uri-template="http://your-traceability-agent/trace">
                             <timeout>1</timeout>
                             <suspendOnFailure>
                                 <initialDuration>-1</initialDuration>
