@@ -66,8 +66,8 @@ A global WSO2 policy is created and deployed to intercept API requests, collect 
 In order to do so, you will need to create a policy with a synapse sequence that implements a tracing mechanism used to interrogate and track APIs.
 
 * Create a local policy in WSO2 API Manager to represent your agents traceability flow: [https://your-domain:9443/publisher/policies]
-* Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. This policy is designed for monitoring and debugging, allowing you to track API invocations and identify potential issues. 
-**Note:** Below is the recommended synapse yml to use for your policy.  Any changes or updates to this file may result in processing errors or unwanted results.
+* Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. This policy is designed for monitoring and debugging, allowing you to track API invocations and identify potential issues.
+**Note:** Below is the recommended synapse yml to use for your policy. You will need to replace [TRACEABILITY_AGENT_URL] with your Traceability Agent's URL. This should be the only necessary change. Any changes or updates to this file may result in processing errors or unwanted results.
 
 ```
 shell
@@ -118,7 +118,7 @@ mc.setPayloadJSON({
 ]]></script>
                 <call blocking="true">
                     <endpoint>
-                        <http method="POST" uri-template="http://your-traceability-agent-ip/trace">
+                        <http method="POST" uri-template="http://[TRACEABILITY_AGENT_URL]/trace">
                             <timeout>1</timeout>
                             <suspendOnFailure>
                                 <initialDuration>-1</initialDuration>
