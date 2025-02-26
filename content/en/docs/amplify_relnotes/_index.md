@@ -95,7 +95,7 @@ No agent updates. See February 13 for latest supported agent versions.
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.108)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
 | Graylog API Security                       | 1.1.12                   | 1.0.5            |
-| Traceable API Security                     | 1.0.10                   | 1.0.0            |
+| Traceable API Security                     | 1.0.11                   | 1.0.0            |
 
 ## [Amplify Enterprise Marketplace January 29 2025](/docs/amplify_relnotes/2025jan_amplify/#january-29-2025)
 
@@ -103,22 +103,20 @@ No agent updates. See January 24 for latest supported agent versions.
 
 ## [Amplify Enterprise Marketplace January 24 2025](/docs/amplify_relnotes/2025jan_amplify/#january-24-2025)
 
-| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.109 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.107 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=1.2.14/ TA=1.2.13 SDK v1.1.107   | DA=1.1.80 / TA=1.1.81            |
-| AWS Gateway using SDK 2.0                  | DA=1.2.14/ TA=1.2.14     | DA=1.1.64 / TA-1.1.67            |
-| Azure latest release                       | DA=1.3.15 / TA=1.3.15    | DA=1.1.70 / TA=1.1.76            |
-| Istio 1.9.5                                | DA=1.1.13 / TA=2.1.13    | DA=1.0.36 / TA=2.0.82            |
-| Apigee Edge                                | 1.0.9                    | 0.1.38                           |
-| Apigee X                                   | 1.4.2                    | 1.4.2                            |
-| Mulesoft Anypoint platform v3              | 1.2.15                   | 1.1.48                           |
-| Software AG webMethods                     | 1.0.12                   | 1.0.0                            |
-| Kong Gateway                               | 1.1.12                   | 1.0.9                            |
-| GitLab                                     | 1.1.12                   | 1.0.6                            |
-| Kafka Cluster                              | 1.1.12                   | 1.0.6                            |
-| IBM API Connect Gateway                    | 1.1.12                   | 1.0.0                            |
-| Backstage                                  | 1.0.8                    | 1.0.0                            |
-| SAP Integration Suite - API Management / API Portal | 1.0.1                    | 1.0.0                            |
+| Axway API Management 7.6.2 SPx and 7.7 SPx | DA=1.2.14/ TA=1.2.13     | DA=1.1.80 / TA=1.1.81            |
+| AWS Gateway using SDK 2.0                  | DA=1.2.12/ TA=1.2.12     | DA=1.1.64 / TA-1.1.67            |
+| Azure latest release                       | DA=1.3.13 / TA=1.3.13    | DA=1.1.70 / TA=1.1.76            |
+| Istio 1.9.5                                | DA=1.1.11 / TA=2.1.11    | DA=1.0.36 / TA=2.0.82           |
+| Apigee Edge                                | 1.0.7                    | 0.1.38                           |
+| Mulesoft Anypoint platform v3              | 1.2.13                   | 1.1.48                           |
+| Software AG webMethods                     | 1.0.10                   | 1.0.0                            |
+| Kong Gateway                               | 1.9.10                   | 1.0.9                            |
+| GitLab                                     | 1.1.10                   | 1.0.6                            |
+| Kafka Cluster                              | 1.1.10                   | 1.0.6                            |
+| IBM API Connect Gateway                    | 1.1.10                   | 1.0.0                            |
+| Backstage                                  | 1.0.6                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -130,8 +128,8 @@ No agent updates. See January 24 for latest supported agent versions.
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.109)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
-| Graylog API Security                       | 1.1.13                   | 1.0.5            |
-| Traceable API Security                     | 1.0.11                   | 1.0.0            |
+| Graylog API Security                       | 1.1.12                   | 1.0.5            |
+| Traceable API Security                     | 1.0.10                   | 1.0.0            |
 
 ## [Amplify Enterprise Marketplace January 15 2025](/docs/amplify_relnotes/2025jan_amplify/#january-15-2025)
 
