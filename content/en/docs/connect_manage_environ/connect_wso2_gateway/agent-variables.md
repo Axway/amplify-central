@@ -22,7 +22,7 @@ You can extend the previous minimum variable list with the following variables. 
 
 All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
-Note that beyond the common agent variables, for the WSO2 Traceability Agent, there are no WSO2 specific variables. WSO2 Traceability Agent setup can be found [here](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_wso2/index.html)
+{{< alert title="Note" color="primary" >}} Beyond the common agent variables, for the WSO2 Traceability Agent, there are no WSO2 specific variables. WSO2 Traceability Agent setup can be found [here](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_wso2/index.html)
 
 ### Specific variable for Discovery agents
 

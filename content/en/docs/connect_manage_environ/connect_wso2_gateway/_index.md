@@ -67,12 +67,12 @@ In order to do so, you will need to create a policy with a synapse sequence that
 
 * Create a local policy in WSO2 API Manager to represent your agents traceability flow: [https://your-domain:9443/publisher/policies]
 * Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. This policy is designed for monitoring and debugging, allowing you to track API invocations and identify potential issues.
-**Note:** Below is the recommended synapse yml to use for your policy. You will need to replace [TRACEABILITY_AGENT_URL] with your Traceability Agent's URL. This should be the only necessary change. Any changes or updates to this file may result in processing errors or unwanted results.
+{{< alert title="Note" color="primary" >}} Below is the recommended synapse yaml to use for your policy. You will need to replace [TRACEABILITY_AGENT_URL] with your Traceability Agent's URL. This should be the only necessary change. Any changes or updates to this file may result in processing errors or unwanted results.
 
 ```
-shell
+yaml
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="TraceabilityTest" statistics="enable" trace="enable" xmlns="http://ws.apache.org/ns/synapse">
+<sequence name="TraceabilityAgent" statistics="enable" trace="enable" xmlns="http://ws.apache.org/ns/synapse">
     <clone>
         <target>
             <sequence>
@@ -152,6 +152,7 @@ mc.setPayloadJSON({
     * Drag and drip the Fault Flow policy from the local policy you created (click over via Policy List header to FAULT).
     * Save and deploy to the necessary Gateway.
 
+See [WSO2 Synapse Sequence for Traceability Agent Deconstructed](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_wso2/wso2_synapse_sequence_explanation) for further synapse sequencing explained.
 If you have trouble generating Synapse sequences, you can refer to the following guidelines below or reach out to your WSO2 API Manager administrator for assistance.
 
 * Synapse Mediation Sequences: [https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/](https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/). This covers how to define and attach custom mediation policies using Synapse sequences.
@@ -212,7 +213,8 @@ WSO2 API Manager uses OAuth 2.0 for security. This means that applications need 
 * Make the DCR Request (WSO2 example)
 
 ```
-shell
+markdown
+bash
 curl -X POST https://<wso2-server>/client-registration/v0.17/register \
      -H "Content-Type: application/json" \
      -H "Authorization: Basic <base64-encoded-credentials>" \
@@ -229,7 +231,7 @@ curl -X POST https://<wso2-server>/client-registration/v0.17/register \
     * A successful response will include the client_id (consumer key) and client_secret (secret key).
 
 ```
-shell
+json
 {
   "client_id": "my-dynamic-client",
   "client_secret": "random-generated-secret",
