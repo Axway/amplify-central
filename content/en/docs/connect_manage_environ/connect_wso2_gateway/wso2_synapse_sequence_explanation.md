@@ -96,7 +96,7 @@ mc.setPayloadJSON({
 ## Synapse sequence breakdown
 
 * Overall Structure:
-    * <sequence name="TraceabilityAgent" ...>:
+    * &lt;sequence name="TraceabilityAgent" ...&gt;:
         * This defines a Synapse sequence named "TraceabilityAgent."
         * statistics="enable": Enables collection of performance statistics for this sequence.
         * trace="enable": Enables detailed tracing of message flow through the sequence, helpful for debugging.
@@ -106,7 +106,7 @@ mc.setPayloadJSON({
 * First Clone (Trace Logging):
     * &lt;target&gt;&lt;sequence&gt; ... </sequence></target>:
         * This defines the processing logic for the first clone.
-        * <property ...> elements:
+        * &lt;property ...&gt; elements:
             * These extract various properties from the message context:
                 * HTTP_SC: HTTP status code.
                 * contentLength: The content length of the message.
