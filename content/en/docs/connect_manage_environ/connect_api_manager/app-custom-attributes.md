@@ -5,80 +5,80 @@ draft: false
 weight: 60
 ---
 
-Customize your Discovery Agent so you can discover and provision Application custom properties from your Axway API Gateway environment within Amplify.
+Customize your Discovery Agent so you can discover and provision application custom properties from your Axway API Gateway environment within Amplify.
 
 ## Before you start
 
 * Read [API Manager - add custom properties to an Application](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#add-a-custom-property-to-applications)
-* Know where your discovery agent is running and how to update its configuration
+* Know where your Discovery Agent is running and how to update its configuration
 
 ## Objectives
 
-Learn how to configure your Discovery agent to be able to collect application custom properties.
+Learn how to configure your Discovery Agent to collect application custom properties.
 
 ## Concepts
 
 ### Application custom properties
 
-API Manager application object supports user-defined fields called custom properties. These custom properties allow to extend the default application object content in API Manager to collect additional information and store them into the Application object itself. Those value can then be used during a provisioning process, to perform statistical computation or any additional needs.
+API Manager application object supports user-defined fields called custom properties. These custom properties allows you to extend the default application object content in API Manager to collect additional information and store them into the application object itself. The value can then be used during a provisioning process, to perform statistical computation or any additional needs.
 
-These properties can be of various type: label, text, number, switch or dropdown. Refer to [API Manager - Custom property options](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#custom-property-options)
+These properties can be of various type: label, text, number, switch, or dropdown. Refer to [API Manager - Custom property options](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#custom-property-options).
 
-More, each property can be mandatory or not.
+Each property can be mandatory or optional.
 
 ### ApplicationProfileDefinition
 
-This new object is similar to existing SubscriptionRequestDefinition, AccessRequestDefinition and CredentialRequestDefinition. Refer to [Customize Application Registration, credentials request and subscription screens](/docs/integrate_with_central/customize_ard_crd).
+This object is similar to SubscriptionRequestDefinition, AccessRequestDefinition and CredentialRequestDefinition. See [Customize Application Registration, credentials request and subscription screens](/docs/integrate_with_central/customize_ard_crd).
 
-Its goal is to contain the schema definition corresponding to the application custom properties the provider needs to collect. For each application custom property, there will be a pending object in the ApplicationProfileDefinition. If a custom property is mandatory, the corresponding field in the schema will be required.
+It contains the schema definition corresponding to the application custom properties the provider needs to collect. For each application custom property, there will be a pending object in the ApplicationProfileDefinition. If a custom property is mandatory, the corresponding field in the schema will be required.
 
-ApplicationProfileDefinition accepts internationalization so that it can be presented in the Marketplace WebUI in the langage the consumer understands.
+ApplicationProfileDefinition accepts internationalization so that it can be presented in the Marketplace WebUI in the language the consumer understands.
 
-It must be linked to an AccessRequestDefinition to allow the Marketplace WebUI to render it when Consumer will register their application.
+It must be linked to an AccessRequestDefinition to allow the Marketplace WebUI to render it when the consumer registers their application.
 
 ### ApplicationProfile
 
-The application profile hosts the values entered by a consumer as well as the reference of the ApplicationProfileDefinition that allows to render those values.
+The application profile hosts the values entered by a consumer, as well as the reference of the ApplicationProfileDefinition that enables the rendering of those values.
 
 ## Overview of the flow
 
-Provider prepares API Manager to support Application custom properties
+1. Provider prepares API Manager to support application custom properties.
 
-Provider prepares the Discovery Agent to discover the Application custom properties definition
+2. Provider prepares the Discovery Agent to discover the application custom properties definition.
 
-Discovery Agent attach the ApplicationDefinitionProfile to AccessRequestDefinition and to relevant API Service
+3. Discovery Agent attaches the ApplicationDefinitionProfile to AccessRequestDefinition and to the relevant API service.
 
-Marketplace Consumer registers his application and provide required information based on the application custom properties definition
+4. Marketplace consumer registers their application and provides required information based on the application custom properties definition.
 
-Discovery agent read the entered values and add them to the created application in API Manager
+5. Discovery Agent reads the entered values and adds them to the created application in API Manager.
 
-Whenever a Marketplace consumer update the values, the Discovery Agent will persist them on API Manager
+{{< alert title="Note" color="primary" >}}Whenever a Marketplace consumer updates the values, the Discovery Agent will persist them on API Manager.{{< /alert >}}
 
-## Preparing the Discovery Agent to discover the Application custom properties definition
+## Preparing the Discovery Agent to discover the application custom properties definition
 
-For the discovery agent to discover the application custom properties and push them into an ApplicationProfileDefinition, you have to add a new property in the agent configuration: `APIMANAGER_APPLICATIONDEFINITIONTITLE=myApplicationProfileName`. The property value will be used to name the ApplicationProfileDefinition that will be created under the environment the agent is monitoring.
+Tou must add a new property in the agent configuration: `APIMANAGER_APPLICATIONDEFINITIONTITLE=myApplicationProfileName` to enable the Discovery Agent to discover the application custom properties and push them into an ApplicationProfileDefinition. The property value will be used to name the ApplicationProfileDefinition that will be created under the environment the agent is monitoring.
 
-Once you add this property, be sure to restart the agent so that it starts discovering the application custom properties if any are defined.
+Once you add this property, be sure to restart the agent so that it starts discovering the defined application custom properties.
 
 ## Attaching the ApplicationProfileDefinition to AccessRequestDefinition
 
-To be able to collect appropriate data, the discovered ApplicationProfileDefinition needs to be attached to an AccessRequestDefinition. The AccessRequestDefinition needs to be attached to an API Service Instance. This will help the Marketplace WebUI to render the schema and help consumer to enter the requested values.
+Before data can be collected, the discovered ApplicationProfileDefinition must be attached to an AccessRequestDefinition. The AccessRequestDefinition must be attached to an API Service Instance. This enables the Marketplace WebUI to render the schema and help the consumer enter the requested values.
 
-All this process is automatically handled by the Discovery Agent: after creating the ApplicationProfileDefinition, it creates an empty AccessRequestDefinition and link the ApplicationProfileDefinition and finally update discovered API Service Instance with the appropriate AccessRequestDefinition.
+This process is automatically handled by the Discovery Agent: after creating the ApplicationProfileDefinition, it creates an empty AccessRequestDefinition and links the ApplicationProfileDefinition, and then updates the discovered API service instance with the appropriate AccessRequestDefinition.
 
 ## Populating ApplicationProfile
 
-At the time a consumer registers an application, if the Marketplace WebUI detects, that there is an ApplicationProfileDefinition required, it will render the corresponding schema to let the consumer enter the requested values.
+At the time a consumer registers an application, if the Marketplace WebUI detects that there is an ApplicationProfileDefinition required, the corresponding schema is rendered so that the consumer can enter the requested values.
 
-Once the consumer validates its application registration, an ApplicationProfile is created and the Discovery Agent who monitoring this environment will proceed to first create the application in API Manager, link the selected API to the application and finally add any custom property value entered by the consumer to their corresponding field on the Application.
+Once the consumer validates the application registration, an ApplicationProfile is created and the Discovery Agent that is monitoring this environment will proceed to first create the application in API Manager, then link the selected API to the application and finally add any custom property value entered by the consumer to its corresponding field on the Application.
 
-Consumer is able to review the content he provided by navigating to the Marketplace > Applications, opening the Application details and going to the Attributes tab. There, he will see a card representing an ApplicationProfile that represents the application custom property. Clicking on the name will open the side blade with the details of the properties. Using the Edit ellipsis menu, he is allowed to change the property values as well as the title of the ApplicationProfile.
+The consumer can review the content that was provided by navigating to *Marketplace > Applications*, opening the Application details and going to the *Attributes* tab. A card is displayed that represents an ApplicationProfile that represents the application custom property. Click on the name to open the side panel with the details of the properties. Using the Edit ellipsis menu to change the property values, as well as the title of the ApplicationProfile.
 
-If the application contains API coming from various environments, it is possible that different properties may be needed. In that case, there will be as many ApplicationProfile as environment used by the Application. For instance, you can see an application profile for a dev environment and an application profile for prod environment.
+If the application contains API coming from various environments, different properties may be needed, and there will be as many ApplicationProfiles as environments used by the Application. For instance, there will be an application profile for a dev environment and an application profile for prod environment.
 
 ## Sample
 
-Below is the ApplicationProfileDefinition asking for a PEM key (`PSK`), its format (`JWKS`) and a company department identifier (`DGPSystemID`) to be able to validate it at the application level while receiving API call. The definition is also internationalized in French.
+Request a PEM key (`PSK`), its format (`JWKS`) and a company department identifier (`DGPSystemID`) to be able to validate it at the application level while receiving an API call. The definition is internationalized in French.
 
 ```yaml
 ---
@@ -145,7 +145,7 @@ languages-fr-fr:
 
 ```
 
-Sample how to link the ApplicationProfileDefinition to an AccessRequestDefinition - see `applicationprofile` section below:
+Link the ApplicationProfileDefinition to an AccessRequestDefinition - see `applicationprofile` section below:
 
 ```yaml
 ---
@@ -205,7 +205,7 @@ applicationprofile:
   name: v7-custom-attributes-demo
 ```
 
-Finally adding the accessRequestDefinition to a service instance:
+Add the accessRequestDefinition to a service instance:
 
 ```yaml
 group: management
@@ -238,11 +238,11 @@ lifecycle:
 
 ## Frequently asked questions
 
-What happens when the property `APIMANAGER_APPLICATIONDEFINITIONTITLE` is deleted from the agent configuration file?
-After the agent restarts, the ApplicationProfileDefinition will be deleted and all AccessRequestDefinition will have their reference removed too. This mean consumer will no more enter the values for the application custom properties.
+Question: What happens when the property `APIMANAGER_APPLICATIONDEFINITIONTITLE` is deleted from the agent configuration file?
+Answer: After the agent restarts, the ApplicationProfileDefinition is deleted and all AccessRequestDefinition reference are removed. Consumer can longer enter the values for the application custom properties.
 
-Can I change the title of the custom properties?
-Yes, from the Marketplace application details / Attributes tab, editing an attribute profile will allow to update the title displayed.
+Question: Can I change the title of the custom properties?
+Answer: Yes, from the Marketplace application details / Attributes tab, editing an attribute profile will allow you to update the title displayed.
 
-Is a value change in API Manager Application custom property value reflected on the Marketplace corresponding application?
-No, Discovery Agent only synchronize the application custom properties schema and push the values from Marketplace to API Manager.
+Question: Is a value change in API Manager Application custom property value reflected on the Marketplace corresponding application?
+Answer: No, Discovery Agent only synchronizes the application custom properties schema and pushes the values from Marketplace to API Manager.
