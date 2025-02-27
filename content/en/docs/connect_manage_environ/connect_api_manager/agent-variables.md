@@ -113,7 +113,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | APIMANAGER_DISCOVERYIGNORETAGS        | Comma-separated blacklist of tags that should not be on a proxy before sending to Amplify Engage. Takes precedence over APIMANAGER_FILTER.                           |
 | APIMANAGER_FILTER                     | Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/). |
-| APIMANAGER_APPLICATIONDEFINITIONTITLE | When this variable is set the agent will discover Custom Application Properties from API Manager and create an Application Profile Definition on Amplify Engage      |
+| APIMANAGER_APPLICATIONDEFINITIONTITLE | When this variable is set the agent will discover Custom Application Properties from API Manager and create an Application Profile Definition on Amplify Engage.      |
 
 #### Invoke policy handling
 
