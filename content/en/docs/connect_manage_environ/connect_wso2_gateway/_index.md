@@ -118,7 +118,7 @@ mc.setPayloadJSON({
 ]]></script>
                 <call blocking="true">
                     <endpoint>
-                        <http method="POST" uri-template="http://[TRACEABILITY_AGENT_URL]/trace">
+                        <http method="POST" uri-template="http://[TRACEABILITY_AGENT_URL]:8888/trace">
                             <timeout>1</timeout>
                             <suspendOnFailure>
                                 <initialDuration>-1</initialDuration>

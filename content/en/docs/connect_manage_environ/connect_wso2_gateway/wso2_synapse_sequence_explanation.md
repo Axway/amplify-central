@@ -67,7 +67,7 @@ mc.setPayloadJSON({
 ]]></script>
                 <call blocking="true">
                     <endpoint>
-                        <http method="POST" uri-template="http://[TRACEABILITY_AGENT_URL]/trace">
+                        <http method="POST" uri-template="http://[TRACEABILITY_AGENT_URL]:8888/trace">
                             <timeout>1</timeout>
                             <suspendOnFailure>
                                 <initialDuration>-1</initialDuration>
@@ -119,7 +119,7 @@ mc.setPayloadJSON({
                 * mc is the message context variable.
                 * It also sets the content type to application/json.
             * &lt;call blocking="true"&gt; ... </call>:
-                * This makes a synchronous HTTP POST request to http:[TRACEABILITY_AGENT_URL]/trace.
+                * This makes a synchronous HTTP POST request to http:[TRACEABILITY_AGENT_URL]:8888/trace.
                 * The JSON payload created in the script is sent as the request body.
                 * The endpoint is configured with a 1 second timeout, and failure handling.
             * &lt;drop/&gt;:
@@ -138,7 +138,7 @@ In essence, this sequence does the following:
 * In the first clone:
     * Extracts relevant information.
     * Formats it into a JSON payload.
-    * Sends the payload to a trace logging service (http:[TRACEABILITY_AGENT_URL]/trace).
+    * Sends the payload to a trace logging service (http:[TRACEABILITY_AGENT_URL]:8888/trace).
     * Discards the message.
 * In the second clone:
     * Sends the original message to its intended backend service.
