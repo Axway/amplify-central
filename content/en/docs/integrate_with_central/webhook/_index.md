@@ -312,16 +312,19 @@ The following is an example of "When resource type of kind `APIService` with any
         name: '*'
 ```
 
-## Advanced setup
+## Advanced setup for securing webhook
 
-### Using a secret
+### Using a secret in the Authorization header
 
 A secret is a key-value pair associated with a webhook to secure it. By setting the secret, you ensure that the `POST` request sent to the payload URL is from Axway.
 
-Example of a payload:
+The secret value will be used as an Authorization header.
+
+Example of a secret payload:
 
 ```yaml
-name: secrettest
+Kind: Secret
+name: secret-for-webhook
 title: Axway Environment Test
 metadata:
   scope:
@@ -329,7 +332,7 @@ metadata:
     name: monitor-resources
 spec:
   data:
-    apikey: secret
+    apikey: secretValue
 ```
 
 * **$name**: the secret unique name.
@@ -352,7 +355,7 @@ metadata:
 spec:
   auth:
     secret:
-      name: webhooksecret
+      name: secret-for-webhook
       key: apikey
   enabled: true
   url: https://enveb85y26nv.x.pipedream.net
@@ -366,6 +369,72 @@ spec:
 * **$spec.auth.secret.name**: name of the secret, as defined in the payload.
 * **$spec.auth.secret.key**: key to the secret, which will be used to invoke the webhook.
 * **$spec.enabled**: when enabled, will invoke the webhook.
+
+When the webhook will be trigger, the receiver will have in the Authorization header the value of the secret.
+
+### Using a secret in a specified header
+
+In case you may not want to use the Authorization header (default) but a different header to sent the secret value, you can specify an additional field in the webhook to tell where the secret value will be sent.
+
+Example of a webhook payload referencing a secret and its destination header `x-api-key`:
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: Webhook
+name: webhook
+title: Webhook to invoke requestbin.com
+metadata:
+  scope:
+    kind: Integration
+    name: monitor-resources
+spec:
+  auth:
+    secret:
+      name: secret-for-webhook
+      key: apikey
+    location: 
+      in: header
+      name: x-api-key
+  enabled: true
+  url: https://enveb85y26nv.x.pipedream.net
+```
+
+* **$spec.auth.secret**: use when the webhook is secured and needs a secret to invoke.
+* **$spec.auth.secret.name**: name of the secret, as defined in the payload.
+* **$spec.auth.secret.key**: key to the secret, which will be used to invoke the webhook.
+* **$spec.auth.location.in**: place where the secret will be put in the payload `header`.
+* **$spec.auth.location.name**: name of the header
+
+### Add more headers to the webhook
+
+It could be interesting to add additional headers to the webhook to help the receiver understand where it originated.
+
+Example of webhook with an `x-origin` and `x-random-value` headers:
+
+```yaml
+group: management
+apiVersion: v1alpha1
+kind: Webhook
+name: webhook
+title: Webhook to invoke requestbin.com
+metadata:
+  scope:
+    kind: Integration
+    name: monitor-resources
+spec:
+  auth:
+    secret:
+      name: secret-for-webhook
+      key: apikey
+  enabled: true
+  url: https://enveb85y26nv.x.pipedream.net
+  headers:
+    x-origin: Axway marketplace
+    x-random-value: a-s39073
+```
+
+* **$spec.headers**: list of header name/value to send along with the webhook payload. Only string value are accepted.
 
 ## Related topics
 
