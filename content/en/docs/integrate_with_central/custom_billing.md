@@ -266,7 +266,7 @@ spec:
 ```
 
 {{< alert title="Note" color="primary" >}}
-You can attach a secret to the webhook specification to indicate that the incoming events are from the specific webhook. See [webhook advanced setup](/docs/integrate_with_central/webhook#using-a-secret).
+You can attach a secret to the webhook specification to indicate that the incoming events are from the specific webhook. See [webhook advanced setup](/docs/integrate_with_central/webhook#advanced-setup-for-securing-webhook).
 {{< /alert >}}
 
 Create the resource hook definition using API:
