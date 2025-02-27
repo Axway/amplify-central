@@ -52,7 +52,7 @@ These configuration steps are displayed only if an Embedded Apigee X environment
 
 2. Embedded Discovery Agent Settings:
 
-    * Edit Frequency, Team Ownership, and Additional tags. Initiate Immediate Discovery can also be set.
+    * Edit Frequency, Team Ownership, Stage Tag Name, and Additional tags. Initiate Immediate Discovery can also be set.
 
 3. Embedded Traceability Agent Settings:
 
