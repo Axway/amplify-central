@@ -374,7 +374,7 @@ When the webhook will be trigger, the receiver will have in the Authorization he
 
 ### Using a secret in a specified header
 
-In case you may not want to use the Authorization header (default) but a different header to sent the secret value, you can specify an additional field in the webhook to tell where the secret value will be sent.
+In case you may not want to use the Authorization header (default) but a different header to send the secret value, you can specify an additional field in the webhook to tell where the secret value will be sent.
 
 Example of a webhook payload referencing a secret and its destination header `x-api-key`:
 
@@ -403,7 +403,7 @@ spec:
 * **$spec.auth.secret**: use when the webhook is secured and needs a secret to invoke.
 * **$spec.auth.secret.name**: name of the secret, as defined in the payload.
 * **$spec.auth.secret.key**: key to the secret, which will be used to invoke the webhook.
-* **$spec.auth.location.in**: place where the secret will be put in the payload `header`.
+* **$spec.auth.location.in**: place where the secret will be put in the payload `header` or `query`.
 * **$spec.auth.location.name**: name of the header
 
 ### Add more headers to the webhook
