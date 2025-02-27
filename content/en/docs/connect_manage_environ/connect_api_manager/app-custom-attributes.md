@@ -239,10 +239,10 @@ lifecycle:
 ## Frequently asked questions
 
 Question: What happens when the property `APIMANAGER_APPLICATIONDEFINITIONTITLE` is deleted from the agent configuration file?
-Answer: After the agent restarts, the ApplicationProfileDefinition is deleted and all AccessRequestDefinition reference are removed. Consumer can longer enter the values for the application custom properties.
+<br/>Answer: After the agent restarts, the ApplicationProfileDefinition is deleted and all AccessRequestDefinition reference are removed. Consumer can longer enter the values for the application custom properties.
 
 Question: Can I change the title of the custom properties?
-Answer: Yes, from the Marketplace application details / Attributes tab, editing an attribute profile will allow you to update the title displayed.
+<br/>Answer: Yes, from the Marketplace application details / Attributes tab, editing an attribute profile will allow you to update the title displayed.
 
 Question: Is a value change in API Manager Application custom property value reflected on the Marketplace corresponding application?
-Answer: No, Discovery Agent only synchronizes the application custom properties schema and pushes the values from Marketplace to API Manager.
+<br/>Answer: No, Discovery Agent only synchronizes the application custom properties schema and pushes the values from Marketplace to API Manager.
