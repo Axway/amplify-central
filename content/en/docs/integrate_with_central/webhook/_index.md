@@ -370,11 +370,11 @@ spec:
 * **$spec.auth.secret.key**: key to the secret, which will be used to invoke the webhook.
 * **$spec.enabled**: when enabled, will invoke the webhook.
 
-When the webhook will be trigger, the receiver will have in the Authorization header the value of the secret.
+The receiver will have the value of the secret in the Authorization header when the webhook is triggered.
 
 ### Using a secret in a specified header
 
-In case you may not want to use the Authorization header (default) but a different header to send the secret value, you can specify an additional field in the webhook to tell where the secret value will be sent.
+If you choose to not use the default Authorization header to send the secret value, you can specify an additional field in the webhook to tell where the secret value will be sent.
 
 Example of a webhook payload referencing a secret and its destination header `x-api-key`:
 
@@ -408,7 +408,7 @@ spec:
 
 ### Add more headers to the webhook
 
-It could be interesting to add additional headers to the webhook to help the receiver understand where it originated.
+Additional headers can be added to the webhook to help the receiver understand where it originated from.
 
 Example of webhook with an `x-origin` and `x-random-value` headers:
 
@@ -434,8 +434,8 @@ spec:
     x-random-value: a-s39073
 ```
 
-* **$spec.headers**: list of header name/value to send along with the webhook payload. Only string value are accepted.
+* **$spec.headers**: list of headers name/value to send with the webhook payload. Only string values are accepted.
 
 ## Related topics
 
-The following links provide step-by-step instructions for common integrations through events / webhooks.
+The following links provide setup instructions for common integrations through events / webhooks.
