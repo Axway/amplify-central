@@ -56,6 +56,17 @@ New features, enhancements, and bug fixes for the February 25 update.
   
     * Support for latest AWS Discovery and Traceability Agent improvements.
 
+## February 24, 2025
+
+New features, enhancements, and bug fixes for the February 24 update.
+
+### Agents bug fixes for February 24, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| N/A | APIGOV-29690 | **Issue**: APIM Discovery Agent (1.2.14) reported as Stopped in the UI even tough the agent is running and in a healthy state <br/>**Resolution**: The agent status is now displayed correctly in the Agents page. |
+| 01680913,01680338  | APIGOV-29691 | **Issue**: Azure API Management Discovery agent (1.0.6 and 1.3.13) reported as Stopped in the UI even tough the agent is running and in a healthy state <br/>**Resolution**: The agent status is now displayed correctly in the Agents page. |
+
 ## February 21, 2025
 
 New features, enhancements, and bug fixes for the February 21 update.
