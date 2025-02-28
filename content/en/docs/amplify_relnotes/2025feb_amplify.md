@@ -10,16 +10,21 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
-## February 27, 2025
+## February 26, 2025
 
-New features, enhancements, and bug fixes for the February 27 update.
+New features, enhancements, and bug fixes for the February 26 update.
 
-### Marketplace updates for February 27, 2025
+### Marketplace updates for February 26, 2025
 
 * **Custom attributes for applications in Marketplace**
 
-  (DISCOVERY AGENT,TREACEABILITY AGENT, ENHANCEMENT)<br/>
-  This new feature allows providers to add custom fields to applications in Marketplace, ensuring a seamless integration with Axway's API Manager. For environments connected via APIM Discovery Agents, the agents will **automatically discover** custom attributes and make them visible in the Marketplace. Consumer will be promted to provide required custom attributes when submitting an **Application Registration request** for the first time, but they can update them at any time after provisioning of said values was successul in API Manager.
+  (CONSUMER EXPERIENCE,INTEGRATION, ENHANCEMENT, APIM)<br/>
+  This new feature allows providers to add custom fields to applications in Marketplace, ensuring a seamless integration with Axway's API Manager. For environments connected via APIM Discovery Agents, the agents will **automatically discover** custom attributes and make them visible in the Marketplace. Consumer will be promted to provide required custom attributes when submitting an **Application Registration request** for the first time, but they can update them at any time after provisioning of said values was successul in API Manager. These updates are available in APIM Discovery Agent version **1.2.16**.
+
+* **API Service sharing enhancement**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)<br/>
+  Users can now share an API Service with additional teams after it has already been set up. This enhancement ensures that multiple teams can access and work with an API inside an environment.
   
 ## February 25, 2025
 
@@ -27,16 +32,22 @@ New features, enhancements, and bug fixes for the February 25 update.
 
 ### Agents updates for February 25, 2025
 
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)<br/>
+  For all latest agent versions, please refer to the [Release Notes Index](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
+  
 * **AWS Discovery and Traceability agents enhancements**
 
   (DISCOVERY AGENT,TREACEABILITY AGENT, ENHANCEMENT)<br/>
-  The AWS Discovery Agent has been enhanced with the following improvements:
+  Both the hosted and the on-prem AWS Discovery Agents has been enhanced with the following improvements:
     * **HTTP Endpoint Discovery** - The AWS Discovery agent can now discover **HTTP endpoints** in addition to REST APIS, providing a more complete view of the API landscape. The HTTP APIs can be published in the Marketplace as any other type of supported runtime API. When enabled, consumers can request an OAuth / OIDC client, and monitor usage in Consumer Insights.
     * **Custom Domain Mapping** - When a custom domain mapping is set up on an API, the discovered API in Engage now includes all custom domain mapped paths as API endpoints. Previously, only the base path was included.
     * **Improved Environment Representation** - The AWS Discovery agent can now detect **AWS stages** by leveraging a **tag** assigned to an AWS stage. These stages can be visualized in the Stages screen under Topology, and attached to an API Endopoint for better organization and representation of the AWS environments.<br/>
   
   The **AWS Traceability Agent** has been enhanced to report usage on published HTTP endpoints.
-
+  These enhancements are included in on-prem AWS Discovery Agent and Traceability Agents version **1.2.14**.
+  
 ### Axway Central CLI updates for February 25, 2025
 
 * **Introducing Axway Central CLI version 3.11.0**
