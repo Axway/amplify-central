@@ -81,21 +81,25 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Graylog API Security                       | 1.1.13                   | 1.0.5            |
 | Traceable API Security                     | 1.0.11                   | 1.0.0            |
 
-## [Amplify Enterprise Marketplace February 21 2025](/docs/amplify_relnotes/2025jan_amplify/#february-21-2025)
+## [Amplify Enterprise Marketplace February 24 2025](/docs/amplify_relnotes/2025jan_amplify/#february-24-2025)
 
 No agent updates. See February 21 for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace February 19 2025](/docs/amplify_relnotes/2025jan_amplify/#february-19-2025)
+## [Amplify Enterprise Marketplace February 21 2025](/docs/amplify_relnotes/2025jan_amplify/#february-21-2025)
 
 No agent updates. See February 19 for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace February 18 2025](/docs/amplify_relnotes/2025jan_amplify/#february-18-2025)
+## [Amplify Enterprise Marketplace February 19 2025](/docs/amplify_relnotes/2025jan_amplify/#february-19-2025)
 
 No agent updates. See February 18 for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace February 13 2025](/docs/amplify_relnotes/2025jan_amplify/#february-13-2025)
+## [Amplify Enterprise Marketplace February 18 2025](/docs/amplify_relnotes/2025jan_amplify/#february-18-2025)
 
 No agent updates. See February 13 for latest supported agent versions.
+
+## [Amplify Enterprise Marketplace February 13 2025](/docs/amplify_relnotes/2025jan_amplify/#february-13-2025)
+
+No agent updates. See February 7 for latest supported agent versions.
 
 ## [Amplify Enterprise Marketplace February 7 2025](/docs/amplify_relnotes/2025feb_amplify/#february-7-2025)
 
