@@ -17,7 +17,7 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify Enterprise Marketplace February 26 2025](/docs/amplify_relnotes/2025jan_amplify/#february-26-2025)
+## [Amplify Enterprise Marketplace February 26 2025](/docs/amplify_relnotes/2025feb_amplify/#february-26-2025)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.109 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -49,7 +49,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Graylog API Security                       | 1.1.13                   | 1.0.5            |
 | Traceable API Security                     | 1.0.11                   | 1.0.0            |
 
-## [Amplify Enterprise Marketplace February 25 2025](/docs/amplify_relnotes/2025jan_amplify/#february-25-2025)
+## [Amplify Enterprise Marketplace February 25 2025](/docs/amplify_relnotes/2025feb_amplify/#february-25-2025)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.109 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
@@ -81,23 +81,23 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Graylog API Security                       | 1.1.13                   | 1.0.5            |
 | Traceable API Security                     | 1.0.11                   | 1.0.0            |
 
-## [Amplify Enterprise Marketplace February 24 2025](/docs/amplify_relnotes/2025jan_amplify/#february-24-2025)
+## [Amplify Enterprise Marketplace February 24 2025](/docs/amplify_relnotes/2025feb_amplify/#february-24-2025)
 
-No agent updates. See February 21 for latest supported agent versions.
+No agent updates. See February 7 for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace February 21 2025](/docs/amplify_relnotes/2025jan_amplify/#february-21-2025)
+## [Amplify Enterprise Marketplace February 21 2025](/docs/amplify_relnotes/2025feb_amplify/#february-21-2025)
 
-No agent updates. See February 19 for latest supported agent versions.
+No agent updates. See February 7 for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace February 19 2025](/docs/amplify_relnotes/2025jan_amplify/#february-19-2025)
+## [Amplify Enterprise Marketplace February 19 2025](/docs/amplify_relnotes/2025feb_amplify/#february-19-2025)
 
-No agent updates. See February 18 for latest supported agent versions.
+No agent updates. See February 7 for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace February 18 2025](/docs/amplify_relnotes/2025jan_amplify/#february-18-2025)
+## [Amplify Enterprise Marketplace February 18 2025](/docs/amplify_relnotes/2025feb_amplify/#february-18-2025)
 
-No agent updates. See February 13 for latest supported agent versions.
+No agent updates. See February 7 for latest supported agent versions.
 
-## [Amplify Enterprise Marketplace February 13 2025](/docs/amplify_relnotes/2025jan_amplify/#february-13-2025)
+## [Amplify Enterprise Marketplace February 13 2025](/docs/amplify_relnotes/2025feb_amplify/#february-13-2025)
 
 No agent updates. See February 7 for latest supported agent versions.
 
