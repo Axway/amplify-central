@@ -48,6 +48,7 @@ Learn how to create an environment to represent your API services and other disc
     * **API Discovery Filter** - filter conditions for discovery of API services based on tags. See [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
     * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
     * **Exclude Tags** - if a tag listed here is on an API in the gateway, then it will not be added as a tag in the API service (only available for AWS API Gateway).
+    * **Stage Tag Name** - the name of the tag on the AWS API Gateway Stage that holds the mapped stage on Amplify Engage (only available for AWS API Gateway).
 
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
