@@ -95,7 +95,7 @@ New features and enhancements for the February 19 update.
 
 ## February 18, 2025
 
-New features and enhancements for the February 19 update.
+New features and enhancements for the February 18 update.
 
 ### Marketplace updates for February 18, 2025
 
@@ -106,7 +106,7 @@ New features and enhancements for the February 19 update.
 
 ## February 13, 2025
 
-New features and enhancements for the February 19 update.
+New features and enhancements for the February 13 update.
 
 ### Marketplace updates for February 13, 2025
 
