@@ -379,7 +379,18 @@ The following operators are supported in the RSQL expression.
 |`or`                |Only 1 of the conditions on the left or right must be true. Ex: `tags===foo or tags===bar` |
 |`,`                 |Behaves the same as `or`. Ex: `tags===foo,tags===bar` |
 
-The below are more complex practical examples using RSQL query expressions:
+The following special properties are only available to RSQL query filters:
+
+|Query Properties    |Description                            |
+|---                 |---                                    |
+|`scopedResources.kind` |Only applicable to unscoped resources. Checks if scope has at least 1 scoped resource of the given kind. Ex: `scopedResources.kind===APIService` |
+|`scopedResources.metadata.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources with the given ID. |
+|`scopedResources.metadata.references.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources having a reference to the given resource ID. |
+|`scopeResource.*`   |Only applicable to scoped resources. Provides access to the unscoped resource's properties that the queried resource is scoped under. Ex: `scopeResource.tags===production` |
+|`referencedByResources.kind` |Does a reverse reference lookup. Checks if at least 1 resource of the given kind references the queried resource. Ex: `referencedByResources.kind===Asset` |
+|`referencedByResources.*` |Does a reverse reference lookup. Provides access to properties belonging to any resource that references the queried resource. |
+
+The below are practical examples using RSQL query expressions:
 
 ```bash
 # Get products that have at least one release.
