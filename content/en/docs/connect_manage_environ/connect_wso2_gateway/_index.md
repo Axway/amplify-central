@@ -160,7 +160,7 @@ If you have trouble generating Synapse sequences, you can refer to the following
 
 ## Prerequisites
 
-* An Axway Amplify subscription in the Amplify platform
+* An Axway Amplify Organization with Engage entitlements in the Amplify platform
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * Access to Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal to retrieve details from the services
