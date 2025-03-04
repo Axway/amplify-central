@@ -236,7 +236,6 @@ json
   "registration_access_token": "access-token-to-manage-client",
   "token_endpoint_auth_method": "client_secret_basic"
 }
-
 ```
 
 ClientID and ClientSecret from calling the dynamic client registration (DCR) will be required. Further guidance can be found [here](https://apim.docs.wso2.com/en/latest/reference/product-apis/publisher-apis/publisher-v4/publisher-v4/)
