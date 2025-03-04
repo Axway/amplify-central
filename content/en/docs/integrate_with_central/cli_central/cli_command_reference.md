@@ -39,19 +39,19 @@ The following table describes the usage, options, and arguments for the `get` co
 |`axway central get <Resource> <Name> -s/--scope <Scope Name>`|Get a specific resource by name |
 |**Options**                                                    |                 |
 |`--account=<value>`                                            |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.<br/>*(Added: v1.28.0)*|
-|`--client-id=<value>`                                          |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
-|`--no-cache`                                                   |Refresh system definition cache.<br/>*(Added: v1.8.0)*|
-|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)*|
-|`--language=<value>`                                           |Get the language translation requested along with the resource.<br/>*(Added: v3.2.0)*|
-|`--languageDefinition=<value>`                                 |Get the language translation requested.<br/>*(Added: v3.4.0)*|
+|`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match <br/>*(Added: v1.28.0)*|
+|`--client-id=<value>`                                          |Override your DevOps account's client ID <br/>*(Removed: v2.4.0)*|
+|`--no-cache`                                                   |Refresh system definition cache <br/>*(Added: v1.8.0)*|
+|`--no-owner`                                                   |Display results that have no team owner <br/>*(Added: v2.10.0)*|
+|`--language=<value>`                                           |Get the language translation requested along with the resource <br/>*(Added: v3.2.0)*|
+|`--languageDefinition=<value>`                                 |Get the language translation requested <br/>*(Added: v3.4.0)*|
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
-|`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters.<br/>*(Added: v1.23.0)*|
+|`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters <br/>*(Added: v1.23.0)*|
 |`--region=<value>`                                             |Override region configuration. Set to `US`, `EU` or `AP`|
-|`-s,--scope=<name>`                                            |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
-|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.<br/>*(Added: v1.28.0)*|
-|`--team <name`\|`guid>`                                        |Filter results by owner using team name or team guid. Overrides `--no-owner`.<br/>*(Added: v2.6.0)*|
-|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match.<br/>*(Added: v1.28.0)*|
+|`-s,--scope=<name>`                                            |Scope name for scoped resources <br/>*(Added: v1.17.0)*|
+|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match <br/>*(Added: v1.28.0)*|
+|`--team <name`\|`guid>`                                        |Filter results by owner using team name or team guid. Overrides `--no-owner` <br/>*(Added: v2.6.0)*|
+|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match <br/>*(Added: v1.28.0)*|
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
 
@@ -384,11 +384,11 @@ The following special properties are only available to RSQL query filters:
 |Query Properties    |Description                            |
 |---                 |---                                    |
 |`scopedResources.kind` |Only applicable to unscoped resources. Checks if scope has at least 1 scoped resource of the given kind. Ex: `scopedResources.kind===APIService` |
-|`scopedResources.metadata.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources with the given ID. |
-|`scopedResources.metadata.references.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources having a reference to the given resource ID. |
+|`scopedResources.metadata.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources with the given ID |
+|`scopedResources.metadata.references.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources having a reference to the given resource ID |
 |`scopeResource.*`   |Only applicable to scoped resources. Provides access to the unscoped resource's properties that the queried resource is scoped under. Ex: `scopeResource.tags===production` |
 |`referencedByResources.kind` |Does a reverse reference lookup. Checks if at least 1 resource of the given kind references the queried resource. Ex: `referencedByResources.kind===Asset` |
-|`referencedByResources.*` |Does a reverse reference lookup. Provides access to properties belonging to any resource that references the queried resource. |
+|`referencedByResources.*` |Does a reverse reference lookup. Provides access to properties belonging to any resource that references the queried resource |
 
 The below are practical examples using RSQL query expressions:
 
@@ -438,7 +438,7 @@ The following table describes the usage, options, and arguments for the `create`
 |`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
 |`-o,--output=<value>`                                    |Additional output formats, YAML or JSON|
 |`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
-|`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v2.3.0)*|
+|`-y,--yes`                                               |Automatically reply `yes` to any command prompts <br/>*(Added: v2.3.0)*|
 |**Arguments**                                            |                   |
 |`name`                                                   |Name of the new environment |
 
