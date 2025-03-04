@@ -169,6 +169,13 @@ If you have trouble generating Synapse sequences, you can refer to the following
 ## System requirements
 
 * An environment to run the agent Docker containers.
+    * Configure WSO2 to connect to localhost:8888
+    * In the docker run command, you may have to expose the port inside the docker container.
+    * The -p 8888:8888 flag in your docker run command is used for port mapping between the host and the container. Here's what it does:
+        * The first 8888 (before the :) refers to the host machine's port.
+        * The second 8888 (after the :) refers to the container's port.
+        * This flag tells Docker to bind port 8888 on the host to port 8888 in the container.
+        * Any network traffic sent to localhost:8888 (or the host's IP at port 8888) will be forwarded to port 8888 inside the running container.
 
 ## Region support
 
