@@ -7,7 +7,7 @@ date: 2021-01-13T00:00:00.000Z
 
 Use Axway Central CLI basic commands for creating, fetching, updating, and deleting various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
-### The accessibility of resources
+## The accessibility of resources
 
 Resources can be *scoped* or *unscoped*.
 
@@ -38,68 +38,69 @@ The following table describes the usage, options, and arguments for the `get` co
 |`axway central get <Resource1>,<Resource2>,...,<ResourceN>`  |Get a list of multiple resources  |
 |`axway central get <Resource> <Name> -s/--scope <Scope Name>`|Get a specific resource by name |
 |**Options**                                                    |                 |
-|`--account=<value>`                                            |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match.<br/>*(Added: v1.28.0)*|
-|`--client-id=<value>`                                          |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
-|`--no-cache`                                                   |Refresh system definition cache.<br/>*(Added: v1.8.0)*|
-|`--no-owner`                                                   |Display results that have no team owner.<br/>*(Added: v2.10.0)*|
-|`--language=<value>`                                           |Get the language translation requested along with the resource.<br/>*(Added: v3.2.0)*|
-|`--languageDefinition=<value>`                                 |Get the language translation requested.<br/>*(Added: v3.4.0)*|
+|`--account=<value>`                                            |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--attribute <key=value>`                                      |Attribute in key=value pair format to filter by. Exact match <br/>*(Added: v1.28.0)*|
+|`--client-id=<value>`                                          |Override your DevOps account's client ID <br/>*(Removed: v2.4.0)*|
+|`--no-cache`                                                   |Refresh system definition cache <br/>*(Added: v1.8.0)*|
+|`--no-owner`                                                   |Display results that have no team owner <br/>*(Added: v2.10.0)*|
+|`--language=<value>`                                           |Get the language translation requested along with the resource <br/>*(Added: v3.2.0)*|
+|`--languageDefinition=<value>`                                 |Get the language translation requested <br/>*(Added: v3.4.0)*|
 |`-o,--output=<value>`                                          |Additional output formats, YAML or JSON  |
-|`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters.<br/>*(Added: v1.23.0)*|
-|`--region=<value>`                                             |Override region configuration. Set to `US`, `EU` or `AP`.|
-|`-s,--scope=<name>`                                            |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
-|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match.<br/>*(Added: v1.28.0)*|
-|`--team <name`\|`guid>`                                        |Filter results by owner using team name or team guid. Overrides `--no-owner`.<br/>*(Added: v2.6.0)*|
-|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match.<br/>*(Added: v1.28.0)*|
+|`-q,--query "<RSQL-formatted query>"`                          |RSQL-formatted query to search for filters that match specific parameters <br/>*(Added: v1.23.0)*|
+|`--region=<value>`                                             |Override region configuration. Set to `US`, `EU` or `AP`|
+|`-s,--scope=<name>`                                            |Scope name for scoped resources <br/>*(Added: v1.17.0)*|
+|`--tag <tag>`                                                  |Tag of resource(s) to fetch. Exact match <br/>*(Added: v1.28.0)*|
+|`--team <name`\|`guid>`                                        |Filter results by owner using team name or team guid. Overrides `--no-owner` <br/>*(Added: v2.6.0)*|
+|`--title <title of resource>`                                  |Title of resource(s) to fetch. Includes partial match <br/>*(Added: v1.28.0)*|
 |**Arguments**                                                  |                   |
 |args...                                                        |Command arguments, run `axway central get` to see the examples |
 
-### Fetching, Filtering and Querying
+### Fetching by Kind, Name, and Scope
 
-You can fetch resources by either Resource, Short Name, or the specific Resource Name.
+You can fetch resources by their `kind`, such as "environments, "webhooks", etc.
 
-You can "simple filter" resources by title, tag, and attribute (see examples below). These simple filters can be used independently or in combination (i.e., you can filter by title AND tag AND attribute). However, they only support -singular- filters; you can only filter by *one* tag, *one* title, or *one* attribute at a time.
+Optionally, you can also fetch one specific resource by name.
+You can also fetch a subset of scoped resources by their scope name via the `-s` flag.
 
-For more complex filtering and fetching (e.g., filtering by *multiple* tags, titles, attributes, and other filters), you can also query for resources that match [RSQL-formatted](https://github.com/jirutka/rsql-parser#grammar-and-semantic) query parameters you pass in. See the linked documentation for an example of RSQL query syntax, and the "get examples" below for sample usage.
-
-{{< alert title="Note" color="primary" >}}Using the --query flag will override any --title, --tag or --attribute flags you use.{{< /alert >}}
+By default, a summary of the resource information is shown in table form. Alternatively, you can use the `--output` or `-o` flag to output
+all the resource's information in JSON or YAML form.
 
 The following examples show how to use the `get` command:
 
 ```bash
-# To get all environments:
+# Get all environments.
 axway central get envs
 
-# To get all environments in YAML format:
+# Get all environments in YAML format.
 axway central get environments -o yaml
 
-# To get environment by resource, or common name (for example, 'myenv') in JSON format:
+# Get environment by resource, or common name (for example, 'myenv') in JSON format.
 axway central get env myenv -o json
 
-# To get all webhooks:
+# Get all webhooks.
 axway central get webhooks
 
-# To get all webhooks by short name:
+# Get all webhooks by short name.
 axway central get webh
 
-# To get all webhooks and API services by short name:
+# Get all webhooks and API services by short name.
 axway central get webh, apis
 
-# To get all environments and API services:
+# Get all environments and API services.
 axway central get envs, apisvc
 
-# To get an environment and an API service, which matches a resource in a specified scope in JSON format. In the following example, 'env1' is scope, and it is required after the `-s` flag):
+# Get an environment and an API service, which matches a resource in a specified scope in JSON format.
+# In the following example, 'env1' is scope, and it is required after the `-s` flag).
 axway central get env,apisvc commonname -s env1 -o json
 
-# To get apiservice with name "testsvc" in the scope "Environment" with name "testenv"
+# Get apiservice with name "testsvc" in the scope "Environment" with name "testenv".
 axway central get apisvc testsvc -s Environment/testenv
 ```
 
 The following example shows how to use the `get` command to fetch the internationalization information for a resource using the `--language` argument:
 
 ```bash
-# To get a product with name "test-product" with all the available language translations in JSON format
+# Get a product with name "test-product" with all the available language translations in JSON format.
 axway central get products test-product --language="*" -o json
 ```
 
@@ -295,32 +296,9 @@ axway central get stages demo-stage --languageDefinition="de-de" -o json
 axway central get stages demo-stage --languageDefinition="pt-br" -o json
 ```
 
-The following examples show how to use the `get` command with RSQL queries using the `-q` flag:
+### Simple query filters
 
-```bash
-# To get assets with titles that start with "a"
-axway central get assets -q "title==a*"
-
-# To get assets with titles that start with a or i
-axway central get assets -q "title==a* or title==i*"
-
-# To get assets with tags that match tag1 or tag2
-axway central get assets -q "tags=in=(tag1,tag2)"
-
-# To get assets with logical names that start with 'i'
-axway central get assets -q "name==i*"
-
-# To get assets whose logical names start with 'a' OR 'i'
-axway central get assets -q "name==a* or name==i*"
-
-# To get assets whose logical names start with 'i' AND are tagged with 'test123'
-axway central get assets -q "name=='i*';tags==test123"
-
-# To get assets whose logical names start with 'i' or 'a' AND are tagged with 'test' or 'prod'
-axway central get assets -q "name=='i*' or name=='a*';tags=in=(test,prod)"
-```
-
-The following examples show how to use the `get` command with simple filters:
+You can use the `--title`, `--tag`, `--attribute`, and `--team` arguments to apply a simple filter. The arguments can be used independently or in combination. For example, you can filter by "title" AND "tag" AND "attribute" in the same query. However, these arguments only support -singular- filters. You can only filter by *one* tag, *one* title, or *one* attribute at a time.
 
 ```bash
 # To get assets and filter the list to assets that have a specific title "test123"
@@ -345,6 +323,98 @@ axway central get apis --team <name|guid>
 axway central get apis --no-owner
 ```
 
+### Complex query filters
+
+For more complex filtering, you can query for resources that match an RSQL formatted expression following the "ISO/IEC 14977:1996" grammar using the `-q` flag.
+
+{{< alert title="Note" color="primary" >}}The --query flag will override any --title, --tag or --attribute flags you use.{{< /alert >}}
+
+The following are basic RSQL query examples:
+
+```bash
+# Get assets with titles that start with 'a' (case insensitive)
+axway central get assets -q "title==a*"
+
+# Get assets with titles that start with 'a' or 'i' (case insensitive)
+axway central get assets -q "title==a* or title==i*"
+
+# Get assets with tags that match 'tag1' or 'tag2' (case sensitive)
+axway central get assets -q "tags=in=(tag1,tag2)"
+
+# Get assets with names start with 'i' (case insensitive)
+axway central get assets -q "name==i*"
+
+# Get assets whose names start with 'a' OR 'i' (case insensitive)
+axway central get assets -q "name==a* or name==i*"
+
+# Get assets whose names start with 'i' AND are tagged with 'test123'
+axway central get assets -q "name=='i*';tags==test123"
+
+# Get assets whose names start with 'i' or 'a' (case insensitive) AND are tagged with 'test' or 'prod' (case sensitive)
+# Note the usage of parenthesis to wrap the OR conditions.
+axway central get assets -q "(name==i*,name==a*);tags=in=(test,prod)"
+```
+
+The following operators are supported in the RSQL expression.
+
+|Comparison Operator |Description                            |
+|---                 |---                                    |
+|`==`                |Case insensitive equals. Supports wildcards '*' (multiple characters) and '_' (singular character) |
+|`!=`                |Case insensitive not equals. Supports wildcards '*' and '_' |
+|`===` or `=eq=`     |Case sensitive equals. Does not support wildcards; '*' and '_' will be treated literally |
+|`!==` or `=neq=`    |Case sensitive not equals. Does not support wildcards |
+|`<` or `=lt=`       |Less than |
+|`<=` or `=le=`      |Less than or equal to |
+|`>` or `=gt=`       |Greater than |
+|`>=` or `=ge=`      |Greater than or equal to |
+|`=in=`              |True if at least 1 of the given values match (case sensitive). Right side of expression must be surrounded by parenthesis. Ex: `tags=in=(foo,bar)` is equivalent to `tags===foo,tags===bar` |
+|`=out=`             |True if none of the given values match (case sensitive). Right side of expression must be surrounded by parenthesis. Ex: `tags=out=(foo,bar)` is equivalent to `tags!==foo;tags!==bar` |
+|`=with=`            |Applies multiple conditions on a property having multiple entries. Right side of expression must be surrounded by double quotes or single quotes. Ex: `metadata.references=with='name===foo;kind===APIService'` |
+|`=without=`         |Applies an exclusion filter with multiple conditions on a property having multiple entries. If there is at least 1 match, then the resource is excluded. Right side of expression must be surrounded by double quotes or single quotes. Ex: `metadata.references=without='name===foo;kind===APIService'` |
+
+|Logical Operator    |Description                            |
+|---                 |---                                    |
+|`and`               |The left and right conditions must both be true. Ex: `name==a* and tags===test` |
+|`;`                 |Behaves the same as `and`. Ex: `name==a*;tags===test` |
+|`or`                |Only 1 of the conditions on the left or right must be true. Ex: `tags===foo or tags===bar` |
+|`,`                 |Behaves the same as `or`. Ex: `tags===foo,tags===bar` |
+
+The following special properties are only available to RSQL query filters:
+
+|Query Properties    |Description                            |
+|---                 |---                                    |
+|`scopedResources.kind` |Only applicable to unscoped resources. Checks if scope has at least 1 scoped resource of the given kind. Ex: `scopedResources.kind===APIService` |
+|`scopedResources.metadata.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources with the given ID |
+|`scopedResources.metadata.references.id` |Only applicable to unscoped resources. Checks if scope has any scoped resources having a reference to the given resource ID |
+|`scopeResource.*`   |Only applicable to scoped resources. Provides access to the unscoped resource's properties that the queried resource is scoped under. Ex: `scopeResource.tags===production` |
+|`referencedByResources.kind` |Does a reverse reference lookup. Checks if at least 1 resource of the given kind references the queried resource. Ex: `referencedByResources.kind===Asset` |
+|`referencedByResources.*` |Does a reverse reference lookup. Provides access to properties belonging to any resource that references the queried resource |
+
+The below are practical examples using RSQL query expressions:
+
+```bash
+# Get products that have at least one release.
+axway central get product -q "metadata.references.kind===ProductRelease"
+
+# Get environments that have at least 1 API service.
+axway central get env -q "scopedResources.kind===APIService"
+
+# Get enivonrments that don't have any API services.
+axway central get env -q "scopedResources=without='kind===APIService'"
+
+# Get stages that are assigned to environments.
+axway central get stage -q "referencedByResources=with='kind===Environment'"
+
+# Get stages that are not assigned to any environments.
+axway central get stage -q "referencedByResources=without='kind===Environment'"
+
+# Get API services that are not linked to non-archived assets.
+axway central get apis -q "referencedByResources=without='kind===AssetMapping;scopeResource.state!==archived'"
+
+# Get API services that have the "owasp" linting ruleset applied to them (via their environment).
+axway central get apis -q "scopeResource.metadata.references=with='kind===APISpecLintingRuleset;name===owasp'"
+```
+
 ## create
 
 Use this command to create one or more resources from a YAML or JSON file, or `Stdin`.
@@ -359,16 +429,16 @@ The following table describes the usage, options, and arguments for the `create`
 |`axway central create agent-resource`                 |Create the mandatory information for connecting agents to Amplify environment|
 |**Commands**                                             |          |
 |`environment`                                            |Create an environment with the specified name  |
-|`service-account`                                        |Create a service account<br />*(Removed in v2.5.0. Use [axway service-account](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/service_accounts/index.html) command instead.)* |
+|`service-account`                                        |Create a service account<br />*(Removed in v2.5.0. Use [axway service-account](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/service_accounts/index.html) command instead)* |
 |`agent-resource`                                        |Create the mandatory information for connecting agents to Amplify environment|
 |**Options**                                              |                   |
-|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
+|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--client-id=<value>`                                    |Override your DevOps account's client ID <br/>*(Removed: v2.4.0)*|
 |`-f,--file=<path>`                                       |Filename to use to create the resource  |
-|`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
+|`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
 |`-o,--output=<value>`                                    |Additional output formats, YAML or JSON|
-|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
-|`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v2.3.0)*|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
+|`-y,--yes`                                               |Automatically reply `yes` to any command prompts <br/>*(Added: v2.3.0)*|
 |**Arguments**                                            |                   |
 |`name`                                                   |Name of the new environment |
 
@@ -398,14 +468,14 @@ The following table describes the usage and options for the `apply` command:
 |---                                                      |---                                   |
 |`axway central apply [options]`             |                                    |
 |**Options**                                              |                   |
-|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
+|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--client-id=<value>`                                    |Override your DevOps account's client ID <br/>*(Removed: v2.4.0)*|
 |`-f,--file=<path>`                                       |Filename to use to create the resource  |
-|`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
-|`--language=<value>`                                     |Apply the language translation requested.<br/>*(Added: v3.4.0)*|
+|`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
+|`--language=<value>`                                     |Apply the language translation requested <br/>*(Added: v3.4.0)*|
 |`-o,--output=<value>`                                    |Additional output formats, YAML or JSON|
-|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
-|`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v2.3.0)*|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
+|`-y,--yes`                                               |Automatically reply `yes` to any command prompts <br/>*(Added: v2.3.0)*|
 
 The following examples show how to use the `apply` command:
 
@@ -417,7 +487,7 @@ axway central apply -f ./some/folder/resources.yaml
 axway central apply -f ./some/folder/resources.json -o yaml
 ```
 
-The following examples show how to use the `apply` command to apply just the language translation requested using `--language` argument :
+The following examples show how to use the `apply` command to apply just the language translation requested using `--language` argument:
 
 ```bash
 # apply french language translation to the resource from file if the translation exists
@@ -427,7 +497,7 @@ axway central apply -f ./some/folder/lang-resources.json --language="fr-fr"
 axway central apply -f ./some/folder/lang-resources.json --language="de-de,pt-br,en-us" -o yaml
 ```
 
-The `lang-resources.json` file contents are as follows :
+The `lang-resources.json` file contents are as follows:
 
 ```json
 {
@@ -526,15 +596,15 @@ The following table describes the usage, options, and arguments for the `delete`
 |---                                                      |---                                   |
 |`axway central delete [options] [<args...>]`             |                                    |
 |**Options**                                              |                   |
-|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
+|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--client-id=<value>`                                    |Override your DevOps account's client ID <br/>*(Removed: v2.4.0)*|
 |`-f,--file=<path>`                                       |Filename to use to delete the resource   |
-|`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
-|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
-|`-s,--scope=<name>`                                      |Scope name for scoped resources.<br/>*(Added: v1.17.0)*|
+|`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
+|`-s,--scope=<name>`                                      |Scope name for scoped resources <br/>*(Added: v1.17.0)*|
 |`--wait`                                                 |Wait for the resources to be completely deleted          |
-|`-y,--yes`                                               |Automatically reply `yes` to any command prompts.<br/>*(Added: v1.17.0)*|
-|`--forceDelete`                                          |Force delete a resource (Warning: Ignores finalizers on the resource and the resources scoped under it).<br/>*(Added: v3.6.0)*|
+|`-y,--yes`                                               |Automatically reply `yes` to any command prompts <br/>*(Added: v1.17.0)*|
+|`--forceDelete`                                          |Force delete a resource (Warning: Ignores finalizers on the resource and the resources scoped under it) <br/>*(Added: v3.6.0)*|
 |**Arguments**                                            |                   |
 |`args...`                                                |Command arguments, run `axway central delete` to see the examples |
 
@@ -573,13 +643,13 @@ The following table describes the usage, options, and arguments for the `edit` c
 |Usage                                                    |                             |
 |---                                                      |---                                   |
 |`axway central edit <command> [options]`             |                                    |
-|`axway central edit environment [options] <name>`      |`environment` - Edit an environment with the specified name.     |
+|`axway central edit environment [options] <name>`      |`environment` - Edit an environment with the specified name     |
 |**Options**                                              |                   |
-|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
-|`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
+|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--client-id=<value>`                                    |Override your DevOps account's client ID <br/>*(Removed: v2.4.0)*|
+|`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
 |`-o,--output=<value>`                                       |Additional output formats, YAML or JSON |
-|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
 |**Arguments**                                            |                   |
 |`name`                                                  |Name of the environment |
 
@@ -601,10 +671,10 @@ The following table describes the usage, options, and arguments for the `edit` c
 |`axway central install <command> [options] [<args...>]`             |                                    |
 |`axway central install agents [options]`             |`agents` - Install API Gateway v7, Amazon API Gateway, Azure API Gateway, Kubernetes agents|
 |**Options**                                              |                   |
-|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login).<br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
-|`--client-id=<value>`                                    |Override your DevOps account's client ID.<br/>*(Removed: v2.4.0)*|
-|`--no-cache`                                             |Do not use cache when communicating with the server.<br/>*(Added: v1.8.0)*|
-|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`.|
+|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--client-id=<value>`                                    |Override your DevOps account's client ID <br/>*(Removed: v2.4.0)*|
+|`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
 |**Arguments**                                            |                   |
 |`args...`                                                  |Command arguments, run `axway central install` to see the examples |
 
