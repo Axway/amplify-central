@@ -212,9 +212,7 @@ WSO2 API Manager uses OAuth 2.0 for security. This means that applications need 
     * Example - WSO2: [https://wso2-server/client-registration/v0.17/register]
 * Make the DCR Request (WSO2 example)
 
-```
-markdown
-bash
+```bash
 curl -X POST https://<wso2-server>/client-registration/v0.17/register \
      -H "Content-Type: application/json" \
      -H "Authorization: Basic <base64-encoded-credentials>" \
