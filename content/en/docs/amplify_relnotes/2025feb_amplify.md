@@ -56,6 +56,14 @@ New features and enhancements for the February 25 update.
   
     * Support for latest AWS Discovery and Traceability Agent improvements.
 
+Bug fixes for the February 25 update.
+
+### Agents bug fixes for February 25, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01681619 | APIGOV-29730 | **Issue**: APIM Discovery Agent is causing critical CPU load on API Gateway <br/>**Resolution**: The APIM Discovery Agent gethers the organizations from the API Manager less frequently to lower the CPU load. |
+
 ## February 24, 2025
 
 Bug fixes for the February 24 update.
@@ -66,7 +74,6 @@ Bug fixes for the February 24 update.
 |-------------|--------------|---------------------------------------------------|
 | N/A | APIGOV-29690 | **Issue**: APIM Discovery Agent (1.2.14) reported as stopped in the UI even though the agent is running and in a healthy state <br/>**Resolution**: The agent status is now displayed correctly in the Agents page. |
 | 01680913,01680338  | APIGOV-29691 | **Issue**: Azure API Management Discovery agent (1.0.6 and 1.3.13) reported as stopped in the UI even though the agent is running and in a healthy state <br/>**Resolution**: The agent status is now displayed correctly in the Agents page. |
-| 01681619 | APIGOV-29730 | **Issue**: Discovery Agent is causing critical CPU load on API Gateway <br/>**Resolution**: Robert, according to Jira this was fixed on the 25th. Do you still want to add it to the 24th Release Note? |
 
 ## February 21, 2025
 
