@@ -5,11 +5,12 @@ weight: 120
 ---
 Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the WSO2 API Manager APIs in one central location.
 
-## Why do you want to connect Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal and Amplify?
+## Why do you want to connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal and Amplify?
 
 The WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with WSO2 API Manager and Amplify to:
 
-* Detect changes to WSO2 Publisher APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
+* Detect changes to WSO2 Publisher APIs using the Discovery Agent.
+    * The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service
 * Create and update business plans through Admin to manage quota and subscriptions
 * Create applications and credentials through the Dev Portal to execute WSO2 APIs
 * Track API metrics and transactions related to discovered APIs, their consumers, and subscriptions.
@@ -22,15 +23,15 @@ The related APIs are published to Amplify as an API service in the selected envi
 
 #### Application
 
-While handling a new application event the following steps are taken:
+While handling a new application event, the following steps are taken:
 
 * Create a new application
 
-For deprovisioning the created application will be removed.
+For deprovisioning, the created application will be removed.
 
 #### Access Request
 
-When handling a new access request event, for an existing managed application, the following steps are taken:
+When handling a new access request event for an existing managed application, the following steps are taken:
 
 * Add a subscription policy containing a business plan
 * Create a quota plan and assign it to the API policy
@@ -47,7 +48,7 @@ For deprovisioning:
 
 #### Credential
 
-When handling a new credential event, for a given application, the following steps are taken:
+When handling a new credential event for a given application, the following steps are taken:
 
 * For API key:
     * Provision:
@@ -62,12 +63,12 @@ When handling a new credential event, for a given application, the following ste
 
 ### Traceability
 
-A global WSO2 policy is created and deployed to intercept API requests, collect various details about the request and the API itself, formats this information as a JSON payload, and sends it to a separate tracing service, in this case the Traceability Agent. Crucially, it does this in a non-blocking way, so the original API request/response flow is not affected.
-In order to do so, you will need to create a policy with a synapse sequence that implements a tracing mechanism used to interrogate and track APIs.
+A global WSO2 policy is created and deployed to intercept API requests, collect various details about the request and the API itself, format this information as a JSON payload, and send it to a separate tracing service (in this case the Traceability Agent). Crucially, it does this in a non-blocking way, so the original API request/response flow is not affected.
+To do so, you must create a policy with a synapse sequence that implements a tracing mechanism used to interrogate and track APIs.
 
-* Create a local policy in WSO2 API Manager to represent your agents traceability flow: [https://your-domain:9443/publisher/policies]
+* Create a local policy in WSO2 API Manager to represent your agent's traceability flow: [https://your-domain:9443/publisher/policies].
 * Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. This policy is designed for monitoring and debugging, allowing you to track API invocations and identify potential issues.
-{{< alert title="Note" color="primary" >}} Below is the recommended synapse yaml to use for your policy. You will need to replace [TRACEABILITY_AGENT_URL] with your Traceability Agent's URL. This should be the only necessary change. Any changes or updates to this file may result in processing errors or unwanted results.
+{{< alert title="Note" color="primary" >}} Below is the recommended synapse yaml to use for your policy. You must replace [TRACEABILITY_AGENT_URL] with your Traceability Agent's URL. This should be the only necessary change. Any changes or updates to this file may result in processing errors or unwanted results.
 
 ```
 yaml
@@ -147,9 +148,9 @@ mc.setPayloadJSON({
 * Upload the policy definition to the local policy.
     * Save
 * Add a new global policy: [https://your-domain:9443/publisher/global-policies]
-    * Give it a name and description to represent your agents traceability flow that will apply to all APIs and services deployed within your environment.
+    * Give it a name and description to represent your agent's traceability flow that will apply to all APIs and services deployed within your environment.
     * Drag and drop the Response Flow policy from the local policy you created (click over via Policy List header to RESPONSE).
-    * Drag and drip the Fault Flow policy from the local policy you created (click over via Policy List header to FAULT).
+    * Drag and drop the Fault Flow policy from the local policy you created (click over via Policy List header to FAULT).
     * Save and deploy to the necessary Gateway.
 
 See [WSO2 Synapse Sequence for Traceability Agent Deconstructed](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_wso2/wso2_synapse_sequence_explanation) for further synapse sequencing explained.
@@ -168,14 +169,14 @@ If you have trouble generating Synapse sequences, you can refer to the following
 
 ## System requirements
 
-* An environment to run the agent Docker containers.
+* An environment to run the agent Docker containers
     * Configure WSO2 to connect to localhost:8888
-    * In the docker run command, you may have to expose the port inside the docker container.
+    * In the docker run command, you may have to expose the port inside the docker container
     * The -p 8888:8888 flag in your docker run command is used for port mapping between the host and the container. Here's what it does:
-        * The first 8888 (before the :) refers to the host machine's port.
-        * The second 8888 (after the :) refers to the container's port.
-        * This flag tells Docker to bind port 8888 on the host to port 8888 in the container.
-        * Any network traffic sent to localhost:8888 (or the host's IP at port 8888) will be forwarded to port 8888 inside the running container.
+        * The first 8888 (before the :) refers to the host machine's port
+        * The second 8888 (after the :) refers to the container's port
+        * This flag tells Docker to bind port 8888 on the host to port 8888 in the container
+        * Any network traffic sent to localhost:8888 (or the host's IP at port 8888) will be forwarded to port 8888 inside the running container
 
 ## Region support
 
@@ -193,7 +194,7 @@ Use one of the following settings, for both agents, to set the region the agent 
 * `CENTRAL_REGION`= **EU**
 * `CENTRAL_REGION`= **AP**
 
-{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5, 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets{{< /alert >}}
+{{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5, 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic#central_region-setting) for the variables that `CENTRAL_REGION` sets.{{< /alert >}}
 
 ## Gather the required values from Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal
 
@@ -208,8 +209,8 @@ Values of the baseURL must be provided for the agent to be able to fulfill API C
 
 ### WSO2 API Manager -  API portal Client ID and Secret & Dev Portal ClientID and Secret
 
-The Discovery Agent will need to use the credentials provided by calling the dynamic client registration(DCR) to connect to, discover APIs and track transactions.
-WSO2 API Manager uses OAuth 2.0 for security. This means that applications need to be authenticated before they can access the API Manager's resources (like API discovery). The client ID and secret act as your application's credentials, verifying its identity to the API Manager.
+The Discovery Agent uses the credentials provided by calling the dynamic client registration(DCR) to connect to, discover APIs and track transactions.
+WSO2 API Manager uses OAuth 2.0 for security. This means that applications must be authenticated before they can access the API Manager's resources (like API discovery). The client ID and secret act as your application's credentials, verifying its identity to the API Manager.
 
 #### How to obtain Client ID and Client Secret
 
@@ -252,8 +253,8 @@ If you're having trouble generating keys, reach out to your WSO2 API Manager adm
 
 Connecting WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal to Amplify will provide you with a global centralized view of your APIs and their related traffic.
 
-* Overview:[https://apim.docs.wso2.com/en/latest/get-started/overview](https://apim.docs.wso2.com/en/latest/get-started/overview)
-* API Manager:[https://wso2.com/api-manager/](https://wso2.com/api-manager/)
-* Publisher Portal:[https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/](https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/)
-* Dev Portal:[https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/](https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/)
-* Admin Portal:[https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/](https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/)
+* Overview: [https://apim.docs.wso2.com/en/latest/get-started/overview](https://apim.docs.wso2.com/en/latest/get-started/overview)
+* API Manager: [https://wso2.com/api-manager/](https://wso2.com/api-manager/)
+* Publisher Portal: [https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/](https://apim.docs.wso2.com/en/latest/deploy-and-publish/publish-on-dev-portal/publish-an-api/)
+* Dev Portal: [https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/](https://apim.docs.wso2.com/en/3.0.0/develop/product-apis/getting-started/guide-devportal-v1/)
+* Admin Portal: [https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/](https://apim.docs.wso2.com/en/latest/get-started/api-manager-quick-start-guide/)
