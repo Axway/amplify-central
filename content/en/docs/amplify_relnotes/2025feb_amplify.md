@@ -28,7 +28,7 @@ New features and enhancements for the February 26 update.
   
 ## February 25, 2025
 
-New features, enhancements, and bug fixes or the February 25 update.
+New features, enhancements, and bug fixes for the February 25 update.
 
 ### Agents updates for February 25, 2025
 
