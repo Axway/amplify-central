@@ -32,7 +32,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
-### On-premise Agent Features (Robert)
+### On-premise Agent Features
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
 
@@ -74,6 +74,19 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Platform Usage**             | No                         | No                       | Yes                      | Yes                                |
 | **Transaction Metrics**        | No                         | No                       | Yes                      | Yes                                |
 | **Transaction Event Sampling** | No                         | No                       | No                       | No                                 |
+
+| Description                    | WSO2 API Manager           |
+|--------------------------------|----------------------------|
+| **Discovery**                  | REST, SOAP, and GraphQL    |
+| **Application**                | Yes                        |
+| **Access Request**             | Yes                        |
+| **Credential Type**            | OAuth                      |
+| **Credential Actions**         | Suspend/Enable/Renew       |
+| **Quota Enforcement**          | Yes                        |
+| **Traceability**               | Yes                        |
+| **Platform Usage**             | Yes                        |
+| **Transaction Metrics**        | Yes                        |
+| **Transaction Event Sampling** | No                         |
 
 ### SaaS (Embedded) Agent Features
 
