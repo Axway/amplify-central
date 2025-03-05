@@ -28,7 +28,7 @@ New features and enhancements for the February 26 update.
   
 ## February 25, 2025
 
-New features and enhancements for the February 25 update.
+New features, enhancements, and bug fixes or the February 25 update.
 
 ### Agents updates for February 25, 2025
 
@@ -56,13 +56,11 @@ New features and enhancements for the February 25 update.
   
     * Support for latest AWS Discovery and Traceability Agent improvements.
 
-Bug fixes for the February 25 update.
-
 ### Agents bug fixes for February 25, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01681619 | APIGOV-29730 | **Issue**: APIM Discovery Agent is causing critical CPU load on API Gateway <br/>**Resolution**: The APIM Discovery Agent gethers the organizations from the API Manager less frequently to lower the CPU load. |
+| 01681619 | APIGOV-29730 | **Issue**: APIM Discovery Agent is causing critical CPU load on API Gateway <br/>**Resolution**: The APIM Discovery Agent now gathers the organizations from the API Manager less frequently to lower the CPU load. |
 
 ## February 24, 2025
 
