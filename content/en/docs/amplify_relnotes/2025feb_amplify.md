@@ -66,7 +66,7 @@ Bug fixes for the February 24 update.
 |-------------|--------------|---------------------------------------------------|
 | N/A | APIGOV-29690 | **Issue**: APIM Discovery Agent (1.2.14) reported as stopped in the UI even though the agent is running and in a healthy state <br/>**Resolution**: The agent status is now displayed correctly in the Agents page. |
 | 01680913,01680338  | APIGOV-29691 | **Issue**: Azure API Management Discovery agent (1.0.6 and 1.3.13) reported as stopped in the UI even though the agent is running and in a healthy state <br/>**Resolution**: The agent status is now displayed correctly in the Agents page. |
-| 01681619 | APIGOV-29730 | **Issue**: Discovery Agent is causing critical CPU load on API Gateway <br/>**Resolution**: Robert, according to Jira this was fixed on the 25th. Do you still want to add it to the 24th Release Note? | 
+| 01681619 | APIGOV-29730 | **Issue**: Discovery Agent is causing critical CPU load on API Gateway <br/>**Resolution**: Robert, according to Jira this was fixed on the 25th. Do you still want to add it to the 24th Release Note? |
 
 ## February 21, 2025
 
