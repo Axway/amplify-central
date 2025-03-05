@@ -81,12 +81,12 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Application**                | Yes                        |
 | **Access Request**             | Yes                        |
 | **Credential Type**            | OAuth                      |
-| **Credential Actions**         | Suspend/Enable/Renew       |
+| **Credential Actions**         | Suspend/Enable             |
 | **Quota Enforcement**          | Yes                        |
 | **Traceability**               | Yes                        |
 | **Platform Usage**             | Yes                        |
 | **Transaction Metrics**        | Yes                        |
-| **Transaction Event Sampling** | No                         |
+| **Transaction Event Sampling** | Yes                        |
 
 ### SaaS (Embedded) Agent Features
 
