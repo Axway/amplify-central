@@ -28,7 +28,7 @@ New features and enhancements for the February 26 update.
   
 ## February 25, 2025
 
-New features and enhancements for the February 25 update.
+New features, enhancements, and bug fixes for the February 25 update.
 
 ### Agents updates for February 25, 2025
 
@@ -55,6 +55,12 @@ New features and enhancements for the February 25 update.
   The latest version **3.11.0** of the [Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.11.0) is now available on NPM. This update includes:
   
     * Support for latest AWS Discovery and Traceability Agent improvements.
+
+### Agents bug fixes for February 25, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01681619 | APIGOV-29730 | **Issue**: APIM Discovery Agent is causing critical CPU load on API Gateway <br/>**Resolution**: The APIM Discovery Agent now gathers the organizations from the API Manager less frequently to lower the CPU load. |
 
 ## February 24, 2025
 
