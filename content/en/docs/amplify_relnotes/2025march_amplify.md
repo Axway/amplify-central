@@ -21,9 +21,9 @@ New features and enhancements for the March 7 update.
   (DISCOVERY AGENT, TRACEABILITY AGENT)</br>
   You can now use the new Discovery and Traceability agents to connect an **WSO2** environment to Amplify for automatic discovery of APIs and API metrics reporting. The agents are available as on-prem installations and can be found on [Axway Repository](https://repository.axway.com/catalog?q=agents). The key capabilities include:
 
-  * **Automated API discovery**: Automatic API discovery from WSO2, ensuring comprehensive visibility of your API landscape and federated API governance.
-  * **Enhanced traceability**: Insights into API usage, and performance by integrating with Amplify for detailed reporting.
-  * **Improved governance and compliance**: Apply linting rules to validate the API from an API compliance perspective.
+    * **Automated API discovery**: Automatic API discovery from WSO2, ensuring comprehensive visibility of your API landscape and federated API governance.
+    * **Enhanced traceability**: Insights into API usage, and performance by integrating with Amplify for detailed reporting.
+    * **Improved governance and compliance**: Apply linting rules to validate the API from an API compliance perspective.
 
 * **New agent versions available**
 
