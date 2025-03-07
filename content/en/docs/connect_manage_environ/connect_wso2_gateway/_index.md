@@ -68,7 +68,8 @@ To do so, you must create a policy with a synapse sequence that implements a tra
 
 * Create a local policy in WSO2 API Manager to represent your agent's traceability flow: [https://your-domain:9443/publisher/policies].
 * Create a policy definition that implements a tracing mechanism used to interrogate and track APIs. WSO2 uses Synapse sequences to define request and response flows. This policy is designed for monitoring and debugging, allowing you to track API invocations and identify potential issues.
-{{< alert title="Note" color="primary" >}} Below is the recommended synapse yaml to use for your policy. You must replace [TRACEABILITY_AGENT_URL] with your Traceability Agent's URL. This should be the only necessary change. Any changes or updates to this file may result in processing errors or unwanted results.
+
+{{< alert title="Note" color="primary" >}} Below is the recommended synapse yaml to use for your policy. You must replace [TRACEABILITY_AGENT_URL] with your Traceability Agent's URL. This should be the only necessary change. Any changes or updates to this file may result in processing errors or unwanted results.{{< /alert >}}
 
 ```
 yaml
