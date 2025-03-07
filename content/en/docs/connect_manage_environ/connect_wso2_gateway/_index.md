@@ -154,7 +154,7 @@ mc.setPayloadJSON({
     * Drag and drop the Fault Flow policy from the local policy you created (click over via Policy List header to FAULT).
     * Save and deploy to the necessary Gateway.
 
-See [WSO2 Synapse Sequence for Traceability Agent Deconstructed](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_wso2/wso2_synapse_sequence_explanation) for further synapse sequencing explained.
+See [WSO2 Synapse Sequence for Traceability Agent Deconstructed](/docs/connect_manage_environ/connect_wso2_gateway/wso2_synapse_sequence_explanation) for further synapse sequencing explained.
 If you have trouble generating Synapse sequences, you can refer to the following guidelines below or reach out to your WSO2 API Manager administrator for assistance.
 
 * Synapse Mediation Sequences: [https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/](https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/). This covers how to define and attach custom mediation policies using Synapse sequences.
@@ -199,7 +199,7 @@ Use one of the following settings, for both agents, to set the region the agent 
 
 ## Gather the required values from Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal
 
-### WSO2 API Manager - baseURL (will be used for Publisher Portal / Dev Portal / Admin Portal)
+### WSO2 API Manager - baseURL (used for Publisher Portal / Dev Portal / Admin Portal)
 
 Values of the baseURL must be provided for the agent to be able to fulfill API Calls to WSO2.  The baseURL is where the WSO2 APIM resides.
 
