@@ -63,3 +63,16 @@ New features and enhancements for the March 5 update.
 |-------------|--------------|---------------------------------------------------|
 | 01685540 | APIGOV-29793 | **Issue**: Marketplace - ratings user information not loading <br/>**Resolution**: Due to a change in platform API, the user information could not be shown. After the fix, the user name is being displayed. "Verified User" is displayed when the user name cannot be resolved. |
 |  N/A     | APIGOV-29872 | **Issue**: If you publish an API with multiple endpoints to Marketplace directly from the Service Registryse, only the first end point are included in a plan quota. As a result, consumers cannot consume the other API endpoints in the Marketplace.<br/>**Resolution**: A fix was released to include all endpoints in the plan / quota.|
+
+## March 4, 2025
+
+New features and enhancements for the March 4 update.
+
+### Marketplace updates for March 4, 2025
+
+* **New Amplify Engage branding**
+
+  (WEB UI)</br>
+  The Web UI been rebranded to Amplify Engage from Amplify Central.  The is reflected in the web page title and the web page breadcrumbs.
+
+
