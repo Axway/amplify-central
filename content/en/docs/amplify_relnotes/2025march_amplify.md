@@ -74,5 +74,3 @@ New features and enhancements for the March 4 update.
 
   (AMPLIFY ENGAGE)</br>
  The Web UI has been rebranded to Amplify Engage from Amplify Central.  The is reflected in the web page title and the web page breadcrumbs.
-
-
