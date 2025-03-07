@@ -40,6 +40,12 @@ New features and enhancements for the March 7 update.
 
 New features and enhancements for the March 6 update.
 
+### Agents bug fixes for March 6, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01678979, 01681411 | APIGOV-29658 | **Issue**: Issue with Credential Request <br/>**Resolution**: The credential request screen was not being displayed. Even when directly accessing the product resource, the "Credential Request" button was disabled. This issue was resolved to not require to restart the agent to discover the Credential Request Definition to show up in the Marketplace. The fix is available in discovery agent version **v1.2.17**. |
+
 ### Engage updates for March 6, 2025
 
 * **Automatic free plan creation during product publishing**
@@ -56,3 +62,4 @@ New features and enhancements for the March 5 update.
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | 01685540 | APIGOV-29793 | **Issue**: Marketplace - ratings user information not loading <br/>**Resolution**: Due to a change in platform API, the user information could not be shown. After the fix, the user name is being displayed. "Verified User" is displayed when the user name cannot be resolved. |
+|  N/A     | APIGOV-29872 | **Issue**: If you publish an API with multiple endpoints to Marketplace directly from the Service Registryse, only the first end point are included in a plan quota. As a result, consumers cannot consume the other API endpoints in the Marketplace.<br/>**Resolution**: A fix was released to include all endpoints in the plan / quota.|
