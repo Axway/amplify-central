@@ -75,6 +75,19 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Transaction Metrics**        | No                         | No                       | Yes                      | Yes                                |
 | **Transaction Event Sampling** | No                         | No                       | No                       | No                                 |
 
+| Description                    | WSO2 API Manager           |
+|--------------------------------|----------------------------|
+| **Discovery**                  | REST, SOAP, and GraphQL    |
+| **Application**                | Yes                        |
+| **Access Request**             | Yes                        |
+| **Credential Type**            | OAuth                      |
+| **Credential Actions**         | Suspend/Enable             |
+| **Quota Enforcement**          | Yes                        |
+| **Traceability**               | Yes                        |
+| **Platform Usage**             | Yes                        |
+| **Transaction Metrics**        | Yes                        |
+| **Transaction Event Sampling** | Yes                        |
+
 ### SaaS (Embedded) Agent Features
 
 {{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
