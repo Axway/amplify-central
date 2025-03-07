@@ -145,5 +145,5 @@ This sequence does the following:
 
 If you have trouble generating Synapse sequences, refer to the following guidelines below or reach out to your WSO2 API Manager administrator for assistance.
 
-* Synapse Mediation Sequences: [https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/](https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/). This covers how to define and attach custom mediation policies using Synapse sequences.
-* WSO2 Mediation Extensions: [https://apim.docs.wso2.com/en/latest/extend/mediation-extensions/](https://apim.docs.wso2.com/en/latest/extend/mediation-extensions/). This provides a guide on extending WSO2 with custom Synapse mediators.
+* Synapse Mediation Sequences: [https://apim.docs.wso2.com/en/latest/learn/api-gateway/message-mediation/](https://ei.docs.wso2.com/en/latest/micro-integrator/references/mediators/sequence-Mediator/). This covers how to define and attach custom mediation policies using Synapse sequences.
+* WSO2 Mediation Extensions: [https://apim.docs.wso2.com/en/latest/extend/mediation-extensions/](https://apim.docs.wso2.com/en/4.2.0/reference/mediators/about-mediators/). This provides a guide on extending WSO2 with custom Synapse mediators.
