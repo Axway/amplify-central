@@ -178,7 +178,7 @@ This feature allows you to toggle between displaying or hiding the specific opti
 
 ![Alt image](/Images/marketplace/Oauth.png)
 
-The Discovery Agent for Axway API Management 7.6.2 SPx and 7.7 SPx provides the ability to control the OAuth credential Type dropdown values in the Marketplace based on environment variable configuration.
+The Discovery Agent for Axway API Management 7.7 provides the ability to control the OAuth credential Type dropdown values in the Marketplace based on environment variable configuration.
 The following is an example to limit the dropdown value to "OAuth Client ID & Secret."
 
 ```shell

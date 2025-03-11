@@ -11,7 +11,7 @@ Connect Axway API Manager to Amplify so you can:
 
 ## What is Axway API Manager connected?
 
-Connect your API Management system (v7.6.2 or above) to Amplify by using two agents: Discovery and Traceability.
+Connect your API Management 7.7 system to Amplify by using two agents: Discovery and Traceability.
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
@@ -49,7 +49,7 @@ The Traceability Agent sends log information about APIs in API Gateway and publi
 
 ## System requirements
 
-* Axway API Manager / Axway API Gateway versions 7.6.2 SPx and 7.7 SPx up and running using a Linux installation (CentOS 6.x, 7.x, 8.x,  Oracle Linux 6.x, 7.x, Red Hat Enterprise Linux 6.x, 7.x, 8.x, SUSE Linux Enterprise Server 11.x, 12.x)
+* Axway API Manager / Axway API Gateway 7.7 and running using a Linux installation (CentOS 6.x, 7.x, 8.x,  Oracle Linux 6.x, 7.x, Red Hat Enterprise Linux 6.x, 7.x, 8.x, SUSE Linux Enterprise Server 11.x, 12.x)
 * The Linux machine where API Manager and API Gateway are running must be accessible and have `sudo` rights to run the Agents
 * The agents must be installed on the same machine that API Manager and/or API Gateway is running
 
