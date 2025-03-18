@@ -199,7 +199,7 @@ APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPE_2=Basic
 APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPENAME_2=custom-basic-crd
 
 APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPE_3=APIKey
-APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPENAME_2=custom-api-key-crd
+APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPENAME_3=custom-api-key-crd
 ```
 
 For detailed instructions on handling these custom credentials, see [Use Custom Credentials with the Discovery Agent](/docs/connect_manage_environ/connected_agent_common_reference/custom-external-credentials).
