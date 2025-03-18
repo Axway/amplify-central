@@ -44,7 +44,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Frequency** - set how often the Embedded agent should check for changes to your API resources. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connected_agent_common_reference/embedded-agent-triggers/#triggering-the-agent-to-run-discovery).
     * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover AWS API Gateway resources after environment creation and Embedded agent configuration are complete.
-    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Engage Admin role.
     * **API Discovery Filter** - filter conditions for discovery of API services based on tags. See [Discover APIs for conditional expression samples](/docs/connect_manage_environ/connect_aws_gateway/#filtering-apis-to-be-discovered-1).
     * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
     * **Exclude Tags** - if a tag listed here is on an API in the gateway, then it will not be added as a tag in the API service (only available for AWS API Gateway).
@@ -94,7 +94,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Frequency** - set how often the Embedded agent should check for changes in your Apigee X API Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
     * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Apigee X API Gateway resources after environment creation and Embedded agent configuration are complete.
-    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Team Ownership** - select a team to set the ownership of all the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Engage Admin role.
     * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
@@ -129,7 +129,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Frequency** - set how often the Embedded agent should check for changes in your Azure API Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
     * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Azure API Gateway resources after environment creation and Embedded agent configuration are complete.
-    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Engage Admin role.
     * **Additional Tags** - in addition to any tags found on the gateway, tags defined here will be added to all API services created from this Discovery Agent.
 
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
@@ -172,7 +172,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Frequency** - set how often the Embedded agent should check for changes in your GitHub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
     * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover GitHub Gateway resources after environment creation and Embedded agent configuration are complete.
-    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Engage Admin role.
     * **Paths** - values defined here are used to look into those paths to discover the API service(s).
     * **Filename Filters** - values defined here are used to filter the discovered API service(s) using filenames.
     * **GitHub Repository Name** - name of the GitHub Repository used to discover the API service(s).
@@ -193,7 +193,7 @@ Learn how to create an environment to represent your API services and other disc
 
     * **Frequency** - set how often the Embedded agent should check for changes in your Swaggerhub Gateway. Preferred is no frequency and triggered via a CI/CD pipeline. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days. See [Triggering the agent to run discovery](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/#triggering-the-agent-to-run-discovery).
     * **Initiate Immediate Discovery** - select to enable the Embedded agent to discover Swaggerhub Gateway resources after environment creation and Embedded agent configuration are complete.
-    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Central Admin role.
+    * **Team Ownership** - select a team to set the ownership of the discovered API service(s). Select "No Owner" to make the API service(s) only accessible by the Engage Admin role.
     * **SwaggerHub Organization Owner** - owner name of an organization in SwaggerHub.
     * **Visibility Filter** - visibility state of the APIs on SwaggerHub. Not selecting anything will discover both Public and Private APIs.
     * **Publication Filter** - publication state of the APIs on SwaggerHub. Not selecting anything will discover both Published and UnPublished APIs.
@@ -213,7 +213,7 @@ Learn how to create an environment to represent your API services and other disc
 
 ### Access Rights
 
-(Optional) Select the team(s) the environment can be shared with. By default, an environment is not shared and only the Central Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team.
+(Optional) Select the team(s) the environment can be shared with. By default, an environment is not shared and only the Engage Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team.
 
 1. Click **Next**.
 2. Provide the Tags and Attribute details for the environment.

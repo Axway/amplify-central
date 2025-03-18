@@ -44,7 +44,7 @@ You can validate your installation by running: `axway central --version`
 
 There are two ways to authenticate with Axway CLI:
 
-* With a Central Admin username/password via a browser
+* With a Engage Admin username/password via a browser
 * With a platform service account and a username/password via a prompt
 
 #### Default mode with browser authentication

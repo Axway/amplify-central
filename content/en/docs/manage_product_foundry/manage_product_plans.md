@@ -171,7 +171,7 @@ By default, a plan is visible to everyone. But you can restrict its visibility b
 
 Visibility also depends on the Marketplace type (private vs. public). A public Marketplace can be browsed anonymously, but a product plan can be restricted to only authenticated users. Whereas a private Marketplace always requires authenticated users.
 
-The plan visibility can be configured either by the Catalog Manager or Central admin users.
+The plan visibility can be configured either by the Catalog Manager or Engage Admin users.
 
 The plan visibility configuration is accessible either when creating a plan or using the ellipsis menu **Edit plan visibility** under the visibility tab of the plan wizard:
 

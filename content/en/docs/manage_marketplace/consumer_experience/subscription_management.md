@@ -25,7 +25,7 @@ Anyone who is authenticated in the Marketplace can subscribe to a product with t
 | Persona               | Subscribe to a paid plan | subscribe to a free plan |
 |-----------------------|--------------------------|--------------------------|
 | Subscription Manager  | Authorized               | Authorized               |
-| Central Administrator | Authorized               | Authorized               |
+| Engage Administrator | Authorized               | Authorized               |
 | Developer/Consumer    | Forbidden                | Authorized               |
 
 Each subscription is owned by a team and shared with each member of the team. If you are part of multiple teams, you will be asked to select the team owner. If your team has the attribute **x-private**, the subscription will be owned by your user and not shared inside your team.

@@ -24,7 +24,7 @@ Attributes are keyword and value pairs that can be assigned to products and used
 
 ## Manage categories
 
-Searching through an unordered, unorganized list of products can be a daunting task. However, **Central Admin** users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
+Searching through an unordered, unorganized list of products can be a daunting task. However, **Engage Admin** users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
 
 Categories allow for a broader grouping of products into different topics or themes. Categories are created once, and multiple products can be assigned to them. One product can be in multiple categories.
 
@@ -64,11 +64,11 @@ A public category can be Visible / Featured in one or multiple Marketplaces depe
 
 ### Creating a global category
 
-Only users that are assigned the **Central Admin** role can create global categories when creating or editing a product. Categories are created at the Organization level and available to all teams to apply them to their products.
+Only users that are assigned the **Engage Admin** role can create global categories when creating or editing a product. Categories are created at the Organization level and available to all teams to apply them to their products.
 
 ### Creating a product specific category
 
-Only users that are assigned the **Central Admin** role can create product categories. Categories are created at the Organization level and available to all teams to apply them to their products.
+Only users that are assigned the **Engage Admin** role can create product categories. Categories are created at the Organization level and available to all teams to apply them to their products.
 
 If the product is already published to a Marketplace, the change of category will be reflected immediately in the Marketplace.
 
@@ -86,7 +86,7 @@ If the product is already published to a Marketplace, the change of category wil
 
 ### Editing a category
 
-Only users that are assigned the **Central Admin** role can edit product categories.
+Only users that are assigned the **Engage Admin** role can edit product categories.
 
 #### Update a product category from the WebUI
 
@@ -99,7 +99,7 @@ Only product categories, not global categories, can be edited from the WebUI.
 
 ### Setting a product category as Featured in a Marketplace
 
-Only users that are assigned the **Central Admin** role can edit product categories.
+Only users that are assigned the **Engage Admin** role can edit product categories.
 
 1. Log into the platform.
 2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories.
@@ -152,7 +152,7 @@ spec:
 
 ### Deleting a category
 
-Only users that are assigned the **Central Admin** role can delete product categories.
+Only users that are assigned the **Engage Admin** role can delete product categories.
 
 To delete a category:
 
@@ -162,7 +162,7 @@ To delete a category:
 
 ### Assigning a category while creating/editing a product
 
-Only users that are assigned the **Central Admin** role can create categories while editing/creating a product.
+Only users that are assigned the **Engage Admin** role can create categories while editing/creating a product.
 Catalog Manager users can only assign existing categories.
 
 1. Select a product in the *Product Foundry* and open it.

@@ -8,7 +8,7 @@ Manage your API compliance with the Axway Central CLI.
 ## Before you start
 
 * API compliance entitlement is enabled for your organization
-* You have Central Administrator role access rights
+* You have Engage Administrator role access rights
 * Axway Central CLI is installed. See [Get started with Axway Central CLI](/docs/integrate_with_central/cli_central)
 
 ## Enable automatic compliance validation

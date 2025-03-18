@@ -29,7 +29,7 @@ Organization: axway (12345678-0000-4444-99e9-ac4fa7d116db)
 ✔ Authentication method · generate
 ✔ Private key output file · private_key.pem
 ✔ Public key output file · public_key.pem
-✔ Roles · Central Admin
+✔ Roles · Engage Admin
 
 Successfully created service account
 
@@ -171,7 +171,7 @@ ORGANIZATION                          GUID                                  ORG 
 
 "ABC-AXWAY-COM" ROLES  DESCRIPTION    TYPE
   administrator             Administrator  Platform
-  api_central_admin         Central Admin  Service
+  api_central_admin         Engage Admin  Service
 
 "ABC-AXWAY-COM" TEAMS                GUID                                  ROLE
 ✔ Default Team              4e44d44f-d444-4f44-9999                     administrator

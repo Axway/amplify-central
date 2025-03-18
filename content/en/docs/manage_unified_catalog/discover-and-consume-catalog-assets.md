@@ -30,7 +30,7 @@ Follow these steps to subscribe to an API asset:
 5. (Optional) Enter a short description. This can be used to let the asset provider know how you intend to use the API.
 6. Select an **Application**.
 
-   Amplify **Central admin** can subscribe an application on behalf of API consumers. In this case, they will be required to select the **Team** that will own the subscription.
+   Amplify **Engage Admin** can subscribe an application on behalf of API consumers. In this case, they will be required to select the **Team** that will own the subscription.
 7. Click **Subscribe**.
 
 Watch the animation to learn how to subscribe to an API asset.
@@ -129,7 +129,7 @@ To promote an API as a connector template:
 5. (Optional) Enter a short description in the **Connector description** box.
 6. Click **Export**.
 
-{{< alert title="Tip" color="secondary" >}}You must have the **Central Admin** role or the **Developer** team role assigned, and Integration Builder activated to view the **Export** option.{{< /alert >}}
+{{< alert title="Tip" color="secondary" >}}You must have the **Engage Admin** role or the **Developer** team role assigned, and Integration Builder activated to view the **Export** option.{{< /alert >}}
 
 Now you can navigate to Integration Builder to use your connector.
 

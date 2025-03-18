@@ -55,7 +55,7 @@ To consume APIs from the Marketplace, the consumer must:
 
 Persona: **Subscription Approver** team role or **Catalog Manager** team role
 
-{{< alert title="Note" color="primary" >}}Central Admin role can be used. This user can see all subscriptions without team constraint.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Engage Admin role can be used. This user can see all subscriptions without team constraint.{{< /alert >}}
 
 Subscriptions are attached to a product. Consequently, the subscription approver can see only the subscriptions associated to a product owned by the team(s) he is part of.
 
@@ -112,7 +112,7 @@ With these emails, you can reach out to the consumer using your regular messagin
 Persona: **Subscription Approver** team role or **Catalog Manager** team role
 
 {{< alert title="Note" color="primary" >}}
-The Central Admin role can be used. This user can see all Application Registrations without team constraint.
+The Engage Admin role can be used. This user can see all Application Registrations without team constraint.
 {{< /alert >}}
 
 Application Registrations are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the Catalog Manager can see only the application registrations associated to a product owned by the team(s) he is a part of.
@@ -147,7 +147,7 @@ This will trigger an event to inform of the Application Registration approval. B
 
 Persona: **Catalog Manager** team role
 
-{{< alert title="Note" color="primary" >}}The Central Admin role can be used. This user will be able to see all credentials without team constraint.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The Engage Admin role can be used. This user will be able to see all credentials without team constraint.{{< /alert >}}
 
 Credentials are attached to an application under the constraint of a subscription. Since a subscription is linked to a product, the Catalog Manager can see only the credentials associated to a product owned by the team(s) they are part of.
 

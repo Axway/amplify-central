@@ -39,9 +39,9 @@ Managing your API in Amplify by way of an API proxy offers the following benefit
 
 ## Roles and teams
 
-Amplify has its own set of roles in addition to the Amplify platform roles. These Amplify roles include Amplify **Central Admin**, **Developer**, and **Consumer** type roles to manage and use assets (for example, API proxies, applications, environments, Marketplace, and so on).  
+Amplify has its own set of roles in addition to the Amplify platform roles. These Amplify roles include Amplify **Engage Admin**, **Developer**, and **Consumer** type roles to manage and use assets (for example, API proxies, applications, environments, Marketplace, and so on).  
 
-* Amplify **Central Admin** has full access to manage Amplify and the Marketplace.
+* Amplify **Engage Admin** has full access to manage Amplify and the Marketplace.
 * Amplify **Central Developer** has access to the Marketplace, Application management, and traffic monitoring.
 * Amplify **Central Consumer** has access to the Marketplace and its Applications.
 

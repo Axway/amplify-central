@@ -98,7 +98,7 @@ To delete the existing credential, click the trash bin icon.
 
 The *Marketplace* > Credentials view displays all the credentials your team has access to. This list van be filtered by State, Expiration date and Application.
 
-Note that Central Admin user is able to see all Credentials regardless the team they belongs to.
+Note that Engage Admin user is able to see all Credentials regardless the team they belongs to.
 
 ## View credential value
 

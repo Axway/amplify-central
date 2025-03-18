@@ -80,7 +80,7 @@ With the stage visibility, the provider can expose an endpoint to the appropriat
 
 ### Viewing available stages
 
-Central Admin, Catalog Manager and Developer can view the Stages.
+Engage Admin, Catalog Manager and Developer can view the Stages.
 
 1. Navigate to *Topology > Stages*.
 
@@ -94,7 +94,7 @@ The list of stages is displayed with the following information:
 
 ### Creating a stage
 
-Only the Central Admin role can create Stages.
+Only the Engage Admin role can create Stages.
 
 1. Navigate to *Topology > Stages*.
 2. Click **+ Add new Stage**.
@@ -141,7 +141,7 @@ Only the Central Admin role can create Stages.
 
 A stage cannot be deleted once it is assigned to one or more environments and/or API services. You must remove the associations before deleting a stage.
 
-Only the Central Admin role can delete stages.
+Only the Engage Admin role can delete stages.
 
 1. Navigate to *Topology > Stages*.
 2. Select the stage(s).

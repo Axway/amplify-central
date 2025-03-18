@@ -9,11 +9,11 @@ Within Amplify you can configure the environment ownership to provide access to 
 
 #### Who can configure the environment ownership?
 
-Users that are assigned the Platform Administrator role in combination with the Central Administrator role can assign an owning team, assign an owning team when creating the environment or change the owning team after creation.
+Users that are assigned the Platform Administrator role in combination with the Engage Administrator role can assign an owning team, assign an owning team when creating the environment or change the owning team after creation.
 
 #### Environment ownership
 
-Environments can be created without configuring the ownership, so setting an owner is OPTIONAL. If ownership is not configured, then only Central Administrators can view and manage the environment and the API services within the scope. No other members in the organization will be able to view or access the resources until an owner is assigned. When an owner is assigned, only members of the owner's team can view/edit/delete the environment and manipulate resources scoped to the environment.
+Environments can be created without configuring the ownership, so setting an owner is OPTIONAL. If ownership is not configured, then only Engage Administrators can view and manage the environment and the API services within the scope. No other members in the organization will be able to view or access the resources until an owner is assigned. When an owner is assigned, only members of the owner's team can view/edit/delete the environment and manipulate resources scoped to the environment.
 
 #### API service ownership
 
@@ -124,4 +124,4 @@ Save this configuration into a file (`acl.yaml`) after finding the teamID that c
 
 {{< alert title="Note" color="primary" >}}Currently, there is no check validating the correctness of the team identifier.{{< /alert >}}
 
-Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API service owner is not set, only a Central Admin will be able to view and update the ownership of the API service.
+Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API service owner is not set, only a Engage Admin will be able to view and update the ownership of the API service.
