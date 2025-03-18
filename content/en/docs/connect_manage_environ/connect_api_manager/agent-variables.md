@@ -180,7 +180,7 @@ For detailed instructions on handling these custom credentials, see [Use Custom 
 
 #### Externally managed credential
 
-When a Front End Proxy is secured by an security scheme(OAuth, Basic Auth, API Key, OAuth External), the agent manages the credential provisioning based on respective credential type. This behavior can be overridden to allow custom processing for the credential by configuring a mapping for the credential type to externally managed credential request definition.
+When a Front End Proxy is secured by a security scheme(OAuth, Basic Auth, API Key, OAuth External), the agent manages the credential provisioning based on respective credential type. This behavior can be overridden to allow custom processing for the credential by configuring a mapping for the credential type to externally managed credential request definition.
 
 Given the configuration below, an agent will ignore events which trigger the credential provisioning because it is assumed to be handled externally.
 
