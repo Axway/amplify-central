@@ -15,13 +15,13 @@ Learn how to create an environment to represent your API services and other disc
 
     ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
-    *The Add an Environment wizard is displayed*.
-    *The **+ Add New Environment** button is disabled once the total number of environments surpasses the environment entitlement quota.  If no environment entitlement is defined, there is no environment quota enforcement.
+    * The Add an Environment wizard is displayed.
+    * The **+ Add New Environment** button is disabled once the total number of environments surpasses the environment entitlement quota.  If no environment entitlement is defined, there is no environment quota enforcement.
 
 3. Add the following environment profile information and then click **Next**:
 
     * **Environment Name** - enter a display name for the environment in the WebUI.
-    * **Environment Type** - select the type of API Gateway (Amplify API Gateway, Apigee X Gateway, AWS API Gateway, Azure API Gateway, GitHub, Istio, SwaggerHub) which Axway provides Connected agent support. The Custom/SDK option is for community supported agents or agents developed with the Agent SDK. The Manual option is for a manual sync environment that does not use an agent.
+    * **Environment Type** - select the type of API Gateway for which Axway provides Connected agent support. See [Release Notes](/docs/amplify_relnotes) for the latest supported gateways. The Custom/SDK option is for community supported agents or agents developed with the Agent SDK. The Manual option is for a manual sync environment that does not use an agent.
     * **Production** - select **Yes** if this environment will perform production processing or connects to a non-Axway gateway. The usage will count against your entitled quota.
     * **Governance** - select **Axway Manage** if the environment is hosted in Axway Managed Cloud.
     * **Description** - enter a brief description of the environment.
