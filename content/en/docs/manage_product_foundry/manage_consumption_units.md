@@ -23,7 +23,7 @@ By default, the product includes the **Transaction** consumption unit. This allo
 
 ## View a consumption unit
 
-Catalog Manager or Central Administrator can view consumption unit.
+Catalog Manager or Engage Administrator can view consumption unit.
 
 1. Navigate to *Catalog > Product Foundry* > *Consumption Units*. The *Consumption Units* page is displayed where you can view the list of all available consumption units,including:
 
@@ -41,7 +41,7 @@ Click the ellipsis (⋮) menu next to each consumption unit to:
 
 ## Create a consumption unit
 
-Catalog Manager or Central Administrator can create consumption unit.
+Catalog Manager or Engage Administrator can create consumption unit.
 
 1. Navigate to *Catalog > Product Foundry* > *Consumption Units*. The *Consumption Units* page is displayed.
 2. Click **+ Add New Unit** to open the consumption unit creation panel.
@@ -53,7 +53,7 @@ Logical name must start with `x-`, must be unique and cannot be updated later.
 
 ## Edit a consumption unit
 
-Catalog Manager or Central Administrator can create consumption unit.
+Catalog Manager or Engage Administrator can create consumption unit.
 
 1. Navigate to the *Catalog > Product Foundry* > *Consumption Units*. The *Consumption Units* page is displayed.
 2. Click the ellipsis menu to open the consumption unit edit panel.
@@ -62,7 +62,7 @@ Catalog Manager or Central Administrator can create consumption unit.
 
 ## Delete a consumption unit
 
-Catalog Manager or Central Administrator can delete consumption unit.
+Catalog Manager or Engage Administrator can delete consumption unit.
 
 Delete is only allowed if the consumption unit is not used in any plan quota.
 
@@ -74,7 +74,7 @@ You can also select multiple consumption units from the list and click **Delete*
 
 ## Consumption unit multi-language
 
-Catalog Manager or Central Administrator can translate consumption unit.
+Catalog Manager or Engage Administrator can translate consumption unit.
 
 Consumption units are visible on the Marketplace. Translation can be added so that they can be viewed differently based on the Marketplace language settings.
 

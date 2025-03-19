@@ -25,7 +25,7 @@ Follow these steps to delete a catalog asset.
 1. Select an asset in the **Unified Catalog.**
 2. Click the ellipsis menu (**...**) and select **Delete** from the drop-down.
 
-{{< alert title="Note" color="primary" >}}Only users that are assigned the **Central Admin** role can delete a catalog asset. A catalog asset that has subscriptions in **Active** or **Subscribing** state cannot be deleted until all dependencies have been removed.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Only users that are assigned the **Engage Admin** role can delete a catalog asset. A catalog asset that has subscriptions in **Active** or **Subscribing** state cannot be deleted until all dependencies have been removed.{{< /alert >}}
 
 ## Add or remove tags
 
@@ -50,15 +50,15 @@ Unified Catalog allows you to control who can view and subscribe to catalog asse
 
 ![Share asset](/Images/catalog/share_asset.png)
 
-{{< alert title="Note" color="primary" >}}Only users that are assigned the **Central Admin** role can share an asset with another team or organization.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Only users that are assigned the **Engage Admin** role can share an asset with another team or organization.{{< /alert >}}
 
 ## Manage categories
 
-Searching through an unordered list of catalog assets can become a daunting tasks and make assets not easily discoverable. **Central Admin** users can create categories to group assets in the Amplify Unified Catalog to make searching for assets more effective and improve discovery.
+Searching through an unordered list of catalog assets can become a daunting tasks and make assets not easily discoverable. **Engage Admin** users can create categories to group assets in the Amplify Unified Catalog to make searching for assets more effective and improve discovery.
 
 Categories allow for a broader grouping of catalog assets into different topics or themes. They are created once, and multiple catalog asset can be assigned to them. One catalog asset can be in multiple categories.
 
-{{< alert title="Note" color="primary" >}}Only users that are assigned the **Central Admin** role can create, edit and delete categories. Categories are created at the Organization level and available to all teams to apply them to their assets.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Only users that are assigned the **Engage Admin** role can create, edit and delete categories. Categories are created at the Organization level and available to all teams to apply them to their assets.{{< /alert >}}
 
 ### Create a category
 

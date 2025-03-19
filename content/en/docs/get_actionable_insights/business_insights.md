@@ -9,7 +9,7 @@ Business insights provides API Providers and Program Managers with 360-degree ac
 
 ## Business Insights dashboards
 
-Access to the Business Insights menu and dashboards is based on your role and permissions and your organization's subscriptions. Users must have a Central Administrator or Developer with a team [role](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the dashboards.
+Access to the Business Insights menu and dashboards is based on your role and permissions and your organization's subscriptions. Users must have a Engage Administrator or Developer with a team [role](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the dashboards.
 
 From the [Amplify platform](https://platform.axway.com) home page click **Overview**, and then click **Business Insights** from the left navigation. You are directed to the dashboards.
 

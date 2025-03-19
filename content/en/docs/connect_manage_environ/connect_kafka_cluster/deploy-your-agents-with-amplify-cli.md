@@ -40,7 +40,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
     * You can install OpenSSL
     * There is a graphical environment (optional)
     * You can use Kubernetes 1.19 (Helm install only)
-* An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
+* An Amplify platform user account that has the **Platform Administrator** and **Engage Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
 
 ## Confluent Cloud prerequisites

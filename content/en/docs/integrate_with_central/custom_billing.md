@@ -403,7 +403,7 @@ Events in the WatchTopic are sequential. They remain in the WatchTopic for seven
 
 2. You must now build a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk) to listen to the WatchTopic. See the [Sample of gRPC client source code](https://github.com/Axway/agent-sdk/tree/main/samples/watchclient).
 3. You must compile this source code with go compiler to get the executable: `go make`
-4. For this client to run, you must have an Amplify Service Account with Central Admin rights. The service account key pair must be in the same directory with the gRPC client.
+4. For this client to run, you must have an Amplify Service Account with Engage Admin rights. The service account key pair must be in the same directory with the gRPC client.
 5. Start the gRPC client:
 
     ```cmd

@@ -31,7 +31,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 4. Select the client secret authentication method as either "Auto-generated client secret key" or "Custom client secret key." In this example, "Auto-generated client secret key" is used.
 
-5. Select the appropriate role for this service account. In this example, Central Admin is used. Your service account should now be created.
+5. Select the appropriate role for this service account. In this example, Engage Admin is used. Your service account should now be created.
 
     ![service account dialog screen](/Images/integration/create-service-account.png)
   
@@ -55,7 +55,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
     ![ui create service account screen](/Images/integration/ui-create-service-account.png)
 
-4. Complete the following form. This example uses Client Secret, Platform Generated and the Central Admin role.
+4. Complete the following form. This example uses Client Secret, Platform Generated and the Engage Admin role.
 
     ![ui service account form screen](/Images/integration/ui-service-account-form.png)
 

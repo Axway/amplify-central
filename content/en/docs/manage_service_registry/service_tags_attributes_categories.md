@@ -4,7 +4,7 @@ linkTitle: Tags and Attributes
 weight: 40
 ---
 
-Only the Central Admin users can edit the details of your API services in manual sync environments with tags, attributes, and categories. This can make the curation and organization of API services more efficient.
+Only the Engage Admin users can edit the details of your API services in manual sync environments with tags, attributes, and categories. This can make the curation and organization of API services more efficient.
 
 ## Add or remove tags
 

@@ -9,7 +9,7 @@ In Topology, agents configured within your organization can be viewed to identif
 
 ## View available agents
 
-Only the Central Admin can view the *agents list*.
+Only the Engage Admin can view the *agents list*.
 
 1. Navigate to *Topology > Environments > Agents*. There are five cards in the *agents list* view: Connected, Unhealthy, Stopped, Update Available, and Unsupported.
 

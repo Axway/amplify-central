@@ -19,7 +19,7 @@ Multiple identity providers can be assigned to an environment.
 
 ### Viewing available identity providers
 
-Only the Central Admin can view identity providers.
+Only the Engage Admin can view identity providers.
 
 1. Navigate to *Topology > Identity Providers*.
 
@@ -31,7 +31,7 @@ A list of identity providers is displayed with the following information:
 
 ### Creating an identity provider
 
-Only the Central Admin role can create identity providers.
+Only the Engage Admin role can create identity providers.
 
 1. Navigate to *Topology > Identity Providers*.
 2. Click **+ Add New Identity Provider**. *The Add a Identity Provider wizard is displayed*.
@@ -74,7 +74,7 @@ Only the Central Admin role can create identity providers.
 
 ### Deleting an identity provider
 
-Only the Central Admin role can delete identity providers.
+Only the Engage Admin role can delete identity providers.
 
 1. Navigate to *Topology > Identity Providers*.
 2. Select the identity provider(s).

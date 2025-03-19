@@ -207,7 +207,7 @@ The Agent SDK can be referenced on how to build a watch client using Go. To impl
 
 1. Building a specific client based on our [Agent SDK](https://github.com/Axway/agent-sdk) to listen to the watch topic. See the [Sample of gRPC client source code](https://github.com/Axway/agent-sdk/tree/main/samples/watchclient).
 2. Compile this source code with go compiler to get the executable: `go make`.
-3. An Amplify Service Account with Central Admin rights is needed to run the client. The service account key pair must be in the same directory with the gRPC client.
+3. An Amplify Service Account with Engage Admin rights is needed to run the client. The service account key pair must be in the same directory with the gRPC client.
 4. Start the gRPC client:
 
     ```cmd

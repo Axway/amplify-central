@@ -205,20 +205,20 @@ finalizers: []
 
 Two kinds of users interact with API Server objects:
 
-* **Central Admin**: a powerful user that can do anything.
+* **Engage Admin**: a powerful user that can do anything.
 * **Regular team**: a user belongings to one or multiple teams with specific roles in each team. The roles limit the the user's interaction with the system.
 
 For more information about roles, see [Role and Capabilities](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#roles-and-capabilities) / [Team roles](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) documentation.
 
 {{< alert title="Note" color="primary" >}}
-A service account for CI/CD can have either a Central Admin role or a team role based on the need of interaction.
+A service account for CI/CD can have either a Engage Admin role or a team role based on the need of interaction.
 {{< /alert >}}
 
 The person (or service account) creating an object in the system automatically becomes the owner of the object through the team it was created with. Meaning all users of the same team can manage any object created by a team member. Users from a team cannot see objects created by another team unless the owning team decides to share the object with them. See [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing an object across teams.
 
-The exception for this is related to the Central Admin role. Since this role does not belongs to any team, all objects created by a Central Admin user will only be visible by other Central Admin users. A user that is part of a team will not be able to see objects created by the Central Admin unless the Central Admin shares the object with that team. See [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing an object across teams.
+The exception for this is related to the Engage Admin role. Since this role does not belongs to any team, all objects created by a Engage Admin user will only be visible by other Engage Admin users. A user that is part of a team will not be able to see objects created by the Engage Admin unless the Engage Admin shares the object with that team. See [Access Control List](/docs/integrate_with_central/api_server/#access-contral-list) for sharing an object across teams.
 
-The object owner is located in the `owner` property of each object. This property is absent if the object is created by a Central Admin user.
+The object owner is located in the `owner` property of each object. This property is absent if the object is created by a Engage Admin user.
 
 Sample of environment owned by the *API Development* team:
 

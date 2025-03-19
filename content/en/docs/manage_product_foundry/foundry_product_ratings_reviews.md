@@ -83,7 +83,7 @@ Only the Catalog Manager owning the product can Approve / Decline a review.
 
 ## Delete a review
 
-Only a Central Administrator user can delete reviews.
+Only a Engage Administrator user can delete reviews.
 
 1. Navigate to *Product Foundry > Product*.
 2. Open the product details.

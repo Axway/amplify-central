@@ -35,7 +35,7 @@ Before installing and configuring your Embedded agents, make sure you have the f
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
     * There is a graphical environment (optional)
-* An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
+* An Amplify platform user account that has the **Platform Administrator** and **Engage Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
 
 ### Azure prerequisites

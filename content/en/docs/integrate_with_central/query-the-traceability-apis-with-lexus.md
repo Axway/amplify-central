@@ -14,7 +14,7 @@ The core of the Lexus language and how to use it are described [in this document
 1. [Install the Axway CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/quick_start/index.html).
 2. [Authorize the CLI](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html).
 
-{{< alert title="Note" color="primary" >}}If you are querying against Amplify APIs, ensure your account is assigned the **Central Admin** role in the Amplify platform dashboard.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you are querying against Amplify APIs, ensure your account is assigned the **Engage Admin** role in the Amplify platform dashboard.{{< /alert >}}
 
 ## Amplify use case
 

@@ -30,7 +30,7 @@ The page displays two tabs:
 * [Documents](#documents) - lists available documents in the library
 * [Templates](#templates) - lists templates that can be used to create product documentation
 
-Catalog Manager and/or Central Administrator can manage the document library content.
+Catalog Manager and/or Engage Administrator can manage the document library content.
 
 ### Documents
 
@@ -105,7 +105,7 @@ To create a document:
    * **Create Markdown**: enter the document details (Name, Description, Version) and click **Next** to display the Markdown editor. Once the markdown content is ready, click **Next**.
    * **External Link**: enter the document details (URL, Name, Description, Version) and click **Next**.
 4. Add your document visibility: Product and/or Marketplace. Product visibility allows any Catalog Manager that can access the document to use it in their product. Marketplace visibility can be refined by selecting on which Marketplace the document will be available. If you upload multiple documents, this visibility will be applied to all document(s). If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
-5. Add the team permissions: Restricted (only the Central Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
+5. Add the team permissions: Restricted (only the Engage Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
 6. Review your uploaded files. Click **Prev** to return to any of the previous pages. When finished, click **Save**.
 
 All documents are now displayed in the *Document Library list view*.
@@ -120,7 +120,7 @@ The version is optional. There is no enforcement of the version format, you can 
 
 #### Edit a document
 
-You can only edit documents your team owns. Only Central Admin users can edit any document.
+You can only edit documents your team owns. Only Engage Admin users can edit any document.
 
 1. Navigate to *Document Library*.
 2. Select the ellipsis menu associated with the document you want to edit and click **Edit**. This will open the document wizard. You cannot change the document type but you can edit any field.
@@ -132,7 +132,7 @@ When a document is used in a product or in a Marketplace menu, you are not allow
 
 #### Delete a document
 
-Central Admins can delete any document regardless of whether it is used in product documentation or in Marketplace settings.
+Engage Admins can delete any document regardless of whether it is used in product documentation or in Marketplace settings.
 
 Catalog Manager / Marketplace Manager can delete a document they own only when it is not used in product documentation or in Marketplace settings.
 
@@ -245,7 +245,7 @@ Delete topics, sections, or articles using their **Delete** option in the ellips
 
 #### Delete a template
 
-A template can only be deleted by either a **Catalog Manager** from the team that owns the template or by the Central Administrator.
+A template can only be deleted by either a **Catalog Manager** from the team that owns the template or by the Engage Administrator.
 
 1. Navigate to *Document Library* and select the **Templates** tab
 2. Select **Delete** from the ellipsis menu. A confirmation popup will appear, as deletions cannot be undone.

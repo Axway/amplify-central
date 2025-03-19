@@ -107,7 +107,7 @@ Use Create Product to quickly create a product in draft. An asset and a product 
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
     * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized through the **State** column, as the mock endpoint has the state **MOCKED**.
-    * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
+    * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Engage Admin, no team ownership is proposed and the created asset and product are only visible to the Engage Admin role.
 
 ## Publish to the Marketplace
 
@@ -121,7 +121,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
     * Asset Name - The proposed asset name is set to the API service name.  
     * Product Name - The proposed asset name is set to the API service name.
     * Included Endpoints - By default, all endpoints are selected. Remove any endpoints that are not to be included in the asset. Mocked endpoints will also be listed if [requirements](#create-a-mock-endpoint) are met. Mocked endpoints will be easily recognized through the **State** column, as the mock endpoint has the state **MOCKED**.
-    * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Central Admin, no team ownership is proposed and the created asset and product are only visible to the Central Admin role.
+    * Team Ownership - The proposed team ownership is set to the currently logged in team.  If you are logged in as a Engage Admin, no team ownership is proposed and the created asset and product are only visible to the Engage Admin role.
     * Product Visibility -  Select the Marketplace where you want to publish the product, as well as the visibility restriction: Authenticated Users and Platform Users and/or Marketplace Users.
 
         * **Authenticated users** visibility - Indicates if the user must be authenticated to see the product:

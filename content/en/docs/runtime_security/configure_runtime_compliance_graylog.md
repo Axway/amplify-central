@@ -33,7 +33,7 @@ Before installing and configuring, make sure you have the following agent prereq
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL
     * There is a graphical environment (optional)
-* An Amplify platform user account that has the **Platform Administrator** and **Central Admin** roles
+* An Amplify platform user account that has the **Platform Administrator** and **Engage Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
 * Kubernetes context is set for the Kubernetes cluster where the agent will be deployed
 
