@@ -178,6 +178,32 @@ APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME_1=external-crd-name
 
 For detailed instructions on handling these custom credentials, see [Use Custom Credentials with the Discovery Agent](/docs/connect_manage_environ/connected_agent_common_reference/custom-external-credentials).
 
+#### Externally managed credential
+
+When a Front End Proxy is secured by a security scheme (OAuth, Basic Auth, API Key, OAuth External), the agent manages the credential provisioning based on respective credential type. This behavior can be overridden to allow custom processing for the credential by configuring a mapping for the credential type to externally managed credential request definition.
+
+Given the configuration below, an agent will ignore events which trigger the credential provisioning because it is assumed to be handled externally.
+
+| Variable name                                        | Description                                                                                                                                                                                                       |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPE     | The credential type to map for custom credential processing. Options are APIKey, Basic, Oauth, OAuthExternal.                                                                                                     |
+| APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPENAME | The name of the externally managed credential request definition to map for the credential type.                                                                                                                  |
+
+Here is an example of multiple credential type mappings. Notice how the index number was incremented for each successive mapping.
+
+```shell
+APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPE_1=OAuth
+APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPENAME_1=custom-oauth-crd
+
+APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPE_2=Basic
+APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPENAME_2=custom-basic-crd
+
+APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPE_3=APIKey
+APIMANAGER_CREDENTIALTYPE_MAPPING_CREDENTIALTYPENAME_3=custom-api-key-crd
+```
+
+For detailed instructions on handling these custom credentials, see [Use Custom Credentials with the Discovery Agent](/docs/connect_manage_environ/connected_agent_common_reference/custom-external-credentials).
+
 #### Custom OAuth External policy handling
 
 When a Front End Proxy is secured by an OAuth External policy for an identity provider that does not support OAuth 2.0 Dynamic Client Registration Protocol, the agent will link the API to a Credential Request definition for specifying the identifier of the OAuth client provisioned outside the context of an agent.
