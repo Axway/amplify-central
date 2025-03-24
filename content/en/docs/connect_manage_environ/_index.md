@@ -80,7 +80,7 @@ Using agents is the recommended way to add API services to your environment. Whe
 | **Discovery**                  | REST, SOAP, and GraphQL    |
 | **Application**                | Yes                        |
 | **Access Request**             | Yes                        |
-| **Credential Type**            | OAuth                      |
+| **Credential Type**            | APIKey / OAuth             |
 | **Credential Actions**         | Suspend/Enable             |
 | **Quota Enforcement**          | Yes                        |
 | **Traceability**               | Yes                        |
