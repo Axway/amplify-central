@@ -10,6 +10,25 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## March 21, 2025
+
+New features and enhancements for the March 21 update.
+
+### Agents updates for March 21, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+## March 17, 2025
+
+New features and enhancements for the March 17 update.
+
+### Marketplace updates for March 17, 2025
+
+* **Subscription and Revenue Dashboard have a new time selector**
+
 ## March 7, 2025
 
 New features and enhancements for the March 7 update.
