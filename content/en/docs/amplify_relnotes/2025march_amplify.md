@@ -16,10 +16,30 @@ New features and enhancements for the March 21 update.
 
 ### Agents updates for March 21, 2025
 
+* **External Custom Credential Request Provisioning with standard OAuth**
+  
+  (APIM DISCOVERY AGENT, ENHANCEMENT)</br>
+  The Axway API Manager Discovery Agent now allows overriding the standard OAuth Credential Request Type with a custom Credential Request Definition. Here's what is included: 
+   * **Override default CRD**: Users can define and implement their own custom CRD instead of relying on the default definition provided by the agent.
+   * **Ignore automatic credential provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager for standard OAuth security type. Users must manage the entire provisioning process externally.
+
+* **WSO2 - API Key support**
+  
+  (WSO2 DISCOVERY AGENT, ENHANCEMENT)</br>
+  The WSO2 Discovery Agent now supports API Key provisioning. This allows consumers to generate API Key credentials directly from the Marketplace for APIs managed in WSO2. The update is available in WSO2 Agent version **1.0.2** and later.
+  
 * **New agent versions available**
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agents bug fix for March 21, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| |APIGOV-29940 | **Issue**: WSO2 Agent status not updated <br/>**Resolution**: A fix was included to allow reporting the WSO2 agent status. The fix is available in Discovery Agent version **v1.0.2**. |
+| | APIGOV-29951 | **Issue**: SaaS embedded agents could not update the Stage mapping <br/>**Resolution**: A fix was included in the latest release of the embedded agent to allow updating the stage mappings. |
+|01679002 | APIGOV-29600 | **Issue**: Stage Visibility issue for public marketplace <br/>**Resolution**: A fix was added to allow only authenticated users to see a stage, when the stage visibility is set to "Only authenticated users can see this stage" in a public Marketplace. |
 
 ## March 17, 2025
 
@@ -27,8 +47,11 @@ New features and enhancements for the March 17 update.
 
 ### Marketplace updates for March 17, 2025
 
-* **Subscription and Revenue Dashboard have a new time selector**
+* **Enhanced timeframe filtering in Subscription Dashboard**
 
+  (BUSINESS INSIGHTS, CONSUMER INSIGHTS, ENHANCEMENT)</br>
+  The Subscription Dashboard now lets users refine their search by selecting a specific timeframe for querying subscription entries. Previously, subscription usage was only viewable in fixed 3-month increments. This update provides more flexibility in analyzing subscription trends, making it easier to review usage patterns over custom time periods.
+  
 ## March 7, 2025
 
 New features and enhancements for the March 7 update.
