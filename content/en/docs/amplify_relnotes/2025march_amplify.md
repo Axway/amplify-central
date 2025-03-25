@@ -16,10 +16,10 @@ New features and enhancements for the March 21 update.
 
 ### Agents updates for March 21, 2025
 
-* **External Custom Credential Request Provisioning with standard OAuth**
+* **External custom Credential Request Provisioning with standard OAuth**
   
   (APIM DISCOVERY AGENT, ENHANCEMENT)</br>
-  The Axway API Manager Discovery Agent now allows overriding the standard OAuth Credential Request Type with a custom Credential Request Definition. Here's what is included:
+  The Axway API Manager Discovery Agent now allows overriding the standard OAuth Credential Request Type with a custom Credential Request Definition:
     * **Override default CRD**: Users can define and implement their own custom CRD instead of relying on the default definition provided by the agent.
     * **Ignore automatic credential provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager for standard OAuth security type. Users must manage the entire provisioning process externally.
 
@@ -37,9 +37,9 @@ New features and enhancements for the March 21 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| |APIGOV-29940 | **Issue**: WSO2 Agent status not updated <br/>**Resolution**: A fix was included to allow reporting the WSO2 agent status. The fix is available in Discovery Agent version **v1.0.2**. |
-| | APIGOV-29951 | **Issue**: SaaS embedded agents could not update the Stage mapping <br/>**Resolution**: A fix was included in the latest release of the embedded agent to allow updating the stage mappings. |
-|01679002 | APIGOV-29600 | **Issue**: Stage Visibility issue for public marketplace <br/>**Resolution**: A fix was added to allow only authenticated users to see a stage, when the stage visibility is set to "Only authenticated users can see this stage" in a public Marketplace. |
+| |APIGOV-29940 | **Issue**: WSO2 Agent status not updated <br/>**Resolution**: The WSO2 agent status is now reported. The fix is available in Discovery Agent version **v1.0.2**. |
+| | APIGOV-29951 | **Issue**: SaaS embedded agents could not update the Stage mapping <br/>**Resolution**: The latest release of the embedded agent allows updates to the Stage mappings. |
+|01679002 | APIGOV-29600 | **Issue**: Stage visibility issue for public Marketplace <br/>**Resolution**: Only authenticated users are allowed to see a stage when the stage visibility is set to "Only authenticated users can see this stage" in a public Marketplace. |
 
 ## March 17, 2025
 
