@@ -34,7 +34,7 @@ A list of agents is displayed with the following information:
     * **Up To Date** - the agent is up to date.
     * **Update Available** - a new version is available.
     * **Outdated** - the current version of the agent is outdated. If there are any unsupported agents, an alert/banner will appear at the top of the screen.
-    * **Redacted** - the current version has been redacted. It is recommended to upgrade immediately. If there are any redacted agents, an alert/banner will appear at the top of the screen.
+    * **Retracted** - the current version has been retracted. It is recommended to upgrade immediately. If there are any retracted agents, an alert/banner will appear at the top of the screen.
 
 * **Environment** - the environment the agent is a part of.
 * **Agent's Last Activity** - the last time the agent was updated. By default, this field is selected to show agents in descending order based upon the last activity time.
