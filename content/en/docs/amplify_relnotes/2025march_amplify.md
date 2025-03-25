@@ -52,6 +52,8 @@ New features and enhancements for the March 17 update.
   (BUSINESS INSIGHTS, CONSUMER INSIGHTS, ENHANCEMENT)</br>
   The Subscription Dashboard now lets users refine their search by selecting a specific timeframe for querying subscription entries. Previously, subscription usage was only viewable in fixed 3-month increments. This update provides more flexibility in analyzing subscription trends, making it easier to review usage patterns over custom time periods.
 
+* **New navigation from Product details to Subscription information**
+
   (PRODUCT FOUNDRY, PROVIDER EXPERIENCE)</br>
   The product details / subscription list enables the provider to view subscription details and plan details by clicking the associated links.
 
