@@ -10,6 +10,66 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## March 21, 2025
+
+New features, enhancements, and bug fixes for the March 21 update.
+
+### Agents updates for March 21, 2025
+
+* **External custom Credential Request Provisioning with standard OAuth**
+  
+  (APIM DISCOVERY AGENT, ENHANCEMENT)</br>
+  The Axway API Manager Discovery Agent now allows overriding the standard OAuth Credential Request Type with a custom Credential Request Definition. The update is included in APIM Discovery Agent Agent version 1.2.18 and later. It includes:
+    * **Override default CRD**: Users can define and implement their own custom CRD instead of relying on the default definition provided by the agent.
+    * **Ignore automatic credential provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager for standard OAuth security type. Users must manage the entire provisioning process externally.
+
+* **WSO2 - API Key support**
+  
+  (WSO2 DISCOVERY AGENT, ENHANCEMENT)</br>
+  The WSO2 Discovery Agent now supports API Key provisioning. This allows consumers to generate API Key credentials directly from the Marketplace for APIs managed in WSO2. The update is available in WSO2 Agent version **1.0.2** and later.
+  
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agents bug fix for March 21, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| |APIGOV-29940 | **Issue**: WSO2 Agent status not updated <br/>**Resolution**: The WSO2 agent status is now reported. The fix is available in Discovery Agent version **v1.0.2**. |
+| | APIGOV-29951 | **Issue**: SaaS embedded agents could not update the Stage mapping <br/>**Resolution**: The latest release of the embedded agent allows updates to the Stage mappings. |
+|01679002 | APIGOV-29600 | **Issue**: Stage visibility issue for public Marketplace <br/>**Resolution**: Only authenticated users are allowed to see a stage when the stage visibility is set to "Only authenticated users can see this stage" in a public Marketplace. |
+
+## March 17, 2025
+
+New features, enhancements, and bug fixes for the March 17 update.
+
+### Marketplace updates for March 17, 2025
+
+* **Enhanced timeframe filtering in Subscription Dashboard**
+
+  (BUSINESS INSIGHTS, CONSUMER INSIGHTS, ENHANCEMENT)</br>
+  The Subscription Dashboard now lets users refine their search by selecting a specific timeframe for querying subscription entries. Previously, subscription usage was only viewable in fixed 3-month increments. This update provides more flexibility in analyzing subscription trends, making it easier to review usage patterns over custom time periods.
+
+* **New navigation from Product details to Subscription information**
+
+  (PRODUCT FOUNDRY, PROVIDER EXPERIENCE)</br>
+  The product details / subscription list enables the provider to view subscription details and plan details by clicking the associated links.
+
+* **Alignment between ellipsis menus and side panel actions**
+
+  (PRODUCT FOUNDRY, PROVIDER EXPERIENCE)</br>
+  The *Marketplace > Subscriptions*, *Marketplace > Application Registrations* and *Marketplace > Credentials* lists have new ellipsis menus that correspond to the possible actions on each line of the lists. For instance, a cancelled subscription can no longer be approved or rejected; only view and delete actions are available. The same actions are available in the object details screen.
+
+### Engage bug fixes for March 17, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| | APIGOV-29680 | **Issue**: Document structure drag and drop does not work correctly <br/>**Resolution**: Dropping a document is now set at the place of the cursor. |
+| 01595905 | APIGOV-27978 | **Issue**: The product title remains unchanged in the product overview. <br/>**Resolution**: The product title is now updated on the product details page after an update. |
+| | APIGOV-29927 | **Issue**: Plan not displayed due to a plan visibility set on another Marketplace <br/>**Resolution**: The plan visibility is now correctly filtered by the current Marketplace. |
+  
 ## March 7, 2025
 
 New features and enhancements for the March 7 update.
