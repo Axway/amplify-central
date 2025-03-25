@@ -40,6 +40,7 @@ New features, enhancements, and bug fixes for the March 21 update.
 | |APIGOV-29940 | **Issue**: WSO2 Agent status not updated <br/>**Resolution**: The WSO2 agent status is now reported. The fix is available in Discovery Agent version **v1.0.2**. |
 | | APIGOV-29951 | **Issue**: SaaS embedded agents could not update the Stage mapping <br/>**Resolution**: The latest release of the embedded agent allows updates to the Stage mappings. |
 |01679002 | APIGOV-29600 | **Issue**: Stage visibility issue for public Marketplace <br/>**Resolution**: Only authenticated users are allowed to see a stage when the stage visibility is set to "Only authenticated users can see this stage" in a public Marketplace. |
+| |APIGOV-30015 | **Issue**: When the APIM Traceability Agent is used to report metrics and usage without discovering APIs with the APIM Discovery Agent, the API Service name that is visible on the Business Insights is incorrect <br/>**Resolution**: The APIM Traceability Agent reports metrics and usage with the API service name from the APIM event log. The fix is available in Traceability Agent version **v1.2.17**.  APIM Traceabaility **v1.2.15** and **v1.2.16** have been redacted and removed from the [Axway Repository](https://repository.axway.com/catalog?q=agents).  |
 
 ## March 17, 2025
 
