@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## March 21, 2025
 
-New features and enhancements for the March 21 update.
+New features, enhancements, and bug fixes for the March 21 update.
 
 ### Agents updates for March 21, 2025
 
@@ -43,7 +43,7 @@ New features and enhancements for the March 21 update.
 
 ## March 17, 2025
 
-New features and enhancements for the March 17 update.
+New features, enhancements, and bug fixes for the March 17 update.
 
 ### Marketplace updates for March 17, 2025
 
@@ -67,8 +67,8 @@ New features and enhancements for the March 17 update.
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | | APIGOV-29680 | **Issue**: Document structure drag and drop does not work correctly <br/>**Resolution**: Dropping a document is now set at the place of the cursor. |
-| 01595905 | APIGOV-27978 | **Issue**: The product title remains unchanged in the product overview. <br/>**Resolution**: Product title updated on product details after update |
-| | APIGOV-29927 | **Issue**: Plan not displayed due to a plan visibility set on another marketplace <br/>**Resolution**: Now the plan visibility is correctly filtered by the current Marketplace. |
+| 01595905 | APIGOV-27978 | **Issue**: The product title remains unchanged in the product overview. <br/>**Resolution**: The product title is now updated on the product details page after an update. |
+| | APIGOV-29927 | **Issue**: Plan not displayed due to a plan visibility set on another Marketplace <br/>**Resolution**: The plan visibility is now correctly filtered by the current Marketplace. |
   
 ## March 7, 2025
 
