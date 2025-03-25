@@ -57,10 +57,10 @@ New features and enhancements for the March 17 update.
   (PRODUCT FOUNDRY, PROVIDER EXPERIENCE)</br>
   The product details / subscription list enables the provider to view subscription details and plan details by clicking the associated links.
 
-* **Alignment between ellipsis menus and side blade actions**
+* **Alignment between ellipsis menus and side panel actions**
 
   (PRODUCT FOUNDRY, PROVIDER EXPERIENCE)</br>
-  The Marketplace > Subscriptions, Marketplace > Application Registrations and Marketplace > Credentials list have new ellipsis menu that correspond to the possible action on each line of the list. For instance, a cancelled subscription can no longer be approved nor rejected: only view or delete actions are available. The same actions are available in the object details screen.
+  The *Marketplace > Subscriptions*, *Marketplace > Application Registrations* and *Marketplace > Credentials* lists have new ellipsis menus that correspond to the possible actions on each line of the lists. For instance, a cancelled subscription can no longer be approved or rejected; only view and delete actions are available. The same actions are available in the object details screen.
 
 ### Engage bug fixes for March 17, 2025
 
