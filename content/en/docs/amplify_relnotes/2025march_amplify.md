@@ -19,7 +19,7 @@ New features and enhancements for the March 21 update.
 * **External custom Credential Request Provisioning with standard OAuth**
   
   (APIM DISCOVERY AGENT, ENHANCEMENT)</br>
-  The Axway API Manager Discovery Agent now allows overriding the standard OAuth Credential Request Type with a custom Credential Request Definition:
+  The Axway API Manager Discovery Agent now allows overriding the standard OAuth Credential Request Type with a custom Credential Request Definition. The update is included in APIM Discovery Agent Agent version 1.2.18 and later. It includes:
     * **Override default CRD**: Users can define and implement their own custom CRD instead of relying on the default definition provided by the agent.
     * **Ignore automatic credential provisioning**: The agent will automatically bypass the default credential provisioning in the API Manager for standard OAuth security type. Users must manage the entire provisioning process externally.
 
