@@ -51,6 +51,17 @@ New features and enhancements for the March 17 update.
 
   (BUSINESS INSIGHTS, CONSUMER INSIGHTS, ENHANCEMENT)</br>
   The Subscription Dashboard now lets users refine their search by selecting a specific timeframe for querying subscription entries. Previously, subscription usage was only viewable in fixed 3-month increments. This update provides more flexibility in analyzing subscription trends, making it easier to review usage patterns over custom time periods.
+
+  (PRODUCT FOUNDRY, PROVIDER EXPERIENCE)</br>
+  The product details / subscription list enables the provider to view subscription details and plan details by clicking the associated links.
+
+### Engage bug fixes for March 17, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| | APIGOV-29680 | **Issue**: Document structure drag and drop does not work correctly <br/>**Resolution**: Dropping a document is now set at the place of the cursor. |
+| 01595905 | APIGOV-27978 | **Issue**: The product title remains unchanged in the product overview. <br/>**Resolution**: Product title updated on product details after update |
+| | APIGOV-29927 | **Issue**: Plan not displayed due to a plan visibility set on another marketplace <br/>**Resolution**: Now the plan visibility is correctly filtered by the current Marketplace. |
   
 ## March 7, 2025
 
