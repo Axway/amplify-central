@@ -55,7 +55,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
     ![ui create service account screen](/Images/integration/ui-create-service-account.png)
 
-4. Complete the form. 
+4. Complete the form.
 
 5. When finished, click **Save**. A dialog appears allowing you to view or copy the generated secret to store securely. You need to store this secret, as this is the only time it will ever be displayed.
 
