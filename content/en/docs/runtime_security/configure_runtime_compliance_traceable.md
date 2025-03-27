@@ -11,8 +11,8 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 * Identify existing Amplify environments that Traceable monitors API Calls for
 * Gather the following information that will be used by the agent to communicate with Traceable:
     * The Region for the Traceable app
-    * Platform API token for authenticating with Traceable
-        * [https://app.[TRACEABLE_REGION.]traceable.ai/preferences/api-tokens] (ie. [https://app.eu.traceable.ai/preferences/api-tokens])
+    * Platform API token for authenticating with Traceable, replace TRACEABLE_REGION as needed in the URL
+        * [https://app.{TRACEABLE_REGION.}traceable.ai/preferences/api-tokens] (ie. [https://app.eu.traceable.ai/preferences/api-tokens])
 * Ensure you have the following tools installed:
     * The Axway Central CLI must be installed, and Amplify platform connectivity is required to configure the Traceable agent
 
