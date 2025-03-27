@@ -18,8 +18,6 @@ Once Billing integration is installed and configured, you are ready to monetize 
 
     ![Product plan](/Images/marketplace/billing_integration/usage1.png)
 
-    ![Create product plan](/Images/marketplace/billing_integration/usage2.png)
-
 2. Once the plan is activated, the integration creates the corresponding plan in the billing platform. Note that the billing platform's Plan Code contains the Amplify Product Plan ID.
 
     ![Recurly plan](/Images/marketplace/billing_integration/usage3.png)

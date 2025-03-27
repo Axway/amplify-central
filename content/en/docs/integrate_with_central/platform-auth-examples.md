@@ -55,17 +55,11 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
     ![ui create service account screen](/Images/integration/ui-create-service-account.png)
 
-4. Complete the following form. This example uses Client Secret, Platform Generated and the Engage Admin role.
-
-    ![ui service account form screen](/Images/integration/ui-service-account-form.png)
+4. Complete the form.
 
 5. When finished, click **Save**. A dialog appears allowing you to view or copy the generated Secret to store securely. You need to store this Secret, as this is the only time it will ever be displayed.
 
-    ![ui service account form screen](/Images/integration/ui-service-account-secret.png)
-
 Now that your service account has been created, use your Client ID and Secret to authenticate to the platform.
-
-![ui service account completed screen](/Images/integration/ui-service-acccount-client-id.png)
 
 ## Use your service account
 
