@@ -175,7 +175,7 @@ The rest of the prompts relate to the Istio agents. Continue with [Discovery Age
     Enter the Kubernetes cluster port: (443)
     ```
 
-5. Enter the name of the Kubernetes secret to store the certificate. By default, the Istio ingress gateway is deployed in the `istio-system` namespace, and the secret for the gateway certificate is saved to this namespace. The creation of this namespace is handled by the deployment of Istio, if it does not exists yet.
+5. Enter the name of the Kubernetes Secret to store the certificate. By default, the Istio ingress gateway is deployed in the `istio-system` namespace, and the Secret for the gateway certificate is saved to this namespace. The creation of this namespace is handled by the deployment of Istio, if it does not exists yet.
 
    ```bash
    Enter the name of the secret to store the Istio gateway certificate: (gateway-cert)
@@ -197,7 +197,7 @@ The rest of the prompts relate to the Istio agents. Continue with [Discovery Age
     Provide certificate
     ```
 
-The console displays two lines of text indicating that the certificate and key were created and that a Kubernetes secret was created in the `istio-system` namespace:
+The console displays two lines of text indicating that the certificate and key were created and that a Kubernetes Secret was created in the `istio-system` namespace:
 
 ```bash
 Would you like to generate a self signed certificate, or provide your own?: Generate self signed certificate
@@ -221,7 +221,7 @@ Created secret/gateway-cert in the istio-system namespace.
     Created secret/gateway-cert in the istio-system namespace.
     ```
 
-    The CLI will create the secret in the `istio-system` namespace.
+    The CLI will create the Secret in the `istio-system` namespace.
 
 ### Discovery Agent prompts
 
@@ -276,7 +276,7 @@ Created secret/gateway-cert in the istio-system namespace.
 
 ### Traceability Agent prompts
 
-1. Optionally enable traceability logging to gather usage and metrics of your API Services.
+1. Optionally enable traceability logging to gather usage and metrics of your API services.
 
     ```bash
     Would you like to enable transaction logging?:

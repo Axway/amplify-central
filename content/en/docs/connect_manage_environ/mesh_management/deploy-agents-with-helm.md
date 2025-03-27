@@ -6,7 +6,7 @@ date: 2022-9-26
 ---
 Before deploying the helm chart, you must prepare the Kubernetes cluster, the Amplify environment, and the override file for deploying the chart correctly.
 
-## Prepare the kubernetes cluster
+## Prepare the Kubernetes cluster
 
 To prepare the cluster for the Amplify Agents, create a namespace for the agents to run in:
 
@@ -38,7 +38,7 @@ Client ID: istio-service-account_12345678-0000-4444-99e9
 
 After the service account has been created you will be provided with a Client ID. Save this ID to be used later in the `hybrid-override.yaml` to install the agents.
 
-The public and private keys that were used to create the service account must be added to the namespace as a secret:
+The public and private keys that were used to create the service account must be added to the namespace as a Secret:
 
 ```bash
 kubectl create secret generic amplify-agents-keys \
@@ -48,7 +48,7 @@ kubectl create secret generic amplify-agents-keys \
 --from-literal=password="" -o yaml
 ```
 
-Alternatively, the kubernetes secrets can be created with the helm deployment by overriding the secret properties. Please refer to the section [Update the override file](#update-the-override-file)
+Alternatively, the Kubernetes Secrets can be created with the helm deployment by overriding the Secret properties. Please refer to the section [Update the override file](#update-the-override-file)
 
 ## Prepare Istio
 

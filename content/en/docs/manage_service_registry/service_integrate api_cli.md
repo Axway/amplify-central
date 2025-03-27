@@ -400,7 +400,7 @@ Where `product.json` has the following content:
 
 Provide the Product with an image / avatar, making it visually appealing to the API consumer.
 
-This script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedProductName`. It will query the API Server for the Product resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the Product has an image attached.
+This script queries the created resources on disk using `jq` and stores the result in the environment variables. It will based64 encode the content of a .png file and store this in an environment variable called `encodedProductName`. It will query the API Server for the product resource and update the responding JSON with the values from the environment variables. Finally, it pushes the updates json content back to the API Server so that the product has an image attached.
 
 ```bash
 #!/bin/bash

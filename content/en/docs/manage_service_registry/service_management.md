@@ -35,8 +35,8 @@ To list API services:
 
    * All - View all API services from all API Gateways and environments
    * Design - View all API services from all Design repository environments
-   * Runtime Managed - View all API Services from all Runtime Managed API Gateways
-   * Runtime Unmanaged - View all API Services in all Runtime Unmanaged environments
+   * Runtime Managed - View all API services from all Runtime Managed API Gateways
+   * Runtime Unmanaged - View all API services in all Runtime Unmanaged environments
 
 3. View the following information for all services:
 
@@ -67,7 +67,7 @@ Click on the Service name or icon to view the following detailed information for
 * The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
 * The general Assets tab displays the assets that contain this API service, the state of the assets, and when they were last modified.
 * The general Products tab displays the products that contain this API service, the state and status of the products, and when they were last modified.
-* The Versions tab displays version information for the specific service. Every version of the service is displayed by Service Revision name, specification type, and created/updated date, making it easy to view all versions of an API service. This tab also displays the number of endpoints, assets, products, and if enabled, Security, Design, and Runtime compliance validation scores for each of the API Service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+* The Versions tab displays version information for the specific service. Every version of the service is displayed by Service Revision name, specification type, and created/updated date, making it easy to view all versions of an API service. This tab also displays the number of endpoints, assets, products, and if enabled, Security, Design, and Runtime compliance validation scores for each of the API service(s) in the Environment. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
 
     {{< alert title="Tip" color="secondary" >}} Enter the name of a version in the search bar to quickly find a specific version. <br /> <br/>Click Compliance Score **Details** to open the Compliance tab and view the Security and Design Compliance details, download results in CSV format, and run linting tests. {{< /alert >}}
 
@@ -95,9 +95,9 @@ Click on the Service name or icon to view the following detailed information for
 4. In the *Services* tab at the bottom of the page, click on the trash bin associated with the service you want to delete.
 5. Type the name of the service and click on the confirmation button that “I understand this is a permanent and irreversible action. Delete.” **All versions of the service are deleted.**
 
-## Create Product
+## Create product
 
-Use Create Product to quickly create a product in draft. An asset and a product will automatically be generated. Changes can be made to the product from the Product Foundry if needed.
+Use **Create Product** to quickly create a product in draft. An asset and a product will automatically be generated. Changes can be made to the product from the Product Foundry if needed.
 
 1. Navigate to *Catalog > Service Registry*.
 2. From the list view, click the ellipsis that is associated to the service.
@@ -150,7 +150,7 @@ Create a mock endpoint to simulate the behavior of an API. Contact Axway Support
 
 {{< alert title="Tip" color="secondary" >}}Mocked endpoints will always be created with the state "MOCKED" as to be easily identifiable.{{< /alert >}}
 
-These requirements must be met before an API Service can create a mock endpoint:
+These requirements must be met before an API service can create a mock endpoint:
 
 1. The Service must be OAS2/3.
 2. The organization must have the API Mocking entitlement.
@@ -164,11 +164,11 @@ To create a mock endpoint:
 4. Enter the information in the *Create Mock Endpoint* side panel. Note that only two of the following fields are required:
 
     * **Endpoint Name** - A friendly name, or title, for this mock endpoint.
-    * **API Service Version** - (required) Select or search for a version number for the API Service. The latest version option is automatically updated with new API Service versions.
+    * **API Service Version** - (required) Select or search for a version number for the API service. The latest version option is automatically updated with new API service versions.
     * **Mock Endpoint Name** - (required) Provide a unique name to be appended to the mock URL. Must be unique for your organization.
     * **Secure Mock Endpoint** - By default, the mocked endpoint is not secured. Toggle the button on to secure the mocked endpoint with an authorization header.
 
-5. Click **Save** to save your changes. If successful, a success screen will give the option to close the side panel or go to the API Service.
+5. Click **Save** to save your changes. If successful, a success screen will give the option to close the side panel or go to the API service.
 
 {{< alert title="Note" color="primary" >}}Make sure that your mock endpoint is secured. This requires an HTTP request to set an authorization header, as shown below, with your Axway login token. The Marketplace "Try it out" feature will automatically set this header. Disabling this security feature will make the mock service public to everyone on the Internet.
 
