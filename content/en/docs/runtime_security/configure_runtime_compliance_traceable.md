@@ -12,7 +12,7 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 * Gather the following information that will be used by the agent to communicate with Traceable:
     * The Region for the Traceable app
     * Platform API token for authenticating with Traceable
-        * https://app.[TRACEABLE_REGION.]traceable.ai/preferences/api-tokens (ie. https://app.eu.traceable.ai/preferences/api-tokens)
+        * [https://app.[TRACEABLE_REGION.]traceable.ai/preferences/api-tokens] (ie. [https://app.eu.traceable.ai/preferences/api-tokens])
 * Ensure you have the following tools installed:
     * The Axway Central CLI must be installed, and Amplify platform connectivity is required to configure the Traceable agent
 
@@ -39,7 +39,7 @@ On a set frequency the Amplify Traceable agent will calculate a risk score for y
 
 ### Conformance analysis
 
-The Amplify Traceable agent will keep you informed on how well your API Spec files compare to real time API data as seen by Traceable. By linking your managed environments, via other Amplify agents, to Traceable environments the process is handled for you. 
+The Amplify Traceable agent will keep you informed on how well your API Spec files compare to real time API data as seen by Traceable. By linking your managed environments, via other Amplify agents, to Traceable environments the process is handled for you.
 
 * The Amplify Traceable agent will find all API Specs on Amplify and upload them to Traceable
 * On a set frequency the Amplify Traceable agent will have Traceable run a Conformance Analysis job
@@ -69,7 +69,7 @@ Before installing and configuring, make sure you have the following agent prereq
 * An Amplify platform user account that has the **Platform Administrator** and **Engage Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
 * Axway CLI with the Engage CLI installed
-    * Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/). 
+    * Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
 The agent must have access to:
 
