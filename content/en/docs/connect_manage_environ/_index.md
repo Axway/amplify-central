@@ -5,7 +5,7 @@ weight: 350
 date: 2025-02-05
 ---
 
-Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
+Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, Secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
 
 The following is an example of a simple environment with an API service asset:
 
@@ -18,11 +18,11 @@ The following is an example of a simple environment with an API service asset:
     * Secrets
 ```
 
-The API services, webhooks, and secrets in the example all have a hard dependency to the environment. If the environment is deleted all assets within the environment will also be deleted. The same hard dependency applies to all child assets.
+The API services, webhooks, and Secrets in the example all have a hard dependency to the environment. If the environment is deleted all assets within the environment will also be deleted. The same hard dependency applies to all child assets.
 
 Another example is, if a version within the API service is deleted, its endpoint will also be deleted, but not the API service.
 
-The relationship between API service assets, webhooks, and secrets is a soft dependency. If a webhook is deleted, neither of the other two will be affected. However, this may break integrations where the webhook was being used, for example, in a catalog item.
+The relationship between API service assets, webhooks, and Secrets is a soft dependency. If a webhook is deleted, neither of the other two will be affected. However, this may break integrations where the webhook was being used, for example, in a catalog item.
 
 You can combine assets within an environment to create catalog items that consumers can then subscribe to and use.
 
@@ -135,7 +135,7 @@ An API service represents a physical deployment of a resource in an environment.
 
 #### Versions
 
-API Services have a specification based on type (OAS2, OAS3, WSDL, Protobuf, etc). Whenever this specification changes, a version must be created. This helps account for different stages in the lifecycle of the API service. Each version has a direct dependency on its associated API services and can be individually configured for differing consumer access needs.
+API services have a specification based on type (OAS2, OAS3, WSDL, Protobuf, etc). Whenever this specification changes, a version must be created. This helps account for different stages in the lifecycle of the API service. Each version has a direct dependency on its associated API services and can be individually configured for differing consumer access needs.
 
 #### Endpoints
 

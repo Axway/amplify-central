@@ -45,7 +45,7 @@ The triggers and associated webhooks will use this name for their scope.
 
 ## Create the webhook
 
-Register the webhook that will receive notifications for changes in discovered API service revisions. To do this, create a Webhook resource within the scope of the integration created above. For this tutorial, use a webhook listener at [https://webhook.site/](https://webhook.site/). Run the following command to create a webhook:
+Register the webhook that will receive notifications for changes in discovered API service revisions. To do this, create a webhook resource within the scope of the integration created above. For this tutorial, use a webhook listener at [https://webhook.site/](https://webhook.site/). Run the following command to create a webhook:
 
 ```bash
 axway central create -f webhook.json -o json -y > webhook-details.json

@@ -5,7 +5,7 @@ weight: 20
 date: 2022-05-26
 ---
 
-Consumer insights provides API Consumers with secure, self-service access to actionable insights regarding their usage of the APIs from the Marketplace.
+Consumer insights provides API consumers with secure, self-service access to actionable insights regarding their usage of the APIs from the Marketplace.
 
 Access to the Consumer Insights menu and dashboards is based on your role and permissions and your organization's subscriptions to the Marketplace. Users must have a Consumer or Subscription Admin [role](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the dashboards. From the Marketplace left navigation click **Consumer Insights**, and then select a dashboard you want to view.
 
@@ -53,7 +53,7 @@ Click **API Traffic** to view the traffic information for the API or Application
 
 You can filter by applications, methods, status codes, and a pre-configured time range or customize your own.
 
-{{< alert title="Note" color="primary" >}} API Traffic is based on a limited sample of the actual gateway traffic and will not show all transactions.{{< /alert >}}
+{{< alert title="Note" color="primary" >}} API traffic is based on a limited sample of the actual gateway traffic and will not show all transactions.{{< /alert >}}
 
 Each individual item provides the following data:
 

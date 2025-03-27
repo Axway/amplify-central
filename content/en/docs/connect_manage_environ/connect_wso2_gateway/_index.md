@@ -35,8 +35,8 @@ When handling a new access request event for an existing managed application, th
 
 * Add a subscription policy containing a business plan
 * Create a quota plan and assign it to the API policy
-* Identify the API or API Product and interrogate API id
-* Assign API or API Product with the created application
+* Identify the API or API product and interrogate API ID
+* Assign API or API product with the created application
 * Add/update application's identifiers
 
 For deprovisioning:
@@ -57,7 +57,7 @@ When handling a new credential event for a given application, the following step
         * Application's API key is revoked and removed from the application.
 * For OAuth2:
     * Provision:
-        * Create Oauth Key - an OAuth2 strategy is created and assigned to the application.
+        * Create Oauth key - an OAuth2 strategy is created and assigned to the application.
     * Deprovision:
         * The OAuth2 strategy is deleted and removed from application.
 
@@ -201,7 +201,7 @@ Use one of the following settings, for both agents, to set the region the agent 
 
 ### WSO2 API Manager - baseURL (used for Publisher Portal / Dev Portal / Admin Portal)
 
-Values of the baseURL must be provided for the agent to be able to fulfill API Calls to WSO2.  The baseURL is where the WSO2 APIM resides.
+Values of the baseURL must be provided for the agent to be able to fulfill API calls to WSO2.  The baseURL is where the WSO2 APIM resides.
 
 * baseURL: [https:/your-domain:9443]
 * Publisher Portal: [https://your-domain:9443/publisher]
@@ -211,12 +211,12 @@ Values of the baseURL must be provided for the agent to be able to fulfill API C
 ### WSO2 API Manager -  API portal Client ID and Secret & Dev Portal ClientID and Secret
 
 The Discovery Agent uses the credentials provided by calling the dynamic client registration(DCR) to connect to, discover APIs and track transactions.
-WSO2 API Manager uses OAuth 2.0 for security. This means that applications must be authenticated before they can access the API Manager's resources (like API discovery). The client ID and secret act as your application's credentials, verifying its identity to the API Manager.
+WSO2 API Manager uses OAuth 2.0 for security. This means that applications must be authenticated before they can access the API Manager's resources (like API discovery). The Client ID and Secret act as your application's credentials, verifying its identity to the API Manager.
 
 #### How to obtain Client ID and Client Secret
 
 * Understand the DCR Flow
-    * The DCR endpoint allows you to register a client dynamically without prior manual registration. Upon successful registration, the response will contain the client_id (consumer key) and client_secret (secret key).
+    * The DCR endpoint allows you to register a client dynamically without prior manual registration. Upon successful registration, the response will contain the client_id (consumer key) and client_secret (Secret key).
 * Identify the DCR Endpoint
     * Example - WSO2: [https://wso2-server/client-registration/v0.17/register]
 * Make the DCR Request (WSO2 example)
@@ -235,7 +235,7 @@ curl -X POST https://<wso2-server>/client-registration/v0.17/register \
 ```
 
 * Parse the Response (WSO2 example)
-    * A successful response will include the client_id (consumer key) and client_secret (secret key).
+    * A successful response will include the client_id (consumer key) and client_secret (Secret key).
 
 ```
 json
