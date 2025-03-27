@@ -4,28 +4,61 @@ linkTitle: Configure Traceable runtime compliance
 weight: 20
 ---
 
-Configure your runtime compliance with the Axway Central CLI and Traceable
+Configure your runtime compliance and conformance analysis with the Axway Central CLI and Traceable
 
 ## Before you start
 
-* Identify existing Amplify environments that have Managed APIs for the Traceable agent to correlate with the API calls monitored by Traceable
+* Identify existing Amplify environments that Traceable monitors API Calls for
 * Gather the following information that will be used by the agent to communicate with Traceable:
     * The Region for the Traceable app
     * Platform API token for authenticating with Traceable
+        * https://app.[TRACEABLE_REGION.]traceable.ai/preferences/api-tokens (ie. https://app.eu.traceable.ai/preferences/api-tokens)
 * Ensure you have the following tools installed:
     * The Axway Central CLI must be installed, and Amplify platform connectivity is required to configure the Traceable agent
-    * Kubectl version that is compatible with your Kubernetes cluster with Traceable deployment
-    * Helm 3.2.4 or later
 
 ## Objectives
 
-Learn how to install and configure the Traceable agent for runtime compliance.
+* Learn the benefits of integrating Amplify Engage with Traceable.
+* Learn how to install and configure the Traceable agent for runtime compliance and conformance analysis.
 
-## Prerequisites
+## Traceable integration
+
+Integrating Amplify Engage with Traceable will bring many benefits, including discovery of api endpoints being used in real time, metrics for the usages of those endpoints, a risk score calculation, and conformance analysis results.
+
+### Discovery of Traceable API endpoints
+
+During each polling interval of your Amplify Traceable agent the discovery process will take place. In this process the agent will have Traceable create an API OAS specification document representing all API traffic that Traceable has seen for that Environment. This will be represented in Amplify Engage as an API Service where you can observe the specification as seen by real time data.
+
+### Traceability metrics for Traceable API endpoints
+
+Along with the discovery process the Amplify Traceable agent will also report metrics against the API Service from the realtime data that Traceable has captured. This will help you visualize the API traffic that Traceable has captured against the Traffic that your Managed Gateway has reported in one place.
+
+### Compliance risk scoring
+
+On a set frequency the Amplify Traceable agent will calculate a risk score for your APIs. This score and grade will inform you about how at risk a certain Environment is at based on the traffic and data exchanged by APIs in that Environment. This risk score and will be visualized under the API Service the Amplify Traceable agent creates.
+
+### Conformance analysis
+
+The Amplify Traceable agent will keep you informed on how well your API Spec files compare to real time API data as seen by Traceable. By linking your managed environments, via other Amplify agents, to Traceable environments the process is handled for you. 
+
+* The Amplify Traceable agent will find all API Specs on Amplify and upload them to Traceable
+* On a set frequency the Amplify Traceable agent will have Traceable run a Conformance Analysis job
+* After completion those job results are reflected, not only in Traceable, but on Amplify
+    * Within the API Service view in the Amplify Traceable environment
+    * Within the Environment details view for your Referenced Managed environments
+
+With these results you will see the following.
+
+* Matched endpoints with Issues - these are APIs that are documented but the API Traffic seen by Traceable does not match the documentation
+* Shadow endpoints - these are APIs that are not documented but API Traffic is flowing threw them
+* Orphan endpoints - these are APIs that are documented but no API Traffic is utilizing them
+* Matched endpoints without Issues - these are APIs that are documented correctly when compared to the API Traffic data Traceable has seen
+
+Finally these results are accompanied by a link to the Conformance Analysis job that calculated them so you can learn more on Traceable.
+
+## Installation prerequisites
 
 Before installing and configuring, make sure you have the following agent prerequisites.
-
-### Agent configuration prerequisites
 
 * Any machine (Windows / Linux / Mac) where:
     * You can access platform.axway.com, login.axway.com and repository.axway.com on port 443
@@ -35,32 +68,15 @@ Before installing and configuring, make sure you have the following agent prereq
     * There is a graphical environment (optional)
 * An Amplify platform user account that has the **Platform Administrator** and **Engage Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
-* Kubernetes context is set for the Kubernetes cluster where the agent will be deployed
-
-### Agent deployment prerequisites
-
-Amplify Traceable agent is delivered as a Helm chart that can be deployed in the same Kubernetes cluster where a Traceable agent is deployed.
+* Axway CLI with the Engage CLI installed
+    * Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/). 
 
 The agent must have access to:
 
 * The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
 * The Traceable Platform API
 
-## Configure the agents with Axway Central CLI
-
-Use Axway Central CLI to configure the agent. The CLI will prompt you for answers regarding Traceable installation, the service account used to ensure the connectivity from the agent to Amplify platform, and where to store the discovered APIs in the Amplify platform.
-
-### Step 1: Install Axway Central CLI
-
-Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
-
-Run `axway central --version` to validate your installation.
-
-### Step 2: Folder preparation
-
-Create an empty directory where Axway Central CLI will generate files. Run all Axway Central CLI from this directory.
-
-### Step 3: Identify yourself to Amplify platform with Axway CLI
+### Identify yourself to Amplify platform with Axway CLI
 
 There are two ways to authenticate with Axway CLI:
 
@@ -106,7 +122,22 @@ The current region is set to US.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
 
-### Step 4: Run the agents' configure procedure
+## Docker deployment Prerequisites
+
+* For containerized agents, Docker must be installed and you will need a basic understanding of Docker commands
+
+## Helm deployment Prerequisites
+
+* Ensure you have the following tools installed:
+    * Kubectl - compatible version with your Kubernetes cluster with Traceable deployment
+    * Helm 3.2.4 or later
+* Kubernetes context is set for the Kubernetes cluster where the agent will be deployed
+
+## Step 1: Folder preparation
+
+Create an empty directory where Axway Central CLI will generate files. Run all Axway Central CLI from this directory.
+
+## Step 2: Run the agents' configure procedure
 
 The Axway Central CLI will guide you through the configuration of the agents.
 
@@ -131,20 +162,17 @@ axway central install agents --region=AP
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (Traceable in this scenario).
-
-2. Platform connectivity:
+2. Select the type of deployment for the Traceable agent (helm or docker).
+3. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
-        * **Referenced Environments**: choose from existing environments that have Managed APIs for the Traceable agent to correlate with the API calls monitored by Traceable API Security
+        * **Environment Mapping**: choose from existing environments that have Managed APIs and inform the agent of the Traceable environment that is linked.
    * **Team**: can be an existing team or one that will be created by the installation procedure
    * **Service account**: can be an existing service account created in Amplify. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
-
-3. Traceable API Security configuration setup options:
-   * **Namespace**: can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster
+4. Traceable API Security configuration setup options:
+   * **Namespace**: can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster (Helm install only)
    * **Traceable Region**: the region for Traceable
    * **Token**: the Platform API token for Traceable
-   * **Base path segment length**: the number of base path segments that the agent will use to correlate monitored APIs from Traceable to Managed APIs in existing environments. Default to `2`.
-
-4. Traceability module connectivity:
+5. Traceability module connectivity:
    * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack` or `HTTPS`
 
 Once you have answered all questions, the agent installation performs the following operations:
@@ -168,13 +196,24 @@ public_key.pem           * newly created service account only
 
 `private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify platform (if you choose to let the installation generate them).
 
-### Step 5: Deploy the agent in Kubernetes cluster
+## Step 3a: Deploy the agent in Docker
+
+The installation summary contains the Docker command needed to finish the installation.
+
+By default, the Docker commands are configured to use the latest available agent version. If you want to use a different version, verify the available version in the agent release note.
+
+```shell
+To complete the Traceable agent installation, run the following commands:
+  docker run --env-file "$(pwd)"/traceable.env -v "$(pwd)":/keys -v /data {agentImage}
+```
+
+Once the commands are completed, the agents should be running in within the Docker server.
+
+## Step 3b: Deploy the agent in Kubernetes cluster
 
 The installation summary contains the Helm command needed to finish the installation.
 
 By default, the Helm commands are configured to use the latest available agent version. If you want to use a different version, verify the available version in the agent release note.
-
-Sample:
 
 ```shell
 To complete the Traceable agent installation, run the following commands:
@@ -188,7 +227,7 @@ To complete the Traceable agent installation, run the following commands:
 
 Once the Helm commands are completed, the agents should be running in the Kubernetes cluster.
 
-#### Set up secrets for private repositories
+### Set up secrets for private repositories
 
 To deploy an image stored in a private repository, you must create a kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
 This is necessary for both the Discovery and Traceability agents.
@@ -217,7 +256,7 @@ helm repo update
 helm upgrade --install --namespace <YOUR_NAMESPACE> traceable-agent axway/traceable-agent -f agent-overrides.yaml --set image.pullSecret=<image-pull-secret-name>
 ```
 
-## Check that agents are running with Axway Central CLI
+## Step 4: Check that agents are running with Axway Central CLI
 
 After being authenticated to the platform with `axway auth login` command, run the following to check that the agents are running:
 
