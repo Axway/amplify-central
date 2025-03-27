@@ -18,8 +18,8 @@ The following settings can be used to control the sampling.  A percentage can be
 
 The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to **`0`**, may be set to any value between 0 and 10.  
 
-* A value of `0` results in no transactions sent to Amplify Analytics for the API Traffic display within Business Insights.  The API Health display will still show the API metrics even with sampling set to zero percent.
-* A value of `10` results in 10% of all transactions sent to Amplify Analytics for the API Traffic display.
+* A value of `0` results in no transactions sent to Amplify Analytics for the API traffic display within Business Insights.  The API Health display will still show the API metrics even with sampling set to zero percent.
+* A value of `10` results in 10% of all transactions sent to Amplify Analytics for the API traffic display.
 
 The agent uses a counter to apply the sampling. When a value (other than 0 and 10) is set, the agent will send all transactions up to that value and then not send any until it reaches 100.  Therefore, this percentage results in the first x of each 100 transactions being sampled.
 

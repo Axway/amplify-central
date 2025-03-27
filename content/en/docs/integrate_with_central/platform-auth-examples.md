@@ -3,7 +3,7 @@ title: Authorize API calls to platform services
 linkTitle: Authorize API calls to platform services
 weight: 400
 ---
-Use a service account client and secret key for authorizing clients to make REST calls to the Amplify platform API.  
+Use a service account Client and Secret key for authorizing clients to make REST calls to the Amplify platform API.  
 
 ## Before you start
 
@@ -29,7 +29,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 3. Enter a name and description.
 
-4. Select the client secret authentication method as either "Auto-generated client secret key" or "Custom client secret key." In this example, "Auto-generated client secret key" is used.
+4. Select the Client Secret authentication method as either "Auto-generated client secret key" or "Custom client secret key." In this example, "Auto-generated client secret key" is used.
 
 5. Select the appropriate role for this service account. In this example, Engage Admin is used. Your service account should now be created.
 
@@ -57,13 +57,13 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 4. Complete the form.
 
-5. When finished, click **Save**. A dialog appears allowing you to view or copy the generated secret to store securely. You need to store this secret, as this is the only time it will ever be displayed.
+5. When finished, click **Save**. A dialog appears allowing you to view or copy the generated Secret to store securely. You need to store this Secret, as this is the only time it will ever be displayed.
 
-Now that your service account has been created, use your client Id and secret to authenticate to the platform.
+Now that your service account has been created, use your Client ID and Secret to authenticate to the platform.
 
 ## Use your service account
 
-Now that you have created your service account with client and secret, you can reuse this approach in a scripted manner.
+Now that you have created your service account with Client and Secret, you can reuse this approach in a scripted manner.
 
 ### Authorization
 
@@ -71,13 +71,13 @@ If you are using cURL or Postman, the easiest way to authenticate is by using th
 
 #### Use the CLI Directly
 
-The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services:
+The following command will fulfill the authorization flow and cause the Client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services:
 
 ```shell
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json
 ```
 
-The following command will fulfill the authorization flow and cause the client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services in the EU region:
+The following command will fulfill the authorization flow and cause the Client ID and Secret to be base64 encoded, passed to the auth server and then subsequently use the token to call platform services in the EU region:
 
 ```shell
 axway auth login --client-id sa-test_6d66dc36-f838-4006-8c44-5340d4698be5 --client-secret c961d6f2-8596-4ec3-9aca-0b32f49bf328 --json --region=EU
@@ -111,7 +111,7 @@ You can extract and use the token from the resulting JSON response:
 
 This approach is cumbersome but demonstrates what is necessary to build an application using a language like JavaScript, Java or Golang.  
 
-Use the client ID and secret for basic authentication and base64 encode the string. A colon must be used as a field separator, so that the unencoded string looks like "clientID:secret":  
+Use the Client ID and Secret for basic authentication and base64 encode the string. A colon must be used as a field separator, so that the unencoded string looks like "clientID:secret":  
 
 ```shell
 echo -n "clientID:secret" | base64 
@@ -137,7 +137,7 @@ curl --location --request POST 'https://login.axway.com/auth/realms/Broker/proto
 }
 ```
 
-### Make the API Calls
+### Make the API calls
 
 Now that you have a valid bearer token you can make platform calls as outlined in [Amplify Platform API docs](https://docs.axway.com/category/api) and in the following examples.  
 

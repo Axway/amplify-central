@@ -5,7 +5,7 @@ weight: 10
 date: 2022-02-04
 ---
 
-Business insights provides API Providers and Program Managers with 360-degree actionable insights on their API Program, consumption, adoption, API health, applications, and environments.
+Business insights provides API providers and program Managers with 360-degree actionable insights on their API program, consumption, adoption, API health, applications, and environments.
 
 ## Business Insights dashboards
 
@@ -26,8 +26,8 @@ Each item in the list also provides the average duration, maximum duration, and 
 
 Click an individual item to see the usage data of individual transactions of that API over time.
 
-{{< alert title="Note" color="primary" >}} The API Usage is based on either the aggregated metrics the Traceability Agent is sending (agent using Agents SDK version higher than 1.1.14) or the aggregation of transactions sent by Traceability Agent (agent using Agents SDK version lower than 1.1.14).
-Depending on the Agent version you are using, the API Usage reporting for transactions on the data plane may not be in real time. This is because metrics are aggregated on the agent side and sent to the platform on regular intervals (@hourly by default).
+{{< alert title="Note" color="primary" >}} The API usage is based on either the aggregated metrics the Traceability Agent is sending (agent using Agents SDK version higher than 1.1.14) or the aggregation of transactions sent by Traceability Agent (agent using Agents SDK version lower than 1.1.14).
+Depending on the Agent version you are using, the API usage reporting for transactions on the data plane may not be in real time. This is because metrics are aggregated on the agent side and sent to the platform on regular intervals (@hourly by default).
 See the agent variable CENTRAL_METRICREPORTING_SCHEDULE if you want to lower the interval value.{{< /alert >}}
 
 ## API Traffic
@@ -69,7 +69,7 @@ Click an item in the API traffic list to view its transaction details, including
 
 ## Provider Engagement
 
-Click **Provider Engagement** to see metrics and details about your Provider teams engagement level to understand and improve overall health of your API program and engagement of different teams.
+Click **Provider Engagement** to see metrics and details about your provider teams engagement level to understand and improve overall health of your API program and engagement of different teams.
 
 ![Example of Provider Engagement](/Images/central/provider_engagement.png)
 

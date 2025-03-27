@@ -4,13 +4,13 @@ linkTitle: View Dependency Analysis
 draft: true
 weight: 60
 ---
-The *Dependency Analysis* view displays details about the relationships to the selected API service version. The relationship details enable the API Provider to make informed decisions and take actions on any of the dependencies.
+The *Dependency Analysis* view displays details about the relationships to the selected API service version. The relationship details enable the API provider to make informed decisions and take actions on any of the dependencies.
 
 {{< alert title="Note" color="primary" >}}
 The Dependency Analysis view is not supported for Axway Cloud and Service Mesh environments.
 {{< /alert >}}
 
-The *API Service* details page has multiple tabs to view:
+The *API service* details page has multiple tabs to view:
 
 * **Specifications** for the contract or API methods for the API service version.
 * **Endpoints** for the list of URLs of each deployed instance of the API service version.
@@ -20,7 +20,7 @@ The *API Service* details page has multiple tabs to view:
 The **Dependency Analysis** tab displays the following, if available, for the selected API service version:
 
 * Endpoint
-* available Marketplace items
+* Available Marketplace items
 * Subscriptions to the published Marketplace items
 
 To view Dependency Analysis details:

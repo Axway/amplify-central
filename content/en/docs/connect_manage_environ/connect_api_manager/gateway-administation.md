@@ -213,7 +213,7 @@ In cases where a policy is used but not mapped to a specific authentication type
 * The policy references an external link
 * The policy references a markdown file
 
-For the Traceability to properly associate a Marketplace Consumer with a transaction, the Invoke Policy must set the subject id as documented [here](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). The client application in API Manager must be updated outside of the Discovery Agent. Otherwise, the Traceability won't be able to make this association.
+For the Traceability to properly associate a Marketplace Consumer with a transaction, the Invoke Policy must set the subject ID as documented [here](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_virtualize_web/index.html). The client application in API Manager must be updated outside of the Discovery Agent. Otherwise, the Traceability won't be able to make this association.
 
 #### Customizing Discovery Agent logging variables
 
