@@ -122,16 +122,43 @@ The current region is set to US.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
 
-## Docker deployment Prerequisites
+## Docker deployment
+
+### Docker prerequisites
 
 * For containerized agents, Docker must be installed and you will need a basic understanding of Docker commands
 
-## Helm deployment Prerequisites
+### Environment variables
+
+| Variable                                       | Default | Usage                                                                                                                                                    |
+| ---------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TRACEABLE_REGION                               |         | The [Traceable Region](https://docs.traceable.ai/docs/allow-list) the agent will connect to. (US, US-1, EU, APAC, APAC-2, Canada, UAE)                   |
+| TRACEABLE_TOKEN                                |         | The Platform Token the agent will use when connecting to Traceable                                                                                       |
+| TRACEABLE_POLLINTERVAL                         | 1h      | The frequency the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks                                           |
+| TRACEABLE_COMPLIANCEFREQUENCY                  | 12h     | How often the agent will calculate a compliance risk score and send to Engage                                                                            |
+| TRACEABLE_CONFORMACEFREQUENCY                  | 7d      | How often the agent will have Traceable run a [Conformance Analysis](https://docs.traceable.ai/docs/conformance-analysis) job and send results to Engage |
+| TRACEABLE_ENVIRONMENTMAPPING_AMPLIFY_[INDEX]   |         | Match an Amplify Engage Environment Name with a Traceable Environment Name, for spec mapping in Conformance Analysis jobs                                |
+| TRACEABLE_ENVIRONMENTMAPPING_TRACEABLE_[INDEX] |         | Match an Amplify Engage Environment Name with a Traceable Environment Name, for spec mapping in Conformance Analysis jobs                                |
+
+## Helm deployment
+
+### Helm prerequisites
 
 * Ensure you have the following tools installed:
     * Kubectl - compatible version with your Kubernetes cluster with Traceable deployment
     * Helm 3.2.4 or later
 * Kubernetes context is set for the Kubernetes cluster where the agent will be deployed
+
+### Helm overrides
+
+| Override                       | Default | Usage                                                                                                                                                                            |
+| ------------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| traceable.region               |         | The [Traceable Region](https://docs.traceable.ai/docs/allow-list) the agent will connect to. (US, US-1, EU, APAC, APAC-2, Canada, UAE)                                           |
+| traceable.token                |         | The Platform Token the agent will use when connecting to Traceable                                                                                                               |
+| traceable.pollInterval         | 1h      | The frequency the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks                                                                   |
+| traceable.complianceFrequency  | 12h     | How often the agent will calculate a compliance risk score and send to Engage                                                                                                    |
+| traceable.conformanceFrequency | 7d      | How often the agent will have Traceable run a [Conformance Analysis](https://docs.traceable.ai/docs/conformance-analysis) job and send results to Engage                         |
+| traceable.environmentMapping   |         | An array of objects with an Amplify Engage Environment (key: `amplify`) Name with a Traceable Environment (key: `traceable`) Name, for spec mapping in Conformance Analysis jobs |
 
 ## Step 1: Folder preparation
 
