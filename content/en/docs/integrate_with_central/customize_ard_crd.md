@@ -196,17 +196,17 @@ The playground allows you to change the WebUI components (UISchema section of th
       "type": "string",
       "title": "Telephone",
       "minLength": 10
-    },
+    }
+  },
   "x-axway-order": [
     "firstName",
-    "latName",
+    "lastName",
     "age",
     "phone",
     "address",
     "city",
     "zipcode"
   ]
-  }
 }
 ```
 
