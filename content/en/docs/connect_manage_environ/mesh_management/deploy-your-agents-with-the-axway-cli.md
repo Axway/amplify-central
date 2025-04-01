@@ -284,21 +284,7 @@ Created secret/gateway-cert in the istio-system namespace.
       No
     ```
 
-2. Select a sampling rate. A sampling rate of 1 will log 1% of transactions, a sampling rate of 10 will log 10% of all transactions.
-
-    ```bash
-    What sampling rate would you like to use? (1-10):  (1)
-    ```
-
-3. Select if the agent should report all errors recorded by the Traceability Agent.
-
-    ```bash
-    Would you like to report all errors?:
-    ❯ Yes
-      No
-    ```
-
-4. Select the Traceability Agent protocol.
+2. Select the Traceability Agent protocol.
 
     ```bash
     ? Select Traceability protocol:  (Use arrow keys)

@@ -134,7 +134,7 @@ Add additional tags to resources on Amplify Engage, ignore tags on dataplane res
 
 ## Embedded Traceability Agent
 
-Configured to set if headers should be processed, redact certain information, sample an amount of the transactional data, and set the owner for the transactional data.
+Configured to set if headers should be processed, redact certain information, and set the owner for the transactional data.
 
 * Pull the existing Traceability Agent from your environment and direct it to a file:
 
@@ -160,9 +160,6 @@ Configured to set if headers should be processed, redact certain information, sa
                 * **keyMatch** - response headers keys that match any of these expressions will have the valueMatch sanitized
                 * **valueMatch** - when the header name matches the keyMatch expression, the valueMatch expression is applied and replaces the matches in the header value with the masking character value.
         * **maskingCharacter** - the set of character(s) that will replace any value matched while sanitizing
-    * **sampling** - the sampling settings that will be applied when reporting transactional data
-        * **percentage** - the percentage of all transactions that will be reported to Amplify Engage for display in Business and Consumer insights
-        * **allErrors** - when set to `true`, regardless of the percentage, all errored transactions will be reported to Amplify Engage
     * **owner** - the team owner that will be set when creating resources in Amplify Engage
         * type - set to `team`
         * id - the id value found when viewing the team in Amplify Engage
@@ -192,9 +189,6 @@ Configured to set if headers should be processed, redact certain information, sa
               - keyMath: <header-key-regex>
                 valueMatch: <header-val-regex>
           maskingCharacter: {*}
-        sampling: 
-          percentage: 1
-          allErrors: true
         owner:
           type: team
           id: <team-id>
