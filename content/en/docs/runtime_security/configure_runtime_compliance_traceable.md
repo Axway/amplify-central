@@ -27,7 +27,7 @@ Integrating Amplify Engage with Traceable will bring many benefits, including di
 
 ### Discovery of Traceable API endpoints
 
-During each polling interval of your Amplify Traceable agent the discovery process will take place. In this process the agent will have Traceable create an API OAS specification document representing all API traffic that Traceable has seen for that Environment. This will be represented in Amplify Engage as an API Service where you can observe the specification as seen by real time data.
+During each polling interval of your Amplify Traceable agent, the discovery process will take place. In this process, the agent will have Traceable create an API OAS specification document representing all API traffic that Traceable has seen for that Environment. This will be represented in Amplify Engage as an API Service where you can observe the specification as seen by real time data.
 
 ### Traceability metrics for Traceable API endpoints
 
