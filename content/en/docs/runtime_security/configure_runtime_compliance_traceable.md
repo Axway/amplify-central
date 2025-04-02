@@ -35,19 +35,19 @@ Along with the discovery process the Amplify Traceable agent will also report me
 
 ### Compliance risk scoring
 
-On a set frequency the Amplify Traceable agent will calculate a risk score for your APIs. This score and grade will inform you about how at risk a certain Environment is at based on the traffic and data exchanged by APIs in that Environment. This risk score and will be visualized under the API Service the Amplify Traceable agent creates.
+On a set frequency the Amplify Traceable agent will calculate a risk score for your APIs. This score and grade will inform you about how at risk a certain Environment is at based on the traffic and data exchanged by APIs in that Environment. This risk score and will be visualized under the API Service the Amplify Traceable agent creates. See `TRACEABLE_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
 
 ### Conformance analysis
 
-The Amplify Traceable agent will keep you informed on how well your API Spec files compare to real time API data as seen by Traceable. By linking your managed environments, via other Amplify agents, to Traceable environments the process is handled for you.
+The Amplify Traceable agent will keep you informed on how well your API Spec files compare to real time API data as seen by Traceable. By linking your managed environments, via other Amplify agents, to Traceable environments the process is handled for you automatically.
 
-* The Amplify Traceable agent will find all API Specs on Amplify and upload them to Traceable
-* On a set frequency the Amplify Traceable agent will have Traceable run a Conformance Analysis job
+* The Amplify Traceable agent (version 1.0.14 and later) will find all API Specs on Amplify and upload them to Traceable
+* On the set frequency (See `TRACEABLE_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables)) the Amplify Traceable agent will have Traceable run a Conformance Analysis job
 * After completion those job results are reflected, not only in Traceable, but on Amplify
     * Within the API Service view in the Amplify Traceable environment
     * Within the Environment details view for your Referenced Managed environments
 
-With these results you will see the following.
+With the Conformance Analysis job results, utilizing the API Specifications provided by Engage, you will see a more accurate result for the following:
 
 * Matched endpoints with Issues - these are APIs that are documented but the API Traffic seen by Traceable does not match the documentation
 * Shadow endpoints - these are APIs that are not documented but API Traffic is flowing threw them
@@ -133,7 +133,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | Variable                                       | Default | Usage                                                                                                                                                    |
 | ---------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | TRACEABLE_REGION                               |         | The [Traceable Region](https://docs.traceable.ai/docs/allow-list) the agent will connect to. (US, US-1, EU, APAC, APAC-2, Canada, UAE)                   |
-| TRACEABLE_TOKEN                                |         | The Platform Token the agent will use when connecting to Traceable                                                                                       |
+| TRACEABLE_TOKEN                                |         | The Traceable Platform Token the agent will use when connecting to Traceable                                                                                       |
 | TRACEABLE_POLLINTERVAL                         | 1h      | The frequency the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks                                           |
 | TRACEABLE_COMPLIANCEFREQUENCY                  | 12h     | How often the agent will calculate a compliance risk score and send to Engage                                                                            |
 | TRACEABLE_CONFORMACEFREQUENCY                  | 7d      | How often the agent will have Traceable run a [Conformance Analysis](https://docs.traceable.ai/docs/conformance-analysis) job and send results to Engage |
