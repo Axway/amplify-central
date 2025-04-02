@@ -20,7 +20,7 @@ When requesting a sampling period the user will also request a time frame, 0-300
 
 The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ#on-premise-Agent-Features), is already configured. The only other step is to request the sampling to begin using the Amplify Engage UI or CLI.
 
-{{< alert title="Note" color="primary" >}}The duration field below doe snot apply to SaaS agents, when enabled the SaaS agent will immediately run and send transactional data for that execution only.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The duration field below does not apply to SaaS agents, when enabled the SaaS agent will immediately run and send transactional data for that execution only.{{< /alert >}}
 
 #### Request via the UI
 
