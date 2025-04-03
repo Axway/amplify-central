@@ -34,7 +34,7 @@ The following table describes the operating system supported configurations that
 
 ## Install Axway CLI and Axway Central CLI
 
-1. Install `Node.js 12.13.0 LTS` or later.
+1. Install `Node.js 12.13.0 LTS` or later. (Update requirements)
 2. Install `npm 6.12.0` or later.
 3. Run the following command to install Axway CLI:
 
