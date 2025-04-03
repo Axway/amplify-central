@@ -8,7 +8,7 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 
 ## Before you start
 
-* Identify existing Amplify environments that Traceable monitors API Calls for
+* Identify existing Amplify environments that Traceable monitors API calls for
 * Gather the following information that will be used by the agent to communicate with Traceable:
     * The Region for the Traceable app
     * Platform API token for authenticating with Traceable, replace TRACEABLE_REGION as needed in the URL
@@ -23,38 +23,38 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 
 ## Traceable integration
 
-Integrating Amplify Engage with Traceable will bring many benefits, including discovery of api endpoints being used in real time, metrics for the usages of those endpoints, a risk score calculation, and conformance analysis results.
+Integrating Amplify Engage with Traceable will bring many benefits, including: discovery of API endpoints being used in real time, metrics for the usages of those endpoints, a risk score calculation, and conformance analysis results.
 
 ### Discovery of Traceable API endpoints
 
-During each polling interval of your Amplify Traceable agent, the discovery process will take place. In this process, the agent will have Traceable create an API OAS specification document representing all API traffic that Traceable has seen for that Environment. This will be represented in Amplify Engage as an API Service where you can observe the specification as seen by real time data.
+The discovery process occurs during each polling interval of your Amplify Traceable agent. During this process, Traceable creates an API OAS specification document representing all API traffic that Traceable has seen for that Environment. This is represented in Amplify Engage as an API service where you can observe the specification as seen by real time data.
 
 ### Traceability metrics for Traceable API endpoints
 
-Along with the discovery process the Amplify Traceable agent will also report metrics against the API Service from the realtime data that Traceable has captured. This will help you visualize the API traffic that Traceable has captured against the Traffic that your Managed Gateway has reported in one place.
+Along with the discovery process the Amplify Traceable agent also reports metrics against the API service from the real time data that Traceable has captured. This will help you visualize the API traffic that Traceable has captured against the Traffic that your Managed Gateway has reported in one place.
 
 ### Compliance risk scoring
 
-On a set frequency the Amplify Traceable agent will calculate a risk score for your APIs. This score and grade will inform you about how at risk a certain Environment is at based on the traffic and data exchanged by APIs in that Environment. This risk score and will be visualized under the API Service the Amplify Traceable agent creates. See `TRACEABLE_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
+On a set frequency the Amplify Traceable agent calculates a risk score for your APIs. This score and grade will inform you about how at risk a certain Environment is based on the traffic and data exchanged by APIs in that Environment. This risk score is visualized under the API Service the Amplify Traceable agent creates. See `TRACEABLE_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
 
 ### Conformance analysis
 
 The Amplify Traceable agent will keep you informed on how well your API Spec files compare to real time API data as seen by Traceable. By linking your managed environments, via other Amplify agents, to Traceable environments the process is handled for you automatically.
 
-* The Amplify Traceable agent (version 1.0.14 and later) will find all API Specs on Amplify and upload them to Traceable
+* The Amplify Traceable agent (version 1.0.14 and later) will find all API specs on Amplify and upload them to Traceable
 * On the set frequency (See `TRACEABLE_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables)) the Amplify Traceable agent will have Traceable run a Conformance Analysis job
 * After completion those job results are reflected, not only in Traceable, but on Amplify
     * Within the API Service view in the Amplify Traceable environment
-    * Within the Environment details view for your Referenced Managed environments
+    * Within the Environment details view for your referenced managed environments
 
-With the Conformance Analysis job results, utilizing the API Specifications provided by Engage, you will see a more accurate result for the following:
+With the Conformance Analysis job results, utilizing the API specifications provided by Engage, you will see a more accurate result for the following:
 
-* Matched endpoints with Issues - these are APIs that are documented but the API Traffic seen by Traceable does not match the documentation
-* Shadow endpoints - these are APIs that are not documented but API Traffic is flowing threw them
-* Orphan endpoints - these are APIs that are documented but no API Traffic is utilizing them
-* Matched endpoints without Issues - these are APIs that are documented correctly when compared to the API Traffic data Traceable has seen
+* Matched endpoints with issues - these are APIs that are documented but the API traffic seen by Traceable does not match the documentation
+* Shadow endpoints - these are APIs that are not documented but API traffic is flowing threw them
+* Orphan endpoints - these are APIs that are documented but no API traffic is utilizing them
+* Matched endpoints without Issues - these are APIs that are documented correctly when compared to the API traffic data Traceable has seen
 
-Finally these results are accompanied by a link to the Conformance Analysis job that calculated them so you can learn more on Traceable.
+Finally, these results are accompanied by a link to the Conformance Analysis job that calculated them so you can learn more on Traceable.
 
 ## Installation prerequisites
 
@@ -160,7 +160,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | traceable.conformanceFrequency | 7d      | How often the agent will have Traceable run a [Conformance Analysis](https://docs.traceable.ai/docs/conformance-analysis) job and send results to Engage                         |
 | traceable.environmentMapping   |         | An array of objects with an Amplify Engage Environment (key: `amplify`) Name with a Traceable Environment (key: `traceable`) Name, for spec mapping in Conformance Analysis jobs |
 
-## Step 1: Folder preparation
+## Step 1: Create directory
 
 Create an empty directory where Axway Central CLI will generate files. Run all Axway Central CLI from this directory.
 
@@ -192,7 +192,7 @@ The installation procedure will prompt for the following:
 2. Select the type of deployment for the Traceable agent (helm or docker).
 3. Platform connectivity:
    * **Environment**: can be an existing environment or one that will be created by the installation procedure
-        * **Environment Mapping**: choose from existing environments that have Managed APIs and inform the agent of the Traceable environment that is linked.
+        * **Environment Mapping**: choose from existing environments that have Managed APIs and inform the agent of the Traceable environment that is linked
    * **Team**: can be an existing team or one that will be created by the installation procedure
    * **Service account**: can be an existing service account created in Amplify. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 4. Traceable API Security configuration setup options:
@@ -234,7 +234,7 @@ To complete the Traceable agent installation, run the following commands:
   docker run --env-file "$(pwd)"/traceable.env -v "$(pwd)":/keys -v /data {agentImage}
 ```
 
-Once the commands are completed, the agents should be running in within the Docker server.
+Once the commands are completed, the agents should be running in the Docker server.
 
 ## Step 3b: Deploy the agent in Kubernetes cluster
 
