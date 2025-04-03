@@ -53,7 +53,6 @@ Learn how to create an environment to represent your API services and other disc
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
     * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
-    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
     * **Redaction and Sanitization** - redaction and sanitization settings to use when reporting transactions from the data plane.
         * **URL Path** - all URL paths, or path regular expressions, which may be reported to Amplify Engage. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
         * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.
@@ -135,7 +134,6 @@ Learn how to create an environment to represent your API services and other disc
 3. Embedded Traceability Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type and "Enable Traceability Agent" is selected in the Configure step):
 
     * **Frequency** - set how often the Embedded agent should run traffic collection. 30 minutes is the minimum value that can be set. For example, 30m = 30 minutes, 5h5m = 5 hours and 5 mins, 2d = 2 days.
-    * **Sampling** - enter the percentage of full transaction details sent to the platform for display in Business and Consumer insights. The default value is 10 and the acceptable values are between 0 and 50.
     * **Redaction and Sanitization** - the redaction and sanitization settings to use when reporting transactions from the data plane.
         * **URL Path** - all URL paths, or path regular expressions, which may be reported to Amplify Engage. ".*" will send all the path values. For example, if the agent finds a path of `https://somehost.com/pathof/my/api/uses/thispath` then `https://somehost.com/pathof/my/api/uses/thispath` will be sent to the platform.
         * **Query Arguments** - regular expressions applied to the query argument name and query argument value in the transactional data.

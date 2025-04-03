@@ -73,8 +73,6 @@ CENTRAL_ENVIRONMENT=AmplifyEngageEnvironmentName
 CENTRAL_GRPC_ENABLED=true 
 # enable (default=true) to store a cache locally when the agent is stopped. It enables the agent to resume from where it left off when restarting.
 AGENTFEATURES_PERSISTCACHE=true
-# enable to add sampling based on consumer and subscription information so each consumer can see a certain percentage of the traffic
-TRACEABILITY_PER_SUBSCRIPTION=true
 ```
 
 If you are either struggling with a variable value or want to benefit from the advanced agents features (API filtering / SSL security / proxy access / logging), the following section describes the variables the agents (Discovery / Traceability) rely on.
