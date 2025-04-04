@@ -205,7 +205,7 @@ To map a policy to an authentication type (OAuth, Basic Auth, API Key, external)
 * `APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_1=Invoke API Key` where *Invoke API Key* is the name of the policy attached to the proxy.
 * `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=APIKey` where *APIKey* is the authentication type that the agent should handle the proxy as. Options are APIKey, Basic, OAuth.
 * Additional mappings should have env vars, such as `APIMANAGER_INVOKEPOLICY_MAPPING_POLICYNAME_2`, `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_2`, etc.
-* `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME_1=external-crd-name` can be used for setting the externally managed credentials if `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=external` is also set.
+* `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPENAME_1=external-crd-name` can be used for setting the externally managed credentials if `APIMANAGER_INVOKEPOLICY_MAPPING_CREDENTIALTYPE_1=external` is also set. Setting the externally managed application registration can be done with `APIMANAGER_INVOKEPOLICY_MAPPING_ACCESSTYPENAME_1=external-ard-name` if `APIMANAGER_INVOKEPOLICY_MAPPING_ACCESSTYPE_1=external` is also set
 
 In cases where a policy is used but not mapped to a specific authentication type, the agent will create an Access Request Definition (ARD) that will display the authentication details and the description of the policy being used. If a description cannot be found, the agent will use the value defined by the `APIMANAGER_INVOKEPOLICY_DEFAULTDESCRIPTION` environment variable if:
 
