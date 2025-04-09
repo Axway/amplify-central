@@ -92,3 +92,7 @@ If a Traceability Agent is monitoring the corresponding Gateway, it will allow y
 * API Health - Summary of API call with their status and timing
 * Application - Usage per application and product combination
 * Subscription - Usage per subscription and product combination
+
+## Mutual Authentification
+
+In case the API supports mutual authentication, a warning message is displayed in the product resource details screen to inform you how to proceed with the try out from the Marketplace. Basically, you will have to store your client certificate in your Browser certificate storage so that the mTLS handshake between the Marketplace and the API frontend succeed.
