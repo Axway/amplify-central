@@ -5,7 +5,7 @@ draft: false
 weight: 70
 ---
 
-Customize your Access Request Definition so your consumer will know what to do for trying out API with mTLS security.
+Customize your Credential Request Definition so your consumer will know what to do for trying out API with mTLS security.
 
 ## Before you start
 
@@ -14,7 +14,7 @@ Customize your Access Request Definition so your consumer will know what to do f
 
 ## Objectives
 
-Learn how to update AccessRequestDefinition to inform the Marketplace that the API Security supports mTLS.
+Learn how to update CredentialRequestDefinition to inform the Marketplace that the API Security supports mTLS.
 
 ## Mutual TLS definition
 
