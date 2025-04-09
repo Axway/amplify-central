@@ -43,7 +43,6 @@ New features, enhancements, and bug fixes for the March 21 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01702862 | APIGOV-30113 | **Issue**: Logging into protected marketplace results in blank page **Resolution**: A previous fix prevented to load correctly the Marketplace home page. The fix has been reverted.|
 | 01702862, 01702555 | APIGOV-30111 | **Issue**: Engage Login redirect not working properly <br/>**Resolution**:  A previous fix prevented to load correctly the Marketplace home page. The fix has been reverted. |
 | | APIGOV-29992 | **Issue**: Subscription and App registration filtering by product is lost when viewing details <br/>**Resolution**: When using the register or subscribed button from product page, automatically the product filter is applied and stays applied event when viewing subscription or application registration details. |
 | 01647567 | APIGOV-29079 | **Issue**: Provider can delete credential used to consume multiple APIs <br/>**Resolution**: Now, provider is informed when some credentials are not visible to him so that he can decide to delete or not the credentials |
