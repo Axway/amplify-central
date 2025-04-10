@@ -19,7 +19,7 @@ New features, enhancements, and bug fixes for the March 21 update.
 * **Traceable API Security - Conformance Analysis support**
   
   (TRACEABLE API SECURITY AGENT, ENHANCEMENT)</br>
-  The Traceable on-premise API Seccurity Agent uploads Managed API specifications from Engage to Traceable in order to execute Traceable conformance analysis. This improves the combined value of Engage and Traceable to more accurately identify endpoints with risks, shadow endpoints, and orphan endpoints.  The conformance analysis results are displayed on the Engage Environment details. The update is included in Traceable API Security Agent version 2.0.0 and later. 
+  The Traceable on-premise API Seccurity Agent uploads Managed API specifications from Engage to Traceable in order to execute Traceable conformance analysis. This improves the combined value of Engage and Traceable to more accurately identify endpoints with risks, shadow endpoints, and orphan endpoints.  The conformance analysis results are displayed on the Engage Environment details. The update is included in Traceable API Security Agent version 2.0.0 and later.
 
 * **Kong Enterprise - Workspace support**
   (KONG DISCOVERY AGENT, ENHANCEMENT)</br>
