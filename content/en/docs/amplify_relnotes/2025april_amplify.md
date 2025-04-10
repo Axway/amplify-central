@@ -42,7 +42,8 @@ New features, enhancements, and bug fixes for the March 21 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| |APIGOV-xxxx | **Issue**: Description <br/>**Resolution**: Description. |
+| 01622539 | APIGOV-28510 | **Issue**: The APIM Discovery agent was not rediscoverying SOAP APIs with missing Credential Request Defintions on startup. <br/>**Resolution**: The APIM Disocvery Agent will now automatically the Credential Request Defintions that were missing from SOAP APIs on startup. The fix is available in APIM Discovery Agent version **v1.2.21.**|
+| 01698345 | APIGOV-30021 | **Issue**: . The fix is available in APIM Discovery Agent version **v1.2.21.**|
 
 ### Marketplace updates for April 4, 2025
 
