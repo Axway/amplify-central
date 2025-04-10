@@ -32,13 +32,13 @@ New features, enhancements, and bug fixes for the March 21 update.
 * **All Traceability Agents - Transaction Sampling**
   (TRACEABILITY AGENTS, ENHANCEMENT)</br>
   All on-premise and SaaS Traceability Agents have been updated for on demand Transaction Sampling initiated from the Engage UI (Topology -> Environments -> Agents). Once initiated from the Engage UI, all trasactions including API errors will be sampled for up to five minutes. The count of API successes or error will still be registered on the API Health screen and we recommend the use of the API Gateway tools to further analyze the transactions. The update is included in all Traceability Agents released after April 7, 2025.
-      
+
 * **New agent versions available**
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-### Agents bug fixes for Aprill 9, 2025
+### Agents bug fixes for April 9, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
