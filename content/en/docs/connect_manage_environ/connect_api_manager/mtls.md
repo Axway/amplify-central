@@ -22,7 +22,7 @@ Mutual TLS (mTLS) is a security feature that ensures both sides of a communicati
 
 **Certificates**: Both the client and the server have digital certificates. These certificates are like ID cards that prove their identities.
 
-**Handshake**: When the client wants to talk to the server, they go through a process called a handshake. During this handshake:
+**Handshake**: When the client wants to talk to the server, they go through a process called handshake. During this handshake:
 
 * The client sends its certificate to the server.
 * The server checks the client's certificate to make sure it's valid.
@@ -37,7 +37,7 @@ In summary, mTLS adds an extra layer of security by making sure both the client 
 
 ## Mutual TLS in Amplify Engage
 
-First, you need to configure the API on Axway Manager to support that security layer: you have to use the 2-way SSL security on the API frontend or assign a custom policy that uses mTLS.
+First, you need to configure the API on Axway Manager to support that security layer: you have to use the 2-way SSL inbound security on the API frontend or assign a custom policy that uses mTLS.
 
 Once the API is discoverd, a credential request definition should be attached to the API Service Instance as mentioned [here](/docs/integrate_with_central/customize_ard_crd#customize-credential-request-screen).
 
@@ -57,8 +57,8 @@ Sample of x-axway-mtls properties in an API Key schema:
     "group": "management",
     "apiVersion": "v1alpha1",
     "kind": "CredentialRequestDefinition",
-    "name": "api-key",
-    "title": "API Key",
+    "name": "api-key-mtls",
+    "title": "API Key and mTLS",
     "metadata": {
         "scope": {
             "kind": "Environment",
@@ -132,8 +132,8 @@ Same in yaml format:
 group: management
 apiVersion: v1alpha1
 kind: CredentialRequestDefinition
-name: api-key
-title: API Key
+name: api-key-mtls
+title: API Key and mTLS
 metadata:
   scope:
     kind: Environment
