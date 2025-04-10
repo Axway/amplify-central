@@ -43,7 +43,9 @@ New features, enhancements, and bug fixes for the March 21 update.
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | 01622539 | APIGOV-28510 | **Issue**: The APIM Discovery agent was not rediscoverying SOAP APIs with missing Credential Request Defintions on startup. <br/>**Resolution**: The APIM Disocvery Agent will now automatically the Credential Request Defintions that were missing from SOAP APIs on startup. The fix is available in APIM Discovery Agent version **v1.2.21.**|
-| 01698345 | APIGOV-30021 | **Issue**: . The fix is available in APIM Discovery Agent version **v1.2.21.**|
+| | APIGOV-30134 | **Issue**: The Apigee X Traceability agent had a possible run-time error. <br/>**Resolution**: The possible run-time error was fixed in the Apigee X Traceability Agent. The fix is available in Apigee X Traceability Agent version **v1.4.5.**|
+| 01701325 | APIGOV-30080 | **Issue**: The APIM Discovery and Traceability agent would not display their status correctly on the Engage UI if the agent name included a period in the name (e.g.agent.name.x ). <br/>**Resolution**: A fix was made to display the status correctly when a period is used in the agent name. The fix is available in APIM Discovery Agent version **v1.2.21** and Traceability Agent **v1.2.18.*|
+| 01658556 | APIGOV-29326 | **Issue**: The APIM Discovery agent method of handling of quota enforcement during a plan migration would result in some downtime. <br/>**Resolution**: A fix was made to the APIM Discovery Agent to handle plan migration with zero downtime.  The fix is available in APIM Discovery Agent version **v1.2.21**|
 
 ### Marketplace updates for April 4, 2025
 
