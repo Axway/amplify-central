@@ -77,6 +77,6 @@ New enhancement for the April 3 update.
 
 * **Introducing Axway Central CLI version 3.13.0**
 
-  The latest version **3.13.0** of the Axway Central CLI is now available on NPM. This update includes: 
+  The latest version **3.13.0** of the Axway Central CLI is now available on NPM. This update includes:
   
-  * **Support for the installation of the Traceable API Security Agent in the supported regions**
+    * **Support for the installation of the Traceable API Security Agent in the supported regions**
