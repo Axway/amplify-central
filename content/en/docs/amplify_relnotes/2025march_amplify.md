@@ -12,11 +12,13 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## March 26, 2025
 
-### Engage bug fixes for March 26, 2025
+Bug fix for the March 21 update.
+
+### Engage bug fix for March 26, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| | APIGOV-30066 | **Issue**: Service Registry fails to display when a service which has no revisions <br/>**Resolution**: The Service displays all services correctly when a service has no revisions. |
+| | APIGOV-30066 | **Issue**: Service Registry fails to display when a service has no revisions <br/>**Resolution**: The service displays all services correctly when a service has no revisions. |
 
 ## March 21, 2025
 
