@@ -16,22 +16,25 @@ New features, enhancements, and bug fixes for the April 9 update.
 
 ### Agents updates for April 9, 2025
 
+* **On-demand transaction sampling**
+  
+  (TRACEABILITY AGENTS, ENHANCEMENT)</br>
+  As of April 9, 2025, all new versions of on-premise and SaaS Traceability Agents support on-demand transaction sampling initiated directly from Engage (Topology > Environments > Agents). This enhancement replaces the previous percentage-based sampling approach for all agents released after this date. When activated, on-demand sampling captures all transactions, including API errors, for a period of up to five minutes. While full transaction details are collected during this window, high-level metrics such as success and error counts continue to be displayed on the API Health page. For deeper analysis, we recommend using your API Gateway’s native tools. Refer to [Amplify Engage April 9 2025](/docs/amplify_relnotes/2025april_amplify/#april-9-2025) to find the agent versions that support on-demand transaction sampling.
+
 * **Traceable API Security - Conformance Analysis support**
   
   (TRACEABLE API SECURITY AGENT, ENHANCEMENT)</br>
   The Traceable on-premise API Security Agent sends Managed API specifications from Engage to Traceable in order to execute Traceable Conformance Analysis. This improves the combined value of Engage and Traceable to more accurately identify endpoints with risks, shadow endpoints, and orphan endpoints. The Conformance Analysis results are displayed on the *Engage Environment details* page. The update is included in Traceable API Security Agent version **2.0.0 and later**.
 
 * **Kong Enterprise - Workspace support**
+  
   (KONG DISCOVERY AGENT, ENHANCEMENT)</br>
   The Kong Discovery Agent can now disover API services from one or more Kong Enterprise workspaces. The update is included in Kong Discovery Agent version **1.1.17 and later**.
 
 * **External handling of Access Request Definition**
+  
   (APIM DISCOVERY AGENT, ENHANCEMENT)</br>
   The Axway API Manager Discovery Agent now allows the enabling/disabling of Access Request Definition provisioning.  When disabled, this allows a customer to customize the handling of an Access Request Definition flow. The update is included in APIM Discovery Agent version **1.2.21 and later**.
-
-* **All Traceability Agents - On-demand transaction sampling**
-  (TRACEABILITY AGENTS, ENHANCEMENT)</br>
-  All on-premise and SaaS Traceability Agents have been updated for on-demand transaction sampling initiated from the Engage WebUI (*Topology > Environments > Agents*). Once initiated from the Engage WebUI, all transactions, including API errors, are sampled for up to five minutes. The count of API successes or errors are still registered on the *API Health* page and we recommend the use of the API Gateway tools to further analyze the transactions. The update is included in all Traceability Agents released after April 7, 2025.
 
 * **New agent versions available**
 
