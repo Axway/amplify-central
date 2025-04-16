@@ -17,6 +17,10 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify Engage April 16 2025](/docs/amplify_relnotes/2025april_amplify/#april-16-2025)
+
+No agent updates. See April 9 for latest supported agent versions.
+
 ## [Amplify Engage April 9 2025](/docs/amplify_relnotes/2025april_amplify/#april-9-2025)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.113 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
@@ -35,7 +39,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | IBM API Connect Gateway                    | 1.1.15                   | 1.0.0                            |
 | Backstage                                  | 1.0.11                   | 1.0.0                            |
 | SAP Integration Suite - API Management / API Portal | 1.0.4                    | 1.0.0                            |
-| WSO2                                       | 1.0.3                    | 1.0.0                            |
+| WSO2 API Manager 4.5.0                      | 1.0.3                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -80,7 +84,7 @@ No agent updates. See March 21 for latest supported agent versions.
 | IBM API Connect Gateway                    | 1.1.14                   | 1.0.0                            |
 | Backstage                                  | 1.0.10                   | 1.0.0                            |
 | SAP Integration Suite - API Management / API Portal | 1.0.3                    | 1.0.0                            |
-| WSO2                                       | 1.0.2                    | 1.0.0                            |
+| WSO2 API Manager 4.5.0                     | 1.0.2                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -117,7 +121,7 @@ No agent updates. See March 7 for latest supported agent versions.
 | IBM API Connect Gateway                    | 1.1.13                   | 1.0.0                            |
 | Backstage                                  | 1.0.9                    | 1.0.0                            |
 | SAP Integration Suite - API Management / API Portal | 1.0.2                    | 1.0.0                            |
-| WSO2                                       | 1.0.0                    | 1.0.0                            |
+| WSO2 API Manager 4.5.0                     | 1.0.0                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
