@@ -10,6 +10,17 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## April 16, 2025
+
+New features, enhancements, and bug fixes for the April 16 update.
+
+### Marketplace updates for April 16 2025
+
+* **Download resource in JSON or YAML format**
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  It is now possible to download a product resource Open API specification in its original format or in a converted format. Supported formats are JSON or YAML. In case the resource is not an Open API specification, only its original format can be downloaded.
+
 ## April 9, 2025
 
 New features, enhancements, and bug fixes for the April 9 update.
