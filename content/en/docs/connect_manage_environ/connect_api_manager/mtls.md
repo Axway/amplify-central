@@ -179,4 +179,6 @@ spec:
       suspendable: true
 ```
 
-Once this schema is applied, the mTLS capability will be reflected in the Marketplace. On the resource details screen, consumers will see a message guiding them to store their client certificate in their browser's certificate store to ensure the mTLS handshake works correctly.
+In case the API was already discovered and attached to an API Service instance, you can modify the CredentialRequestDefinition as recommended above but the information will not be propagated automatically to the Marketplace. You will need a new asset release as well as a new product release using this new asset release.
+
+Once the releases are created, the mTLS capability will be reflected in the Marketplace. On the resource details screen, consumers will see a message guiding them to store their client certificate in their browser's certificate store to ensure the mTLS handshake works correctly.
