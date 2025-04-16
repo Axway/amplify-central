@@ -50,7 +50,7 @@ In summary, mTLS adds an extra layer of security by making sure both the client 
 }  
 ```
 
-**Example of an API Key schema with mTLS support**
+## Example of an API Key schema with mTLS support
 
 ```json
 {
@@ -125,7 +125,7 @@ In summary, mTLS adds an extra layer of security by making sure both the client 
 }
 ```
 
-**YAML equivalent**:
+YAML equivalent
 
 ```yaml
 ---
