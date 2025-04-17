@@ -56,7 +56,7 @@ The application profile hosts the values entered by a consumer, as well as the r
 
 ## Preparing the Discovery Agent to discover the application custom properties definition
 
-Tou must add a new property in the agent configuration: `APIMANAGER_APPLICATIONDEFINITIONTITLE=myApplicationProfileName` to enable the Discovery Agent to discover the application custom properties and push them into an ApplicationProfileDefinition. The property value will be used to name the ApplicationProfileDefinition that will be created under the environment the agent is monitoring.
+You must add a new property in the agent configuration: `APIMANAGER_APPLICATIONDEFINITIONTITLE=myApplicationProfileName` to enable the Discovery Agent to discover the application custom properties and push them into an ApplicationProfileDefinition. The property value will be used to name the ApplicationProfileDefinition that will be created under the environment the agent is monitoring.
 
 Once you add this property, be sure to restart the agent so that it starts discovering the defined application custom properties.
 
