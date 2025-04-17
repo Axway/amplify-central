@@ -5,7 +5,7 @@ draft: false
 weight: 70
 ---
 
-Let your consumers know what to fo for trying out APIs secured with mutual TLS (mTLS).
+Guide your consumers on how to set up APIs secured with mutual TLS (mTLS).
 
 ## Before you start
 
@@ -18,16 +18,16 @@ Configure a `CredentiaRequestDefinition` to indicate that the API supports mTLS,
 
 ## What is mTLS?
 
-Mutual TLS (mTLS) is a security feature that ensures both the client and serververify each other's identities before allowing data exchange. It works as follows:
+Mutual TLS (mTLS) is a security feature that ensures both the client and server verify each other's identities before allowing data exchange. How it works:
 
 * **Certificates**: Both parties (the client and the server) present digital certificates to prove their identities.
 
-* **Handshake Process**: When the client wants to talk to the server, they go through a process called handshake. During this handshake:
+* **Handshake Process**: When the client wants to talk to the server, they go through a "handshake" process. During this handshake:
 
-    * Client sends its certificate to the server.
-    * Server validates the client's certificate.
-    * Server sends its certificate to the client.
-    * The client validates the server's certificate.
+    * Client sends its certificate to the server
+    * Server validates the client's certificate
+    * Server sends its certificate to the client
+    * Client validates the server's certificate
 
 * **Encrypted communication**: After successful validation, both sides establish an encrypted communication.
 
@@ -37,11 +37,11 @@ In summary, mTLS adds an extra layer of security by making sure both the client 
 
 ## mTLS setup in Amplify Engage
 
-* **Enable mTLS on the API in API Manager**: In Axway API Manager, configure your API frontend to use inbound 2-way SSL or assing a custom policy implementing mTLS.
+* **Enable mTLS on the API in API Manager**: Configure your API frontend in Axway API Manager to use inbound two-way SSL or assign a custom policy that implements mTLS.
 
-* **Attach a Credential Request Definition**: Once the API is discoverd, a `CredentialRequestDefinition` should be attached to the API Service Instance as described in the [customization guide](/docs/integrate_with_central/customize_ard_crd#customize-credential-request-screen).
+* **Attach a Credential Request Definition**: Once the API is discovered, a `CredentialRequestDefinition` must be attached to the API Service Instance, as described in the [customization guide](/docs/integrate_with_central/customize_ard_crd#customize-credential-request-screen).
 
-* **Update the Schema Definition**: Modify the CredentialRequestDefinition schema to include the `x-axway-mtls` property as described below:
+* **Update the Schema Definition**: Modify the `CredentialRequestDefinition` schema to include the `x-axway-mtls` property, as described below:
 
 ```json
 "x-axway-mtls": {
@@ -179,6 +179,6 @@ spec:
       suspendable: true
 ```
 
-In case the API was already discovered and attached to an API Service instance, you can modify the CredentialRequestDefinition as recommended above but the information will not be propagated automatically to the Marketplace. You will need a new asset release as well as a new product release using this new asset release.
+If the API was already discovered and attached to an API Service instance, you can modify the `CredentialRequestDefinition` as recommended above but the information will not be propagated automatically to the Marketplace. You must have a new asset release, as well as a new product release using this new asset release.
 
-Once the releases are created, the mTLS capability will be reflected in the Marketplace. On the resource details screen, consumers will see a message guiding them to store their client certificate in their browser's certificate store to ensure the mTLS handshake works correctly.
+Once the releases are created, the mTLS capability will be reflected in the Marketplace. On the *resource details* page, consumers will see a message guiding them to store their client certificate in their browser's certificate store to ensure the mTLS handshake works correctly.
