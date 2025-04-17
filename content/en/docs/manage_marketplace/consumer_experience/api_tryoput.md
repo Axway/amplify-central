@@ -92,3 +92,7 @@ If a Traceability Agent is monitoring the corresponding Gateway, it will allow y
 * API Health - Summary of API call with their status and timing
 * Application - Usage per application and product combination
 * Subscription - Usage per subscription and product combination
+
+## Mutual Authentification (mTLS)
+
+If the API uses mutual authentication (mTLS), a warning appears on the product resource details screen with instructions. To try out the API from the Marketplace, you’ll need to store your client certificate in your browser’s certificate storage to complete the mTLS handshake.
