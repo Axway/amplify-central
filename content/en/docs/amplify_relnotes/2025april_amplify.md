@@ -42,7 +42,7 @@ New enhancement for the April 16 update.
 * **Download resource in JSON or YAML format**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  You can now download a product resource Open API specification in its original format or coose to convert it to JSON or YAML. If the resource is not an OpenAPI specification, only the original format will be available for download. This enhancement allows developers to consume API definitions in a format that best suit their tooling or workflows.
+  You can now download a product resource Open API specification in its original format or choose to convert it to JSON or YAML. If the resource is not an OpenAPI specification, only the original format will be available for download. This enhancement allows developers to consume API definitions in a format that best suit their tooling or workflows.
 
 ## April 9, 2025
 
