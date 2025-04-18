@@ -9,7 +9,29 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+## April 18, 2025
 
+New enhancement for the April 18 update
+
+### Agents updates for April 18, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+  
+### Marketplace updates for April 18 2025
+
+* **Configurable product image display in Marketplace**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Product providers now have more control over how images appear in the Marketplace product cards. When uploading a product image, you can choose how the image is displayed, as well as the image position. This enhancement allows you to better showcase your product branding in the Marketplace.
+
+* **Try out APIS that support mTLS**
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  We’ve added a helpful message to the resource details page to APIs that support mTLS. Consumers will now see instructions guiding them to store their client certificate in their browser’s certificate store. This helps prevent connection issues and makes it easier for developers to try out mTLS-enabled resources from the Marketplace. [Learn how to enable try out for APIs with mTLS support](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/mtls/index.html).
+  
 ## April 16, 2025
 
 New enhancement for the April 16 update.
@@ -19,7 +41,7 @@ New enhancement for the April 16 update.
 * **Download resource in JSON or YAML format**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  It is now possible to download a product resource Open API specification in its original format or in a converted format. Supported formats are JSON or YAML. If the resource is not an Open API specification, then only its original format can be downloaded.
+  You can now download a product resource Open API specification in its original format or coose to convert it to JSON or YAML. If the resource is not an OpenAPI specification, only the original format will be available for download. This enhancement allows developers to consume API definitions in a format that best suit their tooling or workflows. 
 
 ## April 9, 2025
 
