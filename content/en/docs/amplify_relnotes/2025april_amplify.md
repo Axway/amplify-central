@@ -20,7 +20,7 @@ New enhancement for the April 18 update
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
   
-### Marketplace updates for April 18 2025
+### Marketplace updates for April 18, 2025
 
 * **Configurable product image display in Marketplace**
 
@@ -36,7 +36,7 @@ New enhancement for the April 18 update
 
 New enhancement for the April 16 update.
 
-### Marketplace updates for April 16 2025
+### Marketplace updates for April 16, 2025
 
 * **Download resource in JSON or YAML format**
 
