@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## April 18, 2025
 
-New enhancement for the April 18 update
+New enhancements for the April 18 update
 
 ### Agents updates for April 18, 2025
 
@@ -28,10 +28,10 @@ New enhancement for the April 18 update
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   Product providers now have more control over how images appear in the Marketplace product cards. When uploading a product image, you can choose how the image is displayed, as well as the image position. This enhancement allows you to better showcase your product branding in the Marketplace.
 
-* **Try out APIS that support mTLS**
+* **Try out APIs that support mTLS**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  We’ve added a helpful message to the resource details page to APIs that support mTLS. Consumers will now see instructions guiding them to store their client certificate in their browser’s certificate store. This helps prevent connection issues and makes it easier for developers to try out mTLS-enabled resources from the Marketplace. [Learn how to enable try out for APIs with mTLS support](/docs/connect_manage_environ/connect_api_manager/mtls/index.html).
+  A helpful message has been added to the resource details page for APIs that support mTLS. Consumers will now see instructions guiding them to store their client certificate in their browser’s certificate store. This helps prevent connection issues and makes it easier for developers to try out mTLS-enabled resources from the Marketplace. See [Learn how to enable try out for APIs with mTLS support](/docs/connect_manage_environ/connect_api_manager/mtls/index.html) for more information.
   
 ## April 16, 2025
 
