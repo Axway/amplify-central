@@ -105,8 +105,6 @@ Step 5. Install the agent.
 
 After all questions are answered, the Axway Central CLI will create an Amplify platform environment that will host the usage report, as well as local files (`traceability_agent` binary file / `ta_env_vars.env` file containing the agent configuration / the public-private key to manage the communication from the agent to the Platform), based on the provided answers.
 
-{{< alert title="Note" color="primary" >}}If you plan to use the Traceability Agent for logging usage only, set `TRACEABILITY_SAMPLING_PERCENTAGE=0` and `TRACEABILITY_SAMPLING_ONLYERRORS=false` in the `ta_env_vars.env` file produced by the CLI to disable the transaction report.{{< /alert >}}
-
 The local files must be copied to the gateway machine, as mentioned in the CLI output.
 
 After all files are copied, start Traceability Agent: `./traceability_agent ./ta_env_vars.env`
@@ -242,10 +240,6 @@ The usage report is based on the transactions the Traceability Agent monitors. I
 ### Axway API Gateway
 
 In the case of high demand, Axway recommends turning off the trace event logging of the gateway. In this situation, the Traceability Agent will not be able to monitor the transactions or report the corresponding traffic.
-
-### AWS API Gateway
-
-The current solution relies on AWS Simple Queue Service to collect traffic from CloudWatch. However, there is a limit of 10 SQS messages per client connection that can be consumed at one time. As a workaround, you can increase the number of workers (i.e., consumer clients) using the `AWS_WORKERS` variable. Be aware that the number of workers is directly related to the network consumption -- the more you add, the more network connections are used.
 
 ### Azure API Gateway
 
