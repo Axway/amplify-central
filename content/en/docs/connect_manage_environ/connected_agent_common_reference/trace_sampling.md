@@ -4,6 +4,8 @@ linkTitle: Trace sampling
 draft: false
 weight: 10
 ---
+{{< alert title="Note" color="primary" >}}To learn how agents prior to April 4th 2025 sampled transactions See [Archived Trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/archive/trace_sampling).{{< /alert >}}
+
 The Traceability Agent can sample the transaction information that is sent to Amplify Analytics. Learn how to request a sampling period, the restrictions of the sampling period, and the rules used by the agent when sending those transactions.
 
 {{< alert title="Note" color="primary" >}}It is recommended that you use the Business Insights API Health screen to identify the APIs that have status errors. Then view the API details with the tools provided by your API Gateway vendor.{{< /alert >}}
