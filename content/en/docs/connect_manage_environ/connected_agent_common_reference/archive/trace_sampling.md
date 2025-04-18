@@ -1,10 +1,12 @@
 ---
-title: Archived trace sampling
-linkTitle: Archived trace sampling
+title: Trace sampling
+linkTitle: Trace sampling
 draft: false
 weight: 150
 date: 2025-04-18
 ---
+{{< alert title="Note" color="primary" >}}This is an archived functionality, for the latest sampling support, refer to [Trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling).{{< /alert >}}
+
 The Traceability Agent can sample the transaction information that is sent to Amplify Analytics . Learn how to set up sampling rules used to send only certain transactions to Amplify Analytics. With the agent default configuration, all transactions are sent to Amplify Analytics.
 
 ## Sampling
