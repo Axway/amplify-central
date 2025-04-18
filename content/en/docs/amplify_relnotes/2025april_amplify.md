@@ -30,7 +30,7 @@ New enhancement for the April 18 update
 * **Try out APIS that support mTLS**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  We’ve added a helpful message to the resource details page to APIs that support mTLS. Consumers will now see instructions guiding them to store their client certificate in their browser’s certificate store. This helps prevent connection issues and makes it easier for developers to try out mTLS-enabled resources from the Marketplace. [Learn how to enable try out for APIs with mTLS support](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/mtls/index.html).
+  We’ve added a helpful message to the resource details page to APIs that support mTLS. Consumers will now see instructions guiding them to store their client certificate in their browser’s certificate store. This helps prevent connection issues and makes it easier for developers to try out mTLS-enabled resources from the Marketplace. [Learn how to enable try out for APIs with mTLS support](/docs/connect_manage_environ/connect_api_manager/mtls/index.html).
   
 ## April 16, 2025
 
