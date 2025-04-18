@@ -133,12 +133,12 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | Variable                                       | Default | Usage                                                                                                                                                                       |
 | ---------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | TRACEABLE_REGION                               |         | The [Traceable Region](https://docs.traceable.ai/docs/allow-list) the agent will connect to. (US, US-1, EU, APAC, APAC-2, Canada, UAE)                                      |
-| TRACEABLE_TOKEN                                |         | The Traceable Platform Token the agent will use when connecting to Traceable.                                                                                               |
+| TRACEABLE_TOKEN                                |         | The Traceable Platform Token the agent will use when connecting to Traceable                                                                                               |
 | TRACEABLE_POLLINTERVAL                         | 1h      | The frequency the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks. (Lower Limit: 1h)                                           |
 | TRACEABLE_COMPLIANCEFREQUENCY                  | 12h     | How often the agent will calculate a compliance risk score and send to Engage. (Lower Limit: 1h)                                                                            |
-| TRACEABLE_CONFORMANCEFREQUENCY                 | 7d      | How often the agent will have Traceable run a [Conformance Analysis](https://docs.traceable.ai/docs/conformance-analysis) job and send results to Engage (Lower Limit: 24h) |
-| TRACEABLE_ENVIRONMENTMAPPING_AMPLIFY_[INDEX]   |         | Match an Amplify Engage Environment Name with a Traceable Environment Name, for spec mapping in Conformance Analysis jobs.                                                  |
-| TRACEABLE_ENVIRONMENTMAPPING_TRACEABLE_[INDEX] |         | Match an Amplify Engage Environment Name with a Traceable Environment Name, for spec mapping in Conformance Analysis jobs.                                                  |
+| TRACEABLE_CONFORMANCEFREQUENCY                 | 7d      | How often the agent will have Traceable run a [Conformance Analysis](https://docs.traceable.ai/docs/conformance-analysis) job and send results to Engage. (Lower Limit: 24h) |
+| TRACEABLE_ENVIRONMENTMAPPING_AMPLIFY_[INDEX]   |         | Match an Amplify Engage Environment Name with a Traceable Environment Name, for spec mapping in Conformance Analysis jobs                                                  |
+| TRACEABLE_ENVIRONMENTMAPPING_TRACEABLE_[INDEX] |         | Match an Amplify Engage Environment Name with a Traceable Environment Name, for spec mapping in Conformance Analysis jobs                                                  |
 
 ## Helm deployment
 
