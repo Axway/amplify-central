@@ -10,6 +10,14 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## April 21, 2025
+
+New enhancements for the April 21 update
+
+### Agents bug fixes for April 21, 2025
+
+### Marketplace updates for April 21, 2025
+
 ## April 18, 2025
 
 New enhancements for the April 18 update
