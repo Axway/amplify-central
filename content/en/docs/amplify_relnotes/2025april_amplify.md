@@ -14,13 +14,21 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 New enhancements for the April 21 update
 
-### Agents bug fixes for April 21, 2025
-
 ### Marketplace updates for April 21, 2025
+
+* **Bulk Archive action in Asset Catalog**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Asset providers can now multi-select up to fifty assets to be set to an archived state if the assset is not being referenced by a product. This enhancement allows you to clean up unused assets.
+
+* **Transaction Sampling disabled for stopped Agents**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  On the Agent status screen, all traceability agents in a stopped state cannot be enabled for on-demand transaction sampling.  This enhancement allows you only to enable trace sampling on agents which are running.
 
 ## April 18, 2025
 
-New enhancements for the April 18 update
+New enhancements for the April 18 update.
 
 ### Agents updates for April 18, 2025
 
@@ -28,6 +36,15 @@ New enhancements for the April 18 update
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+  
+### Agents bug fixes for April 18, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-30096 | **Issue**: The Discovery Agent attempts to create API service revisions with an invalid API service version. <br/>**Resolution**: The Discovery Agent will create an API Service with a valid version. This fix is available in Agent using SDK version **v1.1.114** or later.|
+|  | APIGOV-29609 | **Issue**: The Agent will attempt to connect to an invalid URL if a leading or trailing space character is included in an agent environment variable. <br/>**Resolution**: The Agent will remove leading and trailing spaces from any URL value set in an environment variable to create a valid URL. This fix is available in Agent using SDK version **v1.1.114** or later.|
+| 01704915 | APIGOV-30218 | **Issue**: The Traceability Agent in an offline mode will count healthcheck API calls in the API Health and platform usage report. <br/>**Resolution**: The Traceability Agent will exclude healthcheck API calls from API Health and plaform usage counts. This fix is available in Agent using SDK version **v1.1.114** or later.|
+
   
 ### Marketplace updates for April 18, 2025
 
@@ -40,6 +57,12 @@ New enhancements for the April 18 update
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
   A helpful message has been added to the resource details page for APIs that support mTLS. Consumers will now see instructions guiding them to store their client certificate in their browser’s certificate store. This helps prevent connection issues and makes it easier for developers to try out mTLS-enabled resources from the Marketplace. See [Learn how to enable try out for APIs with mTLS support](/docs/connect_manage_environ/connect_api_manager/mtls/index.html) for more information.
+
+### Marketplace bug fixes for April 18, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-30225 | **Issue**: Engage API Design compliance may produce a linting result with a false error at line zero and character zero. <br/>**Resolution**:  The *Compliance Tool library* has been updated to remove these false erorrs. |
   
 ## April 16, 2025
 
