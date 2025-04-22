@@ -43,7 +43,7 @@ New enhancements for the April 18 update.
 |-------------|--------------|---------------------------------------------------|
 |  | APIGOV-30096 | **Issue**: The Discovery Agent attempts to create API service revisions with an invalid API service version. <br/>**Resolution**: The Discovery Agent will create an API Service with a valid version. This fix is available in Agent using SDK version **v1.1.114** or later.|
 |  | APIGOV-29609 | **Issue**: The Agent will attempt to connect to an invalid URL if a leading or trailing space character is included in an agent environment variable. <br/>**Resolution**: The Agent will remove leading and trailing spaces from any URL value set in an environment variable to create a valid URL. This fix is available in Agent using SDK version **v1.1.114** or later.|
-| 01704915 | APIGOV-30218 | **Issue**: The Traceability Agent in an offline mode will count healthcheck API calls in the API Health and platform usage report. <br/>**Resolution**: The Traceability Agent will exclude healthcheck API calls from API Health and plaform usage counts. This fix is available in Agent using SDK version **v1.1.114** or later.|
+| 01704915 | APIGOV-30218 | **Issue**: The Traceability Agent in oneline and offline mode will count healthcheck API calls in the API Health and platform usage report. <br/>**Resolution**: The Traceability Agent will exclude healthcheck API calls from API Health and plaform usage counts. This fix is available in Agent using SDK version **v1.1.114** or later.|
 
   
 ### Marketplace updates for April 18, 2025
