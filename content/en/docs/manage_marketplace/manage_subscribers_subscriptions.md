@@ -51,6 +51,27 @@ To consume APIs from the Marketplace, the consumer must:
 * Step 5: wait for the provider to provision the credentials
 * Step 6: use the provided credentials to consume the product resources
 
+## View subscriptions
+
+To view subscriptions:
+
+1. navigate to *Amplify Central > Marketplace > Subscriptions*
+2. View the following information for all subscriptions:
+
+    * Subscription Name
+    * Product
+    * Organization
+    * Consumer
+    * Approval State
+    * State
+    * Owning Team
+    * Expires/Migrates
+
+You can also filter the subscriptions by the current state / approval state / consumer using the **Filter By** controls. 
+Search by the Subscription Name with the search bar.
+
+You can also customize the table layout. The **Customize** button in the top-right corner of the table opens a modal that allows you to tailor the layout to your needs. Customization options include showing or hiding columns and reordering columns via drag-and-drop. Layout preferences are automatically saved and persist across browser sessions.
+
 ## Manage consumer subscriptions
 
 Persona: **Subscription Approver** team role or **Catalog Manager** team role

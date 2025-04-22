@@ -40,6 +40,8 @@ To view assets:
 
 You can also filter the assets by the current category / stage / type using the **Filter By** controls. Search by the Asset Name with the search bar.
 
+You can also customize the table layout. The **Customize** button in the top-right corner of the table opens a modal that allows you to tailor the layout to your needs. Customization options include showing or hiding columns and reordering columns via drag-and-drop. Layout preferences are automatically saved and persist across browser sessions.
+
 ## View asset details
 
 To view asset details:
