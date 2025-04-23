@@ -65,7 +65,7 @@ Click the view switch icon at the top-right to switch between the Card View and 
 
 You can also filter the products by categories, state and owning team using the **Filter By** controls. Search by name, title and tag with the search bar.
 
-Click **Customize** icon in the top-right of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
+Click the **Customize** icon in the top-right of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
 
 * Show columns
 * Hide columns
