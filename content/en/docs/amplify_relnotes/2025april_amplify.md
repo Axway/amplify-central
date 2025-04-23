@@ -18,7 +18,7 @@ New enhancements for the April 22 update
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| | APIGOV-30283 | **Issue**: [Marketplace UI] Ratings and reviews is not rendered in the product details anymore <br/>**Resolution**: After some optimization, on product details loading, the rating & reviews list were missing and are now loaded separately. |
+| | APIGOV-30283 | **Issue**: [Marketplace UI] Ratings and reviews not rendered in the product details anymore <br/>**Resolution**: Ratings and reviews are visible again on the product details page |
 
 ## April 21, 2025
 
@@ -29,12 +29,12 @@ New enhancements for the April 21 update
 * **Bulk Archive action in Asset Catalog**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Asset providers can now multi-select up to fifty assets to be set to an archived state if the asset is not being referenced by a product. This enhancement allows you to clean up unused assets.
+  Asset providers can now select and archive up to fifty assets at once, as long as the assets are not referenced by any product. This enhancement allows you to quickly clean up unused assets.
 
 * **Transaction Sampling disabled for stopped Agents**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  On the Agent status screen, all traceability agents in a stopped state cannot be enabled for on-demand transaction sampling.  This enhancement allows you only to enable trace sampling on agents which are running.
+  On the Agent Status screen, traceability agents that are in a stopped state can no longer be enabled for on-demand transaction sampling. This enhancement ensures that sampling can only be activated on agents that are currently running.
 
 ## April 18, 2025
 
