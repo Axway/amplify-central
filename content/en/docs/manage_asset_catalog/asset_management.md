@@ -23,8 +23,6 @@ Learn how to use the Asset Catalog WebUI to create and manage assets, including:
 
 ## View assets
 
-To view assets:
-
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
 3. View the following information for all assets in any state (Draft, Active, Deprecated, Active):
@@ -38,11 +36,18 @@ To view assets:
     * Owning Team
     * Created/Updated
 
-You can also filter the assets by the current category / stage / type using the **Filter By** controls. Search by the Asset Name with the search bar.
+Using the **Filter By** controls to filter assets by the current category / stage / type.
+Search by the Asset Name with the search bar.
+
+Click **Customize** in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
+
+* Show columns
+* Hide columns
+* Reorder columns via drag-and-drop
+
+Layout preferences are automatically saved and persist across browser sessions.
 
 ## View asset details
-
-To view asset details:
 
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
@@ -70,8 +75,6 @@ To view asset details:
 {{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the asset details view.{{< /alert >}}
 
 ## Create an asset
-
-To create an asset:
 
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
