@@ -53,8 +53,6 @@ To consume APIs from the Marketplace, the consumer must:
 
 ## View subscriptions
 
-To view subscriptions:
-
 1. navigate to *Amplify Central > Marketplace > Subscriptions*
 2. View the following information for all subscriptions:
 
@@ -67,10 +65,16 @@ To view subscriptions:
     * Owning Team
     * Expires/Migrates
 
-You can also filter the subscriptions by the current state / approval state / consumer using the **Filter By** controls. 
+Using the **Filter By** controls to filter subscriptions by the current state / approval state / consumer.
 Search by the Subscription Name with the search bar.
 
-You can also customize the table layout. The **Customize** button in the top-right corner of the table opens a modal that allows you to tailor the layout to your needs. Customization options include showing or hiding columns and reordering columns via drag-and-drop. Layout preferences are automatically saved and persist across browser sessions.
+Click **Customize** in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including: 
+
+* Show columns 
+* Hide columns 
+* Reorder columns via drag-and-drop
+
+Layout preferences are automatically saved and persist across browser sessions.
 
 ## Manage consumer subscriptions
 
