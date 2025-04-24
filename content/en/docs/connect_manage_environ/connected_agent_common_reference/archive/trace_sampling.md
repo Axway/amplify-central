@@ -5,9 +5,9 @@ draft: false
 weight: 150
 date: 2025-04-18
 ---
-{{< alert title="Note" color="primary" >}}This is an archived functionality, for the latest sampling support, refer to [Trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This is an archived functionality. For the latest sampling support, see [Trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling).{{< /alert >}}
 
-The Traceability Agent can sample the transaction information that is sent to Amplify Analytics . Learn how to set up sampling rules used to send only certain transactions to Amplify Analytics. With the agent default configuration, all transactions are sent to Amplify Analytics.
+The Traceability Agent can sample the transaction information that is sent to Amplify Analytics. Learn how to set up sampling rules used to send only certain transactions to Amplify Analytics. With the agent default configuration, all transactions are sent to Amplify Analytics.
 
 ## Sampling
 
@@ -15,16 +15,16 @@ Sampling adds the ability to control the amount of transaction data that is sent
 
 ### Settings
 
-The following settings can be used to control the sampling.  A percentage can be set to control the number of transactions that are sent, and a switch can be set to determine how that percentage is applied.
+The following settings can be used to control the sampling. A percentage can be set to control the number of transactions that are sent, and a switch can be set to determine how that percentage is applied.
 
 #### Percentage
 
 The `TRACEABILITY_SAMPLING_PERCENTAGE` variable, defaulted to **`0`**, may be set to any value between 0 and 10.  
 
-* A value of `0` results in no transactions sent to Amplify Analytics for the API traffic display within Business Insights.  The API Health display will still show the API metrics even with sampling set to zero percent.
+* A value of `0` results in no transactions sent to Amplify Analytics for the API traffic display within Business Insights. The API Health display will still show the API metrics even with sampling set to zero percent.
 * A value of `10` results in 10% of all transactions sent to Amplify Analytics for the API traffic display.
 
-The agent uses a counter to apply the sampling. When a value (other than 0 and 10) is set, the agent will send all transactions up to that value and then not send any until it reaches 100.  Therefore, this percentage results in the first x of each 100 transactions being sampled.
+The agent uses a counter to apply the sampling. When a value (other than 0 and 10) is set, the agent will send all transactions up to that value and then not send any until it reaches 100. Therefore, this percentage results in the first x of each 100 transactions being sampled.
 
 #### Per API
 
@@ -42,7 +42,7 @@ The `TRACEABILITY_SAMPLING_ONLYERRORS` variable, defaulted to `false`, may be ch
 
 ### Preparing Traceability Agent
 
-The Traceability Agent may be configured to sample fewer than all events. The maximum percentage is 10%
+The Traceability Agent may be configured to sample fewer than all events. The maximum percentage is 10%.
 
 #### No events
 
@@ -61,11 +61,11 @@ TRACEABILITY_SAMPLING_PERCENTAGE=10
 TRACEABILITY_SAMPLING_PER_API=false
 ```
 
-If the agent receives 100 transactions, evenly between 2 APIs, only the first 10 will be sent to Amplify Analytics.
+If the agent receives 100 transactions, evenly between two APIs, only the first 10 will be sent to Amplify Analytics.
 
 #### 10% of all events, regardless of API and error status
 
-The following is a sample value that is added to `ta_env_vars.env`, which will send 10% of the gateway transactions including errors to Amplify Analytics.
+The following is a sample value that is added to `ta_env_vars.env`, which will send 10% of the gateway transactions, including errors to Amplify Analytics.
 
 ```shell
 TRACEABILITY_SAMPLING_PERCENTAGE=10
@@ -83,7 +83,7 @@ TRACEABILITY_SAMPLING_PER_API=false
 TRACEABILITY_SAMPLING_ONLYERRORS=true
 ```
 
-If the agent receives 100 transactions, evenly between 2 APIs, the first 10 (five from each API) with error status will be sent to Amplify Analytics.
+If the agent receives 100 transactions, evenly between two APIs, the first 10 (five from each API) with error status will be sent to Amplify Analytics.
 
 #### 10% of events per API ID
 
@@ -94,7 +94,7 @@ TRACEABILITY_SAMPLING_PERCENTAGE=10
 TRACEABILITY_SAMPLING_PER_API=true
 ```
 
-If the agent receives 100 transactions, evenly between 2 APIs, only 10 (5 from each API) will be sent to Amplify Analytics.
+If the agent receives 100 transactions, evenly between two APIs, only 10 (five from each API) will be sent to Amplify Analytics.
 
 {{< alert title="Note" color="primary" >}}It is recommended that you use the Business Insights API Health screen to identify the APIs that have status errors. Then view the API details with the tools provided by your API Gateway vendor.{{< /alert >}}
 
