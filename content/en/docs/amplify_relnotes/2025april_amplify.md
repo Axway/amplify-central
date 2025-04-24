@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## April 22, 2025
 
-Bug fix for the April 22 update
+Bug fix for the April 22 update.
 
 ### Marketplace bug fix for April 22, 2025
 
@@ -22,7 +22,7 @@ Bug fix for the April 22 update
 
 ## April 21, 2025
 
-New enhancements for the April 21 update
+New enhancements for the April 21 update.
 
 ### Marketplace updates for April 21, 2025
 
