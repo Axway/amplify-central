@@ -17,6 +17,10 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify Engage April 25 2025](/docs/amplify_relnotes/2025april_amplify/#april-25-2025)
+
+No agent updates. See April 18 for latest supported agent versions.
+
 ## [Amplify Engage April 22 2025](/docs/amplify_relnotes/2025april_amplify/#april-22-2025)
 
 No agent updates. See April 18 for latest supported agent versions.

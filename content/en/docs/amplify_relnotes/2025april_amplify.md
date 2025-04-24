@@ -10,6 +10,17 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## April 25, 2025
+
+New feature for the April 25 update.
+
+### Agents update for April 25, 2025
+
+* **Customize column**
+  
+  (TRACEABILITY AGENTS, ENHANCEMENT)</br>
+  Description
+
 ## April 22, 2025
 
 Bug fix for the April 22 update.
