@@ -12,13 +12,13 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## April 22, 2025
 
-New enhancements for the April 22 update
+Bug fix for the April 22 update
 
-### Marketplace bug fixes for April 22, 2025
+### Marketplace bug fix for April 22, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| | APIGOV-30283 | **Issue**: [Marketplace UI] Ratings and reviews not rendered in the product details anymore <br/>**Resolution**: Ratings and reviews are visible again on the product details page |
+| | APIGOV-30283 | **Issue**: [Marketplace UI] Ratings and reviews are not being rendered in the product details <br/>**Resolution**: Ratings and reviews are visible again on the *Product details* page. |
 
 ## April 21, 2025
 
@@ -26,21 +26,21 @@ New enhancements for the April 21 update
 
 ### Marketplace updates for April 21, 2025
 
-* **Bulk Archive action in Asset Catalog**
+* **Bulk archive action in Asset Catalog**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Asset providers can now select and archive up to fifty assets at once, as long as the assets are not referenced by any product. This enhancement allows you to quickly clean up unused assets.
+  Asset providers can now select and archive up to fifty assets at once, as long as the assets are not referenced by any products. This enhancement allows you to quickly clean up unused assets.
 
-* **Transaction Sampling disabled for stopped Agents**
+* **Transaction sampling disabled for stopped Agents**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  On the Agent Status screen, traceability agents that are in a stopped state can no longer be enabled for on-demand transaction sampling. This enhancement ensures that sampling can only be activated on agents that are currently running.
+  On the *Agent Status* screen, Traceability Agents that are in a stopped state can no longer be enabled for on-demand transaction sampling. This enhancement ensures that sampling can only be activated on agents that are currently running.
 
 ## April 18, 2025
 
-New enhancements for the April 18 update.
+New features, enhancements, and bug fixes for the April 18 update.
 
-### Agents updates for April 18, 2025
+### Agents update for April 18, 2025
 
 * **New agent versions available**
 
@@ -51,9 +51,9 @@ New enhancements for the April 18 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30096 | **Issue**: The Discovery Agent attempts to create API service revisions with an invalid API service version. <br/>**Resolution**: The Discovery Agent will create an API Service with a valid version. This fix is available in Agent using SDK version **v1.1.114** or later.|
-|  | APIGOV-29609 | **Issue**: The Agent will attempt to connect to an invalid URL if a leading or trailing space character is included in an agent environment variable. <br/>**Resolution**: The Agent will remove leading and trailing spaces from any URL value set in an environment variable to create a valid URL. This fix is available in Agent using SDK version **v1.1.114** or later.|
-| 01704915 | APIGOV-30218 | **Issue**: The Traceability Agent in online and offline mode will count healthcheck API calls in the API Health and platform usage report. <br/>**Resolution**: The Traceability Agent will exclude healthcheck API calls from API Health and plaform usage counts. This fix is available in Agent using SDK version **v1.1.114** or later.|
+|  | APIGOV-30096 | **Issue**: The Discovery Agent attempts to create API service revisions with an invalid API service version <br/>**Resolution**: The Discovery Agent will create an API service with a valid version. This fix is available in agent using SDK version **v1.1.114** or later.|
+|  | APIGOV-29609 | **Issue**: The agent will attempt to connect to an invalid URL if a leading or trailing space character is included in an agent environment variable <br/>**Resolution**: The agent will remove leading and trailing spaces from any URL value set in an environment variable to create a valid URL. This fix is available in agent using SDK version **v1.1.114** or later.|
+| 01704915 | APIGOV-30218 | **Issue**: The Traceability Agent in online and offline modes will count healthcheck API calls in the API Health and platform usage report <br/>**Resolution**: A Traceability Agent will exclude healthcheck API calls from API Health and plaform usage counts. This fix is available in agent using SDK version **v1.1.114** or later.|
   
 ### Marketplace updates for April 18, 2025
 
@@ -67,17 +67,17 @@ New enhancements for the April 18 update.
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
   A helpful message has been added to the resource details page for APIs that support mTLS. Consumers will now see instructions guiding them to store their client certificate in their browser’s certificate store. This helps prevent connection issues and makes it easier for developers to try out mTLS-enabled resources from the Marketplace. See [Learn how to enable try out for APIs with mTLS support](/docs/connect_manage_environ/connect_api_manager/mtls/index.html) for more information.
 
-### Marketplace bug fixes for April 18, 2025
+### Marketplace bug fix for April 18, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30225 | **Issue**: Engage API Design compliance may produce a linting result with a false error at line zero and character zero. <br/>**Resolution**:  The *Compliance Tool library* has been updated to remove these false erorrs. |
+|  | APIGOV-30225 | **Issue**: Engage API Design compliance may produce a linting result with a false error at line zero and character zero <br/>**Resolution**: The *Compliance Tool library* has been updated to remove these false erorrs. |
   
 ## April 16, 2025
 
 New enhancement for the April 16 update.
 
-### Marketplace updates for April 16, 2025
+### Marketplace update for April 16, 2025
 
 * **Download resource in JSON or YAML format**
 
@@ -119,17 +119,17 @@ New features, enhancements, and bug fixes for the April 9 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01622539 | APIGOV-28510 | **Issue**: The APIM Discovery Agent does not rediscover SOAP APIs with missing Credential Request Defintions at startup. <br/>**Resolution**: The APIM Discovery Agent now automatically discovers the Credential Request Definitions that were missing from SOAP APIs at startup. This fix is available in APIM Discovery Agent version **v1.2.21.**|
-| | APIGOV-30134 | **Issue**: The Apigee X Traceability Agent has a possible run-time error. <br/>**Resolution**: The possible run-time error was fixed in the Apigee X Traceability Agent. The fix is available in Apigee X Traceability Agent version **v1.4.5.**|
-| 01701325 | APIGOV-30080 | **Issue**: The APIM Discovery and Traceability agents do not display their statuses correctly on the Engage WebUI when the agent name contains a period (e.g., agent.name.x ). <br/>**Resolution**: The agent now reports statuses correctly. This fix is available in APIM Discovery Agent version **v1.2.21** and Traceability Agent **v1.2.18.**|
-| 01658556 | APIGOV-29326 | **Issue**: The APIM Discovery Agent method of handling quota enforcement during a plan migration would result in downtime. <br/>**Resolution**: The APIM Discovery Agent can now handle a plan migration with zero downtime. The fix is available in APIM Discovery Agent version **v1.2.21**|
-| | APIGOV-30186 | **Issue**: The APIM Discovery Agent handling of GraphQL APIs with inbound security would not link to the correct Credential Request Definition. <br/>**Resolution**: The APIM Discovery Agent can now link GraphQL APIs with the correct Credential Request Definition. The fix is available in APIM Discovery Agent version **v1.2.21**|
+| 01622539 | APIGOV-28510 | **Issue**: The APIM Discovery Agent does not rediscover SOAP APIs with missing Credential Request Defintions at startup <br/>**Resolution**: The APIM Discovery Agent now automatically discovers the Credential Request Definitions that were missing from SOAP APIs at startup. This fix is available in APIM Discovery Agent version **v1.2.21.**|
+| | APIGOV-30134 | **Issue**: The Apigee X Traceability Agent has a possible run-time error <br/>**Resolution**: The possible run-time error was fixed in the Apigee X Traceability Agent. The fix is available in Apigee X Traceability Agent version **v1.4.5.**|
+| 01701325 | APIGOV-30080 | **Issue**: The APIM Discovery and Traceability agents do not display their statuses correctly on the Engage WebUI when the agent name contains a period (e.g., agent.name.x ) <br/>**Resolution**: The agent now reports statuses correctly. This fix is available in APIM Discovery Agent version **v1.2.21** and Traceability Agent **v1.2.18.**|
+| 01658556 | APIGOV-29326 | **Issue**: The APIM Discovery Agent method of handling quota enforcement during a plan migration would result in downtime <br/>**Resolution**: The APIM Discovery Agent can now handle a plan migration with zero downtime. The fix is available in APIM Discovery Agent version **v1.2.21.**|
+| | APIGOV-30186 | **Issue**: The APIM Discovery Agent handling of GraphQL APIs with inbound security would not link to the correct Credential Request Definition <br/>**Resolution**: The APIM Discovery Agent can now link GraphQL APIs with the correct Credential Request Definition. The fix is available in APIM Discovery Agent version **v1.2.21.**|
 
 ## April 4, 2025
 
 New enhancement and bug fixes for the April 4 update.
 
-### Marketplace updates for April 4, 2025
+### Marketplace update for April 4, 2025
 
 * **Stage name displayed alongside a resource in the Marketplace**
 
@@ -150,7 +150,7 @@ New enhancement and bug fixes for the April 4 update.
 
 New enhancement for the April 3 update.
 
-### Axway Central CLI updates for April 3, 2025
+### Axway Central CLI update for April 3, 2025
 
 * **Introducing Axway Central CLI version 3.13.0**
 
