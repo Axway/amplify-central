@@ -14,12 +14,12 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 New feature for the April 25 update.
 
-### Agents update for April 25, 2025
+### Marketplace update for for April 25, 2025
 
-* **Customize column**
+* **Customize table**
   
-  (TRACEABILITY AGENTS, ENHANCEMENT)</br>
-  Description
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Providers can now select columns to be displayed and the order in which the columns appear in the table list view. This enhancement is available from a 'Customize table' icon to the right just above the Service Registy, Asset Catalog, Product Foundry and Marketplace Subscription tables.   Once configurud, the display will persist for each user.
 
 ## April 22, 2025
 
