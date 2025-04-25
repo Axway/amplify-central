@@ -21,11 +21,11 @@ New feature for the April 25 update.
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   Providers can now customize the columns displayed in the table list views and define the order in which they appear. This enhancement is available through a **Customize table** icon, located just above the tables in the following screens:
   
-  * Service Registry
-  * Asset Catalog
-  * Product Foundry
-  * Subscriptions
-    
+   * Service Registry
+   * Asset Catalog
+   * Product Foundry
+   * Subscriptions
+
   Once configured, the display will persist for each user.
 
 ## April 22, 2025
