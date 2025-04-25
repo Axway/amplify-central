@@ -51,7 +51,7 @@ To list API services:
 
 You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
-Click the **Customize** icon in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
+Click the **Customize table** icon in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
 
 * Show columns
 * Hide columns
