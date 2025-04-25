@@ -39,11 +39,12 @@ Learn how to use the Asset Catalog WebUI to create and manage assets, including:
 Using the **Filter By** controls to filter assets by the current category / stage / type.
 Search by the Asset Name with the search bar.
 
-Click **Customize** in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
+Click **Customize table** in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
 
 * Show columns
 * Hide columns
 * Reorder columns via drag-and-drop
+* Restore to default layout
 
 Layout preferences are automatically saved and persist across browser sessions.
 
