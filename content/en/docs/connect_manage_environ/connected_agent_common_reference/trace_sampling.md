@@ -4,7 +4,7 @@ linkTitle: Trace sampling
 draft: false
 weight: 10
 ---
-{{< alert title="Note" color="primary" >}}If you are using a Traceability agent version that support Percentage based sampling, refer to [Archived trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/archive/trace_sampling).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}If you are using a Traceability Agent version that supports percentage-based sampling, see [Archived trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/archive/trace_sampling).{{< /alert >}}
 
 The Traceability Agent can sample the transaction information that is sent to Amplify Analytics. Learn how to request a sampling period, the restrictions of the sampling period, and the rules used by the agent when sending those transactions.
 
@@ -14,39 +14,40 @@ The Traceability Agent can sample the transaction information that is sent to Am
 
 Sampling grants the agent the ability to send transaction information of API Traffic to Amplify Analytics.
 
-When requesting a sampling period the user will also request a time frame, 0-300 seconds (5 minutes). Given that the agent has surpassed its cool down period (30 minutes), time since last sampling has ended, the agent sampling will be enabled. At that point the agent will begin to send transactions as they come through, but still be limited to a maximum of 100 transactions a minute.
+When requesting a sampling period the user will also request a time frame, 0-300 seconds (five minutes). Given that the agent has surpassed its cool down period (30 minutes) since the last sampling ended, the agent sampling will be enabled. The agent will begin to send transactions as they come through, but still be limited to a maximum of 100 transactions a minute.
 
-{{< alert title="Note" color="primary" >}}The max sampling time and transactions per minute limit may be changed future updates to Amplify Engage.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The max sampling time and transactions per minute limit may be changed in future updates to Amplify Engage.{{< /alert >}}
 
 ### Requesting the Traceability Agent to sample
 
 The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ#on-premise-Agent-Features), is already configured. The only other step is to request the sampling to begin using the Amplify Engage UI or CLI.
 
-{{< alert title="Note" color="primary" >}}The duration field below does not apply to SaaS agents, when enabled the SaaS agent will immediately run and send transactional data for that execution only.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The duration field below does not apply to SaaS agents. When enabled, the SaaS agent will immediately run and send transactional data for that execution only.{{< /alert >}}
 
 #### Request via the UI
 
-* Navigate to the Agents List page in Amplify Engage
-* Find a Traceability Agent you would like transactional data from
-* Click the Traceability Sampling icon
-* On the menu click to enable sampling, select a duration, and click save
-* Your selected agent should now sample transactions fro the duration selected
+1. Navigate to the *Agents List* page in Amplify Engage.
+2. Find a Traceability Agent you would like transactional data from.
+3. Click the **Traceability Sampling** icon.
+4. Click in the menu to enable sampling. Select a duration, and click **Save**.
+
+Your selected agent should now sample transactions for the duration selected.
   
 #### Request via the CLI
 
-* Login using the Amplify CLI with:
+* Log in using the Amplify CLI:
 
 ```shell
 axway auth login
 ```
 
-* Retrieve the Traceability Agent you would like transactional data from with:
+* Retrieve the Traceability Agent you would like transactional data from:
   
 ```shell
 axway central get -o yaml -s [Environment Name] traceabilityagent [Traceability Agent Name] > resource.yaml
 ```
 
-* Within the `resource.yaml` file add the following:
+* Within the `resource.yaml` file, add:
   
 ```yaml
 sampletrigger:
@@ -54,13 +55,13 @@ sampletrigger:
   duration: 60
 ```
 
-* Update the Traceability Agent using the `resource.yaml` file with:
+* Update the Traceability Agent using the `resource.yaml` file:
 
 ```shell
 axway central apply -f resource.yaml
 ```
 
-* Your selected agent should now sample transactions for 60 seconds
+Your selected agent should now sample transactions for 60 seconds.
 
 For details on how to configure and view API Traffic Insights on the Axway API Management Gateway, see:
 
