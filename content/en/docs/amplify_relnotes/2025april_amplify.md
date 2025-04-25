@@ -12,7 +12,14 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## April 25, 2025
 
-New feature for the April 25 update.
+New feature and enhancements for the April 25 update.
+
+### Agents update for April 25, 2025
+
+* **New Kafka agents versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
 ### Marketplace update for April 25, 2025
 
