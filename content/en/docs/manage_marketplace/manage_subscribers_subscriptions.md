@@ -68,7 +68,7 @@ To consume APIs from the Marketplace, the consumer must:
 Using the **Filter By** controls to filter subscriptions by the current state / approval state / consumer.
 Search by the Subscription Name with the search bar.
 
-Click **Customize table** in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
+Click **Customize table** icon in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
 
 * Show columns
 * Hide columns
