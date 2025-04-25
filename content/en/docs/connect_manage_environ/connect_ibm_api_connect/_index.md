@@ -54,8 +54,6 @@ The Traceability Agent collects metric information and sampled transactions from
 
 The metric data collected includes call count, the number of transactions for a specific API or API/Application combination, and latency details.
 
-The transaction data collected will only be a sample of the overall number of transactions that were seen in IBM API Connect.
-
 ## Prerequisites
 
 * An Axway Amplify subscription in the Amplify platform

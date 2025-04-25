@@ -38,7 +38,7 @@ These configuration steps are displayed only if an Embedded AWS environment is s
 
 3. Embedded Traceability Agent Settings:
 
-    * If enabled, edit: Frequency, Sampling Percentage, URL Path Allowed Patterns, Query Arguments Allowed Patterns, Query Arguments Sanitization Patterns, Request Headers Allowed Patterns, Request Headers Sanitization Patterns, Response Headers Allowed Patterns, Response Headers Sanitization Patterns, and Masking Characters. Sample All Errors can also be set.
+    * If enabled, edit: Frequency, URL Path Allowed Patterns, Query Arguments Allowed Patterns, Query Arguments Sanitization Patterns, Request Headers Allowed Patterns, Request Headers Sanitization Patterns, Response Headers Allowed Patterns, Response Headers Sanitization Patterns, and Masking Characters. Sample All Errors can also be set.
 
 ### Embedded Apigee X API Gateway environment
 
@@ -75,7 +75,7 @@ These configuration steps are displayed only if an Embedded Azure environment is
 
 3. Embedded Traceability Agent Settings:
 
-    * If enabled, edit: Frequency, Sampling Percentage, URL Path Allowed Patterns, Query Arguments Allowed Patterns, Query Arguments Sanitization Patterns, Request Headers Allowed Patterns, Request Headers Sanitization Patterns, Response Headers Allowed Patterns, Response Headers Sanitization Patterns, and Masking Characters. Sample All Errors can also be set.
+    * If enabled, edit: Frequency, URL Path Allowed Patterns, Query Arguments Allowed Patterns, Query Arguments Sanitization Patterns, Request Headers Allowed Patterns, Request Headers Sanitization Patterns, Response Headers Allowed Patterns, Response Headers Sanitization Patterns, and Masking Characters.
 
 ### Embedded GitHub environment
 
