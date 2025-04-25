@@ -14,7 +14,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 New feature for the April 25 update.
 
-### Marketplace update for for April 25, 2025
+### Marketplace update for April 25, 2025
 
 * **Customizable table columns**
   
