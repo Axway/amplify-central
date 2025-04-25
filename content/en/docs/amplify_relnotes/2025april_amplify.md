@@ -16,10 +16,17 @@ New feature for the April 25 update.
 
 ### Marketplace update for for April 25, 2025
 
-* **Customize table**
+* **Customizable table columns**
   
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Providers can now select columns to be displayed and the order in which the columns appear in the table list view. This enhancement is available from a 'Customize table' icon to the right just above the Service Registy, Asset Catalog, Product Foundry and Marketplace Subscription tables.   Once configurud, the display will persist for each user.
+  Providers can now customize the columns displayed in the table list views and define the order in which they appear. This enhancement is available through a **Customize table** icon, located just above the tables in the following screens:
+  
+  * Service Registry
+  * Asset Catalog
+  * Product Foundry
+  * Subscriptions
+    
+  Once configured, the display will persist for each user.
 
 ## April 22, 2025
 
