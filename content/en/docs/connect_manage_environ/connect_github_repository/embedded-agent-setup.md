@@ -26,5 +26,5 @@ The Embedded agent uses a personal access token to read your repository, this to
 6. The token generation requires that you to fill in the `Note` field. The content of this field is not consumed by the agent.
 7. Set an expiration time according to your organizations policy.
 8. If the repository is private, add the parent `repo` permissions
-9. At the end, click **Generate token**.
+9. Click **Generate token**.
 10. Save the token for installation.
