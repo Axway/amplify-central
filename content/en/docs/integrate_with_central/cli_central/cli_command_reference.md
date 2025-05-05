@@ -292,7 +292,7 @@ axway central get stages demo-stage --languageDefinition="en-us" -o json
 # To get a stage with name "demo-stage" with the German language translation in JSON format
 axway central get stages demo-stage --languageDefinition="de-de" -o json
 
-# To get a stage with name "demo-stage" with the Portugese language translation in JSON format
+# To get a stage with name "demo-stage" with the Portuguese language translation in JSON format
 axway central get stages demo-stage --languageDefinition="pt-br" -o json
 ```
 
@@ -399,7 +399,7 @@ axway central get product -q "metadata.references.kind===ProductRelease"
 # Get environments that have at least 1 API service.
 axway central get env -q "scopedResources.kind===APIService"
 
-# Get enivonrments that don't have any API services.
+# Get environments that don't have any API services.
 axway central get env -q "scopedResources=without='kind===APIService'"
 
 # Get stages that are assigned to environments.
