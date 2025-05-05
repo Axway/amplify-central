@@ -25,7 +25,7 @@ New feature and enhancements for the May 2 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-xxxx | **Issue**: Description <br/>**Resolution**: Description.|
+| 01713319 | APIGOV-30367 | **Issue**: All traceability agents were displayed with an unhealthy status while traffic metrics were not affected.   <br/>**Resolution**: A fix was made for handling an error while updating the traceability agent status. |
 
 ### Marketplace updates for May 2, 2025
 
