@@ -78,7 +78,7 @@ New features, enhancements, and bug fixes for the April 18 update.
 |-------------|--------------|---------------------------------------------------|
 |  | APIGOV-30096 | **Issue**: The Discovery Agent attempts to create API service revisions with an invalid API service version <br/>**Resolution**: The Discovery Agent will create an API service with a valid version. This fix is available in agent using SDK version **v1.1.114** or later.|
 |  | APIGOV-29609 | **Issue**: The agent will attempt to connect to an invalid URL if a leading or trailing space character is included in an agent environment variable <br/>**Resolution**: The agent will remove leading and trailing spaces from any URL value set in an environment variable to create a valid URL. This fix is available in agent using SDK version **v1.1.114** or later.|
-| 01704915 | APIGOV-30218 | **Issue**: The Traceability Agent in online and offline modes will count healthcheck API calls in the API Health and platform usage report <br/>**Resolution**: A Traceability Agent will exclude healthcheck API calls from API Health and plaform usage counts. This fix is available in agent using SDK version **v1.1.114** or later.|
+| 01704915 | APIGOV-30218 | **Issue**: The Traceability Agent in online and offline modes will count healthcheck API calls in the API Health and platform usage report <br/>**Resolution**: A Traceability Agent will exclude healthcheck API calls from API Health and platform usage counts. This fix is available in agent using SDK version **v1.1.114** or later.|
   
 ### Marketplace updates for April 18, 2025
 
@@ -96,7 +96,7 @@ New features, enhancements, and bug fixes for the April 18 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30225 | **Issue**: Engage API Design compliance may produce a linting result with a false error at line zero and character zero <br/>**Resolution**: The *Compliance Tool library* has been updated to remove these false erorrs. |
+|  | APIGOV-30225 | **Issue**: Engage API Design compliance may produce a linting result with a false error at line zero and character zero <br/>**Resolution**: The *Compliance Tool library* has been updated to remove these false errors. |
   
 ## April 16, 2025
 
@@ -128,7 +128,7 @@ New features, enhancements, and bug fixes for the April 9 update.
 * **Kong Enterprise - Workspace support**
   
   (KONG DISCOVERY AGENT, ENHANCEMENT)</br>
-  The Kong Discovery Agent can now disover API services from one or more Kong Enterprise workspaces. The update is included in Kong Discovery Agent version **1.1.17 and later**.
+  The Kong Discovery Agent can now discover API services from one or more Kong Enterprise workspaces. The update is included in Kong Discovery Agent version **1.1.17 and later**.
 
 * **External handling of Access Request Definition**
   
@@ -144,7 +144,7 @@ New features, enhancements, and bug fixes for the April 9 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01622539 | APIGOV-28510 | **Issue**: The APIM Discovery Agent does not rediscover SOAP APIs with missing Credential Request Defintions at startup <br/>**Resolution**: The APIM Discovery Agent now automatically discovers the Credential Request Definitions that were missing from SOAP APIs at startup. This fix is available in APIM Discovery Agent version **v1.2.21.**|
+| 01622539 | APIGOV-28510 | **Issue**: The APIM Discovery Agent does not rediscover SOAP APIs with missing Credential Request Definitions at startup <br/>**Resolution**: The APIM Discovery Agent now automatically discovers the Credential Request Definitions that were missing from SOAP APIs at startup. This fix is available in APIM Discovery Agent version **v1.2.21.**|
 | | APIGOV-30134 | **Issue**: The Apigee X Traceability Agent has a possible run-time error <br/>**Resolution**: The possible run-time error was fixed in the Apigee X Traceability Agent. The fix is available in Apigee X Traceability Agent version **v1.4.5.**|
 | 01701325 | APIGOV-30080 | **Issue**: The APIM Discovery and Traceability agents do not display their statuses correctly on the Engage WebUI when the agent name contains a period (e.g., agent.name.x ) <br/>**Resolution**: The agent now reports statuses correctly. This fix is available in APIM Discovery Agent version **v1.2.21** and Traceability Agent **v1.2.18.**|
 | 01658556 | APIGOV-29326 | **Issue**: The APIM Discovery Agent method of handling quota enforcement during a plan migration would result in downtime <br/>**Resolution**: The APIM Discovery Agent can now handle a plan migration with zero downtime. The fix is available in APIM Discovery Agent version **v1.2.21.**|
