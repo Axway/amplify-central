@@ -19,23 +19,23 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Engage May 2 2025](/docs/amplify_relnotes/2025may_amplify/#may-2-2025)
 
-| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.114 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.115 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.7                   | DA=1.2.22/ TA=1.2.19     | DA=1.1.80 / TA=1.1.81            |
-| AWS Gateway using SDK 2.0                  | DA=1.2.18/ TA=1.2.18     | DA=1.1.64 / TA-1.1.67            |
-| Azure latest release                       | DA=1.3.19 / TA=1.3.19    | DA=1.1.70 / TA=1.1.76            |
-| Istio 1.9.5                                | DA=1.1.18 / TA=2.1.17    | DA=1.0.36 / TA=2.0.82            |
-| Apigee Edge                                | 1.0.14                   | 0.1.38                           |
-| Apigee X                                   | 1.4.6                    | 1.4.2                            |
-| Mulesoft Anypoint platform v3              | 1.2.20                   | 1.1.48                           |
-| Software AG webMethods                     | 1.0.16                   | 1.0.0                            |
-| Kong Gateway                               | 1.1.18                   | 1.0.9                            |
-| GitLab                                     | 1.1.16                   | 1.0.6                            |
-| Kafka Cluster                              | 1.1.16                   | 1.0.6                            |
-| IBM API Connect Gateway                    | 1.1.16                   | 1.0.0                            |
-| Backstage                                  | 1.0.12                   | 1.0.0                            |
-| SAP Integration Suite - API Management / API Portal | 1.0.5                    | 1.0.0                            |
-| WSO2 API Manager 4.5.0                      | 1.0.4                    | 1.0.0                            |
+| Axway API Management 7.7                   | DA=1.2.23/ TA=1.2.20     | DA=1.1.80 / TA=1.1.81            |
+| AWS Gateway using SDK 2.0                  | DA=1.2.19/ TA=1.2.19     | DA=1.1.64 / TA-1.1.67            |
+| Azure latest release                       | DA=1.3.20 / TA=1.3.20    | DA=1.1.70 / TA=1.1.76            |
+| Istio 1.9.5                                | DA=1.1.19 / TA=2.1.18    | DA=1.0.36 / TA=2.0.82            |
+| Apigee Edge                                | 1.0.15                   | 0.1.38                           |
+| Apigee X                                   | 1.4.7                    | 1.4.2                            |
+| Mulesoft Anypoint platform v3              | 1.2.21                   | 1.1.48                           |
+| Software AG webMethods                     | 1.0.17                   | 1.0.0                            |
+| Kong Gateway                               | 1.1.19                   | 1.0.9                            |
+| GitLab                                     | 1.1.17                   | 1.0.6                            |
+| Kafka Cluster                              | 1.1.17                   | 1.0.6                            |
+| IBM API Connect Gateway                    | 1.1.17                   | 1.0.0                            |
+| Backstage                                  | 1.0.13                   | 1.0.0                            |
+| SAP Integration Suite - API Management / API Portal | 1.0.6                    | 1.0.0                            |
+| WSO2 API Manager 4.5.0                      | 1.0.5                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
