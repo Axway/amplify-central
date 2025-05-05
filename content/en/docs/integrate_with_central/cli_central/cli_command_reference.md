@@ -684,3 +684,62 @@ The following example shows how to use the `install` command:
 # install agent configuration in interactive mode
 axway central install agents
 ```
+
+## productize
+
+Productize one or more API Services from a file.
+
+The following table describes the usage, and options for the `productize` command:
+
+|Usage                                                    |                             |
+|---                                                      |---                                   |
+|`axway central productize [options]`                     |                             |
+|**Options**                                              |                   |
+|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
+|`-f,--file=<path>`                                       |Filename to use to produtize the resource(s)  |
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
+|`--transferOwnership`                                    |Transfers the ownership(if exisiting) of API Service(s) to corresponding Asset(s) and Product(s)*|
+
+The following example shows how to use the `productize` command:
+
+```bash
+# productize api services from a file without transfer of ownership
+axway central productize -f ./some/folder/apiservices.json
+
+# productize api services from a file with transfer of ownership
+axway central productize -f ./some/folder/apiservices.json --transferOwnership
+```
+
+The `apiservices.json` file contents are as follows:
+
+```json
+[
+    {
+        "metadata": {
+            "scope": {
+                "kind": "Environment",
+                "name": "env1"
+            }
+        },
+        "spec": {
+            "apiService": {
+                "name": "apisvc1"
+            }
+        }  
+    },
+    {
+        "metadata": {
+            "scope": {
+                "kind": "Environment",
+                "name": "env2"
+            }
+        },
+        "spec": {
+            "apiService": {
+                "name": "apisvc2"
+            }
+        }
+    }
+]
+```
