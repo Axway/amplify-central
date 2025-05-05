@@ -28,7 +28,7 @@ New feature and enhancements for the May 2 update.
 | 01713319 | APIGOV-30367 | **Issue**: All traceability agents were displayed with an unhealthy status while traffic metrics were not affected.   <br/>**Resolution**: A fix was made for handling an error while updating the traceability agent status. |
 | 01702598 | APIGOV-30220 | **Issue**: The Kafka discovery agent encountered a 409 status error while updating an AccessRequestDefinition.   <br/>**Resolution**: Additional checks were made to only create/update the AccessRequestDefinition if changes are detected. |
 |          | APIGOV-30267 | **Issue**: The Traceable agent conformance results were not reflected on the Engage WebUI.   <br/>**Resolution**: A fix was made to the handling of a null object returned from the Traceable conformance analysis API. |
-|          | APIGOV-30293 | **Issue**: The Kong agent has a nil panic error when the agent discovers an OAS specification without a component property.   <br/>**Resolution**: A fix was made to prevent the nil panic error while processing the OAS specification. |
+|          | APIGOV-30293 | **Issue**: The discovery agent encountered a nil panic error when the agent discovers an OAS specification without a component property.   <br/>**Resolution**: A fix was made to the Agent sDK prevent the nil panic error while processing the OAS specification. |
 
 ### Marketplace updates for May 2, 2025
 
