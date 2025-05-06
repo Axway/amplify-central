@@ -50,3 +50,9 @@ New feature and enhancements for the May 2 update.
   
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   Description
+
+### Marketplace bug fixes for May 2, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01701322 | APIGOV-30079 | **Issue**: When user is not logged in to a public Marketplace, it is impossible to switch the language.<br/>**Resolution**: Now the language switcher works even when users are not logged in. |
