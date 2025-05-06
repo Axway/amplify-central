@@ -30,7 +30,7 @@ New feature and enhancements for the May 2 update.
 |          | APIGOV-30267 | **Issue**: The Traceable agent conformance results were not reflected on the Engage WebUI.   <br/>**Resolution**: A fix was made to the handling of a null object returned from the Traceable conformance analysis API. |
 |          | APIGOV-30293 | **Issue**: The discovery agent encountered a nil panic error when the agent discovers an OAS specification without a component property.   <br/>**Resolution**: A fix was made to the Agent sDK prevent the nil panic error while processing the OAS specification. |
 |          | APIGOV-30351 | **Issue**: The discovery agent may discover an API as a duplicate in some cases.   <br/>**Resolution**: A fix was made to the method of handling API duplicate detection. |
-| 01691705 | APIGOV-29869 | **Issue**: The GitHub SaaS discovery agent was not able to discover API Services from a private repository.   <br/>**Resolution**: A fix was made to the GitHub SaaS discovery agent to use a token with 'fine grain' permissions. |
+| 01691705 | APIGOV-29869 | **Issue**: The GitHub SaaS discovery agent was not able to discover API Services from a private repository.   <br/>**Resolution**: A fix was made to the GitHub SaaS discovery agent to validate that the chosen repository is accessible and has the correct permissions during configuration. |
 
 ### Agent updates for May 2, 2025
 
