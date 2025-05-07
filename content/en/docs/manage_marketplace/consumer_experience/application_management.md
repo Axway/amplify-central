@@ -55,7 +55,7 @@ Additionally, two tabs are displayed:
 
 ### Credentials details
 
-The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential. From here you can either: 
+The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential. From here you can either:
 
 * Click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
 * Edit a credential.
