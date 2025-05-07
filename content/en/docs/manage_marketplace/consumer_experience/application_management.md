@@ -48,36 +48,37 @@ Anyone who is authenticated in the Marketplace can subscribe to a product with t
 
 The application details shows the application name, description and the owning team.
 
-Then the screen is split into two tabs:
+Additionally, two tabs are displayed:
 
-* **Credentials**: for managing and creating application credentials linked to the resources available in the application
-* **Resources**: list available resources the application has access to
+* **Credentials** for managing and creating application credentials linked to the resources available in the application.
+* **Resources** lists available resources the application has access to.
 
 ### Credentials details
 
-From the credential tab, you will see all the credentials managed by the application. It presents, the credential name, state and number of resources that can be used with this credential.
+The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential.
 
-An ellipsis menu helps manipulating the credential:
+#### Edit credentials
 
-* **View** the details of a credential. From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
-* **Renew** a credential (if the feature available on the Gateway). This will create an new credential.
-* **Rotate** a credential (if the feature available on the Gateway). This will update the credential value.
-* **Delete** a credential
+1. Click on the credential name. *A side panel displays the credential details and a list of resources that can use the resource*.
+2. Click the ellipsis menu to:
 
-When clicking on the credential name, a side panel will open to show the credential details and a detailed list of resources that can use it.
+    * **View** the details of a credential. From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
+    * **Renew** a credential (if the feature available on the Gateway). This will create an new credential.
+    * **Rotate** a credential (if the feature available on the Gateway). This will update the credential value.
+    * **Delete** a credential
 
-You can also request a new credential using the **Request Credential** button. A side panel will open to ask you the credential details (name, resources and any additional data if required).
+You can also click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
 
 ### Resources details
 
-From the resources details , you will see all resources the application has access to. It presents, the resource name, resource stage, the product where the resource is coming from, the subscription and product plan of the subscription as well as the number of credentials that can be used with the resource.
+The Resources tab list all resources the application has access to, along with resource details, including: name, resource stage, the product where the resource is coming from, the subscription and product plan of the subscription as well as the number of credentials that can be used with the resource.
 
 Various link are available:
 
-* resource name: open the product > Resource details screen
-* product name: open the product details screen
-* subscription name: open the subscription details screen
-* plan name: open the plan details screen
+* Resource name: open the product > Resource details screen
+* Product name: open the product details screen
+* Subscription name: open the subscription details screen
+* Plan name: open the plan details screen
 
 A filter allows to search resources for a specific product.
 
