@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## May 2, 2025
 
-New feature and enhancements for the May 2 update.
+New features, enhancements, and bug fixes for the May 2 update.
 
 ### Agents updates for May 2, 2025
 
@@ -24,28 +24,28 @@ New feature and enhancements for the May 2 update.
 * **APIM Discovery Agent: Credential Request Definitions for multiple Inbound Security Policies**
   
   (APIM DISCOVERY AGENT, ENHANCEMENT)</br>
-  When an API is configured with multiple inbound security profiles in V7 API Management, the Discovery Agent will now automatically generate a distinct *Credential Request Definition* for each supported security profile. This enhanement ensures that all credential types associated with the API are exposed and selectable in the Marketplace.
+  When an API is configured with multiple inbound security profiles in v7 API Management, the Discovery Agent will now automatically generate a distinct *Credential Request Definition* for each supported security profile. This enhancement ensures that all credential types associated with the API are exposed and selectable in the Marketplace.
 
 ### Agents bug fixes for May 2, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01713319 | APIGOV-30367 | **Issue**: All traceability agents were displayed with an unhealthy status while traffic metrics were not affected.   <br/>**Resolution**: A fix was made for handling an error while updating the traceability agent status. |
-| 01702598 | APIGOV-30220 | **Issue**: The Kafka discovery agent encountered a 409 status error while updating an AccessRequestDefinition.   <br/>**Resolution**: Additional checks were made to only create/update the AccessRequestDefinition if changes are detected. |
-|          | APIGOV-30267 | **Issue**: The Traceable agent conformance results were not reflected on the Engage WebUI.   <br/>**Resolution**: A fix was made to the handling of a null object returned from the Traceable conformance analysis API. |
-|          | APIGOV-30293 | **Issue**: The discovery agent encountered a nil panic error when the agent discovers an OAS specification without a component property.   <br/>**Resolution**: A fix was made to the Agent SDK to prevent the nil panic error while processing the OAS specification. |
-|          | APIGOV-30351 | **Issue**: The discovery agent may discover an API as a duplicate in some cases.   <br/>**Resolution**: A fix was made to the method of handling API duplicate detection. |
-| 01691705 | APIGOV-29869 | **Issue**: The GitHub SaaS discovery agent was not able to discover API Services from a private repository.   <br/>**Resolution**: A fix was made to validate that the chosen repository is accessible and has the correct permissions during configuration. |
+| 01713319 | APIGOV-30367 | **Issue**: All Traceability Agents were displayed with an unhealthy status while traffic metrics were not affected. <br/>**Resolution**: Error are now handled correctly while updating the Traceability Agent status. |
+| 01702598 | APIGOV-30220 | **Issue**: The Kafka Discovery Agent encountered a 409 status error while updating an AccessRequestDefinition. <br/>**Resolution**: Additional checks now create/update the AccessRequestDefinition only when changes are detected. |
+|          | APIGOV-30267 | **Issue**: The Traceable Agent conformance results were not reflected on the Engage WebUI. <br/>**Resolution**: Null objects returned from the Traceable conformance analysis API are now handled correctly. |
+|          | APIGOV-30293 | **Issue**: The Discovery Agent encountered a nil panic error when the agent discovered an OAS specification without a component property. <br/>**Resolution**: The Agent SDK now prevents nil panic errors while processing the OAS specification. |
+|          | APIGOV-30351 | **Issue**: The Discovery Agent may discover an API as a duplicate in some cases. <br/>**Resolution**: The method of handling API duplicate detection has been fixed. |
+| 01691705 | APIGOV-29869 | **Issue**: The GitHub SaaS Discovery Agent was not able to discover API services from a private repository. <br/>**Resolution**: Repository accessibility and permissions are now validated during configuration. |
 
-### Marketplace updates for May 2, 2025
+### Marketplace update for May 2, 2025
 
 * **Asset Request Definition Cleanup**
   
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  An enhancement has been implemented to improve the configuration consistency in the Asset Catalog. When an *Access Request Definition* is deleted, the system will now automatically remove the corresponding *Asset Request Definition* - if one exists. This prevents orphaned configuration resources.
+  An enhancement has been implemented to improve the configuration consistency in the Asset Catalog. When an *Access Request Definition* is deleted, the system will now automatically remove the corresponding *Asset Request Definition*, if one exists. This prevents orphaned configuration resources.
 
-### Marketplace bug fixes for May 2, 2025
+### Marketplace bug fix for May 2, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01701322 | APIGOV-30079 | **Issue**: When user is not logged in to a public Marketplace, it is impossible to switch the language.<br/>**Resolution**: Now the language switcher works even when users are not logged in. |
+| 01701322 | APIGOV-30079 | **Issue**: When a user is not logged in to a public Marketplace, the language cannot be switched.<br/>**Resolution**: Now, the language switcher works even when users are not logged in. |
