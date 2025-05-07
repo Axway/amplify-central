@@ -25,7 +25,7 @@ Anyone who is authenticated in the Marketplace can subscribe to a product with t
 | Persona               | Create application |
 |-----------------------|--------------------|
 | Subscription Manager  | Forbidden          |
-| Engage Administrator | Authorized         |
+| Engage Administrator  | Authorized         |
 | Developer/Consumer    | Authorized         |
 
 1. Navigate to the *Marketplace*.
@@ -46,21 +46,49 @@ Anyone who is authenticated in the Marketplace can subscribe to a product with t
 2. Select **Applications** and find the application you want to view.
 3. Click the application name to open the application details.
 
-View the following product information associated with the application:
+The application details shows the application name, description and the owning team.
 
-* The subscription and plan names
-* For each subscription/plan, all resources that are accessible with the subscription
-* For each resource, all credentials requested by the consumers with their statuses (Pending / Active / Inactive - see [Credential lifecycle](/docs/manage_marketplace/consumer_experience/credential_management#credential-lifecycle)) and its expiration, date if any
+Additionally, two tabs are displayed:
 
-    * Click the resource name to view the resource details (Methods / Credentials / Application Registrations)
-    * Click **Create Credential** to request new credentials. Once the credential is provisioned on the data plane, click the **eye** icon to view it. **Important**: For security, the value of a credential can be viewed only once inside the Marketplace, but it will remain on the data plane. Be sure to store it in a secure place to use every time you call a product resource. If the credential value is lost, you can request a new one.
-    * Click the credential ellipsis menu to:
+* **Credentials** for managing and creating application credentials linked to the resources available in the application.
+* **Resources** lists available resources the application has access to.
 
-        * **View** the details of a credential. From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
-        * **Renew** a credential (if the feature available on the Gateway). This will create an new credential.
-        * **Delete** a credential
+### Credentials details
 
-{{< alert title="Note" color="primary" >}}You can also initiate a new subscription from the application details. Click **Add subscription**.{{< /alert >}}
+The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential. From here you can either:
+
+* Click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
+* Edit a credential.
+
+#### Edit credential
+
+To edit a credential, you can either:
+
+* Click on the credential name. *A side panel displays the credential details and a list of resources that can use the resource*. Here you can:
+    * **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
+    * **Rotate credential** (if the feature available on the Gateway) - This will update the credential value.
+    * **Delete credential** - This will delete the credential.
+
+* Click the ellipsis menu and select an option:
+    * **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
+    * **Renew credential** (if the feature is available on the Gateway) - This will create a new credential.
+    * **Rotate credential** (if the feature is available on the Gateway) - This will update a credential value.
+    * **Enable credential** - This will change credential status to active.
+    * **Suspend credential** - This will change credential status to inactive.
+    * **Delete**  - This will delete a credential.
+
+### Resources details
+
+The Resources tab list all resources the application has access to, along with resource details, including: name, resource stage, the product where the resource is coming from, the subscription and product plan of the subscription as well as the number of credentials that can be used with the resource.
+
+Various links are available:
+
+* Resource name: open the product > Resource details screen
+* Product name: open the product details screen
+* Subscription name: open the subscription details screen
+* Plan name: open the plan details screen
+
+A filter allows to search resources for a specific product.
 
 ## Edit an application
 
