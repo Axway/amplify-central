@@ -57,20 +57,19 @@ Additionally, two tabs are displayed:
 
 The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential. From here you can either: 
 
-* Edit a credential.
 * Click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
+* Edit a credential.
 
 #### Edit credential
 
 To edit a credential, you can either:
 
 * Click on the credential name. *A side panel displays the credential details and a list of resources that can use the resource*. Here you can:
-    **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
-    **Rotate credential** (if the feature available on the Gateway) - This will update the credential value.
-    **Delete credential** - This will delete the credential.
+    * **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
+    * **Rotate credential** (if the feature available on the Gateway) - This will update the credential value.
+    * **Delete credential** - This will delete the credential.
 
 * Click the ellipsis menu and select an option:
-
     * **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
     * **Renew credential** (if the feature is available on the Gateway) - This will create a new credential.
     * **Rotate credential** (if the feature is available on the Gateway) - This will update a credential value.
