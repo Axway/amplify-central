@@ -55,7 +55,10 @@ Additionally, two tabs are displayed:
 
 ### Credentials details
 
-The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential. From here you can either edit a credential or click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
+The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential. From here you can either: 
+
+* Edit a credential.
+* Click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
 
 #### Edit credential
 
@@ -79,7 +82,7 @@ To edit a credential, you can either:
 
 The Resources tab list all resources the application has access to, along with resource details, including: name, resource stage, the product where the resource is coming from, the subscription and product plan of the subscription as well as the number of credentials that can be used with the resource.
 
-Various link are available:
+Various links are available:
 
 * Resource name: open the product > Resource details screen
 * Product name: open the product details screen
