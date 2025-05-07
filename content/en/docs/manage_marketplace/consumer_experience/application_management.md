@@ -55,19 +55,25 @@ Additionally, two tabs are displayed:
 
 ### Credentials details
 
-The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential.
+The Credentials tab lists all credentials managed by the application, along with credential details, including: name, state, and number of resources that can be used with each credential. From here you can either edit a credential or click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
 
-#### Edit credentials
+#### Edit credential
 
-1. Click on the credential name. *A side panel displays the credential details and a list of resources that can use the resource*.
-2. Click the ellipsis menu to:
+To edit a credential, you can either:
 
-    * **View** the details of a credential. From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
-    * **Renew** a credential (if the feature available on the Gateway). This will create an new credential.
-    * **Rotate** a credential (if the feature available on the Gateway). This will update the credential value.
-    * **Delete** a credential
+* Click on the credential name. *A side panel displays the credential details and a list of resources that can use the resource*. Here you can:
+    **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
+    **Rotate credential** (if the feature available on the Gateway) - This will update the credential value.
+    **Delete credential** - This will delet the credential.
 
-You can also click **Request Credential** to request a new credential. Enter the credential details in the side panel (name, resources and any additional data if required).
+* Click the ellipsis menu and select an option:
+
+    * **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
+    * **Renew credential** (if the feature available on the Gateway) - This will create an new credential.
+    * **Rotate credential** (if the feature available on the Gateway) - This will update a credential value.
+    * **Enable credential** - This will change a credential status to active.
+    * **Suspend credential** - This will change a credential status to inactive.
+    * **Delete**  - This will delete a credential.
 
 ### Resources details
 
