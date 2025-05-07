@@ -64,15 +64,15 @@ To edit a credential, you can either:
 * Click on the credential name. *A side panel displays the credential details and a list of resources that can use the resource*. Here you can:
     **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
     **Rotate credential** (if the feature available on the Gateway) - This will update the credential value.
-    **Delete credential** - This will delet the credential.
+    **Delete credential** - This will delete the credential.
 
 * Click the ellipsis menu and select an option:
 
     * **View credential** - From the details screen, you can **Renew credentials** (if the feature is available on the gateway), **Delete** credentials, **Suspend** credentials (temporarily inactivate the credential) and **Enable** credentials (reactivate a suspended credential).
-    * **Renew credential** (if the feature available on the Gateway) - This will create an new credential.
-    * **Rotate credential** (if the feature available on the Gateway) - This will update a credential value.
-    * **Enable credential** - This will change a credential status to active.
-    * **Suspend credential** - This will change a credential status to inactive.
+    * **Renew credential** (if the feature is available on the Gateway) - This will create a new credential.
+    * **Rotate credential** (if the feature is available on the Gateway) - This will update a credential value.
+    * **Enable credential** - This will change credential status to active.
+    * **Suspend credential** - This will change credential status to inactive.
     * **Delete**  - This will delete a credential.
 
 ### Resources details
