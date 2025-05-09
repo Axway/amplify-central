@@ -745,6 +745,7 @@ The input file needs to be formatted in a certain way for the productize command
     }
 ]
 ```
+
 The following shell script can be used as an example on how to run the `productize` command for large number of api services:
 
 ```bash
