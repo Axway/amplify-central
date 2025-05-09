@@ -689,6 +689,8 @@ axway central install agents
 
 Productize one or more API Services from a file.
 
+This action creates an Asset, and a Product for each API Service in the file with no ownership assignment as default. The title of the API Service is used for Asset title and Product title. All the API Service Instances(API endpoints) are included by default in the Asset created.
+
 The following table describes the usage, and options for the `productize` command:
 
 |Usage                                                    |                             |
