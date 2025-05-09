@@ -9,7 +9,17 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
 ---
+## May 7, 2025
 
+New features, enhancements, and bug fixes for the May 7 update.
+
+### Marketplace update for May 7, 2025
+
+* **Improved Applications Details screen**
+  
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  We've updated the Application Details screen to improve usability. The new layout makes it easier to navigate and quicly identify key information. Credentials and associated resources are now displayed in a clearer, more organized structure, helping users quickly understand the relationship between resources and credentials. The Request Credential experience has also been improved to better represent when a credential can be used with multiple resources.
+  
 ## May 2, 2025
 
 New features, enhancements, and bug fixes for the May 2 update.
