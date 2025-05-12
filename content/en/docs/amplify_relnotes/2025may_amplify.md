@@ -16,10 +16,12 @@ New enhancement for the May 12 update.
 
 ### Axway Engage CLI update for April 12, 2025
 
-* **Bulk action capability**
+* **Introducing Axway Engage CLI**
 
   (NEW CLI RELEASES)</br>
-  Description
+  The latest version **3.15.0** of the Axway Engage CLI is now available on NPM. This update includes:
+  - The Axway Engage CLI has added a 'prdouctize' command to perform the action of creating an Asset and a Product for an API Service. This enables the use of a shell script to bulk create assets and products from as many API Services as you may have.  The sample script has been included in the updated documentation here.  (Lisa to add link to the updated doc)
+  - As of Axway Central CLI version **3.14.0** supports both 'Axway Central" and 'Axway Engage' commands.
 
 ## May 8, 2025
 
