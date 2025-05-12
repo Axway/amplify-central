@@ -20,9 +20,9 @@ New enhancement for the May 12 update.
 
   (NEW CLI RELEASES)</br>
   The latest version **[3.15.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.14.0)** of the Axway Engage CLI is now available on NPM. This update includes:
-  - The Axway Engage CLI now includes a new `productize` command, which automates the creation of an Asset and a Product for a given API Service. This allows you to use shell scripts to bulk-create assets and products for multiple API Services. A sample script demonstrating this process is available in the updated documentation here.  (Lisa to add link to the updated doc)
-  - Starting with version 3.14.0, the Axway Central CLI supports commands for both 'Axway Central' and 'Axway Engage'.
- 
+    * The Axway Engage CLI now includes a new `productize` command, which automates the creation of an Asset and a Product for a given API Service. This allows you to use shell scripts to bulk-create assets and products for multiple API Services. A sample script demonstrating this process is available in the updated documentation here.  (Lisa to add link to the updated doc)
+    * Starting with version 3.14.0, the Axway Central CLI supports commands for both 'Axway Central' and 'Axway Engage'.
+
 * **Limit on API Services grouped under a single asset**
 
   (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
@@ -37,7 +37,7 @@ New enhancement for the May 8 update.
 * **Improved Applications Details screen**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
- The Application Details screen has been redesigned to display the information in a clearer, more organized way. The new layout contains two separate tabs: *Credentials* and *Resources*. The Request Credential experience has also been improved to better represent when a credential can be used with multiple resources. Refer to [View an application](/docs/manage_marketplace/consumer_experience/application_management#view-an-application)
+  The Application Details screen has been redesigned to display the information in a clearer, more organized way. The new layout contains two separate tabs: *Credentials* and *Resources*. The Request Credential experience has also been improved to better represent when a credential can be used with multiple resources. Refer to [View an application](/docs/manage_marketplace/consumer_experience/application_management#view-an-application)
 
 ## May 2, 2025
 
