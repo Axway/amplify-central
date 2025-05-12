@@ -701,7 +701,7 @@ The following table describes the usage and options for the `productize` command
 |`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
 |`-f,--file=<path>`                                       |Filename to use to productize the resource(s)  |
 |`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
-|`--transferOwnership`                                    |Transfers the ownership (if exists) of API service(s) to corresponding asset(s) and product(s). Default is no ownership and only the Engage Admin has access to assign/change an ownership.|
+|`--transferOwnership`                                    |Transfers the ownership (if exists) of API service(s) to corresponding asset(s) and product(s). Default is no ownership and only the Engage Admin has access to assign/change an ownership |
 
 The following example shows how to use the `productize` command:
 
