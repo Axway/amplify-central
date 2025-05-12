@@ -12,16 +12,26 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## May 12, 2025
 
-New enhancement for the May 12 update.
+New enhancements for the May 12 update.
 
-### Axway Engage CLI update for April 12, 2025
+### Axway Central CLI updates for April 12, 2025
 
-* **Introducing Axway Engage CLI**
+* **New version of Axway Central CLI**
 
-  (NEW CLI RELEASES)</br>
-  The latest version **[3.15.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.14.0)** of the Axway Engage CLI is now available on NPM. This update includes:
-    * The Axway Engage CLI now includes a new `productize` command, which automates the creation of an Asset and a Product for a given API Service. This allows you to use shell scripts to bulk-create assets and products for multiple API Services. A sample script demonstrating this process is available in the updated documentation here.  (Lisa to add link to the updated doc)
-    * Starting with version 3.14.0, the Axway Central CLI supports commands for both 'Axway Central' and 'Axway Engage'.
+  (NEW CLI RELEASE)</br>
+  The latest version **[3.15.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.14.0)** of the Axway Central CLI is now available on NPM.
+
+* **New productize command**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, ENHANCEMENT)
+   The Axway Central CLI now includes a new `productize` command, which automates the creation of an Asset and a Product for a given API Service. This allows you to use shell scripts to bulk-create assets and products for multiple API Services. A sample script demonstrating this process is available in the updated documentation here.  Refer to [productize command](/docs/integrate_with_central/ cli_central/cli_command_reference#productize).
+
+* **Axway Central / Axway Engage command support**
+
+  (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)
+  Starting with version 3.14.0, the Axway Central CLI supports commands for both 'Axway Central' and 'Axway Engage'.
+
+### Marketplace update for May 12, 2025
 
 * **Limit on API Services grouped under a single asset**
 
@@ -34,10 +44,10 @@ New enhancement for the May 8 update.
 
 ### Marketplace update for May 8, 2025
 
-* **Improved Applications Details screen**
+* **Improved Applications details screen**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  The Application Details screen has been redesigned to display the information in a clearer, more organized way. The new layout contains two separate tabs: *Credentials* and *Resources*. The Request Credential experience has also been improved to better represent when a credential can be used with multiple resources. Refer to [View an application](/docs/manage_marketplace/consumer_experience/application_management#view-an-application)
+  The Applications details screen has been redesigned to display the information in a clearer, more organized way. The new layout contains two separate tabs: *Credentials* and *Resources*. The Request Credential experience has also been improved to better represent when a credential can be used with multiple resources. Refer to [View an application](/docs/manage_marketplace/consumer_experience/application_management#view-an-application).
 
 ## May 2, 2025
 
