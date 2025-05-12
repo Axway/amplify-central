@@ -793,7 +793,7 @@ rm "$temp_file.json"
 rm "apisvc.json"
 ```
 
-The script above has a query using `axway central get apis` command to fetch API services scoped under 'env1'. This query can be customized and used to fetch the API services that needs to be productized. These API services are formatted and used as an input to the `productize` command. The above example loops over the API services in a batch size of '10', but that can be altered accordingly by changing the 'for' loop condition with the appropriate batch size and setting the 'end_index' value as end_index=$((i+(batch_size -1))). Finally, the output file `log.txt` will have the console output of the bulk productize execution as follows:
+The script above has a query using `axway central get apis` command to fetch API services scoped under 'env1'. This query can be customized and used to fetch the API services that need to be productized. These API services are formatted and used as an input to the `productize` command. The above example loops over the API services in a batch size of '10', but that can be altered accordingly by changing the 'for' loop condition with the appropriate batch size and setting the 'end_index' value as end_index=$((i+(batch_size -1))). Finally, the output file `log.txt` will have the console output of the bulk productize execution as follows:
 
 ```txt
 - Productizing API Service(s)
