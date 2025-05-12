@@ -5,7 +5,7 @@ weight: 130
 date: 2021-01-13T00:00:00.000Z
 ---
 
-Use Axway Central CLI basic commands for creating, fetching, updating, and deleting various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
+Use Axway Central CLI basic commands for creating, fetching, updating, deleting, and productizing various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
 ## The accessibility of resources
 
@@ -687,11 +687,11 @@ axway central install agents
 
 ## productize
 
-Productize one or more API Services from a file.
+Productize one or more API services from a file.
 
-This action creates an Asset, and a Product for each API Service in the file with no ownership assignment as default. The title of the API Service is used for Asset title and Product title. All the API Service Instances(API endpoints) are included by default in the Asset created.
+This action creates an asset and a product for each API service in the file with no ownership assignment as default. The title of the API service is used for the asset title and product title. All of the API service instances (API endpoints) are included by default in the created asset.
 
-The following table describes the usage, and options for the `productize` command:
+The following table describes the usage and options for the `productize` command:
 
 |Usage                                                    |                             |
 |---                                                      |---                                   |
@@ -699,9 +699,9 @@ The following table describes the usage, and options for the `productize` comman
 |**Options**                                              |                   |
 |`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
 |`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
-|`-f,--file=<path>`                                       |Filename to use to produtize the resource(s)  |
+|`-f,--file=<path>`                                       |Filename to use to productize the resource(s)  |
 |`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
-|`--transferOwnership`                                    |Transfers the ownership(if exisiting) of API Service(s) to corresponding Asset(s) and Product(s). Default is no ownership and only the engage admin has access to assign/change an ownership.|
+|`--transferOwnership`                                    |Transfers the ownership (if exists) of API service(s) to corresponding asset(s) and product(s). Default is no ownership and only the Engage Admin has access to assign/change an ownership.|
 
 The following example shows how to use the `productize` command:
 
@@ -713,7 +713,7 @@ axway central productize -f ./some/folder/apiservices.json
 axway central productize -f ./some/folder/apiservices.json --transferOwnership
 ```
 
-The input file needs to be formatted in a certain way for the productize command. The `apiservices.json` file contents are as follows:
+The input file must be formatted in a specific way for the productize command. The `apiservices.json` file contents are as follows:
 
 ```json
 [
@@ -746,7 +746,7 @@ The input file needs to be formatted in a certain way for the productize command
 ]
 ```
 
-The following shell script can be used as an example on how to run the `productize` command for large number of api services:
+The following shell script can be used as an example on how to run the `productize` command for many API services:
 
 ```bash
 #!/bin/bash
@@ -793,7 +793,7 @@ rm "$temp_file.json"
 rm "apisvc.json"
 ```
 
-The script above has a query using `axway central get apis` command to fetch api services scoped under 'env1'. This query can be customized and used to fetch the api services that needs to be productized. These api services are formatted and used as an input to the productize command. The above example loops over the apiservices in a batch size of '10', but that can altered accordingly by changing the 'for' loop condition with the appropriate batch size and setting the 'end_index' value as end_index=$((i+(batch_size -1))). Finally, the output file 'log.txt' will have the console output of the bulk productize execution as follows:
+The script above has a query using `axway central get apis` command to fetch API services scoped under 'env1'. This query can be customized and used to fetch the API services that needs to be productized. These API services are formatted and used as an input to the `productize` command. The above example loops over the API services in a batch size of '10', but that can be altered accordingly by changing the 'for' loop condition with the appropriate batch size and setting the 'end_index' value as end_index=$((i+(batch_size -1))). Finally, the output file `log.txt` will have the console output of the bulk productize execution as follows:
 
 ```txt
 - Productizing API Service(s)
