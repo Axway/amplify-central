@@ -21,6 +21,17 @@ New enhancement for the May 12 update.
   (NEW CLI RELEASES)</br>
   Description
 
+## May 8, 2025
+
+New enhancement for the May 8 update.
+
+### Marketplace update for May 8, 2025
+
+* **Application distinguishes resources and credentials**
+  
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  An enhancement has been implemented to improve the display of the application. Two new tabs are available to display the credentials and the resources attached to the application. Refer to [View an application](/docs/manage_marketplace/consumer_experience/application_management#view-an-application)
+
 ## May 2, 2025
 
 New features, enhancements, and bug fixes for the May 2 update.

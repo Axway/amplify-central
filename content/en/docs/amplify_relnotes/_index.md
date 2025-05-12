@@ -21,6 +21,10 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 No agent updates. See May 2 for latest supported agent versions.
 
+## [Amplify Engage May 8 2025](/docs/amplify_relnotes/2025may_amplify/#may-8-2025)
+
+No agent updates. See May 2 for latest supported agent versions.
+
 ## [Amplify Engage May 2 2025](/docs/amplify_relnotes/2025may_amplify/#may-2-2025)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.115 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
