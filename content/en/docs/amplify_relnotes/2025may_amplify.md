@@ -24,7 +24,7 @@ New enhancements for the May 12 update.
 * **New productize command**
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, ENHANCEMENT)
-   The Axway Central CLI now includes a new `productize` command, which automates the creation of an Asset and a Product for a given API Service. This allows you to use shell scripts to bulk-create assets and products for multiple API Services. A sample script demonstrating this process is available in the updated documentation here.  Refer to [productize command](/docs/integrate_with_central/ cli_central/cli_command_reference#productize).
+   The Axway Central CLI now includes a new `productize` command, which automates the creation of an asset and a product for a given API service. This allows you to use shell scripts to bulk-create assets and products for multiple API services. A sample script demonstrating this process is available in the updated documentation here.  Refer to [productize command](/docs/integrate_with_central/ cli_central/cli_command_reference#productize).
 
 * **Axway Central / Axway Engage command support**
 
