@@ -10,6 +10,17 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## May 12, 2025
+
+New enhancement for the May 12 update.
+
+### Axway Engage CLI update for April 12, 2025
+
+* **Bulk action capability**
+
+  (NEW CLI RELEASES)</br>
+  Description
+
 ## May 2, 2025
 
 New features, enhancements, and bug fixes for the May 2 update.
