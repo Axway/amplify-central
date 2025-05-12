@@ -5,7 +5,7 @@ weight: 130
 date: 2021-01-13T00:00:00.000Z
 ---
 
-Use Axway Central CLI basic commands for creating, fetching, updating, and deleting various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
+Use Axway Central CLI basic commands for creating, fetching, updating, deleting, and productizing various Axway API Server assets. Each command is followed by a brief description, an explanation of the proper command syntax, including command arguments and options, along with example syntax for various use cases.
 
 ## The accessibility of resources
 
@@ -683,4 +683,132 @@ The following example shows how to use the `install` command:
 ```bash
 # install agent configuration in interactive mode
 axway central install agents
+```
+
+## productize
+
+Productize one or more API services from a file.
+
+This action creates an asset and a product for each API service in the file with no ownership assignment as default. The title of the API service is used for the asset title and product title. All of the API service instances (API endpoints) are included by default in the created asset.
+
+The following table describes the usage and options for the `productize` command:
+
+|Usage                                                    |                             |
+|---                                                      |---                                   |
+|`axway central productize [options]`                     |                             |
+|**Options**                                              |                   |
+|`--account=<value>`                                      |Override default account. To be used when multiple accounts are currently logged in via [axway auth login](https://docs.axway.com/bundle/axwaycli-open-docs/page/docs/authentication/index.html#login) <br/>Ex: `--account=amplify-cli:johndoe@domain.com`<br/>*(Added: v2.4.0)*|
+|`--no-cache`                                             |Do not use cache when communicating with the server <br/>*(Added: v1.8.0)*|
+|`-f,--file=<path>`                                       |Filename to use to productize the resource(s)  |
+|`--region=<value>`                                       |Override region configuration. Set to `US`, `EU` or `AP`|
+|`--transferOwnership`                                    |Transfers the ownership (if exists) of API service(s) to corresponding asset(s) and product(s). Default is no ownership and only the Engage Admin has access to assign/change an ownership |
+
+The following example shows how to use the `productize` command:
+
+```bash
+# productize api services from a file without transfer of ownership
+axway central productize -f ./some/folder/apiservices.json
+
+# productize api services from a file with transfer of ownership
+axway central productize -f ./some/folder/apiservices.json --transferOwnership
+```
+
+The input file must be formatted in a specific way for the productize command. The `apiservices.json` file contents are as follows:
+
+```json
+[
+    {
+        "metadata": {
+            "scope": {
+                "kind": "Environment",
+                "name": "env1"
+            }
+        },
+        "spec": {
+            "apiService": {
+                "name": "apisvc1"
+            }
+        }  
+    },
+    {
+        "metadata": {
+            "scope": {
+                "kind": "Environment",
+                "name": "env2"
+            }
+        },
+        "spec": {
+            "apiService": {
+                "name": "apisvc2"
+            }
+        }
+    }
+]
+```
+
+The following shell script can be used as an example on how to run the `productize` command for many API services:
+
+```bash
+#!/bin/bash
+
+# Get all the apiservices that are needed to be productized in JSON format and copy to a file
+axway central get apis -s env1 -o json > apisvc.json
+
+# Format the file in a way that it is acceptable for productize command in Engage CLI
+jq 'map({metadata: {scope: {name: .metadata.scope.name, kind: .metadata.scope.kind}} , spec: {apiService: {name: .name}}})' apisvc.json > input.json
+
+# Input JSON file for productizing api services
+input_file="input.json"
+
+# Output text file to append the results to
+output_file="log.txt"
+
+# Create a temporary file to store the 10 entries as a JSON array
+temp_file=$(mktemp)
+
+# Get the total number of entries in the array
+total_entries=$(jq 'length' "$input_file")
+
+# Loop through the array 10 entries at a time
+for ((i=0; i<total_entries; i+=10)); do
+  # If the next iteration goes beyond the total number of entries, adjust accordingly
+  end_index=$((i+9))
+  if (( end_index >= total_entries )); then
+    end_index=$((total_entries - 1))
+  fi
+  
+  # Extract 10 entries at a time and wrap them in a JSON array
+  jq ".[$i:$((end_index+1))]" "$input_file" > "$temp_file.json"
+  
+  # Perform productize action for the 10 entries in the file and append the output to a log file
+  axway central productize -f "$temp_file.json" >> "$output_file" 2>&1
+  echo "Output appended to $output_file"
+  
+done
+
+# Clean up the temporary file
+rm "$temp_file.json"
+
+# Clean up the input file
+rm "apisvc.json"
+```
+
+The script above has a query using `axway central get apis` command to fetch API services scoped under 'env1'. This query can be customized and used to fetch the API services that need to be productized. These API services are formatted and used as an input to the `productize` command. The above example loops over the API services in a batch size of '10', but that can be altered accordingly by changing the 'for' loop condition with the appropriate batch size and setting the 'end_index' value as end_index=$((i+(batch_size -1))). Finally, the output file `log.txt` will have the console output of the bulk productize execution as follows:
+
+```txt
+- Productizing API Service(s)
+
+API Service: swagger-petstore
+✔ "Asset/swagger-petstore-4" was created successfully with an autogenerated logical name.
+✔ "AssetMapping/giant-warrior" in the scope "Asset/swagger-petstore-4" was created successfully with an autogenerated logical name.
+✔ "ReleaseTag/edgy-rhino" in the scope "Asset/swagger-petstore-4" was created successfully with an autogenerated logical name.
+✔ "Product/swagger-petstore-4" was created successfully with an autogenerated logical name.
+✔ "ReleaseTag/zippy-chicken" in the scope "Product/swagger-petstore-4" was created successfully with an autogenerated logical name.
+API Service 'swagger-petstore' has been successfully productized.
+
+
+API Service: swagger-petstore-openapi-3-0
+✖ Error: Unable to find APIServiceInstances for API Service: swagger-petstore-openapi-3-0
+⚠ Unable to productize API Service 'swagger-petstore-openapi-3-0' for the above errors.
+
 ```
