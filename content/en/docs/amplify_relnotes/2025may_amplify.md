@@ -10,6 +10,45 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## May 12, 2025
+
+New enhancements for the May 12 update.
+
+### Axway Central CLI updates for April 12, 2025
+
+* **New version of Axway Central CLI**
+
+  (NEW CLI RELEASE)</br>
+  The latest version **[3.15.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/3.14.0)** of the Axway Central CLI is now available on NPM.
+
+* **New productize command**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, ENHANCEMENT)
+   The Axway Central CLI now includes a new `productize` command, which automates the creation of an asset and a product for a given API service. This allows you to use shell scripts to bulk-create assets and products for multiple API services. A sample script demonstrating this process is available in the updated documentation here.  Refer to [productize command](/docs/integrate_with_central/ cli_central/cli_command_reference#productize).
+
+* **Axway Central / Axway Engage command support**
+
+  (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)
+  Starting with version 3.14.0, the Axway Central CLI supports commands for both 'Axway Central' and 'Axway Engage'.
+
+### Marketplace update for May 12, 2025
+
+* **Limit on API Services grouped under a single asset**
+
+  (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
+  The Asset Catalog now enforces a maximum of **150 API Services** that can be grouped under a single asset. If your use case requires grouping more than 150 apis, consider creating multiple assets to organize them effectively.
+
+## May 8, 2025
+
+New enhancement for the May 8 update.
+
+### Marketplace update for May 8, 2025
+
+* **Improved Applications details screen**
+  
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  The Applications details screen has been redesigned to display the information in a clearer, more organized way. The new layout contains two separate tabs: *Credentials* and *Resources*. The Request Credential experience has also been improved to better represent when a credential can be used with multiple resources. Refer to [View an application](/docs/manage_marketplace/consumer_experience/application_management#view-an-application).
+
 ## May 2, 2025
 
 New features, enhancements, and bug fixes for the May 2 update.
