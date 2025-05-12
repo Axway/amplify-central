@@ -22,6 +22,11 @@ New enhancement for the May 12 update.
   The latest version **3.15.0** of the Axway Engage CLI is now available on NPM. This update includes:
   - The Axway Engage CLI has added a 'prdouctize' command to perform the action of creating an Asset and a Product for an API Service. This enables the use of a shell script to bulk create assets and products from as many API Services as you may have.  The sample script has been included in the updated documentation here.  (Lisa to add link to the updated doc)
   - As of Axway Central CLI version **3.14.0** supports both 'Axway Central" and 'Axway Engage' commands.
+ 
+* **Maximum API Services grouped to an Asset**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The Asset Catalog now enforces a maximum of 150 API Services grouped to a single asset.
 
 ## May 8, 2025
 
