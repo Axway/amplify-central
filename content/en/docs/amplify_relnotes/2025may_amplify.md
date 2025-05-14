@@ -40,7 +40,7 @@ New enhancements for the May 12 update.
 
 ## May 8, 2025
 
-New enhancement for the May 8 update.
+New enhancement and bug fix for the May 8 update.
 
 ### Marketplace update for May 8, 2025
 
@@ -48,6 +48,12 @@ New enhancement for the May 8 update.
   
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
   The Applications details screen has been redesigned to display the information in a clearer, more organized way. The new layout contains two separate tabs: *Credentials* and *Resources*. The Request Credential experience has also been improved to better represent when a credential can be used with multiple resources. Refer to [View an application](/docs/manage_marketplace/consumer_experience/application_management#view-an-application).
+
+### Marketplace bug fix for May 8, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01705619 | APIGOV-30196 | **Issue**: Stage not visible in credentials / resources <br/>**Resolution**: The stage is now displayed even when the credential was created on a resource that is part of a product release that has been archived. |
 
 ## May 2, 2025
 
