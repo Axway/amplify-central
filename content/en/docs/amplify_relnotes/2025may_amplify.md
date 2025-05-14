@@ -40,7 +40,7 @@ New enhancements for the May 12 update.
 
 ## May 8, 2025
 
-New enhancement for the May 8 update.
+New enhancement and bug fix for the May 8 update.
 
 ### Marketplace update for May 8, 2025
 
@@ -53,7 +53,7 @@ New enhancement for the May 8 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01705619 | APIGOV-30196 | **Issue**: Stage not visible in credentials / resources <br/>**Resolution**: A fix has been made to display the stage even when the credential was created on a resource part of a product release that has been archived |
+| 01705619 | APIGOV-30196 | **Issue**: Stage not visible in credentials / resources <br/>**Resolution**: The stage is now displayed even when the credential was created on a resource that is part of a product release that has been archived. |
 
 ## May 2, 2025
 
