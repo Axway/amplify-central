@@ -40,7 +40,6 @@ New features, enhancements, and bug fixes for the May 16 update.
 |-------------|--------------|---------------------------------------------------|
 | xxxxxxx | APIGOV-xxxxx | **Issue**: Description.<br/>**Resolution**: Description. |
 
-
 ## May 12, 2025
 
 New enhancements for the May 12 update.
