@@ -20,7 +20,7 @@ If you are a current user of the deprecated 'Amplify Central CLI' package, you c
 ## Before you start
 
 * You will need an administrator account for Amplify Engage ([Managing Accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)).
-* You will need [Node.js](https://nodejs.org/en/download/) version 12.13.0 or later.
+* You will need [Node.js](https://nodejs.org/en/download/) version 20.18.2 or later.
 
 ### Operating system supported configurations
 
@@ -28,14 +28,14 @@ The following table describes the operating system supported configurations that
 
 | OS                  | Node.js Version  | Terminal Shells Supported  | Terminal Shells Unsupported |
 | ------------------- | ---------------- | -------------------------- | --------------------------- |
-| Mac OSX or later    | 12.13.0 or later | bash , zsh                 |                             |
-| Windows 10 or later | 12.13.0 or later | Command Prompt, PowerShell | Cygwin, Git Bash            |
-| Linux               | 12.13.0 or later | bash                       |                             |
+| Mac OSX or later    | 20.18.2 or later | bash , zsh                 |                             |
+| Windows 10 or later | 20.18.2 or later | Command Prompt, PowerShell | Cygwin, Git Bash            |
+| Linux               | 20.18.2 or later | bash                       |                             |
 
 ## Install Axway CLI and Axway Central CLI
 
-1. Install `Node.js 12.13.0 LTS` or later. (Update requirements)
-2. Install `npm 6.12.0` or later.
+1. Install `Node.js 20.18.2 LTS` or later. (Update requirements)
+2. Install `npm 10.8.2` or later.
 3. Run the following command to install Axway CLI:
 
    ```bash
@@ -59,19 +59,19 @@ The following table describes the operating system supported configurations that
    Expected response:
 
    ```bash
-   Axway CLI, version 3.0.0
+   Axway CLI, version 4.0.1
    Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
 
    Packages directory: <...>
 
    NAME                      VERSIONS
-   @axway/axway-central-cli  2.0.0
+   @axway/axway-central-cli  4.0.0
    ```
 
-All the development versions of Axway Central CLI can be found at [NPM install of Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli). To install a specific development version, run the following command:
+All the development versions of Axway Central CLI can be found at [NPM install of Axway Central CLI](https://www.npmjs.com/package/@axway/axway-central-cli). Please note that Axway CLI versions 4.*.* are only compatible with Axway Central CLI versions 4.*.*. To install a specific development version, run the following command:
 
 ```bash
-axway pm install @axway/axway-central-cli@2.0.0
+axway pm install @axway/axway-central-cli@4.0.0
 ```
 
 ### Additional installation steps on Windows
@@ -130,8 +130,8 @@ axway auth login --client-id service-account-id-xxxxxxxxxxxxxxxxxxxxxxxx --clien
 Expected response:
 
 ```bash
-AXWAY CLI, version 3.0.1
-Copyright (c) 2018-2021, Axway, Inc. All Rights Reserved.
+AXWAY CLI, version 4.0.1
+Copyright (c) 2018-2025, Axway, Inc. All Rights Reserved.
 
 You are logged in as service-account-id-xxxxxxxxxxxxxxxxxxxxxxxx.
 ```
