@@ -25,7 +25,10 @@ New features, enhancements, and bug fixes for the May 16 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| xxxxxxx | APIGOV-xxxx | **Issue**: Description.<br/>**Resolution**: Description. |
+|  | APIGOV-30205 | **Issue**: The Traceability Agent was not able send metrics to Engage.<br/>**Resolution**: Updates were made to all Traceability Agents to improve the handling of additional communication scenarios. |
+|  | APIGOV-30182 | **Issue**: The APIM Discovery Agent was not detecting changes to the front end proxy Tags.<br/>**Resolution**: The APIM Discovery Agent has been updated to detect changes to the front end proxy tags/attributes and update the revision of the affected API Service. |
+|  | APIGOV-30456 | **Issue**: The Kafka Agent status was not updated properly on Engage.<br/>**Resolution**: The Kafka Agent has been updated to reflect the Agent status correctly. |
+| 01691705 | APIGOV-29869 | **Issue**: The Github Discovery Agent was not able to discover from a 'Private' Github repository.<br/>**Resolution**: The Github Discovery Agent documentation has been updated for the minimum set of permissions to discover from a 'Private' Github repository. |
 
 ### Marketplace update for May 16, 2025
 
@@ -83,7 +86,7 @@ New features, enhancements, and bug fixes for the May 16 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| xxxxxxx | APIGOV-xxxxx | **Issue**: Description.<br/>**Resolution**: Description. |
+|  | APIGOV-30450 | **Issue**: An error would occur if an Asset was linked to an API Service specification in YAML file format and larger than 3 MB.<br/>**Resolution**: A fix was made to support up to a 7.68 MB YAML API Specification file to be linked to an Asset. |
 
 ## May 12, 2025
 
