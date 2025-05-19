@@ -29,10 +29,25 @@ New features, enhancements, and bug fixes for the May 16 update.
 
 ### Marketplace update for May 16, 2025
 
-* **Enhancement**
+* **New version of Axway CLI**
+
+  (NEW CLI RELEASE)</br>
+  The latest version **[4.0.0](https://www.npmjs.com/package/@axway/axway/v/4.0.1)** of the Axway is now available on NPM.
+
+* **New version of Axway CLI**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+   The Axway CLI **v4.0.1** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway Central/Engage CLI **v4.0.0** or later.
   
-  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Description.
+* **New version of Axway Central CLI**
+
+  (NEW CLI RELEASE)</br>
+  The latest version **[4.0.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.0.0)** of the Axway Central CLI is now available on NPM.
+
+* **New version of Axway Central CLI**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+   The Axway Central/Engage CLI **v4.0.0** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway CLI **v4.0.1** or later.
 
 ### Marketplace bug fix for May 16, 2025
 
