@@ -4,7 +4,7 @@ linkTitle: Amplify Engage May
 weight: 8
 date: 2025-5-1
 ---
-We work hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of November. It is always recommended to update to the latest agents' versions.
+We work hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of May. It is always recommended to update to the latest agents' versions.
 
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
@@ -48,6 +48,11 @@ New features, enhancements, and bug fixes for the May 16 update.
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
    The Axway Central/Engage CLI **v4.0.0** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway CLI **v4.0.1** or later.
+
+* **Update to Install agent command**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, XWAY ENGAGE CLI, ENHANCEMENT)</br>
+   The Axway Central CLI 'install agents' commangd has been updated to install the Graylog and Traceable agents using a new ComplianceAgent resource.
 
 ### Marketplace bug fix for May 16, 2025
 
