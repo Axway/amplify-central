@@ -74,6 +74,11 @@ New features, enhancements, and bug fixes for the May 16 update.
 
     Once configured, the display will persist for each user.
 
+* **Corrupted Asset Removal**
+
+  (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
+  Providers can now edit a corrupted Asset version and visualize the API Service(s) which are the cause of the issue(s).  From the Asset Edit/Create wizard, the 'Included Resources' step now has an 'Errors' tab to visualize/unlink the API Service(s) at fault as long as there is no associated Product/Plan in use. To identify the Product/Plan in use, hover over the number in the Products column to visualize which Products/Plans must be adjust to remove the API Service resource from the associated Prodcut/Plan. A new Asset draft must be saved and a new asset version released to resolve the corrupted Asset.     
+
 ### Marketplace bug fix for May 16, 2025
 
 | Case ID | Internal ID | Description |
