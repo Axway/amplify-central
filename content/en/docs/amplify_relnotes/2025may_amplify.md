@@ -86,7 +86,7 @@ New features, enhancements, and bug fixes for the May 16 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30450 | **Issue**: An error would occur if an Asset was linked to an API Service specification in YAML file format and larger than 3 MB.<br/>**Resolution**: A fix was made to support up to a 10 MB YAML API Specification file to be linked to an Asset. |
+|  | APIGOV-30450 | **Issue**: An error would occur if an Asset was linked to an API Service specification in YAML file format and larger than 3 MB.<br/>**Resolution**: A fix was made to support up to a 7.68 MB YAML API Specification file to be linked to an Asset. |
 
 ## May 12, 2025
 
