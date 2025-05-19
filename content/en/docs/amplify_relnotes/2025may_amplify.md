@@ -54,6 +54,26 @@ New features, enhancements, and bug fixes for the May 16 update.
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, XWAY ENGAGE CLI, ENHANCEMENT)</br>
    The Axway Central CLI 'install agents' commangd has been updated to install the Graylog and Traceable agents using a new ComplianceAgent resource.
 
+* **Custimizable table columns**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Providers can now customize the columns displayed in the table list views and define the order in which they appear. This enhancement is available through a Customize table icon, located just above the tables in the following screens:
+  - Service Registry (for each of the individual tabs)
+  - Document Library
+  - Invoices
+  - Application Registrations
+  - Credentials
+  - Environments
+  - Agent Status
+  - Compliance Profies (for each of the individual tabs)
+  - Identity Providers
+  - Stages
+  - Categories
+  - Support Contacts
+  - Consumption Units
+
+    Once configured, the display will persist for each user.
+
 ### Marketplace bug fix for May 16, 2025
 
 | Case ID | Internal ID | Description |
