@@ -5,7 +5,7 @@ weight: 90
 date: 2020-05-29T00:00:00.000Z
 ---
 
-{{< alert title="Note" color="primary" >}}This topic details installation instructions for the 'Axway Central CLI' package, which replaced the deprecated 'Amplify Central CLI' package.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This topic details installation instructions for the Axway Engage CLI (formerly known as 'Axway Central CLI' package), which replaced the deprecated 'Amplify Central CLI' package.{{< /alert >}}
 
 If you are a current user of the deprecated 'Amplify Central CLI' package, you can uninstall that package by running:
 
