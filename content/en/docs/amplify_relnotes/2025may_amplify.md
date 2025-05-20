@@ -30,32 +30,24 @@ New features, enhancements, and bug fixes for the May 16 update.
 |  | APIGOV-30456 | **Issue**: The Kafka Agent status was not updated properly on Engage.<br/>**Resolution**: The Kafka Agent has been updated to reflect the Agent status correctly. |
 | 01691705 | APIGOV-29869 | **Issue**: The Github Discovery Agent was not able to discover from a 'Private' Github repository.<br/>**Resolution**: The Github Discovery Agent documentation has been updated for the minimum set of permissions to discover from a 'Private' Github repository. |
 
-### Marketplace update for May 16, 2025
+### Axway CLI updates for May 16, 2025
 
-* **New version of Axway CLI**
-
-  (NEW CLI RELEASE)</br>
-  The latest version **[4.0.0](https://www.npmjs.com/package/@axway/axway/v/4.0.1)** of the Axway is now available on NPM.
-
-* **New version of Axway CLI**
+* **New Axway CLI v4.0.1 available**
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-   The Axway CLI **v4.0.1** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway Central/Engage CLI **v4.0.0** or later.
+   The Axway CLI **[v4.0.1](https://www.npmjs.com/package/@axway/axway/v/4.0.1)** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway Central/Engage CLI **v4.0.0** or later.
+   
+* **New Axway Engage CLI v4.0.0 available**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+   The Axway Engage CLI (formally Axway Central CLI) **v4.0.0(https://www.npmjs.com/package/@axway/axway-central-cli/v/4.0.0)** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway CLI **v4.0.1** or later.
   
-* **New version of Axway Central CLI**
-
-  (NEW CLI RELEASE)</br>
-  The latest version **[4.0.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.0.0)** of the Axway Central CLI is now available on NPM.
-
-* **New version of Axway Central CLI**
-
-   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-   The Axway Central/Engage CLI **v4.0.0** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway CLI **v4.0.1** or later.
-
-* **Update to Install agent command**
+* **Updates to Install agent command**
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, XWAY ENGAGE CLI, ENHANCEMENT)</br>
-   The Axway Central CLI 'install agents' commangd has been updated to install the Graylog and Traceable agents using a new ComplianceAgent resource.
+   The Axway Engage CLI 'install agents' command has been updated to install the Graylog and Traceable agents using a new ComplianceAgent resource.
+
+### Marketplace updates for May 16, 2025
 
 * **Customizable table columns**
 
@@ -77,17 +69,19 @@ New features, enhancements, and bug fixes for the May 16 update.
 
     Once configured, the display will persist for each user.
 
-* **Corrupted Asset Removal**
+* **Improved handling of corrupted assets**
 
   (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
-  Providers can now edit a corrupted Asset version and visualize the API Service(s) which are the cause of the issue(s).  From the Asset Edit/Create wizard, the 'Included Resources' step now has an 'Errors' tab to visualize/unlink the API Service(s) at fault as long as there is no associated Product/Plan in use. To identify the Product/Plan in use, hover over the number in the Products column to visualize which Products/Plans must be adjust to remove the API Service resource from the associated Product/Plan. A new Asset draft must be saved and a new asset version released to resolve the corrupted Asset.
+  Catalog Managers can now edit a corrupted asset and identify the API Services causing the issue. From the Asset Edit / Create wizard, the *Included Resources* step now includes a new Errors tab. This tab allows you to"
+    * Visualize the API Services responsible for the corruption
+    * Unlink the faulty API Services, provided they are not currently used in any Product or Product Plans.  
 
-### Marketplace bug fix for May 16, 2025
+### Marketplace bug fixes for May 16, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 |  | APIGOV-30450 | **Issue**: An error would occur if an Asset was linked to an API Service specification in YAML file format larger than 3 MB.<br/>**Resolution**: A fix was made to support up to a 7.68 MB YAML API Specification file to be linked to an Asset. |
-|  | APIGOV-30453 | **Issue**: Document library icon generator security issue.<br/>**Resolution**: Due to some security concern with the library that generate an image from PDF,  it has been decided to no more create the PDF first page icon preview. Only image from earlier imported document would be visible. |
+|  | APIGOV-30453 | **Issue**: Document library icon generator security issue.<br/>**Resolution**:Due to security concerns related to the library used for generating preview images from PDF files, the system will no longer create first-page preview icons for newly imported PDFs. Preview images generated for documents uploaded prior to this change will remain visible.|
 
 ## May 12, 2025
 
