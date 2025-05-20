@@ -45,7 +45,7 @@ New features, enhancements, and bug fixes for the May 16 update.
 * **Updates to `install agents` command**
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-   The Axway Central CLI 'install agents' command has been updated to install the Graylog and Traceable agents using a new ComplianceAgent resource.
+   The Axway Central CLI `install agents` command has been updated to install the Graylog and Traceable agents using a new ComplianceAgent resource.
 
 ### Marketplace updates for May 16, 2025
 
