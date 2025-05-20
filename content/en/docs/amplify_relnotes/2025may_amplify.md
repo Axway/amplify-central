@@ -57,36 +57,37 @@ New features, enhancements, and bug fixes for the May 16 update.
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, XWAY ENGAGE CLI, ENHANCEMENT)</br>
    The Axway Central CLI 'install agents' commangd has been updated to install the Graylog and Traceable agents using a new ComplianceAgent resource.
 
-* **Custimizable table columns**
+* **Customizable table columns**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   Providers can now customize the columns displayed in the table list views and define the order in which they appear. This enhancement is available through a Customize table icon, located just above the tables in the following screens:
-  - Service Registry (for each of the individual tabs)
-  - Document Library
-  - Invoices
-  - Application Registrations
-  - Credentials
-  - Environments
-  - Agent Status
-  - Compliance Profies (for each of the individual tabs)
-  - Identity Providers
-  - Stages
-  - Categories
-  - Support Contacts
-  - Consumption Units
+    * Service Registry (for each of the individual tabs)
+    * Document Library
+    * Invoices
+    * Application Registrations
+    * Credentials
+    * Environments
+    * Agent Status
+    * Compliance Profiles (for each of the individual tabs)
+    * Identity Providers
+    * Stages
+    * Categories
+    * Support Contacts
+    * Consumption Units
 
     Once configured, the display will persist for each user.
 
 * **Corrupted Asset Removal**
 
   (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
-  Providers can now edit a corrupted Asset version and visualize the API Service(s) which are the cause of the issue(s).  From the Asset Edit/Create wizard, the 'Included Resources' step now has an 'Errors' tab to visualize/unlink the API Service(s) at fault as long as there is no associated Product/Plan in use. To identify the Product/Plan in use, hover over the number in the Products column to visualize which Products/Plans must be adjust to remove the API Service resource from the associated Prodcut/Plan. A new Asset draft must be saved and a new asset version released to resolve the corrupted Asset.     
+  Providers can now edit a corrupted Asset version and visualize the API Service(s) which are the cause of the issue(s).  From the Asset Edit/Create wizard, the 'Included Resources' step now has an 'Errors' tab to visualize/unlink the API Service(s) at fault as long as there is no associated Product/Plan in use. To identify the Product/Plan in use, hover over the number in the Products column to visualize which Products/Plans must be adjust to remove the API Service resource from the associated Product/Plan. A new Asset draft must be saved and a new asset version released to resolve the corrupted Asset.
 
 ### Marketplace bug fix for May 16, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 |  | APIGOV-30450 | **Issue**: An error would occur if an Asset was linked to an API Service specification in YAML file format larger than 3 MB.<br/>**Resolution**: A fix was made to support up to a 7.68 MB YAML API Specification file to be linked to an Asset. |
+|  | APIGOV-30453 | **Issue**: Document library icon generator security issue.<br/>**Resolution**: Due to some security concern with the library that generate an image from PDF,  it has been decided to no more create the PDF first page icon preview. Only image from earlier imported document would be visible. |
 
 ## May 12, 2025
 
