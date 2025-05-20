@@ -36,7 +36,7 @@ New features, enhancements, and bug fixes for the May 16 update.
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
    The Axway CLI **[v4.0.1](https://www.npmjs.com/package/@axway/axway/v/4.0.1)** has been updated to support Node.js version **20.18.2** or later. This is a major release (breaking change) and intended to be used along with the Axway Central/Engage CLI **v4.0.0** or later.
-   
+ 
 * **New Axway Engage CLI v4.0.0 available**
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
