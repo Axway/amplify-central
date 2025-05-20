@@ -65,11 +65,11 @@ You can also filter the documents by types using the **Filter by:** controls. Se
 
     * Document name - the display name for the product in the WebUI
     * Document logical name - the internal name used to access the document
-    * Document type - TXT / PDF / DOC / DOCX / MD / PPTX / XLSX / URL
+    * Document type - PDF / DOC / DOCX / MD / PPTX / XLSX / URL
     * URL link (URL only)
     * Updated On - the last update date
     * Created On - the creation date
-    * Document thumbnail - preview of the document's first page (only available for PDF documents)
+    * Document thumbnail - preview of the document and download (only available for PDF, MD, PPTX, DOCX, XLSX documents)
     * Document file name (external document only) - the file name associated to the document
     * Document description - the document description that helps identify the document content
     * Referenced Resources - the resources that are using the document (product and/or Marketplace) and the statuses of the resources (Available / Used)
