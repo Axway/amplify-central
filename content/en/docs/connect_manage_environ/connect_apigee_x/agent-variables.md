@@ -22,15 +22,15 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 ### Common variables to both agents
 
-| Variable name          | Description                                                                                               |
-|------------------------|-----------------------------------------------------------------------------------------------------------|
-| APIGEE_AUTHFILEPATH    | The path where you put the GCP authentication file in docker container (**Ground agent only**)            |
-| APIGEE_SERVICEENDPOINT | The service endpoint URL where the API services reside. Default value is `https://apigee.googleapis.com/` |
-| APIGEE_PROJECTID       | The Project ID for your GCP project                                                                       |
-| APIGEE_DEVELOPEREMAIL  | The Apigee developer email                                                                                |
-| APIGEE_MODE            | Apigee agent running mode (*proxy* or *product*; default: *proxy*)                                        |
-| APIGEE_ENVIRONMENT     | The environment from which metrics are gathered                                                           |
-| APIGEE_CLIENTTIMEOUT   | Maximum amount of time to wait for a reply from the Apigee client (default: 1m)                           |
+| Variable name                  | Description                                                                                               |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------|
+| APIGEE_AUTHFILEPATH            | The path where you put the GCP authentication file in docker container (**Ground agent only**)            |
+| APIGEE_SERVICEENDPOINTLOCATION | The service endpoint URL where the API Services reside. Default value is `https://apigee.googleapis.com/` |
+| APIGEE_PROJECTID               | The Project ID for your GCP project                                                                       |
+| APIGEE_DEVELOPEREMAIL          | The Apigee developer email                                                                                |
+| APIGEE_MODE                    | Apigee agent running mode (*proxy* or *product*; default: *proxy*)                                        |
+| APIGEE_ENVIRONMENT             | The environment from which metrics are gathered                                                           |
+| APIGEE_CLIENTTIMEOUT           | Maximum amount of time to wait for a reply from the Apigee client (default: 1m)                           |
 
 If the agent requires data residency, you can prepend the control plane region to the service endpoint: `CONTROL_PLANE_LOCATION-apigee.googleapis.com`. More information regarding data residency can be found [here](https://cloud.google.com/apigee/docs/api-platform/get-started/drz-concepts#data-residency-service-endpoint).
 
