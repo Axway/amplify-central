@@ -25,7 +25,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | Variable name                  | Description                                                                                               |
 |--------------------------------|-----------------------------------------------------------------------------------------------------------|
 | APIGEE_AUTHFILEPATH            | The path where you put the GCP authentication file in docker container (**Ground agent only**)            |
-| APIGEE_SERVICEENDPOINTLOCATION | The service endpoint URL where the API Services reside. Default value is `https://apigee.googleapis.com/` |
+| APIGEE_SERVICEENDPOINTLOCATION | The service endpoint URL where the API services reside. Default value is `https://apigee.googleapis.com/` |
 | APIGEE_PROJECTID               | The Project ID for your GCP project                                                                       |
 | APIGEE_DEVELOPEREMAIL          | The Apigee developer email                                                                                |
 | APIGEE_MODE                    | Apigee agent running mode (*proxy* or *product*; default: *proxy*)                                        |
