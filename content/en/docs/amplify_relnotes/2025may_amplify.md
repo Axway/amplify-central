@@ -14,7 +14,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 New bug fixes for the May 16 update.
 
-### Agents bug fixes for May 16, 2025
+### Agents bug fixes for May 21, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|

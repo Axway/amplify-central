@@ -50,7 +50,6 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Graylog API Security                       | 1.1.18                   | 1.0.5            |
 | Traceable API Security                     | 2.0.2                    | 1.0.0            |
 
-
 ## [Amplify Engage May 16 2025](/docs/amplify_relnotes/2025may_amplify/#may-16-2025)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.116 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
