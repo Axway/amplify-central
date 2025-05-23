@@ -24,7 +24,7 @@ New bug fixes for the May 16 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30506 | **Issue**: Then Axway Engage CLI (formally Axway Central CLI) was missing support for the 'productize' command.<br/>**Resolution**: A fix was made to support the 'productize' command in **[v4.1.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.1.0)**. |
+|  | APIGOV-30506 | **Issue**: The Axway Engage CLI (formally Axway Central CLI) was missing support for the 'productize' command.<br/>**Resolution**: A fix was made to support the 'productize' command in **[v4.1.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.1.0)**. |
 
 ## May 16, 2025
 
