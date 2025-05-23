@@ -18,7 +18,7 @@ New bug fixes for the May 16 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30504 | **Issue**: Traceability Agents may encounter a nil pointer run-time error.<br/>**Resolution**: The fix is available in all Traceability Agents released on May 21 2025 or later. |
+|  | APIGOV-30504 | **Issue**: Traceability Agents could encounter a nil pointer run-time error.<br/>**Resolution**: The fix is available in all Traceability Agents released on May 21 2025 or later. |
 
 ### Marketplace bug fixes for May 21, 2025
 
