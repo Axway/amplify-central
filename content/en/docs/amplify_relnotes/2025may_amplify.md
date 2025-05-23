@@ -12,25 +12,25 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## May 23, 2025
 
-New bug fixes for the May 23 update.
+New features, enhancements, and bug fixes for the May 23 update.
 
 ### Marketplace updates for May 23, 2025
 
-* **Applications filtering by Owning team**
+* **Applications filtering by owning team**
 
   (CONSUMER EXPERIENCE, APPLICATIONS, ENHANCEMENT)</br>
-  You can now filter applications by owning team name in the Applications screen. This enhancement allows consumers that are members of multiple teams to quickly locate and manage applications associated with specific teams, improving visability in a multi-team setup.
+  You can now filter applications by the owning team name in the *Applications* screen. This enhancement allows consumers that are members of multiple teams to quickly locate and manage applications associated with specific teams, improving visibility in a multi-team setup.
 
 * **Enhanced session expiration message**
 
   (CONSUMER EXPERIENCE, APPLICATIONS, ENHANCEMENT)</br>
-  We’ve improved the message displayed when a user’s web session expires. The new message provides clearer guidance, making it easier for users to understand what happened and how to securely sign in again.
+  We’ve improved the message that is displayed when a user’s web session expires. The new message provides clearer guidance, making it easier for users to understand what happened and how to securely sign in again.
 
 ### Marketplace bug fixes for May 23, 2025
 
 | Case ID | Internal ID | Description |
 |--------------|--------------|---------------------------------------------------|
-|              | APIGOV-30429 | **Issue**: Marketplace application, impossible to view the resources associated to a credential.<br/> **Resolution**: A performance issue linked to product having more than 200 versions has been fixed and now all resources associated to a credential are visible from the credential details screen.|
+|              | APIGOV-30429 | **Issue**: Marketplace application, impossible to view the resources associated to a credential.<br/> **Resolution**: A performance issue linked to products having more than 200 versions has been fixed and now all resources associated to a credential are visible from the *credential details* screen.|
 
 ## May 21, 2025
 
