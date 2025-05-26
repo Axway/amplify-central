@@ -32,7 +32,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | APIGEE_ENVIRONMENT        | The environment from which metrics are gathered                                                         |
 | APIGEE_CLIENTTIMEOUT      | Maximum amount of time to wait for a reply from the Apigee client (default: 1m)                         |
 
-If the agent requires data residency, you can select a control plane region which will get prepended to the service endpoint: `CONTROL_PLANE_LOCATION-apigee.googleapis.com`. More information regarding data residency can be found [here](https://cloud.google.com/apigee/docs/api-platform/get-started/drz-concepts#data-residency-service-endpoint) and[here](https://cloud.google.com/apigee/docs/locations#available-apigee-api-control-plane-hosting-jurisdictions).
+If the agent requires data residency, you can configure variable `APIGEE_CONTROLPLANEREGION`, which will get prepended to the service endpoint: `CONTROL_PLANE_LOCATION-apigee.googleapis.com`. More information regarding data residency can be found [here](https://cloud.google.com/apigee/docs/api-platform/get-started/drz-concepts#data-residency-service-endpoint) and[here](https://cloud.google.com/apigee/docs/locations#available-apigee-api-control-plane-hosting-jurisdictions).
 
 ### Specific variables for Traceability Agent
 
