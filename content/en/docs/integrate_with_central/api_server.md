@@ -735,7 +735,7 @@ For instance it is possible to retrieve 15 objects per page (**size==15**) and s
 
 This section is divide into 2 parameter:
 
-* **accessible**: give the number of requested resource the current user has access to (own, shared with read or write access)
+* **accessible**: give the number of requested resources the current user has access to (own, shared with read or write access)
 * **existing**: give the total number of resources even the one the user cannot see.
 
 #### pageInfo
@@ -746,7 +746,9 @@ This section is informative to display what has been used to retrieve the result
 
 This is the specific part of the object where you will find name, title, kind, tags, attributes, metadata, owner, finalizers, spec, references, scope and more depending on each objects.
 
-In this section, you will be able to navigate in the graph of the dependant objects using the `referencedBy` property. For instance if main object is an environment, you can navigate downward in the graph to the APIService of the environment and from there to the APIServiceInstance and APIServiceRevision. It is also possible to navigate upward in the graph from APIService to the product that use this APIService..
+In this section, you will be able to navigate in the graph of the dependant objects using the `scopedResources` property. For instance if main object is an environment, you can navigate downward in the graph to the APIService of the environment and from there to the APIServiceInstance and APIServiceRevision.
+
+It is also possible to navigate upward in the graph from APIService to the products that use this APIService using the `referenceBy` property from the APIService.
 
 ### Query samples
 
