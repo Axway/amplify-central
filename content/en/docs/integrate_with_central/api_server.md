@@ -825,7 +825,7 @@ Open Postman
 
 Add a graphql query using the `New` button and select the `GraphQL icon`
 
-Set the url with one of the above endpoint (ie using the region endpoint your Organization is provisioned in)
+Set the url with one of the above endpoint (ie using the [region endpoint](#anatomy-of-a-graphql-request) your Organization is provisioned in)
 
 Set the authorization process - navigate to the `Authorization` tab of the query and enter the following
 
