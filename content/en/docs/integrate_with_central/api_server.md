@@ -837,7 +837,7 @@ Set the authorization process - navigate to the `Authorization` tab of the query
     * Auth URL: <https://login.axway.com/auth/realms/Broker/protocol/openid-connect/auth?idpHint=360>
     * Client ID: apicentral
 
-* Get your token - click the `Get New Access` Token orange button, the Engage login screen is displayed, add your credential and click Sign in. Once your login is accepted, the token is returned and you can use it in the query
+* Get your token - click the `Get New Access Token` orange button, the Engage login screen is displayed, add your credential and click Sign in. Once your login is accepted, the token is returned and you can use it in the query
 
 * Set the tenantID in the query header - add a new header: `X-Axway-Tenant-Id` and its value is your organizationID
 
