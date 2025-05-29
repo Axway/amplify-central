@@ -212,7 +212,7 @@ The playground allows you to change the WebUI components (UISchema section of th
 
 #### Custom fields component
 
-The request schema supports custom fields using the `x-custom-field` property. This allows you to mark specific properties in your schema as custom, enabling agents and consumers to identify and handle them accordingly. 
+The request schema supports custom fields using the `x-custom-field` property. This allows you to mark specific properties in your schema as custom, enabling agents and consumers to identify and handle them accordingly.
 
 ##### Usage
 
@@ -237,6 +237,7 @@ Important mention: `x-custom-field` does not have to be a bool, it can be a stri
 {{< /alert >}}
 
 Behavior:
+
 * **Identification**: Properties with `x-custom-field` set are recognized as custom fields.
 * **Preservation on Update**: When updating or migrating schemas (for AccessRequestDefinition, CredentialRequestDefinition, or ApplicationProfileDefinition resources), any custom fields present in the existing schema are automatically merged into the new schema. This ensures that custom fields are not lost during updates.
 * **Visibility**: For the properties with `x-custom-field` set to appear when provisioning is done, discovery agent needs to be restarted
