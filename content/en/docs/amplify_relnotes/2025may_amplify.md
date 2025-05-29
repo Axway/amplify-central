@@ -29,7 +29,7 @@ New features, enhancements, and bug fixes for the May 29 update.
 
 ### Marketplace updates for May 29, 2025
 
-* **NEw navigation in/from the Application**
+* **New navigation in/from the Application**
 
   (CONSUMER EXPERIENCE, APPLICATIONS, ENHANCEMENT)</br>
   To help consumer navigate inside the application, resources and credentials, new paths have been added:
