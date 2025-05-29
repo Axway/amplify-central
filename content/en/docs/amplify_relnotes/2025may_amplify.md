@@ -16,41 +16,32 @@ New features, enhancements, and bug fixes for the May 29 update.
 
 ### Agents updates for May 29, 2025
 
-* **Feature**
+* **New agent versions available**
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-### Agents bug fixes for May 29, 2025
-
-| Case ID | Internal ID | Description |
-|-------------|--------------|---------------------------------------------------|
-|  | APIGOV-xxxxx | **Issue**: Description.<br/>**Resolution**: Description. |
-
 ### Marketplace updates for May 29, 2025
 
-* **New navigation in/from the Application**
+* **Improvement to the application details screen**
 
   (CONSUMER EXPERIENCE, APPLICATIONS, ENHANCEMENT)</br>
-  To help consumer navigate inside the application, resources and credentials, new paths have been added:
-    * from the Application page > Credentials, clicking the Resources number will open the credentials details screen with the Resources section expanded.
-    * from the Application page > Resources, clicking the Credentials number will open the resource credentials list screen.
+  We have made it simpler to navigate between key parts of an application by:
+    * On the **Application > Credentials** tab, Clicking the Resources number will open the linked resources for that credential.
+    * On the **Application page > Resources**, clicking the Credentials number will open the linked credentials for that resource.
 
-* **Consumer - Provider communication**
+* **Subscription unique identifier**
 
-  (CONSUMER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
-  To help a better communication between consumer and subscriber around the subscription, the subscription screen (list / details) now display also the subscription unique identifier. On provider side, they can search subscription either with the subscription title or the subscription identifier.
+  (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
+  To make it easier for users to manage and locate their subscriptions, we’ve introduced a **unique subscription identifier**.
+  Previously, subscriptions were identified only by a user-defined friendly name, which often resulted in **duplicate names** and made it hard to distinguish between subscriptions. With this enhancement:
+    * Each subscription now includes a **system-generated unique ID**.
+    * This ID helps you **quickly and accurately identify** subscriptions, even when names are similar or repeated.
 
-* **Markdown documentation from menu**
+* **Table of Contents now displayed for markdown documents used in the navigation menu**
 
   (CONSUMER EXPERIENCE, DOCUMENTATION, MENU, ENHANCEMENT)</br>
-  When displaying a Markdown document via a Marketplace menu, the table of content of the document is now displayed on the right of the document content to help consumer navigate the document.
-
-### Marketplace bug fixes for May 29, 2025
-
-| Case ID | Internal ID | Description |
-|--------------|--------------|---------------------------------------------------|
-|              | APIGOV- | **Issue**: Description.<br/> **Resolution**: Description.|
+  To make it easier for consumers to explore large documents that are accessed via the Marketplace navigation menu, we added a **table of contents** that now appears on the right side of the document view. This improvement helps users to quickly navigate between sections of the document and understand the structure of a glance.
 
 ## May 23, 2025
 
