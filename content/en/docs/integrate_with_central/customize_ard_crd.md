@@ -210,6 +210,37 @@ The playground allows you to change the WebUI components (UISchema section of th
 }
 ```
 
+#### Custom fields component
+
+The request schema supports custom fields using the `x-custom-field` property. This allows you to mark specific properties in your schema as custom, enabling agents and consumers to identify and handle them accordingly. 
+
+##### Usage
+
+To define a custom field in your request schema, add the `x-custom-field` property to the desired property definition:
+
+```json
+{
+  "schema": {
+    "properties": {
+      "customFieldName": {
+        "type": "string",
+        "description": "A user-defined custom field",
+        "x-custom-field": true
+      }
+    }
+  }
+}
+```
+
+{{< alert title="Note" color="primary" >}}
+Important mention: `x-custom-field` does not have to be a bool, it can be a string, integer, enum, array. As long as this field is set on a property, no matter what value it has, that property will be considered a custom property, will be preserved when schema is updated and won't affect the provisioning process.
+{{< /alert >}}
+
+Behavior:
+* **Identification**: Properties with `x-custom-field` set are recognized as custom fields.
+* **Preservation on Update**: When updating or migrating schemas (for AccessRequestDefinition, CredentialRequestDefinition, or ApplicationProfileDefinition resources), any custom fields present in the existing schema are automatically merged into the new schema. This ensures that custom fields are not lost during updates.
+* **Visibility**: For the properties with `x-custom-field` set to appear when provisioning is done, discovery agent needs to be restarted
+
 ## Customize Subscription screen
 
 To customize the subscription screen, you need a `SubscriptionRequestDefinition`. This object will contain the screen definition of the information required to subscribe to a service. This object is not scoped and are globally available.
@@ -478,6 +509,45 @@ Otherwise, create an asset based on this service and then a product.
 You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
 ![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
+
+#### AccessRequestDefinition custom fields sample
+
+Sample of an AccessRequestDefinition (json format) exemplifying `x-custom-field` usage:
+
+```json
+{
+    "group": "management",
+    "apiVersion": "v1alpha1",
+    "kind": "AccessRequestDefinition",
+    "name": "api-scopes",
+    "title": "API Scopes",
+    "metadata": {
+        "scope": {
+            "kind": "Environment",
+            "name": "environment-name",
+        },
+    },
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema",
+            "properties": {
+                "customProp": {
+                    "type": "string",
+                    "title": "Custom Property",
+                    "x-custom-field": true
+                }
+            },
+            "description": "Please choose the best answer",
+            "additionalProperties": false
+        }
+    }
+}
+
+```
 
 ## Customize credential request screen
 
@@ -753,6 +823,58 @@ You will be able to see the purpose selector once you publish the product to the
 Once your access is granted, you can ask for credential. You should be able to see the file selector:
 
 ![Credential Request screen](/Images/central/integrate_with_central/CredentialRequestDefinition.png)
+
+#### CredentialRequestDefinition custom field sample
+
+Sample of an CredentialRequestDefinition (json format) exemplifying `x-custom-field` usage:
+
+```json
+{
+    "group": "management",
+    "apiVersion": "v1alpha1",
+    "kind": "CredentialRequestDefinition",
+    "name": "api-key",
+    "title": "API Key",
+    "metadata": {
+            "scope": {
+                "kind": "Environment",
+                "name": "environment-name",
+            },
+        },
+    "attributes": {},
+    "finalizers": [],
+    "tags": [],
+    "spec": {
+        "schema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+                "cors": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "title": "Javascript Origins",
+                    "uniqueItems": true
+                },
+                "customProp": {
+                    "type": "string",
+                    "title": "Custom Property",
+                    "x-custom-field": true
+                }
+            },
+            "description": "",
+            "x-axway-order": [
+                "cors"
+            ]
+        },
+    }
+}
+```
 
 ## Multi-languages support
 
