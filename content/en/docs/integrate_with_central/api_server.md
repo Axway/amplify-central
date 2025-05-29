@@ -819,6 +819,31 @@ query Management_APIService_List {
 }
 ```
 
+Getting all subscriptions from a specific team and return the subscription title and associated product / product plan
+
+```graphQL
+query Catalog_Subscription_List {
+    catalog_Subscription_List(
+        filter: { properties: { owner_id: "d9120f39-88d1-4977-bc56-5dd7d7335a18" } }
+    ) {
+        items {
+            title
+            spec {
+                product {
+                    title
+                }
+                plan {
+                    name {
+                        title
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
+
 ### Setup Postman to query graphQL api service
 
 Open Postman
