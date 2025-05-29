@@ -32,13 +32,21 @@ New features, enhancements, and bug fixes for the May 29 update.
 * **Enhancement**
 
   (CONSUMER EXPERIENCE, APPLICATIONS, ENHANCEMENT)</br>
-  Description.
+  To help consumer navigate inside the application, resources and credentials, new paths have been added:
+    * from the Application page > Credentials, clicking the Resources number will open the credentials details screen with the Resources section expanded.
+    * from the Application page > Resources, clicking the Credentials number will open the resource credentials list screen.
+
+  (CONSUMER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
+  To help a better communication between consumer and subscriber around the subscription, the subscription screen (list / details) now display also the subscription unique identifier. On provider side, they can search subscription either with the subscription title or the subscription identifier.
+
+  (CONSUMER EXPERIENCE, DOCUMENTATION, MENU, ENHANCEMENT)</br>
+  When displaying a Markdown document via a Marketplace menu, the table of content of the document is now displayed on the right of the document content to help consumer navigate the document.
 
 ### Marketplace bug fixes for May 29, 2025
 
 | Case ID | Internal ID | Description |
 |--------------|--------------|---------------------------------------------------|
-|              | APIGOV-30429 | **Issue**: Description.<br/> **Resolution**: Description.|
+|              | APIGOV- | **Issue**: Description.<br/> **Resolution**: Description.|
 
 ## May 23, 2025
 
