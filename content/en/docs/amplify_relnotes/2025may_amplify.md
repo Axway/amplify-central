@@ -34,7 +34,7 @@ New bug fixes for the May 30 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01719757 | APIGOV-30507 | **Issue**: APIM Discovery Agent was not able to process API Specification files larger then 10 MB.<br/>**Resolution**: An improvement was made to all Dicovery Agents to compress API Specification files larger then 10 MB by removing leading space or End-of-line characters. APIM Discovery Agent **v1.2.27** or later has this improvement.  Other Discovery agents built with SDK **v1.1.118** or later include this improvement. |
+| 01719757 | APIGOV-30507 | **Issue**: APIM Discovery Agent was not able to process API Specification files larger then 10 MB.<br/>**Resolution**: An improvement was made to all Dicovery Agents to compress API Specification files larger then 10 MB by removing leading space or End-of-line characters. APIM Discovery Agent **v1.2.27** or later has this improvement. |
 | 01652136 | APIGOV-29139 | **Issue**: APIM Discovery Agent **v1.2.23** was not reflecting multiple inbound security profiles for an API.<br/>**Resolution**: The fix to reflect multple inbound security policies in the Service Registry was released in APIM Discovery Agent **v1.2.27** or later. |
 | 01711170 | APIGOV-30336 | **Issue**: Duplicate API Services were detected after an upgrade to APIM Discovery Agent **v1.2.21**.<br/>**Resolution**: The fix to the cache manager used to detect API Service chanages was made in APIM Discovery Agent **v1.2.27** or later. |
 | | APIGOV-30564 | **Issue**: When downloading the Docker image of the Kafka Agent **v1.1.19**, a 503 Service Unavailable error was encountered.<br/>**Resolution**: The fix made to enable access to reposistory.axway.com. |
