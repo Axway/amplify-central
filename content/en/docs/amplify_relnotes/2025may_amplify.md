@@ -21,6 +21,11 @@ New features, enhancements, and bug fixes for the May 29 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
+* **All Discovery Agents: Custom Field support**
+  
+  (All DISCOVERY AGENTS, ENHANCEMENT)</br>
+  For Credential Request Definitions (CRDs), Asser Request Definitions (ARDs), and Application Profile Definitions (MAPD) with 'x-custom-field' properties, these will be ignored by all Discovery agents'. This enhancement enables customers to include their own custom information that the agents will ignore. This information can be exposed in the Marketplace.
+
 ## May 30, 2025
 
 New bug fixes for the May 30 update.
@@ -33,6 +38,13 @@ New bug fixes for the May 30 update.
 | 01652136 | APIGOV-29139 | **Issue**: APIM Discovery Agent **v1.2.23** was not reflecting multiple inbound security profiles for an API.<br/>**Resolution**: The fix to reflect multple inbound security policies in the Service Registry was released in APIM Discovery Agent **v1.2.27** or later. |
 | 01711170 | APIGOV-30336 | **Issue**: Duplicate API Services were detected after an upgrade to APIM Discovery Agent **v1.2.21**.<br/>**Resolution**: The fix to the cache manager used to detect API Service chanages was made in APIM Discovery Agent **v1.2.27** or later. |
 | | APIGOV-30564 | **Issue**: When downloading the Docker image of the Kafka Agent **v1.1.19**, a 503 Service Unavailable error was encountered.<br/>**Resolution**: The fix made to enable access to reposistory.axway.com. |
+
+### Marketplace updates for May 30, 2025
+
+* **Limit on API Services/Endpoints grouped under a single asset**
+
+  (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
+  The Asset Catalog now enforces a maximum of **150 API Services or Endpoints** that can be grouped under a single asset. If your use case requires grouping more than 150 APIs or Endpoints, consider creating multiple assets to organize them effectively.
 
 ## May 29, 2025
 
