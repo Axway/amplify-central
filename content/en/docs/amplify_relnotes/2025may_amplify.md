@@ -10,16 +10,30 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
-## May 29, 2025
+## May 30, 2025
 
 New features, enhancements, and bug fixes for the May 29 update.
 
-### Agents updates for May 29, 2025
+### Agents updates for May 30, 2025
 
 * **New agent versions available**
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+## May 30, 2025
+
+New bug fixes for the May 30 update.
+
+### Agents bug fixes for May 30, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01652136 | APIGOV-29139 | **Issue**: APIM Discovery Agent **v1.2.23** was not reflecting multiple inbound security profiles for an API.<br/>**Resolution**: The fix to reflect multple inbound security policies in the Service Registry was released in APIM Discovery Agent **v1.2.27** or later. |
+
+## May 29, 2025
+
+New features, enhancements, and bug fixes for the May 29 update.
 
 ### Marketplace updates for May 29, 2025
 
