@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## May 30, 2025
 
-New features, enhancements, and bug fixes for the May 29 update.
+New features, enhancements, and bug fixes for the May 30 update.
 
 ### Agents updates for May 30, 2025
 
