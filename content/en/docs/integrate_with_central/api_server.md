@@ -689,19 +689,19 @@ In addition to the Rest endpoint, there is a graphQL endpoint `$ENGAGE_URL/apis/
 * EU region: <https://central.eu-fr.axway.com>
 * APAC region: <https://central.ap-sg.axway.com>
 
-GraphQL is a query language for APIs (Application Programming Interfaces) and a runtime for executing those queries. GraphQL allows to navigate inside the relationship of the API Server resources.
+GraphQL is a query language for APIs (Application Programming Interfaces) and a runtime for executing those queries. GraphQL allows you to navigate inside the relationship of the API Server resources.
 
-Unless the REST API endpoint, where you can create,update and delete API Server resources, the graphQL endpoint is a read-only endpoint: you can only get information.
+Unlike the REST API endpoint where you can create/update/delete API Server resources, the graphQL endpoint is a read-only where you can only get information.
 
 ### Anatomy of a graphQL request
 
-The graphqL schema can be browse using that url: `$ENGAGE_URL/apis/graphql/schema`
+The graphqL schema can be browsed using that url: `$ENGAGE_URL/apis/graphql/schema`
 
-All available resources from api server are available as a graphQL object. A different naming convention is used: api server objects coming from the `management` group will be prefixed by `management_` and the one coming from the catalog group are with `catalog_`. Then a suffix is added to all objects: `_list`.
+All available resources from the API Server are available as a GraphQL object. A different naming convention is used: API Server objects coming from the `management` group will be prefixed by `management_` and those coming from the catalog group are prefixed with `catalog_`. A suffix is added to all objects: `_list`.
 
 Sample:
 
-| API server object name | graphQL object name         |
+| API Server object name | GraphQL object name         |
 |------------------------|-----------------------------|
 | Environment            | management_Environment_List |
 | Stage                  | catalog_Stage_List          |
@@ -712,47 +712,47 @@ Each object comes with the following structure: **filter**, **page**, **total**,
 
 #### filter
 
-This section is divide into 2 parameter:
+This section is divide into two parameters:
 
-* **query**: allows to add generic filtering to the graphQL query similar to the query parameter available within apiserver Rest API. Refer to [Query string for filtering entity. Expressed in FIQL/RSQL language.](/docs/integrate_with_central/cli_central/cli_command_reference/index.html#complex-query-filters)
-* **properties**: allow to use the pre-defined query parameter field (name, title...) and a value. Using the '*' in the value allow to use partial match.
+* **query**: Add generic filtering to the GraphQL query similar to the query parameter available within apiserver Rest API. Refer to [Query string for filtering entity. Expressed in FIQL/RSQL language.](/docs/integrate_with_central/cli_central/cli_command_reference/index.html#complex-query-filters)
+* **properties**: Use the pre-defined query parameter field (name, title...) and a value. Using the '*' in the value allows partial match.
 
 If multiple criteria are entered, an AND operator is used to request the data.
 
 #### page
 
-This section is divide into 3 parameter:
+This section is divide into three parameters:
 
-* **number**: allow to select which page number to retrieve
-* **size**: allow to tell how many objects fits in a page
+* **number**: Select the page number to retrieve.
+* **size**: Indicate how many objects fits in a page.
 * sort:
-    * **property**: name of the field to apply the sorting - few fields are available (usually name, title, timestamp)
-    * **direction**: order of the sorting, DESC or ASC
+    * **property**: Name of the field to apply the sorting - few fields are available (usually name, title, timestamp).
+    * **direction**: Order of the sorting, DESC or ASC.
 
-For instance it is possible to retrieve 15 objects per page (**size==15**) and sorting them by their creation date from the most recent to the least recent (property==metadata.audit.createTimestamp / direction==DESC).
+For instance, it is possible to retrieve 15 objects per page (**size==15**) and sort them by their creation date from the most recent to the least recent (property==metadata.audit.createTimestamp / direction==DESC).
 
 #### total
 
-This section is divide into 2 parameter:
+This section is divide into two parameter:
 
-* **accessible**: give the number of requested resources the current user has access to (own, shared with read or write access)
-* **existing**: give the total number of resources even the one the user cannot see.
+* **accessible**: Give the number of requested resources the current user has access to (own, shared with read or write access)
+* **existing**: Give the total number of resources, even those the user cannot see.
 
 #### pageInfo
 
-This section is informative to display what has been used to retrieve the result. It contains the same information as the page parameter and you can select the one you want to see.
+This section is informative and displays what has been used to retrieve the result. It contains the same information as the page parameter and you can select the one you want to see.
 
 #### items
 
-This is the specific part of the object where you will find name, title, kind, tags, attributes, metadata, owner, finalizers, spec, references, scope and more depending on each objects.
+This is the specific part of the object where you will find name, title, kind, tags, attributes, metadata, owner, finalizers, spec, references, scope and more depending on the objects.
 
-In this section, you will be able to navigate in the graph of the dependant objects using the `scopedResources` property. For instance if main object is an environment, you can navigate downward in the graph to the APIService of the environment and from there to the APIServiceInstance and APIServiceRevision.
+In this section, you can navigate in the graph of the dependant objects using the `scopedResources` property. For instance, if the main object is an environment, you can navigate downward in the graph to the APIService of the environment and from there to the APIServiceInstance and APIServiceRevision.
 
-It is also possible to navigate upward in the graph from APIService to the products that use this APIService using the `referenceBy` property from the APIService.
+It is also possible to navigate upward in the graph from APIService to the products that use this APIService by using the `referenceBy` property from the APIService.
 
 ### Query samples
 
-Getting all environment of the system sorted by title
+Get all environments of the system sorted by title:
 
 ```graphQL
 query Management_Environment_List {
@@ -765,7 +765,7 @@ query Management_Environment_List {
 }
 ```
 
-Getting all environment that start with "Demo" unsorted
+Get all environments that start with "Demo" unsorted:
 
 ```graphQL
 query Management_Environment_List {
@@ -778,7 +778,7 @@ query Management_Environment_List {
 }
 ```
 
-Getting all environment that start with "Demo" with a pagesize of 2 and returning only page 2
+Get all environments that start with "Demo" with a pagesize of 2 and returning only page 2:
 
 ```graphQL
 query Management_Environment_List {
@@ -794,7 +794,7 @@ query Management_Environment_List {
 }
 ```
 
-Getting all products that use the APIService "Demo" and return the APIService name, its scope name, the product name and title
+Get all products that use the APIService "Demo" and return the APIService name, its scope name, the product name and title:
 
 ```graphQL
 query Management_APIService_List {
@@ -819,7 +819,7 @@ query Management_APIService_List {
 }
 ```
 
-Getting all subscriptions from a specific team and return the subscription title and associated product / product plan
+Get all subscriptions from a specific team and return the subscription titles and associated products / product plans
 
 ```graphQL
 query Catalog_Subscription_List {
@@ -844,28 +844,21 @@ query Catalog_Subscription_List {
 
 ```
 
-### Setup Postman to query graphQL api service
+### Set up Postman to query GraphQL API Service
 
-Open Postman
+1. Open Postman
+2. Click **New** and select the **GraphQL** icon to Add a graphql query.
+3. Set the url with one of the above endpoints (i.e., using the [region endpoint](#graphql-requests-for-resources) your organization is provisioned in).
+4. Navigate to the `Authorization` tab of the query and enter the following to set the authorization process:
 
-Add a graphql query using the `New` button and select the `GraphQL icon`
+    * Select the `OAuth 2.0` in the Auth Type drop-down.
+    * Configure the new token:
+        * Grant Type: Implicit
+        * Callback url: use the Engage URL value of your region
+        * Auth URL: <https://login.axway.com/auth/realms/Broker/protocol/openid-connect/auth?idpHint=360>
+        * Client ID: apicentral
+    * Click the **Get New Access Token** orange button. The *Engage login* screen is displayed. Add your credential and click **Sign in**. Once your login is accepted, the token is returned and you can use it in the query.
+    * Set the tenantID in the query header - add a new header: `X-Axway-Tenant-Id` and its value is your organizationID.
 
-Set the url with one of the above endpoint (ie using the [region endpoint](#graphql-requests-for-resources) your Organization is provisioned in)
-
-Set the authorization process - navigate to the `Authorization` tab of the query and enter the following
-
-* Select the `OAuth 2.0` in the Auth Type drop down
-
-* Configure the New Token:
-    * Grant Type: Implicit
-    * Callback url: use the Engage url value of your region
-    * Auth URL: <https://login.axway.com/auth/realms/Broker/protocol/openid-connect/auth?idpHint=360>
-    * Client ID: apicentral
-
-* Get your token - click the `Get New Access Token` orange button, the Engage login screen is displayed, add your credential and click Sign in. Once your login is accepted, the token is returned and you can use it in the query
-
-* Set the tenantID in the query header - add a new header: `X-Axway-Tenant-Id` and its value is your organizationID
-
-Collect the graphQL object definition - Navigate to the `Query` tab and click `Use GraphQL Introspection`. You should see the list of available queries.
-
-Start querying - add the specific fields you want to see and user the `Query` button to execute and get the result.
+5. Navigating to the `Query` tab and click **Use GraphQL Introspection** to collect the GraphQL object definition. You should see the list of available queries.
+6. Add the specific fields you want to see and then click **Query** to execute the query and get the result.
