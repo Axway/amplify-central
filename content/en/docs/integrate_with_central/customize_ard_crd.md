@@ -240,7 +240,7 @@ Behavior:
 
 * **Identification**: Properties with `x-custom-field` set are recognized as custom fields.
 * **Preservation on Update**: When updating or migrating schemas (for AccessRequestDefinition, CredentialRequestDefinition, or ApplicationProfileDefinition resources), any custom fields present in the existing schema are automatically merged into the new schema. This ensures that custom fields are not lost during updates.
-* **Visibility**: For the properties with `x-custom-field` set to appear when provisioning is done, discovery agent needs to be restarted
+* **Visibility**: For the properties with `x-custom-field` set to appear when provisioning is done, Discovery Agent must be restarted.
 
 ## Customize Subscription screen
 
