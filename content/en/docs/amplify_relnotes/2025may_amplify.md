@@ -24,53 +24,47 @@ New features, enhancements, and bug fixes for the May 29 update.
 * **All Discovery Agents: Custom Field support**
   
   (All DISCOVERY AGENTS, ENHANCEMENT)</br>
-  For Credential Request Definitions (CRDs), Asser Request Definitions (ARDs), and Application Profile Definitions (MAPD) with 'x-custom-field' properties, these will be ignored by all Discovery agents'. This enhancement enables customers to include their own custom information that the agents will ignore. This information can be exposed in the Marketplace.
-
-## May 30, 2025
-
-New bug fixes for the May 30 update.
+  Credential Request Definitions (CRDs), Asser Request Definitions (ARDs), and Application Profile Definitions (MAPD) with 'x-custom-field' properties will be ignored by all Discovery Agents. This enhancement enables customers to include their own custom information that the agents will ignore. This information can be exposed in the Marketplace.
 
 ### Agents bug fixes for May 30, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01719757 | APIGOV-30507 | **Issue**: APIM Discovery Agent was not able to process API Specification files larger then 10 MB.<br/>**Resolution**: An improvement was made to all Dicovery Agents to compress API Specification files larger then 10 MB by removing leading space or End-of-line characters. APIM Discovery Agent **v1.2.27** or later has this improvement. |
-| 01652136 | APIGOV-29139 | **Issue**: APIM Discovery Agent **v1.2.23** was not reflecting multiple inbound security profiles for an API.<br/>**Resolution**: The fix to reflect multple inbound security policies in the Service Registry was released in APIM Discovery Agent **v1.2.27** or later. |
-| 01711170 | APIGOV-30336 | **Issue**: Duplicate API Services were detected after an upgrade to APIM Discovery Agent **v1.2.21**.<br/>**Resolution**: The fix to the cache manager used to detect API Service chanages was made in APIM Discovery Agent **v1.2.27** or later. |
-| | APIGOV-30564 | **Issue**: When downloading the Docker image of the Kafka Agent **v1.1.19**, a 503 Service Unavailable error was encountered.<br/>**Resolution**: The fix made to enable access to reposistory.axway.com. |
+| 01719757 | APIGOV-30507 | **Issue**: APIM Discovery Agent was not able to process API Specification files larger then 10 MB.<br/>**Resolution**: An improvement was made to all Discovery Agents that compresses API Specification files larger then 10 MB by removing leading space or End-of-line characters. This applies to APIM Discovery Agent **v1.2.27** and later. |
+| 01652136 | APIGOV-29139 | **Issue**: APIM Discovery Agent **v1.2.23** was not reflecting multiple inbound security profiles for an API.<br/>**Resolution**: A fix to reflect multiple inbound security policies in the Service Registry was released in APIM Discovery Agent **v1.2.27** and later. |
+| 01711170 | APIGOV-30336 | **Issue**: Duplicate API services were detected after an upgrade to APIM Discovery Agent **v1.2.21**.<br/>**Resolution**: The fix to the cache manager that is used to detect API service changes was made in APIM Discovery Agent **v1.2.27** and later. |
+| | APIGOV-30564 | **Issue**: When downloading the Docker image of the Kafka Agent **v1.1.19**, a 503 Service Unavailable error was encountered.<br/>**Resolution**: A fix was made that enables access to repository.axway.com. |
 
-### Marketplace updates for May 30, 2025
+### Marketplace update for May 30, 2025
 
-* **Limit on API Services/Endpoints grouped under a single asset**
+* **Limit on API services/endpoints grouped under a single asset**
 
   (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
-  The Asset Catalog now enforces a maximum of **150 API Services or Endpoints** that can be grouped under a single asset. If your use case requires grouping more than 150 APIs or Endpoints, consider creating multiple assets to organize them effectively.
+  The Asset Catalog now enforces a maximum of **150 API services or endpoints** that can be grouped under a single asset. If your use case requires grouping more than 150 APIs or endpoints, consider creating multiple assets to organize them effectively.
 
 ## May 29, 2025
 
-New features, enhancements, and bug fixes for the May 29 update.
+New features and enhancements for the May 29 update.
 
 ### Marketplace updates for May 29, 2025
 
-* **Improvement to the application details screen**
+* **Improvement to the *application details* screen**
 
   (CONSUMER EXPERIENCE, APPLICATIONS, ENHANCEMENT)</br>
-  We have made it simpler to navigate between key parts of an application by:
-    * On the **Application > Credentials** tab, Clicking the Resources number will open the linked resources for that credential.
-    * On the **Application page > Resources**, clicking the Credentials number will open the linked credentials for that resource.
+  It is now simpler to navigate between key parts of an application:
+    * On the **Application > Credentials** tab, click on the Resources number to open the linked resources for that credential.
+    * On the **Application page > Resources**, click on the Credentials number to open the linked credentials for that resource.
 
 * **Subscription unique identifier**
 
   (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
-  To make it easier for users to manage and locate their subscriptions, we’ve introduced a **unique subscription identifier**.
-  Previously, subscriptions were identified only by a user-defined friendly name, which often resulted in **duplicate names** and made it hard to distinguish between subscriptions. With this enhancement:
-    * Each subscription now includes a **system-generated unique ID**.
-    * This ID helps you **quickly and accurately identify** subscriptions, even when names are similar or repeated.
+  A **unique subscription identifier** has been introduced to make it easier to manage and locate subscriptions.
+  Previously, subscriptions were identified only by a user-defined friendly name, which often resulted in **duplicate names** and difficulty in distinguishing between subscriptions. With this enhancement, each subscription now includes a **system-generated unique ID** that helps you to **quickly and accurately identify** subscriptions, even when names are similar or repeated.
 
 * **Table of Contents now displayed for markdown documents used in the navigation menu**
 
   (CONSUMER EXPERIENCE, DOCUMENTATION, MENU, ENHANCEMENT)</br>
-  To make it easier for consumers to explore large documents that are accessed via the Marketplace navigation menu, we added a **table of contents** that now appears on the right side of the document view. This improvement helps users to quickly navigate between sections of the document and understand the structure of a glance.
+  A **table of contents** has been added to the right of the document view to make it easier to explore large documents that are accessed via the Marketplace navigation menu. This improvement helps users to quickly navigate between sections of the document and understand the structure at a glance.
 
 ## May 23, 2025
 
@@ -88,7 +82,7 @@ New features, enhancements, and bug fixes for the May 23 update.
   (CONSUMER EXPERIENCE, APPLICATIONS, ENHANCEMENT)</br>
   We’ve improved the message that is displayed when a user’s web session expires. The new message provides clearer guidance, making it easier for users to understand what happened and how to securely sign in again.
 
-### Marketplace bug fixes for May 23, 2025
+### Marketplace bug fix for May 23, 2025
 
 | Case ID | Internal ID | Description |
 |--------------|--------------|---------------------------------------------------|
@@ -98,13 +92,13 @@ New features, enhancements, and bug fixes for the May 23 update.
 
 New bug fixes for the May 16 update.
 
-### Agents bug fixes for May 21, 2025
+### Agents bug fix for May 21, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 |  | APIGOV-30504 | **Issue**: Traceability Agents could encounter a nil pointer run-time error.<br/>**Resolution**: The fix is available in all Traceability Agents released on May 21 2025 or later. |
 
-### Marketplace bug fixes for May 21, 2025
+### Marketplace bug fix for May 21, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
@@ -114,7 +108,7 @@ New bug fixes for the May 16 update.
 
 New features, enhancements, and bug fixes for the May 16 update.
 
-### Agents updates for May 16, 2025
+### Agents update for May 16, 2025
 
 * **New agent versions available**
 
