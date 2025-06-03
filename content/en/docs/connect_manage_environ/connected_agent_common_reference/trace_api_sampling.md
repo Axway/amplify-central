@@ -48,7 +48,7 @@ axway central get -o yaml -s [Environment Name] apisi [API Service Instance Name
 ```yaml
 sampletrigger:
   requested: true
-  onlyErrors: true
+  onlyErrors: true # Set to true to sample only error transactions; set to false to sample all transactions.
   duration: 3600
 ```
 
