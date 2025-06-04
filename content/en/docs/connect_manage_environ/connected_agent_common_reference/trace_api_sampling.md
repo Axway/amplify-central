@@ -24,8 +24,9 @@ The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_
 1. Navigate to the *Environment List* page in Amplify Engage.
 2. Select the environment you want to sample APIs in.
 3. Find the API you would like to sample.
-4. Click the **API Sampling** icon.
-5. Click in the menu to enable sampling. Select a duration, and click **Save**.
+4. Go to the **Endpoints** tab.
+5. Click the **API Sampling** icon.
+6. Click in the menu to enable sampling. Select a duration, and click **Save**.
 
 Your selected API should now be enabled for sampling for the duration selected.
   
