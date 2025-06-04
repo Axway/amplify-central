@@ -11,7 +11,7 @@ The Traceability Agent can sample the transaction information for individual API
 
 Sampling grants the agent the ability to send transaction information for specific APIs to Amplify Analytics.
 
-When requesting sampling for an API the user will also request a time frame, 100-3600 seconds (1 minute - 1 hour). Given that the selected API has surpassed its cool down period (30 minutes) since the last sampling for the selected API has ended, the API sampling will be enabled. The agent will begin to send transactions as they come through, but still be limited to a maximum of 100 transactions a minute.
+When requesting sampling for an API the user will also request a time frame, 0-3600 seconds(1 hour). Given that the selected API has surpassed its cool down period (30 minutes) since the last sampling for the selected API has ended, the API sampling will be enabled. The agent will begin to send transactions as they come through, but still be limited to a maximum of 100 transactions a minute.
 
 {{< alert title="Note" color="primary" >}}The max sampling time and transactions per minute limit may be changed in future updates to Amplify Engage.{{< /alert >}}
 
