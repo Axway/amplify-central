@@ -138,7 +138,6 @@ spec:
   config:
     mode: proxy
     type: Apigee
-    serviceEndpoint: https://apigee.googleapis.com/
     projectId: rd-amplify-apigee-x
     developerEmail: axway-agent@axway.com
     environment: test
