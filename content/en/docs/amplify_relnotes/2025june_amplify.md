@@ -38,4 +38,6 @@ New features, enhancements, and bug fixes for the June 6 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01719757 | APIGOV-xxxxx | **Issue**: Description.<br/>**Resolution**: Description. |
+| | APIGOV-30512 | **Issue**: Attempting to duplicate plan with name of 350 chars causes 400 error <br/>**Resolution**: Now, plan name is generated instead of re-using the product name |
+| | APIGOV-30216 | **Issue**: [Central UI] Resources (like product/asset) logical names validation uses a different pattern then what the backend enforces <br/>**Resolution**: Validation pattern aligned between UI and backend |
+| | APIGOV-30059 | **Issue**: Fix inconsistent field lengths in UI vs what is allowed via API calls <br/>**Resolution**: Now check field length from UI and backend model are aligned |
