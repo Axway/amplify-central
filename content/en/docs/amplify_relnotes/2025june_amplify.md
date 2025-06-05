@@ -29,10 +29,10 @@ New features, enhancements, and bug fixes for the June 6 update.
 
 ### Marketplace update for June 6, 2025
 
-* **Enhancement**
+* **Remove archived product release**
 
   (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
-  Description.
+  In order to help keep the product release clean after and archival, it is now possible to delete an archived release. Refer to the ellipsis menu on the product release.
 
 ### Marketplace bug fixes for June 6, 2025
 
