@@ -21,18 +21,12 @@ New features, enhancements, and bug fixes for the June 6 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-### Agents bug fixes for June 6, 2025
+### Marketplace updates for June 6, 2025
 
-| Case ID | Internal ID | Description |
-|-------------|--------------|---------------------------------------------------|
-| 01719757 | APIGOV-xxxxx | **Issue**: Description.<br/>**Resolution**: Description. |
-
-### Marketplace update for June 6, 2025
-
-* **Remove archived product release**
+* **Delete archived product release**
 
   (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
-  In order to help keep the product release clean after and archival, it is now possible to delete an archived release. Refer to the ellipsis menu on the product release.
+  To help maintain a clean and organized product release history, users can now delete archived product releases. This action can be performed via the ellipsis menu on the specific product release. Use this feature to remove outdated or unnecessary archived releases once they are no longer needed.
 
 ### Marketplace bug fixes for June 6, 2025
 
