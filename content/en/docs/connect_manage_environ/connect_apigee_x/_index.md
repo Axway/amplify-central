@@ -120,6 +120,7 @@ apigee.environments.getStats
 apigee.proxyrevisions.get
 apigee.resourcefiles.get
 apigee.resourcefiles.list
+apigee.organizations.get
 ```
 
 ### GCP service account
