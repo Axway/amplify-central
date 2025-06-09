@@ -211,7 +211,7 @@ Learn how to create an environment to represent your API services and other disc
 
 ### Access Rights
 
-(Optional) Select the team(s) the environment can be shared with. By default, an environment is not shared and only the Engage Admin will have access to it. If you want your environment to be shared with a specific team, select a team owner, then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team.
+(Optional) Select the team(s) the environment can be shared with. By default, an environment is not shared and only the **Engage Admin** or the owning team will have access to it. If you want your environment to be shared with a specific team, select a team owner, then select the teams you want to grant Read access rights. For each of the teams selected, each member of the shared team(s) selected will be able to access your environment with Read access rights. This allows you to share/enable access to a specific environment without granting access to all the environments owned by your current team.
 
 1. Click **Next**.
 2. Provide the Tags and Attribute details for the environment.

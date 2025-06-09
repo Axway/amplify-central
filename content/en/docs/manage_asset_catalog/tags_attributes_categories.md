@@ -33,11 +33,11 @@ Attributes are keyword and value pairs that can be assigned to assets and used t
 
 ## Manage categories
 
-Searching through an unordered, unorganized list of assets can be a daunting task. However, **Engage Admin** users can create categories to group assets in the Amplify Asset Catalog to make searching for assets more effective and more organized. Examples of categories are `Finance` and `Medicine`.
+Searching through an unordered, unorganized list of assets can be a daunting task. However, **Engage Admin** or **Catalog Manager** users can create categories to group assets in the Amplify Asset Catalog to make searching for assets more effective and more organized. Examples of categories are `Finance` and `Medicine`.
 
 Categories allow for a broader grouping of assets into different topics or themes. Categories are created once, and multiple assets can be assigned to them. One asset can be in multiple categories.
 
-Only users that are assigned the **Engage Admin** role can create, edit, and delete categories. Categories are created at the Organization level and available to all teams to apply them to their assets.
+When creating a category, select the team that owns the category. Select the team(s) the category can be shared with, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your category with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team. Click **Next**.
 
 1. Select an asset in the *Asset Catalog*.
 2. Click **Edit** (pencil button) at top right.
