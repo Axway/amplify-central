@@ -44,7 +44,7 @@ A public category can be set to **Featured** by providers to highlight and adver
 
 A public category can be Visible / Featured in one or multiple Marketplaces depending on the necessary Marketplace advertisement level.
 
-When creating a category, select the team that owns the category. Select the team(s) the category can be shared with, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your category with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team.
+When creating a category, select the team that owns the category. Select the team(s) the category can be shared with, you can choose either Edit or Read access "Rights". Each member of the selected shared team(s) will be able to access your category with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team.
 
 ### Viewing categories
 
