@@ -24,7 +24,7 @@ Attributes are keyword and value pairs that can be assigned to products and used
 
 ## Manage categories
 
-Searching through an unordered, unorganized list of products can be a daunting task. However, **Engage Admin** users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
+Searching through an unordered, unorganized list of products can be a daunting task. However, **Engage Admin** or **Catalog Manager** users can create categories to group products in the Product Foundry to make searching for products more effective and more organized. Examples of categories are `Finance` and `Medicine`.
 
 Categories allow for a broader grouping of products into different topics or themes. Categories are created once, and multiple products can be assigned to them. One product can be in multiple categories.
 
@@ -43,6 +43,8 @@ Additionally, the product category can be organized into a hierarchy (up to thre
 A public category can be set to **Featured** by providers to highlight and advertise the category and the associated products on the Marketplace home page. In this case, a category image is required and provides greater visibility. The maximum number of featured categories is **five**.
 
 A public category can be Visible / Featured in one or multiple Marketplaces depending on the necessary Marketplace advertisement level.
+
+When creating a category, select the team that owns the category. Select the team(s) the category can be shared with, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your category with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team.
 
 ### Viewing categories
 
