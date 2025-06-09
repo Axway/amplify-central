@@ -37,7 +37,7 @@ Searching through an unordered, unorganized list of assets can be a daunting tas
 
 Categories allow for a broader grouping of assets into different topics or themes. Categories are created once, and multiple assets can be assigned to them. One asset can be in multiple categories.
 
-When creating a category, select the team that owns the category. Select the team(s) the category can be shared with, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your category with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team.
+When creating a category, select the team that owns the category. Select the team(s) the category can be shared with, you can choose either Edit or Read access "Rights". Each member of the selected shared team(s) will be able to access your category with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team.
 
 1. Select an asset in the *Asset Catalog*.
 2. Click **Edit** (pencil button) at top right.
