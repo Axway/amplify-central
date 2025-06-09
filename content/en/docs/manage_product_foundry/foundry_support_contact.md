@@ -51,8 +51,9 @@ Click on the support contact name to view more information, such as office hours
     * Office hours (optional) - The day(s) and time periods when the phone will be answered. If the time frame is different from one day to another, click **+ Add Office Hours** to add a different period. Be aware that a day cannot be assigned to multiple periods.
     * Alternative method (optional) - Up to five different methods, including: Website URL, MS Teams channel or Slack channel. These alternative methods require a title that will be displayed in the Marketplace UI and its effective URL. This URL will be used to redirect the consumer to the appropriate information.
 
-6. Select the assigned product where this contact will be displayed. Selected products will be added to the *Associated products* section.
-7. click **Save**.
+6. For Access Rights, select the team that owns the support contact. Select the team(s) the support contact can be shared with. By default, a support contact is not shared and only the **Engage Admin** or the owning team will have access to it. If you want your support contact shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected asset. For each of the teams selected, you can choose either Edit or Read access "Rights." Each member of the shared team(s) selected will be able to access your support contact with the chosen "Rights." This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team. Click **Next**.
+7. Select the assigned product where this contact will be displayed. Selected products will be added to the *Associated products* section.
+8. click **Save**.
 
 The product support contact is saved and assigned to all selected products. Consumers can view the support contact information on the right of the product details screen in the Marketplace.
 
