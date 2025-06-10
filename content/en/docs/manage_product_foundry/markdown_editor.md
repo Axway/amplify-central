@@ -6,9 +6,9 @@ weight: 80
 
 General help about the Markdown editor.
 
-## Markdown Editor
+## Definition
 
-The Markdown editor is a standard markdown content creator with additional features.
+The Markdown editor is a standard markdown content creator with additional features used to create Engage documentation.
 
 The screen is divided in 2 parts:
 
