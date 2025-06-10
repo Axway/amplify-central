@@ -20,7 +20,9 @@ The screen is divided in 2 parts:
     * the full screen mode allow to see the editor in full screen, then the collapse icon allow to exit full screen mode
 * the **editor** itself allowing to enter the Markdown text
 
-List of supported HTML tags:
+The editor supports standard markdown tags. Refer to [Markdown basic syntax](https://www.markdownguide.org/basic-syntax/)
+
+In addition, since it is not always easy to render correctly Markdown content, some HTML tags are also supported:
 
 |HTML Tag name | Definition | Toolbar Helper available |
 |--------------|------------|--------|
