@@ -22,7 +22,7 @@ The screen is divided in 2 parts:
 
 List of supported HTML tags:
 
-|HTML Tag name | Definition | Helper available (Yes/No) |
+|HTML Tag name | Definition | Toolbar Helper available |
 |--------------|------------|--------|
 | h1 to h6 | Header tags from largest (h1) to smallest (h6) | Yes |
 | hr | Inserts a horizontal line | Yes |
