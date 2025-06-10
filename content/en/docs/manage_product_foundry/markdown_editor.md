@@ -1,6 +1,6 @@
 ---
-title: Manage consumption units
-linkTitle: Manage consumption units
+title: Markdown Editor
+linkTitle: Markdown Editor
 weight: 80
 ---
 
