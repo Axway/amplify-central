@@ -102,7 +102,7 @@ To create a document:
 2. Click **+ Add New Document** to open the documents wizard.
 3. Select a Document type: **Upload a document**, **Create Markdown** or **External link**. Based on your choice, the next screen will present you with the appropriate actions:
    * **Upload a document**: click **BROWSE FILES** or drop file(s) into the drop area. The successfully uploaded file is displayed in the *Manage Uploads* area. If a file does not respect the limitations, it will appear in an *error message* area. Check the box in front of the uploaded file to edit the file details: Document name, Description, Version. Once your document information is correct, click **Next**.
-   * **Create Markdown**: enter the document details (Name, Description, Version) and click **Next** to display the Markdown editor. Once the markdown content is ready, click **Next**.
+   * **Create Markdown**: enter the document details (Name, Description, Version) and click **Next** to display the [Markdown editor](/docs/manage_product_foundry/markdown_editor). Once the markdown content is ready, click **Next**.
    * **External Link**: enter the document details (URL, Name, Description, Version) and click **Next**.
 4. Add your document visibility: Product and/or Marketplace. Product visibility allows any Catalog Manager that can access the document to use it in their product. Marketplace visibility can be refined by selecting on which Marketplace the document will be available. If you upload multiple documents, this visibility will be applied to all document(s). If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
 5. Add the team permissions: Restricted (only the Engage Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
@@ -213,7 +213,7 @@ View the following information for all templates:
    * Click **+ Add topic** to add a topic. This opens a side planel where you can provide the topic's details. Click **Save** when done.
    * Click **+ Add Section** to add a section within a topic. This opens a side panel for section details. Click **Save** when finished.
    * Click **+ Add Article** to add articles to a section. You can:
-      * Create a **Markdown Article**: Fill in the Markdown profile (name, description, version) before accessing the markdown editor.
+      * Create a **Markdown Article**: Fill in the Markdown profile (name, description, version) before accessing the [markdown editor](/docs/manage_product_foundry/markdown_editor).
       * **Link a Document**: Select one or more documents from the Document Library to attach.
 4. **Finalize your template**:
 

@@ -145,7 +145,7 @@ View the following detailed information for a specific product in any state (Dra
     * Edit documentation elements (topics, sections, and articles).
         * Click **+ Add topic** to add a new topic.
         * Click **+ Add section** to add a new section in a topic.
-        * Once a section is available, click **+ Add article** to add a Markdown article or link an article from a document library document.
+        * Once a section is available, click **+ Add article** to add a Markdown article using the [Markdown editor](/docs/manage_product_foundry/markdown_editor) or link an article from a document library document.
         * Each time you select a topic, section, article from the documentation structure, its content is visible at the right of the screen, where you can use the pencil icon to edit the content.
         * Topic, section, and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reordered. A section can be moved inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
         * Topic, section, and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation is required for each deletion, as this action is irreversible.
