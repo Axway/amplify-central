@@ -492,8 +492,6 @@ cd /home/APIC-agents
 
 ###### Run the Dockerized Traceability Agent
 
-See [To install the Dockerized Discovery Agent](#installing-the-discovery-agent) section for the `ta_env_vars.env` configuration.
-
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
