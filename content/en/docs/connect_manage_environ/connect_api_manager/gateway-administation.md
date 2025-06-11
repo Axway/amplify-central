@@ -1,7 +1,7 @@
 ---
 title: Administer API Manager Gateway
 linkTitle: Administer API Manager Gateway
-draft: false
+draft: true
 weight: 25
 ---
 Deploy your Discovery Agent and Traceability Agent so you can manage your Axway API Gateway environment within Amplify.
@@ -595,7 +595,7 @@ When using the open traffic logs, it is not required to configure the Gateway co
 
 #### Customizing Traceability Agent API Manager connectivity variables
 
-This section is exactly the same as the [Discovery Agent - API Manager](/docs/connect_manage_environ/connect_api_manager/gateway-administation/#customizing-discovery-agent-api-manager-connectivity-variables).
+This section is exactly the same as the [Discovery Agent - API Manager](/docs/connect_manage_environ/connect_api_manager/install_discovery_agent/#customizing-discovery-agent-api-manager-connectivity-variables).
 
 Once all data is gathered, this section should look like:
 
@@ -645,7 +645,7 @@ APIGATEWAY_SENDALLTRAFFIC=false
 #### Customizing Traceability Agent Central connectivity variables
 
 This section connects the agent to Amplify Engage.
-This section is exactly the same as the [Discovery Agent - Central connectivity](/docs/connect_manage_environ/connect_api_manager/gateway-administation/#customizing-discovery-agent-central-connectivity-variables).
+This section is exactly the same as the [Discovery Agent - Central connectivity](/docs/connect_manage_environ/connect_api_manager/install_discovery_agent/#customizing-discovery-agent-central-connectivity-variables).
 
 Once all data is gathered, the variable list should look like:
 
@@ -717,7 +717,7 @@ Once all data is gathered, this section should look like:
 
 #### Customizing Traceability Agent logging variables
 
-The log section defines how the agent manages its logs. This section is similar to the one defined for the [Discovery Agent](/docs/connect_manage_environ/connect_api_manager/gateway-administation/#customizing-discovery-agent-logging-variables).
+The log section defines how the agent manages its logs. This section is similar to the one defined for the [Discovery Agent](/docs/connect_manage_environ/connect_api_manager/install_discovery_agent/#customizing-discovery-agent-logging-variables).
 
 Once all data is gathered, this section should look like this for standard output logging:
 

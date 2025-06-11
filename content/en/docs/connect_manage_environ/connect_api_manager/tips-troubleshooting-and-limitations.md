@@ -1,7 +1,8 @@
 ---
-title: Get help with Connected API Manager
+title: FAQs and troubleshooting
+linkTitle: FAQs and troubleshooting
 draft: false
-weight: 55
+weight: 75
 ---
 Troubleshooting, known limitations and restrictions that you may encounter while working with the connected / managed environment for Amplify and Axway API Manager. Tips for working with this environment are also provided.
 
