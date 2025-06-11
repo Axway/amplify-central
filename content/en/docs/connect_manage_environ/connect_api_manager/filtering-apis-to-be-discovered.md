@@ -1,6 +1,6 @@
 ---
-title: Feature - Discover APIs
-linkTitle: Feature - Discover APIs
+title: Discover APIs
+linkTitle: Discover APIs
 draft: false
 weight: 40
 ---

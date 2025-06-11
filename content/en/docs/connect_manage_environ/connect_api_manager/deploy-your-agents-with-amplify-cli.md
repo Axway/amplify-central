@@ -1,8 +1,8 @@
 ---
-title: Deploy your agents with Axway CLI
-linkTitle: Deploy your agents with Axway CLI
+title: Install the agents using the CLI
+linkTitle: Install the agents using the CLI
 draft: false
-weight: 20
+weight: 35
 ---
 Deploy your agents using Axway CLI so that you can manage your Axway API Gateway environment within Amplify.
 
@@ -312,7 +312,7 @@ The agent can be installed as a Linux service with systemd. The following comman
 
 When running as a service, it is recommended to update the key path in the environment variables files (`da_env_vars.env` and `ta_env_vars.env`) with an absolute path for the service to find the appropriate key files.
 
-When running as a service, it is best to save your logging to a file rather than the console output. See [Customizing log section (log)](/docs/connect_manage_environ/connect_api_manager/gateway-administation/#customizing-log-section-logging).
+When running as a service, it is best to save your logging to a file rather than the console output.
 
 * Install the services and execute them as user axway and group axway:
 
@@ -493,5 +493,3 @@ NAME                         DATAPLANE TYPE  STATUS   RESOURCE KIND      SCOPE K
 lbean018-traceability        Edge            running  TraceabilityAgent  Environment  apigtw-v77        management
 ec2-ta                       AWS             stopped  TraceabilityAgent  Environment  awsgtw-us-west-1  management
 ```
-
-See [Administer API Gateway](/docs/connect_manage_environ/connect_api_manager/gateway-administation/) for additional information about agent features.

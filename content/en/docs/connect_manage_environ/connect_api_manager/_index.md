@@ -85,7 +85,9 @@ You will be guided through this procedure using Axway Central CLI. See [Deploy y
 
 Some of the content in the Connect API Manager documentation is of interest to a wide range of development and administrator professions. The following topics are organized by professional role and common task scenarios:
 
-* [Administer API Manager Gateway](/docs/connect_manage_environ/connect_api_manager/gateway-administation/)
+* [Install the Discovery Agent](/docs/connect_manage_environ/connect_api_manager/install_discovery_agent/)
+
+* [Install the Traceability Agent](/docs/connect_manage_environ/connect_api_manager/install_traceability_agent/)
 
 * [Administer agent security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/)
 
