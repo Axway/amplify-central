@@ -84,7 +84,9 @@ In addition, since it is not always easy to render correctly Markdown content, s
 
 ### Curation
 
-TBD
+Any other HTML tags not listed above will be blocked.
+
+Regarding Javascript, their action will be ineffective
 
 ## Where is it used?
 
