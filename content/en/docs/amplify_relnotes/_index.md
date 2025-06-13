@@ -30,11 +30,11 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Mulesoft Anypoint platform v3              | 1.2.26                   | 1.1.48                           |
 | Software AG webMethods                     | 1.0.20X                   | 1.0.0                            |
 | Kong Gateway                               | 1.1.24                   | 1.0.9                            |
-| GitLab                                     | 1.1.21X                   | 1.0.6                            |
+| GitLab                                     | 1.1.22                   | 1.0.6                            |
 | Kafka Cluster                              | 1.1.22                   | 1.0.6                            |
 | IBM API Connect Gateway                    | 1.1.22                   | 1.0.0                            |
 | Backstage                                  | 1.0.23                   | 1.0.0                            |
-| SAP Integration Suite - API Management / API Portal | 1.0.9X                    | 1.0.0                            |
+| SAP Integration Suite - API Management / API Portal | 1.0.10                    | 1.0.0                            |
 | WSO2 API Manager 4.5.0                      | 1.0.8X                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
@@ -47,8 +47,8 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.117)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
-| Graylog API Security                       | 1.1.19                   | 1.0.5            |
-| Traceable API Security                     | 2.0.3                    | 1.0.0            |
+| Graylog API Security                       | 1.1.20                   | 1.0.5            |
+| Traceable API Security                     | 2.0.3X                    | 1.0.0            |
 
 ## [Amplify Engage June 6 2025](/docs/amplify_relnotes/2025june_amplify/#june-6-2025)
 
