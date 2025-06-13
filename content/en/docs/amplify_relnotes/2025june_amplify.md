@@ -48,7 +48,7 @@ New enhancement and bug fixes for the June 13 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+| | APIGOV-30534 | **Issue**: After an active product plan is duplicated, the UI is not able to display the quota when editing the duplicated plan. <br/>**Resolution**: A fix was made to an Engage API to enable the display of the quota. |
 
 ## June 6, 2025
 
