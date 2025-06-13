@@ -21,11 +21,21 @@ New enhancement and bug fixes for the June 13 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
+* **All Discovery Agents: Credential Request Type**
+
+  (ALL DISCOVERY AGENTS, ENHANCEMENT)</br>
+  An enhancement to Credential Request Definitions (CRDs) for a Credential Type value (e.g. APIKey, OAuth, HTTPBasic, MutualTLS) has been added.  This will enable clearer communication that a single CRD can be used for multiple APIs.
+
+* **Apigee X Discovery Agents: Data Residency Support**
+
+  (ALL DISCOVERY AGENTS, ENHANCEMENT)</br>
+  The Apigee X on-premise and embedded Discovery agents will use an Apigee Data Residency endpoint to determine the region based URL for accessing Apigee resources.
+    
 ### Agents bug fixes for June 13, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01719757 | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+| 01721183 | APIGOV-30536 | **Issue**: The Agent version status would display "Update Available"/"Retracted" for the latest version of agents in GRPC mode. <br/>**Resolution**: A fix was made to correctly recognize the latest version of all agents. |
 
 ### Marketplace updates for June 13, 2025
 
