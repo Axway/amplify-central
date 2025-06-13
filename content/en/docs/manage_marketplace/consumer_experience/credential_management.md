@@ -88,7 +88,7 @@ The credential request can be done from several places in the Marketplace:
 * From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > **Create Credential** button
 * While requesting access to the product resource: if access is auto approved, then the Create Credential screen is displayed
 
-To create a credential, select the credential type and enter the required information.
+To create a credential, select the credential type and enter the required information. The **Type** field contains the **credential type** associated to this credential.
 
 Once the credential is generated, make sure to copy and paste it in a secure location, as you will not be able to see it again from the Marketplace. If you lose the credential secret, click **Create Credential** to create a new one.
 
@@ -96,7 +96,7 @@ To delete the existing credential, click the trash bin icon.
 
 ## List the credentials
 
-The *Marketplace* > Credentials view displays all the credentials your team has access to. This list van be filtered by State, Expiration date and Application.
+The *Marketplace* > Credentials view displays all the credentials your team has access to. This list can be filtered by State, Expiration date and Application. For each credential, the credential type **APIKey**, **OAuth**, **HTTPBasic** or **MutualTLS** is displayed. In case the credential type is not visible, ask the owner of the product.
 
 Note that Engage Admin user is able to see all Credentials regardless the team they belongs to.
 
