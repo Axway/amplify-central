@@ -553,6 +553,7 @@ Sample of an AccessRequestDefinition (json format) exemplifying `x-custom-field`
 ## Customize credential request screen
 
 To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the credential request definition for each individual environment.
+This object will also contain the credentials type: APIKey, OAuth, HTTPBasic, MutualTLS under the spec/type definition. This type is automatically set by the DiscoveryAgent. In case it is manually managed (ie without a Discovery Agent), the value needs to be set so that the consumer knows the type of credential they will get.
 
 Name of the object: **CredentialRequestDefinition**
 
@@ -575,6 +576,7 @@ Object skeleton (json format):
     "finalizers": [],
     "tags": [],
     "spec": {
+        "type": "APIKey",
         "schema": {
           ...
         },
@@ -613,7 +615,9 @@ Sample of the consumer giving the Javascript origin values and the provider retu
         },
         "attributes": {},
         "finalizers": [],
-        "tags": [],        "spec": {
+        "tags": [],        
+        "spec": {
+            "type": "APIKey",
             "schema": {
                 "type": "object",
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -679,6 +683,7 @@ Sample of no information supplied by the consumer but information provisioned (O
         "finalizers": [],
         "tags": [],
         "spec": {
+            "type": "OAuth",
             "schema": {
                 "type": "object",
                 "$schema": "http://json-schema.org/draft-07/schema#",

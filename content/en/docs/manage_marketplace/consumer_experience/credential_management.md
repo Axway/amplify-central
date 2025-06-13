@@ -96,7 +96,7 @@ To delete the existing credential, click the trash bin icon.
 
 ## List the credentials
 
-The *Marketplace* > Credentials view displays all the credentials your team has access to. This list van be filtered by State, Expiration date and Application.
+The *Marketplace* > Credentials view displays all the credentials your team has access to. This list can be filtered by State, Expiration date and Application. For each credential, the credential type **APIKey**, **OAuth**, **HTTPBasic** or **MutualTLS** is displayed. In case the credential type is not visible, ask the owner of the product.
 
 Note that Engage Admin user is able to see all Credentials regardless the team they belongs to.
 
