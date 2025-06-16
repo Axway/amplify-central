@@ -10,6 +10,19 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## June 16, 2025
+
+New enhancement and bug fixes for the June 16 update.
+
+### Marketplace updates for June 16, 2025
+
+* **Enhanced Markdown editor with HTML support and improved tooling**
+
+  (PROVIDER EXPERIENCE, MARKDOWN, ENHANCEMENT)</br>
+  The Markdown editor has been upgraded to support a more flexible and powerful editing experience. Key improvements include:
+    * Users can now include basic, non-risk HTML tags within the markdown content. This enables more advanced formatting beyond what standard Markdown supports. For a complete list of supported HTML tags, refer to [Mardown Editor](https://docs.axway.com/bundle/amplify-central/page/docs/manage_product_foundry/markdown_editor/index.html). Only safe HTML tags that comply with our security policies are allowed, ensuring that the enhanced formatting does not compromise the platform security.
+    * The editor tooling now offers shortcuts for aligning text (left, center, right), allowing users to format the content efficiently.
+  
 ## June 13, 2025
 
 New enhancement and bug fixes for the June 13 update.
@@ -21,28 +34,21 @@ New enhancement and bug fixes for the June 13 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-* **All Discovery Agents: Credential Request Type**
+* **Credential Request Definition enhancement: Authentication type support**
 
-  (ALL DISCOVERY AGENTS, ENHANCEMENT)</br>
-  An enhancement to Credential Request Definitions (CRDs) for a Credential Type value (e.g. APIKey, OAuth, HTTPBasic, MutualTLS) has been added.  This will enable clearer communication that a single CRD can be used for multiple APIs.
+  (DISCOVERY AGENT, ENHANCEMENT)</br>
+  All agents have been updated to include the authentication type in credential request definitions (e.g., API Key, OAuth, HTTP Basic). This enhancement allows users to clearly see the type of credentials associated with each resource directly on the Credentials screen.
 
 * **Apigee X Discovery Agents: Data Residency Support**
 
-  (ALL DISCOVERY AGENTS, ENHANCEMENT)</br>
-  The Apigee X on-premise and embedded Discovery agents will use an Apigee Data Residency endpoint to determine the region based URL for accessing Apigee resources.
+  (APIGEE DISCOVERY AGENTS, ENHANCEMENT)</br>
+  The on-premise and embedded Apigee X discovery agents have been enhanced to utilize the Apigee Data Residency endpoint to determine the appropriate region-based URL for accessing Apigee resources.
 
 ### Agents bug fixes for June 13, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | 01721183 | APIGOV-30536 | **Issue**: The Agent version status would display "Update Available"/"Retracted" for the latest version of agents in GRPC mode. <br/>**Resolution**: A fix was made to correctly recognize the latest version of all agents. |
-
-### Marketplace updates for June 13, 2025
-
-* **Feature**
-
-  (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
-  Description.
 
 ### Marketplace bug fixes for June 13, 2025
 
