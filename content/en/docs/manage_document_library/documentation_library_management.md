@@ -210,11 +210,11 @@ View the following information for all templates:
    * Click **Next** to proceed.
 3. **Build the documentation structure**:
 
-   * Click **+ Add topic** to add a topic. This opens a side planel where you can provide the topic's details. Click **Save** when done.
+   * Click **+ Add topic** to add a topic. This opens a side panel where you can provide the topic's details. Click **Save** when done.
    * Click **+ Add Section** to add a section within a topic. This opens a side panel for section details. Click **Save** when finished.
    * Click **+ Add Article** to add articles to a section. You can:
       * Create a **Markdown Article**: fill in the Markdown profile (name, description, version) before accessing the [markdown editor](/docs/manage_product_foundry/markdown_editor).
-      * **Link a Document**: felect one or more documents from the Document Library to attach.
+      * **Link a Document**: select one or more documents from the Document Library to attach.
 4. **Finalize your template**:
 
    * Review your template structure. When satisfied, click **Next**.
