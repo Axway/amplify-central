@@ -27,7 +27,6 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | APIGEE_AUTHFILEPATH   | The path where you put the GCP authentication file in docker container (**Ground agent only**) |
 | APIGEE_PROJECTID      | The Project ID for your GCP project                                                            |
 | APIGEE_DEVELOPEREMAIL | The Apigee developer email                                                                     |
-| APIGEE_MODE           | Apigee agent running mode (*proxy* or *product*; default: *proxy*)                             |
 | APIGEE_ENVIRONMENT    | The environment from which metrics are gathered                                                |
 | APIGEE_CLIENTTIMEOUT  | Maximum amount of time to wait for a reply from the Apigee client (default: 1m)                |
 
