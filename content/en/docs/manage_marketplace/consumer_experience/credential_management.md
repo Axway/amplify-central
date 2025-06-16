@@ -84,8 +84,8 @@ View and track the status of the Application Registrations:
 
 The credential request can be done from several places in the Marketplace:
 
-* From the application: *Marketplace* > Application > navigate to the appropriate resource > click **Create Credential**
-* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > click **Create Credential**
+* From the application: *Marketplace > Application* > navigate to the appropriate resource > click **Create Credential**
+* From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application > click **Create Credential**
 * While requesting access to the product resource: if access is auto approved, then the *Create Credential* screen is displayed
 
 To create a credential, select the credential type and enter the required information. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title is visible.
