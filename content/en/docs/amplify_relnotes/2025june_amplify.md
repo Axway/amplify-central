@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## June 16, 2025
 
-New enhancement and bug fixes for the June 16 update.
+New enhancements for the June 16 update.
 
 ### Marketplace updates for June 16, 2025
 
@@ -20,12 +20,12 @@ New enhancement and bug fixes for the June 16 update.
 
   (PROVIDER EXPERIENCE, MARKDOWN, ENHANCEMENT)</br>
   The Markdown editor has been upgraded to support a more flexible and powerful editing experience. Key improvements include:
-    * Users can now include basic, non-risk HTML tags within the markdown content. This enables more advanced formatting beyond what standard Markdown supports. For a complete list of supported HTML tags, refer to [Mardown Editor](https://docs.axway.com/bundle/amplify-central/page/docs/manage_product_foundry/markdown_editor/index.html). Only safe HTML tags that comply with our security policies are allowed, ensuring that the enhanced formatting does not compromise the platform security.
+    * Users can now include basic, non-risk HTML tags within the markdown content. This enables more advanced formatting beyond what standard Markdown supports. For a complete list of supported HTML tags, see [Markdown Editor](/docs/manage_product_foundry/markdown_editor). Only safe HTML tags that comply with our security policies are allowed, ensuring that the enhanced formatting does not compromise the platform security.
     * The editor tooling now offers shortcuts for aligning text (left, center, right), allowing users to format the content efficiently.
   
 ## June 13, 2025
 
-New enhancement and bug fixes for the June 13 update.
+New enhancements and bug fixes for the June 13 update.
 
 ### Agents updates for June 13, 2025
 
@@ -37,7 +37,7 @@ New enhancement and bug fixes for the June 13 update.
 * **Credential Request Definition enhancement: Authentication type support**
 
   (DISCOVERY AGENT, ENHANCEMENT)</br>
-  All agents have been updated to include the authentication type in credential request definitions (e.g., API Key, OAuth, HTTP Basic). This enhancement allows users to clearly see the type of credentials associated with each resource directly on the Credentials screen.
+  All agents have been updated to include the authentication type in credential request definitions (e.g., API Key, OAuth, HTTP Basic). This enhancement allows users to clearly see the type of credentials associated with each resource directly on the *Credentials* screen.
 
 * **Apigee X Discovery Agents: Data Residency Support**
 
