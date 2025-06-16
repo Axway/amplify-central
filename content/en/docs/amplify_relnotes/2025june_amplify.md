@@ -30,7 +30,7 @@ New enhancement and bug fixes for the June 13 update.
 
   (ALL DISCOVERY AGENTS, ENHANCEMENT)</br>
   The Apigee X on-premise and embedded Discovery agents will use an Apigee Data Residency endpoint to determine the region based URL for accessing Apigee resources.
-    
+ 
 ### Agents bug fixes for June 13, 2025
 
 | Case ID | Internal ID | Description |
