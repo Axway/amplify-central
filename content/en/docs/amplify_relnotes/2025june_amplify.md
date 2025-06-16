@@ -34,11 +34,6 @@ New enhancements and bug fixes for the June 13 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-* **Credential Request Definition enhancement: Authentication type support**
-
-  (DISCOVERY AGENT, ENHANCEMENT)</br>
-  All agents have been updated to include the authentication type in credential request definitions (e.g., API Key, OAuth, HTTP Basic). This enhancement allows users to clearly see the type of credentials associated with each resource directly on the *Credentials* screen.
-
 * **Apigee X Discovery Agents: Data Residency Support**
 
   (APIGEE DISCOVERY AGENTS, ENHANCEMENT)</br>
