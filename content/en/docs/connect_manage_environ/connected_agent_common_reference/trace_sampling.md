@@ -18,7 +18,7 @@ When requesting a sampling period the user will also request a time frame, 0-300
 
 {{< alert title="Note" color="primary" >}}The max sampling time and transactions per minute limit may be changed in future updates to Amplify Engage.{{< /alert >}}
 
-{{< alert title="Note" color="primary" >}}In case of specific API sampling, the agent will only sample the APIs which were configured for sampling. This ensures that only relevant API traffic is analyzed, reducing unnecessary data processing. [API Sampling](#api-sampling){{< /alert >}}
+{{< alert title="Note" color="primary" >}}For specific API sampling, the agent will only sample the APIs which were configured for sampling. This ensures that only relevant API traffic is analyzed, reducing unnecessary data processing. [API Sampling](#api-sampling){{< /alert >}}
 
 ### Requesting the Traceability Agent to sample
 
