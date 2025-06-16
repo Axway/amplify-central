@@ -552,8 +552,8 @@ Sample of an AccessRequestDefinition (json format) exemplifying `x-custom-field`
 
 ## Customize credential request screen
 
-To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the credential request definition for each individual environment.
-This object will also contain the credentials type: APIKey, OAuth, HTTPBasic, MutualTLS under the spec/type definition. This type is automatically set by the DiscoveryAgent. In case it is manually managed (ie without a Discovery Agent), the value needs to be set so that the consumer knows the type of credential they will get.
+To customize the credential request screen, you must have a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the credential request definition for each individual environment.
+This object will also contain the credentials type: APIKey, OAuth, HTTPBasic, MutualTLS under the spec/type definition. This type is automatically set by the Discovery Agent. If it is manually managed (i.e., without a Discovery Agent), the value must be set so that the consumer knows the type of credential they will get.
 
 Name of the object: **CredentialRequestDefinition**
 
