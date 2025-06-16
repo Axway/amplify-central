@@ -34,7 +34,7 @@ New enhancements and bug fixes for the June 13 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-* **Apigee X Discovery Agents: Data Residency Support**
+* **Apigee X Discovery Agents: Data Residency support**
 
   (APIGEE DISCOVERY AGENTS, ENHANCEMENT)</br>
   The on-premise and embedded Apigee X discovery agents have been enhanced to utilize the Apigee Data Residency endpoint to determine the appropriate region-based URL for accessing Apigee resources.
