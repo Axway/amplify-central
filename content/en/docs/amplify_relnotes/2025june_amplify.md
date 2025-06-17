@@ -10,7 +10,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
-## June 16 2025
+## June 16, 2025
 
 New enhancements for the June 16 update.
 
@@ -23,7 +23,7 @@ New enhancements for the June 16 update.
     * Users can now include basic, non-risk HTML tags within the markdown content. This enables more advanced formatting beyond what standard Markdown supports. For a complete list of supported HTML tags, see [Markdown Editor](/docs/manage_product_foundry/markdown_editor). Only safe HTML tags that comply with our security policies are allowed, ensuring that the enhanced formatting does not compromise the platform security.
     * The editor tooling now offers shortcuts for aligning text (left, center, right), allowing users to format the content efficiently.
   
-## June 13 2025
+## June 13, 2025
 
 New enhancements and bug fixes for the June 13 update.
 
@@ -51,7 +51,7 @@ New enhancements and bug fixes for the June 13 update.
 |-------------|--------------|---------------------------------------------------|
 | | APIGOV-30534 | **Issue**: After an active product plan is duplicated, the UI is not able to display the quota when editing the duplicated plan. <br/>**Resolution**: A fix was made to an Engage API to enable the display of the quota. |
 
-## June 6 2025
+## June 6, 2025
 
 New enhancement and bug fixes for the June 6 update.
 
