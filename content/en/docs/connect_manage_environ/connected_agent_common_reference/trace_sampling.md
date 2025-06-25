@@ -84,7 +84,7 @@ When requesting sampling for an API the user will also request a time frame, 0-3
 
 The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ#on-premise-Agent-Features), is already configured. The only other step is to request sampling for an individual API. This would add the endpoints of the API Service Instance to all the Traceability Agents from the environment. The maximum number of APIs that can be sampled at one time, per Traceability Agent, is 5. Note that requesting sampling for an API will not trigger sampling for the Traceability Agents themselves, this would have to be done separately.
 
-#### Requesting API sampling via the UI
+#### Request API sampling via the UI
 
 1. Navigate to the *Environment List* page in Amplify Engage.
 2. Select the environment you want to sample APIs in.
