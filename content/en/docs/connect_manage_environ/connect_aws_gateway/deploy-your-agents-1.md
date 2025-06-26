@@ -83,15 +83,16 @@ LOG_PATH=logs
    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
    and search for the Docker image for the most recent agents to download as `{agentImage}`.
    Then replace `{agentImage}` with the current agent release in the following sections.
-3. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
+3. Create a data directory that the agent will store cache data to persist on restarts
+4. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
 
     ```bash
-    docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v data {age}
+    docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v <pwd>/data:data {age}
     ```
 
     `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-4. Run the following health check command to ensure the agent is up and running (continuous mode):
+5. Run the following health check command to ensure the agent is up and running (continuous mode):
 
    ```bash
    docker inspect --format='{{json .State.Health}}' <container>
@@ -155,13 +156,14 @@ LOG_PATH=logs
    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
    and search for the Docker image for the most recent agents to download as `{agentImage}`
    Then replace `{agentImage}` with the current agent release in following sections.
-3. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
+3. Create a data directory that the agent will store cache data to persist on restarts
+4. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```bash
-   docker run --env-file ./env_vars -v <pwd>/keys:/keys -v /data {agentImage}
+   docker run --env-file ./env_vars -v <pwd>/keys:/keys -v <pwd>/data:/data {agentImage}
    ```
 
-4. Run the following health check command to ensure the agent is up and running:
+5. Run the following health check command to ensure the agent is up and running:
 
    ```bash
    docker inspect --format='{{json .State.Health}}' <container>

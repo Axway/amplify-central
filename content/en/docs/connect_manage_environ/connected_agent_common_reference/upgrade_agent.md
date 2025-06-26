@@ -99,8 +99,8 @@ The following steps will guide you through the upgrade procedure:
     * `docker container stop {container id}`
     * `docker rm {container id}`
 4. Start the new container:
-    * Discovery Agent: `docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v /data {agentDAImage}`
-    * Traceability Agent: `docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v /data {agentTAImage}`
+    * Discovery Agent: `docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v <pwd>/data:/data {agentDAImage}`
+    * Traceability Agent: `docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/data:/data {agentTAImage}`
 
 {{< alert title="Note" color="primary" >}}For Discovery Agent version 1.1.9 and later, when the `CENTRAL_TEAM variable` is not set (default = blank), the agent will attempt to match an Axway gateway organization to an Amplify platform team, assigning resources appropriately. No match will have the previous behavior.{{< /alert >}}
 
@@ -136,8 +136,8 @@ Otherwise, if the command shows an actual version and not `latest`, then restart
        * `docker container stop {container id}`
        * `docker rm {container id}`
     4. Start the new container:
-        * Discovery Agent: `docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v /data {agentDAImage}`
-        * Traceability Agent: `docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v /data {agentTAImage}`
+        * Discovery Agent: `docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v <pwd>/data:/data {agentDAImage}`
+        * Traceability Agent: `docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/data:/data {agentTAImage}`
 
 ### Azure agents
 
@@ -178,8 +178,8 @@ AZURE_SHAREDACCESSKEYVALUE=zYn2K4P...
 
 Start the new container:
 
-* Discovery Agent: `docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v /data {agentDAImage}`
-* Traceability Agent: `docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v /data {agentTAImage}`
+* Discovery Agent: `docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v <pwd>/data:/data {agentDAImage}`
+* Traceability Agent: `docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/data:/data {agentTAImage}`
 
 ## Troubleshooting your upgrade
 

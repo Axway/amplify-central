@@ -231,7 +231,7 @@ By default, the Docker commands are configured to use the latest available agent
 
 ```shell
 To complete the Traceable agent installation, run the following commands:
-  docker run --env-file "$(pwd)"/traceable.env -v "$(pwd)":/keys -v /data {agentImage}
+  docker run --env-file "$(pwd)"/traceable.env -v "$(pwd)"/keys:/keys -v "$(pwd)"/data:/data {agentImage}
 ```
 
 Once the commands are completed, the agents should be running in the Docker server.
