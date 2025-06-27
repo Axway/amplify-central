@@ -262,11 +262,11 @@ To complete the install, run the following AWS CLI command:
     and search for Docker Image for the most recent agents.
     Download the image of each Discovery Agent `{agentDAImage}` and Traceability Agent `{agentTAImage}`.  Then replace the `{agentXXImage}` with the current agent release in the following sections.
   - Run the latest Discovery Agent:
-    docker run --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
-        -v /data {agentDAImage}
+    docker run --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)"/keys:/keys \
+        -v "$(pwd)"/data:/data {agentDAImage}
   - Run the latest Traceability Agent:
-    docker run --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
-        -v /data {agentTAImage}
+    docker run --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)"/keys:/keys \
+        -v "$(pwd)"/data:/data {agentTAImage}
 ```
 
 In the sample above, the installation procedure will replace `{agentXXImage}` with the most recent version available.
