@@ -31,13 +31,16 @@ New enhancements and bug fixes for the June 27 update.
 * (Agents, ENHANCEMENT)</br>
   The time to synchronize platform teams with the agents has been reduced to a maximum of five minutes.
 
+* **Kafka agent improvements**
+
+* (Kafka Agents, ENHANCEMENT)</br>
+  The Kafka agents have been modified to handle the discovery of hundreds of topics, schemas, and versions.
+
 ### Agents bug fixes for June 27, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| xxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
-
-### Marketplace updates for June 27, 2025
+|  | APIGOV-30674 | **Issue**: The Traceability Agent was restarting after an upgrade to v1.2.18. <br/>**Resolution**: A fix was made for handling transactions on APIM APIs which were named the samd but served differ paths. |
 
 ### Marketplace bug fixes for June 27, 2025
 
@@ -45,6 +48,9 @@ New enhancements and bug fixes for the June 27 update.
 |-------------|--------------|---------------------------------------------------|
 |  | APIGOV-30533 | **Issue**: Cannot enter value in quota limit entry field. <br/>**Resolution**: Focus corrected to enter the value correctly in the quota limit field. |
 |  | APIGOV-30646 | **Issue**: Cannot navigate to document library after document upload. <br/>**Resolution**: The 'Next' button works as expected after document upload for navigation. |
+|  | APIGOV-30622 | **Issue**: The Axway CLI returns an error for 'axway user credentials' command. <br/>**Resolution**: A fix was released in Axway CLI version 4.0.2 to NPM at https://www.npmjs.com/package/axway/v/4.0.2. |
+| 01695151 | APIGOV-29928 | **Issue**: Importing of Open API Specification version 3.0.4 was displaying correctly. <br/>**Resolution**: A fix was deployed to the Engage WebUI. |
+|  | APIGOV-30724 | **Issue**: The asset wizard preview step was displaying misleading information. <br/>**Resolution**: A fix was deployed to the Engage WebUI to display the preview step more accurately. |
 
 ## June 16, 2025
 
