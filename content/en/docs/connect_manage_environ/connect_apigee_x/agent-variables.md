@@ -24,7 +24,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 
 | Variable name         | Description                                                                                        |
 | --------------------- | -------------------------------------------------------------------------------------------------- |
-| APIGEE_AUTHFILEPATH   | The path where you put the GCP authentication file in docker container (**on premise agent only**) |
+| APIGEE_AUTHFILEPATH   | The path where you put the GCP authentication file in docker container (**on-premise agent only**) |
 | APIGEE_PROJECTID      | The Project ID for your GCP project                                                                |
 | APIGEE_DEVELOPEREMAIL | The Apigee developer email                                                                         |
 | APIGEE_ENVIRONMENT    | The environment from which metrics are gathered                                                    |
