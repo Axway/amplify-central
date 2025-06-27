@@ -445,7 +445,7 @@ cd /home/APIC-agents
 ##### Run the Dockerized Discovery Agent
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Create a data directory that the agent will store cache data to persist on restarts
+2. Create a data directory where the agent will store cache data to persist on restarts
 3. Start the Docker Discovery Agent pointing to the `da_env_vars.env` file and the keys directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
