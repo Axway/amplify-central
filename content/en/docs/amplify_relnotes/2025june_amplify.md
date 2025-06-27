@@ -21,6 +21,11 @@ New enhancements and bug fixes for the June 27 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
+* **On Demand API Sampling for Traceability Agents
+
+* (Traceability Agents, ENHANCEMENT)</br>
+  Description.
+
 ### Agents bug fixes for June 27, 2025
 
 | Case ID | Internal ID | Description |
