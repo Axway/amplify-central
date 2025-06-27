@@ -156,7 +156,7 @@ LOG_PATH=logs
    Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
    and search for the Docker image for the most recent agents to download as `{agentImage}`
    Then replace `{agentImage}` with the current agent release in following sections.
-3. Create a data directory that the agent will store cache data to persist on restarts
+3. Create a data directory where the agent will store cache data to persist on restarts.
 4. Start the Traceability Agent pointing to the `env_vars` file and the `keys` directory. Note that `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```bash
