@@ -24,7 +24,7 @@ New enhancements and bug fixes for the June 27 update.
 * **On Demand API Sampling for Traceability Agents
 
 * (Traceability Agents, ENHANCEMENT)</br>
-  Description.
+  Traceability Agents can sample the transaction information for individual API Endpoints for up to one hour and send the information to Amplify Analytics. The maximum number of APIs that can be sampled at one time, per Traceability Agent, is 5.
 
 ### Agents bug fixes for June 27, 2025
 
@@ -34,16 +34,12 @@ New enhancements and bug fixes for the June 27 update.
 
 ### Marketplace updates for June 27, 2025
 
-* **Feature**
-
-  (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
-  Description.
-
 ### Marketplace bug fixes for June 27, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| xxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|  | APIGOV-30533 | **Issue**: Cannot enter value in quota limit entry field. <br/>**Resolution**: Focus corrected to enter the value correctly in the quota limit field. |
+|  | APIGOV-30646 | **Issue**: Cannot navigate to document library after document upload. <br/>**Resolution**: The 'Next' button works as expected after document upload for navigation. |
 
 ## June 16, 2025
 
