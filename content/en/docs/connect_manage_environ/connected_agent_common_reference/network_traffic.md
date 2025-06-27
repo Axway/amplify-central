@@ -236,11 +236,11 @@ Proxy will use one of two authentication mechanisms, none or username/password a
 
 ```shell
 # US region
-curl -s -o /dev/null -w "%{http_code}"  https://ingestion.platform.axway.com
+curl -s -o /dev/null -w "%{http_code}" --connect-to platform.axway.com:443:ingestion.platform.axway.com https://platform.axway.com
 # EU region
-curl -s -o /dev/null -w "%{http_code}"  https://ingestion-eu.platform.axway.com
+curl -s -o /dev/null -w "%{http_code}" --connect-to platform.axway.com:443:ingestion-eu.platform.axway.com https://platform.axway.com
 # APAC region
-curl -s -o /dev/null -w "%{http_code}"  https://ingestion-ap-sg.platform.axway.com
+curl -s -o /dev/null -w "%{http_code}" --connect-to platform.axway.com:443:ingestion-ap-sg.platform.axway.com https://platform.axway.com
 ```
 
 A return of **"200"** validates the connection was established.
