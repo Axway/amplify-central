@@ -4,7 +4,7 @@ linkTitle: Set up GitLab Discovery Agent
 draft: false
 weight: 100
 ---
-Set up GitLab so an on premise-agent can connect to and discover API specifications to publish in Amplify.
+Set up GitLab so an on-premise agent can connect to and discover API specifications to publish in Amplify.
 
 ## Before you start
 
