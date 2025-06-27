@@ -19,23 +19,23 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Engage June 27 2025](/docs/amplify_relnotes/2025june_amplify/#june-27-2025)
 
-| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.120 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.121 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.7                   | DA=1.2.28 / TA=1.2.27     | DA=1.1.80 / TA=1.1.81            |
-| AWS Gateway using SDK 2.0                  | DA=1.2.24 / TA=1.2.24     | DA=1.1.64 / TA-1.1.67            |
-| Azure latest release                       | DA=1.3.25 / TA=1.3.25    | DA=1.1.70 / TA=1.1.76            |
-| Istio 1.9.5                                | DA=1.1.24 / TA=2.1.23    | DA=1.0.36 / TA=2.0.82            |
-| Apigee Edge                                | 1.0.20                   | 0.1.38                           |
-| Apigee X                                   | 1.4.12                   | 1.4.2                            |
-| Mulesoft Anypoint platform v3              | 1.2.26                   | 1.1.48                           |
-| Software AG webMethods                     | 1.0.21                   | 1.0.0                            |
-| Kong Gateway                               | 1.1.24                   | 1.0.9                            |
-| GitLab                                     | 1.1.22                   | 1.0.6                            |
-| Kafka Cluster                              | 1.1.22                   | 1.0.6                            |
-| IBM API Connect Gateway                    | 1.1.22                   | 1.0.0                            |
-| Backstage                                  | 1.0.23                   | 1.0.0                            |
-| SAP Integration Suite - API Management / API Portal | 1.0.10                    | 1.0.0                            |
-| WSO2 API Manager 4.5.0                      | 1.0.9                    | 1.0.0                            |
+| Axway API Management 7.7                   | DA=1.2.29 / TA=1.2.28     | DA=1.1.80 / TA=1.1.81            |
+| AWS Gateway using SDK 2.0                  | DA=1.2.25 / TA=1.2.25     | DA=1.1.64 / TA-1.1.67            |
+| Azure latest release                       | DA=1.3.26 / TA=1.3.26    | DA=1.1.70 / TA=1.1.76            |
+| Istio 1.9.5                                | DA=1.1.25 / TA=2.1.24    | DA=1.0.36 / TA=2.0.82            |
+| Apigee Edge                                | 1.0.21                   | 0.1.38                           |
+| Apigee X                                   | 1.4.13                   | 1.4.2                            |
+| Mulesoft Anypoint platform v3              | 1.2.27                   | 1.1.48                           |
+| Software AG webMethods                     | 1.0.22                   | 1.0.0                            |
+| Kong Gateway                               | 1.1.25                   | 1.0.9                            |
+| GitLab                                     | 1.1.23                   | 1.0.6                            |
+| Kafka Cluster                              | 1.1.23                   | 1.0.6                            |
+| IBM API Connect Gateway                    | 1.1.23                   | 1.0.0                            |
+| Backstage                                  | 1.0.24                   | 1.0.0                            |
+| SAP Integration Suite - API Management / API Portal | 1.0.11                   | 1.0.0                            |
+| WSO2 API Manager 4.5.0                      | 1.0.10                    | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -45,10 +45,10 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Azure Embedded Service                     |
 | SwaggerHub Embedded Service                |
 
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.117)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.121)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
-| Graylog API Security                       | 1.1.20                   | 1.0.5            |
-| Traceable API Security                     | 2.0.4                    | 1.0.0            |
+| Graylog API Security                       | 1.1.21                   | 1.0.5            |
+| Traceable API Security                     | 2.0.5                    | 1.0.0            |
 
 ## [Amplify Engage June 16 2025](/docs/amplify_relnotes/2025june_amplify/#june-16-2025)
 
