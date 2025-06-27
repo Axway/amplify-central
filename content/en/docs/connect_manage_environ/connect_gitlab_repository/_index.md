@@ -88,7 +88,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 3: Run the agents' configure procedure
 
-The Axway Central CLI will guide you through the configuration of the agents. See [GitLab On Premise agents' setup](/docs/connect_manage_environ/connect_gitlab_repository/ground_agent_setup/) for the prerequisite setup on GitHub agent.
+The Axway Central CLI will guide you through the configuration of the agents. See [GitLab on-premise agents' setup](/docs/connect_manage_environ/connect_gitlab_repository/ground_agent_setup/) for the prerequisite setup on GitHub agent.
 
 Run the following command to start the configuration procedure:
 
