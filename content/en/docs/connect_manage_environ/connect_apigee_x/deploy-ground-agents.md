@@ -1,5 +1,5 @@
 ---
-title: Deploy your on premise Apigee agents with Axway CLI
+title: Deploy your on-premise Apigee agents with Axway CLI
 linkTitle: Deploy your on-premise Apigee agents with Axway CLI
 draft: false
 weight: 10
