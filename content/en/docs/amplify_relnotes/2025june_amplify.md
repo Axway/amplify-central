@@ -24,7 +24,7 @@ New enhancements and bug fixes for the June 27 update.
 * **On Demand API Sampling for Traceability Agents**
 
 * (Traceability Agents, ENHANCEMENT)</br>
-  Traceability Agents can sample the transaction information for individual API Endpoints on demand (up to a maximum of one hour) and send the information to Amplify Analytics. A maximum of five APIs can be sampled per Traceability Agent. The API Sampling can be requested on the WebUI by clicking on the API Sampling icon from the Endpoints tab on the API Service details screen.
+  Traceability Agents can sample the transaction information for individual API Endpoints on demand (up to a maximum of one hour) and send the information to Amplify Analytics. A maximum of five APIs can be sampled per Traceability Agent. The API Sampling can be requested on the WebUI by clicking on the API Sampling icon from the **Endpoints** tab on the *API Service details* screen.
 
 * **Team synchronization with the Platform**
 
@@ -40,7 +40,7 @@ New enhancements and bug fixes for the June 27 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30674 | **Issue**: The Traceability Agent was restarting after an upgrade to v1.2.18. <br/>**Resolution**: A fix was made for handling transactions on APIM APIs which were named the samd but served differ paths. |
+|  | APIGOV-30674 | **Issue**: The Traceability Agent was restarting after an upgrade to v1.2.18. <br/>**Resolution**: A fix was made for handling transactions on APIM APIs that are named the same but serve different paths. |
 
 ### Marketplace bug fixes for June 27, 2025
 
@@ -48,8 +48,8 @@ New enhancements and bug fixes for the June 27 update.
 |-------------|--------------|---------------------------------------------------|
 |  | APIGOV-30533 | **Issue**: Cannot enter value in quota limit entry field. <br/>**Resolution**: Focus corrected to enter the value correctly in the quota limit field. |
 |  | APIGOV-30646 | **Issue**: Cannot navigate to document library after document upload. <br/>**Resolution**: The 'Next' button works as expected after document upload for navigation. |
-|  | APIGOV-30622 | **Issue**: The Axway CLI returns an error for 'axway user credentials' command. <br/>**Resolution**: A fix was released in Axway CLI version 4.0.2 to NPM at https://www.npmjs.com/package/axway/v/4.0.2. |
-| 01695151 | APIGOV-29928 | **Issue**: Importing of Open API Specification version 3.0.4 was displaying correctly. <br/>**Resolution**: A fix was deployed to the Engage WebUI. |
+|  | APIGOV-30622 | **Issue**: The Axway CLI returns an error for 'axway user credentials' command. <br/>**Resolution**: A fix was released in Axway CLI version 4.0.2 to [NPM](https://www.npmjs.com/package/axway/v/4.0.2). |
+| 01695151 | APIGOV-29928 | **Issue**: Importing of Open API Specification version 3.0.4 was displaying incorrectly. <br/>**Resolution**: A fix was deployed to the Engage WebUI. |
 |  | APIGOV-30724 | **Issue**: The asset wizard preview step was displaying misleading information. <br/>**Resolution**: A fix was deployed to the Engage WebUI to display the preview step more accurately. |
 
 ## June 16, 2025
