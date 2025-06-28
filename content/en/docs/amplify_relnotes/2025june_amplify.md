@@ -21,7 +21,7 @@ New enhancements and bug fixes for the June 27 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-* **On Demand API Sampling for Traceability Agents**
+* **On-demand API Sampling for Traceability Agents**
 
 * (Traceability Agents, ENHANCEMENT)</br>
   Traceability Agents can sample the transaction information for individual API Endpoints on demand (up to a maximum of one hour) and send the information to Amplify Analytics. A maximum of five APIs can be sampled per Traceability Agent. The API Sampling can be requested on the WebUI by clicking on the API Sampling icon from the **Endpoints** tab on the *API Service details* screen.
