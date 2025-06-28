@@ -26,12 +26,12 @@ New enhancements and bug fixes for the June 27 update.
 * (Traceability Agents, ENHANCEMENT)</br>
   Traceability Agents can sample the transaction information for individual API Endpoints on demand (up to a maximum of one hour) and send the information to Amplify Analytics. A maximum of five APIs can be sampled per Traceability Agent. The API Sampling can be requested on the WebUI by clicking on the API Sampling icon from the **Endpoints** tab on the *API Service details* screen.
 
-* **Team synchronization with the Platform**
+* **Team synchronization with the platform**
 
 * (Agents, ENHANCEMENT)</br>
   The time to synchronize platform teams with the agents has been reduced to a maximum of five minutes.
 
-* **Kafka agent improvements**
+* **Kafka agents improvements**
 
 * (Kafka Agents, ENHANCEMENT)</br>
   The Kafka agents have been modified to handle the discovery of hundreds of topics, schemas, and versions.
