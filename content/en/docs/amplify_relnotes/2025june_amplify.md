@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## June 27, 2025
 
-New enhancements and bug fixes for the June 27 update.
+New features, enhancements, and bug fixes for the June 27 update.
 
 ### Agents updates for June 27, 2025
 
@@ -101,7 +101,7 @@ New enhancement and bug fixes for the June 6 update.
 
 * **Delete archived product release**
 
-  (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
+  (PROVIDER EXPERIENCE, PRODUCT FOUNDRY, ENHANCEMENT)</br>
   To help maintain a clean and organized product release history, users can now delete archived product releases. This action can be performed via the ellipsis menu on the specific product release. Use this feature to remove outdated or unnecessary archived releases once they are no longer needed.
 
 ### Marketplace bug fixes for June 6, 2025
