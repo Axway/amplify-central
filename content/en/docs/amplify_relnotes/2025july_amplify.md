@@ -14,7 +14,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 New enhancement for the July 1 update.
 
-### Marketplace updates for July 1, 2025
+### Marketplace update for July 1, 2025
 
 * **Credential type is now visible in the Marketplace Applications credential list**
 
