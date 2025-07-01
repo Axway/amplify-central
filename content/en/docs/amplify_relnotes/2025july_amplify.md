@@ -12,11 +12,11 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## July 1, 2025
 
-New enhancement for the July 1 update.
+New features, enhancements, and bug fixes for the July 1 update.
 
 ### Marketplace update for July 1, 2025
 
-* **Credential type is now visible in the Marketplace Applications credential list**
+* **Credential type now visible in Marketplace Applications**
 
   (CONSUMER EXPERIENCE, APPLICATION, ENHANCEMENT)</br>
-  The credential list view in *Marketplace Applications* has been updated to show the credential type.
+  The *Credential List* view under **Marketplace Applications** has been enhanced to display the credential type for each credential entry. This update allows users to view the kind of credentials associated with their applications, making it easier to manage and differentiate between various authentication methods.
