@@ -10,6 +10,48 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## June 27, 2025
+
+New features, enhancements, and bug fixes for the June 27 update.
+
+### Agents updates for June 27, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+* **On-demand API Sampling for Traceability Agents**
+
+* (Traceability Agents, ENHANCEMENT)</br>
+  Traceability Agents can sample the transaction information for individual API Endpoints on demand (up to a maximum of one hour) and send the information to Amplify Analytics. A maximum of five APIs can be sampled per Traceability Agent. The API Sampling can be requested on the WebUI by clicking on the API Sampling icon from the **Endpoints** tab on the *API Service details* screen.
+
+* **Team synchronization with the platform**
+
+* (Agents, ENHANCEMENT)</br>
+  The time to synchronize platform teams with the agents has been reduced to a maximum of five minutes.
+
+* **Kafka agents improvements**
+
+* (Kafka Agents, ENHANCEMENT)</br>
+  The Kafka agents have been modified to handle the discovery of hundreds of topics, schemas, and versions.
+
+### Agents bug fixes for June 27, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-30674 | **Issue**: The Traceability Agent was restarting after an upgrade to v1.2.18. <br/>**Resolution**: A fix was made for handling transactions on APIM APIs that are named the same but serve different paths. |
+
+### Marketplace bug fixes for June 27, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-30533 | **Issue**: Cannot enter value in quota limit entry field. <br/>**Resolution**: Focus corrected to enter the value correctly in the quota limit field. |
+|  | APIGOV-30646 | **Issue**: Cannot navigate to document library after document upload. <br/>**Resolution**: The 'Next' button works as expected after document upload for navigation. |
+|  | APIGOV-30622 | **Issue**: The Axway CLI returns an error for 'axway user credentials' command. <br/>**Resolution**: A fix was released in Axway CLI version 4.0.2 to [NPM](https://www.npmjs.com/package/axway/v/4.0.2). |
+| 01695151 | APIGOV-29928 | **Issue**: Importing of Open API Specification version 3.0.4 was displaying incorrectly. <br/>**Resolution**: A fix was deployed to the Engage WebUI. |
+|  | APIGOV-30724 | **Issue**: The asset wizard preview step was displaying misleading information. <br/>**Resolution**: A fix was deployed to the Engage WebUI to display the preview step more accurately. |
+
 ## June 16, 2025
 
 New enhancements for the June 16 update.
@@ -59,7 +101,7 @@ New enhancement and bug fixes for the June 6 update.
 
 * **Delete archived product release**
 
-  (PROVIDER EXPERIENCE, ASSET CATALOG, ENHANCEMENT)</br>
+  (PROVIDER EXPERIENCE, PRODUCT FOUNDRY, ENHANCEMENT)</br>
   To help maintain a clean and organized product release history, users can now delete archived product releases. This action can be performed via the ellipsis menu on the specific product release. Use this feature to remove outdated or unnecessary archived releases once they are no longer needed.
 
 ### Marketplace bug fixes for June 6, 2025
