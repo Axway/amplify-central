@@ -19,6 +19,8 @@ Learn how to customize the Application Registration and credentials request scre
 * A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to subscribe, access a resource or create credentials, the definition of the subscription, access or credentials may require extra parameters.
 * A provider may want to send back extra information to the consumer. For example, credential information or public keys, etc.
 
+Robert - does this section need to be updated for "find application names?"
+
 In both cases, a schema definition based on **react-jsonschema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
 
 {{< alert title="Note" color="primary" >}}
