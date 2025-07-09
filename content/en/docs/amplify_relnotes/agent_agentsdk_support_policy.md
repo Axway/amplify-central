@@ -91,7 +91,7 @@ If you discover an issue with the SDK, then please file a ticket against the age
 
 All community contributions are reviewed by the Axway project maintainer, and only upon their approval will the contribution be incorporated into the base code of the SDK and an updated version released.
 
-If you discover an issue with an agent that you are unable to resolve yourself, then you should file an issue against the agent project. Make sure your problem does not already exist by looking through the known issues in the repository. Please refer to the contributing guide found in each 3rd-party agent repository, for example: <https://github.com/Axway/agents-mulesoft/blob/main/CONTRIBUTING.md>. (Robert, where will this be?)
+If you discover an issue with an agent that you are unable to resolve yourself, then you should file an issue against the agent project. Make sure your problem does not already exist by looking through the known issues in the repository. Please refer to the contributing guide found in each 3rd-party agent repository, for example: <https://github.com/Axway/agents-mulesoft/blob/main/CONTRIBUTING.md>. (Will this location change?)
 
 If you require an SDK enhancement to support your integration with a 3rd-party Gateway, community members can propose the changes to Axway by following the contribution guidelines in the repository. Axway will provide our best effort to approve and incorporate such SDK changes into the base SDK code; however, we are unable to make commitments as to when and if community-contributed code will be incorporated.
 
