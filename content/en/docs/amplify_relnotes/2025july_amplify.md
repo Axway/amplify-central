@@ -10,6 +10,36 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## July 11, 2025
+
+New features, enhancements, and bug fixes for the July 11 update.
+
+### Agents updates for July 11, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agents bug fixes for July 11, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+
+### Marketplace updates for July 11, 2025
+
+* **Feature**
+
+  (CONSUMER EXPERIENCE, APPLICATION, ENHANCEMENT)</br>
+  Description.
+
+### Marketplace bug fixes for July 11, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+
 ## July 1, 2025
 
 New enhancement for the July 1 update.
