@@ -16,7 +16,7 @@ This topic explains how to build a basic Amazon EC2 private cloud hybrid environ
 
 Learn how to build a basic Amazon EC2 private cloud hybrid environment and add the required tools to enable you to access and manage it remotely from a client system.
 
-{{< alert title="Tip" color="secondary" >}}For the latest Amazon EC2 build instructions and more client system configuration details, see [Set up Amplify mesh governance documentation on GitHub](https://github.com/Axway/Setup-Amplify-Mesh-Governance).{{< /alert >}}
+{{< alert title="Tip" color="secondary" >}}Robert, will this location change? For the latest Amazon EC2 build instructions and more client system configuration details, see [Set up Amplify mesh governance documentation on GitHub](https://github.com/Axway/Setup-Amplify-Mesh-Governance).{{< /alert >}}
 
 ## Minimum requirements
 
