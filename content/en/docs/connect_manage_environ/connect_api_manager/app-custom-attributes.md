@@ -7,6 +7,8 @@ weight: 60
 
 Customize your Discovery Agent so you can discover and provision application custom properties from your Axway API Gateway environment within Amplify.
 
+{{< alert title="Note" color="primary" >}}For only adding additional fields to a Credential Request Definition see [Custom fields component](/docs/integrate_with_central/customize_ard_crd#custom-fields-component).{{< /alert >}}
+
 ## Before you start
 
 * Read [API Manager - add custom properties to an Application](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apimgr_admin/api_mgmt_custom/index.html#add-a-custom-property-to-applications)

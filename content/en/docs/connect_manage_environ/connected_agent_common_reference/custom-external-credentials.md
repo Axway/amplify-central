@@ -6,6 +6,8 @@ weight: 10
 ---
 The Discovery Agent, for certain Gateways, can be configured to allow for handling a specified credential request type outside of the normal agent processing. This can be useful for cases where custom attributes or special processing is required that the agent does not know about.
 
+{{< alert title="Note" color="primary" >}}For only adding additional fields to a Credential Request Definition see [Custom fields component](/docs/integrate_with_central/customize_ard_crd#custom-fields-component).{{< /alert >}}
+
 ## Before you start
 
 * [Install and authenticate yourself via the Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/)
