@@ -27,6 +27,15 @@ Learn how to create an environment to represent your API services and other disc
     * **Description** - enter a brief description of the environment.
     * **Image** - Add an icon or image to be associated with the environment.
 
+4. Optionally, add the following environment credential preferences information and then click **Next**:
+
+    * **Credential expiration** - allows to set the credential expiration in days when credentials are managed via Discovery Agent. You can decide to never expire a credential. When selecting an expiration time, you can also ask the system to automatically deprovision the credential when it expires and send some notification to the consumer (30 days, 14, 7, 3, 1 day prior the expiration) so that he can rotate his credential of ask for a new one.
+    * **Credential value visibility time on Marketplace** - enable if the credential value will be visible or not in the Marketplace. If you decide to make it visible, you additionally set the visibility time period (3 days by default). Once the visibility period is over, consumer will not be able to see anymore their credential values if they have not saved it.
+
+5. Optionally, add the Stage configuration and then click **Next**:
+
+    * the list of available stage is displayed and you can decide for each of them if they can be use in the environment or not and if one of them is the default for the environment. When a default stage is selected, automatically, all endpoints of environment will inherit it. If there are multiple stages assigned to the environment, you will have to decide which one should be assigned to the API Service endpoint. More information about [the stage](/docs/connect_manage_environ/stage)
+
 ### Embedded AWS environment
 
 1. Configure (these configuration steps are displayed only if there is Embedded agent support for the  environment type selected above):
