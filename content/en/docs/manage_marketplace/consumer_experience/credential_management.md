@@ -102,7 +102,7 @@ Note that the Engage Admin user can see all Credentials regardless of the team t
 
 ## View credential value
 
-Once the credential is provisioned by the provider (either manually or using Discovery Agent), you can view your credential secret if providers has allow it. The secret is encrypted and available for a specific period of time to be viewed from inside the Marketplace. After this period, the credential secret will be removed from Amplify, but will remain on the data plane.
+Once the credential is provisioned by the provider (either manually or using Discovery Agent), you can view your credential secret (if allowed by the provider). The secret is encrypted but can be viewed from inside the Marketplace for a specified period. After this period, the credential secret is removed from Amplify, but remains on the data plane.
 
 To view the clear value of the credential:
 
@@ -110,7 +110,7 @@ To view the clear value of the credential:
 * From the application: *Marketplace > Application* > navigate to the appropriate resource > click **View Credential**
 * From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application > click **View Credential**
 
-The panel is enlarged to show the remaining time to view the decrypted value and an eye icon to access it. After confirming your need to view the clear value of credentials, the credential is decrypted and displayed on the screen. After you retrieve the credential clear value, make sure to copy and paste it in a secure location. The secret can be viewed as many times as you wish during its remaining time. IF you have not save your credential value during that availability time, you will need to renew or request a new credential.
+The remaining time to view the decrypted credential value is displayed. To view the value, click the eye icon and confirm your need to view the clear value of the credential. The credential is decrypted and displayed on the screen. Make sure to copy and paste the credential value in a secure location. The secret can be viewed as often as you wish during its remaining period. If you do not save your credential value during the available period, you must renew or request a new credential.
 
 ## Suspend / Enable credential
 
