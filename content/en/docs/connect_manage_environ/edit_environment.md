@@ -17,7 +17,7 @@ Learn how to edit an environment to represent your API services and other discov
 
     *The Edit an Environment wizard is displayed*.
 
-4. You can edit the Environment Name, Production setting, Governance setting, Description, Image, Configuration(AWS, Apigee X, Github), Compliance Profile, Credential Preferences (will be applied only the new created credentials), Stage Assignment, Access Rights, Tags, and Attributes.
+4. You can edit the Environment Profile (Environment Name, Production setting, Governance setting, Description, Image, Configuration (AWS, Apigee X, Github)), Compliance Profile, Credential Preferences (these edits will be applied only to the newly created credentials), Stage Assignment, Access Rights, Tags & Attributes.
 5. Click **Save & Exit** at any time to save the changes that have been made.
 
 ### Embedded AWS environment
