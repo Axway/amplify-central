@@ -60,7 +60,7 @@ The Discovery Agent will use the credentials provided. If MuleSoft requires no a
 
 ## Set up environment variables
 
-The following environment variables file should be created for executing both the Discovery and Traceability agents.
+The following environment variables file must be created for executing both the Discovery and Traceability agents.
 
 ```ini
 CENTRAL_ORGANIZATIONID=<Amplify Central Organization ID>
@@ -81,21 +81,31 @@ LOG_LEVEL=info
 LOG_OUTPUT=stdout
 ```
 
-## Execute the Discovery Agent
+## Install and run Discovery and Traceability agents
 
-The MuleSoft AnyPoint Discovery Agent is built and distributed as a docker image. To execute the agent using the image, execute the following command. Update the version in the example below.
+The MuleSoft AnyPoint Discovery and Traceability agents are built and distributed as docker images. The following steps must be done for both agents.
 
-```shell
-docker run --env-file env_vars -v `pwd`/keys:/keys ghcr.io/axway/mulesoft_discovery_agent:v1.2.2
-```
+1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
+2. Find the current agent release in the [agent release note](/docs/amplify_relnotes).
+   Go to *Help menus > Downloads > Repository*
+     -or-
+   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
+   and search for the Docker image for the most recent agents to download as `{agentImage}`.
+   Then replace `{agentImage}` with the current agent release in the following sections.
+3. Create a data directory where the agent will store cache data to persist on restarts.
+4. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
 
-## Execute the Traceability Agent
+    ```bash
+    docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v <pwd>/data:data {agentImage}
+    ```
 
-The MuleSoft AnyPoint Traceability Agent is built and distributed as a docker image. To execute the agent using the image, execute the following command. Update the version in the examples below.
+    `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
-```shell
-docker run --env-file env_vars -v `pwd`/keys:/keys -v `pwd`/data:/data ghcr.io/axway/mulesoft_traceability_agent:v1.2.6
-```
+5. Run the following health check command to ensure the agent is up and running (continuous mode):
+
+   ```bash
+   docker inspect --format='{{json .State.Health}}' <container>
+   ```
 
 ## Related topics
 
