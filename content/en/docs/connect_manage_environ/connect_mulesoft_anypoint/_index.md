@@ -5,7 +5,7 @@ weight: 120
 ---
 Connect MuleSoft AnyPoint and Amplify so you can govern and monitor the creation of the MuleSoft AnyPoint APIs in one central location.
 
-## Why do you want to connect Backstage and Amplify?
+## Why do you want to connect MuleSoft AnyPoint and Amplify?
 
 Connecting MuleSoft AnyPoint to Amplify will provide you with a global, centralized view of your APIs.
 
