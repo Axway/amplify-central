@@ -42,7 +42,7 @@ Agents are classified into two categories, agents supported by Axway and agents 
 | IBM API Connect            | Axway     | Discovery and Traceability                                   | On-premise          |
 | Graylog API Security       | Axway     | Runtime Compliance                                           | On-premise          |
 | Traceable API Security     | Axway     | Runtime Compliance                                           | On-premise          |
-| MuleSoft Anypoint platform | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-mulesoft>   |
+| MuleSoft Anypoint platform | Axway     | Discovery and Traceability                                   | On-premise |
 | Kong Gateway               | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-kong>       |
 | Apigee Edge API Management | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-apigee>     |
 | Software AG webMethods     | Axway/Community | Discovery                                              | On-premise <br /><https://github.com/Axway/agents-webmethods> |
