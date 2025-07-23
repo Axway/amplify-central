@@ -26,7 +26,7 @@ Learn how to use the Amplify Engage WebUI to configure your organization's setti
 3. Select **Marketplaces** and click on either the Marketplace Name to configure settings of an existing Marketplace, or on **+ Marketplace** to add a new Marketplace.
 4. Set the values for:
     * **Name** - enter the name of your Marketplace.
-    * **Sitename** - enter the title that will appear on your Marketplace page. Use to name the browser tab where the Marketplace is running.
+    * **Sitename** - enter the title that will appear on your Marketplace page. Used to name the browser tab where the Marketplace is running.
     * **Description** - enter the description for your Marketplace that is visible to members of your organization with the consumer role. Used as meta description field for search engine. Only the default language is used.
     * **Marketplace URL** - select whether your Marketplace is hosted on a subdomain or fully qualified domain name. This is required to make your Marketplace available for product publication:
 
