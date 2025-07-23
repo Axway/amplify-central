@@ -11,21 +11,30 @@ Learn how to create an environment to represent your API services and other disc
 ## Add your environment
 
 1. Navigate to *Topology > Environments*.
-2. Click **+ Add New Environment**.
+2. Click **+ Add New**.
 
     ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
     * The Add an Environment wizard is displayed.
-    * The **+ Add New Environment** button is disabled once the total number of environments surpasses the environment entitlement quota.  If no environment entitlement is defined, there is no environment quota enforcement.
+    * The **+ Add New** button is disabled once the total number of environments surpasses the environment entitlement quota.  If no environment entitlement is defined, there is no environment quota enforcement.
 
-3. Add the following environment profile information and then click **Next**:
+3. Add the following Environment Profile information and then click **Next**:
 
     * **Environment Name** - enter a display name for the environment in the WebUI.
     * **Environment Type** - select the type of API Gateway for which Axway provides Connected agent support. See [Release Notes](/docs/amplify_relnotes) for the latest supported gateways. The Custom/SDK option is for community supported agents or agents developed with the Agent SDK. The Manual option is for a manual sync environment that does not use an agent.
     * **Production** - select **Yes** if this environment will perform production processing or connects to a non-Axway gateway. The usage will count against your entitled quota.
     * **Governance** - select **Axway Manage** if the environment is hosted in Axway Managed Cloud.
     * **Description** - enter a brief description of the environment.
-    * **Image** - Add an icon or image to be associated with the environment.
+    * **Image** - add an icon or image to be associated with the environment.
+
+4. Optionally, add the following environment Credential Preferences information and then click **Next**:
+
+    * **Credential expiration** - set the credential expiration (in days) when credentials will no longer be managed by the Discovery Agent. You can decide to never expire a credential. When selecting the expiration, you can also set the system to automatically deprovision the credential when it expires and send a notification to the consumer (30, 14, 7, 3, 1 day prior the expiration) so that the credential can be rotated or a new one created.
+    * **Credential value visibility time on Marketplace** - enable if the credential value will be visible in the Marketplace, and set the visibility period (3 days by default, 365 days maximum). Once the visibility period has expired, the consumer will no longer see their credential value (if it was not saved).
+
+5. Optionally, add the Stage Assignment and then click **Next**:
+
+    * Select the stage(s) to be use in the environment, and determine which one will be the default for the environment. When a default stage is selected, all endpoints of the environment will inherit it. If there are multiple stages assigned to the environment, you must decide which one will be assigned to the API Service endpoint. See [the stage](/docs/connect_manage_environ/stage) for more information.
 
 ### Embedded AWS environment
 
