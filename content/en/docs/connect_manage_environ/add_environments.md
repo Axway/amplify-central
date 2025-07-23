@@ -30,7 +30,7 @@ Learn how to create an environment to represent your API services and other disc
 4. Optionally, add the following environment Credential Preferences information and then click **Next**:
 
     * **Credential expiration** - set the credential expiration (in days) when credentials will no longer be managed by the Discovery Agent. You can decide to never expire a credential. When selecting the expiration, you can also set the system to automatically deprovision the credential when it expires and send a notification to the consumer (30, 14, 7, 3, 1 day prior the expiration) so that the credential can be rotated or a new one created.
-    * **Credential value visibility time on Marketplace** - enable if the credential value will be visible in the Marketplace, and set the visibility period (3 days by default). Once the visibility period has expired, the consumer will no longer see their credential value (if it was not saved).
+    * **Credential value visibility time on Marketplace** - enable if the credential value will be visible in the Marketplace, and set the visibility period (3 days by default, 365 days maximum). Once the visibility period has expired, the consumer will no longer see their credential value (if it was not saved).
 
 5. Optionally, add the Stage Assignment and then click **Next**:
 
