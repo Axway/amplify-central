@@ -23,9 +23,11 @@ Learn how to use the Amplify Engage WebUI to configure your organization's setti
 
     {{< alert title="Caution" color="danger" >}}Users with the appropriate rights can configure General Settings for the Marketplace, such as the name of the Marketplace (that will appear in the Marketplace URL) and the Access mode, by using the Organization settings in the user menu. {{< /alert >}}
 
-3. Select **Marketplaces** and click the Edit icon. *The Marketplaces Settings page is displayed*.
+3. Select **Marketplaces** and click on either the Marketplace Name to configure settings of an existing Marketplace, or on **+ Marketplace** to add a new Marketplace.
 4. Set the values for:
-
+    * **Name** - enter the name of your Marketplace.
+    * **Sitename** - enter the title that will appear on your Marketplace page.
+    * **Description** - enter the description for your Marketplace that is visible to members of your organization with the consumer role.
     * **Marketplace URL** - select whether your Marketplace is hosted on a subdomain or fully qualified domain name. This is required to make your Marketplace available for product publication:
 
         * **URL** - select to host your Marketplace on a fully qualified domain name. Type the URL where your Marketplace will be available and upload a certificate that matches the specified URL.
