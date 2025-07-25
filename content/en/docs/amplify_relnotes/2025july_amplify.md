@@ -47,9 +47,9 @@ New features, enhancements, and bug fixes for the July 23 update.
   (ACCESS RIGHTS, ENHANCEMENT)  
   Users with the **Consumer Organization Role** who were previously assigned one of the following producer team-level roles had those roles automatically **unassigned** to align with the intended usage and boundaries of the Consumer Organization role:
 
-    * Developer  
-    * Catalog Manager  
-    * Marketplace Manager  
+    * Developer
+    * Catalog Manager
+    * Marketplace Manager
     * Subscription Approver
     
   Going forward, users with the Consumer Organization Role may only be assigned a **Consumer** and/or **Subscriber** team-level role. This change helps enforce clear boundaries between producer and consumer responsibilities and simplifies access control management across Amplify Engage.
@@ -65,7 +65,7 @@ New features, enhancements, and bug fixes for the July 23 update.
 * **SEO support using the Marketplace Description property**
 
   (DISCOVERABILITY, SEO, ENHANCEMENT)</br>
-  To improve search engine optimization (SEO) and make Marketplace instances discoverable, the Marketplace description defined in the settings is now automatically included in the HTML <head> section as the page description meta tag. This change allows search engines to better index and rank the Marketplace site using the administrator-defined description.
+  To improve search engine optimization (SEO) and make Marketplace instances discoverable, the Marketplace description defined in the settings is now automatically included in the HTML "head" section as the page description meta tag. This change allows search engines to better index and rank the Marketplace site using the administrator-defined description.
   
 ### Marketplace bug fixes for July 23, 2025
 
