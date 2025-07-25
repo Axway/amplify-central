@@ -12,7 +12,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ## July 25, 2025
 
-New features, enhancements, and bug fixes for the July 25 update.
+New enhancement for the July 25 update.
 
 ### Agents updates for July 25, 2025
 
@@ -23,26 +23,26 @@ New features, enhancements, and bug fixes for the July 25 update.
 
 ## July 23, 2025
 
-New features, enhancements, and bug fixes for the July 23 update.
+New features, enhancements, and bug fix for the July 23 update.
 
 ### Marketplace updates for July 23, 2025
 
 * **Email notifications for subscriptions and application registrations workflows**
 
   (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, NEW FEATURE)</br>
-  To ensure timely action on incoming subscription and application registration requests and deliver a more response experience for consumers, we've introduced **automated email notifications** on subscriptions and application registration events. This ehancement includes:
+  **Automated email notifications** on subscriptions and application registration events have been introduced to ensure timely action on incoming subscription and application registration requests and deliver a more responsive experience for consumers. This enhancement includes:
   
     * **Engage Admin** and **Subscription Approver** role assignees receive an email notification when a new **subscription request** is submitted for a product owned by their team and requires manual approval.
-    * **Engage Admin** assignees receive an email notification when a new **application registration request** is submitted for an API owned by their team and requires manual approval.
+    * **Engage Admin** role assignees receive an email notification when a new **application registration request** is submitted for an API owned by their team and requires manual approval.
     * **Consumers** and **Subscriber** role assignees in the requesting team receive an email notification when their **subscription request** has been **approved or rejected**.
     * **Consumers** and **Subscriber** role assignees in the requesting team receive an email notification when their **application registration request** has been **approved or rejected**.
 
-* **Configurable Credential visibility duration**
+* **Configurable credential visibility duration**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Engage now allows providers to define how long generated credentials remain viewable in the Marketplace after they are issued. Previously, credential visibility was fixed at 3 days, with no ability to modify this behavior. A new setting is now available in the **Credential Preferences** screen of an Environment to define the number of days credentials remain visible in the Marketplace. This configuration affect all credentials generated for APIs within that environment. The **default value is 3 days** if no customization is made. This enhancement gives providers more control over credential security policies.
+  Engage now allows providers to define how long generated credentials remain viewable in the Marketplace after they are issued. Previously, credential visibility was fixed at 3 days, with no ability to modify this behavior. A new setting is now available in the **Credential Preferences** screen of an Environment to define the number of days credentials remain visible in the Marketplace. This configuration affects all credentials generated for APIs within that environment. The **default value is 3 days** if no customization is made. This enhancement gives providers more control over credential security policies.
 
-* **Consumer Role Updates**
+* **Consumer role updates**
 
   (ACCESS RIGHTS, ENHANCEMENT)  
   Users with the **Consumer Organization Role** who were previously assigned one of the following producer team-level roles had those roles automatically **unassigned** to align with the intended usage and boundaries of the Consumer Organization role:
@@ -57,31 +57,31 @@ New features, enhancements, and bug fixes for the July 23 update.
 * **Enhanced customization for status elements and action buttons**
 
   (MARKETPLACE CUSTOMIZATION, BRANDING, ENHANCEMENT)</br>
-  Marketplace Administrators can now more precisely align the Marketplace appearance with their company’s brand guidelines. Previously, the Marketplace applied a single global font color, which limited the ability to style status elements (badges) and action buttons independently. This updates include the following changes:
+  Marketplace Administrators can now more precisely align the Marketplace appearance with their company’s brand guidelines. Previously, the Marketplace applied a single global font color, which limited the ability to style status elements (badges) and action buttons independently. This update includes the following changes:
 
-    * **Status Elements Font Color**: A new setting in the Marketplace Theme configuration allows Marketplace Manager users to customize the font color of status elements independently from the global font color.
-    * **Action Button Text Color**: Another new setting allows marketplace managers to configure the text color of action buttons separately, ensuring better contrast and improved brand alignment.
+    * **Status elements font color**: A new setting in the Marketplace Theme configuration allows Marketplace Manager users to customize the font color of status elements independently from the global font color.
+    * **Action button text color**: Another new setting allows marketplace managers to configure the text color of action buttons separately, ensuring better contrast and improved brand alignment.
 
 * **SEO support using the Marketplace Description property**
 
   (DISCOVERABILITY, SEO, ENHANCEMENT)</br>
-  To improve search engine optimization (SEO) and make Marketplace instances discoverable, the Marketplace description defined in the settings is now automatically included in the HTML "head" section as the page description meta tag. This change allows search engines to better index and rank the Marketplace site using the administrator-defined description.
+  To improve search engine optimization (SEO) and make Marketplace instances discoverable, the Marketplace Description defined in the settings is now automatically included in the HTML "head" section as the page description meta tag. This change allows search engines to better index and rank the Marketplace site using the administrator-defined description.
   
 ### Marketplace bug fixes for July 23, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01726716 | APIGOV-30782 | **Problem with Migrating v7 Applications to Marketplace**: Script fails at creating the credentials. <br/>**Resolution**: Updated the script to use newly introduced Credential Type metadata.|
+| 01726716 | APIGOV-30782 | **Problem with migrating v7 applications to Marketplace**: Script fails at creating the credentials. <br/>**Resolution**: The script has been updated to use newly introduced Credential Type metadata.|
 
 ## July 22, 2025
 
-New features, enhancements, and bug fixes for the July 22 update.
+New bug fix for the July 22 update.
 
 ### Agents bug fixes for July 22, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30847 | **Embedded AWS - unable to Discover APIs**: The AWS Embedded agent is not discovering APIs. <br/>**Resolution**: We optimized the AWS SaaS agent discovery process (avoiding an AWS rate limit blocker). |
+|  | APIGOV-30847 | **Embedded AWS - unable to discover APIs**: The AWS Embedded agent is not discovering APIs. <br/>**Resolution**: The AWS SaaS agent discovery process has been optimized (avoiding an AWS rate limit blocker). |
 
 ## July 1, 2025
 
