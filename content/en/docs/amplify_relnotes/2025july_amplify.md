@@ -71,7 +71,7 @@ New features, enhancements, and bug fixes for the July 23 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01726716 | APIGOV-30847 | **Problem with Migrating v7 Applications to Marketplace**: Script fails at creating the credentials. <br/>**Resolution**: Updated the script to use newly introduced Credential Type metadata.|
+| 01726716 | APIGOV-30782 | **Problem with Migrating v7 Applications to Marketplace**: Script fails at creating the credentials. <br/>**Resolution**: Updated the script to use newly introduced Credential Type metadata.|
 
 ## July 22, 2025
 
