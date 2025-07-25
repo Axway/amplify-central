@@ -71,7 +71,6 @@ New features, enhancements, and bug fixes for the July 23 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-30847 | **Embedded AWS - unable to Discover APIs**: The AWS Embedded agent is not discovering APIs. <br/>**Resolution**: We optimized the AWS SaaS agent discovery process (avoiding an AWS rate limit blocker). |
 | 01726716 | APIGOV-30847 | **Problem with Migrating v7 Applications to Marketplace**: Script fails at creating the credentials. <br/>**Resolution**: Updated the script to use newly introduced Credential Type metadata.|
 
 ## July 22, 2025
