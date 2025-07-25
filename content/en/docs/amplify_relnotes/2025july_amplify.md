@@ -32,10 +32,10 @@ New features, enhancements, and bug fixes for the July 23 update.
   (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, NEW FEATURE)</br>
   To ensure timely action on incoming subscription and application registration requests and deliver a more response experience for consumers, we've introduced **automated email notifications** on subscriptions and application registration events. This ehancement includes:
   
-  - **Engage Admin** and **Subscription Approver** role assignees receive an email notification when a new **subscription request** is submitted for a product owned by their team and requires manual approval.
-  - **Engage Admin** assignees receive an email notification when a new **application registration request** is submitted for an API owned by their team and requires manual approval.
-  - **Consumers** and **Subscriber** role assignees in the requesting team receive an email notification when their **subscription request** has been **approved or rejected**.
-  - **Consumers** and **Subscriber** role assignees in the requesting team receive an email notification when their **application registration request** has been **approved or rejected**.
+    * **Engage Admin** and **Subscription Approver** role assignees receive an email notification when a new **subscription request** is submitted for a product owned by their team and requires manual approval.
+    * **Engage Admin** assignees receive an email notification when a new **application registration request** is submitted for an API owned by their team and requires manual approval.
+    * **Consumers** and **Subscriber** role assignees in the requesting team receive an email notification when their **subscription request** has been **approved or rejected**.
+    * **Consumers** and **Subscriber** role assignees in the requesting team receive an email notification when their **application registration request** has been **approved or rejected**.
 
 * **Configurable Credential visibility duration**
 
@@ -47,22 +47,20 @@ New features, enhancements, and bug fixes for the July 23 update.
   (ACCESS RIGHTS, ENHANCEMENT)  
   Users with the **Consumer Organization Role** who were previously assigned one of the following producer team-level roles had those roles automatically **unassigned** to align with the intended usage and boundaries of the Consumer Organization role:
 
-  * Developer  
-  * Catalog Manager  
-  * Marketplace Manager  
-  * Subscription Approver
-
-  Going forward, users with the Consumer Organization Role may only be assigned a **Consumer** and/or **Subscriber** team-level role.
-
-  This change helps enforce clear boundaries between producer and consumer responsibilities and simplifies access control management across Amplify Engage.
+    * Developer  
+    * Catalog Manager  
+    * Marketplace Manager  
+    * Subscription Approver
+    
+  Going forward, users with the Consumer Organization Role may only be assigned a **Consumer** and/or **Subscriber** team-level role. This change helps enforce clear boundaries between producer and consumer responsibilities and simplifies access control management across Amplify Engage.
 
 * **Enhanced customization for status elements and action buttons**
 
   (MARKETPLACE CUSTOMIZATION, BRANDING, ENHANCEMENT)</br>
   Marketplace Administrators can now more precisely align the Marketplace appearance with their company’s brand guidelines. Previously, the Marketplace applied a single global font color, which limited the ability to style status elements (badges) and action buttons independently. This updates include the following changes:
 
-  * **Status Elements Font Color**: A new setting in the Marketplace Theme configuration allows Marketplace Manager users to customize the font color of status elements independently from the global font color.
-  * **Action Button Text Color**: Another new setting allows marketplace managers to configure the text color of action buttons separately, ensuring better contrast and improved brand alignment.
+    * **Status Elements Font Color**: A new setting in the Marketplace Theme configuration allows Marketplace Manager users to customize the font color of status elements independently from the global font color.
+    * **Action Button Text Color**: Another new setting allows marketplace managers to configure the text color of action buttons separately, ensuring better contrast and improved brand alignment.
 
 * **SEO support using the Marketplace Description property**
 
