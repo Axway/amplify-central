@@ -10,6 +10,17 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## July 25, 2025
+
+New features, enhancements, and bug fixes for the July 25 update.
+
+### Agents updates for July 25, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>  
+  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
 ## July 23, 2025
 
 New features, enhancements, and bug fixes for the July 23 update.
@@ -33,22 +44,47 @@ New features, enhancements, and bug fixes for the July 23 update.
 
 * **Consumer Role Updates**
 
-  (ACCESS RIGHTS, ENHANCEMENT)</br>
-  Users with the **Consumer Organization Role** who were previously assigned one of the following producer team-level roles had those roles automatically **unassigned** to align with the intended usage and bounderies of the Consumer Organization role:
-  
-  * Developer
-  * Catalog Manager
-  * Marketplace Manager
+  (ACCESS RIGHTS, ENHANCEMENT)  
+  Users with the **Consumer Organization Role** who were previously assigned one of the following producer team-level roles had those roles automatically **unassigned** to align with the intended usage and boundaries of the Consumer Organization role:
+
+  * Developer  
+  * Catalog Manager  
+  * Marketplace Manager  
   * Subscription Approver
- 
-Going forward, users with the Consumer Organization Role may only be assigned a Consumer and/or Subscriber role.
-This change helps enforce clear boundaries between produces and consumer responsabilities and simplifies the access control management across the Amplify Engage.
+
+  Going forward, users with the Consumer Organization Role may only be assigned a **Consumer** and/or **Subscriber** team-level role.
+
+  This change helps enforce clear boundaries between producer and consumer responsibilities and simplifies access control management across Amplify Engage.
+
+* **Enhanced customization for status elements and action buttons**
+
+  (MARKETPLACE CUSTOMIZATION, BRANDING, ENHANCEMENT)</br>
+  Marketplace Administrators can now more precisely align the Marketplace appearance with their company’s brand guidelines. Previously, the Marketplace applied a single global font color, which limited the ability to style status elements (badges) and action buttons independently. This updates include the following changes:
+
+  * **Status Elements Font Color**: A new setting in the Marketplace Theme configuration allows Marketplace Manager users to customize the font color of status elements independently from the global font color.
+  * **Action Button Text Color**: Another new setting allows marketplace managers to configure the text color of action buttons separately, ensuring better contrast and improved brand alignment.
+
+* **SEO support using the Marketplace Description property**
+
+  (DISCOVERABILITY, SEO, ENHANCEMENT)</br>
+  To improve search engine optimization (SEO) and make Marketplace instances discoverable, the Marketplace description defined in the settings is now automatically included in the HTML <head> section as the page description meta tag. This change allows search engines to better index and rank the Marketplace site using the administrator-defined description.
   
 ### Marketplace bug fixes for July 23, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|  | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|  | APIGOV-30847 | **Embedded AWS - unable to Discover APIs**: The AWS Embedded agent is not discovering APIs. <br/>**Resolution**: We optimized the AWS SaaS agent discovery process (avoiding an AWS rate limit blocker). |
+| 01726716 | APIGOV-30847 | **Problem with Migrating v7 Applications to Marketplace**: Script fails at creating the credentials. <br/>**Resolution**: Updated the script to use newly introduced Credential Type metadata.|
+
+## July 22, 2025
+
+New features, enhancements, and bug fixes for the July 22 update.
+
+### Agents bug fixes for July 22, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|  | APIGOV-30847 | **Embedded AWS - unable to Discover APIs**: The AWS Embedded agent is not discovering APIs. <br/>**Resolution**: We optimized the AWS SaaS agent discovery process (avoiding an AWS rate limit blocker). |
 
 ## July 1, 2025
 
