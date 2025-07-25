@@ -65,7 +65,7 @@ New features, enhancements, and bug fix for the July 23 update.
 * **SEO support using the Marketplace Description property**
 
   (DISCOVERABILITY, SEO, ENHANCEMENT)</br>
-  To improve search engine optimization (SEO) and make Marketplace instances discoverable, the Marketplace Description defined in the settings is now automatically included in the HTML "head" section as the page description meta tag. This change allows search engines to better index and rank the Marketplace site using the administrator-defined description.
+  The Marketplace description defined in the settings is now automatically included in the HTML "head" section as the page description meta tag to improve search engine optimization (SEO) and make Marketplace instances discoverable. This change allows search engines to better index and rank the Marketplace site using the administrator-defined description.
   
 ### Marketplace bug fixes for July 23, 2025
 
