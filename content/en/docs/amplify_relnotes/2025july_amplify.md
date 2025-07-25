@@ -51,7 +51,7 @@ New features, enhancements, and bug fixes for the July 23 update.
     * Catalog Manager
     * Marketplace Manager
     * Subscription Approver
-    
+
   Going forward, users with the Consumer Organization Role may only be assigned a **Consumer** and/or **Subscriber** team-level role. This change helps enforce clear boundaries between producer and consumer responsibilities and simplifies access control management across Amplify Engage.
 
 * **Enhanced customization for status elements and action buttons**
