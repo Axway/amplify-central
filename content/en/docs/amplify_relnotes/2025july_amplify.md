@@ -10,6 +10,17 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## July 28, 2025
+
+New enhancements for July 28 update.
+
+### Axway CLI updates for July 28, 2025
+
+* **New Axway CLI v4.0.2 is available**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+   The Axway CLI **[v4.0.2](https://www.npmjs.com/package/@axway/axway/v/4.0.12)** has been updated to support .... This is a major release (breaking change) and intended to be used with the Axway Central/Engage CLI **v4.0.1** or later.
+
 ## July 25, 2025
 
 New enhancement for the July 25 update.
