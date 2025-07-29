@@ -19,7 +19,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Engage July 28 2025](/docs/amplify_relnotes/2025july_amplify/#july-28-2025)
 
-No agent updates. See May 30 for latest supported agent versions.
+No agent updates. See July 25 2025 for latest supported agent versions.
 
 ## [Amplify Engage July 25 2025](/docs/amplify_relnotes/2025july_amplify/#july-25-2025)
 
