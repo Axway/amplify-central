@@ -10,6 +10,25 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
+## July 28, 2025
+
+New enhancement and bug fixes for the July 28 update.
+
+### Axway CLI update for July 28, 2025
+
+* **New Axway CLI v4.0.4 is available**
+
+   (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+   The latest Axway CLI **[v4.0.4](https://www.npmjs.com/package/@axway/axway/v/4.0.4)** is now available on NPM. This update includes:
+  
+    * This update provides a fix to the **Axway CLI returning Not Authorized error** that is listed under Marketplace bug fixes for July 28, 2025.
+
+### Marketplace bug fixes for July 28, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01741524 <br/>01741705 | APIGOV-30889 <br/>APIGOV-30909 <br/>APIGOV-30907 | **Axway CLI returning Not Authorized error**:  A "Not authorized" error was returned from the Axway CLI when using a service account. For example, the "Not authorized" error would occur with the `axway org user list` or `axway engage install agents` command. <br/>**Resolution**: Upgrade the Axway CLI version, which can be found at **[v4.0.4](https://www.npmjs.com/package/axway/v/4.0.4)**. When using a service account, the user account with "Tooling Credentials" must be used in order to access all Axway CLI commands. To create a Tooling Credential, refer to [Configuring tooling credentials](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/configuring_and_managing_identity_providers/configuring_tooling_credentials/index.html). |
+
 ## July 25, 2025
 
 New enhancement for the July 25 update.
