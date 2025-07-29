@@ -10,7 +10,7 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 ---
 
-### Marketplace bug fixes for July 23, 2025
+### Marketplace bug fixes for July 28, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
