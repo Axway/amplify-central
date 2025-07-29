@@ -14,14 +14,14 @@ We work hard to improve the Amplify Engage experience by releasing new features 
 
 New enhancement and bug fix for the July 28 update.
 
-### Axway CLI updates for July 28, 2025
+### Axway CLI update for July 28, 2025
 
 * **New Axway CLI v4.0.4 is available**
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
    The Axway CLI **[v4.0.4](https://www.npmjs.com/package/@axway/axway/v/4.0.4)** has been updated.
 
-### Marketplace bug fixes for July 28, 2025
+### Marketplace bug fix for July 28, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
