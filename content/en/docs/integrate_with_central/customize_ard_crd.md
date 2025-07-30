@@ -19,8 +19,6 @@ Learn how to customize the Application Registration and credentials request scre
 * A provider may want to ask extra information from his consumer to be able to correctly provision his request. For example, when a consumer wants to subscribe, access a resource or create credentials, the definition of the subscription, access or credentials may require extra parameters.
 * A provider may want to send back extra information to the consumer. For example, credential information or public keys, etc.
 
-Robert - does this section need to be updated for "find application names?"
-
 In both cases, a schema definition based on **react-jsonschema-form** must be implemented. This schema is used to convey the information from the consumer to the provider (`schema`) and from provider to consumer (`provision`).
 
 {{< alert title="Note" color="primary" >}}
@@ -410,7 +408,14 @@ These above two schemas follow the component framework describe in the [Availabl
 
 Once the Application Registration is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *Application Registration detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
-For each Application Registration name in the Marketplace, there will be one Manaaged Application name.  The Managed Application name is used to create an application or product on each API Gateway/dataplane which contains API resources associated with the Managed Application. To get the Managed Application name, use the following API call:
+### Managed Application
+
+For each Application Registration name in the Marketplace, there will be one Manaaged Application name.  The Managed Application name is used to create an application or product on each API Gateway/dataplane which contains API resources associated with the Managed Application. 
+To get the Managed Application name, use the following API call replacing <environment name> and <app name' with the real logical name values.  The API call will return an array containing one uunique application name represented on the API Gateway/dataplane.
+
+```
+https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment name>/managedapplications?pageSize=1&query=metadata.references=with='kind===Application;name===<app name>'
+```
 
 ### AccessRequestDefinition sample
 
