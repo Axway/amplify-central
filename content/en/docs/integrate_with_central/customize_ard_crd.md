@@ -410,6 +410,8 @@ These above two schemas follow the component framework describe in the [Availabl
 
 Once the Application Registration is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *Application Registration detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
+For each Application Registration name in the Marketplace, there will be one Manaaged Application name.  The Managed Application name is used to create an application or product on each API Gateway/dataplane which contains API resources associated with the Managed Application. To get the Managed Application name, use the following API call:
+
 ### AccessRequestDefinition sample
 
 Sample of an AccessRequestDefinition (json format) asking consumer to select a purpose in a dropdown:
