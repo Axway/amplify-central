@@ -410,8 +410,8 @@ Once the Application Registration is created, the consumer can see the supplied 
 
 ### Managed Application
 
-For each Application Registration name in the Marketplace, there will be one Manaaged Application name.  The Managed Application name is used to create an application or product on each API Gateway/dataplane which contains API resources associated with the Managed Application. 
-To get the Managed Application name, use the following API call replacing <environment name> and <app name' with the real logical name values.  The API call will return an array containing one uunique application name represented on the API Gateway/dataplane.
+For each Application Registration in the Marketplace, there will be one Manaaged Application.  The Managed Application is used to create an application or product on each API Gateway/dataplane which contains API resources associated with the Managed Application.
+To get the Managed Application name, use the following API call replacing <environment name> and <app name> with the real logical name values.  The API call will return an array containing one uunique application represented on the API Gateway/dataplane.
 
 ```
 https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment name>/managedapplications?pageSize=1&query=metadata.references=with='kind===Application;name===<app name>'
@@ -1067,23 +1067,3 @@ Step 4: Put it all together:
 ```
 
 Using the CLI, you should now be able to post the above to have a custom subscription screen in both languages: English and French.
-
-==== crap to delete == ### Container specifications
-
-To ensure reliable performance and scalability in Docker-based environments, the following container specifications are recommended for each core component:
-
-| Component               | vCPU  | Memory (RAM) | Heap Size       | Persistent Storage                  | Replicas | Autoscaling | Notes |
-|-------------------------|-------|--------------|------------------|--------------------------------------|----------|-------------|-------|
-| **Admin Node Manager**  | 1     | 2 GB         | 1024 MB          | Shared Volume (RW)                  | 1        | No          | Requires RDBMS and HTTPS cert. Listens on ports **8090 (HTTP)** and **8091 (HTTPS)** |
-| **API Manager UI**      | 2–4   | 8 GB         | 2048–4096+ MB    | 50 GB                               | 1        | No          | Hosts Manager UI on port **8075** |
-| **API Gateway**         | 2–4   | 8 GB         | 2048–4096+ MB    | 50 GB                               | Min 3    | Yes         | Handles traffic on ports **8065**, **8080**, **8443** |
-| **Cassandra Node**      | 16    | 32 GB        | 8192 MB          | Dedicated disk for commit logs      | 3+ nodes | N/A         | External to cluster; 1 node per AZ |
-
-**General Notes:**
-
-* All components should be deployed using Kubernetes Deployments and support liveness/readiness probes.
-* Public CA certificates and secrets should be provided for TLS.
-* RDBMS, Cassandra, and shared volume dependencies must be satisfied before deployment.
-* ANM and Gateway should use a `.fed`-based configuration, while Manager and traffic pods use `.yaml`.
-* Use Helm chart prechecks to validate external service availability (Cassandra, RDBMS, etc.).
-* 
