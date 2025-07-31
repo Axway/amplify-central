@@ -411,6 +411,7 @@ Once the Application Registration is created, the consumer can see the supplied 
 ### Managed Application
 
 For each Application Registration in the Marketplace, there will be one Managed Application per Topology Environment which contains API resources associated with the Managed Application. This Managed Application is used to create an application or product on each API Gateway/dataplane associated to that environment.
+
 To get the Managed Application name, use the following API call replacing `<environment name>` with he logical name of the environment and `<app name>` with the logical name of the Marketplace application. The API call will return an array containing one unique Managed Application which is the Engage representation of the application on the API Gateway/dataplane.
 
 ```
