@@ -5,11 +5,11 @@ weight: 120
 ---
 Connect Apigee Edge and Amplify so you can govern and monitor the creation of the Apigee Edge APIs in one central location.
 
-## Why do you want to connect Apigee Adge and Amplify?
+## Why do you want to connect Apigee Edge and Amplify?
 
-Connecting MuleSoft AnyPoint to Amplify will provide you with a global, centralized view of your APIs.
+Connecting Apigee Edge to Amplify will provide you with a global, centralized view of your APIs.
 
-MuleSoft AnyPoint can be represented by an Amplify environment, allowing you to better filter APIs. Supplied with the environment, the Discovery Agent interacts with MuleSoft AnyPoint and Amplify to detect changes to MuleSoft AnyPoint APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
+Apigee Edge can be represented by an Amplify environment, allowing you to better filter APIs. Supplied with the environment, the Discovery Agent interacts with Apigee Edge and Amplify to detect changes to Apigee Edge APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
 
 ### Discovery
 
