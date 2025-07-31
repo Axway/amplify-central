@@ -1067,3 +1067,23 @@ Step 4: Put it all together:
 ```
 
 Using the CLI, you should now be able to post the above to have a custom subscription screen in both languages: English and French.
+
+==== crap to delete == ### Container specifications
+
+To ensure reliable performance and scalability in Docker-based environments, the following container specifications are recommended for each core component:
+
+| Component               | vCPU  | Memory (RAM) | Heap Size       | Persistent Storage                  | Replicas | Autoscaling | Notes |
+|-------------------------|-------|--------------|------------------|--------------------------------------|----------|-------------|-------|
+| **Admin Node Manager**  | 1     | 2 GB         | 1024 MB          | Shared Volume (RW)                  | 1        | No          | Requires RDBMS and HTTPS cert. Listens on ports **8090 (HTTP)** and **8091 (HTTPS)** |
+| **API Manager UI**      | 2–4   | 8 GB         | 2048–4096+ MB    | 50 GB                               | 1        | No          | Hosts Manager UI on port **8075** |
+| **API Gateway**         | 2–4   | 8 GB         | 2048–4096+ MB    | 50 GB                               | Min 3    | Yes         | Handles traffic on ports **8065**, **8080**, **8443** |
+| **Cassandra Node**      | 16    | 32 GB        | 8192 MB          | Dedicated disk for commit logs      | 3+ nodes | N/A         | External to cluster; 1 node per AZ |
+
+**General Notes:**
+
+* All components should be deployed using Kubernetes Deployments and support liveness/readiness probes.
+* Public CA certificates and secrets should be provided for TLS.
+* RDBMS, Cassandra, and shared volume dependencies must be satisfied before deployment.
+* ANM and Gateway should use a `.fed`-based configuration, while Manager and traffic pods use `.yaml`.
+* Use Helm chart prechecks to validate external service availability (Cassandra, RDBMS, etc.).
+* 
