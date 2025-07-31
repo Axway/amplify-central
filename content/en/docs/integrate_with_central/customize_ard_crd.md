@@ -408,6 +408,16 @@ These above two schemas follow the component framework describe in the [Availabl
 
 Once the Application Registration is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *Application Registration detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
 
+### Managed Application
+
+For each Application Registration in the Marketplace, there will be one Managed Application per Topology Environment which contains API resources associated with the Managed Application. This Managed Application is used to create an application or product on each API Gateway/dataplane associated to that environment.
+
+To get the Managed Application name, use the following API call replacing `<environment name>` with he logical name of the environment and `<app name>` with the logical name of the Marketplace application. The API call will return an array containing one unique Managed Application which is the Engage representation of the application on the API Gateway/dataplane.
+
+```
+https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment name>/managedapplications?pageSize=1&query=metadata.references=with='kind===Application;name===<app name>'
+```
+
 ### AccessRequestDefinition sample
 
 Sample of an AccessRequestDefinition (json format) asking consumer to select a purpose in a dropdown:
