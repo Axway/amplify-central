@@ -118,7 +118,7 @@ To install an Azure Traceability Agent only, you must create an Azure service pr
 
 Azure Event Hubs is a big data streaming platform and event ingestion service. Refer to <https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about>.
 
-To create an Azure Event Hub, it is first required to create an event hubs namespace. For that, go to Azure Portal and select the \[Event Hubs] service. Then create the event hubs namespace. Select the appropriate Azure subscription and resource group where this namespace will be available. Be sure to create the event hubs namespace in the same region as your API Management service. For the pricing, we recommend the Standard one. When creating the event hubs namespace, Azure will automatically attach to it an access policy. We recommend you keep the default values provided.
+To create an Azure Event Hub, it is first required to create an event hubs namespace. For that, go to Azure Portal and select the \[Event Hubs] service. Then create the event hubs namespace. Select the appropriate Azure subscription and resource group where this namespace will be available. Be sure to create the event hubs namespace in the same region as your API Management service. For the pricing, the Standard one is recommended. When creating the event hubs namespace, Azure will automatically attach to it an access policy. Keep the default values as provided.
 
 Once the namespace is created, you can add an event hub to this namespace.  
 

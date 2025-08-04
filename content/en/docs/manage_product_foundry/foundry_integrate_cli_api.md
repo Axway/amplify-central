@@ -65,13 +65,11 @@ A `.yaml`, `.yml`, or `.json` file can be used to define a specific resource, bu
 
 ### Save the file as product.json
 
-Create the product on the server (`-f` is the filename to use to create the resource, `-y` as we haven't given the product a local name then the server will automatically create one, providing `-y` means we will accept the auto generated name)
+Create the product on the server (where `-f` is the filename to use to create the resource, `-y` mean that the product's automatically generated local name will be accepted.)
 
 ```bash
 axway central create -f product.json -y -o json > product-created.json
 ```
-
-where `-f` is the filename to use to create the resource, `-y` mean that the product's automatically generated local name will be accepted.
 
 ## Prepare your product to be consumed
 

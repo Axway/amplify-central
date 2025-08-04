@@ -61,7 +61,7 @@ Once you are satisfied with your translation, click **Save & Exit** to validate 
 
 The translation will be immediately available in the Marketplace based on the Marketplace language support.
 
-It is not mandatory to translate the product in all available languages. We recommend to a least have the language supported by the Marketplace so that your consumer will see the product correctly.
+It is not mandatory to translate the product in all available languages. It is recommended to have the language supported by the Marketplace so that your consumer will see the product correctly.
 
 {{< alert title="Note" color="primary" >}}
 **Product documentation**
@@ -74,7 +74,7 @@ When creating a new product release, the existing documentation and associated t
 {{< alert title="Note" color="primary" >}}
 **Product documentation using Document Library**
 
-A document from the Document Library can be used in the product documentation. If the document has a default language, only the additional languages can be added/updated via the product document translation screens. We recommend to update the default language information from the Document Library itself. Refer to [Document library multi-language](/docs/manage_document_library/documentation_library_management#multi-languages-support).
+A document from the Document Library can be used in the product documentation. If the document has a default language, only the additional languages can be added/updated via the product document translation screens. It is recommended to update the default language information from the Document Library itself. Refer to [Document library multi-language](/docs/manage_document_library/documentation_library_management#multi-languages-support).
 {{< /alert >}}
 
 ## Product publication check
@@ -85,7 +85,7 @@ When you publish a product to a Marketplace, a new dialog is displayed to show y
 
 It is possible to customize the Subscription, Access Request, and Credentials screens using SubscriptionRequestDefinition, AccessRequestDefinition, and CredentialsRequestDefinition to ask more information from the consumer. Refer to [Customize access request, credentials request and subscription screens](/docs/integrate_with_central/customize_ard_crd#multi-languages-support).
 
-We allow the provider to translate the *title* and *description* of individual fields used in those definition.
+The provider is allowed to translate the *title* and *description* of individual fields used in those definition.
 
 {{< alert title="Caution" color="danger" >}}
 It is not allowed in the translation file to modify any properties related to the field (size limit, type, enum values, etc.). If the definition does not match the initial fields, the translation will be rejected.

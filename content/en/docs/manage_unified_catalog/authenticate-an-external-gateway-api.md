@@ -7,11 +7,11 @@ date: 2020-04-28T00:00:00.000Z
 ---
 Authenticate an API secured with OAuth credentials, which was published from an external gateway.
 
-The Unified Catalog allows you to test OAS2 and OAS3 API's methods from the browser. The current support for testing APIs published from an external gateway from the browser includes APIs secured with an API key, JWT authentication, and no authentication at all. At this time, it is not possible to test OAuth methods from the catalog in the browser, we recommend you use a tool like Postman for testing your external gateway APIs with OAuth. You may still publish APIs secured with OAuth to the Unified Catalog. To learn more, see [Authorizing requests](https://learning.postman.com/docs/postman/sending-api-requests/authorization/#oauth-20).
+The Unified Catalog allows you to test OAS2 and OAS3 API's methods from the browser. The current support for testing APIs published from an external gateway from the browser includes APIs secured with an API key, JWT authentication, and no authentication at all. At this time, it is not possible to test OAuth methods from the catalog in the browser, so it is recommended that you use a tool like Postman for testing your external gateway APIs with OAuth. You may still publish APIs secured with OAuth to the Unified Catalog. To learn more, see [Authorizing requests](https://learning.postman.com/docs/postman/sending-api-requests/authorization/#oauth-20).
 
 ## Test an external API using Postman
 
-This section shows how to test an external gateway API from the Unified Catalog using Postman. In this example, we have used the Axway Support API as the external gateway API with OAuth authentication. The OAS2 specification for the API can be found at [Axway Support API 1.1.7](https://apis-developer.axway.com/index.php?option=com_apiportal&view=apitester&usage=api&tab=tests&apiId=da355fc4-484e-44a3-b436-965ffc377031&menuId=152&managerId=1&renderTool=2&type=rest&apiVersion=1.1.7).
+This section shows how to test an external gateway API from the Unified Catalog using Postman. In this example, the Axway Support API is used as the external gateway API with OAuth authentication. The OAS2 specification for the API can be found at [Axway Support API 1.1.7](https://apis-developer.axway.com/index.php?option=com_apiportal&view=apitester&usage=api&tab=tests&apiId=da355fc4-484e-44a3-b436-965ffc377031&menuId=152&managerId=1&renderTool=2&type=rest&apiVersion=1.1.7).
 
 Follow this procedure to test your API:
 

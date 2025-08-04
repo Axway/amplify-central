@@ -58,7 +58,7 @@ axway central get stg -o json > stages.json
 
 If the stage you want to use already exists, you can still use it if you find its logical name and update the asset to use it.
 
-Query the API Server to get the resource details of the stage you want to assign to the asset. In this example, the stage we want to use has the `title` called `production`.
+Query the API Server to get the resource details of the stage you want to assign to the asset. In this example, the stage to use has the `title` called `production`.
 
 Use this command to get the stage resource and store it to disk:
 
@@ -122,7 +122,7 @@ The asset is created in **Draft** state. To use this asset in a product definiti
 * Manual, by creating a new `AssetResource` in the `Asset` scope directly
 * Automated **(preferred)**, by creating an `AssetMapping` that contains links to the desired resources. Creating an `AssetMapping` will trigger the creation of a new `AssetResource` in the `Asset` scope.
 
-In this example, we will create an `AssetMapping` in the scope of the previously created `Asset`. The asset can be optionally grouped in a stage which was created previously. Also, assuming you are using resources and corresponding files (`api-service-created.json`, `api-service-revision-created.json`, `api-service-instance-created.json`) generated in the previous step ([Register APIs using the CLI](/docs/manage_service_registry/service_integrate-api_cli)):
+In this example, `AssetMapping` is created in the scope of the previously created `Asset`. The asset can be optionally grouped in a stage which was created previously. Also, assuming you are using resources and corresponding files (`api-service-created.json`, `api-service-revision-created.json`, `api-service-instance-created.json`) generated in the previous step ([Register APIs using the CLI](/docs/manage_service_registry/service_integrate-api_cli)):
 
 ```bash
 jq --slurp -f asset-mapping.jq env.json asset-created.json stage-details.json api-service-created.json api-service-revision-created.json api-service-instance-created.json > asset-mapping.json
@@ -262,7 +262,7 @@ axway central apply -f asset-updated.json
 
 If the category you want to use already exists, you can still use it if you find its logical name and update the asset to use it.
 
-Query the API Server to get the resource details of the category to assign to assigned to the asset. In this example, the category we want to use has the `title` called `OpenBanking`.
+Query the API Server to get the resource details of the category to assign to assigned to the asset. In this example, the category to use has the `title` called `OpenBanking`.
 
 Use this command to get the category resource and store it to disk:
 

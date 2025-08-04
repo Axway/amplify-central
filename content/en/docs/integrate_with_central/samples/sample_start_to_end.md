@@ -41,7 +41,7 @@ The zip structure is the following:
     * *J2-3-assetMapping.json*: the asset mapping to assign the API Service instance to the asset.
     * *J2-4-assetActivation.json*: the asset releasing process (from Draft to V1.0.0).
     * *J2-5-documentLibrary-multi-language.json*: some document library document (PDF, URL, Markdown) in 2 languages.
-    * *J2-6-product-multi-language.json*: the product we will expose to the Marketplace.
+    * *J2-6-product-multi-language.json*: the product that will be exposed to the Marketplace.
     * *J2-7-productDocumentation-multi-language.json*: the product documentation (2 topics with Sections and Markdown, 1 topic specific to Document Library Documents).
     * *J2-8-productActivation.json*: the product releasing process (from Draft to V1.0.0).
     * *J2-9-productPlan-multi-language.json*: a paid plan associated to the product.

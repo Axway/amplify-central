@@ -488,7 +488,7 @@ Once the invoice due date is reached, Amplify Engage will raise a new invoice ev
 
 To check for event characteristics: `type=SubResourceUpdated` and `metadata.subsresource=status` and the specific for invoice: `state=pastDue` and `status=pending`.
 
-If the payment has been settled outside of the billing system, we recommend that you change the status of the invoice to Success.
+If the payment has been settled outside of the billing system, it is recommended that you change the status of the invoice to Success.
 
 ```json
 curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
