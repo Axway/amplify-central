@@ -90,7 +90,7 @@ da:
 
 ## Discover the Hybrid List app
 
-In this section we will deploy a service called `hybrid-list`, create a `VirtualService` to expose the service outside the cluster, and allow the Istio DA to discover the api and publish it in Amplify. We will also create a `RequestAuthentication` resource to secure the `hybrid-list` service, and we will see an OAuth policy applied to the API in Amplify.
+This section shows how to deploy a service called `hybrid-list`, create a `VirtualService` to expose the service outside the cluster, and allow the Istio DA to discover the api and publish it in Amplify. It also shows how to create a `RequestAuthentication` resource to secure the `hybrid-list` service, and then shows an OAuth policy applied to the API in Amplify.
 
 ### Prepare the hybrid-override.yaml
 

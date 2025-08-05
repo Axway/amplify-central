@@ -254,7 +254,7 @@ Created secret/gateway-cert in the istio-system namespace.
     istio-system
     ```
 
-    In this example we will create a new namespace:
+    To create a new namespace:
 
     ```bash
     Enter a new namespace name: (amplify-agents)

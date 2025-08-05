@@ -236,7 +236,7 @@ axway central apply -f product-updated.json
 
 Products are categorized to help API providers organize products in the Marketplace, making it easy for API consumers to quickly find them. To assign a product a category, first find it's logical name and then update the product to use it.
 
-Run the following command to query the API Server to get the resource details of the category to be assigned to the product, in this case the category we want to use has the `title` called `OpenBanking`, and store it to disk:
+Run the following command to query the API Server to get the resource details of the category to be assigned to the product, in this case the category has the `title` called `OpenBanking`, and store it to disk:
 
 ```bash
 axway central get category -q "title==OpenBanking" -o json > category-details.json
