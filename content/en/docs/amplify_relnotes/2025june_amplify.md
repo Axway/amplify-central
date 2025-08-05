@@ -4,7 +4,7 @@ linkTitle: Amplify Engage June
 weight: 7
 date: 2025-5-1
 ---
-We work hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month. It is always recommended to update to the latest agents' versions.
+Axway works hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month. It is always recommended to update to the latest agents' versions.
 
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
@@ -108,6 +108,6 @@ New enhancement and bug fixes for the June 6 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| | APIGOV-30512 | **Issue**: Attempting to duplicate a plan with a name of 350 chars causes a 400 error <br/>**Resolution**: When a plan was duplicated, the system added "-copy" to the name, which would have exceeded the maximum allowed length if the original plan name was already at the 350-character limit. To avoid this, we now generate a new name automatically. |
+| | APIGOV-30512 | **Issue**: Attempting to duplicate a plan with a name of 350 chars causes a 400 error <br/>**Resolution**: When a plan was duplicated, the system added "-copy" to the name, which would have exceeded the maximum allowed length if the original plan name was already at the 350-character limit. To avoid this, a new name is  automatically generated. |
 | | APIGOV-30216 | **Issue**: [Central UI] Resources, like product/asset, logical names validation uses a different pattern then what the backend enforces <br/>**Resolution**: The validation pattern has been aligned between the UI and the backend. |
 | | APIGOV-30059 | **Issue**: Fix inconsistent field lengths in UI vs what is allowed via API calls <br/>**Resolution**: Now, check field length from UI and backend model are aligned. |

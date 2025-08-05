@@ -4,7 +4,7 @@ linkTitle: Amplify Enterprise Marketplace January
 weight: 12
 date: 2025-1-7
 ---
-We work hard to improve the Amplify Enterprise Marketplace experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of November. It is always recommended to update to the latest agents' versions.
+Axway works hard to improve the Amplify Enterprise Marketplace experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of November. It is always recommended to update to the latest agents' versions.
 
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
@@ -40,7 +40,7 @@ New features, enhancements, and bug fixes for the January 15 update.
 * **Kafka agent enhancement: SASL/OAUTHBEARER Authentication support**
 
   (KAFKA, DISCOVERY AGENT, ENHANCEMENT)<br />
-  We have extended the range of supported authentication types within the Kafka Agent. The agent can now communicate with the Confluent Platform using **SASL/OAUTHBEARER** authentication, enabling integration with Confluent Platform environments configured with Oauth-based security.This enhancement is available in Kafka Discovery Agent **v1.1.10.**. This update is supported in the Axway Central CLI **v3.9.2**.
+ The range of supported authentication types within the Kafka Agent have been extended. The agent can now communicate with the Confluent Platform using **SASL/OAUTHBEARER** authentication, enabling integration with Confluent Platform environments configured with Oauth-based security.This enhancement is available in Kafka Discovery Agent **v1.1.10.**. This update is supported in the Axway Central CLI **v3.9.2**.
 
 * **APIM Traceability enhancement: Optimized event processing with sampling check**
 
@@ -98,7 +98,7 @@ New features, enhancements, and bug fixes for the January 13 update.
 * **Unified Dataplane type management across API, SDK, CLI, UI**
 
   (ENHANCEMENT, DISCOVERY AGENT)<br />
-  We are now synchronizing the dataplane names (e.g "GitHub", "AWS", "APIM") across our API Server, SDK, CLI and UI. The API Server now acts as the single source of truth for defining the dataplane types. This improvement eliminates discrepancies between components, providing a unified and reliable dataplane type configuration across the ecosystem. Key updates include:
+  The dataplane names (e.g "GitHub", "AWS", "APIM") are now synchronized across our API Server, SDK, CLI and UI. The API Server now acts as the single source of truth for defining the dataplane types. This improvement eliminates discrepancies between components, providing a unified and reliable dataplane type configuration across the ecosystem. Key updates include:
     * API Server: Introduced `dataplaneType` as an enum with predefined allowed values.
     * SDK: Uses the dataplane types defined in the API Server.
     * UI: Dataplane types are now synced directly from the API Server for consistency.
@@ -107,12 +107,12 @@ New features, enhancements, and bug fixes for the January 13 update.
 * **Protected mocked API endpoints**
 
   (API MOCKING, ENHANCEMENT, PROVIDER EXPERIENCE)<br />
-  The API Mocking feature has been enhanced to improve security when working with sensitive data in API specifications. API providers can now configure mock endpoints to require platform-level authorization. When enabled, mock-server endpoints will require an Axway/Platform login authentication token to be included in request headers. Unauthorized requests without a valid token will receive an error response. This enhancement ensures sensitive example data remains protected. We strongly recommend following security best practices by avoiding the inclusion of sensitive data in API specification examples.
+  The API Mocking feature has been enhanced to improve security when working with sensitive data in API specifications. API providers can now configure mock endpoints to require platform-level authorization. When enabled, mock-server endpoints will require an Axway/Platform login authentication token to be included in request headers. Unauthorized requests without a valid token will receive an error response. This enhancement ensures sensitive example data remains protected. It is strongly recommend that you follow security best practices by avoiding the inclusion of sensitive data in API specification examples.
 
 * **Detect failure to delete environments and subscriptions**
 
   (ENHANCEMENT, PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, CORE CAPABILITY)<br />
-  We have added a new state to the environments and subscriptions to show when they are in a **Deleting** state. This addresses the situation when these resources appear to be stuck in a deleted loop in the UI. Environments or subscriptions can go in a **Deleting** state when the Discovery Agent sets up "finalizers" on these resources so they don't get removed before the corresponding configuration is cleaned up from the dataplane. If the agent is down or in an unhealthy state, the removal of those resources is blocked, which will cause them to stay in a **deleting** state. Once the agent is restarted and the finalizers are removed, the resource are deleted from the Marketplace.
+  A new state has been added to the environments and subscriptions to show when they are in a **Deleting** state. This addresses the situation when these resources appear to be stuck in a deleted loop in the UI. Environments or subscriptions can go in a **Deleting** state when the Discovery Agent sets up "finalizers" on these resources so they don't get removed before the corresponding configuration is cleaned up from the dataplane. If the agent is down or in an unhealthy state, the removal of those resources is blocked, which will cause them to stay in a **deleting** state. Once the agent is restarted and the finalizers are removed, the resource are deleted from the Marketplace.
 
 * **Responsive Product Foundry page**
 
@@ -167,4 +167,4 @@ New features, enhancements, and bug fixes for the January 10 update.
 | 01671534 | APIGOV-29446 | **Issue**: Error 404 on Marketplace URL after any change <br/>**Resolution**: No code fix was done to resolve the issue. One envoy pod was in a bad state and it was restarted. E2E tests will be added to regularly check for such an issue. |
 | | APIGOV-29413 | **Issue**: Product PDF documentation view is not at a good height <br/>**Resolution**: The component handling of the PDF content now fits the entire space available. |
 | 01663550 | APIGOV-29333 | **Issue**: Rate and invoice configuration error <br/>**Resolution**: The query to get the insights information now use a correct timestamp format to retrieve the information. |
-| | APIGOV-29288 | **Issue**: "Created" filter hiding Draft or pending invoices <br/>**Resolution**: Instead of using the billing timestamp, we will use the create timestamp of the invoice. |
+| | APIGOV-29288 | **Issue**: "Created" filter hiding Draft or pending invoices <br/>**Resolution**: Instead of using the billing timestamp, the create timestamp of the invoice is now used. |

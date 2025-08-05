@@ -4,7 +4,7 @@ linkTitle: Amplify Engage April
 weight: 9
 date: 2025-3-31
 ---
-We work hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of November. It is always recommended to update to the latest agents' versions.
+Axway works hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month of November. It is always recommended to update to the latest agents' versions.
 
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
 
@@ -118,7 +118,7 @@ New features, enhancements, and bug fixes for the April 9 update.
 * **On-demand transaction sampling**
   
   (TRACEABILITY AGENTS, ENHANCEMENT)</br>
-  As of April 9, 2025, all new versions of on-premise and SaaS Traceability Agents support on-demand transaction sampling initiated directly from Engage (*Topology > Environments > Agents*). This enhancement replaces the previous percentage-based sampling approach for all agents released after this date. When activated, on-demand sampling captures all transactions, including API errors, for a period of up to five minutes. While full transaction details are collected during this period, high-level metrics, such as success and error counts, continue to be displayed on the *API Health* page. For deeper analysis, we recommend using your API Gateway’s native tools. Refer to refer to [April 9 2025 Release Notes](/docs/amplify_relnotes) to find the agent versions that support on-demand transaction sampling.
+  As of April 9, 2025, all new versions of on-premise and SaaS Traceability Agents support on-demand transaction sampling initiated directly from Engage (*Topology > Environments > Agents*). This enhancement replaces the previous percentage-based sampling approach for all agents released after this date. When activated, on-demand sampling captures all transactions, including API errors, for a period of up to five minutes. While full transaction details are collected during this period, high-level metrics, such as success and error counts, continue to be displayed on the *API Health* page. For deeper analysis, use your API Gateway’s native tools. Refer to refer to [April 9 2025 Release Notes](/docs/amplify_relnotes) to find the agent versions that support on-demand transaction sampling.
 
 * **Traceable API Security - Conformance Analysis support**
   
