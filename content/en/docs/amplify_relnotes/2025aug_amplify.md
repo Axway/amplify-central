@@ -10,11 +10,18 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
-## August 7, 2025
+## August 8, 2025
 
-New enhancement for the August 7 update.
+New enhancement for the August 8 update.
 
-### Agents updates for August 7, 2025
+### Marketplace bug fixes for August 8, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01638870 | APIGOV-28902 | **Issue**: A portion of the API Specification was missing from the API Service details screen. <br/>**Resolution**: A fix was made to display the the entier API Specification. |
+|  | APIGOV-30938 | **Issue**: A caching issue caused the compliance run-time results to be displayed on the environment details screen. <br/>**Resolution**: A fix was made so the compliance run-time results would not be displayed un-necessarily. |
+
+### Agents updates for August 8, 2025
 
 * **New agent versions available**
 
