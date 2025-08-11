@@ -21,9 +21,17 @@ When creating an API service, you can assign an owner. However, the API service 
 
 #### How to assign an owner?
 
-{{< alert title="Note" color="primary" >}}This feature is not yet available in the Amplify Engage WebUI; you can see the owner of a service/environment, but you cannot change it.{{< /alert >}}
+##### Amplify Engage WebUI
 
-Currently, you can assign an owner by using the Amplify Central CLI. To learn how to create an environment using the CLI, see [Build an environment](/docs/integrate_with_central/cli_central/cli_environments/).
+Amplify Engage WebUI allows to set the ownership and sharing via the environment Create or Edit wizard using the Access Rights step.
+
+When a non Engage Admin uses the wizard, the ownership is mandatory. Such user cannot modify the sharing.
+
+Engage Admin can update the ownership and also allow the API Service sharing with various team.
+
+##### Amplify Engage CLI or API
+
+You can assign an owner by using the Amplify Central CLI. To learn how to create an environment using the CLI, see [Build an environment](/docs/integrate_with_central/cli_central/cli_environments/).
 
 Sample of an environment that has an owning team:
 
@@ -123,5 +131,3 @@ Save this configuration into a file (`acl.yaml`) after finding the teamID that c
 {{< alert title="Note" color="primary" >}}Currently, there is no check validating the correctness of the team identifier.{{< /alert >}}
 
 Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API service owner is not set, only a Engage Admin will be able to view and update the ownership of the API service.
-
-Amplify Engage WebUI also allow to set the ownership and sharing via the environment Create or Edit wizard using the Access Rights step. When a non Engage Admin uses the wizard, the ownership is mandatory. Engage Admin can update the ownership and also allow the API Service sharing with various team.
