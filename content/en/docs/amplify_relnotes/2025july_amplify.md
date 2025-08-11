@@ -19,9 +19,7 @@ New enhancement and bug fixes for the July 28 update.
 * **New Axway CLI v4.0.4 is available**
 
    (PROVIDER EXPERIENCE, AXWAY CENTRAL CLI, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-   The latest Axway CLI **[v4.0.4](https://www.npmjs.com/package/@axway/axway/v/4.0.4)** is now available on NPM. This update includes:
-  
-    * A fix to the **Axway CLI returning Not Authorized error** that is listed under Marketplace bug fixes for July 28, 2025.
+   The latest Axway CLI **[v4.0.4](https://www.npmjs.com/package/@axway/axway/v/4.0.4)** is now available on NPM. This update includes a fix to the **Axway CLI returning Not Authorized error** that is listed under Marketplace bug fixes for July 28, 2025.
 
 ### Marketplace bug fixes for July 28, 2025
 
@@ -37,7 +35,7 @@ New enhancement for the July 25 update.
 
 * **New agent versions available**
 
-  (NEW AGENT RELEASES)</br>  
+  (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
 ## July 23, 2025
