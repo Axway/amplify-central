@@ -61,7 +61,7 @@ To retrieve the team id:
 
 1. Navigate to *Amplify > Organization > Teams*.
 2. Select a team. The Team details screen is displayed.
-3. Copy the Team ID.
+3. Copy the Team ID from the url.
 
 ![Team info](/Images/central/central_teams.png)
 
@@ -77,7 +77,7 @@ The table below describes the Amplify Engage roles and the resources they have a
 
 If you want to use the same environment (owned or not) with multiple teams, you must share the environment with the appropriate teams. Use an Access Control List (ACL) to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. However, they will not see other teams' work; members can only see the work done inside their team. There is no restriction on the number of teams included in the ACL.
 
-API service owners can be set to any team that is not the environment owner. It is recommended to share the environment with all teams that own one or more API services in the environment.
+API service owners can be set to any team that is not the environment owner.
 
 The ACL is associated or scoped to one environment and references the teamID that can access the environment. You must know the teamId to create the ACL (see "To retrieve the team id," above).
 
@@ -125,3 +125,5 @@ Save this configuration into a file (`acl.yaml`) after finding the teamID that c
 {{< alert title="Note" color="primary" >}}Currently, there is no check validating the correctness of the team identifier.{{< /alert >}}
 
 Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API service owner is not set, only a Engage Admin will be able to view and update the ownership of the API service.
+
+Amplify Engage WebUI also allow to set the ownership and sharing via the environment Create or Edit wizard using the Access Rights step. When a non Engage Admin uses the wizard, the ownership is mandatory. Engage Admin can update the ownership and also allow the API Service sharing with various team.
