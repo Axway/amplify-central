@@ -73,8 +73,6 @@ The table below describes the Amplify Engage roles and the resources they have a
 
 #### Environment sharing
 
-{{< alert title="Note" color="primary" >}}This feature is not yet available in the Amplify Engage WebUI.{{< /alert >}}
-
 If you want to use the same environment (owned or not) with multiple teams, you must share the environment with the appropriate teams. Use an Access Control List (ACL) to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. However, they will not see other teams' work; members can only see the work done inside their team. There is no restriction on the number of teams included in the ACL.
 
 API service owners can be set to any team that is not the environment owner.
