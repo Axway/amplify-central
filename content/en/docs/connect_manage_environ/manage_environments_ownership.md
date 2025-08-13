@@ -21,9 +21,15 @@ When creating an API service, you can assign an owner. However, the API service 
 
 #### How to assign an owner?
 
-{{< alert title="Note" color="primary" >}}This feature is not yet available in the Amplify Engage WebUI; you can see the owner of a service/environment, but you cannot change it.{{< /alert >}}
+##### Amplify Engage WebUI
 
-Currently, you can assign an owner by using the Amplify Central CLI. To learn how to create an environment using the CLI, see [Build an environment](/docs/integrate_with_central/cli_central/cli_environments/).
+An Engage Admin can set/update ownership and allow API service sharing in the Amplify Engage WebUI via the environment Create or Edit wizard using the Access Rights step.
+
+A non-Engage Admin using the wizard cannot modify the sharing. Ownership is mandatory to make these changes.
+
+##### Amplify Engage CLI or API
+
+The Amplify Central CLI can be used to assign an owner. To learn how to create an environment using the CLI, see [Build an environment](/docs/integrate_with_central/cli_central/cli_environments/).
 
 Sample of an environment that has an owning team:
 
@@ -61,7 +67,7 @@ To retrieve the team id:
 
 1. Navigate to *Amplify > Organization > Teams*.
 2. Select a team. The Team details screen is displayed.
-3. Copy the Team ID.
+3. Copy the Team ID from the URL.
 
 ![Team info](/Images/central/central_teams.png)
 
@@ -73,11 +79,9 @@ The table below describes the Amplify Engage roles and the resources they have a
 
 #### Environment sharing
 
-{{< alert title="Note" color="primary" >}}This feature is not yet available in the Amplify Engage WebUI.{{< /alert >}}
-
 If you want to use the same environment (owned or not) with multiple teams, you must share the environment with the appropriate teams. Use an Access Control List (ACL) to determine which team can access the environment. Once a team is part of the ACL, each member of that team will be able to see the environment and manipulate the team objects inside the environment. However, they will not see other teams' work; members can only see the work done inside their team. There is no restriction on the number of teams included in the ACL.
 
-API service owners can be set to any team that is not the environment owner. It is recommended to share the environment with all teams that own one or more API services in the environment.
+API service owners can be set to any team that is not the environment owner.
 
 The ACL is associated or scoped to one environment and references the teamID that can access the environment. You must know the teamId to create the ACL (see "To retrieve the team id," above).
 
@@ -120,8 +124,8 @@ In the following sample, `env1`, which was defined previously, is shared with tw
 }
 ```
 
-Save this configuration into a file (`acl.yaml`) after finding the teamID that corresponds to your configuration. Then use axway central CLI to import this ACL: `axway central apply -f acl.yaml`
+Save this configuration into a file (`acl.yaml`) after finding the teamID that corresponds to your configuration. Then use Axway Central CLI to import this ACL: `axway central apply -f acl.yaml`
 
 {{< alert title="Note" color="primary" >}}Currently, there is no check validating the correctness of the team identifier.{{< /alert >}}
 
-Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API service owner is not set, only a Engage Admin will be able to view and update the ownership of the API service.
+Once everything is correctly setup, developers from teamA or teamB can see the environment `env1` and add their respective services without seeing work done by other teams. They will only see the work done within their team. Be sure to set the owner of your service as describe above. Otherwise, developers will not see the API service inside the environment due to the ACL restriction; they only see what their team(s) own. If the API service owner is not set, only an Engage Admin will be able to view and update the ownership of the API service.
