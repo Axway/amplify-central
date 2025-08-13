@@ -18,8 +18,8 @@ New enhancement and bug fixes for the August 8 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01638870 | APIGOV-28902 | **Issue**: A portion of the API Specification was missing from the API Service details screen. <br/>**Resolution**: A fix was made to display the the entire API Specification. |
-|  | APIGOV-30938 | **Issue**: A caching issue caused the compliance run-time results to be displayed on the environment details screen. <br/>**Resolution**: A fix was made so the compliance run-time results would not be displayed un-necessarily. |
+| 01638870 | APIGOV-28902 | **Issue**: A portion of the API Specification was missing from the API Service details screen. <br/>**Resolution**: The entire API Specification now displays. |
+|  | APIGOV-30938 | **Issue**: A caching issue caused the compliance run-time results to be displayed on the environment details screen. <br/>**Resolution**: The compliance run-time results no longer display unnecessarily. |
 
 ### Agents updates for August 8, 2025
 
