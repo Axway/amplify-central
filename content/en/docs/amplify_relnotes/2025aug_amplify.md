@@ -10,6 +10,15 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## August 14, 2025
+
+New enhancement for the August 14 update.
+
+* **New Traceable API Security agent version available**
+
+  (NEW AGENT RELEASES)</br>  
+  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
 ## August 8, 2025
 
 New enhancement and bug fixes for the August 8 update.
