@@ -76,6 +76,12 @@ The agent must have access to:
 * The platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy
 * The Traceable Platform API
 
+## Install as a SaaS Agent
+
+The Traceable agent can be deployed completely within Amplify Engage. For installation, go to *Engage > Topology > Environments > Add New*. Follow the *Environment Creation* wizard and select "Traceable" as the **Environment Type**. The wizard will guide you through the installation process.
+
+## Install as an On-Premise Agent
+
 ### Identify yourself to Amplify platform with Axway CLI
 
 There are two ways to authenticate with Axway CLI:
