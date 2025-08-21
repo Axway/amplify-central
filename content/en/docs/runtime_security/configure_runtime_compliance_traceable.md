@@ -78,7 +78,7 @@ The agent must have access to:
 
 ## Install as a SaaS Agent
 
-The Traceable agent can be deployed completely within Amplify Engage. For installation, go to *Engage > Topology > Environments > Add New*. Follow the *Environment setup* wizard and select "Traceable" as the **Environment Type**. The wizard will guide you through the installation process.
+The Traceable agent can be deployed completely within Amplify Engage. For installation, go to *Engage > Topology > Environments > Add New*. Follow the *Environment Creation* wizard and select "Traceable" as the **Environment Type**. The wizard will guide you through the installation process.
 
 ## Install as an On-Premise Agent
 
