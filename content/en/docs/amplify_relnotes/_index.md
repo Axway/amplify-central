@@ -21,7 +21,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.7                   | DA=1.2.34 / TA=1.2.32 (SDK v1.1.126)    | DA=1.1.80 / TA=1.1.81            |
+| Axway API Management 7.7                   | DA=1.2.34 (SDK v1.1.126) / TA=1.2.32     | DA=1.1.80 / TA=1.1.81            |
 | AWS Gateway using SDK 2.0                  | DA=1.2.31 / TA=1.2.31     | DA=1.1.64 / TA-1.1.67            |
 | Azure latest release                       | DA=1.3.30 / TA=1.3.30    | DA=1.1.70 / TA=1.1.76            |
 | Istio 1.9.5                                | DA=1.1.27 / TA=2.1.26    | DA=1.0.36 / TA=2.0.82            |
@@ -48,15 +48,15 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
-| Graylog API Security                       | 1.1.23                   | 1.0.5            |
-| Traceable API Security                     | 2.0.5 (SDK 1.1.121)      | 1.0.0            |
+| Graylog API Security                       | 1.1.24                   | 1.0.5            |
+| Traceable API Security                     | 2.0.7 (SDK 1.1.124)      | 1.0.0            |
 
 ## [Amplify Engage August 20 2025](/docs/amplify_relnotes/2025aug_amplify/#august-20-2025)
 
 | Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
-| Axway API Management 7.7                   | DA=1.2.34 / TA=1.2.32 (SDK v1.1.126)    | DA=1.1.80 / TA=1.1.81            |
-| AWS Gateway using SDK 2.0                  | DA=1.2.31 / TA=1.2.31     | DA=1.1.64 / TA-1.1.67            |
+| Axway API Management 7.7                   | DA=1.2.33 / TA=1.2.32    | DA=1.1.80 / TA=1.1.81            |
+| AWS Gateway using SDK 2.0                  | DA=1.2.31 / TA=1.2.31    | DA=1.1.64 / TA-1.1.67            |
 | Azure latest release                       | DA=1.3.30 / TA=1.3.30    | DA=1.1.70 / TA=1.1.76            |
 | Istio 1.9.5                                | DA=1.1.27 / TA=2.1.26    | DA=1.0.36 / TA=2.0.82            |
 | Apigee Edge                                | 1.0.26                   | 0.1.38                           |
@@ -83,7 +83,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
 | Graylog API Security                       | 1.1.23                   | 1.0.5            |
-| Traceable API Security                     | 2.0.5 (SDK 1.1.121)      | 1.0.0            |
+| Traceable API Security                     | 2.0.7                    | 1.0.0            |
 
 ## [Amplify Engage August 8 2025](/docs/amplify_relnotes/2025aug_amplify/#august-8-2025)
 
