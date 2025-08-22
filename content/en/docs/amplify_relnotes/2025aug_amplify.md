@@ -16,10 +16,10 @@ New enhancements and bug fixes for the August 21 update.
 
 ### Agents updates for August 21, 2025
 
-* **New Traceable API Security (embedded) agent released**
+* **Embedded Traceable API Security (embedded) agent**
 
   (NEW AGENT RELEASES)</br>
-  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+  A new embedded Traceabile API Security agent is now available, which you can configure directly from the Amplify Engage user interface. To see the latest versions of all available agents, check out the [Main Release Notes page](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
 
 ### Agent bug fixes for August 21, 2025
 
@@ -50,16 +50,16 @@ New enhancement for the August 20 update.
 
 New enhancement and bug fixes for the August 8 update.
 
-### Marketplace bug fixes for August 8, 2025
-
-| Case ID | Internal ID | Description |
-|-------------|--------------|---------------------------------------------------|
-| 01638870 | APIGOV-28902 | **Issue**: A portion of the API Specification was missing from the API Service details screen. <br/>**Resolution**: The entire API Specification now displays. |
-|  | APIGOV-30938 | **Issue**: A caching issue caused the compliance run-time results to be displayed on the environment details screen. <br/>**Resolution**: The compliance run-time results no longer display unnecessarily. |
-
 ### Agents updates for August 8, 2025
 
 * **New agent versions available**
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Marketplace bug fixes for August 8, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01638870 | APIGOV-28902 | **Issue**: A portion of the API Specification was missing from the API Service details screen. <br/>**Resolution**: The entire API Specification now displays. |
+|  | APIGOV-30938 | **Issue**: A caching issue caused the compliance run-time results to be displayed on the environment details screen. <br/>**Resolution**: The compliance run-time results no longer display unnecessarily. |
