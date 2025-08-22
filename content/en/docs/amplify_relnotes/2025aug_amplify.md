@@ -10,11 +10,41 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
-## August 14, 2025
+## August 22, 2025
 
-New enhancement for the August 14 update.
+New enhancement for the August 22 update.
 
-* **New Traceable API Security agent version available**
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>  
+  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agent bug fixes for August 22, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01745662 | APIGOV-31035 | **Issue**: Suspension and reactivation of a APIM credentiae would cause the client secret to not be visible on the Marketplace. <br/>**Resolution**: A fix was made to the credential handling and credential client secret display on the Marketplace. |
+|  | APIGOV-30993 | **Issue**: The Software AG WebMethods agent would crash with a null pointer error. <br/>**Resolution**: A fix was made to handle a null pointer. |
+
+* **Axway Engage CLi v4.5.0 is available**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>  
+  The AXway CLI **v4.5.0** has been updated to support the installation of the embedded Traceable API Security agent.
+
+## August 21, 2025
+
+New enhancement for the August 21 update.
+
+* **New Traceable API Security (embedded) agent released**
+
+  (NEW AGENT RELEASES)</br>  
+  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+  
+## August 20, 2025
+
+New enhancement for the August 20 update.
+
+* **New Traceable API Security (on-premise) agent version available**
 
   (NEW AGENT RELEASES)</br>  
   Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
