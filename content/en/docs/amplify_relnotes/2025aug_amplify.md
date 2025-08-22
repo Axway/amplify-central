@@ -19,7 +19,7 @@ New enhancements and bug fixes for the August 21 update.
 * **Embedded Traceable API Security (embedded) agent**
 
   (NEW AGENT RELEASES)</br>
-  A new embedded Traceabile API Security agent is now available, which you can configure directly from the Amplify Engage user interface. See the latest versions of all available agents on the [Main Release Notes page](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
+  A new embedded Traceabile API Security agent is now available, which you can configure directly from the Amplify Engage user interface. See the latest versions of all available agents on the [Main Release Notes page](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
 
 ### Agent bug fixes for August 21, 2025
 
@@ -44,7 +44,7 @@ New enhancement for the August 20 update.
 * **New Traceable API Security (on-premise) agent version available**
 
   (NEW AGENT RELEASES)</br>
-  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
 ## August 8, 2025
 
@@ -55,7 +55,7 @@ New enhancement and bug fixes for the August 8 update.
 * **New agent versions available**
 
   (NEW AGENT RELEASES)</br>
-  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
 ### Marketplace bug fixes for August 8, 2025
 
