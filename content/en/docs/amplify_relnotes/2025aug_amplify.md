@@ -10,9 +10,52 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## August 21, 2025
+
+New enhancements and bug fixes for the August 21 update.
+
+### Agents updates for August 21, 2025
+
+* **Embedded Traceable API Security (embedded) agent**
+
+  (NEW AGENT RELEASES)</br>
+  A new embedded Traceabile API Security agent is now available, which you can configure directly from the Amplify Engage user interface. See the latest versions of all available agents on the [Main Release Notes page](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
+
+### Agent bug fixes for August 21, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01745662 | APIGOV-31035 | **Issue**: Suspension and reactivation of a APIM credential caused the client secret to not be visible on the Marketplace. <br/>**Resolution**: A fix was made to the credential handling and credential client secret display on the Marketplace. |
+|  | APIGOV-30993 | **Issue**: The Software AG WebMethods agent crashed with a null pointer error. <br/>**Resolution**: A fix was made to handle a null pointer. |
+
+### Axway CLI update for August 21, 2025
+
+* **New Axway Engage CLI v4.5.0 is available**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway CLI **[v4.5.0](https://www.npmjs.com/package/@axway/axway/v/4.5.5)** has been updated to support the installation of the embedded Traceable API Security agent.
+  
+## August 20, 2025
+
+New enhancement for the August 20 update.
+
+### Agents updates for August 20, 2025
+
+* **New Traceable API Security (on-premise) agent version available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
 ## August 8, 2025
 
 New enhancement and bug fixes for the August 8 update.
+
+### Agents updates for August 8, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
 ### Marketplace bug fixes for August 8, 2025
 
@@ -20,10 +63,3 @@ New enhancement and bug fixes for the August 8 update.
 |-------------|--------------|---------------------------------------------------|
 | 01638870 | APIGOV-28902 | **Issue**: A portion of the API Specification was missing from the API Service details screen. <br/>**Resolution**: The entire API Specification now displays. |
 |  | APIGOV-30938 | **Issue**: A caching issue caused the compliance run-time results to be displayed on the environment details screen. <br/>**Resolution**: The compliance run-time results no longer display unnecessarily. |
-
-### Agents updates for August 8, 2025
-
-* **New agent versions available**
-
-  (NEW AGENT RELEASES)</br>  
-  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
