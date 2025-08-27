@@ -5,7 +5,7 @@ weight: 120
 ---
 Connect Kong and Amplify so you can discover, provision access to, and track usages of Kong gateway routes.
 
-## Why do you want to connect Apigee Edge and Amplify?
+## Why do you want to connect Kong and Amplify?
 
 Connecting Kong to Amplify will provide you with a global centralized view of your APIs and their related traffic.
 
@@ -62,7 +62,7 @@ On startup the Kong traceability agent first validates that it is able to connec
     * Production: set the appropriate value
     * Governance: *Customer Managed*
     * Description: optional
-    * Profile Image/Icon: optiona
+    * Profile Image/Icon: optional
 * Access to Kong to retrieve details from the service and CLI Toolkit
 
 ## System requirements
@@ -149,7 +149,7 @@ Some possible ways to use the filter for gateway services (all these are done wi
 * "tag.Any() == \"spec_local_petstore.json\""  - This will find all the services that have a tag as "spec_local_petstore.json"
 * "tag.discover.Exists()" - This will find all tags that are equal to "discover"
 
-{{< alert title="Note" color="primary" >}}while both ways can achieve the same functionality, the first one is preferred because it does not restrict you on character usages for Kong tags (note the dot in the second example){{< /alert >}}
+{{< alert title="Note" color="primary" >}}While both ways can achieve the same functionality, the first one is preferred because it does not restrict you on character usages for Kong tags (note the dot in the second example).{{< /alert >}}
 
 Currently, functionalities such as tag.Any().Contains() are not implemented in the SDK and only fully equal values are taken into account.
 
