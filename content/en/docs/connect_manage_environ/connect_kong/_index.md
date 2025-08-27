@@ -206,32 +206,9 @@ The Traceability Agent utilizes Kong's HTTP log plugin to track transactions. In
 
 Kong is now set up to send transactions to the Traceability Agent.
 
-### Set up environment variables
-
-The following environment variables file must be created for executing both the Discovery and Traceability agents.
-
-```ini
-CENTRAL_ORGANIZATIONID=<Amplify Central Organization ID>
-CENTRAL_TEAM=<Amplify Central Team Name>
-CENTRAL_ENVIRONMENT=<Amplify Central Environment Name>   # created in Prepare AMPLIFY Central Environments step
-
-CENTRAL_AUTH_CLIENTID=<Amplify Central Service Account>  # created in Prepare AMPLIFY Central Environments step
-CENTRAL_AUTH_PRIVATEKEY=/keys/private_key.pem            # path to the key file created with openssl
-CENTRAL_AUTH_PUBLICKEY=/keys/public_key.pem              # path to the key file created with openssl
-
-MULESOFT_ANYPOINTEXCHANGEURL=https://mulesoftexhange.com # gathered in Prepare MuleSoft step
-MULESOFT_AUTH_USERNAME=username                          # gathered in Prepare MuleSoft step
-MULESOFT_AUTH_PASSWORD=password                          # gathered in Prepare MuleSoft step
-MULESOFT_ENVIRONMENT=Sandbox                             # gathered in Prepare MuleSoft step
-MULESOFT_ORGNAME=Unit                                    # gathered in Prepare MuleSoft step
-
-LOG_LEVEL=info
-LOG_OUTPUT=stdout
-```
-
 ## Install and run Discovery and Traceability agents
 
-The MuleSoft AnyPoint Discovery and Traceability agents are built and distributed as docker images. The following steps must be done for both agents.
+The Kong Discovery and Traceability agents are built and distributed as docker images. The following steps must be done for both agents.
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Find the current agent release in the [agent release note](/docs/amplify_relnotes).
