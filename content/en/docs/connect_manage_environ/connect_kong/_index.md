@@ -87,22 +87,19 @@ Use one of the following settings, for the Discovery Agent, to set the region th
 
 {{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5, 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#central_region-setting) for the variables that `CENTRAL_REGION` sets.{{< /alert >}}
 
-
-
-
 ## Connect to Kong
 
 The Discovery Agent will use the credentials provided. If Kong requires no authentication, credentials are optional.
 
 The Discovery agent expects that the Kong gateway utilizes the [ACL](https://docs.konghq.com/hub/kong-inc/acl/) plugin to control access to the various routes provided in the Kong gateway. On startup the agent checks that this plugin is in use prior to performing any discovery. The agent then uses this plugin while provisioning access to routes in Kong. See [Provisioning](#provisioning).
 
-###  Kong admin API secured by Kong Gateway
+### Kong Admin API secured by Kong Gateway
 
 See [Kong - Securing the Admin API](https://docs.konghq.com/gateway/latest/production/running-kong/secure-admin-api/).
 
 After following the procedures above, the Kong Admin API can be secured using any authentication method that Kong provides. In this section you will learn the authentication types that the Kong agents support. As well as how to retrieve the values needed for the Kong agents.
 
-Once the Kong admin API is secured, a gateway service for it must be added to Kong and then a route configured to access the gateway service. After adding those configurations, the following authentication may be added to the route. Then create a consumer, in Kong, for the agent and add credentials for that consumer. Note these credentials for later.
+Once the Kong Admin API is secured, a gateway service for it must be added to Kong and then a route configured to access the gateway service. After adding those configurations, the following authentication may be added to the route. Then create a consumer, in Kong, for the agent and add credentials for that consumer. Note these credentials for later.
 
 * Basic authentication
 * API Key authentication
@@ -205,7 +202,7 @@ The Traceability Agent utilizes Kong's HTTP log plugin to track transactions. In
     * queue_size - empty
     * retry_count - empty
     * timeout - `10000`
-5. Click **Install**.
+6. Click **Install**.
 
 Kong is now set up to send transactions to the Traceability Agent.
 

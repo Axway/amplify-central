@@ -12,8 +12,6 @@ To maintain a shareable collection of environment files, you can create a `da_en
 
 Some variables/properties have a default value so there is no need set them unless there is a change.
 
-If you are either struggling with a variable value or you want to benefit from the advanced agent features (SSL security / logging), see [Discovery Agent variables](#discovery-agent-variables) for all the variables the Discovery Agent relies on.
-
 ## Complete variable list for advance features
 
 You can extend the previous minimum variable list with the following variables. Some are common to all agents, and some are specific to an agent.
@@ -47,8 +45,8 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | **KONG_SPEC_URLPATHS**                 | The URL paths that the agent will query on the gateway service for API definitions                                                                                                                                                                 |
 | **KONG_SPEC_DEVPORTALENABLED**         | Set to true if the agent should look for spec files in the Kong Dev Portal (default: `false`)                                                                                                                                                      |
 | **KONG_SPEC_CREATEUNSTRUCTUREDAPI**    | Set to true to publish unstructured API if spec is not found  (default: `false`)                                                                                                                                                      |
-| **KONG_WORKSPACES**                    | Set to the comma separated list of workspaces so the agent discovers the resources from the configured workspaces. | 
+| **KONG_WORKSPACES**                    | Set to the comma separated list of workspaces so the agent discovers the resources from the configured workspaces. |
 |                                        |                                                                                                                                                                                                                                                    |
 | Traceability Agent Variables           |                                                                                                                                                                                                                                                    |
 | **KONG_LOGS_HTTP_PATH**                | The path endpoint that the Traceability agent will listen on (default: `/requestlogs`)                                                                                                                                                             |
-| **KONG_LOGS_HTTP_PORT**                | The port that the Traceability agent HTTP server will listen on (default: `9000`)
+| **KONG_LOGS_HTTP_PORT**                | The port that the Traceability agent HTTP server will listen on (default: `9000`) |
