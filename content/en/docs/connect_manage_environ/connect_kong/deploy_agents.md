@@ -76,7 +76,7 @@ Where:
 
 In the following docker commands...
 
-`/home/user/keys` refers to the directory where the key files were created during the last step in [Platform - service account](#platform---service-account).
+`/home/user/keys` refers to the directory where the key files were created while setting up the platform service account.
 `/home/user/discovery/data:/data` and `/home/user/traceability/data:/data` are volumes that are used to store cached information to be saved outside of the container in order to persist restarts.
 `/home/user/specs:/specs` is a volume mount for the spec files, the path in the `KONG_SPEC_LOCALPATH` variable is `/specs` and the path outside fo the container is `/home/user/specs`.
 `discovery-agents.env` and `traceability-agents.env` are files with the various environment variable settings that are available to each agent.
@@ -85,7 +85,7 @@ In the following docker commands...
 
 #### Traceability agent stateful set
 
-The helm deployment of the Traceability Agent uses a resource type of Stateful set along with a service to distribute the events to the agent pods. This is to allow scaling of the Traceability Agent in order to properly handle the load of events being sent through Kong. The agent is expected to be ran in the same kubernetes cluster as the Gateway and the [HTTP Log plugin](#http-log-plugin) should set its endpoint configuration to the [Service](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services) that is created (i.e., `http://kong-traceability-agent.kong-agents.svc.cluster.local:9000` where `kong-traceability-agent` is the service name and `kong-agents` is the namespace for the service).
+The helm deployment of the Traceability Agent uses a resource type of Stateful set along with a service to distribute the events to the agent pods. This is to allow scaling of the Traceability Agent in order to properly handle the load of events being sent through Kong. The agent is expected to be ran in the same kubernetes cluster as the Gateway and the HTTP Log plugin should set its endpoint configuration to the [Service](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services) that is created (i.e., `http://kong-traceability-agent.kong-agents.svc.cluster.local:9000` where `kong-traceability-agent` is the service name and `kong-agents` is the namespace for the service).
 
 #### Create secrets
 
@@ -116,7 +116,7 @@ stringData:
 
 #### Create volume, local specification files only
 
-A volume of with the local specification files is required, given that is the desired [specification discovery method](#specification-discovery-methods). This volume could be of any kubernetes resource type which can be mounted in the Kong agent container. See [Kubernetes Volumes](https://kubernetes.io/docs/concepts/storage/volumes/).
+A volume of with the local specification files is required, given that is the desired specification discovery method. This volume could be of any kubernetes resource type which can be mounted in the Kong agent container. See [Kubernetes Volumes](https://kubernetes.io/docs/concepts/storage/volumes/).
 
 Below are a couple of examples on adding specifications to a volume, of any type, to the agent pod for discovery purposes.
 
