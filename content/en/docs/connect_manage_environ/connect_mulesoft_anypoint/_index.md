@@ -1,7 +1,7 @@
 ---
 title: Connect MuleSoft AnyPoint
 linkTitle: Connect MuleSoft AnyPoint
-weight: 120
+weight: 210
 ---
 Connect MuleSoft AnyPoint and Amplify so you can govern and monitor the creation of the MuleSoft AnyPoint APIs in one central location.
 

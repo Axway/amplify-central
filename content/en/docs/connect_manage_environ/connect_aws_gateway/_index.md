@@ -1,7 +1,7 @@
 ---
 title: Connect AWS Gateway
 linkTitle: Connect AWS Gateway
-weight: 110
+weight: 130
 date: 2021-01-04
 ---
 Connect AWS API Gateway and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the AWS API Gateway hosted APIs in one central location.

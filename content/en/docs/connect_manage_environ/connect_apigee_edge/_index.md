@@ -1,7 +1,7 @@
 ---
 title: Connect Apigee Edge
 linkTitle: Connect Apigee Edge
-weight: 120
+weight: 110
 ---
 Connect Apigee Edge and Amplify so you can govern and monitor the creation of the Apigee Edge APIs in one central location.
 

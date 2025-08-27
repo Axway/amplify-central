@@ -1,7 +1,7 @@
 ---
 title: Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal
 linkTitle: Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal
-weight: 120
+weight: 250
 ---
 Connect WSO2 API Manager - Publisher Portal / Dev Portal / Admin Portal and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the WSO2 API Manager APIs in one central location.
 

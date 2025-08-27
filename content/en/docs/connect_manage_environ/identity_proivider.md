@@ -1,7 +1,7 @@
 ---
 title: Set up an Identity Provider for a SaaS hosted agent
 linkTitle: Set up an Identity Provider for a SaaS hosted agent
-weight: 20
+weight: 30
 date: 2024-08-29
 ---
 
