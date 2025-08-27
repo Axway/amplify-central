@@ -1,7 +1,7 @@
 ---
 title: Manage your services
 linkTitle: Manage your services
-weight: 140
+weight: 300
 date: 2022-02-28
 ---
 

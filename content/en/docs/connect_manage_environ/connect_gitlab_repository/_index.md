@@ -1,7 +1,7 @@
 ---
 title: Connect GitLab Repository
 linkTitle: Connect GitLab Repository
-weight: 110
+weight: 170
 ---
 Connect a GitLab Repository to Amplify so you can discover your API specifications within your repository.
 

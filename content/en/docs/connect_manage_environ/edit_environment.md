@@ -1,7 +1,7 @@
 ---
 title: Edit an environment
 linkTitle: Edit an environment
-weight: 9
+weight: 15
 date: 2024-03-29
 ---
 

@@ -2,7 +2,7 @@
 title: Manage your Marketplace provisioning
 linkTitle: Manage your Marketplace provisioning
 draft: false
-weight: 145 
+weight: 320 
 ---
 
 A subscription provides the consumer, or subscriber, with the required security and endpoint materials to correctly consume the API.

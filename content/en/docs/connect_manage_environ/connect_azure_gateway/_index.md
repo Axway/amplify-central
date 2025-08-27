@@ -1,7 +1,7 @@
 ---
 title: Connect Azure Gateway
 linkTitle: Connect Azure Gateway
-weight: 120
+weight: 140
 date: 2021-01-07
 ---
 Connect Azure API Management Services to Amplify so you can:

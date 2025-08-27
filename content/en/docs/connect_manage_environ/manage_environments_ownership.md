@@ -1,7 +1,7 @@
 ---
 title: Environment access rights
 linkTitle: Environment access rights
-weight: 8
+weight: 10
 ---
 Limit access to environments and API services by assigning an owning team.
 

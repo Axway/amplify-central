@@ -1,7 +1,7 @@
 ---
 title: View environments
 linkTitle: View environments
-weight: 10
+weight: 20
 date: 2020-12-14
 ---
 Display your environments in a searchable and sortable list. The list contains:

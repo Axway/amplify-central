@@ -1,7 +1,7 @@
 ---
 title: Connect Backstage
 linkTitle: Connect Backstage
-weight: 120
+weight: 150
 ---
 Connect Backstage and Amplify so you can govern and monitor the creation of the Backstage APIs in one central location.
 
