@@ -1,7 +1,7 @@
 ---
 title: Connect SwaggerHub
 linkTitle: Connect SwaggerHub
-weight: 250
+weight: 240
 date: 2024-04-23
 ---
 

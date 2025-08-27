@@ -1,7 +1,7 @@
 ---
 title: Connect IBM API Connect
 linkTitle: Connect IBM API Connect
-weight: 190
+weight: 180
 ---
 Connect IBM API Connect and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the IBM API Connect APIs in one central location.
 

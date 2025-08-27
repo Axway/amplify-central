@@ -1,7 +1,7 @@
 ---
 title: Connect SoftwareAG WebMethods
 linkTitle: Connect SoftwareAG WebMethods
-weight: 240
+weight: 230
 ---
 Connect SoftwareAG WebMethods and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the SoftwareAG WebMethods APIs in one central location.
 

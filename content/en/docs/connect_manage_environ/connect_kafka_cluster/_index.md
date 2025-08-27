@@ -1,7 +1,7 @@
 ---
 title: Connect Kafka cluster
 linkTitle: Connect Kafka cluster
-weight: 120
+weight: 190
 date: 2024-02-14
 ---
 Connect your Kafka cluster, hosted with Confluent Cloud/Confluent Platform, to Amplify so you can govern and monitor the creation / deployment / subscriptions of the topics in the cluster as an AsyncAPI specification in a centralized location.

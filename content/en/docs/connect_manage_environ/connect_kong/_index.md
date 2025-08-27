@@ -1,7 +1,7 @@
 ---
 title: Connect Kong
 linkTitle: Connect Kong
-weight: 210
+weight: 200
 ---
 Connect Kong and Amplify so you can discover, provision access to, and track usages of Kong gateway routes.
 
