@@ -10,6 +10,17 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## August 29, 2025
+
+New enhancements and bug fixes for the August 29 update.
+
+### Marketplace bug fixes for August 29, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01738307 | APIGOV-30870 | **Issue**: Categories menu and category filter visible even when no Category available for the Marketplace. <br/>**Resolution**: When there is no category associated to a Marketplace, the **Categories** and Category filter are no more displayed. |
+| 01735887 | APIGOV-30801 | **Issue**: Application dropdown "No option" in case of teams with x-private tag **Resolution**: The register application screen has been fixed to find the correct information based on the user part of x-private team instead of the teamID |
+
 ## August 21, 2025
 
 New enhancements and bug fixes for the August 21 update.
