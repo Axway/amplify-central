@@ -19,7 +19,7 @@ New enhancement and bug fixes for the August 29 update.
 * **Custom Marketplace landing page**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  Marketplace Managers can now define which page in the Marketplace serves as the landing page for users when the default Home page is disabled. They can choose from Browse Products, Categories or a Document in the Document Library, like *Get Started*. This enhancement enables the alignment between the Marketplace entry point and the branding and engagement strategy.
+  Marketplace Managers can now define which page in the Marketplace serves as the landing page for users when the default Home page is disabled. They can choose from Browse Products, Categories or a Document in the Document Library, like *Get Started*. This enhancement allows you to align the Marketplace entry point with your branding and engagement strategy.
 
 ### Marketplace bug fixes for August 29, 2025
 
