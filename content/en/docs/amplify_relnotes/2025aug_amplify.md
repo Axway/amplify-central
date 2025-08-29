@@ -14,11 +14,12 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancements and bug fixes for the August 29 update.
 
-### MArketplace enhancement for August 29, 2025
+### Marketplace updates for August 29, 2025
 
-* **Embedded Traceable API Security (embedded) agent**
+* **Custom Marketplace landing page**
+
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  The Marketplace landing page can be configured to display either the Home page or the Browse Products or the Browse Category page
+  Marketplace Managers can now define which page in the Marketplace serves as the landing page for users when the default Home page is disabled. You can choose from Browse Products, Categories or a Document in the Document Library, like *Get Started*. This enhancement allows you to align the Marketplace entry point with your branding and engagement strategy.
 
 ### Marketplace bug fixes for August 29, 2025
 
