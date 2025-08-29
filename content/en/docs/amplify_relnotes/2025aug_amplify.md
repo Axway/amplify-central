@@ -26,7 +26,7 @@ New enhancement and bug fixes for the August 29 update.
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | 01738307 | APIGOV-30870 | **Issue**: Categories menu and Category filter visible even when no category is available for the Marketplace. <br/>**Resolution**: When there is no category associated to a Marketplace, the Categories menu and Category filter are not displayed. |
-| 01735887 | APIGOV-30801 | **Issue**: Application dropdown displays "No option" for teams with x-private tag **Resolution**: The *Register Application* screen has been fixed. The information found is now based on the user part of x-private team instead of the teamID. |
+| 01735887 | APIGOV-30801 | **Issue**: Application dropdown displays "No option" for teams with x-private tag. <br/>**Resolution**: The *Register Application* screen has been fixed. The information found is now based on the user part of x-private team instead of the teamID. |
 
 ## August 21, 2025
 
