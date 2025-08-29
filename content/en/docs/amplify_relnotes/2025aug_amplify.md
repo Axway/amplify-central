@@ -14,6 +14,12 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancements and bug fixes for the August 29 update.
 
+### MArketplace enhancement for August 29, 2025
+
+* **Embedded Traceable API Security (embedded) agent**
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  The Marketplace landing page can be configured to display either the Home page or the Browse Products or the Browse Category page
+
 ### Marketplace bug fixes for August 29, 2025
 
 | Case ID | Internal ID | Description |
