@@ -10,6 +10,24 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## August 29, 2025
+
+New enhancement and bug fixes for the August 29 update.
+
+### Marketplace updates for August 29, 2025
+
+* **Custom Marketplace landing page**
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  Marketplace Managers can now define which page in the Marketplace serves as the landing page for users when the default Home page is disabled. They can choose from Browse Products, Categories or a Document in the Document Library, like *Get Started*. This enhancement allows you to align the Marketplace entry point with your branding and engagement strategy.
+
+### Marketplace bug fixes for August 29, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01738307 | APIGOV-30870 | **Issue**: Categories menu and Category filter visible even when no category is available for the Marketplace. <br/>**Resolution**: When there is no category associated to a Marketplace, the Categories menu and Category filter are not displayed. |
+| 01735887 | APIGOV-30801 | **Issue**: Application dropdown displays "No option" for teams with x-private tag. <br/>**Resolution**: The *Register Application* screen has been fixed. The information found is now based on the user part of x-private team instead of the teamID. |
+
 ## August 21, 2025
 
 New enhancements and bug fixes for the August 21 update.
