@@ -219,7 +219,7 @@ Learn how to create an environment to represent your API services and other disc
 
 2. Embedded Compliance Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
-    * **Execution Frequency** -  How often the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks. 
+    * **Execution Frequency** -  How often the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks.
     * **Compliance Frequency** - How often the agent will calculate a compliance risk score and send to Engage.
 
 3. Link Environments - A mapping of Traceable environment to Engage environment that the agent will use.
