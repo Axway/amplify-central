@@ -117,7 +117,7 @@ Learn how to create an environment to represent your API services and other disc
         * **Embedded** - Axway to host the agent.
         * **Remotely Hosted** - customer to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, SwaggerHub, and Traceable are supported as Embedded agents.
-        * Azure API Gateway settings:
+        * Azure API Gateway Settings:
             * **Tenant ID** - unique identifier associated with an Azure AD tenant.
             * **Subscription ID** - unique identifier associated with an Azure subscription.
             * **Resource Group Name** - name given to a logical container that holds related Azure resources.
@@ -214,19 +214,19 @@ Learn how to create an environment to represent your API services and other disc
         * **Embedded** - Axway to host the agent.
     * **Agent Configuration** - currently, only AWS API Gateway, Apigee X API Gateway, Azure API Gateway, GitHub, SwaggerHub and Traceable are supported as as Embedded agents.
         * Traceable settings:
-            * **Traceable Region** - The Traceable Region the agent will connect to. (US, US-1, EU, APAC, APAC-2, Canada, UAE).
-            * **Traceable Token** - The Traceable Platform Token the agent will use when connecting to Traceable.
+            * **Traceable Region** - the Traceable Region the agent will connect to. (US, US-1, EU, APAC, APAC-2, Canada, UAE).
+            * **Traceable Token** - the Traceable Platform Token the agent will use when connecting to Traceable.
 
 2. Embedded Compliance Agent Settings (these configuration steps are displayed only if there is Embedded agent support for the environment type):
 
-    * **Execution Frequency** -  How often the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks.
-    * **Compliance Frequency** - How often the agent will calculate a compliance risk score and send to Engage.
+    * **Execution Frequency** - how often the agent polls Traceable for Spec changes, metric collecting, compliance and conformance checks.
+    * **Compliance Frequency** - how often the agent will calculate a compliance risk score and send to Engage.
 
-3. Link Environments - A mapping of Traceable environment to Engage environment that the agent will use.
+3. Link Environments - a mapping of Traceable environment to Engage environment that the agent will use.
 
 ### Compliance Profile
 
-(Optional) Enable API Compliance Design Rules or Security Rule for environment.   For example, API Specification discovered on GitHub prior to deployment can be checked for Compliance to your organization's Center of Excellence.  Once enabled, you can select a default design or security ruleset to be used for all the API services associated with the environment. Custom rulesets can be uploaded from *Compliance Profiles* within the *Topology* section of the WebUI.
+(Optional) Enable API Compliance Design Rules or Security Rule for environment. For example, API Specification discovered on GitHub prior to deployment can be checked for Compliance to your organization's Center of Excellence.  Once enabled, you can select a default design or security ruleset to be used for all the API services associated with the environment. Custom rulesets can be uploaded from *Compliance Profiles* within the *Topology* section of the WebUI.
 
 ### Credential Preferences
 
