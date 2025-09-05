@@ -4,8 +4,6 @@ linkTitle: Consumer Journey
 weight: 20
 ---
 
-# Consumer Journey in Amplify Engage
-
 The **Consumer Journey** in Amplify Engage describes how developers and partners discover, subscribe to, and consume products published in the Marketplace. This journey ensures that consumers have a consistent experience when exploring available APIs and assets, requesting access, managing credentials, and tracking their usage.
 
 The consumer journey follows these key stages:
