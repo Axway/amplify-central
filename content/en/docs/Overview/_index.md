@@ -76,22 +76,27 @@ Amplify Engage consist of the following layers:
   - And customize tags, attributes and access rights
 
 - **Service Registry**  
- All services that are discovered by agents or manually registered are listed in the Service Registry. It can consist of **Design APIs**(API discovered from source code repositories), **Runtime Managed** APIs (discovered by agents or manually registered​) and **Runtime Unmanaged** APIs (shadow or zombie APIs detected through our supported runtime security agents).​
+  All services discovered by agents or manually registered are stored in the Service Registry. The registry can include:
 
-- **Assets Catalog**
+  - Design APIs – APIs identified from source code repositories.
+  - Runtime Managed APIs – APIs discovered by agents or registered manually.
+  - Runtime Unmanaged APIs – Shadow or zombie APIs detected through supported runtime security agents.​
+
+- **Assets Catalog**  
   A curated list of resources grouped into logical, capabilities. Any API intended for consumption must first pass through the asset stage, ensuring that only APIs meeting internal security standards and compliance requirements are published for use.
   
 - **Product Foundry**  
   In Product Foundry, you can create and manage products with subscription plans, then publish them to the Marketplace for consumer access. Products can be built by grouping multiple assets based on domain or target audience, and you can enrich them with documentation that highlights their value and provides engagement instructions.
   
-- **Marketplace**
+- **Marketplace**  
   Products have value only if consumers adopt them. So, you need an efficient way to take your products on the market and engage with your consumers. To achieve that, you need a Marketplace that will let consumers explore your products catalog and subscribe to the products they need. Amplify Engage allows you to set up multiple branded Marketplace instances, each tailored to specific audiences or use cases. For example, you might create one Marketplace tailored for internal teams and another for external partners, each with its own branding, navigation, and catalog of APIs and assets. This flexibility allows you to deliver personalized experiences while maintaining centralized governance.
 
 - **Insights**  
   Amplify Engage offers a centralized view of API usage and consumption patterns across the enterprise. This enables producers to track adoption, performance, and compliance of their APIs, while giving consumers insight into available assets and their utilization.
 
 ## Supported Data Planes
-The list of supported environments is growing. For a full list of supported environments, navigate to our [platform](https:/platform.axway.com/) or software downloads at <https://repository.axway.com>.
+
+The list of supported environments is growing. For a full list of supported environments, navigate to  [Connect and manage and environment]([https:/platform.axway.com/](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/index.html)) or software downloads at <https://repository.axway.com>.
 
 ## See Also
 
