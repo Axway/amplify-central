@@ -27,6 +27,8 @@ Amplify provides **Universal API Management** across your enterprise. With a sin
 * Onboard developers and partners, who can search, learn about, subscribe to, and consume your APIs.
 * Gain insights into how APIs are being used and whether they comply with your corporate standards.
 
+![Universal API Management ](/static/Images/Overview/universal_api_management.png) 
+
 ## Key benefits
 
 - **Autonomy with governance**  
@@ -36,7 +38,7 @@ Amplify provides **Universal API Management** across your enterprise. With a sin
   Automatically find both managed and unmanaged APIs. Unmanaged APIs represent risk (security breaches, duplication, shadow IT). Discovery shows your full inventory and highlights compliance.
 
 - **Reuse across the enterprise**  
-  Developers can quickly find existing services across multiple API types (REST, gRPC, GraphQL, SOAP, etc.) in the Amplify Catalog, reducing duplication and speeding delivery.
+  Providers can quickly find existing services across multiple API types (REST, gRPC, GraphQL, SOAP, etc.) in the Service Registry, reducing duplication and speeding delivery.
 
 - **Boosted consumption**  
   APIs deliver value only when used. Amplify provides a consistent consumer experience—search, discover, try, subscribe, and consume APIs in one place.
@@ -51,7 +53,7 @@ Amplify provides **Universal API Management** across your enterprise. With a sin
 
 ## Functional Capabilities
 
-![Amplify functionality](/Images/Overview/amplify-platform-overview.png)
+![Universal API Management ](/static/Images/Overview/amplify_platform_overview.png) 
 
 Amplify Engage consist of the following layers:
 
