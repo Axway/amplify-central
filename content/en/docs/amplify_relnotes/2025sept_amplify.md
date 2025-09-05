@@ -18,4 +18,4 @@ New enhancement and bug fixes for the September 4 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01747565 | APIGOV-31054 | **Issue**: Add API Service button was missing for a user with a team role of Catalog Manager or Developer in an environment shared with edit access. <br/>**Resolution**: A fix was made to display the Add API Service button when the user was not the environment owner but granted shared edit access to the environment. |
+| 01747565 | APIGOV-31054 | **Issue**: The **Add API Service** button does not display for users with the team role of either Catalog Manager or Developer in environments with shared edit access. <br/>**Resolution**: The **Add API Service** button now displays for user that are not environments owner but are granted shared edit access to the environments. |
