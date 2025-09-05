@@ -1,6 +1,6 @@
 ---
-title: Provider journey
-linkTitle: Provider journey
+title: Provider Journey
+linkTitle: Provider Journey
 weight: 10
 ---
 
@@ -48,12 +48,12 @@ Amplify Engage automates the provisioning and de-provisioning of consumer creden
 
 # See Also
 
-- [Define an environment](/docs/connect_manage_environ)
-- [Add an API service](/docs/connect_manage_environ/manage_services/add_api_service)
+- [Define an Environment](/docs/connect_manage_environ)
+- [Add an API Service](/docs/connect_manage_environ/manage_services/add_api_service)
 - [Integrate with Amplify](/docs/integrate_with_central)
-- [Connect your environment with a Gateway](/docs/connect_manage_environ#synchronize-your-environment-with-a-gateway)
-- [Service registry](/docs/manage_service_registry)
+- [Connect an Environment via Agents](/docs/connect_manage_environ#synchronize-your-environment-with-a-gateway)
+- [Service Registry](/docs/manage_service_registry)
 - [Asset Catalog](/docs/manage_asset_catalog)
-- [Product foundry](/docs/manage_product_foundry)
-- [Publish to marketplace](/docs/manage_marketplace/publish_to_marketplace)
-- [Manage your Marketplace provisioning](/docs/connect_manage_environ/marketplace_provisioning)
+- [Product Foundry](/docs/manage_product_foundry)
+- [Publish to Marketplace](/docs/manage_marketplace/publish_to_marketplace)
+- [Credential provisioning](/docs/connect_manage_environ/marketplace_provisioning)
