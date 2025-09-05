@@ -4,8 +4,6 @@ linkTitle: Provider Journey
 weight: 10
 ---
 
-# Provider Journey in Amplify Engage
-
 The **Provider Journey** in Amplify Engage is the end-to-end process that API providers follow to bring APIs into the platform, curate them into compliant assets, assemble them into products, and publish them for consumer access. It enables enterprises to maintain control and governance while maximizing API adoption, reuse, and business value.
 
 The provider journey follows these key stages:
@@ -59,7 +57,7 @@ Amplify Engage automates the provisioning and de-provisioning of consumer creden
 * [Integrate with Amplify](/docs/integrate_with_central)
 * [Connect an Environment via Agents](/docs/connect_manage_environ#synchronize-your-environment-with-a-gateway)
 * [Service Registry](/docs/manage_service_registry)
-- [Asset Catalog](/docs/manage_asset_catalog)
-- [Product Foundry](/docs/manage_product_foundry)
-- [Publish to Marketplace](/docs/manage_marketplace/publish_to_marketplace)
-- [Credential provisioning](/docs/connect_manage_environ/marketplace_provisioning)
+* [Asset Catalog](/docs/manage_asset_catalog)
+* [Product Foundry](/docs/manage_product_foundry)
+* [Publish to Marketplace](/docs/manage_marketplace/publish_to_marketplace)
+* [Credential provisioning](/docs/connect_manage_environ/marketplace_provisioning)
