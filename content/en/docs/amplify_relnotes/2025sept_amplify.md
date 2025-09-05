@@ -19,10 +19,3 @@ New enhancement and bug fixes for the September 4 update.
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
 | 01747565 | APIGOV-31054 | **Issue**: Add API Service button was missing for a user with a team role of Catalog Manager or Developer in an environment shared with edit access. <br/>**Resolution**: A fix was made to display the Add API Service button when the user was not the environment owner but granted shared edit access to the environment. |
-
-### Agents updates for September 4, 2025
-
-* **Feature**
-
-  (NEW AGENT RELEASES)</br>
-  A new embedded Traceabile API Security agent is now available, which you can configure directly from the Amplify Engage user interface. See the latest versions of all available agents at [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
