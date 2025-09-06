@@ -27,7 +27,7 @@ Amplify provides **Universal API Management** across your enterprise. With a sin
 * Onboard developers and partners, who can search, learn about, subscribe to, and consume your APIs.
 * Gain insights into how APIs are being used and whether they comply with your corporate standards.
 
-![Universal API Management ](/static/Images/Overview/universal_api_management.png)
+![Universal API Management ](/Images/Overview/universal_api_management.png)
 
 ## Key benefits
 
@@ -53,7 +53,7 @@ Amplify provides **Universal API Management** across your enterprise. With a sin
 
 ## Functional Capabilities
 
-![Universal API Management ](/static/Images/Overview/amplify_platform_overview.png)
+![Universal API Management ](/Images/Overview/amplify_platform_overview.png)
 
 Amplify Engage consist of the following layers:
 
