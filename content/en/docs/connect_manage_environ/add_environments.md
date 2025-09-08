@@ -4,7 +4,7 @@ linkTitle: Create an environment
 weight: 5
 date: 2023-04-27
 ---
-Within topology, environments are used to represent a group of objects discovered from a gateway, a repository, or anything manually added to the environment. These grouped objects (API services, webhooks, secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all objects are scoped within.
+Creating an environment is a prerequisite for connecting an agent. Agents use the environment definition to establish communication with the correct data plane, enabling automated API discovery, traffic collection, and lifecycle management. Without an environment, an agent cannot be registered or synchronized with Amplify Engage.
 
 Learn how to create an environment to represent your API services and other discovered objects.
 
