@@ -71,7 +71,9 @@ From the [Environments](https://apicentral.axway.com/topology/environments) view
 * Assign stages (such as production, test, or development) to distinguish life cycle stages
 * Customize tags, attributes, and access rights to align with organizational standards and governance policies
 
-Creating and configuring an Environment is therefore a foundational step before connecting agents, as it defines how each data plane is represented and governed within the Amplify Platform. See [Add Environments](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/add_environments/index.html).
+Creating and configuring an Environment is therefore a foundational step before connecting agents, as it defines how each data plane is represented and governed within the Amplify Platform.
+
+For Details, see [Add Environments](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/add_environments/index.html).
 
 ### Stages
 
