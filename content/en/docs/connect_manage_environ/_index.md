@@ -17,7 +17,7 @@ Connecting your environments to Amplify Engage is essential for unified manageme
 
 ### Using Agents
 
-The recommended way to connect and manage environments is by installing **Discovery Agents** and **Traceability Agents** on your gateways. These agents connect your existing API data planes back to the Amplify Platform's management plane, while providing native API discovery, subscription, and observability for each different vendor platform in your environment. It also automate the discovery of new APIs, and collection of logs or events from the target data planes.​  
+The recommended way to connect and manage environments is by installing **Discovery Agents** and **Traceability Agents** on your gateways. These agents connect your existing API data planes back to the Amplify Platform's management plane, while providing native API discovery, subscription, and observability for each different vendor platform in your environment.
 
 When administrators make changes to the underlying data planes, or when consumers subscribe to the services, the changes are synchronized between Amplify platform and the data planes.​  
 From a user perspective, all data planes in Amplify platform look the same. This makes it very easy for administrators to work with different environments.
@@ -36,10 +36,13 @@ Discovery Agents are lightweight software components that run on your data plane
 
 **Key Features**
 
-* Automated Discovery: Detects new services and versions as they are deployed.
-* Configurable Filtering: Administrators can set rules to control which APIs are discovered and sent to Amplify.
-* Provisioning Support: Handles subscription requests and quota provisioning.
-* Credential Management: Integrates with identity providers and manages credentials for API consumers.
+* **Automated Discovery**: Detects new services and versions as they are deployed.
+* **Configurable Filtering**: Administrators can set rules to control which APIs are discovered and sent to Amplify.
+* **Provisioning Support**: Handles subscription requests and quota provisioning.
+* **Credential Management**: Integrates with identity providers and manages credentials for API consumers.
+
+> [!IMPORTANT]
+> You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version (running version) to version (latest version).
 
 ## Traceability Agent
 
@@ -47,11 +50,59 @@ The Traceability Agent is a lightweight software application that runs on your d
 
 **Key Features**
 
-* **Non-obtrusive metrics collection**: Gathers metrics and traffic data from distributed data planes without disruption​
-* **API Transaction Details**: Includes request/response headers, performance data, and other metadata​
-* **Data redaction and sanitization**: Apply flexible selection, redaction, and sanitization rules to maintain data privacy​
-* **Transaction Sampling Controls**: Captures all transactions, including errors, for a period of 5 minutes, with a blocked off period of 30
-minutes​
+* **Non-obtrusive metrics collection**: Gathers metrics and traffic data from distributed data planes without disruption​.
+* **API Transaction Details**: Includes request/response headers, performance data, and other metadata​.
+* **Data redaction and sanitization**: Apply flexible selection, redaction, and sanitization rules to maintain data privacy​.
+* **Transaction Sampling Controls**: Captures all transactions, including errors, for a period of 5 minutes, with a blocked off period of 30 minutes.​
+
+> [!IMPORTANT]
+> You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version (running version) to version (latest version).
+
+## Environment definition
+
+In Amplify Engage, an **environment** represents the connection point to a specific data plane, such as an API Gateway or runtime infrastructure where your APIs are hosted and managed. It defines the context in which discovery, subscription, and observability operations take place, ensuring that Amplify can interact consistently with the underlying gateway or service.
+
+Creating an environment is a prerequisite for connecting an agent. Agents use the environment definition to establish communication with the correct data plane, enabling automated API discovery, traffic collection, and lifecycle management. Without an environment, an agent cannot be registered or synchronized with Amplify Engage.
+
+From the [Environments](https://apicentral.axway.com/topology/environments) view that you, you can see the status of all connected dataplanes and make adjustments as needed. Each Environment can be edited to:
+
+* Enable linting rules to validate APIs against compliance requirements
+* Automate credential management by setting certificate or key expiration policies handled directly by the agent
+* Assign stages (such as production, test, or development) to distinguish life cycle stages
+* Customize tags, attributes, and access rights to align with organizational standards and governance policies
+
+Creating and configuring an Environment is therefore a foundational step before connecting agents, as it defines how each data plane is represented and governed within the Amplify Platform. See [Add Environments](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/add_environments/index.html).
+
+### Stages
+
+Stages in Amplify Engage represent the different phases of the API lifecycle and are a key mechanism for organizing the API landscape. Common examples include development, testing, and production.
+
+Within an Environment, stages act as logical groupings for API services, regardless of how they are introduced—whether discovered from a gateway, pulled from a repository, or manually created. When APIs are discovered automatically, they are also automatically assigned to a stage.
+
+Stages provide additional governance by letting you control their visibility across different Marketplace instances and teams, ensuring that only the right audiences see APIs at the appropriate lifecycle phase.
+
+## Service Registry 
+
+The Service Registry is the centralized catalog of all services within Amplify Engage, forming what can be thought of as your company’s API Universe. It consolidates services reported by agents as well as those added manually, giving you a single, authoritative view of your API landscape.
+
+The Service Registry is the primary place to discover APIs across the entire enterprise, regardless of the gateway, environment, or source they originate from.
+
+Access to the Service Registry follows strict enterprise security rules:
+
+* The full catalog is visible only to Engage Administrator.
+* In practice, each team or business unit typically sees only a subset of services—specifically those that are associated with their scope of ownership or responsibility.
+
+## API services
+
+An **API service** represents a physical deployment of a resource in an environment. Examples of API services include REST APIs, ASYCN APIs, and so on. Later, these API services can be combined and packaged together to create curate assets that you can productizen and make available for consumption in the Marketplace.
+
+### API Service Versions
+
+Each API Service in Amplify Engage is defined by a **specification**, which can follow multiple formats such as OAS2, OAS3, WSDL, or Protobuf. When the underlying specification changes, a new version is created. Versioning is essential for managing the different phases of an API service’s lifecycle, allowing providers to evolve APIs while maintaining stability for existing consumers.
+
+### API Service Endpoints
+
+An endpoint is a URL that represents the deployment of an API service. There can be one or many endpoints to access a deployed API service version. An endpoint includes a name and description to make it easier for others to consume later. They also contain the host and port information used to access the API service and have a hard dependency on the API service version it is associated with.
 
 ## Supported Gateways and Features
 
@@ -65,50 +116,12 @@ Each gateway supports different features, such as:
 * Quota enforcement
 * Traceability and transaction metrics
   
-For a detailed feature matrix, refer to the [Supported Gateways]
-
-* [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/)
-* [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/)
-* [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/)
-* [Discovery and Traceability Agents for Azure API Management](/docs/connect_manage_environ/connect_azure_gateway/)
-* [Discovery and Traceability Agents for IBM API Connect](/docs/connect_manage_environ/connect_ibm_api_connect/)
-* [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/)
-* [Discovery and Traceability Agents for MuleSoft Gateway](https://github.com/Axway/agents-mulesoft)
-* [Discovery and Traceability Agents for Software AG webMethods](https:///docs/connect_software_ag_webmethods/)
-* [Discovery and Traceability Agents for Kong Gateway](https://github.com/Axway/agents-kong)
-* [Discovery Agent for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/)
-* [Discovery Agent for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
-* [Discovery Agent for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
-* [Discovery Agent for SwaggerHub](/docs/connect_manage_environ/connect_swaggerhub/)
-* [Discovery Agent for Backstage](/docs/connect_manage_environ/connect_backstage/)
-* [Discovery Agent for SAP Integration Suite - API Management / API Portal](/docs/connect_manage_environ/connect_sap_api_portal/)
-
-To manually synchronize your environment, you can use the  Note that changes in your deployment will not be automatically synchronized with Amplify.
-
-## Asset definitions
-
-This section describes the assets that are represented in your environment.
-
-### API services
-
-An API service represents a physical deployment of a resource in an environment. Examples of API services include API, MFT, Protobuf, documentation, and so on. You can manually add API services to your environment or they can be discovered and auto-added by Axway agents. Later, these API services can be combined and packaged together to create catalog items for your consumers to access.
-
-#### Versions
-
-API services have a specification based on type (OAS2, OAS3, WSDL, Protobuf, etc). Whenever this specification changes, a version must be created. This helps account for different stages in the lifecycle of the API service. Each version has a direct dependency on its associated API services and can be individually configured for differing consumer access needs.
-
-#### Endpoints
-
-An endpoint is a URL that represents the deployment of an API service. There can be one or many endpoints to access a deployed API service version. An endpoint includes a name and description to make it easier for others to consume later. They also contain the host and port information used to access the API service and have a hard dependency on the API service version it is associated with.
-
-### Webhooks
-
-Webhook assets are used for enabling subscription flows when a catalog user wants to subscribe to your API service. Webhooks are scoped to the environment level, which makes them reusable with other assets within the environment.
-
-### Secrets
-
-Secrets are a special kind of asset used with webhooks for securing subscription flows.
+For a detailed feature matrix, refer to the [Supported Gateways].
 
 ## Related topics
 
 See the following topics for related information.
+
+* [Manage Environments](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/edit_environment/index.html)
+* [Monitor Agent status](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/agents_management/index.html)
+* [Connect Axway API Manager](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/index.html)
