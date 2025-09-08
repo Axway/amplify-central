@@ -51,11 +51,9 @@ Amplify provides **Universal API Management** across your enterprise. With a sin
 
 ***
 
-## Functional Capabilities
+## Amplify Components, Capabilities and Concepts
 
 ![Universal API Management ](/Images/Overview/amplify_platform_overview.png)
-
-Amplify Engage consist of the following layers:
 
 * **Management Plane**  
   The management plane allows Platform Administrators and API providers to administer users, teams, agents, and other related entities in support of managing your distributed environments and organizations.
@@ -70,7 +68,7 @@ Amplify Engage consist of the following layers:
   The data planes are the environments that are processing runtime transactions; these are your enforcement points that are providing security and access control for your traffic. Besides runtime environments, they could be code repositories that hold your API definitions. The **Agents** connect them to the Amplify Managegement Plane while allowing each environment to remain independent. The integration of data planes is also available through **API or CLI**. Besides a series of prebuilt agents, Axway offers an **Amplify Agent SDK** for creating agents for platforms not yet supported.
 
 * **Environments**  
-  You can view all your connected data planes as Environments and see their status. Editing is enabled for each environment so that you can:
+  An environment represents the connection point to a specific data plane, such as an API Gateway or runtime infrastructure where your APIs are hosted and managed. It defines the context in which discovery, subscription, and observability operations take place, ensuring that Amplify can interact consistently with the underlying gateway or service.
 
     * Enable linting rules to validate the API from a compliance perspective
     * Set the credential expiration date to be automatically handled by the agent
@@ -83,16 +81,28 @@ Amplify Engage consist of the following layers:
     * Design APIs – APIs identified from source code repositories.
     * Runtime Managed APIs – APIs discovered by agents or registered manually.
     * Runtime Unmanaged APIs – Shadow or zombie APIs detected through supported runtime security agents.​
+ 
+* **API Services**  
+An API service represents a physical deployment of a resource in an environment. Examples of API services include REST APIs, ASYCN APIs, and so on. Later, these API services can be combined and packaged together to create curate assets that you can productizen and make available for consumption in the Marketplace.
+
+* **API Service Versions**  
+Each API Service in Amplify Engage is defined by a specification, which can follow multiple formats such as OAS2, OAS3, WSDL, or Protobuf. When the underlying specification changes, a new version is created. Versioning is essential for managing the different phases of an API service’s lifecycle, allowing providers to evolve APIs while maintaining stability for existing consumers.
+
+* **API Service Endpoints**  
+An endpoint is a URL that represents the deployment of an API service. There can be one or many endpoints to access a deployed API service version. An endpoint includes a name and description to make it easier for others to consume later. They also contain the host and port information used to access the API service and have a hard dependency on the API service version it is associated with.
 
 * **Assets Catalog**  
-  A curated list of resources grouped into logical, capabilities. Any API intended for consumption must first pass through the asset stage, ensuring that only APIs meeting internal security standards and compliance requirements are published for use.
+  A curated list of resources grouped into logical, consumable capabilities. Any API intended for consumption must first pass through the asset stage, ensuring that only APIs meeting internal security standards and compliance requirements are published for use.
+
+* **Assets**
+  Resources aggregated into logical, consumable capabilities. Those assets then get built into a product to address a business capability for a a particular domain, or geography, a line of business, or an external partner.
   
 * **Product Foundry**  
   In Product Foundry, you can create and manage products with subscription plans, then publish them to the Marketplace for consumer access. Products can be built by grouping multiple assets based on domain or target audience, and you can enrich them with documentation that highlights their value and provides engagement instructions.
   
 * **Marketplace**  
   Products have value only if consumers adopt them. So, you need an efficient way to take your products on the market and engage with your consumers. To achieve that, you need a Marketplace that will let consumers explore your products catalog and subscribe to the products they need. Amplify Engage allows you to set up multiple branded Marketplace instances, each tailored to specific audiences or use cases. For example, you might create one Marketplace tailored for internal teams and another for external partners, each with its own branding, navigation, and catalog of APIs and assets. This flexibility allows you to deliver personalized experiences while maintaining centralized governance.
-
+  
 * **Insights**  
   Amplify Engage offers a centralized view of API usage and consumption patterns across the enterprise. This enables producers to track adoption, performance, and compliance of their APIs, while giving consumers insight into available assets and their utilization.
 
