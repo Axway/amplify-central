@@ -4,6 +4,7 @@ linkTitle: Connect and manage an environment
 weight: 350
 date: 2025-02-05
 ---
+
 Connecting your environments to Amplify Engage is essential for unified management, visibility, and control over your digital assets, enabling you to streamline operations, enhance security, and accelerate innovation.
 
 **Why connecting your environments matters**
