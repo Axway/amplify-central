@@ -78,7 +78,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
     * API usage statistics and metrics
     * Platform Usage reporting
     * Transaction metrics reporting
-    * 🚫 No Transaction event sampling 
+    * 🚫 No Transaction event sampling
 
 ### GCP Apigee X
 
@@ -91,7 +91,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
     * API usage statistics and metrics
     * Platform Usage reporting
     * Transaction metrics reporting
-    * 🚫No Transaction event sampling 
+    * 🚫No Transaction event sampling
   
 ### IBM API Connect
 
@@ -105,7 +105,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
     * Transaction counts and metrics
     * Platform Usage reporting
     * Transaction metrics reporting
-    * 🚫 Does not support Transaction event sampling 
+    * 🚫 Does not support Transaction event sampling
 
 ### Istio
 
@@ -114,8 +114,8 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Credentials: IDP
 * Quota enforcement through Envoy Filters
 * 🚫 No application or subscription model
-* 🚫 No traceability.
-* Platform usage only.
+* 🚫 No traceability
+* Platform usage only
 
 ### Mulesoft
 
@@ -124,10 +124,10 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Applications Support
 * Application Registration results in the front end proxy being associated to the application
 * Credentials: Basic Auth and OAuth
-* Credential Management: Suspend / Enable   
+* Credential Management: Suspend / Enable
 * 🚫 No quota enforcement
-* 🚫 No traceability.
-* Platform usage only.
+* 🚫 No traceability
+* Platform usage only
 
 ### Software AG webMethods
 
@@ -139,7 +139,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
     * Transaction counts and metrics
     * Platform Usage reporting
     * Transaction metrics reporting
-    * Transaction event sampling 
+    * Transaction event sampling
 
 ### Kong Gateway
 
@@ -150,11 +150,11 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Credentials: API Key / Basic Auth / OAuth
 * Credential Management: Suspend / Enable
 * Quotas enforcement: rate limiting Plugin added to Consumer
-* Traceability: 
+* Traceability:
     * Traceability via HTTP log plugin
     * Platform Usage reporting
     * Transaction metrics reporting
-    * Transaction event sampling 
+    * Transaction event sampling
 
 ### Kafka
 
