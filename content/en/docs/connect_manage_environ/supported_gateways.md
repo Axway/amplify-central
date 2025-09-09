@@ -191,7 +191,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
     * Platform Usage reporting
     * Transaction Metrics reporting
     * 🚫 Transaction Event Sampling
- 
+
 ## Other platforms and repositories
 
 ### GitHub
