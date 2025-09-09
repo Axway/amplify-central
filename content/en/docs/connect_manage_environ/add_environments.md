@@ -4,6 +4,7 @@ linkTitle: Create an environment
 weight: 5
 date: 2023-04-27
 ---
+
 Creating an environment is a prerequisite for connecting an agent. Agents use the environment definition to establish communication with the correct data plane, enabling automated API discovery, traffic collection, and lifecycle management. Without an environment, an agent cannot be registered or synchronized with Amplify Engage.
 
 Learn how to create an environment to represent your API services and other discovered objects.
@@ -17,7 +18,7 @@ Before you begin, you must have:
 
 ## Create an environment
 
-### 1. Open the Environments page.
+### Open the Environments page.
 
 1. Navigate to *Topology > Environments*.
 2. Click **+ Add New Environment**.
@@ -27,7 +28,7 @@ Before you begin, you must have:
 > [!NOTE]
 > If you’ve already reached your environment quota, the button will be disabled. Check your entitlement to confirm limits.
 
-### 2. Fill the environment profile
+### Fill the environment profile
 
 Provide basic details about the environment:
 
@@ -42,7 +43,7 @@ Provide basic details about the environment:
 
 Click **Next** to continue.
 
-### 3. (Optional) Credential Preferences
+### (Optional) Credential Preferences
 
 You can control how credentials behave in this environment:
 
@@ -55,7 +56,7 @@ You can control how credentials behave in this environment:
 
 Click **Next**.
 
-### 4. (Optional) Stage Assignment
+### (Optional) Stage Assignment
 
 Stages in Amplify Engage represent the different phases of the API lifecycle and are a key mechanism for organizing the API landscape. Common examples include development, testing, and production.
 
@@ -66,7 +67,7 @@ For details, see [Add and manage stages](/docs/connect_manage_environ/stage).
 
 Click **Next**.
 
-### 5.(Optional) Compliance Profiles
+### (Optional) Compliance Profiles
 
 Enable compliance or security rules to apply to all APIs discovered in this environment.
 
@@ -74,7 +75,7 @@ Enable compliance or security rules to apply to all APIs discovered in this envi
   
 Amplify Engage includes an embedded Spectral linting server that provides real-time compliance checks along with visualizations of the results.
 
-### 6. Access Rights
+### Access Rights
 
 Share the environment with other teams if needed:
 
@@ -83,8 +84,7 @@ Share the environment with other teams if needed:
 
 By default, only Engage Admin and members of owning team have access. For details, see [Environment Access Rights](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/manage_environments_ownership/index.html).
 
-
-### 7. Finalize
+### Finalize
 
 1. Add any Tags and Attributes to help organize and filter environments.
 2. Click **Save**.
