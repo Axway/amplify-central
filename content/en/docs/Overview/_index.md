@@ -8,7 +8,7 @@ hide_readingtime: true
 
 As the number of APIs in your enterprise grows, so does the complexity of managing them. Research shows that most organizations already operate with **two or more API management platforms** (data planes), and this number continues to increase with the adoption of **multi-cloud and hybrid strategies**.
 
-Each of these platforms comes with its own tools, portals, and gateways—leading to fragmentation and challenges such as:
+Each of these platforms comes with its own tools, portals, and gateways, leading to fragmentation and challenges such as:
 
 * No single place to discover all APIs.
 * Duplicated or shadow APIs across teams.
@@ -85,10 +85,10 @@ Each API service in Amplify Engage is defined by a specification, which can foll
 An endpoint is a URL that represents the deployment of an API service. There can be omultiple endpoints to access a deployed API service version. An endpoint includes a name and description to make it easier for others to consume later. It also contains the host and port information used to access the API service and have a hard dependency on the API service version it is associated with.
 
 * **Assets Catalog**</br>  
-  The catalog is curated list of resources grouped into logical, consumable capabilities. Any API intended for consumption must first pass through the asset stage, ensuring that only APIs meeting internal security standards and compliance requirements are published for use.
+The catalog is curated list of resources grouped into logical, consumable capabilities. Any API intended for consumption must first pass through the asset stage, ensuring that only APIs meeting internal security standards and compliance requirements are published for use.
 
 * **Assets**</br>
-  Assets are resources that are aggregated into logical, consumable capabilities. The assets then get built into a product to address a business capability for a particular domain, geography, line of business, or an external partner.
+Assets are resources that are aggregated into logical, consumable capabilities. The assets then get built into a product to address a business capability for a particular domain, geography, line of business, or an external partner.
   
 * **Product Foundry**</br>
 In Product Foundry, you can create and manage products with subscription plans, then publish them to the Marketplace for consumer access. Products can be built by grouping multiple assets based on domain or target audience, and you can enrich them with documentation that highlights their value and provides engagement instructions.
