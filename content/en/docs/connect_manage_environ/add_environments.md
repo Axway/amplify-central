@@ -104,16 +104,14 @@ To edit an environment:
 2. From the list, select the environment you want to update.
 3. Click **Edit Environment**.
 
-   ![Edit Environment](/Images/central/Environment_Details_Edit.png)  
-
-   *This opens the **Edit Environment wizard.***
+   ![Edit Environment](/Images/central/Environment_Details_Edit.png)
 
 4. Make your changes. You can edit:  
    * **Environment Profile** – Name, production flag, governance type, description, image, and configuration (AWS, Apigee X, GitHub, etc.).
-   - **Compliance Profile** – Default design or security rules.
-   - **Credential Preferences** – Expiration and visibility rules for newly created credentials.
-   - **Stage Assignment** – Default or multiple stages (e.g., Dev, Test, Prod).
-   - **Access Rights** – Change team ownership or change which teams can view the environment.
-   - **Tags & Attributes** – Labels and metadata for filtering/search.
+   * **Compliance Profile** – Default design or security rules.
+   * **Credential Preferences** – Expiration and visibility rules for newly created credentials.
+   * **Stage Assignment** – Default or multiple stages (e.g., Dev, Test, Prod).
+   * **Access Rights** – Change team ownership or change which teams can view the environment.
+   * **Tags & Attributes** – Labels and metadata for filtering/search.
 
 5. Click **Save & Exit** to apply changes.
