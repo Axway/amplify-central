@@ -7,7 +7,7 @@ date: 2025-02-05
 
 Connecting your environments to Amplify Engage is essential for unified management, visibility, and control over your digital assets, enabling you to streamline operations, enhance security, and accelerate innovation.
 
-**Why connecting your environments matters**
+## Why connecting your environments matters
 
 * **Automated API Discovery**: Instantly detect new APIs and services, reducing manual effort and ensuring your catalog is always up to date.
 * **Centralized Management**: Manage all discovered services from a single pane of glass, regardless of where they are hosted.
@@ -33,6 +33,7 @@ Agents can be deployed on-premises or as a service in cloud-native environments.
 You can also manually synchronize your environment using the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that manual changes in your deployment will not be automatically synchronized with Amplify, unless you automate this process.
 
 ## Discovery Agent
+
 Discovery Agents are lightweight software components that run on your data plane hosts or are hosted in Amplify. They automatically discover APIs and services, sending metadata to the Amplify platform for inclusion in the Service Registry.
 
 **Key Features**
@@ -84,7 +85,7 @@ Within an Environment, stages act as logical groupings for API services, regardl
 
 Stages provide additional governance by letting you control their visibility across different Marketplace instances and teams, ensuring that only the right audiences see APIs at the appropriate lifecycle phase.
 
-## Service Registry 
+## Service Registry
 
 The Service Registry is the centralized catalog of all services within Amplify Engage, forming what can be thought of as your company’s API Universe. It consolidates services reported by agents as well as those added manually, giving you a single, authoritative view of your API landscape.
 
