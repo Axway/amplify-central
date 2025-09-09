@@ -81,7 +81,7 @@ Amplify provides **Universal API Management** across your enterprise. With a sin
     * Design APIs – APIs identified from source code repositories.
     * Runtime Managed APIs – APIs discovered by agents or registered manually.
     * Runtime Unmanaged APIs – Shadow or zombie APIs detected through supported runtime security agents.​
- 
+
 * **API Services**  
 An API service represents a physical deployment of a resource in an environment. Examples of API services include REST APIs, ASYCN APIs, and so on. Later, these API services can be combined and packaged together to create curate assets that you can productizen and make available for consumption in the Marketplace.
 
