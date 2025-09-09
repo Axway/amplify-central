@@ -36,7 +36,7 @@ You can also manually synchronize your environment using the [Axway Central CLI]
 
 Discovery Agents are lightweight software components that run on your data plane hosts or are hosted in Amplify. They automatically discover APIs and services, sending metadata to the Amplify platform for inclusion in the Service Registry.
 
-### Key Features
+### Discovery Agent Key Features
 
 * **Automated Discovery**: Detects new services and versions as they are deployed.
 * **Configurable Filtering**: Administrators can set rules to control which APIs are discovered and sent to Amplify.
@@ -50,7 +50,7 @@ Discovery Agents are lightweight software components that run on your data plane
 
 The Traceability Agent is a lightweight software application that runs on your data plane host or can be hosted in Amplify. Its primary function is to report usage metrics, events, and log data from a given data plane to the Amplify platform.
 
-### Key Features
+### Traceability Agent Key Features
 
 * **Non-obtrusive metrics collection**: Gathers metrics and traffic data from distributed data planes without disruption​.
 * **API Transaction Details**: Includes request/response headers, performance data, and other metadata​.
