@@ -65,7 +65,7 @@ In Amplify Engage, an **environment** represents the connection point to a speci
 
 Creating an environment is a prerequisite for connecting an agent. Agents use the environment definition to establish communication with the correct data plane, enabling automated API discovery, traffic collection, and lifecycle management. Without an environment, an agent cannot be registered or synchronized with Amplify Engage.
 
-From the [Environments](https://apicentral.axway.com/topology/environments) view that you, you can see the status of all connected dataplanes and make adjustments as needed. Each Environment can be edited to:
+From the [Environments](https://apicentral.axway.com/topology/environments) view you can see the status of all connected dataplanes and make adjustments as needed. Each Environment can be edited to:
 
 * Enable linting rules to validate APIs against compliance requirements
 * Automate credential management by setting certificate or key expiration policies handled directly by the agent
@@ -119,7 +119,7 @@ Each gateway supports different features, such as:
 * Quota enforcement
 * Traceability and transaction metrics
   
-For a detailed feature matrix, refer to the [Supported Gateways].
+For a detailed list of supported gateways and features, refer to the [Supported Gateways and Platforms](supported_gateways.md).
 
 ## Related topics
 
