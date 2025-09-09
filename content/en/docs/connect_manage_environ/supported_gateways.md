@@ -19,16 +19,17 @@ Amplify Engage supports a variety of **gateways and external systems**, either n
 * Credentials: API Key, OAuth, Basic Auth, IDP.
 * Credential management:
   
-  *  API Key: Suspend / Enable
-  *  OAuth: Suspend / Enable / Rotate
-  *  IDP - Suspend / Enable
-  *  Basic Auth - Suspend / Enable
+    * API Key: Suspend / Enable
+    * OAuth: Suspend / Enable / Rotate
+    * IDP - Suspend / Enable
+    * Basic Auth - Suspend / Enable
 
 * Full traceability and metrics:
-  * Transactions with application context are associated with a managed application in Engage
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * Transaction event sampling
+  
+    * Transactions with application context are associated with a managed application in Engage
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * Transaction event sampling
 
 ### AWS API Gateway
 
@@ -41,14 +42,15 @@ Supports both **on-premise** and **embedded (SaaS)** agents. Both on-premise and
 * Credentials: API Key
 * Credential Management:
   
-  *  API Key: Suspend / Enable
+    * API Key: Suspend / Enable
     
 * Quotas tied to usage plans
 * Traceability:
-  * Collects transaction data via CloudWatch.
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * Transaction event sampling
+  
+    * Collects transaction data via CloudWatch.
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * Transaction event sampling
 
 ### Azure API Management
 
@@ -61,15 +63,15 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Credentials: API Key and EntraID (for on-premise agents only)
 * Credential Management:
   
-  *  API Key: Suspend / Enable
+    * API Key: Suspend / Enable
 
 * Quotas tied to products.
 * Traceability:
 
-  * Collects transactions with product subscriptions associated to the credential
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * Transaction event sampling
+    * Collects transactions with product subscriptions associated to the credential
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * Transaction event sampling
 
 ### Apigee Edge
 
@@ -131,7 +133,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 
 ### Mulesoft
 
-* **On premise** Discovery Agent only
+* **On premise** Discovery and Traceability Agents
 * Discover RAML and REST APIs.
 * Applications Support
 * Application Registration results in the front end proxy being associated to the application
