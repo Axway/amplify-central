@@ -18,14 +18,11 @@ Amplify Engage supports a variety of **gateways and external systems**, either n
 * Quota enforcement per frontend proxy set in the client application
 * Credentials: API Key, OAuth, Basic Auth, IDP.
 * Credential management:
-  
     * API Key: Suspend / Enable
     * OAuth: Suspend / Enable / Rotate
     * IDP - Suspend / Enable
     * Basic Auth - Suspend / Enable
-
 * Full traceability and metrics:
-  
     * Transactions with application context are associated with a managed application in Engage
     * Platform Usage reporting
     * Transaction metrics reporting
@@ -41,12 +38,9 @@ Supports both **on-premise** and **embedded (SaaS)** agents. Both on-premise and
 * Application Registration requests result in linking the usage plan with the API stage in AWS
 * Credentials: API Key
 * Credential Management:
-  
     * API Key: Suspend / Enable
-    
 * Quotas tied to usage plans
 * Traceability:
-  
     * Collects transaction data via CloudWatch.
     * Platform Usage reporting
     * Transaction metrics reporting
@@ -57,17 +51,14 @@ Supports both **on-premise** and **embedded (SaaS)** agents. Both on-premise and
 Supports both **on-premise** and **embedded(SaaS)** agents.
 
 * Discovery and Traceability Agents
-* Discovery of APIs.
+* Discovery of APIs
 * Marketplace application provisioned as a Product
 * Application registration requests result in adding the API to the Product
 * Credentials: API Key and EntraID (for on-premise agents only)
 * Credential Management:
-  
     * API Key: Suspend / Enable
-
 * Quotas tied to products.
 * Traceability:
-
     * Collects transactions with product subscriptions associated to the credential
     * Platform Usage reporting
     * Transaction metrics reporting
@@ -76,35 +67,31 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 ### Apigee Edge
 
 * **On premise** Discovery and Traceability Agents
-* Discovery of API products and proxies
+* Discovery of API products and Proxies
 * Marketplace application mapped to an Apigee application
 * Application Registration results in the product being attached to the application
 * Credentials: API Key and OAuth
 * Credential Management:
-  
-  *  API Key: Suspend / Enable
-
+    * API Key: Suspend / Enable
 * Quotas attached to products (the underlying proxy must enforce the Quota)
 * Traceability:
-  
-  * API usage statistics and metrics
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * 🚫 No Transaction event sampling 
+    * API usage statistics and metrics
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * 🚫 No Transaction event sampling 
 
 ### GCP Apigee X
 
 * **On premise** Discovery and Traceability Agents
-* Discover API proxies
+* Discover API Proxies
 * Application Registration: Links API with the Product
-* API Key / OAuth credentials.
-* Quota policy tied to products.
+* API Key / OAuth credentials
+* Quota policy tied to products
 * Traceability:
-  
-  * API usage statistics and metrics
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * 🚫No Transaction event sampling 
+    * API usage statistics and metrics
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * 🚫No Transaction event sampling 
   
 ### IBM API Connect
 
@@ -112,14 +99,13 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Discover Catalog APIs
 * Marketplace application mapped to Catalog application
 * Application registration results in product access in Catalog application
-* Credentials: API Key / OAuth.
+* Credentials: API Key / OAuth
 * Quotas enforcement by adding usage plan to product
 * Traceability:
-  
-  * Transaction counts and metrics
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * 🚫 Does not support Transaction event sampling 
+    * Transaction counts and metrics
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * 🚫 Does not support Transaction event sampling 
 
 ### Istio
 
@@ -127,20 +113,18 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Discover virtual services
 * Credentials: IDP
 * Quota enforcement through Envoy Filters
-* 🚫 No application or subscription model.
+* 🚫 No application or subscription model
 * 🚫 No traceability.
 * Platform usage only.
 
 ### Mulesoft
 
 * **On premise** Discovery and Traceability Agents
-* Discover RAML and REST APIs.
+* Discover RAML and REST APIs
 * Applications Support
 * Application Registration results in the front end proxy being associated to the application
 * Credentials: Basic Auth and OAuth
-* Credential Management:
-  
-  * Suspend / Enable   
+* Credential Management: Suspend / Enable   
 * 🚫 No quota enforcement
 * 🚫 No traceability.
 * Platform usage only.
@@ -152,11 +136,10 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * 🚫 No application/subscription support
 * 🚫 No credential support
 * Traceability:
-  
-  * Transaction counts and metrics
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * Transaction event sampling 
+    * Transaction counts and metrics
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * Transaction event sampling 
 
 ### Kong Gateway
 
@@ -167,12 +150,11 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Credentials: API Key / Basic Auth / OAuth
 * Credential Management: Suspend / Enable
 * Quotas enforcement: rate limiting Plugin added to Consumer
-* Traceability:
-  
-  * Traceability via HTTP log plugin
-  * Platform Usage reporting
-  * Transaction metrics reporting
-  * Transaction event sampling 
+* Traceability: 
+    * Traceability via HTTP log plugin
+    * Platform Usage reporting
+    * Transaction metrics reporting
+    * Transaction event sampling 
 
 ### Kafka
 
@@ -188,7 +170,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 ### WSO2 API Manager
 
 * **On premise** Discovery and Traceability Agents
-* Discover REST, SOAP, GraphQL APIs.
+* Discover REST, SOAP, GraphQL APIs
 * Applications and application registration support
 * Credentials: API Key / OAuth
 * Credential Management: Suspend / Enable
@@ -200,16 +182,15 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 ### SAP Integration Suite
 
 * **On premise** Discovery and Traceability Agents
-* Discover REST, SOAP, GraphQL APIs.
+* Discover REST, SOAP, GraphQL APIs
 * Application registration support
-* API Key / OAuth credentials.
+* API Key / OAuth credentials
 * Credential Management: Suspend / Enable / Renew
 * Quota enforcement
 * Traceability:
-
-  * Platform Usage reporting
-  * Transaction Metrics reporting
-  * 🚫 Transaction Event Sampling
+    * Platform Usage reporting
+    * Transaction Metrics reporting
+    * 🚫 Transaction Event Sampling
  
 ## Other platforms and repositories
 
@@ -221,16 +202,14 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 ### SwaggerHub
 
 * **Embedded (SaaS)** Discovery Agent
-* Discover API specifications.
-
-🚫 No subscription/credential model.
+* Discover API specifications
 
 ### GitLab
 
 * **On-premise** Discovery Agent
-* Discover APIs in public and private repos.
+* Discover APIs in public and private repos
 
 ### Backstage
 
 * **On-premise** Discovery Agent
-* Discover all API types in catalog.
+* Discover all API types in catalog
