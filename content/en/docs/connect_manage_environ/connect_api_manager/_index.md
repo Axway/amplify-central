@@ -9,8 +9,8 @@ date: 2020-15-15
 
 Amplify uses two lightweight agents to connect with API Manager:
 
-1. [Discovery Agent](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/install_discovery_agent/index.html)  
-    The Discovery Agent is used to discover published APIs and push them to Engage as API Services. If the default owner of the discovered APIs is not set in the agent configuration, the ownership is assigned to the team whose name matches the Organization name that the APIs belong to. 
+1. [Discovery Agent](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/install_discovery_agent/index.html)    
+   The Discovery Agent is used to discover published APIs and push them to Engage as API Services. If the default owner of the discovered APIs is not set in the agent configuration, the ownership is assigned to the team whose name matches the Organization name that the APIs belong to. 
 
 2. [Traceability Agent](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/install_traceability_agent/index.html)  
    The Traceability Agent sends log information about APIs in API Gateway and publishes the events to Amplify. The Traceability Agent requires a connected and running Discovery Agent.
