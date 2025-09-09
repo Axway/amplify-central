@@ -18,13 +18,13 @@ Before you begin, you must have:
 
 ## Create an environment
 
-### Open the Environments page.
+### Open the Environments page
 
 1. Navigate to *Topology > Environments*.
 2. Click **+ Add New Environment**.
 
     ![Environment List Page](/static/Images/central/EnvironmentListPage.png)
-   
+ 
 > [!NOTE]
 > If you’ve already reached your environment quota, the button will be disabled. Check your entitlement to confirm limits.
 
