@@ -101,7 +101,7 @@ Amplify Engage offers a centralized view of API usage and consumption patterns a
 
 ## Supported data planes
 
-The list of supported environments is growing. For a full list of supported environments, navigate to [Connect and manage environment](/docs/connect_manage_environ/index.html) or software downloads at <https://repository.axway.com>.
+The list of supported environments is growing. For a full list of supported environments, navigate to [Connect and manage your environment](/docs/connect_manage_environ/) or software downloads at <https://repository.axway.com>.
 
 ## Related topics
 
