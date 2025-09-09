@@ -15,7 +15,7 @@ Each of these platforms comes with its own tools, portals, and gateways, leading
 * Inconsistent governance and security enforcement.
 * Limited visibility into usage, compliance, and value.
   
-Amplify Engage solves this by providing a federated approach to API management, helping you manage diverse APIs across multiple platforms and environments. Instead of requiring you to replace existing API solutions, Amplify Engage seamlessly integrates with your internal system and connects them into a single unified management plane for governance, discovery, and consumption. Amplify Engage provides enterprise-wide **Universal API Management** so you can: 
+Amplify Engage solves this by providing a federated approach to API management, helping you manage diverse APIs across multiple platforms and environments. Instead of requiring you to replace existing API solutions, Amplify Engage seamlessly integrates with your internal system and connects them into a single unified management plane for governance, discovery, and consumption. Amplify Engage provides enterprise-wide **Universal API Management** so you can:
 
 * Manage and govern APIs and assets across all environments, clouds, and API gateways (Axway and non-Axway).
 * Discover existing APIs, curate them, and make them available to consumers.
