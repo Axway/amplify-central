@@ -42,8 +42,8 @@ This visibility helps developers monitor integration performance and optimize th
 
 See the following topics for related information.
 
-* [Consumer Experience](/docs/manage_marketplace/consumer_experience)
-* [Subscribe to a Product](/docs/manage_marketplace/consumer_experience/subscription_management/#create-a-new-subscription)
-* [Register an Application](/docs/manage_marketplace/consumer_experience/credential_management/#request-access-to-an-api)
-* [Request Credentials](/docs/manage_marketplace/consumer_experience/credential_management/#create-credentials)
-* [Consumer Insights](/docs/get_actionable_insights/consumer_insights)
+* [Consumer experience](/docs/manage_marketplace/consumer_experience)
+* [Subscribe to a product](/docs/manage_marketplace/consumer_experience/subscription_management/#create-a-new-subscription)
+* [Register an application](/docs/manage_marketplace/consumer_experience/credential_management/#request-access-to-an-api)
+* [Request credentials](/docs/manage_marketplace/consumer_experience/credential_management/#create-credentials)
+* [Consumer insights](/docs/get_actionable_insights/consumer_insights)
