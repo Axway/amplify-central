@@ -5,33 +5,54 @@ weight: 35
 date: 2023-10-18
 ---
 
-Within topology, stages are used to regroup API services discovered from a gateway, a repository, or anything manually added to the environment.
+An API stage is a named environment that represents a specific point in the API’s lifecycle (such as development, testing, pre-production, or production). A stage provides a distinct deployment of the API, often with its own URL, configuration, and policies, allowing providers to control access, apply environment-specific settings, and promote APIs safely through their lifecycle.
 
-Learn how to manage the stage to represent your API services lifecycle.
-
-## What is a Stage?
-
-A stage is a concept that provides an abstraction view of the lifecycle state of an API (for example, beta, dev, pre-prod, prod, etc.).
-The stage identifies where the API is available and if any restriction apply. For instance, in a dev stage, the API security might be less important than in production stage.
-Once the API satisfies all the criteria of the current stage, the API can be promoted to the next stage, helping you to build your API lifecycle and to ensure a correct implementation at each stage.
+In Amplify Engage, stages help you represent your API landscape. They act as labels (e.g., Dev, Test, Beta, Prod) that indicates where an API runs, who can see it in the Marketplace, and how it progresses through your delivery pipelines.
 
 {{< alert title="Note" color="primary" >}}Stage management is optional.{{< /alert >}}
 
-## Stage and environment
+## How stages fit in Engage
 
-An environment might be linked to a specific gateway managing one or more stages of the API lifecycle.
+| Concept                  | What it Means                                                           | Relationship to Stages                                                             |
+| ------------------------ | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Environment**          | The connection point to a specific data plane where your APIs are hosted and managedv(e.g AWS Prod US).         | Can contain one or more stages (i.e Connected AWS gateway).|
+| **API Service Endpoint** | A discovered or defined API instance (e.g., `https://api.example.com`). | Could be assigned to a stage, either automatically (via default stage) or manually.|
+| **Marketplace**          | Where consumers browse and subscribe to API products.                           | Only endpoints in *visible stages* appear in the Marketplace.                      |
 
-Multiple stages can be assigned to an environment and one of them can become the default stage for the environment. Once you define a default stage, this stage will be automatically assigned to the API service endpoint discovered in the environment. Without a default stage, you must manually assign the stage to the API service endpoint
+### Stage and environment
 
-By default, the stage is assigned to no environment, meaning that nobody can use/view it.
+* Multiple stages can be assinged to one environment.
+* Stages are optional. If you choose not to use them consumers will not see any lifecycle context (such as Dev, Test, or Prod) or environment information.
+* One stage can be marked as **default**. New endpoints discovered in that environment are assigned to it automatically.
+* Without a default, endpoints must be manually assigned.
 
-## Stage and API service endpoint
+### Stage & API service endpoints
 
-Each API service is part of an environment. When the environment has a default stage, the discovered API service endpoint is automatically assigned to the stage. When creating an asset, the Catalog Manager must decide which endpoint will be exposed by the asset and consequently which stage will be visible in the Marketplace when this asset is used in a published product.
+* Each endpoint can be assigned to one stage.
+* Users choose which endpoint/stage to expose when creating assets.
 
-If the environment supports multiple stages, then each API service endpoint must be manually assigned to a specific stage via the **lifecycle** field.
+### Stages in Marketplace
 
-API service endpoint sample for attaching a specific stage:
+* Stages determine what endpoints consumers see in the Marketplace.
+* By default, a stage is not visible.
+* A Catalog Manager must explicitly enable stage visibility.
+* Stage visibility overrides product visibility.
+    * Product visible + Stage hidden → Consumers see the product but no resources.
+    * Product visible + Stage visible → Consumers see both product and resources.
+ 
+{{< alert title="Note" color="primary" >}}The Marketplace does not request the user’s team context until they subscribe or register an application. As a result, it cannot filter plan resources by team in advance. Instead, the plan displays all resources available to any of the teams the user belongs to, which may be broader than what a specific team will ultimately be able to access. Upon subscription, the consumer is encouraged to review the plan details before proceeding to the subscription.{{< /alert >}}
+
+#### Visibility options
+
+You can restrict visibility to:
+
+* Provider Organizations: Everyone, Specific teams, None.
+* Consumer Organization: All, Selected Organizations, None.
+
+**Example scenarios**:
+
+* Dev endpoints → Internal dev team only
+* Prod endpoints →  Integration teams + partner organizations.
 
 ``` yaml
 ---
@@ -60,114 +81,76 @@ lifecycle:
   stage: demo-prod
 ```
 
-## Stage and Marketplace visibility
+## Managing stages
 
-By default, the stage is not visible in the Marketplace. The Catalog Manager must explicitly give a stage visibility for each Marketplace where the stage is to be visible.
+The following provider roles have access to and can manage stages: 
 
-The visibility follows the same pattern as for product visibility but has precedence over the product visibility. Meaning that there could be visibility on the product but no visibility on the stage. In this situation, the consumer will see the product but no resources inside.
+| Role            | Can View | Can Create | Can Assign     | Can Delete |
+| --------------- | -------- | ---------- | -------------- | ---------- |
+| Engage Admin    | ✅       | ✅          | ✅           | ✅        |
+| Catalog Manager | ✅       | ✅          | ✅           |  ❌       |
+| Developer       | ✅       | ❌          | ❌           | ❌        |
 
-A stage can be restricted to:
+### View stages
 
-* Provider organization: everyone, specific teams, nobody
-* Consumer organization: all organizations, specific organization, no organization
+1. Navigate to **Topology > Stages**.
+2. The list displays:
+    * **Name** - Display name.
+    * **Environment** - The number of environments assigned.
+    * **Services** - The number of API Services linked.
+    * **Assets** - The number of assets tied to this stage.
+    * **Description** - Short description.
 
-With the stage visibility, the provider can expose an endpoint to the appropriate consumer audience:
+### Create a stage
 
-* A dev endpoint may be suitable for an internal development team but not for a partner team.
-* A production endpoint may be suitable for the validation team as well as for a partner team or any consumer organization.
-  
-## Stage management
+1. Navigate to **Topology > Stages > + Add New Stage**.
+2. Enter the basic info:
+    * **Title** (Required)
+    * **Logical name** (Optional, auto-generated if empty)
+    * **Description** (Optional)
+3. Set Visibility
 
-### Viewing available stages
+    * Choose **Platform Users** visibility
+      
+        * **Everyone** (Default) - visible to all registered users in your provider organization.
+        * **Selected teams** - visible to members of the selected teams.
+        * **Exclude selected teams** - visible to members outside of the selected teams.
+        * **Include teams having tag** - visible to members of the teams that have the selected tag.
+        * **None** - not visible in Marketplace
+     
+    * Choose **Marketplace Users** visibility: only available when Consumer Organizations are enabled for that Marketplace.
+        * **Everyone** (Default) - all registered users in your provider organization.
+        * **Selected organizations** - only users in the selected Consumer Organization.
+        * **None** - not visible to any Consumer Organization.
+5. Assign to environments:
+     * Use dropdown to assign environments.
+     * Mark as **Default** if needed.
+     * If another default exists, a tooltip will show which one.
+7. Add **Tags & Attributes**(optional).
+8. **Save**.
 
-Engage Admin, Catalog Manager and Developer can view the Stages.
+### Deleting a stage (Engage Admin only) 
 
-1. Navigate to *Topology > Stages*.
-
-The list of stages is displayed with the following information:
-
-* Stage name - the title of the stage.
-* Environment - the number of environments the stage is associated to.
-* Services - the number of services the stage is associated to.
-* Assets - the number of assets that have a service the stage is associated to.
-* Description - the stage description.
-
-### Creating a stage
-
-Only the Engage Admin role can create Stages.
-
-1. Navigate to *Topology > Stages*.
-2. Click **+ Add new Stage**.
-
-    *The Add a Stage wizard is displayed*.
-
-3. Add the following stage profile information and then click **Next**:
-
-    * **Title** - enter a display name for the stage in the WebUI.
-    * **Logical name** (Optional) - if left empty, it will auto computed based on the stage title.
-    * **Description** (Optional) - enter a brief description of the stage.
-
-4. Add the stage visibility for the Marketplace in the list and then click **Next**:
-
-    * Only set visibility to the Marketplace where the stage should be visible. Leave others empty.
-    * **Platform Users** visibility: under **Platform Users**, select one of the following options from the **Visible To** menu:
-
-        * **Everyone** - (Default) - the stage is visible in the Marketplace by all registered users in your provider organization.
-        * **Selected teams** - only members of the selected teams can see the stage in the Marketplace.
-        * **Exclude selected teams** - only members that are not part of selected teams can see the stage in the Marketplace.
-        * **Include teams having tag** - only members of the team that have the selected tag can see the stage in the Marketplace.
-        * **None** - the stage is not visible to anyone in the Marketplace.
-
-            * From the list of available teams in your provider organization, select the teams you want to give product visibility to or remove visibility from.
-
-    * **Marketplace Users** visibility: under **Marketplace User** (only available when the Marketplace has a consumer organization), select one of the following options from the **Visible To** menu:
-
-        * **Everyone** - (Default) - the product is visible in the Marketplace by all registered users in your provider organization.
-        * **Selected organizations** - only users registered with a Marketplace account and a member of the selected consumer organization can see the product in the Marketplace.
-        * **None** - the product is not visible to any user registered with a Marketplace account or anonymous users.
-
-            * From the list of available consumer organizations in your provider organization, select the consumer organization you want to give product visibility to or remove visibility from.
-
-5. Add the stage assignment for each environment and then click **Next**:
-
-    * Define for which environment the stage will be assigned using the **Assignment dropdown** and if the stage will be the default for a specific environment using the **Default checkbox**. If there is already a default stage assigned to an environment, the Default check box will contain a "-" and a tooltip indicating which stage is the default.
-    * By default, the stage is not assigned to any environment.
-    * You can select multiple environments at a time to assign/unassign the current stage.
-
-6. Provide the Tags and Attribute details for the stage.
-7. Click **Save** to create the stage and return to the list of stage views.
-
-### Deleting a stage
-
-A stage cannot be deleted once it is assigned to one or more environments and/or API services. You must remove the associations before deleting a stage.
-
-Only the Engage Admin role can delete stages.
-
-1. Navigate to *Topology > Stages*.
+1. Navigate to **Topology > Stages**.
 2. Select the stage(s).
-3. Click **Delete**. A popup is displayed informing which environment can be used the stage.
+3. Click **Delete**. A confirmation popup listing affected environments is displayed.
+4. Confirm the action.
 
-## Stage in Marketplace
+{{< alert title="Note" color="yellow" >}}A stage cannot be deleted once it is assigned to one or more environments and/or API services. You must remove the associations before deleting a stage.{{< /alert >}}
 
-Once a product has an asset with an endpoint linked to a stage, the consumer will be able to see that endpoint and the stage information if their team has visibility over the stage.
+## Best practices
 
-The stage is visible when:
+* **Always set a default stage** for each environment to avoid manual assignment.
+* **Align stages with your CI/CD flow**: Dev → Test → Prod.
+* **Be cautious with visibility**: Hide early stages (Dev, Beta) from external consumers.
+* **Use consistent naming**: Match stage titles across environments (e.g., “Prod” not “Production” vs “Live”)
 
-* Displaying the product resources page.
-* Displaying the plan details page.
-* Subscribing to a plan through the plan preview.
+## Advanced options
 
-{{< alert title="Note" color="primary" >}}If a consumer from a provider organization is part of multiple teams that can subscribe to a product, then a warning is displayed when attempting to subscribe. It informs the consumer that what is seen in the plan is not necessarily what will be accessible to the specified team. The consumer is encouraged to review the plan details before proceeding to the subscription.{{< /alert >}}
+### Multi-languages support
 
-## Multi-languages support
+If multiple languages are enabled for a Marketplace, you can translate its name/description. Supported languages: English, French, German, Brazilian Portuguese.
 
-If the stage is visible on the Marketplace, then it's translation(s) can be added so that it can be viewed based on the Marketplace language settings.
-
-By default, four languages are available : English / French / German / Brazilian Portuguese
-
-To set multi-languages support, you need:
-
-* The stage default language
-* The stage translation languages
-
-The language(s) can be set using the *List view* ellipsis menu **Translate**. This will open the *translation details* screen where you can set the default language as well as the other needed languages.
+1. Navigate to **Topology > Stages**.
+2. Select a stage. From the **...(ellipses)** menu, choose **Translate**.
+3. Set default language and add translations as needed.
