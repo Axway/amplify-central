@@ -144,7 +144,31 @@ Click **Edit** (pencil button) at top right to edit the following without creati
 
 ## Delete an asset
 
-The asset (all versions) must be in **Draft**  or **Archived** state.
+There are 2 ways to go about deleting an asset, dependent on role. Engage Admins can use the asset force delete wizard, which will skip having to manually deprecate and archive the asset and all of the asset releases. Non-admins will not have access to this wizard and will have to manually deprecate, archive, and delete the asset.
+
+For **Engage Admins**.
+
+1. Navigate to *Catalog > Asset Catalog*.
+2. Select **All Assets**.
+3. From the list view, click the ellipsis menu of the asset to be deleted.
+4. Click **Delete**.
+5. The first screen is a confirmation of intent. ***Note:** this is a permanent and irreversible action that may affect related products and subscriptions. Select the checkbox once you are ready to continue and then click **Next**.
+6. If the asset to be deleted is not linked to any products, then this step will be skipped. Otherwise review the Dependency Summary and then click **Next**:
+   
+    * Plans using this asset - This tab lists all plans using at least one of this asset's resources.
+    * Active subscriptions - This tab lists all subscriptions that are not in an archived state and linked a plan that is using at least one of this asset's resources.
+    * Linked Products - This tab lists all Products that are linked with the asset in a release or in draft.
+
+7. If the asset to be deleted is not linked to any products, then this step will be skipped. Otherwise select a product action and then click **Next**:
+  
+    * Release a new product version - All associated products will publish a new version without the asset to be deleted.
+    * Create a draft product -  All associated products will be put in draft without the asset to be deleted, so you can make changes before releasing.
+
+8. Carefully review the planned actions to insure that the correct actions will take place. Some cleanup happens before the asset is deleted. If we detect that a plan will no longer be linked to any assets we archive it. This will then archive all subscriptions associated with that plan. If the plan will be linked to other assets after we delete the asset, we leave the plan alone minus the deleted asset. Once you are ready type **Delete** in the input box and click **Delete Asset**. A modal will appear showing you the progress of deleting your asset. Once the process is complete you will be brought to the asset list with an alert confirming the asset was deleted.
+
+{{< alert title="Note" color="primary" >}}Cancelling subscriptions may take longer than expected in some cases. Please leave the tab open.{{< /alert >}}
+
+For **non-admins**. The asset (all versions) must be in **Draft**  or **Archived** state.
 
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
