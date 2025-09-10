@@ -56,7 +56,7 @@ You can control how credentials behave in this environment:
 
 Click **Next**.
 
-### (Optional) Stage Assignment
+### (Optional) Stage assignment
 
 Stages in Amplify Engage represent the different phases of the API lifecycle and are a key mechanism for organizing the API landscape. Common examples include development, testing, and production.
 
@@ -75,7 +75,7 @@ Enable compliance or security rules to apply to all APIs discovered in this envi
   
 Amplify Engage includes an embedded Spectral linting server that provides real-time compliance checks along with visualizations of the results.
 
-### Access Rights
+### Access rights
 
 Share the environment with other teams if needed:
 
