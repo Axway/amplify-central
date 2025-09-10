@@ -11,31 +11,31 @@ In **Topology**, you can view all agents configured in your organization to chec
 
 1. Navigate to **Topology > Environments > Agents**.  
 2. The *Agents list* view displays five categories of agents:  
-   - **Connected**  
-   - **Unhealthy**  
-   - **Stopped**  
-   - **Update Available**  
-   - **Unsupported**
+   * **Connected**
+   * **Unhealthy**
+   * **Stopped**
+   * **Update Available**
+   * **Unsupported**
 
 You can filter the agent list by **Dataplanes, Hosting, Agent State, Version Status,** and **Last Activity** using the filter panel on the left.
 
 Each agent displays the following details:
 
-- **Agent State**  
-  - **Connected** – Running normally and updated within the last 24 hours.  
-  - **Unhealthy** – Failed or has not communicated for 24+ hours.  
-  - **Stopped** – No longer functioning.  
-- **Agent Name** – The configured title of the agent.  
-- **Agent Version** – The current version number.  
-- **Agent Type** – Discovery Agent or Traceability Agent.  
-- **Agent Host** – On-premise or SaaS (embedded).  
-- **Agent Version Status** (on-premise only):  
-  - **Up To Date** – Running the latest version.  
-  - **Update Available** – A newer version is available.  
-  - **Outdated** – Current version is outdated (banner displayed).  
-  - **Retracted** – Current version is retracted; upgrade immediately (banner displayed).  
-- **Environment** – The environment linked to the agent.  
-- **Last Activity** – Timestamp of the last update (list sorted by most recent by default).  
+* **Agent State**  
+    * **Connected** – Running normally and updated within the last 24 hours.
+    * **Unhealthy** – Failed or has not communicated for 24+ hours.
+    * **Stopped** – No longer functioning.
+* **Agent Name** – The configured title of the agent.
+* **Agent Version** – The current version number.
+* **Agent Type** – Discovery Agent or Traceability Agent.
+* **Agent Host** – On-premise or SaaS (embedded).
+* **Agent Version Status** (on-premise only):
+    * **Up To Date** – Running the latest version.
+    * **Update Available** – A newer version is available.
+    * **Outdated** – Current version is outdated (banner displayed).
+    * **Retracted** – Current version is retracted; upgrade immediately (banner displayed).
+* **Environment** – The environment linked to the agent.  
+* **Last Activity** – Timestamp of the last update (list sorted by most recent by default).  
 
 {{< alert title="Note" color="primary" >}}
 If unsupported agents are detected, an alert banner appears at the top of the screen. Follow the instructions to upgrade, or see the [upgrade procedures](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent) and [latest agent versions in the release notes](/docs/amplify_relnotes).
@@ -48,14 +48,16 @@ Only the Engage Admin can view the agent list.
 ## Add Agent Status to Environment Details (CLI)
 
 Even though agents are configured and sending data, but your environment shows `Manual Sync`, you may have:
+
 * Installed agents manually, or
-* Used an older version of **Axway Central CLI** (< 0.12.0) to install the agents.  
+* Used an older version of **Axway Central CLI** (< 0.12.0) to install the agents.
 
-Newer versions of the CLI automatically create resources for supported agents (AWS, v7, Azure) so their status is reported.  
+Newer versions of the CLI automatically create resources for supported agents (AWS, v7, Azure) so their status is reported.
 
-If needed, you must:  
-- Create **Discovery Agent** and **Traceability Agent** resources.  
-- Link those resources to the environment.  
+If needed, you must:
+
+* Create **Discovery Agent** and **Traceability Agent** resources.
+* Link those resources to the environment.
 
 ## Steps to Add Agent Resources
 
@@ -76,6 +78,7 @@ Verify:
 `axway central get env`
 
 **Environment resource sample**
+
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -107,6 +110,7 @@ Check resources:
 `axway central get ta`
 
 **Discovery Agent Resource sample:**
+
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -132,6 +136,7 @@ spec:
 ```
 
 **Traceability Agent Resource Sample**
+
 ```yaml
 group: management
 apiVersion: v1alpha1
