@@ -18,7 +18,7 @@ New bug fix for the September 10 update.
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01747539 | APIGOV-31025 | **Issue**: A Developer or Catalog Manager, has permission to edit an asset but was not able to save the any changes. This was because user was not a member of the owning team of the asset and is not allowed to change access rights. <br/>**Resolution**: A fix was made to prevent editing of ah asset if the user is not a member of the owning team. |
+| 01747539 | APIGOV-31025 | **Issue**: A Developer or Catalog Manager, has permission to edit an asset but was not able to save the any changes. This was because user was not a member of the owning team of the asset and is not allowed to change access rights. <br/>**Resolution**: A fix was made to prevent editing of an asset if the user is not a member of the owning team. |
 
 ## September 4, 2025
 
