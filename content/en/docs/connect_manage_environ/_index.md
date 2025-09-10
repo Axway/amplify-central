@@ -14,7 +14,7 @@ Connecting your environments to Amplify Engage is essential for unified manageme
 * **Governance & Compliance**: Enforce design and security policies, validate compliance, and manage credentials centrally.
 * **Operational Insights**: Monitor API health, usage metrics, and traffic across all environments for better decision-making.
 
-## How to connect your Environment
+## How to connect your environment
 
 ### Using Agents
 
@@ -32,11 +32,11 @@ Agents can be deployed on-premises or as a service in cloud-native environments.
 
 You can also manually synchronize your environment using the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that manual changes in your deployment will not be automatically synchronized with Amplify, unless you automate this process.
 
-## Discovery Agent
+## Discovery agent
 
 Discovery Agents are lightweight software components that run on your data plane hosts or are hosted in Amplify. They automatically discover APIs and services, sending metadata to the Amplify platform for inclusion in the Service Registry.
 
-### Discovery Agent Key Features
+### Discovery agent key features
 
 * **Automated Discovery**: Detects new services and versions as they are deployed.
 * **Configurable Filtering**: Administrators can set rules to control which APIs are discovered and sent to Amplify.
@@ -46,11 +46,11 @@ Discovery Agents are lightweight software components that run on your data plane
 > [!IMPORTANT]
 > You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version (running version) to version (latest version).
 
-## Traceability Agent
+## Traceability agent
 
 The Traceability Agent is a lightweight software application that runs on your data plane host or can be hosted in Amplify. Its primary function is to report usage metrics, events, and log data from a given data plane to the Amplify platform.
 
-### Traceability Agent Key Features
+### Traceability agent key features
 
 * **Non-obtrusive metrics collection**: Gathers metrics and traffic data from distributed data planes without disruption​.
 * **API Transaction Details**: Includes request/response headers, performance data, and other metadata​.
@@ -96,9 +96,9 @@ Access to the Service Registry follows strict enterprise security rules:
 * The full catalog is visible only to Engage Administrator.
 * In practice, each team or business unit typically sees only a subset of services—specifically those that are associated with their scope of ownership or responsibility.
 
-## API services
+## API Services
 
-An **API service** represents a physical deployment of a resource in an environment. Examples of API services include REST APIs, ASYCN APIs, and so on. Later, these API services can be combined and packaged together to create curate assets that you can productizen and make available for consumption in the Marketplace.
+An **API Service** represents a physical deployment of a resource in an environment. Examples of API Services include REST APIs, ASYCN APIs, and so on. Later, these API Services can be combined and packaged together to create curate assets that you can productizen and make available for consumption in the Marketplace.
 
 ### API Service Versions
 
@@ -108,7 +108,7 @@ Each API Service in Amplify Engage is defined by a **specification**, which can 
 
 An endpoint is a URL that represents the deployment of an API service. There can be one or many endpoints to access a deployed API service version. An endpoint includes a name and description to make it easier for others to consume later. They also contain the host and port information used to access the API service and have a hard dependency on the API service version it is associated with.
 
-## Supported Gateways and Features
+## Supported gateways and features
 
 Amplify Engage supports a wide range of gateways and platforms, including Axway API Gateway, AWS API Gateway, Azure API Management, Istio, Apigee, IBM API Connect, MuleSoft, Software AG webMethods, Kong, Kafka, Backstage, GitHub, GitLab, SAP Integration Suite, GCP Apigee X, SwaggerHub, and WSO2 API Manager.
 
