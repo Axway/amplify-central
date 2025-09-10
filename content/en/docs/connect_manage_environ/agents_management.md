@@ -77,7 +77,7 @@ Verify:
 
 `axway central get env`
 
-*Environment resource sample*
+#### Environment resource sample
 
 ```yaml
 group: management
@@ -100,7 +100,7 @@ spec:
         This is the environment for representing the gateway ZYZ.
 ```
 
-### Step 3: Create Agent Resources
+### Step 3: Create agent resources
 
 `axway central apply -f myDiscoveryAgentFile.yaml`
 
@@ -135,7 +135,7 @@ spec:
 
 ```
 
-**Traceability Agent Resource Sample**
+#### Traceability agent resource sample
 
 ```yaml
 group: management
@@ -158,7 +158,7 @@ spec:
   dataplaneType: my-dataplane-name
 ```
 
-### Step 4: Link Agent Configuration
+### Step 4: Link agent configuration
 
 Update your agent’s **env_vars** to include the **CENTRAL_AGENTNAME** variable:
 
@@ -166,7 +166,7 @@ Update your agent’s **env_vars** to include the **CENTRAL_AGENTNAME** variable
 
 Once the agent starts successfully, its status updates in Amplify Engage / Topology.
 
-## Environment Status
+## Environment atatus
 
 The environment’s status is calculated from the status of all linked agents:
 
