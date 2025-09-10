@@ -54,33 +54,6 @@ You can restrict visibility to:
 * Dev endpoints → Internal dev team only
 * Prod endpoints →  Integration teams + partner organizations.
 
-``` yaml
----
-group: management
-apiVersion: v1alpha1
-kind: APIServiceInstance
-name: customer-data-instance-prod-v2
-title: Customer Data Service Instance PROD V2
-metadata:
-  scope:
-    kind: Environment
-    name: demo-prod
-attributes: {}
-finalizers: []
-tags:
-  - nonprod
-spec:
-  endpoint:
-    - host: prod200.k8s.axwayamplify.com
-      port: 443
-      routing:
-        basePath: /apis
-      protocol: https
-  apiServiceRevision: customer-data-revision-v200
-lifecycle:
-  stage: demo-prod
-```
-
 ## Managing stages
 
 The following provider roles have access to and can manage stages: 
@@ -154,3 +127,33 @@ If multiple languages are enabled for a Marketplace, you can translate its name/
 1. Navigate to **Topology > Stages**.
 2. Select a stage. From the **...(ellipses)** menu, choose **Translate**.
 3. Set default language and add translations as needed.
+
+### Creating a stage via CLI
+
+### Assigning a stage via CLI
+
+You can assign a stage directly when creating or updating an API service instance through the CLI. This allows you to control lifecycle placement without using the WebUI.
+
+YAML Example:
+
+```yaml
+apiVersion: v1alpha1
+kind: APIServiceInstance
+name: customer-data-instance-prod-v2
+title: Customer Data Service Instance PROD V2
+metadata:
+  scope:
+    kind: Environment
+    name: demo-prod
+spec:
+  endpoint:
+    - host: prod200.k8s.axwayamplify.com
+      port: 443
+      protocol: https
+  apiServiceRevision: customer-data-revision-v200
+lifecycle:
+  stage: demo-prod
+
+In this example:
+
+`lifecycle.stage` assigns the **stage** (`demo-prod`) to the API Service Endpoint.
