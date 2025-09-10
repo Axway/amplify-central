@@ -5,78 +5,77 @@ weight: 25
 date: 2024-10-10
 ---
 
-In Topology, agents configured within your organization can be viewed to identify if any actions are to be taken.
+In **Topology**, you can view all agents configured in your organization to check their health and identify if any actions are needed.  
 
-## View available agents
+## View Available Agents
 
-Only the Engage Admin can view the *agents list*.
+1. Navigate to **Topology > Environments > Agents**.  
+2. The *Agents list* view displays five categories of agents:  
+   - **Connected**  
+   - **Unhealthy**  
+   - **Stopped**  
+   - **Update Available**  
+   - **Unsupported**
 
-1. Navigate to *Topology > Environments > Agents*. There are five cards in the *agents list* view: Connected, Unhealthy, Stopped, Update Available, and Unsupported.
+You can filter the agent list by **Dataplanes, Hosting, Agent State, Version Status,** and **Last Activity** using the filter panel on the left.
 
-{{< alert title="Note" color="primary" >}}If there are unsupported agents, an alert/banner will appear at the top of the screen. Follow the provided instructions on how to upgrade your agents, or see the [upgrade procedures](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent) documentation and view the [latest agent versions in the release notes](/docs/amplify_relnotes).{{< /alert >}}
+Each agent displays the following details:
 
-{{< alert title="Tip" color="secondary" >}}The list of agents can be filtered by Dataplanes, Hosting, Agent State, Version Status and Last Activity by using the filter located at the left of the screen.{{< /alert >}}
+- **Agent State**  
+  - **Connected** – Running normally and updated within the last 24 hours.  
+  - **Unhealthy** – Failed or has not communicated for 24+ hours.  
+  - **Stopped** – No longer functioning.  
+- **Agent Name** – The configured title of the agent.  
+- **Agent Version** – The current version number.  
+- **Agent Type** – Discovery Agent or Traceability Agent.  
+- **Agent Host** – On-premise or SaaS (embedded).  
+- **Agent Version Status** (on-premise only):  
+  - **Up To Date** – Running the latest version.  
+  - **Update Available** – A newer version is available.  
+  - **Outdated** – Current version is outdated (banner displayed).  
+  - **Retracted** – Current version is retracted; upgrade immediately (banner displayed).  
+- **Environment** – The environment linked to the agent.  
+- **Last Activity** – Timestamp of the last update (list sorted by most recent by default).  
 
-A list of agents is displayed with the following information:
+{{< alert title="Note" color="primary" >}}
+If unsupported agents are detected, an alert banner appears at the top of the screen. Follow the instructions to upgrade, or see the [upgrade procedures](/docs/connect_manage_environ/connected_agent_common_reference/upgrade_agent) and [latest agent versions in the release notes](/docs/amplify_relnotes).
+{{< /alert >}}
 
-* **Agent State** - displays the current state of the agent. Can be one of three states: Connected, Unhealthy, or Stopped.
+{< alert title="Note" color="primary" >}}
+Only the Engage Admin can view the agent list.
+{{< /alert >}}
 
-    * **Connected** - the agent is running smoothly and has been updated in the last 24 hours.
-    * **Unhealthy** -  the agent is in a unhealthy or failed state and/or has not communicated in the last 24 hours or more.
-    * **Stopped** - the agent is no longer functioning.
+## Add Agent Status to Environment Details (CLI)
 
-* **Agent Name** - the title of the agent.
-* **Agent Version** - the agent version number.
-* **Agent Type** - can be either a Discovery Agent or a Traceability Agent.
-* **Agent Host** - can be either On-premise or SaaS (embedded agent).
-* **Agent Version Status** - applies to on-premise agents only. Provides information on the update status of the agent. Can have one of three statuses: Up To Date, Update Available, or Outdated. View the [latest agent versions](/docs/amplify_relnotes).
+Even though agents are configured and sending data, but your environment shows `Manual Sync`, you may have:
+* Installed agents manually, or
+* Used an older version of **Axway Central CLI** (< 0.12.0) to install the agents.  
 
-    * **Up To Date** - the agent is up to date.
-    * **Update Available** - a new version is available.
-    * **Outdated** - the current version of the agent is outdated. If there are any unsupported agents, an alert/banner will appear at the top of the screen.
-    * **Retracted** - the current version has been retracted. It is recommended to upgrade immediately. If there are any retracted agents, an alert/banner will appear at the top of the screen.
+Newer versions of the CLI automatically create resources for supported agents (AWS, v7, Azure) so their status is reported.  
 
-* **Environment** - the environment the agent is a part of.
-* **Agent's Last Activity** - the last time the agent was updated. By default, this field is selected to show agents in descending order based upon the last activity time.
+If needed, you must:  
+- Create **Discovery Agent** and **Traceability Agent** resources.  
+- Link those resources to the environment.  
 
-## View agent details
+## Steps to Add Agent Resources
 
-1. Navigate to *Topology > Environments > Agents*.
-2. Click on the agent. *Basic details are displayed about the agent*.
+### Step 1: Authenticate with CLI
 
-## Add your agent status to the environment details page using the CLI
+`axway auth login`
 
-If your environment status in **Amplify Engage / Topology** displays `Manual Sync.`, even though you have configured agents that have discovered APIs from your gateway and sent relative traffic to Business Insights, then you either installed the agents manually or with an older version of Axway Central CLI. Axway Central CLI (0.12.0 and later) creates necessary resources for the known agents (AWS, v7, Azure) to report its environment status to Amplify for you to view.
+A browser opens to complete login. Once authenticated, you can close the browser.
 
-If you installed the agents manually or with an older version of Axway Central CLI, you must:
+### Step 2: Create an Environment (if needed)
 
-* Add new agent resources: Discovery Agent resource and Traceability Agent resource
-* Add your agent resources to the environment  
+If you already have an environment, you can skip this step. Only the environment name will be required later.
 
-### Resources descriptions
+`axway central apply -f myEnvFile.yaml`
 
-Refer to `axway central get` to list the resources.
+Verify:
 
-**Discovery Agent resource**:
+`axway central get env`
 
-| RESOURCE                  | SHORT NAMES  | RESOURCE KIND                   | SCOPED  | SCOPE KIND    | RESOURCE GROUP  |
-|---------------------------|--------------|---------------------------------|---------|---------------|-----------------|
-| discoveryagents           | da           | DiscoveryAgent                  | true    | Environment   | management |
-
-**Traceability Agent resource**:
-
-| RESOURCE                  | SHORT NAMES  | RESOURCE KIND                   | SCOPED  | SCOPE KIND    | RESOURCE GROUP  |
-|---------------------------|--------------|---------------------------------|---------|---------------|-----------------|
-| traceabilityagents        | ta           | TraceabilityAgent               | true    | Environment   | management |
-
-The following samples describe the resources for:
-
-* An environment: my-engage-environment
-* A Discovery Agent: my-discovery-agent-name
-* A Traceability Agent: my-traceability-agent-name
-
-Environment sample:
-
+**Environment resource sample**
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -92,14 +91,22 @@ tags:
 spec:
   icon:
     data: >-
-     base64EncodedImage
+          base64EncodedImage
     contentType: image/png
   description: >-
-    This is the environment for representing the gateway ZYZ.
+        This is the environment for representing the gateway ZYZ.
 ```
 
-Discovery Agent sample:
+### Step 3: Create Agent Resources
 
+`axway central apply -f myDiscoveryAgentFile.yaml`
+
+Check resources:
+
+`axway central get da`
+`axway central get ta`
+
+**Discovery Agent Resource sample:**
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -121,10 +128,10 @@ spec:
   logging:
     level: debug
   dataplaneType: my-dataplane-name
+
 ```
 
-Traceability Agent sample:
-
+**Traceability Agent Resource Sample**
 ```yaml
 group: management
 apiVersion: v1alpha1
@@ -146,79 +153,21 @@ spec:
   dataplaneType: my-dataplane-name
 ```
 
-### Add your agent resources to the environment
+### Step 4: Link Agent Configuration
 
-The following steps will guide you in defining the require agent resources in order to display the agent status associated to an environment.
+Update your agent’s **env_vars** to include the **CENTRAL_AGENTNAME** variable:
 
-You must access the Axway Central CLI. See [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install).
+`CENTRAL_AGENTNAME=my-discovery-agent-name`
 
-#### Step 1: Authenticate yourself with Axway Central CLI
+Once the agent starts successfully, its status updates in Amplify Engage / Topology.
 
-In a command line prompt, enter `axway auth login`.
+## Environment Status
 
-A browser opens. You are prompted to enter your credentials and choose your platform organization. Once connected you can close the browser.
+The environment’s status is calculated from the status of all linked agents:
 
-#### Step 2: Create an environment
+* **Connected** – All agents are running.
+* **Disconnected** – All agents are stopped.
+* **Connection Error** – One or more agents failed.
+* **Partially Connected** – Mix of running/stopped or never-started agents.
+* **Manual Sync** – No status reported, or mix of stopped and never-started agents.
 
-If you already have an environment, you can skip this step. Only the environment name will be require later.
-
-Create an environment using one of these methods:
-
-* Use the CLI: `axway central create env my-environment-name`.
-* Use the CLI with a file: create a file (myEnvFile.yaml) containing the environment resource definition mentioned above and use `axway central apply -f myEnvFile.yaml` to create it.
-* Use the UI: Go to topology and use the "+ Environment" button.
-
-Run `axway central get env`. You should see something similar to this:
-
-```shell
-NAME                            AGE                TITLE                           RESOURCE KIND    RESOURCE GROUP
-my-engage-environment  a few seconds ago  My beautiful environment title  Environment      management
-```
-
-#### Step 3: Create the agent resources
-
-Create agent resources using one of these methods:
-
-* Manually use a file containing the content explained in the above [Resources descriptions](#resources-descriptions) section.
-* Use the Axway Central CLI: `axway central create agent-resource`. You will be prompt to select the type of agent (Discovery | Traceability | both), the name of these agents and the type of Gateway (free text).
-
-Reference the CLI output name `CENTRAL_AGENTNAME` variable in your agent configuration file.
-
-Check that the resources were created correctly by using either the Axway Central CLI or by going to **Amplify Engage WebUI > Topology > Environment**.
-
-Once you are done, verify your work by running the commands `axway central get da` or `axway central get ta` or `axway central get da,ta`
-
-You should see something similar to this:
-
-```shell
-// discovery agent
-NAME                     STATUS   AGE           RESOURCE KIND       SCOPE KIND   SCOPE NAME                       RESOURCE GROUP
-my-discovery-agent-name           a minute ago  DiscoveryAgent      Environment  my-engage-environment   management
-
-// traceability agent
-NAME                        STATUS   AGE                RESOURCE KIND          SCOPE KIND   SCOPE NAME                      RESOURCE GROUP
-my-traceability-agent-name           a few seconds ago  TraceabilityAgent      Environment  my-engage-environment  management
-```
-
-Notice that each agent has an empty column named `STATUS`. This status column will be updated with either `running` when agent is running, `stopped` when agent is stopped or `failed` when the agent cannot establish the connection with the gateway.
-
-#### Step 4: Update agent configuration
-
-In order to link agent binary with the appropriate agent resource, you have to update the agent configuration file (env_vars). Use the `CENTRAL_AGENTNAME` variable and link the value to the resource name defined previously.
-
-Sample: CENTRAL_AGENTNAME=my-discovery-agent-name
-
-Once the Discovery Agent successfully starts, the agent status (Amplify Engage / Topology) will change to `Running`. If there are no other agents linked to that environment, then the environment status will change from `Manual Sync` to `Connected`.
-{{< alert title="Note" color="primary" >}}
-The environment status is calculated from the aggregate status of all agents linked to that environment:
-
-* If all the agents in the environment are `Running`, the environment status will be `Connected`.
-* If all the agents are `Stopped`, the environment status will be `Disconnected`.
-* If one or more agents are `Failed` and the agent cannot reach the Gateway, then the environment status will be `Connection Error`.
-* If one or more agents are `Stopped` and the other agents are `Running`, **or** one or more agents are `Running` and the other agents have never been started, then the environment status will be `Partially Connected`.
-* If there are no reported agent status resource values, **or** one or more agents are `Stopped` and one or more agents have never been started (no agent status), then the environment status will be `Manual Sync`.
-{{< /alert >}}
-
-Opening the environment details page displays all agents and status linked to this environment.
-
-You can also check the status value in CLI using `axway central get da` or `axway central get ta`.
