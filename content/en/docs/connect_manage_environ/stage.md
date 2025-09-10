@@ -128,13 +128,58 @@ If multiple languages are enabled for a Marketplace, you can translate its name/
 2. Select a stage. From the **...(ellipses)** menu, choose **Translate**.
 3. Set default language and add translations as needed.
 
-### Creating a stage via CLI
+### Managing stages via CLI
 
-### Assigning a stage via CLI
+You can create and manage stages via CLI. Use this approach if you prefer automation or CI/CD pipelines.
 
-You can assign a stage directly when creating or updating an API service instance through the CLI. This allows you to control lifecycle placement without using the WebUI.
+#### List stages via CLI
 
-YAML Example:
+```bash
+axway central get stg
+```
+
+To retrieve the list of stages for an organization in the EU region, run the following command:
+
+```bash
+axway central get stg --region=EU
+```
+
+{{< alert title="Note" color="primary" >}}The additional parameter of `--region=EU` or `--region=AP` will execute any Axway Central command in the EU or APAC region specifically.{{< /alert >}}
+
+#### Get stage details via CLI
+
+To get the details of a specific stage run the following command:
+
+```bash
+axway central get stg -o json > stages.json
+```
+
+#### Create a stage via CLI
+
+```bash
+axway central create -f stage.json -o json -y > stage-details.json
+```
+
+`stage.json` example:
+
+```json
+{
+  "group": "catalog",
+  "apiVersion": "v1alpha1",
+  "kind": "Stage",
+  "title": "production",
+  "spec": {
+    "description": "All APIs hosted in production"
+  }
+}
+```
+### Assigning a stage to an instance via CLI
+
+```bash
+axway central apply -f APIServiceInstance.json
+```
+
+APIServiceInstance.json sample:
 
 ```yaml
 apiVersion: v1alpha1
