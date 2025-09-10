@@ -7,7 +7,7 @@ date: 2024-10-10
 
 In **Topology**, you can view all agents configured in your organization to check their health and identify if any actions are needed.  
 
-## View Available Agents
+## View available agents
 
 1. Navigate to **Topology > Environments > Agents**.  
 2. The *Agents list* view displays five categories of agents:  
@@ -45,7 +45,7 @@ If unsupported agents are detected, an alert banner appears at the top of the sc
 Only the Engage Admin can view the agent list.
 {{< /alert >}}
 
-## Add Agent Status to Environment Details (CLI)
+## Add agent status to environment details (CLI)
 
 Even though agents are configured and sending data, but your environment shows `Manual Sync`, you may have:
 
@@ -59,7 +59,7 @@ If needed, you must:
 * Create **Discovery Agent** and **Traceability Agent** resources.
 * Link those resources to the environment.
 
-## Steps to Add Agent Resources
+## Steps to add agent resources
 
 ### Step 1: Authenticate with CLI
 
@@ -77,7 +77,7 @@ Verify:
 
 `axway central get env`
 
-**Environment resource sample**
+*Environment resource sample*
 
 ```yaml
 group: management
@@ -109,7 +109,7 @@ Check resources:
 `axway central get da`
 `axway central get ta`
 
-**Discovery Agent Resource sample:**
+*Discovery Agent resource sample:*
 
 ```yaml
 group: management
@@ -175,4 +175,3 @@ The environment’s status is calculated from the status of all linked agents:
 * **Connection Error** – One or more agents failed.
 * **Partially Connected** – Mix of running/stopped or never-started agents.
 * **Manual Sync** – No status reported, or mix of stopped and never-started agents.
-
