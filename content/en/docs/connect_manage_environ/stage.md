@@ -39,7 +39,7 @@ In Amplify Engage, stages help you represent your API landscape. They act as lab
 * Stage visibility overrides product visibility.
     * Product visible + Stage hidden → Consumers see the product but no resources.
     * Product visible + Stage visible → Consumers see both product and resources.
- 
+
 {{< alert title="Note" color="primary" >}}The Marketplace does not request the user’s team context until they subscribe or register an application. As a result, it cannot filter plan resources by team in advance. Instead, the plan displays all resources available to any of the teams the user belongs to, which may be broader than what a specific team will ultimately be able to access. Upon subscription, the consumer is encouraged to review the plan details before proceeding to the subscription.{{< /alert >}}
 
 #### Visibility options
@@ -56,7 +56,7 @@ You can restrict visibility to:
 
 ## Managing stages
 
-The following provider roles have access to and can manage stages: 
+The following provider roles have access to and can manage stages:
 
 | Role            | Can View | Can Create | Can Assign     | Can Delete |
 | --------------- | -------- | ---------- | -------------- | ---------- |
@@ -82,27 +82,24 @@ The following provider roles have access to and can manage stages:
     * **Logical name** (Optional, auto-generated if empty)
     * **Description** (Optional)
 3. Set Visibility
-
     * Choose **Platform Users** visibility
-      
         * **Everyone** (Default) - visible to all registered users in your provider organization.
         * **Selected teams** - visible to members of the selected teams.
         * **Exclude selected teams** - visible to members outside of the selected teams.
         * **Include teams having tag** - visible to members of the teams that have the selected tag.
         * **None** - not visible in Marketplace
-     
     * Choose **Marketplace Users** visibility: only available when Consumer Organizations are enabled for that Marketplace.
         * **Everyone** (Default) - all registered users in your provider organization.
         * **Selected organizations** - only users in the selected Consumer Organization.
         * **None** - not visible to any Consumer Organization.
 5. Assign to environments:
-     * Use dropdown to assign environments.
-     * Mark as **Default** if needed.
-     * If another default exists, a tooltip will show which one.
+    * Use dropdown to assign environments.
+    * Mark as **Default** if needed.
+    * If another default exists, a tooltip will show which one.
 7. Add **Tags & Attributes**(optional).
 8. **Save**.
 
-### Deleting a stage (Engage Admin only) 
+### Deleting a stage (Engage Admin only)
 
 1. Navigate to **Topology > Stages**.
 2. Select the stage(s).
@@ -173,6 +170,7 @@ axway central create -f stage.json -o json -y > stage-details.json
   }
 }
 ```
+
 ### Assigning a stage to an instance via CLI
 
 ```bash
@@ -198,6 +196,7 @@ spec:
   apiServiceRevision: customer-data-revision-v200
 lifecycle:
   stage: demo-prod
+```
 
 In this example:
 
