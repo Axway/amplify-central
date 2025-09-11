@@ -154,7 +154,7 @@ For **Engage Admins**.
 4. Click **Delete**.
 5. The first screen is a confirmation of intent. ***Note:** this is a permanent and irreversible action that may affect related products and subscriptions. Select the checkbox once you are ready to continue and then click **Next**.
 6. If the asset to be deleted is not linked to any products, then this step will be skipped. Otherwise review the Dependency Summary and then click **Next**:
-   
+
     * Plans using this asset - This tab lists all plans using at least one of this asset's resources.
     * Active subscriptions - This tab lists all subscriptions that are not in an archived state and linked a plan that is using at least one of this asset's resources.
     * Linked Products - This tab lists all Products that are linked with the asset in a release or in draft.
