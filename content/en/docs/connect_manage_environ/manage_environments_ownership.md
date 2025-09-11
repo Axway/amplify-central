@@ -3,17 +3,17 @@ title: Environment access rights
 linkTitle: Environment access rights
 weight: 10
 ---
-Limit access to environments and API services by assigning an owning team.
 
-Within Amplify you can configure the environment ownership to provide access to API services in that environment to a specific team. By assigning an owner, Administrators can delegate full control over the API services within that environment to the members of the owning team, as further indicated by their user roles. Members outside of the owning team will not be able to view or create API services or any other resources in that scope.
+Each environment in Amplify Engage can have an owning team. The owning team has full control over all resources within that environment, according to the members’ assigned roles.
+
+* **If an owner is assigned**: Only members of the owning team can view, create, edit, or delete API services and related resources in that environment.
+* **If no owner is assigned**: Engage Admins can manage the environment and its resources—unless ownership is explicitly defined at the API service level.
+
 
 #### Who can configure the environment ownership?
 
 Users that are assigned the Platform Administrator role in combination with the Engage Administrator role can assign an owning team, assign an owning team when creating the environment or change the owning team after creation.
 
-#### Environment ownership
-
-Environments can be created without configuring the ownership, so setting an owner is OPTIONAL. If ownership is not configured, then only Engage Administrators can view and manage the environment and the API services within the scope. No other members in the organization will be able to view or access the resources until an owner is assigned. When an owner is assigned, only members of the owner's team can view/edit/delete the environment and manipulate resources scoped to the environment.
 
 #### API service ownership
 
