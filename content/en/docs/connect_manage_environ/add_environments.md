@@ -23,7 +23,7 @@ Before you begin, you must have:
 1. Navigate to *Topology > Environments*.
 2. Click **+ Add New Environment**.
 
-    ![Environment List Page](/static/Images/central/EnvironmentListPage.png)
+    ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
 > [!NOTE]
 > If you’ve already reached your environment quota, the button will be disabled. Check your entitlement to confirm limits.
