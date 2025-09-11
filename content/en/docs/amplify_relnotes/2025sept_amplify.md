@@ -14,7 +14,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New bug fix for the September 11 update.
 
-### Marketplace bug fix for September 10, 2025
+### Marketplace bug fix for September 11, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
