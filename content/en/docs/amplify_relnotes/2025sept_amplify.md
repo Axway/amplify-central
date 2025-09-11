@@ -10,6 +10,16 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## September 11, 2025
+
+New bug fix for the September 11 update.
+
+### Marketplace bug fix for September 11, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01747539 | APIGOV-31025 | **Issue**: Developers and Catalog Managers could open an asset for editing but were unable to save changes if they were not members of the owning team. <br/>**Resolution**: Engage now blocks asset editing for users who are not members of the owning team. |
+
 ## September 4, 2025
 
 New bug fix for the September 4 update.
