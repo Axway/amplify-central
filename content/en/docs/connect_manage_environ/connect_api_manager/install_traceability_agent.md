@@ -63,7 +63,7 @@ After customizing all the sections, your `ta_env_vars.env` file should look like
 # API MANAGER connectivity
 APIMANAGER_HOST=<HOST>
 APIMANAGER_AUTH_USERNAME=<USER>
-APIMANAGER_AUTH_PASSWORD=<PASSWORD>
+APIMANAGER_AUTH_PASSWORD=<PASSWORD> (Surround a password with double quotes when the password contains special characters, example: "lma^]&_}}*%!#(" )
 
 # API GATEWAY connectivity
 APIGATEWAY_HOST=<HOST>
@@ -176,7 +176,7 @@ Once all data is gathered, this section should look like:
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword (surround a password with double quotes when the password contains special characters, example: "lma^]&_}}*%!#(" )
 ```
 
 ##### Customizing Traceability Agent API Gateway connectivity variables
@@ -312,7 +312,7 @@ EVENT_LOG_PATHS=<API GATEWAY INSTALL DIRECTORY>/apigateway/events/group-2_instan
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword (surround a password with double quotes when the password contains special characters, example: "lma^]&_}}*%!#(" )
 
 # API Gateway connectivity
 APIGATEWAY_HOST=localhost
