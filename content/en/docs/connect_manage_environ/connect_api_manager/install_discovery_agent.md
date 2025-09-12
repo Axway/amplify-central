@@ -69,7 +69,7 @@ After customizing all the sections, your `da_env_vars.env` file should look like
 # API MANAGER connectivity
 APIMANAGER_HOST=<HOST>
 APIMANAGER_AUTH_USERNAME=<USER>
-APIMANAGER_AUTH_PASSWORD=<PASSWORD>
+APIMANAGER_AUTH_PASSWORD="<PASSWORD>" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 
 # API GATEWAY connectivity
 APIGATEWAY_HOST=<HOST>
@@ -129,7 +129,7 @@ This section connects the agent to API Manager and determines which APIs should 
 * Discover any API from any organization (“API Manager Administrator”)  
 * Discover any API from a specific organization (“Organization Administrator”)
 
-`APIMANAGER_AUTH_PASSWORD`: The password of the API Manager user in clear text.
+`APIMANAGER_AUTH_PASSWORD`: The password of the API Manager user in clear text. (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 
 Once all data is gathered, this section should looks like:
 
@@ -137,7 +137,7 @@ Once all data is gathered, this section should looks like:
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="apiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 APIMANAGER_DISCOVERYIGNORETAGS=tag1,tag2
 APIMANAGER_FILTER=tag.APITAG==value
 #APIMANAGER_POLLINTERVAL=30s
@@ -260,7 +260,7 @@ After customizing all variables, your `da_env_vars.env` file should look like:
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="apiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 APIMANAGER_DISCOVERYIGNORETAGS=tag1,tag2
 APIMANAGER_FILTER=tag.APITAG==value
 #APIMANAGER_POLLINTERVAL=30s

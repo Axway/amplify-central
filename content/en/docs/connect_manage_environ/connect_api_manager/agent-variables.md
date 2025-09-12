@@ -30,7 +30,7 @@ Use the following environment variables as a starting point to easily switch fro
 APIMANAGER_HOST=ApiManagerHostName (localhost by default)
 APIMANAGER_PORT=ApiManagerPortNumber (8075 by default)
 APIMANAGER_AUTH_USERNAME=AnApiManagerUserName
-APIMANAGER_AUTH_PASSWORD=AnApiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="AnApiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 #
 #API Central connectivity
 #
@@ -50,7 +50,7 @@ CENTRAL_ENVIRONMENT=AmplifyEngageEnvironmentName
 APIMANAGER_HOST=ApiManagerHostName (localhost by default)
 APIMANAGER_PORT=ApiManagerPortNumber (8075 by default)
 APIMANAGER_AUTH_USERNAME=AnApiManagerUserName
-APIMANAGER_AUTH_PASSWORD=AnApiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="AnApiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 #
 #API Gateway connectivity
 #
@@ -88,7 +88,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | Variable name                           | Description                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | APIMANAGER_APIVERSION                   | The API version of the API Manager (default value: `1.3`).                                                                                                                                                                                                                                                                                |
-| APIMANAGER_AUTH_PASSWORD                | The password created for the API Manager username created for this agent (created in API Manager).                                                                                                                                                                                                                                        |
+| APIMANAGER_AUTH_PASSWORD                | The password created for the API Manager username created for this agent. It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#("  (created in API Manager).                                                                                                                                                                                                                                        |
 | APIMANAGER_AUTH_USERNAME                | The API Manager username for this agent. Created in API Manager (must be API Manager Admin).                                                                                                                                                                                                                                              |
 | APIMANAGER_CLIENTTIMEOUT                | The time interval at which the HTTP client times out making HTTP requests to API Manager.  Default value: `60s`. Units: ns, us, ms, s, m, h                                                                                                                                                                                                       |
 | APIMANAGER_REQUESTSETTINGS_RETRIES      | The number of retries the agent will make for an API call to API Manager. Default value: `5` (Available in Discovery v1.12.12 and Traceability v1.12.11 or newer)                                                                                                                                                                                 |
