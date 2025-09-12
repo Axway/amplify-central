@@ -5,150 +5,127 @@ weight: 350
 date: 2025-02-05
 ---
 
-Within topology, environments represent a group of assets discovered from a gateway, a repository, or anything manually added to the environment. These grouped assets (API services, webhooks, Secrets) are displayed in Amplify. Environments are at the highest hierarchical level, and all assets are scoped within.
+Connecting your environments to Amplify Engage is essential for unified management, visibility, and control over your digital assets, enabling you to streamline operations, enhance security, and accelerate innovation.
 
-The following is an example of a simple environment with an API service asset:
+## Why connecting your environments matters
 
-```txt
-* Environment
-    * API service
-        * Versions
-            * Endpoints
-    * Webhooks
-    * Secrets
-```
+* **Automated API Discovery**: Instantly detect new APIs and services, reducing manual effort and ensuring your catalog is always up to date.
+* **Centralized Management**: Manage all discovered services from a single pane of glass, regardless of where they are hosted.
+* **Governance & Compliance**: Enforce design and security policies, validate compliance, and manage credentials centrally.
+* **Operational Insights**: Monitor API health, usage metrics, and traffic across all environments for better decision-making.
 
-The API services, webhooks, and Secrets in the example all have a hard dependency to the environment. If the environment is deleted all assets within the environment will also be deleted. The same hard dependency applies to all child assets.
+## How to connect your environment
 
-Another example is, if a version within the API service is deleted, its endpoint will also be deleted, but not the API service.
+### Using Agents
 
-The relationship between API service assets, webhooks, and Secrets is a soft dependency. If a webhook is deleted, neither of the other two will be affected. However, this may break integrations where the webhook was being used, for example, in a catalog item.
+The recommended way to connect and manage environments is by installing **Discovery Agents** and **Traceability Agents** on your gateways. These agents connect your existing API data planes back to the Amplify Platform's management plane, while providing native API discovery, subscription, and observability for each different vendor platform in your environment.
 
-You can combine assets within an environment to create catalog items that consumers can then subscribe to and use.
+When administrators make changes to the underlying data planes, or when consumers subscribe to the services, the changes are synchronized between Amplify platform and the data planes.​  
+From a user perspective, all data planes in Amplify platform look the same. This makes it very easy for administrators to work with different environments.
 
-## Synchronize your environment with a gateway
+The **Data Planes** are your API gateways and runtime environments (e.g., Axway, AWS API Gateway, Azure API Management, Istio, Apigee, Kong, MuleSoft, WSO2, Kafka, SAP, Software AG, IBM API Connect, and more).
+Each data plane is represented as an **environment** in Amplify Engage.
 
-Using agents is the recommended way to add API services to your environment. When a Discovery Agent is installed on your gateway, the agent will automatically discover API service assets and add them to your environment in Amplify. The Traceability Agent will send API traffic logs from your gateway to Amplify, where you can then view and analyze the logs.
+Agents can be deployed on-premises or as a service in cloud-native environments. They are easy to install, secure, and extensible via SDKs.
 
-{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
+### Manual syncronization
 
-### On-premise agent features
+You can also manually synchronize your environment using the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that manual changes in your deployment will not be automatically synchronized with Amplify, unless you automate this process.
 
-{{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
+## Discovery agent
 
-| Description                    | Axway API Gateway                                                                                                       | AWS API Gateway                                      | Azure API Management                                                   | Istio            | Apigee Edge                                                   | IBM API Connect                                     |
-|--------------------------------|-------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------------------|------------------|---------------------------------------------------------------|-----------------------------------------------------|
-| **Discovery**                  | Published Frontend Proxies                                                                                              | Rest APIs in API Gateway                             | APIs                                                                   | Virtual Services | API Products / Proxies                                        | Catalog APIs                                        |
-| **Application**                | Client App                                                                                                              | Usage plan                                           | Product                                                                | No               | Application                                                   | Catalog Application                                 |
-| **Access Request**             | Associated Frontend Proxy with Application                                                                              | Associated API Stage with Usage plan                 | Associated API with Product                                            | No               | Products associated to Application                            | Product access in Application                       |
-| **Credential Type**            | APIKey / OAuth / BasicAuth / IDP                                                                                        | APIKey                                               | APIKey / EntraID                                                       | IDP              | APIKey / OAuth                                                | APIKey / OAuth                                      |
-| **Credential Actions**         | APIKey - Suspend/Enable <br />OAuth - Suspend/Enable/Rotate <br />IDP - Suspend/Enable <br />BasicAuth - Suspend/Enable | Suspend/Enable                                       | Suspend/Enable                                                         | No               | Suspend/Enable                                                | No                                                  |
-| **Quota Enforcement**          | Quota per Frontend Proxy set in Client App                                                                              | Quotas are attached to a Usage plan                  | Quota Policy associated to Product                                     | Envoy Filters    | Quota added to a Product, underlying proxy must enforce Quota | Plan added to Product                               |
-| **Traceability**               | Transactions with application context associated to Managed Applications                                                | Transactions with API Key associated with Usage plan | Transactions with Azure Product subscriptions associated to Credential | No               | API Usage Statistics                                          | Transaction Count for APIs and API/App relationship |
-| **Platform Usage**             | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | Yes              | Yes                                                           | Yes                                                 |
-| **Transaction Metrics**        | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | Yes                                                           | Yes                                                 |
-| **Transaction Event Sampling** | Yes                                                                                                                     | Yes                                                  | Yes                                                                    | No               | No                                                            | Yes                                                 |
+Discovery Agents are lightweight software components that run on your data plane hosts or are hosted in Amplify. They automatically discover APIs and services, sending metadata to the Amplify platform for inclusion in the Service Registry.
 
-| Description                    | MuleSoft Gateway                           | Software AG webMethods                     | Kong Gateway                                               | Kafka Cluster  |
-|--------------------------------|--------------------------------------------|--------------------------------------------|------------------------------------------------------------|----------------|
-| **Discovery**                  | Rest APIs (+RAML)                          | Published Frontend Proxies                 | Services and attached Routes                               | Topics         |
-| **Application**                | Associated Client App with Contract        | No                                         | Consumer                                                   | Create Product |
-| **Access Request**             | Associated Frontend Proxy with Application | No                                         | If ACL plugin is required to give consumer access to Route | No             |
-| **Credential Type**            | Basic Auth / OAuth                         | No                                         | APIKey / Basic Auth / OAuth                                | APIKey / SASL  |
-| **Credential Actions**         | Suspend/Enable                             | No                                         | Suspend/Enable                                             | Suspend/Enable |
-| **Quota Enforcement**          | No                                         | Quotas are attached to a Policy in the API | Rate limiting plugin added to Consumer                     | No             |
-| **Traceability**               | No                                         | Yes                                        | Using the Kong HTTP log plugin                             | No             |
-| **Platform Usage**             | Yes                                        | Yes                                        | Yes                                                        | Yes            |
-| **Transaction Metrics**        | No                                         | Yes                                        | Yes                                                        | Yes            |
-| **Transaction Event Sampling** | No                                         | Yes                                        | Yes                                                        | No             |
+### Discovery agent key features
 
-| Description                    | Backstage Software Catalog | GitLab Repository        | SAP Integration Suite - API Management / API Portal          | GCP Apigee X                       |
-|--------------------------------|----------------------------|--------------------------|--------------------------|------------------------------------|
-| **Discovery**                  | All API types              | Public/Private Rest APIs | REST, SOAP, and GraphQL  | API Proxies                        |
-| **Application**                | No                         | No                       | Yes                      | Application                        |
-| **Access Request**             | No                         | No                       | Yes                      | Associated API with Product        |
-| **Credential Type**            | No                         | No                       | APIKey / OAuth           | APIKey / OAuth                     |
-| **Credential Actions**         | No                         | No                       | Suspend/Enable/Renew     | Suspend/Enable                     |
-| **Quota Enforcement**          | No                         | No                       | Yes                      | Quota Policy associated to Product |
-| **Traceability**               | No                         | No                       | Yes                      | API Usage Statistics               |
-| **Platform Usage**             | No                         | No                       | Yes                      | Yes                                |
-| **Transaction Metrics**        | No                         | No                       | Yes                      | Yes                                |
-| **Transaction Event Sampling** | No                         | No                       | No                       | No                                 |
+* **Automated Discovery**: Detects new services and versions as they are deployed.
+* **Configurable Filtering**: Administrators can set rules to control which APIs are discovered and sent to Amplify.
+* **Provisioning Support**: Handles subscription requests and quota provisioning.
+* **Credential Management**: Integrates with identity providers and manages credentials for API consumers.
 
-| Description                    | WSO2 API Manager           |
-|--------------------------------|----------------------------|
-| **Discovery**                  | REST, SOAP, and GraphQL    |
-| **Application**                | Yes                        |
-| **Access Request**             | Yes                        |
-| **Credential Type**            | APIKey / OAuth             |
-| **Credential Actions**         | Suspend/Enable             |
-| **Quota Enforcement**          | Yes                        |
-| **Traceability**               | Yes                        |
-| **Platform Usage**             | Yes                        |
-| **Transaction Metrics**        | Yes                        |
-| **Transaction Event Sampling** | Yes                        |
+> [!IMPORTANT]
+> You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version (running version) to version (latest version).
 
-### SaaS (Embedded) Agent Features
+## Traceability agent
 
-{{< alert title="Note" color="primary" >}}**No** = Feature is not currently supported. <br />**Yes** = Feature is currently supported.{{< /alert >}}
+The Traceability Agent is a lightweight software application that runs on your data plane host or can be hosted in Amplify. Its primary function is to report usage metrics, events, and log data from a given data plane to the Amplify platform.
 
-| Description                    | AWS                                                  | GCP Apigee X                       | GitHub Repository        | SwaggerHub               | Azure API Management                                                  |
-|--------------------------------|------------------------------------------------------|------------------------------------|--------------------------|--------------------------|-----------------------------------------------------------------------|
-| **Discovery**                  | Rest APIs in API Gateway                             | API Proxies                        | Public/Private Rest APIs | Public/Private Rest APIs | APIs                                                                  |
-| **Application**                | Usage plan                                           | Application                        | No                       | No                       | Product                                                               |
-| **Access Request**             | Associated API Stage with Usage plan                 | Associated API with Product        | No                       | No                       | Associated API with Product                                           |
-| **Credential Type**            | APIKey                                               | APIKey / OAuth                     | No                       | No                       | APIKey                                                                |
-| **Credential Actions**         | Suspend/Enable                                       | Suspend/Enable                     | No                       | No                       | Suspend/Enable                                                        |
-| **Quota Enforcement**          | Quotas are attached to a Usage plan                  | Quota Policy associated to Product | No                       | No                       | Quota Policy associated to Product                                    |
-| **Traceability**               | Transactions with API Key associated with Usage plan | API Usage Statistics               | No                       | No                       | Transactions with Azure Product subscription associated to Credential |
-| **Platform Usage**             | Yes                                                  | Yes                                | No                       | No                       | Yes                                                                   |
-| **Transaction Metrics**        | Yes                                                  | Yes                                | No                       | No                       | Yes                                                                   |
-| **Transaction Event Sampling** | Yes                                                  | No                                 | No                       | No                       | Yes                                                                   |
+### Traceability agent key features
 
-For detailed information about agent configuration, features and limitations, see:
+* **Non-obtrusive metrics collection**: Gathers metrics and traffic data from distributed data planes without disruption​.
+* **API Transaction Details**: Includes request/response headers, performance data, and other metadata​.
+* **Data redaction and sanitization**: Apply flexible selection, redaction, and sanitization rules to maintain data privacy​.
+* **Transaction Sampling Controls**: Captures all transactions, including errors, for a period of 5 minutes, with a blocked off period of 30 minutes.​
 
-* [Discovery and Traceability Agents for Axway API Manager](/docs/connect_manage_environ/connect_api_manager/)
-* [Discovery and Traceability Agents for GCP Apigee X](/docs/connect_manage_environ/connect_apigee_x/)
-* [Discovery and Traceability Agents for AWS API Gateway](/docs/connect_manage_environ/connect_aws_gateway/)
-* [Discovery and Traceability Agents for Azure API Management](/docs/connect_manage_environ/connect_azure_gateway/)
-* [Discovery and Traceability Agents for IBM API Connect](/docs/connect_manage_environ/connect_ibm_api_connect/)
-* [Discovery and Traceability Agents for Istio Gateway](/docs/connect_manage_environ/mesh_management/)
-* [Discovery and Traceability Agents for MuleSoft Gateway](https://github.com/Axway/agents-mulesoft)
-* [Discovery and Traceability Agents for Software AG webMethods](https:///docs/connect_software_ag_webmethods/)
-* [Discovery and Traceability Agents for Kong Gateway](https://github.com/Axway/agents-kong)
-* [Discovery Agent for GitHub Repository](/docs/connect_manage_environ/connect_github_repository/)
-* [Discovery Agent for GitLab Repository](/docs/connect_manage_environ/connect_gitlab_repository/)
-* [Discovery Agent for Kafka Cluster](/docs/connect_manage_environ/connect_kafka_cluster/)
-* [Discovery Agent for SwaggerHub](/docs/connect_manage_environ/connect_swaggerhub/)
-* [Discovery Agent for Backstage](/docs/connect_manage_environ/connect_backstage/)
-* [Discovery Agent for SAP Integration Suite - API Management / API Portal](/docs/connect_manage_environ/connect_sap_api_portal/)
+> [!IMPORTANT]
+> You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version (running version) to version (latest version).
 
-To manually synchronize your environment, you can use the [Axway Central CLI](/docs/integrate_with_central/cli_central/cli_environments) or the [Amplify APIs](https://apicentral.axway.com/apis/docs). Note that changes in your deployment will not be automatically synchronized with Amplify.
+## Environment definition
 
-## Asset definitions
+In Amplify Engage, an **environment** represents the connection point to a specific data plane, such as an API Gateway or runtime infrastructure where your APIs are hosted and managed. It defines the context in which discovery, subscription, and observability operations take place, ensuring that Amplify can interact consistently with the underlying gateway or service.
 
-This section describes the assets that are represented in your environment.
+Creating an environment is a prerequisite for connecting an agent. Agents use the environment definition to establish communication with the correct data plane, enabling automated API discovery, traffic collection, and lifecycle management. Without an environment, an agent cannot be registered or synchronized with Amplify Engage.
 
-### API services
+From the [Environments](https://apicentral.axway.com/topology/environments) view you can see the status of all connected dataplanes and make adjustments as needed. Each Environment can be edited to:
 
-An API service represents a physical deployment of a resource in an environment. Examples of API services include API, MFT, Protobuf, documentation, and so on. You can manually add API services to your environment or they can be discovered and auto-added by Axway agents. Later, these API services can be combined and packaged together to create catalog items for your consumers to access.
+* Enable linting rules to validate APIs against compliance requirements
+* Automate credential management by setting certificate or key expiration policies handled directly by the agent
+* Assign stages (such as production, test, or development) to distinguish life cycle stages
+* Customize tags, attributes, and access rights to align with organizational standards and governance policies
 
-#### Versions
+Creating and configuring an Environment is therefore a foundational step before connecting agents, as it defines how each data plane is represented and governed within the Amplify Platform.
 
-API services have a specification based on type (OAS2, OAS3, WSDL, Protobuf, etc). Whenever this specification changes, a version must be created. This helps account for different stages in the lifecycle of the API service. Each version has a direct dependency on its associated API services and can be individually configured for differing consumer access needs.
+For Details, see [Add Environments](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/add_environments/index.html).
 
-#### Endpoints
+### Stages
+
+Stages in Amplify Engage represent the different phases of the API lifecycle and are a key mechanism for organizing the API landscape. Common examples include development, testing, and production.
+
+Within an Environment, stages act as logical groupings for API services, regardless of how they are introduced—whether discovered from a gateway, pulled from a repository, or manually created. When APIs are discovered automatically, they are also automatically assigned to a stage.
+
+Stages provide additional governance by letting you control their visibility across different Marketplace instances and teams, ensuring that only the right audiences see APIs at the appropriate lifecycle phase.
+
+## Service Registry
+
+The Service Registry is the centralized catalog of all services within Amplify Engage, forming what can be thought of as your company’s API Universe. It consolidates services reported by agents as well as those added manually, giving you a single, authoritative view of your API landscape.
+
+The Service Registry is the primary place to discover APIs across the entire enterprise, regardless of the gateway, environment, or source they originate from.
+
+Access to the Service Registry follows strict enterprise security rules:
+
+* The full catalog is visible only to Engage Administrator.
+* In practice, each team or business unit typically sees only a subset of services—specifically those that are associated with their scope of ownership or responsibility.
+
+## API Services
+
+An **API Service** represents a physical deployment of a resource in an environment. Examples of API Services include REST APIs, ASYCN APIs, and so on. Later, these API Services can be combined and packaged together to create curate assets that you can productizen and make available for consumption in the Marketplace.
+
+### API Service Versions
+
+Each API Service in Amplify Engage is defined by a **specification**, which can follow multiple formats such as OAS2, OAS3, WSDL, or Protobuf. When the underlying specification changes, a new version is created. Versioning is essential for managing the different phases of an API service’s lifecycle, allowing providers to evolve APIs while maintaining stability for existing consumers.
+
+### API Service Endpoints
 
 An endpoint is a URL that represents the deployment of an API service. There can be one or many endpoints to access a deployed API service version. An endpoint includes a name and description to make it easier for others to consume later. They also contain the host and port information used to access the API service and have a hard dependency on the API service version it is associated with.
 
-### Webhooks
+## Supported gateways and features
 
-Webhook assets are used for enabling subscription flows when a catalog user wants to subscribe to your API service. Webhooks are scoped to the environment level, which makes them reusable with other assets within the environment.
+Amplify Engage supports a wide range of gateways and platforms, including Axway API Gateway, AWS API Gateway, Azure API Management, Istio, Apigee, IBM API Connect, MuleSoft, Software AG webMethods, Kong, Kafka, Backstage, GitHub, GitLab, SAP Integration Suite, GCP Apigee X, SwaggerHub, and WSO2 API Manager.
 
-### Secrets
+Each gateway supports different features, such as:
 
-Secrets are a special kind of asset used with webhooks for securing subscription flows.
+* Discovery of APIs and applications
+* Access request management
+* Credential types and actions (APIKey, OAuth, BasicAuth, etc.)
+* Quota enforcement
+* Traceability and transaction metrics
+  
+For a detailed list of supported gateways and features, refer to the [Supported Gateways and Platforms](supported_gateways.md).
 
 ## Related topics
 
 See the following topics for related information.
+
+* [Manage Environments](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/edit_environment/index.html)
+* [Monitor Agent status](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/agents_management/index.html)
+* [Connect Axway API Manager](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/connect_api_manager/index.html)
