@@ -149,7 +149,34 @@ There are two ways to delete an asset, depending on your role.
 * **Engage Admins** can delete assets that are in active state, which skips the need to manually deprecate and archive the assest. The system provides a guided workflow that automatically cleans up all related dependencies so you don’t need to manually track or remove them.
 * **Catalog Managers** must manually deprecate, archive, and delete the asset.
 
-### What happens during automatic Asset cleanup
+### Delete an asset (for Engage Admins)
+
+1. Navigate to *Catalog > Asset Catalog*.
+2. Select **All Assets**.
+3. From the list view, click the ellipsis menu of the asset to be deleted.
+4. Click **Delete**.
+5. Confirm your intent.
+6. Review the [Dependency Summary](#what-happens-during-automatic-asset-cleanup):
+
+    * **Plans using this asset** - Lists plans with resources from this asset.
+    * **Active subscriptions** - Lists subscriptions that are still active and tied to those plans.
+    * **Linked products** - Lists products (draft or released) that include this asset.
+    * *If no dependencies exist, this step is skipped*.
+
+7. Choose an action for linked products:
+
+    * **Release a new product version** - Creates a new version of the product without the asset.
+    * **Create a draft product** -  Moves the product to draft without the asset so you can edit it before releasing.
+
+8. Review the summary of planned actions.
+9. Type *DELETE* in the confirmation box and click **Delete Asset**.
+
+    * A modal will show deletion progress.
+    * Once complete, you will return to the asset list with a confirmation message.
+
+{{< alert title="Note" color="primary" >}}Cancelling subscriptions may take longer than expected in some cases. Please leave the tab open.{{< /alert >}}
+
+#### What happens during automatic Asset cleanup
 
 When you delete an asset, Amplify Engage scans for all dependencies and provides a summary before you confirm the action.
 
@@ -174,34 +201,7 @@ When you delete an asset, Amplify Engage scans for all dependencies and provides
     * Subscriptions linked to archived plans are cancelled automatically.
     * Subscriptions linked to active plans remain intact.
 
-### Deleting an asset (for **Engage Admins)
-
-1. Navigate to *Catalog > Asset Catalog*.
-2. Select **All Assets**.
-3. From the list view, click the ellipsis menu of the asset to be deleted.
-4. Click **Delete**.
-5. Confirm your intent.
-6. Review the Dependency Summary:
-
-    * **Plans using this asset** - Lists plans with resources from this asset.
-    * **Active subscriptions** - Lists subscriptions that are still active and tied to those plans.
-    * **Linked Products** - Lists products (draft or released) that include this asset.
-    * *If no dependencies exist, this step is skipped*.
-
-7. Choose an action for linked products:
-
-    * **Release a new product version** - Creates a new version of the product without the asset.
-    * **Create a draft product** -  Moves the product to draft without the asset so you can edit it before releasing.
-
-8. Review the summary of planned actions.
-9. Type **DELETE** in the confirmation box and click **Delete Asset**.
-
-    * A modal will show deletion progress.
-    * Once complete, you will return to the asset list with a confirmation message.
-
-{{< alert title="Note" color="primary" >}}Cancelling subscriptions may take longer than expected in some cases. Please leave the tab open.{{< /alert >}}
-
-### Deleting an asset (for Catalog Managers)
+### Delete an asset (for Catalog Managers)
 
 1. Manually deprecate and archive the asset and each release.
 2. Once archived, delete the asset directly from the Asset Catalog.
@@ -210,15 +210,11 @@ When you delete an asset, Amplify Engage scans for all dependencies and provides
 
 ## Deprecate an asset
 
-* The asset must be in Active state.
-* Each version of the asset must be deprecated individually.
-* Once all versions are deprecated, the entire asset is marked as deprecated.
-
-### Deprecate asset steps
+The asset must be in **Active** state. Each version of the asset must be deprecated individually. Once all versions are deprecated, the entire asset is marked as deprecated.
 
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
-3. From the list view, select the Active asset to deprecate.
+3. From the list view, select the active asset to deprecate.
 4. Select the version you want to deprecate and click **Deprecate**.
 5. Repeat for each active version.
 6. When no active versions remain, the asset automatically moves to **Deprecated** state.
@@ -231,5 +227,5 @@ The asset must be in **Deprecated** state.
 2. Select **All Assets**.
 3. From the list view, select the Deprecated asset to archive.
 4. Click **Archive**.
-5. Type ARCHIVE in the confirmation box.
+5. Type *ARCHIVE* in the confirmation box.
 6. Confirm action.
