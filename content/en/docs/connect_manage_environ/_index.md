@@ -62,7 +62,7 @@ The Traceability Agent is a lightweight software application that runs on your d
 
 ## Environment definition
 
-In Amplify Engage, an **environment** represents the connection point to a specific data plane, such as an API Gateway or runtime infrastructure where your APIs are hosted and managed. It defines the context in which discovery, subscription, and observability operations take place, ensuring that Amplify can interact consistently with the underlying gateway or service.
+In Amplify Engage, an environment represents the connection point to a specific data plane, such as an API Gateway or runtime infrastructure where your APIs are hosted and managed. It defines the context in which discovery, subscription, and observability operations take place, ensuring that Amplify can interact consistently with the underlying gateway or service.
 
 Creating an environment is a prerequisite for connecting an agent. Agents use the environment definition to establish communication with the correct data plane, enabling automated API discovery, traffic collection, and lifecycle management. Without an environment, an agent cannot be registered or synchronized with Amplify Engage.
 
@@ -75,7 +75,7 @@ From the [Environments](https://apicentral.axway.com/topology/environments) view
 
 Creating and configuring an environment is therefore a foundational step before connecting agents, as it defines how each data plane is represented and governed within the Amplify platform.
 
-For Details, see [Add environments](/docs/connect_manage_environ/add_environments).
+For Details, see [Create an environments](/docs/connect_manage_environ/add_environments).
 
 ### Stages
 
@@ -125,7 +125,3 @@ For a detailed list of supported gateways and features, see the [Supported gatew
 ## Related topics
 
 See the following topics for related information.
-
-* [Manage environments](/docs/connect_manage_environ/edit_environment)
-* [Monitor agent status](/docs/connect_manage_environ/agents_management)
-* [Connect Axway API Manager](/docs/connect_manage_environ/connect_api_manager)
