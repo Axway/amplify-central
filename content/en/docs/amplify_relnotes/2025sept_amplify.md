@@ -10,6 +10,16 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## September 16, 2025
+
+New bug fix for the September 16 update.
+
+### Marketplace bug fix for September 16, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|         | APIGOV-31208 | **Issue**: Error occurs when trying to create a mock endpoint with a service which does not have an owner and the user is an Engage Admin. <br/>**Resolution**: Mock endpoints can now be created with the UI by an Engage Admin regardless of whether the service has an owner. |
+
 ## September 11, 2025
 
 New bug fix for the September 11 update.
