@@ -18,6 +18,8 @@ Before you begin, you must have:
 
 ## Create an environment
 
+Follow these steps to create an environment.
+
 ### Open the Environments page
 
 1. Navigate to *Topology > Environments*.
@@ -25,21 +27,20 @@ Before you begin, you must have:
 
     ![Environment List Page](/Images/central/EnvironmentListPage.png)
 
-> [!NOTE]
-> If you’ve already reached your environment quota, the button will be disabled. Check your entitlement to confirm limits.
+{{< alert title="Note" color="primary" >}}If you’ve already reached your environment quota, the button will be disabled. Check your entitlement to confirm limits.{{< /alert >}}
 
-### Fill the environment profile
+### Complete the environment profile
 
 Provide basic details about the environment:
 
 * **Environment Name** - A short friendly display name.
 * **Environment Type** - Choose the gateway or system type (for example, AWS API Gateway, Azure API Gateway).
-    * Custom/SDK - for community agents or SDK-based agents.
-    * Manual - for environments without an agent.
-* **Production** - Select **Yes** if this is a production dataplane or connects to a non-Axway gateway. The usage will count against your entitled quota.
+    * Custom/SDK - For community agents or SDK-based agents.
+    * Manual - For environments without an agent.
+* **Production** - Select **Yes** if this is a production data plane or connects to a non-Axway gateway. The usage will count against your entitled quota.
 * **Governance** - Select **Axway Manage** if hosted in Axway Managed Cloud.
 * **Description** - Brief description of the environment.
-* **Image** -Upload an iconto help identity this environment.
+* **Image** -Upload an icon to help identify this environment.
 
 Click **Next** to continue.
 
@@ -67,7 +68,7 @@ For details, see [Add and manage stages](/docs/connect_manage_environ/stage).
 
 Click **Next**.
 
-### (Optional) Compliance Profiles
+### (Optional) Compliance profiles
 
 Enable compliance or security rules to apply to all APIs discovered in this environment.
 
@@ -82,31 +83,32 @@ Share the environment with other teams if needed:
 * Select a **team owner**.
 * Grant **read** or **edit** access to one or more teams.
 
-By default, only Engage Admin and members of owning team have access. For details, see [Environment Access Rights](https://docs.axway.com/bundle/amplify-central/page/docs/connect_manage_environ/manage_environments_ownership/index.html).
+By default, only the Engage Admin and members of the owning team have access. For details, see [Environment Access Rights](/docs/connect_manage_environ/manage_environments_ownership).
 
 ### Finalize
 
-1. Add any Tags and Attributes to help organize and filter environments.
+Add tags and attributes to finish creating your environment:
+
+1. Add any tags and attributes to help organize and filter environments.
 2. Click **Save**.
 
 Your environment is now created and ready for agent connection.
 
-> [!TIP]
-> Always create environments before setting up discovery or traceability agents. This ensures all API services are associated with the right data plane.
+{{< alert title="Tip" color="secondary" >}}Always create environments before setting up Discovery or Traceability agents. This ensures all API services are associated with the right data plane.{{< /alert >}}
 
-## Edit an Environment
+## Edit an environment
 
 You can update an environment at any time — for example, to change profile details or adjust access and compliance settings.
 
 To edit an environment:
 
-1. Navigate to **Topology > Environments**.
+1. Navigate to *Topology > Environments*.
 2. From the list, select the environment you want to update.
 3. Click **Edit Environment**.
 
    ![Edit Environment](/Images/central/Environment_Details_Edit.png)
 
-4. Make your changes. You can edit:  
+4. You can edit:  
    * **Environment Profile** – Name, production flag, governance type, description, image, and configuration (AWS, Apigee X, GitHub, etc.).
    * **Compliance Profile** – Default design or security rules.
    * **Credential Preferences** – Expiration and visibility rules for newly created credentials.
