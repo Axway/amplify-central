@@ -9,10 +9,10 @@ Connecting your environments to Amplify Engage is essential for unified manageme
 
 ## Why connecting your environments matters
 
-* **Automated API Discovery**: Instantly detect new APIs and services, reducing manual effort and ensuring your catalog is always up to date.
-* **Centralized Management**: Manage all discovered services from a single pane of glass, regardless of where they are hosted.
-* **Governance & Compliance**: Enforce design and security policies, validate compliance, and manage credentials centrally.
-* **Operational Insights**: Monitor API health, usage metrics, and traffic across all environments for better decision-making.
+* **Automated API discovery**: Instantly detect new APIs and services, reducing manual effort and ensuring your catalog is always up to date.
+* **Centralized management**: Manage all discovered services from a single pane of glass, regardless of where they are hosted.
+* **Governance and compliance**: Enforce design and security policies, validate compliance, and manage credentials centrally.
+* **Operational insights**: Monitor API health, usage metrics, and traffic across all environments for better decision-making.
 
 ## How to connect your environment
 
