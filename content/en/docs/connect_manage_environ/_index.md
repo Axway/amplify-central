@@ -43,8 +43,7 @@ Discovery Agents are lightweight software components that run on your data plane
 * **Provisioning support**: Handles subscription requests and quota provisioning.
 * **Credential management**: Integrates with identity providers and manages credentials for API consumers.
 
-> [!IMPORTANT]
-> You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version (running version) to version (latest version).
+{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
 ## Traceability Agent
 
@@ -57,8 +56,7 @@ The Traceability Agent is a lightweight software application that runs on your d
 * **Data redaction and sanitization**: Apply flexible selection, redaction, and sanitization rules to maintain data privacy​.
 * **Transaction Sampling Controls**: Captures all transactions, including errors, for a period of 5 minutes, with a blocked off period of 30 minutes.​
 
-> [!IMPORTANT]
-> You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version (running version) to version (latest version).
+{{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
 ## Environment definition
 
