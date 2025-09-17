@@ -19,7 +19,7 @@ New enhancement for the September 17 update.
 * **Delet assets in active state**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Engage Admins can now delete assets that are in active state, which skips the need to manually deprecate and archive the asset. Amplify Enagage provides a guided workflow that automatically cleans up all related dependencies so you don’t need to manually track or remove them. For more details, see [Delete Assets (for Engage Admins)](https://docs.axway.com/bundle/amplify-central/page/docs/manage_asset_catalog/asset_management/index.html#delete-an-asset-for-engage-admins).
+  Engage Admins can now delete assets that are in active state, which skips the need to manually deprecate and archive the asset. Amplify Enagage provides a guided workflow that automatically cleans up all related dependencies so you don’t need to manually track or remove them. For more details, see [Delete an assets (for Engage Admins)](https://docs.axway.com/bundle/amplify-central/page/docs/manage_asset_catalog/asset_management/index.html#delete-an-asset-for-engage-admins).
 
 ## September 16, 2025
 
