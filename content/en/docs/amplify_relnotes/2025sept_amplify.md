@@ -14,12 +14,12 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancement for the September 17 update.
 
-### Marketplace update for September 17, 2025
+### Marketplace updates for September 17, 2025
 
-* **Delete Asset Wizard**
+* **Delet assets in active state**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  For Engage Admins, the asset deletion experience has been improved with a WebUI wizard. An active asset can now be deleted with a guided workflow that automatically cleans up all released dependencies.  The user does not have to manually trace and remove the dependencies (e.g. products, plans, subscriptions). 
+  Engage Admins can now delete assets that are in active state, which skips the need to manually deprecate and archive the asset. Amplify Enagage provides a guided workflow that automatically cleans up all related dependencies so you don’t need to manually track or remove them. For more details, see [Delete Assets (for Engage Admins)](https://docs.axway.com/bundle/amplify-central/page/docs/manage_asset_catalog/asset_management/index.html#delete-an-asset-for-engage-admins).
 
 ## September 16, 2025
 
