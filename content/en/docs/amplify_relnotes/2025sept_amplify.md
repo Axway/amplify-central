@@ -19,7 +19,7 @@ New enhancement for the September 17 update.
 * **Delete Asset Wizard**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  For Engage Admins, the asset deletion experience has been improved with a WebUI wizard. An active asset can now be deleted with a guided workflow that automatically cleans up all released dependencies.  The user does not have to manually trace and remove the dependencies (e.g. products, planss, subscriptions). 
+  For Engage Admins, the asset deletion experience has been improved with a WebUI wizard. An active asset can now be deleted with a guided workflow that automatically cleans up all released dependencies.  The user does not have to manually trace and remove the dependencies (e.g. products, plans, subscriptions). 
 
 ## September 16, 2025
 
