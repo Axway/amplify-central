@@ -10,6 +10,17 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## September 17, 2025
+
+New enhancement for the September 17 update.
+
+### Marketplace update for September 17, 2025
+
+* **Feature**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Description.
+
 ## September 16, 2025
 
 New bug fix for the September 16 update.
