@@ -10,6 +10,17 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## September 19, 2025
+
+New enhancement for the September 19 update.
+
+### Agents updates for September 19, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
 ## September 17, 2025
 
 New enhancement for the September 17 update.
