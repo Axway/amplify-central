@@ -22,7 +22,7 @@ When requesting a sampling period the user will also request a time frame, 0-300
 
 ### Requesting the Traceability Agent to sample
 
-The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ#on-premise-Agent-Features), is already configured. The only other step is to request the sampling to begin using the Amplify Engage UI or CLI.
+The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ/supported_gateways), is already configured. The only other step is to request the sampling to begin using the Amplify Engage UI or CLI.
 
 {{< alert title="Note" color="primary" >}}The duration field below does not apply to SaaS agents. When enabled, the SaaS agent will immediately run and send transactional data for that execution only.{{< /alert >}}
 
@@ -82,7 +82,7 @@ When requesting sampling for an API the user will also request a time frame, 0-3
 
 ### Requesting sampling for an individual API
 
-The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ#on-premise-Agent-Features), is already configured. The only other step is to request sampling for an individual API. This would add the endpoints of the API Service Instance to all the Traceability Agents from the environment. The maximum number of APIs that can be sampled at one time, per Traceability Agent, is 5. Note that requesting sampling for an API will not trigger sampling for the Traceability Agents themselves, this would have to be done separately.
+The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ/supported_gateways), is already configured. The only other step is to request sampling for an individual API. This would add the endpoints of the API Service Instance to all the Traceability Agents from the environment. The maximum number of APIs that can be sampled at one time, per Traceability Agent, is 5. Note that requesting sampling for an API will not trigger sampling for the Traceability Agents themselves, this would have to be done separately.
 
 #### Request API sampling via the UI
 
