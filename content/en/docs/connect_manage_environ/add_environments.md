@@ -44,7 +44,7 @@ Provide basic details about the environment:
 
 Click **Next** to continue.
 
-### (Optional) Credential Preferences
+### (Optional) Credential preferences
 
 You can control how credentials behave in this environment:
 
