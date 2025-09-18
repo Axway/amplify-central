@@ -55,7 +55,7 @@ See the following topics for related information.
 * [Define an environment](/docs/connect_manage_environ)
 * [Add an API service](/docs/connect_manage_environ/manage_services/add_api_service)
 * [Integrate with Amplify](/docs/integrate_with_central)
-* [Connect an environment via agents](/docs/connect_manage_environ#synchronize-your-environment-with-a-gateway)
+* [Connect an environment via agents](/docs/connect_manage_environ)
 * [Service Registry](/docs/manage_service_registry)
 * [Asset Catalog](/docs/manage_asset_catalog)
 * [Product Foundry](/docs/manage_product_foundry)
