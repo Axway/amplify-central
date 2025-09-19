@@ -19,7 +19,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Engage September 19 2025](/docs/amplify_relnotes/2025sept_amplify/#september-19-2025)
 
-| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.127 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
 | Axway API Management 7.7                   | DA=1.2.34 (SDK v1.1.126) / TA=1.2.32     | DA=1.1.80 / TA=1.1.81            |
 | AWS Gateway using SDK 2.0                  | DA=1.2.31 / TA=1.2.31     | DA=1.1.64 / TA-1.1.67            |
@@ -46,7 +46,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | SwaggerHub Embedded Service                |
 | Traceable Embedded API Security Service    |
 
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.127)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
 | Graylog API Security                       | 1.1.24                   | 1.0.5            |
 | Traceable API Security                     | 2.0.7 (SDK 1.1.124)      | 1.0.0            |
