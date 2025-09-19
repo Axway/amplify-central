@@ -21,6 +21,13 @@ New enhancement for the September 19 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
+### Agent bug fixes for September 19, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01752991   | APIGOV-31195 | **Issue**: The platform usage events were showing the incorrect observation start time. For example, if no traffic occured on a weekend, the observation start time would be Saturday instead of Monday when API traffic would start. <br/>**Resolution**: All Traceability agents have had the usage publishing logic updated for the observation start time even if no usage is reported. Additionally a short delay was added to processing usage to allow inflight metric reports to update the usage prior to the report being sent. |
+| 01751619   | APIGOV-31098 | **Issue**: APIM Discovery agent detected a duplicate API Service from a published API. <br/>**Resolution**: APIM Discovery agent and the Traceability agent have improved cache handling. The should result is reduction the probability of duplicate APIs and improve the sending of metrics. |
+
 ## September 17, 2025
 
 New enhancement for the September 17 update.
