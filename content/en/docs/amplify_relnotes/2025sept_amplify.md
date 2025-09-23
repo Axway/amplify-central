@@ -12,14 +12,14 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## September 23, 2025
 
-New enhancements for the September 23 update.
+New enhancement for the September 23 update.
 
-### Marketplace updates for September 23, 2025
+### Marketplace update for September 23, 2025
 
 * **Register application to multiple resources**
 
   (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-  Users can now register for access to multiple resources from the same product in a single request—saving time and effort. The new registration flow is organized into clear steps:
+  Users can now register for access to multiple resources from the same product in a single request, saving time and effort. The new registration flow is organized into clear steps:
 
     * **Select Application**: Choose an existing application and active subscription plan, or create a new application if needed.
     * **Configure Resource**: Select the resources to register to in a searchable table.
