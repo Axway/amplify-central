@@ -10,16 +10,45 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## September 23, 2025
+
+New enhancement for the September 23 update.
+
+### Marketplace update for September 23, 2025
+
+* **Register application to multiple resources**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Users can now register for access to multiple resources from the same product in a single request, saving time and effort. The new registration flow is organized into clear steps:
+
+    * **Select Application**: Choose an existing application and active subscription plan, or create a new application if needed.
+    * **Configure Resource**: Select the resources to register to in a searchable table.
+    * **Additional Details**: Complete any required registration fields.  Resources that require the same registration information are grouped together. You only need to provide additional info once per group.
+    * **Preview Application**: Review your selections and submit the request.
+
+  After submission, users receive a confirmation message with a link to track the status of each registration request or to request a credential. Marketplace automatically creates a separate registration request for each selected resource.
+
+## September 19, 2025
+
+New bug fixes for the September 19 update.
+
+### Agent bug fixes for September 19, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01752991   | APIGOV-31195 | **Issue**: The platform usage events were showing the incorrect observation start time. For example, if no traffic occurred on a weekend, the observation start time would be Saturday instead of Monday when API traffic started. <br/>**Resolution**: All Traceability Agents have had the usage publishing logic updated for the observation start time, even if no usage is reported. Additionally, a short delay was added to processing usage to allow inflight metric reports to update the usage prior to the report being sent. |
+| 01751619   | APIGOV-31098 | **Issue**: The APIM Discovery Agent detected a duplicate API service from a published API. <br/>**Resolution**: The APIM Discovery Agent and Traceability Agent have improved cache handling. This reduces the probability of duplicate APIs and improves the sending of metrics. |
+
 ## September 17, 2025
 
 New enhancement for the September 17 update.
 
 ### Marketplace updates for September 17, 2025
 
-* **Delet assets in active state**
+* **Delete assets in active state**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Engage Admins can now delete assets that are in active state, which skips the need to manually deprecate and archive the asset. Amplify Enagage provides a guided workflow that automatically cleans up all related dependencies so you don’t need to manually track or remove them. For more details, see [Delete an asset (for Engage Admins)](https://docs.axway.com/bundle/amplify-central/page/docs/manage_asset_catalog/asset_management/index.html#delete-an-asset-for-engage-admins).
+  Engage Admins can now delete assets that are in active state, which skips the need to manually deprecate and archive the asset. Amplify Engage provides a guided workflow that automatically cleans up all related dependencies so you don’t need to manually track or remove them. For more details, see [Delete an asset (for Engage Admins)](https://docs.axway.com/bundle/amplify-central/page/docs/manage_asset_catalog/asset_management/index.html#delete-an-asset-for-engage-admins).
 
 ## September 16, 2025
 
