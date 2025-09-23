@@ -28,16 +28,6 @@ New enhancements for the September 23 update.
 
   After submission, users receive a confirmation message with a link to track the status of each registration request or to request a credential. Marketplace automatically creates a separate registration request for each selected resource.
 
-* **Default Navigation menu items customization**
-
-  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-  Marketplace Managers now have full control over the visibility and naming of the default navigation menu items — Home, Products, Categories, and Applications. Previously, these menu items were always visible to consumers and could not be hidden or disabled.
-  With this enhancement, you can:
-
-    * Individually toggle the visibility of each default menu item.
-    * Rename default menu items to better fit business or branding needs.
-    * Reorder the display position of menu items in the navigation bar.
-
 ## September 19, 2025
 
 New enhancement for the September 19 update.
