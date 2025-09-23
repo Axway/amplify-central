@@ -30,14 +30,7 @@ New enhancements for the September 23 update.
 
 ## September 19, 2025
 
-New enhancement for the September 19 update.
-
-### Agents updates for September 19, 2025
-
-* **New agent versions available**
-
-  (NEW AGENT RELEASES)</br>
-  Refer to [Release Notes](https://docs.axway.com/bundle/amplify-central/page/docs/amplify_relnotes/index.html) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+New bug fixes for the September 19 update.
 
 ### Agent bug fixes for September 19, 2025
 
