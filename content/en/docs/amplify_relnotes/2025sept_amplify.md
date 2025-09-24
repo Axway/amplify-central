@@ -32,7 +32,7 @@ New enhancement for the September 23 update.
 
   (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   When displaying the Credential details, consumer can also view the credential definition so that he has access to the information provided when creating it. For instance, and OAuth credential will display the token url endpoint, the redirect url endpoint, the scopes as long as those fields are part of the credential definition.
-  Note: For v7 API Manager internal OAuth server, the token url value is not part of the credential definition and will not be displayed in the credential details. If provider wants to show it to its consumer, he has to add a custom field **tokenUrl** of type string in the credential definition. Refer to [Customize credential request screen](/docs/integrate_with_central/customize_ard_crd#Customize-credential-request-screen)
+  Note: For v7 API Manager internal OAuth server, the token url value is not part of the credential definition and will not be displayed in the credential details. If provider wants to show it to its consumer, he has to add a custom field **tokenUrl** of type string in the credential definition. Refer to [Customize credential request screen](/docs/integrate_with_central/customize_ard_crd#customize-credential-request-screen)
 
 ## September 19, 2025
 
