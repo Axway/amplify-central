@@ -4,48 +4,62 @@ linkTitle: Marketplace menus
 weight: 37
 ---
 
-Configure the Marketplace menus. This footer is displayed on all pages of the Marketplace and can be customized to include elements such as links, logos, and text.
+To customize the Marketplace **Help menu** and the **Navigation menu**, you must have one of the following roles:
 
-## Before you start
+* **Platform Administrator**.
+* **Marketplace Manager** in a team with Administration preferences enabled for the Marketplace instance.
 
-You must have Platform Administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Menus* content.
+## Customize the Navigation menu
 
-## Objectives
+By default, the Marketplace navigation menu bar includes:
 
-Learn how to customize the Marketplace menus.
+* Home
+* Products
+* Categories
+* Applications
 
-## Customize the Marketplace menus
+As an administrator, you can:
 
-The Marketplace menus changes are made from the Marketplace *Menus* page:
+* Toggle the visibility of each default menu item individually.
+* Rename menu default items to match your business or branding.
+* Reorder the display position of default items in the navigation bar.
+* Add custom menu items
 
-1. Navigate to *Organization > Marketplace*.
-2. Select **Menus**. *The menus page is displayed*:
+To update the main navigation bar:
 
-    ![Marketplace menus](/Images/marketplace/marketplace_menus.png)
+1. Navigate to your **Organization -> Marketplaces** and select a Marketplace.
+2. Go to **Pages & Menus** -> **Navigation Menu**.
+3. In the Navigation Menu section, click **Configure**.
+4. For each navigation item:
 
-### Change the help menu
+    * Enter a **label** (e.g., “Docs” or Get Started”).
+    * Enter a **link** to the destination. You can add a link to an external page or reference a page from the Document Library.
+    * Set the **visibility** ( Always Shown, Signed in, Signed out).
+    * Choose whether the link opens in a **new tab**.
+    * Use the **Move** icon to reorder items.
+    * Click the **delete** icon to remove an item (enabled only for custom items).
 
-From the *Menus* page, click **Configure** in the Help Menu section to change the contents of the help menu displayed in the navigation bar. Click **Add menu item** to configure a Help menu. Do the following to configure menu items:
+5. Click **Clear all items** to reset the menu to default settings.
+6. Click **+ Menu item** to add a new item.
 
-1. Click the question mark icon to select an icon from the drop down menu to use for the help item image.
-2. Type a label for the menu item.
-3. Type a link to the menu item.
-4. Select the visibility of the menu item.
-5. Select whether the menu item opens a new tab.
-6. Click the up or down arrow keys to move the menu item's position.
-7. Click the delete icon to remove a menu item.
-8. Click **+Add Menu Item** to add more menu items.
-9. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
+Note: You can add a maximum of **5 custom navigation menu items** to the navigation bar in addition to the default ones.
 
-### Configure the navigation menu
+### Change the Help menu
 
-From the *Menus* page, click **Configure** in the Navigation Menu Items section to add and configure links to the common navigation menu. Click **Add navigation item**, and then do the following to configure menu items:
+To update the Help menu that is positioned next to the Account menu:
 
-1. Type a label for the menu item.
-2. Type a link to the menu item.
-3. Select the visibility of the menu item.
-4. Select whether the menu item opens a new tab.
-5. Click the up or down arrow keys to move the menu item's position.
-6. Click the delete icon to remove a menu item.
-7. Click **+Add Menu Item** to add more menu items.
-8. Click **Clear all items** to start with a blank configuration. *No Menu Configured* is displayed.
+1. Navigate to your **Organization -> Marketplaces** and select a Marketplace.
+2. Go to **Pages & Menus** -> **Help Menu**.
+3. Click **Configure**.
+4. For each help item:
+
+    * Choose an **icon**. Toggle *Show icons* to use icons.
+    * Enter a **label** (e.g "Support Center").
+    * Enter a **link** to the help resource.
+    * Set the **visibility**.
+    * Choose whether the link opens in a **new tab**.
+    * Use the **Move** icon to reorder items.
+    * Click the **delete** icon to remove an icon.
+
+5. Click **Clear all items** to reset the menu.
+6. Click **+ Menu Item** to add a new help item.
