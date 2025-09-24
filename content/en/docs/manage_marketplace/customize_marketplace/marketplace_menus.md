@@ -42,9 +42,9 @@ To update the main navigation bar:
 5. Click **Clear all items** to reset the menu to default settings.
 6. Click **+ Menu item** to add a new item.
 
-Note: You can add a maximum of **5 custom navigation menu items** to the navigation bar in addition to the default ones.
+{{< alert title="Note" color="primary" >}}You can add a maximum of **5 custom navigation menu items** to the navigation bar in addition to the default ones.{{< /alert >}}
 
-### Change the Help menu
+## Change the Help menu
 
 To update the Help menu that is positioned next to the Account menu:
 
