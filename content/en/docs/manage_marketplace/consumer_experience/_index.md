@@ -36,7 +36,7 @@ From the product details page:
 
 Once your subscription is approved, you can **register an application** to gain access to the product resources.
 
-{{< alert title="Note" color="primary" >}Some subscriptions are approved automatically, others may need provider approval.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Some subscriptions are approved automatically, others may need provider approval.{{< /alert >}}
 
 ## Register an application
 
@@ -64,7 +64,7 @@ To register an application from the Product details page, click **Register Appli
    * Double check before submitting.
    * Click **Register Application**. After submission, a confirmation message appears with a link to track your application registrations or request a credential.
 
-{{< alert title="Note" color="primary" >}Some resources may require manual approval by the provider. The registration will indicate whether access is granted instantly or pending approval. You can always access the application registration requests from the Application Registrations page from the left side menu.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Some resources may require manual approval by the provider. The registration will indicate whether access is granted instantly or pending approval. You can always access the application registration requests from the Application Registrations page from the left side menu.{{< /alert >}}
 
 ## Request a credential
 
@@ -76,7 +76,7 @@ Once your application registration is approved and access to the product resourc
 4. Fill in any necessary configuration details.
 5. Once generated, securely store your credentials.
 
-{{< alert title="Note" color="primary" >}Multiple different resources can sometimes share the same credential. Review the credential details to verify the resources it applies to.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Multiple different resources can sometimes share the same credential. Review the credential details to verify the resources it applies to.{{< /alert >}}
 
 ## Related topics
 
