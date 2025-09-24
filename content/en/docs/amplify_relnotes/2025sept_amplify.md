@@ -28,6 +28,11 @@ New enhancement for the September 23 update.
 
   After submission, users receive a confirmation message with a link to track the status of each registration request or to request a credential. Marketplace automatically creates a separate registration request for each selected resource.
 
+* **Enhanced Credential Details view**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  The Credential Details screen now displays the information provided during credential creation. For instance, it now shows the token URL, the redirect URL, the scopes, and any custom fields included in the credential definition for an OAuth credential type. Note that the **v7 API Manager internal OAuth server** does not include the **token URL** by default for credentials it manages. To display it, providers must add a custom field named *tokenUrl* of type *string* to the credential definition. See [Customize credential request screen](/docs/integrate_with_central/customize_ard_crd#customize-credential-request-screen) for implementation details.
+
 ## September 19, 2025
 
 New bug fixes for the September 19 update.
