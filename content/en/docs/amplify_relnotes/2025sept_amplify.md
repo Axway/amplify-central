@@ -21,6 +21,19 @@ New enhancement for the September 24 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
+### Marketplace updates for September 24, 2025
+
+* **Navigation menu items customization**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Marketplace Managers now have full control over the visibility and naming of the default navigation menu items — Home, Products, Categories, and Applications. With this enhancement, you can:
+
+    * Individually toggle the visibility of each default menu item.
+    * Rename default menu items to better fit business or branding needs.
+    * Reorder the display position of menu items in the navigation bar.
+
+  Note that the new visibility settings will cause the Categories item to reappear in the navigation menu when no categories are defined. To correct this, go to *Pages & Menus* → *Navigation Menu* in your Marketplace instance and set the Categories item visibility to *Hidden*.
+
 ## September 23, 2025
 
 New enhancement for the September 23 update.
