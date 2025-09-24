@@ -57,7 +57,37 @@ No agent updates. See August 21 2025 for latest supported agent versions.
 
 ## [Amplify Engage September 19 2025](/docs/amplify_relnotes/2025sept_amplify/#september-19-2025)
 
-No agent updates. See August 21 2025 for latest supported agent versions.
+| Environment type                        | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
+|--------------------------------------------|--------------------------|------------------|
+| Axway API Management 7.7                   | DA=1.2.35 (SDK v1.1.127) / TA=1.2.33     | DA=1.1.80 / TA=1.1.81            |
+| AWS Gateway using SDK 2.0                  | DA=1.2.31 / TA=1.2.31     | DA=1.1.64 / TA-1.1.67            |
+| Azure latest release                       | DA=1.3.30 / TA=1.3.30    | DA=1.1.70 / TA=1.1.76            |
+| Istio 1.9.5                                | DA=1.1.27 / TA=2.1.26    | DA=1.0.36 / TA=2.0.82            |
+| Apigee Edge                                | 1.0.27 (SDK v1.1.127)    | 0.1.38                           |
+| Apigee X                                   | 1.4.17                   | 1.4.2                            |
+| Mulesoft Anypoint platform v3              | 1.2.31 (SDK v1.1.127)    | 1.1.48                           |
+| Software AG webMethods                     | 1.0.25                   | 1.0.0                            |
+| Kong Gateway                               | 1.1.31 (SDK v1.1.127)    | 1.0.9                            |
+| GitLab                                     | 1.1.26 (SDK v1.1.127)    | 1.0.6                            |
+| Kafka Cluster                              | 1.1.25                   | 1.0.6                            |
+| IBM API Connect Gateway                    | 1.1.25                   | 1.0.0                            |
+| Backstage                                  | 1.0.26                   | 1.0.0                            |
+| SAP Integration Suite - API Management / API Portal | 1.0.13                   | 1.0.0                            |
+| WSO2 API Manager 4.5.0                      | 1.0.12                    | 1.0.0                            |
+
+| Supported SaaS (embedded) agents           |
+|--------------------------------------------|
+| AWS Embedded Service                       |
+| Apigee X Embedded Service                  |
+| GitHub Embedded Service                    |
+| Azure Embedded Service                     |
+| SwaggerHub Embedded Service                |
+| Traceable Embedded API Security Service    |
+
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
+|--------------------------------------------|--------------------------|------------------|
+| Graylog API Security                       | 1.1.24 (SDK v1.1.127)    | 1.0.5            |
+| Traceable API Security                     | 2.0.7 (SDK 1.1.124)      | 1.0.0            |
 
 ## [Amplify Engage September 17 2025](/docs/amplify_relnotes/2025sept_amplify/#september-17-2025)
 
@@ -110,8 +140,8 @@ No agent updates. See August 21 2025 for latest supported agent versions.
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.124)  | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83)  |
 |--------------------------------------------|--------------------------|------------------|
-| Graylog API Security                       | 1.1.24                   | 1.0.5            |
-| Traceable API Security                     | 2.0.7 (SDK 1.1.124)      | 1.0.0            |
+| Graylog API Security                       | 1.1.23                   | 1.0.5            |
+| Traceable API Security                     | 2.0.7                    | 1.0.0            |
 
 ## [Amplify Engage August 20 2025](/docs/amplify_relnotes/2025aug_amplify/#august-20-2025)
 
