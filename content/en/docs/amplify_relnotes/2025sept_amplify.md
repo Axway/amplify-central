@@ -32,7 +32,9 @@ New enhancement for the September 24 update.
     * Rename default menu items to better fit business or branding needs.
     * Reorder the display position of menu items in the navigation bar.
 
-  Note that the new visibility settings will cause the Categories item to reappear in the navigation menu when no categories are defined. To correct this, go to *Pages & Menus* → *Navigation Menu* in your Marketplace instance and set the Categories item visibility to *Hidden*.
+  For more information, see [Customize menu items](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_menus/index.html).
+  
+  {{< alert title="Note" color="primary" >}}The new visibility settings will cause the Categories item to reappear in the navigation menu when no categories are defined. To correct this, go to *Pages & Menus* → *Navigation Menu* in your Marketplace instance and set the Categories item visibility to *Hidden*.{{< /alert >}}
 
 ## September 23, 2025
 
