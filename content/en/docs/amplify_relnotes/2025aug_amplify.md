@@ -37,7 +37,7 @@ New enhancements and bug fixes for the August 21 update.
 * **Embedded Traceable API Security (embedded) agent**
 
   (NEW AGENT RELEASES)</br>
-  A new embedded Traceabile API Security agent is now available, which you can configure directly from the Amplify Engage user interface. See the latest versions of all available agents at [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
+  A new embedded Traceable API Security agent is now available, which you can configure directly from the Amplify Engage user interface. See the latest versions of all available agents at [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).
 
 ### Agent bug fixes for August 21, 2025
 
