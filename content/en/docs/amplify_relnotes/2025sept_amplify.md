@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## September 24, 2025
 
-New enhancement for the September 24 update.
+New enhancements for the September 24 update.
 
 ### Agent updates for September 24, 2025
 
@@ -21,7 +21,7 @@ New enhancement for the September 24 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
-### Marketplace updates for September 24, 2025
+### Marketplace update for September 24, 2025
 
 * **Navigation menu items customization**
 
@@ -32,15 +32,15 @@ New enhancement for the September 24 update.
     * Rename default menu items to better fit business or branding needs.
     * Reorder the display position of menu items in the navigation bar.
 
-  For more information, see [Customize menu items](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_menus/index.html).
+  For more information, see [Customize menu items](/docs/manage_marketplace/customize_marketplace/marketplace_menus).
   
-  {{< alert title="Note" color="primary" >}}The new visibility settings will cause the Categories item to reappear in the navigation menu when no categories are defined. To correct this, go to *Pages & Menus* → *Navigation Menu* in your Marketplace instance and set the Categories item visibility to *Hidden*.{{< /alert >}}
+  {{< alert title="Note" color="primary" >}}The new visibility settings will cause the Categories item to reappear in the navigation menu when no categories are defined. To correct this, set the Categories item visibility to *Hidden* by going to *Pages & Menus > Navigation Menu* in your Marketplace instance.{{< /alert >}}
 
 ## September 23, 2025
 
-New enhancement for the September 23 update.
+New enhancements for the September 23 update.
 
-### Marketplace update for September 23, 2025
+### Marketplace updates for September 23, 2025
 
 * **Register application to multiple resources**
 
@@ -61,7 +61,14 @@ New enhancement for the September 23 update.
 
 ## September 19, 2025
 
-New bug fixes for the September 19 update.
+New enhancement and bug fixes for the September 19 update.
+
+### Agent updates for September 19, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
 
 ### Agent bug fixes for September 19, 2025
 
@@ -74,7 +81,7 @@ New bug fixes for the September 19 update.
 
 New enhancement for the September 17 update.
 
-### Marketplace updates for September 17, 2025
+### Marketplace update for September 17, 2025
 
 * **Delete assets in active state**
 
