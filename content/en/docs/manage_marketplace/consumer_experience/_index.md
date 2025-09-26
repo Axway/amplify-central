@@ -9,17 +9,15 @@ Once consumers are logged in, they can browse products, subscribe to products, a
 
 ## Log into the Marketplace
 
-Before you can subscribe to products and request access to APIs, you must first log in with an account. If you don't have an account, you must set up one.
+Before you can subscribe to products and request access to APIs, you must first log in with an account. If you don't have an account, you must set one up.
 
 ### Account setup options
 
-1. If the provider has enabled self-service registration:
-
+* If the provider has enabled self-service registration:
     * You can sign up directly by creating a Consumer Organization account.
     * Once registered, you can log in and begin exploring products, subscribing, and requesting access to resources.
 
-2. Invite-based
-
+* Invite-based:
     * The provider must create an account for you with the appropriate permissions.
     * You'll receive an invitation link from the provider.
     * Use the link to access your account.
