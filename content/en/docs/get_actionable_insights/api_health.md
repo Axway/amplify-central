@@ -11,7 +11,7 @@ The API Health Dashboard offers centralized view into API performance and usage 
 
 To access the API Health Dashboard, navigate to your **Platform account -> Business Insights-> API Health**.
 
-The following roles can access the API Health dashboard, with visibility varying acvording to permissions:
+The following roles can access the API Health dashboard, with visibility varying according to permissions:
 
 | Role                | Description                                                                                                            |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
