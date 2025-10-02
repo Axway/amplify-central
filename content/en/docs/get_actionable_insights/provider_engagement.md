@@ -14,6 +14,16 @@ Use this dashboard to understand and improve the overall health of your API prog
 To access the dashboard, navigate to **Business Insights -> Engagement -> Provider Engagement** .
 From here, you can view metrics that reflect both the current state and the recent activity of your provider teams.
 
+## Who can access the dashboard
+
+The Provider Engagement dashboard is visible to the following roles:
+
+| Role                | Description                                                                                                                                       |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Engage Admin**    | Has full visibility across all provider teams and environments. Can view activity for all teams, including unassigned services or assets.         |
+| **Catalog Manager** | Can view metrics for assets, services and products owned by their team.                                                                           |
+| **Insights Viewer** | Can view metrics for assets, services and products owned by their team.                                                                           |
+
 ## Filtering options
 
 Use the filter controls at the top of the dashboard to refine the displayed data:
