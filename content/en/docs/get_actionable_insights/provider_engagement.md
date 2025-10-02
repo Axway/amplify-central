@@ -1,22 +1,72 @@
-## Provider Engagement
+---
+title: Provider Engagement
+linkTitle: Provider Engagement
+weight: 10
+date: 2022-02-04
+---
+The Provider Engagement dashboard helps you monitor and evaluate the activity and engagement level of your provider teams. It gives you visibility into how teams contribute to your API program by tracking the number of teams, services, assets, and products created or updated over time.
+Use this dashboard to understand and improve the overall health of your API program and to identify highly active or underperforming teams.
 
-Click **Provider Engagement** to see metrics and details about your provider teams engagement level to understand and improve overall health of your API program and engagement of different teams.
+![Example of Provider Engagement](/static//Images/central/provider_engagement.png)
 
-![Example of Provider Engagement](/Images/central/provider_engagement.png)
+## Accessing the dashboard
 
-You can filter by provider team (select one, multiple, or all).
+To access the dashboard, navigate to **Business Insights -> Engagement -> Provider Engagement** .
+From here, you can view metrics that reflect both the current state and the recent activity of your provider teams.
 
-In the **Current Totals** section, view the total current counts for the following:
+## Filtering options
 
-* **Teams** - total number of teams as of the current time.
-* **Services** - total number of services as of the current time.
-* **Assets** - total number of assets and their current states (draft, active, deprecated, and archived) as of the current time.
-* **Products** - total number of products and their current states (draft, active, deprecated, and archived) as of the current time. Also, the total number of published products is displayed.
+Use the filter controls at the top of the dashboard to refine the displayed data:
 
-In the **Team Activity** section, view the chart (for all teams selected) or the table (break down by team) for events that have occurred in the time frame selected.
+* **Provider Team**: Select one, multiple, or all provider teams.
+* **Time Range**: Choose a specific timeframe (for example, last 7 days, 30 days, or custom range) to analyze activity.
+* **View Mode**: Switch between Services, Assets and Products.
 
-* **Services** - the number of services created, updated, and deprecated during the selected timeframe.
-* **Assets** - the number of assets created, activated, deprecated, and archived during the selected timeframe.
-* **Products** - the number of products created, activated, published, deprecated, and archived during the selected timeframe.
+## Current totals
 
-The events reflect changes of state, creation, and publish actions. In the chart view, use the filter to show the details by week or month. Review the table to see the break down by team.
+The **Current Totals** section displays the most up-to-date counts for all key provider-related objects within your organization. These totals represent the current state of your provider landscape.  
+Use this section to assess the current inventory of your provider ecosystem and understand the distribution of assets and products by state.
+
+| Metric       | Description                                                                                                                                               |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Teams**    | Total number of provider teams currently defined in the organization.                                                                                     |
+| **Services** | Total number of services currently registered in the Service Registry.                                                                                    |
+| **Assets**   | Total number of assets, categorized by lifecycle state (Draft, Active, Deprecated, Archived).                                                             |
+| **Products** | Total number of products, categorized by lifecycle state (Draft, Active, Deprecated, Archived). Also displays the total number of *Published* products. This count can be filtered by one or more marketplaces, and is the only thing impacted by the marketplace filter.                                                                                                |
+
+## Team activity
+
+The **Team Activity** section tracks how your teams are engaging over time — showing how many services, assets, and products were created or changed within a selected timeframe.
+
+You can view the data in two ways:
+
+* **Chart view**: Aggregated events across all selected teams.
+* **Table view**: Detailed breakdown per team.
+
+### Metrics tracked
+
+| Category     | Event Types Tracked                                 | Description                                                                                           |
+| ------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------|
+| **Services** | Created                                             | Measures the creation  of APIs and services by team in the selected time range.                       |
+| **Assets**   | Created, Activated, Deprecated, Archived            | Tracks asset lifecycle activities in the selected time range, reflecting how teams evolve their APIs. |
+| **Products** | Created, Activated, Published, Deprecated, Archived | Captures product lifecycle events in the selected time range, including publication activity.         |
+
+
+### Chart view
+
+In the chart you can visualize the level of engagement across all selected teams:
+
+* Review total activities for the chosen timeframe.
+* Use the granularity filter to display results by week or month.
+* Identify trends such as spikes in activity following new initiatives or releases.
+
+### Table view
+
+In the table, you can examine the same activity data broken down per team:
+
+* Each row corresponds to a specific provider team.
+* Shows "admin only" row for any product not owned by a team
+* Columns show counts of events per object type (services, assets, products).
+* Use this view to identify which teams are most active or need additional support.
+
+
