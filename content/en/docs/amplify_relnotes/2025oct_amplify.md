@@ -25,5 +25,5 @@ New enhancements for the October 3 update.
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
-|             | APIGOV-31178 | **Issue**: An issue was found where the agent in GRPC mode would restart if the agent cannot connect to the Amplify platform watch controller. <br />**Resolution**: A fix was made to agent SDK to improve the handling of the re-connection to the Amplify platform watch controller. |
-| 01753872    | APIGOV-31216 | **Issue**: An issue where the Discovery Agent would overwrite the Credential Request Definition (CRD) after a CRD update was made for the Identity Provider. <br />**Resolution**: A fix was made to method used to detect Credential Request Definition (CRD) changes. |
+|             | APIGOV-31178 | **Issue**: An issue was found where the agent connected with GRPC would not always re-establish a connection to Amplify when the connection was lost. <br />**Resolution**: A fix was made to agent to improve the CRPC re-connection to the Amplify. |
+| 01753872    | APIGOV-31216 | **Issue**: An issue was found where the Discovery Agent would update the Credential Request Definition (CRD) for an Identity Provider unnecessarily. <br />**Resolution**: A fix was made to the detection method for changes to the Credential Request Definition (CRD). |
