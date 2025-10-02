@@ -25,5 +25,5 @@ New enhancements for the October 3 update.
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
-|             | APIGOV-31178 | **Issue**: An issue was found where the agent connected with GRPC would not always re-establish a connection to Amplify when the connection was lost. <br />**Resolution**: A fix was made to improved the agent’s GRPC reconnection logic to Amplify. |
+|             | APIGOV-31178 | **Issue**: An issue was found where the agent connected with GRPC would not always re-establish a connection to Amplify when the connection was lost. <br />**Resolution**: A fix was made to improve the agent’s GRPC reconnection logic to Amplify. |
 | 01753872    | APIGOV-31216 | **Issue**: An issue was found where the Discovery Agent would update the Credential Request Definition (CRD) for an Identity Provider unnecessarily. <br />**Resolution**: A fix was made to refine the change detection method for Credential Request Definition (CRD) updates. |
