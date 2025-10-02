@@ -14,8 +14,6 @@ Use this dashboard to understand and improve the overall health of your API prog
 To access the dashboard, navigate to **Business Insights -> Engagement -> Provider Engagement** .
 From here, you can view metrics that reflect both the current state and the recent activity of your provider teams.
 
-## Who can access the dashboard
-
 The Provider Engagement dashboard is visible to the following roles:
 
 | Role                | Description                                                                                                                                       |
