@@ -7,7 +7,7 @@ date: 2022-02-04
 
 The API Health Dashboard offers centralized view into API performance and usage across your environments. It helps you monitor transaction volumes, identify error trends, and analyze the health of both **managed** and **unmanaged** APIs.
 
-![Example of API Health](/static/Images/central/api_usage.png)
+![Example of API Health](/static/Images/central/BusinessInsights_API_Health.png)
 
 To access the API Health Dashboard, navigate to your **Platform account -> Business Insights-> API Health**.
 
