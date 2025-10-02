@@ -32,3 +32,24 @@ You can use the filters at the top of the dashboard to refine your view.
 
 * **Marketplace**: Lists all marketplaces you have access to.
 * **Consumer Organization**: Lists all consumer orgs within those marketplaces, including your current org.
+
+## Current Totals
+
+A snapshot of the total counts across consumer organizations, teams, users, subscriptions, and credentials.
+
+### Consumer Orgs
+
+The **Consumer Orgs** card displays the total number of consumer organizations in all selected marketplaces you have access to.
+
+* The platform organization you are a member of is counted as a Consumer Orgs.
+* Shows:
+
+    * Total Consumer Organziations at current time
+    * Active orgs within the selected time range (those with active sessions)
+
+Newly created orgs within the selected time range
+
+Filterable by Marketplace and Consumer Org.
+
+Example:
+If you select Marketplace A and Marketplace B for the last 90 days, this card shows how many orgs were active or created during that period.
