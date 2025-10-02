@@ -20,3 +20,10 @@ New enhancements for the October 3 update.
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agent bug fixes for October 3, 2025
+
+| Case ID     | Internal ID  | Description                                       |
+|-------------|--------------|---------------------------------------------------|
+|             | APIGOV-31178 | **Issue**: An issue was found where the agent in GRPC mode would restart if the agent cannot connect to the Amplify platform watch controller. <br />**Resolution**: A fix was made to agent SDK to improve the handling of the re-connection to the Amplify platform watch controller. |
+| 01753872    | APIGOV-31216 | **Issue**: An issue where the Discovery Agent would overwrite the Credential Request Definition (CRD) after a CRD update was made for the Identity Provider. <br />**Resolution**: A fix was made to method used to detect Credential Request Definition (CRD) changes. |
