@@ -42,14 +42,23 @@ A snapshot of the total counts across consumer organizations, teams, users, subs
 The **Consumer Orgs** card displays the total number of consumer organizations in all selected marketplaces you have access to.
 
 * The platform organization you are a member of is counted as a Consumer Orgs.
-* Shows:
+* Metrics displayed:
 
-    * Total Consumer Organziations at current time
-    * Active orgs within the selected time range (those with active sessions)
+    * **Consumer Orgs**: Total Consumer Organizations currently available in the selected marketplaces.
+    * **Active**: Organization with active user sessions in the selected time interval.
+    * **New**: Newly created consumer organization in the selected time interval.
 
-Newly created orgs within the selected time range
+### Teams
 
-Filterable by Marketplace and Consumer Org.
+Shows the total number of teams within your accessible consumer orgs. Displays:
 
-Example:
-If you select Marketplace A and Marketplace B for the last 90 days, this card shows how many orgs were active or created during that period.
+* **Teams**: Total number of teams currently available in the consumer organizations you have access to.
+* **New**: Newly created teams within the selected time range.
+
+### Users
+
+Shows the total number of unique users across your accessible consumer orgs. Displays:
+
+* **Users**: Total unique users.
+* **Active**: Users with active sessions within the selected time range.
+* **New**: Newly invited users within the selected time range.
