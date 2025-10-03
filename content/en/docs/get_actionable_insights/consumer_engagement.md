@@ -83,7 +83,7 @@ This card is visible only to Engage Admin assignees.
 
 ## Consumer Activity
 
-The **Consumer Activity** section includes a chart view andd and detailed tables to help you analyze growth and engagement patterns.
+The **Consumer Activity** section includes a chart view and a table view to help you analyze growth and engagement patterns.
 
 In the chart you can visualize the level of engagement across all selected Consumer Organizations.
 
