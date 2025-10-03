@@ -30,20 +30,23 @@ New enhancements for the October 3 update.
 
 ### Marketplace update for October 3, 2025
 
-* **Provider has more insights about the subscription he is migrating**
+* **Enhanced subsciption selection for migration**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Catalog Manager can now see more information about the migration they tried to migrate (Marketplace name, Organization, subscriber email, creation date, owning team). He has also the possibility to select only the column he is interested by.
+  To help users select the correct subscription to migrate, the side blade now displays more contextual and relevant information about each subscription.
 
-* **Provider can search subscription by plan name**
-
-  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Catalog Manager, when viewing product details / subscription list, can now search the subscription with *subscription name*, *subscription ID* or *plan name*. The subscription creation date is also available in the list.
-
-* **Provider can preserve the plan status after migrating all subscriptions**
+* **Product Details: Improved subscription search**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Catalog Manager, has now the choice after all subscriptions are migrated to not archive the plan. Like this the plan remains active for further subscriber. This option is only available as soon as the system detect that all subscription will be migrated. A popup is displayed asking Catalo Manager to either Archive the plan or keep the plan in Active state.
+  Catalog Managers can search for subscriptions using any of the following fields: Subscription name, Subscription Id and Plan Name. The **subscription creation date** is now visible directly in the subscription list, providing better context when managing or troubleshooting subscriptions.
+
+* **Keep plans active after subscription migration**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Catalog Managers now have the flexibility to decide whether a plan should remain active after all its subscriptions have been migrated. When the system detects that all subscriptions for a plan will be migrated, the user is presented with two options:
+
+    * Deprecate the plan
+    * Leave the plan active, allowing new consumers to continue subscribing. 
 
 ### Marketplace bug fix for October 3, 2025
 
