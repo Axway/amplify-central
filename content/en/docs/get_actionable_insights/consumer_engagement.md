@@ -8,7 +8,7 @@ date: 2022-09-15
 The **Consumer Engagement** dashboard provides visibility into how your consumers are interacting with your Marketplace.
 Use this dashboard to identify adoption trends, monitor activity levels, and refine engagement strategies to drive greater API consumption.
 
-![Consumer Engagement Screenshot](/static/Images/central/consumer_engagement.png)
+![Consumer Engagement Screenshot](/static/Images/consumer_engagement.png)
 
 ## Accessing the dashboard
 
