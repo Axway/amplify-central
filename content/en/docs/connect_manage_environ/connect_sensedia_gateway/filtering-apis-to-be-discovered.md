@@ -37,12 +37,6 @@ Sample to discover all APIs having attribute "Axway" with tag value "axway": `SE
 
 Sample to discover all APIs having attribute "API Type" with tag value "development": `SENSEDIA_FILTER=tag.API_Type_development.Exists()`
 
-### Alternative format with specific tag value filtering
-
-`tag.<attributeName>.Exists()`
-
-Sample to discover all APIs having any tag with attribute name "Axway": `SENSEDIA_FILTER=tag.Axway.Exists()`
-
 ### Format with boolean comparison (for exclusion)
 
 `tag.<attributeName>_<specificTagValue>.Exists() == false`
@@ -58,26 +52,6 @@ Sample to discover all APIs having attribute "Axway" with tag value "axway": `SE
 Sample to discover all APIs having attribute "API Type" with tag value "private": `SENSEDIA_FILTER=tag.API_Type_private.Exists() == true`
 
 Sample to exclude APIs with "Axway" attribute containing "testing" tag: `SENSEDIA_FILTER=tag.Axway_testing.Exists() == false`
-
-## Filter based on tag attribute existence
-
-`tag.<attributeName>.Exists() == true | false`
-
-Sample to discover all APIs having any tag with attribute name "Axway": `SENSEDIA_FILTER=tag.Axway.Exists() == true`
-
-Sample to discover all APIs not having any tag with attribute name "API Type": `SENSEDIA_FILTER=tag.API_Type.Exists() == false`
-
-## Filter based on specific tag values within attributes
-
-`tag.<attributeName>_<specificTagValue>.Exists() == true | false`
-
-This format allows filtering for specific tag values within a tag attribute.
-
-Sample to discover all APIs having attribute "Axway" with specific tag value 'axway': `SENSEDIA_FILTER=tag.Axway_axway.Exists() == true`
-
-Sample to discover all APIs having attribute "Axway" with specific tag value 'discover': `SENSEDIA_FILTER=tag.Axway_discover.Exists() == true`
-
-Sample to exclude APIs having attribute "Axway" with tag value 'testing': `SENSEDIA_FILTER=tag.Axway_testing.Exists() == false`
 
 ## Alternative filter methods
 
@@ -136,26 +110,3 @@ Comparative operators are used for comparing two values. These can be combined w
 |----------|----------------------------------------------------------------------------------------------------------------|
 | `==`       | Equal to operator, returns true if values on both sides are equal.                                             |
 | `!=`       | Not equal to operator, returns true if the value on the left side is not equal to the value on the right side. |
-
-## Example filter expressions
-
-Based on the actual tag structure and correct filter format, here are practical examples:
-
-### Simple filters
-
-* Discover APIs with Axway attribute containing "axway" tag: `SENSEDIA_FILTER=tag.Axway_axway.Exists()`
-* Discover APIs with Axway attribute containing "discover" tag: `SENSEDIA_FILTER=tag.Axway_discover.Exists()`
-* Discover APIs with API Type attribute containing "development" tag: `SENSEDIA_FILTER=tag.API_Type_development.Exists()`
-* Exclude testing APIs: `SENSEDIA_FILTER=tag.Axway_testing.Exists() == false`
-
-### Compound filters
-
-* Discover Axway APIs that are also for testing: `SENSEDIA_FILTER=tag.Axway_axway.Exists() && tag.Axway_testing.Exists()`
-* Discover APIs that have Axway tags OR API Type tags: `SENSEDIA_FILTER=tag.Axway_axway.Exists() || tag.API_Type_development.Exists()`
-* Exclude testing APIs from discovery: `SENSEDIA_FILTER=tag.Axway_testing.Exists() == false`
-
-### Special characters in attribute names
-
-Note that spaces in attribute names like "API Type" should be referenced as `API_Type` in filters:
-
-`SENSEDIA_FILTER=tag.API_Type_development.Exists()`

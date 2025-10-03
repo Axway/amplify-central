@@ -184,7 +184,7 @@ The agents run on Docker containers and must have access to:
 
 Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
 
-You can validate that your installation by running: `axway central --version`.
+You can validate that your installation by running: `axway engage --version`.
 
 ### Step 2: Folder preparation
 
@@ -245,19 +245,19 @@ For additional information, see [Add configuration to your agents with Axway Cen
 To start the configuration procedure, run the following command:
 
 ```shell
-axway central install agents
+axway engage install agents
 ```
 
 If your Amplify subscription is hosted in the EU region, run the following installation command to start the configuration procedure:
 
 ```shell
-axway central install agents --region=EU
+axway engage install agents --region=EU
 ```
 
 If your Amplify subscription is hosted in the APAC region, run the following installation command to start the configuration procedure:
 
 ```shell
-axway central install agents --region=AP
+axway engage install agents --region=AP
 ```
 
 The installation procedure will prompt for the following:
@@ -271,14 +271,10 @@ The installation procedure will prompt for the following:
    * **Platform URL**: Sensedia platform base URL (e.g., `https://platform-production.sensedia.com`)
    * **Client ID**: Client ID for Sensedia API authentication
    * **Client Secret**: Client Secret for Sensedia API authentication
-   * **Discovery Filter**: Tag-based filter for API discovery (e.g., `tag.Axway_axway.Exists()`)
    * **Environments**: Comma-separated list of environment names (e.g., `Producao,Development`)
    * **Discovery Identity APIs**: Whether to discover identity APIs (true/false)
    * **Discovery Private APIs**: Whether to discover private APIs (true/false)
    * **Developer Email**: Email address to associate with applications created by the agent
-   * **Poll Interval**: How often to check for changes (3m minimum for Discovery, 5m for Traceability)
-4. Traceability module connectivity:
-   * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack`, or `HTTPS`
 
 Once you have answered all questions, the agents' configuration files are updated, the Amplify Engage resources are created and the key pair is generated (if you chose to create a new service account).
 
@@ -336,13 +332,13 @@ See [Administer Sensedia Gateway](/docs/connect_manage_environ/connect_sensedia_
 
 After being authenticated to the platform with the `axway auth login` command, run the following:
 
-* `axway central get da` to get all Discovery Agent information
-* `axway central get ta` to get all Traceability Agent information
+* `axway engage get da` to get all Discovery Agent information
+* `axway engage get ta` to get all Traceability Agent information
 
 The STATUS column will help you identify which agent is running.
 
 ```shell
-C:\Demos>axway central get da
+C:\Demos>axway engage get da
 √ Resource(s) successfully retrieved
 
 NAME                      DATAPLANE TYPE  STATUS     RESOURCE KIND   SCOPE KIND   SCOPE NAME        RESOURCE GROUP
@@ -352,7 +348,7 @@ azure-da                  Azure           running    DiscoveryAgent  Environment
 ```
 
 ```shell
-C:\Demos>axway central get ta
+C:\Demos>axway engage get ta
 √ Resource(s) successfully retrieved
 
 NAME                         DATAPLANE TYPE  STATUS   RESOURCE KIND      SCOPE KIND   SCOPE NAME        RESOURCE GROUP

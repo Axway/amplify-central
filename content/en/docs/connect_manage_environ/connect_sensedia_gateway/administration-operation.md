@@ -70,7 +70,6 @@ The Discovery Agent enhances API specifications by:
 * **Identity APIs**: Include/exclude identity APIs
 * **Private APIs**: Include/exclude private APIs
 * **Environments**: Filter by specific environment deployments
-* **Visibility Type**: Filter by API visibility (PUBLIC, PRIVATE)
 
 ## Traceability Agent features
 
@@ -90,6 +89,7 @@ The Traceability Agent performs the following operations:
 * **Server Error Metrics**: Tracks server errors (500+ status codes)
 * **Application Tracking**: Associates metrics with Sensedia applications and clients
 * **Time-based Processing**: Uses configurable time windows with processing delays
+* **7-Day Data Limitation**: The agent enforces a 7-day maximum lookback period - if the processing window extends beyond 7 days from the current time, it may not produce reliable results due to Sensedia platform data retention policies
 
 {{< alert title="Note" color="primary" >}}The Traceability Agent supports API metrics only and does not provide transaction-level logging.{{< /alert >}}
 
@@ -127,13 +127,13 @@ The agents support marketplace provisioning for:
 | `SENSEDIA_BASEURL` | Sensedia platform base URL | `https://platform-production.sensedia.com` |
 | `SENSEDIA_AUTH_CLIENTID` | Client ID for authentication | `id` |
 | `SENSEDIA_AUTH_CLIENTSECRET` | Client Secret for authentication | `<secret>` |
+| `SENSEDIA_DEVELOPEREMAIL` | Email for application creation (required for Discovery Agent only) | `developer@company.com` |
 
 ### Optional Configuration
 
 | Variable | Description | Default |
 |----------|-------------|----------|
 | `SENSEDIA_ENVIRONMENTS` | Comma-separated list of environments | `""` (all environments) |
-| `SENSEDIA_DEVELOPEREMAIL` | Email for application creation | `""` |
 | `SENSEDIA_FILTER` | API discovery filter expression | `""` (no filtering) |
 | `SENSEDIA_POLLINTERVAL` | Discovery/Traceability poll interval | `30m` |
 | `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs | `false` |
