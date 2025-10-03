@@ -27,3 +27,26 @@ New enhancements for the October 3 update.
 |-------------|--------------|---------------------------------------------------|
 |             | APIGOV-31178 | **Issue**: An issue was found where the agent connected with GRPC would not always re-establish a connection to Amplify when the connection was lost. <br />**Resolution**: A fix was made to improve the agent’s GRPC reconnection logic to Amplify. |
 | 01753872    | APIGOV-31216 | **Issue**: An issue was found where the Discovery Agent would update the Credential Request Definition (CRD) for an Identity Provider unnecessarily. <br />**Resolution**: A fix was made to refine the change detection method for Credential Request Definition (CRD) updates. |
+
+### Marketplace update for October 3, 2025
+
+* **Provider has more insights about the subscription he is migrating**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Catalog Manager can now see more information about the migration they tried to migrate (Marketplace name, Organization, subscriber email, creation date, owning team). He has also the possibility to select only the column he is interested by.
+
+* **Provider can search subscription by plan name**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Catalog Manager, when viewing product details / subscription list, can now search the subscription with *subscription name*, *subscription ID* or *plan name*. The subscription creation date is also available in the list.
+
+* **Provider can preserve the plan status after migrating all subscriptions**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Catalog Manager, has now the choice after all subscriptions are migrated to not archive the plan. Like this the plan remains active for further subscriber. This option is only available as soon as the system detect that all subscription will be migrated. A popup is displayed asking Catalo Manager to either Archive the plan or keep the plan in Active state.
+
+### Marketplace bug fix for October 3, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+|         | APIGOV-31308 | **Issue**: Attempt to decrypt the credential value fails. <br/>**Resolution**: a library has been cleaned up but was mandatory for Marketplace system to access the AWS KMS storage where the encrypted credential value is stored. |
