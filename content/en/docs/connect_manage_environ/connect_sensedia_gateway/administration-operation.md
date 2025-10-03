@@ -1,0 +1,171 @@
+---
+title: Administer Sensedia Gateway
+linkTitle: Administer Sensedia Gateway
+draft: false
+weight: 25
+---
+
+As a Cloud Administrator / Operator, you are responsible for configuring and managing your organization's Sensedia infrastructure. This topic contains setup and operational details for the Sensedia agents to govern your Sensedia API Gateway service.
+
+## Connected Sensedia API Gateway overview
+
+Connecting Sensedia API Gateway to Amplify will provide you with a connected/managed environment, and a global centralized view of your APIs and their related traffic, allowing users to have a centralized governance (creation/deployment/publish/subscription) and monitoring of the traffic for Sensedia API Gateway hosted APIs.
+
+Each Sensedia Gateway is represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with Sensedia API Gateway and Amplify.
+
+### Minimum requirements
+
+* [Amplify Platform Service Account](/docs/integrate_with_central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
+* [Sensedia API Gateway with API Manager v5](https://docs.sensedia.com/en/api-platform-guide/4.14.x.x/index.html)
+* Client ID and Client Secret credentials for Sensedia API authentication
+* Docker environment for running the agents
+* Network connectivity from agent host to Sensedia API Gateway and Amplify Platform
+
+### Agent deployment
+
+The Sensedia agents are delivered as Docker images and can be deployed in any Docker-compatible environment. The agents require:
+
+* Network access to Sensedia API Gateway API Manager endpoints
+* Network access to Amplify Platform endpoints
+* Persistent storage for agent data and logs
+* Environment variables configuration files
+
+### Authentication and authorization
+
+The Sensedia agents use OAuth 2.0 client credentials flow for authentication with the Sensedia platform:
+
+1. **Client Credentials**: The agent uses a configured Client ID and Client Secret
+2. **Token Endpoint**: Authentication requests are made to `/user-management/v1/oauth2/token`
+3. **Bearer Token**: All API calls use the obtained Bearer token
+4. **Token Refresh**: The agent automatically refreshes tokens when they expire
+
+The Bearer token includes tenant information, so no additional tenant configuration is required.
+
+## Discovery Agent features
+
+The Discovery Agent performs the following operations:
+
+### API Discovery Process
+
+1. **Get All APIs**: Retrieves a list of all APIs from Sensedia using the API Manager API
+2. **Filter APIs**: Applies configured filters based on tags, apiTags, identityApi, privateAPI, and environments
+3. **Get API Details**: For each filtered API, retrieves detailed information including revisions and environments
+4. **Create API Services**: Creates Amplify API Services for each discovered Sensedia API
+5. **Create Revisions**: Creates API Service Revisions for each deployed Sensedia revision
+6. **Create Instances**: Creates API Service Instances for each environment where the API is deployed
+7. **Specification Processing**: Retrieves and processes OpenAPI specifications, adding OAuth security information
+
+### API Specification Enhancement
+
+The Discovery Agent enhances API specifications by:
+
+* **OAuth Security**: Adds OAuth 2.0 security definitions based on Sensedia interceptors
+* **Grant Types**: Identifies and adds appropriate grant types (CLIENT_CREDENTIALS, etc.)
+* **Token URLs**: Configures token and authorization URLs for each environment
+* **Authentication Methods**: Supports both "Access token validation" and "OAuth" interceptor types
+
+### Supported Filter Options
+
+* **Tags**: Filter based on API tags
+* **Identity APIs**: Include/exclude identity APIs
+* **Private APIs**: Include/exclude private APIs
+* **Environments**: Filter by specific environment deployments
+* **Visibility Type**: Filter by API visibility (PUBLIC, PRIVATE)
+
+## Traceability Agent features
+
+The Traceability Agent performs the following operations:
+
+### Traffic Data Collection
+
+1. **Environment Setup**: Maps configured environment names to Sensedia environment IDs
+2. **API Metrics**: Collects API call metrics using date ranges with proper time offsets
+3. **Pagination**: Handles large datasets by processing multiple pages of call data
+4. **Metric Aggregation**: Groups and aggregates metrics by API, application, client, and status
+
+### Metrics Processing
+
+* **Success Metrics**: Tracks successful API calls (status < 400)
+* **Client Error Metrics**: Tracks client errors (400-499 status codes)
+* **Server Error Metrics**: Tracks server errors (500+ status codes)
+* **Application Tracking**: Associates metrics with Sensedia applications and clients
+* **Time-based Processing**: Uses configurable time windows with processing delays
+
+{{< alert title="Note" color="primary" >}}The Traceability Agent supports API metrics only and does not provide transaction-level logging.{{< /alert >}}
+
+## Provisioning features
+
+The agents support marketplace provisioning for:
+
+### Application Management
+
+* **Create Applications**: Automatically creates Sensedia applications for subscription requests
+* **Application Status**: Sets application status to "APPROVED" by default
+* **Developer Association**: Associates applications with configured developer email
+* **Application Updates**: Manages application lifecycle through status changes
+
+### Access Request Processing
+
+* **Plan Management**: Creates or reuses plans for API access
+* **Rate Limiting**: Configures rate limit interceptors based on access request quotas
+* **API Association**: Adds APIs to applications while preserving existing associations
+* **Plan Reuse**: Efficiently reuses plans across multiple applications for the same API
+
+### Credential Management
+
+* **Client Credentials**: Retrieves client ID and secret from Sensedia applications
+* **Single Credential**: Each application supports one credential pair only
+* **Credential Rotation**: Supports credential renewal through application status changes
+* **Credential Revocation**: Supports credential revocation by setting application to "REJECTED"
+
+## Configuration management
+
+### Required Environment Variables
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `SENSEDIA_BASEURL` | Sensedia platform base URL | `https://platform-production.sensedia.com` |
+| `SENSEDIA_AUTH_CLIENTID` | Client ID for authentication | `id` |
+| `SENSEDIA_AUTH_CLIENTSECRET` | Client Secret for authentication | `<secret>` |
+
+### Optional Configuration
+
+| Variable | Description | Default |
+|----------|-------------|----------|
+| `SENSEDIA_ENVIRONMENTS` | Comma-separated list of environments | `""` (all environments) |
+| `SENSEDIA_DEVELOPEREMAIL` | Email for application creation | `""` |
+| `SENSEDIA_FILTER` | API discovery filter expression | `""` (no filtering) |
+| `SENSEDIA_POLLINTERVAL` | Discovery/Traceability poll interval | `30m` |
+| `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs | `false` |
+| `SENSEDIA_DISCOVERYPRIVATEAPIS` | Discover private APIs | `false` |
+
+## Monitoring and troubleshooting
+
+### Health checks
+
+The agents provide health check endpoints for monitoring:
+
+* **Discovery Agent**: Reports API discovery status and connectivity
+* **Traceability Agent**: Reports traffic collection status and data processing
+* **Platform Connectivity**: Validates connection to Amplify Platform
+* **Gateway Connectivity**: Validates connection to Sensedia API Gateway
+
+### Log analysis
+
+Agent logs provide detailed information about:
+
+* **Authentication**: Token acquisition and refresh events
+* **API Discovery**: Discovery process and filtering results
+* **Traffic Processing**: Metrics collection and aggregation
+* **Error Handling**: Connection issues and API errors
+* **Performance**: Processing times and throughput metrics
+
+### Common operational tasks
+
+* **Agent Restart**: Restart Docker containers to apply configuration changes
+* **Log Review**: Monitor agent logs for errors and performance issues
+* **Filter Updates**: Modify discovery filters to adjust API selection
+* **Environment Mapping**: Update environment configurations as needed
+* **Credential Rotation**: Update Sensedia client credentials when required
+
+See [Get help with Connected Sensedia Gateway](/docs/connect_manage_environ/connect_sensedia_gateway/tips-and-troubleshooting/) for troubleshooting information.
