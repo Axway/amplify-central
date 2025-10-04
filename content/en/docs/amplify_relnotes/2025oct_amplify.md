@@ -50,6 +50,6 @@ New enhancements and bug fixes for the October 3 update.
 
 ### Marketplace bug fix for October 3, 2025
 
-| Case ID | Internal ID | Description |
+| Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
-|         | APIGOV-31308 | **Issue**: Attempt to decrypt the credential value fails. <br/>**Resolution**: A library has been cleaned up that is mandatory for the Marketplace system to access the AWS KMS storage where the encrypted credential value is stored. |
+|             | APIGOV-31308 | **Issue**: Attempt to decrypt the credential value fails. <br/>**Resolution**: A library has been cleaned up that is mandatory for the Marketplace system to access the AWS KMS storage where the encrypted credential value is stored. |
