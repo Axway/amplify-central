@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## October 3, 2025
 
-New enhancements for the October 3 update.
+New enhancements and bug fixes for the October 3 update.
 
 ### Agent updates for October 3, 2025
 
@@ -25,20 +25,20 @@ New enhancements for the October 3 update.
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
-|             | APIGOV-31178 | **Issue**: An issue was found where the agent connected with GRPC would not always re-establish a connection to Amplify when the connection was lost. <br />**Resolution**: A fix was made to improve the agent’s GRPC reconnection logic to Amplify. |
-| 01753872    | APIGOV-31216 | **Issue**: An issue was found where the Discovery Agent would update the Credential Request Definition (CRD) for an Identity Provider unnecessarily. <br />**Resolution**: A fix was made to refine the change detection method for Credential Request Definition (CRD) updates. |
+|             | APIGOV-31178 | **Issue**: Agent connected with GRPC could not always re-establish the connection to Amplify. <br />**Resolution**: The agent’s GRPC reconnection logic to Amplify has been improved. |
+| 01753872    | APIGOV-31216 | **Issue**: The Discovery Agent updated the Credential Request Definition (CRD) for an Identity Provider when it was not necessary. <br />**Resolution**: The change detection method for Credential Request Definition (CRD) updates has been refined. |
 
-### Marketplace update for October 3, 2025
+### Marketplace updates for October 3, 2025
 
-* **Enhanced subsciption selection for migration**
+* **Enhanced subscription selection for migration**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  To help users select the correct subscription to migrate, the side blade now displays more contextual and relevant information about each subscription.
+  To help users select the correct subscription to migrate, more contextual and relevant information about each subscription is now displayed.
 
 * **Product Details: Improved subscription search**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Catalog Managers can search for subscriptions using any of the following fields: Subscription name, Subscription Id and Plan Name. The **subscription creation date** is now visible directly in the subscription list, providing better context when managing or troubleshooting subscriptions.
+  Catalog Managers can search for subscriptions using any of the following fields: Subscription name, Subscription Id, and Plan name. The **subscription creation date** is now visible directly in the subscription list, providing better context when managing or troubleshooting subscriptions.
 
 * **Keep plans active after subscription migration**
 
@@ -46,10 +46,10 @@ New enhancements for the October 3 update.
   Catalog Managers now have the flexibility to decide whether a plan should remain active after all its subscriptions have been migrated. When the system detects that all subscriptions for a plan will be migrated, the user is presented with two options:
 
     * Deprecate the plan
-    * Leave the plan active, allowing new consumers to continue subscribing. 
+    * Leave the plan active, allowing new consumers to continue subscribing
 
 ### Marketplace bug fix for October 3, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-|         | APIGOV-31308 | **Issue**: Attempt to decrypt the credential value fails. <br/>**Resolution**: a library has been cleaned up but was mandatory for Marketplace system to access the AWS KMS storage where the encrypted credential value is stored. |
+|         | APIGOV-31308 | **Issue**: Attempt to decrypt the credential value fails. <br/>**Resolution**: A library has been cleaned up that is mandatory for the Marketplace system to access the AWS KMS storage where the encrypted credential value is stored. |
