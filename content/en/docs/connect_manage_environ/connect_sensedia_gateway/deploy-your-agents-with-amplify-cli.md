@@ -43,7 +43,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | SENSEDIA_DISCOVERYIDENTITYAPIS   | When set to true, the agent will discover Identity APIs. Default is false.                                                                                                         |
 | SENSEDIA_DISCOVERYPRIVATEAPIS    | When set to true, the agent will discover Private APIs. Default is false.                                                                                                          |
 | SENSEDIA_ENVIRONMENTS            | Comma-separated list of Sensedia environments to filter for discovery (e.g., `Production,Development`).                                                                           |
-| SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for changes (ns - default, us, ms, s, m, h). Default is 30s.                                                                               |
+| SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for changes (ns - default, us, ms, s, m, h). Default is 5m.                                                                               |
 
 ### Create your Discovery Agent environment file
 

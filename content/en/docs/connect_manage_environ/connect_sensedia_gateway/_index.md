@@ -23,7 +23,7 @@ The Discovery Agent is used to discover APIs and their revisions deployed to con
 
 ### Traceability Agent
 
-The Traceability Agent is used to filter the Sensedia API Gateway call logs and prepare the metrics that are sent to Amplify and made visible in Business Insights. Viewing your traffic helps you to identify possible bottlenecks and errors. The traffic can be filtered by environment in case multiples are involved in your topography.
+The Traceability Agent is used to filter the Sensedia API Gateway call logs and prepare the metrics that are sent to and made visible to Amplify. Viewing your traffic helps you to identify possible bottlenecks and errors. The traffic can be filtered by environment in case multiples are involved in your topography.
 
 The Traceability Agent gathers API metrics only and does not support transaction-level logging.
 
