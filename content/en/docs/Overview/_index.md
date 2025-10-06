@@ -22,7 +22,7 @@ Amplify Engage solves this by providing a federated approach to API management, 
 * Onboard developers and partners, who can search, learn about, subscribe to, and consume your APIs.
 * Gain insights into how APIs are being used and whether they comply with your corporate standards.
 
-![Universal API Management ](/Images/Overview/universal_api_management.png)
+![Universal API Management benefits and Amplify components.](/Images/Overview/universal_api_management.png "Universal API Management")
 
 ## Key benefits of Amplify Engage
 
@@ -46,7 +46,7 @@ Consumers, internal or external, get a seamless onboarding and subscription jour
 
 ## Components and capabilities
 
-![Universal API Management ](/Images/Overview/amplify_platform_overview.png)
+![Components of Amplify platform including Amplify Management Plane, Federated Data Planes.](/Images/Overview/amplify_platform_overview.png "Amplify platform components")
 
 * **Management plane**</br>
 The management plane allows Platform Administrators and API providers to administer users, teams, agents, and other related entities in support of managing your distributed environments and organizations.

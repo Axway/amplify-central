@@ -209,7 +209,7 @@ To ensure you're processing the need to approve once, your webhook processor sho
 
 For example, if you have implemented your webhook listener in PowerAutomate, then the condition to validate the above will look as follows:
 
-![Condition filter in Microsoft PowerAutomate](/Images/integration/power_automate_condition.png)
+![Condition filter in Microsoft PowerAutomate.](/Images/integration/power_automate_condition.png "Condition filter")
 
 Once your webhook flow has determined whether the subscription has to be approved or rejected, an "approved" or "rejected" update should be sent to Amplify Engage's API service. The information on the resource that needs to be update is contained in the `selflink` of the webhook notification. The selfLink provides an easy way to get access to a specific resource and change the data. The URL that you send the HTTP PUT request to is a combination of the region that your Amplify service is available at (i.e., `<https://apicentral.axway.com/>` or `<https://central.eu-fr.axway.com/>`) and the `selflink`:
 
