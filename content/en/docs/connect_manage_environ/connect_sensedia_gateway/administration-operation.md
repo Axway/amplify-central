@@ -75,7 +75,7 @@ The Discovery Agent automatically enriches OpenAPI specifications with OAuth 2.0
 
 The agents enable marketplace provisioning by creating Sensedia applications for API subscriptions, managing access plans with rate limiting, and handling credential lifecycle.
 
-### Application Management
+### Application Processing
 
 * **Create Applications**: Automatically creates Sensedia applications for subscription requests
 * **Application Status**: Sets application status to "APPROVED" by default
@@ -98,7 +98,7 @@ The agents enable marketplace provisioning by creating Sensedia applications for
 
 ## Traceability Agent features
 
-The Traceability Agent collects API call metrics from Sensedia environments and processes them into aggregated traffic data that is sent to Amplify Business Insights.
+The Traceability Agent collects API call metrics from Sensedia environments and processes them into aggregated traffic data that is sent to Amplify Engage Business Insights.
 
 ### Traffic Data Collection
 
