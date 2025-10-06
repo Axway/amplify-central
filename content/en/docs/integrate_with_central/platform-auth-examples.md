@@ -33,7 +33,7 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
 5. Select the appropriate role for this service account. In this example, Engage Admin is used. Your service account should now be created.
 
-    ![service account dialog screen](/Images/integration/create-service-account.png)
+    ![Successfully created service account dialog screen.](/Images/integration/create-service-account.png "Service account successfully created")
   
 6. Take note of the Client ID and Secret. You will need to remember or store the secret securely, as this is the only time it will ever be displayed.
 
@@ -41,19 +41,19 @@ A service account is an Amplify concept that allows a non-user, such as a CLI or
 
     `axway service-account list`
 
-  ![service account list screen](/Images/integration/service-account-list.png)
+  ![service account list screen.](/Images/integration/service-account-list.png "List of service accounts")
 
 ### Create the service account with the UI
 
 1. Sign in to the Amplify platform and select **Organization** from the User drop-down menu.
 
-    ![organization drop down screen](/Images/integration/organization-drop-down.png)
+    ![User dropdown menu.](/Images/integration/organization-drop-down.png "User dropdown menu")
 
 2. Click **Service Accounts** from the left navigation.
 
 3. Click **+ Service Account** in the upper-right corner.
 
-    ![ui create service account screen](/Images/integration/ui-create-service-account.png)
+    ![Service Accounts UI screen with button to add a new service account.](/Images/integration/ui-create-service-account.png "Add Service Account button")
 
 4. Complete the form.
 

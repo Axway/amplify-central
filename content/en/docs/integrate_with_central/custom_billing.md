@@ -40,7 +40,7 @@ The query samples in this section are based on the US region for Amplify. For ot
 
 The following image shows the high-level components and flow of custom billing integration:
 
-![Custom billing integration](/Images/central/integrate_with_central/custom_billing_integration.png)
+![Flow of custom billing integration.](/Images/central/integrate_with_central/custom_billing_integration.png "Custom billing integration flow")
 
 ## Step 1: Activate the custom billing integration
 

@@ -360,7 +360,7 @@ Sample of plan and subscription definition request association:
 
 When subscribing to the plan, you will be able to see the emails and billing address:
 
-![Subscription Request screen](/Images/central/integrate_with_central/SubscriptionRequestDefinition.png)
+![Subscription Request UI screen.](/Images/central/integrate_with_central/SubscriptionRequestDefinition.png "Subscription Request screen")
 
 ## Customize Application Registration screen
 
@@ -519,7 +519,7 @@ Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
-![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
+![Application Registration UI screen.](/Images/central/integrate_with_central/AccessRequestDefinition.png "Application Registration screen")
 
 #### AccessRequestDefinition custom fields sample
 
@@ -834,11 +834,11 @@ Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
-![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
+![Application Registration UI screen with purpose selector drop-down menu.](/Images/central/integrate_with_central/AccessRequestDefinition.png "Purpose selector drop-drown menu")
 
 Once your access is granted, you can ask for credential. You should be able to see the file selector:
 
-![Credential Request screen](/Images/central/integrate_with_central/CredentialRequestDefinition.png)
+![Credential Request UI screen.](/Images/central/integrate_with_central/CredentialRequestDefinition.png "Credential Request screen")
 
 #### CredentialRequestDefinition custom field sample
 
