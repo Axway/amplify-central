@@ -110,6 +110,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | SENSEDIA_AUTH_CLIENTSECRET       | The client secret for authenticating with Sensedia API Gateway.                                                                                                                    |
 | SENSEDIA_ENVIRONMENTS            | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                                                       |
 | SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m.                                                                      |
+| SENSEDIA_SENDALLTRAFFIC          | When set to true, the agent will send all API traffic to be reported. When set to false, only discovered APIs will be reported. Default is false.                               |
 
 ### Create your Traceability Agent environment file
 
@@ -332,29 +333,17 @@ See [Administer Sensedia Gateway](/docs/connect_manage_environ/connect_sensedia_
 
 After being authenticated to the platform with the `axway auth login` command, run the following:
 
-* `axway engage get da` to get all Discovery Agent information
-* `axway engage get ta` to get all Traceability Agent information
+* `axway engage get da,ta` to get both Discovery and Traceability Agent information
 
 The STATUS column will help you identify which agent is running.
 
 ```shell
-C:\Demos>axway engage get da
+C:\Demos>axway engage get da,ta
 √ Resource(s) successfully retrieved
 
-NAME                      DATAPLANE TYPE  STATUS     RESOURCE KIND   SCOPE KIND   SCOPE NAME        RESOURCE GROUP
-lbean018-discovery        Edge            running    DiscoveryAgent  Environment  apigtw-v77        management
-sensedia-da               Sensedia        running    DiscoveryAgent  Environment  sensedia-prod     management
-azure-da                  Azure           running    DiscoveryAgent  Environment  azure-dev         management
-```
-
-```shell
-C:\Demos>axway engage get ta
-√ Resource(s) successfully retrieved
-
-NAME                         DATAPLANE TYPE  STATUS   RESOURCE KIND      SCOPE KIND   SCOPE NAME        RESOURCE GROUP
-lbean018-traceability        Edge            running  TraceabilityAgent  Environment  apigtw-v77        management
-sensedia-ta                  Sensedia        running  TraceabilityAgent  Environment  sensedia-prod     management
-azure-ta                     Azure           running  TraceabilityAgent  Environment  azure-dev         management
+NAME            DATAPLANE TYPE  STATUS   RESOURCE KIND      SCOPE KIND   SCOPE NAME      RESOURCE GROUP
+sensedia-da     Sensedia        running  DiscoveryAgent     Environment  sensedia-prod   management
+sensedia-ta     Sensedia        running  TraceabilityAgent  Environment  sensedia-prod   management
 ```
 
 See [Administer Sensedia Gateway](/docs/connect_manage_environ/connect_sensedia_gateway/administration-operation/) for additional information about agent features.

@@ -43,7 +43,7 @@ The Bearer token includes tenant information, so no additional tenant configurat
 
 ## Discovery Agent features
 
-The Discovery Agent performs the following operations:
+The Discovery Agent will query Sensedia APIs to find APIs exposed in Sensedia. It will then create a representation of that API in Amplify Engage, adding any necessary security, that can be published through to Marketplace.
 
 ### API Discovery Process
 
@@ -53,11 +53,11 @@ The Discovery Agent performs the following operations:
 4. **Create API Services**: Creates Amplify API Services for each discovered Sensedia API
 5. **Create Revisions**: Creates API Service Revisions for each deployed Sensedia revision
 6. **Create Instances**: Creates API Service Instances for each environment where the API is deployed
-7. **Specification Processing**: Retrieves and processes OpenAPI specifications, adding OAuth security information
+7. **Specification Processing**: Retrieves and processes OpenAPI specifications, checking interceptor policies before adding OAuth security information (see [API Specification Enhancement](#api-specification-enhancement))
 
 ### API Specification Enhancement
 
-The Discovery Agent enhances API specifications by:
+The Discovery Agent automatically enriches OpenAPI specifications with OAuth 2.0 security definitions by analyzing Sensedia interceptor configurations. It identifies authentication methods, configures appropriate grant types and token endpoints, and ensures APIs published to Amplify Marketplace include the necessary security information for consumer access.
 
 * **OAuth Security**: Adds OAuth 2.0 security definitions based on Sensedia interceptors
 * **Grant Types**: Identifies and adds appropriate grant types (CLIENT_CREDENTIALS, etc.)
@@ -71,9 +71,34 @@ The Discovery Agent enhances API specifications by:
 * **Private APIs**: Include/exclude private APIs
 * **Environments**: Filter by specific environment deployments
 
+## Provisioning features
+
+The agents enable marketplace provisioning by creating Sensedia applications for API subscriptions, managing access plans with rate limiting, and handling credential lifecycle.
+
+### Application Management
+
+* **Create Applications**: Automatically creates Sensedia applications for subscription requests
+* **Application Status**: Sets application status to "APPROVED" by default
+* **Developer Association**: Associates applications with configured developer email
+* **Application Updates**: Manages application lifecycle through status changes
+
+### Access Request Processing
+
+* **Plan Management**: Creates or reuses plans for API access
+* **Rate Limiting**: Configures rate limit interceptors based on access request quotas
+* **API Association**: Adds APIs to applications while preserving existing associations
+* **Plan Reuse**: Efficiently reuses plans across multiple applications for the same API
+
+### Credential Processing
+
+* **Client Credentials**: Retrieves client ID and secret from Sensedia applications
+* **Single Credential**: Each application supports one credential pair only
+* **Credential Rotation**: Supports credential renewal through application status changes
+* **Credential Revocation**: Supports credential revocation by setting application to "REJECTED"
+
 ## Traceability Agent features
 
-The Traceability Agent performs the following operations:
+The Traceability Agent collects API call metrics from Sensedia environments and processes them into aggregated traffic data that is sent to Amplify Business Insights.
 
 ### Traffic Data Collection
 
@@ -91,53 +116,24 @@ The Traceability Agent performs the following operations:
 * **Time-based Processing**: Uses configurable time windows with processing delays
 * **7-Day Data Limitation**: The agent enforces a 7-day maximum lookback period - if the processing window extends beyond 7 days from the current time, it may not produce reliable results due to Sensedia platform data retention policies
 
-{{< alert title="Note" color="primary" >}}The Traceability Agent supports API metrics only and does not provide transaction-level logging.{{< /alert >}}
-
-## Provisioning features
-
-The agents support marketplace provisioning for:
-
-### Application Management
-
-* **Create Applications**: Automatically creates Sensedia applications for subscription requests
-* **Application Status**: Sets application status to "APPROVED" by default
-* **Developer Association**: Associates applications with configured developer email
-* **Application Updates**: Manages application lifecycle through status changes
-
-### Access Request Processing
-
-* **Plan Management**: Creates or reuses plans for API access
-* **Rate Limiting**: Configures rate limit interceptors based on access request quotas
-* **API Association**: Adds APIs to applications while preserving existing associations
-* **Plan Reuse**: Efficiently reuses plans across multiple applications for the same API
-
-### Credential Management
-
-* **Client Credentials**: Retrieves client ID and secret from Sensedia applications
-* **Single Credential**: Each application supports one credential pair only
-* **Credential Rotation**: Supports credential renewal through application status changes
-* **Credential Revocation**: Supports credential revocation by setting application to "REJECTED"
+{{< alert title="Note" color="primary" >}}The Traceability Agent supports API metrics only and does not provide transaction logging.{{< /alert >}}
 
 ## Configuration management
 
-### Required Environment Variables
+### Environment Variables
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `SENSEDIA_BASEURL` | Sensedia platform base URL | `https://platform-production.sensedia.com` |
-| `SENSEDIA_AUTH_CLIENTID` | Client ID for authentication | `id` |
-| `SENSEDIA_AUTH_CLIENTSECRET` | Client Secret for authentication | `<secret>` |
-| `SENSEDIA_DEVELOPEREMAIL` | Email for application creation (required for Discovery Agent only) | `developer@company.com` |
-
-### Optional Configuration
-
-| Variable | Description | Default |
-|----------|-------------|----------|
-| `SENSEDIA_ENVIRONMENTS` | Comma-separated list of environments | `""` (all environments) |
-| `SENSEDIA_FILTER` | API discovery filter expression | `""` (no filtering) |
-| `SENSEDIA_POLLINTERVAL` | Discovery/Traceability poll interval | `30m` |
-| `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs | `false` |
-| `SENSEDIA_DISCOVERYPRIVATEAPIS` | Discover private APIs | `false` |
+| Variable | Description | Required | Default | Example |
+|----------|-------------|----------|---------|---------|
+| `SENSEDIA_BASEURL` | Sensedia platform base URL | Yes | | `https://platform-production.sensedia.com` |
+| `SENSEDIA_AUTH_CLIENTID` | Client ID for authentication | Yes | | `id` |
+| `SENSEDIA_AUTH_CLIENTSECRET` | Client Secret for authentication | Yes | | `<secret>` |
+| `SENSEDIA_DEVELOPEREMAIL` | Email for application creation (Discovery Agent only) | Yes | | `developer@company.com` |
+| `SENSEDIA_ENVIRONMENTS` | Comma-separated list of environments | No | `""` (all environments) | `Production,Development` |
+| `SENSEDIA_FILTER` | API discovery filter expression | No | `""` (no filtering) | `tag.Axway_axway.Exists()` |
+| `SENSEDIA_POLLINTERVAL` | Discovery/Traceability poll interval | No | `30m` | `5m` |
+| `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs | No | `false` | `true` |
+| `SENSEDIA_DISCOVERYPRIVATEAPIS` | Discover private APIs | No | `false` | `true` |
+| `SENSEDIA_SENDALLTRAFFIC` | Send all API traffic for reporting (Traceability Agent only) | No | `true` | `false` |
 
 ## Monitoring and troubleshooting
 
