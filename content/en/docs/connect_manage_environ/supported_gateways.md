@@ -143,7 +143,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 
 ### Sensedia API Gateway
 
-* * **On premise** Discovery and Traceability agents
+* **On premise** Discovery and Traceability agents
 
 ### Kong Gateway
 
