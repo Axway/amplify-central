@@ -44,6 +44,7 @@ Agents are classified into two categories, agents supported by Axway and agents 
 | Kong Gateway               | Axway     | Discovery and Traceability                 | On-premise          |
 | MuleSoft Anypoint platform | Axway     | Discovery and Traceability                 | On-premise          |
 | SAP Integration Suite - API Management / API |Axway  | Discovery and Traceability   | On-premise          |
+| Sensedia API Gateway       | Axway     | Discovery and Traceability                 | On-premise          |
 | Software AG webMethods     | Axway     | Discovery                                  | On-premise          |
 | SwaggerHub                 | Axway     | Discovery                                  | SaaS                |
 | Traceable API Security     | Axway     | Runtime Compliance                         | On-premise and SaaS |

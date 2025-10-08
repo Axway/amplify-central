@@ -141,6 +141,10 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
     * Transaction metrics reporting
     * Transaction event sampling
 
+### Sensedia API Gateway
+
+* * **On premise** Discovery and Traceability agents
+
 ### Kong Gateway
 
 * **On premise** Discovery and Traceability agents

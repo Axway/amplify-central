@@ -10,6 +10,23 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## October 10, 2025
+
+New enhancement and bug fix for the October 10 update.
+
+### Agent update for October 10, 2025
+
+* **New Sensedia API Gateway**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Marketplace bug fix for October 10, 2025
+
+| Case ID     | Internal ID  | Description                                       |
+|-------------|--------------|---------------------------------------------------|
+| 01764972, 01764914 | APIGOV-31313 | **Issue**: Unable to create credentials from Application details page <br/>**Resolution**: Product Version ID was wrongly parsed to the URL. |
+
 ## October 3, 2025
 
 New enhancements and bug fixes for the October 3 update.
