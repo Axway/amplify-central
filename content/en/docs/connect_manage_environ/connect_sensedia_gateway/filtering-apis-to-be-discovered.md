@@ -8,9 +8,9 @@ Set up tag-based condition expressions using the SENSEDIA_FILTER environment var
 
 Conditional expressions statements use logical operators to compare values. This section provides sample syntax for defining expressions.
 
-{{< alert title="Note" color="primary" >}}For tag based filtering, the conditional expression should have "tag" as the prefix / selector in the symbol name:  `tag.<tagName> == <tagValue>`. The expression can be a simple condition or a compound condition in which multiple conditions are evaluated using logical operators. See Logical operators and Comparative operators, below.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}For tag-based filtering, the conditional expression must have "tag" as the prefix / selector in the symbol name:  `tag.<tagName> == <tagValue>`. The expression can be a simple condition or a compound condition in which multiple conditions are evaluated using logical operators.{{< /alert >}}
 
-## Sensedia Tag Structure
+## Sensedia tag structure
 
 Sensedia APIs use a specific tag structure with `apiTags` containing attribute names and their associated tag values:
 
@@ -29,9 +29,7 @@ Sensedia APIs use a specific tag structure with `apiTags` containing attribute n
 
 ## Filter based on tag attribute and value combination
 
-`The primary and tested format for tag filtering is:
-
-`tag.<attributeName>_<tagValue>.Exists()`
+This is the primary and tested format for tag filtering: `tag.<attributeName>_<tagValue>.Exists()`
 
 Sample to discover all APIs having attribute "Axway" with tag value "axway": `SENSEDIA_FILTER=tag.Axway_axway.Exists()`
 
@@ -39,13 +37,11 @@ Sample to discover all APIs having attribute "API Type" with tag value "developm
 
 ### Format with boolean comparison (for exclusion)
 
-`tag.<attributeName>_<specificTagValue>.Exists() == false`
+This is the primary filter format used in Sensedia agents. It combines the attribute name and tag value with an underscore: `tag.<attributeName>_<specificTagValue>.Exists() == false`
 
 Sample to exclude APIs having attribute "Axway" with tag value 'testing': `SENSEDIA_FILTER=tag.Axway_testing.Exists() == false`
 
-{{< alert title="Note" color="primary" >}}The tested and recommended format is `tag.<attributeName>_<tagValue>.Exists()` without the `== true` comparison. Use `== false` only when you need to explicitly exclude APIs with specific tags.{{< /alert >}}`
-
-This is the primary filter format used in Sensedia agents. It combines the attribute name and tag value with an underscore.
+{{< alert title="Note" color="primary" >}}The tested and recommended format is `tag.<attributeName>_<tagValue>.Exists()` without the `== true` comparison. Use `== false` only when you need to explicitly exclude APIs with specific tags.{{< /alert >}}
 
 Sample to discover all APIs having attribute "Axway" with tag value "axway": `SENSEDIA_FILTER=tag.Axway_axway.Exists() == true`
 
