@@ -144,6 +144,15 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 ### Sensedia API Gateway
 
 * **On premise** Discovery and Traceability agents
+* Discover REST APIs
+* Application and subscription support
+* Credential support: OAuth
+* Credential management: Suspend / Enable
+* Traceability:
+    * Transaction counts and metrics
+    * Platform usage reporting
+    * Transaction metrics reporting
+    * 🚫 Transaction event sampling
 
 ### Kong Gateway
 
