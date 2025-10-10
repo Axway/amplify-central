@@ -13,7 +13,7 @@ Connecting Sensedia API Gateway to Amplify will provide you with a global centra
 Each Sensedia Gateway can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with Sensedia API Gateway and Amplify to:
 
 * Detect changes to Sensedia API Gateway APIs and deployments using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published as a catalog item to be used by consumers to subscribe to the service.
-* Filter the Sensedia API Gateway logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify Platform.
+* Filter the Sensedia API Gateway logs that are related to discovered APIs and prepare the transaction events that are sent to Amplify platform.
 
 {{< alert title="Note" color="primary" >}}You will be notified at the startup of the agent if your agent is outdated: New version available. Please consider upgrading from version *(running version)* to version *(latest version)*.{{< /alert >}}
 
@@ -30,12 +30,12 @@ The Traceability Agent gathers API metrics only and does not support transaction
 ## Prerequisites
 
 * An Axway Amplify subscription in the Amplify platform
-* A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
+* A platform service account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * Sensedia API Gateway with API Manager v5 access
 * Client ID and Client Secret credentials for Sensedia API authentication
 * Docker environment for running the agents
-* Network access from agent host to Sensedia API Gateway and Amplify Platform
+* Network access from agent host to Sensedia API Gateway and Amplify platform
 
 ## Region support
 
