@@ -12,25 +12,31 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## October 10, 2025
 
-New enhancement and bug fix for the October 10 update.
+New enhancements and bug fix for the October 10 update.
 
 ### Agent update for October 10, 2025
 
 * **New Sensedia Discovery and Traceability agents**
 
   (NEW AGENT RELEASES)</br>
-You can now use the new Discovery and Traceability agents to connect an Sensedia environment to Amplify for automatic discovery of APIs and API metrics reporting. See the latest versions of all available agents at [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents). The key capabilities include:
+  You can now use the new Discovery and Traceability agents to connect an Sensedia environment to Amplify for automatic discovery of APIs and API metrics reporting. See the latest versions of all available agents at [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents). The key capabilities include:
 
-* API discovery: Automatic API discovery from Sensedia, ensuring comprehensive visibility of your API landscape and federated API governance.
-* Enhanced traceability: Insights into API usage and performance by integrating with Amplify for detailed reporting.
-* Improved governance and compliance: Apply linting rules to validate the API from an API compliance perspective.
+    * API discovery: Automatic API discovery from Sensedia, ensuring comprehensive visibility of your API landscape and federated API governance.
+    * Enhanced traceability: Insights into API usage and performance by integrating with Amplify for detailed reporting.
+    * Improved governance and compliance: Apply linting rules to validate the API from an API compliance perspective.
 
 ### Axway CLI update for October 10, 2025
 
 * **New Axway Engage CLI v4.6.0 is available**
 
-(PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)
-The Axway Engage CLI [v4.6.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.6.0) has been updated to support the installation of the Sensedia on-premise Discovery and Traceability agents.
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI [v4.6.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.6.0) has been updated to support the installation of the Sensedia on-premise Discovery and Traceability agents.
+
+### Marketplace bug fix for October 10, 2025
+
+| Case ID     | Internal ID  | Description                                       |
+|-------------|--------------|---------------------------------------------------|
+| 01764972, 01764914 | APIGOV-31313 | **Issue**: Unable to create credentials from Application details page <br/>**Resolution**: Product Version ID was wrongly parsed to the URL. |
 
 ## October 3, 2025
 
