@@ -73,7 +73,7 @@ LOG_PATH=logs
 
 ### Install and run Discovery Agent
 
-1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
+1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your service account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Find the current agent release in the [agent release note](/docs/amplify_relnotes).
    Go to *Help menus > Downloads > Repository*
      -or-
@@ -139,7 +139,7 @@ LOG_PATH=logs
 
 ### Install and run Traceability Agent
 
-1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
+1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your service account to a keys directory. Make sure the directory is located on the machine being used for deployment.
 2. Find the current agent release in the [agent release note](/docs/amplify_relnotes).
    Go to *Help menus > Downloads > Repository*
      -or-
@@ -239,7 +239,7 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 ### Step 4: Run the agents' configure procedure
 
-Sensedia agents are delivered in Docker images provided by Axway. You can run them from any Docker environment that can access the Amplify Platform and Sensedia API Gateway.
+Sensedia agents are delivered in Docker images provided by Axway. You can run them from any Docker environment that can access the Amplify platform and Sensedia API Gateway.
 
 For additional information, see [Add configuration to your agents with Axway Central CLI](/docs/integrate_with_central/cli_central/cli_embedded_agent_config/).
 
