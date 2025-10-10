@@ -36,6 +36,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Backstage                                  | 1.0.28                   | 1.0.0                            |
 | SAP Integration Suite - API Management / API Portal | 1.0.15                   | 1.0.0                            |
 | WSO2 API Manager 4.5.0                     | 1.0.15                    | 1.0.0                            |
+| Sensedia                                   | 1.0.0                     | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
