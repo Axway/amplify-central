@@ -11,7 +11,7 @@ As a Cloud Administrator / Operator, you are responsible for configuring and man
 
 Connecting Sensedia API Gateway to Amplify will provide you with a connected/managed environment, and a global centralized view of your APIs and their related traffic, allowing users to have a centralized governance (creation/deployment/publish/subscription) and monitoring of the traffic for Sensedia API Gateway hosted APIs.
 
-Each Sensedia Gateway is represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents, Discovery and Traceability, interact with Sensedia API Gateway and Amplify.
+Each Sensedia Gateway is represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents--Discovery and Traceability, interact with Sensedia API Gateway and Amplify.
 
 ### Minimum requirements
 
@@ -19,14 +19,14 @@ Each Sensedia Gateway is represented by an Amplify environment allowing you to b
 * [Sensedia API Gateway with API Manager v5](https://docs.sensedia.com/en/api-platform-guide/4.14.x.x/index.html)
 * Client ID and Client Secret credentials for Sensedia API authentication
 * Docker environment for running the agents
-* Network connectivity from agent host to Sensedia API Gateway and Amplify Platform
+* Network connectivity from agent host to Sensedia API Gateway and Amplify platform
 
 ### Agent deployment
 
 The Sensedia agents are delivered as Docker images and can be deployed in any Docker-compatible environment. The agents require:
 
 * Network access to Sensedia API Gateway API Manager endpoints
-* Network access to Amplify Platform endpoints
+* Network access to Amplify platform endpoints
 * Persistent storage for agent data and logs
 * Environment variables configuration files
 
@@ -45,17 +45,17 @@ The Bearer token includes tenant information, so no additional tenant configurat
 
 The Discovery Agent will query Sensedia APIs to find APIs exposed in Sensedia. It will then create a representation of that API in Amplify Engage, adding any necessary security, that can be published through to Marketplace.
 
-### API Discovery Process
+### API discovery process
 
 1. **Get All APIs**: Retrieves a list of all APIs from Sensedia using the API Manager API
 2. **Filter APIs**: Applies configured filters based on tags, apiTags, identityApi, privateAPI, and environments
 3. **Get API Details**: For each filtered API, retrieves detailed information including revisions and environments
-4. **Create API Services**: Creates Amplify API Services for each discovered Sensedia API
-5. **Create Revisions**: Creates API Service Revisions for each deployed Sensedia revision
-6. **Create Instances**: Creates API Service Instances for each environment where the API is deployed
+4. **Create API Services**: Creates Amplify API services for each discovered Sensedia API
+5. **Create Revisions**: Creates API service revisions for each deployed Sensedia revision
+6. **Create Instances**: Creates API service instances for each environment where the API is deployed
 7. **Specification Processing**: Retrieves and processes OpenAPI specifications, checking interceptor policies before adding OAuth security information (see [API Specification Enhancement](#api-specification-enhancement))
 
-### API Specification Enhancement
+### API specification enhancement
 
 The Discovery Agent automatically enriches OpenAPI specifications with OAuth 2.0 security definitions by analyzing Sensedia interceptor configurations. It identifies authentication methods, configures appropriate grant types and token endpoints, and ensures APIs published to Amplify Marketplace include the necessary security information for consumer access.
 
@@ -64,7 +64,7 @@ The Discovery Agent automatically enriches OpenAPI specifications with OAuth 2.0
 * **Token URLs**: Configures token and authorization URLs for each environment
 * **Authentication Methods**: Supports both "Access token validation" and "OAuth" interceptor types
 
-### Supported Filter Options
+### Supported filter options
 
 * **Tags**: Filter based on API tags
 * **Identity APIs**: Include/exclude identity APIs
@@ -73,23 +73,23 @@ The Discovery Agent automatically enriches OpenAPI specifications with OAuth 2.0
 
 ## Provisioning features
 
-The agents enable marketplace provisioning by creating Sensedia applications for API subscriptions, managing access plans with rate limiting, and handling credential lifecycle.
+The agents enable Marketplace provisioning by creating Sensedia applications for API subscriptions, managing access plans with rate limiting, and handling credential lifecycle.
 
-### Application Processing
+### Application processing
 
 * **Create Applications**: Automatically creates Sensedia applications for subscription requests
 * **Application Status**: Sets application status to "APPROVED" by default
 * **Developer Association**: Associates applications with configured developer email
 * **Application Updates**: Manages application lifecycle through status changes
 
-### Access Request Processing
+### Access Request processing
 
 * **Plan Management**: Creates or reuses plans for API access
 * **Rate Limiting**: Configures rate limit interceptors based on access request quotas
 * **API Association**: Adds APIs to applications while preserving existing associations
 * **Plan Reuse**: Efficiently reuses plans across multiple applications for the same API
 
-### Credential Processing
+### Credential processing
 
 * **Client Credentials**: Retrieves client ID and secret from Sensedia applications
 * **Single Credential**: Each application supports one credential pair only
@@ -100,14 +100,14 @@ The agents enable marketplace provisioning by creating Sensedia applications for
 
 The Traceability Agent collects API call metrics from Sensedia environments and processes them into aggregated traffic data that is sent to Amplify Engage Business Insights.
 
-### Traffic Data Collection
+### Traffic data collection
 
-1. **Environment Setup**: Maps configured environment names to Sensedia environment IDs
-2. **API Metrics**: Collects API call metrics using date ranges with proper time offsets
-3. **Pagination**: Handles large datasets by processing multiple pages of call data
-4. **Metric Aggregation**: Groups and aggregates metrics by API, application, client, and status
+* **Environment Setup**: Maps configured environment names to Sensedia environment IDs
+* **API Metrics**: Collects API call metrics using date ranges with proper time offsets
+* **Pagination**: Handles large datasets by processing multiple pages of call data
+* **Metric Aggregation**: Groups and aggregates metrics by API, application, client, and status
 
-### Metrics Processing
+### Metrics processing
 
 * **Success Metrics**: Tracks successful API calls (status < 400)
 * **Client Error Metrics**: Tracks client errors (400-499 status codes)
@@ -120,7 +120,7 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 
 ## Configuration management
 
-### Environment Variables
+### Environment variables
 
 | Variable | Description | Required | Default | Example |
 |----------|-------------|----------|---------|---------|
