@@ -10,6 +10,39 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## October 13, 2025
+
+New enhancements for the October 13 update.
+
+### Agent update for October 13, 2025
+
+* **New Sensedia Discovery and Traceability agents**
+
+  (NEW AGENT RELEASES)</br>
+  You can now use the new Discovery and Traceability agents to connect an Sensedia environment to Amplify for automatic discovery of APIs and API metrics reporting. See the latest versions of all available agents at [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents). The key capabilities include:
+
+    * API discovery: Automatic API discovery from Sensedia, ensuring comprehensive visibility of your API landscape and federated API governance.
+    * Enhanced traceability: Insights into API usage and performance by integrating with Amplify for detailed reporting.
+    * Improved governance and compliance: Apply linting rules to validate the API from an API compliance perspective.
+
+### Axway CLI update for October 13, 2025
+
+* **New Axway Engage CLI v4.6.0 is available**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI [v4.6.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.6.0) has been updated to support the installation of the Sensedia on-premise Discovery and Traceability agents.
+
+## October 10, 2025
+
+New bug fixes for the October 10 update.
+
+### Marketplace bug fixes for October 10, 2025
+
+| Case ID     | Internal ID  | Description                                       |
+|-------------|--------------|---------------------------------------------------|
+| 01764972, 01764914 | APIGOV-31313 | **Issue**: Unable to create credentials from Application details page <br/>**Resolution**: Product Version ID was wrongly parsed to the URL. |
+| 01767554 | APIGOV-31338 | **Issue**: Engage document libraries are not available in the Marketplace settings they are published to <br/>**Resolution**: The publication event for document library documents has been fixed and now documents are visible in the Marketplace settings. |
+
 ## October 3, 2025
 
 New enhancements and bug fixes for the October 3 update.
