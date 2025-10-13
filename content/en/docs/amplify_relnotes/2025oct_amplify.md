@@ -37,6 +37,7 @@ New enhancements and bug fix for the October 10 update.
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
 | 01764972, 01764914 | APIGOV-31313 | **Issue**: Unable to create credentials from Application details page <br/>**Resolution**: Product Version ID was wrongly parsed to the URL. |
+| 01767554 | APIGOV-31338 | **Issue**: Engage document library are not available in Marketplace settings they are published to <br/>**Resolution**: the publication event for document library document has been fixed and now documents are visible in the Marketplace settings. |
 
 ## October 3, 2025
 
