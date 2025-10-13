@@ -114,6 +114,8 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 * **Server Error Metrics**: Tracks server errors (500+ status codes)
 * **Application Tracking**: Associates metrics with Sensedia applications and clients
 * **Time-based Processing**: Uses configurable time windows with processing delays
+* **Batch Processing**: Configurable batch size (1-1000 records) for optimal API performance
+* **Processing Delays**: Configurable time offset (1m-60m) to account for Sensedia platform processing delays
 * **7-Day Data Limitation**: The agent enforces a 7-day maximum lookback period - if the processing window extends beyond 7 days from the current time, it may not produce reliable results due to Sensedia platform data retention policies
 
 {{< alert title="Note" color="primary" >}}The Traceability Agent supports API metrics only and does not provide transaction logging.{{< /alert >}}
@@ -134,6 +136,8 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 | `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs | No | `false` | `true` |
 | `SENSEDIA_DISCOVERYPRIVATEAPIS` | Discover private APIs | No | `false` | `true` |
 | `SENSEDIA_SENDALLTRAFFIC` | Send all API traffic for reporting (Traceability Agent only) | No | `true` | `false` |
+| `SENSEDIA_TRACEABILITYBATCHSIZE` | Batch size for traceability API calls (Traceability Agent only) | No | `500` | `1000` |
+| `SENSEDIA_TIMEOFFSET` | Time offset for processing delays (Traceability Agent only) | No | `10m` | `15m` |
 
 ## Monitoring and troubleshooting
 

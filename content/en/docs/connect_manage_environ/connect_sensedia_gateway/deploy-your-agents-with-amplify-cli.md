@@ -111,6 +111,8 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | SENSEDIA_ENVIRONMENTS            | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                                                       |
 | SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m.                                                                      |
 | SENSEDIA_SENDALLTRAFFIC          | When set to true, the agent will send all API traffic to be reported. When set to false, only discovered APIs will be reported. Default is false.                               |
+| SENSEDIA_TRACEABILITYBATCHSIZE   | The batch size for traceability API calls. Controls how many records are fetched per page. Default is 500. Range: 1-1000.                                                       |
+| SENSEDIA_TIMEOFFSET              | Time offset to subtract from current time when querying for traceability data to account for processing delays. Default is 10m. Range: 1m-60m.                                  |
 
 ### Create your Traceability Agent environment file
 
@@ -125,6 +127,8 @@ SENSEDIA_AUTH_CLIENTID=<YOUR_SENSEDIA_CLIENT_ID>
 SENSEDIA_AUTH_CLIENTSECRET=<YOUR_SENSEDIA_CLIENT_SECRET>
 SENSEDIA_ENVIRONMENTS=Production,Development
 SENSEDIA_POLLINTERVAL=5m
+SENSEDIA_TRACEABILITYBATCHSIZE=500
+SENSEDIA_TIMEOFFSET=10m
 
 # Amplify connectivity
 CENTRAL_ORGANIZATIONID=<YOUR_ORGANIZATION_ID>
