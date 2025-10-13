@@ -10,11 +10,11 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
-## October 10, 2025
+## October 13, 2025
 
-New enhancements and bug fix for the October 10 update.
+New enhancements for the October 13 update.
 
-### Agent update for October 10, 2025
+### Agent update for October 13, 2025
 
 * **New Sensedia Discovery and Traceability agents**
 
@@ -25,14 +25,18 @@ New enhancements and bug fix for the October 10 update.
     * Enhanced traceability: Insights into API usage and performance by integrating with Amplify for detailed reporting.
     * Improved governance and compliance: Apply linting rules to validate the API from an API compliance perspective.
 
-### Axway CLI update for October 10, 2025
+### Axway CLI update for October 13, 2025
 
 * **New Axway Engage CLI v4.6.0 is available**
 
   (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
   The Axway Engage CLI [v4.6.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.6.0) has been updated to support the installation of the Sensedia on-premise Discovery and Traceability agents.
 
-### Marketplace bug fix for October 10, 2025
+## October 10, 2025
+
+New bug fixes for the October 10 update.
+
+### Marketplace bug fixes for October 10, 2025
 
 | Case ID     | Internal ID  | Description                                       |
 |-------------|--------------|---------------------------------------------------|
