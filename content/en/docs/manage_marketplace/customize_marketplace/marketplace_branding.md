@@ -36,7 +36,7 @@ All Marketplace branding changes are made from the Marketplace *Appearance* page
 1. Navigate to *Organization > Marketplace*.
 2. Select **Appearance**. *The Appearance page is displayed*:
 
-    ![Marketplace appearance](/Images/marketplace/marketplace_appearance.png)
+    ![Appearance page in Marketplace.](/Images/marketplace/marketplace_appearance.png "Appearance page")
 
 ### Change the logo and favicon
 

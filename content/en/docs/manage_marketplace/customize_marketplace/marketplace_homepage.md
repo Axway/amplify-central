@@ -21,7 +21,7 @@ The Marketplace homepage changes are made from the Marketplace *Homepage* page:
 1. Navigate to *Organization > Marketplace*.
 2. Select **Homepage**. *The Homepage page is displayed*:
 
-    ![Marketplace homepage](/Images/marketplace/marketplace_homepage.png)
+    ![Marketplace homepage with configuration and preview sections.](/Images/marketplace/marketplace_homepage.png "Configure Marketplace homepage")
 
 ## Show or hide the Marketplace homepage
 

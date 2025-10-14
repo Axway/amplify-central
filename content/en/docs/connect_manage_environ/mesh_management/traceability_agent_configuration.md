@@ -549,7 +549,7 @@ The setup is complete for observability in the mesh. To view transactions in Bus
 curl -v http://demo.sandbox.axwaytest.net:8080/mylist/list
  ```
 
- ![Amplify control plane](/Images/central/Transactions.png)
+ ![API traffic in Business Insights.](/Images/central/Transactions.png "API traffic")
 
 ## Toggling the Traceability Agent
 

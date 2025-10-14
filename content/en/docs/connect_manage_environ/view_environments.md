@@ -18,7 +18,7 @@ Display your environments in a searchable and sortable list. The list contains:
     * Custom/SDK environments
     * Environments that have been defined manually using the Axway Central CLI or APIs
 
-![Environment List Page](/Images/central/EnvironmentListPage.png)
+![Environments list page.](/Images/central/EnvironmentListPage.png "Environments list page")
 
 This page can be sorted by an environment title, logical name, or by the time that they were created or last modified. To sort the list, select the desired option from the drop-down menu.
 
@@ -114,7 +114,7 @@ The API service details page includes:
 
 * **Compliance Score**: Compliance validation is an optional entitlement, API Compliance, which can be purchased with the Amplify API Management Platform product.  Compliance validation is the verification of your APIs in terms of how they meet the guidelines defined in a ruleset. Both an API Design and Security ruleset can be applied to all the APIs in a selected environment. The API is checked for compliance in terms of the API methods supported or the presence of a security policy. The grading results of the compliance are measured in the number of errors, warnings, info, or hints found. In the Services tab, two columns visualize the compliance grading of each API. The first one shows the grade from a Security perspective, the second is the Design compliance level. An activity indicator is displayed in either grading column once the API is queued for Design or Security compliance validation. An N/A is displayed in either grading column if the API is not one of the supported API types. A red icon is displayed in the grading column if the API specification file is missing a required value.
 
-    ![Error results](/Images/compliance/error_results.png)
+    ![Compliance score results.](/Images/compliance/error_results.png "Compliance score results")
 
 * **Versions information**: Contains information specific to the version that you have selected. Includes the type of specification (OAS2, OAS3, WSDL, Protobuf, etc.) and the version string from the API Specification file.
     * Specifications tab: Displays the contract or methods for your selected API service version. Some specification types provide a visualization of your API methods, and some fields are collapsible. You can see additional information by clicking to open relevant methods or models.
