@@ -25,7 +25,7 @@ Follow these steps to create an environment.
 1. Navigate to *Topology > Environments*.
 2. Click **+ Add New Environment**.
 
-    ![Environment List Page](/Images/central/EnvironmentListPage.png)
+    ![Add New Environment button on Environment List Page.](/Images/central/EnvironmentListPage.png "Add New Environment button")
 
 {{< alert title="Note" color="primary" >}}If you’ve already reached your environment quota, the button will be disabled. Check your entitlement to confirm limits.{{< /alert >}}
 
@@ -106,7 +106,7 @@ To edit an environment:
 2. From the list, select the environment you want to update.
 3. Click **Edit Environment**.
 
-   ![Edit Environment](/Images/central/Environment_Details_Edit.png)
+   ![Edit Environment button displayed on the Environments page.](/Images/central/Environment_Details_Edit.png "Edit Environment button")
 
 4. You can edit:  
    * **Environment Profile** – Name, production flag, governance type, description, image, and configuration (AWS, Apigee X, GitHub, etc.).

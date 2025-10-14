@@ -100,7 +100,7 @@ A letter grade from A to F is used to indicate the level of Design or Security c
 
 In the Service Registry, two columns visualize the compliance grading of each API. The first one shows the grade from a Security perspective, the second one visualized the Design compliance level. Hover over the grading letter to see the summary of the analysis that resulted in the current grading. A circular spinner is displayed in either grading column once the API is queued for Design or Security compliance validation. An N/A is displayed in either grading column if the API is not one of the supported API types. A red icon is displayed in the grading column if the API specification file is missing a required value.
 
-![Error results](/Images/compliance/error_results.png)
+![Service Registry grading results.](/Images/compliance/error_results.png "Service Registry grading results")
 
 ## Related topics
 

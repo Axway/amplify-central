@@ -69,13 +69,13 @@ To retrieve the team id:
 2. Select a team. The Team details screen is displayed.
 3. Copy the Team ID from the URL.
 
-![Team info](/Images/central/central_teams.png)
+![Team ID is highlighted in the URL of the Team details screen.](/Images/central/central_teams.png "Highlighted Team ID")
 
 #### Resource access by user role
 
 The table below describes the Amplify Engage roles and the resources they have access to.
 
-![Resource Access by Role](/Images/central/env_gw_mgmt/resourcepermissionsbyrole.png)
+![Table that lists resource access by role.](/Images/central/env_gw_mgmt/resourcepermissionsbyrole.png "Resource access by user role")
 
 #### Environment sharing
 
