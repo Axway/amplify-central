@@ -10,6 +10,24 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## October 17, 2025
+
+New enhancements and bug fixes for the October 17 update.
+
+### Agent updates for October 17, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Marketplace bug fixes for October 17, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01753476 | APIGOV-31123 | **Issue**: Blank screen after Oauth Authorization code flow with PKCE <br/>**Resolution**: Authorization code with PKCE has been corrected to supply the code_challenge and code_challenge_method=S256. |
+| 01767119 | APIGOV-31366 | **Issue**: OAuth Authorization code flow with PKCE fails via Marketplace <br/>**Resolution**: Authorization code with PKCE has been corrected to supply the code_challenge and code_challenge_method=S256. |
+
 ## October 13, 2025
 
 New enhancements for the October 13 update.
