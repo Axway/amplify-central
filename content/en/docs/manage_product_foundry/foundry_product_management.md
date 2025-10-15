@@ -153,8 +153,9 @@ View the following detailed information for a specific product in any state (Dra
 
 8. (Optional step) For Access Rights, select the team that owns the product. Select the team(s) the product can be shared with. By default, a product is not shared and only the **Engage Admin** or the owning team will have access to it. To share your product with specific teams, select a team owner and all teams you want to grant "Rights" to for the selected product. For each of the teams selected, you can choose either **Edit** or **Read** access rights. Each member of the shared team(s) selected will be able to access your product with the chosen rights. This allows you to share/enable access to a specific product without granting access to all the products owned by your current team. Click **Next**.
 9. (Optional step) Provide one support contact so consumers can get product help, if needed. Click **+ Add new contact** and enter the contact information. Click **Next**.
-10. (Optional step) Provide the Tags, Attribute, and Category details for the product.
-11. Click **Preview Product** to view the details prior to creation. Click **Save** to create the product in a draft state, or click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
+10. (Optional step) Provide Terms and Conditions for your consumer to approve while subscribing. TBD
+11. (Optional step) Provide the Tags, Attribute, and Category details for the product.
+12. Click **Preview Product** to view the details prior to creation. Click **Save** to create the product in a draft state, or click **Save & Activate** to create a new product version release in an Active state for consumption in the Marketplace.
 
 If the product is created in a **Draft** state, you must move it to an **Active** state (by activating the product) before it can be published to a Marketplace.
 
