@@ -27,6 +27,8 @@ New enhancements and bug fixes for the October 17 update.
 |-------------|--------------|---------------------------------------------------|
 | 01753476 | APIGOV-31123 | **Issue**: Blank screen after Oauth Authorization code flow with PKCE <br/>**Resolution**: Authorization code with PKCE has been corrected to supply the code_challenge and code_challenge_method=S256. |
 | 01767119 | APIGOV-31366 | **Issue**: OAuth Authorization code flow with PKCE fails via Marketplace <br/>**Resolution**: Authorization code with PKCE has been corrected to supply the code_challenge and code_challenge_method=S256. |
+| 01762649 | APIGOV-31273 | **Issue**: Consumer can create application without an owner <br/>**Resolution**: Owning team in now mandatory while creating application. |
+|          | APIGOV-31372 | **Issue**: Marketplace UI: Application registration wizard does not support creation of x-private applications <br/>**Resolution**: Consumer can use the Application Registration even when their owning team has the x-private tag. |
 
 ## October 13, 2025
 
