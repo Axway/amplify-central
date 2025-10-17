@@ -30,7 +30,7 @@ New enhancements and bug fixes for the October 17 update.
 | 01762649 | APIGOV-31273 | **Issue**: Consumer can create application without an owner <br/>**Resolution**: Owning team in now mandatory while creating application. |
 |          | APIGOV-31372 | **Issue**: Marketplace UI: Application registration wizard does not support creation of x-private applications <br/>**Resolution**: Consumer can use the Application Registration even when their owning team has the x-private tag. |
 | 01752882 | APIGOV-31384 | **Issue**: Blank screen when platform role developer and team role developer attempts to visualize an API from the Service Registry or Environments UI. <br/>**Resolution**: The platform role developer and team role developer can visualize an API owned by their team. |
-| 01763934 | APIGOV-31305 | **Issue**: A credential is not being deleting on the Identity Provider after being deleted on Engage. <br/>**Resolution**: The Discovery agent will use registration_cli_uri to unregister the credential on the Identity Provider. |
+| 01763934 | APIGOV-31305 | **Issue**: A credential is not unregistered from the Identity Provider after being deleted on Engage. <br/>**Resolution**: The Discovery agent will use the registration_client_uri, returned when registering new credentials, to unregister the credential from the Identity Provider. |
 
 ## October 13, 2025
 
