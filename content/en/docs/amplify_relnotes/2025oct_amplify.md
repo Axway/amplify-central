@@ -27,10 +27,10 @@ New enhancements and bug fixes for the October 17 update.
 |-------------|--------------|---------------------------------------------------|
 | 01753476 | APIGOV-31123 | **Issue**: Blank screen after Oauth Authorization code flow with PKCE <br/>**Resolution**: Authorization code with PKCE has been corrected to supply the code_challenge and code_challenge_method=S256. |
 | 01767119 | APIGOV-31366 | **Issue**: OAuth Authorization code flow with PKCE fails via Marketplace <br/>**Resolution**: Authorization code with PKCE has been corrected to supply the code_challenge and code_challenge_method=S256. |
-| 01762649 | APIGOV-31273 | **Issue**: Consumer can create application without an owner <br/>**Resolution**: Owning team in now mandatory while creating application. |
-|          | APIGOV-31372 | **Issue**: Marketplace UI: Application registration wizard does not support creation of x-private applications <br/>**Resolution**: Consumer can use the Application Registration even when their owning team has the x-private tag. |
-| 01752882 | APIGOV-31384 | **Issue**: Blank screen when platform role developer and team role developer attempts to visualize an API from the Service Registry or Environments UI. <br/>**Resolution**: The platform role developer and team role developer can visualize an API owned by their team. |
-| 01763934 | APIGOV-31305 | **Issue**: A credential is not unregistered from the Identity Provider after being deleted on Engage. <br/>**Resolution**: The Discovery agent will use the registration_client_uri, returned when registering new credentials, to unregister the credential from the Identity Provider. |
+| 01762649 | APIGOV-31273 | **Issue**: A consumer can create an application without an owner <br/>**Resolution**: The owning team is now mandatory when creating an application. |
+|          | APIGOV-31372 | **Issue**: Marketplace UI: Application registration wizard does not support creation of x-private applications <br/>**Resolution**: A consumer can use the Application Registration even if their owning team has the `x-private` tag. |
+| 01752882 | APIGOV-31384 | **Issue**: Blank screen when platform role developer and team role developer attempts to visualize an API from the Service Registry or Environments UI <br/>**Resolution**: The platform role *developer* and team role *developer* can visualize an API owned by their team. |
+| 01763934 | APIGOV-31305 | **Issue**: A credential is not unregistered from the Identity Provider after being deleted on Engage <br/>**Resolution**: The Discovery agent will now unregister the credential from the Identity Provider using the `registration_client_uri`, which is returned during the registration of new credentials. |
 
 ## October 13, 2025
 
