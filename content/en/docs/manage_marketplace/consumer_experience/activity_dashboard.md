@@ -66,13 +66,13 @@ This section provides a comprehensive view of all products your team has subscri
 
 Each product is displayed as a card showing:
 
-* **Product Name** * The name of the subscribed product
-* **Product Description** * A brief overview of what the product offers
-* **Number of Subscriptions** * How many subscriptions your team has for this product
-* **Number of Applications** * Applications associated with this product
-* **Version** * The current version of the product
-* **Updated Date** * When the product was last updated
-* **Register Application Button** * Quick action to register a new application for this product
+* **Product Name** - The name of the subscribed product
+* **Product Description** - A brief overview of what the product offers
+* **Number of Subscriptions** - How many subscriptions your team has for this product
+* **Number of Applications** - Applications associated with this product
+* **Version** - The current version of the product
+* **Updated Date** - When the product was last updated
+* **Register Application Button** - Quick action to register a new application for this product
 
 ## Tips for Using Your Dashboard
 
