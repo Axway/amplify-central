@@ -1,7 +1,7 @@
 ---
 title: Activity Dashboard
 linkTitle: Activity Dashboard
-weight: 7
+weight: 5
 ---
 
 Learn how to use the Activity Dashboard.
