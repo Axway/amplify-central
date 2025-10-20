@@ -58,7 +58,7 @@ This section displays all your application registrations organized by approval s
 
 Click the **View All** button at the top of the panel to see your complete application registration list.
 
-Under **Approved** application registration tab, it is possible to start requesting credentials using the **Generate credentials** button. This will open the credential side blade. Refer to [Generate credential](/docs/manage_marketplace/consumer_experience/credential_management#create-credentials)
+Under **Approved** application registration tab, it is possible to start requesting credentials using the **Request credentials** button. This will open the credential side blade. Refer to [Create credential](/docs/manage_marketplace/consumer_experience/credential_management#create-credentials)
 
 ### Subscribed Products
 
