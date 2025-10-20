@@ -9,12 +9,84 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 ## Before you start
 
 * Identify existing Amplify environments that Akamai API Security monitors API calls for
+* Create a service account in Akamai API Security to obtain OAuth 2.0 credentials (see [Create Akamai service account](#create-akamai-service-account))
 * Gather the following information that will be used by the agent to communicate with Akamai:
-    * The Akamai API Security base URL for your account
+    * The Akamai API Security base URL for your account (e.g., `https://your-account.luna.akamaiapis.net`)
     * Client ID and Client Secret for OAuth 2.0 authentication with Akamai API Security
+    * Akamai group names that contain the APIs you want to monitor
     * Environment group mappings between Amplify environments and Akamai groups
 * Ensure you have the following tools installed:
     * The Axway Central CLI must be installed, and Amplify platform connectivity is required to configure the Akamai agent
+
+## Create Akamai service account
+
+To connect the Akamai agent to your Akamai API Security platform, you need to create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
+
+### Prerequisites for Akamai service account
+
+* Administrative access to your Akamai API Security platform
+* Permissions to create API clients and manage service accounts
+* Knowledge of which Akamai groups contain the APIs you want to monitor
+
+### Steps to create the service account
+
+1. **Log in to Akamai API Security platform**
+   * Navigate to your Akamai API Security dashboard
+   * Use your administrative credentials to access the platform
+
+2. **Access API Management section**
+   * Go to the API management or developer console section
+   * Look for OAuth client management or service account creation options
+
+3. **Create a new OAuth 2.0 client**
+   * Click "Create Client" or "New OAuth Client"
+   * Enter a descriptive name for your client (e.g., "Amplify Akamai Agent")
+   * Set the client type to "Service Account" or "Machine-to-Machine"
+
+4. **Configure client permissions**
+   * Grant the following minimum permissions to the service account:
+     * **API Discovery**: Read access to APIs and group information
+     * **Metrics Access**: Read access to API traffic metrics (`/api/v3/apis/metrics`)
+     * **Spec Generation**: Access to generate OpenAPI specifications from traffic data
+     * **Group Management**: Read access to group configurations and mappings
+   * Ensure the client has access to all groups you want to monitor
+
+5. **Generate credentials**
+   * Complete the client creation process
+   * **Copy and securely store the Client ID and Client Secret** - you will need these for agent configuration
+   * The Client Secret will only be displayed once, so save it immediately
+
+6. **Verify API access**
+   * Test the credentials by making a sample API call to verify connectivity:
+   ```bash
+   # Test authentication (replace with your actual credentials and base URL)
+   curl -X POST "https://your-account.luna.akamaiapis.net/auth/token" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "client_id": "your-client-id",
+       "client_secret": "your-client-secret"
+     }'
+   ```
+   * Verify you receive an access token in the response
+
+7. **Note your base URL**
+   * Record your Akamai API Security base URL (typically in the format: `https://your-account.luna.akamaiapis.net`)
+   * This will be used as the `AKAMAI_BASEURL` in your agent configuration
+
+### Required information summary
+
+After creating your service account, you should have:
+
+| Information | Example | Usage |
+|-------------|---------|-------|
+| **Base URL** | `https://your-account.luna.akamaiapis.net` | Akamai API Security endpoint |
+| **Client ID** | `781605bf18ce5f59400ea717ef17d90f7751b00f36e14272e668de1a4fb2674c` | OAuth 2.0 client identifier |
+| **Client Secret** | `eb6f2737c2156822efa47ed84cc45577a35857d40bbe9b4056ce0f81c94d827529038fb34dd571f64f5e45216fc804598a106aaf79bd3217278835f81b1bb6f2` | OAuth 2.0 client secret (sensitive) |
+| **Groups** | `production-apis`, `staging-apis` | Akamai group names to monitor |
+
+{{< alert title="Security Note" color="warning" >}}
+Store the Client Secret securely. It provides access to your Akamai API Security data and should be treated as a sensitive credential. Never commit it to source control or share it in plain text.
+{{< /alert >}}
 
 ## Objectives
 
@@ -132,15 +204,15 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 | Variable                                     | Default | Usage                                                                                                                                                                       |
 | -------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AKAMAI_BASEURL                               |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`)                                                                       |
-| AKAMAI_CLIENTID                              |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security                                                                                                       |
-| AKAMAI_CLIENTSECRET                          |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security                                                                                                   |
-| AKAMAI_GROUPS                                |         | Comma-separated list of Akamai group names to monitor (Required - at least one group must be specified)                                                                   |
+| AKAMAI_BASEURL                               |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`). See [Create Akamai service account](#create-akamai-service-account) |
+| AKAMAI_CLIENTID                              |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security. Obtained from your service account creation                                                          |
+| AKAMAI_CLIENTSECRET                          |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security. Keep this secure and never commit to source control                                             |
+| AKAMAI_GROUPS                                |         | Comma-separated list of Akamai group names to monitor (Required - at least one group must be specified). Use group names, not IDs                                       |
 | AKAMAI_POLLINTERVAL                          | 1h      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks. (Lower Limit: 1h)                                        |
 | AKAMAI_COMPLIANCEFREQUENCY                   | 12h     | How often the agent will calculate a traffic-weighted compliance risk score and send to Engage. (Lower Limit: 1h)                                                       |
 | AKAMAI_CONFORMANCEFREQUENCY                  | 24h     | How often the agent will run conformance analysis against discovered APIs and send results to Engage. (Lower Limit: 1h)                                                 |
 | AKAMAI_SEGMENTLENGTH                         | 2       | Controls API grouping by path segments (e.g., 0=host only, 1="/api", 2="/api/v1", 3="/api/v1/users"). Higher values provide more granular grouping.                    |
-| AKAMAI_TOKENREFRESHINTERVAL                  | 55m     | OAuth 2.0 token refresh interval to maintain authentication (0=no auto-refresh)                                                                                           |
+| AKAMAI_TOKENREFRESHINTERVAL                  | 55m     | OAuth 2.0 token refresh interval to maintain authentication (0=no auto-refresh). Should be less than token expiry time                                                   |
 | AKAMAI_HTTPTIMEOUT                           | 30s     | HTTP client timeout for Akamai API requests                                                                                                                               |
 | AKAMAI_ENVIRONMENTMAPPING_[INDEX]_AMPLIFY    |         | Amplify Engage Environment Name for environment mapping (used with corresponding AKAMAI entry)                                                                            |
 | AKAMAI_ENVIRONMENTMAPPING_[INDEX]_AKAMAI     |         | Akamai group name for environment mapping (used with corresponding AMPLIFY entry)                                                                                         |
@@ -158,15 +230,15 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 
 | Override                       | Default | Usage                                                                                                                                                                            |
 | ------------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| akamai.baseUrl                 |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`)                                                                            |
-| akamai.clientId                |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security                                                                                                           |
-| akamai.clientSecret            |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security                                                                                                       |
-| akamai.groups                  |         | Array of Akamai group names to monitor (Required - at least one group must be specified)                                                                                      |
+| akamai.baseUrl                 |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`). See [Create Akamai service account](#create-akamai-service-account)    |
+| akamai.clientId                |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security. Obtained from your service account creation                                                               |
+| akamai.clientSecret            |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security. Keep this secure and never commit to source control                                                  |
+| akamai.groups                  |         | Array of Akamai group names to monitor (Required - at least one group must be specified). Use group names, not IDs                                                           |
 | akamai.pollInterval            | 1h      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks                                                                  |
 | akamai.complianceFrequency     | 12h     | How often the agent will calculate a traffic-weighted compliance risk score and send to Engage                                                                                 |
 | akamai.conformanceFrequency    | 24h     | How often the agent will run conformance analysis and send results to Engage                                                                                                   |
 | akamai.segmentLength           | 2       | Controls API grouping by path segments for discovery organization (0=host only, 1="/api", 2="/api/v1", etc.)                                                                  |
-| akamai.tokenRefreshInterval    | 55m     | OAuth 2.0 token refresh interval to maintain authentication                                                                                                                    |
+| akamai.tokenRefreshInterval    | 55m     | OAuth 2.0 token refresh interval to maintain authentication. Should be less than token expiry time                                                                             |
 | akamai.httpTimeout             | 30s     | HTTP client timeout for Akamai API requests                                                                                                                                    |
 | akamai.environmentMapping      |         | An array of objects with an Amplify Engage Environment (key: `amplify`) Name with an Akamai group (key: `akamaiGroupName`) Name, for API discovery and conformance analysis   |
 
@@ -181,19 +253,19 @@ The Axway Central CLI will guide you through the configuration of the agents.
 The agents' configuration will be installed in the directory from where the CLI runs.
 
 ```shell
-axway central install agents
+axway engage install agents
 ```
 
 If your Amplify subscription is hosted in the EU region, run this command to start the configuration procedure:
 
 ```shell
-axway central install agents --region=EU
+axway engage install agents --region=EU
 ```
 
 If your Amplify subscription is hosted in the APAC region, run this command to start the configuration procedure:
 
 ```shell
-axway central install agents --region=AP
+axway engage install agents --region=AP
 ```
 
 The installation procedure will prompt for the following:
@@ -207,9 +279,10 @@ The installation procedure will prompt for the following:
    * **Service account**: can be an existing service account created in Amplify. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 4. Akamai API Security configuration setup options:
    * **Namespace**: can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster (Helm install only)
-   * **Groups**: the specific Akamai group names to monitor for API discovery (required)
-   * **Client ID**: the OAuth 2.0 Client ID for Akamai API Security
-   * **Client Secret**: the OAuth 2.0 Client Secret for Akamai API Security
+   * **Base URL**: the Akamai API Security base URL for your account (e.g., `https://your-account.luna.akamaiapis.net`)
+   * **Groups**: the specific Akamai group names to monitor for API discovery (required). Enter the exact group names from your Akamai platform
+   * **Client ID**: the OAuth 2.0 Client ID for Akamai API Security (obtained from [Create Akamai service account](#create-akamai-service-account))
+   * **Client Secret**: the OAuth 2.0 Client Secret for Akamai API Security (obtained from service account creation - keep secure)
    * **Segment Length**: the path segment grouping level for API discovery (default: 2, where 0=host only, 1="/api", 2="/api/v1")
    * **Token Refresh Interval**: OAuth 2.0 token refresh frequency to maintain authentication (default: 55m)
 5. Traceability module connectivity:
@@ -300,13 +373,13 @@ helm upgrade --install --namespace <YOUR_NAMESPACE> akamai-agent axway/akamai-ag
 
 After being authenticated to the platform with `axway auth login` command, run the following to check that the agents are running:
 
-* `axway central get ta` to get all Traceability Agent information
-* `axway central get da` to get all Discovery Agent information
+* `axway engage get ta` to get all Traceability Agent information
+* `axway engage get da` to get all Discovery Agent information
 
 The STATUS column will help you identify which agent is running.
 
 ```shell
-C:\Demos>axway central get da
+C:\Demos>axway engage get da
 ✔ Resource(s) successfully retrieved
 
 NAME        AGE            TITLE         RESOURCE KIND     SCOPE KIND   SCOPE NAME  RESOURCE GROUP  DATAPLANE TYPE  STATUS
@@ -355,40 +428,85 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 
 #### Agent not starting
 
-* Verify Akamai credentials are correct (clientId and clientSecret)
-* Check network connectivity to Akamai API Security platform
-* Ensure all required environment variables are set (baseUrl, clientId, clientSecret, groups)
-* Verify at least one group is specified in the groups configuration
-* Check that the base URL format is correct (e.g., `https://your-account.luna.akamaiapis.net`)
+* **Verify Akamai credentials**: Ensure the Client ID and Client Secret are correct and match what was generated during [service account creation](#create-akamai-service-account)
+* **Test authentication manually**: Use a tool like curl to verify your credentials work:
+  ```bash
+  curl -X POST "https://your-account.luna.akamaiapis.net/auth/token" \
+    -H "Content-Type: application/json" \
+    -d '{"client_id": "your-client-id", "client_secret": "your-client-secret"}'
+  ```
+* **Check network connectivity**: Ensure the agent can reach your Akamai API Security platform URL
+* **Validate environment variables**: Confirm all required variables are set (baseUrl, clientId, clientSecret, groups)
+* **Verify group names**: Ensure group names match exactly what exists in your Akamai platform (not group IDs)
+* **Check base URL format**: Confirm the URL follows the pattern `https://your-account.luna.akamaiapis.net`
 
 #### Discovery not finding APIs
 
-* Verify environment mapping configuration between Amplify and Akamai groups
-* Check Akamai group permissions and access rights
-* Validate segment length configuration is appropriate for your API structure (0=host only, 1="/api", 2="/api/v1")
-* Ensure the specified groups contain APIs that are actively monitored by Akamai
-* Check agent logs for OAuth 2.0 authentication issues
+* **Verify group access**: Log into Akamai API Security and confirm the service account has access to the specified groups
+* **Check group API content**: Ensure the specified groups contain APIs that are actively monitored by Akamai
+* **Test group discovery**: Use curl to test group and API discovery:
+  ```bash
+  # Get groups (after obtaining token)
+  curl -H "Authorization: Bearer YOUR_TOKEN" \
+    "https://your-account.luna.akamaiapis.net/api/v3/groups"
+  
+  # Get APIs for a specific group
+  curl -H "Authorization: Bearer YOUR_TOKEN" \
+    "https://your-account.luna.akamaiapis.net/api/v3/apis?group=GROUP_ID"
+  ```
+* **Validate environment mapping**: Ensure environment mapping between Amplify and Akamai groups is correctly configured
+* **Adjust segment length**: Try different segmentLength values (0=host only, 1="/api", 2="/api/v1") based on your API structure
+* **Review agent logs**: Check for OAuth 2.0 authentication errors or API access permission issues
 
 #### Metrics not available
 
-* Ensure your Akamai account has access to the `/api/v3/apis/metrics` endpoint
-* Verify API traffic exists for the monitored endpoints within the time window
-* Check if metrics collection is enabled in Akamai API Security
-* Review checkpoint data to ensure reasonable time windows for metrics collection
-* Verify the tokenRefreshInterval is set appropriately (default: 55m)
+* **Verify metrics endpoint access**: Ensure your service account has permissions for `/api/v3/apis/metrics`
+* **Check traffic existence**: Confirm API traffic exists for the monitored endpoints within the collection time window
+* **Validate metrics API response**: Test metrics access manually:
+  ```bash
+  curl -H "Authorization: Bearer YOUR_TOKEN" \
+    "https://your-account.luna.akamaiapis.net/api/v3/apis/metrics?group=GROUP_ID"
+  ```
+* **Review time windows**: Ensure checkpoint data provides reasonable time windows for metrics collection
+* **Check token refresh**: Verify tokenRefreshInterval is appropriate (default: 55m, should be less than token expiry)
 
 #### OAuth 2.0 Authentication issues
 
-* Verify client credentials are valid and have not expired
-* Check that the client has appropriate permissions for API discovery and metrics access
-* Ensure tokenRefreshInterval is configured properly for automatic token renewal
-* Review agent logs for specific OAuth 2.0 error messages
+* **Validate service account permissions**: Ensure the Akamai service account has all required permissions:
+    * API Discovery (read access to APIs and groups)
+    * Metrics Access (read access to metrics endpoint)
+    * Spec Generation (access to generate specifications from traffic)
+* **Check token expiry**: Verify tokens are being refreshed before expiration
+* **Review credential storage**: Ensure Client Secret is stored securely and not corrupted
+* **Test token acquisition**: Manually test OAuth 2.0 flow using curl
+* **Check network issues**: Verify no firewalls or proxies are interfering with OAuth requests
+
+#### Group configuration issues
+
+* **List available groups**: Use the Akamai API to get all available groups:
+  ```bash
+  curl -H "Authorization: Bearer YOUR_TOKEN" \
+    "https://your-account.luna.akamaiapis.net/api/v3/groups"
+  ```
+* **Use exact group names**: Group names are case-sensitive and must match exactly
+* **Verify group permissions**: Ensure the service account has read access to all specified groups
+* **Check group content**: Confirm groups contain the APIs you want to monitor
 
 #### Conformance analysis issues
 
-* Verify API specifications are properly published in Amplify
-* Check environment mapping between Amplify and Akamai groups matches your setup
-* Ensure APIs have sufficient traffic for meaningful conformance analysis
-* Validate that the `GenerateSpecFromTraffic` method can access required Akamai data
+* **Verify API specifications**: Ensure API specifications are properly published in Amplify Engage
+* **Check environment mapping**: Confirm mapping between Amplify environments and Akamai groups is accurate
+* **Validate traffic requirements**: Ensure APIs have sufficient traffic for meaningful conformance analysis
+* **Test spec generation**: Verify the service account can access the `GenerateSpecFromTraffic` method
+* **Review analysis frequency**: Check if conformanceFrequency setting is appropriate for your use case
+
+### Getting additional help
+
+If you continue to experience issues:
+
+1. **Check agent logs**: Review detailed logs for specific error messages and authentication failures
+2. **Verify service account**: Confirm the Akamai service account has all required permissions in the API Security platform
+3. **Test API access**: Use curl commands to manually test connectivity and permissions
+4. **Contact support**: Reach out to Axway support with specific error messages and configuration details
 
 For additional support, please contact Axway support or refer to the Amplify documentation.

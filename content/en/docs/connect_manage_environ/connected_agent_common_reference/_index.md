@@ -1,7 +1,7 @@
 ---
 title: Connected agent - Common reference
 linkTitle: Connected agent - Common reference
-weight: 150
+weight: 330
 date: 2021-04-12
 ---
 A common reference, such as parameters and error codes, that are shared by Axway agents.

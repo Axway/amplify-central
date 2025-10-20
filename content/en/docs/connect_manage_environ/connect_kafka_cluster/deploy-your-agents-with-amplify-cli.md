@@ -219,7 +219,7 @@ To utilize the agents, pull the latest Docker images and run them using the appr
 
 Start the Discovery Agent on a Linux based machine
 docker run -it --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
-    -v /data {agentImage}
+    -v "$(pwd)"/data:/data {agentImage}
 
 Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
  * Go to *Help menus > Downloads > Repository* 
@@ -231,7 +231,7 @@ Find the current agent release in the [agent release note](/docs/amplify_relnote
 
 Start the Traceability Agent on a Linux based machine
 docker run -it --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
-    -v /data {agentImage}
+    -v "$(pwd)"/data:/data {agentImage}
 ```
 
 * Download the latest images of the Discovery/Traceability agents:

@@ -69,7 +69,7 @@ After customizing all the sections, your `da_env_vars.env` file should look like
 # API MANAGER connectivity
 APIMANAGER_HOST=<HOST>
 APIMANAGER_AUTH_USERNAME=<USER>
-APIMANAGER_AUTH_PASSWORD=<PASSWORD>
+APIMANAGER_AUTH_PASSWORD="<PASSWORD>" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 
 # API GATEWAY connectivity
 APIGATEWAY_HOST=<HOST>
@@ -129,7 +129,7 @@ This section connects the agent to API Manager and determines which APIs should 
 * Discover any API from any organization (“API Manager Administrator”)  
 * Discover any API from a specific organization (“Organization Administrator”)
 
-`APIMANAGER_AUTH_PASSWORD`: The password of the API Manager user in clear text.
+`APIMANAGER_AUTH_PASSWORD`: The password of the API Manager user in clear text. (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 
 Once all data is gathered, this section should looks like:
 
@@ -137,7 +137,7 @@ Once all data is gathered, this section should looks like:
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="apiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 APIMANAGER_DISCOVERYIGNORETAGS=tag1,tag2
 APIMANAGER_FILTER=tag.APITAG==value
 #APIMANAGER_POLLINTERVAL=30s
@@ -260,7 +260,7 @@ After customizing all variables, your `da_env_vars.env` file should look like:
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="apiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 APIMANAGER_DISCOVERYIGNORETAGS=tag1,tag2
 APIMANAGER_FILTER=tag.APITAG==value
 #APIMANAGER_POLLINTERVAL=30s
@@ -445,13 +445,14 @@ cd /home/APIC-agents
 ##### Run the Dockerized Discovery Agent
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Start the Docker Discovery Agent pointing to the `da_env_vars.env` file and the keys directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
+2. Create a data directory where the agent will store cache data to persist on restarts.
+3. Start the Docker Discovery Agent pointing to the `da_env_vars.env` file and the keys directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
-   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v /data {agentImage}
+   docker run --env-file ./da_env_vars.env -v <pwd>/keys:/keys -v <pwd>/data:/data {agentImage}
    ```
 
-3. Run the following health check command to ensure the agent is up and running:
+4. Run the following health check command to ensure the agent is up and running:
 
    ```shell
    docker inspect --format='{{json .State.Health}}' <container>

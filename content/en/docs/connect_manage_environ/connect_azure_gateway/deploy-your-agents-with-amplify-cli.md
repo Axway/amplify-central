@@ -198,7 +198,7 @@ run them using the appropriate supplied environment files, (da_env_vars.env & ta
 
   - Start the Discovery Agent:
     docker run --env-file "$(pwd)"/da_env_vars.env -v "$(pwd)":/keys \
-        -v /data {agentImage}
+        -v "$(pwd)"/data:/data {agentImage}
 
   - Find the current agent release in the [agent release note](/docs/amplify_relnotes). Then access the list of available agents from your organization:
     * Go to *Help menus > Downloads > Repository* 
@@ -210,7 +210,7 @@ run them using the appropriate supplied environment files, (da_env_vars.env & ta
 
   - Start the Traceability Agent:
     docker run --env-file "$(pwd)"/ta_env_vars.env -v "$(pwd)":/keys \
-        -v /data {agentImage}
+        -v "$(pwd)"/data:/data {agentImage}
 ```
 
 * Download the latest images of the Discovery/Traceability agents:

@@ -26,8 +26,8 @@ Note that an access is not required if the corresponding API does not support an
 
 There are two ways to request access:
 
-* from the product by using the **Register Application** button
-* from a product resource tab using the **Door with lock** icon
+* From the product by using the **Register Application** button
+* From a product resource tab using the **Door with lock** icon
 
 To request access to an API from the product:
 
@@ -36,7 +36,7 @@ To request access to an API from the product:
 3. It opens the side panel with the requested information.
 4. Complete the Request access form. Note that **Request access name** is auto populated.
 
-    * Select a resource
+    * Select a resource.
     * Select an application. If you are a member in multiple teams, the subscriptions and the application must be owned by the same team.
     * Select a subscription.
     * Fill out any other fields that are displayed on the form.
@@ -67,9 +67,9 @@ To preserve the quota limitation associated with the selected API and the select
 
 View and track the status of the Application Registrations:
 
-* From the Register Applications: *Marketplace* > Application Registrations. View all access accros all products/applications your team has access to.
-* From the application: *Marketplace* > Application > navigate to the appropriate resource. View specific access linked to an application
-* From the product: *Marketplace* > Product > Resource > Application Registrations > navigate to the appropriate application. View specific access linked to an API.
+* From the Register Applications: *Marketplace > Application Registrations*. View all access accros all products/applications your team has access to.
+* From the application: *Marketplace > Application* > navigate to the appropriate resource. View specific access linked to an application.
+* From the product: *Marketplace > Product > Resource > Application Registrations* > navigate to the appropriate application. View specific access linked to an API.
 
 ## Credential lifecycle
 
@@ -84,11 +84,11 @@ View and track the status of the Application Registrations:
 
 The credential request can be done from several places in the Marketplace:
 
-* From the application: *Marketplace* > Application > navigate to the appropriate resource > **Create Credential** button
-* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > **Create Credential** button
-* While requesting access to the product resource: if access is auto approved, then the Create Credential screen is displayed
+* From the application: *Marketplace > Application* > navigate to the appropriate resource > click **Create Credential**
+* From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application > click **Create Credential**
+* While requesting access to the product resource: if access is auto approved, then the *Create Credential* screen is displayed
 
-To create a credential, select the credential type and enter the required information.
+To create a credential, select the credential type and enter the required information. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title is visible.
 
 Once the credential is generated, make sure to copy and paste it in a secure location, as you will not be able to see it again from the Marketplace. If you lose the credential secret, click **Create Credential** to create a new one.
 
@@ -96,28 +96,28 @@ To delete the existing credential, click the trash bin icon.
 
 ## List the credentials
 
-The *Marketplace* > Credentials view displays all the credentials your team has access to. This list van be filtered by State, Expiration date and Application.
+The *Marketplace > Credentials* view displays all the credentials your team has access to. This list can be filtered by State, Expiration date and Application. For each credential, the credential type **APIKey**, **OAuth**, **HTTPBasic** or **MutualTLS** is displayed. If the credential type is not visible, ask the owner of the product.
 
-Note that Engage Admin user is able to see all Credentials regardless the team they belongs to.
+Note that the Engage Admin user can see all Credentials regardless of the team they belongs to.
 
 ## View credential value
 
-Once the credential is provisioned by the provider (either manually or using Discovery Agent), you can view your credential secret. The secret is encrypted and available for only three days to be viewed from inside the Marketplace. After this period, the credential secret will be removed from Amplify, but will remain on the data plane.
+Once the credential is provisioned by the provider (either manually or using Discovery Agent), you can view your credential secret (if allowed by the provider). The secret is encrypted but can be viewed from inside the Marketplace for a specified period. After this period, the credential secret is removed from Amplify, but remains on the data plane.
 
 To view the clear value of the credential:
 
-* From the credentials list: *Marketplace* > Credentials > Select the appropriate credentials > **View Credential** button
-* From the application: *Marketplace* > Application > navigate to the appropriate resource > **View Credential** button
-* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application > **View Credential** button
+* From the credentials list: *Marketplace > Credentials* > Select the appropriate credentials > click **View Credential**
+* From the application: *Marketplace > Application* > navigate to the appropriate resource > click **View Credential**
+* From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application > click **View Credential**
 
-The panel is enlarged to show the remaining time to view the decrypted value and an eye icon to access it. After confirming your need to view the clear value of credentials, the credentials are decrypted and displayed on the screen. After you retrieve the credential clear value, make sure to copy and paste it in a secure location as you will not be able to see it again once the side panel is closed or the session expires.
+The remaining time to view the decrypted credential value is displayed. To view the value, click the eye icon and confirm your need to view the clear value of the credential. The credential is decrypted and displayed on the screen. Make sure to copy and paste the credential value in a secure location. The secret can be viewed as often as you wish during its remaining period. If you do not save your credential value during the available period, you must renew or request a new credential.
 
 ## Suspend / Enable credential
 
 Credential can be suspended / enabled from several places in the Marketplace:
 
-* From the application: *Marketplace* > Application > navigate to the appropriate resource
-* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application
+* From the application: *Marketplace > Application* > navigate to the appropriate resource
+* From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application
 
 Click on the credential name to display the credential information. From here, you can:
 
@@ -136,7 +136,7 @@ When viewing the credential list from the application or from the product resour
 
 A credential can be deleted:
 
-* From the application: *Marketplace* > Application > navigate to the appropriate resource
-* From the resource: *Marketplace* > Product > Resource > Credentials > navigate to the appropriate application
+* From the application: *Marketplace > Application* > navigate to the appropriate resource
+* From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application
 
 Click on the credential name to display the credential information. Click **Delete credential** to delete the credential. This action must be confirmed by the user, as it is irreversible.

@@ -1,7 +1,7 @@
 ---
 title: Add and manage stages
 linkTitle: Add and manage stages
-weight: 20
+weight: 35
 date: 2023-10-18
 ---
 

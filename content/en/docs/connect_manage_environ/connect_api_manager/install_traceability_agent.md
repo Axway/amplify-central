@@ -63,7 +63,7 @@ After customizing all the sections, your `ta_env_vars.env` file should look like
 # API MANAGER connectivity
 APIMANAGER_HOST=<HOST>
 APIMANAGER_AUTH_USERNAME=<USER>
-APIMANAGER_AUTH_PASSWORD=<PASSWORD>
+APIMANAGER_AUTH_PASSWORD="<PASSWORD>" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 
 # API GATEWAY connectivity
 APIGATEWAY_HOST=<HOST>
@@ -176,7 +176,7 @@ Once all data is gathered, this section should look like:
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="apiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 ```
 
 ##### Customizing Traceability Agent API Gateway connectivity variables
@@ -312,7 +312,7 @@ EVENT_LOG_PATHS=<API GATEWAY INSTALL DIRECTORY>/apigateway/events/group-2_instan
 APIMANAGER_HOST=localhost
 APIMANAGER_PORT=8075
 APIMANAGER_AUTH_USERNAME=apiManagerUser
-APIMANAGER_AUTH_PASSWORD=apiManagerUserPassword
+APIMANAGER_AUTH_PASSWORD="apiManagerUserPassword" (It is recommended to surround the password with double quotes regardless of whether it contains special characters, example: "lma^]&_}}*%!#(" )
 
 # API Gateway connectivity
 APIGATEWAY_HOST=localhost
@@ -493,10 +493,11 @@ cd /home/APIC-agents
 ###### Run the Dockerized Traceability Agent
 
 1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
+2. Create a data directory where the agent will store cache data to persist on restarts.
+3. Start the Traceability Agent pointing to the `ta_env_vars.env` file, `keys`, logging `events`, and the usage metrics `data` directory. `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
 
    ```shell
-   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v /data -v {agentImage}
+   docker run --env-file ./ta_env_vars.env -v <pwd>/keys:/keys -v <pwd>/events:/events -v <pwd>/data:/data -v {agentImage}
    ```
 
    * See [Create and start API Gateway Docker container](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_installation/apigw_containers/deployment_flows/custom_image_deployment/docker_script_gwimage/index.html#mount-volumes-to-persist-logs-outside-the-api-gateway-container) for more  information regarding the persistent API Gateway trace and event logs to a directory on your host machine.

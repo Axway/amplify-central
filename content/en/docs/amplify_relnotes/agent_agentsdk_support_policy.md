@@ -28,25 +28,27 @@ Runtime Compliance Agents collect data from a third party that captures and scan
 
 Agents are classified into two categories, agents supported by Axway and agents supported by the community:
 
-| Environment                | Support   | Agent type                                 | Deployment |
-| -------------------------- | --------- | ------------------------------------------ |---|
-| Axway API Management       | Axway     | Discovery and Traceability                                   | On-premise          |
-| AWS API Gateway            | Axway     | Discovery and Traceability                                   | On-premise and SaaS |
-| Azure API Management       | Axway     | Discovery and Traceability                                   | On-premise          |
-| Istio                      | Axway     | Discovery and Traceability                                   | On-premise          |
-| Github                     | Axway     | Discovery                                                    | On-premise and SaaS |
-| Gitlab                     | Axway     | Discovery                                                    | On-premise          |
-| Kafka Cluster              | Axway     | Discovery and Traceability                                   | On-premise          |
-| Apigee X API Management    | Axway     | Discovery and Traceability                                   | SaaS                |
-| SwaggerHub                 | Axway     | Discovery                                                    | SaaS                |
-| IBM API Connect            | Axway     | Discovery and Traceability                                   | On-premise          |
-| Graylog API Security       | Axway     | Runtime Compliance                                           | On-premise          |
-| Traceable API Security     | Axway     | Runtime Compliance                                           | On-premise          |
-| MuleSoft Anypoint platform | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-mulesoft>   |
-| Kong Gateway               | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-kong>       |
-| Apigee Edge API Management | Axway/Community | Discovery and Traceability                             | On-premise <br /><https://github.com/Axway/agents-apigee>     |
-| Software AG webMethods     | Axway/Community | Discovery                                              | On-premise <br /><https://github.com/Axway/agents-webmethods> |
-| WSO2 API Management        | Community       | Discovery                                              | On-premise <br /><https://github.com/Axway/agents-wso2>       |
+| Environment                | Support   | Agent type                                 | Deployment          |
+| -------------------------- | --------- | ------------------------------------------ |---------------------|
+| Apigee Edge API Management | Axway     | Discovery and Traceability                 | On-premise          |
+| Apigee X API Management    | Axway     | Discovery and Traceability                 | SaaS                |
+| AWS API Gateway            | Axway     | Discovery and Traceability                 | On-premise and SaaS |
+| Axway API Management       | Axway     | Discovery and Traceability                 | On-premise          |
+| Azure API Management       | Axway     | Discovery and Traceability                 | On-premise          |
+| Github                     | Axway     | Discovery                                  | On-premise and SaaS |
+| Gitlab                     | Axway     | Discovery                                  | On-premise          |
+| Graylog API Security       | Axway     | Runtime Compliance                         | On-premise          |
+| IBM API Connect            | Axway     | Discovery and Traceability                 | On-premise          |
+| Istio                      | Axway     | Discovery and Traceability                 | On-premise          |
+| Kafka Cluster              | Axway     | Discovery and Traceability                 | On-premise          |
+| Kong Gateway               | Axway     | Discovery and Traceability                 | On-premise          |
+| MuleSoft Anypoint platform | Axway     | Discovery and Traceability                 | On-premise          |
+| SAP Integration Suite - API Management / API |Axway  | Discovery and Traceability   | On-premise          |
+| Sensedia                   | Axway     | Discovery and Traceability                 | On-premise          |
+| Software AG webMethods     | Axway     | Discovery                                  | On-premise          |
+| SwaggerHub                 | Axway     | Discovery                                  | SaaS                |
+| Traceable API Security     | Axway     | Runtime Compliance                         | On-premise and SaaS |
+| WSO2 API Management        | Axway     | Discovery                                  | On-premise          |
 
 All Amplify agents are built using the Amplify Agent SDK.
 

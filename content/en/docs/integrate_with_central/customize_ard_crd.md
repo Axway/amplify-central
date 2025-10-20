@@ -360,7 +360,7 @@ Sample of plan and subscription definition request association:
 
 When subscribing to the plan, you will be able to see the emails and billing address:
 
-![Subscription Request screen](/Images/central/integrate_with_central/SubscriptionRequestDefinition.png)
+![Subscription Request UI screen.](/Images/central/integrate_with_central/SubscriptionRequestDefinition.png "Subscription Request screen")
 
 ## Customize Application Registration screen
 
@@ -407,6 +407,16 @@ Object skeleton (json format):
 These above two schemas follow the component framework describe in the [Available components](#available-components) section.
 
 Once the Application Registration is created, the consumer can see the supplied information as well as the provisioned information (if any) by opening the *Application Registration detail* page and navigating to the **Schema** section. "Input from consumer" refers to the accessRequestDefinition schema and "Provisioned data from dataplane" refers to what the provider sent to the consumer.
+
+### Managed Application
+
+For each Application Registration in the Marketplace, there will be one Managed Application per Topology Environment which contains API resources associated with the Managed Application. This Managed Application is used to create an application or product on each API Gateway/dataplane associated to that environment.
+
+To get the Managed Application name, use the following API call replacing `<environment name>` with he logical name of the environment and `<app name>` with the logical name of the Marketplace application. The API call will return an array containing one unique Managed Application which is the Engage representation of the application on the API Gateway/dataplane.
+
+```
+https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment name>/managedapplications?pageSize=1&query=metadata.references=with='kind===Application;name===<app name>'
+```
 
 ### AccessRequestDefinition sample
 
@@ -509,7 +519,7 @@ Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
-![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
+![Application Registration UI screen.](/Images/central/integrate_with_central/AccessRequestDefinition.png "Application Registration screen")
 
 #### AccessRequestDefinition custom fields sample
 
@@ -552,7 +562,8 @@ Sample of an AccessRequestDefinition (json format) exemplifying `x-custom-field`
 
 ## Customize credential request screen
 
-To customize the credential request screen, you need a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the credential request definition for each individual environment.
+To customize the credential request screen, you must have a `CredentialRequestDefinition`. This object will contain the screen definition of the information required to provision access to a service and the output the provider wants to return to his consumer. This object is scoped per environment, meaning that if you have multiple environments, you must duplicate the credential request definition for each individual environment.
+This object will also contain the credentials type: APIKey, OAuth, HTTPBasic, MutualTLS under the spec/type definition. This type is automatically set by the Discovery Agent. If it is manually managed (i.e., without a Discovery Agent), the value must be set so that the consumer knows the type of credential they will get.
 
 Name of the object: **CredentialRequestDefinition**
 
@@ -575,6 +586,7 @@ Object skeleton (json format):
     "finalizers": [],
     "tags": [],
     "spec": {
+        "type": "APIKey",
         "schema": {
           ...
         },
@@ -613,7 +625,9 @@ Sample of the consumer giving the Javascript origin values and the provider retu
         },
         "attributes": {},
         "finalizers": [],
-        "tags": [],        "spec": {
+        "tags": [],        
+        "spec": {
+            "type": "APIKey",
             "schema": {
                 "type": "object",
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -679,6 +693,7 @@ Sample of no information supplied by the consumer but information provisioned (O
         "finalizers": [],
         "tags": [],
         "spec": {
+            "type": "OAuth",
             "schema": {
                 "type": "object",
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -819,11 +834,11 @@ Otherwise, create an asset based on this service and then a product.
 
 You will be able to see the purpose selector once you publish the product to the Marketplace, subscribe to it to get an active subscription, and then request access.
 
-![Application Registration screen](/Images/central/integrate_with_central/AccessRequestDefinition.png)
+![Application Registration UI screen with purpose selector drop-down menu.](/Images/central/integrate_with_central/AccessRequestDefinition.png "Purpose selector drop-drown menu")
 
 Once your access is granted, you can ask for credential. You should be able to see the file selector:
 
-![Credential Request screen](/Images/central/integrate_with_central/CredentialRequestDefinition.png)
+![Credential Request UI screen.](/Images/central/integrate_with_central/CredentialRequestDefinition.png "Credential Request screen")
 
 #### CredentialRequestDefinition custom field sample
 

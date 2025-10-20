@@ -2,7 +2,7 @@
 title: Manage your Marketplace provisioning
 linkTitle: Manage your Marketplace provisioning
 draft: false
-weight: 145 
+weight: 320 
 ---
 
 A subscription provides the consumer, or subscriber, with the required security and endpoint materials to correctly consume the API.
@@ -176,7 +176,7 @@ AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
 
 This feature allows you to toggle between displaying or hiding the specific options within the OAuth credential Type dropdown menu on the Request Credential screen in the Marketplace.
 
-![Alt image](/Images/marketplace/Oauth.png)
+![OAuth Credential type dropdown menu on Create Credential screen.](/Images/marketplace/Oauth.png "OAuth Credential type dropdown menu")
 
 The Discovery Agent for Axway API Management 7.7 provides the ability to control the OAuth credential Type dropdown values in the Marketplace based on environment variable configuration.
 The following is an example to limit the dropdown value to "OAuth Client ID & Secret."

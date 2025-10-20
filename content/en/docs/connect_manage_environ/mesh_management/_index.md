@@ -1,7 +1,7 @@
 ---
 title: Connect Istio Gateway
 linkTitle: Connect Istio Gateway
-weight: 130
+weight: 185
 date: 2019-07-30
 ---
 This section explains what Amplify Istio agents are used for, what a hybrid environment is, and how you can monitor the APIs and microservices in a hybrid environment from Amplify.
@@ -19,7 +19,7 @@ Each Istio Gateway can be represented by an Amplify environment allowing you to 
 
 Amplify provides a central control plane, hosted in Axway public cloud, which manages your API traffic across multiple cloud and on-premise environments. It can monitor data planes in the Axway public cloud as well as in numerous connected private cloud hybrid environments. In Amplify, *hybrid* means working across SaaS, multi-cloud, and on-premise environments.
 
-![Amplify control plane](/Images/central/hybrid_control_data_plane.png)
+![Flow of Amplify control plane and customer data plane in hybrid environment.](/Images/central/hybrid_control_data_plane.png "Hybrid environment")
 
 ### Control plane
 

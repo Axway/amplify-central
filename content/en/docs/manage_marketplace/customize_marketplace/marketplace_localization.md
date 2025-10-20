@@ -73,7 +73,7 @@ When you access a Marketplace, if multiple languages are enabled, you can change
 Products will be shown in the user's preferred language whenever possible. If a translation is missing, the default product language will be displayed. This might lead to consumers seeing a partially translated product.
 
 {{< alert title="Note" color="warning" >}}
-We highly recommended you aligning the Marketplace default language with the product default language to avoid inconsistencies in translation.
+It is highly recommended that you align the Marketplace default language with the product default language to avoid inconsistencies in translation.
 {{< /alert >}}
 
 {{< alert title="Limitation" color="warning" >}}

@@ -217,13 +217,13 @@ As mentioned in the installation procedure, agents can be started with the follo
 Discovery Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd):/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v /data {agentImage}
+docker run -it --env-file $(pwd)/da_env_vars.env -v $(pwd)/keys:/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v $(pwd)/data:/data {agentImage}
 ```
 
 Traceability Agent:
 
 ```shell
-docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd):/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v /data {agentImage}
+docker run -it --env-file $(pwd)/ta_env_vars.env -v $(pwd)/keys:/keys -v EVENT_LOG_PATH_ENTERED_DURING_INSTALLATION:/events -v $(pwd)/data:/data {agentImage}
 ```
 
 ### Helm deployment

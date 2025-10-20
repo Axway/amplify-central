@@ -16,7 +16,7 @@ From the [Amplify platform](https://platform.axway.com) home page click **Overvi
 ## API Health
 
 Click **API Health** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
-  ![Example of API Health](/Images/central/api_usage.png)
+  ![API Health dashboard view.](/Images/central/api_usage.png "API Health dashboard view")
 
 You can filter by environments, APIs, and a pre-configured time range or customize your own. Consuming Team and Subscription filters are available when a Marketplace is enabled for the current org.
 
@@ -33,7 +33,7 @@ See the agent variable CENTRAL_METRICREPORTING_SCHEDULE if you want to lower the
 ## API Traffic
 
 Click **API Traffic** to view the traffic information for the API or App. This view is useful for finding and troubleshooting failed transactions.
-  ![Example of API traffic](/Images/central/api_traffic.png)
+  ![API Traffic dashboard view.](/Images/central/api_traffic.png "API Traffic dashboard view")
 
 {{< alert title="Note" color="primary" >}} The API traffic view provides details for up to a maximum of 1000 transactions based on your search. You might need to further restrict the search by time range or other filter criteria to view all results.{{< /alert >}}
 
@@ -60,10 +60,10 @@ Click an item in the API traffic list to view its transaction details, including
 * Duration
 * Timestamp
 
-  ![Example of API traffic details](/Images/central/api_traffic_details.png)
+  ![API traffic transaction details.](/Images/central/api_traffic_details.png "API traffic transaction details")
 
  For each span you can view the request and response header details.
-  ![Example of API traffic request and response](/Images/central/api_traffic_request_response.png)
+  ![API traffic request and response details.](/Images/central/api_traffic_request_response.png "API traffic request and response details")
 
  Headers can be redacted and sanitized based on the agent configuration reporting the data. Refer to [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/) for details.
 
@@ -71,7 +71,7 @@ Click an item in the API traffic list to view its transaction details, including
 
 Click **Provider Engagement** to see metrics and details about your provider teams engagement level to understand and improve overall health of your API program and engagement of different teams.
 
-![Example of Provider Engagement](/Images/central/provider_engagement.png)
+![Provider Engagement dashboard view.](/Images/central/provider_engagement.png "Provider Engagement dashboard view")
 
 You can filter by provider team (select one, multiple, or all).
 
@@ -94,7 +94,7 @@ The events reflect changes of state, creation, and publish actions. In the chart
 
 Click **Applications** to see metrics and charts about the performance of API assets within the consumers' Marketplace Applications to understand and improve the real world performance of the APIs. The list includes the parent consuming team that owns each application and its usage.
 
-  ![Example of App usage](/Images/central/app_usage.png)
+  ![Applications dashboard view.](/Images/central/app_usage.png "Applications dashboard view")
 
 You can filter by consuming team, application, product, service, consumption units and a pre-configured timeframe or customize your own.
 
@@ -106,7 +106,7 @@ Click **Subscriptions** to see a list of the consumer team with their subscripti
 
 {{% alert title="Note" color="primary" %}} The Subscription page is available to providers with an active Marketplace subscription.{{% /alert %}}
 
-![Example of Subscriptions](/Images/central/subscriptions.png)
+![Subscriptions dashboard view.](/Images/central/subscriptions.png "Subscriptions dashboard view")
 
 You can filter by consuming team, product, resource (API), application, subscription, consumption units and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
 
@@ -123,7 +123,7 @@ Click **Leaderboard** to view the following aspects about the APIs in your organ
 * Top 10 most performant APIs
 * Top 10 least performant APIs
 
-![Example of Leaderboard](/Images/central/leaderboard.png)
+![Leaderboard dashboard view.](/Images/central/leaderboard.png "Leaderboard dashboard view")
 
 This view is useful for improving your API program and focusing your efforts based on your program goals and current state of different APIs. The first 100 most used APIs are displayed only.  
 

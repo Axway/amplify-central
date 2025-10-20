@@ -58,7 +58,7 @@ All customer payments are done using the Stripe billing portal.
 
 #### Accessing Stripe using Stripe API and API Key
 
-Marketplace Stripe billing integration supports both 2024-06-20 and 2022-11-15 API versions, but we recommended that you use the latest 2024-06-20. Refer to [this page](https://stripe.com/docs/libraries/set-version).
+Marketplace Stripe billing integration supports both 2024-06-20 and 2022-11-15 API versions, but it's recommended that you use the latest 2024-06-20. Refer to [this page](https://stripe.com/docs/libraries/set-version).
 
 If your Stripe account does not use either of these versions, you might need to use the Stripe API directly instead of the Stripe UI for certain actions explained in this documentation.
 
@@ -107,7 +107,7 @@ This portal will help the Stripe customers to see their information: billing add
 
 1. Log into Stripe.
 2. Search for portal and navigate to the link **Settings > Billing > Customer portal**.
-3. Enable the billing portal and copy the URL. We will need it later on the Marketplace side.
+3. Enable the billing portal and copy the URL. It will be needed later on the Marketplace side.
 
 ### Enable the Stripe integration in Marketplace
 

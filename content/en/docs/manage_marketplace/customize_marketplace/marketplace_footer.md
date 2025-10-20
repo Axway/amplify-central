@@ -21,7 +21,7 @@ The Marketplace footer changes are made from the Marketplace *Footer* page:
 1. Navigate to *Organization > Marketplace*.
 2. Select **Footer**. *The Footer page is displayed*:
 
-    ![Marketplace Footer](/Images/marketplace/marketplace_footer.png)
+    ![Footer page in Marketplace that includes Layout and Preview sections.](/Images/marketplace/marketplace_footer.png "Footer page")
 
 ## Add elements to the Marketplace footer
 

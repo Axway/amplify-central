@@ -1,7 +1,7 @@
 ---
 title: Connect Apigee X Gateway
 linkTitle: Connect Apigee X Gateway
-weight: 110
+weight: 120
 ---
 Connect Google Cloud Platform Apigee X and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the Apigee X hosted APIs in one central location.
 
