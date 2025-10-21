@@ -10,7 +10,7 @@ The **Subscription Dashboard** provides visibility into subscription-level usage
 The table displays subscription usage that meets the selected filter criteria. Data is derived from metric events associated with product plans that have a quota-based product plan unit type — for example, transactions.  
 Selecting a subscription row expands a secondary view listing the usage breakdown by APIs in the product.
 
-[Business Insights Subscription Dashboard]()
+![Business Insights Subscription Dashboard](/static/Images/Business-Insights-Subscriptions-Dashboard.png)
 
 If the user does not have access to a specific Product or API, the system still displays the row but substitutes the name with the resource ID. This ensures the total usage remains intact, even when a portion of the contributing resources are not visible due to role ownership restrictions.
 
