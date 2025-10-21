@@ -18,20 +18,20 @@ The dashboard is organized into two main sections:
 * **Current Totals** – A snapshot of the total counts across consumer organizations, teams, users, subscriptions, and credentials.
 * **Consumer Activity** – A time-based view that shows new and active entities within the selected date range.
 
-The Provider Engagement dashboard is visible to the following roles:
+The Consumer Engagement dashboard is visible to the following roles:
 
 | Role                | Description                                                                                                                                       |
 | ------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Engage Admin**    | Can view engagement metrics for across all Consumer Organizations and Marketplaces.       |
 | **Catalog Manager** | Can view engagement metrics to Marketplaces they have acccess to. They can see subscription metrics for products their team owns.            |
-| **Insights Viewer** |Can view engagement metrics to Marketplaces they have acccess to.  They can see subscription metrics for products their team owns.                           |
+| **Insights Viewer** | Can view engagement metrics to Marketplaces they have acccess to.  They can see subscription metrics for products their team owns.                           |
 
 ## Filtering options
 
 You can use the filters at the top of the dashboard to refine your view.
 
 * **Marketplace**: Lists all marketplaces you have access to.
-* **Consumer Organization**: Lists all consumer orgs within those marketplaces, including your current org.
+* **Consumer Organization**: Lists all consumer orgs within those marketplaces, including your platform org.
 
 ## Current Totals
 
@@ -41,14 +41,12 @@ A snapshot of the total counts across consumer organizations, teams, users, subs
 
 The **Consumer Orgs** card displays the following metrics:
 
-* **Consumer Orgs**: Total Consumer Organizations currently available in the selected marketplaces you have access to.
+* **Consumer Orgs**: Total Consumer Organizations currently available in the selected marketplaces you have access to, inlcuding your platform organziation.
 * **Active**: Organization with active user sessions in the selected time interval.
 * **New**: Newly created consumer organization in the selected time interval.
 
-Consumer organizations include the organization in all selected marketplaces you have access to.
-
 ### Teams
-   
+
 Metrics include:
 
 * **Teams**: Total number of teams currently available in the consumer organizations you have access to.
