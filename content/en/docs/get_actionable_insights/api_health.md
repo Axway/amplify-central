@@ -24,7 +24,7 @@ The following roles can access the API Health dashboard, with visibility varying
 
 The dashboard is composed of summary cards, a usage chart, and transaction tables for both managed and unmanaged APIs. Filters at the top of the page allow users to narrow the view by environment, API, timeframe, and other parameters.
 
-{{< alert title="Note" color="primary" >}} Depending on the Agent version you are using, the API usage reporting for transactions on the data plane may not be in real time. This is because metrics are aggregated on the agent side and sent to the platform on regular intervals (@hourly by default). See the agent variable CENTRAL_METRICREPORTING_SCHEDULE if you want to lower the interval value.{{< /alert >}}
+{{< alert title="Note" color="primary" >}} Depending on the Agent version you are using, the API usage reporting for transactions on the data plane may not be in real time. This is because metrics are aggregated on the agent side and sent to the platform on regular intervals (hourly by default). See the agent variable CENTRAL_METRICREPORTING_SCHEDULE if you want to lower the interval value.{{< /alert >}}
 
 ### Summary cards
 
