@@ -9,7 +9,7 @@ Amplify Engage delivers robust traceability, monitoring, and analytics features 
 
 **Insights** in Amplify Engage refer to a suite of dashboards and analytics tools that provide a comprehensive view of API usage, health, adoption, and engagement. These capabilities are designed to support both business and technical decision-making by surfacing key metrics and trends from across all environments and data planes.
 
-## Key Insights Capabilities
+## Key Insights capabilities
 
 ### Business Insights
 
@@ -35,7 +35,7 @@ Provides API consumers with secure, self-service access to actionable insights a
 * Choose time slices from five minutes to a week for a quick data views, or pick a custom time interval.
 * Monitor API usage against quotas in subscribed plans.
 
-### Roles and Permissions
+### Roles and permissions
 
 The following roles can access the Insights Dashboard:
 
@@ -45,7 +45,7 @@ The following roles can access the Insights Dashboard:
 * **Insights Viewer** can access the Business Insights dashboard. Their visibility is limited to usage and metrics associated with their team membership.
 * **Consumer** and **Subscriber** can access Consumer Insights dashboard only.
 
-### Filtering in Business Insights Dashboards
+### Filtering in Business Insights dashboards
 
 The Marketplace filter available in the Business Insights Dashboard is dynamically determined by the Marketplace preferences options given to a team. Only marketplaces with explicit preferences that match your team and role will show, ensuring that users only see usage data and metrics relevant to their permissions and responsibilities.
 
