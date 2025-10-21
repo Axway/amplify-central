@@ -1,6 +1,6 @@
 ---
-title: Subscriptions Dashboard
-linkTitle: Subscriptions Dashboard
+title: Subscriptions dashboard
+linkTitle: Subscriptions dashboard
 weight: 10
 date: 2025-10-21
 ---
@@ -12,7 +12,7 @@ Selecting a subscription row expands a secondary view listing the usage breakdow
 
 ![Business Insights Subscription Dashboard](/static/Images/Business-Insights-Subscriptions-Dashboard.png)
 
-If the user does not have access to a specific Product or API, the system still displays the row but substitutes the name with the resource ID. This ensures the total usage remains intact, even when a portion of the contributing resources are not visible due to role ownership restrictions.
+{{< alert title="Note" color="primary" >}}If the user does not have access to a specific Product or API, the system still displays the row but substitutes the name with the resource ID. This ensures the total usage remains intact, even when a portion of the contributing resources are not visible due to role ownership restrictions.{{< /alert >}}
 
 ## Accessing the dashboard
 
