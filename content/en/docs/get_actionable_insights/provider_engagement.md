@@ -2,8 +2,9 @@
 title: Provider engagement
 linkTitle: Provider engagement
 weight: 10
-date: 2022-02-04
+date: 2025-10-21
 ---
+
 The Provider Engagement dashboard helps you monitor and evaluate the activity and engagement level of your provider teams. It gives you visibility into how teams contribute to your API program by tracking the number of teams, services, assets, and products created or updated over time.
 Use this dashboard to understand and improve the overall health of your API program and to identify highly active or underperforming teams.
 
@@ -59,7 +60,6 @@ You can view the data in two ways:
 | **Assets**   | Created, Activated, Deprecated, Archived            | Tracks asset lifecycle activities in the selected time range, reflecting how teams evolve their APIs. |
 | **Products** | Created, Activated, Published, Deprecated, Archived | Captures product lifecycle events in the selected time range, including publication activity.         |
 
-
 ### Chart view
 
 In the chart you can visualize the level of engagement across all selected teams:
@@ -76,5 +76,3 @@ In the table, you can examine the same activity data broken down per team:
 * Shows "admin only" row for any product not owned by a team
 * Columns show counts of events per object type (services, assets, products).
 * Use this view to identify which teams are most active or need additional support.
-
-
