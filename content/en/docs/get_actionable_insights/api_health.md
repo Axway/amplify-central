@@ -77,4 +77,4 @@ Each card providers a high-level overview of transaction health based on the app
 
 You can export data from the API Health dashboard for deeper analysis or reporting. The export includes all data currently displayed on the screen — this covers the chart data (transactions over time), the summary card data (totals and percentages for successes, client errors, and server errors), and the table data for both managed and unmanaged APIs. Exports are generated in CSV format, making it easy to open and analyze in spreadsheet tools such as Excel or Google Sheets.
 
-{{< alert title="Note" color="primary" >}} Please note that the table export file can include a maximum of 1,000 APIs. If your filters return more than 1,000 APIs, refine your selection to reduce the dataset before exporting.{{< /alert >}}
+{{< alert title="Note" color="primary" >}} Please note that the table export file can include a maximum of 1,000 APIs. If your filters return more than 1000 APIs, refine your selection to reduce the dataset before exporting.{{< /alert >}}
