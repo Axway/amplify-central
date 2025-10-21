@@ -2,7 +2,7 @@
 title: API Health
 linkTitle: API Health
 weight: 10
-date: 2022-02-04
+date: 2025-10-04
 ---
 
 The API Health Dashboard offers centralized view into API performance and usage across your environments. It helps you monitor transaction volumes, identify error trends, and analyze the health of both **managed** and **unmanaged** APIs.
