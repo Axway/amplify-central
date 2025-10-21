@@ -2,7 +2,7 @@
 title: Consumer engagement
 linkTitle: Consumer engagement
 weight: 525
-date: 2022-09-15
+date: 2025-10-21
 ---
 
 The **Consumer Engagement** dashboard provides visibility into how your consumers are interacting with your Marketplace.
