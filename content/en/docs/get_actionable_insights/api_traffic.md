@@ -9,6 +9,8 @@ The **API Traffic** dashboard allows you to inspect transaction-level data for y
 
 The dashboard displays up to **1000** of the most recent transactions that match your filter criteria. Each transaction includes core metadata such as request method, status code, latency, and execution timestamp. 
 
+![Example of API traffic](/static/Images/central/api_traffic.png)
+
 Each transaction in the list includes:
 
 * **Status**:	HTTP status code reported by the transaction.
@@ -38,4 +40,20 @@ The detailed trace displays the span-level breakdown of the transaction, includi
 * **Duration**:	Time spent in this span.
 * **Timestamp**:	Execution timestamp for the span.
 
-Each span may also include request and response headers, where available. 
+![Example of API traffic details](/static/Images/central/api_traffic_details.png)
+
+Each span may also include request and response headers, where available.
+
+![Example of API traffic request and response](/static/Images/central/api_traffic_request_response.png)
+
+## Header redaction and sanitization
+
+Depending on the agent configuration, certain headers may be redacted or sanitized for security or compliance purposes. Sensitive values may be masked or suppressed entirely.
+
+For more information on how this is configured, refer to [Trace redaction](/content/en/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction.md/).
+
+## Transaction sampling
+
+API traffic displayed in this dashboard is sampled, not fully captured. To view transactions, Administators must enable the on-demand sampling at the agent level. Sampling is time-bound and only collects transactions during the active sampling window, allowing focused troubleshooting without continuously streaming all traffic.
+
+For more information on how to turn on sampling, refer to [Traffic sampling](/content/en/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling.md/).
