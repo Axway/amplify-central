@@ -14,7 +14,10 @@ Selecting a subscription row expands a secondary view listing the usage breakdow
 
 If the user does not have access to a specific Product or API, the system still displays the row but substitutes the name with the resource ID. This ensures the total usage remains intact, even when a portion of the contributing resources are not visible due to role ownership restrictions.
 
-The dashboard is subject to strict access rules based on user role and marketplace preferences:
+## Accessing the dashboard
+
+To access the dashboard, navigate to Business Insights -> Subscriptions & Revenue.  
+The dashboard is visible to the following roles:
 
 | Role                                       | Access                                                                     |
 | ------------------------------------------ | -------------------------------------------------------------------------- | 
