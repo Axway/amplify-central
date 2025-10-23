@@ -29,8 +29,8 @@ Click any transaction in the list to open its detailed trace view.
 
 The detailed trace displays the span-level breakdown of the transaction, including:
 
-* **Type**:	The span classification (gateway leg, backend call, etc.).
-* **Status**:	Outcome of the call at this specific span.
+* **Type**:	The span classification.
+* **Status**:	Outcome of the call at this specific span
 * **Source**: Component or service initiating the call.
 * **Destination**: Component or service receiving the call.
 * **Method**: HTTP method.
