@@ -4,77 +4,43 @@ linkTitle: Console
 weight: 5
 ---
 
-Learn how to use the Console.
+The Console is your personal activity center where you can monitor your team’s key actions in the Marketplace — including subscription activity, application registrations, and the products your team is currently subscribed to.
 
-## What is the Console?
+This screen is organized into three main sections to help you stay on top of your marketplace activities.
 
-The Console is your personal command center where you can view and manage all your marketplace activities in one convenient location. Here you'll find:
+## Subscription Activity
 
-* Your subscription status and history
-* Your application registration details
-* All products you've subscribed to
+This section shows your product subscriptions organized by approval status (Approved / Pending / Declined).
 
-### Empty Console
-
-In case, you don't have any subscription or application registration yet, the tab will be replaced with an empty section having only 1 button:
-
-* **View products** to find a suitable product to subscribe to.
-* **View applications** to find or create an application.
-
-### Understanding Status Counts
-
-At the top of each activity panel, you'll see the total count for each status tab. These numbers give you a quick overview of:
-
-* **Subscription Activity**: Total approved, pending, and cancelled subscriptions
-* **Application Registration Activity**: Total approved, pending, and rejected application registrations
-
-This helps you quickly assess your marketplace activity at a glance.
-
-## Accessing Your Console
-
-1. **Log in** to your marketplace account
-2. Look for **Console** in the left navigation menu
-3. Click to open your dashboard
-
-**Note:** The Console is only available to logged in users. If you don't see this option, please make sure you're signed in.
-
-## Understanding Your Dashboard
-
-Your Console is organized into three main sections to help you stay on top of your marketplace activities.
-
-### Subscription Activity
-
-This section shows all your product subscriptions organized by approval status (Approved / Pending / Declined). These subscriptions are owned by the team you are member of or by yourself if your are a member of a team using the *x-private* tag.
-
-It displays your 7 most recent subscriptions for each approval status.
-
+It displays your 7 most recent subscriptions for each approval status.  
 Click the **View All** button at the top of the panel to see your complete subscription list.
 
 Under **Approved** subscription tab, it is possible to start requesting access for Product APIs using the **Register Application** button. This will open the application registration wizard. Refer to [Request Access to an API](/docs/manage_marketplace/consumer_experience/credential_management#request-access-to-an-api)
 
-### Application Registration Activity
+## Application Registration Activity
 
-This section displays all your application registrations organized by approval status (Approved / Pending / Declined). These application registrations are owned by the team you are member of or by yourself if your are a member of a team using the *x-private* tag.
+This section displays your application registrations organized by approval status (Approved / Pending / Declined).
 
+It displays your 7 most recent application registrations for each approval status.  
 Click the **View All** button at the top of the panel to see your complete application registration list.
 
 Under **Approved** application registration tab, it is possible to start requesting credentials using the **Request credentials** button. This will open the credential side blade. Refer to [Create credential](/docs/manage_marketplace/consumer_experience/credential_management#create-credentials)
 
 ### Subscribed Products
 
-This section provides a comprehensive view of all products your team has subscribed to.
+This section displays all products your team has subscribed to.
 
 Each product is displayed as a card showing:
 
-* **Product Name** - The name of the subscribed product
-* **Product Description** - A brief overview of what the product offers
-* **Number of Subscriptions** - How many subscriptions your team has for this product
-* **Number of Applications** - Applications associated with this product
+* **Product name** - The name of the subscribed product
+* **Product description** - A brief overview of what the product offers
+* **Number of subscriptions** - How many subscriptions your team has for this product
+* **Number of applications** - Applications associated with this product
 * **Version** - The current version of the product
 * **Updated Date** - When the product was last updated
-* **Register Application Button** - Quick action to register a new application for this product
+* **Register application button** - Quick action to register a new application for this product
 
-## Tips for Using Your Dashboard
+## Tips for using the Console screen
 
 Stay Organized:
 
