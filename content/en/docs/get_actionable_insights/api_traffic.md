@@ -46,6 +46,18 @@ Each span may also include request and response headers, where available.
 
 ![Example of API traffic request and response](/static/Images/central/api_traffic_request_response.png)
 
+## Accessing the dashboard
+
+To access the dashboard, navigate to **Business Insights -> API Traffic**.  
+The dashboard is visible to the following roles:
+
+| Role                                       | Access                                                                     |
+| ------------------------------------------ | -------------------------------------------------------------------------- | 
+| **Engage Admin**                           | Sees all traffic across all apis.                                          |  
+| **Catalog Manager**                        | Only sees usage for APIs owned by their team.                              |
+| **Insights Viewer**                        | Same restrictions as Catalog Manager.                                      |
+| **Developer (Team only)**                  | Same restrictions as Catalog Manager.                                      |
+
 ## Header redaction and sanitization
 
 Depending on the agent configuration, certain headers may be redacted or sanitized for security or compliance purposes. Sensitive values may be masked or suppressed entirely.
