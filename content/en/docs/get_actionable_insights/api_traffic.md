@@ -21,7 +21,6 @@ Each transaction in the list includes:
 * **Duration**: Total request execution time.
 * **Timestamp**: When the transaction occurred.
 
-
 {< alert title="Note" color="primary" >}}The total number of displayed records is derived from agent-based sampling rules and may not represent all traffic.{{< /alert >}}
 
 ## Transaction Details
@@ -50,12 +49,12 @@ Each span may also include request and response headers, where available.
 To access the dashboard, navigate to **Business Insights -> API Traffic**.
 The dashboard is visible to the following roles:
 
-| Role                                       | Access                                                                     |
-| ------------------------------------------ | -------------------------------------------------------------------------- |
-| **Engage Admin**                           | Sees all traffic across all apis.                                          |
-| **Catalog Manager**                        | Only sees usage for APIs owned by their team.                              |
-| **Insights Viewer**                        | Same restrictions as Catalog Manager.                                      |
-| **Developer (Team only)**                  | Same restrictions as Catalog Manager.                                      |
+| Role                             | Access                                         |
+| ---------------------------------| ---------------------------------------------- |
+| **Engage Admin**                 | Sees all traffic across all apis.              |
+| **Catalog Manager**              | Only sees usage for APIs owned by their team.  |
+| **Insights Viewer**              | Same restrictions as Catalog Manager.          |
+| **Developer (Team only)**        | Same restrictions as Catalog Manager.          |
 
 ## Header redaction and sanitization
 
@@ -65,6 +64,6 @@ For more information on how this is configured, refer to [Trace redaction](/cont
 
 ## Transaction sampling
 
-API traffic displayed in this dashboard is sampled, not fully captured. To view transactions, Administators must enable the on-demand sampling at the agent level. Sampling is time-bound and only collects transactions during the active sampling window, allowing focused troubleshooting without continuously streaming all traffic.
+API traffic displayed in this dashboard is sampled, not fully captured. To view transactions, Administrators must enable the on-demand sampling at the agent level. Sampling is time-bound and only collects transactions during the active sampling window, allowing focused troubleshooting without continuously streaming all traffic.
 
 For more information on how to turn on sampling, refer to [Traffic sampling](/content/en/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling.md/).

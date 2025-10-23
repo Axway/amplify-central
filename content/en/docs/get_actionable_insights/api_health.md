@@ -37,7 +37,7 @@ Each card providers a high-level overview of transaction health based on the app
 * **Successes**
 
     * Shows the number of **successful transactions** (status code < 400).
-    * Includes a percentage indicating the proportion of successfull calls relative to the total transactions.
+    * Includes a percentage indicating the proportion of successful calls relative to the total transactions.
 
 * **Client Errors**
 

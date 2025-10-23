@@ -23,8 +23,8 @@ The Consumer Engagement dashboard is visible to the following roles:
 | Role                | Description                                                                                                                                       |
 | ------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Engage Admin**    | Can view engagement metrics for across all Consumer Organizations and Marketplaces.       |
-| **Catalog Manager** | Can view engagement metrics to Marketplaces they have acccess to. They can see subscription metrics for products their team owns.            |
-| **Insights Viewer** | Can view engagement metrics to Marketplaces they have acccess to.  They can see subscription metrics for products their team owns.                           |
+| **Catalog Manager** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns.            |
+| **Insights Viewer** | Can view engagement metrics to Marketplaces they have access to.  They can see subscription metrics for products their team owns.                           |
 
 ## Filtering options
 
@@ -41,7 +41,7 @@ A snapshot of the total counts across consumer organizations, teams, users, subs
 
 The **Consumer Orgs** card displays the following metrics:
 
-* **Consumer Orgs**: Total Consumer Organizations currently available in the selected marketplaces you have access to, inlcuding your platform organziation.
+* **Consumer Orgs**: Total Consumer Organizations currently available in the selected marketplaces you have access to, including your platform organization.
 * **Active**: Organization with active user sessions in the selected time interval.
 * **New**: Newly created consumer organization in the selected time interval.
 
