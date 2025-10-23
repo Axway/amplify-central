@@ -34,27 +34,31 @@ The agent will now capture traffic for the requested duration (subject to cool-d
 
 ### Start agent sampling via the CLI
 
-1. Login
-   ```
-   axway auth login
-   ```
+Login
 
-2. Retrieve the Traceability Agent you would like transactional data from
-   ```
-   axway central get -o yaml -s [Environment Name] traceabilityagent [Agent Name] > resource.yaml
-   ```
+```
+axway auth login
+ ```
 
-3. Edit resource.yaml and add:
-   ```
+Retrieve the Traceability Agent you would like transactional data from
+
+```
+axway central get -o yaml -s [Environment Name] traceabilityagent [Agent Name] > resource.yaml
+```
+
+Edit resource.yaml and add:
+
+```
    sampletrigger:
     requested: true
     duration: 60
-   ```
+ ```
 
-4. Then apply it:
-   ```
-   axway central apply -f resource.yam
-   ```
+Then apply it:
+
+```
+axway central apply -f resource.yam
+```
 
 The agent will now sample for 60 seconds.
 
@@ -78,18 +82,20 @@ The API is now configured for sampling for the selected duration.
 
 ### Start API sampling via the CLI
 
-1. Login
+Login
 
 ```
 axway auth login
 ```
 
-2. Export the API Service Instance
+Export the API Service Instance
+
 ```
 axway central get -o yaml -s [Environment Name] apisi [API Service Instance Name] > resource.yaml
 ```
 
-3. Edit resource.yaml and add:
+Edit resource.yaml and add:
+
 ```
 sampletrigger:
   requested: true
@@ -97,8 +103,10 @@ sampletrigger:
   duration: 3600
 ```
 
-4. Apply the change:
+Apply the change:
+
 ```
 axway central apply -f resource.yaml
 ```
+
 The API will now be sampled for up to 3600 seconds (1 hour).
