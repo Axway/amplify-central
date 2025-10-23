@@ -20,7 +20,7 @@ To access the dashboard, navigate to **Business Insights -> Subscriptions & Reve
 The dashboard is visible to the following roles:
 
 | Role                                       | Access                                                                     |
-| ------------------------------------------ | -------------------------------------------------------------------------- | 
+| ------------------------------------------ | -------------------------------------------------------------------------- |
 | **Engage Admin**                           | Sees all subscriptions across all products.                                |  
 | **Catalog Manager**                        | Only sees usage for subscriptions tied to products owned by their team.    |
 | **Insights Viewer**                        | Same restrictions as Catalog Manager.                                      |
