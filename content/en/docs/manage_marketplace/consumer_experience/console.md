@@ -1,20 +1,20 @@
 ---
-title: Activity Dashboard
-linkTitle: Activity Dashboard
+title: Console
+linkTitle: Console
 weight: 5
 ---
 
-Learn how to use the Activity Dashboard.
+Learn how to use the Console.
 
-## What is the Activity Dashboard?
+## What is the Console?
 
-The Activity Dashboard is your personal command center where you can view and manage all your marketplace activities in one convenient location. Here you'll find:
+The Console is your personal command center where you can view and manage all your marketplace activities in one convenient location. Here you'll find:
 
 * Your subscription status and history
 * Your application registration details
 * All products you've subscribed to
 
-### Empty Activity Dashboard
+### Empty Console
 
 In case, you don't have any subscription or application registration yet, the tab will be replaced with an empty section having only 1 button:
 
@@ -30,17 +30,17 @@ At the top of each activity panel, you'll see the total count for each status ta
 
 This helps you quickly assess your marketplace activity at a glance.
 
-## Accessing Your Activity Dashboard
+## Accessing Your Console
 
 1. **Log in** to your marketplace account
-2. Look for **Activity Dashboard** in the left navigation menu
+2. Look for **Console** in the left navigation menu
 3. Click to open your dashboard
 
-**Note:** The Activity Dashboard is only available to logged*in users. If you don't see this option, please make sure you're signed in.
+**Note:** The Console is only available to logged in users. If you don't see this option, please make sure you're signed in.
 
 ## Understanding Your Dashboard
 
-Your Activity Dashboard is organized into three main sections to help you stay on top of your marketplace activities.
+Your Console is organized into three main sections to help you stay on top of your marketplace activities.
 
 ### Subscription Activity
 
@@ -93,8 +93,8 @@ Monitor Updates:
 
 ## Frequently Asked Questions
 
-**Q: Why can't I see the Activity Dashboard?**  
-A: The Activity Dashboard is only available to logged*in users. Please sign in to access your dashboard.
+**Q: Why can't I see the Console?**  
+A: The Console is only available to logged in users. Please sign in to access your dashboard.
 
 **Q: How many items are displayed in each tab?**  
 A: Each status tab shows your 7 most recent items. Use the "View All" button to see your complete list.
@@ -108,5 +108,5 @@ A: You'll see a helpful "Browse Product" button that will guide you to explore a
 **Q: How often does the dashboard update?**  
 A: Your dashboard displays current information. Refresh the page to see the latest updates to your subscriptions and applications.
 
-**Q: Can other team members see my Activity Dashboard?**  
-A: The Activity Dashboard shows activity for your team. Team members may see shared team activities depending on your marketplace configuration.
+**Q: Can other team members see my Console?**  
+A: The Console shows activity for your team. Team members may see shared team activities depending on your marketplace configuration.
