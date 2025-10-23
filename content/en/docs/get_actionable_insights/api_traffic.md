@@ -13,9 +13,9 @@ The dashboard displays up to **1000** of the most recent transactions that match
 
 Each transaction in the list includes:
 
-* **Status**:	HTTP status code reported by the transaction.
-* **Method**:	HTTP method used (GET, POST, etc.).
-* **URI**:	Target resource or endpoint path.
+* **Status**: HTTP status code reported by the transaction.
+* **Method**:	HTTP method used (GET, POST, etc).
+* **URI**: Target resource or endpoint path.
 * **Name**:	The API or operation name.
 * **Environment**: The environment where the transaction was processed.
 * **Duration**: Total request execution time.
