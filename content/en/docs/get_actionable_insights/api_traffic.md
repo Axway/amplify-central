@@ -21,7 +21,7 @@ Each transaction in the list includes:
 * **Duration**: Total request execution time.
 * **Timestamp**: When the transaction occurred.
 
-{< alert title="Note" color="primary" >}}The total number of displayed records is derived from agent-based sampling rules and may not represent all traffic.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}The total number of displayed records is derived from agent-based sampling rules and may not represent all traffic.{{< /alert >}}
 
 ## Transaction Details
 
