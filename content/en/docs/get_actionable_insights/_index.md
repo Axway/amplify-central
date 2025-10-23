@@ -19,7 +19,7 @@ Offers a 360-degree view of your API program, including engagement, consumption,
 * **API Health**: Centralized visibility into API usage, success rates, errors, and trends across all environments.
 * **API Traffic**: Detailed transaction-level data for troubleshooting and performance analysis.
 * **Provider Engagement**: Metrics on provider team activity and collaboration.
-* **Consumer Engagement**: Trends and metricsfor spotting adoption patterns and refining your engagement strategies to drive further API consumption.
+* **Consumer Engagement**: Trends and metrics for spotting adoption patterns and refining your engagement strategies to drive further API consumption.
 * **Applications**: Usage metrics for each Marketplace application, with filtering by organization, team, product, and timeframe.
 * **Subscriptions**: List sof the consumers with their product subscriptions and monthly usage​.
 * **Revenue**: Breakdown of charges and invoice statistics by product and consumer, enabling revenue analysis.
@@ -39,9 +39,9 @@ Provides API consumers with secure, self-service access to actionable insights a
 
 The following roles can access the Insights dashboards:
 
-* **Engage Administrators** can access both Business Insights and Consumer Insights dashabord. They can see metrics across all teams in the organization.
+* **Engage Administrators** can access both Business Insights and Consumer Insights dashboard. They can see metrics across all teams in the organization.
 * **Catalog Manager** can view the Business Insights dashboards. Usage and metrics are scoped to their team. They must be a member in the owning team to view usage or engagement metrics.
-* **Developer** can view only a subset of the Business Insights dashboards (API Health, API Traffic, Applications,Leaderboard). Their visibility is limited usage and metrics assosciated with their team membership.
+* **Developer** can view only a subset of the Business Insights dashboards (API Health, API Traffic, Applications,Leaderboard). Their visibility is limited usage and metrics associated with their team membership.
 * **Insights Viewer** can access the Business Insights dashboard. Their visibility is limited to usage and metrics associated with their team membership.
 * **Consumer** and **Subscriber** can access Consumer Insights dashboard only.
 
