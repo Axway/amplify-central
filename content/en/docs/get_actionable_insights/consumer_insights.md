@@ -2,7 +2,7 @@
 title: Consumer insights
 linkTitle: Consumer insights
 weight: 20
-date: 2022-05-26
+date: 2025-10-21
 ---
 
 Consumer insights provides API consumers with secure, self-service access to actionable insights regarding their usage of the APIs from the Marketplace.
