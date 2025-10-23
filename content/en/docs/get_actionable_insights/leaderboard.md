@@ -5,7 +5,7 @@ weight: 525
 date: 2025-10-21
 ---
 
-The Leaderboard dashboard provides a set of curated “Top 10” lists to help you identify trends at a glance:                                                                                                 
+The Leaderboard dashboard provides a set of curated “Top 10” lists to help you identify trends at a glance:
 
 * **Top 10 Most used APIs**: APIs with the highest traffic volume in the selected time range. Useful for understanding adoption leaders.
 * **Top 10 Least Used APIs**: APIs with low or declining usage. Helpful for prioritizing lifecycle decisions (retire, improve docs, or promote).
