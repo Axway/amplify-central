@@ -59,6 +59,7 @@ For setting Marketplace preferences, refer to [Marketplace Settings](https://doc
 
 * [API Health](/content/en/docs/get_actionable_insights/api_health.md)
 * [API Traffic](/content/en/docs/get_actionable_insights/api_traffic.md)
+* [Applications Dashboard](/content/en/docs/get_actionable_insights/applications_dashboard.md)
 * [Provider Engagement](/content/en/docs/get_actionable_insights/provider_engagement.md)
 * [Consumer Engagement](/content/en/docs/get_actionable_insights/consumer_engagement.md)
 * [Subscriptions Dashboard](/content/en/docs/get_actionable_insights/subscriptions_dashboard.md)
