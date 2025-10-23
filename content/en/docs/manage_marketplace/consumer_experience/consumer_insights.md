@@ -55,27 +55,27 @@ You can filter the view by application, HTTP method, status code, or time range 
 
 Each transaction in the list includes:
 
-* **Status**:	HTTP status code reported by the transaction.
-* **Method**:	HTTP method used (GET, POST, etc.).
-* **URI**:	Target resource or endpoint path.
-* **Name**:	The API or operation name.
-* **Environment**:	The environment where the transaction was processed.
-* **Duration**:	Total request execution time.
-* **Timestamp**:	When the transaction occurred.
+* **Status**: HTTP status code reported by the transaction.
+* **Method**: HTTP method used (GET, POST, etc.).
+* **URI**: Target resource or endpoint path.
+* **Name**: The API or operation name.
+* **Environment**: The environment where the transaction was processed.
+* **Duration**: Total request execution time.
+* **Timestamp**: When the transaction occurred.
 
 ### Transaction details
 
 Click any transaction in the list to open its detailed trace view.
 The detailed trace displays the span-level breakdown of the transaction, including:
 
-* **Type**:	The span classification (gateway leg, backend call, etc.).
-* **Status**:	Outcome of the call at this specific span.
-* **Source**:	Component or service initiating the call.
-* **Destination**:	Component or service receiving the call.
-* **Method**:	HTTP method.
-* **URI Path**:	The endpoint for this span.
-* **Duration**:	Time spent in this span.
-* **Timestamp**:	Execution timestamp for the span.
+* **Type**: The span classification (gateway leg, backend call, etc.).
+* **Status**: Outcome of the call at this specific span.
+* **Source**: Component or service initiating the call.
+* **Destination**: Component or service receiving the call.
+* **Method**: HTTP method.
+* **URI Path**: The endpoint for this span.
+* **Duration**: Time spent in this span.
+* **Timestamp**: Execution timestamp for the span.
 
 Each span may also include request and response headers, where available.
 
