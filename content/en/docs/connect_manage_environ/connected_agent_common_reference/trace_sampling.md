@@ -88,7 +88,8 @@ axway auth login
 ```
 axway central get -o yaml -s [Environment Name] apisi [API Service Instance Name] > resource.yaml
 ```
-3.Edit resource.yaml and add:
+
+3. Edit resource.yaml and add:
 ```
 sampletrigger:
   requested: true
@@ -101,4 +102,3 @@ sampletrigger:
 axway central apply -f resource.yaml
 ```
 The API will now be sampled for up to 3600 seconds (1 hour).
-
