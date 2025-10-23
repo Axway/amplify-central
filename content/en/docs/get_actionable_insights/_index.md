@@ -37,7 +37,7 @@ Provides API consumers with secure, self-service access to actionable insights a
 
 ### Roles and permissions
 
-The following roles can access the Insights Dashboard:
+The following roles can access the Insights dashboards:
 
 * **Engage Administrators** can access both Business Insights and Consumer Insights dashabord. They can see metrics across all teams in the organization.
 * **Catalog Manager** can view the Business Insights dashboards. Usage and metrics are scoped to their team. They must be a member in the owning team to view usage or engagement metrics.
@@ -54,3 +54,13 @@ The Marketplace filter available in the Business Insights Dashboard is dynamical
 * If your team is included in the **consumption preference** for a Marketplace, that Marketplace will become visible to you when you have the Insights Viewer role.
 
 For setting Marketplace preferences, refer to [Marketplace Settings](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_settings/index.html).
+
+## Related Topics
+
+* [API Health](/content/en/docs/get_actionable_insights/api_health.md)
+* [API Traffic](/content/en/docs/get_actionable_insights/api_traffic.md)
+* [Provider Engagement](/content/en/docs/get_actionable_insights/provider_engagement.md)
+* [Consumer Engagement](/content/en/docs/get_actionable_insights/consumer_engagement.md)
+* [Subscriptions Dashboard](/content/en/docs/get_actionable_insights/subscriptions_dashboard.md)
+* [Leaderboard](/content/en/docs/get_actionable_insights/leaderboard.md)
+* [Consumer Insights](/content/en/docs/manage_marketplace/consumer_experience/consumer_insights.md)
