@@ -1,25 +1,25 @@
 ---
-title: Consumer insights
-linkTitle: Consumer insights
+title: Consumer Insights
+linkTitle: Consumer Insights
 weight: 20
-date: 2022-05-26
+date: 2025-10-23
 ---
 
-Consumer insights provides API consumers with secure, self-service access to actionable insights regarding their usage of the APIs from the Marketplace.
+Consumer Insights gives API consumers an easy, self-service way to view how they’re using APIs in the Marketplace.
 
-Access to the Consumer Insights menu and dashboards is based on your role and permissions and your organization's subscriptions to the Marketplace. Users must have a Consumer or Subscription Admin [role](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html#team-roles) to access the dashboards. From the Marketplace left navigation click **Consumer Insights**, and then select a dashboard you want to view.
+To access the Consumer Insights dashboard, users must have a consumer or subscriber role. To get started, open the Marketplace’s left navigation panel, select **Consumer Insights**, and choose the dashboard you want to explore.
 
 ## API Health
 
-Click **API Health** to see an aggregated view of your API recent usage. This view is useful for monitoring traffic patterns and successes or failures over time.
+Click **API Health** to view a high-level summary of your recent API activity. This dashboard helps you monitor traffic patterns, spot unusual spikes or drops, and track overall success vs. error rates over time.
 
-![API Health example](/Images/marketplace/consumer_experience/ci_api_health.png)
+You can filter the data by product, subscription, application, or time range - using either the preset options or a custom window.
 
-You can filter by products, subscriptions, applications, and a pre-configured time range or customize your own.
+At the top of the page, the tiles show counts and percentages for all transactions, successes, client errors, and server errors. If you select Compare to previous period, you can see how your current usage compares to the prior week, month, or year and quickly identify trends.
 
-The view shows all transactions, successes, client errors, and server errors with the total number, percentage details, and trend (when **Compare to previous period** is selected) in the tiles across the top below the filter options. Click the **Compare to previous period** option to compare the current selected time range to the previous time range. You can compare the current week, month, or year to the previous week, month, or year to understand how your API usage is changing over time.
+![API Health example](/static/Images/marketplace/consumer_experience/ci_api_health.png)
 
-Each individual item provides the following data
+Below the summary, each API entry includes:
 
 * API Name
 * Version
@@ -27,66 +27,67 @@ Each individual item provides the following data
 * Minimum duration (ms)
 * Maximum duration (ms)
 * Average duration (ms)
-* Successful
-* Client Error
-* Server Error
+* Successful requests
+* Client errors
+* Server errors
 
-The API usage reporting for transactions is not real time and may be delayed by several minutes based on settings selected by your API provider.
+Note that the API usage data is not real-time. There may be a delay of several minutes before new transactions appear in the dashboard.
 
 ## Applications
 
-Click **Applications** to see an aggregated view of Application usage. These are applications configured within the Marketplace.
+![Applications example](/static/Images/marketplace/consumer_experience/ci_applications.png)
 
-![Applications example](/Images/marketplace/consumer_experience/ci_applications.png)
+Click **Applications** to view a summary of how each of your applications is using APIs in the Marketplace.
+This dashboard helps you understand which applications are generating traffic and how actively they are being used.
 
-You can filter by applications, products, and a pre-configured time range or customize your own.
+You can filter the data by application, product, or time range.
 
-Click an individual item to see that application's usage by product, API, and total transactions.
+Clicking on an individual application opens a detailed view showing its usage broken down by API.
 
-The Application usage reporting for transactions is not real time and may be delayed by several minutes based on settings selected by your API provider.
+Please note that application usage data is not shown in real time. New transactions may take a few minutes to appear in the dashboard.
 
 ## API Traffic
 
-Click **API Traffic** to view the traffic information for the API or Application. This view is useful for finding and troubleshooting failed transactions.
+The **API Traffic** dashboard lets you drill into individual API calls made through your subscribed APIs or your own applications. It’s especially helpful for identifying and troubleshooting failed or unexpected transactions.
+You can filter the view by application, HTTP method, status code, or time range — either using one of the presets or by choosing a custom window. Data in the API Traffic dashboard is retained for 7 days, so you can review and troubleshoot recent activity within that time window.
 
-![API Traffic example](/Images/marketplace/consumer_experience/ci_api_traffic.png)
+![API Traffic example](/static/Images/marketplace/consumer_experience/ci_api_traffic.png)
 
-You can filter by applications, methods, status codes, and a pre-configured time range or customize your own.
+Each transaction in the list includes:
+
+* **Status**:	HTTP status code reported by the transaction.
+* **Method**:	HTTP method used (GET, POST, etc.).
+* **URI**:	Target resource or endpoint path.
+* **Name**:	The API or operation name.
+* **Environment**:	The environment where the transaction was processed.
+* **Duration**:	Total request execution time.
+* **Timestamp**:	When the transaction occurred.
+
+### Transaction details
+
+Click any transaction in the list to open its detailed trace view.
+The detailed trace displays the span-level breakdown of the transaction, including:
+
+* **Type**:	The span classification (gateway leg, backend call, etc.).
+* **Status**:	Outcome of the call at this specific span.
+* **Source**:	Component or service initiating the call.
+* **Destination**:	Component or service receiving the call.
+* **Method**:	HTTP method.
+* **URI Path**:	The endpoint for this span.
+* **Duration**:	Time spent in this span.
+* **Timestamp**:	Execution timestamp for the span.
+
+Each span may also include request and response headers, where available.
+
+![API traffic transaction details example](/static/Images/marketplace/consumer_experience/ci_api_traffic_details.png)
 
 {{< alert title="Note" color="primary" >}} API traffic is based on a limited sample of the actual gateway traffic and will not show all transactions.{{< /alert >}}
 
-Each individual item provides the following data:
-
-* Status
-* Method
-* URI
-* Name
-* Environment
-* Duration
-* Timestamp
-
-Click an item in the API traffic list to view its transaction details in a sidebar:
-
-* Type
-* Status
-* Source
-* Destination
-* Method
-* URI Path
-* Duration
-* Timestamp
-
-![API traffic transaction details example](/Images/marketplace/consumer_experience/ci_api_traffic_details.png)
-
-Click the **+** next to the transaction details to view the request and response header details. Headers can be redacted and sanitized based on the agent configuration set by your API provider.
-
 ## Subscriptions
 
-Click **Subscriptions** to see a list of the products and its subscription in your Marketplace.
+The **Subscriptions** dashboard shows how each of your subscriptions is being used across the products you’re subscribed to. It helps you easily track your consumption and see how it compares to the quota you’ve been allocated.
 
-![Subscriptions example](/Images/marketplace/consumer_experience/ci_subscriptions.png)
+The subscription table shows usage for the subscriptions that match your selected filters. You can filter by product, subscription, or time range.
+When you click on a subscription row, it expands to display a detailed breakdown of usage by each API within that product.
 
-You can filter by products, subscriptions, and time range in three month increments (last 3 months, 4 to 6 months, 7 to 9 months, and 10 to 12 months).
-
-Click an individual item to see quota and last three-month usage by each resource and plan in that subscription.
-
+![Subscriptions example](/static/Images/marketplace/consumer_experience/consumer_insights_subscriptions.png)
