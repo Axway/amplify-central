@@ -12,14 +12,18 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## October 24, 2025
 
-New enhancement and bug fixes for the October 17 update.
+New enhancement and bug fixes for the October 24 update.
 
 ### Marketplace updates for October 24, 2025
 
-* **Hide empty fields**
+* **Empty fields are hidden automatically**
 
-  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  To remove visual clutter, improve focus, and provide a more streamlined experience, you can now hide empty stage, tag, and Categories fields (and their corresponding filters). You can also hide the Plan tab if no plan is available for a product.
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  When a field has no information to show, it simply won’t appear on the screen anymore. This keeps the page clean and easy to read, so users can quickly focus on what matters. This behavior is supported across key Marketplace views, including:
+
+    * Empty categories and tags are not displayed on the product details screen
+    * Stages filters is not displayed in the Products screen when no stages are enabled
+    * The Plans tab in the product details screen when there are no available plans
 
 ### Marketplace bug fixes for October 24, 2025
 
