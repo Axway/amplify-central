@@ -14,12 +14,6 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancement and bug fixes for the October 17 update.
 
-### Agent bug fixes for October 24, 2025
-
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
-
 ### Marketplace updates for October 24, 2025
 
 * **Hide empty fields**
