@@ -34,21 +34,26 @@ To connect the Akamai agent to your Akamai API Security platform, you need to cr
    * Navigate to your Akamai API Security dashboard
    * Use your administrative credentials to access the platform
 
-2. **Access API Management section**
-   * Go to the API management or developer console section
-   * Look for OAuth client management or service account creation options
+2. **Access Service Accounts section**
+   * Navigate to **Identity and Access Management** > **Service Accounts**, or go directly to `/user-management/service-accounts`
+   * Look for the option to create a new API client or service account
 
 3. **Create a new OAuth 2.0 client**
-   * Click "Create Client" or "New OAuth Client"
+   * Click "Create service account"
    * Enter a descriptive name for your client (e.g., "Amplify Akamai Agent")
-   * Set the client type to "Service Account" or "Machine-to-Machine"
+   * Select "Service Account" as the client type
 
 4. **Configure client permissions**
-   * Grant the following minimum permissions to the service account:
-     * **API Discovery**: Read access to APIs and group information
-     * **Metrics Access**: Read access to API traffic metrics (`/api/v3/apis/metrics`)
-     * **Spec Generation**: Access to generate OpenAPI specifications from traffic data
-     * **Group Management**: Read access to group configurations and mappings
+   * Select the permission level for the service account. Available options are:
+     * **Admin** (Recommended): Full access to all APIs, groups, metrics, and configuration
+     * **Contributor**: Read and write access to most resources
+     * **Participant**: Limited read and write access
+     * **Viewer**: Read-only access
+   * **We recommend selecting Admin** to ensure the agent has access to all required functionality including:
+     * API discovery and group information
+     * API traffic metrics (`/api/v3/apis/metrics`)
+     * OpenAPI specification generation from traffic data
+     * Group configurations and mappings
    * Ensure the client has access to all groups you want to monitor
 
 5. **Generate credentials**
@@ -99,7 +104,7 @@ Integrating Amplify Engage with Akamai API Security will bring many benefits, in
 
 ### Discovery of Akamai API endpoints
 
-The discovery process occurs during each polling interval of your Amplify Akamai agent. During this process, the agent uses the `GetAPIsWithGrouping` method to retrieve all APIs from Akamai API Security that are being monitored for your configured groups, applies segmentLength-based grouping to organize APIs by host and path segments, and creates unified API OAS specification documents using `GenerateSpecFromTraffic` representing all API traffic that Akamai has observed for each Environment. This is represented in Amplify Engage as API services where you can observe the specifications derived from real-time monitoring data.
+The discovery process occurs during each polling interval of your Amplify Akamai agent. The agent retrieves all APIs from Akamai API Security that are being monitored for your configured groups, organizes them by host and path segments based on the configured segment length, and creates unified OpenAPI specification documents representing all API traffic that Akamai has observed for each environment. These discovered APIs are represented in Amplify Engage as API services where you can observe the specifications derived from real-time monitoring data.
 
 ### Traffic metrics for Akamai API endpoints
 
@@ -107,17 +112,15 @@ Along with the discovery process, the Amplify Akamai agent also reports metrics 
 
 ### Compliance risk scoring
 
-On a set frequency, the Amplify Akamai agent calculates a traffic-weighted risk score for your APIs. This score uses the business formula: `sum(apiRiskScore * apiCallVolume) / numberOfEndpoints` to provide accurate risk assessment based on actual API usage patterns. The risk score and grade will inform you about how at risk a certain Environment is based on the traffic patterns and security posture of APIs in that Environment. This risk score is visualized under the API Services the Amplify Akamai agent creates. See `AKAMAI_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
+On a set frequency, the Amplify Akamai agent calculates a traffic-weighted risk score for your APIs. This score uses the business formula: `sum(apiRiskScore * apiCallVolume) / numberOfEndpoints` to provide accurate risk assessment based on actual API usage patterns. The agent normalizes the risk score to accepted Amplify values (between 0 and 5). The risk score and grade will inform you about how at risk a certain Environment is based on the traffic patterns and security posture of APIs in that Environment. This risk score is visualized under the API Services the Amplify Akamai agent creates. See `AKAMAI_CONFORMANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
 
 ### Conformance analysis
 
 The Amplify Akamai agent will keep you informed on how well your API specifications compare to real-time API data as seen by Akamai API Security. By linking your managed environments, via other Amplify agents, to Akamai environments the process is handled for you automatically.
 
 * The Amplify Akamai agent will find all API specs on Amplify and cross-reference them with Akamai API Security data
-* On the set frequency (See `AKAMAI_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables)) the Amplify Akamai agent will run a Conformance Analysis using pure synchronous processing
-* After completion, those analysis results are reflected in Amplify
-    * Within the API Service view in the Amplify Akamai environment
-    * Within the Environment details view for your referenced managed environments
+* On the set frequency (See `AKAMAI_CONFORMANCEFREQUENCY` in [Environment Variables](#environment-variables)) the Amplify Akamai agent will run a Conformance Analysis using pure synchronous processing
+* After completion, those analysis results are reflected in Amplify within the Environment details view for the Akamai environment
 
 With the Conformance Analysis results, utilizing the API specifications provided by Engage and real-time traffic data from Akamai, you will see accurate results for the following:
 
@@ -207,15 +210,14 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | AKAMAI_BASEURL                               |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`). See [Create Akamai service account](#create-akamai-service-account) |
 | AKAMAI_CLIENTID                              |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security. Obtained from your service account creation                                                          |
 | AKAMAI_CLIENTSECRET                          |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security. Keep this secure and never commit to source control                                             |
-| AKAMAI_GROUPS                                |         | Comma-separated list of Akamai group names to monitor (Required - at least one group must be specified). Use group names, not IDs                                       |
 | AKAMAI_POLLINTERVAL                          | 1h      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks. (Lower Limit: 1h)                                        |
 | AKAMAI_COMPLIANCEFREQUENCY                   | 12h     | How often the agent will calculate a traffic-weighted compliance risk score and send to Engage. (Lower Limit: 1h)                                                       |
 | AKAMAI_CONFORMANCEFREQUENCY                  | 24h     | How often the agent will run conformance analysis against discovered APIs and send results to Engage. (Lower Limit: 1h)                                                 |
 | AKAMAI_SEGMENTLENGTH                         | 2       | Controls API grouping by path segments (e.g., 0=host only, 1="/api", 2="/api/v1", 3="/api/v1/users"). Higher values provide more granular grouping.                    |
 | AKAMAI_TOKENREFRESHINTERVAL                  | 55m     | OAuth 2.0 token refresh interval to maintain authentication (0=no auto-refresh). Should be less than token expiry time                                                   |
 | AKAMAI_HTTPTIMEOUT                           | 30s     | HTTP client timeout for Akamai API requests                                                                                                                               |
-| AKAMAI_ENVIRONMENTMAPPING_[INDEX]_AMPLIFY    |         | Amplify Engage Environment Name for environment mapping (used with corresponding AKAMAI entry)                                                                            |
-| AKAMAI_ENVIRONMENTMAPPING_[INDEX]_AKAMAI     |         | Akamai group name for environment mapping (used with corresponding AMPLIFY entry)                                                                                         |
+| AKAMAI_ENVIRONMENTMAPPING_AMPLIFY_[INDEX]    |         | Amplify Engage Environment Name for environment mapping (used with corresponding AKAMAI entry)                                                                            |
+| AKAMAI_ENVIRONMENTMAPPING_AKAMAI_[INDEX]     |         | Akamai group name for environment mapping (used with corresponding AMPLIFY entry)                                                                                         |
 
 ## Helm deployment
 
@@ -233,13 +235,12 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | akamai.baseUrl                 |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`). See [Create Akamai service account](#create-akamai-service-account)    |
 | akamai.clientId                |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security. Obtained from your service account creation                                                               |
 | akamai.clientSecret            |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security. Keep this secure and never commit to source control                                                  |
-| akamai.groups                  |         | Array of Akamai group names to monitor (Required - at least one group must be specified). Use group names, not IDs                                                           |
-| akamai.pollInterval            | 1h      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks                                                                  |
-| akamai.complianceFrequency     | 12h     | How often the agent will calculate a traffic-weighted compliance risk score and send to Engage                                                                                 |
-| akamai.conformanceFrequency    | 24h     | How often the agent will run conformance analysis and send results to Engage                                                                                                   |
-| akamai.segmentLength           | 2       | Controls API grouping by path segments for discovery organization (0=host only, 1="/api", 2="/api/v1", etc.)                                                                  |
-| akamai.tokenRefreshInterval    | 55m     | OAuth 2.0 token refresh interval to maintain authentication. Should be less than token expiry time                                                                             |
-| akamai.httpTimeout             | 30s     | HTTP client timeout for Akamai API requests                                                                                                                                    |
+| akamai.pollInterval            | 1h      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks. (Lower Limit: 1h)                                        |
+| akamai.complianceFrequency     | 12h     | How often the agent will calculate a traffic-weighted compliance risk score and send to Engage. (Lower Limit: 1h)                                                       |
+| akamai.conformanceFrequency    | 24h     | How often the agent will run conformance analysis against discovered APIs and send results to Engage. (Lower Limit: 1h)                                                 |
+| akamai.segmentLength           | 2       | Controls API grouping by path segments (e.g., 0=host only, 1="/api", 2="/api/v1", 3="/api/v1/users"). Higher values provide more granular grouping.                    |
+| akamai.tokenRefreshInterval    | 55m     | OAuth 2.0 token refresh interval to maintain authentication (0=no auto-refresh). Should be less than token expiry time                                                   |
+| akamai.httpTimeout             | 30s     | HTTP client timeout for Akamai API requests                                                                                                                               |
 | akamai.environmentMapping      |         | An array of objects with an Amplify Engage Environment (key: `amplify`) Name with an Akamai group (key: `akamaiGroupName`) Name, for API discovery and conformance analysis   |
 
 ## Step 1: Create directory
@@ -396,26 +397,25 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 
 ### Discovery capabilities
 
-* **API Endpoint Discovery**: Automatically discovers all APIs monitored by Akamai API Security using `GetAPIsWithGrouping`
+* **API Endpoint Discovery**: Automatically discovers all APIs monitored by Akamai API Security
 * **Segment-based Organization**: Organizes APIs by configurable path segment grouping (0=host only, 1="/api", 2="/api/v1", etc.)
-* **Unified Specification Generation**: Creates environment-level OpenAPI specifications from discovered APIs using `GenerateSpecFromTraffic`
+* **Unified Specification Generation**: Creates environment-level OpenAPI specifications from discovered APIs
 * **OAuth 2.0 Authentication**: Secure authentication with automatic token refresh capabilities
-* **Change Detection**: Monitors for API changes and updates specifications accordingly using traceable-agent patterns
+* **Change Detection**: Monitors for API changes and updates specifications accordingly
 * **Environment Mapping**: Links Amplify environments to Akamai groups for accurate discovery scope
-* **Multi-Group Support**: Monitors multiple Akamai groups simultaneously for comprehensive API coverage
 
 ### Compliance capabilities
 
-* **Traffic-weighted Risk Scoring**: Calculates risk scores using actual API traffic volumes from `/api/v3/apis/metrics` endpoint
+* **Traffic-weighted Risk Scoring**: Calculates risk scores using actual API traffic volumes
 * **Business Formula Implementation**: Uses `sum(apiRiskScore * apiCallVolume) / numberOfEndpoints` for accurate assessment
-* **Real-time Metrics Integration**: Leverages Akamai's metrics API with checkpoint-based time window management
-* **Intelligent Error Handling**: Gracefully handles metrics API unavailability by skipping unavailable APIs
+* **Real-time Metrics Integration**: Leverages Akamai's traffic metrics with checkpoint-based time window management
+* **Intelligent Error Handling**: Gracefully handles metrics unavailability by skipping unavailable APIs
 * **Per-API Analysis**: Individual API endpoint risk assessment and scoring with comprehensive logging
 * **Progressive Data Collection**: Uses checkpoint data for consistent time windows across agent executions
 
 ### Conformance capabilities
 
-* **Real-time Analysis**: Direct integration with Akamai APIs using synchronous processing
+* **Real-time Analysis**: Direct integration with Akamai for synchronous processing
 * **Comprehensive State Handling**: Manages Matched, No Risk, Sensitive, Required, Not Matched, Conflicting, and Pending states
 * **Traffic-based Validation**: Compares API specifications against actual traffic patterns
 * **Shadow API Detection**: Identifies undocumented APIs with active traffic
@@ -436,7 +436,7 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
     -d '{"client_id": "your-client-id", "client_secret": "your-client-secret"}'
   ```
 * **Check network connectivity**: Ensure the agent can reach your Akamai API Security platform URL
-* **Validate environment variables**: Confirm all required variables are set (baseUrl, clientId, clientSecret, groups)
+* **Validate environment variables**: Confirm all required variables are set (baseUrl, clientId, clientSecret)
 * **Verify group names**: Ensure group names match exactly what exists in your Akamai platform (not group IDs)
 * **Check base URL format**: Confirm the URL follows the pattern `https://your-account.luna.akamaiapis.net`
 
@@ -468,7 +468,6 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
     "https://your-account.luna.akamaiapis.net/api/v3/apis/metrics?group=GROUP_ID"
   ```
 * **Review time windows**: Ensure checkpoint data provides reasonable time windows for metrics collection
-* **Check token refresh**: Verify tokenRefreshInterval is appropriate (default: 55m, should be less than token expiry)
 
 #### OAuth 2.0 Authentication issues
 
@@ -497,7 +496,7 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 * **Verify API specifications**: Ensure API specifications are properly published in Amplify Engage
 * **Check environment mapping**: Confirm mapping between Amplify environments and Akamai groups is accurate
 * **Validate traffic requirements**: Ensure APIs have sufficient traffic for meaningful conformance analysis
-* **Test spec generation**: Verify the service account can access the `GenerateSpecFromTraffic` method
+* **Test specification generation**: Verify the service account has access to generate specifications from traffic data
 * **Review analysis frequency**: Check if conformanceFrequency setting is appropriate for your use case
 
 ### Getting additional help
