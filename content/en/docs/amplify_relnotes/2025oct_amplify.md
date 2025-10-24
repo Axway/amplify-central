@@ -10,6 +10,31 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## October 24, 2025
+
+New enhancement and bug fixes for the October 17 update.
+
+### Agent bug fixes for October 24, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
+### Marketplace updates for October 24, 2025
+
+* **Hide empty fields**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  To remove visual clutter, improve focus, and provide a more streamlined experience, you can now hide empty stage, tag, and Categories fields (and their corresponding filters). You can also hide the Plan tab if no plan is available for a product.
+
+### Marketplace bug fixes for October 24, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31430 | **Issue**: Scrolling issue in the Subscription dropdown in the Register Application wizard <br/>**Resolution**: You can now scroll up to 10 subscriptions at a time. |
+| 01752744 | APIGOV-31144 | **Issue**: Misconfigured CORS Policy (CWE-942) found on security scan of Marketplace <br/>**Resolution**: `Access-Control-Allow-Credentials` is set to **False** by default to mitigate the risk. |
+|          | APIGOV-31311 | **Issue**: Grouping per asset filter does not show the resource group <br/>**Resolution**: Filter load has been fixed. |
+
 ## October 17, 2025
 
 New enhancements and bug fixes for the October 17 update.
