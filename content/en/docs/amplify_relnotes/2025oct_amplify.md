@@ -28,7 +28,8 @@ New enhancement and bug fixes for the October 17 update.
 |          | APIGOV-31430 | **Issue**: Scrolling issue in the Subscription dropdown in the Register Application wizard <br/>**Resolution**: You can now scroll up to 10 subscriptions at a time. |
 | 01752744 | APIGOV-31144 | **Issue**: Misconfigured CORS Policy (CWE-942) found on security scan of Marketplace <br/>**Resolution**: `Access-Control-Allow-Credentials` is set to **False** by default to mitigate the risk. |
 |          | APIGOV-31311 | **Issue**: Grouping per asset filter does not show the resource group <br/>**Resolution**: Filter load has been fixed. |
-
+| 01771338 <br/>01765710 | APIGOV-31420 <br/>APIGOV-31332 | **Issue**: When attempting to create a new version of an asset without corrupted resources or resources in error, an error message page is displayed <br/>**Resolution**: A fix has been made to enabe new asset version creation. |
+ 
 ## October 17, 2025
 
 New enhancements and bug fixes for the October 17 update.
