@@ -23,7 +23,7 @@ New enhancement and bug fixes for the October 24 update.
 
     * Empty categories and tags are not displayed on the product details screen
     * Stages filters is not displayed in the Products screen when no stages are enabled
-    * The Plans tab in the product details screen when there are no available plans
+    * The Plans tab is not displyed in the product details screen when there are no available plans
 
 ### Marketplace bug fixes for October 24, 2025
 
