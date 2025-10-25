@@ -1,7 +1,7 @@
 ---
 title: Search and filter Marketplace content
 linkTitle: Search and filter Marketplace content
-weight: 5
+weight: 60
 ---
 
 Learn how to search through content in the Marketplace.
