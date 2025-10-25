@@ -14,6 +14,8 @@ Amplify's runtime compliance feature allows you to assess the runtime compliance
 
 Runtime compliance is the assessment of potential security risks based on real-time API traffic. Amplify has integrated with multiple tools to monitor and assess API traffic for security threats. For example, the captured real-time API traffic is continuously scanned by the tools to detect real attacks, leaks, and other threats.
 
+* [Akamai API Security](https://www.akamai.com/products/api-security)
+    * [Configure Akamai](/docs/runtime_security/configure_runtime_compliance_akamai)
 * [Graylog API Security](https://graylog.org/products/api-security/)
     * [Configure Graylog](/docs/runtime_security/configure_runtime_compliance_graylog)
 * [Traceable](https://www.traceable.ai/api-security-testing)
