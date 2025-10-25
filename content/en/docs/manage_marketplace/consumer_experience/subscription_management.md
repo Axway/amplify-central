@@ -25,7 +25,7 @@ Anyone who is authenticated in the Marketplace can subscribe to a product with t
 | Persona               | Subscribe to a paid plan | subscribe to a free plan |
 |-----------------------|--------------------------|--------------------------|
 | Subscription Manager  | Authorized               | Authorized               |
-| Engage Administrator | Authorized               | Authorized               |
+| Engage Administrator  | Authorized               | Authorized               |
 | Developer/Consumer    | Forbidden                | Authorized               |
 
 Each subscription is owned by a team and shared with each member of the team. If you are part of multiple teams, you will be asked to select the team owner. If your team has the attribute **x-private**, the subscription will be owned by your user and not shared inside your team.
@@ -39,6 +39,8 @@ Only one subscription per team/product/plan type combination is allowed.
 
     * Select the Usage Plan
     * Select the Owner
+    * Name your subscription if the default name does not suit your requirements
+    * Accept the Product Terms & Conditions if provider requires it. You can view the Terms & Conditions details by clicking the provided link: it will open in a separate tab.
     * Click **Save**
 
 5. Track the status of your subscription from the *Subscription overview* page. For additional information on states, see [Subscription approval states](#subscription-approval-states).
