@@ -112,7 +112,7 @@ Along with the discovery process, the Amplify Akamai agent also reports metrics 
 
 ### Compliance risk scoring
 
-On a set frequency, the Amplify Akamai agent calculates a traffic-weighted risk score for your APIs. This score uses the business formula: `sum(apiRiskScore * apiCallVolume) / numberOfEndpoints` to provide accurate risk assessment based on actual API usage patterns. The agent normalizes the risk score to accepted Amplify values (between 0 and 5). The risk score and grade will inform you about how at risk a certain Environment is based on the traffic patterns and security posture of APIs in that Environment. This risk score is visualized under the API Services the Amplify Akamai agent creates. See `AKAMAI_CONFORMANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
+On a set frequency, the Amplify Akamai agent calculates a traffic-weighted risk score for your APIs. This score uses the business formula: `sum(apiRiskScore * apiCallVolume) / numberOfEndpoints` to provide accurate risk assessment based on actual API usage patterns. The agent normalizes the risk score to accepted Amplify values (between 0 and 5). The risk score and grade will inform you about how at risk a certain Environment is based on the traffic patterns and security posture of APIs in that Environment. This risk score is visualized under the API Services the Amplify Akamai agent creates. See `AKAMAI_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
 
 ### Conformance analysis
 
@@ -210,11 +210,10 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | AKAMAI_BASEURL                               |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`). See [Create Akamai service account](#create-akamai-service-account) |
 | AKAMAI_CLIENTID                              |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security. Obtained from your service account creation                                                          |
 | AKAMAI_CLIENTSECRET                          |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security. Keep this secure and never commit to source control                                             |
-| AKAMAI_POLLINTERVAL                          | 1h      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks. (Lower Limit: 1h)                                        |
+| AKAMAI_POLLINTERVAL                          | 5m      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks                                                           |
 | AKAMAI_COMPLIANCEFREQUENCY                   | 12h     | How often the agent will calculate a traffic-weighted compliance risk score and send to Engage. (Lower Limit: 1h)                                                       |
 | AKAMAI_CONFORMANCEFREQUENCY                  | 24h     | How often the agent will run conformance analysis against discovered APIs and send results to Engage. (Lower Limit: 1h)                                                 |
 | AKAMAI_SEGMENTLENGTH                         | 2       | Controls API grouping by path segments (e.g., 0=host only, 1="/api", 2="/api/v1", 3="/api/v1/users"). Higher values provide more granular grouping.                    |
-| AKAMAI_TOKENREFRESHINTERVAL                  | 55m     | OAuth 2.0 token refresh interval to maintain authentication (0=no auto-refresh). Should be less than token expiry time                                                   |
 | AKAMAI_HTTPTIMEOUT                           | 30s     | HTTP client timeout for Akamai API requests                                                                                                                               |
 | AKAMAI_ENVIRONMENTMAPPING_AMPLIFY_[INDEX]    |         | Amplify Engage Environment Name for environment mapping (used with corresponding AKAMAI entry)                                                                            |
 | AKAMAI_ENVIRONMENTMAPPING_AKAMAI_[INDEX]     |         | Akamai group name for environment mapping (used with corresponding AMPLIFY entry)                                                                                         |
@@ -235,11 +234,10 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | akamai.baseUrl                 |         | The base URL for your Akamai API Security account (e.g., `https://your-account.luna.akamaiapis.net`). See [Create Akamai service account](#create-akamai-service-account)    |
 | akamai.clientId                |         | The OAuth 2.0 Client ID for authenticating with Akamai API Security. Obtained from your service account creation                                                               |
 | akamai.clientSecret            |         | The OAuth 2.0 Client Secret for authenticating with Akamai API Security. Keep this secure and never commit to source control                                                  |
-| akamai.pollInterval            | 1h      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks. (Lower Limit: 1h)                                        |
+| akamai.pollInterval            | 5m      | The frequency the agent polls Akamai for API discovery, metrics collection, compliance and conformance checks                                                                  |
 | akamai.complianceFrequency     | 12h     | How often the agent will calculate a traffic-weighted compliance risk score and send to Engage. (Lower Limit: 1h)                                                       |
 | akamai.conformanceFrequency    | 24h     | How often the agent will run conformance analysis against discovered APIs and send results to Engage. (Lower Limit: 1h)                                                 |
 | akamai.segmentLength           | 2       | Controls API grouping by path segments (e.g., 0=host only, 1="/api", 2="/api/v1", 3="/api/v1/users"). Higher values provide more granular grouping.                    |
-| akamai.tokenRefreshInterval    | 55m     | OAuth 2.0 token refresh interval to maintain authentication (0=no auto-refresh). Should be less than token expiry time                                                   |
 | akamai.httpTimeout             | 30s     | HTTP client timeout for Akamai API requests                                                                                                                               |
 | akamai.environmentMapping      |         | An array of objects with an Amplify Engage Environment (key: `amplify`) Name with an Akamai group (key: `akamaiGroupName`) Name, for API discovery and conformance analysis   |
 
@@ -285,7 +283,6 @@ The installation procedure will prompt for the following:
    * **Client ID**: the OAuth 2.0 Client ID for Akamai API Security (obtained from [Create Akamai service account](#create-akamai-service-account))
    * **Client Secret**: the OAuth 2.0 Client Secret for Akamai API Security (obtained from service account creation - keep secure)
    * **Segment Length**: the path segment grouping level for API discovery (default: 2, where 0=host only, 1="/api", 2="/api/v1")
-   * **Token Refresh Interval**: OAuth 2.0 token refresh frequency to maintain authentication (default: 55m)
 5. Traceability module connectivity:
    * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack` or `HTTPS`
 
