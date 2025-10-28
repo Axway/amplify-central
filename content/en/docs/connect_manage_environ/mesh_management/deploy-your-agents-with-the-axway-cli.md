@@ -229,11 +229,12 @@ Created secret/gateway-cert in the istio-system namespace.
 
     If you choose to deploy the Traceability Agent, select the mode in which you want the Traceability Agent to run.
 
-    The Amplify Istio Traceability Agent has two modes, default and verbose. The default mode captures only the headers specified in the EnvoyFilter. The verbose mode captures all the headers in the request and response flows. Once selected, you will be able to switch modes if required. Refer to [Monitor APIs and Services - Toggling the Traceability Agent](/docs/connect_manage_environ/mesh_management/traceability_agent_configuration/#toggling-the-traceability-agent).
+    The Amplify Istio Traceability Agent has three modes: ambient, default, and verbose. The **ambient mode** (default) is designed for Istio's ambient mesh architecture and uses the Telemetry API. The **default mode** captures only the headers specified in the EnvoyFilter and is designed for traditional sidecar-based deployments. The **verbose mode** captures all the headers in the request and response flows. Once selected, you will be able to switch modes if required. Refer to [Monitor APIs and Services - Toggling the Traceability Agent](/docs/connect_manage_environ/mesh_management/traceability_agent_configuration/#toggling-the-traceability-agent).
 
    ```bash
     Select Traceability Agent HTTP header publishing mode:
-    ❯ Default
+    ❯ Ambient
+      Default
       Verbose
    ```
 

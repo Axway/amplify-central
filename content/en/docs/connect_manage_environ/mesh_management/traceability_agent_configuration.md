@@ -26,7 +26,11 @@ For more information, see [Install Axway Central CLI](/docs/integrate_with_centr
 The Amplify Istio Traceability Agent is installed into your Kubernetes cluster as part of deploying the `ampc-hybrid` helm chart. The Traceability Agent (TA) sends metrics and logs for API activity back to Amplify so that you can monitor service activity and troubleshoot your services.
 The agent publishes a summary of the transaction which can be seen in Business Insights. Once the transaction summary is expanded, you can see all the related spans within a transaction including the request and response headers for each.
 
-The Amplify Istio Traceability Agent has two modes; default and verbose. The default mode captures only the headers specified in the EnvoyFilter and the verbose mode captures all the headers in request and response flows.
+The Amplify Istio Traceability Agent has three modes: **ambient** (default), default, and verbose.
+
+- **Ambient mode**: The recommended mode for Istio's ambient mesh architecture. Uses Istio's Telemetry API to configure access logging. This is the default mode as of agent version 2.1.32+.
+- **Default mode**: Captures only the headers specified in the EnvoyFilter configuration. Designed for traditional sidecar-based Istio deployments.
+- **Verbose mode**: Captures all the headers in request and response flows. Also uses EnvoyFilter for sidecar-based deployments.
 
 ## Setup
 
@@ -646,6 +650,109 @@ To exclude any headers, remove them from "additional_request_headers_to_log" and
   ```bash
  kubectl apply -f <fileName>.yaml
  ```
+
+**Switching to ambient mode**:
+
+Ambient mode is the default mode as of agent version 2.1.32+. To explicitly configure ambient mode:
+
+```bash
+helm repo update
+helm upgrade --install --namespace apic-control ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set als.mode="ambient"
+```
+
+In ambient mode, the Traceability Agent uses Istio's Telemetry API instead of EnvoyFilter. The helm chart automatically creates the necessary Telemetry resources when deployed with `als.mode="ambient"`.
+
+### Manual Telemetry Resource Configuration (without helm)
+
+If you prefer to create Telemetry resources manually without using the helm chart, follow these steps:
+
+#### Step 1: Create the Extension Provider Configuration
+
+Create a file named `telemetry-provider.yaml`:
+
+```yaml
+apiVersion: telemetry.istio.io/v1alpha1
+kind: Telemetry
+metadata:
+  name: als-grpc-provider
+  namespace: <your-namespace>
+spec:
+  extensionProviders:
+    - name: als-grpc-provider
+      envoyHttpAls:
+        service: ampc-hybrid-als.apic-control.svc.cluster.local
+        port: 9000
+        logName: mesh
+        additionalRequestHeadersToLog:
+          - "x-request-id"
+          - "accept"
+          - "user-agent"
+          - "x-envoy-decorator-operation"
+          - "x-envoy-external-address"
+          - "x-istio-attributes"
+          - "x-forwarded-client-cert"
+          - "x-forwarded-for"
+          - "x-forwarded-proto"
+          - "x-b3-parentspanid"
+          - "x-b3-spanid"
+        additionalResponseHeadersToLog:
+          - "connection"
+          - "content-length"
+          - "content-md5"
+          - "content-type"
+          - "date"
+          - "etag"
+          - "request-id"
+          - "response-time"
+          - "server"
+          - "start-time"
+          - "vary"
+        filterStateObjectsToLog:
+          - "wasm.upstream_peer"
+          - "wasm.upstream_peer_id"
+          - "wasm.downstream_peer"
+          - "wasm.downstream_peer_id"
+```
+
+Replace `<your-namespace>` with the namespace where you want to capture traffic. If your ALS service is deployed in a different namespace or with a different name, update the `service` field accordingly.
+
+#### Step 2: Create the Access Logging Configuration
+
+Create a file named `telemetry-logging.yaml`:
+
+```yaml
+apiVersion: telemetry.istio.io/v1alpha1
+kind: Telemetry
+metadata:
+  name: als-telemetry
+  namespace: <your-namespace>
+spec:
+  accessLogging:
+    - providers:
+        - name: envoy
+      filter:
+        expression: "true"
+    - providers:
+        - name: als-grpc-provider
+  selector:
+    matchLabels:
+      istio.io/dataplane-mode: ambient
+```
+
+The selector `istio.io/dataplane-mode: ambient` ensures this configuration only applies to workloads running in Istio's ambient mode.
+
+#### Step 3: Apply the Telemetry Resources
+
+```bash
+kubectl apply -f telemetry-provider.yaml
+kubectl apply -f telemetry-logging.yaml
+```
+
+Repeat these steps for each namespace where you want to capture traffic with the Traceability Agent.
+
+{{% alert title="Note" %}}
+For more information about Istio Telemetry API, refer to the [Istio Telemetry documentation](https://istio.io/latest/docs/reference/config/telemetry/).
+{{% /alert %}}
 
 ## Transaction Redaction
 

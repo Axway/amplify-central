@@ -258,19 +258,22 @@ als:
     CENTRAL_AUTH_CLIENTID: istio-service-account_12345678-0000-4444-99e9
     CENTRAL_ORGANIZATIONID: "123456789912345"
 
-  # Header publishing mode. Set to default or verbose.
-  mode: default
+  # Header publishing mode. Options: ambient (default), default, or verbose.
+  # ambient: Uses Istio Telemetry API for ambient mesh mode (recommended)
+  # default: Uses EnvoyFilter with specified headers for sidecar-based meshes
+  # verbose: Captures all headers in request/response flows
+  mode: ambient
   # Name for the Istio cluster
   clusterName: istio-k8scluster
   # The tracing provider configured for Istio
   istioTracer: "zipkin"
   # Name of the secret containing the public & private keys used by the provided service account client ID
   keysSecretName: amplify-agents-keys
-  # List of namespaces where the ALS Envoy filters should be applied
+  # List of namespaces where the ALS Envoy filters (for default/verbose modes) or Telemetry resources (for ambient mode) should be applied
   envoyFilterNamespaces:
   - default
   publishHeaders: true
-  # A list of request headers that are sent to the agent
+  # A list of request headers that are sent to the agent (applies to ambient and default modes)
   defaultModeRequestHeaders:
   - "accept"
   - "user-agent"
@@ -280,7 +283,7 @@ als:
   - "x-forwarded-for"
   - "x-forwarded-proto"
   - "x-istio-attributes"
-  # A list of response headers that are sent to the agent
+  # A list of response headers that are sent to the agent (applies to ambient and default modes)
   defaultModeResponseHeaders:
   - "connection"
   - "content-length"
