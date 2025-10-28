@@ -20,7 +20,7 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 
 ## Create Akamai service account
 
-To connect the Akamai agent to your Akamai API Security platform, you need to create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
+To connect the Akamai agent to your Akamai API Security platform, you must create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
 
 ### Prerequisites for Akamai service account
 
@@ -30,39 +30,41 @@ To connect the Akamai agent to your Akamai API Security platform, you need to cr
 
 ### Steps to create the service account
 
-1. **Log in to Akamai API Security platform**
+1. Log in to Akamai API Security platform:
    * Navigate to your Akamai API Security dashboard
    * Use your administrative credentials to access the platform
 
-2. **Access Service Accounts section**
-   * Navigate to **Identity and Access Management** > **Service Accounts**, or go directly to `/user-management/service-accounts`
+2. Access Service Accounts section:
+   * Navigate to *Identity and Access Management* > *Service Accounts*, or go directly to `/user-management/service-accounts`
    * Look for the option to create a new API client or service account
 
-3. **Create a new OAuth 2.0 client**
-   * Click "Create service account"
+3. Create a new OAuth 2.0 client:
+   * Click **Create service account**
    * Enter a descriptive name for your client (e.g., "Amplify Akamai Agent")
-   * Select "Service Account" as the client type
+   * Select **Service Account** as the client type
 
-4. **Configure client permissions**
+4. Configure client permissions:
    * Select the permission level for the service account. Available options are:
      * **Admin** (Recommended): Full access to all APIs, groups, metrics, and configuration
      * **Contributor**: Read and write access to most resources
      * **Participant**: Limited read and write access
      * **Viewer**: Read-only access
-   * **We recommend selecting Admin** to ensure the agent has access to all required functionality including:
+
+      We recommend selecting Admin** to ensure the agent has access to all required functionality including:
      * API discovery and group information
      * API traffic metrics (`/api/v3/apis/metrics`)
      * OpenAPI specification generation from traffic data
      * Group configurations and mappings
    * Ensure the client has access to all groups you want to monitor
 
-5. **Generate credentials**
+5. Generate credentials:
    * Complete the client creation process
-   * **Copy and securely store the Client ID and Client Secret** - you will need these for agent configuration
+   * Copy and securely store the Client ID and Client Secret - you will need these for agent configuration
    * The Client Secret will only be displayed once, so save it immediately
 
-6. **Verify API access**
-   * Test the credentials by making a sample API call to verify connectivity:
+6. Verify API access:
+   * Test the credentials by making a sample API call to verify connectivity:</br>
+
    ```bash
    # Test authentication (replace with your actual credentials and base URL)
    curl -X POST "https://your-account.luna.akamaiapis.net/auth/token" \
@@ -72,9 +74,10 @@ To connect the Akamai agent to your Akamai API Security platform, you need to cr
        "client_secret": "your-client-secret"
      }'
    ```
+
    * Verify you receive an access token in the response
 
-7. **Note your base URL**
+7. Note your base URL:
    * Record your Akamai API Security base URL (typically in the format: `https://your-account.luna.akamaiapis.net`)
    * This will be used as the `AKAMAI_BASEURL` in your agent configuration
 
@@ -89,14 +92,14 @@ After creating your service account, you should have:
 | **Client Secret** | `eb6f2737c2156822efa47ed84cc45577a35857d40bbe9b4056ce0f81c94d827529038fb34dd571f64f5e45216fc804598a106aaf79bd3217278835f81b1bb6f2` | OAuth 2.0 client secret (sensitive) |
 | **Groups** | `production-apis`, `staging-apis` | Akamai group names to monitor |
 
-{{< alert title="Security Note" color="warning" >}}
-Store the Client Secret securely. It provides access to your Akamai API Security data and should be treated as a sensitive credential. Never commit it to source control or share it in plain text.
+{{< alert title="Note" color="danger" >}}
+**Security Note**</br>Store the Client Secret securely. It provides access to your Akamai API Security data and should be treated as a sensitive credential. Never commit it to source control or share it in plain text.
 {{< /alert >}}
 
 ## Objectives
 
-* Learn the benefits of integrating Amplify Engage with Akamai API Security.
-* Learn how to install and configure the Akamai agent for runtime compliance and conformance analysis.
+* Learn the benefits of integrating Amplify Engage with Akamai API Security
+* Learn how to install and configure the Akamai agent for runtime compliance and conformance analysis
 
 ## Akamai integration
 
@@ -112,17 +115,17 @@ Along with the discovery process, the Amplify Akamai agent also reports metrics 
 
 ### Compliance risk scoring
 
-On a set frequency, the Amplify Akamai agent calculates a traffic-weighted risk score for your APIs. This score uses the business formula: `sum(apiRiskScore * apiCallVolume) / numberOfEndpoints` to provide accurate risk assessment based on actual API usage patterns. The agent normalizes the risk score to accepted Amplify values (between 0 and 5). The risk score and grade will inform you about how at risk a certain Environment is based on the traffic patterns and security posture of APIs in that Environment. This risk score is visualized under the API Services the Amplify Akamai agent creates. See `AKAMAI_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
+On a set frequency, the Amplify Akamai agent calculates a traffic-weighted risk score for your APIs. This score uses the business formula: `sum(apiRiskScore * apiCallVolume) / numberOfEndpoints` to provide accurate risk assessment based on actual API usage patterns. The agent normalizes the risk score to accepted Amplify values (between 0 and 5). The risk score and grade will inform you about how at risk a certain environment is based on the traffic patterns and security posture of APIs in that environment. This risk score is visualized under the API services the Amplify Akamai agent creates. See `AKAMAI_COMPLIANCEFREQUENCY` in [Environment Variables](#environment-variables) for configuration.
 
 ### Conformance analysis
 
-The Amplify Akamai agent will keep you informed on how well your API specifications compare to real-time API data as seen by Akamai API Security. By linking your managed environments, via other Amplify agents, to Akamai environments the process is handled for you automatically.
+The Amplify Akamai agent will keep you informed on how well your API specifications compare to real-time API data as seen by Akamai API Security. By linking your managed environments (via other Amplify agents) to Akamai environments, the process is handled for you automatically.
 
 * The Amplify Akamai agent will find all API specs on Amplify and cross-reference them with Akamai API Security data
-* On the set frequency (See `AKAMAI_CONFORMANCEFREQUENCY` in [Environment Variables](#environment-variables)) the Amplify Akamai agent will run a Conformance Analysis using pure synchronous processing
+* On the set frequency (See `AKAMAI_CONFORMANCEFREQUENCY` in [Environment Variables](#environment-variables)) the Amplify Akamai agent will run a conformance analysis using pure synchronous processing
 * After completion, those analysis results are reflected in Amplify within the Environment details view for the Akamai environment
 
-With the Conformance Analysis results, utilizing the API specifications provided by Engage and real-time traffic data from Akamai, you will see accurate results for the following:
+With the conformance analysis results, utilizing the API specifications provided by Engage and real-time traffic data from Akamai, you will see accurate results for the following:
 
 * Matched endpoints with issues - these are APIs that are documented but the API traffic seen by Akamai does not match the documentation
 * Shadow endpoints - these are APIs that are not documented but API traffic is flowing through them
@@ -144,7 +147,7 @@ Before installing and configuring, make sure you have the following agent prereq
 * An Amplify platform user account that has the **Platform Administrator** and **Engage Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
 * Axway CLI with the Engage CLI installed
-    * Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/).
+    * Follow the instructions described in [Install Axway Central CLI](/docs/integrate_with_central/cli_central/cli_install/)
 
 The agent must have access to:
 
@@ -155,8 +158,8 @@ The agent must have access to:
 
 There are two ways to authenticate with Axway CLI:
 
-* Default mode: with an administrator username (email address) / password via a browser
-* Headless mode: with a platform service account and a username / password via a prompt
+* Default mode: With an administrator username (email address) / password via a browser
+* Headless mode: With a platform service account and a username / password via a prompt
 
 #### Default mode with browser authentication
 
@@ -272,17 +275,17 @@ The installation procedure will prompt for the following:
 1. Select the type of gateway you want to connect to (Akamai in this scenario).
 2. Select the type of deployment for the Akamai agent (helm or docker).
 3. Platform connectivity:
-   * **Environment**: can be an existing environment or one that will be created by the installation procedure
-        * **Environment Mapping**: choose from existing environments that have Managed APIs and inform the agent of the Akamai group that is linked
-   * **Team**: can be an existing team or one that will be created by the installation procedure
-   * **Service account**: can be an existing service account created in Amplify. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
+   * **Environment**: Can be an existing environment or one that will be created by the installation procedure
+        * **Environment Mapping**: Choose from existing environments that have Managed APIs and inform the agent of the Akamai group that is linked
+   * **Team**: Can be an existing team or one that will be created by the installation procedure
+   * **Service account**: Can be an existing service account created in Amplify. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 4. Akamai API Security configuration setup options:
-   * **Namespace**: can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster (Helm install only)
-   * **Base URL**: the Akamai API Security base URL for your account (e.g., `https://your-account.luna.akamaiapis.net`)
-   * **Groups**: the specific Akamai group names to monitor for API discovery (required). Enter the exact group names from your Akamai platform
-   * **Client ID**: the OAuth 2.0 Client ID for Akamai API Security (obtained from [Create Akamai service account](#create-akamai-service-account))
-   * **Client Secret**: the OAuth 2.0 Client Secret for Akamai API Security (obtained from service account creation - keep secure)
-   * **Segment Length**: the path segment grouping level for API discovery (default: 2, where 0=host only, 1="/api", 2="/api/v1")
+   * **Namespace**: Can be an existing namespace or a new one that will be created by the installation procedure in the Kubernetes cluster (Helm install only)
+   * **Base URL**: The Akamai API Security base URL for your account (e.g., `https://your-account.luna.akamaiapis.net`)
+   * **Groups**: The specific Akamai group names to monitor for API discovery (required). Enter the exact group names from your Akamai platform
+   * **Client ID**: The OAuth 2.0 Client ID for Akamai API Security (obtained from [Create Akamai service account](#create-akamai-service-account))
+   * **Client Secret**: The OAuth 2.0 Client Secret for Akamai API Security (obtained from service account creation - keep secure)
+   * **Segment Length**: The path segment grouping level for API discovery (default: 2, where 0=host only, 1="/api", 2="/api/v1")
 5. Traceability module connectivity:
    * Traceability Agent protocol (Lumberjack (tcp) by default recommended for production environment or HTTPs recommended for testing purpose), select between `Lumberjack` or `HTTPS`
 
@@ -340,7 +343,7 @@ Once the Helm commands are completed, the agents should be running in the Kubern
 
 ### Set up secrets for private repositories
 
-To deploy an image stored in a private repository, you must create a kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
+To deploy an image stored in a private repository, you must create a Kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
 This is necessary for both the Discovery and Traceability agents.
 
 Kubernetes command to create secret:
@@ -397,7 +400,7 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 * **API Endpoint Discovery**: Automatically discovers all APIs monitored by Akamai API Security
 * **Segment-based Organization**: Organizes APIs by configurable path segment grouping (0=host only, 1="/api", 2="/api/v1", etc.)
 * **Unified Specification Generation**: Creates environment-level OpenAPI specifications from discovered APIs
-* **OAuth 2.0 Authentication**: Secure authentication with automatic token refresh capabilities
+* **OAuth 2.0 Authentication**: Secures authentication with automatic token refresh capabilities
 * **Change Detection**: Monitors for API changes and updates specifications accordingly
 * **Environment Mapping**: Links Amplify environments to Akamai groups for accurate discovery scope
 
@@ -419,14 +422,12 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 * **Orphan API Detection**: Identifies documented APIs with no traffic
 * **Issue Classification**: Detailed reporting of specification mismatches and compliance issues
 
-## Troubleshooting
+## Common troubleshooting issues
 
-### Common issues
-
-#### Agent not starting
+### Agent not starting
 
 * **Verify Akamai credentials**: Ensure the Client ID and Client Secret are correct and match what was generated during [service account creation](#create-akamai-service-account)
-* **Test authentication manually**: Use a tool like curl to verify your credentials work:
+* **Test authentication manually**: Use a tool like cURL to verify your credentials work:
   ```bash
   curl -X POST "https://your-account.luna.akamaiapis.net/auth/token" \
     -H "Content-Type: application/json" \
@@ -437,11 +438,11 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 * **Verify group names**: Ensure group names match exactly what exists in your Akamai platform (not group IDs)
 * **Check base URL format**: Confirm the URL follows the pattern `https://your-account.luna.akamaiapis.net`
 
-#### Discovery not finding APIs
+### Discovery not finding APIs
 
 * **Verify group access**: Log into Akamai API Security and confirm the service account has access to the specified groups
 * **Check group API content**: Ensure the specified groups contain APIs that are actively monitored by Akamai
-* **Test group discovery**: Use curl to test group and API discovery:
+* **Test group discovery**: Use cURL to test group and API discovery:
   ```bash
   # Get groups (after obtaining token)
   curl -H "Authorization: Bearer YOUR_TOKEN" \
@@ -455,7 +456,7 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 * **Adjust segment length**: Try different segmentLength values (0=host only, 1="/api", 2="/api/v1") based on your API structure
 * **Review agent logs**: Check for OAuth 2.0 authentication errors or API access permission issues
 
-#### Metrics not available
+### Metrics not available
 
 * **Verify metrics endpoint access**: Ensure your service account has permissions for `/api/v3/apis/metrics`
 * **Check traffic existence**: Confirm API traffic exists for the monitored endpoints within the collection time window
@@ -466,7 +467,7 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
   ```
 * **Review time windows**: Ensure checkpoint data provides reasonable time windows for metrics collection
 
-#### OAuth 2.0 Authentication issues
+### OAuth 2.0 Authentication issues
 
 * **Validate service account permissions**: Ensure the Akamai service account has all required permissions:
     * API Discovery (read access to APIs and groups)
@@ -474,10 +475,10 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
     * Spec Generation (access to generate specifications from traffic)
 * **Check token expiry**: Verify tokens are being refreshed before expiration
 * **Review credential storage**: Ensure Client Secret is stored securely and not corrupted
-* **Test token acquisition**: Manually test OAuth 2.0 flow using curl
+* **Test token acquisition**: Manually test OAuth 2.0 flow using cURL
 * **Check network issues**: Verify no firewalls or proxies are interfering with OAuth requests
 
-#### Group configuration issues
+### Group configuration issues
 
 * **List available groups**: Use the Akamai API to get all available groups:
   ```bash
@@ -488,7 +489,7 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 * **Verify group permissions**: Ensure the service account has read access to all specified groups
 * **Check group content**: Confirm groups contain the APIs you want to monitor
 
-#### Conformance analysis issues
+### Conformance analysis issues
 
 * **Verify API specifications**: Ensure API specifications are properly published in Amplify Engage
 * **Check environment mapping**: Confirm mapping between Amplify environments and Akamai groups is accurate
@@ -496,13 +497,13 @@ akamai-ta   3 hours ago    akamai-ta     TraceabilityAgent  Environment  akamai 
 * **Test specification generation**: Verify the service account has access to generate specifications from traffic data
 * **Review analysis frequency**: Check if conformanceFrequency setting is appropriate for your use case
 
-### Getting additional help
+## Getting additional help
 
 If you continue to experience issues:
 
 1. **Check agent logs**: Review detailed logs for specific error messages and authentication failures
 2. **Verify service account**: Confirm the Akamai service account has all required permissions in the API Security platform
-3. **Test API access**: Use curl commands to manually test connectivity and permissions
+3. **Test API access**: Use cURL commands to manually test connectivity and permissions
 4. **Contact support**: Reach out to Axway support with specific error messages and configuration details
 
 For additional support, please contact Axway support or refer to the Amplify documentation.
