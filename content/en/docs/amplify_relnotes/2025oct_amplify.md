@@ -10,6 +10,36 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## October 31, 2025
+
+New enhancement and bug fixes for the October 31 update.
+
+### Agent updates for October 31, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agent bug fixes for October 31, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
+### Marketplace updates for October 31, 2025
+
+* **Feature**
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  Description
+
+### Marketplace bug fixes for October 31, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
 ## October 24, 2025
 
 New enhancement and bug fixes for the October 24 update.
