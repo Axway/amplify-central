@@ -16,19 +16,20 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
     * Akamai group names that contain the APIs you want to monitor
     * Environment group mappings between Amplify environments and Akamai groups
 * Ensure you have the following tools installed:
-    * The Axway Central CLI must be installed, and Amplify platform connectivity is required to configure the Akamai agent
+    * The Axway Central CLI
+    * Amplify platform connectivity (required to configure the Akamai agent)
 
-## Create Akamai service account
+### Create Akamai service account
 
 To connect the Akamai agent to your Akamai API Security platform, you must create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
 
-### Prerequisites for Akamai service account
+#### Prerequisites for Akamai service account
 
 * Administrative access to your Akamai API Security platform
 * Permissions to create API clients and manage service accounts
 * Knowledge of which Akamai groups contain the APIs you want to monitor
 
-### Steps to create the service account
+#### Steps to create the service account
 
 1. Log in to Akamai API Security platform:
    * Navigate to your Akamai API Security dashboard
@@ -81,7 +82,7 @@ To connect the Akamai agent to your Akamai API Security platform, you must creat
    * Record your Akamai API Security base URL (typically in the format: `https://your-account.luna.akamaiapis.net`)
    * This will be used as the `AKAMAI_BASEURL` in your agent configuration
 
-### Required information summary
+#### Required information summary
 
 After creating your service account, you should have:
 
@@ -101,7 +102,7 @@ After creating your service account, you should have:
 * Learn the benefits of integrating Amplify Engage with Akamai API Security
 * Learn how to install and configure the Akamai agent for runtime compliance and conformance analysis
 
-## Akamai integration
+## Benefits of Akamai integration
 
 Integrating Amplify Engage with Akamai API Security will bring many benefits, including: discovery of API endpoints being monitored in real time, metrics for the usages of those endpoints, traffic-weighted risk score calculations, and conformance analysis results.
 
@@ -200,13 +201,11 @@ The current region is set to US.
 
 If you are a member of multiple Amplify organizations, you may have to choose an organization using the `axway auth switch --org <orgId|orgName>` command.
 
-## Docker deployment
+### Docker deployment
 
-### Docker prerequisites
+For containerized agents, Docker must be installed and you will need a basic understanding of Docker commands
 
-* For containerized agents, Docker must be installed and you will need a basic understanding of Docker commands
-
-### Environment variables
+#### Environment variables
 
 | Variable                                     | Default | Usage                                                                                                                                                                       |
 | -------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -221,16 +220,14 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | AKAMAI_ENVIRONMENTMAPPING_AMPLIFY_[INDEX]    |         | Amplify Engage Environment Name for environment mapping (used with corresponding AKAMAI entry)                                                                            |
 | AKAMAI_ENVIRONMENTMAPPING_AKAMAI_[INDEX]     |         | Akamai group name for environment mapping (used with corresponding AMPLIFY entry)                                                                                         |
 
-## Helm deployment
-
-### Helm prerequisites
+### Helm deployment
 
 * Ensure you have the following tools installed:
     * Kubectl - compatible version with your Kubernetes cluster where Akamai agent will be deployed
     * Helm 3.2.4 or later
 * Kubernetes context is set for the Kubernetes cluster where the agent will be deployed
 
-### Helm overrides
+#### Helm overrides
 
 | Override                       | Default | Usage                                                                                                                                                                            |
 | ------------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -244,11 +241,15 @@ If you are a member of multiple Amplify organizations, you may have to choose an
 | akamai.httpTimeout             | 30s     | HTTP client timeout for Akamai API requests                                                                                                                               |
 | akamai.environmentMapping      |         | An array of objects with an Amplify Engage Environment (key: `amplify`) Name with an Akamai group (key: `akamaiGroupName`) Name, for API discovery and conformance analysis   |
 
-## Step 1: Create directory
+## Install and Configure Akamai agents
+
+Follow these steps to install and configure the Akamai agents.
+
+### Step 1: Create directory
 
 Create an empty directory where Axway Central CLI will generate files. Run all Axway Central CLI from this directory.
 
-## Step 2: Run the agents' configure procedure
+### Step 2: Run the agents' configure procedure
 
 The Axway Central CLI will guide you through the configuration of the agents.
 
@@ -310,7 +311,7 @@ public_key.pem           * newly created service account only
 
 `private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify platform (if you choose to let the installation generate them).
 
-## Step 3a: Deploy the agent in Docker
+### Step 3a: Deploy the agent in Docker
 
 The installation summary contains the Docker command needed to finish the installation.
 
@@ -323,7 +324,7 @@ To complete the Akamai agent installation, run the following commands:
 
 Once the commands are completed, the agents should be running in the Docker server.
 
-## Step 3b: Deploy the agent in Kubernetes cluster
+### Step 3b: Deploy the agent in Kubernetes cluster
 
 The installation summary contains the Helm command needed to finish the installation.
 
@@ -341,7 +342,7 @@ To complete the Akamai agent installation, run the following commands:
 
 Once the Helm commands are completed, the agents should be running in the Kubernetes cluster.
 
-### Set up secrets for private repositories
+#### Set up secrets for private repositories
 
 To deploy an image stored in a private repository, you must create a Kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
 This is necessary for both the Discovery and Traceability agents.
@@ -370,7 +371,7 @@ helm repo update
 helm upgrade --install --namespace <YOUR_NAMESPACE> akamai-agent axway/akamai-agent -f agent-overrides.yaml --set image.pullSecret=<image-pull-secret-name>
 ```
 
-## Step 4: Check that agents are running with Axway Central CLI
+### Step 4: Check that agents are running with Axway Central CLI
 
 After being authenticated to the platform with `axway auth login` command, run the following to check that the agents are running:
 
