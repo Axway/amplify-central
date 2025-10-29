@@ -681,6 +681,23 @@ To remove an additional language, you must mark all the properties of the langua
 
 Once this is done, you can change the default language to the new language, as described previously.
 
+## Designing resources within VS Code
+
+Any Amplify Central resource content can be created/validated within Visual Studio Code by using the [yaml plugin](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml&ssr=false#overview). Add the following to the yaml schemas section of the plugin settings to start validating any yaml file ending with ***.central.yaml**: `“<CENTRAL_URL>/apis/jsonschema”: “/.central.yaml”` where <CENTRAL_URL> is either:
+
+* <https://apicentral.axway.com/apis/jsonschema> for US region
+* <https://central.eu-fr.axway.com/apis/jsonschema> for EU region
+* <https://central.ap-sg.axway.com/apis/jsonschema> for APAC region
+
+``` YAML plugin settings sample for US region
+    "yaml.schemas": {
+        
+        "https://apicentral.axway.com/apis/jsonschema": "/*.central.yaml" 
+    },
+```
+
+Then each yaml file ending with `.central.yaml` will allow the Engage objects creation/validation. Using the `CTRL + Space` command combination will help with code completion.
+
 ## GraphQL requests for resources
 
 In addition to the Rest endpoint, there is a graphQL endpoint `$ENGAGE_URL/apis/graphql` and its corresponding schema `$ENGAGE_URL/apis/graphql/schema` where $ENGAGE_URL is one of:
