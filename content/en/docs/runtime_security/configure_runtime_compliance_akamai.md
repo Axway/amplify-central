@@ -21,7 +21,7 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 
 ### Create Akamai service account
 
-To connect the Akamai agent to your Akamai API Security platform, you must create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
+To connect the Akamai agents to your Akamai API Security platform, you need to create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
 
 #### Prerequisites for Akamai service account
 
@@ -100,7 +100,7 @@ After creating your service account, you should have:
 ## Objectives
 
 * Learn the benefits of integrating Amplify Engage with Akamai API Security
-* Learn how to install and configure the Akamai agent for runtime compliance and conformance analysis
+* Learn how to install and configure the Akamai agents for runtime compliance and conformance analysis
 
 ## Benefits of Akamai integration
 
@@ -274,7 +274,7 @@ axway engage install agents --region=AP
 The installation procedure will prompt for the following:
 
 1. Select the type of gateway you want to connect to (Akamai in this scenario).
-2. Select the type of deployment for the Akamai agent (helm or docker).
+2. Select the type of deployment for the Akamai agents (helm or docker).
 3. Platform connectivity:
    * **Environment**: Can be an existing environment or one that will be created by the installation procedure
         * **Environment Mapping**: Choose from existing environments that have Managed APIs and inform the agent of the Akamai group that is linked
@@ -309,29 +309,29 @@ public_key.pem           * newly created service account only
 
 `agent-overrides.yaml` contains the specific configuration you entered during the installation procedure. These files are required to start the agents.
 
-`private_key.pem` and `public_key.pem` are the generated key pair the agent will use to securely talk with the Amplify platform (if you choose to let the installation generate them).
+`private_key.pem` and `public_key.pem` are the generated key pair the agents will use to securely talk with the Amplify platform (if you choose to let the installation generate them).
 
-### Step 3a: Deploy the agent in Docker
+### Step 3a: Deploy the agents in Docker
 
 The installation summary contains the Docker command needed to finish the installation.
 
-By default, the Docker commands are configured to use the latest available agent version. If you want to use a different version, verify the available version in the agent release note.
+By default, the Docker commands are configured to use the latest available agents version. If you want to use a different version, verify the available version in the agents release note.
 
 ```shell
-To complete the Akamai agent installation, run the following commands:
+To complete the Akamai agents installation, run the following commands:
   docker run --env-file "$(pwd)"/akamai.env -v "$(pwd)":/keys -v /data {agentImage}
 ```
 
 Once the commands are completed, the agents should be running in the Docker server.
 
-### Step 3b: Deploy the agent in Kubernetes cluster
+### Step 3b: Deploy the agents in Kubernetes cluster
 
 The installation summary contains the Helm command needed to finish the installation.
 
-By default, the Helm commands are configured to use the latest available agent version. If you want to use a different version, verify the available version in the agent release note.
+By default, the Helm commands are configured to use the latest available agents version. If you want to use a different version, verify the available version in the agents release note.
 
 ```shell
-To complete the Akamai agent installation, run the following commands:
+To complete the Akamai agents installation, run the following commands:
   helm repo add axway https://helm.repository.axway.com --username=<client_id> --password=<client_secret>
   helm repo update
   helm upgrade --install --namespace agents-amplify akamai-agent axway/akamai-agent -f agent-overrides.yaml
