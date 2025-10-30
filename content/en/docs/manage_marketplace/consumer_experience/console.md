@@ -24,7 +24,7 @@ This section displays your application registrations organized by approval statu
 It displays your seven most recent application registrations for each approval status.  
 Click **View All** at the top of the panel to see your complete application registration list.
 
-Under the **Approved** application registration tab, click **Request credentials** to request credentials. This will open the credential panel. See [Create credential](/docs/manage_marketplace/consumer_experience/credential_management#create-credentials).
+Under the **Approved** application registration tab, click **Request Credentials** to request credentials. This will open the credential panel. See [Create credential](/docs/manage_marketplace/consumer_experience/credential_management#create-credentials).
 
 ### Subscribed Products
 
