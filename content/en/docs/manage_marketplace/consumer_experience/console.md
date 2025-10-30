@@ -15,7 +15,7 @@ This section shows your product subscriptions organized by approval status (Appr
 It displays your seven most recent subscriptions for each approval status.
 Click **View All** at the top of the panel to see your complete subscription list.
 
-Under the **Approved** subscription tab, click **Register Application** to request access to Product APIs. This opens the application registration wizard. See [Request Access to an API](/docs/manage_marketplace/consumer_experience/credential_management#request-access-to-an-api).
+Under the **Approved** subscription tab, click **Register application** to request access to Product APIs. This opens the application registration wizard. See [Request Access to an API](/docs/manage_marketplace/consumer_experience/credential_management#request-access-to-an-api).
 
 ## Application Registration Activity
 
