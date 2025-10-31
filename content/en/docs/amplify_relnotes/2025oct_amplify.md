@@ -32,7 +32,7 @@ New enhancement and bug fixes for the October 31 update.
 * **Feature**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  Description
+  Consumer Console. Consumer console is a set of dashboard allowing the user to see the approval status of his subscription and application registration. It also show the product the team the user is part of have subscribe to.
 
 ### Marketplace bug fixes for October 31, 2025
 
