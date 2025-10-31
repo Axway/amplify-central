@@ -10,6 +10,39 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## October 31, 2025
+
+New enhancement and bug fixes for the October 31 update.
+
+### Agent updates for October 31, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agent bug fixes for October 31, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31284 | **Issue**: The APIM agent is not able to set the PKCE file when provisioning an OKTA credential. <br/>**Resolution**: A change was made to the allow the use of boolen or string values in the extra properties configuration. <br/>Add the following to your Discovery Agent IDP settings to enable this: <br/>`AGENTFEATURES_IDP_EXTRAPROPERTIES_X="{\"application_type\":\"browser\", \"pkce_required\": true}"`. |
+| 01770978 | APIGOV-31423 | **Issue**: The APIM Discovery agent was not using a persistent volume for its cache causing a rebuild on startup. <br/>**Resolution**: An APIM Discovery agent helm chart fix was made to mount both the data and log directories in a persistent manner. |
+| 01763934 | APIGOV-31436 <br/>APIGOV-31305| **Issue**: The APIM Discovery agent was not able to delete an Identity Provider credential because the IDP expected the returned registration client uri to be used. <br/>**Resolution**: A fix was made to use the IDP returned registration client uri as a query parameter to request the credential deletion. |
+|          | APIGOV-31361| **Issue**: The AWS SaaS agent was experiencing a small memory leak over time. <br/>**Resolution**: A fix was made to memory cleanup process. |
+
+### Marketplace updates for October 31, 2025
+
+* **Feature**
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  Consumer Console. Consumer console is a set of dashboard allowing the user to see the approval status of his subscription and application registration. It also show the product the team the user is part of have subscribe to.
+
+### Marketplace bug fixes for October 31, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
 ## October 24, 2025
 
 New enhancement and bug fixes for the October 24 update.
@@ -23,7 +56,7 @@ New enhancement and bug fixes for the October 24 update.
 
     * Empty categories and tags are not displayed on the product details screen
     * Stages filters is not displayed in the Products screen when no stages are enabled
-    * The Plans tab is not displyed in the product details screen when there are no available plans
+    * The Plans tab is not displayed in the product details screen when there are no available plans
 
 ### Marketplace bug fixes for October 24, 2025
 
