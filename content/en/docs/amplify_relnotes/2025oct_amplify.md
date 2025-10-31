@@ -25,9 +25,7 @@ New enhancement and bug fixes for the October 31 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-31284 | **Issue**: The APIM agent is not able to set the PKCE file when provisioning an OKTA credential. <br/>**Resolution**: A change was made to the APIM Discovery agent to create a Single Page Application in OKTA to support the PKCE code flow. <br/>
-Add the following to your Discovery Agent IDP settings to enable this: <br/>
-`AGENTFEATURES_IDP_EXTRAPROPERTIES_X="{\"application_type\":\"browser\", \"pkce_required\": \"true\", "token_endpoint_auth_method": "none"}" `. |
+|          | APIGOV-31284 | **Issue**: The APIM agent is not able to set the PKCE file when provisioning an OKTA credential. <br/>**Resolution**: A change was made to the APIM Discovery agent to create a Single Page Application in OKTA to support the PKCE code flow. <br/>Add the following to your Discovery Agent IDP settings to enable this: <br/>`AGENTFEATURES_IDP_EXTRAPROPERTIES_X="{\"application_type\":\"browser\", \"pkce_required\": \"true\", "token_endpoint_auth_method": "none"}" `. |
 | 01770978 | APIGOV-31423 | **Issue**: The APIM Discovery agent was taking over eleven minutes to startup because it was rebuilding the cache on startup. <br/>**Resolution**: The APIM Discovery agent helm chart fix was made to mount both the data and log directories in a persistent manner. |
 | 01763934 | APIGOV-31436 <br/>APIGOV-31305| **Issue**: The APIM Discovery agent was not able to delete a credential on the PingIdentity ForgeRock identity provider. <br/>**Resolution**: A fix was made to also use the Client ID as a query parameter to request the credential deletion. |
 |          | APIGOV-31361| **Issue**: The AWS SaaS agent was experiencing a small memory leak over time. <br/>**Resolution**: A fix was made to memory cleanup process. |
