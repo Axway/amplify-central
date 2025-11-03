@@ -25,31 +25,25 @@ New enhancements and bug fixes for the October 31 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-31284 | **Issue**: The APIM agent is not able to set the PKCE file when provisioning an OKTA credential. <br/>**Resolution**: A change was made to the allow the use of boolen or string values in the extra properties configuration. <br/>Add the following to your Discovery Agent IDP settings to enable this: <br/>`AGENTFEATURES_IDP_EXTRAPROPERTIES_X="{\"application_type\":\"browser\", \"pkce_required\": true}"`. |
-| 01770978 | APIGOV-31423 | **Issue**: The APIM Discovery agent was not using a persistent volume for its cache causing a rebuild on startup. <br/>**Resolution**: An APIM Discovery agent helm chart fix was made to mount both the data and log directories in a persistent manner. |
-| 01763934 | APIGOV-31436 <br/>APIGOV-31305| **Issue**: The APIM Discovery agent was not able to delete an Identity Provider credential because the IDP expected the returned registration client uri to be used. <br/>**Resolution**: A fix was made to use the IDP returned registration client uri as a query parameter to request the credential deletion. |
-|          | APIGOV-31361| **Issue**: The AWS SaaS agent was experiencing a small memory leak over time. <br/>**Resolution**: A fix was made to memory cleanup process. |
+|          | APIGOV-31284 | **Issue**: The APIM agent was not able to set the PKCE file when provisioning an OKTA credential. <br/>**Resolution**: The use of boolen or string values are now allowed in the extra properties configuration. <br/>Add the following to your Discovery Agent IDP settings to enable this: <br/>`AGENTFEATURES_IDP_EXTRAPROPERTIES_X="{\"application_type\":\"browser\", \"pkce_required\": true}"`. |
+| 01770978 | APIGOV-31423 | **Issue**: The APIM Discovery Agent was not using a persistent volume for its cache which caused a rebuild on startup. <br/>**Resolution**: An APIM Discovery Agent helm chart fix now mounts both the data and log directories in a persistent manner. |
+| 01763934 | APIGOV-31436 <br/>APIGOV-31305| **Issue**: The APIM Discovery Agent was not able to delete an Identity Provider credential because the IDP expected the returned registration client URI to be used. <br/>**Resolution**: The IDP returned registration client URI is now used as a query parameter to request the credential deletion. |
+|          | APIGOV-31361| **Issue**: The AWS SaaS agent was experiencing a small memory leak over time. <br/>**Resolution**: The memory cleanup process has been fixed. |
 
 ### Marketplace updates for October 31, 2025
 
 * **User Console screen**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  We’ve introduced a new **User Console** screen, screen designed to help both new and returning users easily stay on top of their Marketplace activity. The Console brings together key information into one convenient place, offering a quick snapshot of what matters most. Users can now:
+  A new **User Console** screen that is designed to help both new and returning users easily stay on top of their Marketplace activity. The Console brings together key information into one convenient place, offering a quick snapshot of what matters most. Users can now:
 
     * **View Subscriptions** – Track the status of recently approved, pending, or declined subscriptions at a glance.
     * **Manage Application Registrations** – See recently registered applications and quickly access related details or generate credentials.
     * **Access subscribed Products** – Explore and manage products already subscribed to without switching between multiple screens.
 
-### Marketplace bug fixes for October 31, 2025
-
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
-
 ## October 24, 2025
 
-New enhancements and bug fixes for the October 24 update.
+New enhancement and bug fixes for the October 24 update.
 
 ### Marketplace updates for October 24, 2025
 
