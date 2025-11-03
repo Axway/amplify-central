@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## October 31, 2025
 
-New enhancement and bug fixes for the October 31 update.
+New enhancements and bug fixes for the October 31 update.
 
 ### Agent updates for October 31, 2025
 
@@ -32,10 +32,14 @@ New enhancement and bug fixes for the October 31 update.
 
 ### Marketplace updates for October 31, 2025
 
-* **Feature**
+* **User Console screen**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
-  Consumer Console. Consumer console is a set of dashboard allowing the user to see the approval status of his subscription and application registration. It also show the product the team the user is part of have subscribe to.
+  We’ve introduced a new **User Console** screen, screen designed to help both new and returning users easily stay on top of their Marketplace activity. The Console brings together key information into one convenient place, offering a quick snapshot of what matters most. Users can now:
+
+    * **View Subscriptions** – Track the status of recently approved, pending, or declined subscriptions at a glance.
+    * **Manage Application Registrations** – See recently registered applications and quickly access related details or generate credentials.
+    * **Access subscribed Products** – Explore and manage products already subscribed to without switching between multiple screens.
 
 ### Marketplace bug fixes for October 31, 2025
 
@@ -45,7 +49,7 @@ New enhancement and bug fixes for the October 31 update.
 
 ## October 24, 2025
 
-New enhancement and bug fixes for the October 24 update.
+New enhancements and bug fixes for the October 24 update.
 
 ### Marketplace updates for October 24, 2025
 
