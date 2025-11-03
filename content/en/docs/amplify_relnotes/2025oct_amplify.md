@@ -10,6 +10,37 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## October 31, 2025
+
+New enhancements and bug fixes for the October 31 update.
+
+### Agent updates for October 31, 2025
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agent bug fixes for October 31, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31284 | **Issue**: The APIM agent was not able to set the PKCE file when provisioning an OKTA credential. <br/>**Resolution**: The use of boolen or string values are now allowed in the extra properties configuration. <br/>Add the following to your Discovery Agent IDP settings to enable this: <br/>`AGENTFEATURES_IDP_EXTRAPROPERTIES_X="{\"application_type\":\"browser\", \"pkce_required\": true}"`. |
+| 01770978 | APIGOV-31423 | **Issue**: The APIM Discovery Agent was not using a persistent volume for its cache which caused a rebuild on startup. <br/>**Resolution**: An APIM Discovery Agent helm chart fix now mounts both the data and log directories in a persistent manner. |
+| 01763934 | APIGOV-31436 <br/>APIGOV-31305| **Issue**: The APIM Discovery Agent was not able to delete an Identity Provider credential because the IDP expected the returned registration client URI to be used. <br/>**Resolution**: The IDP returned registration client URI is now used as a query parameter to request the credential deletion. |
+|          | APIGOV-31361| **Issue**: The AWS SaaS agent was experiencing a small memory leak over time. <br/>**Resolution**: The memory cleanup process has been fixed. |
+
+### Marketplace updates for October 31, 2025
+
+* **User Console screen**
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  A new **User Console** screen that is designed to help both new and returning users easily stay on top of their Marketplace activity. The Console brings together key information into one convenient place, offering a quick snapshot of what matters most. Users can now:
+
+    * **View Subscriptions** – Track the status of recently approved, pending, or declined subscriptions at a glance.
+    * **Manage Application Registrations** – See recently registered applications and quickly access related details or generate credentials.
+    * **Access subscribed Products** – Explore and manage products already subscribed to without switching between multiple screens.
+
 ## October 24, 2025
 
 New enhancement and bug fixes for the October 24 update.
@@ -23,7 +54,7 @@ New enhancement and bug fixes for the October 24 update.
 
     * Empty categories and tags are not displayed on the product details screen
     * Stages filters is not displayed in the Products screen when no stages are enabled
-    * The Plans tab is not displyed in the product details screen when there are no available plans
+    * The Plans tab is not displayed in the product details screen when there are no available plans
 
 ### Marketplace bug fixes for October 24, 2025
 
