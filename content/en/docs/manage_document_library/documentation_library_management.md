@@ -15,7 +15,7 @@ You must have Catalog Manager team role, assigned by your org administrator, to 
 Learn how to use the Document Library WebUI to:
 
 * Create a document
-* Make a document available (product document / Marketplace settings)
+* Make a document available (product document / MCP Clients / Marketplace settings)
 * Restrict the document access
 * Edit a document
 * Delete a document
@@ -104,7 +104,10 @@ To create a document:
    * **Upload a document**: click **BROWSE FILES** or drop file(s) into the drop area. The successfully uploaded file is displayed in the *Manage Uploads* area. If a file does not respect the limitations, it will appear in an *error message* area. Check the box in front of the uploaded file to edit the file details: Document name, Description, Version. Once your document information is correct, click **Next**.
    * **Create Markdown**: enter the document details (Name, Description, Version) and click **Next** to display the [Markdown editor](/docs/manage_product_foundry/markdown_editor). Once the markdown content is ready, click **Next**.
    * **External Link**: enter the document details (URL, Name, Description, Version) and click **Next**.
-4. Add your document visibility: Product and/or Marketplace. Product visibility allows any Catalog Manager that can access the document to use it in their product. Marketplace visibility can be refined by selecting on which Marketplace the document will be available. If you upload multiple documents, this visibility will be applied to all document(s). If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
+4. Add your document visibility: Product, MCP Client and/or Marketplace. 
+   * Product visibility allows any Catalog Manager that can access the document to use it in their product. 
+   * MCP Client visibility allows selecting the MCP Client that this document will be associated with.
+   * Marketplace visibility can be refined by selecting on which Marketplace the document will be available. If you upload multiple documents, this visibility will be applied to all document(s). If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
 5. Add the team permissions: Restricted (only the Engage Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
 6. Review your uploaded files. Click **Prev** to return to any of the previous pages. When finished, click **Save**.
 
