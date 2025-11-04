@@ -18,7 +18,7 @@ The list of MCP Client Types is displayed with the following information:
 * Client name - The title of the client type.
 * Referenced - The number of times the client type is referenced.
 * Updated - Date of the last modification.
-* Action menu - The ellipsis menu to manage the clien type
+* Action menu - The ellipsis menu to manage the client type
     * Edit - Edit the client type
     * Delete - Delete the client type
 
