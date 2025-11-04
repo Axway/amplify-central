@@ -75,8 +75,9 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
 
 {{< alert title="Note" color="primary" >}}If your IDP is configured to use Client Registration Policies, ensure that the scopes defined in the API are allowed in the policy. See [Keycloak Client Registration](https://www.keycloak.org/docs/23.0.6/securing_apps/#_client_registration_policies).{{< /alert >}}
 
-{{< alert title="Okta SPA + PKCE" color="primary" >}}To provision an Okta Single Page Application that supports Authorization Code + PKCE, include `AGENTFEATURES_IDP_EXTRAPROPERTIES_<index>` with `application_type` set to `browser` and `pkce_required` set to `true`. If omitted, an Okta Service application (no enforced PKCE) is provisioned by default.
-Then you have to assign the application to a group or specific users and define required Access Policies to the Authorization server in order to match the application scope.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}**Okta SPA + PKCE**</br>
+To provision an Okta Single Page Application that supports Authorization Code + PKCE, include `AGENTFEATURES_IDP_EXTRAPROPERTIES_<index>` with `application_type` set to `browser` and `pkce_required` set to `true`. If omitted, an Okta Service application (no enforced PKCE) is provisioned by default.
+You must assign the application to a group or specific users and define required Access Policies to the Authorization server in order to match the application scope.{{< /alert >}}
 
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
