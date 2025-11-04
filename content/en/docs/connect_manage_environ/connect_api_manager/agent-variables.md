@@ -166,6 +166,17 @@ AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
 ```
 
+```shell
+# Okta SPA IDP configuration variables
+AGENTFEATURES_IDP_NAME_1="okta-spa"
+AGENTFEATURES_IDP_TITLE_1="Okta SPA"
+AGENTFEATURES_IDP_TYPE_1="okta"
+AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
+AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
+AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
+AGENTFEATURES_IDP_EXTRAPROPERTIES_1="{\"application_type\":\"browser\", \"pkce_required\": true}"
+```
+
 ##### Invoke policy mapping to externally managed credential request definition example
 
 An invoke policy mapping may reference an externally managed credential request definition. Below is a sample of the environment variable setup to handle this mapping.
