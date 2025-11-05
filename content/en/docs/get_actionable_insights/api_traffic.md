@@ -5,11 +5,11 @@ weight: 10
 date: 2025-10-21
 ---
 
-The **API Traffic** dashboard allows you to inspect transaction-level data for your APIs. This view is especially useful for finding and troubleshooting failed transactions.
+The API Traffic dashboard allows you to inspect transaction-level data for your APIs. This view is especially useful for finding and troubleshooting failed transactions.
 
 The dashboard displays up to **1000** of the most recent transactions that match your filter criteria. Each transaction includes core metadata such as request method, status code, latency, and execution timestamp.
 
-![Example of API traffic](/static/Images/central/api_traffic.png)
+![API Traffic dashboard.](/static/Images/central/api_traffic.png "API Traffic dashboard example" )
 
 Each transaction in the list includes:
 
@@ -38,15 +38,15 @@ The detailed trace displays the span-level breakdown of the transaction, includi
 * **Duration**: Time spent in this span.
 * **Timestamp**: Execution timestamp for the span.
 
-![Example of API traffic details](/static/Images/central/api_traffic_details.png)
+![API traffic trace view.](/static/Images/central/api_traffic_details.png "API traffic trace view")
 
 Each span may also include request and response headers, where available.
 
-![Example of API traffic request and response](/static/Images/central/api_traffic_request_response.png)
+![API traffic request and response.](/static/Images/central/api_traffic_request_response.png "API traffic request and response")
 
-## Accessing the dashboard
+## Access the dashboard
 
-To access the dashboard, navigate to **Business Insights -> API Traffic**.
+To access the dashboard, navigate to *Business Insights > API Traffic*.
 The dashboard is visible to the following roles:
 
 | Role                             | Access                                         |
@@ -60,10 +60,10 @@ The dashboard is visible to the following roles:
 
 Depending on the agent configuration, certain headers may be redacted or sanitized for security or compliance purposes. Sensitive values may be masked or suppressed entirely.
 
-For more information on how this is configured, refer to [Trace redaction](/content/en/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction.md/).
+For more information on how this is configured, see [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/).
 
 ## Transaction sampling
 
 API traffic displayed in this dashboard is sampled, not fully captured. To view transactions, Administrators must enable the on-demand sampling at the agent level. Sampling is time-bound and only collects transactions during the active sampling window, allowing focused troubleshooting without continuously streaming all traffic.
 
-For more information on how to turn on sampling, refer to [Traffic sampling](/content/en/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling.md/).
+For more information on how to turn on sampling, see [Traffic sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling/).

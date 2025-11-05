@@ -1,11 +1,16 @@
 ---
-title: Applications dashboard
-linkTitle: Applications dashboard
+title: Applications
+linkTitle: Applications
 weight: 10
 date: 2025-10-23
 ---
 
-To access the Applications dashboard, navigate to *Business Insights > Applications*. This dashboard helps you understand which applications are generating traffic to your APIs and how actively they are being used.
+The Applications dashboard helps you understand which applications are generating traffic to your APIs and how actively they are being used.
+
+## Access the dashboard
+
+To access the Applications dashboard, navigate to *Business Insights > Applications*.
+
 What you can see in this view depends on your role and the ownership of the assets.
 
 | Role                                       | Access                                                     |
@@ -15,7 +20,7 @@ What you can see in this view depends on your role and the ownership of the asse
 | **Insights Viewer**                        | Same visibility rules as Catalog Manager                   |
 | **Developer**                              | Cannot access this screen                                  |
 
-![Example of App usage](/static/Images/central/bi_applications.png)
+![Applications dashboard.](/static/Images/central/bi_applications.png "Applications dashboard")
 
 The table lists all applications that match your selected filters. It displays:
 
@@ -25,6 +30,9 @@ The table lists all applications that match your selected filters. It displays:
 * The total usage for the selected unit (for example, number of transactions)
 
 Only usage that is tied to a quota-backed metric is shown, so the data reflects what counts against the plan quota.
+
+## Filtering options
+
 You can filter the data by application, product, or time range.
 
-Clicking on an individual application opens a detailed view showing its usage broken down by API.
+Click on an individual application to open a detailed view showing its usage broken down by API.

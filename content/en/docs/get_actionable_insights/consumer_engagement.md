@@ -1,18 +1,19 @@
 ---
-title: Consumer engagement
-linkTitle: Consumer engagement
+title: Consumer Engagement
+linkTitle: Consumer Engagement
 weight: 525
 date: 2025-10-21
 ---
 
-The **Consumer Engagement** dashboard provides visibility into how your consumers are interacting with your Marketplace.
+The Consumer Engagement dashboard provides visibility into how your consumers are interacting with your Marketplace.
+
 Use this dashboard to identify adoption trends, monitor activity levels, and refine engagement strategies to drive greater API consumption.
 
-![Consumer Engagement Screenshot](/static/Images/consumer_engagement.png)
+![Consumer Engagement dashboard.](/static/Images/consumer_engagement.png "Consumer Engagement dashboard")
 
-## Accessing the dashboard
+## Access the dashboard
 
-To access the dashboard, navigate to **Business Insights -> Engagement -> Consumer Engagement**.
+To access the dashboard, navigate to *Business Insights > Engagement > Consumer Engagement*.
 The dashboard is organized into two main sections:
 
 * **Current Totals** – A snapshot of the total counts across consumer organizations, teams, users, subscriptions, and credentials.
@@ -22,16 +23,16 @@ The Consumer Engagement dashboard is visible to the following roles:
 
 | Role                | Description                                                                                                                                       |
 | ------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Engage Admin**    | Can view engagement metrics for across all Consumer Organizations and Marketplaces.       |
-| **Catalog Manager** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns.            |
-| **Insights Viewer** | Can view engagement metrics to Marketplaces they have access to.  They can see subscription metrics for products their team owns.                           |
+| **Engage Admin**    | Can view engagement metrics across all Consumer Organizations and Marketplaces.   |
+| **Catalog Manager** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns.   |
+| **Insights Viewer** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns.   |
 
 ## Filtering options
 
 You can use the filters at the top of the dashboard to refine your view.
 
-* **Marketplace**: Lists all marketplaces you have access to.
-* **Consumer Organization**: Lists all consumer orgs within those marketplaces, including your platform org.
+* **Marketplace**: Lists all Marketplaces you have access to.
+* **Consumer Organization**: Lists all consumer orgs within those Marketplaces, including your platform organization.
 
 ## Current Totals
 
@@ -39,9 +40,9 @@ A snapshot of the total counts across consumer organizations, teams, users, subs
 
 ### Consumer Orgs
 
-The **Consumer Orgs** card displays the following metrics:
+Metrics include:
 
-* **Consumer Orgs**: Total Consumer Organizations currently available in the selected marketplaces you have access to, including your platform organization.
+* **Consumer Orgs**: Total consumer organizations currently available in the selected Marketplaces you have access to, including your platform organization.
 * **Active**: Organization with active user sessions in the selected time interval.
 * **New**: Newly created consumer organization in the selected time interval.
 
@@ -54,7 +55,7 @@ Metrics include:
 
 ### Users
 
-The **Users** card displays the following metrics:
+Metrics include:
 
 * **Users**: Total unique users.
 * **Active**: Users with active sessions within the selected time range.
@@ -65,16 +66,16 @@ The **Users** card displays the following metrics:
 Metrics include:
 
 * **Subscriptions**: Total subscriptions currently available to products in the owning team the user belongs to.
-* **New** created during the selected time range. Includes deleted subscriptions for Engage Admin users.
-* **Subscriptions with usage** within the selected time range.
+* **New**: Created during the selected time range. Includes deleted subscriptions for Engage Admin users.
+* **Subscriptions with usage**: Within the selected time range.
 
-Engage Admin see all subscriptions in the organization, but Catalog Managers and Insights Viewer assignees can view only subscriptions for products owned by their team.
+Engage Admins see all subscriptions in the organization, but Catalog Managers and Insights Viewer assignees can view only subscriptions for products owned by their team.
 
 ### Credentials
 
 Metrics include:
 
-* **Credentials**: Total credentials available across the Consumer Organization the user has access to.
+* **Credentials**: Total credentials available across the consumer organization the user has access to.
 * **New**: Newly created credentials within the selected time range.
 
 This card is visible only to Engage Admin assignees.
@@ -89,4 +90,4 @@ In the chart you can visualize the level of engagement across all selected Consu
 * Use the granularity filter to display results by week or month.
 * Identify trends such as spikes in product adoptions or top performing consumers.
 
-In the table, you can examine the same activity data broken down per Consumer Organization.
+In the table, you can examine the same activity data broken down per consumer organization.
