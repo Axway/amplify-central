@@ -5,7 +5,7 @@ weight: 200
 date: 2020-05-29T00:00:00.000Z
 hide_readingtime: true
 ---
-Get started with the Axway Central CLI to support a DevOps approach to API Management. **Update topic for MCP Client**
+Get started with the Axway Central CLI to support a DevOps approach to API Management.
 
 ## What is the Axway Central CLI
 
@@ -495,7 +495,6 @@ Where, the `mcp.json` file contains the definition of the mcp service to be crea
   }
 }
 ```
-
 
 ### Update resources
 
