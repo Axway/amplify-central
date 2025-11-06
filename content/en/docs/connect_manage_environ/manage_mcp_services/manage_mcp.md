@@ -35,7 +35,11 @@ Follow these steps to create an API service in your environment:
     * **Icon**: Not required. A visual aid when looking through the list of API services.
     * **Classification**: Not required. Select Internal, Public, Restricted, or Sensitive.
     * **Source Code Repo**: Not required. Add the source code repoif needed.
-5. Click **Save**.
+5. Define MCP Clients
+6. Create Runtime Endpoint
+7. (Optional step) For Access Rights, select the team that owns the MCP service. Select the team(s) the MCP service can be shared with. By default, an MCP service is not shared and only the **Engage Admin** or the owning team will have access to it. To share your MCP service with specific teams, select a team owner and all teams you want to grant "Rights" to for the selected MCP service. For each of the teams selected, you can choose either **Edit** or **Read** access rights. Each member of the shared team(s) selected will be able to access your MCP service with the chosen rights. This allows you to share/enable access to a specific MCP service without granting access to all the MCP services owned by your current team. Click **Next**.
+8. (Optional step) Provide the Tags and Attribute details for the MCP service.
+9. Click **Save**.
 
 ### Errors and debugging
 
