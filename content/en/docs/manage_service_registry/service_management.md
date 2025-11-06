@@ -87,7 +87,7 @@ Click on the Service name or icon to view the following detailed information for
 ## Create an API service
 
 1. Navigate to *Topology* and select an environment.
-2. Click **+ Add API Service** to add a new service.
+2. Click the **Add New Service** button located on the top right of the page. Then select **Add New API Service**.
 3. Upload an API Specification file.
 4. Some information will be read from the API Specification file and pre-populated. Add / Edit information where applicable and then click **Next**:
 
