@@ -38,12 +38,12 @@ Follow these steps to create an API service in your environment:
 4. Discover supported AI clients based on detected MCP protocol versions. Both MCP clients and Document resources that support MCP clients must be available in order to link them to this MCP service. If either is not available the UI will prompt you to create them in another tab before you continue. Click **Next** once finished.
     * Add any MCP clients needed by clicking **Add Client**. Select the MCP client from the type dropdown. Then select the document you wish to use for this MCP client. Click **Create**.
     * To edit, delete, or preview click the 3 ellipsis of the MCP client and select the desired outcome.
-6. Input the your endpoint's name and optionally the stage and state of the endpoint. If fetch from url was used this information will be filled in automatically.Click **Next**.
+5. Input the your endpoint's name and optionally the stage and state of the endpoint. If fetch from url was used this information will be filled in automatically.Click **Next**.
     * Add any endpoints needed by clicking **Create Endpoint** and fill in the required fields. Then click **Save**.
     * To edit or delete click the 3 ellipsis of the endpoint and select the desired outcome.
-7. (Optional step) For Access Rights, select the team that owns the MCP service. Select the team(s) the MCP service can be shared with. By default, an MCP service is not shared and only the **Engage Admin** or the owning team will have access to it. To share your MCP service with specific teams, select a team owner and all teams you want to grant "Rights" to for the selected MCP service. For each of the teams selected, you can choose either **Edit** or **Read** access rights. Each member of the shared team(s) selected will be able to access your MCP service with the chosen rights. This allows you to share/enable access to a specific MCP service without granting access to all the MCP services owned by your current team. Click **Next**.
-8. (Optional step) Provide the Tags and Attribute details for the MCP service.
-9. Click **Save**.
+6. (Optional step) For Access Rights, select the team that owns the MCP service. Select the team(s) the MCP service can be shared with. By default, an MCP service is not shared and only the **Engage Admin** or the owning team will have access to it. To share your MCP service with specific teams, select a team owner and all teams you want to grant "Rights" to for the selected MCP service. For each of the teams selected, you can choose either **Edit** or **Read** access rights. Each member of the shared team(s) selected will be able to access your MCP service with the chosen rights. This allows you to share/enable access to a specific MCP service without granting access to all the MCP services owned by your current team. Click **Next**.
+7. (Optional step) Provide the Tags and Attribute details for the MCP service.
+8. Click **Save**.
 
 ### Errors and debugging
 
