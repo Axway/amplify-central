@@ -1,7 +1,6 @@
-
 ---
-title: Manage a MCP service
-linkTitle: Manage a MCP service
+title: Manage an MCP service
+linkTitle: Manage an MCP service
 weight: 20
 date: 2021-02-09
 ---
