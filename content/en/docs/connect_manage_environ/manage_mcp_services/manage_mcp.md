@@ -1,4 +1,3 @@
-
 ---
 title: Manage an MCP service
 linkTitle: Manage an MCP service
@@ -36,7 +35,7 @@ Follow these steps to create an API service in your environment:
     * **Description**: Not required. Limited to 1000 characters.
     * **Icon**: Not required. A visual aid when looking through the list of API services.
     * **Classification**: Not required. Select Internal, Public, Restricted, or Sensitive.
-    * **Source Code Repo**: Not required. Add the source code repoif needed.
+    * **Source Code Repo**: Not required. Add the source code repo if needed.
 4. Discover supported AI clients based on detected MCP protocol versions. Both MCP clients and Document resources that support MCP clients must be available in order to link them to this MCP service. If either is not available the UI will prompt you to create them in another tab before you continue. Click **Next** once finished.
     * Add any MCP clients needed by clicking **Add Client**. Select the MCP client from the type dropdown. Then select the document you wish to use for this MCP client. Click **Create**.
     * To edit, delete, or preview click the 3 ellipsis of the MCP client and select the desired outcome.

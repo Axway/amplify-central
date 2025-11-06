@@ -1,4 +1,3 @@
-
 ---
 title: Manage your MCP services
 linkTitle: Manage your MCP services
