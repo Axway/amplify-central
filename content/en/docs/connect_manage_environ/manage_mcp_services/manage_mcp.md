@@ -1,9 +1,11 @@
+
 ---
 title: Manage an MCP service
 linkTitle: Manage an MCP service
 weight: 20
 date: 2021-02-09
 ---
+
 Use the Topology WebUI to select an environment and then manage your MCP services, including view, create, update, and delete.
 
 ## Add an MCP service
