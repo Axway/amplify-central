@@ -29,7 +29,7 @@ The zip contains the following file:
 * 5-mcp-client-cursor.yaml : an MCP client for Cursor with its corresponding documentation
 * 6-mcp-client-vscode.yaml : an MCP client for Visual Studio Code with its corresponding documentation
 * 7-mcp-agenda.yaml: the MCP Service and its definition
-* mcp-agenda-details.json: a sample of the MCP service specification. 
+* mcp-agenda-details.json: a sample of the MCP service specification.
 
 {{< alert title="Note" color="primary" >}}
 **MCP specification**
