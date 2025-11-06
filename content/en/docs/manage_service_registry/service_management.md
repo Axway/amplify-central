@@ -82,6 +82,8 @@ Click on the Service name or icon to view the following detailed information for
 
 * With the version specific tab, there are other tabs to view the API Specification & Methods, Tags & Attributes, Compliance, Assets, and Products, which are related to the version of the service.
 
+* If an MCP service is selected the *Specifications* tab will now be populated with MCP server information. Server Metadata, Tools, Resources, Prompts, and MCP Clients are viewable from this screen.
+
 ## Create an API service
 
 1. Navigate to *Topology* and select an environment.
