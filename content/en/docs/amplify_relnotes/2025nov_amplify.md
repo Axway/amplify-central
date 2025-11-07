@@ -26,3 +26,18 @@ New enhancements and bug fixes for the November 7 update.
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+
+### Marketplace updates for November 7, 2025
+
+* **Credential visibility time**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  When credential is still visible from the Marketplace, the remaining time is better displayed and the expiration time is also available. When the credential is not visible from the Marketplace, a clear message is displayed.
+
+### Marketplace bug fixes for November 7, 2025
+
+| Case ID | Internal ID | Description |
+|-------------|--------------|---------------------------------------------------|
+| 01774432 | APIGOV-31503 | **Issue**: Create button remains enabled after switching conditional fields in Marketplace CRD form <br/>**Resolution**: Fix validation of conditional schemas (ARD, CRD, Subscription additionnal information) |
+| 01764879 | APIGOV-31371 | **Issue**: Markdown article: table is overlapping with ToC (Table of Contents) <br/>**Resolution**: Collapsible table of contents in markdown articles. |
+
