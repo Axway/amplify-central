@@ -40,4 +40,3 @@ New enhancements and bug fixes for the November 7 update.
 |-------------|--------------|---------------------------------------------------|
 | 01774432 | APIGOV-31503 | **Issue**: Create button remains enabled after switching conditional fields in Marketplace CRD form <br/>**Resolution**: Fix validation of conditional schemas (ARD, CRD, Subscription additionnal information) |
 | 01764879 | APIGOV-31371 | **Issue**: Markdown article: table is overlapping with ToC (Table of Contents) <br/>**Resolution**: Collapsible table of contents in markdown articles. |
-
