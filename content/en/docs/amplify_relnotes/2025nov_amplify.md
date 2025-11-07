@@ -25,7 +25,7 @@ New enhancements and bug fixes for the November 7 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01776739 | APIGOV-31513 | **Issue**: Traceability agents using SDK version 1.1.127 or later were under reporting platform usage. <br/>**Resolution**: A fix has been made in SKD version 1.1.131 and new agents have been released to repository.axway.com. |
 
 ### Marketplace updates for November 7, 2025
 
