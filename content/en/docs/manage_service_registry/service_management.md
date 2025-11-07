@@ -82,12 +82,12 @@ Click on the Service name or icon to view the following detailed information for
 
 * With the version specific tab, there are other tabs to view the API Specification & Methods, Tags & Attributes, Compliance, Assets, and Products, which are related to the version of the service.
 
-* If an MCP service is selected the *Specifications* tab will now be populated with MCP server information. Server Metadata, Tools, Resources, Prompts, and MCP Clients are viewable from this screen.
+* If an MCP service is selected, the *Specifications* tab is populated with MCP server information. Server Metadata, Tools, Resources, Prompts, and MCP Clients are viewable.
 
 ## Create an API service
 
 1. Navigate to *Topology* and select an environment.
-2. Click the **Add New Service** button located on the top right of the page. Then select **Add New API Service**.
+2. Click **Add New Service** (located at the top right of the page). Then select **Add New API Service**.
 3. Upload an API Specification file.
 4. Some information will be read from the API Specification file and pre-populated. Add / Edit information where applicable and then click **Next**:
 
