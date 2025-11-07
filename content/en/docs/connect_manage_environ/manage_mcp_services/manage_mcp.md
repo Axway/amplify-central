@@ -9,10 +9,10 @@ Use the Topology WebUI to select an environment and then manage your MCP service
 
 ## Add an MCP service
 
-Follow these steps to create an API service in your environment:
+Follow these steps to create a Model Context Protocol (MCP) service:
 
 1. From the details page of your environment, click the **Add New Service** button located on the top right of the page. Then select **Add New MCP Service**.
-2. Click either **Manual Definition** or **Fetch from URL** to define the MCP server specification. To learn how to add an MCP service using the Axway Central CLI, see [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api/). Once ready, click **Next**.
+2. Click either **Fetch from URL** or **Manual Definition** to define the MCP server specification. To learn how to add an MCP service using the Axway Central CLI, see [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api/). Once ready, click **Next**.
     * **Fetch from URL**: Provide a publicly accessible URL pointing to the MCP server specification. The system will retrieve and load the spec automatically.
        * **Fetch MCP Server from URL**: Provide the following fields then click **Import**. Once imported a preview of the MCP server will become available.
          * MCP Endpoint: Enter the URL endpoint to connect your MCP server.
