@@ -34,6 +34,16 @@ New enhancements and bug fixes for the November 7 update.
   (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   When credential is still visible from the Marketplace, the remaining time is better displayed and the expiration time is also available. When the credential is not visible from the Marketplace, a clear message is displayed.
 
+* **Auditor role**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  A new Platform role **Auditor** is available. This role has read-only permissions and can view any screen in Engage UI. There is no need for such user to be part of any team.
+
+* **Product Terms and Conditions**
+
+  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Catalog Manager has now the possibility to add terms and conditions to his product. Once the Terms and Conditions is added and the product published to a Marketplace, any consumer subscribing to the product will have to accept the product Terms and Conditions.
+
 ### Marketplace bug fixes for November 7, 2025
 
 | Case ID | Internal ID | Description |
