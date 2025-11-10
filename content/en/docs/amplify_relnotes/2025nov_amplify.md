@@ -25,28 +25,28 @@ New enhancements and bug fixes for the November 7 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01776739 | APIGOV-31513 | **Issue**: Traceability agents using SDK version 1.1.127 or later were under reporting platform usage. <br/>**Resolution**: A fix has been made in SKD version 1.1.131 and new agents have been released to repository.axway.com. |
+| 01776739 | APIGOV-31513 | **Issue**: Traceability Agents using SDK version 1.1.127 or later were under reporting platform usage <br/>**Resolution**: A fix has been made in SKD version 1.1.131 and new agents have been released to repository.axway.com. |
 
 ### Marketplace updates for November 7, 2025
 
 * **Credential visibility time**
 
   (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-  When credential is still visible from the Marketplace, the remaining time is better displayed and the expiration time is also available. When the credential is not visible from the Marketplace, a clear message is displayed.
+  When a credential is still visible from the Marketplace, the remaining time is now clearly displayed and the  expiration time is also available. When the credential is not visible from the Marketplace, a message is displayed.
 
 * **Auditor role**
 
   (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-  A new Platform role **Auditor** is available. This role has read-only permissions and can view any screen in Engage UI. There is no need for such user to be part of any team.
+  A new platform role **Auditor** is available. This role has read-only permissions and can view any screen in the Engage UI. This user does not need to be part of any team.
 
 * **Product Terms and Conditions**
 
   (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-  Catalog Manager has now the possibility to add terms and conditions to his product. Once the Terms and Conditions is added and the product published to a Marketplace, any consumer subscribing to the product will have to accept the product Terms and Conditions.
+  A Catalog Manager can now add Terms & Conditions to their product. Once the Terms & Conditions is added and the product is published to a Marketplace, any consumer subscribing to the product must accept the product Terms & Conditions.
 
 ### Marketplace bug fixes for November 7, 2025
 
 | Case ID | Internal ID | Description |
 |-------------|--------------|---------------------------------------------------|
-| 01774432 | APIGOV-31503 | **Issue**: Create button remains enabled after switching conditional fields in Marketplace CRD form <br/>**Resolution**: Fix validation of conditional schemas (ARD, CRD, Subscription additionnal information) |
-| 01764879 | APIGOV-31371 | **Issue**: Markdown article: table is overlapping with ToC (Table of Contents) <br/>**Resolution**: Collapsible table of contents in markdown articles. |
+| 01774432 | APIGOV-31503 | **Issue**: Create button remained enabled after switching conditional fields in the Marketplace CRD form <br/>**Resolution**: The validation of conditional schemas (ARD, CRD, Subscription additional information) has been fixed. |
+| 01764879 | APIGOV-31371 | **Issue**: Markdown article: table is overlapping with TOC (Table of Contents) <br/>**Resolution**: A collapsible Table of Contents has been added to markdown articles. |
