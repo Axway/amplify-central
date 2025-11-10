@@ -146,13 +146,13 @@ To create an empty resource that represents an environment resource type with a 
 axway central create environment helloworld
 ```
 
-Example of creating a resource that represents an Model Context Protocol (MCP) service resource type using a file with the create command:
+To create a resource that represents a Model Context Protocol (MCP) service resource type using a file with the create command:
 
 ```bash
 axway central create -f mcp.json
 ```
 
-Where, the `mcp.json` file contains the definition of the mcp service to be created:
+Where, the `mcp.json` file contains the definition of the MCP service to be created:
 
 ```json
 {
