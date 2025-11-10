@@ -42,7 +42,7 @@ New enhancements and bug fixes for the November 7 update.
 * **Product Terms and Conditions**
 
   (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-  A Catalog Manager can now add Terms & Conditions to their product. Once the Terms & Conditions is added and the product is published to a Marketplace, any consumer subscribing to the product must accept the product Terms & Conditions.
+  A Catalog Manager can now add Terms and Conditions to their product. Once the Terms and Conditions is added and the product is published to a Marketplace, any consumer subscribing to the product must accept the product Terms and Conditions.
 
 ### Marketplace bug fixes for November 7, 2025
 
