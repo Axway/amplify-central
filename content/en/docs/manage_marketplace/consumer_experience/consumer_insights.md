@@ -11,13 +11,13 @@ To access the Consumer Insights dashboard, users must have a consumer or subscri
 
 ## API Health
 
-Click **API Health** to view a high-level summary of your recent API activity. This dashboard helps you monitor traffic patterns, spot unusual spikes or drops, and track overall success vs. error rates over time.
+Click **API Health** to view a high-level summary of your recent API activity. This dashboard helps you monitor traffic patterns, spot unusual spikes or drops, and track overall success versus error rates over time.
 
 You can filter the data by product, subscription, application, or time range - using either the preset options or a custom window.
 
-At the top of the page, the tiles show counts and percentages for all transactions, successes, client errors, and server errors. If you select Compare to previous period, you can see how your current usage compares to the prior week, month, or year and quickly identify trends.
+At the top of the page, the tiles show counts and percentages for all transactions, successes, client errors, and server errors. If you select **Compare to previous period**, you can see how your current usage compares to the prior week, month, or year and quickly identify trends.
 
-![API Health example](/static/Images/marketplace/consumer_experience/ci_api_health.png)
+![API Health dashboard.](/static/Images/marketplace/consumer_experience/ci_api_health.png "API Health dashboard")
 
 Below the summary, each API entry includes:
 
@@ -35,23 +35,25 @@ Note that the API usage data is not real-time. There may be a delay of several m
 
 ## Applications
 
-![Applications example](/static/Images/marketplace/consumer_experience/ci_applications.png)
+![Applications dashboard.](/static/Images/marketplace/consumer_experience/ci_applications.png "Applications dashboard")
 
 Click **Applications** to view a summary of how each of your applications is using APIs in the Marketplace.
 This dashboard helps you understand which applications are generating traffic and how actively they are being used.
 
 You can filter the data by application, product, or time range.
 
-Clicking on an individual application opens a detailed view showing its usage broken down by API.
+Click on an individual application to open a detailed view showing its usage broken down by API.
 
-Please note that application usage data is not shown in real time. New transactions may take a few minutes to appear in the dashboard.
+{{< alert title="Note" color="primary" >}}
+The application usage data is not shown in real time. New transactions may take a few minutes to appear in the dashboard.
+{{< /alert >}}
 
 ## API Traffic
 
-The **API Traffic** dashboard lets you drill into individual API calls made through your subscribed APIs or your own applications. It’s especially helpful for identifying and troubleshooting failed or unexpected transactions.
-You can filter the view by application, HTTP method, status code, or time range — either using one of the presets or by choosing a custom window. Data in the API Traffic dashboard is retained for 7 days, so you can review and troubleshoot recent activity within that time window.
+The **API Traffic** dashboard lets you drill down into individual API calls made through your subscribed APIs or your own applications. It’s especially helpful for identifying and troubleshooting failed or unexpected transactions.
+You can filter the view by application, HTTP method, status code, or time range — either using one of the presets or by choosing a custom window. Data in the API Traffic dashboard is retained for seven days, so you can review and troubleshoot recent activity within that time window.
 
-![API Traffic example](/static/Images/marketplace/consumer_experience/ci_api_traffic.png)
+![API Traffic dashboard.](/static/Images/marketplace/consumer_experience/ci_api_traffic.png "API Traffic dashboard")
 
 Each transaction in the list includes:
 
@@ -79,7 +81,7 @@ The detailed trace displays the span-level breakdown of the transaction, includi
 
 Each span may also include request and response headers, where available.
 
-![API traffic transaction details example](/static/Images/marketplace/consumer_experience/ci_api_traffic_details.png)
+![API traffic transaction details.](/static/Images/marketplace/consumer_experience/ci_api_traffic_details.png "API traffic transaction details")
 
 {{< alert title="Note" color="primary" >}} API traffic is based on a limited sample of the actual gateway traffic and will not show all transactions.{{< /alert >}}
 
@@ -88,6 +90,7 @@ Each span may also include request and response headers, where available.
 The **Subscriptions** dashboard shows how each of your subscriptions is being used across the products you’re subscribed to. It helps you easily track your consumption and see how it compares to the quota you’ve been allocated.
 
 The subscription table shows usage for the subscriptions that match your selected filters. You can filter by product, subscription, or time range.
+
 When you click on a subscription row, it expands to display a detailed breakdown of usage by each API within that product.
 
-![Subscriptions example](/static/Images/marketplace/consumer_experience/consumer_insights_subscriptions.png)
+![Subscriptions dashboard.](/static/Images/marketplace/consumer_experience/consumer_insights_subscriptions.png "SUbscriptions dashboard")
