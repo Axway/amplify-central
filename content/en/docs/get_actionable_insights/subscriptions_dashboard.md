@@ -1,7 +1,7 @@
 ---
 title: Subscriptions
 linkTitle: Subscriptions
-weight: 10
+weight: 70
 date: 2025-10-21
 ---
 

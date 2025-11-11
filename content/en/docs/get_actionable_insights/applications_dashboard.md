@@ -1,7 +1,7 @@
 ---
 title: Applications
 linkTitle: Applications
-weight: 10
+weight: 60
 date: 2025-10-23
 ---
 

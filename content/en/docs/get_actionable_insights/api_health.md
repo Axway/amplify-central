@@ -1,7 +1,7 @@
 ---
 title: API Health
 linkTitle: API Health
-weight: 10
+weight: 20
 date: 2025-10-04
 ---
 

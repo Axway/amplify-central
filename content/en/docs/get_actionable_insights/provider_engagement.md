@@ -1,7 +1,7 @@
 ---
 title: Provider Engagement
 linkTitle: Provider Engagement
-weight: 10
+weight: 40
 date: 2025-10-21
 ---
 
@@ -38,6 +38,7 @@ The dashboard has two main sections, Current Totals and Team Activity. Filters a
 ### Current totals
 
 The Current Totals section displays the most up-to-date counts for all key provider-related objects within your organization. These totals represent the current state of your provider landscape.  
+
 Use this section to assess the current inventory of your provider ecosystem and understand the distribution of assets and products by state.
 
 | Metric       | Description                                                              |
