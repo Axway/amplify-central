@@ -1,7 +1,7 @@
 ---
 title: Consumer Insights
 linkTitle: Consumer insights
-weight: 20
+weight: 120
 date: 2025-10-21
 ---
 
