@@ -26,7 +26,7 @@ The agent must have passed its 30-minute cool-down since the last sampling sessi
 
 ### Start agent sampling via the UI
 
-1. Go to *Topology > Environments > Agents* Amplify Engage.
+1. Go to *Topology > Environments > Agents* in Amplify Engage.
 2. Locate the Traceability Agent you want to sample.
 3. Click the Enable Sampling icon.
 4. Toggle on Enable Traceability Sampling and select a duration (0–300 seconds). Click Save.
