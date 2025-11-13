@@ -179,6 +179,6 @@ spec:
       suspendable: true
 ```
 
-If the API was already discovered and attached to an API Service instance, you can modify the `CredentialRequestDefinition` as recommended above but the information will not be propagated automatically to the Marketplace. You must have a new asset release, as well as a new product release using this new asset release.
+If the API was already discovered and attached to an API Service instance, you can modify the `CredentialRequestDefinition` as recommended above but the information will not be propagated automatically to the Marketplace. You must have a new asset release, as well as a new product release using this new asset release. (Robert to update)
 
 Once the releases are created, the mTLS capability will be reflected in the Marketplace. On the *resource details* page, consumers will see a message guiding them to store their client certificate in their browser's certificate store to ensure the mTLS handshake works correctly.
