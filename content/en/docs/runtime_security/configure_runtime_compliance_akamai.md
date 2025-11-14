@@ -21,7 +21,7 @@ Configure your runtime compliance and conformance analysis with the Axway Centra
 
 ### Create Akamai service account
 
-To connect the Akamai agents to your Akamai API Security platform, you need to create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
+To connect the Akamai agents to your Akamai API Security platform, create a service account with the appropriate permissions. This service account will provide the OAuth 2.0 Client ID and Client Secret required for authentication.
 
 #### Prerequisites for Akamai service account
 
