@@ -38,7 +38,7 @@ New enhancements and bug fixes for the November 14 update.
 * **Updates to install agents command**
 
   (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-  The Axway Engage CLI (formerly Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
+  The Axway Engage CLI (formerly Axway Central CLI) [**v4.8.0**](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.8.0) has been updated to install the Akamai agents.
 
 ### Marketplace bug fixes for November 14, 2025
 
