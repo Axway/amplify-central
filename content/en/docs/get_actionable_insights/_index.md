@@ -14,14 +14,14 @@ Amplify Engage Insights is a suite of dashboards and analytics tools that provid
 Business Insights offers a 360-degree view of your API program, including engagement, consumption, health, applications, and environments.
 
 * **Platform Dashboard**: Track API program adoption, metrics, and trends for assets, subscriptions, environments, teams, users, and transactions.
-* **API Health**: Centralized visibility into API usage, success rates, errors, and trends across all environments.
-* **API Traffic**: Detailed transaction-level data for troubleshooting and performance analysis.
-* **Provider Engagement**: Metrics on provider team activity and collaboration.
-* **Consumer Engagement**: Trends and metrics for spotting adoption patterns and refining your engagement strategies to drive further API consumption.
-* **Applications**: Usage metrics for each Marketplace application, with filtering by organization, team, product, and timeframe.
-* **Subscriptions**: List of the consumers and their product subscriptions and monthly usage​.
+* [**API Health**](/docs/get_actionable_insights/api_health/): Centralized visibility into API usage, success rates, errors, and trends across all environments.
+* [**API Traffic**](/docs/get_actionable_insights/api_traffic/): Detailed transaction-level data for troubleshooting and performance analysis.
+* [**Provider Engagement**](/docs/get_actionable_insights/provider_engagement/): Metrics on provider team activity and collaboration.
+* [**Consumer Engagement**](/docs/get_actionable_insights/consumer_engagement/): Trends and metrics for spotting adoption patterns and refining your engagement strategies to drive further API consumption.
+* [**Applications**](/docs/get_actionable_insights/applications_dashboard/): Usage metrics for each Marketplace application, with filtering by organization, team, product, and timeframe.
+* [**Subscriptions**](/docs/get_actionable_insights/subscriptions_dashboard/): List of the consumers and their product subscriptions and monthly usage​.
 * **Revenue**: Breakdown of charges and invoice statistics by product and consumer, enabling revenue analysis.
-* **Leaderboard**: Track the most and least performant and popular services.
+* [**Leaderboard**](/docs/get_actionable_insights/leaderboard/): Track the most and least performant and popular services.
 
 ## Consumer Insights capabilities
 
@@ -32,6 +32,8 @@ Consumer Insights provides API consumers with secure, self-service access to act
 * Filter data by product, subscription, or application.
 * Choose time slices from five minutes to a week for a quick data views, or pick a custom time interval.
 * Monitor API usage against quotas in subscribed plans.
+
+For details, see [Consumer Insights](/docs/manage_marketplace/consumer_experience/consumer_insights/).
 
 ## Roles and permissions
 

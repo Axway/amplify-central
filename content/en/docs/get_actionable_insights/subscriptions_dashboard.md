@@ -17,7 +17,7 @@ Selecting a subscription row expands a secondary view listing the usage breakdow
 
 ## Access the dashboard
 
-To access the dashboard, navigate to *Business Insights > Subscriptions & Revenue*.  
+To access the dashboard, navigate to *Business Insights > Subscriptions & Revenue > Subscriptions*.  
 
 The dashboard is visible to the following roles:
 

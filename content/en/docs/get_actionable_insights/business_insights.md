@@ -34,7 +34,8 @@ See the agent variable CENTRAL_METRICREPORTING_SCHEDULE if you want to lower the
 ## API Traffic
 
 Click **API Traffic** to view the traffic information for the API or App. This view is useful for finding and troubleshooting failed transactions.
-  ![Example of API traffic](/Images/central/api_traffic.png)
+
+![API traffic view.](/Images/central/api_traffic.png "API Traffic view)
 
 {{< alert title="Note" color="primary" >}} The API traffic view provides details for up to a maximum of 1000 transactions based on your search. You might need to further restrict the search by time range or other filter criteria to view all results.{{< /alert >}}
 

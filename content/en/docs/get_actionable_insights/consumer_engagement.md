@@ -14,6 +14,7 @@ Use this dashboard to identify adoption trends, monitor activity levels, and ref
 ## Access the dashboard
 
 To access the dashboard, navigate to *Business Insights > Engagement > Consumer Engagement*.
+
 The dashboard is organized into two main sections:
 
 * **Current Totals** – A snapshot of the total counts across consumer organizations, teams, users, subscriptions, and credentials.

@@ -14,8 +14,8 @@ Then, use sampling to capture the traffic that helps you troubleshoot the proble
 
 | Type           | Scope                                  | Triggered From       | Duration       | Notes                      |
 | -------------- | -------------------------------------- | -------------------- | -------------- | -------------------------- |
-| Agent sampling | All API traffic across the environment | Traceability Agent   | 0–300 seconds  | Up to 100 transactions/min |
-| API sampling   | Traffic for a specific API             | API Service Instance | 0–3600 seconds | Up to 5 APIs per agent     |
+| Agent sampling | All API traffic across the environment | Traceability Agent   | 1-5 minutes  | Up to 100 transactions/min |
+| API sampling   | Traffic for a specific API             | API Service Instance | 1-60 minutes | Up to 5 APIs per agent     |
 
 {{< alert title="Note" color="primary" >}}If you are using a Traceability Agent version that supports percentage-based sampling, see [Archived trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/archive/trace_sampling).{{< /alert >}}
 
@@ -29,7 +29,7 @@ The agent must have passed its 30-minute cool-down since the last sampling sessi
 1. Go to *Topology > Environments > Agents* in Amplify Engage.
 2. Locate the Traceability Agent you want to sample.
 3. Click the Enable Sampling icon.
-4. Toggle on Enable Traceability Sampling and select a duration (0–300 seconds). Click Save.
+4. Toggle on Enable Traceability Sampling and select a duration (1-5 minutes). Click Save.
 
 The agent will now capture traffic for the requested duration (subject to cool-down limits).
 
@@ -52,7 +52,7 @@ Edit resource.yaml and add:
 ```
    sampletrigger:
     requested: true
-    duration: 60
+    duration: 5
  ```
 
 Then apply it:
@@ -61,7 +61,7 @@ Then apply it:
 axway central apply -f resource.yam
 ```
 
-The agent will now sample for 60 seconds.
+The agent will now sample for 5 minutes.
 
 ## API Sampling (sampling a specific API)
 
@@ -77,7 +77,7 @@ API sampling captures traffic for only a specific API, rather than all APIs in t
 * Locate the API Service you want to sample.
 * Open the Endpoints tab.
 * Click the Ellipsis menu and select Enable Sampling.
-* Toggle on Enable Sampling and select a duration (0–3600 seconds). Click Save.
+* Toggle on Enable Sampling and select a duration (1-60 minutes). Click Save.
 
 The API is now configured for sampling for the selected duration.
 
@@ -101,7 +101,7 @@ Edit resource.yaml and add:
 sampletrigger:
   requested: true
   onlyErrors: true  # Set to false to sample all transactions
-  duration: 3600
+  duration: 60
 ```
 
 Apply the change:
@@ -110,4 +110,4 @@ Apply the change:
 axway central apply -f resource.yaml
 ```
 
-The API will now be sampled for up to 3600 seconds (1 hour).
+The API will now be sampled for up to 60 minutes.

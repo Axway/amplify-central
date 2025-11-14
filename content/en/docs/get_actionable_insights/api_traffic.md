@@ -47,6 +47,7 @@ Each span may also include request and response headers, where available.
 ## Access the dashboard
 
 To access the dashboard, navigate to *Business Insights > API Traffic*.
+
 The dashboard is visible to the following roles:
 
 | Role                             | Access                                         |
