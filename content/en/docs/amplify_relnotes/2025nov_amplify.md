@@ -32,15 +32,15 @@ New enhancements and bug fixes for the November 14 update.
 
 * **Akamai Compliance Agent**
 
-  (AKAMAI API SECURITY AGENT, ENHANCEMENT)</br>
-The Akamai on-premise API Security Agent v1.0.0 has been released.  It sends Managed API specifications from Engage to Akamai in order to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Coonfomance Analysis results are displayed on the Engage Environment details page. 
+  (AKAMAI API SECURITY AGENT)</br>
+  The Akamai on-premise API Security Agent v1.0.0 has been released. It sends Managed API specifications from Engage to Akamai in order to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the Engage Environment details page. 
 
 ### Axway CLI updates for November 14, 2025
 
 * **Updates to install agents command**
 
-    (PROVIDER EXPERIENCE,AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-The Axway Engage CLI (formerally Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI (formerally Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
 
 ### Marketplace bug fixes for November 14, 2025
 
