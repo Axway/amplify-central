@@ -25,7 +25,23 @@ New enhancements and bug fixes for the November 14 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+| 01770957 | APIGOV-31432 <br/>APIGOV-31546 | **Issue**: Authentication error communicating with Amplify after upgrading APIM agent with the latest helm chart. <br/>**Resolution**: The APIM helm chart has been fixed when upgrading APIM agents. |
+| 01769698 | APIGOV-31462 | **Issue**: The APIM agent was not able to create managed applications across two APIM gateways. <br/>**Resolution**: A fix to the APIM agent for managed application creation across two APIM gateways was made. |
+| 01758442 | APIGOV-31234 | **Issue**: The Marketplace 'Try-it-out" with mTLS was not enabled for two APIs in the same environment. <br/>**Resolution**: A fix was made to synchronize the mTLS setting on the credential request with the Marketplace. |
+
+### Agent updates for November 14, 2025
+
+* **Akamai Compliance Agent**
+
+  (AKAMAI API SECURITY AGENT, ENHANCEMENT)</br>
+The Akamai on-premise API Security Agent v1.0.0 has been released.  It sends Managed API specifications from Engage to Akamai in order to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Coonfomance Analysis results are displayed on the Engage Environment details page. 
+
+### Axway CLI updates for November 14, 2025
+
+* **Updates to install agents command**
+
+    (PROVIDER EXPERIENCE,AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+The Axway Engage CLI (formerally Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
 
 ### Marketplace updates for November 14, 2025
 
