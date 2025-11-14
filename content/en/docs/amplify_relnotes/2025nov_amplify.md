@@ -43,19 +43,6 @@ The Akamai on-premise API Security Agent v1.0.0 has been released.  It sends Man
     (PROVIDER EXPERIENCE,AXWAY ENGAGE CLI, ENHANCEMENT)</br>
 The Axway Engage CLI (formerally Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
 
-### Marketplace updates for November 14, 2025
-
-* **Feature**
-
-  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-  Description.
-
-### Marketplace bug fixes for November 14, 2025
-
-| Case ID | Internal ID | Description |
-|-------------|--------------|---------------------------------------------------|
-| xxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
-
 ## November 7, 2025
 
 New enhancements and bug fixes for the November 7 update.
