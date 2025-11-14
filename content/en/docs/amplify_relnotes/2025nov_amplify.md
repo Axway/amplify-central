@@ -16,6 +16,11 @@ New enhancements and bug fixes for the November 14 update.
 
 ### Agent updates for November 14, 2025
 
+* **Akamai Compliance Agent**
+
+  (AKAMAI API SECURITY AGENT)</br>
+  The Akamai on-premise API Security Agent v1.0.0 has been released. It sends Managed API specifications from Engage to Akamai to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the *Engage Environment details* page.
+
 * **New agent versions available**
 
   (NEW AGENT RELEASES)</br>
@@ -26,27 +31,20 @@ New enhancements and bug fixes for the November 14 update.
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | 01770957 | APIGOV-31432 <br/>APIGOV-31546 | **Issue**: Agents deployed via a helm chart do not support password protected private keys. <br/>**Resolution**: The APIM helm chart has been enhanced to support password protected private keys. |
-| 01769698 | APIGOV-31462 | **Issue**: The APIM agent was not able to create managed applications across two APIM gateways. <br/>**Resolution**: A retry enhancement to the APIM agent was made to improve managed application creation. |
-
-### Agent updates for November 14, 2025
-
-* **Akamai Compliance Agent**
-
-  (AKAMAI API SECURITY AGENT)</br>
-  The Akamai on-premise API Security Agent v1.0.0 has been released. It sends Managed API specifications from Engage to Akamai in order to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the Engage Environment details page. 
+| 01769698 | APIGOV-31462 | **Issue**: The APIM agent could not create managed applications across two APIM gateways. <br/>**Resolution**: An APIM agent retry enhancement improves managed application creation. |
 
 ### Axway CLI updates for November 14, 2025
 
 * **Updates to install agents command**
 
   (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-  The Axway Engage CLI (formerally Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
+  The Axway Engage CLI (formerly Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
 
 ### Marketplace bug fixes for November 14, 2025
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01758442 | APIGOV-31234 | **Issue**: The Marketplace 'Try-it-out" with mTLS was not enabled for two APIs in the same environment. <br/>**Resolution**: A fix was made to synchronize the mTLS setting on the credential request with the Marketplace. |
+| 01758442 | APIGOV-31234 | **Issue**: The Marketplace "Try-it-out" with mTLS was not enabled for two APIs in the same environment. <br/>**Resolution**: The mTLS setting on the credential request has been synchronized with the Marketplace. |
 
 ## November 7, 2025
 
