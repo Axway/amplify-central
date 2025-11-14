@@ -25,9 +25,8 @@ New enhancements and bug fixes for the November 14 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01770957 | APIGOV-31432 <br/>APIGOV-31546 | **Issue**: Authentication error communicating with Amplify after upgrading APIM agent with the latest helm chart. <br/>**Resolution**: The APIM helm chart has been fixed when upgrading APIM agents. |
-| 01769698 | APIGOV-31462 | **Issue**: The APIM agent was not able to create managed applications across two APIM gateways. <br/>**Resolution**: A fix to the APIM agent for managed application creation across two APIM gateways was made. |
-| 01758442 | APIGOV-31234 | **Issue**: The Marketplace 'Try-it-out" with mTLS was not enabled for two APIs in the same environment. <br/>**Resolution**: A fix was made to synchronize the mTLS setting on the credential request with the Marketplace. |
+| 01770957 | APIGOV-31432 <br/>APIGOV-31546 | **Issue**: Agents deployed via a helm chart do not support password protected private keys. <br/>**Resolution**: The APIM helm chart has been enhanced to support password protected private keys. |
+| 01769698 | APIGOV-31462 | **Issue**: The APIM agent was not able to create managed applications across two APIM gateways. <br/>**Resolution**: A retry enhancement to the APIM agent was made to improve managed application creation. |
 
 ### Agent updates for November 14, 2025
 
@@ -42,6 +41,12 @@ The Akamai on-premise API Security Agent v1.0.0 has been released.  It sends Man
 
     (PROVIDER EXPERIENCE,AXWAY ENGAGE CLI, ENHANCEMENT)</br>
 The Axway Engage CLI (formerally Axway Central CLI) **v4.8.0** has been updated to install the Akamai agents.
+
+### Marketplace bug fixes for November 14, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01758442 | APIGOV-31234 | **Issue**: The Marketplace 'Try-it-out" with mTLS was not enabled for two APIs in the same environment. <br/>**Resolution**: A fix was made to synchronize the mTLS setting on the credential request with the Marketplace. |
 
 ## November 7, 2025
 
