@@ -179,4 +179,4 @@ spec:
       suspendable: true
 ```
 
-You can modify the CredentialRequestDefinition as recommended above, then mTLS capability will be automatically reflected in Marketplace if its associated APIs have already been published. On the *resource details* page, consumers will see a message guiding them to store their client certificate in their browser's certificate store to ensure the mTLS handshake works correctly.
+You can modify the `CredentialRequestDefinition` as recommended above; then, mTLS capability will be automatically reflected in the Marketplace if its associated APIs have already been published. On the *resource details* page, consumers will see a message guiding them to store their client certificate in their browser certificate store to ensure the mTLS handshake works correctly.
