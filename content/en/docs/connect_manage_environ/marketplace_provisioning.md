@@ -46,6 +46,7 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
 * Title (`AGENTFEATURES_IDP_TITLE`): The title of the Credential Request Definition that will be shown to consumers in Amplify Marketplace.
 * Type (`AGENTFEATURES_IDP_TYPE`): The type of OAuth identity provider (`generic`, `keycloak` or `okta`).
 * Metadata URL (`AGENTFEATURES_IDP_METADATAURL`): The URL exposed by the OAuth authorization server to provide metadata information.
+* Extra Properties (`AGENTFEATURES_IDP_EXTRAPROPERTIES`): Additional client metadata sent during dynamic registration. Supports string and boolean values (for example `'{"application_type":"browser","pkce_required":true}'`). For Okta, use this to switch from the default Service application to a Single Page Application (SPA) and to enable PKCE for authorization code flows.
 * Authentication Config: Used by the agent to communicate with the OAuth identity provider.
     * Type (`AGENTFEATURES_IDP_AUTH_TYPE`): The type of authentication mechanism to be used. The supported types are:
         * `accessToken`: Authentication based on the pre-configured access token(initial access token, Admin API token, etc.).
@@ -74,6 +75,10 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
 
 {{< alert title="Note" color="primary" >}}If your IDP is configured to use Client Registration Policies, ensure that the scopes defined in the API are allowed in the policy. See [Keycloak Client Registration](https://www.keycloak.org/docs/23.0.6/securing_apps/#_client_registration_policies).{{< /alert >}}
 
+{{< alert title="Note" color="primary" >}}**Okta SPA + PKCE**</br>
+To provision an Okta Single Page Application that supports Authorization Code + PKCE, include `AGENTFEATURES_IDP_EXTRAPROPERTIES_<index>` with `application_type` set to `browser` and `pkce_required` set to `true`. If omitted, an Okta Service application (no enforced PKCE) is provisioned by default.
+You must assign the application to a group or specific users and define required Access Policies to the Authorization server in order to match the application scope.{{< /alert >}}
+
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
 ```shell
@@ -85,6 +90,17 @@ AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.
 AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
 
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
+```
+
+```shell
+# Okta SPA + PKCE provisioning (Authorization Code + PKCE flow support)
+AGENTFEATURES_IDP_NAME_1="okta-spa"
+AGENTFEATURES_IDP_TITLE_1="Okta SPA"
+AGENTFEATURES_IDP_TYPE_1="okta"
+AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
+AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
+AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
+AGENTFEATURES_IDP_EXTRAPROPERTIES_1="{\"application_type\":\"browser\", \"pkce_required\": true}"
 ```
 
 ```shell
@@ -176,7 +192,7 @@ AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
 
 This feature allows you to toggle between displaying or hiding the specific options within the OAuth credential Type dropdown menu on the Request Credential screen in the Marketplace.
 
-![Alt image](/Images/marketplace/Oauth.png)
+![OAuth Credential type dropdown menu on Create Credential screen.](/Images/marketplace/Oauth.png "OAuth Credential type dropdown menu")
 
 The Discovery Agent for Axway API Management 7.7 provides the ability to control the OAuth credential Type dropdown values in the Marketplace based on environment variable configuration.
 The following is an example to limit the dropdown value to "OAuth Client ID & Secret."
