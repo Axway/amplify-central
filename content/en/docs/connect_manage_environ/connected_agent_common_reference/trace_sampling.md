@@ -4,124 +4,110 @@ linkTitle: Trace sampling
 draft: false
 weight: 10
 ---
+
+The Traceability Agent can temporarily sample API transaction traffic and send it to Amplify Engage to include in the API Traffic dashboards in Business Insights and Consumer Insights.
+
+Sampling must be requested on demand, and it runs only for a defined duration.
+
+Before requesting sampling, use *Business Insights > API Health* to identify APIs with errors.
+Then, use sampling to capture the traffic that helps you troubleshoot the problem. There are two supported mechanisms for sampling:
+
+| Type           | Scope                                  | Triggered From       | Duration       | Notes                      |
+| -------------- | -------------------------------------- | -------------------- | -------------- | -------------------------- |
+| Agent sampling | All API traffic across the environment | Traceability Agent   | 1-5 minutes  | Up to 100 transactions/min |
+| API sampling   | Traffic for a specific API             | API Service Instance | 1-60 minutes | Up to 5 APIs per agent     |
+
 {{< alert title="Note" color="primary" >}}If you are using a Traceability Agent version that supports percentage-based sampling, see [Archived trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/archive/trace_sampling).{{< /alert >}}
 
-The Traceability Agent can sample the transaction information that is sent to Amplify Analytics. Learn how to request a sampling period, the restrictions of the sampling period, and the rules used by the agent when sending those transactions.
+## Agent sampling
 
-{{< alert title="Note" color="primary" >}}It is recommended that you use the Business Insights API Health screen to identify the APIs that have status errors. Then view the API details with the tools provided by your API Gateway vendor.{{< /alert >}}
+Agent sampling enables transaction capture (successes and errors) for all APIs associated with a Traceability Agent.
+The agent must have passed its 30-minute cool-down since the last sampling session before you can trigger a new one.
 
-## Sampling
+### Start agent sampling via the UI
 
-Sampling grants the agent the ability to send transaction information of API Traffic to Amplify Analytics.
+1. Go to *Topology > Environments > Agents* in Amplify Engage.
+2. Locate the Traceability Agent you want to sample.
+3. Click the Enable Sampling icon.
+4. Toggle on Enable Traceability Sampling and select a duration (1-5 minutes). Click Save.
 
-When requesting a sampling period the user will also request a time frame, 0-300 seconds (five minutes). Given that the agent has surpassed its cool down period (30 minutes) since the last sampling ended, the agent sampling will be enabled. The agent will begin to send transactions as they come through, but still be limited to a maximum of 100 transactions a minute.
+The agent will now capture traffic for the requested duration (subject to cool-down limits).
 
-{{< alert title="Note" color="primary" >}}The max sampling time and transactions per minute limit may be changed in future updates to Amplify Engage.{{< /alert >}}
+### Start agent sampling via the CLI
 
-{{< alert title="Note" color="primary" >}}For specific API sampling, the agent will only sample the APIs which were configured for sampling. This ensures that only relevant API traffic is analyzed, reducing unnecessary data processing. [API Sampling](#api-sampling){{< /alert >}}
+Login:
 
-### Requesting the Traceability Agent to sample
+```
+axway auth login
+ ```
 
-The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ/supported_gateways), is already configured. The only other step is to request the sampling to begin using the Amplify Engage UI or CLI.
+Retrieve the Traceability Agent you would like transactional data from:
 
-{{< alert title="Note" color="primary" >}}The duration field below does not apply to SaaS agents. When enabled, the SaaS agent will immediately run and send transactional data for that execution only.{{< /alert >}}
+```
+axway central get -o yaml -s [Environment Name] traceabilityagent [Agent Name] > resource.yaml
+```
 
-#### Request via the UI
+Edit resource.yaml and add:
 
-1. Navigate to the *Agents List* page in Amplify Engage.
-2. Find a Traceability Agent you would like transactional data from.
-3. Click the **Traceability Sampling** icon.
-4. Click in the menu to enable sampling. Select a duration, and click **Save**.
+```
+   sampletrigger:
+    requested: true
+    duration: 5
+ ```
 
-Your selected agent should now sample transactions for the duration selected.
-  
-#### Request via the CLI
+Then apply it:
 
-* Log in using the Amplify CLI:
+```
+axway central apply -f resource.yam
+```
 
-```shell
+The agent will now sample for 5 minutes.
+
+## API Sampling (sampling a specific API)
+
+API sampling captures traffic for only a specific API, rather than all APIs in the environment.
+
+* You can sample up to five APIs per Traceability Agent at the same time.
+* Requesting API sampling does not automatically start agent sampling.
+* You must trigger agent sampling separately if you want traffic to be collected.
+
+### Start API sampling via the UI
+
+* Go to *Topology > Environments > All Environments* in Amplify Engage and select an environment.
+* Locate the API Service you want to sample.
+* Open the Endpoints tab.
+* Click the Ellipsis menu and select Enable Sampling.
+* Toggle on Enable Sampling and select a duration (1-60 minutes). Click Save.
+
+The API is now configured for sampling for the selected duration.
+
+### Start API sampling via the CLI
+
+Login:
+
+```
 axway auth login
 ```
 
-* Retrieve the Traceability Agent you would like transactional data from:
-  
-```shell
-axway central get -o yaml -s [Environment Name] traceabilityagent [Traceability Agent Name] > resource.yaml
+Export the API Service Instance:
+
 ```
-
-* Within the `resource.yaml` file, add:
-  
-```yaml
-sampletrigger:
-  requested: true
-  duration: 60
-```
-
-* Update the Traceability Agent using the `resource.yaml` file:
-
-```shell
-axway central apply -f resource.yaml
-```
-
-Your selected agent should now sample transactions for 60 seconds.
-
-For details on how to configure and view API Traffic Insights on the Axway API Management Gateway, see:
-
-* [Amplify Analytics Operational Insights](https://docs.axway.com/bundle/axway-open-docs/page/docs/operational_insights/index.html)
-* [Configure API Gateway Analytics](https://docs.axway.com/bundle/axway-open-docs/page/docs/apimanager_analytics/index.html).
-
-## API sampling
-
-The Traceability Agent can sample the transaction information for individual APIs that is sent to Amplify Analytics.
-
-Sampling grants the agent the ability to send transaction information for specific APIs to Amplify Analytics.
-
-When requesting sampling for an API the user will also request a time frame, 0-3600 seconds(1 hour). Given that the selected API has surpassed its cool down period (30 minutes) since the last sampling for the selected API has ended, the API sampling will be enabled. The agent will begin to send transactions as they come through, but still be limited to a maximum of 100 transactions a minute.
-
-{{< alert title="Note" color="primary" >}}The max sampling time and transactions per minute limit may be changed in future updates to Amplify Engage.{{< /alert >}}
-
-### Requesting sampling for an individual API
-
-The Traceability Agent, if listed as [supporting sampling](/docs/connect_manage_environ/supported_gateways), is already configured. The only other step is to request sampling for an individual API. This would add the endpoints of the API Service Instance to all the Traceability Agents from the environment. The maximum number of APIs that can be sampled at one time, per Traceability Agent, is 5. Note that requesting sampling for an API will not trigger sampling for the Traceability Agents themselves, this would have to be done separately.
-
-#### Request API sampling via the UI
-
-1. Navigate to the *Environment List* page in Amplify Engage.
-2. Select the environment you want to sample APIs in.
-3. Find the API you would like to sample.
-4. Go to the **Endpoints** tab.
-5. Click the **API Sampling** icon.
-6. Click in the menu to enable sampling. Select a duration, and click **Save**.
-
-Your selected API should now be enabled for sampling for the duration selected.
-  
-#### Request API sampling via the CLI
-
-* Log in using the Amplify CLI:
-
-```shell
-axway auth login
-```
-
-* Retrieve the API Service Instance you would like transactional data from:
-  
-```shell
 axway central get -o yaml -s [Environment Name] apisi [API Service Instance Name] > resource.yaml
 ```
 
-* Within the `resource.yaml` file, add:
-  
-```yaml
+Edit resource.yaml and add:
+
+```
 sampletrigger:
   requested: true
-  onlyErrors: true # Set to true to sample only error transactions; set to false to sample all transactions.
-  duration: 3600
+  onlyErrors: true  # Set to false to sample all transactions
+  duration: 60
 ```
 
-* Update the API Service Instance using the `resource.yaml` file:
+Apply the change:
 
-```shell
+```
 axway central apply -f resource.yaml
 ```
 
-Your selected API should now have sampling enabled for the duration selected.
+The API will now be sampled for up to 60 minutes.

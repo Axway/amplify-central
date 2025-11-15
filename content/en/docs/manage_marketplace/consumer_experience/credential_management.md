@@ -67,7 +67,7 @@ To preserve the quota limitation associated with the selected API and the select
 
 View and track the status of the Application Registrations:
 
-* From the Register Applications: *Marketplace > Application Registrations*. View all access accros all products/applications your team has access to.
+* From the Register Applications: *Marketplace > Application Registrations*. View all access across all products/applications your team has access to.
 * From the application: *Marketplace > Application* > navigate to the appropriate resource. View specific access linked to an application.
 * From the product: *Marketplace > Product > Resource > Application Registrations* > navigate to the appropriate application. View specific access linked to an API.
 
