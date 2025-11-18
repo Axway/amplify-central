@@ -9,7 +9,7 @@ The Consumer Engagement dashboard provides visibility into how your consumers ar
 
 Use this dashboard to identify adoption trends, monitor activity levels, and refine engagement strategies to drive greater API consumption.
 
-![Consumer Engagement dashboard.](/static/Images/consumer_engagement.png "Consumer Engagement dashboard")
+![Consumer Engagement dashboard.](/Images/consumer_engagement.png "Consumer Engagement dashboard")
 
 ## Access the dashboard
 

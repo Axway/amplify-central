@@ -11,7 +11,7 @@ The table displays subscription usage that meets the selected filter criteria. D
 
 Selecting a subscription row expands a secondary view listing the usage breakdown by APIs in the product.
 
-![Subscriptions dashboard.](/static/Images/Business-Insights-Subscriptions-Dashboard.png "Subscriptions dashboard")
+![Subscriptions dashboard.](/Images/Business-Insights-Subscriptions-Dashboard.png "Subscriptions dashboard")
 
 {{< alert title="Note" color="primary" >}}If the user does not have access to a specific product or API, the system still displays the row but substitutes the name with the resource ID. This ensures the total usage remains intact, even when a portion of the contributing resources are not visible due to role ownership restrictions.{{< /alert >}}
 

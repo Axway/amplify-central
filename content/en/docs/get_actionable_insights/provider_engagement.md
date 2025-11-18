@@ -9,7 +9,7 @@ The Provider Engagement dashboard helps you monitor and evaluate the activity an
 
 Use this dashboard to understand and improve the overall health of your API program and to identify highly active or underperforming teams.
 
-![Provider Engagement dashboard.](/static//Images/central/provider_engagement.png "Provider Engagement dashboard")
+![Provider Engagement dashboard.](/Images/central/provider_engagement.png "Provider Engagement dashboard")
 
 ## Access the dashboard
 

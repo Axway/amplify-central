@@ -20,7 +20,7 @@ What you can see in this view depends on your role and the ownership of the asse
 | **Insights Viewer**                        | Same visibility rules as Catalog Manager                   |
 | **Developer**                              | Cannot access this screen                                  |
 
-![Applications dashboard.](/static/Images/central/bi_applications.png "Applications dashboard")
+![Applications dashboard.](/Images/central/bi_applications.png "Applications dashboard")
 
 The table lists all applications that match your selected filters. It displays:
 
