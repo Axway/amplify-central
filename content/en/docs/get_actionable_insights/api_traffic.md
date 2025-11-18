@@ -9,7 +9,7 @@ The API Traffic dashboard allows you to inspect transaction-level data for your 
 
 The dashboard displays up to **1000** of the most recent transactions that match your filter criteria. Each transaction includes core metadata such as request method, status code, latency, and execution timestamp.
 
-![API Traffic dashboard.](/static/Images/central/api_traffic.png "API Traffic dashboard example" )
+![API Traffic dashboard.](/Images/central/api_traffic.png "API Traffic dashboard example" )
 
 Each transaction in the list includes:
 
@@ -38,11 +38,11 @@ The detailed trace displays the span-level breakdown of the transaction, includi
 * **Duration**: Time spent in this span.
 * **Timestamp**: Execution timestamp for the span.
 
-![API traffic trace view.](/static/Images/central/api_traffic_details.png "API traffic trace view")
+![API traffic trace view.](/Images/central/api_traffic_details.png "API traffic trace view")
 
 Each span may also include request and response headers, where available.
 
-![API traffic request and response.](/static/Images/central/api_traffic_request_response.png "API traffic request and response")
+![API traffic request and response.](/Images/central/api_traffic_request_response.png "API traffic request and response")
 
 ## Access the dashboard
 
