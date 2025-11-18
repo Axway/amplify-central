@@ -32,7 +32,7 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
     * You can access the npm package (for installing Axway CLI)
     * You can install OpenSSL (make sure it is in the path for the CLI to use it if needed)
     * There is a graphical environment (optional)
-    * You can use Kubernetes 1.19 (Helm install only)
+    * A Kubernetes cluster compatible with the agent Helm charts (see the Agent release notes for tested Kubernetes versions)
 * An Amplify platform user account that has the **Platform Administrator** and **Engage Admin** roles
 * An Amplify platform service account to run the configuration in headless mode (optional)
 * An API Manager user assigned as an API Manager Admin
@@ -266,6 +266,31 @@ persistentVolumeClaimConfig:
     storageClass: gp2-csi
 ```
 
+Note: the Traceability Agent Helm chart exposes additional configuration via `values.yaml`:
+
+* Configure PVCs for logs and data using `persistentVolumeClaimConfig` (example shown above).
+* Control telemetry and sampling through `env:` entries such as `TRACEABILITY_SAMPLING_PERCENTAGE`, `TRACEABILITY_SAMPLING_ONLYERRORS`, and `telemetry.enabled`.
+
+Example `persistentVolumeClaimConfig` and `env` snippets for `ta-overrides.yaml` / `values.yaml`:
+
+```yaml
+persistentVolumeClaimConfig:
+  logs:
+    storageClass: gp2-csi
+    name: logs-claim
+    size: 2Gi
+  data:
+    storageClass: gp2-csi
+    name: data-claim
+    size: 2Gi
+
+env:
+  TRACEABILITY_SAMPLING_PERCENTAGE: 10
+  TRACEABILITY_SAMPLING_ONLYERRORS: false
+  TRACEABILITY_SAMPLING_PER_API: true
+  telemetry.enabled: false
+```
+
 The helm charts for the agents and download instructions can be found at https:/repository.axway.com/catalog.
 The agents can be deployed with the following commands, which are mentioned at the end of the CLI install prompts:
 
@@ -274,14 +299,33 @@ helm repo add axway https://helm.repository.axway.com --username==<client-id> --
 helm repo update
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-discovery axway/ampc-beano-help-prod-v7-discovery -f da-overrides.yaml
 helm upgrade --install --namespace <YOUR_NAMESPACE> v7-traceability axway/ampc-beano-helm-v7-traceability -f ta-overrides.yaml
+
+Note: You can also install the agents using separate standalone charts for finer control. For example, install the Traceability Agent standalone chart (`als-traceability-agent`) or the Discovery Agent standalone chart (`discovery-agent`) from the Axway Helm repo. When installing separately, ensure DA-specific values go into the `da` section of your override file and TA-specific values go into the `als` (or `ta`) section depending on the chart.
+
+Helm checklist (high-level):
+
+* Prepare a namespace and ensure service account keys are available (see earlier sections).
+* Create a Helm override file (`ta-overrides.yaml` / `hybrid-override.yaml`) including `env:`, `keysSecretName`, and `persistentVolumeClaimConfig` if needed.
+* If using private images, create a docker-registry secret and set `image.pullSecret`.
+* Use `helm upgrade --install` to deploy the chart and verify with `kubectl get pods`.
+
+Example standalone install commands:
+
+
+```bash
+helm repo add axway https://helm.repository.axway.com --username=<client-id> --password=<client_secret>
+helm repo update
+helm upgrade --install --namespace <NAMESPACE> ampc-als axway/als-traceability-agent -f ta-overrides.yaml
+helm upgrade --install --namespace <NAMESPACE> ampc-da axway/discovery-agent -f da-overrides.yaml
+```
+
 ```
 
 #### Set up secrets for private repositories
 
-To deploy an image stored in a private repository, you must create a kubernetes secret and set up the `pullSecret` field in the `image` section in the override file.
-This is necessary for both the Discovery and Traceability agents.
+To deploy an image stored in a private repository, you must create a Kubernetes image-pull secret (type `kubernetes.io/dockerconfigjson`, created via `kubectl create secret docker-registry`) and set up the `pullSecret` field in the `image` section in the override file. This is necessary for both the Discovery and Traceability agents.
 
-Kubernetes command to create secret:
+Kubernetes command to create the Docker registry secret (type `kubernetes.io/dockerconfigjson`):
 
 ```bash
 kubectl create secret docker-registry <SECRET_NAME> --namespace <YOUR_NAMESPACE> --docker-server=docker.repository.axway.com --docker-username=<client_id> --docker-password=<client_secret>

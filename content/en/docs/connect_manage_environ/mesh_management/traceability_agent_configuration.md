@@ -24,6 +24,8 @@ For more information, see [Install Axway Central CLI](/docs/integrate_with_centr
 ## Overview
 
 The Amplify Istio Traceability Agent is installed into your Kubernetes cluster as part of deploying the `ampc-hybrid` helm chart. The Traceability Agent (TA) sends metrics and logs for API activity back to Amplify so that you can monitor service activity and troubleshoot your services.
+
+Note: The Traceability Agent is also available as a standalone Helm chart (`als-traceability-agent`) that can be installed independently of the Discovery Agent (DA). Installing agents with separate charts allows independent lifecycle management and tailored values per agent. See the Deploy your agents with Helm page for example standalone install commands and notes on separating values for DA and TA.
 The agent publishes a summary of the transaction which can be seen in Business Insights. Once the transaction summary is expanded, you can see all the related spans within a transaction including the request and response headers for each.
 
 The Amplify Istio Traceability Agent has two modes; default and verbose. The default mode captures only the headers specified in the EnvoyFilter and the verbose mode captures all the headers in request and response flows.
@@ -139,7 +141,7 @@ x-agent-details:
 Once configured, use the following command to populate the resources in Amplify:
 
  ```bash
-axway central apply -f <fileName>.yaml 
+axway central apply -f <fileName>.yaml
  ```
 
 #### Reporting traffic and metric event correlated to Amplify Engage subscription/application
@@ -433,7 +435,7 @@ spec:
       number: 443
       protocol: HTTPS
     tls:
-      mode: SIMPLE 
+      mode: SIMPLE
       serverCertificate: /etc/istio/istio-ingressgateway/tls.crt
       privateKey: /etc/istio/istio-ingressgateway/tls.key
  ```
@@ -553,60 +555,45 @@ curl -v http://demo.sandbox.axwaytest.net:8080/mylist/list
 
 ## Toggling the Traceability Agent
 
-After deploying the `ampc-hybrid` helm chart to your Kubernetes cluster, you can see the Amplify Istio Traceability Agent running. The service is called `ampc-hybrid-als`. During the step [Deploy your agents with the Axway CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/), you were able to select the mode for the Amplify Istio Traceability Agent. If you want to switch the mode, use the following procedure.
+After deploying the `ampc-hybrid` helm chart to your Kubernetes cluster, you can see the Amplify Istio Traceability Agent running. The service is called `ampc-hybrid-als`. During the step [Deploy your agents with the Axway CLI](/docs/connect_manage_environ/mesh_management/deploy-your-agents-with-the-axway-cli/), you were able to select the mode for the Amplify Istio Traceability Agent.
 
-**From default to verbose**:
+The CLI offers three modes: `ambient`, `default`, and `verbose`. For clarity:
 
-Edit the istio-override.yaml file's configuration under the meshConfig section to set enableEnvoyAccessLogService as true:
+* `ambient`: the recommended baseline mode where the agent accepts forwarded access-log data (works with Istio Telemetry resources when enabled in the chart).
+* `default`: sidecar access-log based capture (documentation sometimes uses the word "sidecar" to describe this behavior; treat `sidecar` and `default` as equivalent in that context).
+* `verbose`: captures a more comprehensive set of headers for debugging and observability purposes.
+
+To change whether Istio forwards Envoy access logs to the agent (this is independent from the agent `mode`), edit your `IstioOperator` resource to toggle `enableEnvoyAccessLogService` under `meshConfig` and re-apply the operator (for example with `istioctl install -f istio-override.yaml`).
+
+Example: enable forwarding of Envoy access logs to the agent:
 
 ```yaml
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
 spec:
   meshConfig:
     enableTracing: true
     enableEnvoyAccessLogService: true
- ```
+```
 
-After the change, re-install Istio again:
+After updating Istio, set the agent Helm value for the chosen header capture mode (the following examples use the umbrella `ampc-hybrid` chart):
 
- ```bash
- istioctl install --set profile=demo -f istio-override.yaml
- ```
-
-After the Istio re-installation, run the following command to set the Amplify Istio Traceability Agent's mode to "verbose":
-
-  ```bash
+```bash
+# set verbose mode
 helm repo update
 helm upgrade --install --namespace apic-control ampchybrid axway/ampc-hybrid -f hybrid-override.yaml --set als.mode="verbose"
- ```
 
-**From verbose to default**:
+# set default (sidecar) mode
+helm upgrade --install --namespace apic-control ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set als.mode="default"
 
-Edit the Istio-override.yaml file's configuration under the meshConfig section to set enableEnvoyAccessLogService as false:
+# set ambient mode
+helm upgrade --install --namespace apic-control ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set als.mode="ambient"
+```
+
+In `default`/`sidecar` mode the Traceability Agent can be configured to capture only the request and response headers specified in the EnvoyFilter. The example EnvoyFilter below shows how to configure the headers that Envoy should forward in its access logs to the agent.
 
 ```yaml
-spec:
-  meshConfig:
-    enableTracing: true
-    enableEnvoyAccessLogService: false
- ```
-
-After the change, re-install Istio again:
-
- ```bash
- istioctl install --set profile=demo -f istio-override.yaml
- ```
-
-After the Istio re-installation, run the following command to set the Amplify Istio Traceability Agent's mode to "default":
-
-  ```bash
-helm repo update
-helm upgrade --install --namespace apic-control ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml --set als.mode="default"
- ```
-
-In default mode the Traceability Agent can be configured to only capture certain request and response headers. By default, all headers specified in the EnvoyFilter configuration are captured below. See "additional_request_headers_to_log" and "additional_response_headers_to_log" sections.
-
- ```yaml
- apiVersion: networking.istio.io/v1alpha3
+apiVersion: networking.istio.io/v1alpha3
 kind: EnvoyFilter
 metadata:
   name: patch-gateway-and-sidecars-with-als
@@ -639,13 +626,57 @@ spec:
                       google_grpc:
                         target_uri: ampc-hybrid-als.apic-control.svc.cluster.local:9000
                         stat_prefix: ampc-hybrid-als
- ```
+```
 
-To exclude any headers, remove them from "additional_request_headers_to_log" and "additional_response_headers_to_log". Please note that unless otherwise specified envoyFilterNamespace is "istio-system". Once the configuration has changed, run the following command:
+To exclude any headers, remove them from `additional_request_headers_to_log` and `additional_response_headers_to_log`. Please note that unless otherwise specified `envoyFilterNamespace` is `istio-system`. Once the configuration has changed, run the following command:
 
-  ```bash
- kubectl apply -f <fileName>.yaml
- ```
+```bash
+kubectl apply -f <fileName>.yaml
+```
+
+Note: the agent Helm chart `values.yaml` defaults `mode` to `ambient` and `telemetry.enabled` to `false`. If you want the chart to create Istio Telemetry CRs automatically when using ambient mode, set `telemetry.enabled=true` when installing the chart.
+
+The ALS Helm chart `values.yaml` also exposes environment variables you can set under the `env:` section to control Traceability Agent behavior, including sampling and telemetry options:
+
+* `TRACEABILITY_SAMPLING_PERCENTAGE` (integer 0-10) — sampling percentage for transactions sent to Amplify.
+* `TRACEABILITY_SAMPLING_ONLYERRORS` (boolean) — when true, only error transactions are considered for sampling.
+* `TRACEABILITY_SAMPLING_PER_API` (boolean) — apply sampling per API ID when true, or globally when false.
+
+Additionally, the chart moved persistent volume configuration into `values.yaml` so you can control PVC names, classes and sizes via `persistentVolumeClaimConfig` (see the Helm values reference or the `hybrid-override.yaml` example in the deploy guide).
+
+Example `persistentVolumeClaimConfig` and `env` snippets for `values.yaml`:
+
+```yaml
+persistentVolumeClaimConfig:
+  logs:
+    storageClass: gp2
+    name: logs-claim
+    size: 2Gi
+  data:
+    storageClass: gp2
+    name: data-claim
+    size: 2Gi
+
+env:
+  TRACEABILITY_SAMPLING_PERCENTAGE: 10
+  TRACEABILITY_SAMPLING_ONLYERRORS: false
+  TRACEABILITY_SAMPLING_PER_API: true
+  telemetry.enabled: false
+```
+
+When installing charts in clusters that must pull images from Axway's private docker registry, create a docker-registry secret (type `kubernetes.io/dockerconfigjson`) so pods can pull private images. For example, create the secret with:
+
+```bash
+kubectl create secret docker-registry <secret-name> \
+  --docker-server=<registry-server> \
+  --docker-username=<username> \
+  --docker-password=<password> \
+  --docker-email=<email> --namespace <namespace>
+```
+
+Then pass the secret name to the chart with the `image.pullSecret` or `pullSecret` values.
+
+If you are installing the Traceability Agent (`als-traceability-agent`) as a standalone chart, place TA-specific values under the chart's expected top-level key (typically `als` or similar). For the Discovery Agent standalone chart, place values under the `da` key. Review each chart's `values.yaml` for exact keys and structure.
 
 ## Transaction Redaction
 
@@ -699,5 +730,29 @@ The deployment of Amplify Istio Traceability Agent will fail if invalid configur
 ```bash
 kubectl -n <namespace of Amplify Istio Traceability Agent> logs <podName>
 ```
+
+## Ambient vs Sidecar installation differences
+
+This section explains practical differences when installing the Traceability Agent to operate in **ambient** mode versus **sidecar** (also referred to as `default`) mode.
+
+* Ambient mode (recommended baseline):
+    * Purpose: The agent accepts forwarded access-log data and integrates with Istio Telemetry CRs (when `telemetry.enabled=true`) so that capture configuration can be managed by the chart and telemetry resources.
+    * Istio changes: Requires the `enableEnvoyAccessLogService` set to `true` (or `false` depending on whether you want Istio to forward logs) in your `IstioOperator` `meshConfig` and may require deploying Telemetry CRs (the chart can create them if `telemetry.enabled=true`). See the `IstioOperator` example earlier on this page.
+    * Deployment options: Typically deployed as a Helm chart on a node or set of nodes where access logs are forwarded to the agent. The agent may rely on cluster-level Telemetry resources and Envoy filters to forward the access logs.
+    * Notes: Ambient mode generally requires fewer EnvoyFilter changes in sidecars but does require ensuring the Telemetry and Envoy access-log forwarding is configured appropriately for your Istio version.
+
+* Sidecar mode (`default`):
+    * Purpose: The agent receives access-log entries directly from sidecar proxies (Envoy) configured via EnvoyFilters on gateways and sidecars.
+    * Istio changes: Requires patching Gateway and sidecar EnvoyFilters to include `envoy.access_loggers.http_grpc` pointing to the agent service and configuring `additional_request_headers_to_log` and `additional_response_headers_to_log` (examples provided earlier on this page).
+    * Deployment options: Often deployed per-node or per-namespace as Helm chart instances or standalone DaemonSet/StatefulSet depending on your topology. In some environments the Traceability Agent is deployed as a sidecar-like capture that collects logs from local Envoy proxies.
+    * Notes: Sidecar mode gives explicit control over which headers are logged at the Envoy level and can be preferable where fine-grained capture is required or when Telemetry CRs are not available or desired.
+
+When choosing a mode, consider the following checklist:
+
+* Do you want to manage capture centrally using Istio Telemetry (ambient) or via EnvoyFilters (sidecar)?
+* Does your Istio distribution and version support the Telemetry CRs you need (check release notes)?
+* Do you need per-API sampling or global sampling? Use `TRACEABILITY_SAMPLING_PER_API` accordingly in Helm `env` values.
+
+If you need step-by-step non-Helm instructions for Binary or Docker installations, see the Binary/Docker sections in the Install the agents using the CLI page.
 
 The logs should display the configuration error. Fix the configuration and repeat the steps above.

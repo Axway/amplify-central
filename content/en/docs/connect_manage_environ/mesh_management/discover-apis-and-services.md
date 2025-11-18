@@ -16,7 +16,7 @@ You may optionally create the Amplify resources manually with the Axway CLI, and
 
 ## Overview
 
-Amplify Istio Discovery Agent is a service that gets installed into your Kubernetes cluster as part of deploying the `ampc-hybrid` helm chart.
+Amplify Istio Discovery Agent is a service that gets installed into your Kubernetes cluster as part of deploying the `ampc-hybrid` helm chart. The Discovery Agent is also available as a standalone Helm chart (`discovery-agent`) and can be installed independently if you prefer to manage DA and TA separately.
 
 The Discovery Agent (DA) discovers Istio Virtual Service resources from configured namespaces, and creates API Services based on the routes defined in the Virtual Service.
 
@@ -247,11 +247,14 @@ The steps are as follows:
    hybrid-list-749ddd444-ncllr              1/1     Running   0          22m
    ```
 
-9. If you modified anything in the `hybrid-override.yaml`, then re-deploy the helm chart.
+9. If you modified anything in the `hybrid-override.yaml`, then re-deploy the helm chart. You can redeploy using the umbrella chart or deploy agents separately using the standalone charts:
 
-    ```bash
-    helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
-    ```
+  ```bash
+  helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-hybrid -f hybrid-override.yaml
+  # or deploy the agents individually
+  helm upgrade --install --namespace amplify-agents ampc-als axway/als-traceability-agent -f ta-overrides.yaml
+  helm upgrade --install --namespace amplify-agents ampc-da axway/discovery-agent -f da-overrides.yaml
+  ```
 
 10. Confirm that the agent discovered the hybrid-list virtual service by looking up `APIServices` in Amplify.
 
