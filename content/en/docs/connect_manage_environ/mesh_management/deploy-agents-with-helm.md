@@ -473,7 +473,6 @@ Notes:
 * **Resource footprint**: Separate installs create distinct Kubernetes resources (Deployments/StatefulSets/DaemonSets) per agent which can simplify resource tuning and RBAC separation.
 * **Helm hooks and CR creation**: If you rely on umbrella-chart hooks (for example to create shared Secrets or CRs), ensure you account for those when installing separately — you may need to create those resources yourself or enable equivalent hooks in each chart.
 
-
 ## Verify that the pods are running
 
 1. After the installation is complete, run the following command with the namespace you selected for the Istio agent location and confirm that the pods are all in a running status:

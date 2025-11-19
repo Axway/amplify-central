@@ -256,7 +256,7 @@ The steps are as follows:
   helm upgrade --install --namespace amplify-agents ampc-da axway/discovery-agent -f da-overrides.yaml
   ```
 
-10. Confirm that the agent discovered the hybrid-list virtual service by looking up `APIServices` in Amplify.
+1. Confirm that the agent discovered the hybrid-list virtual service by looking up `APIServices` in Amplify.
 
     ```bash
     ~ » axway central get apiservices -s istio
@@ -266,7 +266,7 @@ The steps are as follows:
     mylist  9 minutes ago  mylist  APIService     Environment  istio       management      Default Team
     ```
 
-11. Confirm that the agent discovered the `RequestAuthentication` by looking up `CredentialRequestDefinitions` in Amplify.
+2. Confirm that the agent discovered the `RequestAuthentication` by looking up `CredentialRequestDefinitions` in Amplify.
 
     ```bash
     ~ » axway central get credentialrequestdefinitions -s istio
@@ -276,7 +276,7 @@ The steps are as follows:
     local-keycloak-oauth-idp  22 minutes ago  OAuthlocal-keycloak  CredentialRequestDefinition  Environment  istio       management
     ```
 
-12. Confirm that the agent discovered associated the `APIServiceInstance` to the `CredentialRequestDefinition`. The value of `spec.credentialRequestDefinition` should be the same as the `CredentialRequestDefinition` name from the previous step.
+3. Confirm that the agent discovered associated the `APIServiceInstance` to the `CredentialRequestDefinition`. The value of `spec.credentialRequestDefinition` should be the same as the `CredentialRequestDefinition` name from the previous step.
 
     ```bash
     ~ » axway central get apiserviceinstances -s istio mylist -o yaml
