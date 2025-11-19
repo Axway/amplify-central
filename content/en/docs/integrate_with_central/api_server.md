@@ -54,7 +54,7 @@ accessrequests            accreq               AccessRequest                   t
 apiserviceinstances       apisi                APIServiceInstance              true    Environment        management    
 apiservicerevisions       apisr                APIServiceRevision              true    Environment        management    
 apiservices               apis                 APIService                      true    Environment        management    
-apispecs                  apisp                APISpec                         true    K8SCluster         management    
+apispecs                  apisp                APISpec                         true    Mesh                         management    
 .....................................................
 .....................................................
 consumerinstances         consumeri            ConsumerInstance                true    Environment        management    
