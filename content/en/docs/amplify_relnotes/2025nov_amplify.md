@@ -14,7 +14,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancement and bug fixes for the November 18 update.
 
-### Marketplace updates for November 18, 2025
+### Marketplace update for November 18, 2025
 
 * **Subscription Marketplace origin**
 
