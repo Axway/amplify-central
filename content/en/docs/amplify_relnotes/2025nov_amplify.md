@@ -10,6 +10,25 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## November 18, 2025
+
+New enhancement and bug fixes for the November 18 update.
+
+### Marketplace update for November 18, 2025
+
+* **Subscription Marketplace origin**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Subscription details are enhanced to show a new **Marketplace URL** field.
+
+### Marketplace bug fixes for November 18, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01757618 | APIGOV-31229 | **Issue**: Application requester information changed after plan migration <br/>**Resolution**: The original user who requested now remains as the requester after migration. |
+|          | APIGOV-30386 | **Issue**: Tooltip on the Applications selector for Application Registration is not correct <br/>**Resolution**: Tooltips updated as appropriate to remove confusing wording. |
+|          | APIGOV-31543 | **Issue**: Auditor role does not follow pattern for IDP and Compliance details to hide actions <br/>**Resolution**: IDP and Compliance details pages updated to hide actions as appropriate. |
+
 ## November 14, 2025
 
 New enhancements and bug fixes for the November 14 update.
