@@ -146,6 +146,356 @@ To create an empty resource that represents an environment resource type with a 
 axway central create environment helloworld
 ```
 
+To create a resource that represents a Model Context Protocol (MCP) service resource type using a file with the create command:
+
+```bash
+axway central create -f mcp.json
+```
+
+Where, the `mcp.json` file contains the definition of the MCP service to be created:
+
+```json
+{
+  "mcp": "1.0.0",
+  "details":
+  {
+    "protocolVersion": "2025-03-26",
+    "capabilities":
+    {
+      "tools":
+      {
+        "listChanged": false
+      }
+    },
+    "serverInfo":
+    {
+      "name": "x-mcpvw2",
+      "version": "1.0.2"
+    }
+  },
+  "tools":
+  [
+    {
+      "name": "pets_list239r2",
+      "description": "Some tool to list pets",
+      "inputSchema":
+      {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Pet",
+        "type": "object",
+        "properties":
+        {
+          "name":
+          {
+            "type": "string"
+          },
+          "status":
+          {
+            "type": "string",
+            "enum":
+            [
+              "available",
+              "pending",
+              "sold"
+            ]
+          }
+        },
+        "required":
+        [
+          "name",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ],
+  "transports":
+  {
+    "http-stream":
+    {
+      "definition":
+      {
+        "openapi": "3.0.1",
+        "info":
+        {
+          "title": "MCP HTTP Streaming Transport API",
+          "description": "This API allows clients to interact with the MCP server using HTTP streaming.\nAll requests and responses conform to the JSON-RPC 2.0 specification.\n",
+          "version": "1.0.0"
+        },
+        "servers":
+        [
+          {
+            "url": "http://localhost:3000"
+          }
+        ],
+        "paths":
+        {
+          "/":
+          {
+            "get":
+            {
+              "summary": "GET not allowed",
+              "operationId": "getMcpNotAllowed",
+              "responses":
+              {
+                "405":
+                {
+                  "description": "Method Not Allowed"
+                }
+              }
+            },
+            "post":
+            {
+              "summary": "JSON-RPC 2.0 endpoint for MCP",
+              "operationId": "mcpJsonRpc",
+              "requestBody":
+              {
+                "content":
+                {
+                  "application/json":
+                  {
+                    "schema":
+                    {
+                      "required":
+                      [
+                        "jsonrpc",
+                        "method"
+                      ],
+                      "type": "object",
+                      "properties":
+                      {
+                        "method":
+                        {
+                          "type": "string",
+                          "description": "The name of the method to be invoked"
+                        },
+                        "id":
+                        {
+                          "description": "An identifier established by the Client that must contain a String, Number, or NULL value if included. If it is not included, it is assumed to be a notification.",
+                          "anyOf":
+                          [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "number"
+                            }
+                          ]
+                        },
+                        "params":
+                        {
+                          "type": "object",
+                          "description": "A structured value that holds the parameter values to be used during the invocation of the method"
+                        },
+                        "jsonrpc":
+                        {
+                          "type": "string",
+                          "enum":
+                          [
+                            "2.0"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": true
+              },
+              "responses":
+              {
+                "200":
+                {
+                  "description": "JSON-RPC 2.0 response",
+                  "content":
+                  {
+                    "application/json":
+                    {
+                      "schema":
+                      {
+                        "required":
+                        [
+                          "id",
+                          "jsonrpc"
+                        ],
+                        "type": "object",
+                        "properties":
+                        {
+                          "result":
+                          {
+                            "type": "object",
+                            "description": "The result of the method invocation"
+                          },
+                          "id":
+                          {
+                            "description": "An identifier established by the Client that must contain a String, Number, or NULL value. If it is not included, it is assumed to be a notification.",
+                            "anyOf":
+                            [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ]
+                          },
+                          "error":
+                          {
+                            "type": "object",
+                            "properties":
+                            {
+                              "message":
+                              {
+                                "type": "string",
+                                "description": "A String providing a short description of the error"
+                              },
+                              "code":
+                              {
+                                "type": "integer",
+                                "description": "A Number that indicates the error type that occurred"
+                              },
+                              "data":
+                              {
+                                "type": "object",
+                                "description": "A Primitive or Structured value that contains additional information about the error"
+                              }
+                            },
+                            "description": "Error object if there was an error invoking the method"
+                          },
+                          "jsonrpc":
+                          {
+                            "type": "string",
+                            "enum":
+                            [
+                              "2.0"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "components":
+        {
+          "schemas":
+          {
+            "JsonRpcResponse":
+            {
+              "required":
+              [
+                "id",
+                "jsonrpc"
+              ],
+              "type": "object",
+              "properties":
+              {
+                "result":
+                {
+                  "type": "object",
+                  "description": "The result of the method invocation"
+                },
+                "id":
+                {
+                  "description": "An identifier established by the Client that must contain a String, Number, or NULL value. If it is not included, it is assumed to be a notification.",
+                  "anyOf":
+                  [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "error":
+                {
+                  "type": "object",
+                  "properties":
+                  {
+                    "message":
+                    {
+                      "type": "string",
+                      "description": "A String providing a short description of the error"
+                    },
+                    "code":
+                    {
+                      "type": "integer",
+                      "description": "A Number that indicates the error type that occurred"
+                    },
+                    "data":
+                    {
+                      "type": "object",
+                      "description": "A Primitive or Structured value that contains additional information about the error"
+                    }
+                  },
+                  "description": "Error object if there was an error invoking the method"
+                },
+                "jsonrpc":
+                {
+                  "type": "string",
+                  "enum":
+                  [
+                    "2.0"
+                  ]
+                }
+              }
+            },
+            "JsonRpcRequest":
+            {
+              "required":
+              [
+                "jsonrpc",
+                "method"
+              ],
+              "type": "object",
+              "properties":
+              {
+                "method":
+                {
+                  "type": "string",
+                  "description": "The name of the method to be invoked"
+                },
+                "id":
+                {
+                  "description": "An identifier established by the Client that must contain a String, Number, or NULL value if included. If it is not included, it is assumed to be a notification.",
+                  "anyOf":
+                  [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "params":
+                {
+                  "type": "object",
+                  "description": "A structured value that holds the parameter values to be used during the invocation of the method"
+                },
+                "jsonrpc":
+                {
+                  "type": "string",
+                  "enum":
+                  [
+                    "2.0"
+                  ]
+                }
+              }
+            }
+          },
+          "responses":
+          {}
+        }
+      }
+    }
+  }
+}
+```
+
 ### Update resources
 
 Update resources using the `apply` command. The apply command accepts a file containing the resource(s) to be updated. json and yaml formats are accepted.
