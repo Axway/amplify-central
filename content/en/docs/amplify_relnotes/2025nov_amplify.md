@@ -10,6 +10,23 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## November 24, 2025
+
+New enhancement and bug fixes for the November 24 update.
+
+### Marketplace update for November 24, 2025
+
+* **Feature**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Feature description.
+
+### Marketplace bug fixes for November 24, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
 ## November 18, 2025
 
 New enhancement and bug fixes for the November 18 update.
