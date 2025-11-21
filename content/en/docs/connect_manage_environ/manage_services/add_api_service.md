@@ -19,6 +19,9 @@ Follow these steps to create an API service in your environment:
     * **Tags**: Used to group assets, making it easier and faster to find them.
     * **Attributes**: Key and value pairs used for extending functionality and integrations with third-party systems.
     * **API Service Image**: A visual aid when looking through the list of API services.
+    * **Server Overview**: To be displayed on the Marketplace resources tab as the Overview.
+    * **Classification**: Specify the classification level of the server.
+    * **Source Code Repository**: Define the location of the source code.
 4. Click **Save**.
 
 To learn how to add an API service using the Axway Central CLI, see [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api/).
