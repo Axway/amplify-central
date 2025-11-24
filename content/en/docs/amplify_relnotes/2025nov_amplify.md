@@ -26,12 +26,6 @@ New enhancements and bug fixes for the November 24 update.
     * Include MCP Servers in your products
     * Make MCP capabilities discoverable to your consumers
 
-### Marketplace bug fixes for November 24, 2025
-
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
-
 ## November 18, 2025
 
 New enhancement and bug fixes for the November 18 update.
