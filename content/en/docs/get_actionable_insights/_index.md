@@ -41,7 +41,7 @@ The following roles can access the Insights dashboards:
 
 * **Engage Administrators** can access both Business Insights and Consumer Insights dashboards. They can see metrics across all teams in the organization.
 * **Catalog Manager** can view the Business Insights dashboards. Usage and metrics are scoped to their team. They must be a member in the owning team to view usage or engagement metrics.
-* **Developer** can view only a subset of the Business Insights dashboards (API Health, API Traffic, Applications,Leaderboard). Their visibility is limited usage and metrics associated with their team membership.
+* **Developer** can view only a subset of the Business Insights dashboards (API Health, API Traffic, Leaderboard). Their visibility is limited usage and metrics associated with their team membership.
 * **Insights Viewer** can access the Business Insights dashboard. Their visibility is limited to usage and metrics associated with their team membership.
 * **Consumer** and **Subscriber** can access Consumer Insights dashboard only.
 

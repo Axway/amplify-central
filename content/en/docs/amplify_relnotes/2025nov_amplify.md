@@ -10,6 +10,21 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## Novmember XX, 2025
+
+New enhancement and bug fixes for the November XX update.
+
+* **Business Insights: Provider Engagement**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Significant internal performance improvements when viewing this screen.
+  
+  _Admin only_ team filter is only selectable for users with an Engage Admin role.
+
+  **Team activity:** For date ranges starting from April 24, 2025:
+    * Significant performance improvements.
+    * Provider team association reflects the service, asset or product owner at the time of the relevant activity. For previous time periods the team association reflects the _current_ owner.
+
 ## November 18, 2025
 
 New enhancement and bug fixes for the November 18 update.
