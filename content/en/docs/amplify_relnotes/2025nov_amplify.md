@@ -19,11 +19,11 @@ New enhancement and bug fixes for the November XX update.
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   Significant internal performance improvements when viewing this screen.
   
-  _Admin only_ team filter is only selectable for users with an Engage Admin role.
+  *Admin only* team filter is only selectable for users with an Engage Admin role.
 
   **Team activity:** For date ranges starting from April 24, 2025:
     * Significant performance improvements.
-    * Provider team association reflects the service, asset or product owner at the time of the relevant activity. For previous time periods the team association reflects the _current_ owner.
+    * Provider team association reflects the service, asset or product owner at the time of the relevant activity. For previous time periods the team association reflects the current owner instead.
 
 ## November 18, 2025
 

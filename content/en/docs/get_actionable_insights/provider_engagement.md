@@ -59,7 +59,7 @@ You can view the data in two ways:
 
 Activity is associated to the provider team which owned the service, asset or product at that point in time.
 
-Note: When viewing activity for a time range starting prior to *April 24, 2025*, all activity will reflect _current_ provider team ownership instead. This difference in behavior will be displayed with an on-screen information.
+Note: When viewing activity for a time range starting prior to *April 24, 2025*, all activity will reflect *current* provider team ownership instead. This difference in behavior will be displayed with an on-screen information.
 
 #### Metrics tracked
 
@@ -82,6 +82,6 @@ Visualize the level of engagement across all selected provider teams:
 Examine the same activity data broken down per provider team:
 
 * Each row corresponds to services, assets or products owned by a specific provider team.
-* Shows "_Admin only_" row for any services, assets or products not owned by a team.
+* Shows *Admin only* row for any services, assets or products not owned by a team.
 * Columns show the number of unique services, assets, or products with the corresponding type of activity.
 * Use this view to identify which teams are most active or need additional support.
