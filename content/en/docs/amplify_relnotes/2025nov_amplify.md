@@ -10,6 +10,22 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## November 24, 2025
+
+New enhancements for the November 24 update.
+
+### Marketplace updates for November 24, 2025
+
+* **MCP server registration and discovery**
+
+  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We've extended the Engage capabilities with a new feature - you can now **register and publish MCP servers** just like any other assets. This new feature allows you to:
+
+    * Manually add MCP servers to your Service Registry
+    * View key MCP server metadata and definitions
+    * Include MCP servers in your products
+    * Make MCP capabilities discoverable to your consumers
+
 ## November 18, 2025
 
 New enhancement and bug fixes for the November 18 update.
