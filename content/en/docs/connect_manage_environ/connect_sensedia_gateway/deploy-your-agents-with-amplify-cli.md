@@ -16,7 +16,7 @@ Once agents are correctly deployed, they can collect the data from the Sensedia 
 * Docker must be installed and you will need a basic understanding of Docker commands
 * You will need information on Sensedia API Gateway:
     * The Sensedia platform URL (e.g., `https://platform-production.sensedia.com`)
-    * Client ID and Client Secret for API authentication
+    * Authentication credentials: either Client ID and Client Secret (OAuth - Sensedia 3.x) or static token (Sensedia 4.x/5.x)
     * Configured environments (if filtering by environment)
 
 ## Objectives
@@ -54,8 +54,14 @@ For example:
 ```yaml
 # Sensedia connectivity
 SENSEDIA_BASEURL=<YOUR_SENSEDIA_PLATFORM_URL>
+
+# Option 1: OAuth authentication 
 SENSEDIA_AUTH_CLIENTID=<YOUR_SENSEDIA_CLIENT_ID>
 SENSEDIA_AUTH_CLIENTSECRET=<YOUR_SENSEDIA_CLIENT_SECRET>
+
+# Option 2: Static token authentication - use instead of Option 1
+# SENSEDIA_AUTH_TOKEN=<YOUR_STATIC_TOKEN>
+
 SENSEDIA_DEVELOPEREMAIL=<YOUR_DEVELOPER_EMAIL>
 SENSEDIA_FILTER=tag.Axway_axway.Exists()
 SENSEDIA_POLLINTERVAL=30s
@@ -106,8 +112,9 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | Variable name                    | Description                                                                                                                                                                         |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SENSEDIA_BASEURL                 | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                                                            |
-| SENSEDIA_AUTH_CLIENTID           | The client ID for authenticating with Sensedia API Gateway.                                                                                                                        |
-| SENSEDIA_AUTH_CLIENTSECRET       | The client secret for authenticating with Sensedia API Gateway.                                                                                                                    |
+| SENSEDIA_AUTH_CLIENTID           | The client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                                             |
+| SENSEDIA_AUTH_CLIENTSECRET       | The client secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                                             |
+| SENSEDIA_AUTH_TOKEN              | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                              |
 | SENSEDIA_ENVIRONMENTS            | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                                                       |
 | SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m.                                                                      |
 | SENSEDIA_SENDALLTRAFFIC          | When set to true, the agent will send all API traffic to be reported. When set to false, only discovered APIs will be reported. Default is false.                               |
@@ -123,8 +130,14 @@ For example:
 ```yaml
 # Sensedia connectivity
 SENSEDIA_BASEURL=<YOUR_SENSEDIA_PLATFORM_URL>
+
+# Option 1: OAuth authentication
 SENSEDIA_AUTH_CLIENTID=<YOUR_SENSEDIA_CLIENT_ID>
 SENSEDIA_AUTH_CLIENTSECRET=<YOUR_SENSEDIA_CLIENT_SECRET>
+
+# Option 2: Static token authentication - use instead of Option 1
+# SENSEDIA_AUTH_TOKEN=<YOUR_STATIC_TOKEN>
+
 SENSEDIA_ENVIRONMENTS=Production,Development
 SENSEDIA_POLLINTERVAL=5m
 SENSEDIA_TRACEABILITYBATCHSIZE=500
@@ -274,8 +287,10 @@ The installation procedure will prompt for the following:
    * **Service account**: can be an existing service account created in the Amplify platform. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 3. Sensedia Configuration Setup options:
    * **Platform URL**: Sensedia platform base URL (e.g., `https://platform-production.sensedia.com`)
-   * **Client ID**: Client ID for Sensedia API authentication
-   * **Client Secret**: Client Secret for Sensedia API authentication
+   * **Authentication Method**: Choose between OAuth (Client ID/Secret) or Static Token
+   * **Client ID**: Client ID for OAuth authentication if OAuth selected
+   * **Client Secret**: Client Secret for OAuth authentication if OAuth selected
+   * **Static Token**: Authentication token if Static Token selected
    * **Environments**: Comma-separated list of environment names (e.g., `Producao,Development`)
    * **Discovery Identity APIs**: Whether to discover identity APIs (true/false)
    * **Discovery Private APIs**: Whether to discover private APIs (true/false)
