@@ -16,7 +16,7 @@ Once agents are correctly deployed, they can collect the data from the Sensedia 
 * Docker must be installed and you will need a basic understanding of Docker commands
 * You will need information on Sensedia API Gateway:
     * The Sensedia platform URL (e.g., `https://platform-production.sensedia.com`)
-    * Authentication credentials: either Client ID and Client Secret (OAuth - Sensedia 3.x) or static token (Sensedia 4.x/5.x)
+    * Authentication credentials: either Client ID and Client Secret (OAuth - Sensedia 3.x) or static token
     * Configured environments (if filtering by environment)
 
 ## Objectives

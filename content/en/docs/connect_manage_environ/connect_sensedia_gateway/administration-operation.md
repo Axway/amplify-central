@@ -41,7 +41,7 @@ The Sensedia agents support two authentication methods:
 3. **Bearer Token**: All API calls use the obtained Bearer token with `Authorization: Bearer <token>` header
 4. **Token Refresh**: The agent automatically refreshes tokens when they expire
 
-#### Static Token Authentication (Sensedia 4.x/5.x)
+#### Static Token Authentication
 
 1. **Static Token**: The agent uses a pre-configured authentication token
 2. **Header**: All API calls include the `Sensedia-Auth: <token>` header
@@ -148,7 +148,7 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 | `SENSEDIA_TRACEABILITYBATCHSIZE` | Batch size for traceability API calls (Traceability Agent only) | No | `500` | `1000` |
 | `SENSEDIA_TIMEOFFSET` | Time offset for processing delays (Traceability Agent only) | No | `10m` | `15m` |
 
-*Either configure `SENSEDIA_AUTH_TOKEN` for static token authentication (Sensedia 4.x/5.x), or both `SENSEDIA_AUTH_CLIENTID` and `SENSEDIA_AUTH_CLIENTSECRET` for OAuth authentication (Sensedia 3.x). Do not configure both methods.
+*Either configure `SENSEDIA_AUTH_TOKEN` for static token authentication or both `SENSEDIA_AUTH_CLIENTID` and `SENSEDIA_AUTH_CLIENTSECRET` for OAuth authentication (Sensedia 3.x). Do not configure both methods.
 
 ## Monitoring and troubleshooting
 
