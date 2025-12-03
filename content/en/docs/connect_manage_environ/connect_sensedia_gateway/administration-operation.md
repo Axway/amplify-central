@@ -17,7 +17,7 @@ Each Sensedia Gateway is represented by an Amplify environment allowing you to b
 
 * [Amplify Platform Service Account](/docs/integrate_with_central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
 * [Sensedia API Gateway with API Manager](https://docs.sensedia.com/en/api-platform-guide/4.14.x.x/index.html)
-* Sensedia authentication credentials (either Client ID/Secret for OAuth or static token)
+* Sensedia authentication credentials (either Client ID Client Secret for OAuth or static token)
 * Docker environment for running the agents
 * Network connectivity from agent host to Sensedia API Gateway and Amplify platform
 

@@ -287,7 +287,7 @@ The installation procedure will prompt for the following:
    * **Service account**: can be an existing service account created in the Amplify platform. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 3. Sensedia Configuration Setup options:
    * **Platform URL**: Sensedia platform base URL (e.g., `https://platform-production.sensedia.com`)
-   * **Authentication Method**: Choose between OAuth (Client ID/Secret) or Static Token
+   * **Authentication Method**: Choose between OAuth (Client ID and Client Secret) or Static Token
    * **Client ID**: Client ID for OAuth authentication if OAuth selected
    * **Client Secret**: Client Secret for OAuth authentication if OAuth selected
    * **Static Token**: Authentication token if Static Token selected
