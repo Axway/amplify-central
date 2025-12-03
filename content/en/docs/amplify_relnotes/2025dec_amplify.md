@@ -12,14 +12,14 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## December 3, 2025
 
-New enhancements for the December 3 update.
+New enhancements and bug fixes for the December 3 update.
 
 ### Marketplace updates for December 3, 2025
 
-* **MCP filter for Marketplace products**
+* **Filter Marketplace products by type (API or MCP)**
 
-  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
-  A filter is now available on *Marketplace Products* page for MCP and API.
+  (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  You can now filter products specifically by API or MCP, helping you quickly narrow down the products and focus on the services most relevant to your workflow. Additionally, a new **Type** filter (i.e ASYNCAPI, OAS2, MCP) was added to the _Resources_ screen.
 
 ### Marketplace bug fixes for December 3, 2025
 
