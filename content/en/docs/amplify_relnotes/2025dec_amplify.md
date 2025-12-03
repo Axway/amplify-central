@@ -1,0 +1,29 @@
+---
+title: Amplify Engage December 2025
+linkTitle: Amplify Engage December
+weight: 3
+date: 2025-12-3
+---
+Axway works hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month. It is always recommended to update to the latest agents' versions.
+
+{{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
+
+---
+
+## December 3, 2025
+
+New enhancement and bug fixes for the December 3 update.
+
+### Marketplace update for December 3, 2025
+
+* **Filter Marketplace products by type (API or MCP)**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  You can now filter products specifically by API or MCP, helping you quickly narrow down the products and focus on the services most relevant to your workflow. Additionally, a new **Type** filter (i.e., ASYNCAPI, OAS2, MCP) was added to the *Resources* screen.
+
+### Marketplace bug fixes for December 3, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01771151 | APIGOV-31418 | **Issue**:  In-template topics are limited to 20 <br/>**Resolution**: An unlimited number of in-template topics can now be added. Topics no longer disappear when displaying and edited. |
+| 01743271 | APIGOV-30943 | **Issue**:  A user with a developer role in a team that owns 0 services can see services owned by other teams in Service Registry, but receives a loading blank page when one of these services is selected<br/>**Resolution**: User with a developer role in a team that owns 0 services will not see any services. If the team owns any services, then the user will see services owned by that respective team. Users who do not have access to products can now see the number of products that are only associated to the service. |
