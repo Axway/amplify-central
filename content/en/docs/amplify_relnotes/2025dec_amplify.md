@@ -18,7 +18,7 @@ New enhancements and bug fixes for the December 12 update.
 
 * **Enhancement**
 
-  (AKAMAI API SECURITY AGENT)</br>
+  (???? AGENT)</br>
   Description.
 
 * **New agent versions available**
