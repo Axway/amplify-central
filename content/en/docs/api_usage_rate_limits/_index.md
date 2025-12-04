@@ -5,10 +5,6 @@ weight: 130
 date: 2025-12-4
 ---
 
-{{< alert title="Note" color="warning" >}}
-**Important. Please read.**
-{{< /alert >}}
-
 ## General usage limitations
 
 Your use of the Amplify APIs (collectively, the "APIs") is subject to certain limitations designed to ensure the stability, security, and performance of the services for all users.
