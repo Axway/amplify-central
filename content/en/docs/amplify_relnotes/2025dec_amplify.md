@@ -10,6 +10,48 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## December 12, 2025
+
+New enhancements and bug fixes for the December 12 update.
+
+### Agent updates for December 12, 2025
+
+* **Enhancement**
+
+  (AKAMAI API SECURITY AGENT)</br>
+  Description.
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agent bug fixes for December 12, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|xxxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
+### Axway CLI updates for December 12, 2025
+
+* **Enhancement**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI (formerly Axway Central CLI) [**v4.9.0**](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.9.0) has been updated to install the ???? agents.
+
+### Marketplace update for December 12, 2025
+
+* **Enhancement**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  Description.
+
+### Marketplace bug fixes for December 12, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
 ## December 3, 2025
 
 New enhancement and bug fixes for the December 3 update.
