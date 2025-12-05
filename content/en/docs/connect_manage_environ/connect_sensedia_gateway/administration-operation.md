@@ -41,7 +41,7 @@ The Sensedia agents support two authentication methods:
 3. **Bearer Token**: All API calls use the obtained Bearer token with `Authorization: Bearer <token>` header
 4. **Token Refresh**: The agent automatically refreshes tokens when they expire
 
-#### Static Token Authentication
+#### Static token authentication
 
 1. **Static Token**: The agent uses a pre-configured authentication token
 2. **Header**: All API calls include the `Sensedia-Auth: <token>` header
