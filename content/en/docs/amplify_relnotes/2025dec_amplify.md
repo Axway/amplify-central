@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## December 3, 2025
 
-New enhancement and bug fixes for the December 3 update.
+New enhancement and bug fixes for the December 3 update. Robert to add APIGOV-31584
 
 ### Marketplace update for December 3, 2025
 
