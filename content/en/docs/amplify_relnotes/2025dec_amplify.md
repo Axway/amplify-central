@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## December 3, 2025
 
-New enhancement and bug fixes for the December 3 update. Robert to add APIGOV-31584
+New enhancement and bug fixes for the December 3 update.
 
 ### Marketplace update for December 3, 2025
 
@@ -27,6 +27,7 @@ New enhancement and bug fixes for the December 3 update. Robert to add APIGOV-31
 |--------- |------------- |-------------|
 | 01771151 | APIGOV-31418 | **Issue**:  In-template topics are limited to 20 <br/>**Resolution**: An unlimited number of in-template topics can now be added. Topics no longer disappear when displaying and edited. |
 | 01743271 | APIGOV-30943 | **Issue**:  A user with a developer role in a team that owns 0 services can see services owned by other teams in Service Registry, but receives a loading blank page when one of these services is selected<br/>**Resolution**: User with a developer role in a team that owns 0 services will not see any services. If the team owns any services, then the user will see services owned by that respective team. Users who do not have access to products can now see the number of products that are only associated to the service. |
+| 01781534 | APIGOV-31584 | **Issue**:  A non-Engage admin (Developer/Catalog Manager/Subscription approver/API Access Manager) was not able to create a new asset version from the Engage UI. <br/>**Resolution**: A fix has been made to enable the asset version creation for the non-Engage admin users. |
 
 ### Business Insights updates for December 3, 2025
 
