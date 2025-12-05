@@ -112,8 +112,8 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | Variable name                    | Description                                                                                                                                                                         |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SENSEDIA_BASEURL                 | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                                                            |
-| SENSEDIA_AUTH_CLIENTID           | The client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                                             |
-| SENSEDIA_AUTH_CLIENTSECRET       | The client secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                                             |
+| SENSEDIA_AUTH_CLIENTID           | The Client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                                             |
+| SENSEDIA_AUTH_CLIENTSECRET       | The Client Secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                                             |
 | SENSEDIA_AUTH_TOKEN              | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                              |
 | SENSEDIA_ENVIRONMENTS            | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                                                       |
 | SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m.                                                                      |
