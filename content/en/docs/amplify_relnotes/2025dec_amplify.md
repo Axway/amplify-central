@@ -67,7 +67,7 @@ New enhancement and bug fixes for the December 3 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01771151 | APIGOV-31418 | **Issue**:  In-template topics are limited to 20 <br/>**Resolution**: An unlimited number of in-template topics can now be added. Topics no longer disappear when displaying and edited. |
+| 01771151 | APIGOV-31418 | **Issue**:  In-template topics were limited to 20 <br/>**Resolution**: An unlimited number of in-template topics can now be added. Topics no longer disappear when displaying and edited. |
 | 01743271 | APIGOV-30943 | **Issue**:  A user with a developer role in a team that owned 0 services could see services owned by other teams in Service Registry, but received a loading blank page when one of these services was selected <br/>**Resolution**: User with a developer role in a team that owns 0 services will not see any services. If the team owns any services, then the user will see services owned by that respective team. Users who do not have access to products can now see the number of products that are only associated to the service. |
 | 01781534 | APIGOV-31584 | **Issue**:  A Developer or Catalog Manager user was not able to create a new asset version from the Engage UI <br/>**Resolution**: A fix has been made to enable the asset version creation for the Catalog Manager and Developer assignees. |
 
