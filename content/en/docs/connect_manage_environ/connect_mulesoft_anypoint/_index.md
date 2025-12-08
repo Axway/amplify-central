@@ -17,6 +17,28 @@ The Discovery Agent is used to discover new published APIs for a specific MuleSo
 
 The related APIs are published to Amplify as an API service in the selected environment.
 
+#### OpenID Connect Client Providers
+
+For integrating the Discovery Agent with any OpenID Connect Client Providers in MuleSoft the agent will need read access to the Client Providers in the top level MuleSoft Organization. This will allow the agent to properly setup Marketplace with the supported grant types.
+
+The process the agent takes to associate a MuleSoft Exchange API to a specific Client Provider is the following.
+
+* For an Exchange API check the configuration for its default Client Provider
+* Given the Client Provider is not the AnyPoint provider associate a specific Client Provider ID to the API
+* Prior to publishing the API create the necessary request definitions, if not already created, for the Client Provider, with its supported grant types
+
+Once the agent has discoverd APIs with a Client Provider they can by published through the Marketplace. Then the agent handles provisioning as follows.
+
+* For each API in a Marketplace application, create a MuleSoft application for each unique Client Provider
+* Associate APIs to their proper MuleSoft Application based on the Client Provider
+* Return the Client ID and Secret to Marketplace for the proper MuleSoft Application
+
+### Traceability
+
+The Traceability Agent is used to gather API Metric data using the  MuleSoft AnyPoint Archive API. The data returned by the [MuleSoft AnyPoint Monitoring API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/anypoint-monitoring-archive-api/) is then used to determine the Amplify Engage API and Application context for associating metrics to specific Marketplace Applications.
+
+The the Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metrics API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/metrics-api/) for compiling the same data, the archive API is the default behavior. See `MULESOFT_USEMONITORINGAPI` in the [Common variables to both agents](agent_variables.md#common-variables-to-both-agents) table.
+
 ## Prerequisites
 
 * An Axway Amplify subscription in the Amplify platform
