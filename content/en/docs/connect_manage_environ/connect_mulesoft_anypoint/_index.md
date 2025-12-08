@@ -37,7 +37,7 @@ Once the agent has discoverd APIs with a Client Provider they can by published t
 
 The Traceability Agent is used to gather API Metric data using the  MuleSoft AnyPoint Archive API. The data returned by the [MuleSoft AnyPoint Monitoring API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/anypoint-monitoring-archive-api/) is then used to determine the Amplify Engage API and Application context for associating metrics to specific Marketplace Applications.
 
-The the Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metrics API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/metrics-api/) for compiling the same data, the archive API is the default behavior. See `MULESOFT_USEMONITORINGAPI` in the [Common variables to both agents](agent_variables.md#common-variables-to-both-agents) table.
+The the Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metrics API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/metrics-api/) for compiling the same data, the archive API is the default behavior. See `MULESOFT_USEMONITORINGAPI` in the [Common variables to both agents](agent_variables#common-variables-to-both-agents) table.
 
 ## Prerequisites
 
