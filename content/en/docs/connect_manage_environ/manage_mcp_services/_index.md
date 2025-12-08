@@ -16,8 +16,11 @@ Follow these steps to create a Model Context Protocol (MCP) service:
     * **Fetch from URL**: Provide a publicly accessible URL pointing to the MCP server specification. The system will retrieve and load the spec automatically.
        * **Fetch MCP Server from URL**: Complete the following fields and then click **Import**. Once imported, a preview of the MCP server is available.
          * MCP Endpoint: Enter the URL endpoint to connect your MCP server.
-         * Authentication Type: Can be either *API Key* or *Bearer Token*.
-         * API Key Token: This field is required if the *API Key* is selected.
+         * Authentication Type: Can be *None*, *API Key*, or *Bearer Token*.
+         * API Key Token: If *API Key* is selected, complete the following fields:
+           * Key: The API key name.
+           * Value: The API key value.
+           * Add to: Select either *Header* or *Query* to specify where the key should be added.
          * Header Name & Bearer Token Value: These fields are required if *Bearer Token* is selected.
     * **Manual Definition**: Paste or type the MCP server specification directly into the editor. Ideal for testing, quick edits, and when a file is not available.
        * **Server Metadata**: Define core service details, such as compatibility and deployment info. Click **Next** once all required fields are complete.
