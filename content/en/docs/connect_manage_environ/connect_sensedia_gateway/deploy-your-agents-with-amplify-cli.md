@@ -16,7 +16,7 @@ Once agents are correctly deployed, they can collect the data from the Sensedia 
 * Docker must be installed and you will need a basic understanding of Docker commands
 * You will need information on Sensedia API Gateway:
     * The Sensedia platform URL (e.g., `https://platform-production.sensedia.com`)
-    * Authentication credentials: either Client ID and Client Secret (OAuth - Sensedia 3.x) or static token
+    * Authentication credentials: either Client ID and Client Secret (OAuth) or static token
     * Configured environments (if filtering by environment)
 
 ## Objectives
@@ -36,8 +36,9 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | Variable name                    | Description                                                                                                                                                                         |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SENSEDIA_BASEURL                 | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                                                            |
-| SENSEDIA_AUTH_CLIENTID           | The client ID for authenticating with Sensedia API Gateway.                                                                                                                        |
-| SENSEDIA_AUTH_CLIENTSECRET       | The client secret for authenticating with Sensedia API Gateway.                                                                                                                    |
+| SENSEDIA_AUTH_CLIENTID           | The Client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                                             |
+| SENSEDIA_AUTH_CLIENTSECRET       | The Client Secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                                             |
+| SENSEDIA_AUTH_TOKEN              | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                              |
 | SENSEDIA_DEVELOPEREMAIL          | Developer email for application creation in Sensedia.                                                                                                                              |
 | SENSEDIA_FILTER                  | Filter condition expression for discovering APIs based on tags. The conditional expression must have "tag" as the prefix/selector. For example, `tag.Axway_axway.Exists()`.      |
 | SENSEDIA_DISCOVERYIDENTITYAPIS   | When set to true, the agent will discover Identity APIs. Default is false.                                                                                                         |
@@ -288,9 +289,9 @@ The installation procedure will prompt for the following:
 3. Sensedia Configuration Setup options:
    * **Platform URL**: Sensedia platform base URL (e.g., `https://platform-production.sensedia.com`)
    * **Authentication Method**: Choose between OAuth (Client ID and Client Secret) or Static Token
-   * **Client ID**: Client ID for OAuth authentication if OAuth selected
-   * **Client Secret**: Client Secret for OAuth authentication if OAuth selected
-   * **Static Token**: Authentication token if Static Token selected
+      * **Client ID**: Client ID for OAuth authentication if OAuth selected
+      * **Client Secret**: Client Secret for OAuth authentication if OAuth selected
+      * **Static Token**: Authentication token if Static Token selected
    * **Environments**: Comma-separated list of environment names (e.g., `Producao,Development`)
    * **Discovery Identity APIs**: Whether to discover identity APIs (true/false)
    * **Discovery Private APIs**: Whether to discover private APIs (true/false)
