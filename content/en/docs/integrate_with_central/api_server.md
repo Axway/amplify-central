@@ -15,28 +15,28 @@ The following tables describe the API style in terms of GET, PUT, POST etc. and 
 
 ### Unscoped resources
 
-| Operation | URL                                                                       | Description                                                                                               |
-|-----------|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| Operation | URL                                                                       | Description                                                                                                |
+| --------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}                          | Lists all resources of the kind related to the resourceNamesPlural and the specified group and version.    |
 | POST      | /apis/{group}/{apiVersion}/{resourceNamesPlural}                          | Creates a new resource of the kind related to the resourceNamesPlural and the specified group and version. |
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name.                                                                   |
 | DELETE    | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name.                                                                   |
 | PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name.                                                                   |
-| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a subresource with the specified spec name.                                                     |
+| GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a subresource with the specified spec name.                                                      |
 | PUT       | /apis/{group}/{apiVersion}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name.                                                        |
 
 ### Scoped resources
 
-| Operation | URL                                                                                                                        | Description                                                                                            |
-|-----------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| Operation | URL                                                                                                                        | Description                                                                                             |
+| --------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | GET       | /apis/{group}/{apiVersion}/{resourceNamesPlural}                                                                           | Lists all resources of the kind related to the resourceNamesPlural and the specified group and version. |
-| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Lists all the resources under their defined scope.                                                     |
-| POST      | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Creates a new resources under its defined scope.                                                       |
+| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Lists all the resources under their defined scope.                                                      |
+| POST      | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}                          | Creates a new resources under its defined scope.                                                        |
 | GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Retries a resource with a specific name under the specified scope name.                                 |
-| DELETE    | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name under the specified scope name.                                  |
-| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name under the specified scope name.                                  |
-| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a subresource with the specified spec name under the specified scope.                       |
-| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name under the specified scope.                          |
+| DELETE    | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Removes a resource with a specific name under the specified scope name.                                 |
+| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}                   | Updates a resource with a specific name under the specified scope name.                                 |
+| GET       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Retrieves a subresource with the specified spec name under the specified scope.                         |
+| PUT       | /apis/{group}/{apiVersion}/{scopedResourceNamesPlural}/{scopedResourceName}/{resourceNamesPlural}/{name}/{subResourceName} | Updates a subresource with the specified spec name under the specified scope.                           |
 
 All operations on the API Server can be performed via the Axway CLI and the Amplify Central CLI. For example, to view all resource types that are available in the system, run the following `get` command and provide an argument as to the type to get:
 
@@ -54,7 +54,6 @@ accessrequests            accreq               AccessRequest                   t
 apiserviceinstances       apisi                APIServiceInstance              true    Environment        management    
 apiservicerevisions       apisr                APIServiceRevision              true    Environment        management    
 apiservices               apis                 APIService                      true    Environment        management    
-apispecs                  apisp                APISpec                         true    K8SCluster         management    
 .....................................................
 .....................................................
 consumerinstances         consumeri            ConsumerInstance                true    Environment        management    
@@ -298,7 +297,7 @@ For instance, when an API Service is scoped to environment and that environment 
 General rule:
 
 | Parent object ownership | Scoped object ownership | Applied ownership to the scoped object |
-|-------------------------|-------------------------|----------------------------------------|
+| ----------------------- | ----------------------- | -------------------------------------- |
 | Owner A                 | None                    | Owner A                                |
 | Owner A                 | Owner B                 | Owner B                                |
 
@@ -702,7 +701,7 @@ All available resources from the API Server are available as a GraphQL object. A
 Sample:
 
 | API Server object name | GraphQL object name         |
-|------------------------|-----------------------------|
+| ---------------------- | --------------------------- |
 | Environment            | management_Environment_List |
 | Stage                  | catalog_Stage_List          |
 | APIService             | management_APIService_List  |
