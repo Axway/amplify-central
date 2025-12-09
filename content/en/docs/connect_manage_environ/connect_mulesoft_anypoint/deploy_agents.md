@@ -10,7 +10,7 @@ The MuleSoft agents are delivered as containers, mulesoft-discovery-agent and mu
 
 Before beginning to deploy the agents, gather the following in addition to the details that were noted in setup.
 
-* MuleSoft AnyPoint Exchange URL, if it differs from the default of **https://anypoint.mulesoft.com**
+* MuleSoft AnyPoint Exchange URL, if it differs from the default of **<https://anypoint.mulesoft.com>**
 * MuleSoft Environment name to discover and track transactions from (e.g. Sandbox)
 * MuleSoft AnyPoint Business Unit the agent connects to
 * MuleSoft Username and Password or Client ID and Secret
