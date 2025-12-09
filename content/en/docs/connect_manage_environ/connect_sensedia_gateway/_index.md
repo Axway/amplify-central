@@ -33,7 +33,9 @@ The Traceability Agent gathers API metrics only and does not support transaction
 * A platform service account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * Sensedia API Gateway with API Manager access
-* Sensedia authentication credentials (either Client ID and Client Secret for OAuth or static token)
+* Sensedia authentication credentials
+    * Client ID and Client Secret for OAuth
+    * Static Token
 * Docker environment for running the agents
 * Network access from agent host to Sensedia API Gateway and Amplify platform
 
