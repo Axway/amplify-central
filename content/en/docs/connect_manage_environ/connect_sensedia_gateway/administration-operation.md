@@ -32,22 +32,20 @@ The Sensedia agents are delivered as Docker images and can be deployed in any Do
 
 ### Authentication and authorization
 
+The authentication method is automatically detected based on the configured credentials. Configure either `SENSEDIA_AUTH_CLIENTID` and `SENSEDIA_AUTH_CLIENTSECRET` for OAuth, or `SENSEDIA_AUTH_TOKEN` for Static Token Authentication.
+
 The Sensedia agents support two authentication methods:
 
-#### OAuth 2.0 Client Credentials (Sensedia 3.x)
+* **OAuth 2.0 Client Credentials**
+    1. **Client Credentials**: The agent uses a configured Client ID and Client Secret
+    2. **Token Endpoint**: Authentication requests are made to `/user-management/v1/oauth2/token`
+    3. **Bearer Token**: All API calls use the obtained Bearer token with `Authorization: Bearer <token>` header
+    4. **Token Refresh**: The agent automatically refreshes tokens when they expire
 
-1. **Client Credentials**: The agent uses a configured Client ID and Client Secret
-2. **Token Endpoint**: Authentication requests are made to `/user-management/v1/oauth2/token`
-3. **Bearer Token**: All API calls use the obtained Bearer token with `Authorization: Bearer <token>` header
-4. **Token Refresh**: The agent automatically refreshes tokens when they expire
-
-#### Static token authentication
-
-1. **Static Token**: The agent uses a pre-configured authentication token
-2. **Header**: All API calls include the `Sensedia-Auth: <token>` header
-3. **No Refresh**: Static tokens do not expire and require no refresh mechanism
-
-The authentication method is automatically detected based on the configured credentials. Configure either `SENSEDIA_AUTH_CLIENTID` and `SENSEDIA_AUTH_CLIENTSECRET` for OAuth, or `SENSEDIA_AUTH_TOKEN` for static token authentication.
+* **Static Token Authentication**
+    1. **Static Token**: The agent uses a pre-configured authentication token
+    2. **Header**: All API calls include the `Sensedia-Auth: <token>` header
+    3. **No Refresh**: Static tokens do not expire and require no refresh mechanism
 
 ## Discovery Agent features
 
@@ -147,8 +145,6 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 | `SENSEDIA_SENDALLTRAFFIC` | Send all API traffic for reporting (Traceability Agent only) | No | `true` | `false` |
 | `SENSEDIA_TRACEABILITYBATCHSIZE` | Batch size for traceability API calls (Traceability Agent only) | No | `500` | `1000` |
 | `SENSEDIA_TIMEOFFSET` | Time offset for processing delays (Traceability Agent only) | No | `10m` | `15m` |
-
-*Either configure `SENSEDIA_AUTH_TOKEN` for static token authentication or both `SENSEDIA_AUTH_CLIENTID` and `SENSEDIA_AUTH_CLIENTSECRET` for OAuth authentication (Sensedia 3.x). Do not configure both methods.
 
 ## Monitoring and troubleshooting
 
