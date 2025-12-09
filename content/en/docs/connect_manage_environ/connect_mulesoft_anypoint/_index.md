@@ -5,7 +5,7 @@ weight: 210
 ---
 Connect MuleSoft AnyPoint and Amplify so you can discover, provision access to, and track usages of MuleSoft AnyPoint API Manager Assets.
 
-## Why do you want to connect Kong and Amplify?
+## Why do you want to connect MuleSoft AnyPoint and Amplify?
 
 Connecting MuleSoft AnyPoint to Amplify will provide you with a global centralized view of your APIs and their related traffic.
 
@@ -24,7 +24,7 @@ After that initial startup process the Discovery Agent begins running its main d
 
 For integrating the Discovery Agent with any OpenID Connect client providers in MuleSoft the agent will need read access to the client providers in the top level MuleSoft Organization. This will allow the agent to properly setup Marketplace with the supported grant types.
 
-The process the agent takes to associate a MuleSoft Exchange API to a specific client provider is the following.
+The process the agent takes when associating a MuleSoft Exchange API to a specific client provider is the following.
 
 * For an Exchange API check the configuration for its default client provider
 * Given the client provider is not the AnyPoint provider associate a specific client provider ID to the API
@@ -57,7 +57,7 @@ Finally, when a Marketplace user requests a credential for a resource that belon
 
 The Traceability Agent is used to gather API Metric data using the  MuleSoft AnyPoint Archive API. The data returned by the [MuleSoft AnyPoint Monitoring API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/anypoint-monitoring-archive-api/) is then used to determine the Amplify Engage API and Application context for associating metrics to specific Marketplace Applications.
 
-The the Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metrics API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/metrics-api/) for compiling the same data, the archive API is the default behavior. See `MULESOFT_USEMONITORINGAPI` in the [Common variables to both agents](agent_variables#common-variables-to-both-agents) table.
+The Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metrics API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/metrics-api/) for compiling the same data, the archive API is the default behavior. See `MULESOFT_USEMONITORINGAPI` in the [Common variables to both agents](agent_variables#common-variables-to-both-agents) table.
 
 ## Prerequisites
 

@@ -4,7 +4,7 @@ linkTitle: Deploy your agents
 draft: false
 weight: 10
 ---
-The MuleSoft agents are delivered as containers, mulesoft-discovery-agent and mulesoft-traceability-agent. These containers can be deployed directly to a container server, such as Docker, or using the provided helm chart. In this section you will lean how to deploy the agents directly as containers or within a kubernetes cluster using the helm chart.
+The MuleSoft agents are delivered as containers, mulesoft-discovery-agent and mulesoft-traceability-agent. These containers can be deployed directly to a container server, such as Docker, or using the provided helm chart. In this section you will learn how to deploy the agents directly as containers or within a kubernetes cluster using the helm chart.
 
 ## Before you start
 
