@@ -44,7 +44,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | SENSEDIA_DISCOVERYIDENTITYAPIS | When set to true, the agent will discover Identity APIs. Default is false.                                                                                                  |
 | SENSEDIA_DISCOVERYPRIVATEAPIS  | When set to true, the agent will discover Private APIs. Default is false.                                                                                                   |
 | SENSEDIA_ENVIRONMENTS          | Comma-separated list of Sensedia environments to filter for discovery (e.g., `Production,Development`).                                                                     |
-| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for changes (ns - default, us, ms, s, m, h). Default is 5m.                                                                          |
+| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for changes (ns - default, us, ms, s, m, h). Default is 5m, , minimum is 5m.                                                         |
 
 ### Create your Discovery Agent environment file
 
@@ -117,7 +117,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | SENSEDIA_AUTH_CLIENTSECRET     | The Client Secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                             |
 | SENSEDIA_AUTH_TOKEN            | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                  |
 | SENSEDIA_ENVIRONMENTS          | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                       |
-| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m.                                       |
+| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m, minimum is 5m.                        |
 | SENSEDIA_SENDALLTRAFFIC        | When set to true, the agent will send all API traffic to be reported. When set to false, only discovered APIs will be reported. Default is false. |
 | SENSEDIA_TRACEABILITYBATCHSIZE | The batch size for traceability API calls. Controls how many records are fetched per page. Default is 500. Range: 1-1000.                         |
 | SENSEDIA_TIMEOFFSET            | Time offset to subtract from current time when querying for traceability data to account for processing delays. Default is 10m. Range: 1m-60m.    |

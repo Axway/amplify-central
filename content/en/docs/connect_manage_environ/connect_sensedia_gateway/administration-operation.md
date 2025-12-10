@@ -139,7 +139,7 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 | `SENSEDIA_DEVELOPEREMAIL`        | Email for application creation (Discovery Agent only)           | Yes      |                         | `developer@company.com`                    |
 | `SENSEDIA_ENVIRONMENTS`          | Comma-separated list of environments                            | No       | `""` (all environments) | `Production,Development`                   |
 | `SENSEDIA_FILTER`                | API discovery filter expression                                 | No       | `""` (no filtering)     | `tag.Axway_axway.Exists()`                 |
-| `SENSEDIA_POLLINTERVAL`          | Discovery/Traceability poll interval                            | No       | `30m`                   | `5m`                                       |
+| `SENSEDIA_POLLINTERVAL`          | Discovery/Traceability poll interval                            | No       | `5m` (min is '5m')      | `5m`                                       |
 | `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs                                          | No       | `false`                 | `true`                                     |
 | `SENSEDIA_DISCOVERYPRIVATEAPIS`  | Discover private APIs                                           | No       | `false`                 | `true`                                     |
 | `SENSEDIA_SENDALLTRAFFIC`        | Send all API traffic for reporting (Traceability Agent only)    | No       | `true`                  | `false`                                    |
