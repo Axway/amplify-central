@@ -16,7 +16,7 @@ The MuleSoft AnyPoint API Manager Assets can be represented by an Amplify enviro
 
 ### Discovery
 
-On startup, the MuleSoft Discovery Agent first validates that it is able to connect to all required services. Once connected to MuleSoft, the agent begins looking at MuleSoft Anypoint APIs for what it should discovery.
+On startup, the MuleSoft Discovery Agent first validates that it is able to connect to all required services. Once connected to MuleSoft, the agent begins looking at MuleSoft Anypoint APIs for what it should discover.
 
 After that initial startup process, the Discovery Agent begins running its main discovery process. In this process the agent will look for Active API Manager Assets in MuleSoft. With each active asset found, the agent will determine what credential types are associated with the API based on the policies applied to it. Finally, it will gather the API spec from MuleSoft AnyPoint Exchange prior to publishing to Amplify Engage. If the spec type is unknown by Amplify, the service will have a type of `Unstructured`.
 
