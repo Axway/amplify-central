@@ -24,10 +24,10 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Axway API Management 7.7                   | DA=1.2.42 / TA=1.2.39 (SDK v1.1.132) | DA=1.1.80 / TA=1.1.81            |
 | AWS Gateway using SDK 2.0                  | DA=1.2.37 / TA=1.2.37 (SDK v1.1.132) | DA=1.1.64 / TA-1.1.67            |
 | Azure latest release                       | DA=1.3.36 / TA=1.3.36    | DA=1.1.70 / TA=1.1.76            |
-| Istio 1.9.5                                | DA=1.1.36 / TA=2.1.33 (SDK v1.1.132)  | DA=1.0.36 / TA=2.0.82            |
+| Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  | DA=1.0.36 / TA=2.0.82            |
 | Apigee Edge                                | 1.0.31                   | 0.1.38                           |
 | Apigee X                                   | 1.4.22                   | 1.4.2                            |
-| Mulesoft Anypoint platform v3              | 1.2.35                   | 1.1.48                           |
+| Mulesoft Anypoint platform v3              | 1.2.36 (SDK v1.1.134)    | 1.1.48                           |
 | Software AG webMethods                     | 1.0.29                   | 1.0.0                            |
 | Kong Gateway                               | 1.1.35                   | 1.0.9                            |
 | GitLab                                     | 1.1.30                   | 1.0.6                            |
