@@ -118,7 +118,6 @@ This feature focuses on sampling errors in a continuous manner without sampling 
 
 {{< alert title="Note" color="primary" >}}Always on error sampling, at this time, is only supported in the following agents: Axway API Manager Traceability Agent{{< /alert >}}
 
-
 ### How to enable always on error sampling
 
 Set the Traceability Agent environment variable `CENTRAL_ERRORSAMPLINGENABLED` to `true`. The default is `false`, so error sampling is disabled unless explicitly enabled.
