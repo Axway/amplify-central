@@ -111,3 +111,48 @@ axway central apply -f resource.yaml
 ```
 
 The API will now be sampled for up to 60 minutes.
+
+## Always On Error sampling
+
+This feature focuses on sampling errors in a continuous manner without sampling all errors, but the first error for a unique API/App pair. Pairs reset once per hour in order to allow for new errors to be sampled.
+
+### How to enable always on error sampling
+
+Set the Traceability Agent environment variable `CENTRAL_ERRORSAMPLINGENABLED` to `true`. The default is `false`, so error sampling is disabled unless explicitly enabled.
+
+Example:
+```shell
+CENTRAL_ERRORSAMPLINGENABLED=true
+```
+
+### Resolve errors
+
+Resolving errors clears the API/App pair from error sampling, allowing for another error for that pair to be sampled without waiting for the error sampling reset (happens every hour). 
+
+#### Use CLI to resolve error
+
+1. Login:
+```shell
+axway auth login
+```
+
+2. Retrieve the API Service you want to resolve errors on:
+```shell
+axway central get apis -s  [Environment Name] -n [API Service Name] -o yaml > resource.yaml
+```
+
+3. Edit `resource.yaml` and add the Managed Application reference under `appinfo`:
+```yaml
+appinfo:
+  name: "<Managed Application Name>"
+```
+Important: `appinfo.name` must be the name of the Managed Application from the Marketplace.
+
+4. Apply the change:
+```bash
+axway central apply -f resource.yaml
+```
+
+### Agents that support always on error sampling
+
+Only V7 Traceability Agent supports always on error sampling for now. More agents will be added in the future.
