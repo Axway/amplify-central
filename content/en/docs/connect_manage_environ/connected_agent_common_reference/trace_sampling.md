@@ -10,10 +10,11 @@ The Traceability Agent can temporarily sample API transaction traffic and send i
 Sampling must be requested on demand, and it runs only for a defined duration.
 
 Before requesting sampling, use *Business Insights > API Health* to identify APIs with errors.
-Then, use sampling to capture the traffic that helps you troubleshoot the problem. There are two supported mechanisms for sampling:
+Then, use sampling to capture the traffic that helps you troubleshoot the problem. There are three supported mechanisms for sampling:
 
 | Type           | Scope                                  | Triggered From       | Duration       | Notes                      |
 | -------------- | -------------------------------------- | -------------------- | -------------- | -------------------------- |
+| Continuous error sampling | Capture the first observed error for each API/Application pair within a 60-minute window| Traceability Agent   | 60 minutes  | Must be turned on per agent |
 | Agent sampling | All API traffic across the environment | Traceability Agent   | 1-5 minutes  | Up to 100 transactions/min |
 | API sampling   | Traffic for a specific API             | API Service Instance | 1-60 minutes | Up to 5 APIs per agent     |
 
@@ -112,11 +113,11 @@ axway central apply -f resource.yaml
 
 The API will now be sampled for up to 60 minutes.
 
-## Always On Error sampling
+## Error sampling
 
-This feature focuses on sampling errors in a continuous manner without sampling all errors, but the first error for a unique API/App pair. Pairs reset once per hour in order to allow for new errors to be sampled.
+This will automatically capture the first observed error for each API/Application pair within a 60-minute window. Pairs reset once per hour in order to allow for new errors to be sampled.
 
-{{< alert title="Note" color="primary" >}}Always on error sampling, at this time, is only supported in the following agents: Axway API Manager Traceability Agent{{< /alert >}}
+{{< alert title="Note" color="primary" >}}This sampling mode is only supported in the following agents: **Axway API Manager Traceability Agent**{{< /alert >}}
 
 ### How to enable always on error sampling
 
