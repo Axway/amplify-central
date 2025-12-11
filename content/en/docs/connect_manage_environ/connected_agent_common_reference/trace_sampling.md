@@ -116,6 +116,9 @@ The API will now be sampled for up to 60 minutes.
 
 This feature focuses on sampling errors in a continuous manner without sampling all errors, but the first error for a unique API/App pair. Pairs reset once per hour in order to allow for new errors to be sampled.
 
+{{< alert title="Note" color="primary" >}}Always on error sampling, at this time, is only supported in the following agents: Axway API Manager Traceability Agent{{< /alert >}}
+
+
 ### How to enable always on error sampling
 
 Set the Traceability Agent environment variable `CENTRAL_ERRORSAMPLINGENABLED` to `true`. The default is `false`, so error sampling is disabled unless explicitly enabled.
@@ -156,7 +159,3 @@ Apply the change:
 ```bash
 axway central apply -f resource.yaml
 ```
-
-### Agents that support always on error sampling
-
-Only V7 Traceability Agent supports always on error sampling for now. More agents will be added in the future.
