@@ -66,11 +66,57 @@ New enhancements and bug fixes for the December 12 update.
   * API Key Authentication option allows for the Key name and Value to be added to the Header or as a Query parameter.
   * Bearer Token Authentication option allows the Header and Token value to be configured.
  
+* **Console Screen selectable as landing page** 
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We've enhanced the consumer's home page view by allowing the Console page to be set at the home page
+  * The Console page can be selected as the alternative home page when the landing page is disabled on Marketplace settings. 
+
+* **Display Terms and Conditions in Product details** 
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCED FEATURE)</br>
+  We've enhanced the Terms and Conditions for a product to allow the provider to view the T&C in Product Details
+  * Provider can view the  Terms and Conditions as selected for the Product
+  * When Terms and Conditions are not set for a Product, the provider will have a direct link to set the T&C in Edit Product
+
+* **Consumer sees the home page with new platform model** 
+
+  (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We've enhanced the home page configuration settings for Marketplace Manager in Marketplace Settings
+  * Marketplace manager is able to configure and preview the home page settings in an updated UI
+  * New home pages settings rendered as viewable in preview when viewing their Marketplace
+
+* **Getting Started in Console Page** 
+
+   (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We've enhanced the Console page settings to include a "Getting Started" section
+  * Marketplace manager can enable/disable a "Getting Started" section to appear on the Console page
+  * The "Getting Started" content is defined by selecting from the Document Library
+  * "Getting Started" section appears at the bottom of the Console page
+
+* **Filter MCP by MCP type on Marketplace Products** 
+
+   (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We've added the option for a consumer to filter their Product list by resource type in the Marketplace
+  * Consumers are now able to filter the product resorces based on resource type (MCP or API)
+  * Filter is shown/hidden based on if there are resources of the selected type to make filtering easier 
+
+* **Credential state available for updated notifications** 
+
+   (PROVIDER EXPERIENCE, PRODUCT FOUNDRY, ENHANCED FEATURE)</br>
+  We've added the Credential State (Active, Inactive> to the credential experired event
+  * When credentials expire, notifications will be enhanced to include instructions specific to the state of the credential (Active/Inactive)
+  
 ### Marketplace bug fixes for December 12, 2025
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | 01765710 | APIGOV-31332 | **Issue**: An error message was displayed after resolving a corrupted asset with a new asset version is created and attempting to view "Resources in Error".  The error message can occur after a plan migration was performed on a corrupted resource. <br/>**Resolution**: A fix to the Engage UI was made. |
+| 01769559 | APIGOV-31474 | **Issue**: Consumer assigned to a consumer org but not assigned to a team is not able to connect to a public Marketplace (home page and product list) to show what is publicly visible. <br/>**Resolution**: A fix was implemented to allow consumers with no team assignment to be able to view public Marketplace (home page and products). |
+| 01784115 | APIGOV-31648 | **Issue**: Marketplace: Product resource details screen doesn't display mTLS warning message <br/>**Resolution**: A fix was implemented to show appropriate message for mTLS. |
+| 01765710 | APIGOV-31469 | **Issue**: Resources in error during plan migration<br/>**Resolution**: A fix was implemented to allow migration to complete from a plan with errored resources to a plan without them. |
+| 01771151 | APIGOV-31418 | **Issue**: Templates - topics limited to 20<br/>**Resolution**: A fix was implemented so more than 20 topics can be added without losing any - can also shuffle topics around without issue. |
+|01743271| APIGOV-30943 | **Issue**: User with team developer role has viewing issue in service registry<br/>**Resolution**: A fix was implemented for users with a developer roles on a team who do not have access to product, they will be able to only see the number of product associated to the Service. |
 
 ### Axway CLI updates for December December 11, 2025
 
