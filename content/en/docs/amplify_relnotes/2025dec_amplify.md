@@ -16,10 +16,27 @@ New enhancements and bug fixes for the December 12 update.
 
 ### Agent updates for December 12, 2025
 
-* **Enhancement**
+* **Mulesoft External IdP support**
 
-  (???? AGENT)</br>
-  Description.
+  (NEW AGENT RELEASES)</br>
+  The Mulesoft Discovery Agent has been enhanced to support OAuth with an external Identity Provider that supports OpenID Dynamic Client Registration protocol.
+
+* **Sensedia Static Token Authentication support**
+
+  (NEW AGENT RELEASES)</br>
+  The Sensidia Discovery Agent has been enhanced to support a Static Token Authentication method.
+
+* **APIM Error Transaction Sampling**
+
+  (NEW AGENT RELEASES)</br>
+  The APIM Traceability Agent has been enhanced to support Error Transaction Sampling which can be visualized on the Business Insights -> API Traffic screen.
+  The Error Transaction sampling must be enabled by setting the Traceability agent environment variable (CENTRAL_ERRORSAMPLINGENABLED=true).
+  Once enabled, this will automatically capture the **first observed error** for each API/Application pair within a 60-minute window. Catalog Managers and Insights Viewers will have the option to manually reset the capture at any time to allow a new error to be recorded. The agent will reset automatically after one hour, so new errors can be tracked without manual intervention.
+
+* **Istio Agent**
+
+  (NEW AGENT RELEASES)</br>
+  The Istio Agent has been update to support either ambient of sidecar mode.  The Istio API Gateway version supported is v1.27.3 and Kerbernetes version 1.33.2.
 
 * **New agent versions available**
 
@@ -37,7 +54,7 @@ New enhancements and bug fixes for the December 12 update.
 * **Enhancement**
 
   (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-  The Axway Engage CLI (formerly Axway Central CLI) [**v4.9.0**](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.9.0) has been updated to install the ???? agents.
+  The Axway Engage CLI (formerly Axway Central CLI) [**v4.9.0**](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.9.0) has been updated to install the Istio and Sensedia agents with the latest supported features .
 
 ### Marketplace update for December 12, 2025
 
