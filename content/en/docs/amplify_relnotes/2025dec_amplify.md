@@ -98,13 +98,13 @@ New enhancements and bug fixes for the December 12 update.
 
    (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
   We've added the option for a consumer to filter their Product list by resource type in the Marketplace
-  * Consumers are now able to filter the product resorces based on resource type (MCP or API)
+  * Consumers are now able to filter the product resources based on resource type (MCP or API)
   * Filter is shown/hidden based on if there are resources of the selected type to make filtering easier 
 
 * **Credential state available for updated notifications** 
 
    (PROVIDER EXPERIENCE, PRODUCT FOUNDRY, ENHANCED FEATURE)</br>
-  We've added the Credential State (Active, Inactive> to the credential experired event
+  We've added the Credential State (Active, Inactive> to the credential expired event
   * When credentials expire, notifications will be enhanced to include instructions specific to the state of the credential (Active/Inactive)
   
 ### Marketplace bug fixes for December 12, 2025
