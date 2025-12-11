@@ -70,7 +70,7 @@ New enhancements and bug fixes for the December 12 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+| 01765710 | APIGOV-31332 | **Issue**: An error message was displayed after resolving a corrupted asset with a new asset version is created and attempting to view "Resources in Error".  The error message can occur after a plan migration was performed on a corrupted resource. <br/>**Resolution**: A fix to the Engage UI was made. |
 
 ### Axway CLI updates for December December 11, 2025
 
