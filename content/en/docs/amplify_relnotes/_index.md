@@ -35,8 +35,8 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | IBM API Connect Gateway                    | 1.1.29                   | 1.0.0                            |
 | Backstage                                  | 1.0.30                   | 1.0.0                            |
 | SAP Integration Suite - API Management / API Portal | 1.0.17                   | 1.0.0                            |
-| WSO2 API Manager 4.5.0                     | 1.0.17                    | 1.0.0                            |
-| Sensedia                                   | 1.0.2                     | 1.0.0                            |
+| WSO2 API Manager 4.5.0                     | 1.0.17                   | 1.0.0                            |
+| Sensedia                                   | 1.0.5 (SDK v1.1.134)     | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
