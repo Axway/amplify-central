@@ -47,7 +47,7 @@ New enhancements and bug fixes for the December 12 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|xxxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+| 01764990 | APIGOV-31498 | **Issue**: An APIM Manager quota was not updated after a plan migration and the quota was changed. <br/>**Resolution**: A fix has been made to the APIM agent to update quota changes on the APIM Manager. |
 
 ### Axway CLI updates for December 12, 2025
 
