@@ -130,19 +130,19 @@ Resolving errors clears the API/App pair from error sampling, allowing for anoth
 
 #### Use CLI to resolve error
 
-1. Login:
+Login:
 
 ```shell
 axway auth login
 ```
 
-2. Retrieve the API Service you want to resolve errors on:
+Retrieve the API Service you want to resolve errors on:
 
 ```shell
 axway central get apis -s  [Environment Name] -n [API Service Name] -o yaml > resource.yaml
 ```
 
-3. Edit `resource.yaml` and add the Managed Application reference under `appinfo`:
+Edit `resource.yaml` and add the Managed Application reference under `appinfo`:
 
 ```yaml
 appinfo:
@@ -151,7 +151,7 @@ appinfo:
 
 Important: `appinfo.name` must be the name of the Managed Application from the Marketplace.
 
-4. Apply the change:
+Apply the change:
 
 ```bash
 axway central apply -f resource.yaml
