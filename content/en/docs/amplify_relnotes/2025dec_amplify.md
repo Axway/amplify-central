@@ -41,16 +41,26 @@ New enhancements and bug fixes for the December 12 update.
 
 ### Marketplace update for December 12, 2025
 
-* **Enhancement**
+* **MCP Server registration and discovery Enhancement**
 
-  (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
-  Description.
-
+  (PROVIDER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We've extended the Fetch from URL experience on Engage when **registering and publishing MCP servers** to:
+  * Authentication now has the option to be set to None.
+  * API Key Authentication option allows for the Key name and Value to be added to the Header or as a Query parameter.
+  * Bearer Token Authentication option allows the Header and Token value to be configured.
+ 
 ### Marketplace bug fixes for December 12, 2025
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | xxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
+### Axway CLI updates for December December 11, 2025
+
+* **Updates to the install agents command**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHACNEMENT)</br>
+  The Axway Engage CLI (formerler Axway Centeral CLI) **v4.9.0** has been updated to install Istio agents in ambient mode and Seneseida agents to use token authentication.
 
 ## December 3, 2025
 
