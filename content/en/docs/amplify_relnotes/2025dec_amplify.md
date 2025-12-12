@@ -84,9 +84,9 @@ New enhancements and bug fixes for the December 12 update.
 
    (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
   We've enhanced the Console page settings to include a **Getting Started** section
-  * Marketplace manager can enable/disable a "Getting Started" section to appear on the Console page
-  * The "Getting Started" content is defined by selecting from the Document Library
-  * "Getting Started" section appears at the bottom of the Console page
+    * Marketplace manager can enable/disable a "Getting Started" section to appear on the Console page
+    * The "Getting Started" content is defined by selecting from the Document Library
+    * "Getting Started" section appears at the bottom of the Console page
 
 * **Filter products by MCP/API type in Marketplace**
 
