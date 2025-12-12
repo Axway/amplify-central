@@ -24,14 +24,15 @@ New enhancements and bug fixes for the December 12 update.
 * **Sensedia Static Token Authentication support**
 
   (NEW AGENT RELEASES)</br>
-  The Sensidia Discovery Agent has been enhanced to support a Static Token Authentication method.
+  The Sensedia Discovery Agent has been enhanced to support a **Static Token Authentication** method.
 
 * **APIM Error Transaction Sampling**
 
   (NEW AGENT RELEASES)</br>
-  The APIM Traceability Agent has been enhanced to support Error Transaction Sampling which can be visualized on the Business Insights -> API Traffic screen.
+  The APIM Traceability Agent has been enhanced to support Continous Error Transaction Sampling.
   The Error Transaction sampling must be enabled by setting the Traceability agent environment variable (CENTRAL_ERRORSAMPLINGENABLED=true).
-  Once enabled, this will automatically capture the **first observed error** for each API/Application pair within a 60-minute window. Catalog Managers and Insights Viewers will have the option to manually reset the capture at any time to allow a new error to be recorded. The agent will reset automatically after one hour, so new errors can be tracked without manual intervention.
+  Once enabled, this will automatically capture the **first observed error** for each API/Application pair within a 60-minute window.
+  To learn how to enable the error sampling, refer to [Trace Sampling](/content/en/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling.md).
 
 * **Istio Agent**
 
@@ -58,54 +59,39 @@ New enhancements and bug fixes for the December 12 update.
 
 ### Marketplace update for December 12, 2025
 
-* **MCP Server registration and discovery Enhancement**
+* **MCP Server registration and discovery enhancement**
 
-  (PROVIDER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
-  We've extended the Fetch from URL experience on Engage when **registering and publishing MCP servers** to:
-  * Authentication now has the option to be set to None.
-  * API Key Authentication option allows for the Key name and Value to be added to the Header or as a Query parameter.
-  * Bearer Token Authentication option allows the Header and Token value to be configured.
+  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  The *Fetch from URL* experience now supports more flexible authentication methods when registering and publishing MCP servers, including **no auth** and configurable **API Keys** with a custom name and value, passed in the header or as a query parameter 
  
 * **Console Screen selectable as landing page** 
 
-  (PROVIDER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
-  We've enhanced the consumer's home page view by allowing the Console page to be set at the home page
-  * The Console page can be selected as the alternative home page when the landing page is disabled on Marketplace settings. 
+  (MARKETPLACE ADMINISTRATION, MARKETPLACE, ENHANCEMENT)</br>
+  The Console page can be selected as the alternative home page when the landing page is disabled on Marketplace settings. 
 
 * **Display Terms and Conditions in Product details** 
 
-  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCED FEATURE)</br>
-  We've enhanced the Terms and Conditions for a product to allow the provider to view the T&C in Product Details
-  * Provider can view the  Terms and Conditions as selected for the Product
-  * When Terms and Conditions are not set for a Product, the provider will have a direct link to set the T&C in Edit Product
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  We’ve enhanced Product Terms and Conditions feature so providers can view them directly from Product Details. If no Terms and Conditions are set, a direct link is provided to add them from Edit Product.
 
-* **Consumer sees the home page with new platform model** 
+* **Advanced Homepage customization settings** 
 
   (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
-  We've enhanced the home page configuration settings for Marketplace Manager in Marketplace Settings
-  * Marketplace manager is able to configure and preview the home page settings in an updated UI
-  * New home pages settings rendered as viewable in preview when viewing their Marketplace
+ Marketplace Administrators can now fully customize the Marketplace homepage using a flexible, element-based layout. Elements can be added, removed, reordered, and configured individually to better match branding and UX requirements.
+ Key improvements include configurable hero banners, articles, images, CTAs, and featured content, along with per-element styling and visibility controls.
 
 * **Getting Started in Console Page** 
 
    (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
-  We've enhanced the Console page settings to include a "Getting Started" section
+  We've enhanced the Console page settings to include a **Getting Started** section
   * Marketplace manager can enable/disable a "Getting Started" section to appear on the Console page
   * The "Getting Started" content is defined by selecting from the Document Library
   * "Getting Started" section appears at the bottom of the Console page
 
-* **Filter MCP by MCP type on Marketplace Products** 
+* **Filter products by MCP/API type in Marketplace** 
 
    (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
-  We've added the option for a consumer to filter their Product list by resource type in the Marketplace
-  * Consumers are now able to filter the product resorces based on resource type (MCP or API)
-  * Filter is shown/hidden based on if there are resources of the selected type to make filtering easier 
-
-* **Credential state available for updated notifications** 
-
-   (PROVIDER EXPERIENCE, PRODUCT FOUNDRY, ENHANCED FEATURE)</br>
-  We've added the Credential State (Active, Inactive> to the credential experired event
-  * When credentials expire, notifications will be enhanced to include instructions specific to the state of the credential (Active/Inactive)
+  We’ve added a Product Type filter to the Marketplace, allowing consumers to filter products by API or MCP.
   
 ### Marketplace bug fixes for December 12, 2025
 
