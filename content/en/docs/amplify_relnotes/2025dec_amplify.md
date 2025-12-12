@@ -62,25 +62,25 @@ New enhancements and bug fixes for the December 12 update.
 * **MCP Server registration and discovery enhancement**
 
   (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
-  The *Fetch from URL* experience now supports more flexible authentication methods when registering and publishing MCP servers, including **no auth** and configurable **API Keys** with a custom name and value, passed in the header or as a query parameter 
- 
-* **Console Screen selectable as landing page** 
+  The *Fetch from URL* experience now supports more flexible authentication methods when registering and publishing MCP servers, including **no auth** and configurable **API Keys** with a custom name and value, passed in the header or as a query parameter
+
+* **Console Screen selectable as landing page**
 
   (MARKETPLACE ADMINISTRATION, MARKETPLACE, ENHANCEMENT)</br>
-  The Console page can be selected as the alternative home page when the landing page is disabled on Marketplace settings. 
+  The Console page can be selected as the alternative home page when the landing page is disabled on Marketplace settings.
 
-* **Display Terms and Conditions in Product details** 
+* **Display Terms and Conditions in Product details**
 
   (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   We’ve enhanced Product Terms and Conditions feature so providers can view them directly from Product Details. If no Terms and Conditions are set, a direct link is provided to add them from Edit Product.
 
-* **Advanced Homepage customization settings** 
+* **Advanced Homepage customization settings**
 
   (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
  Marketplace Administrators can now fully customize the Marketplace homepage using a flexible, element-based layout. Elements can be added, removed, reordered, and configured individually to better match branding and UX requirements.
  Key improvements include configurable hero banners, articles, images, CTAs, and featured content, along with per-element styling and visibility controls.
 
-* **Getting Started in Console Page** 
+* **Getting Started in Console Page**
 
    (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
   We've enhanced the Console page settings to include a **Getting Started** section
@@ -88,7 +88,7 @@ New enhancements and bug fixes for the December 12 update.
   * The "Getting Started" content is defined by selecting from the Document Library
   * "Getting Started" section appears at the bottom of the Console page
 
-* **Filter products by MCP/API type in Marketplace** 
+* **Filter products by MCP/API type in Marketplace**
 
    (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
   We’ve added a Product Type filter to the Marketplace, allowing consumers to filter products by API or MCP.
