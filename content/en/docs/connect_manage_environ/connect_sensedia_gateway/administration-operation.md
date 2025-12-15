@@ -16,8 +16,8 @@ Each Sensedia Gateway is represented by an Amplify environment allowing you to b
 ### Minimum requirements
 
 * [Amplify Platform Service Account](/docs/integrate_with_central/cli_central/cli_install/#option-2---authenticate-and-authorize-your-service-account)
-* [Sensedia API Gateway with API Manager v5](https://docs.sensedia.com/en/api-platform-guide/4.14.x.x/index.html)
-* Client ID and Client Secret credentials for Sensedia API authentication
+* [Sensedia API Gateway with API Manager](https://docs.sensedia.com/en/api-platform-guide/4.14.x.x/index.html)
+* Sensedia authentication credentials (either Client ID Client Secret for OAuth or static token)
 * Docker environment for running the agents
 * Network connectivity from agent host to Sensedia API Gateway and Amplify platform
 
@@ -32,14 +32,20 @@ The Sensedia agents are delivered as Docker images and can be deployed in any Do
 
 ### Authentication and authorization
 
-The Sensedia agents use OAuth 2.0 client credentials flow for authentication with the Sensedia platform:
+The authentication method is automatically detected based on the configured credentials. Configure either `SENSEDIA_AUTH_CLIENTID` and `SENSEDIA_AUTH_CLIENTSECRET` for OAuth, or `SENSEDIA_AUTH_TOKEN` for Static Token Authentication.
 
-1. **Client Credentials**: The agent uses a configured Client ID and Client Secret
-2. **Token Endpoint**: Authentication requests are made to `/user-management/v1/oauth2/token`
-3. **Bearer Token**: All API calls use the obtained Bearer token
-4. **Token Refresh**: The agent automatically refreshes tokens when they expire
+The Sensedia agents support two authentication methods:
 
-The Bearer token includes tenant information, so no additional tenant configuration is required.
+* **OAuth 2.0 Client Credentials**
+    1. **Client Credentials**: The agent uses a configured Client ID and Client Secret
+    2. **Token Endpoint**: Authentication requests are made to `/user-management/v1/oauth2/token`
+    3. **Bearer Token**: All API calls use the obtained Bearer token with `Authorization: Bearer <token>` header
+    4. **Token Refresh**: The agent automatically refreshes tokens when they expire
+
+* **Static Token Authentication**
+    1. **Static Token**: The agent uses a pre-configured authentication token
+    2. **Header**: All API calls include the `Sensedia-Auth: <token>` header
+    3. **No Refresh**: Static tokens do not expire and require no refresh mechanism
 
 ## Discovery Agent features
 
@@ -124,20 +130,21 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 
 ### Environment variables
 
-| Variable | Description | Required | Default | Example |
-|----------|-------------|----------|---------|---------|
-| `SENSEDIA_BASEURL` | Sensedia platform base URL | Yes | | `https://platform-production.sensedia.com` |
-| `SENSEDIA_AUTH_CLIENTID` | Client ID for authentication | Yes | | `id` |
-| `SENSEDIA_AUTH_CLIENTSECRET` | Client Secret for authentication | Yes | | `<secret>` |
-| `SENSEDIA_DEVELOPEREMAIL` | Email for application creation (Discovery Agent only) | Yes | | `developer@company.com` |
-| `SENSEDIA_ENVIRONMENTS` | Comma-separated list of environments | No | `""` (all environments) | `Production,Development` |
-| `SENSEDIA_FILTER` | API discovery filter expression | No | `""` (no filtering) | `tag.Axway_axway.Exists()` |
-| `SENSEDIA_POLLINTERVAL` | Discovery/Traceability poll interval | No | `30m` | `5m` |
-| `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs | No | `false` | `true` |
-| `SENSEDIA_DISCOVERYPRIVATEAPIS` | Discover private APIs | No | `false` | `true` |
-| `SENSEDIA_SENDALLTRAFFIC` | Send all API traffic for reporting (Traceability Agent only) | No | `true` | `false` |
-| `SENSEDIA_TRACEABILITYBATCHSIZE` | Batch size for traceability API calls (Traceability Agent only) | No | `500` | `1000` |
-| `SENSEDIA_TIMEOFFSET` | Time offset for processing delays (Traceability Agent only) | No | `10m` | `15m` |
+| Variable                         | Description                                                     | Required | Default                 | Example                                    |
+| -------------------------------- | --------------------------------------------------------------- | -------- | ----------------------- | ------------------------------------------ |
+| `SENSEDIA_BASEURL`               | Sensedia platform base URL                                      | Yes      |                         | `https://platform-production.sensedia.com` |
+| `SENSEDIA_AUTH_CLIENTID`         | Client ID for OAuth authentication                              | No       |                         | `id`                                       |
+| `SENSEDIA_AUTH_CLIENTSECRET`     | Client Secret for OAuth authentication                          | No       |                         | `<secret>`                                 |
+| `SENSEDIA_AUTH_TOKEN`            | Static authentication token                                     | No       |                         | `your-static-token`                        |
+| `SENSEDIA_DEVELOPEREMAIL`        | Email for application creation (Discovery Agent only)           | Yes      |                         | `developer@company.com`                    |
+| `SENSEDIA_ENVIRONMENTS`          | Comma-separated list of environments                            | No       | `""` (all environments) | `Production,Development`                   |
+| `SENSEDIA_FILTER`                | API discovery filter expression                                 | No       | `""` (no filtering)     | `tag.Axway_axway.Exists()`                 |
+| `SENSEDIA_POLLINTERVAL`          | Discovery/Traceability poll interval                            | No       | `5m` (min is '5m')      | `5m`                                       |
+| `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs                                          | No       | `false`                 | `true`                                     |
+| `SENSEDIA_DISCOVERYPRIVATEAPIS`  | Discover private APIs                                           | No       | `false`                 | `true`                                     |
+| `SENSEDIA_SENDALLTRAFFIC`        | Send all API traffic for reporting (Traceability Agent only)    | No       | `true`                  | `false`                                    |
+| `SENSEDIA_TRACEABILITYBATCHSIZE` | Batch size for traceability API calls (Traceability Agent only) | No       | `500`                   | `1000`                                     |
+| `SENSEDIA_TIMEOFFSET`            | Time offset for processing delays (Traceability Agent only)     | No       | `10m`                   | `15m`                                      |
 
 ## Monitoring and troubleshooting
 

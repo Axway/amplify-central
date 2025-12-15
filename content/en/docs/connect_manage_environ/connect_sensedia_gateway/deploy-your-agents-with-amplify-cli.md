@@ -16,7 +16,7 @@ Once agents are correctly deployed, they can collect the data from the Sensedia 
 * Docker must be installed and you will need a basic understanding of Docker commands
 * You will need information on Sensedia API Gateway:
     * The Sensedia platform URL (e.g., `https://platform-production.sensedia.com`)
-    * Client ID and Client Secret for API authentication
+    * Authentication credentials: either Client ID and Client Secret (OAuth) or static token
     * Configured environments (if filtering by environment)
 
 ## Objectives
@@ -33,17 +33,18 @@ The Discovery Agent discovers APIs based on tags defined in the agent configurat
 
 All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
-| Variable name                    | Description                                                                                                                                                                         |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SENSEDIA_BASEURL                 | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                                                            |
-| SENSEDIA_AUTH_CLIENTID           | The client ID for authenticating with Sensedia API Gateway.                                                                                                                        |
-| SENSEDIA_AUTH_CLIENTSECRET       | The client secret for authenticating with Sensedia API Gateway.                                                                                                                    |
-| SENSEDIA_DEVELOPEREMAIL          | Developer email for application creation in Sensedia.                                                                                                                              |
-| SENSEDIA_FILTER                  | Filter condition expression for discovering APIs based on tags. The conditional expression must have "tag" as the prefix/selector. For example, `tag.Axway_axway.Exists()`.      |
-| SENSEDIA_DISCOVERYIDENTITYAPIS   | When set to true, the agent will discover Identity APIs. Default is false.                                                                                                         |
-| SENSEDIA_DISCOVERYPRIVATEAPIS    | When set to true, the agent will discover Private APIs. Default is false.                                                                                                          |
-| SENSEDIA_ENVIRONMENTS            | Comma-separated list of Sensedia environments to filter for discovery (e.g., `Production,Development`).                                                                           |
-| SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for changes (ns - default, us, ms, s, m, h). Default is 5m.                                                                               |
+| Variable name                  | Description                                                                                                                                                                 |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SENSEDIA_BASEURL               | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                                                       |
+| SENSEDIA_AUTH_CLIENTID         | The Client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                                                       |
+| SENSEDIA_AUTH_CLIENTSECRET     | The Client Secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                                                       |
+| SENSEDIA_AUTH_TOKEN            | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                                            |
+| SENSEDIA_DEVELOPEREMAIL        | Developer email for application creation in Sensedia.                                                                                                                       |
+| SENSEDIA_FILTER                | Filter condition expression for discovering APIs based on tags. The conditional expression must have "tag" as the prefix/selector. For example, `tag.Axway_axway.Exists()`. |
+| SENSEDIA_DISCOVERYIDENTITYAPIS | When set to true, the agent will discover Identity APIs. Default is false.                                                                                                  |
+| SENSEDIA_DISCOVERYPRIVATEAPIS  | When set to true, the agent will discover Private APIs. Default is false.                                                                                                   |
+| SENSEDIA_ENVIRONMENTS          | Comma-separated list of Sensedia environments to filter for discovery (e.g., `Production,Development`).                                                                     |
+| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for changes (ns - default, us, ms, s, m, h). Default is 5m, , minimum is 5m.                                                         |
 
 ### Create your Discovery Agent environment file
 
@@ -54,8 +55,14 @@ For example:
 ```yaml
 # Sensedia connectivity
 SENSEDIA_BASEURL=<YOUR_SENSEDIA_PLATFORM_URL>
+
+# Option 1: OAuth authentication 
 SENSEDIA_AUTH_CLIENTID=<YOUR_SENSEDIA_CLIENT_ID>
 SENSEDIA_AUTH_CLIENTSECRET=<YOUR_SENSEDIA_CLIENT_SECRET>
+
+# Option 2: Static token authentication - use instead of Option 1
+# SENSEDIA_AUTH_TOKEN=<YOUR_STATIC_TOKEN>
+
 SENSEDIA_DEVELOPEREMAIL=<YOUR_DEVELOPER_EMAIL>
 SENSEDIA_FILTER=tag.Axway_axway.Exists()
 SENSEDIA_POLLINTERVAL=30s
@@ -103,16 +110,17 @@ The Traceability Agent is used to filter the transaction logs from Sensedia API 
 
 All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
-| Variable name                    | Description                                                                                                                                                                         |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SENSEDIA_BASEURL                 | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                                                            |
-| SENSEDIA_AUTH_CLIENTID           | The client ID for authenticating with Sensedia API Gateway.                                                                                                                        |
-| SENSEDIA_AUTH_CLIENTSECRET       | The client secret for authenticating with Sensedia API Gateway.                                                                                                                    |
-| SENSEDIA_ENVIRONMENTS            | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                                                       |
-| SENSEDIA_POLLINTERVAL            | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m.                                                                      |
-| SENSEDIA_SENDALLTRAFFIC          | When set to true, the agent will send all API traffic to be reported. When set to false, only discovered APIs will be reported. Default is false.                               |
-| SENSEDIA_TRACEABILITYBATCHSIZE   | The batch size for traceability API calls. Controls how many records are fetched per page. Default is 500. Range: 1-1000.                                                       |
-| SENSEDIA_TIMEOFFSET              | Time offset to subtract from current time when querying for traceability data to account for processing delays. Default is 10m. Range: 1m-60m.                                  |
+| Variable name                  | Description                                                                                                                                       |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SENSEDIA_BASEURL               | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                             |
+| SENSEDIA_AUTH_CLIENTID         | The Client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                             |
+| SENSEDIA_AUTH_CLIENTSECRET     | The Client Secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                             |
+| SENSEDIA_AUTH_TOKEN            | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                  |
+| SENSEDIA_ENVIRONMENTS          | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                       |
+| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m, minimum is 5m.                        |
+| SENSEDIA_SENDALLTRAFFIC        | When set to true, the agent will send all API traffic to be reported. When set to false, only discovered APIs will be reported. Default is false. |
+| SENSEDIA_TRACEABILITYBATCHSIZE | The batch size for traceability API calls. Controls how many records are fetched per page. Default is 500. Range: 1-1000.                         |
+| SENSEDIA_TIMEOFFSET            | Time offset to subtract from current time when querying for traceability data to account for processing delays. Default is 10m. Range: 1m-60m.    |
 
 ### Create your Traceability Agent environment file
 
@@ -123,8 +131,14 @@ For example:
 ```yaml
 # Sensedia connectivity
 SENSEDIA_BASEURL=<YOUR_SENSEDIA_PLATFORM_URL>
+
+# Option 1: OAuth authentication
 SENSEDIA_AUTH_CLIENTID=<YOUR_SENSEDIA_CLIENT_ID>
 SENSEDIA_AUTH_CLIENTSECRET=<YOUR_SENSEDIA_CLIENT_SECRET>
+
+# Option 2: Static token authentication - use instead of Option 1
+# SENSEDIA_AUTH_TOKEN=<YOUR_STATIC_TOKEN>
+
 SENSEDIA_ENVIRONMENTS=Production,Development
 SENSEDIA_POLLINTERVAL=5m
 SENSEDIA_TRACEABILITYBATCHSIZE=500
@@ -274,8 +288,9 @@ The installation procedure will prompt for the following:
    * **Service account**: can be an existing service account created in the Amplify platform. The installation procedure creates a service account that can be used only with Amplify Engage. If you choose an existing service account, be sure you have the appropriate public and private keys, as they will be required for the agent to connect to the Amplify platform. If you choose to create one, the generated private and public keys will be provided.
 3. Sensedia Configuration Setup options:
    * **Platform URL**: Sensedia platform base URL (e.g., `https://platform-production.sensedia.com`)
-   * **Client ID**: Client ID for Sensedia API authentication
-   * **Client Secret**: Client Secret for Sensedia API authentication
+   * **Authentication Method**: Choose between OAuth or Static Token
+      * **OAuth**: Client ID and Client Secret
+      * **Static Token**: Authentication token
    * **Environments**: Comma-separated list of environment names (e.g., `Producao,Development`)
    * **Discovery Identity APIs**: Whether to discover identity APIs (true/false)
    * **Discovery Private APIs**: Whether to discover private APIs (true/false)
