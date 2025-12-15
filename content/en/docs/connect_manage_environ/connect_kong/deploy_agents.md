@@ -4,7 +4,7 @@ linkTitle: Deploy your agents
 draft: false
 weight: 10
 ---
-The Kong agents are delivered as containers, kong_discovery_agent and kong_traceability_agent. These containers can be deployed directly to a container server, such as Docker, or using the provided helm chart. In this section you will lean how to deploy the agents directly as containers or within a kubernetes cluster using the helm chart.
+The Kong agents are delivered as containers, kong-discovery-agent and kong-traceability-agent. These containers can be deployed directly to a container server, such as Docker, or using the provided helm chart. In this section you will learn how to deploy the agents directly as containers or within a kubernetes cluster using the helm chart.
 
 ## Before you start
 
@@ -14,6 +14,9 @@ Before beginning to deploy the agents, gather the following in addition to the d
 * The host the agent will use when setting the endpoint of a discovered API, (`KONG_PROXY_HOST`)
     *The HTTP `KONG_PROXY_PORTS_HTTP` and HTTPs `KONG_PROXY_PORTS_HTTPS` ports the agent will use with the endpoint above
 * The URL paths, hosted by the gateway service, to query for spec files, `KONG_SPEC_URLPATHS`
+* Go to *Help menus > Downloads > Repository*
+     -or-
+* Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents) and search for the Docker image for the most recent agents to download as `{discoveryAgentImage}` and `{traceabilityAgentImage}`.
 
 ## Objectives
 
@@ -61,18 +64,16 @@ CENTRAL_REGION=US
 Kong Discovery agent
 
 ```shell
-docker run -d -v /home/user/keys:/keys -v /home/user/specs:/specs -v /home/user/discovery/data:/data --env-file discovery-agents.env ghcr.io/axway/kong_discovery_agent:latest
+docker run -d -v /home/user/keys:/keys -v /home/user/specs:/specs -v /home/user/discovery/data:/data --env-file discovery-agents.env {discoveryAgentImage}
 ```
 
 Kong Traceability agent
 
 ```shell
-docker run -d -v /home/user/keys:/keys -v /home/user/traceability/data:/data --env-file traceability-agents.env -p 9000:9000 ghcr.io/axway/kong_traceability_agent:latest
+docker run -d -v /home/user/keys:/keys -v /home/user/traceability/data:/data --env-file traceability-agents.env -p 9000:9000 {traceabilityAgentImage}
 ```
 
 Where:
-
-In the following docker commands...
 
 `/home/user/keys` refers to the directory where the key files were created while setting up the platform service account.
 `/home/user/discovery/data:/data` and `/home/user/traceability/data:/data` are volumes that are used to store cached information to be saved outside of the container in order to persist restarts.

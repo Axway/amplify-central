@@ -3,26 +3,68 @@ title: Connect MuleSoft AnyPoint
 linkTitle: Connect MuleSoft AnyPoint
 weight: 210
 ---
-Connect MuleSoft AnyPoint and Amplify so you can govern and monitor the creation of the MuleSoft AnyPoint APIs in one central location.
+Connect MuleSoft AnyPoint and Amplify so you can discover, provision access to, and track usages of MuleSoft AnyPoint API Manager Assets.
 
 ## Why do you want to connect MuleSoft AnyPoint and Amplify?
 
-Connecting MuleSoft AnyPoint to Amplify will provide you with a global, centralized view of your APIs.
+Connecting MuleSoft AnyPoint to Amplify will provide you with a global centralized view of your APIs and their related traffic.
 
-MuleSoft AnyPoint can be represented by an Amplify environment, allowing you to better filter APIs. Supplied with the environment, the Discovery Agent interacts with MuleSoft AnyPoint and Amplify to detect changes to MuleSoft AnyPoint APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
+The MuleSoft AnyPoint API Manager Assets can be represented by an Amplify environment allowing you to better filter APIs and their traffic. Supplied with the environment, two agents (Discovery and Traceability) interact with MuleSoft and Amplify to:
+
+* Detect changes to API Manager APIs using the Discovery Agent. The Discovery Agent pushes the service configuration as an API service for the environment, which can then be published and used by consumers to subscribe to the service.
+* Track API metrics and transactions related to discovered APIs, their consumers, and subscriptions.
 
 ### Discovery
 
-The Discovery Agent is used to discover new published APIs for a specific MuleSoft AnyPoint Software Catalog. The Discovery Agent pushes all API definitions from MuleSoft AnyPoint to Amplify. If the spec type is unknown by Amplify, the service will have a type of `Unstructured`.
+On startup, the MuleSoft Discovery Agent first validates that it is able to connect to all required services. Once connected to MuleSoft, the agent begins looking at MuleSoft Anypoint APIs for what it should discover.
 
-The related APIs are published to Amplify as an API service in the selected environment.
+After that initial startup process, the Discovery Agent begins running its main discovery process. In this process the agent will look for Active API Manager Assets in MuleSoft. With each active asset found, the agent will determine what credential types are associated with the API based on the policies applied to it. Finally, it will gather the API spec from MuleSoft AnyPoint Exchange prior to publishing to Amplify Engage. If the spec type is unknown by Amplify, the service will have a type of `Unstructured`.
+
+#### OpenID Connect client providers
+
+For integrating the Discovery Agent with any OpenID Connect client providers in MuleSoft the agent will need read access to the client providers in the top level MuleSoft Organization. This will allow the agent to properly setup Marketplace with the supported grant types.
+
+The process the agent takes when associating a MuleSoft Exchange API to a specific client provider is the following.
+
+* For an Exchange API check the configuration for its default client provider
+* Given the client provider is not the AnyPoint provider associate a specific client provider ID to the API
+* Prior to publishing the API create the necessary request definitions, if not already created, for the client provider, with its supported grant types
+
+### Provisioning
+
+As described in the [Discovery](#discovery) section, the MuleSoft agent creates all supported credential types on Engage during its normal processing. Once API services are published they can be made into Assets and Products via Engage itself. The Products can then be published to the Marketplace for consumption. In order to receive access to the service a user must first request access to it and the MuleSoft agent provisioning process will execute based off of that request.
+
+#### Marketplace application
+
+A Marketplace application is created by a Marketplace user. When a resource within the MuleSoft connected environment is added to that application, Engage will create a ManagedApplication resource that the agent will execute off of. This creation of the ManagedApplication does not immediately trigger an action within MuleSoft, as MuleSoft requires an asset association to create an Application. Continue on the [Access request](#access-request) and [Credential](#credential) sections to learn more.
+
+#### Access request
+
+When a Marketplace user requests access to an API Resource Engage will create an AccessRequest resource within the Engage environment connected to MuleSoft. The MuleSoft agent will see this resource creation event and complete one of the following steps in MuleSoft.
+
+* Determine the MuleSoft client provider for the API in the AccessRequest.
+* Check if the MuleSoft Agent has previously created a MuleSoft application for the Marketplace application and client provider combination
+    * If the Application does not yet exist, the agent will create a MuleSoft application for the client provider. This process will use the values given in Marketplace for setting the proper grant types in the MuleSoft application.
+* Once the application has been found or created the agent will finally associate the API to the MuleSoft application.
+
+{{< alert title="Note" color="primary" >}}The MuleSoft agent currently only supports the OpenID Connect Token policy in MuleSoft for Open ID Connect client providers.{{< /alert >}}
+
+#### Credential
+
+Finally, when a Marketplace user requests a credential for a resource that belongs to a MuleSoft environment, Engage will create a Credential resource in the same Engage environment connected to MuleSoft. The agent receives this event and retrieves the client id and secret from the  MuleSoft Application for the expected client provider returning it to Engage.
+
+### Traceability
+
+The Traceability Agent is used to gather API Metric data using the  MuleSoft AnyPoint Archive API. The data returned by the [MuleSoft AnyPoint Monitoring API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/anypoint-monitoring-archive-api/) is then used to determine the Amplify Engage API and Application context for associating metrics to specific Marketplace Applications.
+
+The Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metrics API](https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/metrics-api/) for compiling the same data, the archive API is the default behavior. See `MULESOFT_USEMONITORINGAPI` in the [Common variables to both agents](agent_variables#common-variables-to-both-agents) table.
 
 ## Prerequisites
 
 * An Axway Amplify subscription in the Amplify platform
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html/#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
-* Access to MuleSoft to retrieve details from the service and CLI Toolkit
+* Access to MuleSoft to retrieve details needed for the agents
 
 ## System requirements
 
@@ -45,67 +87,6 @@ Use one of the following settings, for the Discovery Agent, to set the region th
 * `CENTRAL_REGION`= **AP**
 
 {{< alert title="Note" color="primary" >}}`CENTRAL_REGION` is part of agents released after June 5, 2024. See [CENTRAL_REGION setting](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#central_region-setting) for the variables that `CENTRAL_REGION` sets.{{< /alert >}}
-
-## Connect to MuleSoft
-
-The Discovery Agent will use the credentials provided. If MuleSoft requires no authentication, credentials are optional.
-
-## Gather the required values from MuleSoft
-
-* MuleSoft AnyPoint Exchange URL
-* MuleSoft Environment name to discover and track transactions from (e.g. Sandbox)
-* MuleSoft AnyPoint Business Unit the agent connects to
-* MuleSoft Username and Password or Client ID and Secret
-    * If using a Client ID and Secret then a MuleSoft App Integration will need to be created
-
-## Set up environment variables
-
-The following environment variables file must be created for executing both the Discovery and Traceability agents.
-
-```ini
-CENTRAL_ORGANIZATIONID=<Amplify Central Organization ID>
-CENTRAL_TEAM=<Amplify Central Team Name>
-CENTRAL_ENVIRONMENT=<Amplify Central Environment Name>   # created in Prepare AMPLIFY Central Environments step
-
-CENTRAL_AUTH_CLIENTID=<Amplify Central Service Account>  # created in Prepare AMPLIFY Central Environments step
-CENTRAL_AUTH_PRIVATEKEY=/keys/private_key.pem            # path to the key file created with openssl
-CENTRAL_AUTH_PUBLICKEY=/keys/public_key.pem              # path to the key file created with openssl
-
-MULESOFT_ANYPOINTEXCHANGEURL=https://mulesoftexhange.com # gathered in Prepare MuleSoft step
-MULESOFT_AUTH_USERNAME=username                          # gathered in Prepare MuleSoft step
-MULESOFT_AUTH_PASSWORD=password                          # gathered in Prepare MuleSoft step
-MULESOFT_ENVIRONMENT=Sandbox                             # gathered in Prepare MuleSoft step
-MULESOFT_ORGNAME=Unit                                    # gathered in Prepare MuleSoft step
-
-LOG_LEVEL=info
-LOG_OUTPUT=stdout
-```
-
-## Install and run Discovery and Traceability agents
-
-The MuleSoft AnyPoint Discovery and Traceability agents are built and distributed as docker images. The following steps must be done for both agents.
-
-1. Copy the `private_key.pem` and `public_key.pem` files that were originally created when you set up your Service Account to a keys directory. Make sure the directory is located on the machine being used for deployment.
-2. Find the current agent release in the [agent release note](/docs/amplify_relnotes).
-   Go to *Help menus > Downloads > Repository*
-     -or-
-   Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents)
-   and search for the Docker image for the most recent agents to download as `{agentImage}`.
-   Then replace `{agentImage}` with the current agent release in the following sections.
-3. Create a data directory where the agent will store cache data to persist on restarts.
-4. Start the Discovery Agent pointing to the `env_vars` file and the keys directory:
-
-    ```bash
-    docker run --env-file ./env_vars -v <pwd>/keys:/keys  -v <pwd>/data:data {agentImage}
-    ```
-
-    `pwd` relates to the local directory where the docker command is run. For Windows, the absolute path is preferred.
-
-5. Run the following health check command to ensure the agent is up and running (continuous mode):
-
-   ```bash
-   docker inspect --format='{{json .State.Health}}' <container>
-   ```
 
 ## Related topics
 
