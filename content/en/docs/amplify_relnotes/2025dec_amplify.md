@@ -10,6 +10,107 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## December 12, 2025
+
+New enhancements and bug fixes for the December 12 update.
+
+### Agent updates for December 12, 2025
+
+* **Mulesoft External IdP support**
+
+  (NEW AGENT RELEASES)</br>
+  The Mulesoft Discovery Agent has been enhanced to support OAuth with an external Identity Provider that supports OpenID Dynamic Client Registration protocol.
+
+* **Sensedia Static Token Authentication support**
+
+  (NEW AGENT RELEASES)</br>
+  The Sensedia Discovery Agent has been enhanced to support a **Static Token Authentication** method.
+
+* **APIM Error Transaction Sampling**
+
+  (NEW AGENT RELEASES)</br>
+  The APIM Traceability Agent has been enhanced to support Continous Error Transaction Sampling.
+  The Error Transaction sampling must be enabled by setting the Traceability agent environment variable (CENTRAL_ERRORSAMPLINGENABLED=true).
+  Once enabled, this will automatically capture the **first observed error** for each API/Application pair within a 60-minute window.
+  To learn how to enable the error sampling, refer to [Trace Sampling](/content/en/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling.md).
+
+* **Istio Agent**
+
+  (NEW AGENT RELEASES)</br>
+  The Istio Agent has been update to support either ambient of sidecar mode.  The Istio API Gateway version supported is v1.27.3 and Kerbernetes version 1.33.2.
+
+* **New agent versions available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents.
+
+### Agent bug fixes for December 12, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01764990 | APIGOV-31498 | **Issue**: An APIM Manager quota was not updated after a plan migration and the quota was changed. <br/>**Resolution**: A fix has been made to the APIM agent to update quota changes on the APIM Manager. |
+
+### Axway CLI updates for December 12, 2025
+
+* **Enhancement**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI (formerly Axway Central CLI) [**v4.9.0**](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.9.0) has been updated to install the Istio and Sensedia agents with the latest supported features .
+
+### Marketplace update for December 12, 2025
+
+* **MCP Server registration and discovery enhancement**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  The *Fetch from URL* experience now supports more flexible authentication methods when registering and publishing MCP servers, including **no auth** and configurable **API Keys** with a custom name and value, passed in the header or as a query parameter
+
+* **Console Screen selectable as landing page**
+
+  (MARKETPLACE ADMINISTRATION, MARKETPLACE, ENHANCEMENT)</br>
+  The Console page can be selected as the alternative home page when the landing page is disabled on Marketplace settings.
+
+* **Display Terms and Conditions in Product details**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  We’ve enhanced Product Terms and Conditions feature so providers can view them directly from Product Details. If no Terms and Conditions are set, a direct link is provided to add them from Edit Product.
+
+* **Advanced Homepage customization settings**
+
+  (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+ Marketplace Administrators can now fully customize the Marketplace homepage using a flexible, element-based layout. Elements can be added, removed, reordered, and configured individually to better match branding and UX requirements.
+ Key improvements include configurable hero banners, articles, images, CTAs, and featured content, along with per-element styling and visibility controls.
+
+* **Getting Started in Console Page**
+
+   (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We've enhanced the Console page settings to include a **Getting Started** section
+    * Marketplace manager can enable/disable a "Getting Started" section to appear on the Console page
+    * The "Getting Started" content is defined by selecting from the Document Library
+    * "Getting Started" section appears at the bottom of the Console page
+
+* **Filter products by MCP/API type in Marketplace**
+
+   (CONSUMER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
+  We’ve added a Product Type filter to the Marketplace, allowing consumers to filter products by API or MCP.
+  
+### Marketplace bug fixes for December 12, 2025
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01765710 | APIGOV-31332 | **Issue**: An error message was displayed after resolving a corrupted asset with a new asset version is created and attempting to view "Resources in Error".  The error message can occur after a plan migration was performed on a corrupted resource. <br/>**Resolution**: A fix to the Engage UI was made. |
+| 01769559 | APIGOV-31474 | **Issue**: Consumer assigned to a consumer org but not assigned to a team is not able to connect to a public Marketplace (home page and product list) to show what is publicly visible. <br/>**Resolution**: A fix was implemented to allow consumers with no team assignment to be able to view public Marketplace (home page and products). |
+| 01784115 | APIGOV-31648 | **Issue**: Marketplace: Product resource details screen doesn't display mTLS warning message <br/>**Resolution**: A fix was implemented to show appropriate message for mTLS. |
+| 01765710 | APIGOV-31469 | **Issue**: Resources in error during plan migration<br/>**Resolution**: A fix was implemented to allow migration to complete from a plan with errored resources to a plan without them. |
+| 01771151 | APIGOV-31418 | **Issue**: Templates - topics limited to 20<br/>**Resolution**: A fix was implemented so more than 20 topics can be added without losing any - can also shuffle topics around without issue. |
+|01743271| APIGOV-30943 | **Issue**: User with team developer role has viewing issue in service registry<br/>**Resolution**: A fix was implemented for users with a developer roles on a team who do not have access to product, they will be able to only see the number of product associated to the Service. |
+
+### Axway CLI updates for December December 11, 2025
+
+* **Updates to the install agents command**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHACNEMENT)</br>
+  The Axway Engage CLI (formerler Axway Centeral CLI) **v4.9.0** has been updated to install Istio agents in ambient mode and Seneseida agents to use token authentication.
+
 ## December 3, 2025
 
 New enhancement and bug fixes for the December 3 update.
