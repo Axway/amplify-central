@@ -80,7 +80,7 @@ Update the command to use your desired Istio profile, and then run the install. 
 
 ## Prepare Amplify
 
-There are two agents that can be deployed, a Discovery Agent and a Traceability Agent. The Environment and K8SCluster resources are required for each agent.
+There are two agents that can be deployed, a Discovery Agent (DA) and a Traceability Agent (TA). The required Amplify resources are an `Environment` (one per target environment) and, where applicable, a `Mesh` resource that represents the mesh the cluster belongs to. The previous `K8SCluster` resource type has been removed from the API server and should not be used in new examples.
 
 The following resources are used run the agents. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified.
 
@@ -94,11 +94,11 @@ spec:
 ---
 apiVersion: v1alpha1
 group: management
-kind: K8SCluster
-name: istio-k8scluster
-title: istio-k8scluster
+kind: Mesh
+name: istio-mesh
+title: istio-mesh
 spec:
-  mesh: istio-mesh
+  description: Istio service mesh that contains one or more clusters
 ```
 
 ```bash
@@ -222,7 +222,7 @@ secret:
   create: false
   # Name of the secret that will be created
   name: ""
-  # Set to false if the value of password, publicKey and privateKey properties are base64 encoded. 
+  # Set to false if the value of password, publicKey and privateKey properties are base64 encoded.
   # Defaults to true, the properties will be base64 encoded by template.
   base64Encode: true
   # Password for the private key
@@ -258,14 +258,36 @@ als:
     CENTRAL_AUTH_CLIENTID: istio-service-account_12345678-0000-4444-99e9
     CENTRAL_ORGANIZATIONID: "123456789912345"
 
-  # Header publishing mode. Set to default or verbose.
-  mode: default
-  # Name for the Istio cluster
-  clusterName: istio-k8scluster
+  # Header publishing mode. Choose one of:
+  #  - `ambient` (recommended baseline) — agent accepts forwarded access-log data and works with Telemetry CRs
+  #  - `default` (sidecar) — sidecar access-log based capture (often referred to as "sidecar")
+  #  - `verbose` — capture a superset of headers for debugging/observability
+  # Note: the CLI still offers `default` and `verbose` choices; in documentation `sidecar` is often used as an equivalent term for `default` when referring to sidecar access-log capture.
+  mode: ambient
+  # Name for the cluster or mesh identifier (used for externalAPIID correlation)
+  clusterName: istio-cluster
   # The tracing provider configured for Istio
   istioTracer: "zipkin"
   # Name of the secret containing the public & private keys used by the provided service account client ID
   keysSecretName: amplify-agents-keys
+  # PersistentVolumeClaim configuration: logs and data claims are configurable via
+  # the chart `values.yaml` under `persistentVolumeClaimConfig`. Example:
+  # persistentVolumeClaimConfig:
+  #   logs:
+  #     storageClass: gp2
+  #     name: logs-claim
+  #     size: 2Gi
+  #   data:
+  #     storageClass: gp2
+  #     name: data-claim
+  #     size: 2Gi
+
+  # Example `env:` snippet for traceability sampling and telemetry control:
+  # env:
+  #   TRACEABILITY_SAMPLING_PERCENTAGE: 10
+  #   TRACEABILITY_SAMPLING_ONLYERRORS: false
+  #   TRACEABILITY_SAMPLING_PER_API: true
+  #   telemetry.enabled: false
   # List of namespaces where the ALS Envoy filters should be applied
   envoyFilterNamespaces:
   - default
@@ -309,7 +331,7 @@ als:
     # correlation service host
     host:
     # correlation service port
-    port: 
+    port:
 
 # Configures the Discovery Agent
 da:
@@ -335,8 +357,8 @@ da:
     CENTRAL_AUTH_CLIENTID: istio-service-account_12345678-0000-4444-99e9
     CENTRAL_ORGANIZATIONID: "123456789912345"
 
-  # Name for the Istio cluster
-  clusterName: istio-k8scluster
+  # Name for the Istio cluster or mesh identifier
+  clusterName: istio-cluster
   # Name of the k8s secret for private/public key pair
   keysSecretName: amplify-agents-keys
   # Discovery configuration
@@ -382,6 +404,74 @@ helm repo add axway https://helm.repository.axway.com --username==<client-id> --
 helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-beano-helm-prod-ampc-hybrid -f hybrid-override.yaml
 ```
+
+Note: the `ampc-hybrid` umbrella chart deploys both the Discovery Agent (DA) and Traceability Agent (TA) together. If you prefer, the Traceability Agent also ships as a standalone chart (`als-traceability-agent`) and can be installed separately. When installing in air-gapped or secured clusters that pull images from Axway's private registry, create a docker-registry secret (type `kubernetes.io/dockerconfigjson`) so pods can pull private images. For example, create the secret with:
+
+```bash
+kubectl create secret docker-registry <secret-name> \
+  --docker-server=<registry-server> \
+  --docker-username=<username> \
+  --docker-password=<password> \
+  --docker-email=<email> --namespace <namespace>
+```
+
+Pass the secret name to the chart using the `image.pullSecret` or `pullSecret` values.
+
+## Helm install quick steps
+
+Follow these high-level steps to install the Amplify Istio Agents using Helm. These steps cover the common items required for a successful install:
+
+1. Prepare a Kubernetes namespace and service account/keys as described above.
+2. Create or update a Helm override file (for example `hybrid-override.yaml`) with required values including `env:` entries, `keysSecretName`, `clusterName`, and the `persistentVolumeClaimConfig` for `logs` and `data` if persistent storage is required.
+3. If installing in an air-gapped or secured cluster, create a `docker-registry` secret and set `image.pullSecret` in the override file.
+4. Add the Axway Helm repo and update:
+
+```bash
+helm repo add axway https://helm.repository.axway.com --username=<client-id> --password=<client_secret>
+helm repo update
+```
+
+1. Install or upgrade the umbrella chart (example installs both Discovery and Traceability agents):
+
+```bash
+helm upgrade --install --namespace <NAMESPACE> ampc-hybrid axway/ampc-beano-helm-prod-ampc-hybrid -f hybrid-override.yaml
+```
+
+* To set the Traceability Agent mode (ambient/default/verbose) at install time use `--set als.mode=<mode>` or set it in your `hybrid-override.yaml`.
+* If you need the chart to create Istio Telemetry CRs automatically when using ambient mode, set `telemetry.enabled=true` in the values or via `--set als.telemetry.enabled=true`.
+* Verify pods and logs with `kubectl -n <NAMESPACE> get pods` and `kubectl -n <NAMESPACE> logs <podName>`.
+
+Notes:
+
+* Use `--set` overrides carefully — complex multi-value overrides are easier to manage in an override file.
+* For private images, ensure `image.pullSecret` is set and the secret exists in the target namespace.
+
+## Deploy DA and TA with separate Helm charts
+
+If you prefer to manage the Discovery Agent (DA) and Traceability Agent (TA) independently, both agents can be deployed using separate Helm charts instead of the `ampc-hybrid` umbrella chart. This provides more granular control over lifecycle, versions, and values for each agent.
+
+Example: install the Traceability Agent standalone chart (`als-traceability-agent`):
+
+```bash
+helm repo add axway https://helm.repository.axway.com --username=<client-id> --password=<client_secret>
+helm repo update
+helm upgrade --install --namespace amplify-agents ampc-als axway/als-traceability-agent -f hybrid-override.yaml
+```
+
+Example: install the Discovery Agent standalone chart (often named `discovery-agent` or similar in the Axway repo):
+
+```bash
+helm repo add axway https://helm.repository.axway.com --username=<client-id> --password=<client_secret>
+helm repo update
+helm upgrade --install --namespace amplify-agents ampc-da axway/discovery-agent -f hybrid-override.yaml
+```
+
+Notes:
+
+* **Values separation**: When installing separately, split or adapt values in your override file so that values intended for the DA go under the `da:` key and values for the TA go under the `als:` (or `ta:`) key as appropriate for each chart. Standalone charts typically accept the same top-level values (`env`, `keysSecretName`, `clusterName`, `persistentVolumeClaimConfig`) but namespacing may differ — check the chart's `values.yaml` for exact keys.
+* **Versioning**: Installing charts independently allows you to upgrade DA and TA separately to different chart/app versions.
+* **Resource footprint**: Separate installs create distinct Kubernetes resources (Deployments/StatefulSets/DaemonSets) per agent which can simplify resource tuning and RBAC separation.
+* **Helm hooks and CR creation**: If you rely on umbrella-chart hooks (for example to create shared Secrets or CRs), ensure you account for those when installing separately — you may need to create those resources yourself or enable equivalent hooks in each chart.
 
 ## Verify that the pods are running
 

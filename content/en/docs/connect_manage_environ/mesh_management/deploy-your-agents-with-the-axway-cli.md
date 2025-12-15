@@ -268,11 +268,18 @@ Created secret/gateway-cert in the istio-system namespace.
       Yes
     ```
 
-5. Create a K8S Cluster resource.
+5. Create a `Mesh` and `Environment` resource.
 
-    ```bash
-    Enter a unique k8s cluster name:  (cli-1664387590624)
-    ```
+  The API Server no longer uses the `K8SCluster` resource type. Instead, model your cluster using a `Mesh` resource (to represent the service mesh) and an `Environment` resource (one per target environment). Create a `Mesh` and an `Environment` if they do not already exist.
+
+  Example (CLI prompts):
+
+  ```bash
+  Enter a name for the Mesh: (mesh-1234)
+  Enter a name for the Environment: (istio-demo)
+  ```
+
+  Note: older CLI versions or legacy docs may still reference `K8SCluster`; treat any existing prompts that ask for a cluster name as the Environment name when following current API Server models.
 
 ### Traceability Agent prompts
 
@@ -330,6 +337,21 @@ Once you save the `hybrid-override.yaml` file with the changes made above, run t
 helm repo add axway https://helm.repository.axway.com --username==<client-id> --password=<client_secret>
 helm repo update
 helm upgrade --install --namespace amplify-agents ampc-hybrid axway/ampc-beano-helm-prod-ampc-hybrid -f hybrid-override.yaml
+```
+
+If your cluster pulls images from Axway's private Docker registry, create a Kubernetes image-pull secret of type `kubernetes.io/dockerconfigjson` (the docker-registry secret) and set the `image.pullSecret` (or `pullSecret`) value in your override file so pods can pull private images. Example:
+
+```bash
+kubectl create secret docker-registry <SECRET_NAME> --namespace <YOUR_NAMESPACE> --docker-server=docker.repository.axway.com --docker-username=<client_id> --docker-password=<client_secret>
+```
+
+Note: If you prefer to manage the agents independently, you can install the Discovery Agent (DA) and Traceability Agent (TA) using separate, standalone Helm charts instead of the `ampc-hybrid` umbrella chart. When installing separately, ensure values intended for the DA are placed under the `da:` key in `da-overrides.yaml` and values intended for the TA are placed under the `als:` (or `ta:`) key in `ta-overrides.yaml`. Standalone install example commands:
+
+```bash
+helm repo add axway https://helm.repository.axway.com --username=<client-id> --password=<client_secret>
+helm repo update
+helm upgrade --install --namespace amplify-agents ampc-als axway/als-traceability-agent -f ta-overrides.yaml
+helm upgrade --install --namespace amplify-agents ampc-da axway/discovery-agent -f da-overrides.yaml
 ```
 
 {{< alert title="Note" color="primary" >}}By default, the Amplify Istio Discovery Agent polls every 60 seconds for the discovery resources. To change this, you must pass a helm override in the form of `--set da.poll.interval` or `--set da.pollInterval` accordingly with the desired agents.{{< /alert >}}
