@@ -74,12 +74,6 @@ New enhancements and bug fixes for the December 12 update.
   (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   We’ve enhanced Product Terms and Conditions feature so providers can view them directly from Product Details. If no Terms and Conditions are set, a direct link is provided to add them from Edit Product.
 
-* **Advanced Homepage customization settings**
-
-  (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
- Marketplace Administrators can now fully customize the Marketplace homepage using a flexible, element-based layout. Elements can be added, removed, reordered, and configured individually to better match branding and UX requirements.
- Key improvements include configurable hero banners, articles, images, CTAs, and featured content, along with per-element styling and visibility controls.
-
 * **Getting Started in Console Page**
 
    (MARKETPLACE MANAGER EXPERIENCE, MARKETPLACE, NEW FEATURE)</br>
