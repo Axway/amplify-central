@@ -1,6 +1,6 @@
 ---
 title: Release Notes
-linkTitle: Release Notes Archive 2024
+linkTitle: Release Notes archive 2024
 no_list: true
 weight: 100
 date: 2020-10-28

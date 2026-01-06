@@ -1,6 +1,6 @@
 ---
 title: Release Notes
-linkTitle: Release Notes Archive 2025
+linkTitle: Release Notes archive 2025
 no_list: true
 weight: 90
 date: 2025-1-7
