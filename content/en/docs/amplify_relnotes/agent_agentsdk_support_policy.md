@@ -1,7 +1,7 @@
 ---
 title: Support Policy for Amplify agents and Amplify Agent SDK
 linkTitle: Support Policy for Amplify agents and Amplify Agent SDK
-weight: 100
+weight: 200
 date: 2021-08-23
 description: Support policies for Amplify agents and the Amplify Agent SDK;
   which include versioning, release cycles and distribution
