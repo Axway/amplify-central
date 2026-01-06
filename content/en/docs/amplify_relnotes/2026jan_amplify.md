@@ -1,6 +1,6 @@
 ---
 title: Amplify Engage January 2026
-linkTitle: Amplify Engage December
+linkTitle: Amplify Engage January
 weight: 13
 date: 2026-1-36
 ---
