@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## January 9, 2026
 
-New enhancement for the January 9 update.
+New enhancements and bug fix for the January 9 update.
 
 ### Agent updates for January 9, 2025
 
@@ -38,5 +38,3 @@ New enhancement for the January 9 update.
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | 001771151 | APIGOV-31646 | **Issue**: In Product Documents, topics are limited to 20. When there are more than 20 documents and display or edit some topics disappear. <br/>**Resolution**: A fix was implemented so more than 20 documents can be added without losing any |
-
-  
