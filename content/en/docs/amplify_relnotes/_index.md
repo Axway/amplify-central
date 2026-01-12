@@ -17,12 +17,12 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify Engage January 9 2026](/docs/amplify_relnotes/2026jan_amplify/#january-9-2025)
+## [Amplify Engage January 12 2026](/docs/amplify_relnotes/2026jan_amplify/#january-12-2026)
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.131 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
 |--------------------------------------------|--------------------------|------------------|
 | Axway API Management 7.7                   | DA=1.2.43 / TA=1.2.40 (SDK v1.1.134) | DA=1.1.80 / TA=1.1.81            |
-| AWS Gateway using SDK 2.0                  | DA=1.2.37 / TA=1.2.37 (SDK v1.1.132) | DA=1.1.64 / TA-1.1.67            |
+| AWS Gateway using SDK 2.0                  | DA=1.2.38 / TA=1.2.38 (SDK v1.1.133) | DA=1.1.64 / TA-1.1.67            |
 | Azure latest release                       | DA=1.3.36 / TA=1.3.36    | DA=1.1.70 / TA=1.1.76            |
 | Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  | DA=1.0.36 / TA=2.0.82            |
 | Apigee Edge                                | 1.0.31                   | 0.1.38                           |
@@ -36,7 +36,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Backstage                                  | 1.0.30                   | 1.0.0                            |
 | SAP Integration Suite - API Management / API Portal | 1.0.17                   | 1.0.0                            |
 | WSO2 API Manager 4.5.0                     | 1.0.17                   | 1.0.0                            |
-| Sensedia                                   | 1.0.5 (SDK v1.1.134)     | 1.0.0                            |
+| Sensedia                                   | 1.0.7 (SDK v1.1.134)     | 1.0.0                            |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
