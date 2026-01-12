@@ -20,3 +20,22 @@ New enhancement for the January 9 update.
 
   (NEW AGENT RELEASES)</br>
   Description.
+
+### Marketplace updates for January 12, 2026
+
+* **MCP Translated Service**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  The MCP service for Provider and Consumer shows in the language of the Marketplace
+
+* **Terms & Conditions Translation Warning**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+   A check has been added for the product Terms & Conditions translation while publishing it to a Marketplace to inform the provider if it is missing
+
+### Marketplace bug fixes for January 12, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 001771151 | APIGOV-31646 | **Issue**: In Product Documents, topics are limited to 20. When there are more than 20 documents and display or edit some topics disappear. <br/>**Resolution**: A fix was implemented so more than 20 documents can be added without losing any |
+<img width="1378" height="718" alt="image" src="https://github.com/user-attachments/assets/c0e9cdaf-e820-44ca-a54d-f22ea5ab4c0e" />
