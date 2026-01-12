@@ -10,16 +10,22 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
-## January 9, 2026
+## January 12, 2026
 
 New enhancements and bug fix for the January 9 update.
 
-### Agent updates for January 9, 2025
+### Agent updates for January 12, 2026
 
-* **Enhancement**
+* **Sensedia 4.x support**
 
   (NEW AGENT RELEASES)</br>
-  Description.
+  The Sensedia agent discovery process has been improved for the Sensedia 4.x Static Token Authentication and data model support.
+
+### Agent bug fixes for January 12, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31507 | **Issue**: The AWS on-premise and SaaS agents had a memory leak. <br/>**Resolution**: The memory leak has been fixed. |
 
 ### Marketplace updates for January 12, 2026
 
