@@ -1,0 +1,46 @@
+---
+title: Amplify Engage January 2026
+linkTitle: Amplify Engage January
+weight: 13
+date: 2026-1-36
+---
+Axway works hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month. It is always recommended to update to the latest agents' versions.
+
+{{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
+
+---
+
+## January 12, 2026
+
+New enhancements and bug fixes for the January 12 update.
+
+### Agent updates for January 12, 2026
+
+* **Sensedia 4.x support**
+
+  (NEW AGENT RELEASES)</br>
+  The Sensedia agent discovery process has been improved for the Sensedia 4.x Static Token Authentication and data model support.
+
+### Agent bug fixes for January 12, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31507 | **Issue**: The AWS on-premise and SaaS agents had a memory leak. <br/>**Resolution**: The memory leak has been fixed. |
+
+### Marketplace updates for January 12, 2026
+
+* **MCP Translated Service**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  The MCP service for Provider and Consumer shows in the language of the Marketplace.
+
+* **Terms & Conditions translation warning**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+   A check has been added for the product Terms & Conditions translation while publishing it to a Marketplace to inform the provider if it is missing.
+
+### Marketplace bug fixes for January 12, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 001771151 | APIGOV-31646 | **Issue**: In Product documents, topics are limited to 20. When more than 20 documents, some topics disappeared when displaying or editing. <br/>**Resolution**: A fix was implemented so more than 20 documents can be added without losing any. |
