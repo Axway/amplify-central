@@ -22,7 +22,7 @@ You can extend the previous minimum variable list with the following variables. 
 
 All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
-{{< alert title="Note" color="primary" >}} Beyond the common agent variables, for the WSO2 Traceability Agent, there are no WSO2 specific variables. WSO2 Traceability Agent setup can be found [here](/docs/connect_manage_environ/connect_wso2_gateway).
+Beyond the common agent variables, for the WSO2 Traceability Agent, there are no WSO2 specific variables. WSO2 Traceability Agent setup can be found [here](/docs/connect_manage_environ/connect_wso2_gateway).
 
 ### Specific variable for Discovery agents
 
