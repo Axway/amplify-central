@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## January 12, 2026
 
-New enhancements and bug fix for the January 9 update.
+New enhancements and bug fixes for the January 12 update.
 
 ### Agent updates for January 12, 2026
 
@@ -32,15 +32,15 @@ New enhancements and bug fix for the January 9 update.
 * **MCP Translated Service**
 
   (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
-  The MCP service for Provider and Consumer shows in the language of the Marketplace
+  The MCP service for Provider and Consumer shows in the language of the Marketplace.
 
-* **Terms & Conditions Translation Warning**
+* **Terms & Conditions translation warning**
 
   (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-   A check has been added for the product Terms & Conditions translation while publishing it to a Marketplace to inform the provider if it is missing
+   A check has been added for the product Terms & Conditions translation while publishing it to a Marketplace to inform the provider if it is missing.
 
 ### Marketplace bug fixes for January 12, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 001771151 | APIGOV-31646 | **Issue**: In Product Documents, topics are limited to 20. When there are more than 20 documents and display or edit some topics disappear. <br/>**Resolution**: A fix was implemented so more than 20 documents can be added without losing any |
+| 001771151 | APIGOV-31646 | **Issue**: In Product documents, topics are limited to 20. When more than 20 documents, some topics disappeared when displaying or editing. <br/>**Resolution**: A fix was implemented so more than 20 documents can be added without losing any. |
