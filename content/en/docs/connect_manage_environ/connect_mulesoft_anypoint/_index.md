@@ -74,6 +74,7 @@ The Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metric
         * **Manage Client Applications** – Retrieve and delete client applications
         * **Application Creator** – Create client applications
         * **Exchange Creator** – Create contracts and retrieve Exchange assets
+        * **Admin Client Management Provider Clients** - Get client providers
 
     * **Traceability Agent**
         * **View Policies** – Retrieve monitoring metrics (agent-configured environments must be selected)
