@@ -10,6 +10,36 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## January 16, 2026
+
+New enhancements and bug fixes for the January 16 update.
+
+### Agent updates for January 16, 2026
+
+* **Agent**
+
+  (NEW AGENT RELEASES)</br>
+  Description.
+
+### Agent bug fixes for January 16, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
+### Marketplace updates for January 16, 2026
+
+* **Feature**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  Description.
+
+### Marketplace bug fixes for January 16, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+
 ## January 12, 2026
 
 New enhancements and bug fixes for the January 12 update.
