@@ -53,7 +53,6 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Traceable API Security                     | 2.0.14                   | 1.0.0            |
 | Akamai API Security                        | 1.0.0 (SDK v1.1.132)     | 1.0.0            |
 
-
 ## [Amplify Engage January 12 2026](/docs/amplify_relnotes/2026jan_amplify/#january-12-2026)
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.131 <br />unless otherwise noted) | Minimum supported agent version <br />(based on Amplify Agents SDK 1.1.83) |
