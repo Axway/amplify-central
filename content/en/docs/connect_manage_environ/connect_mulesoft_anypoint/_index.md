@@ -65,17 +65,18 @@ The Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metric
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html/#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * Access to MuleSoft to retrieve details needed for the agents
-* A connected app using client credentials which will impersonate the agent, which requires the following list of scopes:
-    * Discovery Agent
-        * "View Environments in a particular organization" - Getting environments
-        * "View APIs Configuration" - Getting APIs(agent configured environments must be selected)
-        * "View Policies" - Getting policies(agent configured environments must be selected)
-        * "Manage Contracts" - Creating SLA Tiers(agent configured environments must be selected)
-        * "Manage Client Applications" - Deleting Client Applications, Getting Client Applications
-        * "Application Creator" - Creating Client Applications
-        * "Exchange Creator" - Creating Contracts, Getting exchange assets
-    * Traceability Agent
-        * "View Policies" - Getting the monitoring metrics(agent configured environments must be selected)
+* A connected app using the **client credentials** grant type that impersonates the agent. This app requires the following scopes:
+    **Discovery Agent**
+        - **View Environments in a Particular Organization** – Retrieve environments
+        - **View APIs Configuration** – Retrieve APIs (agent-configured environments must be selected)
+        - **View Policies** – Retrieve policies (agent-configured environments must be selected)
+        - **Manage Contracts** – Create SLA tiers (agent-configured environments must be selected)
+        - **Manage Client Applications** – Retrieve and delete client applications
+        - **Application Creator** – Create client applications
+        - **Exchange Creator** – Create contracts and retrieve Exchange assets
+
+    **Traceability Agent**
+        - **View Policies** – Retrieve monitoring metrics (agent-configured environments must be selected)
 
 ## System requirements
 
