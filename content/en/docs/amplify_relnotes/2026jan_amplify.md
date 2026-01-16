@@ -18,7 +18,7 @@ New enhancements and bug fixes for the January 16 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-31783 | **Issue**: The Mulesoft agent was not reporting minimum, maximum and average API response times to Businuess Insights. <br/>**Resolution**: A fix has been made to all three API Response times are reported. |
+|          | APIGOV-31783 | **Issue**: The Mulesoft agent was not reporting minimum, maximum and average API response times to Businuess Insights. <br/>**Resolution**: A fix has been made so all three API response times are reported. |
 
 ### Marketplace bug fixes for January 16, 2026
 
