@@ -30,14 +30,14 @@ New bug fixes for the January 16 update.
 
 New enhancements and bug fixes for the January 12 update.
 
-### Agent updates for January 12, 2026
+### Agent update for January 12, 2026
 
 * **Sensedia 4.x support**
 
   (NEW AGENT RELEASES)</br>
   The Sensedia agent discovery process has been improved for the Sensedia 4.x Static Token Authentication and data model support.
 
-### Agent bug fixes for January 12, 2026
+### Agent bug fix for January 12, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -55,7 +55,7 @@ New enhancements and bug fixes for the January 12 update.
   (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
    A check has been added for the product Terms & Conditions translation while publishing it to a Marketplace to inform the provider if it is missing.
 
-### Marketplace bug fixes for January 12, 2026
+### Marketplace bug fix for January 12, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
