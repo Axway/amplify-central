@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="e2e">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/static/samples/e2e/e2e.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

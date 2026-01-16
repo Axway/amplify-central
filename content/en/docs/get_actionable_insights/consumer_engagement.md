@@ -92,26 +92,26 @@ In the chart you can visualize the level of engagement across all selected Consu
 * Use the granularity filter to display results by week or month.
 * Identify trends such as spikes in product adoptions or top performing consumers.
 
-### Consumer Orgs
+### Consumer Orgs tab
 
 * **New**: New consumer organizations created within the selected date range.
 * **Active**: Organizations with active user sessions within the selected date range.
 
-### Teams
+### Teams tab
 
 * **New**: New teams created within the selected date range.
 
-### Users
+### Users tab
 
 * **New**: Newly invited users within the selected date range.
 * **Active**: Unique active users within the selected date range.
 
-### Subscriptions
+### Subscriptions tab
 
 * **New**: New subscriptions created within the selected date range.
 * **Subscriptions with usage**: Unique subscriptions with reported metrics within the selected date range.
 
-### Credentials
+### Credentials tab
 
 * **New**: New credentials created within the selected date range.
 
