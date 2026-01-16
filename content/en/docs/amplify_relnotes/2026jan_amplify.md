@@ -10,18 +10,34 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## January 16, 2026
+
+New bug fixes for the January 16 update.
+
+### Agent bug fix for January 16, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31783 | **Issue**: The Mulesoft agent was not reporting minimum, maximum and average API response times to Businuess Insights. <br/>**Resolution**: All three API response times are now reported. |
+
+### Marketplace bug fix for January 16, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-29432 | **Issue**: The **Next** button on the Engage UI was active after manually adding an API Service.  If there was an error in the API Specification, an error message was displayed but the active **Next** button allowed the user to continue. <br/>**Resolution**: The **Next** button is now disabled until the error in the API Specification is corrected. |
+
 ## January 12, 2026
 
 New enhancements and bug fixes for the January 12 update.
 
-### Agent updates for January 12, 2026
+### Agent update for January 12, 2026
 
 * **Sensedia 4.x support**
 
   (NEW AGENT RELEASES)</br>
   The Sensedia agent discovery process has been improved for the Sensedia 4.x Static Token Authentication and data model support.
 
-### Agent bug fixes for January 12, 2026
+### Agent bug fix for January 12, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -39,7 +55,7 @@ New enhancements and bug fixes for the January 12 update.
   (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
    A check has been added for the product Terms & Conditions translation while publishing it to a Marketplace to inform the provider if it is missing.
 
-### Marketplace bug fixes for January 12, 2026
+### Marketplace bug fix for January 12, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
