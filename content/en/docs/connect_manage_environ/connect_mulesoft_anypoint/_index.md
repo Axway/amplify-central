@@ -65,6 +65,19 @@ The Traceability Agent may also utilize the [MuleSoft AnyPoint Monitoring Metric
 * A Platform Service Account. See [Managing service accounts](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html/#managing-service-accounts)
 * An Amplify environment. See [Create an environment](/docs/integrate_with_central/cli_central/cli_environments/)
 * Access to MuleSoft to retrieve details needed for the agents
+* A connected app using the **client credentials** grant type that impersonates the agent. This app requires the following scopes:
+    * **Discovery Agent**
+        * **View Environments in a Particular Organization** – Retrieve environments
+        * **View APIs Configuration** – Retrieve APIs (agent-configured environments must be selected)
+        * **View Policies** – Retrieve policies (agent-configured environments must be selected)
+        * **Manage Contracts** – Create SLA tiers (agent-configured environments must be selected)
+        * **Manage Client Applications** – Retrieve and delete client applications
+        * **Application Creator** – Create client applications
+        * **Exchange Creator** – Create contracts and retrieve Exchange assets
+        * **Admin Client Management Provider Clients** - Get client providers
+
+    * **Traceability Agent**
+        * **View Policies** – Retrieve monitoring metrics (agent-configured environments must be selected)
 
 ## System requirements
 
