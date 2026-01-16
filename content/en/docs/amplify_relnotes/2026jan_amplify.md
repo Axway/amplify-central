@@ -14,13 +14,13 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New bug fixes for the January 16 update.
 
-### Agent bug fixes for January 16, 2026
+### Agent bug fix for January 16, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-31783 | **Issue**: The Mulesoft agent was not reporting minimum, maximum and average API response times to Businuess Insights. <br/>**Resolution**: All three API response times are now reported. |
 
-### Marketplace bug fixes for January 16, 2026
+### Marketplace bug fix for January 16, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
