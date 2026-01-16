@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mcp">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/static/samples/mcp/mcp.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
