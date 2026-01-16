@@ -14,31 +14,17 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancements and bug fixes for the January 16 update.
 
-### Agent updates for January 16, 2026
-
-* **Agent**
-
-  (NEW AGENT RELEASES)</br>
-  Description.
-
 ### Agent bug fixes for January 16, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
-
-### Marketplace updates for January 16, 2026
-
-* **Feature**
-
-  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
-  Description.
+|          | APIGOV-31783 | **Issue**: The Mulesoft agent was reporting minimum, maximum and average API response times incorrectly to Businuess Insights. <br/>**Resolution**: A fix has been made to all three API Response times. |
 
 ### Marketplace bug fixes for January 16, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description <br/>**Resolution**: Description. |
+|          | APIGOV-29432 | **Issue**: The "next" button on the Engage UI is active after manually adding an API Service.  If there is an error in the API Specification, an error message is displayed but the active "next" button allows the user to continue. <br/>**Resolution**: The "next" button has been disabled now until the error in the API Specification has been corrected. |
 
 ## January 12, 2026
 
