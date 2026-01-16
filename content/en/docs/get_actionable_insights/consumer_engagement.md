@@ -22,11 +22,11 @@ The dashboard is organized into two main sections:
 
 The Consumer Engagement dashboard is visible to the following roles:
 
-| Role                | Description                                                                                                                                       |
-| ------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Engage Admin**    | Can view engagement metrics across all Consumer Organizations and Marketplaces.   |
-| **Catalog Manager** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns.   |
-| **Insights Viewer** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns.   |
+| Role                | Description                                                                                                                      |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| **Engage Admin**    | Can view engagement metrics across all Consumer Organizations and Marketplaces.                                                  |
+| **Catalog Manager** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns. |
+| **Insights Viewer** | Can view engagement metrics to Marketplaces they have access to. They can see subscription metrics for products their team owns. |
 
 ## Filtering options
 
@@ -44,31 +44,31 @@ A snapshot of the total counts across consumer organizations, teams, users, subs
 Metrics include:
 
 * **Consumer Orgs**: Total consumer organizations currently available in the selected Marketplaces you have access to, including your platform organization.
-* **Active**: Organization with active user sessions in the selected time interval.
-* **New**: Newly created consumer organization in the selected time interval.
+* **Active**: Total consumer organizations that have not been disabled.
 
 ### Teams
 
 Metrics include:
 
-* **Teams**: Total number of teams currently available in the consumer organizations you have access to.
-* **New**: Newly created teams within the selected time range.
+* **Teams**: Total number of teams currently available.
+* **Internal**: Total number of teams currently available in the provider organization you have access to.
+* **External**: Total number of teams currently available in consumer organizations you have access to.
 
 ### Users
 
 Metrics include:
 
 * **Users**: Total unique users.
-* **Active**: Users with active sessions within the selected time range.
-* **New**: Newly invited users within the selected time range.
+* **Internal**: Users within the provider organization.
+* **External**: Users within consumer organizations.
 
 ### Subscriptions
 
 Metrics include:
 
 * **Subscriptions**: Total subscriptions currently available to products in the owning team the user belongs to.
-* **New**: Created during the selected time range. Includes deleted subscriptions for Engage Admin users.
-* **Subscriptions with usage**: Within the selected time range.
+* **Active**: Active subscriptions currently available to products in the owning team the user belongs to.
+* **Cancelled**: Archived subscriptions currently available to products in the owning team the user belongs to.
 
 Engage Admins see all subscriptions in the organization, but Catalog Managers and Insights Viewer assignees can view only subscriptions for products owned by their team.
 
@@ -76,8 +76,9 @@ Engage Admins see all subscriptions in the organization, but Catalog Managers an
 
 Metrics include:
 
-* **Credentials**: Total credentials available across the consumer organization the user has access to.
-* **New**: Newly created credentials within the selected time range.
+* **Credentials**: Total credentials.
+* **Active**: Active credentials.
+* **Inactive**: Inactive credentials.
 
 This card is visible only to Engage Admin assignees.
 
