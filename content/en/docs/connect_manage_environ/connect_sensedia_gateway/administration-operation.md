@@ -133,7 +133,7 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 | Variable                         | Description                                                     | Required | Default                 | Example                                    |
 | -------------------------------- | --------------------------------------------------------------- | -------- | ----------------------- | ------------------------------------------ |
 | `SENSEDIA_BASEURL`               | Sensedia platform base URL                                      | Yes      |                         | `https://platform-production.sensedia.com` |
-| `SENSECDA_RATELIMIT`             | The max number of concurrent API calls to Sensedia API Manager  | No       | 0 (unlimited)           | `50`                                       |
+| `SENSEDIA_RATELIMIT`             | The max number of concurrent API calls to Sensedia API Manager  | No       | 0 (unlimited)           | `50`                                       |
 | `SENSEDIA_AUTH_CLIENTID`         | Client ID for OAuth authentication                              | No       |                         | `id`                                       |
 | `SENSEDIA_AUTH_CLIENTSECRET`     | Client Secret for OAuth authentication                          | No       |                         | `<secret>`                                 |
 | `SENSEDIA_AUTH_TOKEN`            | Static authentication token                                     | No       |                         | `your-static-token`                        |
