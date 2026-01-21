@@ -31,7 +31,7 @@ The Discovery Agent discovers APIs based on tags defined in the agent configurat
 
 ### Create your Discovery Agent configuration
 
-All Sensedia agent variables can be found here: [Environment variables](/docs/connect_manage_environ/administration-operation#environment-variables).
+All Sensedia agent variables can be found here: [Environment variables](/docs/connect_manage_environ/connect_sensedia_gateway/administration-operation#environment-variables).
 
 All common agent variables can be found here: [Agent variables](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
@@ -97,7 +97,7 @@ The Traceability Agent is used to filter the transaction logs from Sensedia API 
 
 ### Create your Traceability Agent configuration
 
-All Sensedia agent variables can be found here: [Environment variables](/docs/connect_manage_environ/administration-operation#environment-variables).
+All Sensedia agent variables can be found here: [Environment variables](/docs/connect_manage_environ/connect_sensedia_gateway/administration-operation#environment-variables).
 
 All common agent variables can be found here: [Agent variables](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
