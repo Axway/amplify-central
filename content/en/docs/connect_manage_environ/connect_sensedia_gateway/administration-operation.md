@@ -130,21 +130,22 @@ The Traceability Agent collects API call metrics from Sensedia environments and 
 
 ### Environment variables
 
-| Variable                         | Description                                                                                  | Required | Default                 | Example                                    |
-| -------------------------------- | -------------------------------------------------------------------------------------------- | -------- | ----------------------- | ------------------------------------------ |
-| `SENSEDIA_BASEURL`               | Sensedia platform base URL                                                                   | Yes      |                         | `https://platform-production.sensedia.com` |
-| `SENSEDIA_AUTH_CLIENTID`         | Client ID for OAuth authentication                                                           | No       |                         | `id`                                       |
-| `SENSEDIA_AUTH_CLIENTSECRET`     | Client Secret for OAuth authentication                                                       | No       |                         | `<secret>`                                 |
-| `SENSEDIA_AUTH_TOKEN`            | Static authentication token                                                                  | No       |                         | `your-static-token`                        |
-| `SENSEDIA_DEVELOPEREMAIL`        | Email for application creation and sent as userLogin header when using `SENSEDIA_AUTH_TOKEN` | Yes      |                         | `developer@company.com`                    |
-| `SENSEDIA_ENVIRONMENTS`          | Comma-separated list of environments                                                         | No       | `""` (all environments) | `Production,Development`                   |
-| `SENSEDIA_FILTER`                | API discovery filter expression                                                              | No       | `""` (no filtering)     | `tag.Axway_axway.Exists()`                 |
-| `SENSEDIA_POLLINTERVAL`          | Discovery/Traceability poll interval                                                         | No       | `5m` (min is '5m')      | `5m`                                       |
-| `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs                                                                       | No       | `false`                 | `true`                                     |
-| `SENSEDIA_DISCOVERYPRIVATEAPIS`  | Discover private APIs                                                                        | No       | `false`                 | `true`                                     |
-| `SENSEDIA_SENDALLTRAFFIC`        | Send all API traffic for reporting (Traceability Agent only)                                 | No       | `true`                  | `false`                                    |
-| `SENSEDIA_TRACEABILITYBATCHSIZE` | Batch size for traceability API calls (Traceability Agent only)                              | No       | `500`                   | `1000`                                     |
-| `SENSEDIA_TIMEOFFSET`            | Time offset for processing delays (Traceability Agent only)                                  | No       | `10m`                   | `15m`                                      |
+| Variable                         | Description                                                     | Required | Default                 | Example                                    |
+| -------------------------------- | --------------------------------------------------------------- | -------- | ----------------------- | ------------------------------------------ |
+| `SENSEDIA_BASEURL`               | Sensedia platform base URL                                      | Yes      |                         | `https://platform-production.sensedia.com` |
+| `SENSECDA_RATELIMIT`             | The max number of concurrent API calls to Sensedia API Manager  | No       | 0 (unlimited)           | `50`                                       |
+| `SENSEDIA_AUTH_CLIENTID`         | Client ID for OAuth authentication                              | No       |                         | `id`                                       |
+| `SENSEDIA_AUTH_CLIENTSECRET`     | Client Secret for OAuth authentication                          | No       |                         | `<secret>`                                 |
+| `SENSEDIA_AUTH_TOKEN`            | Static authentication token                                     | No       |                         | `your-static-token`                        |
+| `SENSEDIA_DEVELOPEREMAIL`        | Email for application creation and used for Sensedia token auth | Yes      |                         | `developer@company.com`                    |
+| `SENSEDIA_ENVIRONMENTS`          | Comma-separated list of environments                            | No       | `""` (all environments) | `Production,Development`                   |
+| `SENSEDIA_FILTER`                | API discovery filter expression                                 | No       | `""` (no filtering)     | `tag.Axway_axway.Exists()`                 |
+| `SENSEDIA_POLLINTERVAL`          | Discovery/Traceability poll interval                            | No       | `5m` (min is '5m')      | `5m`                                       |
+| `SENSEDIA_DISCOVERYIDENTITYAPIS` | Discover identity APIs                                          | No       | `false`                 | `true`                                     |
+| `SENSEDIA_DISCOVERYPRIVATEAPIS`  | Discover private APIs                                           | No       | `false`                 | `true`                                     |
+| `SENSEDIA_SENDALLTRAFFIC`        | Send all API traffic for reporting (Traceability Agent only)    | No       | `true`                  | `false`                                    |
+| `SENSEDIA_TRACEABILITYBATCHSIZE` | Batch size for traceability API calls (Traceability Agent only) | No       | `500`                   | `1000`                                     |
+| `SENSEDIA_TIMEOFFSET`            | Time offset for processing delays (Traceability Agent only)     | No       | `10m`                   | `15m`                                      |
 
 ## Monitoring and troubleshooting
 

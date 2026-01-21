@@ -31,20 +31,9 @@ The Discovery Agent discovers APIs based on tags defined in the agent configurat
 
 ### Create your Discovery Agent configuration
 
-All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
+All Sensedia agent variables can be found here: [Environment variables](/docs/connect_manage_environ/administration-operation#environment-variables).
 
-| Variable name                  | Description                                                                                                                                                                 |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SENSEDIA_BASEURL               | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                                                       |
-| SENSEDIA_AUTH_CLIENTID         | The Client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                                                       |
-| SENSEDIA_AUTH_CLIENTSECRET     | The Client Secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                                                       |
-| SENSEDIA_AUTH_TOKEN            | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                                            |
-| SENSEDIA_DEVELOPEREMAIL        | Developer email for application creation in Sensedia.                                                                                                                       |
-| SENSEDIA_FILTER                | Filter condition expression for discovering APIs based on tags. The conditional expression must have "tag" as the prefix/selector. For example, `tag.Axway_axway.Exists()`. |
-| SENSEDIA_DISCOVERYIDENTITYAPIS | When set to true, the agent will discover Identity APIs. Default is false.                                                                                                  |
-| SENSEDIA_DISCOVERYPRIVATEAPIS  | When set to true, the agent will discover Private APIs. Default is false.                                                                                                   |
-| SENSEDIA_ENVIRONMENTS          | Comma-separated list of Sensedia environments to filter for discovery (e.g., `Production,Development`).                                                                     |
-| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for changes (ns - default, us, ms, s, m, h). Default is 5m, , minimum is 5m.                                                         |
+All common agent variables can be found here: [Agent variables](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
 ### Create your Discovery Agent environment file
 
@@ -108,19 +97,9 @@ The Traceability Agent is used to filter the transaction logs from Sensedia API 
 
 ### Create your Traceability Agent configuration
 
-All common agent variables can be found [here](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
+All Sensedia agent variables can be found here: [Environment variables](/docs/connect_manage_environ/administration-operation#environment-variables).
 
-| Variable name                  | Description                                                                                                                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SENSEDIA_BASEURL               | The base URL of the Sensedia platform API Manager (e.g., `https://platform-production.sensedia.com`).                                             |
-| SENSEDIA_AUTH_CLIENTID         | The Client ID for OAuth authentication with Sensedia. Either use this with CLIENTSECRET or use TOKEN.                                             |
-| SENSEDIA_AUTH_CLIENTSECRET     | The Client Secret for OAuth authentication with Sensedia. Either use this with CLIENTID or use TOKEN.                                             |
-| SENSEDIA_AUTH_TOKEN            | The static authentication token for Sensedia. Either use this or use CLIENTID with CLIENTSECRET.                                                  |
-| SENSEDIA_ENVIRONMENTS          | Comma-separated list of Sensedia environments to monitor for traceability (e.g., `Production,Development`).                                       |
-| SENSEDIA_POLLINTERVAL          | The interval at which to poll Sensedia for transaction data (ns - default, us, ms, s, m, h). Default is 5m, minimum is 5m.                        |
-| SENSEDIA_SENDALLTRAFFIC        | When set to true, the agent will send all API traffic to be reported. When set to false, only discovered APIs will be reported. Default is false. |
-| SENSEDIA_TRACEABILITYBATCHSIZE | The batch size for traceability API calls. Controls how many records are fetched per page. Default is 500. Range: 1-1000.                         |
-| SENSEDIA_TIMEOFFSET            | Time offset to subtract from current time when querying for traceability data to account for processing delays. Default is 10m. Range: 1m-60m.    |
+All common agent variables can be found here: [Agent variables](/docs/connect_manage_environ/connected_agent_common_reference/agent-variables#agent-variables).
 
 ### Create your Traceability Agent environment file
 
