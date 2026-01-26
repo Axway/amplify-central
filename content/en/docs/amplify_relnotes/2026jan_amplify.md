@@ -12,7 +12,9 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## January 26, 2026
 
-### Marketplace bug fix for January 26, 2026
+New bug fixes for the January 26 update.
+
+### Marketplace bug fixes for January 26, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -20,6 +22,10 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 | 01800615 | APIGOV-31863 | **Issue**: The UI MCP Tools output schema was a mandatory field. <br/>**Resolution**: The UI MCP Tools output schema has been updated to be an optional field. |
 | 01800560 | APIGOV-31829 | **Issue**: The UI MCP Transports supported field was not being displayed after saving a selection. <br/>**Resolution**: The UI has been fixed to display the saved Transports Selected. |
 | 01800613 | APIGOV-31831 | **Issue**: The UI MCP Clients display of the referenced document count was not increasing. <br/>**Resolution**: The UI has been fixed to accurately display the MCP Cliemt referenced document count. |
+
+## January 23, 2026
+
+New enhancements for the January 23 update.
 
 ### Marketplace updates for January 23, 2026
 
