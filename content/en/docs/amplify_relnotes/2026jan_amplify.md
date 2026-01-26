@@ -29,30 +29,30 @@ New enhancements for the January 23 update.
 
 ### Marketplace updates for January 23, 2026
 
-* **Improve Grid Pagination in Marketplace Product Screen**
+* **Improved Grid Pagination in Marketplace Product Screen**
 
   (CONSUMER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
-  Enhanced Marketplace product grid, eliminating “fake endings” and improving visual clarity to help customers discover and evaluate products more easily
+  Enhanced Marketplace product pagination, eliminating “fake endings” and improving visual clarity to help customers discover and evaluate products more easily.
 
-* **Standardize Provider Screen "+Add" Buttons**
+* **Standardizeed Provider Screen "+Add" Buttons**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-   Upgraded Provider "+ Add" button and header UIs per UX audit, boosting consistency across pages
+   Upgraded Provider "+ Add" button and header UIs per UX audit, boosting consistency across pages.
 
 * **Filter Subscriptions by Consumer Organization**
 
   (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
-   Enhanced the Engage | Subscriptions screen with a new filter for consumer organizations to make information easier to find and navigate
+   Enhanced the Subscriptions screen in Engage (provider view) with a new filter for consumer organizations to make information easier to find and navigate.
 
 * **Marketplace Navigation Language Change**
 
   (CONSUMER EXPERIENCE, MARKETPLACE,RESOLUTION)</br>
-  Resolved navigation language change in Marketplace to function for all pages
+  Resolved navigation language change in Marketplace to function for all pages.
 
 * **API Key as a Query/Header in Marketplace**
 
   (PRODIVER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
-  Updated credentials in the case where both the API Key as a header AND API Key as a query are present in the file to give the user the option to select which they want to test.
+  Updated the "try-it-out" experience in the case where both the API Key as a header AND API Key as a query are present in the file to give the user the option to select which they want to test.
 
 ## January 16, 2026
 
