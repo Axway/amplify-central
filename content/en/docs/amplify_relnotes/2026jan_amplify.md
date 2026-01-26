@@ -54,9 +54,6 @@ New enhancements and bug fixes for the January 23 update.
   (PRODIVER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
   Updated credentials in the case where both the API Key as a header AND API Key as a query are present in the file to give the user the option to select which they want to test.
 
-
-
-
 ## January 16, 2026
 
 New bug fixes for the January 16 update.
