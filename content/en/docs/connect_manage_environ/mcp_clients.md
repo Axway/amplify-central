@@ -14,7 +14,7 @@ Within Topology, MCP clients are used to manage MCP client types that are used w
 The list of MCP client types is displayed with the following information:
 
 * **Client name** - The title of the client type
-* **Referenced** - The number of times the client type is referenced
+* **Referenced** - The number of documents the client type is referenced
 * **Updated** - Date of the last modification
 * **Action menu** - The ellipsis menu used to manage the client type:
     * **Edit** - Edit the client type
