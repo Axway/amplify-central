@@ -1503,7 +1503,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 ## [Amplify Central June 2022](/docs/amplify_relnotes/archive/20220630_ampc_relnotes/)
 
-**What's new for**
+**What's new for**:
 
 * **Axway Central CLI** (version 2.10.3): None
 * **Amplify Central WebUI**: See the Release Notes for Asset Catalog, Product Foundry, and Service Registry
@@ -1587,7 +1587,7 @@ Current agent versions are based on Amplify Agents SDK v1.1.30. This version is 
 
 ## [Amplify Central May 2022](/docs/amplify_relnotes/archive/20220523_ampc_relnotes/)
 
-**What's new for**
+**What's new for**:
 
 * **Axway Central CLI** (version 2.10.3):
     * The agent installation supports the single-entry point URL defined by the region where the agent is installed
