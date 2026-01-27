@@ -10,6 +10,50 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## January 26, 2026
+
+New bug fixes for the January 26 update.
+
+### Marketplace bug fixes for January 26, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31857 | **Issue**: The UI MCP Server Metadata version was too restrictive by supporting only the semantic version format. <br/>**Resolution**: The UI MCP Server Metadata version has been updated to accept any text value. |
+| 01800615 | APIGOV-31863 | **Issue**: The UI MCP Tools output schema was a mandatory field. <br/>**Resolution**: The UI MCP Tools output schema has been updated to be an optional field. |
+| 01800560 | APIGOV-31829 | **Issue**: The UI MCP Transports supported field was not being displayed after saving a selection. <br/>**Resolution**: The UI has been fixed to display the saved selected Transports. |
+| 01800613 | APIGOV-31831 | **Issue**: The UI MCP Clients display of the referenced document count was not increasing. <br/>**Resolution**: The UI has been fixed to accurately display the MCP Client referenced document count. |
+
+## January 23, 2026
+
+New enhancements for the January 23 update.
+
+### Marketplace updates for January 23, 2026
+
+* **Improved grid pagination in Marketplace Product screen**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Enhanced Marketplace *Product*  pagination to eliminate "fake endings" and improve visual clarity, helping customers discover and evaluate products more easily.
+
+* **Standardize Provider screen "+ Add" button**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Upgraded *Provider* **+ Add** button and header UIs per UX audit, providing consistency across pages.
+
+* **Filter Subscriptions by consumer organization**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Enhanced the *Subscriptions* screen in Engage (provider view) with a new filter for consumer organizations to make information easier to find and navigate.
+
+* **Marketplace navigation language change**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, RESOLUTION)</br>
+  Resolved navigation language change in Marketplace to function for all pages.
+
+* **API Key as a query / header in Marketplace**
+
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  Updated the "try-it-out" experience when both the API Key as a header AND API Key as a query are present in the file to give the user the option to select which they want to test.
+
 ## January 16, 2026
 
 New bug fixes for the January 16 update.
@@ -18,7 +62,7 @@ New bug fixes for the January 16 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-31783 | **Issue**: The Mulesoft agent was not reporting minimum, maximum and average API response times to Businuess Insights. <br/>**Resolution**: All three API response times are now reported. |
+|          | APIGOV-31783 | **Issue**: The Mulesoft agent was not reporting minimum, maximum and average API response times to Business Insights. <br/>**Resolution**: All three API response times are now reported. |
 
 ### Marketplace bug fix for January 16, 2026
 
@@ -47,7 +91,7 @@ New enhancements and bug fixes for the January 12 update.
 
 * **MCP Translated Service**
 
-  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   The MCP service for Provider and Consumer shows in the language of the Marketplace.
 
 * **Terms & Conditions translation warning**
