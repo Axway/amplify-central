@@ -31,7 +31,7 @@ New enhancements for the January 23 update.
 
 * **Improved grid pagination in Marketplace Product screen**
 
-  (CONSUMER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   Enhanced Marketplace *Product*  pagination to eliminate "fake endings" and improve visual clarity, helping customers discover and evaluate products more easily.
 
 * **Standardize Provider screen "+ Add" button**
@@ -46,7 +46,7 @@ New enhancements for the January 23 update.
 
 * **Marketplace navigation language change**
 
-  (CONSUMER EXPERIENCE, MARKETPLACE,RESOLUTION)</br>
+  (CONSUMER EXPERIENCE, MARKETPLACE, RESOLUTION)</br>
   Resolved navigation language change in Marketplace to function for all pages.
 
 * **API Key as a query / header in Marketplace**
@@ -91,7 +91,7 @@ New enhancements and bug fixes for the January 12 update.
 
 * **MCP Translated Service**
 
-  (PROVIDER EXPERIENCE, MARKETPLACE,ENHANCEMENT)</br>
+  (PROVIDER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   The MCP service for Provider and Consumer shows in the language of the Marketplace.
 
 * **Terms & Conditions translation warning**
