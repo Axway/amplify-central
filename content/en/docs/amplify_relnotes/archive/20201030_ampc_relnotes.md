@@ -2,7 +2,7 @@
 title: Amplify Central October 2020 Release Notes
 linkTitle: Amplify Central October 2020
 weight: 90
-draft: yes
+draft: true
 date: 2020-10-30
 description: Amplify Central / Unified Catalog enables the user to manage their
   provider / consumer view. For more information, see the Amplify Central and

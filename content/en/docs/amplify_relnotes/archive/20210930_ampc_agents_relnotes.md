@@ -2,7 +2,7 @@
 title: Amplify agents September 2021 Release Notes
 linkTitle: Amplify agents September 2021
 weight: 90
-draft: yes
+draft: true
 date: 2021-09-30
 description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
   / Istio provide better visibility into your multi-type gateway eco system.

@@ -2,6 +2,7 @@
 title: Amplify August 26 2022
 linkTitle: Amplify August 26 2022
 weight: 90
+draft: true
 date: 2022-08-19
 ---
 We work hard to improve the Amplify experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in the latest release.

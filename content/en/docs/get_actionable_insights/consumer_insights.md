@@ -2,7 +2,7 @@
 title: Consumer Insights
 linkTitle: Consumer insights
 weight: 120
-draft: yes
+draft: true
 date: 2025-10-21
 ---
 

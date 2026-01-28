@@ -2,6 +2,7 @@
 title: Amplify agents January 2022 Release Notes
 linkTitle: Amplify agents January 2022
 weight: 90
+draft: true
 date: 2022-01-14
 description: Traceability and Discovery agents for Amplify Gateway / AWS / Azure
   / Istio provide better visibility into your multi-type gateway eco system.
