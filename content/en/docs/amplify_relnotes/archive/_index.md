@@ -2,6 +2,7 @@
 title: Release Notes archive
 linkTitle: Release Notes archive May 2022 through December 2023
 no_list: true
+draft: true
 weight: 100
 date: 2020-10-28
 hide_readingtime: true

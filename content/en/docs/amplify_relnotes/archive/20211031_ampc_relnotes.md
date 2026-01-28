@@ -2,7 +2,7 @@
 title: Amplify Central October 2021 Release Notes
 linkTitle: Amplify Central October 2021
 weight: 90
-draft: yes
+draft: true
 date: 2021-10-13
 description: Amplify Central enables the user to manage their provider /
   consumer view.

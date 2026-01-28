@@ -2,7 +2,7 @@
 title: Business insights
 linkTitle: Business insights
 weight: 10
-draft: yes
+draft: true
 date: 2022-02-04
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Amplify Central May 2022 Release Notes
 linkTitle: Amplify Central May 2022
-draft: yes
+draft: true
 weight: 90
 date: 2022-05-23
 ---
