@@ -18,7 +18,7 @@ New bug fix for the January 29 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01802658 | APIGOV-31894 | **Issue**: After a new asset version is releaesed with a corrupted API Service, the API Service could not be removed from the product plan quota. <br/>**Resolution**: Afix has been made allow the removal of the corrupted API Service from the product plan quota. This would then enable the release of a new asset version without the corrupt API Service. |
+| 01802658 | APIGOV-31894 | **Issue**: After a new asset version is releaesed with a corrupted API Service, the API Service could not be removed from the product plan quota. <br/>**Resolution**: A fix has been made to allow the removal of the corrupted API Service from the product plan quota. Then a new asset version can be released without the corrupt API Service. |
 
 ## January 26, 2026
 
