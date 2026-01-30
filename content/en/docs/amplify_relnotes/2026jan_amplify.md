@@ -14,7 +14,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New bug fix for the January 29 update.
 
-### Marketplace bug fixes for January 29, 2026
+### Marketplace bug fix for January 29, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
