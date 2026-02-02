@@ -16,6 +16,6 @@ New bug fix for the February 5 update.
 
 ### Marketplace bug fix for February 5, 2026
 
-| Case ID  | Internal ID  | Description                                                                |
-|--------- |------------- |----------------------------------------------------------------------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description.                  |
+| Case ID   | Internal ID   | Description                                                            |
+| --------- | ------------- |------------------------------------------------------------------------|
+| xxxxxxxx  | APIGOV-xxxxx  | **Issue**: Description. <br/>**Resolution**: Description.              |
