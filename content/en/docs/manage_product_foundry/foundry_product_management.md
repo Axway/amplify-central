@@ -120,7 +120,7 @@ View the following detailed information for a specific product in any state (Dra
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **All Products**.
-3. Click **+ Add New Product** to add a new product.
+3. Click **+ Add Product** to add a new product.
 4. Add the following and then click **Next**:
 
     * Product Name - The display name for the product in the WebUI

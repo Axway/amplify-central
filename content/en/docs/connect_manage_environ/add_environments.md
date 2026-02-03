@@ -23,9 +23,9 @@ Follow these steps to create an environment.
 ### Open the Environments page
 
 1. Navigate to *Topology > Environments*.
-2. Click **+ Add New Environment**.
+2. Click **+ Add Environment**.
 
-    ![Add New Environment button on Environment List Page.](/Images/central/EnvironmentListPage.png "Add New Environment button")
+    ![Add Environment button on Environment List Page.](/Images/central/EnvironmentListPage.png "Add Environment button")
 
 {{< alert title="Note" color="primary" >}}If you’ve already reached your environment quota, the button will be disabled. Check your entitlement to confirm limits.{{< /alert >}}
 

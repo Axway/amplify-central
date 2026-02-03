@@ -76,7 +76,7 @@ If the product is already published to a Marketplace, the change of category wil
 
 1. Log into the platform.
 2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories.
-3. Click **+ Add New Category** to start the category creation wizard:
+3. Click **+ Add Category** to start the category creation wizard:
 
     * Category Profile page: Enter the category definition (Name, Parent, Description, and an optional image). The category logical name will be computed based on the category name.
     * When associating a parent, the Access rights and Marketplace association are disabled because the children category automatically follows its parent rights and visibility.
