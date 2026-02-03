@@ -6,16 +6,17 @@ date: 2026-2-2
 ---
 Axway works hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month. It is always recommended to update to the latest agents' versions.
 
-{{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents). To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).{{< /alert >}}
 
 ---
 
-## February 5, 2026
+## February 2, 2026
 
-New bug fix for the February 5 update.
+New enhancements for the February 2 update.
 
-### Marketplace bug fix for February 5, 2026
+### Agent update for February 2, 2026
 
-| Case ID   | Internal ID   | Description                                                            |
-| --------- | ------------- |------------------------------------------------------------------------|
-| xxxxxxxx  | APIGOV-xxxxx  | **Issue**: Description. <br/>**Resolution**: Description.              |
+* **New Apigee Edge agent version available**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
