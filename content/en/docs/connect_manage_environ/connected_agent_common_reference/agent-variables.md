@@ -6,20 +6,20 @@ weight: 40
 ---
 The variables common to all agents are described here in more detail.
 
-* [Agent Variables](#agent-variables)
-    * [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
-        * [Status endpoint variables](#status-endpoint-variables)
-        * [Logging variables](#logging-variables)
-        * [Custom unit metric service variables](#custom-unit-metric-service-variables)
-    * [Discovery Agent only variables](#discovery-agent-only-variables)
-        * [IdP configuration variables](#idp-configuration-variables)
-    * [Traceability Agent only variables](#traceability-agent-only-variables)
-        * [Audit log variables](#audit-log-variables)
-        * [Additional Axway API Manager Traceability Agent audit log](#additional-axway-api-manager-traceability-agent-audit-log)
-* [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
-    * [Default pattern](#default-pattern)
-    * [Available variables](#available-variables)
-    * [Date Formats](#date-formats)
+- [Agent Variables](#agent-variables)
+  - [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
+    - [Status endpoint variables](#status-endpoint-variables)
+    - [Logging variables](#logging-variables)
+    - [Custom unit metric service variables](#custom-unit-metric-service-variables)
+  - [Discovery Agent only variables](#discovery-agent-only-variables)
+    - [IdP configuration variables](#idp-configuration-variables)
+  - [Traceability Agent only variables](#traceability-agent-only-variables)
+    - [Audit log variables](#audit-log-variables)
+    - [Additional Axway API Manager Traceability Agent audit log](#additional-axway-api-manager-traceability-agent-audit-log)
+- [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
+  - [Default pattern](#default-pattern)
+  - [Available variables](#available-variables)
+  - [Date Formats](#date-formats)
 
 ## Agent Variables
 
@@ -53,6 +53,7 @@ The variables common to all agents are described here in more detail.
 | AGENTFEATURES_VERSIONCHECKER      | Set to false to turn off the agent job that checks if the running agent is the latest available (default: `true`).                                                                                                                                                                                                                            |
 | AGENTFEATURES_PERSISTCACHE        | Set to false to turn off the agent's persisted cache (default: `true`).                                                                                                                                                                                                                                                                       |
 | CENTRAL_GRPC_ENABLED              | Set to false to make agent function in poll mode (default: `true`).                                                                                                                                                                                                                                                                            |
+| CENTRAL_INSTANCEVALIDATORENABLED  | Set to true to enable the instance validator (default:   `false`).                                                                                                                                 |
 
 #### Status endpoint variables
 
