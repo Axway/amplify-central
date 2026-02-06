@@ -10,9 +10,23 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## February 9, 2026
+
+New enhancement for the February 9 update.
+
+### Agent updates for February 9, 2026
+
+* **Security builds**
+
+  (NEW AGENT RELEASES)</br>
+
+  We have release updated agents to improve general security and reliability.
+
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
+
 ## February 2, 2026
 
-New enhancements for the February 2 update.
+New enhancement for the February 2 update.
 
 ### Agent update for February 2, 2026
 
