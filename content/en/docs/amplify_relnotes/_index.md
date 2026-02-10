@@ -19,7 +19,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Engage February 9 2026](/docs/amplify_relnotes/2026feb_amplify/#february-9-2026)
 
-{{< alert title="Note" color="primary" >}}To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).{{< /alert >}}
+{{< alert title="Note" color="primary" >}}To view the agents supported, unsupported, or have an upgrade available within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).{{< /alert >}}
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.131 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
