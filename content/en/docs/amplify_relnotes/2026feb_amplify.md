@@ -9,26 +9,16 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 {{< alert title="Note" color="primary" >}}For information on the latest agent versions, please refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents). To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).{{< /alert >}}
 
 ---
-
-## February 9, 2026
-
-New enhancement for the February 9 update.
-
-### Agent updates for February 9, 2026
-
-* **Security builds**
-
-  (NEW AGENT RELEASES)</br>
-
-  We have release updated agents to improve general security and reliability.
-
-  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
-
 ## February 2, 2026
 
 New enhancement for the February 2 update.
 
-### Agent update for February 2, 2026
+### Agent bug fixes for February 2, 2026
+
+| Case ID     | Internal ID  | Description                                       |
+|-------------|--------------|---------------------------------------------------|
+| 01776011	  | APIGOV-31926 | **Issue**: Apegee Edge agent v1.0.31 appeared to be disconnected on Engage with the wrong version number. <br />**Resolution**: A fix to the Apigee Edge agent to show the correct status and version. |
+
 
 * **New Apigee Edge agent version available**
 
