@@ -25,4 +25,4 @@ New enhancement and bug fix for the February 2 update.
 
 | Case ID     | Internal ID  | Description                                                                         |
 |-------------|--------------|-------------------------------------------------------------------------------------|
-| 01776011    | APIGOV-31926 | **Issue**: Apigee Edge agent v1.0.31 appeared to be disconnected on Engage with the wrong version number. <br />**Resolution**: A fix to the Apigee Edge agent to show the correct status and version. |
+| 01776011    | APIGOV-31926 | **Issue**: Apigee Edge agent v1.0.31 appeared to be disconnected on Engage with the wrong version number. <br />**Resolution**: The Apigee Edge agent now shows the correct status and version. |
