@@ -105,7 +105,8 @@ Only users that are assigned the **Engage Admin** role can edit product catego
 
 1. Log into the platform.
 2. Navigate to *Catalog > Product Foundry > Categories*. This page displays all global categories assigned only to products and product categories.
-3. Click the star icon to open the category details screen and automatically expand the Marketplace visibility section where the Marketplace list is displayed and whether the category is featured in each Marketplace.
+3. Click the star icon to open the category gibranch
+ and automatically expand the Marketplace visibility section where the Marketplace list is displayed and whether the category is featured in each Marketplace.
 4. Click the star icon to feature the category in the corresponding Marketplace. If the maximum number (five) of featured categories is reached, you will be prompted to either discard the change or replace an existing featured category with the current one.
 5. Save the changes.
 
