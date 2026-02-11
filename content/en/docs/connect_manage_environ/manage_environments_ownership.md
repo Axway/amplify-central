@@ -73,9 +73,9 @@ To retrieve the team id:
 
 #### Resource access by user role
 
-The table below describes the Amplify Engage roles and the resources they have access to.
+Refer to [Organization roles and features](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/organization_roles_and_features/index.html) for all available user roles and the capabilities they grant access to.
 
-![Table that lists resource access by role.](/Images/central/env_gw_mgmt/resourcepermissionsbyrole.png "Resource access by user role")
+<!-- ![Table that lists resource access by role.](/Images/central/env_gw_mgmt/resourcepermissionsbyrole.png "Resource access by user role") -->
 
 #### Environment sharing
 
