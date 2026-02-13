@@ -1,7 +1,6 @@
 ---
 title: Pre-production Release Notes
 linkTitle: Pre-production Release Notes
-no_list: true
 weight: 105
 date: 2025-2-12
 hide_readingtime: true
@@ -20,3 +19,7 @@ You can provide feedback or report issues by creating a case with [Axway Support
 * Items in preview are not guaranteed to reach production.
 * Final production content is confirmed after the preview window closes.
 * Approved changes are promoted during the planned production release date.
+
+## Pre-production releases
+
+Preview releases by date:
