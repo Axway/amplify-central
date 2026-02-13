@@ -34,7 +34,7 @@ A list of identity providers is displayed with the following information:
 Only the Engage Admin role can create identity providers.
 
 1. Navigate to *Topology > Identity Providers*.
-2. Click **+ Add New Identity Provider**. *The Add a Identity Provider wizard is displayed*.
+2. Click **+ Add Identity Provider**. *The Add a Identity Provider wizard is displayed*.
 3. Add the following identity provider general information:
 
     * **Identity Provider Name** - enter a friendly name for the identity provider in the WebUI.

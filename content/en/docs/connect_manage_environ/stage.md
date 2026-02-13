@@ -97,7 +97,7 @@ The list of stages is displayed with the following information:
 Only the Engage Admin role can create Stages.
 
 1. Navigate to *Topology > Stages*.
-2. Click **+ Add new Stage**.
+2. Click **+ Add Stage**.
 
     *The Add a Stage wizard is displayed*.
 

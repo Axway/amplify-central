@@ -99,7 +99,7 @@ The Document Library supports multiple document types:
 To create a document:
 
 1. Navigate to *Document Library*.
-2. Click **+ Add New Document** to open the documents wizard.
+2. Click **+ Add Document** to open the documents wizard.
 3. Select a Document type: **Upload a document**, **Create Markdown** or **External link**. Based on your choice, the next screen will present you with the appropriate actions:
    * **Upload a document**: click **BROWSE FILES** or drop file(s) into the drop area. The successfully uploaded file is displayed in the *Manage Uploads* area. If a file does not respect the limitations, it will appear in an *error message* area. Check the box in front of the uploaded file to edit the file details: Document name, Description, Version. Once your document information is correct, click **Next**.
    * **Create Markdown**: enter the document details (Name, Description, Version) and click **Next** to display the [Markdown editor](/docs/manage_product_foundry/markdown_editor). Once the markdown content is ready, click **Next**.
@@ -203,7 +203,7 @@ View the following information for all templates:
 1. **Open the template wizard**:
 
    * Navigate to *Document Library* and select the **Templates** tab.
-   * Click **+ Add New Template** to start the template wizard.
+   * Click **+ Add Template** to start the template wizard.
 2. **Enter general information**:
 
    * Fill out the required fields:

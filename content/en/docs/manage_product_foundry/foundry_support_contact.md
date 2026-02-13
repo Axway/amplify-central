@@ -41,7 +41,7 @@ Click on the support contact name to view more information, such as office hours
 
 1. Navigate to *Catalog > Product Foundry*.
 2. Select **Support Contacts**.
-3. Click **+ Add New Contact** to add a new product support contact.
+3. Click **+ Add Contact** to add a new product support contact.
 4. The product support contact wizard opens. This wizard is composed of two pages: one for the support contact information and one for the product association.
 5. Add the following and then click **Next**:
 

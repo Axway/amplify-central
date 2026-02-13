@@ -79,7 +79,7 @@ Layout preferences are automatically saved and persist across browser sessions.
 
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
-3. Click **+ Add New Asset**.
+3. Click **+ Add Asset**.
 4. Add the following Asset Profile information and then click **Next**:
 
     * Asset Name - The display name for the asset in the WebUI
@@ -103,7 +103,7 @@ Layout preferences are automatically saved and persist across browser sessions.
 
 If the asset was created in a **Draft** state, you must move it to an **Active** state (by activating the asset) before you can use it in a product definition.
 
-The **+ Add New Asset** button is disabled once the total number of active and deprecated assets exceeds the asset entitlement quota. If no asset entitlement is defined, there is no asset quota enforcement.
+The **+ Add Asset** button is disabled once the total number of active and deprecated assets exceeds the asset entitlement quota. If no asset entitlement is defined, there is no asset quota enforcement.
 
 ## Activate an asset
 
