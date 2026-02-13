@@ -24,7 +24,7 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 * **Advanced Marketplace Homepage Customization**
   
    (CONSUMER EXPERIENCE, MARKETPLACE HOMEPAGE, ENHANCEMENT)</br>
-  Marketplace Administrators are now able to control the layout and customization of the Marketplace homepage. They can rearrange sections, include or exclude certain elements or even add custom articles (as formatted text) to the Homepage. This flexibility grants them the ability to create a tailored experience that aligns with their branding requirements, often driven by their UX or Marketplace teams. 
+  Marketplace Administrators are now able to control the layout and customization of the Marketplace homepage. They can rearrange sections, include or exclude certain elements or even add custom articles (as formatted text) to the Homepage. This flexibility grants them the ability to create a tailored experience that aligns with their branding requirements, often driven by their UX or Marketplace teams.
 
 * **Clicking the subscription name on the product details screen opens a sideblade instead of navigating away**
 
@@ -35,7 +35,6 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   Updated the *Product Foundry* and *Document Library* (documents and templates) for UI consistency based on UX audit
-
 
 ## Marketplace bug fixes
 
