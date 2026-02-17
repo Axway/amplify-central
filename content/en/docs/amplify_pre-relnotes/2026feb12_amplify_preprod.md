@@ -36,9 +36,21 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   Updated the *Product Foundry* and *Document Library* (documents and templates) for UI consistency based on UX audit
 
+* **Standardize Provider Topology -> Environments -> Details Screen "+ Add" button**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Updated the *+ Add* button and UI header for *Topoloy -> Environments -> Details* screen providing consistency across pages.
+
+* **MCP Tools Output schema displays an empty field**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  Updated the MCP Tools detail sideblade to display *No oupt schema available when an output schema is not defined.
+
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-31938 | **Issue**: Can not edit Product Plans that contain over 150 resources. <br/>**Resolution**: Plan updated to switched to graphQL request to grab >150 asset resources.
 |          | APIGOV-31937 | **Issue**: Product Plans can not be edited if there are assets with no active releases attached to the product. <br/>**Resolution**: Fixed the failing request for asset releases.
+|          | APIGOV-31918 | **Issue**: The MCP wizard was not saving the overview when a description, source code repository, or classification value was not entered when creating an MCP Service. <br/>**Resolution**: Fixed MCP wizard to save the MCP Service overview.
+|          | APIGOV-31870 | **Issue**: The action of deleting an environment displays a confirmation warning with a reference to *Unified Catalog* items. <br/>**Resolution**: Fixed the display to no longer reference the *Unified Catalog*.
