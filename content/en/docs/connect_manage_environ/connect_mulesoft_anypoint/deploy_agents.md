@@ -36,7 +36,6 @@ Discovery Agent
 MULESOFT_ANYPOINTEXCHANGEURL=https://youranypoint.exchangeurl.com
 MULESOFT_AUTH_CLIENTID=client-id                          
 MULESOFT_AUTH_CLIENTSECRET=client-secret                          
-MULESOFT_ENVIRONMENTLABEL=Environment
 
 CENTRAL_ORGANIZATIONID=123456789
 CENTRAL_AUTH_CLIENTID=mulesoft-agents_123456789-abcd-efgh-ijkl-098765432109
@@ -49,7 +48,6 @@ CENTRAL_REGION=US
 Traceability Agent
 
 ```shell
-MULESOFT_ANYPOINTEXCHANGEURL=https://youranypoint.exchangeurl.com
 MULESOFT_AUTH_CLIENTID=client-id                          
 MULESOFT_AUTH_CLIENTSECRET=client-secret                          
 
