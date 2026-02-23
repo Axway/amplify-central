@@ -57,7 +57,10 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
 ## Agent updates
 
-* **Agent**
+* **Akamai SaaS Agent**
+
+(AKAMAI API SECURITY AGENT, ENhANCEMENT)</br>
+  The Akamai API Security Agent has been released as a SaaS service. It sends Managed API specifications from Engage to Akamai to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the Engage Environment details page.   
 
 (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
@@ -70,13 +73,15 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
 ## Marketplace updates
 
-* **Feature**
+* **Manual API/MCP Service Creaction**
   
-   (CONSUMER EXPERIENCE, MARKETPLACE HOMEPAGE, ENHANCEMENT)</br>
-  Description.
+   (PROVIDER EXPERIENCE, MANUAL ADDITION OF AN API/MCP SERVICE, ENHANCEMENT)</br>
+  The Service Registry has been enhanced to all the Provider to manually add an API/MCP service with a UI wizard which allows the user to select from their accessible environment(s).
 
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|          | APIGOV-32074 | **Issue**: An error occurs on the UI when viewing an Service details page if the service has no API compliance results. <br/>**Resolution**: A fix has been made to the Service details page. |
+| 01809186 | APIGOV-32042 | **Issue**: The Next button remained disabled after manually uploading an Async API specification file. <br/>**Resolution**: The Next button has been fixed to be enabled after upload of an Async API Specification file. |
+|          | APIGOV-31968 | **Issue**: The Asset details page does not refresh the product releases in the products tab. This was observed after the selection of an active asset release and then selecting a draft asset release to view the products tab. <br/>**Resolution**: The refresh of the product releases has been fixed. |
