@@ -6,18 +6,28 @@ date: 2025-2-12
 hide_readingtime: true
 ---
 
-This preview (preprod) environment allows customers to test and validate upcoming features, enhancements, and bug fixes before they are promoted to production.
+This pre-production environment gives our customers a chance to test and validate upcoming features, improvements, and bug fixes before they go live in production.
 
-Feedback collected during preview testing may result in changes, deferrals, or removals of the previewed features, enhancements, and bug fixes in the upcoming production release.
+Feedback collected during preview testing may result in changes, deferrals, or removals of the previewed features, enhancements, or bug fixes in the upcoming production release.
 
 ## Provide testing feedback
 
-You can provide feedback or report issues by creating a case with [Axway Support](https://support.axway.com/en/). Be sure to specify *Axway Cloud Amplify Engage* as the Product, *1.0.0* as the Version, and *Non-production* as the Environment.
+You can share feedback or report issues by opening a case with [Axway Support](https://support.axway.com/en/).
 
-## Preview promotion to production
+When submitting the case, please:
 
-* Items in preview are not guaranteed to reach production.
-* Final production content is confirmed after the preview window closes.
+* Add [Amplify Engage Preprod] at the beginning of the Case Subject ( i.e [Amplify Engage Preprod] Feedback on Homepage Customization Feature)
+* Select *Axway Cloud Amplify Engage* as the Product
+* Specify 1.0.0 as the Version
+* Choose Non-production as the Environment
+* Include **gweaver@axway.com** in the *CC Email* field
+
+If Amplify Engage Preprod is not clearly referenced in the case, your feedback may not be reviewed in time or considered for the upcoming release.
+
+## Promotion to production
+
+* Depending on the nature of the feedback and the timing of its submission, items in the pre-production environment may not be incorporated into the upcoming production release.
+* Final production content is confirmed after the feedback window closes.
 * Approved changes are promoted during the planned production release date.
 
 ## Pre-production releases
