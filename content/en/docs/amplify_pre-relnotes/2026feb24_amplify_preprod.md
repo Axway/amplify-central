@@ -78,22 +78,22 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
   (CONSUMER EXPERIENCE, APPLICATION REGISTRATION, ENHANCEMENT)</br>
   Marketplace consumers can now search within the Subscriptions dropdown portion of the Select Application wizard step without having to manually scroll through a potentially long list.
- 
+
 * **UX audit updates for consistency across UI - Product details**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   The *Product Foundry|Product details* has been updated for UI consistency based on aUX audit.
- 
+
 * **Expose user type owner for x-private teams in API Server**
 
   (ANALYTICS, ENHANCEMENT)</br>
   To allow agents (and Fusion) to include subscription owner details in Insights events, Analytics now gets API Server user-type owner information the Marketplace backend.
- 
+
 * **Fusion requires that Marketplace supports authorization for credentials without a Client Secret**
 
   (AUTHORIZATION, FUSION, CONFIGURATION)</br>
   Fusion requires that the Marketplace supports OAuth2 authorization with credentials that do not require a client secret.
- 
+
 * **Enhanced filtering and display options in Subscriptions view**
 
   (PROVIDER, SUBSCRIPTIONS, ENHANCEMENT)</br>
