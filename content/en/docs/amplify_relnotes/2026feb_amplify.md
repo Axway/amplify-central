@@ -34,7 +34,7 @@ New enhancements and bug fixes for the February 23 update.
 * **Standardize provider Topology > Environments > Details screen "+ Add" button**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  The *+ Add* button and UI header have been updated for *Topology > Environments > Details* screen providing consistency across pages.
+  The **+ Add** button and UI header have been updated for *Topology > Environments > Details* screen providing consistency across pages.
 
 * **MCP Tools output schema displays an empty field**
 
