@@ -6,20 +6,20 @@ weight: 40
 ---
 The variables common to all agents are described here in more detail.
 
-* [Agent Variables](#agent-variables)
-    * [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
-        * [Status endpoint variables](#status-endpoint-variables)
-        * [Logging variables](#logging-variables)
-        * [Custom unit metric service variables](#custom-unit-metric-service-variables)
-    * [Discovery Agent only variables](#discovery-agent-only-variables)
-        * [IdP configuration variables](#idp-configuration-variables)
-    * [Traceability Agent only variables](#traceability-agent-only-variables)
-        * [Audit log variables](#audit-log-variables)
-        * [Additional Axway API Manager Traceability Agent audit log](#additional-axway-api-manager-traceability-agent-audit-log)
-* [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
-    * [Default pattern](#default-pattern)
-    * [Available variables](#available-variables)
-    * [Date Formats](#date-formats)
+- [Agent Variables](#agent-variables)
+  - [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
+    - [Status endpoint variables](#status-endpoint-variables)
+    - [Logging variables](#logging-variables)
+    - [Custom unit metric service variables](#custom-unit-metric-service-variables)
+  - [Discovery Agent only variables](#discovery-agent-only-variables)
+    - [IdP configuration variables](#idp-configuration-variables)
+  - [Traceability Agent only variables](#traceability-agent-only-variables)
+    - [Audit log variables](#audit-log-variables)
+    - [Additional Axway API Manager Traceability Agent audit log](#additional-axway-api-manager-traceability-agent-audit-log)
+- [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
+  - [Default pattern](#default-pattern)
+  - [Available variables](#available-variables)
+  - [Date Formats](#date-formats)
 
 ## Agent Variables
 
@@ -38,7 +38,7 @@ The variables common to all agents are described here in more detail.
 | CENTRAL_AUTH_PUBLICKEY            | The public key associated with the Service Account.                                                                                                                                                                                                                                                                                           |
 | CENTRAL_AUTH_REALM                | The Realm used to authenticate for Amplify Central: `Broker`.                                                                                                                                                                                                                                                                                 |
 | CENTRAL_AUTH_TIMEOUT              | The timeout to wait for the authentication server to respond (default=ns, us, ms, s, m, h). Set to 10s.                                                                                                                                                                                                                                       |
-| CENTRAL_CLIENTTIMEOUT             | The time interval at which the HTTP client times out making HTTP requests and processing the response (ns - default, us, ms, s, m, h). Set to 60s.                                                                                                                                                                                            |
+| CENTRAL_CLIENTTIMEOUT             | The time interval at which the HTTP client times out making HTTP requests and processing the response (ns - default, us, ms, s, m, h). Set to 60s (Upper Limit: 120s).                                                                                                                                                                                            |
 | CENTRAL_ENVIRONMENT               | Name of the Amplify Central environment where API will be hosted.                                                                                                                                                                                                                                                                             |
 | CENTRAL_JOBTIMEOUT                | The longest duration interval or scheduled jobs are allowed to run before being canceled (default: `5m`).                                                                                                                                                                                                                                     |
 | CENTRAL_ORGANIZATIONID            | The Organization ID from Amplify Central. Locate this at Platform > User > Organization.                                                                                                                                                                                                                                                      |
