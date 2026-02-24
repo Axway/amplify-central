@@ -11,9 +11,9 @@ date: 2026-2-12
 
 ---
 
-This preview (preprod) environment allows you to test and validate upcoming features, enhancements, and bug fixes before they are promoted to production.
+This preproduction environment allows you to test and validate upcoming features, enhancements, and bug fixes before they are promoted to production.
 
-Feedback collected during preview testing may result in changes, deferrals, or removals of the previewed features, enhancements, and bug fixes in the upcoming production release.
+Please note that, depending on the nature of the feedback and the timing of its submission, it may not be incorporated into the upcoming production release.
 
 See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedback) for instructions on submitting preprod testing feedback.
 
@@ -71,8 +71,8 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
 * **Manual API/MCP service creation**
   
-  (PROVIDER EXPERIENCE, MANUAL ADDITION OF AN API/MCP SERVICE, ENHANCEMENT)</br>
-  The Service Registry has been enhanced to allow all providers the ability to manually add an API/MCP service with a UI wizard which allows them to select from their accessible environment(s).
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The Service Registry now allows providers to manually add a new API or MCP service through a guided UI wizard. During the setup process, users can select from the environments they have access to. This enhanecment enables providers to quickly register services without relying solely on automated discovery.
 
 * **Application Registration: Ability to search in the Subscription dropdown**
 
@@ -82,7 +82,7 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 * **UX audit updates for consistency across UI - Product details**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  The *Product Foundry|Product details* has been updated for UI consistency based on aUX audit.
+  The *Product Foundry|Product details* has been updated with several usability and styling fixes.
 
 * **Expose user type owner for x-private teams in API Server**
 
