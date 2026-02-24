@@ -17,6 +17,10 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
+## [Amplify Engage February 23 2026](/docs/amplify_relnotes/2026feb_amplify/#february-23-2026)
+
+No agent updates. See February 2 2026 for latest supported agent versions.
+
 ## [Amplify Engage February 2 2026](/docs/amplify_relnotes/2026feb_amplify/#february-2-2026)
 
 {{< alert title="Note" color="primary" >}}To view the agents supported, unsupported, or have an upgrade available within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents). The view will also indicate if your agents are "Unsupported," which includes agents released over 12 months ago.
