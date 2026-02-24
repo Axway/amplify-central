@@ -12,20 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## February 23, 2026
 
-New enhancement and bug fixes for the February 23 update.
-
-### Agent update for February 23, 2026
-
-* **Agent**
-
-  (NEW AGENT RELEASES)</br>
-  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
-
-### Agent bug fix for February 23, 2026
-
-| Case ID     | Internal ID  | Description                                                                         |
-|-------------|--------------|-------------------------------------------------------------------------------------|
-| xxxxxxxx    | APIGOV-xxxxx | **Issue**: Description. <br />**Resolution**: Description. |
+New enhancements and bug fixes for the February 23 update.
 
 ### Marketplace updates
 
