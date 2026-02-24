@@ -59,22 +59,56 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
 * **Akamai SaaS Agent**
 
-(AKAMAI API SECURITY AGENT, ENhANCEMENT)</br>
+  (AKAMAI API SECURITY AGENT, ENhANCEMENT)</br>
   The Akamai API Security Agent has been released as a SaaS service. It sends Managed API specifications from Engage to Akamai to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the Engage Environment details page.
-(NEW AGENT RELEASES)</br>
+
+* **New agent releases**
+
+  (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
 
 ## Marketplace updates
 
 * **Manual API/MCP service creation**
   
-   (PROVIDER EXPERIENCE, MANUAL ADDITION OF AN API/MCP SERVICE, ENHANCEMENT)</br>
+  (PROVIDER EXPERIENCE, MANUAL ADDITION OF AN API/MCP SERVICE, ENHANCEMENT)</br>
   The Service Registry has been enhanced to allow all providers the ability to manually add an API/MCP service with a UI wizard which allows them to select from their accessible environment(s).
+
+* **Application Registration: Ability to search in the Subscription dropdown**
+
+  (CONSUMER EXPERIENCE, APPLICATION REGISTRATION, ENHANCEMENT)</br>
+  Marketplace consumers can now search within the Subscriptions dropdown portion of the Select Application wizard step without having to manually scroll through a potentially long list.
+ 
+* **UX audit updates for consistency across UI - Product details**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The *Product Foundry|Product details* has been updated for UI consistency based on aUX audit.
+ 
+* **Expose user type owner for x-private teams in API Server**
+
+  (ANALYTICS, ENHANCEMENT)</br>
+  To allow agents (and Fusion) to include subscription owner details in Insights events, Analytics now gets API Server user-type owner information the Marketplace backend.
+ 
+* **Fusion requires that Marketplace supports authorization for credentials without a Client Secret**
+
+  (AUTHORIZATION, FUSION, CONFIGURATION)</br>
+  Fusion requires that the Marketplace supports OAuth2 authorization with credentials that do not require a client secret.
+ 
+* **Enhanced filtering and display options in Subscriptions view**
+
+  (PROVIDER, SUBSCRIPTIONS, ENHANCEMENT)</br>
+  The Engage Subscriptions screen has been enhanced to make information easier to find and navigate by introducing an additional filtering option for Marketplace, adding Plan to the table display, and enhancing the search query to include Subscription ID, Plan, and Product.
 
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-32074 | **Issue**: An error occured on the UI when viewing a Service details page if the service had no API compliance results. <br/>**Resolution**: The Service details page now displays as expected. |
+|          | APIGOV-32074 | **Issue**: An error occurred on the UI when viewing a Service details page if the service had no API compliance results. <br/>**Resolution**: The Service details page now displays as expected. |
 | 01809186 | APIGOV-32042 | **Issue**: The **Next** button remained disabled after manually uploading an Async API Specification file. <br/>**Resolution**: The Next button is now enabled after the upload of an Async API Specification file. |
+|          | APIGOV-32019 | **Issue**: GraphQL query for asset resources requires quote escape for search term. <br/>**Resolution**: GraphQL query implemented for defect APIGOV-31938 required quote escapes for search term in the constructed query. |
+|          | APIGOV-31970 | **Issue**: Validate enum parameters before opening a DB transaction - attacks on MP occurred when using different values for filter parameters <br/>**Resolution**: Moved validation to happen before a DB transaction is opened and before the request hits our backend logic. |
 |          | APIGOV-31968 | **Issue**: The Asset details page did not refresh the product releases in the *Products* tab. This was observed after the selection of an active asset release when selecting a draft asset release to view the *Products* tab. <br/>**Resolution**: The refresh of the product releases has been fixed. |
+|          | APIGOV-31838 | **Issue**: Stop publishing resource tags in internal events. <br/>**Resolution**: Updates made to stop sending tags in the events published by Analytics controller to Platform. Verified that the activity view still works as expected, and minimized the duplication of tags & attributes in the API Server events to the best extent possible. |
+|          | APIGOV-31540 | **Issue**: Visibility of Compliance Score Details for Developer Role. <br/>**Resolution**: Developer role can now view the linting results. |
+|          | APIGOV-31073 | **Issue**: [Central UI] Enable Marketplace visibility selection for document library. <br/>**Resolution**: Marketplace Manager, Catalog Manager, Developer, and Engage Admin roles updated as appropriate Marketplace visibility. |
+|          | APIGOV-30403 | **Issue**: Wrong subscriber info for user in a default team with x-private tag. <br/>**Resolution**: The new structure for Marketplace subresource now includes an addition of user information when the owner is a user belonging to a specific team. |
