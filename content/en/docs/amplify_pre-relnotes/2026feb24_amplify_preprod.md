@@ -95,7 +95,7 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-31959 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+| 01804721 | APIGOV-31959 | **Issue**: Agents which detected an API service was no longer on the dataplane would remove the API service from the Engage Service Registry. <br/>**Resolution**: Agent will no longer remove an API service which may have been removed from the dataplace from the Engage Service Registry. |
 |          | APIGOV-32006 | **Issue**: TBD. <br/>**Resolution**: TBD. |
 |          | APIGOV-31780 | **Issue**: TBD. <br/>**Resolution**: TBD. |
 |          | APIGOV-31704 | **Issue**: TBD. <br/>**Resolution**: TBD. |
