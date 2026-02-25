@@ -64,7 +64,6 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 | Traceable Embedded API Security Service    |
 | Akamai Embedded API Security Service       |
 
-
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.131 unless otherwise noted)  |
 |--------------------------------------------|--------------------------|
 | Graylog API Security                       | 1.1.29                 X  |
@@ -109,7 +108,7 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 * **Expose user type owner for x-private teams in API Server**
 
   (ANALYTICS, ENHANCEMENT)</br>
-  To allow agents (and Fusion) to include subscription owner details in Insights events, Analytics now gets API Server user-type owner information the Marketplace backend.
+  To allow agents (and Fusion) to include subscription owner details in Insights events, Analytics now gets API Server user-type owner information from the Marketplace backend.
 
 * **Fusion requires that Marketplace supports authorization for credentials without a Client Secret**
 
