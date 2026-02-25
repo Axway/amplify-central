@@ -17,11 +17,25 @@ Please note that, depending on the nature of the feedback and the timing of its 
 
 See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedback) for instructions on submitting preprod testing feedback.
 
+Please note the following Agent Environment variable settings must be set to access the preprod environment in the US region:
+
+CENTRAL_URL=https://engage.na-us.axwaypreprod.net
+TRACEABILITY_HOST=phoenix.na-us.axwaypreprod.net:443  #TA only
+
+Please note the following Agent Environment variable settings must be set to access the preprod environment in the EU region:
+
+CENTRAL_AUTH_URL=https://login.na-us.axwaypreprod.net/auth 
+CENTRAL_PLATFORMURL=https://platform.na-us.axwaypreprod.net 
+CENTRAL_URL=https://engage.eu-fr.axwaypreprod.net
+CENTRAL_DEPLOYMENT=preprod                               # TA only
+TRACEABILITY_HOST=phoenix.eu-fr.axwaypreprod.net:443     # TA only
+TRACEABILITY_PROTOCOL=https                              # TA only
+
 ---
 
 ## Supported agents
 
-| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.131 <br />unless otherwise noted) |
+| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
 | Axway API Management 7.7                   | DA=1.2.43 / TA=1.2.40 (SDK v1.1.134) |
 | AWS Gateway using SDK 2.0                  | DA=1.2.38 / TA=1.2.38 (SDK v1.1.133) |
@@ -29,13 +43,13 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 | Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  |
 | Apigee Edge                                | 1.0.32 (SDK v1.1.134)                 |
 | Apigee X                                   | 1.4.22                   |
-| Mulesoft Anypoint platform v3              | 1.2.38 (SDK v1.1.134)    |
+| Mulesoft Anypoint platform v3              | 1.2.39                  X |
 | Software AG webMethods                     | 1.0.29                   |
-| Kong Gateway                               | 1.1.35                   |
-| GitLab                                     | 1.1.30                   |
+| Kong Gateway                               | 1.1.36                  X |
+| GitLab                                     | 1.1.31                  X |
 | Kafka Cluster                              | 1.1.29                   |
 | IBM API Connect Gateway                    | 1.1.29                   |
-| Backstage                                  | 1.0.30                   |
+| Backstage                                  | 1.0.32                  X |
 | SAP Integration Suite - API Management / API Portal | 1.0.17                   |
 | WSO2 API Manager 4.5.0                     | 1.0.17                   |
 | Sensedia                                   | 1.0.7 (SDK v1.1.134)     |
@@ -48,10 +62,12 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 | Azure Embedded Service                     |
 | SwaggerHub Embedded Service                |
 | Traceable Embedded API Security Service    |
+| Akamai Embedded API Security Service       |
+
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.131 unless otherwise noted)  |
 |--------------------------------------------|--------------------------|
-| Graylog API Security                       | 1.1.28                   |
+| Graylog API Security                       | 1.1.29                 X  |
 | Traceable API Security                     | 2.0.14                   |
 | Akamai API Security                        | 1.0.0 (SDK v1.1.132)     |
 
@@ -66,6 +82,12 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
+
+## Agent bug fixes
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-32074 | **Issue**: TBD. <br/>**Resolution**: TBD. |
 
 ## Marketplace updates
 
