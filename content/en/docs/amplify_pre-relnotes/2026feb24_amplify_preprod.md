@@ -77,6 +77,11 @@ TRACEABILITY_PROTOCOL=https                              # TA only
   (AKAMAI API SECURITY AGENT, ENhANCEMENT)</br>
   The Akamai API Security Agent has been released as a SaaS service. It sends Managed API specifications from Engage to Akamai to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the Engage Environment details page.
 
+* **Mulesoft Anypoint Agent**
+
+  (MULESOFT ANYPOINT AGENT, ENhANCEMENT)</br>
+  The Mulesoft Anypoint discovery agent has been enhance with the ability to discover API services from multiple business units containing multiple environments. The API services will all be included for display on the Engage Environment details page.
+
 * **New agent releases**
 
   (NEW AGENT RELEASES)</br>
