@@ -95,7 +95,15 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-32074 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-31959 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-32006 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-31780 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-31704 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-31075 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-32029 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-32006 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+|          | APIGOV-31904 | **Issue**: TBD. <br/>**Resolution**: TBD. |
+
 
 ## Marketplace updates
 
