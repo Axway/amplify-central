@@ -17,12 +17,18 @@ Please note that, depending on the nature of the feedback and the timing of its 
 
 See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedback) for instructions on submitting preprod testing feedback.
 
-Please note the following Agent Environment variable settings must be set to access the preprod environment in the US region:
+---
+
+## Supported agents
+
+To access the **pre‑prod environment**, you must set the following **Agent environment variables**, depending on the region you are connecting to.
+
+### Pre-prod US Region
 
 CENTRAL_URL=https://engage.na-us.axwaypreprod.net
 TRACEABILITY_HOST=phoenix.na-us.axwaypreprod.net:443  #TA only
 
-Please note the following Agent Environment variable settings must be set to access the preprod environment in the EU region:
+### Pre-prod EU Region
 
 CENTRAL_AUTH_URL=https://login.na-us.axwaypreprod.net/auth 
 CENTRAL_PLATFORMURL=https://platform.na-us.axwaypreprod.net 
@@ -31,9 +37,7 @@ CENTRAL_DEPLOYMENT=preprod                               # TA only
 TRACEABILITY_HOST=phoenix.eu-fr.axwaypreprod.net:443     # TA only
 TRACEABILITY_PROTOCOL=https                              # TA only
 
----
-
-## Supported agents
+### Supported agent versions
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
