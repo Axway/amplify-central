@@ -22,7 +22,7 @@ When submitting the case, please:
 * Choose Non-production as the Environment
 * Include **gweaver@axway.com** in the *CC Email* field
 
-If Amplify Engage Preprod is not clearly referenced in the case, your feedback may not be reviewed in time or considered for the upcoming release.
+If *Amplify Engage Preprod* label is not clearly referenced in the case subject field, your feedback may not be reviewed in time or considered for the upcoming release.
 
 ## Promotion to production
 
