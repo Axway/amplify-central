@@ -7,7 +7,7 @@ date: 2026-2-12
 
 **Feedback Window**: February 25 2026 → March 4 2026 <br />
 **Planned Production Date**: March 5 2026 <br />
-**Environment**: Non-production
+**Environment**: Pre-production
 
 ---
 
