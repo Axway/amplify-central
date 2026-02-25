@@ -96,14 +96,9 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | 01804721 | APIGOV-31959 | **Issue**: Agents which detected an API service was no longer on the dataplane would remove the API service from the Engage Service Registry. <br/>**Resolution**: Agent will no longer remove an API service which may have been removed from the dataplace from the Engage Service Registry. |
-|          | APIGOV-32006 | **Issue**: TBD. <br/>**Resolution**: TBD. |
-|          | APIGOV-31780 | **Issue**: TBD. <br/>**Resolution**: TBD. |
-|          | APIGOV-31704 | **Issue**: TBD. <br/>**Resolution**: TBD. |
-|          | APIGOV-31075 | **Issue**: TBD. <br/>**Resolution**: TBD. |
-|          | APIGOV-32029 | **Issue**: TBD. <br/>**Resolution**: TBD. |
-|          | APIGOV-32006 | **Issue**: TBD. <br/>**Resolution**: TBD. |
-|          | APIGOV-31904 | **Issue**: TBD. <br/>**Resolution**: TBD. |
-
+| 01802192 | APIGOV-31904 | **Issue**: An Agent restrated with gRPC mode enabled would display as **stopped** even though the agent was running and connected. <br/>**Resolution**: A fix has been made to the helm chart was made to use a recreate deployment strategy. |
+|          | APIGOV-32006 | **Issue**: If a slow internet connection exists between the agent and the Amplify platform, the agent may time out and retry with an invalid request. <br/>**Resolution**: A fix has been made to send valid request with a minimum pagesize value. |
+|          | APIGOV-31075 | **Issue**: An environment and the API service in the environment may not display the same connect or manual sync status based on the Agent Access Control List setting. <br/>**Resolution**: An fix has been made to the Agent Access Control List setting. |
 
 ## Marketplace updates
 
