@@ -45,7 +45,7 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 | AWS Gateway using SDK 2.0                  | DA=1.2.38 / TA=1.2.38 (SDK v1.1.133) |
 | Azure latest release                       | DA=1.3.36 / TA=1.3.36    |
 | Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  |
-| Apigee Edge                                | 1.0.32 (SDK v1.1.134)                 |
+| Apigee Edge                                | 1.0.33                  X |
 | Apigee X                                   | 1.4.22                   |
 | Mulesoft Anypoint platform v3              | 1.2.39                  X |
 | Software AG webMethods                     | 1.0.29                   |
@@ -68,11 +68,11 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 | Traceable Embedded API Security Service    |
 | Akamai Embedded API Security Service       |
 
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.131 unless otherwise noted)  |
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 unless otherwise noted)  |
 |--------------------------------------------|--------------------------|
-| Graylog API Security                       | 1.1.29                 X  |
-| Traceable API Security                     | 2.0.14                   |
-| Akamai API Security                        | 1.0.0 (SDK v1.1.132)     |
+| Graylog API Security                       | 1.1.29                   |
+| Traceable API Security                     | 2.0.15                   |
+| Akamai API Security                        | 1.1.2                    |
 
 ## Agent updates
 
