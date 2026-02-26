@@ -48,7 +48,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Axway API Management 7.7                   | DA=1.2.50 / TA=1.2.41    |
 | AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39    |
 | Azure latest release                       | DA=1.3.37 / TA=1.3.37    |
-| Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  |
+| Istio 1.9.5                                | DA=1.1.38 / TA=2.1.35    |
 | Apigee Edge                                | 1.0.33                   |
 | Apigee X                                   | 1.4.23                   |
 | Mulesoft Anypoint platform v3              | 1.2.39                   |
