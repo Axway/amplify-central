@@ -54,7 +54,7 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 | Mulesoft Anypoint platform v3              | 1.2.39                   |
 | Software AG webMethods                     | 1.0.30                   |
 | Kong Gateway                               | 1.1.36                   |
-| GitHub                                     | 1.1.31                   |
+| GitLab                                     | 1.1.31                   |
 | Kafka Cluster                              | 1.1.29 (SDK v1.1.131)                  |
 | IBM API Connect Gateway                    | 1.1.30                   |
 | Backstage                                  | 1.0.32                   |
