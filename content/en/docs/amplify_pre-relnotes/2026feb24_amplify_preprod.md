@@ -1,0 +1,151 @@
+---
+title: Amplify Engage February 24 2026
+linkTitle: Amplify Engage February 24 2026
+weight: 24
+date: 2026-2-12
+---
+
+**Feedback Window**: February 25 2026 → March 4 2026 <br />
+**Planned Production Date**: March 5 2026 <br />
+**Environment**: Pre-production
+
+---
+
+This preproduction environment allows you to test and validate upcoming features, enhancements, and bug fixes before they are promoted to production.
+
+Please note that, depending on the nature of the feedback and the timing of its submission, it may not be incorporated into the upcoming production release.
+
+See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedback) for instructions on submitting preprod testing feedback.
+
+---
+
+## Supported agents
+
+To access the **pre‑prod environment**, you must set the following **Agent environment variables**, depending on the region you are connecting to.
+
+### Pre-prod US Region
+
+CENTRAL_AUTH_URL=<https://login.na-us.axwaypreprod.net/auth></br>
+CENTRAL_PLATFORMURL=<https://platform.na-us.axwaypreprod.net></br>
+CENTRAL_URL=<https://engage.na-us.axwaypreprod.net></br>
+CENTRAL_DEPLOYMENT=preprod (# TA only)</br>
+TRACEABILITY_HOST=phoenix.na-us.axwaypreprod.net:443 (# TA only)</br>
+TRACEABILITY_PROTOCOL=https (# TA only)
+
+### Pre-prod EU Region
+
+CENTRAL_AUTH_URL=<https://login.na-us.axwaypreprod.net/auth></br>
+CENTRAL_PLATFORMURL=<https://platform.na-us.axwaypreprod.net></br>
+CENTRAL_URL=<https://engage.eu-fr.axwaypreprod.net></br>
+CENTRAL_DEPLOYMENT=preprod (# TA only)</br>
+TRACEABILITY_HOST=phoenix.eu-fr.axwaypreprod.net:443 (# TA only)</br>
+TRACEABILITY_PROTOCOL=https (# TA only)
+
+### Supported agent versions
+
+| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
+|--------------------------------------------|--------------------------|
+| Axway API Management 7.7                   | DA=1.2.50 / TA=1.2.41    |
+| AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39    |
+| Azure latest release                       | DA=1.3.37 / TA=1.3.37    |
+| Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  |
+| Apigee Edge                                | 1.0.33                   |
+| Apigee X                                   | 1.4.23                   |
+| Mulesoft Anypoint platform v3              | 1.2.39                   |
+| Software AG webMethods                     | 1.0.30                   |
+| Kong Gateway                               | 1.1.36                   |
+| GitLab                                     | 1.1.31                   |
+| Kafka Cluster                              | 1.1.29 (SDK v1.1.131)                  |
+| IBM API Connect Gateway                    | 1.1.30                   |
+| Backstage                                  | 1.0.32                   |
+| SAP Integration Suite - API Management / API Portal | 1.0.18                  |
+| WSO2 API Manager 4.5.0                     | 1.0.18                  |
+| Sensedia                                   | 1.0.8                   |
+
+| Supported SaaS (embedded) agents           |
+|--------------------------------------------|
+| AWS Embedded Service                       |
+| Apigee X Embedded Service                  |
+| GitHub Embedded Service                    |
+| Azure Embedded Service                     |
+| SwaggerHub Embedded Service                |
+| Traceable Embedded API Security Service    |
+| Akamai Embedded API Security Service       |
+
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 unless otherwise noted)  |
+|--------------------------------------------|--------------------------|
+| Graylog API Security                       | 1.1.29                   |
+| Traceable API Security                     | 2.0.15                   |
+| Akamai API Security                        | 1.1.2                    |
+
+## Agent updates
+
+* **Akamai SaaS Agent**
+
+  (AKAMAI API SECURITY AGENT, ENHANCEMENT)</br>
+  The Akamai API Security Agent has been released as a SaaS service. It sends Managed API specifications from Engage to Akamai to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the Engage *Environment details* page.
+
+* **Mulesoft Anypoint Agent**
+
+  (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
+  The Mulesoft Anypoint Discovery Agent has been enhance with the ability to discover API services from multiple business units containing multiple environments. The API services will all be included for display on the Engage *Environment details* page.
+
+* **New agent releases**
+
+  (NEW AGENT RELEASES)</br>
+  See the table above for the latest versions of all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
+
+## Agent bug fixes
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01804721 | APIGOV-31959 | **Issue**: Agent that detected an API service that was no longer on the dataplane would remove the API service from the Engage Service Registry. <br/>**Resolution**: Agent will no longer remove an API service, which may have been removed from the dataplane, from the Engage Service Registry. |
+| 01802192 | APIGOV-31904 | **Issue**: An agent restarted with gRPC mode enabled would display as **stopped** even though the agent was running and connected. <br/>**Resolution**: A fix to the helm chart was made to use a recreate deployment strategy. |
+|          | APIGOV-32006 | **Issue**: If a slow internet connection existed between the agent and the Amplify platform, the agent may have timed out and retried with an invalid request. <br/>**Resolution**: Valid request are now sent with a minimum pageSize value. |
+|          | APIGOV-31075 | **Issue**: An environment and the API service in the environment may not have displayed the same connect or manual sync status based on the Agent Access Control List setting. <br/>**Resolution**: The Agent Access Control List setting has been fixed. |
+
+## Marketplace updates
+
+* **Manual API/MCP service creation**
+  
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The Service Registry now allows providers to manually add a new API or MCP service through a guided UI wizard. During the setup process, users can select from the environments they have access to. This enhancement enables providers to quickly register services without relying solely on automated discovery.
+
+* **Application Registration: Ability to search in the Subscription dropdown**
+
+  (CONSUMER EXPERIENCE, APPLICATION REGISTRATION, ENHANCEMENT)</br>
+  Marketplace consumers can now search within the Subscriptions dropdown portion of the Select Application wizard step without having to manually scroll through a potentially long list.
+
+* **UX audit updates for consistency across UI - Product details**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The *Product Foundry|Product details* has been updated with several usability and styling fixes.
+
+* **Expose user type owner for x-private teams in API Server**
+
+  (ANALYTICS, ENHANCEMENT)</br>
+  To allow agents (and Fusion) to include subscription owner details in Insights events, Analytics now gets API Server user-type owner information from the Marketplace backend.
+
+* **Fusion requires that Marketplace supports authorization for credentials without a Client Secret**
+
+  (AUTHORIZATION, FUSION, CONFIGURATION)</br>
+  Fusion requires that the Marketplace supports OAuth2 authorization with credentials that do not require a Client Secret.
+
+* **Enhanced filtering and display options in Subscriptions view**
+
+  (PROVIDER, SUBSCRIPTIONS, ENHANCEMENT)</br>
+  The Engage *Subscriptions* screen has been enhanced to make information easier to find and navigate by introducing an additional filtering option for Marketplace, adding Plan to the table display, and enhancing the search query to include Subscription ID, Plan, and Product.
+
+## Marketplace bug fixes
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-32074 | **Issue**: An error occurred on the UI when viewing a Service details page if the service had no API compliance results. <br/>**Resolution**: The Service details page now displays as expected. |
+| 01809186 | APIGOV-32042 | **Issue**: The **Next** button remained disabled after manually uploading an Async API Specification file. <br/>**Resolution**: The **Next** button is now enabled after the upload of an Async API Specification file. |
+|          | APIGOV-32019 | **Issue**: GraphQL query for asset resources requires quote escape for search term. <br/>**Resolution**: GraphQL query implemented for defect APIGOV-31938 required quote escapes for search term in the constructed query. |
+|          | APIGOV-31970 | **Issue**: Validate enum parameters before opening a DB transaction - attacks on MP occurred when using different values for filter parameters <br/>**Resolution**: Moved validation to happen before a DB transaction is opened and before the request hits our backend logic. |
+|          | APIGOV-31968 | **Issue**: The Asset details page did not refresh the product releases in the Products tab. This was observed after the selection of an active asset release when selecting a draft asset release to view the Products tab. <br/>**Resolution**: The refresh of the product releases has been fixed. |
+|          | APIGOV-31838 | **Issue**: Stop publishing resource tags in internal events. <br/>**Resolution**: Updates made to stop sending tags in the events published by Analytics controller to platform. Verified that the activity view still works as expected, and minimized the duplication of tags & attributes in the API Server events to the best extent possible. |
+|          | APIGOV-31540 | **Issue**: Visibility of Compliance Score Details for Developer role. <br/>**Resolution**: Developer role can now view the linting results. |
+|          | APIGOV-31073 | **Issue**: [Central UI] Enable Marketplace visibility selection for document library. <br/>**Resolution**: Marketplace Manager, Catalog Manager, Developer, and Engage Admin roles updated as appropriate for Marketplace visibility. |
+|          | APIGOV-30403 | **Issue**: Wrong subscriber info for user in a default team with x-private tag. <br/>**Resolution**: The new structure for Marketplace subresource now includes an addition of user information when the owner is a user belonging to a specific team. |
