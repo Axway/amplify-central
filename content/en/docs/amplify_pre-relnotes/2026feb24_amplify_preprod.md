@@ -45,21 +45,21 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.43 / TA=1.2.40 (SDK v1.1.134) |
-| AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39   |
-| Azure latest release                       | DA=1.3.37 / TA=1.3.37   |
+| Axway API Management 7.7                   | DA=1.2.50 / TA=1.2.41    |
+| AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39    |
+| Azure latest release                       | DA=1.3.37 / TA=1.3.37    |
 | Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  |
-| Apigee Edge                                | 1.0.33                  |
-| Apigee X                                   | 1.4.23                  |
-| Mulesoft Anypoint platform v3              | 1.2.39                  |
-| Software AG webMethods                     | 1.0.29 (SDK v1.1.131)                  |
-| Kong Gateway                               | 1.1.36                  |
-| GitLab                                     | 1.1.31                  |
+| Apigee Edge                                | 1.0.33                   |
+| Apigee X                                   | 1.4.23                   |
+| Mulesoft Anypoint platform v3              | 1.2.39                   |
+| Software AG webMethods                     | 1.0.30                   |
+| Kong Gateway                               | 1.1.36                   |
+| GitHub                                     | 1.1.31                   |
 | Kafka Cluster                              | 1.1.29 (SDK v1.1.131)                  |
-| IBM API Connect Gateway                    | 1.1.29 (SDK v1.1.131)                  |
-| Backstage                                  | 1.0.32                  |
+| IBM API Connect Gateway                    | 1.1.30                   |
+| Backstage                                  | 1.0.32                   |
 | SAP Integration Suite - API Management / API Portal | 1.0.18                  |
-| WSO2 API Manager 4.5.0                     | 1.0.17 (SDK v1.1.131)                   |
+| WSO2 API Manager 4.5.0                     | 1.0.18                  |
 | Sensedia                                   | 1.0.8                   |
 
 | Supported SaaS (embedded) agents           |
@@ -101,7 +101,7 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 |--------- |------------- |-------------|
 | 01804721 | APIGOV-31959 | **Issue**: Agents which detected an API service was no longer on the dataplane would remove the API service from the Engage Service Registry. <br/>**Resolution**: Agent will no longer remove an API service which may have been removed from the dataplace from the Engage Service Registry. |
 | 01802192 | APIGOV-31904 | **Issue**: An Agent restrated with gRPC mode enabled would display as **stopped** even though the agent was running and connected. <br/>**Resolution**: A fix has been made to the helm chart was made to use a recreate deployment strategy. |
-|          | APIGOV-32006 | **Issue**: If a slow internet connection exists between the agent and the Amplify platform, the agent may time out and retry with an invalid request. <br/>**Resolution**: A fix has been made to send valid request with a minimum pagesize value. |
+|          | APIGOV-32006 | **Issue**: If a slow internet connection exists between the agent and the Amplify platform, the agent may time out and retry with an invalid request. <br/>**Resolution**: A fix has been made to send valid request with a minimum pageSize value. |
 |          | APIGOV-31075 | **Issue**: An environment and the API service in the environment may not display the same connect or manual sync status based on the Agent Access Control List setting. <br/>**Resolution**: An fix has been made to the Agent Access Control List setting. |
 
 ## Marketplace updates
