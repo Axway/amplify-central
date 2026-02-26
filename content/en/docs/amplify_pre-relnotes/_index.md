@@ -14,9 +14,9 @@ Feedback collected during preview testing may result in changes, deferrals, or r
 
 You can share feedback or report issues by opening a case with [Axway Support](https://support.axway.com/en/).
 
-When submitting the case, please:
+When submitting the case:
 
-* Add [Amplify Engage Preprod] at the beginning of the Case Subject ( i.e [Amplify Engage Preprod] Feedback on Homepage Customization Feature)
+* Add [Amplify Engage Preprod] at the beginning of the Case Subject ( i.e., [Amplify Engage Preprod] Feedback on Homepage Customization Feature)
 * Select *Axway Cloud Amplify Engage* as the Product
 * Specify 1.0.0 as the Version
 * Choose Non-production as the Environment
