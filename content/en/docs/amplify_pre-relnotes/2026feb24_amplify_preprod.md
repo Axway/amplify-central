@@ -46,21 +46,21 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
 | Axway API Management 7.7                   | DA=1.2.43 / TA=1.2.40 (SDK v1.1.134) |
-| AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39   X |
-| Azure latest release                       | DA=1.3.36 / TA=1.3.36    |
+| AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39   |
+| Azure latest release                       | DA=1.3.37 / TA=1.3.37   |
 | Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  |
-| Apigee Edge                                | 1.0.33                  X |
-| Apigee X                                   | 1.4.23                  X |
-| Mulesoft Anypoint platform v3              | 1.2.39                  X |
-| Software AG webMethods                     | 1.0.29                   |
-| Kong Gateway                               | 1.1.36                  X |
-| GitLab                                     | 1.1.31                  X |
-| Kafka Cluster                              | 1.1.29                   |
-| IBM API Connect Gateway                    | 1.1.29                   |
-| Backstage                                  | 1.0.32                  X |
-| SAP Integration Suite - API Management / API Portal | 1.0.17                   |
-| WSO2 API Manager 4.5.0                     | 1.0.17                   |
-| Sensedia                                   | 1.0.7 (SDK v1.1.134)     |
+| Apigee Edge                                | 1.0.33                  |
+| Apigee X                                   | 1.4.23                  |
+| Mulesoft Anypoint platform v3              | 1.2.39                  |
+| Software AG webMethods                     | 1.0.29 (SDK v1.1.131)                  |
+| Kong Gateway                               | 1.1.36                  |
+| GitLab                                     | 1.1.31                  |
+| Kafka Cluster                              | 1.1.29 (SDK v1.1.131)                  |
+| IBM API Connect Gateway                    | 1.1.29 (SDK v1.1.131)                  |
+| Backstage                                  | 1.0.32                  |
+| SAP Integration Suite - API Management / API Portal | 1.0.18                  |
+| WSO2 API Manager 4.5.0                     | 1.0.17 (SDK v1.1.131)                   |
+| Sensedia                                   | 1.0.8                   |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
