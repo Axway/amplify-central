@@ -93,7 +93,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 * **New agent releases**
 
   (NEW AGENT RELEASES)</br>
-  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
+  See the table above for the latest versions of all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
 
 ## Agent bug fixes
 
