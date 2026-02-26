@@ -25,8 +25,12 @@ To access the **pre‑prod environment**, you must set the following **Agent env
 
 ### Pre-prod US Region
 
+CENTRAL_AUTH_URL=https://login.na-us.axwaypreprod.net/auth 
+CENTRAL_PLATFORMURL=https://platform.na-us.axwaypreprod.net 
 CENTRAL_URL=https://engage.na-us.axwaypreprod.net
-TRACEABILITY_HOST=phoenix.na-us.axwaypreprod.net:443  #TA only
+CENTRAL_DEPLOYMENT=preprod                               # TA only
+TRACEABILITY_HOST=phoenix.na-us.axwaypreprod.net:443     # TA only
+TRACEABILITY_PROTOCOL=https                              # TA only
 
 ### Pre-prod EU Region
 
@@ -42,11 +46,11 @@ TRACEABILITY_PROTOCOL=https                              # TA only
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
 | Axway API Management 7.7                   | DA=1.2.43 / TA=1.2.40 (SDK v1.1.134) |
-| AWS Gateway using SDK 2.0                  | DA=1.2.38 / TA=1.2.38 (SDK v1.1.133) |
+| AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39   X |
 | Azure latest release                       | DA=1.3.36 / TA=1.3.36    |
 | Istio 1.9.5                                | DA=1.1.37 / TA=2.1.34 (SDK v1.1.134)  |
 | Apigee Edge                                | 1.0.33                  X |
-| Apigee X                                   | 1.4.22                   |
+| Apigee X                                   | 1.4.23                  X |
 | Mulesoft Anypoint platform v3              | 1.2.39                  X |
 | Software AG webMethods                     | 1.0.29                   |
 | Kong Gateway                               | 1.1.36                  X |
