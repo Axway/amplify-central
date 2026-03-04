@@ -5,8 +5,8 @@ weight: 24
 date: 2026-3-3
 ---
 
-**Feedback Window**: March ? 2026 → March ? 2026 <br />
-**Planned Production Date**: March ? 2026 <br />
+**Feedback Window**: March 5 2026 → March 13 2026 <br />
+**Planned Production Date**: March 19 2026 <br />
 **Environment**: Pre-production
 
 ---
@@ -85,11 +85,6 @@ TRACEABILITY_PROTOCOL=https (# TA only)
   (AKAMAI API SECURITY AGENT, ENHANCEMENT)</br>
   Description.
 
-* **New agent releases**
-
-  (NEW AGENT RELEASES)</br>
-  See the table above for the latest versions of all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
-
 ## Agent bug fixes
 
 | Case ID  | Internal ID  | Description |
@@ -98,34 +93,40 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Marketplace updates
 
-* **Subscriptions Sideblade Tabs Enhancement**
-   (PROVIDER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
+* **Subscriptions sideblade tabs enhancement**
+
+  (PROVIDER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
   We have enhanced the Subscriptions side blade on the Subscriptions page by moving “Tags & Attributes” and “Usage” from expandable sections into separate tabs, reducing vertical scrolling and improving information accessibility.
 
-* **As a consumer I want to see rich detailed information about a Marketplace Product**
-  (CONSUMER EXPERIENCE, PRODUCTS, ENHANCEMENT)</br>
-  We added a new **Overview** field in Product Details that allows Providers to select and preview a Markdown document from the Document Library within the Product Wizard (Profile tab), enabling rich, detailed product information to be displayed in Marketplace. The Marketplace Product now features an **Overview** tab that renders the linked document (auto-updating with library changes) and retains the existing Description below the product name.
+* **Product overview with markdown support**
+
+  (CONSUMER EXPERIENCE, PRODUCTS, NEW FEATURE)</br>
+  We added a new **Overview** field in the Product that makes it easier for providers to add richer prodcut information to the Marketplace product listing. When creating or editing a product, Providers can select and preview a **Markdown document** from the Document Library. On the Marketplace side, the product **Overview** tab renders the selected document. The content is rendered from the linked Markdown file and automatically updates whenever the document is updated in the Document Library, so you don’t need to manually update the product each time the documentation changes. The existing Description remains visible on the product cards and on the Product Details screen under the product name, giving consumers a quick summary while the Overview tab provides a more detailed explanation.
 
 * **Publish `api_central.deprovisioned` pubsub event when processing deprovision events**
+
   (PLATFORM, ENHANCEMENT)</br>
   We now publish an api_central.deprovisioned event after processing an api_central.deprovision event to signal that an org is no longer provisioned in the region’s services. The event includes the required org_id in the payload to notify Platform of the completed deprovisioning state.
 
-* **Product Name provided for Direct links to Generate Credentials and Register Application screens**
-  (CONSUMER EXPERIENCE, APPROVALS, ENHANCEMENT)</br>
-  We updated the apicentral.subscription.approval.update event to include the PublishedProduct.metadata.id, along with Product ID and Subscription ID, enabling approval notification emails to provide direct links that take users straight to the Generate Credentials and Register Application screens with pre-filled values.
+* **Direct links to Generate Credentials and Register Application in the approval notification emails**
 
-* **UX Audit Updates for Consistency Across UI - Marketplace**
+  (CONSUMER EXPERIENCE, APPROVALS, ENHANCEMENT)</br>
+  We improved the subscription approval notifications to make it easier for users to complete the next steps after their subscription or application registration request is approved. Approval emails now include direct links that take users straight to the relevant setup screens, such as **Register Application** and **Generate Credentials**, with the necessary information already pre-filled.
+
+* **Product card: styling and reponsiveness improvements**
+
   (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   We improved Marketplace product card responsiveness so that at 834px page width, cards automatically adjust to display a left-aligned image layout for a more consistent viewing experience. We also standardized the placement of error status icons on Product cards, ensuring they now appear in the upper-right corner alongside other status indicators for improved visual consistency.
 
 * **Replace markdown component with markdown-it**
-  (TECHNICAL BACKEND, ENHANCEMENT)</br>
+
+  (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   We replaced the existing react-markdown implementation with a more performant combination of markdown-it, unified, and rehype-react to better support large markdown documents with complex tables, significantly improving rendering performance. As part of this enhancement, we upgraded GraphiQL, aligned related dependencies (including GraphQL and Shiki), and updated styling and configurations to ensure compatibility with the latest versions.
 
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|  01811246 | APIGOV-31896| **Issue**: MCP Transports Supported UI Issue Marketplace <br/>**Resolution**: Transports Supported field now populated in Marketplace for those which existed before the previous fix.
-|          | APIGOV-32065 | **Issue**: The preview of specific MD is not working in Engage. <br/>**Resolution**: Product documentation now renders correctly throughout Engage
-|          | APIGOV-32022 | **Issue**: Localize API Service - shows fields for MCP service. <br/>**Resolution**: Localization function hidden as does not apply for API Service
+|  01811246 | APIGOV-31896| **Issue**: MCP Transports Supported UI Issue Marketplace <br/>**Resolution**: Transports Supported field now populated in Marketplace for those which existed before the previous fix. |
+|          | APIGOV-32065 | **Issue**: The preview of specific MD is not working in Engage. <br/>**Resolution**: Product documentation now renders correctly throughout Engage. |
+|          | APIGOV-32022 | **Issue**: Localize API Service - shows fields for MCP service. <br/>**Resolution**: Localization function hidden as does not apply for API Service. |
