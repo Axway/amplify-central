@@ -21,7 +21,7 @@ New enhancements and bug fixes for the March 5 update.
   (AKAMAI API SECURITY AGENT, ENHANCEMENT)</br>
   The Akamai API Security Agent has been released as a SaaS service. It sends Managed API specifications from Engage to Akamai to execute Akamai Conformance Analysis. This improves the combined value of Engage and Akamai to more accurately identify endpoints with risks and shadow endpoints. The Conformance Analysis results are displayed on the Engage *Environment details* page.
 
-* **Mulesoft Anypoint Agent**
+* **Mulesoft Anypoint Agent: Discovery from multiple business units**
 
   (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
   The Mulesoft Anypoint Discovery Agent has been enhance with the ability to discover API services from multiple business units containing multiple environments. The API services will all be included for display on the Engage *Environment details* page.
@@ -42,7 +42,7 @@ New enhancements and bug fixes for the March 5 update.
 
 ## Marketplace updates
 
-* **Manual API/MCP service creation**
+* **Manual API/MCP service creation from Service Registry**
   
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   The Service Registry now allows providers to manually add a new API or MCP service through a guided UI wizard. During the setup process, users can select from the environments they have access to. This enhancement enables providers to quickly register services without relying solely on automated discovery.
