@@ -16,15 +16,15 @@ The MuleSoft AnyPoint API Manager Assets can be represented by an Amplify enviro
 
 ### Discovery
 
-On startup the Mulesoft Discovery Agent validates access to MuleSoft and Amplify, seeds a local cache (existing Central API revisions and OIDC client providers), then runs an immediate discovery pass and continues on a configurable poll interval.
+On startup, the Mulesoft Discovery Agent validates access to MuleSoft and Amplify, seeds a local cache (existing Central API revisions and OIDC client providers), then runs an immediate discovery pass and continues on a configurable poll interval.
 
-Discovery Agent begins at the top-level MuleSoft organization (determined from the authenticated user) and walks the organization tree. It discovers environments for each business unit and recursively visits child business units (sub-orgs). For each environment the agent pages through Exchange assets and processes each active API.
+Discovery Agent begins at the top-level MuleSoft organization (determined from the authenticated user) and walks the organization tree. It discovers environments for each business unit and recursively visits child business units (sub-orgs). For each environment, the agent pages through Exchange assets and processes each active API.
 
-* It determines credential types from applied policies
+* Determines credential types from applied policies
 * Fetches detailed API metadata (including proxy/consumer endpoint normalization)
 * Selects and fetches the spec file
 * Computes a checksum and caches the API for revision/deduplication
-* Prepares the service payload for publishing to Amplify Central. If a spec type is not supported by Amplify it is published as `Unstructured`.
+* Prepares the service payload for publishing to Amplify Central. If a spec type is not supported by Amplify, it is published as `Unstructured`.
 
 #### OpenID Connect client providers
 
