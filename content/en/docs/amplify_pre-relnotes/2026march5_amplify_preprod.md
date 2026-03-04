@@ -43,6 +43,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ### Supported agent versions
 
+There are no new Agent Preview releases.
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
 | Axway API Management 7.7                   | DA=1.2.50 / TA=1.2.41    |
@@ -78,19 +79,6 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Traceable API Security                     | 2.0.15                   |
 | Akamai API Security                        | 1.1.2                    |
 
-## Agent updates
-
-* **Agent**
-
-  (AKAMAI API SECURITY AGENT, ENHANCEMENT)</br>
-  Description.
-
-## Agent bug fixes
-
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
-
 ## Marketplace updates
 
 * **Subscriptions sideblade tabs enhancement**
@@ -123,6 +111,11 @@ TRACEABILITY_PROTOCOL=https (# TA only)
   (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   We replaced the existing react-markdown implementation with a more performant combination of markdown-it, unified, and rehype-react to better support large markdown documents with complex tables, significantly improving rendering performance. As part of this enhancement, we upgraded GraphiQL, aligned related dependencies (including GraphQL and Shiki), and updated styling and configurations to ensure compatibility with the latest versions.
 
+* **Manual API/MCP Service Version Registration**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The Engage Service Registry Details page supports the manual creation of API or MCP Service versions.  The Engage Admin, Catalog Manager, or Developer can create a new verion of an API or MCP Service.  
+
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
@@ -130,3 +123,4 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 |  01811246 | APIGOV-31896| **Issue**: MCP Transports Supported UI Issue Marketplace <br/>**Resolution**: Transports Supported field now populated in Marketplace for those which existed before the previous fix. |
 |          | APIGOV-32065 | **Issue**: The preview of specific MD is not working in Engage. <br/>**Resolution**: Product documentation now renders correctly throughout Engage. |
 |          | APIGOV-32022 | **Issue**: Localize API Service - shows fields for MCP service. <br/>**Resolution**: Localization function hidden as does not apply for API Service. |
+|          | APIGOV-32080 | **Issue**: After logging in with Engage CLI, the first GET command returned about 5MB of data. <br/>**Resolution**: A fix was made to the API Server to reduce this to return about 500KB of data. |
