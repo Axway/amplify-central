@@ -98,13 +98,34 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Marketplace updates
 
-* **Feature**
-  
-  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Description.
+* **Subscriptions Sideblade Tabs Enhancement**
+   (PROVIDER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
+  We have enhanced the Subscriptions side blade on the Subscriptions page by moving “Tags & Attributes” and “Usage” from expandable sections into separate tabs, reducing vertical scrolling and improving information accessibility.
+
+* **As a consumer I want to see rich detailed information about a Marketplace Product**
+  (CONSUMER EXPERIENCE, PRODUCTS, ENHANCEMENT)</br>
+  We added a new **Overview** field in Product Details that allows Providers to select and preview a Markdown document from the Document Library within the Product Wizard (Profile tab), enabling rich, detailed product information to be displayed in Marketplace. The Marketplace Product now features an **Overview** tab that renders the linked document (auto-updating with library changes) and retains the existing Description below the product name.
+
+* **Publish `api_central.deprovisioned` pubsub event when processing deprovision events**
+  (PLATFORM, ENHANCEMENT)</br>
+  We now publish an api_central.deprovisioned event after processing an api_central.deprovision event to signal that an org is no longer provisioned in the region’s services. The event includes the required org_id in the payload to notify Platform of the completed deprovisioning state.
+
+* **Product Name provided for Direct links to Generate Credentials and Register Application screens**
+  (CONSUMER EXPERIENCE, APPROVALS, ENHANCEMENT)</br>
+  We updated the apicentral.subscription.approval.update event to include the PublishedProduct.metadata.id, along with Product ID and Subscription ID, enabling approval notification emails to provide direct links that take users straight to the Generate Credentials and Register Application screens with pre-filled values.
+
+* **UX Audit Updates for Consistency Across UI - Marketplace**
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  We improved Marketplace product card responsiveness so that at 834px page width, cards automatically adjust to display a left-aligned image layout for a more consistent viewing experience. We also standardized the placement of error status icons on Product cards, ensuring they now appear in the upper-right corner alongside other status indicators for improved visual consistency.
+
+* **Replace markdown component with markdown-it**
+  (TECHNICAL BACKEND, ENHANCEMENT)</br>
+  We replaced the existing react-markdown implementation with a more performant combination of markdown-it, unified, and rehype-react to better support large markdown documents with complex tables, significantly improving rendering performance. As part of this enhancement, we upgraded GraphiQL, aligned related dependencies (including GraphQL and Shiki), and updated styling and configurations to ensure compatibility with the latest versions.
 
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|  01811246 | APIGOV-31896| **Issue**: MCP Transports Supported UI Issue Marketplace <br/>**Resolution**: Transports Supported field now populated in Marketplace for those which existed before the previous fix.
+|          | APIGOV-32065 | **Issue**: The preview of specific MD is not working in Engage. <br/>**Resolution**: Product documentation now renders correctly throughout Engage
+|          | APIGOV-32022 | **Issue**: Localize API Service - shows fields for MCP service. <br/>**Resolution**: Localization function hidden as does not apply for API Service
