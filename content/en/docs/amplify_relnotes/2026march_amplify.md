@@ -86,12 +86,15 @@ New enhancements and bug fixes for the March 5 update.
 |          | APIGOV-31073 | **Issue**: [Central UI] Enable Marketplace visibility selection for document library. <br/>**Resolution**: Marketplace Manager, Catalog Manager, Developer, and Engage Admin roles updated as appropriate for Marketplace visibility. |
 |          | APIGOV-30403 | **Issue**: Wrong subscriber information for user in a default team with x-private tag. <br/>**Resolution**: The new structure for Marketplace subresource now includes the addition of user information when the owner is a user belonging to a specific team. |
 
-## Axway CLI updates
+## CLI updates
 
 * **Support for preproduction environments**
 
   (PROVIDER EXPERIENCE, AXWAY CLI, ENHANCEMENT)</br>
   The Axway Engage CLI *[v4.1.0](https://www.npmjs.com/package/axway/v/4.1.0)* has been updated to support the preproduction environments in the US and EU regions.
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI *[v4.10.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.10.0)* has been updated to support the preproduction environment in the US and EU regions.
 
 ### Pre-prod Axway CLI configuration commands
 
@@ -104,9 +107,6 @@ New enhancements and bug fixes for the March 5 update.
 ```$ axway config set env prod```
 
 ```$ axway config set region {value} (US or EU or APAC)```
-
- (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
-  The Axway Engage CLI *[v4.10.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.10.0)* has been updated to support the preproduction environment in the US and EU regions.
 
 ### Pre-prod Axway Engage CLI configuration commands
 
