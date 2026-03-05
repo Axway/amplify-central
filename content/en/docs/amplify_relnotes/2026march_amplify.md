@@ -85,3 +85,34 @@ New enhancements and bug fixes for the March 5 update.
 |          | APIGOV-31540 | **Issue**: Visibility of Compliance Score Details for Developer role. <br/>**Resolution**: Developer role can now view the linting results. |
 |          | APIGOV-31073 | **Issue**: [Central UI] Enable Marketplace visibility selection for document library. <br/>**Resolution**: Marketplace Manager, Catalog Manager, Developer, and Engage Admin roles updated as appropriate for Marketplace visibility. |
 |          | APIGOV-30403 | **Issue**: Wrong subscriber info for user in a default team with x-private tag. <br/>**Resolution**: The new structure for Marketplace subresource now includes an addition of user information when the owner is a user belonging to a specific team. |
+
+## Axway CLI updated
+
+* **Enhancement**
+
+ (PROVIDER EXPERIENCE, AXWAY CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI *[v4.1.0](https://www.npmjs.com/package/axway/v/4.1.0)* has been updated to support the preproduction environments in the US and EU regions.
+
+### Pre-prod Axway CLI configuration commands
+
+$ axway config set env preprod
+$ axway config set region {value} (US or EU)
+
+### Production Axway CLI configuration commands
+
+$ axway config set env prod
+$ axway config set region {value} (US or EU or APAC)
+
+ (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI *[v4.10.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.10.0)* has been updated to support the preproduction environment in the US and EU regions.
+
+### Pre-prod Axway Engage CLI configuration commands
+
+$ axway engage config set --base-url=https://engage.eu-fr.axwaypreprod.net (For EU Orgs)
+$ axway engage config set --base-url=https://engage.na-us.axwaypreprod.net (For US Orgs)
+
+### Production Axway Engage CLI configuration commands
+
+$ axway engage config set --base-url=https://central.eu-fr.axway.com (For EU Orgs)
+$ axway engage config set --base-url=https://apicentral.axway.com (For US Orgs)
+$ axway engage config set --base-url=https://central.ap-sg.axway.com (For APAC Orgs)
