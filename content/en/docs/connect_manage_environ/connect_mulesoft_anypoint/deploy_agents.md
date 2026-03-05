@@ -11,7 +11,6 @@ The MuleSoft agents are delivered as containers, mulesoft-discovery-agent and mu
 Before beginning to deploy the agents, gather the following in addition to the details that were noted in setup.
 
 * MuleSoft AnyPoint Exchange URL, if it differs from the default of **<https://anypoint.mulesoft.com>**
-* MuleSoft Environment name to discover and track transactions from (e.g. Sandbox)
 * MuleSoft AnyPoint Business Unit the agent connects to
 * MuleSoft Username and Password or Client ID and Secret
     * If using a Client ID and Secret then a MuleSoft App Integration will need to be created
@@ -34,10 +33,9 @@ Use the information gathered above to create two environment variable files for 
 Discovery Agent
 
 ```shell
+MULESOFT_ANYPOINTEXCHANGEURL=https://youranypoint.exchangeurl.com
 MULESOFT_AUTH_CLIENTID=client-id                          
 MULESOFT_AUTH_CLIENTSECRET=client-secret                          
-MULESOFT_ENVIRONMENT=Sandbox                            
-MULESOFT_ORGNAME=Unit                                   
 
 CENTRAL_ORGANIZATIONID=123456789
 CENTRAL_AUTH_CLIENTID=mulesoft-agents_123456789-abcd-efgh-ijkl-098765432109
@@ -52,8 +50,7 @@ Traceability Agent
 ```shell
 MULESOFT_AUTH_CLIENTID=client-id                          
 MULESOFT_AUTH_CLIENTSECRET=client-secret                          
-MULESOFT_ENVIRONMENT=Sandbox                            
-MULESOFT_ORGNAME=Unit                                   
+
 
 CENTRAL_ORGANIZATIONID=123456789
 CENTRAL_AUTH_CLIENTID=mulesoft-agents_123456789-abcd-efgh-ijkl-098765432109
