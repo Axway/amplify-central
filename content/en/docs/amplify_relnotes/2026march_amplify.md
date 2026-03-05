@@ -72,6 +72,11 @@ New enhancements and bug fixes for the March 5 update.
   (PROVIDER, SUBSCRIPTIONS, ENHANCEMENT)</br>
   The Engage *Subscriptions* screen has been enhanced to make information easier to find and navigate by introducing an additional filtering option for Marketplace, adding Plan to the table display, and enhancing the search query to include Subscription ID, Plan, and Product.
 
+* **Product overview with Markdown support**
+
+  (CONSUMER EXPERIENCE, PRODUCTS, NEW FEATURE)</br>
+  A new **Overview** field has been added in the product that makes it easier for providers to add richer product information to the Marketplace product listing. When creating or editing a product, Providers can select and preview a **Markdown document** from the Document Library. On the Marketplace side, the product *Overview* tab renders the selected document. The content is rendered from the linked Markdown file and automatically updates whenever the document is updated in the Document Library, so you don’t need to manually update the product each time the documentation changes. The existing description remains visible on the product cards and on the *Product Details* page under the product name, giving consumers a quick summary while the *Overview* tab provides a more detailed explanation.
+
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
