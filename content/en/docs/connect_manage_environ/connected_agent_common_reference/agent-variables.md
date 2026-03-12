@@ -6,20 +6,20 @@ weight: 40
 ---
 The variables common to all agents are described here in more detail.
 
-* [Agent Variables](#agent-variables)
-    * [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
-        * [Status endpoint variables](#status-endpoint-variables)
-        * [Logging variables](#logging-variables)
-        * [Custom unit metric service variables](#custom-unit-metric-service-variables)
-    * [Discovery Agent only variables](#discovery-agent-only-variables)
-        * [IdP configuration variables](#idp-configuration-variables)
-    * [Traceability Agent only variables](#traceability-agent-only-variables)
-        * [Audit log variables](#audit-log-variables)
-        * [Additional Axway API Manager Traceability Agent audit log](#additional-axway-api-manager-traceability-agent-audit-log)
-* [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
-    * [Default pattern](#default-pattern)
-    * [Available variables](#available-variables)
-    * [Date Formats](#date-formats)
+- [Agent Variables](#agent-variables)
+  - [Common to Discovery and Traceability](#common-to-discovery-and-traceability)
+    - [Status endpoint variables](#status-endpoint-variables)
+    - [Logging variables](#logging-variables)
+    - [Custom unit metric service variables](#custom-unit-metric-service-variables)
+  - [Discovery Agent only variables](#discovery-agent-only-variables)
+    - [IdP configuration variables](#idp-configuration-variables)
+  - [Traceability Agent only variables](#traceability-agent-only-variables)
+    - [Audit log variables](#audit-log-variables)
+    - [Additional Axway API Manager Traceability Agent audit log](#additional-axway-api-manager-traceability-agent-audit-log)
+- [CENTRAL\_APISERVICEREVISIONPATTERN](#central_apiservicerevisionpattern)
+  - [Default pattern](#default-pattern)
+  - [Available variables](#available-variables)
+  - [Date Formats](#date-formats)
 
 ## Agent Variables
 
@@ -38,7 +38,7 @@ The variables common to all agents are described here in more detail.
 | CENTRAL_AUTH_PUBLICKEY            | The public key associated with the Service Account.                                                                                                                                                                                                                                                                                           |
 | CENTRAL_AUTH_REALM                | The Realm used to authenticate for Amplify Central: `Broker`.                                                                                                                                                                                                                                                                                 |
 | CENTRAL_AUTH_TIMEOUT              | The timeout to wait for the authentication server to respond (default=ns, us, ms, s, m, h). Set to 10s.                                                                                                                                                                                                                                       |
-| CENTRAL_CLIENTTIMEOUT             | The time interval at which the HTTP client times out making HTTP requests and processing the response (ns - default, us, ms, s, m, h). Set to 60s (Upper Limit: 120s).                                                                                                                                                                                            |
+| CENTRAL_CLIENTTIMEOUT             | The time interval at which the HTTP client times out making HTTP requests and processing the response (ns - default, us, ms, s, m, h). Set to 60s (Upper Limit: 120s).                                                                                                                                                                        |
 | CENTRAL_ENVIRONMENT               | Name of the Amplify Central environment where API will be hosted.                                                                                                                                                                                                                                                                             |
 | CENTRAL_JOBTIMEOUT                | The longest duration interval or scheduled jobs are allowed to run before being canceled (default: `5m`).                                                                                                                                                                                                                                     |
 | CENTRAL_ORGANIZATIONID            | The Organization ID from Amplify Central. Locate this at Platform > User > Organization.                                                                                                                                                                                                                                                      |
@@ -52,7 +52,7 @@ The variables common to all agents are described here in more detail.
 | CENTRAL_TEAM                      | Set to assign an owner of all API resources in the CENTRAL_ENVIRONMENT to that team. When blank (default), the agent will attempt to match API Manager organizations to existing teams. When no match is found, the API resources will not be assigned an owner. Catalog items will be assigned to the same team, or default team when blank. |
 | AGENTFEATURES_VERSIONCHECKER      | Set to false to turn off the agent job that checks if the running agent is the latest available (default: `true`).                                                                                                                                                                                                                            |
 | AGENTFEATURES_PERSISTCACHE        | Set to false to turn off the agent's persisted cache (default: `true`).                                                                                                                                                                                                                                                                       |
-| CENTRAL_GRPC_ENABLED              | Set to false to make agent function in poll mode (default: `true`).                                                                                                                                                                                                                                                                            |
+| CENTRAL_GRPC_ENABLED              | Set to false to make agent function in poll mode (default: `true`).                                                                                                                                                                                                                                                                           |
 
 #### Status endpoint variables
 
@@ -83,10 +83,10 @@ For more information about the following variables, see [Use Custom Units with D
 
 All of the variables in this list may be repeated for each metric service to be used. Each set of variables should be appended with an index number (i.e., `AGENTFEATURES_METRICSERVICES_ENABLE_1=true`).
 
-| Variable name                             | Description                                                                                         |
-| ----------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| AGENTFEATURES_METRICSERVICES_ENABLE       | Set to true to enable this metric service URL.                                                       |
-| AGENTFEATURES_METRICSERVICES_URL          | The URL, host and port number, that the metric service is listening on.                              |
+| Variable name                             | Description                                                                                           |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| AGENTFEATURES_METRICSERVICES_ENABLE       | Set to true to enable this metric service URL.                                                        |
+| AGENTFEATURES_METRICSERVICES_URL          | The URL, host and port number, that the metric service is listening on.                               |
 | AGENTFEATURES_METRICSERVICES_REJECTONFAIL | If set to true, any error with the quota enforcement will fail the provisioning event in Marketplace. |
 
 ### Discovery Agent only variables
@@ -106,7 +106,7 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 | Variable name                               | Description                                                                                                                                                                                                                                                                                                                               |
 | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AGENTFEATURES_IDP_NAME                      | The name of the OAuth identity provider.                                                                                                                                                                                                                                                                                                  |
-| AGENTFEATURES_IDP_TITLE                     | The title of the Credential Request Definition that will be shown to consumers in Marketplace.                                                                                                                                                                                                                                    |
+| AGENTFEATURES_IDP_TITLE                     | The title of the Credential Request Definition that will be shown to consumers in Marketplace.                                                                                                                                                                                                                                            |
 | AGENTFEATURES_IDP_TYPE                      | The type of OAuth identity provider (`generic`, `keycloak` or `okta`).                                                                                                                                                                                                                                                                    |
 | AGENTFEATURES_IDP_METADATAURL               | The URL exposed by the OAuth authorization server to provide metadata information.                                                                                                                                                                                                                                                        |
 | AGENTFEATURES_IDP_EXTRAPROPERTIES           | Additional properties to send in the client metadata when registering a new client.                                                                                                                                                                                                                                                       |
@@ -131,13 +131,20 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 | AGENTFEATURES_IDP_SSL_MAXVERSION            | String value for the maximum SSL/TLS version that is acceptable. If empty, then the maximum version supported by this package is used, which is currently TLS 1.3. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                    |
 | AGENTFEATURES_IDP_SSL_MINVERSION            | String value for the minimum SSL/TLS version that is acceptable. If zero, empty TLS 1.2 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                      |
 
+These optional variables can be used for additional `okta` configuration:
+
+| Variable Name                 | Description                                                                                                                                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| AGENTFEATURES_IDP_OKTA_GROUP  | Name of an existing Okta group to assign the registered OAuth client to. The group must already exist in Okta.                                  |
+| AGENTFEATURES_IDP_OKTA_POLICY | Name of an existing Okta authorization server policy to which the registered OAuth client will be added. The policy must already exist in Okta. |
+
 {{< alert title="Note" color="primary" >}}Not all agents support these IdP settings.{{< /alert >}}
 
 ### Traceability Agent only variables
 
 | Variable name                                  | Description                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CENTRAL_ENVIRONMENTID                          | ID of the Amplify Engage environment. This is only used and required when `CENTRAL_USAGEREPORTING_OFFLINE=true`. See [Manual reporting](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage#manual-reporting).                                                                             |
+| CENTRAL_ENVIRONMENTID                          | ID of the Amplify Engage environment. This is only used and required when `CENTRAL_USAGEREPORTING_OFFLINE=true`. See [Manual reporting](/docs/connect_manage_environ/connected_agent_common_reference/traceability_usage#manual-reporting).                                                                                     |
 | CENTRAL_METRICREPORTING_PUBLISH                | Enables/disables the sending of metric events to Amplify (default value: `true`).                                                                                                                                                                                                                                               |
 | CENTRAL_METRICREPORTING_SCHEDULE               | The schedule at which the agent reports API metrics to Amplify and cache usage numbers (default value: `@hourly`, minimum value: `@hourly`, ex:`@hourly`, `@daily`). Takes precedence over replaced variable CENTRAL_USAGEREPORTING_INTERVAL.                                                                                   |
 | CENTRAL_USAGEREPORTING_PUBLISH                 | Enables/disables the sending of usage events to Amplify (default value: `true`). Takes precedence over replaced variable CENTRAL_PUBLISHUSAGE.                                                                                                                                                                                  |
@@ -153,14 +160,14 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 | TRACEABILITY_EXCEPTION_LIST                    | Determines what API paths the agent will dismiss and not process for usage or transaction reporting. Valid regular expressions can be configured. Example: `["/api/v\\d+/ping.*$", "^/qa.*$", "/qa.*" ]`. Learn the Regular Expression syntax ([RE2 Syntax](https://github.com/google/re2/wiki/Syntax)) supported by the agent. |
 | TRACEABILITY_PROXYURL                          | The socks5 or http URL of the proxy server for ingestion service (`<socks5://hostname:port>`). If empty, no proxy is defined.                                                                                                                                                                                                   |
 | TRACEABILITY_REDACTION_MASKING_CHARACTERS      | Determines what characters are displayed as the sanitized response header values on Amplify (default value `{*}`).                                                                                                                                                                                                              |
-| TRACEABILITY_REDACTION_PATH_SHOW               | Determines what portions of a transactions PATH to send to Amplify Engage. By default, the entire path is redacted. Example: `[{keyMatch:".*"}]` to send all paths.                                                                                                                                                     |
+| TRACEABILITY_REDACTION_PATH_SHOW               | Determines what portions of a transactions PATH to send to Amplify Engage. By default, the entire path is redacted. Example: `[{keyMatch:".*"}]` to send all paths.                                                                                                                                                             |
 | TRACEABILITY_REDACTION_QUERYARGUMENT_SANITIZE  | Determines what portions of a Query Argument value to sanitize. Sanitize query parameter `tenantId` to mask the ten first characters or less `[{keyMatch:"tenantId",valueMatch:"^.{0,10}"}]                                                                                                                                     |
-| TRACEABILITY_REDACTION_QUERYARGUMENT_SHOW      | Determines what Query Arguments to send to Amplify Engage. By default, all query parameters are redacted. Example: `[{keyMatch:".*"}]` to send all query parameters.                                                                                                                                                    |
+| TRACEABILITY_REDACTION_QUERYARGUMENT_SHOW      | Determines what Query Arguments to send to Amplify Engage. By default, all query parameters are redacted. Example: `[{keyMatch:".*"}]` to send all query parameters.                                                                                                                                                            |
 | TRACEABILITY_REDACTION_REQUESTHEADER_SANITIZE  | Determines what portions of a Request Header value to sanitize. Sanitize `Authorization` request header to mask the ten first characters or less `[{keyMatch:"Authorization",valueMatch:"^.{0,10}"}]`                                                                                                                           |
-| TRACEABILITY_REDACTION_REQUESTHEADER_SHOW      | Determines what Request Header Keys to send to Amplify Engage. By default, all request headers are redacted. Example: `[{keyMatch:"Accept.*"}, {keyMatch:"Connection"}]` to send all Accept* and the Connection request header.                                                                                         |
+| TRACEABILITY_REDACTION_REQUESTHEADER_SHOW      | Determines what Request Header Keys to send to Amplify Engage. By default, all request headers are redacted. Example: `[{keyMatch:"Accept.*"}, {keyMatch:"Connection"}]` to send all Accept\* and the Connection request header.                                                                                                |
 | TRACEABILITY_REDACTION_RESPONSEHEADER_SANITIZE | Determines what portions of a Response Header value to sanitize. Example: `[{keyMatch:"apiKey",valueMatch:".{0,10}$"}]` to sanitize the `apiKey` request header to mask the last ten characters or less.                                                                                                                        |
 | TRACEABILITY_REDACTION_RESPONSEHEADER_SHOW     | Determines which Response Header Keys to send to Amplify. By default, all response headers are redacted. Example: `[{keyMatch:".*"}]` to send all response headers.                                                                                                                                                             |
-| TRACEABILITY_WORKER                            | The number of workers collecting events and sending them to Amplify Engage (default value: `1`).                                                                                                                                                                                                                        |
+| TRACEABILITY_WORKER                            | The number of workers collecting events and sending them to Amplify Engage (default value: `1`).                                                                                                                                                                                                                                |
 
 #### Audit log variables
 
