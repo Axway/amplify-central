@@ -44,12 +44,13 @@ To list API services:
    * Assets
    * Environment
    * Owner
+   * Sync Status
    * Modified date by user
    * Security compliance grading
    * Design compliance grading
    * Runtime compliance grading
 
-You can filter the services by the Service type, Stages, Environments, Owners, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
+You can filter the services by the Service type, Stages, Environments, Owners, Sync Status, and Security and Design grading scores (A, B, C, D, E and F) using the **Filter By** controls. Search by the Service Name with the search bar.
 
 Click the **Customize table** icon in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
 
@@ -60,6 +61,12 @@ Click the **Customize table** icon in the top-right corner of the table to custo
 
 Layout preferences are automatically saved and persist across browser sessions.
 
+**Sync Status**: This field helps users identify which API services are potentially missing from the dataplane. The associated agent will not take an action to remove the API service, nor impact credentials/API service relationships. The Provider is responsible for confirming that the API service has been removed from the dataplane. Only after confirmation, the Provider should perform a Delete API action will there be an impact.
+
+* In Sync: The API service must be agent managed and was detected in the associated data plane during the last discovery cycle.
+* Out of Sync: The API service must be agent managed and was not detected in the associated data plane during the last discovery cycle. It may have been removed.
+* Manual: The API service is not agent managed and does not support automatic provisioning. Application registrations and credential management must be handled manually outside the platform.
+
 ## View API service details
 
 To view service details:
@@ -69,7 +76,7 @@ To view service details:
 
 Click on the Service name or icon to view the following detailed information for a specific service in any state (Draft, Active, Deprecated, Active):
 
-* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, and Owning Team. There are tabs for the Versions, Endpoints, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
+* General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, Sync Status, and Owning Team. There are tabs for the Versions, Endpoints, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
 * The metrics area displays the number of teams the General Service is shared with, the number of assets and products related to the General Service, and the number of active asset requests to the General Service.
 * The general Endpoints tab displays a list of endpoints associated with the API service. If the API service is not within the scope of an environment with agent, the user can create and edit runtime endpoints by using the **Create Runtime Endpoint** button or dropdown. Editing is done by clicking the three ellipsis and selecting **Edit Endpoint**. If [requirements](#create-a-mock-endpoint) are met, the user can create and edit mocked endpoints by using the **Create Mock Endpoint** button or dropdown. Editing is done by clicking the three ellipsis and selecting **Edit Mock Endpoint**.
 * The general Access Rights tab displays all teams the API service is shared with.
