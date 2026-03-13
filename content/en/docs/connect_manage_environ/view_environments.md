@@ -107,9 +107,9 @@ The API service details page includes:
 * **Service Information**: Contains general information that includes the logical name, environment name, owner, classification, source code repository, description, and API service sync status.
 * **Sync Status**: This field helps users identify which API services are potentially missing from the dataplane.
 
-     * In Sync: The API service must be agent managed was detected in the associated data plane during the last discovery cycle.
-     * Out of Sync: The API service must be agent managed was not detected in the associated data plane during the last discovery cycle. It may have been removed.
-     * Manual: The API service is not agent managed and does not support automatic provisioning. Application registrations and credential management must be handled manually outside the platform.
+    * In Sync: The API service must be agent managed was detected in the associated data plane during the last discovery cycle.
+    * Out of Sync: The API service must be agent managed was not detected in the associated data plane during the last discovery cycle. It may have been removed.
+    * Manual: The API service is not agent managed and does not support automatic provisioning. Application registrations and credential management must be handled manually outside the platform.
 
 * **Dashboard Report**: Dashboard that shows the aggregated values for how your API service version assets are distributed and how many subscriptions exist across all of those assets.
 
