@@ -80,10 +80,11 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Agent updates
 
-* **Update**
+* **Agents Out of Sync marking**
 
-  (AGENT, ENHANCEMENT)</br>
-  Description.
+  (ALL AGENTS, ENHANCEMENT)</br>
+  All agents have been enhanced to mark an API service as "Out of Sync" if the API has been detected as removed from the dataplane. Agents will no longer remove an API service from the Engage Service Registry automatically. The provider should confirm that the API service has been removed from the dataplan before performing the delete action on the API service.
+All agents will change the mark from "Out of Sync" to "In Sync" if the API service is detected on the dataplane.  
 
 * **New agent releases**
 
