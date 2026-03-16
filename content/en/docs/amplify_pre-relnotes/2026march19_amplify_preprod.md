@@ -86,6 +86,11 @@ TRACEABILITY_PROTOCOL=https (# TA only)
   All agents have been enhanced to mark an API service as "Out of Sync" if the API has been detected as removed from the dataplane. Agents will no longer remove an API service from the Engage Service Registry automatically. The provider should confirm that the API service has been removed from the dataplan before performing the delete action on the API service.
 All agents will change the mark from "Out of Sync" to "In Sync" if the API service is detected on the dataplane.  
 
+* **Axway API Management agent OKTA support**
+
+  (AXWAY API MANAGEMENT DISCOVERY AGENT, ENHANCEMENT)</br>
+  The Axway API Management discovery agent has been enhanced to populate the existing group and policy created on an OKTA identity provider with information. The group and policy name is set by the agent environment variables.  
+
 * **New agent releases**
 
   (NEW AGENT RELEASES)</br>
