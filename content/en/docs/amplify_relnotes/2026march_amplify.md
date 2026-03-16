@@ -14,7 +14,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancements and bug fixes for the March 19 update.
 
-### Marketplace updates
+### Marketplace updates for March 19, 2026
 
 * **Subscriptions side panel tabs enhancement**
 
@@ -46,7 +46,7 @@ New enhancements and bug fixes for the March 19 update.
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   The Engage *Service Registry Details* page supports the manual creation of API or MCP service versions. The Engage Admin, Catalog Manager, or Developer can create a new version of an API or MCP service.
 
-### Marketplace bug fixes
+### Marketplace bug fixes March 19, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -59,7 +59,7 @@ New enhancements and bug fixes for the March 19 update.
 
 New enhancements and bug fixes for the March 5 update.
 
-### Agent updates
+### Agent updates for March 5, 2026
 
 * **Akamai SaaS Agent**
 
@@ -76,7 +76,7 @@ New enhancements and bug fixes for the March 5 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
 
-### Agent bug fixes
+### Agent bug fixes for March 5, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -85,7 +85,7 @@ New enhancements and bug fixes for the March 5 update.
 |          | APIGOV-32006 | **Issue**: If a slow internet connection existed between the agent and the Amplify platform, the agent may have timed out and retried with an invalid request. <br/>**Resolution**: Valid request are now sent with a minimum pageSize value. |
 |          | APIGOV-31075 | **Issue**: An environment and the API service in the environment may not have displayed the same connect or manual sync status based on the Agent Access Control List setting. <br/>**Resolution**: The Agent Access Control List setting has been fixed. |
 
-### Marketplace updates
+### Marketplace updates for March 5, 2026
 
 * **Manual API/MCP service creation from Service Registry**
   
@@ -122,7 +122,7 @@ New enhancements and bug fixes for the March 5 update.
   (CONSUMER EXPERIENCE, PRODUCTS, NEW FEATURE)</br>
   A new **Overview** field has been added in the product that makes it easier for providers to add richer product information to the Marketplace product listing. When creating or editing a product, Providers can select and preview a **Markdown document** from the Document Library. On the Marketplace side, the product *Overview* tab renders the selected document. The content is rendered from the linked Markdown file and automatically updates whenever the document is updated in the Document Library, so you don’t need to manually update the product each time the documentation changes. The existing description remains visible on the product cards and on the *Product Details* page under the product name, giving consumers a quick summary while the *Overview* tab provides a more detailed explanation.
 
-### Marketplace bug fixes
+### Marketplace bug fixes for March 5, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -136,7 +136,7 @@ New enhancements and bug fixes for the March 5 update.
 |          | APIGOV-31073 | **Issue**: [Central UI] Enable Marketplace visibility selection for document library. <br/>**Resolution**: Marketplace Manager, Catalog Manager, Developer, and Engage Admin roles updated as appropriate for Marketplace visibility. |
 |          | APIGOV-30403 | **Issue**: Wrong subscriber information for user in a default team with x-private tag. <br/>**Resolution**: The new structure for Marketplace subresource now includes the addition of user information when the owner is a user belonging to a specific team. |
 
-### CLI updates
+### CLI updates for March 5, 2026
 
 * **Support for preproduction environments**
 
