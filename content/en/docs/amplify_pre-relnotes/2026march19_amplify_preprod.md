@@ -89,7 +89,7 @@ All agents will change the mark from "Out of Sync" to "In Sync" if the API servi
 * **Axway API Management agent OKTA support**
 
   (AXWAY API MANAGEMENT DISCOVERY AGENT, ENHANCEMENT)</br>
-  The Axway API Management discovery agent has been enhanced to populate the existing group and policy created on an OKTA identity provider with information. The group and policy name is set by the agent environment variables.  
+  The Axway API Management discovery agent has been enhanced to populate the existing group and policy created on an OKTA identity provider with information. The group and policy name are set by the agent environment variables so the registered OAuth client can be assigned to the correct group/policy.    
 
 * **New agent releases**
 
