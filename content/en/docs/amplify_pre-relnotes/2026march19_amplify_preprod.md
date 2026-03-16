@@ -101,6 +101,11 @@ All agents will change the mark from "Out of Sync" to "In Sync" if the API servi
   (APIGEE X DISCOVERY AGENT, ENHANCEMENT)</br>
   The Apigee X discovery agent has been enhanced to filter API proxies by name or the tags field from the Open API specification field.
 
+* **Sensidia 4.x support**
+
+  (SENSEDIA AGENT, ENHANCEMENT)</br>
+  The Sensedia discovery agent has been enhanced .... TBD.
+
 * **New agent releases**
 
   (NEW AGENT RELEASES)</br>
