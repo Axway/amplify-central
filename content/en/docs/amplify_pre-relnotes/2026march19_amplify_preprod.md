@@ -80,11 +80,11 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Agent updates
 
-* **Agents Out of Sync marking**
+* **Axway API Management agent Out of Sync marking**
 
-  (ALL AGENTS, ENHANCEMENT)</br>
-  All agents have been enhanced to mark an API service as "Out of Sync" if the API has been detected as removed from the dataplane. Agents will no longer remove an API service from the Engage Service Registry automatically. The provider should confirm that the API service has been removed from the dataplan before performing the delete action on the API service.
-All agents will change the mark from "Out of Sync" to "In Sync" if the API service is detected on the dataplane.
+  (AXWAY API MANAGEMENT DISCOVERY AGENT, ENHANCEMENT)</br>
+  The Axway API Management discovery agent has been enhanced to mark an API service as "Out of Sync" if the API has been detected as removed from the dataplane. Agents will no longer remove an API service from the Engage Service Registry automatically. The provider should confirm that the API service has been removed from the dataplane before performing the delete action on the API service.
+The Axway API Management discovery agent will change the mark from "Out of Sync" to "In Sync" if the API service is detected on the dataplane.
 
 * **Agent Transaction Sampling per API/Environment**
 
