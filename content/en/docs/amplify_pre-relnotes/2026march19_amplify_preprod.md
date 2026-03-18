@@ -118,11 +118,15 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 * **Service Registry Sync Status UI Enhancement**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  The Engage Service Registry, Environment details and the Asset create/edit wizard have been updated to reflect a "Sync Status" of API/MCP service(s) which may no longer be on the associated dataplane. Three possible display badges have been added.
-- "Out of Sync" - This means the agent has detected the service as potentially removed / deleted from the dataplane. A service in thie state can not be linked or grouped in an new asset releases with the UI.
-- "In Sync" -  This means the agent has detected the service on the dataplane.
-- "Manaul" - This means the service was manually discovered.  Application registrations and credential management must be handled manually outside the platform.  
+  The Engage Service Registry, Environment details and the Asset create/edit wizard have been updated to reflect a "Sync Status" of API/MCP service(s) which may no longer be on the associated    dataplane. Three possible display badges have been added.
+  - "Out of Sync" - This means the agent has detected the service as potentially removed / deleted from the dataplane. A service in thie state can not be linked or grouped in an new asset releases with the UI.
+  - "In Sync" -  This means the agent has detected the service on the dataplane.
+  - "Manaul" - This means the service was manually discovered.  Application registrations and credential management must be handled manually outside the platform.  
 
+* **Access Rights - Alphabetize the 'Select Owning Team' Dropdown**
+
+  The 'Select Owning Team' feature that appears in Product Foundry, Assets and Categorires now have consistent alphabetic dropdown lists
+  
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
@@ -132,3 +136,8 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 |          | APIGOV-32111 | **Issue**: A user was unable to delete of an MCP Client while editing the MCP service. <br/>**Resolution**: A fix was made to enable the deletion of an MCP Client from Edit screen with the ellipsis action button. |
 | 01802658 | APIGOV-32060 | **Issue**: In the API resource linked to an asset is deleted and a new asset release is made, the new asset release Error status will not be set. This would block the removal of new asset release from the product plan quota. <br/>**Resolution**: A fix was made to the Asset release Error status to allow removal of an asset release from a product quota plan. |
 | 01806599 | APIGOV-31976 | **Issue**: The display of the number of services in the Environment deails screen was confusing due to Access Control List settings. <br/>**Resolution**: A UX change was made to display the Team service count (limited by the Access Control List) and the Organizarion service count separately. |
+| 01814472 | APIGOV-32149 | **Issue**: Subscription name in Subscription details is replaced with Product name. <br/>**Resolution**: A UX change was made to display the correctly show the subscription name |
+| 01812281 | APIGOV-32145 | **Issue**: State was missing for mocked resources in Plan Preview to distinguish between regular and mocked resources. <br/>**Resolution**: State is now displayed for mocked resources in the Plan Preview |
+| 01812270 | APIGOV-32120 | **Issue**: Add hover-over for product description on Product Foundry. <br/>**Resolution**: A UX change was made to show the description on hover-over in Product Foundry |
+|          | APIGOV-32024 | **Issue**: In Document Library, a user is able to delete a document in use. <br/>**Resolution**: A logic change was made so that only documents that are not in use can be deleted |
+
