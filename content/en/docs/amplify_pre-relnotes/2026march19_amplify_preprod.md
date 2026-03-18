@@ -111,15 +111,17 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | 01818551 <br/>01818601 | APIGOV-32247 | **Issue**: The Agent status was displayed as **stopped** when the agents were **running**. <br/>**Resolution**: A fix was made on the platfrom to handle status update change. |
-| xxxx | APIGOV-32247 | **Issue**: The Agent status was not being updated. <br/>**Resolution**: A fix was made on the platfrom to handle status update. |
-
+| 01806466 | APIGOV-32028 | **Issue**: The Axway APIM discovery agent would encounter a timeout when requesting a large number of API proxies from the API Manager. <br/>**Resolution**: A fix was made to support a lightweigt v1.4 of the /proxies/light endpoint if supported by the API Manager. Otherwize the v1.3 endpoint will be used. |
 
 ## Marketplace updates
 
-* **Enhancement**
+* **Service Registry Sync Status UI Enhancement**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  Description.
+  The Engage Service Registry, Environment details and the Asset create/edit wizard have been updated to reflect a "Sync Status" of API/MCP service(s) which may no longer be on the associated dataplane. Three possible display badges have been added.
+- "Out of Sync" - This means the agent has detected the service as potentially removed / deleted from the dataplane. A service in thie state can not be linked or grouped in an new asset releases with the UI.
+- "In Sync" -  This means the agent has detected the service on the dataplane.
+- "Manaul" - This means the service was manually discovered.  Application registrations and credential management must be handled manually outside the platform.  
 
 ## Marketplace bug fixes
 
@@ -128,3 +130,5 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 |          | APIGOV-32185 | **Issue**: The API version creation wizard opened in the same browser service details tab. <br/>**Resolution**: UX patern change made to openthe wizard in a new browser tab. |
 | 01812272 | APIGOV-32146 | **Issue**: The entire display text is not visible for some fields in the Service Registry table. <br/>**Resolution**: The entire text is display on hover for the fields in the Service Name, Environment, and Owner columns. |
 |          | APIGOV-32111 | **Issue**: A user was unable to delete of an MCP Client while editing the MCP service. <br/>**Resolution**: A fix was made to enable the deletion of an MCP Client from Edit screen with the ellipsis action button. |
+| 01802658 | APIGOV-32060 | **Issue**: In the API resource linked to an asset is deleted and a new asset release is made, the new asset release Error status will not be set. This would block the removal of new asset release from the product plan quota. <br/>**Resolution**: A fix was made to the Asset release Error status to allow removal of an asset release from a product quota plan. |
+| 01806599 | APIGOV-31976 | **Issue**: The display of the number of services in the Environment deails screen was confusing due to Access Control List settings. <br/>**Resolution**: A UX change was made to display the Team service count (limited by the Access Control List) and the Organizarion service count separately. |
