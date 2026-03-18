@@ -110,7 +110,9 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01818551 <br/>01818601 | APIGOV-32247 | **Issue**: The Agent status was displayed as **stopped** when the agents were **running**. <br/>**Resolution**: A fix was made on the platfrom to handle status update change. |
+| xxxx | APIGOV-32247 | **Issue**: The Agent status was not being updated. <br/>**Resolution**: A fix was made on the platfrom to handle status update. |
+
 
 ## Marketplace updates
 
@@ -123,4 +125,6 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|          | APIGOV-32185 | **Issue**: The API version creation wizard opened in the same browser service details tab. <br/>**Resolution**: UX patern change made to openthe wizard in a new browser tab. |
+| 01812272 | APIGOV-32146 | **Issue**: The entire display text is not visible for some fields in the Service Registry table. <br/>**Resolution**: The entire text is display on hover for the fields in the Service Name, Environment, and Owner columns. |
+|          | APIGOV-32111 | **Issue**: A user was unable to delete of an MCP Client while editing the MCP service. <br/>**Resolution**: A fix was made to enable the deletion of an MCP Client from Edit screen with the ellipsis action button. |
