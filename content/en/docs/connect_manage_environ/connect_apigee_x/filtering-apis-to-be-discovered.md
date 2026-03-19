@@ -4,7 +4,7 @@ linkTitle: Discover APIs
 draft: false
 weight: 40
 ---
-Set up tag-based condition expressions using the APIGEE_FILTER environment variable to discover APIs that could be added to Amplify.
+Set up tag-based condition expressions using the APIGEE_FILTER environment variable (or, for SaaS, by editing the api-server resource DiscoveryAgent.spec.config.filter) to discover APIs that could be added to Amplify.
 
 The tag names are taken from the API Spec, currently only working for OAS2/OAS3. For example, if you have a tag name 'PET' defined in the OAS Spec, you can use that tag name in the conditional expression to discover APIs that could be added to Amplify.
 
@@ -96,13 +96,13 @@ Use these patterns to build filter expressions quickly:
 * Match with regular expression: `tag.Name.matchRegEx(<regularExpression>)`
 * Combine conditions: `name.Proxy == "CurrencyConverter" && tag.Name == "Finance"`
 
-Sample of a composite expression to discover APIs having Math as a tag name OR APIs having a tag name API_TYPE whose value is 'Healthcare' and exclude APIs having a tag name API_TYPE whose value is 'SOAP': `tag.Math.Exists() == true || tag.API_TYPE == Healthcare || tag.API_TYPE != SOAP`
-
 ## Other examples which can be used both for tag name and proxy name
 
-Discover all APIs having a logical name that is equal to CurrencyConverter and a tag name equal to Finance `name.Proxy == "CurrencyConverter" && tag.Name == "CurrencyConverter"`
+Discover all APIs having a logical name that is equal to CurrencyConverter and a tag name equal to Finance: 
+`name.Proxy == "CurrencyConverter" && tag.Name == "Finance"`
 
-Discover all APIs having a logical name that is not equal to CurrencyConverter and APIs that have tag name that is not equal to Finance `name.Proxy != "CurrencyConverter" && tag.Name != "Finance"`
+Discover all APIs having a logical name that is not equal to CurrencyConverter and APIs that have tag name that is not equal to Finance:
+`name.Proxy != "CurrencyConverter" && tag.Name != "Finance"`
 
 ## See also
 
