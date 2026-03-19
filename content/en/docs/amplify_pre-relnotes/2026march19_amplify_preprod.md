@@ -80,23 +80,22 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Agent updates
 
-* **Axway API Management agent Out of Sync marking**
+* **Flagging of API Services missing from the Axway V7 dataplane**
 
   (AXWAY API MANAGEMENT DISCOVERY AGENT, ENHANCEMENT)</br>
-  The Axway API Management discovery agent has been enhanced to mark an API service as "Out of Sync" if the API has been detected as removed from the dataplane. Agents will no longer remove an API service from the Engage Service Registry automatically. The provider should confirm that the API service has been removed from the dataplane before performing the delete action on the API service.
-The Axway API Management discovery agent will change the mark from "Out of Sync" to "In Sync" if the API service is detected on the dataplane.
+  The Axway API Management discovery agent now flags API Services as "Out of Sync" when they are no longer detected on the dataplane. The Discovery Agent no longer removes an API service from the Engage Service Registry automatically. The provider should confirm that the API has been removed from the dataplane before performing the delete action on the API service. Existing application registrations and credentials remain valid until the service is manually removed, at which point the standard corrupted-resource handling is applied.
 
 * **Agent Transaction Sampling per API/Environment**
 
   (ALL AGENTS, ENHANCEMENT)</br>
-  All agents which support on-demand transaction sampling have been enhanced to allow the provider to select all endpoints in API service or all API services in an environment. 
+  All agents which support on-demand transaction sampling have been enhanced to allow the provider to select all endpoints in an API service or all API services in an environment. 
 
 * **Axway API Management agent OKTA support**
 
   (AXWAY API MANAGEMENT DISCOVERY AGENT, ENHANCEMENT)</br>
   The Axway API Management discovery agent has been enhanced to populate the existing group and policy created on an OKTA identity provider with information. The group and policy name are set by the agent environment variables so the registered OAuth client can be assigned to the correct group/policy.
 
-* **Sensidia 4.x support**
+* **Sensedia 4.x support**
 
   (SENSEDIA AGENT, ENHANCEMENT)</br>
   The Sensedia discovery agent has been enhanced to handle the use case of the same API service deployed across multiple Sensedia environments. An improvement to the handling of rate limiting settings for a subscription with multiple quota entries.
@@ -110,36 +109,38 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01818551 <br/>01818601 | APIGOV-32247 | **Issue**: The Agent status was displayed as **stopped** when the agents were **running**. <br/>**Resolution**: A fix was made on the platfrom to handle status update change. |
+| 01818551 <br/>01818601 | APIGOV-32247 | **Issue**: The Agent status was displayed as **stopped** when the agents were **running**. <br/>**Resolution**: A fix was made on the platfrom to handle status update changes. |
 | 01806466 | APIGOV-32028 | **Issue**: The Axway APIM discovery agent would encounter a timeout when requesting a large number of API proxies from the API Manager. <br/>**Resolution**: A fix was made to support a lightweigt v1.4 of the /proxies/light endpoint if supported by the API Manager. Otherwize the v1.3 endpoint will be used. |
 
 ## Marketplace updates
 
-* **Service Registry Sync Status UI Enhancement**
+* **Service Registry: New Sync Status**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  The Engage Service Registry, Environment details and the Asset create/edit wizard have been updated to reflect a "Sync Status" of API/MCP service(s) which may no longer be on the associated    dataplane. Three possible display badges have been added.
+  The Engage Service Registry and the Asset screens have been updated to reflect a "Sync Status" of API/MCP service(s) which may no longer be on the associated dataplane. Three possible display badges have been added.
   - "Out of Sync" - This means the agent has detected the service as potentially removed / deleted from the dataplane. A service in this state can not be linked or grouped in an new asset releases with the UI.
   - "In Sync" -  This means the agent has detected the service on the dataplane.
-  - "Manaul" - This means the service was manually discovered.  Application registrations and credential management must be handled manually outside the platform.
+  - "Manaul" - This means the service was manually discovered. Application registrations and credential management must be handled manually outside the platform.
 
-* **Environments UI Enhancement**
+* **Filter environments by owner**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
-  The Engage Environments list view has been updated with an owner column and the option to filter environments by the owner.
+  A new filter has been added to the Environments screen to allow filtering by owner.
 
-* **Access Rights - Alphabetize the 'Select Owning Team' Dropdown**
+* **Access Rights - Alphabetize the 'Select Owning Team' dropdown**
 
-  The 'Select Owning Team' feature that appears in Product Foundry, Assets and Categorires now have consistent alphabetic dropdown lists.
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The **Select Owning Team** dropdown in Product Foundry, Assets and Categories now shows teams in a consistent alphabetical order.
 
-* **Grid Pagination improvements in Marketplace Categories, Applications Screens**
+* **Removed 'fake endings'in Marketplace Categories and Applications screens**
 
-  - UI improvements have been made to Marketplace Categories to display 20 items per page by default. A user option is available to update items per page.
-  - Grid layout remains consistent and the total items counter above the grid and filtering also updates it, accordingly.
+  (CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  The Marketplace Applications and Categories screens have been enhanced to eliminate 'fake endings' and improve visual clarity.
  
 * **Allow Google to crawl and index content in Marketplace**
 
-  Marketplace pages are crawlable and indexable in Google Search Console. Admins / Marketplace Managers can store a single google verification tag. These settings can be  enabled via the platform Marketplace Settings. Please note that is can be enabled when the Marketplace is enabled as 'Public'.
+  (ADMINISTRATION, NEW FEATURE)</br>
+  Marketplace pages can now be crawled and indexed via Google Search Console. Admins and Marketplace Managers can configure a single Google verification tag in **Marketplace Settings**. This option is available only when the Marketplace is set to Public. Additionally, you can disable search indexig per Marketplace.
   
 ## Marketplace bug fixes
 
