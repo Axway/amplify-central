@@ -130,13 +130,8 @@ All of the variables in this list may be repeated for each IdP to be used. Each 
 | AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY    | Controls whether a client verifies the server's certificate chain and host name. If true, TLS accepts any certificate presented by the server and any host name in that certificate. In this mode, TLS is susceptible to man-in-the-middle attacks.                                                                                       |
 | AGENTFEATURES_IDP_SSL_MAXVERSION            | String value for the maximum SSL/TLS version that is acceptable. If empty, then the maximum version supported by this package is used, which is currently TLS 1.3. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                    |
 | AGENTFEATURES_IDP_SSL_MINVERSION            | String value for the minimum SSL/TLS version that is acceptable. If zero, empty TLS 1.2 is taken as the minimum. Allowed values are: TLS1.0, TLS1.1, TLS1.2, TLS1.3.                                                                                                                                                                      |
-
-These optional variables can be used for additional `okta` configuration:
-
-| Variable Name                 | Description                                                                                                                                     |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| AGENTFEATURES_IDP_OKTA_GROUP  | Name of an existing Okta group to assign the registered OAuth client to. The group must already exist in Okta.                                  |
-| AGENTFEATURES_IDP_OKTA_POLICY | Name of an existing Okta authorization server policy to which the registered OAuth client will be added. The policy must already exist in Okta. |
+| AGENTFEATURES_IDP_OKTA_GROUP  | (okta specific) Name of an existing Okta group to assign the registered OAuth client to. The group must already exist in Okta.                                  |
+| AGENTFEATURES_IDP_OKTA_POLICY | (okta specific) Name of an existing Okta authorization server policy to which the registered OAuth client will be added. The policy must already exist in Okta. |
 
 {{< alert title="Note" color="primary" >}}Not all agents support these IdP settings.{{< /alert >}}
 
