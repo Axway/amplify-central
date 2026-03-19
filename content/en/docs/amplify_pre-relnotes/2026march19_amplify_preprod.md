@@ -130,7 +130,16 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 
 * **Access Rights - Alphabetize the 'Select Owning Team' Dropdown**
 
-  The 'Select Owning Team' feature that appears in Product Foundry, Assets and Categorires now have consistent alphabetic dropdown lists
+  The 'Select Owning Team' feature that appears in Product Foundry, Assets and Categorires now have consistent alphabetic dropdown lists.
+
+* **Grid Pagination improvements in Marketplace Categories, Applications Screens**
+
+  - UI improvements have been made to Marketplace Categories to display 20 items per page by default. A user option is available to update items per page.
+  - Grid layout remains consistent and the total items counter above the grid and filtering also updates it, accordingly.
+ 
+* **Allow Google to crawl and index content in Marketplace**
+
+  Marketplace pages are crawlable and indexable in Google Search Console. Admins / Marketplace Managers can store a single google verification tag. These settings can be  enabled via the platform Marketplace Settings. Please note that is can be enabled when the Marketplace is enabled as 'Public'.
   
 ## Marketplace bug fixes
 
@@ -145,4 +154,6 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 | 01812281 | APIGOV-32145 | **Issue**: State was missing for mocked resources in Plan Preview to distinguish between regular and mocked resources. <br/>**Resolution**: State is now displayed for mocked resources in the Plan Preview |
 | 01812270 | APIGOV-32120 | **Issue**: Add hover-over for product description on Product Foundry. <br/>**Resolution**: A UX change was made to show the description on hover-over in Product Foundry |
 |          | APIGOV-32024 | **Issue**: In Document Library, a user is able to delete a document in use. <br/>**Resolution**: A logic change was made so that only documents that are not in use can be deleted |
+| 01809116 | APIGOV-32032 | **Issue**: There is a errenous message that appears after trying out a resource on Marketplace. <br/>**Resolution**: A fix has been made to remove the message |
+| 01897409 | APIGOV-31659 | **Issue**: Consumer users when part of a team with 'x-private' tag can subscribe to paid products. <br/>**Resolution**: A logic change was added to ensure consumers can only subscribe to free plans |
 
