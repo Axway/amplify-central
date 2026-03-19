@@ -26,7 +26,6 @@ Learn how to set filtering based on tag name from the API Spec, tag value, parti
 `name.Proxy.Exists() == false`
 `name.Proxy.Exists() == true`
 
-
 Sample to discover all APIs having any tag name: `filter: tag.Name.Exists() == true`
 
 Sample to discover all APIs not having a tag name: `filter: tag.Name.Exists() == false`
@@ -98,7 +97,7 @@ Use these patterns to build filter expressions quickly:
 
 ## Other examples which can be used both for tag name and proxy name
 
-Discover all APIs having a logical name that is equal to CurrencyConverter and a tag name equal to Finance: 
+Discover all APIs having a logical name that is equal to CurrencyConverter and a tag name equal to Finance:
 `name.Proxy == "CurrencyConverter" && tag.Name == "Finance"`
 
 Discover all APIs having a logical name that is not equal to CurrencyConverter and APIs that have tag name that is not equal to Finance:
