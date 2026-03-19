@@ -36,12 +36,12 @@ New enhancements and bug fixes for the March 19 update.
   (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
   The Marketplace product card responsiveness has been improved so that at 834px page width, cards automatically adjust to display a left-aligned image layout for a more consistent viewing experience. The placement of error status icons on Product cards has also been standardized, ensuring they now appear in the upper-right corner alongside other status indicators for improved visual consistency.
 
-* **Replace Markdown component with markdown-it**
+* **Replaced Markdown component with markdown-it**
 
   (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   The existing react-markdown implementation has been replaced with a more performant combination of markdown-it, unified, and rehype-react to better support large Markdown documents with complex tables, significantly improving rendering performance. As part of this enhancement, GraphiQL was upgraded, related dependencies were aligned (including GraphQL and Shiki), and styling and configurations were updated to ensure compatibility with the latest versions.
 
-* **Manual API/MCP service Version Registration**
+* **Manual API/MCP service version creation**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   The Engage *Service Registry Details* page supports the manual creation of API or MCP service versions. The Engage Admin, Catalog Manager, or Developer can create a new version of an API or MCP service.
