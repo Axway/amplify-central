@@ -10,11 +10,56 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## March 19, 2026
+
+New enhancements and bug fixes for the March 19 update.
+
+### Marketplace updates for March 19, 2026
+
+* **Subscriptions side panel tabs enhancement**
+
+  (PROVIDER EXPERIENCE, SUBSCRIPTIONS, ENHANCEMENT)</br>
+  The Subscriptions side panel on the *Subscriptions* page has been enhanced by moving "Tags & Attributes" and "Usage" from expandable sections into separate tabs, reducing vertical scrolling and improving information accessibility.
+
+* **Publish `api_central.deprovisioned` pubsub event when processing deprovision events**
+
+  (PLATFORM, ENHANCEMENT)</br>
+  An api_central.deprovisioned event is now published after processing an `api_central.deprovision` event to signal that an org is no longer provisioned in the region's services. The event includes the required **org_id** in the payload to notify platform of the completed deprovisioning state.
+
+* **Direct links to *Generate Credentials* and *Register Application* in the approval notification emails**
+
+  (CONSUMER EXPERIENCE, APPROVALS, ENHANCEMENT)</br>
+  The subscription approval notifications have been improved to make it easier for users to complete the next steps after their subscription or application registration request is approved. Approval emails now include direct links that take users straight to the relevant setup screens, such as *Register Application* and *Generate Credentials*, with the necessary information already pre-filled.
+
+* **Product card: styling and responsiveness improvements**
+
+  (CONSUMER EXPERIENCE, MARKETPLACE, ENHANCEMENT)</br>
+  The Marketplace product card responsiveness has been improved so that at 834px page width, cards automatically adjust to display a left-aligned image layout for a more consistent viewing experience. The placement of error status icons on Product cards has also been standardized, ensuring they now appear in the upper-right corner alongside other status indicators for improved visual consistency.
+
+* **Replaced Markdown component with markdown-it**
+
+  (CONSUMER EXPERIENCE, PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The existing react-markdown implementation has been replaced with a more performant combination of markdown-it, unified, and rehype-react to better support large Markdown documents with complex tables, significantly improving rendering performance. As part of this enhancement, GraphiQL was upgraded, related dependencies were aligned (including GraphQL and Shiki), and styling and configurations were updated to ensure compatibility with the latest versions.
+
+* **Manual API/MCP service version creation**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The Engage *Service Registry Details* page supports the manual creation of API or MCP service versions. The Engage Admin, Catalog Manager, or Developer can create a new version of an API or MCP service.
+
+### Marketplace bug fixes March 19, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|  01811246 | APIGOV-31896| **Issue**: MCP Transports supported UI issue in Marketplace <br/>**Resolution**: Transports Supported field now populated in Marketplace for those that existed before the previous fix. |
+|          | APIGOV-32065 | **Issue**: The preview of specific MD is not working in Engage. <br/>**Resolution**: Product documentation now renders correctly throughout Engage. |
+|          | APIGOV-32022 | **Issue**: Localize API service - shows fields for MCP service. <br/>**Resolution**: Localization function hidden, as it does not apply for API service. |
+|          | APIGOV-32080 | **Issue**: After logging in with Engage CLI, the first GET command returned about 5MB of data. <br/>**Resolution**: A fix was made to the API server to reduce this and return about 500KB of data. |
+
 ## March 5, 2026
 
 New enhancements and bug fixes for the March 5 update.
 
-## Agent updates
+### Agent updates for March 5, 2026
 
 * **Akamai SaaS Agent**
 
@@ -31,7 +76,7 @@ New enhancements and bug fixes for the March 5 update.
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
 
-## Agent bug fixes
+### Agent bug fixes for March 5, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -40,7 +85,7 @@ New enhancements and bug fixes for the March 5 update.
 |          | APIGOV-32006 | **Issue**: If a slow internet connection existed between the agent and the Amplify platform, the agent may have timed out and retried with an invalid request. <br/>**Resolution**: Valid request are now sent with a minimum pageSize value. |
 |          | APIGOV-31075 | **Issue**: An environment and the API service in the environment may not have displayed the same connect or manual sync status based on the Agent Access Control List setting. <br/>**Resolution**: The Agent Access Control List setting has been fixed. |
 
-## Marketplace updates
+### Marketplace updates for March 5, 2026
 
 * **Manual API/MCP service creation from Service Registry**
   
@@ -77,7 +122,7 @@ New enhancements and bug fixes for the March 5 update.
   (CONSUMER EXPERIENCE, PRODUCTS, NEW FEATURE)</br>
   A new **Overview** field has been added in the product that makes it easier for providers to add richer product information to the Marketplace product listing. When creating or editing a product, Providers can select and preview a **Markdown document** from the Document Library. On the Marketplace side, the product *Overview* tab renders the selected document. The content is rendered from the linked Markdown file and automatically updates whenever the document is updated in the Document Library, so you don’t need to manually update the product each time the documentation changes. The existing description remains visible on the product cards and on the *Product Details* page under the product name, giving consumers a quick summary while the *Overview* tab provides a more detailed explanation.
 
-## Marketplace bug fixes
+### Marketplace bug fixes for March 5, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
@@ -91,7 +136,7 @@ New enhancements and bug fixes for the March 5 update.
 |          | APIGOV-31073 | **Issue**: [Central UI] Enable Marketplace visibility selection for document library. <br/>**Resolution**: Marketplace Manager, Catalog Manager, Developer, and Engage Admin roles updated as appropriate for Marketplace visibility. |
 |          | APIGOV-30403 | **Issue**: Wrong subscriber information for user in a default team with x-private tag. <br/>**Resolution**: The new structure for Marketplace subresource now includes the addition of user information when the owner is a user belonging to a specific team. |
 
-## CLI updates
+### CLI updates for March 5, 2026
 
 * **Support for preproduction environments**
 
@@ -101,25 +146,25 @@ New enhancements and bug fixes for the March 5 update.
   (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
   The Axway Engage CLI *[v4.10.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.10.0)* has been updated to support the preproduction environment in the US and EU regions.
 
-### Pre-prod Axway CLI configuration commands
+#### Pre-prod Axway CLI configuration commands
 
 ```$ axway config set env preprod```
 
 ```$ axway config set region {value} (US or EU)```
 
-### Production Axway CLI configuration commands
+#### Production Axway CLI configuration commands
 
 ```$ axway config set env prod```
 
 ```$ axway config set region {value} (US or EU or APAC)```
 
-### Pre-prod Axway Engage CLI configuration commands
+#### Pre-prod Axway Engage CLI configuration commands
 
 ```$ axway engage config set --base-url=https://engage.eu-fr.axwaypreprod.net (For EU Orgs)```
 
 ```$ axway engage config set --base-url=https://engage.na-us.axwaypreprod.net (For US Orgs)```
 
-### Production Axway Engage CLI configuration commands
+#### Production Axway Engage CLI configuration commands
 
 ```$ axway engage config set --base-url=https://central.eu-fr.axway.com (For EU Orgs)```
 
