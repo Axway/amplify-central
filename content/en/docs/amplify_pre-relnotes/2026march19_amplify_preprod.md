@@ -43,18 +43,18 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ### Supported agent versions
 
-| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 <br />unless otherwise noted) |
+| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.136 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.50 / TA=1.2.41    |
+| Axway API Management 7.7                   | DA=1.2.51 / TA=1.2.42    X|
 | AWS Gateway using SDK 2.0                  | DA=1.2.39 / TA=1.2.39    |
-| Azure latest release                       | DA=1.3.37 / TA=1.3.37    |
-| Istio 1.9.5                                | DA=1.1.38 / TA=2.1.35    |
-| Apigee Edge                                | 1.0.33                   |
-| Apigee X                                   | 1.4.23                   |
-| Mulesoft Anypoint platform v3              | 1.2.39                   |
+| Azure latest release                       | DA=1.3.38 / TA=1.3.38    X|
+| Istio 1.9.5                                | DA=1.1.39 / TA=2.1.36    X|
+| Apigee Edge                                | 1.0.34                   X|
+| Apigee X                                   | 1.4.23 (SDK 1.1.135)     X|
+| Mulesoft Anypoint platform v3              | 1.2.40                   X|
 | Software AG webMethods                     | 1.0.30                   |
 | Kong Gateway                               | 1.1.36                   |
-| GitLab                                     | 1.1.31                   |
+| GitLab                                     | 1.1.37                   X|
 | Kafka Cluster                              | 1.1.29 (SDK v1.1.131)    |
 | IBM API Connect Gateway                    | 1.1.30                   |
 | Backstage                                  | 1.0.32                   |
@@ -72,9 +72,9 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Traceable Embedded API Security Service    |
 | Akamai Embedded API Security Service       |
 
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.135 unless otherwise noted)  |
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.136 unless otherwise noted)  |
 |--------------------------------------------|--------------------------|
-| Graylog API Security                       | 1.1.29                   |
+| Graylog API Security                       | 1.1.30                   X|
 | Traceable API Security                     | 2.0.15                   |
 | Akamai API Security                        | 1.1.2                    |
 
@@ -119,9 +119,14 @@ The Axway API Management discovery agent will change the mark from "Out of Sync"
 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   The Engage Service Registry, Environment details and the Asset create/edit wizard have been updated to reflect a "Sync Status" of API/MCP service(s) which may no longer be on the associated    dataplane. Three possible display badges have been added.
-  - "Out of Sync" - This means the agent has detected the service as potentially removed / deleted from the dataplane. A service in thie state can not be linked or grouped in an new asset releases with the UI.
+  - "Out of Sync" - This means the agent has detected the service as potentially removed / deleted from the dataplane. A service in this state can not be linked or grouped in an new asset releases with the UI.
   - "In Sync" -  This means the agent has detected the service on the dataplane.
-  - "Manaul" - This means the service was manually discovered.  Application registrations and credential management must be handled manually outside the platform.  
+  - "Manaul" - This means the service was manually discovered.  Application registrations and credential management must be handled manually outside the platform.
+
+* **Environments UI Enhancement**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  The Engage Environments list view has been updated with an owner column and the option to filter environments by the owner.
 
 * **Access Rights - Alphabetize the 'Select Owning Team' Dropdown**
 
