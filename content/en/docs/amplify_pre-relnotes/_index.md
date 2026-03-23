@@ -20,7 +20,7 @@ When submitting the case:
 * Select *Axway Cloud Amplify Engage* as the Product
 * Specify 1.0.0 as the Version
 * Choose Non-production as the Environment
-* Include **gweaver@axway.com** in the *CC Email* field
+* Include **amplifyengagepreprod@axway.com** in the *CC Email* field
 
 If *Amplify Engage Preprod* label is not clearly referenced in the case subject field, your feedback may not be reviewed in time or considered for the upcoming release.
 
