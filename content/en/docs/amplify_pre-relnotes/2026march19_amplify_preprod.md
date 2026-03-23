@@ -93,7 +93,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 * **Axway API Management agent OKTA support**
 
   (AXWAY API MANAGEMENT DISCOVERY AGENT, ENHANCEMENT)</br>
-  The Axway API Management Discovery Agent has been enhanced to populate the group and policy information for an OKTA identity provider. The group and policy names are set using agent environment variables to ensure that the registered OAuth client is assigned to the correct group or policy.
+  The Axway API Management Discovery Agent has been enhanced to populate the existing group and policy created on an OKTA identity provider with the pertinent application and client information. The group and policy names are set using agent environment variables to ensure that the registered OAuth client is assigned to the correct group or policy.
 
 * **Sensedia 4.x support**
 
