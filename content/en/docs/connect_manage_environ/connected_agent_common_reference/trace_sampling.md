@@ -17,8 +17,8 @@ Then, use sampling to capture the traffic that helps you troubleshoot the proble
 | Continuous error sampling | Capture the first observed error for each API/Application pair within a 60-minute window| Traceability Agent   | 60 minutes  | Must be turned on per agent |
 | Agent sampling | All API traffic across the environment | Traceability Agent   | 1-5 minutes  | Up to 100 transactions/min |
 | Environment sampling | All API traffic across all agents in an environment | Environment | 1-30 minutes | Triggers all Traceability Agents in the environment |
-| API Service sampling | Traffic for a specific API Service | API Service | 1-30 minutes | Scoped to a single API Service |
-| API sampling   | Traffic for a specific API             | API Service Instance | 1-60 minutes | Up to 5 APIs per agent     |
+| API service sampling | Traffic for a specific API service | API service | 1-30 minutes | Scoped to a single API service |
+| API sampling   | Traffic for a specific API             | API service Instance | 1-60 minutes | Up to 5 APIs per agent     |
 
 {{< alert title="Note" color="primary" >}}If you are using a Traceability Agent version that supports percentage-based sampling, see [Archived trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/archive/trace_sampling).{{< /alert >}}
 
@@ -103,14 +103,14 @@ axway central apply -f env_resource.yaml
 
 All Traceability Agents in the environment will now sample for the requested duration.
 
-## API Service sampling
+## API service sampling
 
-API Service sampling triggers sampling for a specific API Service within an environment.
+API service sampling triggers sampling for a specific API service within an environment.
 
-* Requesting API Service sampling does not automatically start agent sampling.
+* Requesting API service sampling does not automatically start agent sampling.
 * You must trigger agent sampling separately if you want traffic to be collected.
 
-### Start API Service sampling via the CLI
+### Start API service sampling via the CLI
 
 Login:
 
@@ -118,7 +118,7 @@ Login:
 axway auth login
 ```
 
-Retrieve the API Service resource:
+Retrieve the API service resource:
 
 ```
 axway central get apis -s [Environment Name] -n [API Service Name] -o yaml > api_resource.yaml
@@ -138,9 +138,9 @@ Apply the change:
 axway central apply -f api_resource.yaml
 ```
 
-All Traceability Agents in the environment will now sample the API Service for the requested duration.
+All Traceability Agents in the environment will now sample the API service for the requested duration.
 
-## Endpoint Sampling (sampling a specific API)
+## Endpoint sampling (sampling a specific API)
 
 Endpoint sampling captures traffic for only a specific endpoint, rather than all endpoints belonging to the API.
 
@@ -151,7 +151,7 @@ Endpoint sampling captures traffic for only a specific endpoint, rather than all
 ### Start API sampling via the UI
 
 * Go to *Topology > Environments > All Environments* in Amplify Engage and select an environment.
-* Locate the API Service you want to sample.
+* Locate the API service you want to sample.
 * Open the Endpoints tab.
 * Click the Ellipsis menu and select Enable Sampling.
 * Toggle on Enable Sampling and select a duration (1-60 minutes). Click Save.
@@ -166,7 +166,7 @@ Login:
 axway auth login
 ```
 
-Export the API Service Instance:
+Export the API service Instance:
 
 ```
 axway central get -o yaml -s [Environment Name] apisi [API Service Instance Name] > resource.yaml
@@ -215,7 +215,7 @@ Login:
 axway auth login
 ```
 
-Retrieve the API Service you want to resolve errors on:
+Retrieve the API service you want to resolve errors on:
 
 ```shell
 axway central get apis -s  [Environment Name] -n [API Service Name] -o yaml > resource.yaml
