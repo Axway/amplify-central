@@ -10,6 +10,15 @@ The tag names are taken from the API Spec, currently only working for OAS2/OAS3.
 
 Conditional expressions statements use logical operators to compare values. This section provides sample syntax for defining expressions.
 
+{{< alert title="Important" color="warning" >}}
+Filtering supports only the following selectors:
+
+* `tag.*` values from API specification tags (OAS2/OAS3)
+* `name.Proxy` (proxy name)
+
+Other metadata fields are not evaluated by this filter.
+{{< /alert >}}
+
 ## Before you start
 
 * Review Logical operators and Comparative operators
@@ -84,6 +93,8 @@ Comparative operators are used for comparing two values. These can be combined w
 ## Quick reference
 
 Use these patterns to build filter expressions quickly:
+
+Scope reminder: these patterns apply only to API specification tags (`tag.*`) and proxy name (`name.Proxy`).
 
 * Check if any tag exists: `tag.Name.Exists() == true`
 * Check if no tag exists: `tag.Name.Exists() == false`
