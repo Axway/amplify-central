@@ -30,25 +30,25 @@ Learn how to set filtering based on tag name from the API Spec, tag value, parti
 
 ## Filter based on tag name or proxy name
 
-`tag.Name.Exists() == true`
-`tag.Name.Exists() == false`
-`name.Proxy.Exists() == false`
-`name.Proxy.Exists() == true`
+* `tag.Name.Exists()`
+* `tag.Name.Exists() == false`
+* `name.Proxy.Exists() == false`
+* `name.Proxy.Exists()`
 
-Sample to discover all APIs having any tag name: `filter: tag.Name.Exists() == true`
+Sample to discover all APIs having any tag name: `filter: tag.Name.Exists()`
 
 Sample to discover all APIs not having a tag name: `filter: tag.Name.Exists() == false`
 
-Sample to discover all APIs having a proxy name: `filter: name.Proxy.Exists() == true`
+Sample to discover all APIs having a proxy name: `filter: name.Proxy.Exists()`
 
 Sample to discover all APIs not having a proxy name: `filter: name.Proxy.Exists() == false`
 
 ## Filter based on tag value or proxy name
 
-`tag.Name != <tagValue>`
-`tag.Name == <tagValue>`
-`name.Proxy != <proxyName>`
-`name.Proxy == <proxyName>`
+* `tag.Name != <tagValue>`
+* `tag.Name == <tagValue>`
+* `name.Proxy != <proxyName>`
+* `name.Proxy == <proxyName>`
 
 Sample to discover all APIs having a tag that has Finance in its value: `filter: tag.Name == Finance`
 
@@ -60,8 +60,8 @@ Sample to discover all APIs not having a proxy name 'CurrencyConverter': `filter
 
 ## Filter based on partial tag value or partial proxy name
 
-`tag.Name.Contains(<value>) == true | false`
-`name.Proxy.Contains(<value>) == true | false`
+* `tag.Name.Contains(<value>) == true | false`
+* `name.Proxy.Contains(<value>) == true | false`
 
 Sample to discover all APIs having a tag name containing API: `tag.Name.Contains("API") == true`
 
@@ -73,8 +73,8 @@ Sample to discover all APIs having a proxy name not containing 'Currency': `name
 
 ## Filter using MatchRegEx
 
-`tag.Name.matchRegEx(<regularExpression>)`
-`name.Proxy.matchRegEx(<regularExpression>)`
+* `tag.Name.matchRegEx(<regularExpression>)`
+* `name.Proxy.matchRegEx(<regularExpression>)`
 
 ## Logical operators
 
