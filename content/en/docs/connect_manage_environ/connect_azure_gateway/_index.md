@@ -101,6 +101,90 @@ Notes:
 
 You can retrieve your subscription id with the command: `az account show --query id`
 
+### Granting Microsoft Graph API permissions for Entra ID credential provisioning
+
+If you plan to use Entra ID credential provisioning, the service principal requires Microsoft Graph API permissions. Two permission sets are supported:
+
+| Permission set                                                          | Scope                | Description                                                                                                            |
+|-------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------|
+| `Application.ReadWrite.All` + `ServicePrincipal.ReadWrite.All`          | Tenant-wide          | The agent can manage all app registrations and service principals in the tenant.                                       |
+| `Application.ReadWrite.OwnedBy` + `ServicePrincipal.ReadWrite.OwnedBy`  | Owned resources only | **Recommended (least-privilege)**. The agent can only manage app registrations and service principals that it created. |
+
+Use the Azure CLI to grant the permissions. Replace `<APP_ID>` with the `appId` returned when you created the service principal:
+
+```shell
+# Grant Application.ReadWrite.OwnedBy (recommended)
+az ad app permission add --id <APP_ID> --api 00000003-0000-0000-c000-000000000000 --api-permissions 18a4783c-866b-4cc7-a460-3d5e5662c884=Role
+
+# Grant ServicePrincipal.ReadWrite.OwnedBy (recommended)
+az ad app permission add --id <APP_ID> --api 00000003-0000-0000-c000-000000000000 --api-permissions 314ac21d-d7c0-49e0-89d0-0e29a3014e42=Role
+
+# Grant admin consent for the tenant
+az ad app permission admin-consent --id <APP_ID>
+```
+
+{{< alert title="Note" color="primary" >}}If your organization's security policy allows tenant-wide access, you can substitute `Application.ReadWrite.All` (`1bfefb4e-e0b5-418b-a88f-73c46d2cc8e9=Role`) and `ServicePrincipal.ReadWrite.All` (`89c8469c-83ad-45f7-8ff2-6e3d4285709e=Role`) instead. No additional agent configuration is required — the agent automatically detects which permission set is available.{{< /alert >}}
+
+#### Verifying permissions are correctly configured
+
+After granting permissions, use the Azure CLI to confirm the setup:
+
+```shell
+# List Graph API permissions granted to the agent's app registration
+az ad app permission list --id <APP_ID>
+
+# Verify admin consent was granted (look for entries with "resourceId" matching Microsoft Graph)
+az ad sp show --id <APP_ID> --query "appRoleAssignments"
+
+# Test outbound connectivity to Microsoft Graph API
+# A "401" response confirms the host is reachable (authentication is expected to fail without a token)
+curl -s -o /dev/null -w "%{http_code}" https://graph.microsoft.com/v1.0
+```
+
+{{< alert title="Note" color="primary" >}}The agent must be able to reach `graph.microsoft.com:443` over HTTPS. If your network restricts outbound traffic, add this host to your firewall allow list. See [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/#azure-gateway---entra-id-credential-provisioning).{{< /alert >}}
+
+#### Migrating from Application.ReadWrite.All to OwnedBy permissions
+
+If you are tightening permissions on an existing deployment, be aware of the following:
+
+* App registrations created **before** the switch will not have the agent's service principal listed as an owner. The agent **cannot manage** these resources under `.OwnedBy` permissions.
+* Only app registrations created **after** the permission change will be manageable by the agent.
+* To allow the agent to manage previously created resources, manually add the agent's service principal as an owner:
+
+```shell
+# Get the agent's service principal object ID
+SP_OBJECT_ID=$(az ad sp show --id <APP_ID> --query id -o tsv)
+
+# Add the agent's SP as owner of an existing app registration
+az ad app owner add --id <EXISTING_APP_REGISTRATION_ID> --owner-object-id $SP_OBJECT_ID
+```
+
+* Alternatively, you can keep `Application.ReadWrite.All` + `ServicePrincipal.ReadWrite.All` until all previously provisioned credentials have been rotated or deleted, then switch to `.OwnedBy`.
+
+### How Entra ID credential provisioning works
+
+When a Marketplace consumer requests Entra ID credentials for a discovered API, the Discovery Agent performs the following steps:
+
+1. **Create an app registration** in Azure AD with a display name that identifies the consumer and API.
+2. **Add the agent's service principal as owner** of the app registration. This step is non-fatal — if it fails (e.g., due to `.All` permissions where ownership is implicit), the agent logs a warning and continues.
+3. **Create a service principal** for the app registration. The agent retries this step with exponential backoff (up to ~6 seconds total) to account for Azure AD directory propagation delays.
+4. **Create a client secret** on the app registration.
+5. **Return the `client_id` and `client_secret`** to the consumer via the Amplify Marketplace.
+
+When a credential is deleted, the agent removes the corresponding app registration and its associated service principal from Azure AD.
+
+### Choosing a credential type: API Key vs. Entra ID
+
+Azure API Management supports two credential types. The table below summarizes the differences to help you choose the right one for your use case:
+
+|                                  | API Key                                                     | Entra ID (ClientID + ClientSecret)                                       |
+|----------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------|
+| **Authentication mechanism**     | APIM subscription key passed as a header or query parameter | OAuth 2.0 client-credentials flow using `client_id` and `client_secret`  |
+| **What the agent provisions**    | An Azure APIM subscription                                  | An Azure AD app registration, service principal, and client secret       |
+| **Best for**                     | Simple, key-based API access                                | APIs protected by Azure AD / OAuth 2.0                                   |
+| **Azure AD permissions required**| None (APIM Contributor role only)                           | Microsoft Graph API permissions (see above)                              |
+| **Credential rotation**          | Consumer regenerates the subscription key                   | Consumer requests a new credential; agent creates a new client secret    |
+
 ## Preparing Azure services for Traceability Agent
 
 The following is a high-level overview of the required steps to connect Azure API Management services to Amplify:

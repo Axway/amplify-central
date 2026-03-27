@@ -50,11 +50,20 @@ When discovering and publishing the virtualized APIs with OAuth (External) inbou
 
 When the OAuth (External) inbound security configured on the virtualized REST API uses an identity provider that does not support OAuth 2.0 dynamic client registration, the Discovery Agent will link the resource published on Amplify Engage to Credential Request Definition(CRD) that will allow Marketplace consumers to specify the identifier of the OAuth client provisioned in identity provider outside the context of Discovery Agent.
 
-### Discovery Agent to manage Entra ID ClientID and CLientSecret credentials
+### Discovery Agent to manage Entra ID ClientID and ClientSecret credentials
 
-{{< alert title="Note" color="primary" >}}Entra ID ClientID and CLientSecret credentials was made available with v1.3.6 and later.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Entra ID ClientID and ClientSecret credentials was made available with v1.3.6 and later.{{< /alert >}}
 
-When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and CLientSecret to the published resources on Amplify Engage that allows Marketplace consumers to provision credentials to the specified application registrations.
+When discovering and publishing the virtualized APIs that are protected using Entra ID, the Discovery Agent can associate the registered ClientID and ClientSecret to the published resources on Amplify Engage that allows Marketplace consumers to provision credentials to the specified application registrations.
+
+The agent's service principal requires Microsoft Graph API permissions for Entra ID credential provisioning. Two permission sets are supported:
+
+| Permission set                                                          | Scope                | Description                                                                                |
+|-------------------------------------------------------------------------|----------------------|--------------------------------------------------------------------------------------------|
+| `Application.ReadWrite.OwnedBy` + `ServicePrincipal.ReadWrite.OwnedBy`  | Owned resources only | **Recommended (least-privilege)**. The agent can only manage app registrations it created. |
+| `Application.ReadWrite.All` + `ServicePrincipal.ReadWrite.All`          | Tenant-wide          | The agent can manage all app registrations in the tenant.                                  |
+
+See [Granting Microsoft Graph API permissions for Entra ID credential provisioning](/docs/connect_manage_environ/connect_azure_gateway/#granting-microsoft-graph-api-permissions-for-entra-id-credential-provisioning) for setup instructions.
 
 For setting up APIs protected using Entra ID, please refer to [Protect an API in Azure API Management using OAuth 2.0 authorization with Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad).
 
