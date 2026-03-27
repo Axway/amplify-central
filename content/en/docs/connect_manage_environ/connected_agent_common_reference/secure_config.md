@@ -2,7 +2,7 @@
 title: Use secure credentials in configuration
 linkTitle: Use secure credentials in configuration
 draft: false
-weight: 20
+weight: 55
 ---
 Secure credentials in the agent configuration by referencing data keys within the secret resource in Amplify.
 

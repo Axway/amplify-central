@@ -2,7 +2,7 @@
 title: Use Discovery Agent to categorize your APIs
 linkTitle: Use Discovery Agent to categorize your APIs
 draft: false
-weight: 10
+weight: 35
 ---
 The Discovery Agent can automatically categorize discovered APIs when publishing to Amplify Service Registry. Learn how to add conditions and associated categories when those conditions are met.
 

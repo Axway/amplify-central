@@ -2,7 +2,7 @@
 title: Common agent variables
 linkTitle: Common agent variables
 draft: false
-weight: 40
+weight: 70
 ---
 The variables common to all agents are described here in more detail.
 

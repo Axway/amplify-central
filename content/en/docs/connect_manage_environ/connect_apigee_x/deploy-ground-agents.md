@@ -2,7 +2,7 @@
 title: Deploy your on-premise Apigee agents with Axway CLI
 linkTitle: Deploy your on-premise Apigee agents with Axway CLI
 draft: false
-weight: 10
+weight: 20
 ---
 Deploy your agents using Axway CLI so you can manage your Apigee X Gateway environment within Amplify.
 

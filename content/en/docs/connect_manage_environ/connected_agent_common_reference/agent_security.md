@@ -2,7 +2,7 @@
 title: Administer agent security
 linkTitle: Administer agent security
 draft: false
-weight: 40
+weight: 60
 ---
 The main security features of the agents are described here.
 

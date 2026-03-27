@@ -1,7 +1,7 @@
 ---
 title: View runtime compliance
 linkTitle: View runtime compliance
-weight: 40
+weight: 50
 ---
 
 Understand the runtime compliance score.

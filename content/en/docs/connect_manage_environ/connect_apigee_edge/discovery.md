@@ -1,7 +1,7 @@
 ---
 title: Apigee Edge Discovery Agent
 linkTitle: Apigee Edge Discovery Agent
-weight: 120
+weight: 10
 ---
 
 The Discovery Agent finds deployed API Proxies in Apigee Edge and then sends them to API Central.

@@ -1,7 +1,7 @@
 ---
 title: Apigee Edge Traceability Agent
 linkTitle: Apigee Edge Traceability Agent
-weight: 120
+weight: 20
 ---
 
 The Traceability Agent finds logs from consumed Apigee proxies and sends the traffic data to Amplify Engage.

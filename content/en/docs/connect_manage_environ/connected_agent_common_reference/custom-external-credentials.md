@@ -2,7 +2,7 @@
 title: Use Custom Credentials with the Discovery Agent
 linkTitle: Use Custom Credentials with the Discovery Agent
 draft: false
-weight: 10
+weight: 30
 ---
 The Discovery Agent, for certain Gateways, can be configured to allow for handling a specified credential request type outside of the normal agent processing. This can be useful for cases where custom attributes or special processing is required that the agent does not know about.
 

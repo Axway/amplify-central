@@ -2,7 +2,7 @@
 title: Upgrade an agent
 linkTitle: Upgrade an agent
 draft: false
-weight: 20
+weight: 50
 ---
 Upgrade your existing agent installation.
 

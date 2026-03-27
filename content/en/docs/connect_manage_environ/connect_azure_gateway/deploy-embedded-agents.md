@@ -2,7 +2,7 @@
 title: Deploy your Embedded Azure agents with Axway CLI
 linkTitle:  Deploy your Embedded Azure agents with Axway CLI
 draft: false
-weight: 10
+weight: 20
 ---
 Deploy your Embedded agents using Axway CLI so you can manage your Azure Gateway environment within Amplify.
 
