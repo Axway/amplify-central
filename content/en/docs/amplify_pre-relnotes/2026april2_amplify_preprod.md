@@ -80,10 +80,29 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Agent updates
 
-* **Enhancement**
+* **API Filtering for SAP Integration Suite - API Management / API Portal**
 
-  (AGENT, ENHANCEMENT)</br>
-  Description.
+  (DISCOVERY AGENT, ENHANCEMENT)</br>
+  The SAP Discovery agent has been enhanced to support the automatic filtering of discovered APIs by tags.
+
+* **SaaS Azure API Filtering for SAP Integration Suite - API Management / API Portal**
+
+  (DISCOVERY AGENT, ENHANCEMENT)</br>
+  The SAP Discovery agent has been enhanced to support the automatic filtering of discovered APIs by tags.
+
+* **Mulesoft Agent rate limiting**
+
+  (DISCOVERY AGENT, ENHANCEMENT)</br>
+  The Mulesoft agent has been enhanced to limit the frequency of calls to Mulesoft APIs.
+
+* **Weaker Cipher Suties removed from all Traceability agents **
+
+  (TRACEABILITY AGENTS, ENHANCEMENT)</br>
+  To increase the security of the traceability agent communications to the platform, the following cipher suites are no longer supported and should not be used in an agent environment varible named <*_SSL_CIPHERSUITES>:
+  - TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+  - TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+  - TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+  - TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
 
 * **New agent releases**
 
@@ -95,6 +114,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-31809 | **Issue**: The minimum, average and maximum API response times had equal values. <br/>**Resolution**: A fix was made to the agent SDK to include the correct values in the metrics events. |
+| 01819611 | APIGOV-32273 | **Issue**: The Azure SaaS service was not discovering APIs with a parantheses in their name e.g. api(name). <br/>**Resolution**: A fix was made to Azure SaaS service to discovery APIs with a parantheses in the name. |
 
 ## Marketplace updates
 
