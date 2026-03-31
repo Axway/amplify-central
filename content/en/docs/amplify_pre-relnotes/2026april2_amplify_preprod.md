@@ -94,7 +94,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxx7 | **Issue**: Description. <br/>**Resolution**: Description. |
+|          | APIGOV-31809 | **Issue**: The minimum, average and maximum API response times had equal values. <br/>**Resolution**: A fix was made to the agent SDK to include the correct values in the metrics events. |
 
 ## Marketplace updates
 
@@ -107,4 +107,8 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|          | APIGOV-32308 | **Issue**: The table display for the group resources step of the asset wizard is not fully visible due to the screen width. <br/>**Resolution**: A fix was made to display horizontal scroll bars if needed due to the screen width. |
+| 01816942 <br/>01822911 | APIGOV-32207 | **Issue**: The "Create Mock Endpoint" action from the service details page would not allow the user to save the mock endpoint. <br/>**Resolution**: A fix was made to the title of the sideblade to display "Create Mock Endpoint" and to allow the save action if all the necessary data was inputed. |
+|          | APIGOV-32355 | **Issue**: Users were not able to run a compliance linting job for a specific API in the Service Registry. <br/>**Resolution**: A fix was made to allow users with permissions to run a compliance linting job from the Service Registry. |
+|          | APIGOV-32353 | **Issue**: When viewing the Compliance Profiles sideblade, API calls would be coninuously made until the sideblade was closed. <br/>**Resolution**: A fix was made to reduct the number of API calls generated. |
+|          | APIGOV-31809 | **Issue**: Description. <br/>**Resolution**: Description. |
