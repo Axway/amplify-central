@@ -122,10 +122,17 @@ If the agents are not explicitly referencing a cipher suite (i.e. using default 
 
 ## Marketplace updates
 
-* **Enhancement**
+* **Application Existing Credentials**
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  When a consumer is requesting credentials for a resource with an application that already has credential, the consumer will now be provided with a helpful message that there are existing credentials for the application and the consumer may not need to request a new credential and instead reused an existing one. Additionally the consumer can clicks on a "View existing credentials" link in sideblade and be presented with a list of existing credentials for the selected application.  
 
-  (CONSUMER EXPERIENCE, NEW FEATURE)</br>
-  Description.
+* **Standardize Provider Screen "+Add" Buttons**
+  (PROVIDER EXPERIENCE, ENHANCEMENT, SUPPORT CONTACTS)</br>
+  Upgraded Provider "+ Add" button and header UIs for Add/Edit Product>Support Contacts>Add Support Contact button, boosting consistency across pages
+
+* **Marketplace Landing Page Document ID in URL**
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  When the Marketplace is configured in Marketplace settings to use a Document from the Document Library as the Default Landing page, the URL for the Landing page displays the Document's ID.  To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the Landing page instead of the "Document not found" page.  
   
 ## Marketplace bug fixes
 
@@ -133,5 +140,9 @@ If the agents are not explicitly referencing a cipher suite (i.e. using default 
 |--------- |------------- |-------------|
 |          | APIGOV-32308 | **Issue**: The table display for the group resources step of the asset wizard is not fully visible due to the screen width. <br/>**Resolution**: A fix was made to display horizontal scroll bars if needed due to the screen width. |
 | 01816942 <br/>01822911 | APIGOV-32207 | **Issue**: The "Create Mock Endpoint" action from the service details page would not allow the user to save the mock endpoint. <br/>**Resolution**: A fix was made to the title of the sideblade to display "Create Mock Endpoint" and to allow the save action if all the necessary data was inputed. |
-|          | APIGOV-32353 | **Issue**: When viewing the Compliance Profiles sideblade, API calls would be coninuously made until the sideblade was closed. <br/>**Resolution**: A fix was made to reduct the number of API calls generated. |
-|          | APIGOV-31809 | **Issue**: Description. <br/>**Resolution**: Description. |
+|          | APIGOV-32353 | **Issue**: When viewing the Compliance Profiles sideblade, API calls would be coninuously made until the sideblade was closed. <br/>**Resolution**: A fix was made to reduct the number of API calls generated
+| 01800612 | APIGOV-32179| **Issue**: In Engage, while viewing Tools for a Service, when the sections are expanded the table header overlaps with the title <br/>**Resolution**: Fixed display issue to remove the overlap for Tools
+|           | APIGOV-32259| **Issue**: Publishing/Unpublishing a product should be prevented on the UI if non-admin user is not the owner <br/>**Resolution**: Publish and unpublish buttons in UI updated to prevent negative path for non admin user
+|           | APIGOV-30385| **Issue**: 80% CPU spikes in prod US triggered alert - marketplace db query <br/>**Resolution**: Corrected a missing index on publish_stages / marketplace field
+| 01803047 | APIGOV-31895| **Issue**: Unable to Remove Category from Featured Marketplace<br/>**Resolution**: Save state for Featured Categories fixed to allow for removing as featured the marketplace
+|           | APIGOV-32354| **Issue**: RDS CPU spike caused by Marketplace queries <br/>**Resolution**: Added an index on asset_resource_cred_defs / credential_def_id to reduce the cost to around 25
