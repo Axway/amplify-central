@@ -168,8 +168,12 @@ When a Marketplace consumer requests Entra ID credentials for a discovered API, 
 1. **Create an app registration** in Azure AD with a display name that identifies the consumer and API.
 2. **Add the agent's service principal as owner** of the app registration. This step is non-fatal — if it fails (e.g., due to `.All` permissions where ownership is implicit), the agent logs a warning and continues.
 3. **Create a service principal** for the app registration. The agent retries this step with exponential backoff (up to ~6 seconds total) to account for Azure AD directory propagation delays.
-4. **Create a client secret** on the app registration.
+4. **Create a client secret** on the app registration. This step is also retried with exponential backoff.
 5. **Return the `client_id` and `client_secret`** to the consumer via the Amplify Marketplace.
+
+If service principal or client secret creation fails after exhausting all retries, the agent automatically **rolls back** by deleting the app registration that was created in step 1. This prevents orphaned app registrations from accumulating in Azure AD and blocking future provisioning attempts for the same API.
+
+{{< alert title="Note" color="primary" >}}Azure AD's eventual consistency model means that newly created objects (such as app registrations) may not be immediately visible to all API endpoints. The retry mechanism with exponential backoff is designed to absorb these propagation delays, which typically resolve within a few seconds.{{< /alert >}}
 
 When a credential is deleted, the agent removes the corresponding app registration and its associated service principal from Azure AD.
 
