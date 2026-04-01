@@ -2,7 +2,7 @@
 title: Triggering your Embedded agent to run immediately
 linkTitle: Triggering your Embedded agent to run immediately
 draft: false
-weight: 19
+weight: 45
 ---
 
 ## Objectives

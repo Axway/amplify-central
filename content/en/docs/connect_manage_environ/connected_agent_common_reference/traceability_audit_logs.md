@@ -2,7 +2,7 @@
 title: Understand the Traceability Agent audit logs
 linkTitle: Traceability Agent audit logs
 draft: false
-weight: 10
+weight: 25
 ---
 The Traceability Agent can keep audit logs for tracking information about what the agent has processed.
 

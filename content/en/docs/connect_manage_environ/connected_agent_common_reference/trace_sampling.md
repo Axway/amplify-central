@@ -2,7 +2,7 @@
 title: Trace sampling
 linkTitle: Trace sampling
 draft: false
-weight: 10
+weight: 20
 ---
 
 The Traceability Agent can temporarily sample API transaction traffic and send it to Amplify Engage to include in the API Traffic dashboards in Business Insights and Consumer Insights.

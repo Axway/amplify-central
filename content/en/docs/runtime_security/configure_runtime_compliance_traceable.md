@@ -1,7 +1,7 @@
 ---
 title: Configure Traceable runtime compliance
 linkTitle: Configure Traceable runtime compliance
-weight: 20
+weight: 30
 ---
 
 Configure your runtime compliance and conformance analysis with the Axway Central CLI and Traceable

@@ -2,7 +2,7 @@
 title: Release Notes
 linkTitle: Release Notes archive 2024
 no_list: true
-weight: 100
+weight: 90
 date: 2020-10-28
 hide_readingtime: true
 ---

@@ -2,7 +2,7 @@
 title: Trace sampling
 linkTitle: Trace sampling
 draft: false
-weight: 150
+weight: 10
 date: 2025-04-18
 ---
 {{< alert title="Note" color="primary" >}}This is an archived functionality. For the latest sampling support, see [Trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling).{{< /alert >}}

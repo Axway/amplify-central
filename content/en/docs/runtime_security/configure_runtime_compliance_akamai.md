@@ -1,7 +1,7 @@
 ---
 title: Configure Akamai runtime compliance
 linkTitle: Configure Akamai runtime compliance
-weight: 30
+weight: 40
 ---
 
 Configure your runtime compliance and conformance analysis with the Axway Central CLI and Akamai

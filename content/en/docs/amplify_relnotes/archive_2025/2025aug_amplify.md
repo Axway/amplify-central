@@ -1,7 +1,7 @@
 ---
 title: Amplify Engage August 2025
 linkTitle: Amplify Engage August
-weight: 6
+weight: 5
 date: 2025-8-5
 ---
 Axway works hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month. It is always recommended to update to the latest agents' versions.
