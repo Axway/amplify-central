@@ -173,7 +173,7 @@ When a Marketplace consumer requests Entra ID credentials for a discovered API, 
 
 If service principal or client secret creation fails after exhausting all retries, the agent automatically **rolls back** by deleting the app registration that was created in step 1. This prevents orphaned app registrations from accumulating in Azure AD and blocking future provisioning attempts for the same API.
 
-{{< alert title="Note" color="primary" >}}Azure AD's eventual consistency model means that newly created objects (such as app registrations) may not be immediately visible to all API endpoints. The retry mechanism with exponential backoff is designed to absorb these propagation delays, which typically resolve within a few seconds.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}Azure AD's eventual consistency model means that newly created objects (such as app registrations) may not be immediately visible to all API endpoints. The retry mechanism with exponential backoff is designed to absorb these propagation delays, which typically resolve within a few seconds. For more details, see [404 Not Found error when managing objects through Microsoft Graph](https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/app-integration/404-not-found-error-manage-objects-microsoft-graph).{{< /alert >}}
 
 When a credential is deleted, the agent removes the corresponding app registration and its associated service principal from Azure AD.
 
