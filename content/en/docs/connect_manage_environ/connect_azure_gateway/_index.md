@@ -177,6 +177,38 @@ If service principal or client secret creation fails after exhausting all retrie
 
 When a credential is deleted, the agent removes the corresponding app registration and its associated service principal from Azure AD.
 
+### Changes to the validate-jwt policy
+
+When an Entra ID credential is provisioned, the Discovery Agent makes two modifications to the API's existing `validate-jwt` inbound policy in Azure API Management:
+
+1. **A new `<audience>` entry** is added to the `<audiences>` list. This is the standard OAuth audience for the provisioned credential (e.g., `api://credential-name-id`). It is required for the `validate-jwt` policy to accept tokens issued for that credential.
+
+2. **An `output-token-variable-name` attribute and a `<set-header>` element** are added to support consumer usage analytics in Amplify. The `output-token-variable-name="jwt"` attribute tells the `validate-jwt` policy to store the decoded JWT in a context variable. The `<set-header name="X-Amplify-Audience">` element then extracts the `aud` claim from the token and passes it as a header on the backend request:
+
+    ```xml
+    <validate-jwt header-name="Authorization" output-token-variable-name="jwt" ...>
+      <audiences>
+        <audience>https://management.azure.com/</audience>
+        <audience>api://credential-name-id</audience>
+      </audiences>
+      ...
+    </validate-jwt>
+    <set-header name="X-Amplify-Audience" exists-action="override">
+      <value>@(((Jwt)context.Variables["jwt"]).Claims["aud"]?.FirstOrDefault())</value>
+    </set-header>
+    ```
+
+The Traceability Agent reads the `X-Amplify-Audience` header from Event Hub logs to attribute API traffic to the correct consumer application in Amplify usage reports and dashboards.
+
+{{< alert title="Note" color="primary" >}}
+
+* **No impact on authentication** — the agent does not change how the `validate-jwt` policy authenticates requests. Existing audiences, issuers, and OpenID configuration are not modified.
+* **No impact on API consumers** — the `X-Amplify-Audience` header is only set on the internal backend request. It is not returned to API callers and is invisible to consumers.
+* **Fully reversible** — when the Amplify credential is deprovisioned, the audience entry, the `set-header` element, and the `output-token-variable-name` attribute are automatically removed, restoring the policy to its original state.
+* **No sensitive data** — the header passes along the audience claim that is already present in the validated JWT. No additional data is extracted or exposed.
+* **Consumer insights require this instrumentation** — Azure Event Hub diagnostic logs do not include JWT claims or the `Authorization` header. The `set-header` policy is the only mechanism available to extract the audience from the validated token and make it available in the Event Hub logs for consumer attribution.
+{{< /alert >}}
+
 ### Choosing a credential type: API Key vs. Entra ID
 
 Azure API Management supports two credential types. The table below summarizes the differences to help you choose the right one for your use case:
