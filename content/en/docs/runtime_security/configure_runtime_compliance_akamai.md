@@ -93,7 +93,7 @@ After creating your service account, you should have:
 | **Client Secret** | `eb6f2737c2156822efa47ed84cc45577a35857d40bbe9b4056ce0f81c94d827529038fb34dd571f64f5e45216fc804598a106aaf79bd3217278835f81b1bb6f2` | OAuth 2.0 client secret (sensitive) |
 | **Groups** | `production-apis`, `staging-apis` | Akamai group names to monitor |
 
-{{< alert title="Note" color="danger" >}}
+{{< alert title="Note" color="primary" >}}
 **Security Note**</br>Store the Client Secret securely. It provides access to your Akamai API Security data and should be treated as a sensitive credential. Never commit it to source control or share it in plain text.
 {{< /alert >}}
 
