@@ -166,10 +166,11 @@ az ad app owner add --id <EXISTING_APP_REGISTRATION_ID> --owner-object-id $SP_OB
 When a Marketplace consumer requests Entra ID credentials for a discovered API, the Discovery Agent performs the following steps:
 
 1. **Create an app registration** in Azure AD with a display name that identifies the consumer and API.
-2. **Add the agent's service principal as owner** of the app registration. This step is non-fatal — if it fails (e.g., due to `.All` permissions where ownership is implicit), the agent logs a warning and continues.
-3. **Create a service principal** for the app registration. The agent retries this step with exponential backoff (up to ~6 seconds total) to account for Azure AD directory propagation delays.
-4. **Create a client secret** on the app registration. This step is also retried with exponential backoff.
-5. **Return the `client_id` and `client_secret`** to the consumer via the Amplify Marketplace.
+2. **Set the identifier URI** on the app registration to `api://<app-client-id>`, where `<app-client-id>` is the application's own client ID returned by Azure in step 1. Azure's [default tenant policy](https://aka.ms/identifier-uri-formatting-error) requires identifier URIs to contain the application's client ID, a tenant-verified domain, or the tenant ID. Using the app's own client ID satisfies this requirement for all tenants.
+3. **Add the agent's service principal as owner** of the app registration. This step is non-fatal — if it fails (e.g., due to `.All` permissions where ownership is implicit), the agent logs a warning and continues.
+4. **Create a service principal** for the app registration. The agent retries this step with exponential backoff (up to ~6 seconds total) to account for Azure AD directory propagation delays.
+5. **Create a client secret** on the app registration. This step is also retried with exponential backoff.
+6. **Return the `client_id` and `client_secret`** to the consumer via the Amplify Marketplace. The `apiScope` is set to `api://<app-client-id>` matching the identifier URI.
 
 If service principal or client secret creation fails after exhausting all retries, the agent automatically **rolls back** by deleting the app registration that was created in step 1. This prevents orphaned app registrations from accumulating in Azure AD and blocking future provisioning attempts for the same API.
 
@@ -181,24 +182,47 @@ When a credential is deleted, the agent removes the corresponding app registrati
 
 When an Entra ID credential is provisioned, the Discovery Agent makes two modifications to the API's existing `validate-jwt` inbound policy in Azure API Management:
 
-1. **A new `<audience>` entry** is added to the `<audiences>` list. This is the standard OAuth audience for the provisioned credential (e.g., `api://credential-name-id`). It is required for the `validate-jwt` policy to accept tokens issued for that credential.
+1. **A new `<audience>` entry** is added to the `<audiences>` list. This is the standard OAuth audience for the provisioned credential, using the app registration's client ID (e.g., `api://<app-client-id>`). It is required for the `validate-jwt` policy to accept tokens issued for that credential.
 
-2. **An `output-token-variable-name` attribute and a `<set-header>` element** are added to support consumer usage analytics in Amplify. The `output-token-variable-name="jwt"` attribute tells the `validate-jwt` policy to store the decoded JWT in a context variable. The `<set-header name="X-Amplify-Audience">` element then extracts the `aud` claim from the token and passes it as a header on the backend request:
-
-    ```xml
-    <validate-jwt header-name="Authorization" output-token-variable-name="jwt" ...>
-      <audiences>
-        <audience>https://management.azure.com/</audience>
-        <audience>api://credential-name-id</audience>
-      </audiences>
-      ...
-    </validate-jwt>
-    <set-header name="X-Amplify-Audience" exists-action="override">
-      <value>@(((Jwt)context.Variables["jwt"]).Claims["aud"]?.FirstOrDefault())</value>
-    </set-header>
-    ```
+2. **An `output-token-variable-name` attribute and a `<set-header>` element** are added to support consumer usage analytics in Amplify. The `output-token-variable-name="jwt"` attribute tells the `validate-jwt` policy to store the decoded JWT in a context variable. The `<set-header name="X-Amplify-Audience">` element then extracts the `aud` claim from the token and passes it as a header on the backend request.
 
 The Traceability Agent reads the `X-Amplify-Audience` header from Event Hub logs to attribute API traffic to the correct consumer application in Amplify usage reports and dashboards.
+
+#### Before and after: validate-jwt policy
+
+**Before** — the original policy as configured in Azure APIM, with no audiences and no agent instrumentation:
+
+```xml
+<inbound>
+    <validate-jwt header-name="Authorization" failed-validation-httpcode="401">
+        <openid-config url="https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration" />
+        <issuers>
+            <issuer>https://sts.windows.net/{tenant-id}/</issuer>
+        </issuers>
+    </validate-jwt>
+</inbound>
+```
+
+**After provisioning** — the agent adds the new credential's audience, the `output-token-variable-name` attribute, and a `set-header` element:
+
+```xml
+<inbound>
+    <validate-jwt header-name="Authorization" failed-validation-httpcode="401" output-token-variable-name="jwt">
+        <openid-config url="https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration" />
+        <audiences>
+            <audience>api://app-client-id</audience>
+        </audiences>
+        <issuers>
+            <issuer>https://sts.windows.net/{tenant-id}/</issuer>
+        </issuers>
+    </validate-jwt>
+    <set-header name="X-Amplify-Audience" exists-action="override">
+        <value>@(((Jwt)context.Variables["jwt"]).Claims["aud"]?.FirstOrDefault())</value>
+    </set-header>
+</inbound>
+```
+
+**After deprovisioning** — the agent removes the credential's audience, the `set-header` element, and the `output-token-variable-name` attribute, restoring the policy to its original state.
 
 {{< alert title="Note" color="primary" >}}
 
