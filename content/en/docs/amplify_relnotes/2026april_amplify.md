@@ -45,7 +45,6 @@ New enhancements and bug fixes for the April 2 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01818551 <br/>01818601 | APIGOV-32247 | **Issue**: The Agent status appeared as **stopped** when the agents were actually **running**. <br/>**Resolution**: Platform fix implemented to properly handle status update changes. |
 | 01806466 | APIGOV-32028 | **Issue**: The Axway APIM Discovery Agent timed out when requesting a large number of API proxies from the API Manager. <br/>**Resolution**: Added support for lightweight v1.4 of the /proxies/light endpoint if supported by the API Manager. Otherwise, the v1.3 endpoint will be used. |
 
 ### Marketplace updates for April 2, 2026
