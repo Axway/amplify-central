@@ -10,13 +10,15 @@ The Traceability Agent can temporarily sample API transaction traffic and send i
 Sampling must be requested on demand, and it runs only for a defined duration.
 
 Before requesting sampling, use *Business Insights > API Health* to identify APIs with errors.
-Then, use sampling to capture the traffic that helps you troubleshoot the problem. There are three supported mechanisms for sampling:
+Then, use sampling to capture the traffic that helps you troubleshoot the problem. There are five supported mechanisms for sampling:
 
 | Type           | Scope                                  | Triggered From       | Duration       | Notes                      |
 | -------------- | -------------------------------------- | -------------------- | -------------- | -------------------------- |
 | Continuous error sampling | Capture the first observed error for each API/Application pair within a 60-minute window| Traceability Agent   | 60 minutes  | Must be turned on per agent |
 | Agent sampling | All API traffic across the environment | Traceability Agent   | 1-5 minutes  | Up to 100 transactions/min |
-| API sampling   | Traffic for a specific API             | API Service Instance | 1-60 minutes | Up to 5 APIs per agent     |
+| Environment sampling | All API traffic across all agents in an environment | Environment | 1-30 minutes | Triggers all Traceability Agents in the environment |
+| API service sampling | Traffic for a specific API service | API service | 1-30 minutes | Scoped to a single API service |
+| API sampling   | Traffic for a specific API             | API service Instance | 1-60 minutes | Up to 5 APIs per agent     |
 
 {{< alert title="Note" color="primary" >}}If you are using a Traceability Agent version that supports percentage-based sampling, see [Archived trace sampling](/docs/connect_manage_environ/connected_agent_common_reference/archive/trace_sampling).{{< /alert >}}
 
@@ -64,18 +66,92 @@ axway central apply -f resource.yam
 
 The agent will now sample for 5 minutes.
 
-## API Sampling (sampling a specific API)
+## Environment sampling
 
-API sampling captures traffic for only a specific API, rather than all APIs in the environment.
+Environment sampling triggers sampling on all Traceability Agents present in that environment.
 
-* You can sample up to five APIs per Traceability Agent at the same time.
-* Requesting API sampling does not automatically start agent sampling.
+* Requesting environment sampling does not automatically start agent sampling.
+* You must trigger agent sampling separately if you want traffic to be collected.
+
+### Start environment sampling via the CLI
+
+Login:
+
+```
+axway auth login
+```
+
+Retrieve the environment resource:
+
+```
+axway central get env -n [Environment Name] -o yaml > env_resource.yaml
+```
+
+Edit env_resource.yaml and add the following at the end of the file:
+
+```yaml
+sampletrigger:
+  requested: true
+  duration: 30
+```
+
+Apply the change:
+
+```
+axway central apply -f env_resource.yaml
+```
+
+All Traceability Agents in the environment will now sample for the requested duration.
+
+## API service sampling
+
+API service sampling triggers sampling for a specific API service within an environment.
+
+* Requesting API service sampling does not automatically start agent sampling.
+* You must trigger agent sampling separately if you want traffic to be collected.
+
+### Start API service sampling via the CLI
+
+Login:
+
+```
+axway auth login
+```
+
+Retrieve the API service resource:
+
+```
+axway central get apis -s [Environment Name] -n [API Service Name] -o yaml > api_resource.yaml
+```
+
+Edit api_resource.yaml and add the following at the end of the file:
+
+```yaml
+sampletrigger:
+  requested: true
+  duration: 30
+```
+
+Apply the change:
+
+```
+axway central apply -f api_resource.yaml
+```
+
+All Traceability Agents in the environment will now sample the API service for the requested duration.
+
+## Endpoint sampling (sampling a specific API)
+
+Endpoint sampling captures traffic for only a specific endpoint, rather than all endpoints belonging to the API.
+
+* You can sample up to five endpoints per Traceability Agent at the same time.
+* Requesting endpoint sampling does not automatically start agent sampling.
 * You must trigger agent sampling separately if you want traffic to be collected.
 
 ### Start API sampling via the UI
 
 * Go to *Topology > Environments > All Environments* in Amplify Engage and select an environment.
-* Locate the API Service you want to sample.
+* Locate the API service you want to sample.
 * Open the Endpoints tab.
 * Click the Ellipsis menu and select Enable Sampling.
 * Toggle on Enable Sampling and select a duration (1-60 minutes). Click Save.
@@ -90,7 +166,7 @@ Login:
 axway auth login
 ```
 
-Export the API Service Instance:
+Export the API service Instance:
 
 ```
 axway central get -o yaml -s [Environment Name] apisi [API Service Instance Name] > resource.yaml
@@ -139,7 +215,7 @@ Login:
 axway auth login
 ```
 
-Retrieve the API Service you want to resolve errors on:
+Retrieve the API service you want to resolve errors on:
 
 ```shell
 axway central get apis -s  [Environment Name] -n [API Service Name] -o yaml > resource.yaml
