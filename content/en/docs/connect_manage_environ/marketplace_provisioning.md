@@ -79,6 +79,9 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
 To provision an Okta Single Page Application that supports Authorization Code + PKCE, include `AGENTFEATURES_IDP_EXTRAPROPERTIES_<index>` with `application_type` set to `browser` and `pkce_required` set to `true`. If omitted, an Okta Service application (no enforced PKCE) is provisioned by default.
 You must assign the application to a group or specific users and define required Access Policies to the Authorization server in order to match the application scope.{{< /alert >}}
 
+{{< alert title="Note" color="primary" >}}**Okta group and policy assignment**</br>
+When using `AGENTFEATURES_IDP_TYPE=okta`, you can optionally configure the agent to automatically assign registered OAuth clients to an Okta group and/or to an authorization server policy using `AGENTFEATURES_IDP_OKTA_GROUP` and `AGENTFEATURES_IDP_OKTA_POLICY`. The group and policy must already exist in Okta before the agent starts. If either is configured but cannot be found in Okta, the agent will fail to start.{{< /alert >}}
+
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
 ```shell
@@ -101,6 +104,17 @@ AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.
 AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
 AGENTFEATURES_IDP_EXTRAPROPERTIES_1="{\"application_type\":\"browser\", \"pkce_required\": true}"
+```
+
+```shell
+# Okta group and policy assignment (optional enrichment)
+AGENTFEATURES_IDP_NAME_1="idp-name"
+AGENTFEATURES_IDP_TYPE_1="okta"
+AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
+AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
+AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
+AGENTFEATURES_IDP_OKTA_GROUP_1="Marketplace"
+AGENTFEATURES_IDP_OKTA_POLICY_1="MarketplacePolicy"
 ```
 
 ```shell
