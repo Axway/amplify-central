@@ -85,11 +85,6 @@ TRACEABILITY_PROTOCOL=https (# TA only)
   (DISCOVERY AGENT, ENHANCEMENT)</br>
   The SAP Discovery agent has been enhanced to support the automatic filtering of discovered APIs by tags.
 
-* **SaaS Azure API Filtering for SAP Integration Suite - API Management / API Portal**
-
-  (DISCOVERY AGENT, ENHANCEMENT)</br>
-  The SAP Discovery agent has been enhanced to support the automatic filtering of discovered APIs by tags.
-
 * **Mulesoft Agent rate limiting**
 
   (DISCOVERY AGENT, ENHANCEMENT)</br>
