@@ -55,7 +55,7 @@ The following information is displayed for environments created using the API se
         * Subscriptions: The total count of subscribers to all the published Marketplace items.
 
     * **Tags & Attributes**: This section shows any tags (keywords) and attributes (key and value pairs) that are specific to the environment asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third-party systems.
-    * **Services, Access Rights, Credential Management**: This section shows all API services, access rights, and when credentials expire within the environment. It is sortable by logical name, Version Count, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the user who last modified the API service, and when the API service was last modified.
+    * **Services, Access Rights, Credential Management**: This section shows all API services, access rights, and when credentials expire within the environment. It is sortable by logical name, Version Count, and when the service was created or last modified. You can search by title, name, or tag. For each API service, it shows the number of versions, the API service sync status, the user who last modified the API service, and when the API service was last modified.
 
         * Mock Endpoints: If requirements are met, a mock endpoint can be created from the **Services** tab:
 
@@ -104,7 +104,13 @@ To view the details of your API service and its versions:
 
 The API service details page includes:
 
-* **Service Information**: Contains general information and any tags or attributes that are specific to the API service asset. Attributes in this context are key and value pairs used for extending functionality and integrations with third party systems.
+* **Service Information**: Contains general information that includes the logical name, environment name, owner, classification, source code repository, description, and API service sync status.
+* **Sync Status**: This field helps users identify which API services are potentially missing from the dataplane. The associated agent will not take an action to remove the API service, nor impact credentials/API service relationships. The Provider is responsible for confirming that the API service has been removed from the dataplane. Only after confirmation, the Provider should perform a Delete API action will there be an impact.
+
+    * In Sync: The API service must be agent managed and was detected in the associated data plane during the last discovery cycle.
+    * Out of Sync: The API service must be agent managed and was not detected in the associated data plane during the last discovery cycle. It may have been removed.
+    * Manual: The API service is not agent managed and does not support automatic provisioning. Application registrations and credential management must be handled manually outside the platform.
+
 * **Dashboard Report**: Dashboard that shows the aggregated values for how your API service version assets are distributed and how many subscriptions exist across all of those assets.
 
     * Shared with: The total count of teams this API service is shared with

@@ -64,7 +64,7 @@ Layout preferences are automatically saved and persist across browser sessions.
     * Modified By - The user who last modified the asset
     * Created On - Date, Time, and Username of who created this asset
     * Description - A short description of the asset
-    * Resources - Displays asset resources which are created from API service endpoints. Will also display any associated stages or states.
+    * Resources - Displays asset resources which are created from API service endpoints. Will also display the stage, state, and sync status.
     * Products - Information on products that are linked to this asset
     * Access Rights - Shared teams can have different types of access to this asset
     * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
@@ -92,9 +92,14 @@ Layout preferences are automatically saved and persist across browser sessions.
     * Auto-Release - Enable / disable the auto-release of new Asset versions. If auto-release is **enabled**, a new asset will be automatically released with each change to any one of the grouped resources (i.e., API services). For example, auto-release enabled will trigger an automatic asset release every time a new grouped API service revision is discovered or created. This enables a more automated and hands-off experience. If you want more control of the asset release process, set auto-release to **disabled**.
     * Auto-Release Type - The default is set to Patch release versions and you can select another type of asset release versioning (i.e., major or minor).
 
-6. In Group Resources, find the available API resources you want to link, and click on the Link icon. For each resource, select the endpoints to link. Endpoints can be filtered by state and any associated stages. Each endpoint lists the API service version, url(s), stage, and state.
+6. In Group Resources, find the available API resources you want to link, and click on the Link icon. Each resource displays the API service title, environment name, tags, latest version, sync status, and the last modified date. API resources that are **Out of Sync** are not listed in the all resources tab. Resources can be filtered by the API service type or the sync status. For each resource, select the endpoints to link. Endpoints can be filtered by state and any associated stages. Each endpoint lists the API service version, url(s), stage, and state.
 
     * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
+    * **Sync Status**: This field helps users identify which API services are potentially missing from the dataplane. The associated agent will not take an action to remove the API service, nor impact credentials/API service relationships. The Provider is responsible for confirming that the API service has been removed from the dataplane. Only after confirmation, the Provider should perform a Delete API action will there be an impact.
+
+       * In Sync: The API service must be agent managed and was detected in the associated data plane during the last discovery cycle.
+       * Out of Sync: The API service must be agent managed and was not detected in the associated data plane during the last discovery cycle. It may have been removed.
+       * Manual: The API service is not agent managed and does not support automatic provisioning. Application registrations and credential management must be handled manually outside the platform.
 
 7. Configure the Access Request handling for Manual or Automatic, and click **Next**. If Access Request Handling is set to **Manual**, a user must approve access to the API service(s) grouped in the asset. If Access Request Handling is set to **Automatic**, the access to the API service(s) grouped in the asset is granted automatically.
 8. For Access Rights, select the team that owns the product. Select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Engage Admin** or the owning team will have access to it. If you want your asset shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected asset. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your asset with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team. Click **Next**.
