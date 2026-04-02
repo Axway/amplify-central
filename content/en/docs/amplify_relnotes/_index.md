@@ -23,7 +23,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 |--------------------------------------------|--------------------------|
 | Axway API Management 7.7                   | DA=1.2.51 / TA=1.2.42    |
 | AWS Gateway using SDK 2.0                  | DA=1.2.40 / TA=1.2.40    |
-| Azure latest release                       | DA=1.3.38 / TA=1.3.38    |
+| Azure latest release                       | DA=1.3.40 / TA=1.3.40    |
 | Istio 1.9.5                                | DA=1.1.39 / TA=2.1.36    |
 | Apigee Edge                                | 1.0.34                   |
 | Apigee X                                   | 1.4.24                   |
@@ -52,7 +52,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 |--------------------------------------------|--------------------------|
 | Graylog API Security                       | 1.1.30                   |
 | Traceable API Security                     | 2.0.16                   |
-| Akamai API Security                        | 1.1.3                    |
+| Akamai API Security                        | 1.1.4                    |
 
 ## [Amplify Engage March 19 2026](/docs/amplify_relnotes/2026march_amplify/#march-19-2026)
 
