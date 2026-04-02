@@ -41,7 +41,7 @@ New enhancements and bug fixes for the April 2 update.
   (NEW AGENT RELEASES)</br>
    Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
 
-### Agent bug fixes for April 2, 2026
+### Agent bug fix for April 2, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
