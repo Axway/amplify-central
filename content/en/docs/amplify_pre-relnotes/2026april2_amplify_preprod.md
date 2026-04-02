@@ -99,9 +99,9 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
   (TRACEABILITY AGENTS, ENHANCEMENT)</br>
   To increase the security of the traceability agent communications to the platform, the following weak CBC-mode cipher suites are no longer supported and should not be used in an agent environment varible named <CENTRAL_SSL_CIPHERSUITES> or <*_SSL_CIPHERSUITES>:
-  - TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
-  - TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
-  - TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+    * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+    * TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+    * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
 
 **Note: If agents are explicitly referencing one of the unsupported CBC-mode cipher suites listed above, the agent environment variable must be updated to one or more of the supported cipher suites.**
 See [Information Security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/index.html) for instructions
