@@ -5,8 +5,8 @@ weight: 21
 date: 2026-3-31
 ---
 
-**Feedback Window**: April 2 2026 → April ? 2026 <br />
-**Planned Production Date**: April ? <br />
+**Feedback Window**: April 2 2026 → April 10 2026 <br />
+**Planned Production Date**: April 16 <br />
 **Environment**: Pre-production
 
 ---
@@ -117,7 +117,7 @@ If the agents are not explicitly referencing a cipher suite (i.e. using default 
 
 ## Marketplace updates
 
-* **Application Existing Credentials**
+* **Request Credential: Existing Credentials Detection**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   When a consumer is requesting credentials for a resource with an application that already has credential, the consumer will now be provided with a helpful message that there are existing credentials for the application and the consumer may not need to request a new credential and instead reused an existing one. Additionally the consumer can clicks on a "View existing credentials" link in sideblade and be presented with a list of existing credentials for the selected application.  
@@ -127,7 +127,7 @@ If the agents are not explicitly referencing a cipher suite (i.e. using default 
   (PROVIDER EXPERIENCE, ENHANCEMENT, SUPPORT CONTACTS)</br>
   Upgraded Provider "+ Add" button and header UIs for Add/Edit Product>Support Contacts>Add Support Contact button, boosting consistency across pages
 
-* **Marketplace Landing Page Document ID in URL**
+* **Marketplace Landing Page: Document ID in the URL**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   When the Marketplace is configured in Marketplace settings to use a Document from the Document Library as the Default Landing page, the URL for the Landing page displays the Document's ID.  To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the Landing page instead of the "Document not found" page.  
