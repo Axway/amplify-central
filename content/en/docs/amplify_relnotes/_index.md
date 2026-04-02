@@ -26,7 +26,7 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Azure latest release                       | DA=1.3.40 / TA=1.3.40    |
 | Istio 1.9.5                                | DA=1.1.39 / TA=2.1.36    |
 | Apigee Edge                                | 1.0.34                   |
-| Apigee X                                   | 1.4.24                   |
+| Apigee X                                   | 1.4.25                   |
 | Mulesoft Anypoint platform v3              | 1.2.40                   |
 | Software AG webMethods                     | 1.0.31                   |
 | Kong Gateway                               | 1.1.37                   |
