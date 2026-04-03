@@ -45,22 +45,22 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.53 / TA=1.2.44    X|
-| AWS Gateway using SDK 2.0                  | DA=1.2.42 / TA=1.2.42    X|
-| Azure latest release                       | DA=1.3.42 / TA=1.3.42    X|
-| Istio 1.9.5                                | DA=1.1.41 / TA=2.1.38    X|
-| Apigee Edge                                | 1.0.36                   X|
-| Apigee X                                   | 1.4.27                   X|
-| Mulesoft Anypoint platform v3              | 1.2.42                   X|
-| Software AG webMethods                     | 1.0.32                   |
-| Kong Gateway                               | 1.1.39                   X|
-| GitLab                                     | 1.1.39                   X|
-| Kafka Cluster                              | 1.1.32                   X|
-| IBM API Connect Gateway                    | 1.1.33                   X|
-| Backstage                                  | 1.0.35                   X|
-| SAP Integration Suite - API Management / API Portal | 1.0.21          X|
-| WSO2 API Manager 4.5.0                     | 1.0.20                   |
-| Sensedia                                   | 1.0.10                   |
+| Axway API Management 7.7                   | DA=1.2.53 / TA=1.2.44    |
+| AWS Gateway using SDK 2.0                  | DA=1.2.42 / TA=1.2.42    |
+| Azure latest release                       | DA=1.3.42 / TA=1.3.42    |
+| Istio 1.9.5                                | DA=1.1.41 / TA=2.1.38    |
+| Apigee Edge                                | 1.0.36                   |
+| Apigee X                                   | 1.4.27                   |
+| Mulesoft Anypoint platform v3              | 1.2.42                   |
+| Software AG webMethods                     | 1.0.33                   |
+| Kong Gateway                               | 1.1.39                   |
+| GitLab                                     | 1.1.39                   |
+| Kafka Cluster                              | 1.1.32                   |
+| IBM API Connect Gateway                    | 1.1.33                   |
+| Backstage                                  | 1.0.35                   |
+| SAP Integration Suite - API Management / API Portal | 1.0.21          |
+| WSO2 API Manager 4.5.0                     | 1.0.21                   |
+| Sensedia                                   | 1.0.11                   |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -74,9 +74,9 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 unless otherwise noted)  |
 |--------------------------------------------|--------------------------|
-| Graylog API Security                       | 1.1.32                   X|
-| Traceable API Security                     | 2.0.18                   X|
-| Akamai API Security                        | 1.1.6                    X|
+| Graylog API Security                       | 1.1.32                   |
+| Traceable API Security                     | 2.0.18                   |
+| Akamai API Security                        | 1.1.6                    |
 
 ## Agent updates
 
