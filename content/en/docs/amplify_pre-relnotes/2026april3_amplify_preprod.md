@@ -1,11 +1,11 @@
 ---
-title: Amplify Engage April 2 2026
-linkTitle: Amplify Engage April 2 2026
+title: Amplify Engage April 3 2026
+linkTitle: Amplify Engage April 3 2026
 weight: 21
 date: 2026-3-31
 ---
 
-**Feedback Window**: April 2 2026 → April 10 2026 <br />
+**Feedback Window**: April 3 2026 → April 10 2026 <br />
 **Planned Production Date**: April 16 <br />
 **Environment**: Pre-production
 
