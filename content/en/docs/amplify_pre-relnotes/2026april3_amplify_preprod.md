@@ -1,11 +1,11 @@
 ---
-title: Amplify Engage April 2 2026
-linkTitle: Amplify Engage April 2 2026
+title: Amplify Engage April 3 2026
+linkTitle: Amplify Engage April 3 2026
 weight: 21
 date: 2026-3-31
 ---
 
-**Feedback Window**: April 2 2026 → April 10 2026 <br />
+**Feedback Window**: April 3 2026 → April 10 2026 <br />
 **Planned Production Date**: April 16 <br />
 **Environment**: Pre-production
 
@@ -43,24 +43,24 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ### Supported agent versions
 
-| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.136 <br />unless otherwise noted) |
+| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.52 / TA=1.2.43    |
-| AWS Gateway using SDK 2.0                  | DA=1.2.41 / TA=1.2.41    |
-| Azure latest release                       | DA=1.3.41 / TA=1.3.41    |
-| Istio 1.9.5                                | DA=1.1.40 / TA=2.1.37    |
-| Apigee Edge                                | 1.0.35                   |
-| Apigee X                                   | 1.4.26                   |
-| Mulesoft Anypoint platform v3              | 1.2.41                   |
-| Software AG webMethods                     | 1.0.32                   |
-| Kong Gateway                               | 1.1.38                   |
-| GitLab                                     | 1.1.38                   |
-| Kafka Cluster                              | 1.1.31                   |
-| IBM API Connect Gateway                    | 1.1.32                   |
-| Backstage                                  | 1.0.34                   |
-| SAP Integration Suite - API Management / API Portal | 1.0.20          |
-| WSO2 API Manager 4.5.0                     | 1.0.20                   |
-| Sensedia                                   | 1.0.10                   |
+| Axway API Management 7.7                   | DA=1.2.53 / TA=1.2.44    |
+| AWS Gateway using SDK 2.0                  | DA=1.2.42 / TA=1.2.42    |
+| Azure latest release                       | DA=1.3.42 / TA=1.3.42    |
+| Istio 1.9.5                                | DA=1.1.41 / TA=2.1.38    |
+| Apigee Edge                                | 1.0.36                   |
+| Apigee X                                   | 1.4.27                   |
+| Mulesoft Anypoint platform v3              | 1.2.42                   |
+| Software AG webMethods                     | 1.0.33                   |
+| Kong Gateway                               | 1.1.39                   |
+| GitLab                                     | 1.1.39                   |
+| Kafka Cluster                              | 1.1.32                   |
+| IBM API Connect Gateway                    | 1.1.33                   |
+| Backstage                                  | 1.0.35                   |
+| SAP Integration Suite - API Management / API Portal | 1.0.21          |
+| WSO2 API Manager 4.5.0                     | 1.0.21                   |
+| Sensedia                                   | 1.0.11                   |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -72,11 +72,11 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Traceable Embedded API Security Service    |
 | Akamai Embedded API Security Service       |
 
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.136 unless otherwise noted)  |
+| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 unless otherwise noted)  |
 |--------------------------------------------|--------------------------|
-| Graylog API Security                       | 1.1.31                   |
-| Traceable API Security                     | 2.0.17                   |
-| Akamai API Security                        | 1.1.5                    |
+| Graylog API Security                       | 1.1.32                   |
+| Traceable API Security                     | 2.0.18                   |
+| Akamai API Security                        | 1.1.6                    |
 
 ## Agent updates
 
