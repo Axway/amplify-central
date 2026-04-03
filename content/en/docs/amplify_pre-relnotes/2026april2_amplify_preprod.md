@@ -80,28 +80,30 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Agent updates
 
-* **API Filtering for SAP Integration Suite - API Management / API Portal**
+* **API filtering for SAP Integration Suite - API Management / API Portal**
 
   (DISCOVERY AGENT, ENHANCEMENT)</br>
-  The SAP Discovery agent has been enhanced to support the automatic filtering of discovered APIs by tags.
+  The SAP Discovery Agent has been enhanced to support the automatic filtering of discovered APIs by tags.
 
-* **Mulesoft Agent rate limiting**
+* **Mulesoft agent rate limiting**
 
   (DISCOVERY AGENT, ENHANCEMENT)</br>
   The Mulesoft agent has been enhanced to limit the frequency of calls to Mulesoft APIs.
 
-* **Weaker Cipher Suties removed from all Traceability agents**
+* **Weaker cipher suites removed from all Traceability Agents**
 
   (TRACEABILITY AGENTS, ENHANCEMENT)</br>
-  To increase the security of the traceability agent communications to the platform, the following weak CBC-mode cipher suites are no longer supported and should not be used in an agent environment varible named <CENTRAL_SSL_CIPHERSUITES> or <*_SSL_CIPHERSUITES>:
+  To enhance the security of Traceability Agent communications with the platform, the following weak CBC-mode cipher suites are no longer supported. These cipher suites should not be used in an agent environment variable named <CENTRAL_SSL_CIPHERSUITES> or <*_SSL_CIPHERSUITES>:
     * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
     * TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
     * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
 
-**Note: If agents are explicitly referencing one of the unsupported CBC-mode cipher suites listed above, the agent environment variable must be updated to one or more of the supported cipher suites.**
-See [Information Security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security/index.html) for instructions
+{{< alert title="Note" color="primary" >}}If agents are explicitly referencing one of the unsupported CBC-mode cipher suites listed above, the agent environment variable must be updated to one or more of the supported cipher suites.
 
-If the agents are not explicitly referencing a cipher suite (i.e. using default values), then no configuration changes are required.
+See [Information Security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security) for instructions.
+
+If the agents are not explicitly referencing a cipher suite (i.e., using default values), then no configuration changes are required.
+{{< /alert >}}
 
 * **New agent releases**
 
@@ -113,34 +115,34 @@ If the agents are not explicitly referencing a cipher suite (i.e. using default 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-31809 | **Issue**: The minimum, average and maximum API response times had equal values. <br/>**Resolution**: A fix was made to the agent SDK to include the correct values in the metrics events. |
-| 01819611 | APIGOV-32273 | **Issue**: The Azure SaaS service was not discovering APIs with a parantheses in their name e.g. api(name). <br/>**Resolution**: A fix was made to Azure SaaS service to discovery APIs with a parantheses in the name. |
+| 01819611 | APIGOV-32273 | **Issue**: The Azure SaaS service was unable to discover APIs if their names contained parentheses, for example, api(name). <br/>**Resolution**: The Azure SaaS service can now successfully discover APIs that include parentheses in their names. |
 
 ## Marketplace updates
 
-* **Request Credential: Existing Credentials Detection**
+* **Request credential: existing credentials detection**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  When a consumer is requesting credentials for a resource with an application that already has credential, the consumer will now be provided with a helpful message that there are existing credentials for the application and the consumer may not need to request a new credential and instead reused an existing one. Additionally the consumer can clicks on a "View existing credentials" link in sideblade and be presented with a list of existing credentials for the selected application.  
+  When a consumer requests credentials for a resource with an application that already has credentials, a helpful message will now be displayed informing the consumer that existing credentials are available for the application. This message indicates that it may not be necessary to request new credentials and suggests reusing an existing credential. Additionally, the consumer can click on a "View existing credentials" link in the side panel to view a list of existing credentials for the selected application.  
 
-* **Standardize Provider Screen "+Add" Buttons**
+* **Standardize Provider screen "+Add" buttons**
   
   (PROVIDER EXPERIENCE, ENHANCEMENT, SUPPORT CONTACTS)</br>
-  Upgraded Provider "+ Add" button and header UIs for Add/Edit Product>Support Contacts>Add Support Contact button, boosting consistency across pages
+  Upgraded Provider **+ Add** button and header UIs for Add/Edit Product > Support Contacts > Add Support Contact button, boosting consistency across pages.
 
-* **Marketplace Landing Page: Document ID in the URL**
+* **Marketplace landing page: Document ID in the URL**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  When the Marketplace is configured in Marketplace settings to use a Document from the Document Library as the Default Landing page, the URL for the Landing page displays the Document's ID.  To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the Landing page instead of the "Document not found" page.  
+  When the Marketplace is configured in Marketplace settings to use a document from the Document Library as the default landing page, the URL for the landing page displays the document's ID. To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the landing page instead of the "Document not found" page.  
   
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-32308 | **Issue**: The table display for the group resources step of the asset wizard is not fully visible due to the screen width. <br/>**Resolution**: A fix was made to display horizontal scroll bars if needed due to the screen width. |
-| 01816942 <br/>01822911 | APIGOV-32207 | **Issue**: The "Create Mock Endpoint" action from the service details page would not allow the user to save the mock endpoint. <br/>**Resolution**: A fix was made to the title of the sideblade to display "Create Mock Endpoint" and to allow the save action if all the necessary data was inputed. |
-|          | APIGOV-32353 | **Issue**: When viewing the Compliance Profiles sideblade, API calls would be coninuously made until the sideblade was closed. <br/>**Resolution**: A fix was made to reduct the number of API calls generated
-| 01800612 | APIGOV-32179| **Issue**: In Engage, while viewing Tools for a Service, when the sections are expanded the table header overlaps with the title <br/>**Resolution**: Fixed display issue to remove the overlap for Tools
-|          | APIGOV-32259| **Issue**: Publishing/Unpublishing a product should be prevented on the UI if non-admin user is not the owner <br/>**Resolution**: Publish and unpublish buttons in UI updated to prevent negative path for non admin user
-|          | APIGOV-30385| **Issue**: 80% CPU spikes in prod US triggered alert - marketplace db query <br/>**Resolution**: Corrected a missing index on publish_stages / marketplace field
-| 01803047 | APIGOV-31895| **Issue**: Unable to Remove Category from Featured Marketplace<br/>**Resolution**: Save state for Featured Categories fixed to allow for removing as featured the marketplace
-|          | APIGOV-32354| **Issue**: RDS CPU spike caused by Marketplace queries <br/>**Resolution**: Added an index on asset_resource_cred_defs / credential_def_id to reduce the cost to around 25
+|          | APIGOV-32308 | **Issue**: The table display for the group resources step of the asset wizard is not fully visible due to the screen width. <br/>**Resolution**: Horizontal scroll bars are now displayed if needed due to the screen width. |
+| 01816942 <br/>01822911 | APIGOV-32207 | **Issue**: The "Create Mock Endpoint" action from the service details page would not allow the user to save the mock endpoint. <br/>**Resolution**: A fix was made to the title of the side panel to display "Create Mock Endpoint" and to allow the save action if all the necessary data was inputted. |
+|          | APIGOV-32353 | **Issue**: When viewing the Compliance Profiles side panel, API calls would be continuously made until the side panel was closed. <br/>**Resolution**: A fix was made to reduce the number of API calls generated. |
+| 01800612 | APIGOV-32179| **Issue**: In Engage, while viewing Tools for a Service, when the sections were expanded the table header overlapped with the title. <br/>**Resolution**: Fixed display issue to remove the overlap for Tools. |
+|          | APIGOV-32259| **Issue**: Publishing or unpublishing a product should be prevented on the UI if a non-admin user is not the owner. <br/>**Resolution**: The Publish and Unpublish buttons in the UI now prevent the negative path for non-admin users. |
+|          | APIGOV-30385| **Issue**: 80% CPU spikes in prod US triggered alert - marketplace db query. <br/>**Resolution**: Corrected a missing index on publish_stages / marketplace field. |
+| 01803047 | APIGOV-31895| **Issue**: Unable to Remove Category from Featured Marketplace<br/>**Resolution**: Fixed the save state for Featured Categories to allow removing a category from being featured in the Marketplace. |
+|          | APIGOV-32354| **Issue**: RDS CPU spike caused by Marketplace queries. <br/>**Resolution**: Added an index on asset_resource_cred_defs / credential_def_id to reduce the cost to around 25. |
