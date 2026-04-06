@@ -4,7 +4,7 @@ linkTitle: Marketplace homepage
 weight: 40
 ---
 
-**Mark to edit this topic**
+Mark to edit this topic
 
 Configure the Marketplace homepage, a landing page that can be customized to provide a search, featured content, and calls to action for consumers who enter from high-level links.
 
