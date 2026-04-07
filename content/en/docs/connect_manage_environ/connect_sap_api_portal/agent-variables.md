@@ -35,3 +35,4 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | SAP_AUTH_DEVPORTAL_CLIENTSECRET      | The SAP Integration Suite - Dev Portal ClientSecret that the agent will use to authenticate to Dev Portal |
 | SAP_DEVELOPEREMAIL                   | The SAP Integration Suite - Developer Email that the agent will create applications based on |
 | SAP_SPEC_CREATEUNSTRUCTUREDAPI       | A flag which will create an unstructured API in Central if the provided API Spec is unknown/invalid |
+| SAP_FILTER                           | A filter string to use when discovering APIs. [Discover APIs](/docs/connect_manage_environ/connect_sap_api_portal/filtering-apis-to-be-discovered/) |
