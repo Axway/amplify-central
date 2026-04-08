@@ -14,7 +14,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancements and bug fixes for the April 16 update.
 
-### Agent updates
+### Agent updates for April 16, 2026
 
 * **API filtering for SAP Integration Suite - API Management / API Portal**
 
@@ -46,14 +46,14 @@ If the agents are not explicitly referencing a cipher suite (i.e., using default
   (NEW AGENT RELEASES)</br>
   Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
 
-### Agent bug fixes
+### Agent bug fixes for April 16, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-31809 | **Issue**: The minimum, average and maximum API response times had equal values. <br/>**Resolution**: A fix was made to the agent SDK to include the correct values in the metrics events. |
 | 01819611 | APIGOV-32273 | **Issue**: The Azure SaaS service was unable to discover APIs if their names contained parentheses, for example, api(name). <br/>**Resolution**: The Azure SaaS service can now successfully discover APIs that include parentheses in their names. |
 
-### Marketplace updates
+### Marketplace updates for April 16, 2026
 
 * **Request credential: existing credentials detection**
   
@@ -70,7 +70,7 @@ If the agents are not explicitly referencing a cipher suite (i.e., using default
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   When the Marketplace is configured in Marketplace settings to use a document from the Document Library as the default landing page, the URL for the landing page displays the document's ID. To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the landing page instead of the "Document not found" page.  
   
-### Marketplace bug fixes
+### Marketplace bug fixes for April 16, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
