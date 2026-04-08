@@ -30,11 +30,215 @@ The related APIs are published to Amplify as an API service in the selected envi
 
 ![Service Discovery](/Images/central/connect-azure-gateway/discoveryagent.png)
 
+#### Discovery process
+
+* Find all published APIs or Event Hub topics in the configured Azure API Management service
+* Push REST and SOAP API definitions to Amplify as API services in the selected environment
+* Detect changes to existing APIs and update the corresponding API service in Amplify
+
+#### Provisioning process
+
+Azure API Management supports two credential types: **API Key** and **Entra ID**. The agent handles provisioning differently for each type.
+
+**API Key provisioning:**
+
+* When a consumer requests API Key credentials, the agent creates an Azure APIM subscription and returns the subscription key to the consumer via the Amplify Marketplace.
+
+**Entra ID credential provisioning:**
+
+When a Marketplace consumer requests Entra ID credentials for a discovered API, the Discovery Agent performs the following steps:
+
+1. **Create an app registration** in Azure AD with a display name that identifies the consumer and API.
+2. **Set the identifier URI** on the app registration to `api://<app-client-id>`, where `<app-client-id>` is the application's own client ID returned by Azure in step 1. Azure's [default tenant policy](https://aka.ms/identifier-uri-formatting-error) requires identifier URIs to contain the application's client ID, a tenant-verified domain, or the tenant ID. Using the app's own client ID satisfies this requirement for all tenants.
+3. **Add the agent's service principal as owner** of the app registration. This step is non-fatal — if it fails (e.g., due to `.All` permissions where ownership is implicit), the agent logs a warning and continues.
+4. **Create a service principal** for the app registration. The agent retries this step with exponential backoff (up to ~6 seconds total) to account for Azure AD directory propagation delays.
+5. **Create a client secret** on the app registration. This step is also retried with exponential backoff.
+6. **Return the `client_id` and `client_secret`** to the consumer via the Amplify Marketplace. The `apiScope` is set to `api://<app-client-id>` matching the identifier URI.
+
+If service principal or client secret creation fails after exhausting all retries, the agent automatically **rolls back** by deleting the app registration that was created in step 1. This prevents orphaned app registrations from accumulating in Azure AD and blocking future provisioning attempts for the same API.
+
+{{< alert title="Note" color="primary" >}}Azure AD's eventual consistency model means that newly created objects (such as app registrations) may not be immediately visible to all API endpoints. The retry mechanism with exponential backoff is designed to absorb these propagation delays, which typically resolve within a few seconds. For more details, see [404 Not Found error when managing objects through Microsoft Graph](https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/app-integration/404-not-found-error-manage-objects-microsoft-graph).{{< /alert >}}
+
+When a credential is deleted, the agent removes the corresponding app registration and its associated service principal from Azure AD.
+
+**Changes to the validate-jwt policy:**
+
+When an Entra ID credential is provisioned, the Discovery Agent makes two modifications to the API's existing `validate-jwt` inbound policy in Azure API Management:
+
+1. **A new `<audience>` entry** is added to the `<audiences>` list. This is the standard OAuth audience for the provisioned credential, using the app registration's client ID (e.g., `api://<app-client-id>`). It is required for the `validate-jwt` policy to accept tokens issued for that credential.
+
+2. **An `output-token-variable-name` attribute and a `<set-header>` element** are added to support consumer usage analytics in Amplify. The `output-token-variable-name="jwt"` attribute tells the `validate-jwt` policy to store the decoded JWT in a context variable. The `<set-header name="X-Amplify-Audience">` element then extracts the `aud` claim from the token and passes it as a header on the backend request.
+
+The Traceability Agent reads the `X-Amplify-Audience` header from Event Hub logs to attribute API traffic to the correct consumer application in Amplify usage reports and dashboards.
+
+**Before** — the original policy as configured in Azure APIM, with no audiences and no agent instrumentation:
+
+```xml
+<inbound>
+    <validate-jwt header-name="Authorization" failed-validation-httpcode="401">
+        <openid-config url="https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration" />
+        <issuers>
+            <issuer>https://sts.windows.net/{tenant-id}/</issuer>
+        </issuers>
+    </validate-jwt>
+</inbound>
+```
+
+**After provisioning** — the agent adds the new credential's audience, the `output-token-variable-name` attribute, and a `set-header` element:
+
+```xml
+<inbound>
+    <validate-jwt header-name="Authorization" failed-validation-httpcode="401" output-token-variable-name="jwt">
+        <openid-config url="https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration" />
+        <audiences>
+            <audience>api://app-client-id</audience>
+        </audiences>
+        <issuers>
+            <issuer>https://sts.windows.net/{tenant-id}/</issuer>
+        </issuers>
+    </validate-jwt>
+    <set-header name="X-Amplify-Audience" exists-action="override">
+        <value>@(((Jwt)context.Variables["jwt"]).Claims["aud"]?.FirstOrDefault())</value>
+    </set-header>
+</inbound>
+```
+
+**After deprovisioning** — the agent removes the credential's audience, the `set-header` element, and the `output-token-variable-name` attribute, restoring the policy to its original state.
+
+{{< alert title="Note" color="primary" >}}
+
+* **No impact on authentication** — the agent does not change how the `validate-jwt` policy authenticates requests. Existing audiences, issuers, and OpenID configuration are not modified.
+* **No impact on API consumers** — the `X-Amplify-Audience` header is only set on the internal backend request. It is not returned to API callers and is invisible to consumers.
+* **Fully reversible** — when the Amplify credential is deprovisioned, the audience entry, the `set-header` element, and the `output-token-variable-name` attribute are automatically removed, restoring the policy to its original state.
+* **No sensitive data** — the header passes along the audience claim that is already present in the validated JWT. No additional data is extracted or exposed.
+* **Consumer insights require this instrumentation** — Azure Event Hub diagnostic logs do not include JWT claims or the `Authorization` header. The `set-header` policy is the only mechanism available to extract the audience from the validated token and make it available in the Event Hub logs for consumer attribution.
+{{< /alert >}}
+
+#### Choosing a credential type: API Key vs. Entra ID
+
+Azure API Management supports two credential types. The table below summarizes the differences to help you choose the right one for your use case:
+
+|                                  | API Key                                                     | Entra ID (ClientID + ClientSecret)                                       |
+|----------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------|
+| **Authentication mechanism**     | APIM subscription key passed as a header or query parameter | OAuth 2.0 client-credentials flow using `client_id` and `client_secret`  |
+| **What the agent provisions**    | An Azure APIM subscription                                  | An Azure AD app registration, service principal, and client secret       |
+| **Best for**                     | Simple, key-based API access                                | APIs protected by Azure AD / OAuth 2.0                                   |
+| **Azure AD permissions required**| None (APIM Contributor role only)                           | Microsoft Graph API permissions (see [Granting Microsoft Graph API permissions](#granting-microsoft-graph-api-permissions-for-entra-id-credential-provisioning))                              |
+| **Credential rotation**          | Consumer regenerates the subscription key                   | Consumer requests a new credential; agent creates a new client secret    |
+
 ### Traceability Agent
 
 The Traceability Agent sends log information about APIs that have been discovered and published to Amplify.
 
 ![Service Traceability](/Images/central/connect-azure-gateway/traceabilityagent.png)
+
+#### How the Traceability Agent attributes API traffic
+
+The Traceability Agent uses different strategies to attribute API traffic to an Amplify consumer depending on the credential type and whether the request was authenticated successfully.
+
+##### API Key credentials
+
+For APIs protected by an API Key (APIM subscription key), the Traceability Agent reads the `apimSubscriptionId` field from the Event Hub log entry. This is the Azure subscription name associated with the key used in the request. The agent uses this identifier to look up the corresponding Amplify credential and resolve the consumer application, product, and plan.
+
+No additional policy changes or headers are needed — the subscription ID is always present in Event Hub logs for requests that include a valid subscription key.
+
+##### Entra ID credentials — successful requests
+
+For APIs protected by Entra ID, the Traceability Agent reads the `X-Amplify-Audience` header from the `backendRequestHeaders` field in the Event Hub log entry. This header contains the JWT `aud` (audience) claim, which corresponds to the `api://<app-client-id>` value of the provisioned credential.
+
+The agent uses this audience value to look up the Amplify credential (via the `jwtAudience` attribute stored in the credential's agent details) and resolve the full consumer context — application, product, plan, and quota.
+
+This path only works when:
+
+1. The `validate-jwt` policy successfully validates the JWT token.
+2. The `set-header` policy executes and copies the `aud` claim into `X-Amplify-Audience`.
+3. The diagnostic setting is configured to log `X-Amplify-Audience` in backend request headers.
+
+###### Example: Amplify metric for a successful Entra ID request
+
+When the Traceability Agent finds `X-Amplify-Audience` in the Event Hub log, it resolves the full consumer context. The resulting `api.transaction.status.metric` event sent to Amplify includes the subscription, application, product, plan, and quota:
+
+```json
+{
+  "event": "api.transaction.status.metric",
+  "data": {
+    "marketplace": {
+      "guid": "e9b0cccf-31e3-45ff-afe1-1f461810bd5f",
+      "consumerOrgId": "732373823941016"
+    },
+    "subscription": {
+      "id": "8ac9903b9976ab960199778a3ec20640"
+    },
+    "application": {
+      "id": "8ac9903b9976ab960199778a688e064e",
+      "consumerOrgId": "732373823941016"
+    },
+    "product": {
+      "id": "8ac9903b9976ab9601997789e64505f6",
+      "versionId": "8ac9903b9976ab9601997789e76e0604"
+    },
+    "productPlan": {
+      "id": "8ac9903b9976ab9601997789e82a0611"
+    },
+    "api": {
+      "id": "789894ea1efe4c58adf78377c399fdee",
+      "name": "petstore-1"
+    },
+    "units": {
+      "transactions": {
+        "count": 15,
+        "quota": { "id": "8ac9903b9976ab9601997789eae40628" },
+        "response": { "max": 231, "min": 6, "avg": 32.2 },
+        "status": "Success"
+      }
+    }
+  }
+}
+```
+
+Notice that the metric contains complete consumer context: `marketplace`, `subscription`, `application` (with a real Amplify ID), `product`, `productPlan`, and `quota`. This data powers the Consumer Insights dashboards in Amplify — showing which application consumed the API, under which product and plan, and how much of the quota was used.
+
+##### Entra ID credentials — failed requests (401)
+
+When a request to an Entra ID-protected API fails JWT validation (e.g., expired token, invalid audience, missing `Authorization` header), the `validate-jwt` policy rejects the request with a `401 Unauthorized` response. Because the policy short-circuits the inbound pipeline, the `set-header` element **never executes**, and the `X-Amplify-Audience` header is not set.
+
+In this case, the Traceability Agent falls back to the subscription ID path. If the API also requires a subscription key (which is common — Azure APIM can enforce both JWT validation and a subscription key on the same API), the agent reads the `apimSubscriptionId` from the log entry. If the caller used Azure's **built-in all-access subscription** (named `master`), the traffic appears attributed to `master` rather than to a specific consumer.
+
+###### Example: Amplify metric for a failed Entra ID request
+
+```json
+{
+  "event": "api.transaction.status.metric",
+  "data": {
+    "application": {
+      "id": "remoteAppId_master"
+    },
+    "api": {
+      "id": "remoteApiId_petstore",
+      "name": "petstore"
+    },
+    "units": {
+      "transactions": {
+        "count": 20,
+        "response": { "max": 1, "min": 0, "avg": 0.15 },
+        "status": "Failure"
+      }
+    }
+  }
+}
+```
+
+Compare this to the successful metric above — there is no `marketplace`, `subscription`, `product`, `productPlan`, or `quota`. The `application.id` is `remoteAppId_master` (derived from the Azure `master` subscription) instead of a real Amplify application ID. In Amplify dashboards, this traffic appears unattributed with no consumer context.
+
+{{< alert title="Note" color="primary" >}}The `master` subscription is a built-in Azure APIM subscription that grants access to all APIs. It is often used during development or testing alongside Entra ID authentication. Traffic attributed to `master` in Amplify dashboards typically indicates requests that failed JWT validation but were still logged by Azure because a valid subscription key was present.{{< /alert >}}
+
+##### Summary
+
+| Scenario                              | Header / field used             | Consumer attribution                                                   |
+|---------------------------------------|---------------------------------|------------------------------------------------------------------------|
+| API Key - valid subscription key      | `apimSubscriptionId`            | Full consumer context (app, product, plan)                             |
+| Entra ID - successful JWT validation  | `X-Amplify-Audience` header     | Full consumer context (app, product, plan)                             |
+| Entra ID - failed JWT validation (401)| `apimSubscriptionId` (fallback) | Attributed to subscription name (e.g., `master`) - no consumer context |
 
 ## Prerequisites
 
@@ -161,90 +365,6 @@ az ad app owner add --id <EXISTING_APP_REGISTRATION_ID> --owner-object-id $SP_OB
 
 * Alternatively, you can keep `Application.ReadWrite.All` + `ServicePrincipal.ReadWrite.All` until all previously provisioned credentials have been rotated or deleted, then switch to `.OwnedBy`.
 
-### How Entra ID credential provisioning works
-
-When a Marketplace consumer requests Entra ID credentials for a discovered API, the Discovery Agent performs the following steps:
-
-1. **Create an app registration** in Azure AD with a display name that identifies the consumer and API.
-2. **Set the identifier URI** on the app registration to `api://<app-client-id>`, where `<app-client-id>` is the application's own client ID returned by Azure in step 1. Azure's [default tenant policy](https://aka.ms/identifier-uri-formatting-error) requires identifier URIs to contain the application's client ID, a tenant-verified domain, or the tenant ID. Using the app's own client ID satisfies this requirement for all tenants.
-3. **Add the agent's service principal as owner** of the app registration. This step is non-fatal — if it fails (e.g., due to `.All` permissions where ownership is implicit), the agent logs a warning and continues.
-4. **Create a service principal** for the app registration. The agent retries this step with exponential backoff (up to ~6 seconds total) to account for Azure AD directory propagation delays.
-5. **Create a client secret** on the app registration. This step is also retried with exponential backoff.
-6. **Return the `client_id` and `client_secret`** to the consumer via the Amplify Marketplace. The `apiScope` is set to `api://<app-client-id>` matching the identifier URI.
-
-If service principal or client secret creation fails after exhausting all retries, the agent automatically **rolls back** by deleting the app registration that was created in step 1. This prevents orphaned app registrations from accumulating in Azure AD and blocking future provisioning attempts for the same API.
-
-{{< alert title="Note" color="primary" >}}Azure AD's eventual consistency model means that newly created objects (such as app registrations) may not be immediately visible to all API endpoints. The retry mechanism with exponential backoff is designed to absorb these propagation delays, which typically resolve within a few seconds. For more details, see [404 Not Found error when managing objects through Microsoft Graph](https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/app-integration/404-not-found-error-manage-objects-microsoft-graph).{{< /alert >}}
-
-When a credential is deleted, the agent removes the corresponding app registration and its associated service principal from Azure AD.
-
-### Changes to the validate-jwt policy
-
-When an Entra ID credential is provisioned, the Discovery Agent makes two modifications to the API's existing `validate-jwt` inbound policy in Azure API Management:
-
-1. **A new `<audience>` entry** is added to the `<audiences>` list. This is the standard OAuth audience for the provisioned credential, using the app registration's client ID (e.g., `api://<app-client-id>`). It is required for the `validate-jwt` policy to accept tokens issued for that credential.
-
-2. **An `output-token-variable-name` attribute and a `<set-header>` element** are added to support consumer usage analytics in Amplify. The `output-token-variable-name="jwt"` attribute tells the `validate-jwt` policy to store the decoded JWT in a context variable. The `<set-header name="X-Amplify-Audience">` element then extracts the `aud` claim from the token and passes it as a header on the backend request.
-
-The Traceability Agent reads the `X-Amplify-Audience` header from Event Hub logs to attribute API traffic to the correct consumer application in Amplify usage reports and dashboards.
-
-#### Before and after: validate-jwt policy
-
-**Before** — the original policy as configured in Azure APIM, with no audiences and no agent instrumentation:
-
-```xml
-<inbound>
-    <validate-jwt header-name="Authorization" failed-validation-httpcode="401">
-        <openid-config url="https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration" />
-        <issuers>
-            <issuer>https://sts.windows.net/{tenant-id}/</issuer>
-        </issuers>
-    </validate-jwt>
-</inbound>
-```
-
-**After provisioning** — the agent adds the new credential's audience, the `output-token-variable-name` attribute, and a `set-header` element:
-
-```xml
-<inbound>
-    <validate-jwt header-name="Authorization" failed-validation-httpcode="401" output-token-variable-name="jwt">
-        <openid-config url="https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration" />
-        <audiences>
-            <audience>api://app-client-id</audience>
-        </audiences>
-        <issuers>
-            <issuer>https://sts.windows.net/{tenant-id}/</issuer>
-        </issuers>
-    </validate-jwt>
-    <set-header name="X-Amplify-Audience" exists-action="override">
-        <value>@(((Jwt)context.Variables["jwt"]).Claims["aud"]?.FirstOrDefault())</value>
-    </set-header>
-</inbound>
-```
-
-**After deprovisioning** — the agent removes the credential's audience, the `set-header` element, and the `output-token-variable-name` attribute, restoring the policy to its original state.
-
-{{< alert title="Note" color="primary" >}}
-
-* **No impact on authentication** — the agent does not change how the `validate-jwt` policy authenticates requests. Existing audiences, issuers, and OpenID configuration are not modified.
-* **No impact on API consumers** — the `X-Amplify-Audience` header is only set on the internal backend request. It is not returned to API callers and is invisible to consumers.
-* **Fully reversible** — when the Amplify credential is deprovisioned, the audience entry, the `set-header` element, and the `output-token-variable-name` attribute are automatically removed, restoring the policy to its original state.
-* **No sensitive data** — the header passes along the audience claim that is already present in the validated JWT. No additional data is extracted or exposed.
-* **Consumer insights require this instrumentation** — Azure Event Hub diagnostic logs do not include JWT claims or the `Authorization` header. The `set-header` policy is the only mechanism available to extract the audience from the validated token and make it available in the Event Hub logs for consumer attribution.
-{{< /alert >}}
-
-### Choosing a credential type: API Key vs. Entra ID
-
-Azure API Management supports two credential types. The table below summarizes the differences to help you choose the right one for your use case:
-
-|                                  | API Key                                                     | Entra ID (ClientID + ClientSecret)                                       |
-|----------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------|
-| **Authentication mechanism**     | APIM subscription key passed as a header or query parameter | OAuth 2.0 client-credentials flow using `client_id` and `client_secret`  |
-| **What the agent provisions**    | An Azure APIM subscription                                  | An Azure AD app registration, service principal, and client secret       |
-| **Best for**                     | Simple, key-based API access                                | APIs protected by Azure AD / OAuth 2.0                                   |
-| **Azure AD permissions required**| None (APIM Contributor role only)                           | Microsoft Graph API permissions (see above)                              |
-| **Credential rotation**          | Consumer regenerates the subscription key                   | Consumer requests a new credential; agent creates a new client secret    |
-
 ## Preparing Azure services for Traceability Agent
 
 The following is a high-level overview of the required steps to connect Azure API Management services to Amplify:
@@ -290,14 +410,55 @@ Azure is now ready to register your API traffic to the event hub.
 
 ### Configuring API Azure monitoring
 
-By default, Azure does not monitor API traffic or their headers. You must explicitly ask for that. You can do it per API or for all APIs present in the API Management service.
+By default, Azure does not monitor API traffic or their headers. You must explicitly enable logging so that the Traceability Agent can collect API transactions from the Event Hub.
 
-To configure monitoring:
+You can enable monitoring for **all APIs** at once or for **individual APIs**. Both approaches are described below.
 
-1. Open the settings of an API (or all APIs).
-2. Select the Azure Monitor tab.
-3. Select the check box to enable monitoring.
-4. Select the Verbose mode and add all headers you want to track. These headers can belong to any request/response (frontend/backend) or you can choose different headers to log using the advanced options.
+{{< alert title="Note" color="primary" >}}If you use Entra ID credential provisioning, you **must** enable logging of backend request headers and include the `X-Amplify-Audience` header. This header is injected by the `validate-jwt` policy during credential provisioning and is required for the Traceability Agent to attribute API traffic to the correct consumer application. Without it, consumer insights will not appear in Amplify dashboards.{{< /alert >}}
+
+#### Option 1: Enable monitoring for all APIs
+
+This applies the same logging configuration to every API in the API Management service.
+
+1. In the Azure portal, navigate to your **API Management service**.
+2. In the left menu, select **APIs** > **All APIs**.
+3. Select the **Settings** tab at the top.
+4. Scroll down to the **Diagnostic Logs** section and select **Azure Monitor**.
+5. Check the box to **Enable** logging.
+6. Set **Verbosity** to **Information** or **Verbose**.
+7. Under **Additional settings**, configure the headers to log:
+    * **Frontend Request** — add any headers you want to track (e.g., `Authorization` is typically excluded for security reasons).
+    * **Frontend Response** — add any response headers you want to track.
+    * **Backend Request** — if you use **Entra ID** credential provisioning, add `X-Amplify-Audience`. This header is only present on APIs protected by Entra ID and is required for the Traceability Agent to attribute traffic to the correct consumer application. It is not needed for APIs that use API Key credentials only.
+    * **Backend Response** — add any backend response headers you want to track.
+8. Set **Body bytes to log** as needed (0 to disable body logging, or a value up to 8192).
+9. Click **Save**.
+
+#### Option 2: Enable monitoring for a specific API
+
+Use this when you only want to monitor selected APIs rather than all traffic.
+
+1. In the Azure portal, navigate to your **API Management service**.
+2. In the left menu, select **APIs**, then select the specific API you want to monitor (e.g., **Petstore**).
+3. Select the **Settings** tab at the top.
+4. Scroll down to the **Diagnostic Logs** section and select **Azure Monitor**.
+5. Check the **Override global setting** box.
+6. Check the box to **Enable** logging.
+7. Set **Verbosity** to **Information** or **Verbose**.
+8. Under **Additional settings**, configure the headers to log:
+    * **Backend Request** — if you use **Entra ID** credential provisioning, add `X-Amplify-Audience`. This header is only present on APIs protected by Entra ID and is required for consumer insights. It is not needed for APIs that use API Key credentials only.
+    * Add other frontend/backend request/response headers as needed.
+9. Set **Body bytes to log** as needed.
+10. Click **Save**.
+
+#### Verifying the diagnostic logging configuration
+
+After enabling monitoring, you can verify that events are flowing to your Event Hub:
+
+1. Make a few API calls to the monitored API(s).
+2. In the Azure portal, navigate to your **Event Hubs namespace** > **Event Hub**.
+3. Check the **Overview** page for incoming messages. It may take a few minutes for events to appear.
+4. Optionally, use the **Data Explorer** (Process Data section) to inspect raw events and confirm that `backendRequestHeaders` contains the expected headers.
 
 Now that Azure is all set, you can [Deploy the agents using Axway Central CLI](/docs/connect_manage_environ/connect_azure_gateway/deploy-your-agents-with-amplify-cli) to discover and monitor Azure APIs.
 
