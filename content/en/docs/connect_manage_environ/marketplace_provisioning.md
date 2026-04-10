@@ -42,13 +42,13 @@ From the Marketplace, a consumer first requests access to a resource and then re
 
 The Discovery Agent provides the capability to provision credentials to an OAuth identity provider based on [OAuth 2.0 Dynamic Client Registration Protocol](https://datatracker.ietf.org/doc/html/rfc7591). The Discovery Agent can be configured with multiple OAuth identity providers that can be used by the agent to provision credentials for the associated data plane. The Discovery Agent requires the following configuration to register the OAuth identity providers:
 
-* Name (`AGENTFEATURES_IDP_NAME`): The name of the OAuth identity provider.
-* Title (`AGENTFEATURES_IDP_TITLE`): The title of the Credential Request Definition that will be shown to consumers in Amplify Marketplace.
-* Type (`AGENTFEATURES_IDP_TYPE`): The type of OAuth identity provider (`generic`, `keycloak` or `okta`).
-* Metadata URL (`AGENTFEATURES_IDP_METADATAURL`): The URL exposed by the OAuth authorization server to provide metadata information.
-* Extra Properties (`AGENTFEATURES_IDP_EXTRAPROPERTIES`): Additional client metadata sent during dynamic registration. Supports string and boolean values (for example `'{"application_type":"browser","pkce_required":true}'`). For Okta, use this to switch from the default Service application to a Single Page Application (SPA) and to enable PKCE for authorization code flows.
+* Name (`AGENTFEATURES_IDP_NAME_{n}`): The name of the OAuth identity provider.
+* Title (`AGENTFEATURES_IDP_TITLE_{n}`): The title of the Credential Request Definition that will be shown to consumers in Amplify Marketplace.
+* Type (`AGENTFEATURES_IDP_TYPE_{n}`): The type of OAuth identity provider (`generic`, `keycloak` or `okta`).
+* Metadata URL (`AGENTFEATURES_IDP_METADATAURL_{n}`): The URL exposed by the OAuth authorization server to provide metadata information.
+* Extra Properties (`AGENTFEATURES_IDP_EXTRAPROPERTIES_{n}`): Additional client metadata sent during dynamic registration. Supports string and boolean values (for example `'{"application_type":"browser","pkce_required":true}'`). For Okta, use this to switch from the default Service application to a Single Page Application (SPA) and to enable PKCE for authorization code flows.
 * Authentication Config: Used by the agent to communicate with the OAuth identity provider.
-    * Type (`AGENTFEATURES_IDP_AUTH_TYPE`): The type of authentication mechanism to be used. The supported types are:
+    * Type (`AGENTFEATURES_IDP_AUTH_TYPE_{n}`): The type of authentication mechanism to be used. The supported types are:
         * `accessToken`: Authentication based on the pre-configured access token(initial access token, Admin API token, etc.).
         * `client`: *Deprecated*. Use client_secret_post.
         * `client_secret_basic`: Agent uses the client id and secret to acquire access token using HTTP Basic authentication.
@@ -57,40 +57,40 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
         * `private_key_jwt`: Agent generates a signed JWT token using registered key pair and uses it to acquire the token.
         * `tls_client_auth`: Agent uses the mTLS connection based on public key infrastructure (PKI) with registered client certificate to acquire the access token.
         * `self_signed_tls_client_auth`: Agent uses the mTLS connection with registered self-signed client certificate to acquire the access token.
-    * Access Token (`AGENTFEATURES_IDP_AUTH_ACCESSTOKEN`): The token (initial access token, Admin API Token, etc.) to be used by the Agent SDK to authenticate with the OAuth identity provider. The config is required if the type is set to `accessToken`. The config is required when using `accessToken` based authentication.
-    * Client ID (`AGENTFEATURES_IDP_AUTH_CLIENTID`): The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is not set to `accessToken`.
-    * Client Secret (`AGENTFEATURES_IDP_AUTH_CLIENTSECRET`): The secret for the client in the OAuth identity provider. The config is required if the type is set to `client_secret_basic`, `client_secret_post` or `client_secret_jwt`.
-    * Scopes (`AGENTFEATURES_IDP_AUTH_CLIENTSCOPE`): Space-separated scopes to be used when requesting the access token from the authorization server.
-    * Private Key file path (`AGENTFEATURES_IDP_AUTH_PRIVATEKEY`): Path of the private key file to be used for `private_key_jwt` authentication.
-    * Public Key file path (`AGENTFEATURES_IDP_AUTH_PUBLICKEY`): Path of the public key file to be used for `private_key_jwt` authentication.
-    * Private Key password (`AGENTFEATURES_IDP_AUTH_KEYPASSWORD`): Password for the private key.
-    * Token Signing Algorithm (`AGENTFEATURES_IDP_AUTH_TOKENSIGNINGMETHOD`): Algorithm used for signing the token for `client_secret_jwt` or `private_key_jwt`. Defaults to `HS256` for `client_secret_jwt` and `RS256` for `private_key_jwt`.
-    * Flag for re-using cached token (`AGENTFEATURES_IDP_AUTH_USECACHEDTOKEN`): Boolean flag to enable / disable the agent to cache the token until the expiry of the access token.
-    * Flag for using the user registration token (`AGENTFEATURES_IDP_AUTH_USEREGISTRATIONTOKEN`): Boolean flag to enable / disable the agent to save and use the Credential specific registration token when modifying the client in the IDP.
+    * Access Token (`AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_{n}`): The token (initial access token, Admin API Token, etc.) to be used by the Agent SDK to authenticate with the OAuth identity provider. The config is required if the type is set to `accessToken`. The config is required when using `accessToken` based authentication.
+    * Client ID (`AGENTFEATURES_IDP_AUTH_CLIENTID_{n}`): The identifier of the client in the OAuth identity provider that can used to create new OAuth clients. The config is required if the type is not set to `accessToken`.
+    * Client Secret (`AGENTFEATURES_IDP_AUTH_CLIENTSECRET_{n}`): The secret for the client in the OAuth identity provider. The config is required if the type is set to `client_secret_basic`, `client_secret_post` or `client_secret_jwt`.
+    * Scopes (`AGENTFEATURES_IDP_AUTH_CLIENTSCOPE_{n}`): Space-separated scopes to be used when requesting the access token from the authorization server.
+    * Private Key file path (`AGENTFEATURES_IDP_AUTH_PRIVATEKEY_{n}`): Path of the private key file to be used for `private_key_jwt` authentication.
+    * Public Key file path (`AGENTFEATURES_IDP_AUTH_PUBLICKEY_{n}`): Path of the public key file to be used for `private_key_jwt` authentication.
+    * Private Key password (`AGENTFEATURES_IDP_AUTH_KEYPASSWORD_{n}`): Password for the private key.
+    * Token Signing Algorithm (`AGENTFEATURES_IDP_AUTH_TOKENSIGNINGMETHOD_{n}`): Algorithm used for signing the token for `client_secret_jwt` or `private_key_jwt`. Defaults to `HS256` for `client_secret_jwt` and `RS256` for `private_key_jwt`.
+    * Flag for re-using cached token (`AGENTFEATURES_IDP_AUTH_USECACHEDTOKEN_{n}`): Boolean flag to enable / disable the agent to cache the token until the expiry of the access token.
+    * Flag for using the user registration token (`AGENTFEATURES_IDP_AUTH_USEREGISTRATIONTOKEN_{n}`): Boolean flag to enable / disable the agent to save and use the Credential specific registration token when modifying the client in the IDP.
     * mTLS Config:
-        * Skip host verification (`AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY`): Flag to control verification of the TLS server certificate chain and host name.
-        * Root CA certificate (`AGENTFEATURES_IDP_SSL_ROOTCACERTPATH`): The path of the root CA certificate to be used for the mTLS connection.
-        * Client certificate (`AGENTFEATURES_IDP_SSL_CLIENTCERTPATH`): The path of the client certificate to be used for the mTLS connection.
-        * Client key (`AGENTFEATURES_IDP_SSL_CLIENTKEYPATH`): The path of the client key to be used for the mTLS connection.
+        * Skip host verification (`AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY_{n}`): Flag to control verification of the TLS server certificate chain and host name.
+        * Root CA certificate (`AGENTFEATURES_IDP_SSL_ROOTCACERTPATH_{n}`): The path of the root CA certificate to be used for the mTLS connection.
+        * Client certificate (`AGENTFEATURES_IDP_SSL_CLIENTCERTPATH_{n}`): The path of the client certificate to be used for the mTLS connection.
+        * Client key (`AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_{n}`): The path of the client key to be used for the mTLS connection.
 
 {{< alert title="Note" color="primary" >}}If your IDP is configured to use Client Registration Policies, ensure that the scopes defined in the API are allowed in the policy. See [Keycloak Client Registration](https://www.keycloak.org/docs/23.0.6/securing_apps/#_client_registration_policies).{{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}**Okta SPA + PKCE**</br>
-To provision an Okta Single Page Application that supports Authorization Code + PKCE, include `AGENTFEATURES_IDP_EXTRAPROPERTIES_<index>` with `application_type` set to `browser` and `pkce_required` set to `true`. If omitted, an Okta Service application (no enforced PKCE) is provisioned by default.
+To provision an Okta Single Page Application that supports Authorization Code + PKCE, include `AGENTFEATURES_IDP_EXTRAPROPERTIES_{n}` with `application_type` set to `browser` and `pkce_required` set to `true`. If omitted, an Okta Service application (no enforced PKCE) is provisioned by default.
 You must assign the application to a group or specific users and define required Access Policies to the Authorization server in order to match the application scope.{{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}**Okta group and policy assignment**</br>
-When using `AGENTFEATURES_IDP_TYPE=okta`, you can optionally configure the agent to automatically assign registered OAuth clients to an Okta group and/or to an authorization server policy using `AGENTFEATURES_IDP_OKTA_GROUP` and `AGENTFEATURES_IDP_OKTA_POLICY`. The group and policy must already exist in Okta before the agent starts. If either is configured but cannot be found in Okta, the agent will fail to start.{{< /alert >}}
+When using `AGENTFEATURES_IDP_TYPE_{n}=okta`, you can optionally configure the agent to automatically assign registered OAuth clients to an Okta group and/or to an authorization server policy using `AGENTFEATURES_IDP_OKTA_GROUP_{n}` and `AGENTFEATURES_IDP_OKTA_POLICY_{n}`. The group and policy must already exist in Okta before the agent starts. If either is configured but cannot be found in Okta, the agent will fail to start.{{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}**Okta API token requirements**</br>
-When `AGENTFEATURES_IDP_AUTH_TYPE` is set to `accessToken` and `AGENTFEATURES_IDP_TYPE` is `okta`, the agent authenticates to the Okta Management API using the [SSWS authentication scheme](https://developer.okta.com/docs/reference/core-okta-api/#authentication). The token supplied in `AGENTFEATURES_IDP_AUTH_ACCESSTOKEN` must be an [Okta Admin API token](https://developer.okta.com/docs/guides/create-an-api-token/main/) created by a user with sufficient administrative privileges. The required permissions depend on which features are enabled (see the table below).</br></br>
+When `AGENTFEATURES_IDP_AUTH_TYPE_{n}` is set to `accessToken` and `AGENTFEATURES_IDP_TYPE_{n}` is `okta`, the agent authenticates to the Okta Management API using the [SSWS authentication scheme](https://developer.okta.com/docs/reference/core-okta-api/#authentication). The token supplied in `AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_{n}` must be an [Okta Admin API token](https://developer.okta.com/docs/guides/create-an-api-token/main/) created by a user with sufficient administrative privileges. The required permissions depend on which features are enabled (see the table below).</br></br>
 The **Super Admin** or **Organization Admin** [role](https://help.okta.com/en-us/content/topics/security/administrators-admin-comparison.htm) covers all operations. For least privilege, create a [custom admin role](https://developer.okta.com/docs/concepts/role-assignment/) scoped to application and authorization server management.{{< /alert >}}
 
 | Feature                                | Okta API operations                                                                                            | Required permissions                                                                                                                                                                                                                              |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Dynamic Client Registration (always)   | `POST /api/v1/apps`                                                                                            | Application management                                                                                                                                                                                                                            |
-| `AGENTFEATURES_IDP_OKTA_GROUP`         | `GET /api/v1/groups`, `PUT /api/v1/apps/{appId}/groups/{groupId}`                                              | [Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Group/) read access, [Application Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/) management   |
-| `AGENTFEATURES_IDP_OKTA_POLICY`        | `GET /api/v1/authorizationServers/{id}/policies`, `PUT /api/v1/authorizationServers/{id}/policies/{policyId}`  | [Authorization Server Policies API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServerPolicies/) management                                                                                           |
+| `AGENTFEATURES_IDP_OKTA_GROUP_{n}`     | `GET /api/v1/groups`, `PUT /api/v1/apps/{appId}/groups/{groupId}`                                              | [Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Group/) read access, [Application Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/) management   |
+| `AGENTFEATURES_IDP_OKTA_POLICY_{n}`    | `GET /api/v1/authorizationServers/{id}/policies`, `PUT /api/v1/authorizationServers/{id}/policies/{policyId}`  | [Authorization Server Policies API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServerPolicies/) management                                                                                           |
 
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
