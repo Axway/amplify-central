@@ -131,3 +131,4 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 |            | APIGOV-32414| **Issue**: Tooltip on Marketplace Product Warning Icon is not visible <br/>**Resolution**: Fixed display issue to show the warning icon.
 |           | APIGOV-32294| **Issue**: Consumer Org User with Consumer role on x-private team cannot subscribe to free plans <br/>**Resolution**: Consumer role for x-private team fixed to allow subscription to free plans.
 |           | APIGOV-32300| **Issue**: Featured Categories limit reached panel is not visible<br/>**Resolution**: Fixed the UI so that the limit reached panel is now visible.
+|          | APIGOV-32355 | **Issue**: Users were not able to run a compliance linting job for a specific API in the Service Registry. <br/>**Resolution**: A fix was made to allow users with permissions to run a compliance linting job from the Service Registry. |
