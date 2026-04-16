@@ -52,7 +52,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Apigee Edge                                | 1.0.36                   |
 | Apigee X                                   | 1.4.27                 TBD  |
 | Mulesoft Anypoint platform v3              | 1.2.42                 TBD  |
-| Software AG webMethods                     | 1.0.33                 TBD  |
+| IBM webMethods                             | 1.0.33                 TBD  |
 | Kong Gateway                               | 1.1.39                   |
 | GitLab                                     | 1.1.39                   |
 | Kafka Cluster                              | 1.1.32                   |
@@ -98,7 +98,12 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 * **Azure Agent: permissions update**
 
   (AZURE AGENT, ENHANCEMENT)</br>
-  The Azure agent has been enhanced to support the minimum permissions required to manage agent created resources. The permissions have been reduce to **ReadWrite OwnedBy** for all agent created resources. 
+  The Azure agent has been enhanced to support the minimum permissions required to manage agent created resources. The permissions have been reduce to **ReadWrite OwnedBy** for all agent created resources.
+
+* **IBM webMehotds: rate limiting**
+
+  (WEBMETHODS AGENT, ENHANCEMENT)</br>
+  The IBM (formerly Software AG) webMethods agents, discovery and traceability, have been enhanced to support rate limitng of the API requests to the webMethods platform with a WEBMETHODS_RATELIMIT environment variable setting. 
 
 * **New agent releases**
 
