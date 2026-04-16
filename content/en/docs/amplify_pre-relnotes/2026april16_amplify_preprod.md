@@ -88,7 +88,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 * **Anypoint Agent: Discovery with business unit and enviroment filters**
 
   (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
-  The Mulesoft Anypoint discovery Agent has been enhanced with the ability to define business unite and environment filters to the discovery API services. The API services will all be included for display on the Engage Environment details page.
+  The Mulesoft Anypoint discovery Agent has been enhanced with the ability to define business units and environment filters to the discovery API services. Only the API services which pass the filters will be included for display on the Engage Environment details page.
 
 * **Azure Agent: Entra ID URI format update**
 
@@ -98,7 +98,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 * **Azure Agent: permissions update**
 
   (AZURE AGENT, ENHANCEMENT)</br>
-  The Azure agent has been enhanced to support the minimum permissions required to manage agent created resources. The permissions have been reduce to **ReadWrite OwnedBy** for all agent created resources.
+  The Azure agent now supports **Application.ReadWrite.OwnedBy** and **ServicePrincipal.ReadWrite.OwnedBy** Microsoft Graph permissions, reducing the required scope to only manage resources the agent creates. Customers with existing **.All** permissions are unaffected and no configuration changes are required.
 
 * **IBM webMehotds: rate limiting**
 
