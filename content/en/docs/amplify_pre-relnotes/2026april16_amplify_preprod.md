@@ -80,10 +80,20 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Agent updates
 
-* **Enhancement**
+* **Apigee X Endpoint Discovery**
 
-  (DISCOVERY AGENT, ENHANCEMENT)</br>
-  Description.
+  (APIGEE X AGENT, ENHANCEMENT)</br>
+  The Apigee X discovery agent has been enhanced to discover the Endpoint URL from the server field in associated API specification file.  If no server field is found in the API Specification file, the API proxy endpoint will be used.
+
+* **Anypoint Agent: Discovery with business unit and enviroment filters**
+
+  (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
+  The Mulesoft Anypoint discovery Agent has been enhanced with the ability to define business unite and environment filters to the discovery API services. The API services will all be included for display on the Engage Environment details page.
+
+* **AZURE Agent: ENTRA ID URI FORMAT UPDATE**
+
+  (AZURE AGENT, ENHANCEMENT)</br>
+  The Azure agent has been enhanced to support the new Entra ID URI rule format.  The Microsoft Entra ID URI format rules have been updated to state that it **must contain the app's client ID, a verified domain, or the tenant IDs**.  Refer to [Entra ID format](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#identifieruris-attribute).
 
 * **New agent releases**
 
@@ -94,7 +104,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|          | APIGOV-32406 | **Issue**: The Azure on-premise traceability agent was not reporting information to Consumer Insights and Business Insights -> Application screens. <br/>**Resolution**: A fix was made to display the information on both Consumer Insighnts and Business Insights. |
 
 ## Marketplace updates
 
