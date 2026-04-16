@@ -83,7 +83,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 * **Apigee X Endpoint Discovery**
 
   (APIGEE X AGENT, ENHANCEMENT)</br>
-  The Apigee X discovery agent has been enhanced to discover the Endpoint URL from the server field in associated API specification file.  If no server field is found in the API Specification file, the API proxy endpoint will be used.
+  The Apigee X discovery agent has been enhanced to discover the Endpoint URL from the server field in associated API specification file.  If no server field is found in the API Specification file, an endpoint constructed from the Proxy details will be used.
 
 * **Anypoint Agent: Discovery with business unit and enviroment filters**
 
@@ -100,7 +100,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
   (AZURE AGENT, ENHANCEMENT)</br>
   The Azure agent now supports **Application.ReadWrite.OwnedBy** and **ServicePrincipal.ReadWrite.OwnedBy** Microsoft Graph permissions, reducing the required scope to only manage resources the agent creates. Customers with existing **.All** permissions are unaffected and no configuration changes are required.
 
-* **IBM webMehotds: rate limiting**
+* **IBM webMethods: rate limiting**
 
   (WEBMETHODS AGENT, ENHANCEMENT)</br>
   The IBM (formerly Software AG) webMethods agents, discovery and traceability, have been enhanced to support rate limitng of the API requests to the webMethods platform with a WEBMETHODS_RATELIMIT environment variable setting. 
