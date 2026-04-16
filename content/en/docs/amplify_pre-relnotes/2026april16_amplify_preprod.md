@@ -45,14 +45,14 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.53 / TA=1.2.44    |
+| Axway API Management 7.7                   | DA=1.2.53 / TA=1.2.44  TBD  |
 | AWS Gateway using SDK 2.0                  | DA=1.2.42 / TA=1.2.42    |
-| Azure latest release                       | DA=1.3.42 / TA=1.3.42    |
+| Azure latest release                       | DA=1.3.42 / TA=1.3.42  TBD  |
 | Istio 1.9.5                                | DA=1.1.41 / TA=2.1.38    |
 | Apigee Edge                                | 1.0.36                   |
-| Apigee X                                   | 1.4.27                   |
-| Mulesoft Anypoint platform v3              | 1.2.42                   |
-| Software AG webMethods                     | 1.0.33                   |
+| Apigee X                                   | 1.4.27                 TBD  |
+| Mulesoft Anypoint platform v3              | 1.2.42                 TBD  |
+| Software AG webMethods                     | 1.0.33                 TBD  |
 | Kong Gateway                               | 1.1.39                   |
 | GitLab                                     | 1.1.39                   |
 | Kafka Cluster                              | 1.1.32                   |
@@ -90,10 +90,15 @@ TRACEABILITY_PROTOCOL=https (# TA only)
   (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
   The Mulesoft Anypoint discovery Agent has been enhanced with the ability to define business unite and environment filters to the discovery API services. The API services will all be included for display on the Engage Environment details page.
 
-* **AZURE Agent: ENTRA ID URI FORMAT UPDATE**
+* **Azure Agent: Entra ID URI format update**
 
   (AZURE AGENT, ENHANCEMENT)</br>
-  The Azure agent has been enhanced to support the new Entra ID URI rule format.  The Microsoft Entra ID URI format rules have been updated to state that it **must contain the app's client ID, a verified domain, or the tenant IDs**.  Refer to [Entra ID format](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#identifieruris-attribute).
+  The Azure agent has been enhanced to support the new Entra ID URI format.  The Microsoft Entra ID URI restriction policy format rules have been updated to state that it **must contain the app's client ID, a verified domain, or the tenant IDs**.  Refer to [Entra ID format](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#identifieruris-attribute).
+
+* **Azure Agent: permissions update**
+
+  (AZURE AGENT, ENHANCEMENT)</br>
+  The Azure agent has been enhanced to support the minimum permissions required to manage agent created resources. The permissions have been reduce to **ReadWrite OwnedBy** for all agent created resources. 
 
 * **New agent releases**
 
@@ -105,6 +110,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-32406 | **Issue**: The Azure on-premise traceability agent was not reporting information to Consumer Insights and Business Insights -> Application screens. <br/>**Resolution**: A fix was made to display the information on both Consumer Insighnts and Business Insights. |
+|          | APIGOV-32441 | **Issue**: The APIM Discovery agent would not detect the first deleted API Proxy as "Out of Sync". <br/>**Resolution**: A fix was made to detect the "Out of Sync" status of the first detleted API. |
 
 ## Marketplace updates
 
