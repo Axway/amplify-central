@@ -3,28 +3,28 @@ title: Marketplace homepage
 linkTitle: Marketplace homepage
 weight: 40
 ---
-
+ 
 Configure the Marketplace homepage using a flexible, element-based layout model that allows Marketplace Administrators to control structure, ordering, visibility, and content in alignment with branding and user-experience requirements.
-
+ 
 ---
 ## Before you start
-- You must have Marketplace Administrator (or Platform Administrator) credentials.
-- Your organization must have the Public Marketplace entitlement enabled.
+* You must have Marketplace Administrator (or Platform Administrator) credentials.
+* Your organization must have the Public Marketplace entitlement enabled.
 ---
 ## Objectives
-- Understand the element‑based homepage model.
-- Customize homepage layout, order, and visibility.
-- Configure homepage elements and their content.
+* Understand the element based homepage model.
+* Customize homepage layout, order, and visibility.
+* Configure homepage elements and their content.
 ---
-## Element‑based homepage model
+## Element based homepage model
 The Marketplace homepage is composed of elements. Each element represents a section of the homepage and includes its own configuration and styling properties.
 ### Key characteristics
-- Elements can be added, removed, and reordered.
-- Elements support configurable widths: **full**, **half**, or **quarter**.
-- Elements automatically wrap to the next row when the total width exceeds available space.
-- Multiple elements of the same type can be added.
-- Each element includes visibility settings for unauthenticated users.
-- All elements are responsive across desktop, tablet, and mobile devices.
+* Elements can be added, removed, and reordered.
+* Elements support configurable widths: **full**, **half**, or **quarter**.
+* Elements automatically wrap to the next row when the total width exceeds available space.
+* Multiple elements of the same type can be added.
+* Each element includes visibility settings for unauthenticated users.
+* All elements are responsive across desktop, tablet, and mobile devices.
 > The **Navigation menu** element is required and is always present, including in an empty homepage state. Its menu items are configured from **Marketplace Settings > Pages and Menus > Homepage**.
 ---
 ## Open homepage settings
@@ -52,101 +52,101 @@ Clicking the delete button will delete the selected element and reorder the rema
 Drag and drop the element using the reorder button to update the order of the elements
 ### Default
 Revert the homepage items to the default layout at any time.
-
+ 
 ---
 ## Homepage configuration actions
-- **Export** – Download the current homepage configuration.
-- **Import** – Import a previously exported configuration.
-- **Reset** – Restore the default homepage configuration.
+* **Export** – Download the current homepage configuration.
+* **Import** – Import a previously exported configuration.
+* **Reset** – Restore the default homepage configuration.
 > Changes are **not applied** until you click **Save**. All edits, imports, or resets take effect only after saving.
-
+ 
 The homepage preview has additional options for
-- Signed‑in view
-- Signed‑out view
-- Localized language views
+* Signed in view
+* Signed out view
+* Localized language views
 ---
 ## Supported homepage elements
 Each element can be configured independently, and multiple instances of any element type can be added.
 ### Available element types
-- **Page Header (Content)**
-- **Card**
-- **Navigation menu**
-- **Categories**
-- **Products**
-- **Separator**
-<!--  **Sign In / Register** -->
+* **Page Header (Content)**
+* **Card**
+* **Navigation menu**
+* **Categories**
+* **Products**
+* **Separator**
+<!-*  **Sign In / Register** -->
 ---
 ## Page Header (Content)
-A flexible, content‑based element to introduce and frame homepage content.
-- Optional element.
-- Can be added, removed, and reordered.
-- Multiple instances supported.
+A flexible, content based element to introduce and frame homepage content.
+* Optional element.
+* Can be added, removed, and reordered.
+* Multiple instances supported.
 Supports:
-- Text
-- Button
-- Image
-- Document
-- Search
-Common uses include branding, announcements, onboarding, search‑first experiences, and calls to action.
-
+* Text
+* Button
+* Image
+* Document
+* Search
+Common uses include branding, announcements, onboarding, search first experiences, and calls to action.
+ 
 **Configurable properties**
-- Content objects and layout
-- Background color or gradient
-- Background image (PNG, GIF, JPG, max 5 MB)
-- Typography and alignment
-- Visibility settings
+* Content objects and layout
+* Background color or gradient
+* Background image (PNG, GIF, JPG, max 5 MB)
+* Typography and alignment
+* Visibility settings
 ---
 ## Card
 A structured container for grouped information, links, or actions.
-- Optional element.
-- Multiple instances supported.
+* Optional element.
+* Multiple instances supported.
 Common uses include promotions and curated content.
-
+ 
 **Configurable properties**
-- Content and layout
-- Background styling
-- Typography
-- Visibility settings
+* Content and layout
+* Background styling
+* Typography
+* Visibility settings
 ---
 ## Navigation menu (required)
 Provides primary navigation.
-- Required element.
-- Can be reordered.
-- Multiple navigation menus supported.
-- Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
+* Required element.
+* Can be reordered.
+* Multiple navigation menus supported.
+* Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
 ---
 ## Categories
 Supports discovery and browsing. Highlights category groupings or discovery paths.
   
 **Configurable properties**
-- Category selection
-- Sort order
-- Layout and styling
-- Visibility settings
+* Category selection
+* Sort order
+* Layout and styling
+* Visibility settings
 ---
 ## Products
 Displays curated or dynamic product lists.
-
+ 
 **Configurable properties**
-- Product selection method
-- Sort order
-- Item limits
-- Layout and styling
-- Visibility settings
+* Product selection method
+* Sort order
+* Item limits
+* Layout and styling
+* Visibility settings
 ---
 ## Separator
 Visually separates sections to improve readability.
-
+ 
 **Available styles**
-- Solid
-- Dotted
-- Dashed
+* Solid
+* Dotted
+* Dashed
 <!-- ## Sign In / Register
 Adds or configures authentication entry points.
-- Optional element.
-- Can be reordered.
-- Supports hiding the default Marketplace Sign In / Register button.
-Used when providing custom sign‑in or registration experiences. -->
+* Optional element.
+* Can be reordered.
+* Supports hiding the default Marketplace Sign In / Register button.
+Used when providing custom sign in or registration experiences. -->
 ---
 ## Review and save
 1. Review layout and content in the live preview.
@@ -154,9 +154,7 @@ Used when providing custom sign‑in or registration experiences. -->
 3. Click **Save** to apply changes.
 ---
 ## Result
-- Homepage renders using the configured elements and order.
-- Only selected elements are displayed.
-- Visibility rules are applied for unauthenticated users.
-- Layout adapts to different screen sizes.
-
-
+* Homepage renders using the configured elements and order.
+* Only selected elements are displayed.
+* Visibility rules are applied for unauthenticated users.
+* Layout adapts to different screen sizes.
