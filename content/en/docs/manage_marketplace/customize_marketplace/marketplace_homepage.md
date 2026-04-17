@@ -4,127 +4,159 @@ linkTitle: Marketplace homepage
 weight: 40
 ---
 
-Mark to edit this topic
+Configure the Marketplace homepage using a flexible, element-based layout model that allows Marketplace Administrators to control structure, ordering, visibility, and content in alignment with branding and user-experience requirements.
 
-Configure the Marketplace homepage, a landing page that can be customized to provide a search, featured content, and calls to action for consumers who enter from high-level links.
-
+---
 ## Before you start
-
-You must have Platform Administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Homepage* content.
-
+- You must have Marketplace Administrator (or Platform Administrator) credentials.
+- Your organization must have the Public Marketplace entitlement enabled.
+---
 ## Objectives
+- Understand the element‑based homepage model.
+- Customize homepage layout, order, and visibility.
+- Configure homepage elements and their content.
+---
+## Element‑based homepage model
+The Marketplace homepage is composed of elements. Each element represents a section of the homepage and includes its own configuration and styling properties.
+### Key characteristics
+- Elements can be added, removed, and reordered.
+- Elements support configurable widths: **full**, **half**, or **quarter**.
+- Elements automatically wrap to the next row when the total width exceeds available space.
+- Multiple elements of the same type can be added.
+- Each element includes visibility settings for unauthenticated users.
+- All elements are responsive across desktop, tablet, and mobile devices.
+> The **Navigation menu** element is required and is always present, including in an empty homepage state. Its menu items are configured from **Marketplace Settings > Pages and Menus > Homepage**.
+---
+## Open homepage settings
+All Marketplace homepage customizations are performed from **Marketplace Settings > Pages and Menus > Homepage**.
+1. Sign in to Amplify Engage.
+2. Navigate to **Marketplace Settings > Pages and Menus**.
+3. Select **Homepage**.
+A default homepage layout is displayed. You can modify existing elements or add new ones.
+> **Important**: Ensure the **Enabled** toggle is set to **Show**. Setting it to **Hide** disables the custom homepage and prevents it from being displayed.
+Changes are reflected dynamically in the preview, which can be toggled between:
+---
+## Manage homepage layout
+Elements can be added, deleted, and reordered at any time.
+> Actions are executed by clicking the respective buttons. Changes appear immediately in the preview.
+### Add an element
+1. Click the **+** button to add a new element.
+2. The **Add to page** screen opens.
+3. Select an element type.
+4. The element is added to the layout.
+### Edit an element
+Clicking the edit button opens the element configuration screen specific to the element type
+### Delete an element
+Clicking the delete button will delete the selected element and reorder the remaining elements accordingly.
+### Reorder an element
+Drag and drop the element using the reorder button to update the order of the elements
+### Default
+Revert the homepage items to the default layout at any time.
 
-Learn how to customize the Marketplace homepage.
+---
+## Homepage configuration actions
+- **Export** – Download the current homepage configuration.
+- **Import** – Import a previously exported configuration.
+- **Reset** – Restore the default homepage configuration.
+> Changes are **not applied** until you click **Save**. All edits, imports, or resets take effect only after saving.
 
-## Customize the Marketplace homepage
+The homepage preview has additional options for
+- Signed‑in view
+- Signed‑out view
+- Localized language views
+---
+## Supported homepage elements
+Each element can be configured independently, and multiple instances of any element type can be added.
+### Available element types
+- **Page Header (Content)**
+- **Card**
+- **Navigation menu**
+- **Categories**
+- **Products**
+- **Separator**
+<!--  **Sign In / Register** -->
+---
+## Page Header (Content)
+A flexible, content‑based element to introduce and frame homepage content.
+- Optional element.
+- Can be added, removed, and reordered.
+- Multiple instances supported.
+Supports:
+- Text
+- Button
+- Image
+- Document
+- Search
+Common uses include branding, announcements, onboarding, search‑first experiences, and calls to action.
 
-The Marketplace homepage changes are made from the Marketplace *Homepage* page:
+**Configurable properties**
+- Content objects and layout
+- Background color or gradient
+- Background image (PNG, GIF, JPG, max 5 MB)
+- Typography and alignment
+- Visibility settings
+---
+## Card
+A structured container for grouped information, links, or actions.
+- Optional element.
+- Multiple instances supported.
+Common uses include promotions and curated content.
 
-1. Navigate to *Organization > Marketplace*.
-2. Select **Homepage**. *The Homepage page is displayed*:
+**Configurable properties**
+- Content and layout
+- Background styling
+- Typography
+- Visibility settings
+---
+## Navigation menu (required)
+Provides primary navigation.
+- Required element.
+- Can be reordered.
+- Multiple navigation menus supported.
+- Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
+---
+## Categories
+Supports discovery and browsing. Highlights category groupings or discovery paths.
+  
+**Configurable properties**
+- Category selection
+- Sort order
+- Layout and styling
+- Visibility settings
+---
+## Products
+Displays curated or dynamic product lists.
 
-    ![Marketplace homepage with configuration and preview sections.](/Images/marketplace/marketplace_homepage.png "Configure Marketplace homepage")
+**Configurable properties**
+- Product selection method
+- Sort order
+- Item limits
+- Layout and styling
+- Visibility settings
+---
+## Separator
+Visually separates sections to improve readability.
 
-## Show or hide the Marketplace homepage
+**Available styles**
+- Solid
+- Dotted
+- Dashed
+<!-- ## Sign In / Register
+Adds or configures authentication entry points.
+- Optional element.
+- Can be reordered.
+- Supports hiding the default Marketplace Sign In / Register button.
+Used when providing custom sign‑in or registration experiences. -->
+---
+## Review and save
+1. Review layout and content in the live preview.
+2. Verify ordering, messaging, language, and authentication behavior.
+3. Click **Save** to apply changes.
+---
+## Result
+- Homepage renders using the configured elements and order.
+- Only selected elements are displayed.
+- Visibility rules are applied for unauthenticated users.
+- Layout adapts to different screen sizes.
 
-From the *Homepage* page, click the toggle button to **Hide** or **Show** the Marketplace homepage. When enabled (Show is selected) the Hero Banner, Featured Content, and Call To Action sections are displayed for you to customize.
 
-## Customize the hero banner
-
-From the *Homepage* page, locate the Hero Banner section to customize the hero banner.
-
-### Change the hero banner content
-
-From the Homepage - *Hero Content* section, click **Configure** to change the hero banner format, actions, and content. The hero content settings are displayed:
-
-* **Format** - a search based (Message + Search) or action based (Message + Actions) hero banner.
-* **Title** - the title for your hero banner.
-* **Message** - your hero banner message.
-* **Position** - the position to place the hero banner content.
-
-Close the Hero Content pop out, and then click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
-
-### Change the hero banner background color
-
-From the Homepage - *Hero Content* section, select a solid or gradient option for the hero background color. Make sure your text remains legible and meets accessibility requirements.
-
-* **Solid** - one solid color is used for the hero banner background. When selected, configure one background color.
-* **Gradient** - two colors are used for the hero banner background. When selected, configure the start color, end color, and direction for the gradient.
-
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
-
-### Change the hero banner background image
-
-From the Homepage - *Hero Content* section, click **Configure** to apply an image to the hero banner background. Use transparent images and position options to compliment your content. The Background Image settings are displayed.
-
-* **Choose File** - the hero banner background image. Acceptable file formats are PNG, GIF, and JPG and the file size must be less than 5MB.
-* **Background Size** - resize the background image. Options are:
-    * **Auto** - shown original size.
-    * **Cover** - fills the area by scaling proportionately.
-    * **Contain** - fits within the area.
-    * **Stretch** - expands or shrinks both dimensions to fill the area.
-* **Background Position** - the starting position of the hero banner background image.
-
-In the Configure pop out, click **Remove** to remove the background image.
-
-## Show or hide the featured content
-
-From the *Homepage* page, locate the Featured Content section to show and customize the featured content. Select an option to showcase featured categories, featured products, or none (section not shown).
-
-### Customize the featured content
-
-From the Homepage - *Featured Content* section, you can select to show featured categories or featured products and then customize the following:
-
-* **Title** - the title for the featured categories or featured products section.
-* **Sort by** - how the featured content should be sorted on your Marketplace homepage:
-
-    * **Alphabetical** - products of categories sorted alphabetically.
-    * **Most popular** - sorted by most subscriptions.
-    * **Most recent** - sorted by created date with most recent first.
-
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
-
-## Show or hide the call to action
-
-From the *Homepage* page, locate the Call To Action section to show and customize the featured content. Click the toggle button to **Hide** or **Show** the section. When enabled (Show is selected) the Call to Action content section with an action message is displayed. Once enabled, configure the following for the Call To Action section.
-
-### Change the call to action content
-
-From the Homepage - *Call To Action* section, click **Configure** in the Call To Action Content section to change the content and action.
-
-The Content settings are displayed:
-
-* **Title** - the title for your call to action section.
-* **Message** - your call to action message.
-* **Position** - the position to place the call to action content.
-
-The Action Button settings are displayed where you can configure the action button URL and styling:
-
-* **URL** - select Sign in / Register (the default) or Custom. When Custom is selected, type a custom URL and label for the action button.
-* **Action Behavior** - select whether to open the same browser tab or open in a new tab when the action button is clicked.
-* **Button Background** - select a color for the action button background.
-* **Button Text** - select a color for the action button text.
-* **Button Format** - select a solid fill background or outline for the button appearance.
-* **Button Radius** - select an option for the action button radius (Square, Rounded, or Round).
-
-Close the Call To Action pop out, and then click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
-
-### Change the call to action background color
-
-From the Homepage - *Call To Action* section, select a color in the Background Color.
-
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
-
-### Change the call to action background image
-
-From the Homepage - *Call To Action* section, click **Configure** in the Background Image section to apply an image to the call to action background. Use transparent images and position options to compliment your content. The Call To Action Image settings are displayed.
-
-* **Choose File** - the call to action background image. Acceptable file formats are PNG, GIF, and JPG and the file size must be less than 5MB.
-* **Background Size** - resize the call to action background image. Options are:
-    * **Auto** - shown original size.
-    * **Cover** - fills the area by scaling proportionately.
-    * **Contain** - fits within the area.
-    * **Stretch** - expands or shrinks both dimensions to fill the area.
-* **Background Position** - the starting position of the call to action background image.
-
-In the Configure pop out, click **Remove** to remove the call to action background image.
