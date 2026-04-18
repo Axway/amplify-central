@@ -1,4 +1,4 @@
----  
+---
 title: Marketplace homepage
 linkTitle: Marketplace homepage
 weight: 40
@@ -154,7 +154,7 @@ A structured container for grouped information, links, or actions.
 
 Common uses include promotions and curated content.
 
-### Configurable properties
+Configurable Properties
 
 * Content and layout
 * Background styling
@@ -178,7 +178,7 @@ Provides primary navigation.
 
 Supports discovery and browsing. Highlights category groupings or discovery paths.
   
-### Configurable properties
+Configurable properties
 
 * Category selection
 * Sort order
@@ -191,7 +191,7 @@ Supports discovery and browsing. Highlights category groupings or discovery path
 
 Displays curated or dynamic product lists.
 
-### Configurable properties
+Configurable properties
 
 * Product selection method
 * Sort order
