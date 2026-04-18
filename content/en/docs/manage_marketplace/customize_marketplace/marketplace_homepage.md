@@ -5,7 +5,7 @@ weight: 40
 ---
  
 Configure the Marketplace homepage using a flexible, element-based layout model that allows Marketplace Administrators to control structure, ordering, visibility, and content in alignment with branding and user-experience requirements.
- 
+
 ---
 
 ## Before you start
@@ -82,7 +82,7 @@ Drag and drop the element using the reorder button to update the order of the el
 ### Default
 
 Revert the homepage items to the default layout at any time.
- 
+
 ---
 
 ## Homepage configuration actions
