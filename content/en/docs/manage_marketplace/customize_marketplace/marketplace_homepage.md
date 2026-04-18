@@ -1,4 +1,4 @@
----
+---  
 title: Marketplace homepage
 linkTitle: Marketplace homepage
 weight: 40
@@ -92,7 +92,7 @@ Revert the homepage items to the default layout at any time.
 * **Reset** – Restore the default homepage configuration.
 
 > Changes are **not applied** until you click **Save**. All edits, imports, or resets take effect only after saving.
- 
+
 The homepage preview has additional options for
 
 * Signed in view
@@ -119,7 +119,6 @@ Each element can be configured independently, and multiple instances of any elem
 
 ## Page Header (Content)
 
-
 A flexible, content based element to introduce and frame homepage content.
 
 * Optional element.
@@ -135,8 +134,8 @@ Supports:
 * Search
 
 Common uses include branding, announcements, onboarding, search first experiences, and calls to action.
- 
-**Configurable properties**
+
+### Configurable properties
 
 * Content objects and layout
 * Background color or gradient
@@ -154,8 +153,8 @@ A structured container for grouped information, links, or actions.
 * Multiple instances supported.
 
 Common uses include promotions and curated content.
- 
-**Configurable properties**
+
+### Configurable properties
 
 * Content and layout
 * Background styling
@@ -179,7 +178,7 @@ Provides primary navigation.
 
 Supports discovery and browsing. Highlights category groupings or discovery paths.
   
-**Configurable properties**
+### Configurable properties
 
 * Category selection
 * Sort order
@@ -191,8 +190,8 @@ Supports discovery and browsing. Highlights category groupings or discovery path
 ## Products
 
 Displays curated or dynamic product lists.
- 
-**Configurable properties**
+
+### Configurable properties
 
 * Product selection method
 * Sort order
@@ -205,13 +204,12 @@ Displays curated or dynamic product lists.
 ## Separator
 
 Visually separates sections to improve readability.
- 
-**Available styles**
+
+### Available styles
 
 * Solid
 * Dotted
 * Dashed
-
 
 [//]: #
   (Sign In / Register
