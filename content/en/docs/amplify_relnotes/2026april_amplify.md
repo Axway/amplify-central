@@ -24,7 +24,7 @@ New enhancements and bug fixes for the April 16 update.
 * **Mulesoft agent rate limiting**
 
   (DISCOVERY AGENT, ENHANCEMENT)</br>
-  The Mulesoft agent has been enhanced to limit the frequency of calls to Mulesoft APIs.
+  As part of recent enhancements to Business Unit (BU) discovery, a rate‑limiting strategy has been introduced to control the volume of MuleSoft API executions and prevent throttling issues under high load.
 
 * **Weaker cipher suites removed from all Traceability Agents**
 
@@ -58,7 +58,7 @@ If the agents are not explicitly referencing a cipher suite (i.e., using default
 * **Request credential: existing credentials detection**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  When a consumer requests credentials for a resource with an application that already has credentials, a helpful message will now be displayed informing the consumer that existing credentials are available for the application. This message indicates that it may not be necessary to request new credentials and suggests reusing an existing credential. Additionally, the consumer can click on a "View existing credentials" link in the side panel to view a list of existing credentials for the selected application.  
+  When a consumer requests credentials for a resource with an application that already has credentials, a helpful message will now be displayed informing the consumer that existing credentials are available for the application. This message indicates that it may not be necessary to request new credentials and suggests reusing an existing one. Additionally, the consumer can click on a "View existing credentials" link in the side panel to view a list of existing credentials for the selected application.  
 
 * **Standardize Provider screen "+Add" buttons**
   
@@ -75,7 +75,7 @@ If the agents are not explicitly referencing a cipher suite (i.e., using default
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-32308 | **Issue**: The table display for the group resources step of the asset wizard is not fully visible due to the screen width. <br/>**Resolution**: Horizontal scroll bars are now displayed if needed due to the screen width. |
-| 01816942 <br/>01822911 | APIGOV-32207 | **Issue**: The "Create Mock Endpoint" action from the service details page would not allow the user to save the mock endpoint. <br/>**Resolution**: A fix was made to the title of the side panel to display "Create Mock Endpoint" and to allow the save action if all the necessary data was inputted. |
+| 01816942 <br/>01822911 | APIGOV-32207 | **Issue**: The "Create Mock Endpoint" action from the service details page would not allow the user to save the mock endpoint. <br/>**Resolution**: A fix was made to the title of the side panel to display "Create Mock Endpoint" and to allow the save action if all the necessary data was entered. |
 |          | APIGOV-32353 | **Issue**: When viewing the Compliance Profiles side panel, API calls would be continuously made until the side panel was closed. <br/>**Resolution**: A fix was made to reduce the number of API calls generated. |
 | 01800612 | APIGOV-32179| **Issue**: In Engage, while viewing Tools for a Service, when the sections were expanded the table header overlapped with the title. <br/>**Resolution**: Fixed display issue to remove the overlap for Tools. |
 |          | APIGOV-32259| **Issue**: Publishing or unpublishing a product should be prevented on the UI if a non-admin user is not the owner. <br/>**Resolution**: The Publish and Unpublish buttons in the UI now prevent the negative path for non-admin users. |
