@@ -1,11 +1,11 @@
 ---
-title: Amplify Engage April 16 2026
-linkTitle: Amplify Engage April 16 2026
+title: Amplify Engage April 20 2026
+linkTitle: Amplify Engage April 20 2026
 weight: 20
 date: 2026-4-8
 ---
 
-**Feedback Window**: April 16 2026 → April 24 2026 <br />
+**Feedback Window**: April 20 2026 → April 27 2026 <br />
 **Planned Production Date**: April 30 <br />
 **Environment**: Pre-production
 
@@ -80,30 +80,30 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 ## Agent updates
 
-* **Apigee X Endpoint Discovery**
+* **Apigee X: Endpoints discovered from the API spec file**
 
   (APIGEE X AGENT, ENHANCEMENT)</br>
   The Apigee X discovery agent has been enhanced to discover the Endpoint URL from the server field in associated API specification file.  If no server field is found in the API Specification file, an endpoint constructed from the Proxy details will be used.
 
-* **Anypoint Agent: Discovery with business unit and enviroment filters**
+* **Mulesoft Agent: business unit and enviroment filters**
 
   (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
-  The Mulesoft Anypoint discovery Agent has been enhanced with the ability to define business units and environment filters to the discovery API services. Only the API services which pass the filters will be included for display on the Engage Environment details page.
+  The Mulesoft Anypoint Discovery Agent now supports business unit and environment filtering for discovery of API services. Only APIs that match the configured filters are discovered and displayed on the Engage Environment Details page, improving relevance and reducing unnecessary API processing.
 
-* **Azure Agent: Entra ID URI format update**
+* **Azure Agent support for new Entra ID URI format**
 
   (AZURE AGENT, ENHANCEMENT)</br>
-  The Azure agent has been enhanced to support the new Entra ID URI format.  The Microsoft Entra ID URI restriction policy format rules have been updated to state that it **must contain the app's client ID, a verified domain, or the tenant IDs**.  Refer to [Entra ID format](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#identifieruris-attribute).
+  The Azure agent has been enhanced to support the updated Microsoft Entra ID URI format. TURI validation now aligns with Entra ID restriction policy requirements, ensuring identifier URIs include the application’s client ID, a verified domain, or tenant ID(s). For details, see the Microsoft documentation on the [Entra ID format](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#identifieruris-attribute).
 
 * **Azure Agent: permissions update**
 
   (AZURE AGENT, ENHANCEMENT)</br>
   The Azure agent now supports **Application.ReadWrite.OwnedBy** and **ServicePrincipal.ReadWrite.OwnedBy** Microsoft Graph permissions, reducing the required scope to only manage resources the agent creates. Customers with existing **.All** permissions are unaffected and no configuration changes are required.
 
-* **IBM webMethods: rate limiting**
+* **IBM webMethods: rate limiting support**
 
   (WEBMETHODS AGENT, ENHANCEMENT)</br>
-  The IBM (formerly Software AG) webMethods agents, discovery and traceability, have been enhanced to support rate limitng of the API requests to the webMethods platform with a WEBMETHODS_RATELIMIT environment variable setting. 
+  The IBM (formerly Software AG) webMethods discovery and traceability agents have been enhanced to support rate limitng of API requests to the webMethods platform. Rate limiting can be configured using the **WEBMETHODS_RATELIMIT** environment variable to help manage request volume.
 
 * **New agent releases**
 
@@ -115,20 +115,20 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 |          | APIGOV-32406 | **Issue**: The Azure on-premise traceability agent was not reporting information to Consumer Insights and Business Insights -> Application screens. <br/>**Resolution**: A fix was made to display the information on both Consumer Insighnts and Business Insights. |
-|          | APIGOV-32441 | **Issue**: The APIM Discovery agent would not detect the first deleted API Proxy as "Out of Sync". <br/>**Resolution**: A fix was made to detect the "Out of Sync" status of the first detleted API. |
+|          | APIGOV-32441 | **Issue**: The APIM Discovery agent would not detect the first deleted API Proxy as "Out of Sync". <br/>**Resolution**: A fix was made to detect the "Out of Sync" status of the first deleted API. |
 
 ## Marketplace updates
 
-* **Marketplace Sign In Button Customization**
+* **Marketplace Sign-In button customization**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-     Marketplace owners can now fully manage and style the Sign In button as a standard navigation bar item. The Sign In control follows the same configuration model as other built‑in navigation items, including consistent visibility and labeling management. In addition, marketplaces can present distinct Sign In actions with different emphasis (for example, primary versus secondary), enabling clearer authentication entry points and more intentional user journeys.
+     Marketplace owners can now fully **manage and style the Sign In** button as a standard navigation bar item. The Sign In control follows the same configuration model as other built‑in navigation items, including consistent visibility and labeling management. In addition, marketplaces can present distinct Sign In actions with different emphasis (for example, primary versus secondary), enabling clearer authentication entry points and more intentional user journeys.
   
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|            | APIGOV-32414| **Issue**: Tooltip on Marketplace Product Warning Icon is not visible <br/>**Resolution**: Fixed display issue to show the warning icon.
-|           | APIGOV-32294| **Issue**: Consumer Org User with Consumer role on x-private team cannot subscribe to free plans <br/>**Resolution**: Consumer role for x-private team fixed to allow subscription to free plans.
-|           | APIGOV-32300| **Issue**: Featured Categories limit reached panel is not visible<br/>**Resolution**: Fixed the UI so that the limit reached panel is now visible.
-|          | APIGOV-32355 | **Issue**: Users were not able to run a compliance linting job for a specific API in the Service Registry. <br/>**Resolution**: A fix was made to allow users with permissions to run a compliance linting job from the Service Registry. |
+|          | APIGOV-32414| **Issue**: Tooltip on Marketplace Product Warning Icon is not visible <br/>**Resolution**: Fixed display issue to show the warning icon.|
+|          | APIGOV-32294| **Issue**: Consumer Org User with Consumer role on x-private team cannot subscribe to free plans <br/>**Resolution**: Consumer role for x-private team fixed to allow subscription to free plans.|
+|          | APIGOV-32300| **Issue**: Featured Categories limit reached panel is not visible<br/>**Resolution**: Fixed the UI so that the limit reached panel is now visible.|
+|          | APIGOV-32355 | **Issue**: Users were not able to run a compliance linting job for a specific API in the Service Registry. <br/>**Resolution**: A fix was made to allow users with permissions (Engage Admin) to run a compliance linting job from the Service Registry. |
