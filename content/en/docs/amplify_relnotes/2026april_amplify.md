@@ -10,6 +10,80 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## April 20, 2026
+
+New enhancements and bug fixes for the April 20 update.
+
+### Agent updates for April 20, 2026
+
+* **API filtering for SAP Integration Suite - API Management / API Portal**
+
+  (DISCOVERY AGENT, ENHANCEMENT)</br>
+  The SAP Discovery Agent has been enhanced to support the automatic filtering of discovered APIs by tags.
+
+* **Mulesoft agent rate limiting**
+
+  (DISCOVERY AGENT, ENHANCEMENT)</br>
+  As part of recent enhancements to Business Unit (BU) discovery, a rate‑limiting strategy has been introduced to control the volume of MuleSoft API executions and prevent throttling issues under high load.
+
+* **Weaker cipher suites removed from all Traceability Agents**
+
+  (TRACEABILITY AGENTS, ENHANCEMENT)</br>
+  To enhance the security of Traceability Agent communications with the platform, the following weak CBC-mode cipher suites are no longer supported. These cipher suites should not be used in an agent environment variable named <CENTRAL_SSL_CIPHERSUITES> or <*_SSL_CIPHERSUITES>:
+    * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+    * TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+    * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+
+{{< alert title="Note" color="primary" >}}If agents are explicitly referencing one of the unsupported CBC-mode cipher suites listed above, the agent environment variable must be updated to one or more of the supported cipher suites.
+
+See [Information Security](/docs/connect_manage_environ/connected_agent_common_reference/agent_security) for instructions.
+
+If the agents are not explicitly referencing a cipher suite (i.e., using default values), then no configuration changes are required.
+{{< /alert >}}
+
+* **New agent releases**
+
+  (NEW AGENT RELEASES)</br>
+  Refer to [Release Notes](/docs/amplify_relnotes) or go to [Axway Repository](https://repository.axway.com/catalog?q=agents) to see the latest versions for all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
+
+### Agent bug fixes for April 20, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-31809 | **Issue**: The minimum, average and maximum API response times had equal values. <br/>**Resolution**: A fix was made to the agent SDK to include the correct values in the metrics events. |
+| 01819611 | APIGOV-32273 | **Issue**: The Azure SaaS service was unable to discover APIs if their names contained parentheses, for example, api(name). <br/>**Resolution**: The Azure SaaS service can now successfully discover APIs that include parentheses in their names. |
+
+### Marketplace updates for April 20, 2026
+
+* **Request credential: existing credentials detection**
+  
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  When a consumer requests credentials for a resource with an application that already has credentials, a helpful message will now be displayed informing the consumer that existing credentials are available for the application. This message indicates that it may not be necessary to request new credentials and suggests reusing an existing one. Additionally, the consumer can click on a "View existing credentials" link in the side panel to view a list of existing credentials for the selected application.  
+
+* **Standardize Provider screen "+Add" buttons**
+  
+  (PROVIDER EXPERIENCE, ENHANCEMENT, SUPPORT CONTACTS)</br>
+  Upgraded Provider **+ Add** button and header UIs for Add/Edit Product > Support Contacts > Add Support Contact button, boosting consistency across pages.
+
+* **Marketplace landing page: Document ID in the URL**
+  
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  When the Marketplace is configured in Marketplace settings to use a document from the Document Library as the default landing page, the URL for the landing page displays the document's ID. To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the landing page instead of the "Document not found" page.  
+  
+### Marketplace bug fixes for April 20, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-32308 | **Issue**: The table display for the group resources step of the asset wizard is not fully visible due to the screen width. <br/>**Resolution**: Horizontal scroll bars are now displayed if needed due to the screen width. |
+| 01816942 <br/>01822911 | APIGOV-32207 | **Issue**: The "Create Mock Endpoint" action from the service details page would not allow the user to save the mock endpoint. <br/>**Resolution**: A fix was made to the title of the side panel to display "Create Mock Endpoint" and to allow the save action if all the necessary data was entered. |
+|          | APIGOV-32353 | **Issue**: When viewing the Compliance Profiles side panel, API calls would be continuously made until the side panel was closed. <br/>**Resolution**: A fix was made to reduce the number of API calls generated. |
+| 01800612 | APIGOV-32179| **Issue**: In Engage, while viewing Tools for a Service, when the sections were expanded the table header overlapped with the title. <br/>**Resolution**: Fixed display issue to remove the overlap for Tools. |
+|          | APIGOV-32259| **Issue**: Publishing or unpublishing a product should be prevented on the UI if a non-admin user is not the owner. <br/>**Resolution**: The Publish and Unpublish buttons in the UI now prevent the negative path for non-admin users. |
+|          | APIGOV-30385| **Issue**: 80% CPU spikes in prod US triggered alert - marketplace db query. <br/>**Resolution**: Corrected a missing index on publish_stages / marketplace field. |
+| 01803047 | APIGOV-31895| **Issue**: Unable to Remove Category from Featured Marketplace<br/>**Resolution**: Fixed the save state for Featured Categories to allow removing a category from being featured in the Marketplace. |
+|          | APIGOV-32354| **Issue**: RDS CPU spike caused by Marketplace queries. <br/>**Resolution**: Added an index on asset_resource_cred_defs / credential_def_id to reduce the cost to around 25. |
+|          | APIGOV-32468| **Issue**: Production APIs not listed in Request Credential screen. <br/>**Resolution**: Code fix put in place to prevent future occurrence of this edge case from happening again where certain Credential Request Definitions (CRDs) did not have a defined type |
+
 ## April 7, 2026
 
 New enhancement for the April 7 update.
