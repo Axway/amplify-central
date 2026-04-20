@@ -41,27 +41,6 @@ CENTRAL_DEPLOYMENT=preprod (# TA only)</br>
 TRACEABILITY_HOST=phoenix.eu-fr.axwaypreprod.net:443 (# TA only)</br>
 TRACEABILITY_PROTOCOL=https (# TA only)
 
-### Supported agent versions
-
-| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
-|--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.53 / TA=1.2.44  TBD  |
-| AWS Gateway using SDK 2.0                  | DA=1.2.42 / TA=1.2.42    |
-| Azure latest release                       | DA=1.3.42 / TA=1.3.42  TBD  |
-| Istio 1.9.5                                | DA=1.1.41 / TA=2.1.38    |
-| Apigee Edge                                | 1.0.36                   |
-| Apigee X                                   | 1.4.27                 TBD  |
-| Mulesoft Anypoint platform v3              | 1.2.42                 TBD  |
-| IBM webMethods                             | 1.0.33                 TBD  |
-| Kong Gateway                               | 1.1.39                   |
-| GitLab                                     | 1.1.39                   |
-| Kafka Cluster                              | 1.1.32                   |
-| IBM API Connect Gateway                    | 1.1.33                   |
-| Backstage                                  | 1.0.35                   |
-| SAP Integration Suite - API Management / API Portal | 1.0.21          |
-| WSO2 API Manager 4.5.0                     | 1.0.21                   |
-| Sensedia                                   | 1.0.11                   |
-
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
 | AWS Embedded Service                       |
