@@ -41,61 +41,6 @@ CENTRAL_DEPLOYMENT=preprod (# TA only)</br>
 TRACEABILITY_HOST=phoenix.eu-fr.axwaypreprod.net:443 (# TA only)</br>
 TRACEABILITY_PROTOCOL=https (# TA only)
 
-| Supported SaaS (embedded) agents           |
-|--------------------------------------------|
-| AWS Embedded Service                       |
-| Apigee X Embedded Service                  |
-| GitHub Embedded Service                    |
-| Azure Embedded Service                     |
-| SwaggerHub Embedded Service                |
-| Traceable Embedded API Security Service    |
-| Akamai Embedded API Security Service       |
-
-| Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 unless otherwise noted)  |
-|--------------------------------------------|--------------------------|
-| Graylog API Security                       | 1.1.32                   |
-| Traceable API Security                     | 2.0.18                   |
-| Akamai API Security                        | 1.1.6                    |
-
-## Agent updates
-
-* **Apigee X: Endpoints discovered from the API spec file**
-
-  (APIGEE X AGENT, ENHANCEMENT)</br>
-  The Apigee X discovery agent has been enhanced to discover the Endpoint URL from the server field in associated API specification file.  If no server field is found in the API Specification file, an endpoint constructed from the Proxy details will be used.
-
-* **Mulesoft Agent: business unit and enviroment filters**
-
-  (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
-  The Mulesoft Anypoint Discovery Agent now supports business unit and environment filtering for discovery of API services. Only APIs that match the configured filters are discovered and displayed on the Engage Environment Details page, improving relevance and reducing unnecessary API processing.
-
-* **Azure Agent support for new Entra ID URI format**
-
-  (AZURE AGENT, ENHANCEMENT)</br>
-  The Azure agent has been enhanced to support the updated Microsoft Entra ID URI format. TURI validation now aligns with Entra ID restriction policy requirements, ensuring identifier URIs include the application’s client ID, a verified domain, or tenant ID(s). For details, see the Microsoft documentation on the [Entra ID format](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#identifieruris-attribute).
-
-* **Azure Agent: permissions update**
-
-  (AZURE AGENT, ENHANCEMENT)</br>
-  The Azure agent now supports **Application.ReadWrite.OwnedBy** and **ServicePrincipal.ReadWrite.OwnedBy** Microsoft Graph permissions, reducing the required scope to only manage resources the agent creates. Customers with existing **.All** permissions are unaffected and no configuration changes are required.
-
-* **IBM webMethods: rate limiting support**
-
-  (WEBMETHODS AGENT, ENHANCEMENT)</br>
-  The IBM (formerly Software AG) webMethods discovery and traceability agents have been enhanced to support rate limitng of API requests to the webMethods platform. Rate limiting can be configured using the **WEBMETHODS_RATELIMIT** environment variable to help manage request volume.
-
-* **New agent releases**
-
-  (NEW AGENT RELEASES)</br>
-  See the table above for the latest versions of all available agents. To view the agents configured within your organization, see the instructions at [View available agents](/docs/connect_manage_environ/agents_management/#view-available-agents).
-
-## Agent bug fixes
-
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-|          | APIGOV-32406 | **Issue**: The Azure on-premise traceability agent was not reporting information to Consumer Insights and Business Insights -> Application screens. <br/>**Resolution**: A fix was made to display the information on both Consumer Insighnts and Business Insights. |
-|          | APIGOV-32441 | **Issue**: The APIM Discovery agent would not detect the first deleted API Proxy as "Out of Sync". <br/>**Resolution**: A fix was made to detect the "Out of Sync" status of the first deleted API. |
-
 ## Marketplace updates
 
 * **Marketplace Sign-In button customization**
