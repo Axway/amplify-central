@@ -46,12 +46,13 @@ All Marketplace homepage customizations are performed from **Marketplace Setting
 
 1. Sign in to Amplify Engage.
 2. Navigate to **Marketplace Settings > Pages and Menus**.
-3. Select **Homepage**.
-
-A default homepage layout is displayed. You can modify existing elements or add new ones.
+3. Select **Homepage**: A default homepage layout is displayed. You can modify existing elements or add new ones.
+4. Click **Save** to apply changes.
 
 > **Important**: Ensure the **Enabled** toggle is set to **Show**. Setting it to **Hide** disables the custom homepage and prevents it from being displayed.
 Changes are reflected dynamically in the preview, which can be toggled between:
+
+Once configured, the homepage renders using the selected elements in the defined order. Only the elements explicitly added by the administrator are displayed, and visibility rules are applied to control what unauthenticated users can see. The layout automatically adapts to different screen sizes, ensuring a responsive and consistent experience across devices.
 
 ---
 
@@ -115,93 +116,162 @@ Each element can be configured independently, and multiple instances of any elem
 * **Separator**
 
 [//]: # (**Sign In / Register**)
+
 ---
 
-## Page Header (Content)
+## Element: Page Header (Content)
 
-A flexible, content based element to introduce and frame homepage content.
-
-* Optional element.
-* Can be added, removed, and reordered.
-* Multiple instances supported.
-
-Supports:
-
-* Text
-* Button
-* Image
-* Document
-* Search
+The Page Header (Content) element is a pre‑defined, content‑based homepage element used to introduce, frame, and structure Marketplace homepage content. It serves as a container for multiple UI elements, enabling Marketplace Administrators to build rich, branded, and targeted homepage sections without requiring custom development.
+This element supports flexible composition and layout and can be reused multiple times on the homepage.
 
 Common uses include branding, announcements, onboarding, search first experiences, and calls to action.
 
+* Optional element - not required on the homepage
+* Fully configurable - styling, layout, and visibility can be tailored per instance
+* Can be placed anywhere on the homepage.
+* Multiple instances supported - use several Content elements on the homepage
+
+A Page Header (Content) element can include any combination of the following elements:
+
+* **Text**
+* **Button**
+* **Image**
+* **Document**
+* **Search**
+
+Each element inside the Content container has its own configuration options. 
+
 ### Configurable properties
 
-* Content objects and layout
+The following properties apply to the Content element itself and control the overall look, layout, and visibility of the container.
+
+* Background image (PNG, GIF, JPG, max 5 MB): Image source, Image Size, Image position in the container.
+* Background boder and layout
 * Background color or gradient
-* Background image (PNG, GIF, JPG, max 5 MB)
-* Typography and alignment
-* Visibility settings
+* Visibility settings - controls who can see the content. This allows targeted content such as onboarding prompts for anonymous users or announcements for authenticated consumers.
 
 ---
 
-## Card
+## Element: Card (Content)
 
-A structured container for grouped information, links, or actions.
+The **Card** element is a pre‑defined, content‑based homepage element that serves as a compact container for multiple UI elements, similar to the **Page Header (Content)** element. It allows Marketplace Administrators to group text, buttons, images, documents, or search into a focused, self‑contained section. The Card element is best suited for localized calls to action and supporting content that complements larger homepage sections.
 
-* Optional element.
-* Multiple instances supported.
+While both elements act as containers, they are designed for different presentation and intent:
 
-Common uses include promotions and curated content.
+* The **Page Header** element is optimized for hero‑style sections, typically spanning the full width of the page and used to introduce or frame major areas of the homepage.
+* The **Card** element is optimized for targeted, action‑oriented content within the homepage canvas and is typically used to highlight a specific action, message, or entry point.
 
-Configurable Properties
+### Key characteristics
 
-* Content and layout
-* Background styling
-* Typography
-* Visibility settings
+* Pre-defined, reusable element
+* Optional element - not required on the homepage
+* Acts as a container for multiple child UI elements
+* Designed for focused, CTA‑driven content
+* Typically placed within the homepage layout grid rather than spanning full width
+* Fully configurable - styling, layout, and visibility can be tailored per instance
+* Can be placed anywhere on the homepage.
+* Multiple card elements can be used
+
+Can include any combination of the following elements:
+
+* **Text**
+* **Button**
+* **Image**
+* **Document**
+* **Search**
+
+Each element inside the Content container has its own configuration options.
+
+### Configurable properties
+
+* Background image (PNG, GIF, JPG, max 5 MB): Image source, Image Size, Image position in the container.
+* Background boder and layout
+* Background color or gradient
+* Visibility settings - controls who can see the content. This allows targeted content such as onboarding prompts for anonymous users or announcements for authenticated consumers.
 
 ---
 
-## Navigation menu (required)
+## Element: Navigation Menu (required)
 
 Provides primary navigation.
 
 * Required element.
 * Can be reordered.
 * Multiple navigation menus supported.
-* Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
+* Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**. 
+
+For full configuration details, see [Marketplace menus](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_menus/index.html).
 
 ---
 
-## Categories
+## Element: Categories
 
-Supports discovery and browsing. Highlights category groupings or discovery paths.
+The **Categories** element is a pre‑defined homepage element designed to support discovery and browsing by highlighting category groupings and curated discovery paths within the Marketplace. It allows Marketplace Administrators to surface Featured Categories prominently on the homepage, helping consumers quickly navigate products and resources that are relevant to their needs.
+This element can be used to:
+
+* Promote featured or prioritized categories
+* Guide users toward specific use cases, domains, or solution areas
+* Improve product discoverability by organizing content into clear, meaningful groupings
+* Reduce friction for new or exploratory users by providing curated entry points
   
-Configurable properties
+### Configurable properties
 
-* Category selection
-* Sort order
-* Layout and styling
-* Visibility settings
+The Categories element provides the following configuration options:
 
----
-
-## Products
-
-Displays curated or dynamic product lists.
-
-Configurable properties
-
-* Product selection method
-* Sort order
-* Item limits
-* Layout and styling
-* Visibility settings
+* Title
+    * Descriptive label displayed above the categories
+    * Default value: Featured Categories
+    * Can be customized to reflect the intended discovery theme (for example, Explore by Use Case or Popular Categories)
+* Sort Order
+    * Alphabetical
+    * Most recent
+* Layout
+    * Control how categories are visually presented within the homepage layout
+    * Supports consistent alignment with other supported elements
+* Visibility Settings
+    * Control who can see the Categories element
+    * Options include always visible, signed‑in users only, or signed‑out users only
 
 ---
 
-## Separator
+## Element: Products
+
+The **Products** element is a pre‑defined homepage element used to display curated or dynamic lists of Marketplace products. It enables Marketplace Administrators to prominently surface selected products on the homepage, supporting discovery, promotion, and adoption of offerings that align with business priorities or specific consumer use cases.
+This element allows administrators to control which products are displayed, how they are ordered, and how many are shown, while ensuring a consistent visual presentation aligned with the overall Marketplace design.
+
+### Purpose and Use Cases
+
+The Products element is best suited for highlighting specific products and driving engagement directly from the homepage.
+
+Common use cases include:
+
+* Promoting featured or strategic products
+* Highlighting products related to a specific use case or domain
+* Surfacing newly published or recently updated products
+* Guiding consumers toward recommended starting points
+* Supporting campaigns, launches, or adoption initiatives
+
+The Products element can be used in combination with Page Header (Content), Card, and Categories elements to create clear discovery paths across the homepage.
+
+### Configurable properties
+
+* Display Products
+    * Define how products are selected for display (for example, curated selections or dynamically driven sets)
+    * Options include *Products with specific tag*, *Top rated products*, *Published Products*
+* Sort by
+    * Control the order in which products are displayed
+    * Options include *alphabetical* and *most recent*
+* Count
+    * Specify the maximum number of products displayed in the element. Max 12 products.
+    * Helps maintain visual balance and avoid overwhelming users
+* Layout
+* Visibility Settings
+    * Define who can see the Products element
+    * Options may include: *Always visible*, *Signed‑in users*, *Signed‑out users*
+
+---
+
+## Element: Separator
 
 Visually separates sections to improve readability.
 
@@ -221,17 +291,73 @@ Visually separates sections to improve readability.
 
 ---
 
-## Review and save
+## Element: Text
 
-1. Review layout and content in the live preview.
-2. Verify ordering, messaging, language, and authentication behavior.
-3. Click **Save** to apply changes.
+Can be used for headings, descriptions, announcements, or instructional content, section headers.
 
----
+Configuration options:
 
-## Result
+* Markdown‑formatted content
+* Text color
+* Border
+* Layout
 
-* Homepage renders using the configured elements and order.
-* Only selected elements are displayed.
-* Visibility rules are applied for unauthenticated users.
-* Layout adapts to different screen sizes.
+## Element: Button
+
+Can be used for call to action and navigation. 
+
+Configuration options:
+
+* URL: External link or document selected from the Document Library
+* Button text
+* Action behavior: Open in same tab / Open in new tab
+* Appearance: Can be selected from a set of predefined styles (Heading, Primary, Secondary, Tertiary) or define your own custom style.
+* Border
+* Layout
+
+## Element: Image
+
+Typically used for branding, visual emphasis, or banners.
+
+Configuration options:
+
+* Image source
+* Alt text (for accessibility)
+* Border
+* Layout
+
+## Element: Document
+
+Embeds content from the Document Library directly into the homepage.
+
+Configuration options:
+
+* Selected document from Document Library
+* Border
+* Layout
+* Alignment
+
+Typical uses:
+
+* Embedded welcome documents
+* Release notes or announcements
+* Getting‑started guides
+
+## Element: Search
+
+Adds a search bar inside the Content container to facilitate discovery.
+
+Configuration options:
+
+* Search scope
+    * Products
+    * Documents
+    * Resources
+    * All
+* Placeholder text: Text displayed inside the search bar
+* Layout
+
+Typical uses:
+
+* Search‑first homepage experiences
+* Prominent product or documentation search
