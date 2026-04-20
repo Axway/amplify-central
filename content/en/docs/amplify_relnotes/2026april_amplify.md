@@ -12,7 +12,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ## April 20, 2026
 
-New enhancements and bug fixes for the April 16 update.
+New enhancements and bug fixes for the April 20 update.
 
 ### Agent updates for April 20, 2026
 
