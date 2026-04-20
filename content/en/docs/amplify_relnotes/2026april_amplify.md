@@ -82,6 +82,7 @@ If the agents are not explicitly referencing a cipher suite (i.e., using default
 |          | APIGOV-30385| **Issue**: 80% CPU spikes in prod US triggered alert - marketplace db query. <br/>**Resolution**: Corrected a missing index on publish_stages / marketplace field. |
 | 01803047 | APIGOV-31895| **Issue**: Unable to Remove Category from Featured Marketplace<br/>**Resolution**: Fixed the save state for Featured Categories to allow removing a category from being featured in the Marketplace. |
 |          | APIGOV-32354| **Issue**: RDS CPU spike caused by Marketplace queries. <br/>**Resolution**: Added an index on asset_resource_cred_defs / credential_def_id to reduce the cost to around 25. |
+|          | APIGOV-32468| **Issue**: Production APIs not listed in Request Credential screen. <br/>**Resolution**: Code fix put in place to prevent future occurrence of this edge case from happening again where certain Credential Request Definitions (CRDs) did not have a defined type |
 
 ## April 7, 2026
 
