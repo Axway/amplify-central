@@ -3,126 +3,361 @@ title: Marketplace homepage
 linkTitle: Marketplace homepage
 weight: 40
 ---
+ 
+Configure the Marketplace homepage using a flexible, element-based layout model that allows Marketplace Administrators to control structure, ordering, visibility, and content in alignment with branding and user-experience requirements.
 
-Configure the Marketplace homepage, a landing page that can be customized to provide a search, featured content, and calls to action for consumers who enter from high-level links.
+---
 
 ## Before you start
 
-You must have Platform Administrator credentials and your organization must have the Public Marketplace entitlement to enable and configure *Marketplace Homepage* content.
+* You must have Marketplace Administrator (or Platform Administrator) credentials.
+* Your organization must have the Public Marketplace entitlement enabled.
+  
+---
 
 ## Objectives
 
-Learn how to customize the Marketplace homepage.
+* Understand the element based homepage model.
+* Customize homepage layout, order, and visibility.
+* Configure homepage elements and their content.
 
-## Customize the Marketplace homepage
+---
 
-The Marketplace homepage changes are made from the Marketplace *Homepage* page:
+## Element based homepage model
 
-1. Navigate to *Organization > Marketplace*.
-2. Select **Homepage**. *The Homepage page is displayed*:
+The Marketplace homepage is composed of elements. Each element represents a section of the homepage and includes its own configuration and styling properties.
 
-    ![Marketplace homepage with configuration and preview sections.](/Images/marketplace/marketplace_homepage.png "Configure Marketplace homepage")
+### Element Key characteristics
 
-## Show or hide the Marketplace homepage
+* Elements can be added, removed, and reordered.
+* Elements support configurable widths: **full**, **half**, or **quarter**.
+* Elements automatically wrap to the next row when the total width exceeds available space.
+* Multiple elements of the same type can be added.
+* Each element includes visibility settings for unauthenticated users.
+* All elements are responsive across desktop, tablet, and mobile devices.
 
-From the *Homepage* page, click the toggle button to **Hide** or **Show** the Marketplace homepage. When enabled (Show is selected) the Hero Banner, Featured Content, and Call To Action sections are displayed for you to customize.
+> The **Navigation menu** element is required and is always present, including in an empty homepage state. Its menu items are configured from **Marketplace Settings > Pages and Menus > Homepage**.
 
-## Customize the hero banner
+---
 
-From the *Homepage* page, locate the Hero Banner section to customize the hero banner.
+## Open homepage settings
 
-### Change the hero banner content
+All Marketplace homepage customizations are performed from **Marketplace Settings > Pages and Menus > Homepage**.
 
-From the Homepage - *Hero Content* section, click **Configure** to change the hero banner format, actions, and content. The hero content settings are displayed:
+1. Sign in to Amplify Engage.
+2. Navigate to **Marketplace Settings > Pages and Menus**.
+3. Select **Homepage**: A default homepage layout is displayed. You can modify existing elements or add new ones.
+4. Click **Save** to apply changes.
 
-* **Format** - a search based (Message + Search) or action based (Message + Actions) hero banner.
-* **Title** - the title for your hero banner.
-* **Message** - your hero banner message.
-* **Position** - the position to place the hero banner content.
+> **Important**: Ensure the **Enabled** toggle is set to **Show**. Setting it to **Hide** disables the custom homepage and prevents it from being displayed.
+Changes are reflected dynamically in the preview, which can be toggled between:
 
-Close the Hero Content pop out, and then click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+Once configured, the homepage renders using the selected elements in the defined order. Only the elements explicitly added by the administrator are displayed, and visibility rules are applied to control what unauthenticated users can see. The layout automatically adapts to different screen sizes, ensuring a responsive and consistent experience across devices.
 
-### Change the hero banner background color
+---
 
-From the Homepage - *Hero Content* section, select a solid or gradient option for the hero background color. Make sure your text remains legible and meets accessibility requirements.
+## Manage homepage layout
 
-* **Solid** - one solid color is used for the hero banner background. When selected, configure one background color.
-* **Gradient** - two colors are used for the hero banner background. When selected, configure the start color, end color, and direction for the gradient.
+Elements can be added, deleted, and reordered at any time.
+> Actions are executed by clicking the respective buttons. Changes appear immediately in the preview.
 
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+### Add an element
 
-### Change the hero banner background image
+1. Click the **+** button to add a new element.
+2. The **Add to page** screen opens.
+3. Select an element type.
+4. The element is added to the layout.
 
-From the Homepage - *Hero Content* section, click **Configure** to apply an image to the hero banner background. Use transparent images and position options to compliment your content. The Background Image settings are displayed.
+### Edit an element
 
-* **Choose File** - the hero banner background image. Acceptable file formats are PNG, GIF, and JPG and the file size must be less than 5MB.
-* **Background Size** - resize the background image. Options are:
-    * **Auto** - shown original size.
-    * **Cover** - fills the area by scaling proportionately.
-    * **Contain** - fits within the area.
-    * **Stretch** - expands or shrinks both dimensions to fill the area.
-* **Background Position** - the starting position of the hero banner background image.
+Clicking the edit button opens the element configuration screen specific to the element type
 
-In the Configure pop out, click **Remove** to remove the background image.
+### Delete an element
 
-## Show or hide the featured content
+Clicking the delete button will delete the selected element and reorder the remaining elements accordingly.
 
-From the *Homepage* page, locate the Featured Content section to show and customize the featured content. Select an option to showcase featured categories, featured products, or none (section not shown).
+### Reorder an element
 
-### Customize the featured content
+Drag and drop the element using the reorder button to update the order of the elements
 
-From the Homepage - *Featured Content* section, you can select to show featured categories or featured products and then customize the following:
+### Default
 
-* **Title** - the title for the featured categories or featured products section.
-* **Sort by** - how the featured content should be sorted on your Marketplace homepage:
+Revert the homepage items to the default layout at any time.
 
-    * **Alphabetical** - products of categories sorted alphabetically.
-    * **Most popular** - sorted by most subscriptions.
-    * **Most recent** - sorted by created date with most recent first.
+---
 
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+## Homepage configuration actions
 
-## Show or hide the call to action
+* **Export** – Download the current homepage configuration.
+* **Import** – Import a previously exported configuration.
+* **Reset** – Restore the default homepage configuration.
 
-From the *Homepage* page, locate the Call To Action section to show and customize the featured content. Click the toggle button to **Hide** or **Show** the section. When enabled (Show is selected) the Call to Action content section with an action message is displayed. Once enabled, configure the following for the Call To Action section.
+> Changes are **not applied** until you click **Save**. All edits, imports, or resets take effect only after saving.
 
-### Change the call to action content
+The homepage preview has additional options for
 
-From the Homepage - *Call To Action* section, click **Configure** in the Call To Action Content section to change the content and action.
+* Signed in view
+* Signed out view
+* Localized language views
 
-The Content settings are displayed:
+---
 
-* **Title** - the title for your call to action section.
-* **Message** - your call to action message.
-* **Position** - the position to place the call to action content.
+## Supported homepage elements
 
-The Action Button settings are displayed where you can configure the action button URL and styling:
+Each element can be configured independently, and multiple instances of any element type can be added.
 
-* **URL** - select Sign in / Register (the default) or Custom. When Custom is selected, type a custom URL and label for the action button.
-* **Action Behavior** - select whether to open the same browser tab or open in a new tab when the action button is clicked.
-* **Button Background** - select a color for the action button background.
-* **Button Text** - select a color for the action button text.
-* **Button Format** - select a solid fill background or outline for the button appearance.
-* **Button Radius** - select an option for the action button radius (Square, Rounded, or Round).
+### Available element types
 
-Close the Call To Action pop out, and then click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+* **Page Header (Content)**
+* **Card**
+* **Navigation menu**
+* **Categories**
+* **Products**
+* **Separator**
 
-### Change the call to action background color
+[//]: # (**Sign In / Register**)
 
-From the Homepage - *Call To Action* section, select a color in the Background Color.
+---
 
-Click **Save** at the top of the page to save your changes or **Reset** to revert the changes to the previous values.
+## Element: Page Header (Content)
 
-### Change the call to action background image
+The Page Header (Content) element is a pre‑defined, content‑based homepage element used to introduce, frame, and structure Marketplace homepage content. It serves as a container for multiple UI elements, enabling Marketplace Administrators to build rich, branded, and targeted homepage sections without requiring custom development.
+This element supports flexible composition and layout and can be reused multiple times on the homepage.
 
-From the Homepage - *Call To Action* section, click **Configure** in the Background Image section to apply an image to the call to action background. Use transparent images and position options to compliment your content. The Call To Action Image settings are displayed.
+Common uses include branding, announcements, onboarding, search first experiences, and calls to action.
 
-* **Choose File** - the call to action background image. Acceptable file formats are PNG, GIF, and JPG and the file size must be less than 5MB.
-* **Background Size** - resize the call to action background image. Options are:
-    * **Auto** - shown original size.
-    * **Cover** - fills the area by scaling proportionately.
-    * **Contain** - fits within the area.
-    * **Stretch** - expands or shrinks both dimensions to fill the area.
-* **Background Position** - the starting position of the call to action background image.
+* Optional element - not required on the homepage
+* Fully configurable - styling, layout, and visibility can be tailored per instance
+* Can be placed anywhere on the homepage.
+* Multiple instances supported - use several Content elements on the homepage
 
-In the Configure pop out, click **Remove** to remove the call to action background image.
+A Page Header (Content) element can include any combination of the following elements:
+
+* **Text**
+* **Button**
+* **Image**
+* **Document**
+* **Search**
+
+Each element inside the Content container has its own configuration options.
+
+Configurable properties
+
+The following properties apply to the Content element itself and control the overall look, layout, and visibility of the container.
+
+* Background image (PNG, GIF, JPG, max 5 MB): Image source, Image Size, Image position in the container.
+* Background boder and layout
+* Background color or gradient
+* Visibility settings - controls who can see the content. This allows targeted content such as onboarding prompts for anonymous users or announcements for authenticated consumers.
+
+---
+
+## Element: Card (Content)
+
+The **Card** element is a pre‑defined, content‑based homepage element that serves as a compact container for multiple UI elements, similar to the **Page Header (Content)** element. It allows Marketplace Administrators to group text, buttons, images, documents, or search into a focused, self‑contained section. The Card element is best suited for localized calls to action and supporting content that complements larger homepage sections.
+
+While both elements act as containers, they are designed for different presentation and intent:
+
+* The **Page Header** element is optimized for hero‑style sections, typically spanning the full width of the page and used to introduce or frame major areas of the homepage.
+* The **Card** element is optimized for targeted, action‑oriented content within the homepage canvas and is typically used to highlight a specific action, message, or entry point.
+
+### Card Key characteristics
+
+* Pre-defined, reusable element
+* Optional element - not required on the homepage
+* Acts as a container for multiple child UI elements
+* Designed for focused, CTA‑driven content
+* Typically placed within the homepage layout grid rather than spanning full width
+* Fully configurable - styling, layout, and visibility can be tailored per instance
+* Can be placed anywhere on the homepage.
+* Multiple card elements can be used
+
+Can include any combination of the following elements:
+
+* **Text**
+* **Button**
+* **Image**
+* **Document**
+* **Search**
+
+Each element inside the Content container has its own configuration options.
+
+Configurable properties
+
+* Background image (PNG, GIF, JPG, max 5 MB): Image source, Image Size, Image position in the container.
+* Background boder and layout
+* Background color or gradient
+* Visibility settings - controls who can see the content. This allows targeted content such as onboarding prompts for anonymous users or announcements for authenticated consumers.
+
+---
+
+## Element: Navigation Menu (required)
+
+Provides primary navigation.
+
+* Required element.
+* Can be reordered.
+* Multiple navigation menus supported.
+* Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
+
+For full configuration details, see [Marketplace menus](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_menus/index.html).
+
+---
+
+## Element: Categories
+
+The **Categories** element is a pre‑defined homepage element designed to support discovery and browsing by highlighting category groupings and curated discovery paths within the Marketplace. It allows Marketplace Administrators to surface Featured Categories prominently on the homepage, helping consumers quickly navigate products and resources that are relevant to their needs.
+This element can be used to:
+
+* Promote featured or prioritized categories
+* Guide users toward specific use cases, domains, or solution areas
+* Improve product discoverability by organizing content into clear, meaningful groupings
+* Reduce friction for new or exploratory users by providing curated entry points
+  
+Configurable properties
+
+The Categories element provides the following configuration options:
+
+* Title
+    * Descriptive label displayed above the categories
+    * Default value: Featured Categories
+    * Can be customized to reflect the intended discovery theme (for example, Explore by Use Case or Popular Categories)
+* Sort Order
+    * Alphabetical
+    * Most recent
+* Layout
+    * Control how categories are visually presented within the homepage layout
+    * Supports consistent alignment with other supported elements
+* Visibility Settings
+    * Control who can see the Categories element
+    * Options include always visible, signed‑in users only, or signed‑out users only
+
+---
+
+## Element: Products
+
+The **Products** element is a pre‑defined homepage element used to display curated or dynamic lists of Marketplace products. It enables Marketplace Administrators to prominently surface selected products on the homepage, supporting discovery, promotion, and adoption of offerings that align with business priorities or specific consumer use cases.
+This element allows administrators to control which products are displayed, how they are ordered, and how many are shown, while ensuring a consistent visual presentation aligned with the overall Marketplace design.
+
+### Purpose and Use Cases
+
+The Products element is best suited for highlighting specific products and driving engagement directly from the homepage.
+
+Common use cases include:
+
+* Promoting featured or strategic products
+* Highlighting products related to a specific use case or domain
+* Surfacing newly published or recently updated products
+* Guiding consumers toward recommended starting points
+* Supporting campaigns, launches, or adoption initiatives
+
+The Products element can be used in combination with Page Header (Content), Card, and Categories elements to create clear discovery paths across the homepage.
+
+Configurable properties
+
+* Display Products
+    * Define how products are selected for display (for example, curated selections or dynamically driven sets)
+    * Options include *Products with specific tag*, *Top rated products*, *Published Products*
+* Sort by
+    * Control the order in which products are displayed
+    * Options include *alphabetical* and *most recent*
+* Count
+    * Specify the maximum number of products displayed in the element. Max 12 products.
+    * Helps maintain visual balance and avoid overwhelming users
+* Layout
+* Visibility Settings
+    * Define who can see the Products element
+    * Options may include: *Always visible*, *Signed‑in users*, *Signed‑out users*
+
+---
+
+## Element: Separator
+
+Visually separates sections to improve readability.
+
+### Available styles
+
+* Solid
+* Dotted
+* Dashed
+
+[//]: #
+  (Sign In / Register
+  Adds or configures authentication entry points.
+  Optional element.
+  Can be reordered.
+  Supports hiding the default Marketplace Sign In / Register button.
+  Used when providing custom sign in or registration experiences.)
+
+---
+
+## Element: Text
+
+Can be used for headings, descriptions, announcements, or instructional content, section headers.
+
+Configurable properties:
+
+* Markdown‑formatted content
+* Text color
+* Border
+* Layout
+
+## Element: Button
+
+Can be used for call to action and navigation.
+
+Configurable properties:
+
+* URL: External link or document selected from the Document Library
+* Button text
+* Action behavior: Open in same tab / Open in new tab
+* Appearance: Can be selected from a set of predefined styles (Heading, Primary, Secondary, Tertiary) or define your own custom style.
+* Border
+* Layout
+
+## Element: Image
+
+Typically used for branding, visual emphasis, or banners.
+
+Configurable properties:
+
+* Image source
+* Alt text (for accessibility)
+* Border
+* Layout
+
+## Element: Document
+
+Embeds content from the Document Library directly into the homepage.
+
+Configurable properties:
+
+* Selected document from Document Library
+* Border
+* Layout
+* Alignment
+
+Typical uses:
+
+* Embedded welcome documents
+* Release notes or announcements
+* Getting‑started guides
+
+## Element: Search
+
+Adds a search bar inside the Content container to facilitate discovery.
+
+Configurable properties:
+
+* Search scope
+    * Products
+    * Documents
+    * Resources
+    * All
+* Placeholder text: Text displayed inside the search bar
+* Layout
+
+Typical uses:
+
+* Search‑first homepage experiences
+* Prominent product or documentation search
