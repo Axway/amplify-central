@@ -45,14 +45,14 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.53 / TA=1.2.44  TBD  |
+| Axway API Management 7.7                   | DA=1.2.54 / TA=1.2.45    |
 | AWS Gateway using SDK 2.0                  | DA=1.2.42 / TA=1.2.42    |
-| Azure latest release                       | DA=1.3.42 / TA=1.3.42  TBD  |
+| Azure latest release                       | DA=1.3.43 / TA=1.3.43    |
 | Istio 1.9.5                                | DA=1.1.41 / TA=2.1.38    |
 | Apigee Edge                                | 1.0.36                   |
-| Apigee X                                   | 1.4.27                 TBD  |
-| Mulesoft Anypoint platform v3              | 1.2.42                 TBD  |
-| IBM webMethods                             | 1.0.33                 TBD  |
+| Apigee X                                   | 1.4.29                   |
+| Mulesoft Anypoint platform v3              | 1.2.43                   |
+| IBM webMethods                             | 1.0.34                   |
 | Kong Gateway                               | 1.1.39                   |
 | GitLab                                     | 1.1.39                   |
 | Kafka Cluster                              | 1.1.32                   |
