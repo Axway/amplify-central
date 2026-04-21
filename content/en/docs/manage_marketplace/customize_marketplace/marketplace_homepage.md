@@ -27,7 +27,7 @@ Configure the Marketplace homepage using a flexible, element-based layout model 
 
 The Marketplace homepage is composed of elements. Each element represents a section of the homepage and includes its own configuration and styling properties.
 
-### Key characteristics
+### Element Key characteristics
 
 * Elements can be added, removed, and reordered.
 * Elements support configurable widths: **full**, **half**, or **quarter**.
@@ -139,7 +139,7 @@ A Page Header (Content) element can include any combination of the following ele
 * **Document**
 * **Search**
 
-Each element inside the Content container has its own configuration options. 
+Each element inside the Content container has its own configuration options.
 
 Configurable properties
 
@@ -161,7 +161,7 @@ While both elements act as containers, they are designed for different presentat
 * The **Page Header** element is optimized for hero‑style sections, typically spanning the full width of the page and used to introduce or frame major areas of the homepage.
 * The **Card** element is optimized for targeted, action‑oriented content within the homepage canvas and is typically used to highlight a specific action, message, or entry point.
 
-### Key characteristics
+### Card Key characteristics
 
 * Pre-defined, reusable element
 * Optional element - not required on the homepage
@@ -198,7 +198,7 @@ Provides primary navigation.
 * Required element.
 * Can be reordered.
 * Multiple navigation menus supported.
-* Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**. 
+* Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
 
 For full configuration details, see [Marketplace menus](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_menus/index.html).
 
@@ -304,7 +304,7 @@ Configurable properties:
 
 ## Element: Button
 
-Can be used for call to action and navigation. 
+Can be used for call to action and navigation.
 
 Configurable properties:
 
