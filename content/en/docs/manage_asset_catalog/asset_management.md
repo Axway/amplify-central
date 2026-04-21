@@ -155,7 +155,7 @@ Define who owns the asset and who can access it.
 
 * Select the Owning Team
 * Optionally share the asset with other teams
-* For each shared team, select *Read* or *Edit* access rights: 
+* For each shared team, select *Read* or *Edit* access rights:
 
 {{< alert title="Important" color="primary" >}} By default, assets are private to the owning team and Engage Admins. {{< /alert >}}
 
@@ -173,7 +173,7 @@ Click **Next** when finished.
 
 Click **Preview Asset** to review everything before creation.
 
-Choose how to save: 
+Choose how to save:
 
 * **Save**
   Creates the asset in Draft state
@@ -201,6 +201,7 @@ You must activate an asset when:
 Activation always results in a released asset version (Major, Minor, or Patch).
 
 ### Asset states eligible for activation
+
 An asset can be activated when it is in one of the following states:
 
 * Draft
@@ -327,7 +328,7 @@ The asset must be in **Active** state. Each version of the asset must be depreca
 5. Repeat for each active version.
 6. When no active versions remain, the asset automatically moves to **Deprecated** state.
 
-----
+---
 
 ## Archive an asset
 
