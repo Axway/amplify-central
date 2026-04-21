@@ -4,7 +4,8 @@ linkTitle: Asset management
 weight: 20
 ---
 
-Use the Asset Catalog WebUI to manage the full lifecycle of your assets—from creation and configuration to activation, updates, deprecation, and archival.
+Assets are resources that are aggregated into logical, consumable capabilities. The assets then get built into a product to address a business capability for a particular domain, geography, line of business, or an external partner.  
+Use this guide to understand and manage the full lifecycle of your assets—from creation and configuration to activation, updates, deprecation, and archival.
 
 ## Before you start
 
@@ -142,7 +143,7 @@ If auto‑release is enabled, select the default version increment:
 * Minor
 * Major
 
-#### Application reigstration requests handling
+#### Application registration requests handling
 
 Choose how application registration requests to the APIs in this asset are handled:
 
