@@ -141,7 +141,7 @@ A Page Header (Content) element can include any combination of the following ele
 
 Each element inside the Content container has its own configuration options. 
 
-### Configurable properties
+Configurable properties
 
 The following properties apply to the Content element itself and control the overall look, layout, and visibility of the container.
 
@@ -182,7 +182,7 @@ Can include any combination of the following elements:
 
 Each element inside the Content container has its own configuration options.
 
-### Configurable properties
+Configurable properties
 
 * Background image (PNG, GIF, JPG, max 5 MB): Image source, Image Size, Image position in the container.
 * Background boder and layout
@@ -214,7 +214,7 @@ This element can be used to:
 * Improve product discoverability by organizing content into clear, meaningful groupings
 * Reduce friction for new or exploratory users by providing curated entry points
   
-### Configurable properties
+Configurable properties
 
 The Categories element provides the following configuration options:
 
@@ -253,7 +253,7 @@ Common use cases include:
 
 The Products element can be used in combination with Page Header (Content), Card, and Categories elements to create clear discovery paths across the homepage.
 
-### Configurable properties
+Configurable properties
 
 * Display Products
     * Define how products are selected for display (for example, curated selections or dynamically driven sets)
@@ -295,7 +295,7 @@ Visually separates sections to improve readability.
 
 Can be used for headings, descriptions, announcements, or instructional content, section headers.
 
-Configuration options:
+Configurable properties:
 
 * Markdown‑formatted content
 * Text color
@@ -306,7 +306,7 @@ Configuration options:
 
 Can be used for call to action and navigation. 
 
-Configuration options:
+Configurable properties:
 
 * URL: External link or document selected from the Document Library
 * Button text
@@ -319,7 +319,7 @@ Configuration options:
 
 Typically used for branding, visual emphasis, or banners.
 
-Configuration options:
+Configurable properties:
 
 * Image source
 * Alt text (for accessibility)
@@ -330,7 +330,7 @@ Configuration options:
 
 Embeds content from the Document Library directly into the homepage.
 
-Configuration options:
+Configurable properties:
 
 * Selected document from Document Library
 * Border
@@ -347,7 +347,7 @@ Typical uses:
 
 Adds a search bar inside the Content container to facilitate discovery.
 
-Configuration options:
+Configurable properties:
 
 * Search scope
     * Products
