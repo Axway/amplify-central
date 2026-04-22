@@ -68,8 +68,15 @@ If the agents are not explicitly referencing a cipher suite (i.e., using default
 * **Marketplace landing page: Document ID in the URL**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  When the Marketplace is configured in Marketplace settings to use a document from the Document Library as the default landing page, the URL for the landing page displays the document's ID. To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the landing page instead of the "Document not found" page.  
+  When the Marketplace is configured in Marketplace settings to use a document from the Document Library as the default landing page, the URL for the landing page displays the document's ID. To mitigate any risk if a user modifies the characters of the Document ID in the URL, the user will now be redirected to the landing page instead of the "Document not found" page.
+
+* **Extended Administrative Controls of Consumer Organizations**
   
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  Organization Administrator and Marketplace Manager roles now have enhanced permissions to manage consumer organization metadata, teams, users, and role assignments.  
+  In addition, Organization Administrator role assignees can now remove consumer organizations when needed.  
+These updates provide greater flexibility and control for administrators managing consumer organizations within the Marketplace.
+
 ### Marketplace bug fixes for April 20, 2026
 
 | Case ID  | Internal ID  | Description |
