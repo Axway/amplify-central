@@ -85,7 +85,7 @@ TRACEABILITY_PROTOCOL=https (# TA only)
   (APIGEE X AGENT, ENHANCEMENT)</br>
   The Apigee X discovery agent has been enhanced to discover the Endpoint URL from the server field in associated API specification file.  If no server field is found in the API Specification file, an endpoint constructed from the Proxy details will be used.
 
-* **Mulesoft Agent: business unit and enviroment filters**
+* **Mulesoft Agent: business unit and environment filters**
 
   (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
   The Mulesoft Anypoint Discovery Agent now supports business unit and environment filtering for discovery of API services. Only APIs that match the configured filters are discovered and displayed on the Engage Environment Details page, improving relevance and reducing unnecessary API processing.
@@ -122,7 +122,21 @@ TRACEABILITY_PROTOCOL=https (# TA only)
 * **Marketplace Sign-In button customization**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-     Marketplace owners can now fully **manage and style the Sign In** button as a standard navigation bar item. The Sign In control follows the same configuration model as other built‑in navigation items, including consistent visibility and labeling management. In addition, marketplaces can present distinct Sign In actions with different emphasis (for example, primary versus secondary), enabling clearer authentication entry points and more intentional user journeys.
+  Marketplace owners can now fully **manage and style the Sign In** button as a standard navigation bar item. The Sign In control follows the same configuration model as other built‑in navigation items, including consistent visibility and labeling management. In addition, marketplaces can present distinct Sign In actions with different emphasis (for example, primary versus secondary), enabling clearer authentication entry points and more intentional user journeys.
+
+* **Custom sender email address for Marketplace notifications**
+  
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  Admins can now customize the “From” email address for Marketplace‑triggered emails such as subscription approvals, Consumer Org registrations, credential expiry notifications etc. This ensures a consistent, branded experience, improves partner trust, and reduces the risk of emails being flagged as spam.
+
+  **How to configure**
+
+    * Navigate to Marketplace -> Settings -> SMTP
+    * Enable use of a custom SMTP service
+    * In the **Sender** section, enter the email address that will be used as the sender using your organization’s domain and the display **name**
+    * In the **Connection Settings** section, provide your SMTP server details
+    * Save your changes
+    * Once configured, all Marketplace‑triggered emails will use the updated sender address.
   
 ## Marketplace bug fixes
 
