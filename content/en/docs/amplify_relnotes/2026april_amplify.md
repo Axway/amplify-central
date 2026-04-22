@@ -73,8 +73,8 @@ If the agents are not explicitly referencing a cipher suite (i.e., using default
 * **Extended administrative controls of Consumer Organizations**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Organization Administrator and Marketplace Manager roles now have enhanced permissions to manage consumer organization metadata, teams, users, and role assignments.  
-  In addition, Organization Administrator role assignees can now remove consumer organizations when needed.  
+  **Organization Administrator and Marketplace Manager** roles now have enhanced permissions to manage **consumer organization metadata, teams, users, and role assignments**.  
+  In addition, Organization Administrator role assignees can now **remove consumer organizations** when needed.  
 These updates provide greater flexibility and control for administrators managing consumer organizations within the Marketplace.
 
 ### Marketplace bug fixes for April 20, 2026
