@@ -3,6 +3,7 @@ title: Marketplace homepage
 linkTitle: Marketplace homepage
 weight: 40
 ---
+ **Update for uncommenting Sign In button and removing section about requirment to have navigation bar and possible note that all default and added elements can be removed?
  
 Configure the Marketplace homepage using a flexible, element-based layout model that allows Marketplace Administrators to control structure, ordering, visibility, and content in alignment with branding and user-experience requirements.
 
