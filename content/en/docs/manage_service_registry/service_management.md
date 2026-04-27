@@ -78,6 +78,7 @@ Click on the Service name or icon to view the following detailed information for
 
 * General Service information (non-version specific) is displayed at the top and includes the Service Name, Logical Name, Description, Sync Status, and Owning Team. There are tabs for the Versions, Endpoints, Access Rights, Tags & Attributes, Assets, and Products for the General Service.
 * The metrics area displays the number of teams the General Service is shared with, the number of assets and products related to the General Service, and the number of active asset requests to the General Service.
+* The geneal Documentation tab displays all service-level documentation.
 * The general Endpoints tab displays a list of endpoints associated with the API service. If the API service is not within the scope of an environment with agent, the user can create and edit runtime endpoints by using the **Create Runtime Endpoint** button or dropdown. Editing is done by clicking the three ellipsis and selecting **Edit Endpoint**. If [requirements](#create-a-mock-endpoint) are met, the user can create and edit mocked endpoints by using the **Create Mock Endpoint** button or dropdown. Editing is done by clicking the three ellipsis and selecting **Edit Mock Endpoint**.
 * The general Access Rights tab displays all teams the API service is shared with.
 * The general Tags & Attributes tab displays the tags and attributes properties for the general API service.
@@ -103,7 +104,8 @@ Click on the Service name or icon to view the following detailed information for
     * Image - An icon or image to be associated with the service
 
 5. If [requirements](#create-a-mock-endpoint) are met, there will be an option to create a mock or runtime endpoint. If mock endpoint creation is selected, then fill in the mock endpoint inputs according to the information [provided](#create-a-mock-endpoint). If requirements are not met, then the only option available will be runtime endpoint. Simply add / edit Endpoint information, if available, and click **Next**.
-6. Click **Save**.
+6. Optionally service level documentation can be added. There is the option to use a pre-existing template or create new. Only documents that have **Service Registry** visibility enabled will be listed when adding an article.
+7. Click **Save**.
 
 ## Delete an API service
 
@@ -159,6 +161,7 @@ Use Publish to Marketplace to quickly promote an API to the Marketplace for inte
                 * From the list of available consumer organizations in your provider organization, select the consumer organization you want to give product visibility or remove visibility from.
 
     * The default product plan is a free unlimited plan which can be edited after the product is created.
+    * Any service-level documentation will be visible in the marketplace.
 
 5. Click **Publish** to quickly make an API service available from consumption in the Marketplace.
 
