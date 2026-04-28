@@ -204,6 +204,22 @@ The docker container does not expose any ports outside of the container. Within 
 | ---------------- | -------------- | -------- | ------------------------------------------------------------------ |
 | Docker Container | 8989 (default) | HTTPS    | Serves the status of the agent and its dependencies for monitoring |
 
+### Azure Gateway - Entra ID credential provisioning
+
+When the Azure Discovery Agent is configured to provision Entra ID credentials, the agent must be able to reach the Microsoft Graph API. Ensure the following outbound connection is allowed:
+
+| Host                  | Port | Protocol | Data                                                                                             |
+| --------------------- | ---- | -------- | ------------------------------------------------------------------------------------------------ |
+| graph.microsoft.com   | 443  | HTTPS    | Entra ID credential provisioning (app registration, service principal, client secret management) |
+
+**Validation:**
+
+```shell
+curl -s -o /dev/null -w "%{http_code}" https://graph.microsoft.com/v1.0
+```
+
+A return of **"401"** confirms that the host is reachable (authentication is expected to fail without a token).
+
 ## Subscription notifications
 
 SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.
