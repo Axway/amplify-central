@@ -4,148 +4,345 @@ linkTitle: Asset management
 weight: 20
 ---
 
-Manage your assets, including: view, create, activate, edit, delete, deprecate and archive, with the Asset Catalog WebUI.
+Assets are resources that are aggregated into logical, consumable capabilities. The assets then get built into a product to address a business capability for a particular domain, geography, line of business, or an external partner.  
+Use this guide to understand and manage the full lifecycle of your assets—from creation and configuration to activation, updates, deprecation, and archival.
 
 ## Before you start
 
-You must have credentials or a user account from your org administrator to use the Asset Catalog WebUI. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+* You must have a Catalog Manager or Developer role. For information, see [Managing users](https://docs.axway.com/bundle/platform-management/page/docs/management_guide/organizations/managing_organizations/index.html#managing-users).
+* Ensure the API services you want to link already exist and are discoverable
+
+---
 
 ## Objectives
 
 Learn how to use the Asset Catalog WebUI to create and manage assets, including:
 
 * Create an asset
-* Link an existing API to the created asset
 * Activate the asset to make it available to the Product Foundry
-* Organize your assets
 * Edit the asset with or without creating a new release
 * Archive and delete an asset
 
-## View assets
-
-1. Navigate to *Catalog > Asset Catalog*.
-2. Select **All Assets**.
-3. View the following information for all assets in any state (Draft, Active, Deprecated, Active):
-
-    * Asset Name
-    * State
-    * Logical Name
-    * Tags
-    * Type
-    * Resources
-    * Owning Team
-    * Created/Updated
-
-Using the **Filter By** controls to filter assets by the current category / stage / type.
-Search by the Asset Name with the search bar.
-
-Click the **Customize table** icon in the top-right corner of the table to customize the table layout. A modal opens that allows you to tailor the layout to your needs, including:
-
-* Show columns
-* Hide columns
-* Reorder columns via drag-and-drop
-* Restore to default layout
-
-Layout preferences are automatically saved and persist across browser sessions.
-
-## View asset details
-
-1. Navigate to *Catalog > Asset Catalog*.
-2. Select **All Assets**.
-3. From the list view, select an asset.
-4. View the following detailed information for a specific asset in any state (Draft, Active, Deprecated, Active):
-
-    * Asset Name - The display name for the asset in the WebUI
-    * Asset Type - API service or other resource types (e.g., PDF and video files)
-    * Asset State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
-    * Logical Name - Uniquely identifies the asset
-    * Owning Team - The development team that owns the asset
-    * Modified On - Date, Time, and Username of who last modified this asset
-    * Modified By - The user who last modified the asset
-    * Created On - Date, Time, and Username of who created this asset
-    * Description - A short description of the asset
-    * Resources - Displays asset resources which are created from API service endpoints. Will also display the stage, state, and sync status.
-    * Products - Information on products that are linked to this asset
-    * Access Rights - Shared teams can have different types of access to this asset
-    * Version State - Draft, Active, Deprecated, Archived. See [Asset management](/docs/manage_asset_catalog/asset_lifecycle/) for additional information
-    * Categories - Help classify assets into groups and find the asset by filtering on the Category
-    * Tags - Labels to help find assets in the catalog
-    * Attributes - Key and value pair to allow customers to attach/query for custom information
-    * Release Management - The *Asset details* page displays a badge below the title indicating that the asset is set for **Automatic** or **Manual** release of new versions. The setting **Automatic (On hold)** only applies when the asset is in a draft state with auto-release set to **Automatic**. The asset draft must be manually "activated" to resume auto-release handling.
-
-{{< alert title="Note" color="primary" >}}Tags, Attributes, and Categories can be added or removed in the asset details view.{{< /alert >}}
+---
 
 ## Create an asset
 
-1. Navigate to *Catalog > Asset Catalog*.
-2. Select **All Assets**.
-3. Click **+ Add Asset**.
-4. Add the following Asset Profile information and then click **Next**:
+Creating an asset is the first step in making APIs or other resources available for use in products.
+An asset starts in a Draft state, where you can safely configure and review it before making it available for consumption.
+This section walks you through the asset creation flow in a clear, logical sequence, from defining the asset to activating it.
 
-    * Asset Name - The display name for the asset in the WebUI
-    * Logical Name - Uniquely identifies the asset
-    * Description - A short description of the asset
-    * Image - An icon or image to be associated with the asset
+When creating an asset, you will complete the following phases:
 
-5. Add the following Release Management information and then click **Next**:
+1. Define the asset profile
+2. Link API resources
+3. (Optional) Configure API exposure
+4. Configure release management
+5. Configure access and sharing
+6. Classify the asset (categories, tags, attributes)
+7. Review and save (Draft or Active)
 
-    * Auto-Release - Enable / disable the auto-release of new Asset versions. If auto-release is **enabled**, a new asset will be automatically released with each change to any one of the grouped resources (i.e., API services). For example, auto-release enabled will trigger an automatic asset release every time a new grouped API service revision is discovered or created. This enables a more automated and hands-off experience. If you want more control of the asset release process, set auto-release to **disabled**.
-    * Auto-Release Type - The default is set to Patch release versions and you can select another type of asset release versioning (i.e., major or minor).
+{{< alert title="Important" color="primary" >}} An asset must be **Active** before it can be used in a product definition. Assets created as Draft must be activated later. See [Activate an asset](#activate-an-asset). {{< /alert >}}
 
-6. In Group Resources, find the available API resources you want to link, and click on the Link icon. Each resource displays the API service title, environment name, tags, latest version, sync status, and the last modified date. API resources that are **Out of Sync** are not listed in the all resources tab. Resources can be filtered by the API service type or the sync status. For each resource, select the endpoints to link. Endpoints can be filtered by state and any associated stages. Each endpoint lists the API service version, url(s), stage, and state.
+### Step 1: Start creating the asset
 
-    * If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.
-    * **Sync Status**: This field helps users identify which API services are potentially missing from the dataplane. The associated agent will not take an action to remove the API service, nor impact credentials/API service relationships. The Provider is responsible for confirming that the API service has been removed from the dataplane. Only after confirmation, the Provider should perform a Delete API action will there be an impact.
+* Navigate to *Catalog > Asset Catalog*
+* Select **All Assets**
+* Click **+ Add Asset**
 
-       * In Sync: The API service must be agent managed and was detected in the associated data plane during the last discovery cycle.
-       * Out of Sync: The API service must be agent managed and was not detected in the associated data plane during the last discovery cycle. It may have been removed.
-       * Manual: The API service is not agent managed and does not support automatic provisioning. Application registrations and credential management must be handled manually outside the platform.
+{{< alert title="Note" color="primary" >}}
+The + Add Asset button is disabled when
 
-7. Configure the Access Request handling for Manual or Automatic, and click **Next**. If Access Request Handling is set to **Manual**, a user must approve access to the API service(s) grouped in the asset. If Access Request Handling is set to **Automatic**, the access to the API service(s) grouped in the asset is granted automatically.
-8. For Access Rights, select the team that owns the product. Select the team(s) the asset can be shared with. By default, an asset is not shared and only the **Engage Admin** or the owning team will have access to it. If you want your asset shared with a specific team, select a team owner, and then select all the teams you want to grant "Rights" to the selected asset. For each of the teams selected, you can choose either Edit or Read access "Rights". Each member of the shared team(s) selected will be able to access your asset with the chosen "Rights". This allows you to share/enable access to a specific asset without granting access to all the assets owned by your current team. Click **Next**.
-9. Provide the Category, Tags, and Attribute details for the asset. Click **Next**.
-10. Click **Preview Asset** to view the details prior to creation. At his point, you can click **Save** to create the asset in a draft state. Alternatively, you can click **Save & Activate** to create a new asset version release in an **Active** state for consumption in a product definition.
+* The combined number of Active and Deprecated assets exceeds the entitlement quota
+* If no entitlement is defined, no quota is enforced.
 
-If the asset was created in a **Draft** state, you must move it to an **Active** state (by activating the asset) before you can use it in a product definition.
+{{< /alert >}}
 
-The **+ Add Asset** button is disabled once the total number of active and deprecated assets exceeds the asset entitlement quota. If no asset entitlement is defined, there is no asset quota enforcement.
+### Step 2: Define the asset profile
+
+The asset profile describes **what this asset is** and how users will see it in the WebUI. Clear names and descriptions help consumers quickly understand what your asset provides.
+
+Provide the following information, then click **Next**:
+
+* **Asset Name**: Display name shown throughout the UI and Marketplace
+* **Logical Name**: A unique, system‑level identifier for the asset
+  > This cannot be changed later
+* **Description**: A short summary describing the purpose of the asset
+* **Image**:An optional icon or image associated with the asset
+
+### Step 3: Link API resources
+
+In this step, you associate existing API services with the asset. This is the most important step, as it determines how APIs are grouped and exposed together based on their intended use cases or capabilities.
+
+In the **Group Resources** section:
+
+* Find available resources (API, MCP)
+* Click the **Link icon** to add a resource to the asset
+* Select endpoints to expose. Each endpoint shows:
+    * API service version
+    * URL(s)
+    * Stage
+    * State
+
+{{< alert title="Note" color="primary" >}} API resources that are *Out of Sync* are not listed. {{< /alert >}}
+
+{{< alert title="Important" color="primary" >}} Removing an API service from the data plane does not automatically remove it from the platform.
+The provider must explicitly delete the API service and clean up the associated references in the linked asset {{< /alert >}}
+
+### Step 4 (Optional): Configure API exposure
+
+Some API services support partial exposure, allowing you to expose only selected portions of an API.
+Partial exposure is supported for:
+
+* Unstructured APIs
+* OAS2 services
+* OAS3 services
+
+By default, all linked services use **Full exposure**, meaning the asset includes the complete API specification from the linked API service.
+
+#### How it works
+
+* Select **Edit Specification** for a service
+* Upload a file containing the partial API specification
+* The Exposure column updates from **Full** to **Partial**
+
+{{< alert title="Important" color="primary" >}} Changes here affect only how the API is exposed within the asset.
+The source API service is not modified. {{< /alert >}}
+
+#### Impact on release management
+
+If any linked API uses partial exposure:
+
+* **Auto‑Release is automatically disabled**
+* Manual activation is required for publishing updates
+
+### Step 5: Configure release management
+
+Release management controls how and when new versions of the asset are published.
+
+Provide the following and click **Next**:
+
+#### Auto‑Release
+
+* **Enabled**
+  New versions are automatically released when:
+
+    * A grouped API service changes
+    * A new API revision is detected
+
+* **Disabled**
+  You manually control when new versions are released.
+
+> Tip </br>
+Enable auto‑release for highly automated pipelines. Disable it if you need tighter release control.
+
+#### Auto‑Release Type
+
+If auto‑release is enabled, select the default version increment:
+
+* Patch (default)
+* Minor
+* Major
+
+#### Application registration requests handling
+
+Choose how application registration requests to the APIs in this asset are handled:
+
+* **Automatic** – Access is granted immediately
+* **Manual** – Access must be approved
+
+### Step 6: Configure access and sharing
+
+Define who owns the asset and who can access it.
+
+* Select the Owning Team
+* Optionally share the asset with other teams
+* For each shared team, select *Read* or *Edit* access rights:
+
+{{< alert title="Important" color="primary" >}} By default, assets are private to the owning team and Engage Admins. {{< /alert >}}
+
+### Step 7: Classify the asset
+
+Add metadata to help users discover and organize the asset:
+
+* Categories – Group assets logically
+* Tags – Searchable labels
+* Attributes – Custom key/value metadata
+
+Click **Next** when finished.
+
+### Step 8: Review and save the asset
+
+Click **Preview Asset** to review everything before creation.
+
+Choose how to save:
+
+* **Save**
+  Creates the asset in Draft state
+* **Save & Activate**
+  Creates and immediately releases the asset as Active, making it consumable.
+
+> Reminder </br>
+Assets created as Draft must be activated before they can be used in a product definition.
+
+---
 
 ## Activate an asset
 
-The asset can be in **Draft** or **Deprecated** state.
+Activating an asset publishes a version of the asset and makes it available for use in a product definition. Until an asset is activated, it remains in a **Draft** or **Deprecated** state and cannot be consumed by products.
+Activation is also the point at which versioning and release semantics are applied, ensuring providers understand the impact of changes.
 
-1. Navigate to *Catalog > Asset Catalog*.
-2. Select **All Assets**.
-3. From the list view, select the asset to activate.
-4. Select an asset version in a **Draft** or **Deprecated** state.
-5. Click **Activate**.
-6. Select a Release Type of either **Major**, **Minor**, or **Patch**.
-7. Click **Update**.
+### When activation is required
+
+You must activate an asset when:
+
+* The asset was created in a **Draft** state
+* Changes requiring a new asset version have been saved as Draft
+* The asset is **Deprecated** and needs to be reintroduced for use
+
+Activation always results in a released asset version (Major, Minor, or Patch).
+
+### Asset states eligible for activation
+
+An asset can be activated when it is in one of the following states:
+
+* Draft
+* Deprecated
+
+### Activate an asset version
+
+* Navigate to *Catalog > Asset Catalog*
+* Select **All Assets**
+* From the list, select the asset you want to activate
+* Select the asset version
+* Click **Activate**
+* Choose a release type
+    * **Patch**: Backward‑compatible changes, such as documentation updates or minor refinements
+    * **Minor**: Backward‑compatible feature additions or extensions
+    * **Major**:Breaking or significant changes that may impact consumers
+* Click **Update** to complete activation
+
+Once activated, the asset version enters the **Active** state and becomes available for consumption in product definitions.
+
+### Activation and auto‑release behavior
+
+* If **Auto‑Release** is enabled, new asset versions may be released automatically based on changes to linked API services.
+* If **Auto‑Release** is disabled, activation is always manual.
+* If an asset uses **Partial exposure**, auto‑release is disabled and manual activation is required.
+
+---
 
 ## Edit an asset
 
-The asset can be in **Draft**, **Active**, or **Deprecated** state.
+Editing an asset allows you to update its details, configuration, or linked API services.
+Depending on what you edit, changes may take effect immediately or require creating and releasing a new asset version.
+Understanding this distinction helps you avoid unintended releases and maintain control over what consumers see.
+
+An asset can be edited when it is in one of the following states:
+
+* **Draft**
+* **Active**
+* **Deprecated**
+
+All edits are based on the latest draft or latest released version of the asset.
+
+### Editing without creating a new version
+
+Some changes do not impact how the asset is consumed by products and therefore do not require a new version or activation.
+To make these changes:
+
+* Navigate to *Catalog > Asset Catalog*
+* Select **All Assets**
+* Open the asset you want to edit
+* Click **Edit** (pencil icon) in the top‑right corner
+
+You can update the following fields without creating a draft or releasing a new version:
+
+* Asset profile
+* Release Management settings
+* Application registration approvals
+* Access Rights
+* Categories, Tags or Attributes
+
+These changes take effect immediately and apply to:
+
+* The asset
+* Any products that reference the asset
+
+> Use this edit path when</br>
+You are making metadata, access, or visibility updates that do not change the underlying APIs.
+>
+
+### Editing that requires a new asset version
+
+Changes that modify which APIs are grouped, how they are exposed, or what consumers receive require a new asset version.
+Examples include:
+
+* Adding or removing API services
+* Changing linked endpoints
+* Updating partial vs full API exposure
+
+Depending on the asset state, select:
+
+* Edit Draft – if a draft already exists
+* Create New Version – if editing from an active version
+
+This opens the guided edit flow, starting with **Group Resources**.
+After making changes, choose one of the following options:
+
+#### Save as Draft
+
+* Saves changes to a draft version
+* Does not make changes visible to consumers
+* Used when:
+
+    * You want to review changes later
+    * Auto‑Release is disabled and you plan to activate manually
+    * Auto‑Release is enabled and you are updating the latest draft
+
+#### Save & Activate
+
+* Saves changes and immediately releases a new asset version
+* Makes the updated asset available for consumption
+* This option is available only when Auto‑Release is disabled.
+
+### Choosing the right edit path
+
+* **Metadata or access changes?**
+  → Edit directly, no new version required
+
+* **API grouping or exposure changes?**
+  → Create a draft or new version
+
+* **Ready to publish changes?**
+  → Activate the asset version (manual or automatic)
+
+---
+
+## Deprecate an asset
+
+The asset must be in **Active** state. Each version of the asset must be deprecated individually. Once all versions are deprecated, the entire asset is marked as deprecated.
 
 1. Navigate to *Catalog > Asset Catalog*.
 2. Select **All Assets**.
-3. From the list view, click on the asset to edit. All edits will be based on the latest draft version or release version of the asset.
+3. From the list view, select the active asset to deprecate.
+4. Select the version you want to deprecate and click **Deprecate**.
+5. Repeat for each active version.
+6. When no active versions remain, the asset automatically moves to **Deprecated** state.
 
-### Edit an asset without a draft or release
+---
 
-Click **Edit** (pencil button) at top right to edit the following without creating a draft or releasing a new asset version: Asset Name, Description, Image, Release Management settings, Access Requests, Access Rights, Categories, Tags and Attributes. The edits will take effect immediately for the asset and any Marketplace products associated with this asset.
-  
-{{< alert title="Note" color="primary" >}}If the asset is in a draft state, enabling auto-release will result in release management being in an "on hold" setting. The asset draft must be manually "activated" to resume auto-release handling.{{< /alert >}}
+## Archive an asset
 
-### Edit an asset with the option to create a draft or release a new version
+The asset must be in **Deprecated** state.
 
-1. Depending on the state of the asset, click either **Edit Draft** or **Create New Version** to edit the API services linked to this asset in the Group Resources step and release a new asset version to make it available for consumption by a product.
-2. Select a preview or save option:
+1. Navigate to *Catalog > Asset Catalog*.
+2. Select **All Assets**.
+3. From the list view, select the Deprecated asset to archive.
+4. Click **Archive**.
+5. Type *ARCHIVE* in the confirmation box.
+6. Confirm action.
 
-    * **Preview Asset** - view your asset changes prior to taking effect.
-    * **Save as Draft** - update changes to an asset when edits require a new asset release (Group Resources edits). This action will either update the latest draft if Auto-release is disabled or create a new release if Auto-release is enabled.
-    * **Save & Activate** - update changes in an asset version release when edits require a new asset release (Group Resources edits) and Auto-release is disablesdisabled.
-
-{{< alert title="Note" color="primary" >}}If the organization has the Compliance Validation entitlement, then the Security and Design compliance validation grading scores are displayed in the Available Resources table. See [Manage your compliance validation](/docs/manage_compliance/#default-grading-scores) for grading scores information.{{< /alert >}}
+---
 
 ## Delete an asset
 
@@ -212,25 +409,3 @@ When you delete an asset, Amplify Engage scans for all dependencies and provides
 2. Once archived, delete the asset directly from the Asset Catalog.
 
 {{< alert title="Note" color="primary" >}}Assets that are part of an active product definition cannot be deleted.{{< /alert >}}
-
-## Deprecate an asset
-
-The asset must be in **Active** state. Each version of the asset must be deprecated individually. Once all versions are deprecated, the entire asset is marked as deprecated.
-
-1. Navigate to *Catalog > Asset Catalog*.
-2. Select **All Assets**.
-3. From the list view, select the active asset to deprecate.
-4. Select the version you want to deprecate and click **Deprecate**.
-5. Repeat for each active version.
-6. When no active versions remain, the asset automatically moves to **Deprecated** state.
-
-## Archive an asset
-
-The asset must be in **Deprecated** state.
-
-1. Navigate to *Catalog > Asset Catalog*.
-2. Select **All Assets**.
-3. From the list view, select the Deprecated asset to archive.
-4. Click **Archive**.
-5. Type *ARCHIVE* in the confirmation box.
-6. Confirm action.
