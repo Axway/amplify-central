@@ -109,7 +109,7 @@ The `ta_env_vars.env` configuration file contain six sections to customize: the 
 
 This section describes where the API Gateway logs are located on the machine so the beat can read them.
 
-The agent can work either with the Gateway event logs (**default**) or the Gateway open traffic log. To configure the open traffic log from the Axway Gateway, you must turn it on using Policy Studio. Refer to this [page](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apigtw_admin/admin_open_logging/index.html) for more information.
+The agent can work either with the gateway event logs (**default**) or the gateway open traffic log. To configure the open traffic log from the Axway Gateway, you must turn it on using Policy Studio. Refer to this [page](https://docs.axway.com/bundle/axway-open-docs/page/docs/apim_administration/apigtw_admin/admin_open_logging/index.html) for more information.
 
 ###### Sourcing Gateway traffic from event log file(s)
 
@@ -160,9 +160,9 @@ OPENTRAFFIC_LOG_INPUT=true
 OPENTRAFFIC_LOG_PATHS=/events/DefaultGroup_*.log
 ```
 
-{{< alert title="Caution" color="danger" >}}Be careful when entering the file name in `OPENTRAFFIC_LOG_PATHS` variable, as based on the Gateway deployment (standard VS EMT mode). The default name **group-\*_instance-\*.log** might not be accurate if any customization occurred!
+{{< alert title="Caution" color="danger" >}}Be careful when entering the file name in `OPENTRAFFIC_LOG_PATHS` variable, as based on the gateway deployment (standard VS EMT mode). The default name **group-\*_instance-\*.log** might not be accurate if any customization occurred!
 
-When using the open traffic logs, it is not required to configure the Gateway connectivity (`APIGATEWAY_*` variables), as all information the Traceability Agent needs to report is present in the open traffic log.
+When using the open traffic logs, it is not required to configure the gateway connectivity (`APIGATEWAY_*` variables), as all information the Traceability Agent needs to report is present in the open traffic log.
 {{< /alert >}}
 
 ##### Customizing Traceability Agent API Manager connectivity variables

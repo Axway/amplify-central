@@ -86,7 +86,7 @@ Data Fields:
 
 #### Transactions data
 
-The transaction data represents the number and details of transactions processed by the Gateway during a period of time. By default, the Traceability Agent does not send transactions but you can enable it for a short period on demand. See [Trace Sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling/#sampling).
+The transaction data represents the number and details of transactions processed by the gateway during a period of time. By default, the Traceability Agent does not send transactions but you can enable it for a short period on demand. See [Trace Sampling](/docs/connect_manage_environ/connected_agent_common_reference/trace_sampling/#sampling).
 
 The transactions can be redacted (by default) and/or sanitized, according to your need, before sending the information to Amplify platform. See [Trace redaction](/docs/connect_manage_environ/connected_agent_common_reference/trace_redaction/).
 
@@ -208,7 +208,7 @@ The docker container does not expose any ports outside of the container. Within 
 
 SMTP and/or a webhook URL can be set up to send subscription notifications on both subscribe and unsubscribe actions.
 
-The SMTP server address or the webhook url needs to be accessible from the Gateway machine for the agent to use them.
+The SMTP server address or the webhook url needs to be accessible from the gateway machine for the agent to use them.
 
 ## Using proxies - Axway API Gateway
 

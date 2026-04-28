@@ -84,7 +84,7 @@ Where:
 
 #### Traceability agent stateful set
 
-The helm deployment of the Traceability Agent uses a resource type of Stateful set along with a service to distribute the events to the agent pods. This is to allow scaling of the Traceability Agent in order to properly handle the load of events being sent through Kong. The agent is expected to be ran in the same kubernetes cluster as the Gateway and the HTTP Log plugin should set its endpoint configuration to the [Service](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services) that is created (i.e., `http://kong-traceability-agent.kong-agents.svc.cluster.local:9000` where `kong-traceability-agent` is the service name and `kong-agents` is the namespace for the service).
+The helm deployment of the Traceability Agent uses a resource type of Stateful set along with a service to distribute the events to the agent pods. This is to allow scaling of the Traceability Agent in order to properly handle the load of events being sent through Kong. The agent is expected to be ran in the same kubernetes cluster as the gateway and the HTTP Log plugin should set its endpoint configuration to the [Service](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services) that is created (i.e., `http://kong-traceability-agent.kong-agents.svc.cluster.local:9000` where `kong-traceability-agent` is the service name and `kong-agents` is the namespace for the service).
 
 #### Create secrets
 
