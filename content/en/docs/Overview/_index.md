@@ -54,7 +54,7 @@ The management plane allows Platform Administrators and API providers to adminis
 * **Agents**</br>
 Amplify agents are lightweight software applications that either run on your data plane host or are hosted / embedded with the Amplify platform for certain SaaS native environments. These agents are responsible for gathering information that is happening in your data plane and sending it to Amplify Engage:
   
-    * **Discovery Agents** automate the process of finding resources deployed in an environment (for example, OAS 3.0, WSDL, etc.) and sending them to the Amplify platform where they will automatically service in the Service Registry. After they have been published, consumers can subscribe to use the discovered assets, at which point the agent helps to natively provision this subscription in the Gateway, as well as to manage credentials and quota enforcement.
+    * **Discovery Agents** automate the process of finding resources deployed in an environment (for example, OAS 3.0, WSDL, etc.) and sending them to the Amplify platform where they will automatically service in the Service Registry. After they have been published, consumers can subscribe to use the discovered assets, at which point the agent helps to natively provision this subscription in the gateway, as well as to manage credentials and quota enforcement.
     * **Traceability Agents** collect usage, metrics, and data plane transaction metadata and send them to the Amplify platform for additional insights. In the platform, API consumers and API providers gain visibility into the performance and behavior of the assets discovered in the data plane.
 
 * **Federated data planes**</br>

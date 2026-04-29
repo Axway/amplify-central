@@ -22,7 +22,7 @@ Learn how to quickly configure, install, and run your Discovery and Traceability
 Axway Central CLI and Amplify platform connectivity are required to configure the agent.
 
 1. Configure the agent from any machine that has access to the Amplify platform (<https://platform.axway.com>) and a graphical environment (optional).
-2. Once the configuration is complete, the agent(s) and its configuration must be copied to the Gateway machine so that it can use the API Manager API's and access the event logs or open traffic logs.
+2. Once the configuration is complete, the agent(s) and its configuration must be copied to the gateway machine so that it can use the API Manager API's and access the event logs or open traffic logs.
 
 ## Agent configuration machine pre-requisites
 
@@ -44,9 +44,9 @@ Axway Central CLI and Amplify platform connectivity are required to configure th
 
 The agents run on the same machine as the gateway or API Manager when the gateway is deployed in a classic mode.
 
-The agents run on the same Docker environment as the Gateway or API Manager when the gateway is deployed in EMT mode.
+The agents run on the same Docker environment as the gateway or API Manager when the gateway is deployed in EMT mode.
 
-{{< alert title="Note" color="primary" >}}The Traceability Agent must use the same volume where the event logs or open traffic logs are written by the Gateway (refer to `anm` container).
+{{< alert title="Note" color="primary" >}}The Traceability Agent must use the same volume where the event logs or open traffic logs are written by the gateway (refer to `anm` container).
 {{< /alert >}}
 
 The agents must have access to the platform URLs described in [Administer network traffic](/docs/connect_manage_environ/connected_agent_common_reference/network_traffic/) either directly or via a proxy.

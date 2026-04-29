@@ -12,7 +12,7 @@ The Amplify agents are software applications that run on your host. The agents a
 
 ### Discovery Agents
 
-Discovery Agents automate the process of finding assets that are deployed in a gateway, for example, OAS 3.0, WSDL, etc., and send them to the Amplify platform, where they are made available in the Catalog for people to find and use. Consumers can subscribe to use the discovered assets, and the agent helps to provision this subscription in the Gateway.
+Discovery Agents automate the process of finding assets that are deployed in a gateway, for example, OAS 3.0, WSDL, etc., and send them to the Amplify platform, where they are made available in the Catalog for people to find and use. Consumers can subscribe to use the discovered assets, and the agent helps to provision this subscription in the gateway.
 
 ### Traceability Agents
 

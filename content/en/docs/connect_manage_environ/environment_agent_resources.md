@@ -174,7 +174,7 @@ The environment status is calculated from the aggregate status of all agents lin
 
 * If all the agents in the environment are `Running`, the environment status will be `Connected`.
 * If all the agents are `Stopped`, the environment status will be `Disconnected`.
-* If one or more agents are `Failed` and the agent cannot reach the Gateway, then the environment status will be `Connection Error`.
+* If one or more agents are `Failed` and the agent cannot reach the gateway, then the environment status will be `Connection Error`.
 * If one or more agents are `Stopped` and the other agents are `Running`, **or** one or more agents are `Running` and the other agents have never been started, then the environment status will be `Partially Connected`.
 * If there are no reported agent status resource values, **or** one or more agents are `Stopped` and one or more agents have never been started (no agent status), then the environment status will be `Manual Sync`.
 {{< /alert >}}
