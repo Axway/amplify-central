@@ -26,7 +26,7 @@ Learn how to:
 2. Navigate tp **Integration > Search Engines** tab.
 3. Locate the **Indexing** setting.
 4. Set **Indexing** to **Enabled** to allow the marketplace to be indexed.
-    * When Indexing is **ON**, the site is considered indexable.
+    * When Indexing is **Enabled**, the site is considered indexable.
     * When Indexing is explicitly set to **Disabled**, the site is not indexable.
 5. Once Indexing is enabled, a **Google site verification ID** field becomes available.
 6. Enter your **Google site verification ID**.
