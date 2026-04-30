@@ -60,13 +60,22 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace updates
 
-* **Title**
-  
+* **Credential Request Sideblade Enhancement**
+
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Description.
-  
+     When a consumer submits a new credential request for an application, the Credential Request Submitted sideblade displays a list of existing resources associated with the same application that can reuse the newly requested credentials, helping consumers understand reuse opportunities. If no other resources exist, the section is hidden. Note the View credentials action continues provide access to the newly created credential’s metadata.
+
+* **Asset Archiving Safeguards for Product Dependencies**
+
+  (PROVIDER EXPERIENCE, RESOLUTION, ASSET CATALOG)</br>
+    Archiving behavior has been updated to prevent assets that are actively referenced by products or product releases from entering an unrecoverable state or inform when an asset has already been archived. Assets used in product plans are now clearly identified as Non-Archivable, and archiving is blocked to avoid breaking plan configuration and updates. The archive confirmation dialog has been improved for clarity and consistency, with a unified experience for single and multi-select actions, including pagination and clear visibility into referenced products and versions. This ensures product plans remain manageable and prevents UI dead-ends caused by archived dependencies.
+ 
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01826485 | APIGOV-32437| **Issue**: Issue with the screen which shows list of accessible APIs <br/>**Resolution**: Fixed by adding a Status column to the grid to note status of the resources based on application status
+| 01784733 | APIGOV-31611| **Issue**: Conflict Between Asset-Level and Product-Level Categories <br/>**Resolution**: Fixed collision issue between Asset and Product categories.
+|            | APIGOV-32371| **Issue**: Tooltip display issue in small screen for credentials, date tooltip displays under "State" <br/>**Resolution**: Fixed display with horizontal scrollbar to show the tooltip appropriately.
+|            | APIGOV-32434| **Issue**: Unable to create a release on small screen - sideblade of product is not scrollable <br/>**Resolution**: Fixed display with proper scrollbar to enable visibility of sideblade content
+|            | APIGOV-32530| **Issue**: Marketplace UI: Improve keycloak login handler <br/>**Resolution**: Fixed so that if main authentication to grant auth token fails, it redirect the user back to login page
