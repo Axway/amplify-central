@@ -189,7 +189,7 @@ Configurable properties
 
 ---
 
-## Element: Navigation Menu (required)
+## Element: Navigation Menu
 
 Provides primary navigation.
 
