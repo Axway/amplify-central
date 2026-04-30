@@ -47,10 +47,16 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **Title**
+* **IBM webMethods API Discovery**
 
-  (APIGEE X AGENT, ENHANCEMENT)</br>
-  Description.
+  (WEBMETHODS DISCOVERY AGENT, ENHANCEMENT)</br>
+  The IBM web methods discovery agent has been enhanced to also use of webMethods /search API to improve the performance of the API discovery process.
+
+* **Mulesoft Agent: business unit and environment filters**
+
+  (MULSOFT ANYPOINT AGENT, ENHANCEMENT)</br>
+
+The Mulesoft Anypoint Discovery Agent now supports business unit and environment filtering for discovery of API services. Only APIs that match the configured filters are discovered and displayed on the Engage Environment Details page, improving relevance and reducing unnecessary API processing.
 
 ## Agent bug fixes
 
@@ -74,7 +80,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
   (PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG, MARKETPLACE)</br>
     The Asset create/edit experience has been enhanced to allow the Provider the option of partial exposure of the API service. This will enable the provider to expose a selected subset of the full API specification in the asset promoted to a product in the Mareketplace.
-The asset create/edit wizard has a new step to **Configure Specification** where the Provider can select the option to **Manage Specification** and use the ellipsis for OAS2, OAS3, or Unstructured APIs.
+The asset create/edit wizard has a new step to **Configure Specification** where the Provider can select the option to **Manage Specification** for OAS2, OAS3, or Unstructured APIs.
 This will display a sideblade with two options,
 
   - Upload New specification file
