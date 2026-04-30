@@ -277,7 +277,7 @@ Visually separates sections to improve readability.
 * Dotted
 * Dashed
 
-===
+---
 
 ## Sign In / Register
 
