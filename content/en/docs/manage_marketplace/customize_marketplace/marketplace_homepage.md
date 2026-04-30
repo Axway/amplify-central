@@ -192,7 +192,6 @@ Configurable properties
 
 Provides primary navigation.
 
-* Required element.
 * Can be reordered.
 * Multiple navigation menus supported.
 * Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
