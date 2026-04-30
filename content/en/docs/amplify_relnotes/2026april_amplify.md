@@ -78,7 +78,6 @@ New enhancements and bug fixes for the April 30 update.
 |          | APIGOV-32300| **Issue**: Featured Categories limit reached panel is not visible. <br/>**Resolution**: Fixed the UI so that the limit reached panel is now visible.|
 |          | APIGOV-32355 | **Issue**: Users cannot run a compliance linting job for a specific API in the Service Registry. <br/>**Resolution**: A fix was made to allow users with permissions (Engage Admin) to run a compliance linting job from the Service Registry. |
 |          | APIGOV-32541 | **Issue**: Subscription remains in pending to archive when the name is close to 100 characters. <br/>**Resolution**: The logical name for a subscription job that is generated when the consumer archives a subscription or plan is now generated based on the subscription ID, avoiding trimming or maxing out the resource logical name. |
-|            | APIGOV-32541| **Issue**: Subscription remains in pending to archive when the name is close to 100 characters <br/>**Resolution**: Logical names for subscriptions jobs that are generated when consumer archives a subscription or plans are archived are generated now based on the subscription id avoiding trimming or maxing out the resource logical name.
 
 ## April 20, 2026
 
