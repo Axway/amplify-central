@@ -70,6 +70,20 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
   (PROVIDER EXPERIENCE, RESOLUTION, ASSET CATALOG)</br>
     Archiving behavior has been updated to prevent assets that are actively referenced by products or product releases from entering an unrecoverable state or inform when an asset has already been archived. Assets used in product plans are now clearly identified as Non-Archivable, and archiving is blocked to avoid breaking plan configuration and updates. The archive confirmation dialog has been improved for clarity and consistency, with a unified experience for single and multi-select actions, including pagination and clear visibility into referenced products and versions. This ensures product plans remain manageable and prevents UI dead-ends caused by archived dependencies.
 
+* **Partial API Exposure**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG, MARKETPLACE)</br>
+    The Asset create/edit experience has been enhanced to allow the Provider the option of partial exposure of the API service. This will enable the provider to expose a selected subset of the full API specification in the asset promoted to a product in the Mareketplace.
+The asset create/edit wizard has a new step to **Configure Specification** where the Provider can select the option to **Manage Specification** and use the ellipsis for OAS2, OAS3, or Unstructured APIs.
+This will display a sideblade with two options,
+
+  - Upload New specification file
+      This allows a new OAS2 or OAS3 specification file where a subset of API Methods or Endpoint URLs can be defined for exposure in the Asset/Product published to the Marketplace.  
+  - Select Existing Operations
+      This allows the search by Operation or Path within the full API specification then selection of a subset of methods for exposure in the Asset/Product published to the Marketplace.
+
+NOTE: The exposure of a partial API specification does NOT alter the full API specificaiton in the Engage Service Registry.
+
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
