@@ -17,7 +17,7 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify Engage April 30 2026](/docs/amplify_relnotes/2026april_amplify/#april-30-2026)
+## [Amplify Engage May 4 2026](/docs/amplify_relnotes/2026april_amplify/#may-4-2026)
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
@@ -53,6 +53,10 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 | Graylog API Security                       | 1.1.32                   |
 | Traceable API Security                     | 2.0.18                   |
 | Akamai API Security                        | 1.1.6                    |
+
+## [Amplify Engage April 29 2026](/docs/amplify_relnotes/2026april_amplify/#april-29-2026)
+
+No agent updates. See April 16 2026 for latest supported agent versions.
 
 ## [Amplify Engage April 16 2026](/docs/amplify_relnotes/2026april_amplify/#april-16-2026)
 
