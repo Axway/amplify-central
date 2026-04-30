@@ -3,7 +3,7 @@ title: Marketplace homepage
 linkTitle: Marketplace homepage
 weight: 40
 ---
- 
+
 Configure the Marketplace homepage using a flexible, element-based layout model that allows Marketplace Administrators to control structure, ordering, visibility, and content in alignment with branding and user-experience requirements.
 
 ---
@@ -29,14 +29,12 @@ The Marketplace homepage is composed of elements. Each element represents a sect
 
 ### Element Key characteristics
 
-* Elements can be added, removed, and reordered.
+* All Elements can be added, removed, and reordered.
 * Elements support configurable widths: **full**, **half**, or **quarter**.
 * Elements automatically wrap to the next row when the total width exceeds available space.
 * Multiple elements of the same type can be added.
 * Each element includes visibility settings for unauthenticated users.
 * All elements are responsive across desktop, tablet, and mobile devices.
-
-> The **Navigation menu** element is required and is always present, including in an empty homepage state. Its menu items are configured from **Marketplace Settings > Pages and Menus > Homepage**.
 
 ---
 
@@ -114,8 +112,7 @@ Each element can be configured independently, and multiple instances of any elem
 * **Categories**
 * **Products**
 * **Separator**
-
-[//]: # (**Sign In / Register**)
+* **Sign In / Register**
 
 ---
 
@@ -191,11 +188,10 @@ Configurable properties
 
 ---
 
-## Element: Navigation Menu (required)
+## Element: Navigation Menu
 
 Provides primary navigation.
 
-* Required element.
 * Can be reordered.
 * Multiple navigation menus supported.
 * Menu entries configured from **Marketplace Settings > Pages and Menus > Homepage**.
@@ -281,13 +277,16 @@ Visually separates sections to improve readability.
 * Dotted
 * Dashed
 
-[//]: #
-  (Sign In / Register
-  Adds or configures authentication entry points.
-  Optional element.
-  Can be reordered.
-  Supports hiding the default Marketplace Sign In / Register button.
-  Used when providing custom sign in or registration experiences.)
+---
+
+## Element: Sign In / Register
+
+Adds or configures authentication entry points.
+  
+* Optional element.
+* Can be reordered.
+* Supports hiding the default Marketplace Sign In / Register button.
+* Used when providing custom sign in or registration experiences.
 
 ---
 
@@ -302,6 +301,8 @@ Configurable properties:
 * Border
 * Layout
 
+---
+
 ## Element: Button
 
 Can be used for call to action and navigation.
@@ -315,6 +316,8 @@ Configurable properties:
 * Border
 * Layout
 
+---
+
 ## Element: Image
 
 Typically used for branding, visual emphasis, or banners.
@@ -325,6 +328,8 @@ Configurable properties:
 * Alt text (for accessibility)
 * Border
 * Layout
+
+---
 
 ## Element: Document
 
@@ -342,6 +347,8 @@ Typical uses:
 * Embedded welcome documents
 * Release notes or announcements
 * Getting‑started guides
+
+---
 
 ## Element: Search
 
