@@ -69,7 +69,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
   (PROVIDER EXPERIENCE, RESOLUTION, ASSET CATALOG)</br>
     Archiving behavior has been updated to prevent assets that are actively referenced by products or product releases from entering an unrecoverable state or inform when an asset has already been archived. Assets used in product plans are now clearly identified as Non-Archivable, and archiving is blocked to avoid breaking plan configuration and updates. The archive confirmation dialog has been improved for clarity and consistency, with a unified experience for single and multi-select actions, including pagination and clear visibility into referenced products and versions. This ensures product plans remain manageable and prevents UI dead-ends caused by archived dependencies.
- 
+
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
