@@ -279,7 +279,7 @@ Visually separates sections to improve readability.
 
 ---
 
-## Sign In / Register
+## Element: Sign In / Register
 
 Adds or configures authentication entry points.
   
