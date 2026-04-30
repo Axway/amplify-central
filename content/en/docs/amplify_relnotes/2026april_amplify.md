@@ -79,6 +79,13 @@ New enhancements and bug fixes for the April 30 update.
 |          | APIGOV-32355 | **Issue**: Users cannot run a compliance linting job for a specific API in the Service Registry. <br/>**Resolution**: A fix was made to allow users with permissions (Engage Admin) to run a compliance linting job from the Service Registry. |
 |          | APIGOV-32541 | **Issue**: Subscription remains in pending to archive when the name is close to 100 characters. <br/>**Resolution**: The logical name for a subscription job that is generated when the consumer archives a subscription or plan is now generated based on the subscription ID, avoiding trimming or maxing out the resource logical name. |
 
+### CLI updates for April 29, 2026
+
+* **Engage CLI updates**
+
+  (PROVIDER EXPERIENCE, AXWAY ENGAGE CLI, ENHANCEMENT)</br>
+  The Axway Engage CLI [v4.12.0](https://www.npmjs.com/package/@axway/axway-central-cli/v/4.12.0) has been updated to include security fixes.
+
 ## April 20, 2026
 
 New enhancements and bug fixes for the April 20 update.
