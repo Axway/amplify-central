@@ -112,7 +112,6 @@ Each element can be configured independently, and multiple instances of any elem
 * **Categories**
 * **Products**
 * **Separator**
-* **Sign In / Register**
 
 ---
 
@@ -276,17 +275,6 @@ Visually separates sections to improve readability.
 * Solid
 * Dotted
 * Dashed
-
----
-
-## Element: Sign In / Register
-
-Adds or configures authentication entry points.
-  
-* Optional element.
-* Can be reordered.
-* Supports hiding the default Marketplace Sign In / Register button.
-* Used when providing custom sign in or registration experiences.
 
 ---
 
