@@ -24,8 +24,8 @@ As an administrator, you can:
 * Toggle the visibility of each default menu item individually.
 * Rename menu default items to match your business or branding.
 * Reorder the display position of default items in the navigation bar.
-* Add/Delete/Edit/Reorder custom menu items
-* Delete any default item including **Sign in / Register**
+* Add/Delete/Edit/Reorder custom menu items.
+* Delete any default item including **Sign in / Register**.
 
 To update the main navigation bar:
 
@@ -38,8 +38,8 @@ To update the main navigation bar:
     * Enter a link to the destination. You can add a link to an external page or reference a page from the Document Library.
     * Set the visibility (**Always Shown**, **Hidden**, **Signed in**, **Signed out**).
     * Choose whether the link opens in a new tab.
-    * Use the **Move** icon to reorder items.
-    * Click the **Delete** icon to remove an item (enabled for both default and custom items).
+    * Click **Move** to reorder items.
+    * Click **Delete** to remove an item (enabled for both default and custom items).
 
 5. Click **Clear all items** to remove all custom and default items.
 6. Click **+ Menu item** to add a new item.
@@ -60,8 +60,8 @@ To update the Help menu that is positioned next to the Account menu:
     * Enter a link to the help resource.
     * Set the visibility.
     * Choose whether the link opens in a new tab.
-    * Use the **Move** icon to reorder items.
-    * Click the **Delete** icon to remove an icon.
+    * Click **Move** to reorder items.
+    * Click **Delete** to remove an icon.
 
 5. Click **Clear all items** to reset the menu.
 6. Click **+ Menu Item** to add a new help item.
