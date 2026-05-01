@@ -4,7 +4,7 @@ linkTitle: Integrate with Google Console
 weight: 15
 ---
 
-Integrate your Amplify Engage Marketplace with Google Search Console to allow Google to crawl and index public marketplace pages. This integration enables search engine discoverability through configurable indexing settings and metadata applied to public pages.
+Integrate your Amplify Engage Marketplace with Google Search Console to allow Google to crawl and index public Marketplace pages. This integration enables search engine discoverability through configurable indexing settings and metadata applied to public pages.
 
 ## Before you start
 
@@ -22,22 +22,21 @@ Learn how to:
 
 ## Enable Google Console indexing
 
-1. Navigate to **Marketplace > Marketplace Settings**.
-2. Navigate tp **Integration > Search Engines** tab.
+1. Navigate to *Marketplace > Marketplace Settings*.
+2. Select **Integration > Search Engines** tab.
 3. Locate the **Indexing** setting.
-4. Set **Indexing** to **Enabled** to allow the marketplace to be indexed.
+4. Set **Indexing** to **Enabled** to allow the Marketplace to be indexed.
     * When Indexing is **Enabled**, the site is considered indexable.
     * When Indexing is explicitly set to **Disabled**, the site is not indexable.
-5. Once Indexing is enabled, a **Google site verification ID** field becomes available.
-6. Enter your **Google site verification ID**.
+5. Once Indexing is enabled, a **Google site verification ID** field becomes available. Enter your **Google site verification ID**.
     * The verification meta tag is added only when a Google ID value is present.
-7. Save your changes.
+6. Save your changes.
 
 The Marketplace consumes these settings via the `marketplace.settings.update` event. No changes are required in `Appc.data.provider`.
 
 ## Indexed pages and metadata behavior
 
-When indexing is enabled, Amplify Engage automatically applies page-specific titles and descriptions to public pages:
+When indexing is enabled, Amplify Engage automatically applies page-specific titles and descriptions to the following public pages.
 
 ### Homepage
 
@@ -83,8 +82,8 @@ When indexing is enabled, Amplify Engage automatically applies page-specific tit
 
 ## Robots.txt behavior
 
-Robots.txt is managed at the Platform level. Unified navigation elements are excluded from indexing to ensure only relevant marketplace content is crawled by search engines.
+Robots.txt is managed at the platform level. Unified navigation elements are excluded from indexing to ensure only relevant Marketplace content is crawled by search engines.
 
-## Notes and limitations
+## Limitation
 
-* The Google ID field is visible and editable only when Indexing is set to **Enabled**.
+The Google ID field is visible and editable only when Indexing is set to **Enabled**.
