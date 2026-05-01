@@ -310,7 +310,7 @@ Embeds content from the Document Library directly into the homepage.
 
 Adds a search bar inside the Content container to facilitate discovery.
 
-#### Search configurable properties:
+#### Search configurable properties
 
 * Search scope
     * Products
