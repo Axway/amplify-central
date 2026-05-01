@@ -61,7 +61,8 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01827634 | APIGOV-32445 | **Issue**: When attempting to register an Application on the Marketplace, the protection lock icon is message preventing credentials to be requested. <br/>**Resolution**: A fix was made in the credential request definition synchronization in the APIM agent. |
+|          | APIGOV-32465 | **Issue**: The agent status could appear as Unhealthy or Stopped while the agent was running. <br/>**Resolution**: A fix was made on the Engage platform to improve the handling of the connection status. |
 
 ## Marketplace updates
 
