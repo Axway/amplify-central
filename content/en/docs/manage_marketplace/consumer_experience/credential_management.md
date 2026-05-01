@@ -42,7 +42,7 @@ To request access to an API from the product:
     * Fill out any other fields that are displayed on the form.
     * Click **Register Application**.
 
-If the access is automatically approved, you will be prompted with the option to *Request Credential*.
+If the access is automatically approved, you will be prompted with the option to Request Credential.
 If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
 To request access to an API from the product resource:
@@ -56,7 +56,7 @@ To request access to an API from the product resource:
     * Fill out any other fields that are displayed on the form.
     * Click **Register Application**.
 
-If the access is automatically approved, you will be prompted to *Request Credential*.
+If the access is automatically approved, you will be prompted to Request Credential.
 If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
 {{< alert title="Note" color="primary" >}}
@@ -89,11 +89,11 @@ The credential request can be done from several places in the Marketplace:
 * From the product: *Marketplace > Product* > click **Request Credential**
 * While requesting access to the product resource: if access is auto approved, then the *Request Credential* screen is displayed
 
-To create a credential, enter a **Name**, select which resource will be acccessed, select the owning Team (optional), select which application to add the credential to, select the credential type and enter the required information. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title is visible.
+To create a credential, enter a **Name**, select the resource to acccess, choose an owning Team (optional), select which application to add the credential to, speicify the credential type and required details. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title appears.
 
-After selecting the resource and application, if there are existing credentials for the application, you will see a message alert that there are "Existing credentials found" for the application that can be reused.  The message includes a link to "View existing credentials" which will open a dialog listing information for the existing credentials for the selected application. Clicking any of the Credential Names will navigate you to the credential details page.  If an existing credential can be reused, cancel the Request credential process.  If there are no existing credentials or if none of the existing credentials listed are reusable, you can still create a new credential.  
+When you choose a resource and application, you'll receive a notification stating "Existing credentials found" if there are credentials that can be reused for that application. This message provides a "View existing credentials" link, which opens a dialog displaying details about the available credentials. Selecting any Credential Name takes you to its details page. If you find a reusable credential, simply cancel the Request credential process. However, if no credentials are available or none are reusable, you can create a new credential.  
 
-After clicking **Submit**, you will be navigated to the **Credential Requst Submitted** page which will also display a a number of resources in the application which are compatible with the new credential. You can click the **View Crendential** button to navigate to the **Credenaial Details** page, or **Close** to leave the page.
+Once you click **Submit**, you will be redirected to the **Credential Requst Submitted** page, which will list resources within the application that are compatible with the new credential. You can choose **View Crendential** to go to the **Credenaial Details** page, or select **Close** to exit the page.
 
 Once the credential is generated, make sure to copy and paste it in a secure location, as you will not be able to see it again from the Marketplace. If you lose the credential secret, click **Create Credential** to create a new one.
 
