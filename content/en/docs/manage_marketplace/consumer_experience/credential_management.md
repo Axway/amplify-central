@@ -42,12 +42,12 @@ To request access to an API from the product:
     * Fill out any other fields that are displayed on the form.
     * Click **Register Application**.
 
-If the access is automatically approved, you will be directed to the *Create Credential* screen.
+If the access is automatically approved, you will be prompted with the option to Request Credential.
 If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
 To request access to an API from the product resource:
 
-1. From the Marketplace *Home* screen, open a product and select the **Resources** tab.
+1. From the Marketplace *Home* or *Products* screen, open a product and select the **Resources** tab.
 2. Click the **Door with lock** icon that is displayed next to the resource.
 3. Complete the Request access form. Note that **Request access name** is auto populated.
 
@@ -56,7 +56,7 @@ To request access to an API from the product resource:
     * Fill out any other fields that are displayed on the form.
     * Click **Register Application**.
 
-If the access is automatically approved, you will be directed to the *Create Credential* screen.
+If the access is automatically approved, you will be prompted to Request Credential.
 If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
 {{< alert title="Note" color="primary" >}}
@@ -84,11 +84,16 @@ View and track the status of the Application Registrations:
 
 The credential request can be done from several places in the Marketplace:
 
-* From the application: *Marketplace > Application* > navigate to the appropriate resource > click **Create Credential**
-* From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application > click **Create Credential**
-* While requesting access to the product resource: if access is auto approved, then the *Create Credential* screen is displayed
+* From the application: *Marketplace > Application* > navigate to the appropriate resource > click **Request Credential**
+* From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application > click **Request Credential**
+* From the product: *Marketplace > Product* > click **Request Credential**
+* While requesting access to the product resource: if access is auto approved, then the *Request Credential* screen is displayed
 
-To create a credential, select the credential type and enter the required information. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title is visible.
+To create a credential, enter a **Name**, select the resource to acccess, choose an owning Team (optional), select which application to add the credential to, speicify the credential type and required details. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title appears.
+
+When you choose a resource and application, you'll receive a notification stating "Existing credentials found" if there are credentials that can be reused for that application. This message provides a "View existing credentials" link, which opens a dialog displaying details about the available credentials. Selecting any Credential Name takes you to its details page. If you find a reusable credential, simply cancel the Request credential process. However, if no credentials are available or none are reusable, you can create a new credential.  
+
+Once you click **Submit**, you will be redirected to the **Credential Requst Submitted** page, which will list resources within the application that are compatible with the new credential. You can choose **View Crendential** to go to the **Credenaial Details** page, or select **Close** to exit the page.
 
 Once the credential is generated, make sure to copy and paste it in a secure location, as you will not be able to see it again from the Marketplace. If you lose the credential secret, click **Create Credential** to create a new one.
 
