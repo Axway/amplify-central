@@ -24,19 +24,9 @@ TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
 
 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
-TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
-
-TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
-
 The full list of cipher suites is extensive, and many may not be supported by the various servers. The cipher suites listed above are generally considered to be the most secure. Here is a full list of cipher suites that the agents allow for configuration:
 
-TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
-
-TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
-
 TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
-
-TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
 
 TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
 
