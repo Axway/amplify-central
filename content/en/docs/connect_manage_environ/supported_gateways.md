@@ -54,7 +54,7 @@ Supports both **on-premise** and **embedded(SaaS)** agents.
 * Discovery of APIs
 * Marketplace application provisioned as a product
 * Application registration requests result in adding the API to the product
-* Credentials: API Key and EntraID (for on-premise agents only)
+* Credentials: API Key and EntraID
 * Credential management:
     * API Key: Suspend / Enable
 * Quotas tied to products
