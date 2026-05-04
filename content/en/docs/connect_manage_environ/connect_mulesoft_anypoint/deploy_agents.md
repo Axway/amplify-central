@@ -12,8 +12,8 @@ Before beginning to deploy the agents, gather the following in addition to the d
 
 * MuleSoft AnyPoint Exchange URL, if it differs from the default of **<https://anypoint.mulesoft.com>**
 * MuleSoft AnyPoint Business Unit the agent connects to
-* MuleSoft Username and Password or Client ID and Secret
-    * If using a Client ID and Secret then a MuleSoft App Integration will need to be created
+* MuleSoft Client ID and Secret
+    * A MuleSoft App Integration with the required permissions must be created
 * Go to *Help menus > Downloads > Repository*
      -or-
 * Go to [https://repository.axway.com/catalog?q=agents](https://repository.axway.com/catalog?q=agents) and search for the Docker image for the most recent agents to download as `{discoveryAgentImage}` and `{traceabilityAgentImage}`.
