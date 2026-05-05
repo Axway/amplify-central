@@ -61,12 +61,12 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01827634 | APIGOV-32445 | **Issue**: When attempting to register an Application on the Marketplace, the protection lock icon is message preventing credentials to be requested. <br/>**Resolution**: A fix was made in the credential request definition synchronization in the APIM agent. |
+| 01827634 | APIGOV-32445 | **Issue**: Once the API is added to a product and viewed in Marketplace, it is missing the protection lock icon and thus credentials can't be requested and application registration is not possible. <br/>**Resolution**: A fix was made in the credential request definition synchronization in the APIM agent. |
 |          | APIGOV-32465 | **Issue**: The agent status could appear as Unhealthy or Stopped while the agent was running. <br/>**Resolution**: A fix was made on the Engage platform to improve the handling of the connection status. |
 
 ## Marketplace updates
 
-* **Credential request side panel enhancement**
+* **Credential reuse visibility during Credential Request submission**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   When a consumer submits a new credential request for an application, the Credential Request Submitted side panel displays a list of existing resources associated with the same application that can reuse the newly requested credentials, helping consumers understand reuse opportunities. If no other resources exist, the section is hidden. Note the View credentials action continues provide access to the newly created credential’s metadata.
