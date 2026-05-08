@@ -10,6 +10,17 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## May 7, 2026
+
+New enhancement for May 7 update.
+
+### Agent update for May 7, 2026
+
+* **IBM webMethods: hostname override**
+
+  (WEBMETHODS AGENT, ENHANCEMENT)</br>
+  The IBM (formerly Software AG) webMethods Discovery agent now lets you override the hostname for discovered API endpoints published to Amplify Central when the gateway is behind a load balancer or uses a custom domain. Configure the hostname override with the WEBMETHODS_GATEWAYHOST environment variable.
+
 ## May 4, 2026
 
 New enhancements and bug fixes for the May 4 update.
