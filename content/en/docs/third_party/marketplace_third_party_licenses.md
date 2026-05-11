@@ -11,6 +11,7 @@ Information about the third-party open source and commercial/proprietary librari
 {{< alert title="Note" color="primary" >}}The third-party software and licenses information is published monthly. For up-to-date information, contact your account representative.{{< /alert >}}
 
 * [Amplify Engage May 2026 Third-party Software and Licenses](/samples/thirdparty/20260501.zip)
+* [Amplify Engage April 2026 Third-party Software and Licenses](/samples/thirdparty/20260401.zip)
 * [Amplify Engage March 2026 Third-party Software and Licenses](/samples/thirdparty/20260301.zip)
 * [Amplify Engage February 2026 Third-party Software and Licenses](/samples/thirdparty/20260201.zip)
 * [Amplify Engage January 2026 Third-party Software and Licenses](/samples/thirdparty/20260101.zip)
