@@ -102,7 +102,9 @@ By default, all linked services use **Full exposure**, meaning the asset include
 #### How it works
 
 * Select **Edit Specification** for a service
-* Upload a file containing the partial API specification
+* Choose one of the following options to define the partial specification:
+    * **Select Operations** – pick from the existing operations defined in the API service
+    * **Upload Spec file** – upload a file containing the partial API specification (only OAS2 or OAS3 spec files are supported)
 * The Exposure column updates from **Full** to **Partial**
 
 {{< alert title="Important" color="primary" >}} Changes here affect only how the API is exposed within the asset.
