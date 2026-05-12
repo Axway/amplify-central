@@ -46,7 +46,7 @@ Only the Engage Admin role can create identity providers.
     * **Use Registration Access Token** (Optional) - toggle to allow the agent to save and use the credential-specific registration token when modifying the client in the identity provider.
 
 4. Choose to add **Endpoints** and/or **Metadata URL**:
-   
+
       * **Endpoints**:
 
            * **Issuer**: The issuer URL for the identity provider.
@@ -54,7 +54,7 @@ Only the Engage Admin role can create identity providers.
            * **Token Endpoint**: The token endpoint for the identity provider.
            * **Introspection Endpoint**: The introspection endpoint for the identity provider.
            * **JWKS URI**: The JWKS URI for the identity provider.
-   
+
       * **Metadata**:
 
           * **Metadata URL** - provide the URL to connect to the identity provider authorization server to provide metadata information. The OAuth authorization server exposes the URL.
@@ -73,6 +73,8 @@ Only the Engage Admin role can create identity providers.
 
           * **Request Headers** (Optional) - enter name and value pairs to add request headers to the token request calls.
           * **Query Parameters** (Optional) - enter name and value pairs to add query parameters to the token request calls.
+
+5. Set expiration days for the credentials in this idp's environment. If set check if the credential should be deprovisioned when expired. Notification can be sent prior to the credential expiration date if selected.
 
 6. Click **Save** to create the identity provider and return to the list of identity providers.
 
