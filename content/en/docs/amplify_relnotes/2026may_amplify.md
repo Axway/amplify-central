@@ -14,7 +14,7 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 New enhancements and bug fixes for the May 14 update.
 
-### Agent updates
+### Agent updates for May 14, 2026
 
 * **IBM webMethods API discovery**
 
@@ -26,14 +26,14 @@ New enhancements and bug fixes for the May 14 update.
   (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
   The Mulesoft Anypoint Discovery Agent now supports business unit and environment filtering for discovery of API services. Only APIs that match the configured filters are discovered and displayed on the Engage *Environment Details* page, improving relevance and reducing unnecessary API processing.
 
-### Agent bug fixes
+### Agent bug fixes for May 14, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | 01827634 | APIGOV-32445 | **Issue**: When an API is added to a product and viewed in the Marketplace, the protection lock icon may not appear, which prevents credential requests and application registration. <br/>**Resolution**: The APIM agent's credential request definition synchronization was fixed. |
 |          | APIGOV-32465 | **Issue**: Even while the agent was running, its status could show as Unhealthy or Stopped. <br/>**Resolution**: The Engage platform's handling of the connection status was improved. |
 
-### Marketplace updates
+### Marketplace updates for May 14, 2026
 
 * **Credential reuse visibility during Credential Request submission**
 
@@ -58,7 +58,7 @@ New enhancements and bug fixes for the May 14 update.
 
   {{< alert title="Note" color="primary" >}}The exposure of a partial API specification does NOT alter the full API specification in the Engage Service Registry.{{< /alert >}}
 
-### Marketplace bug fixes
+### Marketplace bug fixes for May 14, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
