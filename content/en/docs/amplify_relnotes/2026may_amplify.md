@@ -30,7 +30,7 @@ New enhancements and bug fixes for the May 14 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01827634 | APIGOV-32445 | **Issue**: When an API is added to a product and viewed in the Marketplace, the protection lock icon may not appear, which prevents credential requests and application registration.. <br/>**Resolution**: The APIM agent's credential request definition synchronization was fixed. |
+| 01827634 | APIGOV-32445 | **Issue**: When an API is added to a product and viewed in the Marketplace, the protection lock icon may not appear, which prevents credential requests and application registration. <br/>**Resolution**: The APIM agent's credential request definition synchronization was fixed. |
 |          | APIGOV-32465 | **Issue**: Even while the agent was running, its status could show as Unhealthy or Stopped. <br/>**Resolution**: The Engage platform's handling of the connection status was improved. |
 
 ### Marketplace updates
