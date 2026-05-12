@@ -19,24 +19,24 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Engage May 14 2026](/docs/amplify_relnotes/2026may_amplify/#may-14-2026)
 
-| Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
-|--------------------------------------------|--------------------------|
-| Axway API Management 7.7                   | DA=1.2.54 / TA=1.2.45    |
-| AWS Gateway using SDK 2.0                  | DA=1.2.42 / TA=1.2.42    |
-| Azure latest release                       | DA=1.3.43 / TA=1.3.43    |
-| Istio 1.9.5                                | DA=1.1.41 / TA=2.1.38    |
-| Apigee Edge                                | 1.0.36                   |
-| Apigee X                                   | 1.4.29                   |
-| Mulesoft Anypoint platform v3              | 1.2.42                   |
-| IBM webMethods                             | 1.0.34                   |
-| Kong Gateway                               | 1.1.39                   |
-| GitLab                                     | 1.1.39                   |
-| Kafka Cluster                              | 1.1.32                   |
-| IBM API Connect Gateway                    | 1.1.33                   |
-| Backstage                                  | 1.0.35                   |
-| SAP Integration Suite - API Management / API Portal | 1.0.21          |
-| WSO2 API Manager 4.5.0                     | 1.0.21                   |
-| Sensedia                                   | 1.0.11                   |
+| Environment type                                    | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 <br />unless otherwise noted) |
+|-----------------------------------------------------|--------------------------|
+| Axway API Management 7.7                            | DA=1.2.57 / TA=1.2.48    |
+| AWS Gateway using SDK 2.0                           | 1.2.44                   |
+| Azure latest release                                | 1.3.45.                  |
+| Istio 1.9.5                                         | DA=1.1.43 / TA=2.1.40    |
+| Apigee Edge                                         | 1.0.38                   |
+| Apigee X                                            | 1.4.31                   |
+| Mulesoft Anypoint platform v3                       | 1.2.45                   |
+| IBM webMethods                                      | 1.0.36                   |
+| Kong Gateway                                        | 1.1.41                   |
+| GitLab                                              | 1.1.41                   |
+| Kafka Cluster                                       | 1.1.34                   |
+| IBM API Connect Gateway                             | 1.1.35                   |
+| Backstage                                           | 1.0.37                   |
+| SAP Integration Suite - API Management / API Portal | 1.0.23                   |
+| WSO2 API Manager 4.5.0                              | 1.0.23                   |
+| Sensedia                                            | 1.0.13                   |
 
 | Supported SaaS (embedded) agents           |
 |--------------------------------------------|
@@ -50,9 +50,9 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 | Runtime Compliance agents                  | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.137 unless otherwise noted)  |
 |--------------------------------------------|--------------------------|
-| Graylog API Security                       | 1.1.32                   |
-| Traceable API Security                     | 2.0.18                   |
-| Akamai API Security                        | 1.1.6                    |
+| Graylog API Security                       | 1.1.34                   |
+| Traceable API Security                     | 2.0.21                   |
+| Akamai API Security                        | 1.1.8                    |
 
 ## [Amplify Engage May 7 2026](/docs/amplify_relnotes/2026may_amplify/#may-7-2026)
 
