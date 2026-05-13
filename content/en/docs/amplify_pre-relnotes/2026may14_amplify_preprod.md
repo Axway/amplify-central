@@ -60,12 +60,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace updates
 
-* **Unified Oauth Credential Provisioning for MCP Server + Backlog API (v7 Gateway)**
-  
-  (PROVIDER AND CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE CREDENTIALS)</br>
-     Generate and manage a single OAuth credential that seamlessly grants access to both MCP servers and their underlying APIs, simplifying onboarding and reducing configuration effort, reducing setup time for developers and eliminating duplicate credential management. A unified credential model also helps organizations lower operational risk and avoid access gaps across interconnected services.
-
-* **Agent to Agent**
+* **AI Agent Registration and Discovery**
   
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
      Easily discover AI Agents (A2A) in the Marketplace with a dedicated, user-friendly details view that highlights capabilities, skills, and key metadata helping consumers quickly evaluate and adopt the right agent. Enhanced filtering by AI Agent (A2A) type in Marketplace Products further improves discoverability, reducing time spent searching and accelerating integration.
