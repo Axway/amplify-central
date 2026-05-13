@@ -76,5 +76,5 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 |--------- |------------- |-------------|
 | 01827557 | APIGOV-32559| **Issue**: 503 Admission error when linking/unlinking asset in draft product <br/>**Resolution**: Fixed by increasing timeout during asset linking/unlinking |
 | 01835429 | APIGOV-32649| **Issue**: Adding/Editing a plan in Engage doesn't fetch all resources <br/>**Resolution**: Fixed by updating to show the resources of more than 20 Assets in the quota resource selector |
-|          | APIGOV-32589| **Issue**: API Server failed to process ResourceEntryDeleted event for a CRD that had 42k soft references <br/>**Resolution**: Increased the memory to 1.5GBs and set the relay notifier timeout to 5 minutes | 
+|          | APIGOV-32589| **Issue**: API Server failed to process ResourceEntryDeleted event for a CRD that had 42k soft references <br/>**Resolution**: Increased the memory to 1.5GBs and set the relay notifier timeout to 5 minutes |
 |          | APIGOV-32437| **Issue**: Product documentation does not render if the spec.sections.articles do not have a title set <br/>**Resolution**: Fixed by maintaining Title as a mandatory field for documents. |
