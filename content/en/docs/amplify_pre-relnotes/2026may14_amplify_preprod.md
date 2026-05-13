@@ -60,13 +60,21 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace updates
 
-* **Title**
+* **Unified Oauth Credential Provisioning for MCP Server + Backlog API (v7 Gateway)**
+  
+  (PROVIDER AND CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE CREDENTIALS)</br>
+     Generate and manage a single OAuth credential that seamlessly grants access to both MCP servers and their underlying APIs, simplifying onboarding and reducing configuration effort, reducing setup time for developers and eliminating duplicate credential management. A unified credential model also helps organizations lower operational risk and avoid access gaps across interconnected services.
 
+* **Agent to Agent**
+  
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Description.
+     Easily discover AI Agents (A2A) in the Marketplace with a dedicated, user-friendly details view that highlights capabilities, skills, and key metadata helping consumers quickly evaluate and adopt the right agent. Enhanced filtering by AI Agent (A2A) type in Marketplace Products further improves discoverability, reducing time spent searching and accelerating integration.
 
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: description. <br/>**Resolution**: Description. |
+| 01827557 | APIGOV-32559| **Issue**: 503 Admission error when linking/unlinking asset in draft product <br/>**Resolution**: Fixed by increasing timeout during asset linking/unlinking |
+| 01835429 | APIGOV-32649| **Issue**: Adding/Editing a plan in Engage doesn't fetch all resources <br/>**Resolution**: Fixed by updating to show the resources of more than 20 Assets in the quota resource selector |
+|          | APIGOV-32589| **Issue**: API Server failed to process ResourceEntryDeleted event for a CRD that had 42k soft references <br/>**Resolution**: Increased the memory to 1.5GBs and set the relay notifier timeout to 5 minutes | 
+|          | APIGOV-32437| **Issue**: Product documentation does not render if the spec.sections.articles do not have a title set <br/>**Resolution**: Fixed by maintaining Title as a mandatory field for documents. |
