@@ -10,6 +10,65 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## May 14, 2026
+
+New enhancements and bug fixes for the May 14 update.
+
+### Agent updates for May 14, 2026
+
+* **IBM webMethods API discovery**
+
+  (WEBMETHODS DISCOVERY AGENT, ENHANCEMENT)</br>
+  The IBM webMethods Discovery Agent has been enhanced to use webMethods /search API to improve the performance of the API discovery process.
+
+* **Mulesoft Agent: business unit and environment filters**
+
+  (MULESOFT ANYPOINT AGENT, ENHANCEMENT)</br>
+  The Mulesoft Anypoint Discovery Agent now supports business unit and environment filtering for discovery of API services. Only APIs that match the configured filters are discovered and displayed on the Engage *Environment Details* page, improving relevance and reducing unnecessary API processing.
+
+### Agent bug fixes for May 14, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01827634 | APIGOV-32445 | **Issue**: When an API is added to a product and viewed in the Marketplace, the protection lock icon may not appear, which prevents credential requests and application registration. <br/>**Resolution**: The APIM agent's credential request definition synchronization was fixed. |
+|          | APIGOV-32465 | **Issue**: Even while the agent was running, its status could show as Unhealthy or Stopped. <br/>**Resolution**: The Engage platform's handling of the connection status was improved. |
+
+### Marketplace updates for May 14, 2026
+
+* **Credential reuse visibility during Credential Request submission**
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  When a consumer submits a new credential request for an application, the Credential Request Submitted side panel displays a list of existing resources associated with the same application that can reuse the newly requested credentials, helping consumers understand reuse opportunities. If no other resources exist, the section is hidden. Note that the View credentials action continues to provide access to the newly created credential’s metadata.
+
+* **Asset archiving safeguards for product dependencies**
+
+  (PROVIDER EXPERIENCE, RESOLUTION, ASSET CATALOG)</br>
+  The archiving behavior has been updated to prevent assets that are actively referenced by products or product releases from entering an unrecoverable state or inform when an asset has already been archived. Assets used in product plans are now clearly identified as Non-Archivable, and archiving is blocked to avoid breaking plan configurations and updates. The archive confirmation dialog has been improved for clarity and consistency, with a unified experience for single and multi-select actions, including pagination and clear visibility into referenced products and versions. This ensures product plans remain manageable and prevents UI dead-ends caused by archived dependencies.
+
+* **Partial API exposure**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG, MARKETPLACE)</br>
+  The Asset create/edit experience has been enhanced to allow the provider the option of partial exposure of the API service. This allows the provider to expose a selected subset of the full API specification in the asset promoted to a product in the Marketplace.
+
+  The asset create/edit wizard has a new **Configure Specification** step where the provider can select the option to **Manage Specification** for OAS2, OAS3, or Unstructured APIs. This displays a side panel with two options:
+
+    * **Upload New specification file** - This allows a new OAS2 or OAS3 specification file where a subset of API methods or endpoint URLs can be defined for exposure in the asset/product published to the Marketplace.  
+
+    * **Select Existing Operations** - This allows the search by Operation or Path within the full API specification and the selection of a subset of methods for exposure in the asset/product published to the Marketplace.
+
+  {{< alert title="Note" color="primary" >}}The exposure of a partial API specification does NOT alter the full API specification in the Engage Service Registry.{{< /alert >}}
+
+### Marketplace bug fixes for May 14, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+|          | APIGOV-32647| **Issue**: Marketplace AssetResourceUpdatedEventHandler taking more than 500s to process AssetResource/Asset update events. <br/>**Resolution**: Optimized Marketplace asset resource update events. |
+| 01826485 | APIGOV-32437| **Issue**: Issue with the screen that shows list of accessible APIs. <br/>**Resolution**: A Status column has been added to the grid to note status of the resources based on application status. |
+| 01784733 | APIGOV-31611| **Issue**: Conflict between asset-level and product-level categories. <br/>**Resolution**: The asset and product category conflict has been resolved. |
+|          | APIGOV-32371| **Issue**: On small screens, the credentials date tooltip appears beneath "State." <br/>**Resolution**: A horizontal scrollbar has been added to ensure proper tooltip display. |
+|           | APIGOV-32434| **Issue**: A release cannot be created on a small screen because the product's side panel does not allow scrolling. <br/>**Resolution**: Added scrollbar for improved side panel visibility. |
+|           | APIGOV-32530| **Issue**: Marketplace UI: Improve Keycloak login handler. <br/>**Resolution**: Now, if main authentication fails to grant an auth token, users are redirected to the login page. |
+
 ## May 7, 2026
 
 New enhancement for May 7 update.
