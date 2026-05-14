@@ -34,13 +34,13 @@ This section walks you through the asset creation flow in a clear, logical seque
 
 When creating an asset, you will complete the following phases:
 
-1. Define the asset profile
-2. Link API resources
-3. (Optional) Configure API exposure
-4. Configure release management
-5. Configure access and sharing
-6. Classify the asset (categories, tags, attributes)
-7. Review and save (Draft or Active)
+1. Define the asset profile.
+2. Link API resources.
+3. (Optional) Configure API exposure.
+4. Configure release management.
+5. Configure access and sharing.
+6. Classify the asset (categories, tags, attributes).
+7. Review and save (Draft or Active).
 
 {{< alert title="Note" color="primary" >}} **Important**: An asset must be **Active** before it can be used in a product definition. Assets created as Draft must be activated later. See [Activate an asset](#activate-an-asset). {{< /alert >}}
 
@@ -101,11 +101,11 @@ By default, all linked services use **Full exposure**, meaning the asset include
 
 #### How it works
 
-1. Select **Edit Specification** for a service
+1. Select **Edit Specification** for a service.
 2. Choose one of the following options to define the partial specification:
     * **Select Operations** – pick from the existing operations defined in the API service
     * **Upload Spec file** – upload a file containing the partial API specification (only OAS2 or OAS3 spec files are supported)
-3. The Exposure column updates from **Full** to **Partial**
+3. The Exposure column updates from **Full** to **Partial**.
 
 {{< alert title="Note" color="primary" >}} **Important**: Changes here affect only how the API is exposed within the asset.
 
@@ -178,16 +178,15 @@ Click **Preview Asset** to review everything before creation.
 
 Choose how to save:
 
-* **Save**
-  Creates the asset in Draft state
-* **Save & Activate**
-  Creates and immediately releases the asset as Active, making it consumable.
+* **Save**: Creates the asset in Draft state.
+* **Save & Activate**: Creates and immediately releases the asset as Active, making it consumable.
 
 {{< alert title="Note" color="primary" >}}Assets created as Draft must be activated before they can be used in a product definition.{{< /alert >}}
 
 ## Activate an asset
 
 Activating an asset publishes a version of the asset and makes it available for use in a product definition. Until an asset is activated, it remains in a **Draft** or **Deprecated** state and cannot be consumed by products.
+
 Activation is also the point at which versioning and release semantics are applied, ensuring providers understand the impact of changes.
 
 ### When activation is required
