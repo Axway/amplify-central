@@ -74,9 +74,7 @@ Only the Engage Admin role can create identity providers.
           * **Request Headers** (Optional) - enter name and value pairs to add request headers to the token request calls.
           * **Query Parameters** (Optional) - enter name and value pairs to add query parameters to the token request calls.
 
-5. Set expiration days for the credentials in this idp's environment. If set check if the credential should be deprovisioned when expired. Notification can be sent prior to the credential expiration date if selected.
-
-6. Click **Save** to create the identity provider and return to the list of identity providers.
+5. Click **Save** to create the identity provider and return to the list of identity providers.
 
 ### Editing an identity provider
 
