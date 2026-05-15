@@ -47,23 +47,40 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **Title**
+* **APIM enhancement: Improved API Instance validation handling**
 
-  (NAME OF AGENT, ENHANCEMENT)</br>
-  Description.
+  (EdgeGatewayDiscoveryAgent, ENHANCEMENT)</br>
+  Enhanced the instance validation logic to prevent incorrect sync statuses in Amplify Engage when Axway API Manager is temporarily unreachable (e.g. due to invalid credentials or network issues).
+
+* **SoftwareAG webMethods enhancement: Optimized Traceability Agent API request efficiency**
+
+  (SOFTWAREAG WEBMETHODS, ENHANCEMENT)</br>
+  Improved the performance and stability of the WebMethods Traceability Agent by optimizing API request patterns and reducing the volume of data retrieved from the WebMethods platform. These enhancements help prevent potential crashes and have been validated to ensure no increase in 429 errors.
 
 ## Agent bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01824665 | APIGOV-32378 | **Issue**: Logical name when deleting Service from Environment page. <br/>**Resolution**: Delete pop-up modal now display the Service Name Friendly Title, instead of the logical name. |
+| 01833661 | APIGOV-32578 | **Issue**: Mulesoft v1.2.43 keeps restarting. <br/>**Resolution**: Standardized rate limiting configuration in MuleSoft by implementing a single, consistent rate limiter across all business unit clients. |
+| 01836077 | APIGOV-32650 | **Issue**: Environment name not fully displayed when adding a resource during asset creation . <br/>**Resolution**: Display full name in a hoverover tooltip. |
+|          | APIGOV-32658 | **Issue**: Sensedia - API Traceability transactions are not being given application context. <br/>**Resolution**:  Consumer Insights Dashboards are now showing data.|
+|          | APIGOV-32655 | **Issue**: Agents Controller - handling of retracted versions when it is also latest. <br/>**Resolution**: A fix was introduced to properly handle latest retraced version. |
+|          | APIGOV-32438 | **Issue**: UI - block ability to add a manual API/MCP service to all agent managed environments. <br/>**Resolution**: UI now enforces validation in the Manually Add wizard, allowing users to proceed only when the selected environment is configured for "Manual Sync."|
+|          | APIGOV-32628 | **Issue**: Asset Wizard - Configure specification stage column is empty. <br/>**Resolution**: The endpoint stage is correctly displayed on the Configure Specification page of the asset wizard.  |
 
 ## Marketplace updates
 
 * **AI Agent Registration and Discovery**
-  
-  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-     Easily discover AI Agents (A2A) in the Marketplace with a dedicated, user-friendly details view that highlights capabilities, skills, and key metadata helping consumers quickly evaluate and adopt the right agent. Enhanced filtering by AI Agent (A2A) type in Marketplace Products further improves discoverability, reducing time spent searching and accelerating integration.
+
+  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, NEW FEATURE)</br>
+  Amplify Engage now supports the registration and discovery of **AI Agents**, alongside other API and MCP resource types. Providers can now easily register AI Agents in the Service Registry by importing an **Agent Card**. A guided wizard automatically extracts and populates key service metadata, significantly reducing manual data entry.
+Once registered, the AI Agent can be seamlessly published to the Marketplace using the standard **Asset → Product** publication flow. Enhanced filtering by AI Agent (A2A) type in Marketplace Products further improves discoverability, reducing time spent searching and accelerating integration.
+
+* **Enhanced Analytics Context for Access Requests**
+
+  (ANALYTICS, ENHANCEMENT, ENGAGE)</br>
+  To improve analytics accuracy and reduce dependency on additional API Server calls, ownership information is now included in Marketplace references within Access Requests. This enhancement enables agents to automatically enrich metric and transaction events with the appropriate context, resulting in more efficient and meaningful analytics reporting.
 
 ## Marketplace bug fixes
 
