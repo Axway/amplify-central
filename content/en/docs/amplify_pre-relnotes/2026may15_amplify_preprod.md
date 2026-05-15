@@ -49,7 +49,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 * **APIM enhancement: Improved API instance validation handling**
 
-  (EdgeGatewayDiscoveryAgent, ENHANCEMENT)</br>
+  (EDGEGATEWAYDISCOVERYAGENT, ENHANCEMENT)</br>
   Enhanced the instance validation logic to prevent incorrect sync statuses in Amplify Engage when Axway API Manager is temporarily unreachable (e.g., due to invalid credentials or network issues).
 
 * **Software AG webMethods enhancement: Optimized Traceability Agent API request efficiency**
@@ -74,7 +74,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 * **AI Agent registration and discovery**
 
   (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, NEW FEATURE)</br>
-  Amplify Engage now supports the registration and discovery of **AI Agents**, alongside other API and MCP resource types. Providers can now easily register AI Agents in the Service Registry by importing an **Agent Card**. A guided wizard automatically extracts and populates key service metadata, significantly reducing manual data entry.
+  Amplify Engage now supports the registration and discovery of AI Agents, alongside other API and MCP resource types. Providers can now easily register AI Agents in the Service Registry by importing an **Agent Card**. A guided wizard automatically extracts and populates key service metadata, significantly reducing manual data entry.
 
   Once registered, the AI Agent can be seamlessly published to the Marketplace using the standard **Asset > Product** publication flow. Enhanced filtering by AI Agent (A2A) type in Marketplace products further improves discoverability, reducing time spent searching and accelerating integration.
 
