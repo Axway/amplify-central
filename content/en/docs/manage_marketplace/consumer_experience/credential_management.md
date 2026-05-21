@@ -80,7 +80,7 @@ View and track the status of the Application Registrations:
 | **Inactive**   | The credential is provisioned on the data plane but cannot be used to consume APIs. This can be the result of a [Suspend action](/docs/manage_marketplace/consumer_experience/credential_management#suspend--enable-credential). |
 | **Deleting**   | The credential deletion has been initiated and is waiting for the credentials to be deprovisioned in the data plane.                        |
 
-#### mTLS credential expiration
+### mTLS credential expiration
 
 For mTLS credentials, the Marketplace automatically extracts the expiration date from the uploaded certificate and sets it on the credential resource. You do not need to manually enter an expiration date. The existing credential notification framework sends expiration alerts as the certificate approaches its expiry date.
 
@@ -95,7 +95,7 @@ The credential request can be done from several places in the Marketplace:
 
 To create a credential, enter a **Name**, select the resource to acccess, choose an owning Team (optional), select which application to add the credential to, speicify the credential type and required details. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title appears.
 
-#### Create an mTLS credential
+### Create an mTLS credential
 
 When the credential type is **MutualTLS**, you are required to upload a public key certificate during credential creation. Only the public certificate is stored by the Marketplace — private key material is never accepted.
 
@@ -104,14 +104,14 @@ To create an mTLS credential:
 1. From the credential request form, select **MutualTLS** as the credential type.
 2. Upload a valid public certificate file. Supported formats: `.pem`, `.crt`, `.cer`.
 3. Once uploaded, the system validates the certificate and displays the following metadata:
-   - **Subject DN** — the distinguished name of the certificate subject
-   - **Expiry Date** — when the certificate expires
-   - **Fingerprint (SHA-256)** — the unique hash of the certificate
+   * **Subject DN** — the distinguished name of the certificate subject
+   * **Expiry Date** — when the certificate expires
+   * **Fingerprint (SHA-256)** — the unique hash of the certificate
 4. Review the parsed certificate details and click **Submit**.
 
 If the same credential can be reused with other APIs under the application, a notification is displayed indicating the credential is compatible with additional resources.
 
-**Validation errors**
+**Validation errors
 
 The following errors may be displayed during certificate upload:
 
@@ -150,13 +150,13 @@ To view the clear value of the credential:
 
 The remaining time to view the decrypted credential value is displayed. To view the value, click the eye icon and confirm your need to view the clear value of the credential. The credential is decrypted and displayed on the screen. Make sure to copy and paste the credential value in a secure location. The secret can be viewed as often as you wish during its remaining period. If you do not save your credential value during the available period, you must renew or request a new credential.
 
-#### View mTLS credential details
+### View mTLS credential details
 
 When viewing an mTLS credential, the credential details page displays the certificate metadata instead of a secret value:
 
-- **Subject DN** — the distinguished name of the certificate subject
-- **Expiry Date** — when the certificate expires
-- **Fingerprint (SHA-256)** — the unique hash of the certificate
+* **Subject DN** — the distinguished name of the certificate subject
+* **Expiry Date** — when the certificate expires
+* **Fingerprint (SHA-256)** — the unique hash of the certificate
 
 Unlike API Key or OAuth credentials, mTLS credentials do not have a secret to copy. The public certificate is retained by the Marketplace so it can be passed downstream to provisioning flows and rendered in the UI.
 
@@ -180,14 +180,14 @@ This action is not supported by all data planes and may not be available for the
 
 When viewing the credential list from the application or from the product resources details, a **Renew credential** menu can be used if enabled by the underlying data plane.
 
-#### Renew an mTLS credential
+### Renew an mTLS credential
 
 When renewing an mTLS credential, you upload a new valid public certificate. The renewal process has the following behavior:
 
-- Renewal does **not** overwrite the existing certificate.
-- The old and new certificates coexist until the old certificate expires or is explicitly invalidated.
-- The new certificate is validated using the same rules as initial creation (format, expiration, no private key material).
-- Once the new certificate is uploaded and submitted, the credential expiration date is updated to reflect the new certificate's expiry.
+* Renewal does **not** overwrite the existing certificate.
+* The old and new certificates coexist until the old certificate expires or is explicitly invalidated.
+* The new certificate is validated using the same rules as initial creation (format, expiration, no private key material).
+* Once the new certificate is uploaded and submitted, the credential expiration date is updated to reflect the new certificate's expiry.
 
 This allows a seamless transition period where both certificates remain valid, avoiding service disruption during certificate rotation.
 
