@@ -56,7 +56,12 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxx   | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description.  |
+| 01834250   | APIGOV-32644 | **Issue**: The IBM (formerly Software AG) Webmethods agent created multiple Asset resource versions. <br/>**Resolution**: A new WebMethods configuration parameter (WEBMETHODS_GATEWAYHOST) was added to define the correct asset resource endpoint when the Webmethods gateway was behind a load balancer.  |
+| 01824682   | APIGOV-32421 | **Issue**: The IBM Webmethods agent was setting the **tags** used by the Webmethods gateway to retriedve APIs. <br/>**Resolution**: A new Webmethods configuration paramater (CENTRAL_ROOTTAGSTOSTRIP) was added to removed the tag value.  |
+| 01837772   | APIGOV-32679 | **Issue**: The IBM Webmethods agent did not set the application level authentication scopes. <br/>**Resolution**: A new Webmethods configuration paramater (WEBMETHODS_ADDOAUTHSCOPES=true) was added to enable the valid setting of the authentication scope names.  |
+| 01837253   | APIGOV-32664 | **Issue**: The APIM discovery agent created multiple Asset versions. <br/>**Resolution**: A fix was made to the APIM discover agent.  |
+| 01836131   | APIGOV-32682 | **Issue**: The Engage Service Registry **save** button prevented the user from saving edits to endpoint for an API. <br/>**Resolution**: A fix was made to the Engage UI.  |
+|            | APIGOV-32627 | **Issue**: A document template could not be used with an API Service. <br/>**Resolution**: A fix was made to allow the use of a document template that was made availble to API Services.  |
 
 ## Marketplace updates
 
