@@ -10,6 +10,57 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
+## May 28, 2026
+
+New enhancements and bug fixes for the May 28 update.
+
+### Agent updates for May 28, 2026
+
+* **APIM enhancement: Improved API instance validation handling**
+
+  (EDGEGATEWAYDISCOVERYAGENT, ENHANCEMENT)</br>
+  Enhanced the instance validation logic to prevent incorrect sync statuses in Amplify Engage when Axway API Manager is temporarily unreachable (e.g., due to invalid credentials or network issues).
+
+* **Software AG webMethods enhancement: Optimized Traceability Agent API request efficiency**
+
+  (SOFTWAREAG WEBMETHODS, ENHANCEMENT)</br>
+  Improved the performance and stability of the WebMethods Traceability Agent by optimizing API request patterns and reducing the volume of data retrieved from the webMethods platform. These enhancements help prevent potential crashes and have been validated to ensure no increase in 429 errors.
+
+### Agent bug fixes for May 28, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01824665 | APIGOV-32378 | **Issue**: Logical name when deleting a service from the Environment page. <br/>**Resolution**: Delete pop-up modal now display the Service Name Friendly Title, instead of the logical name. |
+| 01833661 | APIGOV-32578 | **Issue**: Mulesoft v1.2.43 keeps restarting. <br/>**Resolution**: Standardized rate limiting configuration in MuleSoft by implementing a single, consistent rate limiter across all business unit clients. |
+| 01836077 | APIGOV-32650 | **Issue**: Environment name not fully displayed when adding a resource during asset creation. <br/>**Resolution**: Display full name in a hover text tooltip. |
+|          | APIGOV-32658 | **Issue**: API Traceability transactions are not being given application context. <br/>**Resolution**:  Consumer Insights dashboards are now showing data.|
+|          | APIGOV-32655 | **Issue**: Agents Controller - handling of retracted versions when it is also latest. <br/>**Resolution**: A fix was introduced to properly handle latest retracted version. |
+|          | APIGOV-32438 | **Issue**: UI - block ability to add a manual API/MCP service to all agent-managed environments. <br/>**Resolution**: UI now enforces validation in the Manually Add wizard, allowing users to proceed only when the selected environment is configured for "Manual Sync." |
+|          | APIGOV-32628 | **Issue**: Asset wizard - Configure specification stage column is empty. <br/>**Resolution**: The endpoint stage is correctly displayed on the Configure Specification page of the Asset wizard.  |
+
+### Marketplace updates for May 28, 2026
+
+* **AI Agent registration and discovery**
+
+  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, NEW FEATURE)</br>
+  Amplify Engage now supports the registration and discovery of AI Agents, alongside other API and MCP resource types. Providers can now easily register AI Agents in the Service Registry by importing an **Agent Card**. A guided wizard automatically extracts and populates key service metadata, significantly reducing manual data entry.
+
+  Once registered, the AI Agent can be seamlessly published to the Marketplace using the standard **Asset > Product** publication flow. Enhanced filtering by AI Agent (A2A) type in Marketplace products further improves discoverability, reducing time spent searching and accelerating integration.
+
+* **Enhanced analytics context for Access Requests**
+
+  (ANALYTICS, ENHANCEMENT, ENGAGE)</br>
+  To improve analytics accuracy and reduce the dependency on additional API Server calls, ownership information is now included in Marketplace references within Access Requests. This enhancement enables agents to automatically enrich metric and transaction events with the appropriate context, resulting in more efficient and meaningful analytics reporting.
+
+### Marketplace bug fixes for May 28, 2026
+
+| Case ID  | Internal ID  | Description |
+|--------- |------------- |-------------|
+| 01827557 | APIGOV-32559| **Issue**: 503 Admission error when linking/unlinking asset in draft product. <br/>**Resolution**: Increased timeout during asset linking/unlinking. |
+| 01835429 | APIGOV-32649| **Issue**: Adding/Editing a plan in Engage doesn't fetch all resources. <br/>**Resolution**: Updated to show the resources of more than 20 assets in the quota resource selector. |
+|          | APIGOV-32589| **Issue**: API Server fails to process ResourceEntryDeleted event for a CRD that had 42k soft references. <br/>**Resolution**: Increased the memory to 1.5GBs and set the relay notifier timeout to 5 minutes. |
+|          | APIGOV-32471| **Issue**: Product documentation does not render if the spec.sections.articles do not have a title set. <br/>**Resolution**: The logical name (which is always mandatory) is now taken into account when the title is missing on a document. |
+
 ## May 14, 2026
 
 New enhancements and bug fixes for the May 14 update.
