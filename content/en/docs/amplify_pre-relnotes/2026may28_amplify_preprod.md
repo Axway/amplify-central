@@ -5,7 +5,7 @@ weight: 17
 date: 2026-5-26
 ---
 
-**Feedback Window**: May 8 2026 → June 4 2026 <br />
+**Feedback Window**: May 28 2026 → June 4 2026 <br />
 **Planned Production Date**: June 11 <br />
 **Environment**: Pre-production
 
