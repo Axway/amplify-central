@@ -65,13 +65,16 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace updates
 
-* **Enhancement**
+* **Provider Management of Consumer Organization Resources**
 
-  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, NEW FEATURE)</br>
-  Description.
+     (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+     Engage Administrators in a Provider Organization can now create, update, and manage applications, subscriptions, and credentials within Consumer Organizations directly without requiring Platform Admin privileges. This enables migration workflows where existing v7 applications and credentials can be onboarded into a Consumer Org so partners continue using their existing access from Engage. Automation scripts running under a Provider Org account can also target Consumer Org contexts, supporting bulk migration and onboarding scenarios managed by the provider.
 
-## Marketplace bug fixes
+### Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01832312| APIGOV-32538| **Issue**: Product Status remains "PUBLISHED" after unpublishing a product from Marketplace <br/>**Resolution**: Fixed by modifying product published status badge to determine publication to any marketplace.
+| 01827893 | APIGOV-32444| **Issue**: Engage Product changes not reflected in the Marketplace <br/>**Resolution**: Instructions given to re-establish the link between Provider side product title/description and marketplace product caused by no default language chosen for the Product.
+| 01757899 | APIGOV-31251| **Issue**: Marketplace - Resource Name not entirely displayed <br/>**Resolution**: Fixed by adding a hover-over tooltip for resource title on the Marketplace Product>Product Details>Resources tab once the title is auto-truncated due to screen resolution/zoom.
+|          | APIGOV-32730| **Issue**: Customized Homepage - Exposed configuration on consumer homepage for "Filtered by tag"<br/>**Resolution**: Fixed by hiding subtitle for Product elements with Display Products set with "Products with specific tag" property
