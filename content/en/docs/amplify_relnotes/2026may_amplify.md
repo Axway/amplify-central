@@ -52,6 +52,11 @@ New enhancements and bug fixes for the May 28 update.
   (ANALYTICS, ENHANCEMENT, ENGAGE)</br>
   To improve analytics accuracy and reduce the dependency on additional API Server calls, ownership information is now included in Marketplace references within Access Requests. This enhancement enables agents to automatically enrich metric and transaction events with the appropriate context, resulting in more efficient and meaningful analytics reporting.
 
+* **Unified Oauth credential provisioning for MCP server + Backlog API (v7 Gateway)**
+ 
+  (PROVIDER AND CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE CREDENTIALS)</br>
+  You can now generate a single OAuth credential that grants access to both an MCP server and its underlying API on the v7 Gateway. Engage provisions one client_id / client_secret pair recognized by Fusion and the v7 Gateway, and revoking it removes access to both services at once. Providers see a new Type column distinguishing Primary credentials from Clones, with read-only clone entries and expiration-source details in the credential panel. On the Marketplace side, clones are hidden from consumers; if clone provisioning is pending or errored, the primary credential displays a status indicator and affected resources are marked until provisioning completes.
+
 ### Marketplace bug fixes for May 28, 2026
 
 | Case ID  | Internal ID  | Description |
