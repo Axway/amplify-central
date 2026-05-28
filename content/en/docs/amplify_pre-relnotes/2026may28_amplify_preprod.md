@@ -90,7 +90,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
     * **Override of environment-level settings**
       If a credential expiry time is defined at the IdP level, it will override any expiry configuration set at the environment level for credentials associated with that IdP.
 
-### Marketplace bug fixes
+## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
