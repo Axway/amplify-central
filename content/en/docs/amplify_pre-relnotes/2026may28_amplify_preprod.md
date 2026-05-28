@@ -81,7 +81,7 @@ Service-level documentation complements product-level documentation by focusing 
   (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
   You can now define a credential expiry time when creating a new Identity Provider (IdP) within Engage. This enhancement provides fine-grained control over credential expiration policies at the IdP level.
 
-  **Key Capabilities** 
+  **Key Capabilities**
 
     * **Configurable expiry at IDP level**
       When creating an IDP from the Topology → Identity Provider screen, users can now set a credential expiry time directly within the creation workflow.
