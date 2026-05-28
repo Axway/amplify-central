@@ -21,7 +21,7 @@ See [Provide testing feedback](/docs/amplify_pre-relnotes/#provide-testing-feedb
 
 ## Supported agents
 
-To access the **pre‑prod environment**, you must set the following **Agent environment variables**, depending on the region you are connecting to.
+To access the **pre‑prod environment**, you must set the following **Agent environment variables**, depending on the region you are connecting to. Preview agents must only be used with the Amplify Engage Pre-Prod environment.
 
 ### Pre-prod US Region
 
@@ -47,10 +47,10 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **Feature**
+* **Cross environment credential provisioning**
 
   (EDGEGATEWAYDISCOVERYAGENT, ENHANCEMENT)</br>
-  Description.
+ The Agent SDK has been enhanced to support cross-environment Identity Provider (IDP) and credential management, enabling consistent handling of authentication across multiple dataplanes. This allows a single IDP to be reused across environments and gateways, improving interoperability and simplifying configuration.
 
 ## Agent bug fixes
 
@@ -67,8 +67,27 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 * **Provider Management of Consumer Organization Resources**
 
-     (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-     Engage Administrators in a Provider Organization can now create, update, and manage applications, subscriptions, and credentials within Consumer Organizations directly without requiring Platform Admin privileges. This enables migration workflows where existing v7 applications and credentials can be onboarded into a Consumer Org so partners continue using their existing access from Engage. Automation scripts running under a Provider Org account can also target Consumer Org contexts, supporting bulk migration and onboarding scenarios managed by the provider.
+  (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  Engage Administrators in a Provider Organization can now create, update, and manage applications, subscriptions, and credentials within Consumer Organizations directly without requiring Platform Admin privileges. This enables migration workflows where existing v7 applications and credentials can be onboarded into a Consumer Org so partners continue using their existing access from Engage. Automation scripts running under a Provider Org account can also target Consumer Org contexts, supporting bulk migration and onboarding scenarios managed by the provider.
+
+* **Service-level documentation**
+
+  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, ENHANCEMENT)</br>
+  You can now add and manage documentation directly at the service level within Engage. This capability improves discoverability and understanding for users browsing resource definitions by providing clear context, guidance, and supporting information.
+Service-level documentation complements product-level documentation by focusing on the technical and resource-specific details, while product documentation continues to address the overall offering, business context, and consumption experience. Together, they provide a complete view.
+
+* **Configurable credential expiry for Identity Providers (IdP)**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT)</br>
+  You can now define a credential expiry time when creating a new Identity Provider (IdP) within Engage. This enhancement provides fine-grained control over credential expiration policies at the IdP level.
+
+  **Key Capabilities** 
+
+    * **Configurable expiry at IDP level**
+      When creating an IDP from the Topology → Identity Provider screen, users can now set a credential expiry time directly within the creation workflow.
+  
+    * **Override of environment-level settings**
+      If a credential expiry time is defined at the IdP level, it will override any expiry configuration set at the Environment level for credentials associated with that IdP.
 
 ### Marketplace bug fixes
 
