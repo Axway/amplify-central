@@ -49,30 +49,30 @@ Only the Engage Admin role can create identity providers.
 
       * **Endpoints**:
 
-           * **Issuer**: The issuer URL for the identity provider.
-           * **Authorization Endpoint**: The authorization endpoint for the identity provider.
-           * **Token Endpoint**: The token endpoint for the identity provider.
-           * **Introspection Endpoint**: The introspection endpoint for the identity provider.
-           * **JWKS URI**: The JWKS URI for the identity provider.
+           * **Issuer** - the issuer URL for the identity provider.
+           * **Authorization Endpoint** - the authorization endpoint for the identity provider.
+           * **Token Endpoint** - the token endpoint for the identity provider.
+           * **Introspection Endpoint** - the introspection endpoint for the identity provider.
+           * **JWKS URI** - the JWKS URI for the identity provider.
 
       * **Metadata**:
 
-          * **Metadata URL** - provide the URL to connect to the identity provider authorization server to provide metadata information. The OAuth authorization server exposes the URL.
-          * **Authorization Type** - Select the type of authentication method.
+          * **Metadata URL** - the URL to connect to the identity provider authorization server to provide metadata information. The OAuth authorization server exposes the URL.
+          * **Authorization Type** - select the type of authentication method.
 
               * **Client Secret** - (Default):
 
                   * **Authorization Method** - select the client secret authentication method. Choose from client_secret_post (default), client_secret_basic, or client_secret_jwt.
-                  * **Client ID** - provide the client ID of the OAuth client. The agent uses this to authenticate and register OAuth clients.
-                  * **Client Secret** - provide the OAuth client secret. The agent uses this to authenticate and register OAuth clients.
+                  * **Client ID** - the client ID of the OAuth client. The agent uses this to authenticate and register OAuth clients.
+                  * **Client Secret** - the OAuth client secret. The agent uses this to authenticate and register OAuth clients.
                   * **Client Scopes** (Optional) - enter a list of client scopes to be used for dynamic client registration.
   
               * **Access Token**:
   
-                  * **Access Token** - provide the access token to be used for authenticating.
+                  * **Access Token** - the access token to be used for authenticating.
 
-          * **Request Headers** (Optional) - enter name and value pairs to add request headers to the token request calls.
-          * **Query Parameters** (Optional) - enter name and value pairs to add query parameters to the token request calls.
+          * **Request Headers** (Optional) - the name and value pairs to add request headers to the token request calls.
+          * **Query Parameters** (Optional) - the name and value pairs to add query parameters to the token request calls.
 
 5. Click **Save** to create the identity provider and return to the list of identity providers.
 
