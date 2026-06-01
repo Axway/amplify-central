@@ -17,6 +17,43 @@ Multiple identity providers can be assigned to an environment.
 
 {{< alert title="Note" color="primary" >}}Identity provider management is optional.{{< /alert >}}
 
+## Agent-managed IdentityProvider resources
+
+When an agent is configured with `AGENTFEATURES_MANAGEIDPRESOURCES=true`, the agent automatically creates and manages `IdentityProvider` and `IdentityProviderMetadata` resources in Engage on behalf of the agent. This enables multiple environments connected to the same OAuth authorization server to share a single `IdentityProvider` resource rather than duplicating it per environment.
+
+### IdentityProvider resource
+
+The `IdentityProvider` resource is a global resource (not scoped to any environment). It represents an OAuth authorization server and carries:
+
+* The provider type (`generic`, `keycloak`, or `okta`).
+* A `policies` sub-resource that controls credential expiry, action on expiry, expiry notification lead time, and credential visibility period. These policies are populated from the environment's credential policies at creation time.
+
+### IdentityProviderMetadata resource
+
+The `IdentityProviderMetadata` resource is scoped to an `IdentityProvider` and stores the endpoints discovered from the OAuth authorization server's metadata document:
+
+| Field | Description |
+|---|---|
+| `spec.issuer` | The issuer identifier of the authorization server. |
+| `spec.authorizationEndpoint` | The URL used to obtain authorization grants. |
+| `spec.tokenEndpoint` | The URL used to obtain access tokens. |
+| `spec.introspectionEndpoint` | The URL used for token introspection. |
+| `spec.jwksUri` | The URL of the JSON Web Key Set document. |
+
+### Lookup by IDP metadata
+
+When the agent starts or processes an API that uses OAuth inbound security, the agent determines whether an `IdentityProvider` resource already exists for the configured authorization server by matching against the OAuth authorization server metadata endpoints stored in `IdentityProviderMetadata`:
+
+1. The agent queries Engage for an existing `IdentityProviderMetadata` resource whose metadata endpoints match those of the current IDP configuration.
+2. If a match is found (from any environment's agent or a prior startup), the parent `IdentityProvider` resource name is reused. No new resource is created.
+3. If no match is found, the agent creates a new `IdentityProvider` resource and its `IdentityProviderMetadata` resource.
+
+This lookup-by-metadata mechanism ensures that agents managing different environments that share the same OAuth authorization server automatically converge on the same `IdentityProvider` resource without any manual coordination.
+
+### Linking to credential request definitions
+
+Once the `IdentityProvider` resource name is resolved, it is written into the `spec.identityProvider` field of each Credential Request Definition (CRD) that the agent registers for that IDP. Engage uses this link to associate credentials provisioned in different environments with the same underlying authorization server, enabling consistent lifecycle management across dataplanes.
+
 ### Viewing available identity providers
 
 Only the Engage Admin can view identity providers.
