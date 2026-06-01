@@ -215,7 +215,7 @@ AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
 
 ### External credential provisioning
 
-When an IDP-managed OAuth client is provisioned externally (i.e., the client ID is created by Engage rather than by the gateway's Dynamic Client Registration), the agent links the externally-provisioned `clientId` to the corresponding gateway application. During provisioning:
+When an IDP-managed OAuth client is provisioned externally (i.e., the client ID is created by Engage rather than by the gateway's Dynamic Client Registration), the agent links the externally provisioned `clientId` to the corresponding gateway application. During provisioning:
 
 1. The credential request carries the `clientId` in its IDP credential data.
 2. The agent checks whether the client is already linked to the application.
@@ -224,24 +224,24 @@ When an IDP-managed OAuth client is provisioned externally (i.e., the client ID 
 
 ### Unified credential management across environments with a shared identity provider
 
-When multiple dataplane environments are secured by the same OAuth identity provider, agents can share a single `IdentityProvider` resource in Engage rather than creating a duplicate per environment. This avoids consumers seeing conflicting credential request definitions and ensures that credential lifecycle events (renewal, deletion, expiry) are applied consistently across all environments.
+When multiple dataplane environments are secured by the same OAuth identity provider, agents can share a single `IdentityProvider` resource in Engage rather than creating a duplicate per environment. This prevents consumers from seeing conflicting credential request definitions and ensures that credential lifecycle events (renewal, deletion, expiry) are applied consistently across all environments.
 
 #### How it works
 
 When `AGENTFEATURES_MANAGEIDPRESOURCES=true` is set, the agent automatically manages `IdentityProvider` and `IdentityProviderMetadata` resources in Engage as part of agent startup:
 
-1. **Lookup by IDP Metadata** — The agent resolves the IDP's authorization server metadata (via the configured `AGENTFEATURES_IDP_METADATAURL_{n}` or, for gateways that expose it directly, via the IDP Metadata endpoint(e.g. token endpoint URL) stored in the API's inbound security policy). It then queries Engage for any existing `IdentityProviderMetadata` resource whose metadata (e.g. `spec.tokenEndpoint`) matches.
+1. **Lookup by IDP Metadata** — the agent resolves the IDP's authorization server metadata (via the configured `AGENTFEATURES_IDP_METADATAURL_{n}`) or, for gateways that expose it directly, via the IDP Metadata endpoint (e.g., token endpoint URL stored in the API's inbound security policy). It then queries Engage for any existing `IdentityProviderMetadata` resource whose metadata (e.g., `spec.tokenEndpoint`) matches.
 
-2. **Reuse if found** — If a matching `IdentityProviderMetadata` already exists (from another environment's agent or a previous startup), its parent `IdentityProvider` resource name is returned and reused. No new resource is created.
+2. **Reuse if found** — if a matching `IdentityProviderMetadata` already exists (from another environment's agent or a previous startup), its parent `IdentityProvider` resource name is returned and reused. No new resource is created.
 
-3. **Create if not found** — If no match is found, the agent creates a new `IdentityProvider` resource (scoped globally, not to an environment) and a child `IdentityProviderMetadata` sub-resource that captures the authorization server endpoints:
+3. **Create if not found** — if no match is found, the agent creates a new `IdentityProvider` resource (scoped globally, not to an environment) and a child `IdentityProviderMetadata` sub-resource that captures the authorization server endpoints:
    * `spec.issuer`
    * `spec.authorizationEndpoint`
    * `spec.tokenEndpoint`
    * `spec.introspectionEndpoint`
    * `spec.jwksUri`
 
-4. **Link to credential request definition** — The resolved `IdentityProvider` resource name is written into the `spec.identityProvider` field of each Credential Request Definition (CRD) registered by the agent. Engage uses this link to correlate credentials across environments sharing the same IDP.
+4. **Link to credential request definition** — the resolved `IdentityProvider` resource name is written into the `spec.identityProvider` field of each Credential Request Definition (CRD) registered by the agent. Engage uses this link to correlate credentials across environments sharing the same IDP.
 
 #### Primary and clone credential provisioning
 

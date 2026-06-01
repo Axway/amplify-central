@@ -256,7 +256,7 @@ APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 
 #### Unified credential handling
 
-As part of unified credential provisioning, when a consumer requests a credential the primary credential request is sent to the dataplane agent associated with the resource. Once that credential is successfully provisioned, the Marketplace creates cloned credentials for other dataplane environments that have approved application registration for resources that are secured with same identity provider. These cloned credentials have `spec.provision.mode` set to `external`, indicating that the OAuth client was already provisioned as part of the primary request and does not need to be created again.
+As part of unified credential provisioning, when a consumer requests a credential, the primary credential request is sent to the dataplane agent associated with the resource. Once that credential is successfully provisioned, the Marketplace creates cloned credentials for other dataplane environments that have approved application registration for resources that are secured with same identity provider. These cloned credentials have `spec.provision.mode` set to `external`, indicating that the OAuth client was already provisioned as part of the primary request and does not need to be created again.
 
 For the API Manager Discovery Agent, a cloned credential is processed differently from a standard credential provisioning request:
 
