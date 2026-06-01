@@ -242,6 +242,7 @@ When a Front End Proxy is secured by an OAuth External policy for an identity pr
 | APIMANAGER_CUSTOM_OAUTHEXT_TITLE          | This title is added to the Credential Request Definition for custom OAuth External handling (default value: `Custom OAuth External`).                              |
 | APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION    | This description is added to the Credential Request Definition for custom OAuth External handling (default value: `Contact your provider to get the credentials`). |
 | APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL | This label is added for the client identifier field in the Credential Request Definition for custom OAuth External handling (default value: `Client Id`).          |
+| APIMANAGER_OAUTHIDPREF                    | Specifies which OAuth Credential Request Definition type to link to an `IdentityProvider` resource when `AGENTFEATURES_MANAGEIDPRESOURCES=true`. Allowed values: `secret` (OAuth Client ID & Secret CRD) or `publicKey` (OAuth Client ID & Public Key CRD). Default value: `secret`. |
 
 The value for `APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION` in the Credential Request gives the end consumer a hint on how to get the OAuth client details.
 
