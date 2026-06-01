@@ -268,7 +268,6 @@ When a second agent — connected to a different environment but sharing the sam
 4. Lifecycle events on the primary (renewal, deletion, expiry) propagate to all clone credentials, keeping all environments in sync.
 5. Deprovisioning a clone removes only the gateway application authorization link; the OAuth client in the IDP is not affected.
 
-
 #### Credential policies inherited from the environment
 
 When the `IdentityProvider` resource is first created, the agent reads the credential policies configured on its own environment (expiry period, action, notification days, visibility period) and applies them to the new resource. If no policies are configured on the environment the resource is created without policies. Subsequent agents that reuse the existing resource do not overwrite those policies.
