@@ -112,6 +112,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | APIMANAGER_DISCOVERYIGNORETAGS        | Comma-separated blacklist of tags that should not be on a proxy before sending to Amplify Engage. Takes precedence over APIMANAGER_FILTER.                           |
 | APIMANAGER_FILTER                     | Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/). |
 | APIMANAGER_APPLICATIONDEFINITIONTITLE | When this variable is set the agent will discover Custom Application Properties from API Manager and create an Application Profile Definition on Amplify Engage.      |
+| APIMANAGER_OAUTHIDPREF                   | Specifies which OAuth Credential Request Definition type to link to an `IdentityProvider` resource when `AGENTFEATURES_MANAGEIDPRESOURCES=true`. Allowed values: `secret` (OAuth Client ID & Secret CRD) or `publicKey` (OAuth Client ID & Public Key CRD). Default value: `secret`. |
 
 #### Invoke policy handling
 
@@ -242,7 +243,6 @@ When a Front End Proxy is secured by an OAuth External policy for an identity pr
 | APIMANAGER_CUSTOM_OAUTHEXT_TITLE          | This title is added to the Credential Request Definition for custom OAuth External handling (default value: `Custom OAuth External`).                              |
 | APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION    | This description is added to the Credential Request Definition for custom OAuth External handling (default value: `Contact your provider to get the credentials`). |
 | APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL | This label is added for the client identifier field in the Credential Request Definition for custom OAuth External handling (default value: `Client Id`).          |
-| APIMANAGER_OAUTHIDPREF                    | Specifies which OAuth Credential Request Definition type to link to an `IdentityProvider` resource when `AGENTFEATURES_MANAGEIDPRESOURCES=true`. Allowed values: `secret` (OAuth Client ID & Secret CRD) or `publicKey` (OAuth Client ID & Public Key CRD). Default value: `secret`. |
 
 The value for `APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION` in the Credential Request gives the end consumer a hint on how to get the OAuth client details.
 
