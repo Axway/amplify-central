@@ -254,6 +254,17 @@ APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION="Contact your Azure AD administrator to g
 APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 ```
 
+#### Unified credential handling
+
+As part of unified credential provisioning, when a consumer requests a credential the primary credential request is sent to the dataplane agent associated with the resource. Once that credential is successfully provisioned, the Marketplace creates cloned credentials for other dataplane environments that have approved application registration for resources that are secured with same identity provider. These cloned credentials have `spec.provision.mode` set to `external`, indicating that the OAuth client was already provisioned as part of the primary request and does not need to be created again.
+
+For the API Manager Discovery Agent, a cloned credential is processed differently from a standard credential provisioning request:
+
+* **No new credential is created** — the agent does not create a new authentication on API Manager.
+* **Existing IDP client is linked** — the agent links the already-provisioned OAuth client ID to the API Manager application by registering an `OAuthExternal` application authorization entry for that client ID.
+
+Deprovisioning a cloned credential removes only the application authorization link; the OAuth client is not affected.
+
 ### Specific variables for Traceability Agent
 
 {{< alert title="Note" color="primary" >}}To exclude health checks from being counted towards the number of transactions for the purpose of entitlement, use the variable TRACEABILITY_EXCEPTION_LIST to identify the API path that the health check transactions use. The agent will then dismiss the transactions and not process them for usage in transaction reporting.{{< /alert >}}
