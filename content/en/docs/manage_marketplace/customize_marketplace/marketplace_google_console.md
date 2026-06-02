@@ -9,16 +9,21 @@ Integrate your Amplify Engage Marketplace with Google Search Console to allow Go
 ## Before you start
 
 * You must have **Marketplace Administrator** credentials.
-* Your marketplace must be publicly accessible.
+* Your Marketplace must be publicly accessible.
 * You must have access to **Google Search Console** for site verification.
 
 ## Objectives
 
 Learn how to:
 
-* Enable or disable search engine indexing for your marketplace
+* Configure Google Console
+* Enable or disable search engine indexing for your Marketplace
 * Configure the Google site verification ID
 * Understand which pages are indexable by Google
+
+## Set up Google Console
+
+1. Add Instructions.
 
 ## Enable Google Console indexing
 
