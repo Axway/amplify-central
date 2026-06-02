@@ -4,7 +4,7 @@ linkTitle: Integrate with Google Console
 weight: 15
 ---
 
-# Amplify Engage User Guide — Integrate with Google Console
+## Amplify Engage User Guide — Integrate with Google Console
 
 This document provides expanded, step-by-step instructions for configuring the Google Search Console integration for your Amplify Engage Marketplace, enabling Google to crawl and index public Marketplace pages and documents.
 
