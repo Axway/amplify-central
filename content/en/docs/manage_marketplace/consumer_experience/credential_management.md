@@ -117,8 +117,8 @@ When a credential is reused across environments, provisioning in additional envi
 * There will show an indicator on the primary credential **Status** to inform there are resource provisioning processing.  Also a hover-over will show the avaiability of the resources during this time.
 * The credential details page indicates which resources are pending provisioning.
 * A status indicator shows when a resource is:
-  * **Pending** — Provisioning is in progress in the additional environment.
-  * **Error** — Provisioning failed in the additional environment. Contact the provider.
+    * **Pending** — Provisioning is in progress in the additional environment.
+    * **Error** — Provisioning failed in the additional environment. Contact the provider.
 * Once provisioning completes, the resource status updates to Active and becomes available.
 
 ## List the credentials
