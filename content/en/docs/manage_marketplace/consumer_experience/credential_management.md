@@ -99,6 +99,28 @@ Once the credential is generated, make sure to copy and paste it in a secure loc
 
 To delete the existing credential, click the trash bin icon.
 
+### Credential reuse across API services
+
+When creating a credential, if the requested API service shares an Identity Provider with another API service for which you already have a credential, the Marketplace displays a notification indicating that the existing credential can be reused. In this case:
+
+* No new `client_id / client_secret` is generated.
+* The existing credential is extended to cover the additional API service.
+* The credential details page shows all resources accessible with this credential.
+
+You can still choose to create a new credential instead of reusing the existing one if needed.
+
+#### Resource availability during cross-environment provisioning
+
+When a credential is reused across environments, provisioning in additional environments may take time (for example, if a Discovery Agent is temporarily unavailable). During this period:
+
+* The primary credential remains fully functional for its original API service.
+* There will show an indicator on the primary credential **Status** to inform there are resource provisioning processing.  Also a hover-over will show the avaiability of the resources during this time.
+* The credential details page indicates which resources are pending provisioning.
+* A status indicator shows when a resource is:
+  * **Pending** — Provisioning is in progress in the additional environment.
+  * **Error** — Provisioning failed in the additional environment. Contact the provider.
+* Once provisioning completes, the resource status updates to Active and becomes available.
+
 ## List the credentials
 
 The *Marketplace > Credentials* view displays all the credentials your team has access to. This list can be filtered by State, Expiration date and Application. For each credential, the credential type **APIKey**, **OAuth**, **HTTPBasic** or **MutualTLS** is displayed. If the credential type is not visible, ask the owner of the product.
