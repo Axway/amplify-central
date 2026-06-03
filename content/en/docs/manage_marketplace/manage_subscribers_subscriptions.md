@@ -218,3 +218,68 @@ This action is not supported by all data planes and may not be available for the
 3. Click on a credential name to open the credential details.
 4. Enter a reason, then click **Delete**.
 5. Confirm your choice. The credential will be completely removed from the system and deprovisioned on the data plane.
+
+### Unified OAuth credential provisioning across environments
+
+Amplify Engage supports provisioning a single OAuth credential that works across multiple environments and data planes sharing the same Identity Provider. This is commonly used when an MCP service in one environment (e.g., Fusion) calls a backing API service in another environment (e.g., Axway API Gateway), and both are secured by the same OAuth server.
+
+#### How it works
+
+1. **Consumer requests access to the first API service** — The consumer creates a credential request for an API (e.g., the MCP service in a Fusion environment). Engage provisions the OAuth client in the IdP and returns a `client_id / client_secret`.
+
+2. **Consumer requests access to a second API service sharing the same IdP** — When the consumer requests access to another API in a different environment (e.g., the backing API service in an Axway API Gateway environment) that references the same Identity Provider, Engage detects the shared IdP relationship.
+
+3. **Credential is reused** — Instead of provisioning a new OAuth client, Engage creates a cloned credential referencing the original. The existing `client_id` is registered in the second environment's gateway application so it is recognized there.
+
+4. **Single credential for the consumer** — The consumer sees and manages only the original (primary) credential in the Marketplace. The cloned credential is handled internally by the platform and is not exposed to the consumer.
+
+#### Prerequisites
+
+For unified credential provisioning to work:
+
+* Both API services must have their Credential Request Definitions (CRDs) linked to the same Identity Provider resource in Engage.
+* The Discovery Agents for both environments must have the unified credential feature enabled (see agent configuration above).
+* The Identity Provider resource must exist in Engage with the correct metadata URL so that CRDs across environments can be matched.
+
+#### Typical scenario: MCP service + backing API
+
+A common configuration:
+
+1. A provider exposes an API service on the Axway API Gateway (v7), secured with OAuth via the v7 OAuth server.
+2. The provider builds an MCP service in Fusion over the same API service.
+3. Both the v7 agent and Fusion create CRDs referencing the same IdP (the v7 OAuth server).
+4. A consumer subscribes and requests a credential for the MCP service — Engage provisions the OAuth client.
+5. When the consumer is granted access to the backing API, Engage recognizes the shared IdP and reuses the same `client_id`, registering it in the v7 gateway application.
+6. The consumer uses a single `client_id / client_secret` for both the MCP service and the API service.
+
+### Primary and cloned credentials
+
+The Provider Credentials list page displays both primary credentials (originally provisioned in the IdP) and cloned credentials (created automatically when a credential is reused across environments via unified provisioning).
+
+#### Credential Type column
+
+A **Type** column indicates the nature of each credential:
+
+| Type | Description |
+|------|-------------|
+| **Primary** | The original credential provisioned by the first environment's agent. This is the credential the consumer sees and manages in the Marketplace. |
+| **Clone** | A credential created automatically by Engage when an existing credential is reused in another environment. The clone references the primary credential and uses the same `client_id`. |
+
+#### Cloned credential restrictions
+
+* Cloned credentials cannot be deleted, rotated, or suspended independently. All lifecycle actions on the primary credential cascade to its clones.
+* The only actions available on a cloned credential are **View Credential** and **Copy Email** (of the owning consumer).
+* If a primary credential is revoked or deleted, all associated cloned credentials are automatically deprovisioned and removed.
+* It may be possible that the primary credential is not visible to the current team but one or more of its clones are. This is normal when the associated assets are owned by different teams.
+
+#### Credential expiry display
+
+The **Expires** column shows the expiration date for each credential. For cloned credentials, the expiry always matches the primary credential's expiry — this may differ from the Environment-level credential expiry setting for the clone's environment.
+
+A hover-over on the expiry date within the Credential Details sideblade indicates the source of the expiration:
+
+| Source | Description |
+|--------|-------------|
+| **Current Environment** | Expiry was set based on this credential's Environment credential expiry policy. |
+| **IDP-managed Expiry** | Expiry was inherited from the Identity Provider's credential expiry policy (overrides Environment setting). |
+| **Inherited Expiry** | Expiry was inherited from the primary credential's Environment policy (applies to clones hosted in other environments). |
