@@ -8,7 +8,7 @@ Setup AWS so an Embedded agent can connect to and managed your AWS API Gateway e
 
 ## Before you start
 
-* You must have access to the AWS console with permissions to create and managed IAM policies, roles, and optionally users
+You must have access to the AWS console with permissions to create and managed IAM policies, roles, and optionally users
 
 ## Objectives
 
