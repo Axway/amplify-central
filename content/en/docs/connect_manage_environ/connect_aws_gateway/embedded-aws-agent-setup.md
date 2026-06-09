@@ -239,3 +239,82 @@ Create an IAM user and generate an Access Key ID and Secret Access Key ID that t
 9. Select **Third-party service** and acknowledge that you understand the risks before clicking **Next**.
 10. Give an optional description and click **Create access key**.
 11. Note the Access Key ID and the Secret Access Key to be used during installation.
+
+## AWS IAM policy for AgentCore mode
+
+Create an IAM policy that allows the agent to discover and provision access to your AWS Bedrock AgentCore gateway resources. This policy is required when running in `agentcore-gateway` mode. Attach it to the same IAM role or user used by the agents.
+
+1. Within the AWS IAM Console, start the *Create policy* wizard.
+2. Select the *JSON editor* tab and paste the [Discovery policy JSON](#discovery-policy) below. If provisioning is also enabled, the provisioning permissions can be added to the same policy — a separate policy is not required.
+3. Update the placeholder values:
+   * `<aws-region>` becomes your AWS region, such as `eu-west-1`
+   * `<aws-account-id>` becomes your AWS account ID
+   * `<user-pool-id>` becomes your Cognito User Pool ID (Provisioning permissions only)
+4. Click **Next: Tags** and add any tags you may want.
+5. Click **Next: Review**.
+6. Give the policy a name, such as `AmplifyAgentCorePolicy`.
+
+### Discovery policy
+
+Required for the Discovery Agent to list and inspect AgentCore gateways:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "bedrock-agentcore:ListGateways",
+                "bedrock-agentcore:GetGateway",
+                "bedrock-agentcore:ListGatewayTargets",
+                "bedrock-agentcore:GetGatewayTarget"
+            ],
+            "Resource": "arn:aws:bedrock-agentcore:<aws-region>:<aws-account-id>:gateway/*"
+        }
+    ]
+}
+```
+
+### Provisioning policy
+
+Required for the Provisioning Agent to manage Cognito app clients and update the gateway's allowed-client list on subscribe and unsubscribe events. These statements can be added to the existing AgentCore discovery policy — no separate policy file is needed:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "bedrock-agentcore:UpdateGateway"
+            ],
+            "Resource": "arn:aws:bedrock-agentcore:<aws-region>:<aws-account-id>:gateway/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cognito-idp:ListUserPoolClients",
+                "cognito-idp:CreateUserPoolClient",
+                "cognito-idp:DescribeUserPoolClient",
+                "cognito-idp:UpdateUserPoolClient",
+                "cognito-idp:DeleteUserPoolClient"
+            ],
+            "Resource": "arn:aws:cognito-idp:<aws-region>:<aws-account-id>:userpool/<user-pool-id>"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::<aws-account-id>:role/*"
+        }
+    ]
+}
+```
+
+| Permission | Purpose |
+| --- | --- |
+| `bedrock-agentcore:UpdateGateway` | Provisioning Agent updates the gateway's `allowedClients` list when credentials are issued or revoked |
+| `cognito-idp:*` | Provisioning Agent creates, describes, updates, and deletes app clients in the Cognito User Pool linked to the gateway's CUSTOM_JWT authorizer |
+| `iam:PassRole` | Required so Bedrock AgentCore can assume the execution role associated with the gateway when processing provisioning updates |
+
+{{< alert title="Note" color="primary" >}}The `iam:PassRole` resource can be scoped to a specific role ARN instead of a wildcard for least-privilege configurations.{{< /alert >}}

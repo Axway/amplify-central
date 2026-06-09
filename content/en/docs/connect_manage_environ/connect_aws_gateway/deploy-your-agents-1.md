@@ -41,6 +41,21 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | AWS_PUSHTAGS                         | Determines whether the AWS Stage tags should be pushed to Amplify along with the API definition. Value must be true or false. Default is false.                                                                                                                                                                                                                                                                                                                                    |
 | AWS_REGION                           | The region where AWS APIs are stored.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
+### AgentCore Gateway mode configuration
+
+The following variables are specific to `agentcore-gateway` mode. Set `AWS_GATEWAYMODE` to enable AgentCore mode; the remaining variables are only relevant when AgentCore mode is active.
+
+| Variable name | Description |
+| --- | --- |
+| AWS_GATEWAYMODE | The AWS backend the agent connects to. Set to `agentcore-gateway` to enable Bedrock AgentCore mode. Default is `api-gateway`. |
+| AWS_AGENTCORE_PAGESIZE | Page size for `ListGateways` and `ListGatewayTargets` API requests (on-premises Discovery Agent only). Default is `25`. |
+| AWS_AGENTCORE_LOGGROUPPREFIX | CloudWatch log group prefix for AgentCore gateway application logs. Default is `/aws/vendedlogs/bedrock-agentcore/gateway/APPLICATION_LOGS`. |
+| AWS_AGENTCORE_IAMAUTHENABLED | When set to `true`, gateways using `AWS_IAM` authorization are discovered and associated with the `aws-iam` credential request definition. The gateway is still discovered and published without a credential request definition when this flag is `false`. Default is `false`. |
+| AWS_COGNITO_USERPOOLID_N | Cognito User Pool ID for the Nth pool, where N starts at 1 (for example, `AWS_COGNITO_USERPOOLID_1=eu-west-1_abc123`). Used to match CUSTOM_JWT gateway issuers to a specific Cognito pool for credential provisioning. |
+| AWS_COGNITO_REGION_N | AWS region for the Nth Cognito pool (for example, `AWS_COGNITO_REGION_1=eu-west-1`). Optional; falls back to `AWS_REGION` if not set. |
+
+{{< alert title="Note" color="primary" >}}Multiple Cognito pools are supported by incrementing the index (`_1`, `_2`, and so on).{{< /alert >}}
+
 ### Create your Discovery Agent environment file
 
 Create a configuration file using the above variables. See the variable descriptions for their values. Below is a sample of what the configuration file will look like.
@@ -73,6 +88,38 @@ LOG_LEVEL=info
 LOG_OUTPUT=stdout
 LOG_PATH=logs
 ```
+
+For AgentCore Gateway mode:
+
+```yaml
+# AWS connectivity - AgentCore mode
+AWS_REGION=eu-west-1
+AWS_AUTH_ACCESSKEY=<YOUR AWS ACCESS KEY HERE>
+AWS_AUTH_SECRETKEY=<YOUR AWS SECRET KEY HERE>
+AWS_GATEWAYMODE=agentcore-gateway
+AWS_AGENTCORE_PAGESIZE=25
+AWS_COGNITO_USERPOOLID_1=<YOUR COGNITO USER POOL ID>
+AWS_COGNITO_REGION_1=eu-west-1
+
+# Amplify connectivity
+# organization config:
+CENTRAL_ORGANIZATIONID=<YOUR ORGANIZATION ID>
+CENTRAL_TEAM=<THE TEAM NAME>
+CENTRAL_ENVIRONMENT=<NAME OF THE CENTRAL TOPOLOGY ENVIRONMENT>
+CENTRAL_AUTH_CLIENTID=<SERVICE ACCOUNT NAME>
+
+#CENTRAL_SSL_MINVERSION=
+#CENTRAL_SSL_MAXVERSION=
+#CENTRAL_SSL_CIPHERSUITES=
+#CENTRAL_SSL_NEXTPROTOS=
+#CENTRAL_SSL_INSECURESKIPVERIFY=
+
+LOG_LEVEL=info
+LOG_OUTPUT=stdout
+LOG_PATH=logs
+```
+
+{{< alert title="Note" color="primary" >}}Traceability Agent is not yet supported in AgentCore mode. No Traceability Agent configuration is required when using `agentcore-gateway`.{{< /alert >}}
 
 ### Install and run Discovery Agent
 

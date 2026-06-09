@@ -1,14 +1,14 @@
 ---
-title: Connect AWS Gateway
-linkTitle: Connect AWS Gateway
+title: Connect AWS Gateways
+linkTitle: Connect AWS Gateways
 weight: 130
 date: 2021-01-04
 ---
-Connect AWS API Gateway and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of the AWS API Gateway hosted APIs in one central location.
+Connect AWS API Gateway or AWS Bedrock AgentCore Gateway and Amplify so you can govern and monitor the creation / deployment / publishing and subscriptions of your AWS hosted APIs in one central location.
 
 {{< alert title="Note" color="primary" >}}Go [here](/docs/connect_manage_environ/connect_aws_gateway/deploy-embedded-agents/) for documentation on installing the AWS Embedded agents.{{< /alert >}}
 
-## Why do you want to connect AWS API Gateway and Amplify?
+## AWS API Gateway mode
 
 Connecting AWS API Gateway to Amplify will provide you with a global centralized view of your APIs and their related traffic.
 
@@ -36,6 +36,21 @@ The types of logging you can do with API Gateway to CloudWatch:
 
 For additional logging information, see <https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html>.
 
+## AWS Bedrock AgentCore Gateway mode
+
+Connecting AWS Bedrock AgentCore Gateway to Amplify allows you to discover and govern APIs hosted behind AgentCore gateways and manage consumer credentials through Cognito.
+
+Each AgentCore Gateway can be represented by an Amplify environment. The Discovery Agent interacts with the Bedrock AgentCore control plane and Amplify to:
+
+* Detect AgentCore gateways in `READY` status and publish them to Amplify as API services with auto-generated OpenAPI 3.0 and MCP specifications. The gateway's authorizer type determines which Credential Request Definition (CRD) is assigned to the published service.
+* Manage Cognito app clients on behalf of consumers when they subscribe to or unsubscribe from a discovered API service.
+
+{{< alert title="Note" color="primary" >}}Traceability Agent is not yet available for AgentCore Gateway mode.{{< /alert >}}
+
+### Discovery Agent
+
+The Discovery Agent polls the Bedrock AgentCore control plane for gateways and their authorizer configuration. It regularly checks for new or updated gateways and pushes the corresponding API service definitions to Amplify.
+
 ## Prerequisites
 
 * An Axway Amplify subscription in the Amplify platform
@@ -45,6 +60,12 @@ For additional logging information, see <https://docs.aws.amazon.com/apigateway/
 * Amazon CloudWatch Service
 * CloudFormation template. Download the latest "Amplify AWS Agents CloudFormation" install zip file from [https://repository.axway.com/catalog?q=aws](https://repository.axway.com/catalog?q=aws).
 * The [Traceability Agent](#traceability-agent) requires a connected and running [Discovery Agent](#discovery-agent)
+
+For AgentCore Gateway mode, the following additional prerequisites apply:
+
+* AWS Bedrock AgentCore gateway(s) deployed in your AWS account
+* A Cognito User Pool configured as the JWT authorizer on the gateway (for gateways using CUSTOM_JWT authorization)
+* An IAM policy with `bedrock-agentcore`, `cognito-idp`, and `iam:PassRole` permissions attached to the agent's IAM role or user. See [AWS IAM policy for AgentCore mode](/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/#aws-iam-policy-for-agentcore-mode).
 
 ## Region support
 
