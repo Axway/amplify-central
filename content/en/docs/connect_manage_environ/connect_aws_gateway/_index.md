@@ -47,7 +47,7 @@ Each AgentCore Gateway can be represented by an Amplify environment. The Discove
 
 {{< alert title="Note" color="primary" >}}Traceability Agent is not yet available for AgentCore Gateway mode.{{< /alert >}}
 
-### Discovery Agent
+### Discovery Agent (AgentCore)
 
 The Discovery Agent polls the Bedrock AgentCore control plane for gateways and their authorizer configuration. It regularly checks for new or updated gateways and pushes the corresponding API service definitions to Amplify.
 
