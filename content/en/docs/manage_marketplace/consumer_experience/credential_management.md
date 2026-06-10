@@ -111,7 +111,7 @@ To create an mTLS credential:
 
 If the same credential can be reused with other APIs under the application, a notification is displayed indicating the credential is compatible with additional resources.
 
-**Validation errors
+#### Validation errors
 
 The following errors may be displayed during certificate upload:
 
