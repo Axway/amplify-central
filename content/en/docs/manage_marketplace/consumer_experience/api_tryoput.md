@@ -101,7 +101,7 @@ If the API uses mutual authentication (mTLS), a warning appears on the product r
 
 ### Google Chrome extension compatibility
 
-> **Warning:** Users may encounter errors when using the Try out APIs feature in Google Chrome if the **React Developer Tools** extension is installed and enabled. This extension can interfere with the Swagger UI and may prevent credentials from being created or authorized correctly. Disabling the extension may resolve the issue.
+Users may encounter errors when using the Try out APIs feature in Google Chrome if the **React Developer Tools** extension is installed and enabled. This extension can interfere with the Swagger UI and may prevent credentials from being created or authorized correctly. Disabling the extension may resolve the issue.
 
 **Symptoms:**
 
