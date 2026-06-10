@@ -249,7 +249,7 @@ A common configuration:
 2. The provider builds an MCP service in Fusion over the same API service.
 3. Both the v7 agent and Fusion create CRDs referencing the same IdP (the v7 OAuth server).
 4. A consumer subscribes and requests a credential for the MCP service — Engage provisions the OAuth client.
-5. When the consumer is granted access to the backing API, Engage recognizes the shared IdP and reuses the same `client_id`, registering it in the v7 gateway application.
+5. When the consumer is granted access to the backing API, Engage recognizes the shared IdP and reuses the same `client_id`, registering it in the v7 Gateway application.
 6. The consumer uses a single `client_id / client_secret` for both the MCP service and the API service.
 
 ### Primary and cloned credentials
@@ -270,13 +270,13 @@ A **Type** column indicates the nature of each credential:
 * Cloned credentials cannot be deleted, rotated, or suspended independently. All lifecycle actions on the primary credential cascade to its clones.
 * The only actions available on a cloned credential are **View Credential** and **Copy Email** (of the owning consumer).
 * If a primary credential is revoked or deleted, all associated cloned credentials are automatically deprovisioned and removed.
-* It may be possible that the primary credential is not visible to the current team but one or more of its clones are. This is normal when the associated assets are owned by different teams.
+* It may be possible that the primary credential is not visible to the current team but one or more of its clones are. This is normal when different teams own the associated assets.
 
 #### Credential expiry display
 
 The **Expires** column shows the expiration date for each credential. For cloned credentials, the expiry always matches the primary credential's expiry — this may differ from the Environment-level credential expiry setting for the clone's environment.
 
-A hover-over on the expiry date within the Credential Details sideblade indicates the source of the expiration:
+A hover-over on the expiry date within the Credential Details side panel indicates the source of the expiration:
 
 | Source | Description |
 |--------|-------------|
