@@ -131,12 +131,12 @@ You can still choose to create a new credential instead of reusing the existing 
 When a credential is reused across environments, provisioning in additional environments may take time (for example, if a Discovery Agent is temporarily unavailable). During this period:
 
 * The primary credential remains fully functional for its original API service.
-* There will show an indicator on the primary credential **Status** to inform there are resource provisioning processing.  Also a hover-over will show the avaiability of the resources during this time.
+* There will show an indicator on the primary credential **Status** to inform there are resource provisioning processing.  Also a hover-over will show the availability of resources during this time.
 * The credential details page indicates which resources are pending provisioning.
 * A status indicator shows when a resource is:
     * **Pending** — Provisioning is in progress in the additional environment.
     * **Error** — Provisioning failed in the additional environment. Contact the provider.
-* Once provisioning completes, the resource status updates to Active and becomes available.
+* Once provisioning is complete, the resource status updates to Active and becomes available.
 
 ## List the credentials
 
