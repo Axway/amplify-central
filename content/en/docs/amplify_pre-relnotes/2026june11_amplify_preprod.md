@@ -47,16 +47,15 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **Feature**
+* **MCP Discovery from AWS Bedrock AgentCore**
 
-  (AGENT, ENHANCEMENT)</br>
-  Description.
+  (AWS AGENT, ENHANCEMENT)</br>
+  The AWS SaaS and on-premise agents can discovery Model Context Protocol (MCP) services from an Amazon Bedrock AgentCore Gateway. The discovered MCP services are registered in Amplify Engage Service Registry. The MCP services can be published in the Engage Marketplace for consumption.
 
-## Agent bug fixes
+* **MCP Discovery from AWS Bedrock AgentCore**
 
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description.  |
+  (AXWAY API MANAGEMENT  DISCOVERY AGENT, ENHANCEMENT)</br>
+  The Axway API Management Discovery agent will maintain synchronization between the API Manager and existing Marketplace application/credentials if an API is updated with the APIM CLI.
 
 ## Marketplace updates
 
@@ -84,6 +83,16 @@ The Marketplace now displays service-level documentation for A2A (Agent-to-Agent
 
      (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
      Marketplace now exposes a token endpoint (POST /api/v1/auth/token) that proxies client credential requests to the platform identity provider. Service accounts in Consumer Organizations can obtain access tokens using their Marketplace vanity URL rather than calling the identity provider directly. The endpoint accepts standard client_credentials grant requests, validates that the requesting service account belongs to a Consumer Org associated with that Marketplace (or the owning Provider Org), and returns a 403 if the credential does not match.
+
+* **Endpoint URL copy-to-clipboard**
+
+     (PROVIDER EXPERIENCE, ENHANCEMENT, SERVICE REGISTRY)</br>
+     The Endpoint URL on the Service Registry details page has a **Copy endpoint URL**  icon to  make it easier for a user to make a copy of the full endpoint URL.
+
+* **A2A Service Documentation Support**
+
+     (PROVIDER EXPERIENCE, ENHANCEMENT, SERVICE REGGSITRY)</br>
+The API Service wizard now includes a step to add service-level documentation for A2A (Agent-to-Agent) API Services. Documentation attached to A2A resources will appear on API Service documentation tab.
 
 ## Marketplace bug fixes
 
