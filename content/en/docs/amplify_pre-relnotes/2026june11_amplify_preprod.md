@@ -68,7 +68,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 * **Expanded mTLS Support**
 
      (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-     Marketplace now natively supports mTLS certificate-based credentials. Consumers upload a public certificate during credential creation, and the process validates format, expiration, and signing chain in real time with localized error messages. Parsed metadata (Subject DN, expiration, SHA-256 fingerprint) is displayed at upload and persisted in the credential detail view. Providers control whether self-signed certificates are accepted per environment. Certificate expiration automatically applies to the credential and integrates with the existing notification framework. 
+     Marketplace now natively supports mTLS certificate-based credentials. Consumers upload a public certificate during credential creation, and the process validates format, expiration, and signing chain in real time with localized error messages. Parsed metadata (Subject DN, expiration, SHA-256 fingerprint) is displayed at upload and persisted in the credential detail view. Providers control whether self-signed certificates are accepted per environment. Certificate expiration automatically applies to the credential and integrates with the existing notification framework.
 
 * **A2A Service Documentation Support**
 
