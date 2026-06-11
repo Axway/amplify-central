@@ -72,7 +72,7 @@ You can also filter the documents by types using the **Filter by:** controls. Se
     * Document thumbnail - preview of the document and download (only available for PDF, MD, PPTX, DOCX, XLSX documents)
     * Document file name (external document only) - the file name associated to the document
     * Document description - the document description that helps identify the document content
-    * Referenced Resources - the resources that are using the document (product and/or Marketplace) and the statuses of the resources (Available / Used)
+    * Referenced Resources - the resources that are using the document (Product/Marketplace/API Service/MCP Client) and the statuses of the resources (Available / Used)
 
 Click the **Pencil** icon at the top right to [Edit the document](#edit-a-document).
 
@@ -107,6 +107,7 @@ To create a document:
 4. Add your document visibility: Product, MCP client and/or Marketplace.
    * Product visibility allows any Catalog Manager that can access the document to use it in their product.
    * MCP client visibility allows you to select the MCP client that this document will be associated with.
+   * Service Registry visibility allows this document to be used with service-level documentation.
    * Marketplace visibility can be refined by selecting on which Marketplace the document will be available. If you upload multiple documents, this visibility will be applied to all document(s). If you need specific visibility for a document, consider uploading only that document. Then click **Next**.
 5. Add the team permissions: Restricted (only the Engage Admin user can manage the document) / Shared (specific team permission: owner / read / edit / none). These permissions will be applied to all documents. If you need specific permissions for a document, consider uploading only that document. Then click **Next**.
 6. Review your uploaded files. Click **Prev** to return to any of the previous pages. When finished, click **Save**.
