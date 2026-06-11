@@ -4,22 +4,20 @@ linkTitle: Integrate with Google Console
 weight: 15
 ---
 
-## Integrate with Google Console
-
 Integrate your Amplify Engage Marketplace with Google Search Console to allow Google to crawl and index public Marketplace pages. This integration enables search engine discoverability through configurable indexing settings and verified site ownership registered with Google.
 
 A public Marketplace with indexing enabled becomes discoverable via Google Search, making your API product catalog and documentation accessible to external developers and partners without requiring them to know your Marketplace URL in advance.
 
-### Before you start
+## Before you start
 
 * You must have Marketplace Administrator credentials in Amplify Engage.
-* Your Marketplace must be set to **Public** access (unauthenticated users must be able to browse it). See [Marketplace settings](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_settings/index.html) for how to configure the Access setting.
-* Your Marketplace must have a configured URL. A custom (vanity) URL is strongly recommended so that Google indexes the URL your organization controls rather than an Axway subdomain. See [Customize Marketplace URL](https://docs.axway.com/bundle/amplify-central/page/docs/manage_marketplace/customize_marketplace/marketplace_vanity_url/index.html).
+* Your Marketplace must be set to **Public** access (unauthenticated users must be able to browse it). See [Marketplace settings](/docs/manage_marketplace/customize_marketplace/marketplace_settings/) for how to configure the Access setting.
+* Your Marketplace must have a configured URL. A custom (vanity) URL is strongly recommended so that Google indexes the URL your organization controls rather than an Axway subdomain. See [Customize Marketplace URL](/docs/manage_marketplace/customize_marketplace/marketplace_vanity_url/).
 * You must have a Google account with access to [Google Search Console](https://search.google.com/search-console).
 
-### Objectives
+## Objectives
 
-After completing this guide you will have:
+After completing these instructions, you will have:
 
 * Enabled search engine indexing for your Marketplace in Amplify Engage
 * Obtained a Google site verification ID from Google Search Console
@@ -27,12 +25,16 @@ After completing this guide you will have:
 * Submitted your Marketplace sitemap to Google Search Console to accelerate indexing
 * Confirmed which public Marketplace pages are indexed and how their metadata is generated
 
+## Integration steps
+
+Follow these steps to integrate your Amplify Engage Marketplace with Google Search Console.
+
 ### Step 1 — Enable indexing in Marketplace settings
 
 Configure the Amplify Engage side of the integration first. This enables the platform to serve the Google site verification meta tag and to allow Googlebot to crawl public Marketplace pages.
 
-1. Log into Amplify and navigate to **Organization**.
-2. Select **Marketplaces** and click the name of the Marketplace you want to configure.
+1. Log into Amplify and navigate to *Organization > Marketplaces*.
+2. Click the name of the Marketplace you want to configure.
 3. In the Marketplace configuration, select **Integration > Search Engines**.
 4. Locate the **Indexing** setting and set it to **Enabled**.
    * When Indexing is **Enabled**, public Marketplace pages are considered indexable and the `robots.txt` file allows Googlebot access.
@@ -40,7 +42,7 @@ Configure the Amplify Engage side of the integration first. This enables the pla
 5. Leave the **Google site verification ID** field blank for now. You will return to enter this value after completing the Google Search Console steps.
 6. Click **Save**.
 
-> **Note**: The Google site verification ID field is visible only when Indexing is set to **Enabled**. The verification meta tag is rendered on the Marketplace homepage only when a Google ID value is present.
+{{< alert title="Note" color="primary" >}}The Google site verification ID field is visible only when Indexing is set to **Enabled**. The verification meta tag is rendered on the Marketplace homepage only when a Google ID value is present.{{< /alert >}}
 
 ### Step 2 — Add your Marketplace as a property in Google Search Console
 
@@ -57,7 +59,7 @@ Google Search Console requires you to register and verify ownership of your Mark
 
 Amplify Engage supports site ownership verification via the **HTML meta tag** method. This is the method compatible with the Google site verification ID field in the Marketplace settings.
 
-> **Alternative methods**: Google Search Console also supports HTML file upload, Google Analytics tracking code, Google Tag Manager, and DNS record verification. These methods can be used to verify ownership independently of the Amplify Engage verification ID field, but the HTML meta tag approach is the native integration path.
+**Alternative methods**: Google Search Console also supports HTML file upload, Google Analytics tracking code, Google Tag Manager, and DNS record verification. These methods can be used to verify ownership independently of the Amplify Engage verification ID field, but the HTML meta tag approach is the native integration path.
 
 #### 3a. Get your verification ID from Google Search Console
 
@@ -76,7 +78,7 @@ Amplify Engage supports site ownership verification via the **HTML meta tag** me
 #### 3b. Enter the verification ID in Amplify Engage
 
 1. Return to Amplify Engage.
-2. Navigate to **Organization > Marketplaces**, select your Marketplace, then go to **Integration > Search Engines**.
+2. Navigate to *Organization > Marketplaces*, select your Marketplace, then go to **Integration > Search Engines**.
 3. Ensure **Indexing** is set to **Enabled**.
 4. In the **Google site verification ID** field, paste the content value you copied from Search Console.
 5. Click **Save**.
@@ -96,7 +98,7 @@ Before completing verification in Google Search Console, confirm that the meta t
 3. Search for `google-site-verification` in the source (press `Ctrl+F` / `Cmd+F`).
 4. Confirm the meta tag is present in the `<head>` section and that the `content` value matches the ID you copied from Search Console.
 
-> **Tip**: Use an incognito or private browser window to confirm the tag is visible to unauthenticated users, as Googlebot accesses the page without authentication.
+{{< alert title="Tip" color="secondary" >}}Use an incognito or private browser window to confirm the tag is visible to unauthenticated users, as Googlebot accesses the page without authentication.{{< /alert >}}
 
 #### 3d. Complete verification in Google Search Console
 
@@ -104,7 +106,7 @@ Before completing verification in Google Search Console, confirm that the meta t
 2. Click **Verify**.
 3. Search Console checks for the meta tag on your Marketplace homepage. If found, it confirms ownership and the property status changes to **Verified**.
 
-> **Important**: Do not remove or change the Google site verification ID in Amplify Engage after verification. Google Search Console periodically re-checks for the tag to maintain your verified status. If the tag is removed, your property verification will eventually expire.
+{{< alert title="Note" color="warning" >}}Do not remove or change the Google site verification ID in Amplify Engage after verification. Google Search Console periodically re-checks for the tag to maintain your verified status. If the tag is removed, your property verification will eventually expire.{{< /alert >}}
 
 ### Step 4 — Configure Marketplace settings to optimize indexing
 
@@ -114,13 +116,13 @@ The following Marketplace configuration settings directly affect what Google ind
 
 The **Description** field in Marketplace settings is used as the meta description for the Marketplace homepage and as a fallback description for pages without their own description. This description may appear in Google search result snippets.
 
-1. Navigate to **Organization > Marketplaces** and select your Marketplace.
+1. Navigate to *Organization > Marketplaces* and select your Marketplace.
 2. In the **Description** field, enter a clear, concise description of your Marketplace (recommended: 120–160 characters).
    * This value is used as the meta description on the Marketplace homepage.
    * It is also used as a fallback description on product, category, and document pages that do not have their own description configured.
 3. Click **Save**.
 
-> **Note**: Only the description in the default language is used for the meta description field, regardless of Marketplace localization settings.
+{{< alert title="Note" color="primary" >}}Only the description in the default language is used for the meta description field, regardless of Marketplace localization settings.{{< /alert >}}
 
 #### Sitename (page title)
 
@@ -133,7 +135,7 @@ The **Sitename** field controls the browser tab title and forms the base of page
 
 Googlebot only indexes pages accessible to unauthenticated users. If your Marketplace **Access** is set to **Protected**, Google cannot crawl it regardless of your indexing and verification settings.
 
-* Navigate to **Organization > Marketplaces > [Your Marketplace] > Settings**.
+* Navigate to *Organization > Marketplaces > [Your Marketplace] > Settings*.
 * Confirm **Access** is set to **Public**.
 
 ### Step 5 — Submit your Marketplace sitemap to Google Search Console
@@ -152,7 +154,7 @@ After verification, submit your Marketplace sitemap to Google Search Console. Th
 4. Click **Submit**.
 5. Search Console processes the sitemap and displays the number of discovered URLs. Indexing of submitted URLs typically begins within a few days, though it can take longer depending on your site's crawl priority in Google's queue.
 
-> **Note**: The sitemap is generated and maintained automatically by Amplify Engage. You do not need to manually create or update it.
+{{< alert title="Note" color="primary" >}}The sitemap is generated and maintained automatically by Amplify Engage. You do not need to manually create or update it.{{< /alert >}}
 
 ### Step 6 — Request indexing for priority pages (optional)
 
@@ -184,7 +186,7 @@ When indexing is enabled, Amplify Engage automatically applies page-specific tit
 
 Each page's title is composed from the Marketplace **Sitename** combined with the relevant entity name (product title, category title, etc.). The meta description uses the entity's own description if one is configured, otherwise it falls back to the Marketplace **Description**.
 
-> **Tip**: To improve the quality of Google search result snippets, add descriptions to your products, categories, and documents in their respective configuration screens in Product Foundry and the Document Library. Pages without their own description f
+{{< alert title="Tip" color="secondary" >}}To improve the quality of Google search result snippets, add descriptions to your products, categories, and documents in their respective configuration screens in Product Foundry and the Document Library.{{< /alert >}}
 
 ## Robots.txt behavior
 
