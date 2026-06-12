@@ -19,6 +19,8 @@ To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click her
 
 ## [Amplify Engage June 11 2026](/docs/amplify_relnotes/2026june_amplify/#june-11-2026)
 
+Update table
+
 | Environment type                                    | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.140 <br />unless otherwise noted) |
 |-----------------------------------------------------|--------------------------|
 | Axway API Management 7.7                            | DA=1.2.59 / TA=1.2.50 (SDK v1.1.141) |
