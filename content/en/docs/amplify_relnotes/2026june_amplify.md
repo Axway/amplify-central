@@ -1,8 +1,8 @@
 ---
-title: Amplify Engage May 2026
-linkTitle: Amplify Engage May
+title: Amplify Engage June 2026
+linkTitle: Amplify Engage June
 weight: 8
-date: 2026-4-30
+date: 2026-6-10
 ---
 Axway works hard to improve the Amplify Engage experience by releasing new features and fixing bugs. Here is the list of new features, enhancements, and bug fixes you’ll find in each update for the month. It is always recommended to update to the latest agents' versions.
 
