@@ -52,7 +52,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
   (AWS AGENT, ENHANCEMENT)</br>
   The AWS SaaS and on-premise agents can discovery Model Context Protocol (MCP) services from an Amazon Bedrock AgentCore Gateway. The discovered MCP services are registered in Amplify Engage Service Registry. The MCP services can be published in the Engage Marketplace for consumption.
 
-* **MCP Discovery from AWS Bedrock AgentCore**
+* **Automatic credential/application sync for APIM updates via CLI**
 
   (AXWAY API MANAGEMENT  DISCOVERY AGENT, ENHANCEMENT)</br>
   The Axway API Management Discovery agent will maintain synchronization between the API Manager and existing Marketplace application/credentials if an API is updated with the APIM CLI.
