@@ -80,6 +80,23 @@ View and track the status of the Application Registrations:
 | **Inactive**   | The credential is provisioned on the data plane but cannot be used to consume APIs. This can be the result of a [Suspend action](/docs/manage_marketplace/consumer_experience/credential_management#suspend--enable-credential). |
 | **Deleting**   | The credential deletion has been initiated and is waiting for the credentials to be deprovisioned in the data plane.                        |
 
+### Unified credential lifecycle
+
+When a credential is shared across multiple environments via unified provisioning, lifecycle actions on the primary credential cascade to all linked cloned credentials:
+
+| Action on primary credential | Effect on cloned credentials |
+|------------------------------|------------------------------|
+| **Delete** | All clones are automatically deprovisioned and removed. The `client_id` is unregistered from all linked gateway applications. The OAuth client is deprovisioned from the IdP. |
+| **Suspend (Inactive)** | All clones are set to Inactive. The credential cannot be used in any environment. |
+| **Expire** | All clones expire simultaneously. |
+| **Renew** | The renewed credential's new expiry propagates to all clones. |
+
+**Key behavior notes:**
+
+* If a clone fails to deprovision in a specific environment (e.g., the agent is offline), the primary credential is still revoked. The failure is reported in the Provider Credentials list for that specific environment.
+* Credential expiry times on clones always match the primary, regardless of the clone's own Environment expiry settings.
+* Consumers are not notified separately for cloned credential expirations — only the primary credential triggers lifecycle notifications.
+
 ## Create credentials
 
 The credential request can be done from several places in the Marketplace:
@@ -98,6 +115,28 @@ Once you click **Submit**, you will be redirected to the **Credential Requst Sub
 Once the credential is generated, make sure to copy and paste it in a secure location, as you will not be able to see it again from the Marketplace. If you lose the credential secret, click **Create Credential** to create a new one.
 
 To delete the existing credential, click the trash bin icon.
+
+### Credential reuse across API services
+
+When creating a credential, if the requested API service shares an Identity Provider with another API service for which you already have a credential, the Marketplace displays a notification indicating that the existing credential can be reused. In this case:
+
+* No new `client_id / client_secret` is generated.
+* The existing credential is extended to cover the additional API service.
+* The credential details page shows all resources accessible with this credential.
+
+You can still choose to create a new credential instead of reusing the existing one if needed.
+
+#### Resource availability during cross-environment provisioning
+
+When a credential is reused across environments, provisioning in additional environments may take time (for example, if a Discovery Agent is temporarily unavailable). During this period:
+
+* The primary credential remains fully functional for its original API service.
+* There will show an indicator on the primary credential **Status** to inform there are resource provisioning processing.  Also a hover-over will show the availability of resources during this time.
+* The credential details page indicates which resources are pending provisioning.
+* A status indicator shows when a resource is:
+    * **Pending** — Provisioning is in progress in the additional environment.
+    * **Error** — Provisioning failed in the additional environment. Contact the provider.
+* Once provisioning is complete, the resource status updates to Active and becomes available.
 
 ## List the credentials
 
@@ -145,3 +184,9 @@ A credential can be deleted:
 * From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application
 
 Click on the credential name to display the credential information. Click **Delete credential** to delete the credential. This action must be confirmed by the user, as it is irreversible.
+
+### Notifications for unified credentials
+
+Credential expiration and lifecycle email notifications are sent only for the **primary** credential. Cloned credentials do not trigger separate notifications to consumers. From the consumer's perspective, there is only a single credential — the primary — that covers access to all API services sharing the same IdP.
+
+Providers can observe the status of all clones (including pending or errored states) in the Provider Credentials list page.
