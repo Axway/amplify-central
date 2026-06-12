@@ -39,3 +39,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | WEBMETHODS_RATELIMIT              | The max number of concurrent API calls to SoftwareAG WebMethods. Default: `0` (unlimited).                                                                                                                                                                                                                                                      |
 | WEBMETHODS_RATELIMITDELAY         | The delay to wait between consecutive API calls to SoftwareAG WebMethods. Accepts a duration string (e.g., `2s`, `500ms`, `1m`). Default: `0` (no delay).                                                                                                                                                                                       |
 | WEBMETHODS_OAUTH2AUTHZSERVERALIAS | The OAuth2 server alias used by SoftwareAG WebMethods to authenticate with OAuth2 credential.                                                                                                                                                                                                                                                   |
+
+### Discovery Agent only variables
+
+* `WEBMETHODS_ADDOAUTHSCOPES`: When set to `true`, the Discovery Agent adds a generated full scope to APIs that expose an OAuth flow and creates API-specific OAuth credential request definitions. Default: `false`.
