@@ -74,6 +74,9 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   The Marketplace now displays service-level documentation for A2A (Agent-to-Agent) API services. Documentation attached to A2A resources appears on both the Resources tab of a Marketplace Product page consistent with existing documentation support for other service types.
 
+  (PROVIDER EXPERIENCE, ENHANCEMENT, SERVICE REGISTRY)</br>
+  The API Service wizard now includes a step to add service-level documentation for A2A (Agent-to-Agent) API services. Documentation attached to A2A resources will appear on API service documentation tab.
+
 * **Resource State and Stage in Advanced Search**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
@@ -88,11 +91,6 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
   (PROVIDER EXPERIENCE, ENHANCEMENT, SERVICE REGISTRY)</br>
   The endpoint URL on the Service Registry details page has a **Copy endpoint URL**  icon to  make it easier for a user to make a copy of the full endpoint URL.
-
-* **A2A Service documentation support**
-
-  (PROVIDER EXPERIENCE, ENHANCEMENT, SERVICE REGISTRY)</br>
-  The API Service wizard now includes a step to add service-level documentation for A2A (Agent-to-Agent) API services. Documentation attached to A2A resources will appear on API service documentation tab.
 
 ## Marketplace bug fixes
 
