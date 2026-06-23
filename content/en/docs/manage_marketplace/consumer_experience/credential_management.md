@@ -43,6 +43,7 @@ To request access to an API from the product:
     * Click **Register Application**.
 
 If the access is automatically approved, you will be prompted with the option to Request Credential.
+
 If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
 To request access to an API from the product resource:
@@ -106,11 +107,11 @@ The credential request can be done from several places in the Marketplace:
 * From the product: *Marketplace > Product* > click **Request Credential**
 * While requesting access to the product resource: if access is auto approved, then the *Request Credential* screen is displayed
 
-To create a credential, enter a **Name**, select the resource to acccess, choose an owning Team (optional), select which application to add the credential to, speicify the credential type and required details. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title appears.
+To create a credential, enter a **Name**, select the resource to access, choose an owning Team (optional), select which application to add the credential to, specify the credential type and required details. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title appears.
 
 When you choose a resource and application, you'll receive a notification stating "Existing credentials found" if there are credentials that can be reused for that application. This message provides a "View existing credentials" link, which opens a dialog displaying details about the available credentials. Selecting any Credential Name takes you to its details page. If you find a reusable credential, simply cancel the Request credential process. However, if no credentials are available or none are reusable, you can create a new credential.  
 
-Once you click **Submit**, you will be redirected to the **Credential Requst Submitted** page, which will list resources within the application that are compatible with the new credential. You can choose **View Crendential** to go to the **Credenaial Details** page, or select **Close** to exit the page.
+Once you click **Submit**, you will be redirected to the **Credential Request Submitted** page, which will list resources within the application that are compatible with the new credential. You can choose **View Credential** to go to the **Credential Details** page, or select **Close** to exit the page.
 
 Once the credential is generated, make sure to copy and paste it in a secure location, as you will not be able to see it again from the Marketplace. If you lose the credential secret, click **Create Credential** to create a new one.
 
@@ -142,7 +143,7 @@ When a credential is reused across environments, provisioning in additional envi
 
 The *Marketplace > Credentials* view displays all the credentials your team has access to. This list can be filtered by State, Expiration date and Application. For each credential, the credential type **APIKey**, **OAuth**, **HTTPBasic** or **MutualTLS** is displayed. If the credential type is not visible, ask the owner of the product.
 
-Note that the Engage Admin user can see all Credentials regardless of the team they belongs to.
+Note that the Engage Admin user can see all credentials, regardless of the teams they belong to.
 
 ## View credential value
 
