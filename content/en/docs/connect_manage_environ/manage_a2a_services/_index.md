@@ -16,30 +16,30 @@ Follow these steps to create an A2A service:
     * **Fetch from URL**: Provide a publicly accessible URL pointing to the agent card. The system will retrieve and load the spec automatically.
        * **Fetch A2A Server from URL**: Complete the following fields and then click **Import**. Once imported, a preview of the agent card is available.
          * Version: Can either enter manually or it will be automatically filled in once an agent card has been successfully fetched.
-         * Agent Card URL: Enter a URL to fetch an agent card (requires: name, url, skills). Only version 1.0.0 is supported.
+         * Agent Card URL: Enter a URL to fetch an agent card (requires: name, URL, skills). Only version 1.0.0 is supported.
     * **Upload File**: Upload the agent card.
        * Version: Can either enter manually or it will be automatically filled in once an agent card has been successfully fetched.
-       * Upload Agent Card: Upload a JSON file with an agent card (requires: name, url, and skills). Only version 1.0.0 is supported.
+       * Upload Agent Card: Upload a JSON file with an agent card (requires: name, URL, and skills). Only version 1.0.0 is supported.
 3. Confirm your agent card information and then click **Next**. Enter the following:
     * **Title**: Enter a descriptive name. The title is searchable, but it does not need to be unique.
     * **Logical Name**: Enter an ID for the A2A service. The ID must be unique within the scope of the environment. The logical name is referenced in any dependencies of the A2A service.
     * **Description**: Not required. Limited to **1000** characters.
-    * **Environment**: Will only be viewable if the wizard has been accessed through the Service Registry. Required to choose an environment if so.
+    * **Environment**: This field appears only when you access the wizard from the Service Registry. If it appears, select an environment.
     * **Agent Card Overview**: Not required. Add overview content to help users understand your content when they view it in the marketplace. Supports markdown.
     * **Icon**: Not required. A visual aid when looking through the list of API services.
     * **Classification**: Not required. Select Internal, Public, Restricted, or Sensitive.
     * **Source Code Repo**: Not required. Add the source code repo if needed.
-4. Add documentation: select a document template or start from a blank document:
+4. Add documentation: select a document template or start with a blank document:
     * From a template: a page displays the available template list that is visible to your team(s). Click **Preview template** to view information about the selected template. After choosing a template, click the corresponding radio button on the template card and then click **Next**. The documentation structure is immediately created based on the template structure and can be updated as needed.
     * From a blank document: you must create the documentation structure manually.
     * If you change methods partway through creating the document, then a warning is displayed informing you that the documentation elements that have already been created could be lost. If you wish to keep the existing elements, click **Next**. Otherwise, select the new method (either template or a blank document).
     * Edit documentation elements (topics, sections, and articles).
         * Click **+ Add topic** to add a new topic.
-        * Click **+ Add section** to add a new section in a topic.
+        * Click **+ Add section** to add a new section in the topic.
         * Once a section is available, click **+ Add article** to link an article from a document library document that has Service Registry access.
         * Each time you select a topic, section, article from the documentation structure, its content is visible at the right of the screen, where you can use the pencil icon to edit the content.
         * Topic, section, and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reordered. A section can be moved inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
-        * Topic, section, and article can be deleted using their corresponding **Delete** button taht is accessed via the ellipsis menu. A confirmation is required for each deletion, as this action is irreversible.
+        * Topic, section, and article can be deleted using their corresponding **Delete** button that is accessed via the ellipsis menu. Confirmation is required for each deletion, as this action is irreversible.
         * Once your documentation is ready, click **Next**.
 5. Enter the name of your endpoint and optionally the stage and state of the endpoint. This information may be filled in automatically. Click **Next**.
     * Click **Create Endpoint** to add any endpoints needed. Complete the required fields and click **Save**.
