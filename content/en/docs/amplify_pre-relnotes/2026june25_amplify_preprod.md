@@ -70,16 +70,16 @@ This new feature includes:
     * The Marketplace search backend now supports a `resource.type` query parameter on the `GET /resources` endpoint, enabling filtering by specification type (oas3, oas2, wsdl, protobuf, asyncapi, graphql, raml, mcp, a2a). Unrecognized types return empty results without errors, allowing new types to be introduced without a service release.
     * A new filter control on the Advanced search results Resources tab allows users to select one or more specification types to narrow search results. The filter supports multi-select with OR semantics, deep linking via URL query parameters, and pagination reset on selection change.
     * A new filter control on the advanced search results Products tab allows users to filter products by type (API, MCP, A2A), consistent with the existing basic search product type filter.
- 
-* **Session Handling & Auth API**
+
+* **Session handling and auth API**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Engage Auth has been migrated from the deprecated Platform `/findSession` API to the org-scoped `org_userFindOne` and `team_find` Platform APIs. This change improves security, enables the MCP authentication flow, and switches token revocation to tenant-ID-based logic. In parallel, the Marketplace Web UI and all UI modules has been updated to use the new Platform `/session` API, removing the dependency on the deprecated `/findSession` endpoint and ensuring consistent session handling.
+  Central Auth service has been migrated from the deprecated Platform `/findSession` API to the org-scoped `org_userFindOne` and `team_find` Platform APIs. This change improves security, enables the MCP authentication flow, and switches token revocation to tenant-ID-based logic. In parallel, the Marketplace Web UI and all UI modules has been updated to use the new Platform `/session` API, removing the dependency on the deprecated `/findSession` endpoint and ensuring consistent session handling.
 
 * **Replaced spring-retry with lightweight retry library**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  The spring-retry dependency has been removed from API Server and Central Auth, eliminating the spring-core transitive dependency that was frequently flagged by security scanners. Retry logic now uses a lightweight alternative with a smaller security footprint.
+  The spring-retry dependency has been removed from API Server and Central Auth service, eliminating the spring-core transitive dependency that was frequently flagged by security scanners. Retry logic now uses a lightweight alternative with a smaller security footprint.
 
 * **Asset Archive and Delete actions**
 
