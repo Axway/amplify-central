@@ -11,7 +11,7 @@ Use the Topology WebUI to select an environment and then manage your A2A service
 
 Follow these steps to create a A2A service:
 
-1. From the details page of your environment, click **Add Service** (located at the top right of the page). Then select **Add A2A Service**.
+1. From the details page of your environment or from the Service Registry, click **Add Service** (located at the top right of the page). Then select **Add A2A Service**.
 2. Click either **Fetch from URL** or **Upload File** to import the agent card and then click **Next**. To learn how to add an A2A service using the Axway Central CLI, see [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api/).
     * **Fetch from URL**: Provide a publicly accessible URL pointing to the agent card. The system will retrieve and load the spec automatically.
        * **Fetch A2A Server from URL**: Complete the following fields and then click **Import**. Once imported, a preview of the agent card is available.
