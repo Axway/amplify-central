@@ -47,16 +47,15 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **Title**
+* **Cache Handling Improvement**
 
-  (AWS AGENT, ENHANCEMENT)</br>
-  Description.
+  (DISCOVERY AGENT, AGENT SDK, ENHANCEMENT)</br>
+  Improved cache handling to better manage Discovery Agent connection issues with Amplify Engage.
 
-## Agent bug fixes
+* **Business Insights Query Improvement**
 
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+  (TRACEABILITY AGENT, ENHANCEMENT)</br>
+  Additional fields have been included in the events sent to Business Insights to improve the performance of queries.
 
 ## Marketplace updates
 
@@ -99,11 +98,21 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
   (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   The dependency on `axway-react-ui` has been reduced across products-web, assets-web, and catalog-web. This reduces the effort required for a future full removal of the legacy UI library.
 
+* **Asset Archive and Delete actions**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG)</br>
+  The UX Experience of performing the archive or delete action on an asset is now available as icons on the asset details screen.
+
+* **A2A UX Improvement**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG)</br>
+  The UX Experience of the asset creation wizard has been enhanced to include a filter for A2A resources along with the addition of a Type column to help identify the resource type.
+
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01838430 | APIGOV-32719 | **Issue**: Blank page in Marketplace for some resources. <br/>**Resolution**: When a specification is not available on the resource, a message that no spec is available for this service is displayed in the resource documentation tab in Marketplace . |
+| 01838430 | APIGOV-32719 | **Issue**: Blank page in Marketplace for some resources. <br/>**Resolution**: When a specification is not available on the resource, a message that no spec is available for this service is displayed in the resource documentation tab in Marketplace. A similar message is displayed on the Service Details page.|
 | 01847761 | APIGOV-32950 | **Issue**: Custom subscriptionrequestdef. date field causing UI issues. <br/>**Resolution**: Date is now addable and other fields are not affected. |
 |          | APIGOV-32972 | **Issue**: Marketplace UI: Plan tile subscribe button state does not update correctly. <br/>**Resolution**: When a user cancels their subscription, the Plan tile 'Subscribe' button updates to represent the new subscription state. |
 |          | APIGOV-32959| **Issue**: Marketplace UI: Plan limit type label not displayed <br/>**Resolution**: Limit Type on the Plan details page displays the proper types without blanks. |
