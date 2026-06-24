@@ -75,4 +75,3 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 |          | APIGOV-32959| **Issue**: Marketplace UI: Plan limit type label not displayed <br/>**Resolution**: Limit Type on the Plan details page displays the proper types without blanks. |
 |          | APIGOV-32866| **Issue**: UI: Primary credentials should not display expiry tooltip. <br/>**Resolution**: Primary credential details side-blade updates to no longer display expiration tooltips for the Expiry. |
 |          | APIGOV-xxxxx | **Issue**: [Marketplace] Renew not renewing credentials. <br/>**Resolution**: Marketplace DB/backend fixed to propagate new client secret but keep the client id the same on renewal. |
-
