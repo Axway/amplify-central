@@ -89,10 +89,15 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
   (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   All Central UI modules have been migrated to the new Platform `/session` API. The `usePlatform` hook is now used consistently across all modules, eliminating duplicate session declarations.
 
-* **Title**
+* **Replaced spring-retry with lightweight retry library**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Description.
+  The spring-retry dependency has been removed from API Server and Central Auth, eliminating the spring-core transitive dependency that was frequently flagged by security scanners. Retry logic now uses a lightweight alternative with a smaller security footprint.
+
+* **Reduced dependency on axway-react-ui**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  The dependency on `axway-react-ui` has been reduced across products-web, assets-web, and catalog-web. This reduces the effort required for a future full removal of the legacy UI library.
 
 ## Marketplace bug fixes
 
