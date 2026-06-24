@@ -2,7 +2,7 @@
 title: Manage an A2A service
 linkTitle: Manage an A2A service
 weight: 305
-date: 2025-11-06
+date: 2026-06-24
 ---
 
 Use the Topology WebUI to select an environment and then manage your A2A services, including create, view, update, and delete. You can either upload a file or fetch from a URL.
