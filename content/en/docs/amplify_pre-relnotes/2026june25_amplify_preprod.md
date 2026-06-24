@@ -60,6 +60,35 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace updates
 
+* **Marketplace as a curated AI registry supporting human and agent-based discovery**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  Amplify Marketplace now serves as a curated AI registry aligned with the A2A protocol's curated discovery pattern. AI agents, LLMs, and developer tools (IDEs, coding agents) can programmatically discover and interact with marketplace content via a new Model Context Protocol (MCP) Server endpoint. The advanced search has been enhanced with specification type filtering and resource lifecycle metadata.
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  A new Model Context Protocol (MCP) Server endpoint is available at `/api/v1/mcp`, enabling AI agents and LLMs to discover marketplace resources using the standard MCP protocol (version 2025-11-25). The endpoint supports JSON-RPC 2.0 messaging, protocol version negotiation, tool discovery, and MCP authorization with Protected Resource Metadata (RFC 9728).
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  The MCP Server exposes a Resource Search Tool that allows AI agents to search marketplace resources by keywords and specification type. The response mapping is optimized for AI agent consumption, distinct from the human-oriented advanced search API format.
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  The Marketplace search backend now supports a `resource.type` query parameter on the `GET /resources` endpoint, enabling filtering by specification type (oas3, oas2, wsdl, protobuf, asyncapi, graphql, raml, mcp, a2a). Unrecognized types return empty results without errors, allowing new types to be introduced without a service release.
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  A new filter control on the advanced search results Resources tab allows users to select one or more specification types to narrow search results. The filter supports multi-select with OR semantics, deep linking via URL query parameters, and pagination reset on selection change.
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  A new filter control on the advanced search results Products tab allows users to filter products by type (API, MCP, A2A), consistent with the existing basic search product type filter.
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  Central Auth has been migrated from the deprecated Platform `/findSession` API to the org-scoped `org_userFindOne` and `team_find` Platform APIs. This change improves security, enables the MCP authentication flow, and switches token revocation to tenant-ID-based logic.
+
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  The Marketplace Web UI has been updated to use the new Platform `/session` API, removing the dependency on the deprecated `/findSession` endpoint and ensuring consistent session handling.
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  All Central UI modules have been migrated to the new Platform `/session` API. The `usePlatform` hook is now used consistently across all modules, eliminating duplicate session declarations.
+
 * **Title**
 
   (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
