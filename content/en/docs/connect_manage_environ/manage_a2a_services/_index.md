@@ -9,16 +9,16 @@ Use the Topology WebUI to select an environment and then manage your A2A service
 
 ## Add an A2A service
 
-Follow these steps to create a A2A service:
+Follow these steps to create an A2A service:
 
 1. From the details page of your environment or from the Service Registry, click **Add Service** (located at the top right of the page). Then select **Add A2A Service**.
 2. Click either **Fetch from URL** or **Upload File** to import the agent card and then click **Next**. To learn how to add an A2A service using the Axway Central CLI, see [Register APIs using the CLI](/docs/integrate_with_central/cli_central/cli_register_api/).
     * **Fetch from URL**: Provide a publicly accessible URL pointing to the agent card. The system will retrieve and load the spec automatically.
        * **Fetch A2A Server from URL**: Complete the following fields and then click **Import**. Once imported, a preview of the agent card is available.
-         * Version: Can either enter manually or it will be automaticaly filled in once an agent card has been successfully fetched.
+         * Version: Can either enter manually or it will be automatically filled in once an agent card has been successfully fetched.
          * Agent Card URL: Enter a URL to fetch an agent card (requires: name, url, skills). Only version 1.0.0 is supported.
     * **Upload File**: Upload the agent card.
-       * Version: Can either enter manually or it will be automaticaly filled in once an agent card has been successfully fetched.
+       * Version: Can either enter manually or it will be automatically filled in once an agent card has been successfully fetched.
        * Upload Agent Card: Upload a JSON file with an agent card (requires: name, url, and skills). Only version 1.0.0 is supported.
 3. Confirm your agent card information and then click **Next**. Enter the following:
     * **Title**: Enter a descriptive name. The title is searchable, but it does not need to be unique.
@@ -32,17 +32,17 @@ Follow these steps to create a A2A service:
 4. Add documentation: select a document template or start from a blank document:
     * From a template: a page displays the available template list that is visible to your team(s). Click **Preview template** to view information about the selected template. After choosing a template, click the corresponding radio button on the template card and then click **Next**. The documentation structure is immediately created based on the template structure and can be updated as needed.
     * From a blank document: you must create the documentation structure manually.
-    * If you change methods  part way through creating the document, then a warning is displayed informing you that the documentation elements that have already been created could be lost. If you wish to keep the existing elements, click **Next**. Otherwise, select the new method (either template or a blank document).
+    * If you change methods partway through creating the document, then a warning is displayed informing you that the documentation elements that have already been created could be lost. If you wish to keep the existing elements, click **Next**. Otherwise, select the new method (either template or a blank document).
     * Edit documentation elements (topics, sections, and articles).
         * Click **+ Add topic** to add a new topic.
         * Click **+ Add section** to add a new section in a topic.
         * Once a section is available, click **+ Add article** to link an article from a document library document that has Service Registry access.
         * Each time you select a topic, section, article from the documentation structure, its content is visible at the right of the screen, where you can use the pencil icon to edit the content.
         * Topic, section, and article can be moved around using the drag icon (double horizontal bar with arrow). A topic can be reordered. A section can be moved inside a topic or to another topic. An article can be moved inside its section or to another section within the same topic or to another topic.
-        * Topic, section, and article can be deleted using their corresponding **Delete** ellipsis menu. A confirmation is required for each deletion, as this action is irreversible.
+        * Topic, section, and article can be deleted using their corresponding **Delete** button taht is accessed via the ellipsis menu. A confirmation is required for each deletion, as this action is irreversible.
         * Once your documentation is ready, click **Next**.
 5. Enter the name of your endpoint and optionally the stage and state of the endpoint. This information may be filled in automatically. Click **Next**.
-    * Click **Create Endpoint** to add any endpoints needed. Complete in the required fields and click **Save**.
+    * Click **Create Endpoint** to add any endpoints needed. Complete the required fields and click **Save**.
     * Click the three ellipses of the endpoint to edit, delete, or preview.
 6. (Optional step) For Access Rights, select the team that owns the A2A service. Select the team(s) the A2A service can be shared with. By default, an A2A service is not shared and only the **Engage Admin** or the owning team will have access to it. To share your A2A service with specific teams, select a team owner and all teams you want to grant "Rights" to for the selected A2A service. For each of the teams selected, you can choose either **Edit** or **Read** access rights. Each member of the shared team(s) selected will be able to access your A2A service with the chosen rights. This allows you to share/enable access to a specific A2A service without granting access to all the A2A services owned by your current team. Click **Next**.
 7. (Optional step) For Tags and Attributes, provide details for the A2A service.
