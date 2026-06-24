@@ -24,7 +24,7 @@ Follow these steps to create a A2A service:
     * **Title**: Enter a descriptive name. The title is searchable, but it does not need to be unique.
     * **Logical Name**: Enter an ID for the A2A service. The ID must be unique within the scope of the environment. The logical name is referenced in any dependencies of the A2A service.
     * **Description**: Not required. Limited to **1000** characters.
-    * **Environment**: Will only be viewable if the wizard has been accessed through the Service Registry. Required to choose and environment if so.
+    * **Environment**: Will only be viewable if the wizard has been accessed through the Service Registry. Required to choose an environment if so.
     * **Agent Card Overview**: Not required. Add overview content to help users understand your content when they view it in the marketplace. Supports markdown.
     * **Icon**: Not required. A visual aid when looking through the list of API services.
     * **Classification**: Not required. Select Internal, Public, Restricted, or Sensitive.
