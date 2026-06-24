@@ -69,4 +69,10 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-|          | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01838430 | APIGOV-32719 | **Issue**: Blank page in Marketplace for some resources. <br/>**Resolution**: When a specification is not available on the resource, a message that no spec is available for this service is displayed in the resource documentation tab in Marketplace . |
+| 01847761 | APIGOV-32950 | **Issue**: Custom subscriptionrequestdef. date field causing UI issues. <br/>**Resolution**: Date is now addable and other fields are not affected. |
+|          | APIGOV-32972 | **Issue**: Marketplace UI: Plan tile subscribe button state does not update correctly. <br/>**Resolution**: When a user cancels their subscription, the Plan tile 'Subscribe' button updates to represent the new subscription state. |
+|          | APIGOV-32959| **Issue**: Marketplace UI: Plan limit type label not displayed <br/>**Resolution**: Limit Type on the Plan details page displays the proper types without blanks. |
+|          | APIGOV-32866| **Issue**: UI: Primary credentials should not display expiry tooltip. <br/>**Resolution**: Primary credential details side-blade updates to no longer display expiration tooltips for the Expiry. |
+|          | APIGOV-xxxxx | **Issue**: [Marketplace] Renew not renewing credentials. <br/>**Resolution**: Marketplace DB/backend fixed to propagate new client secret but keep the client id the same on renewal. |
+
