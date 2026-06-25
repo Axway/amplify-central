@@ -67,8 +67,8 @@ When you select **AWS Bedrock AgentCore** as the environment type, configure the
         * **Log Group Prefix** - Optional Log group prefix for vendored logs.
         * **Enable IAM Authentication** - If true, IAM authentication is enabled for requests.
 
-    **Cognito User Pools** - Configure one or more Amazon Cognito user pools that the agent uses for authentication:
-        * **User Pool ID** - The Cognito user pool ID (for example, us-east-1_aBcDeFgHi).
+    * **Cognito User Pools** - Configure one or more Amazon Cognito user pools that the agent uses for authentication:
+        * **User Pool ID** - The Cognito user pool ID (for example, `us-east-1_aBcDeFgHi`).
         * **Region** - The AWS region where the user pool is hosted.
 
 Click **+ Add User Pool** to add additional pools, or click the remove icon to delete a pool.
