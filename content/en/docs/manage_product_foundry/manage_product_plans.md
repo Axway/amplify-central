@@ -71,7 +71,7 @@ Examples of paid plans (illustrative only):
 | 501          | 5000           | $1           | $10               | 0 x $1 + $10 = $0            |
 | 5001         | unlimited      | $0.5         | $20               | 5001 x $0.5 + $20 = $2520.50 |
 
-#### Custom plans
+### Custom plans
 
 Custom plans are intended for offerings where pricing is negotiated entirely outside of Engage (e.g., enterprise contracts, partner agreements, volume-based deals). The Engage Billing module is completely bypassed — all billing, invoicing, and payment collection is managed externally by the provider.
 
