@@ -29,7 +29,7 @@ Learn how to create and configure the product plan using the Product Foundry Web
 
 ## Product plan types and quota consumption costs
 
-There are two types of consumer product plans:
+There are three types of consumer product plans:
 
 * **Free plan** - no charge for API consumption.
 * **Paid plan**:
@@ -37,7 +37,8 @@ There are two types of consumer product plans:
     * **Pay per use** - charged a fixed price for each unit. There is no consumption limit.
     * **Tier - Graduated** - charged for each unit based on the price of its corresponding tier + flat tier fee, if any.
     * **Tier - Volume** - charged for all units based on the price of the final tier reached + flat tier fee, if any.
-
+* **Custom plan** - pricing is negotiated outside of Engage. No charge or billing is configured within the platform.
+  
 Examples of paid plans (illustrative only):
 
 * Standard paid plan cost: Base price: $100, Quota limit: unlimited.
@@ -69,6 +70,19 @@ Examples of paid plans (illustrative only):
 | 1            | 500            | $2           | $0                | 0 x $2 = $0                  |
 | 501          | 5000           | $1           | $10               | 0 x $1 + $10 = $0            |
 | 5001         | unlimited      | $0.5         | $20               | 5001 x $0.5 + $20 = $2520.50 |
+
+### Custom plans
+
+Custom plans are intended for offerings where pricing is negotiated entirely outside of Engage (e.g., enterprise contracts, partner agreements, volume-based deals). The Engage Billing module is completely bypassed — all billing, invoicing, and payment collection is managed externally by the provider.
+
+When configuring a Custom plan:
+
+* Base price, setup cost, and currency fields are **hidden** — pricing cannot be configured within Engage.
+* Quota is restricted to **Standard Quota** only (Unlimited is not available).
+* No prices are shown for quota tiers.
+* The Marketplace displays the plan type as **Custom** and never shows numeric prices, "Starting at $0.00", or "Free" indicators.
+* No invoices, charges, or payment records are generated within the platform.
+* Plan name, description, quota configuration, and visibility settings remain fully available.
 
 ## Create a product plan
 

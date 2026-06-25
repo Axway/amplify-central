@@ -25,6 +25,7 @@ Provisioning use cases include:
 * Enforce an expiration date for provisioned credential
 * Report traffic to Consumer Insights
 * Provisioning OAuth credential to an identity provider
+* Unified credential management across dataplane environments sharing the same identity provider
 
 ### Provision data plane when consumer requests access to a product resource
 
@@ -211,6 +212,75 @@ AGENTFEATURES_IDP_SSL_INSECURESKIPVERIFY_1=true
 AGENTFEATURES_IDP_SSL_CLIENTCERTPATH_1=/path-of-self-signed-client-certificate
 AGENTFEATURES_IDP_SSL_CLIENTKEYPATH_1=/path-of-client-key
 ```
+
+### External credential provisioning
+
+When an IDP-managed OAuth client is provisioned externally (i.e., the client ID is created by Engage rather than by the gateway's Dynamic Client Registration), the agent links the externally provisioned `clientId` to the corresponding gateway application. During provisioning:
+
+1. The credential request carries the `clientId` in its IDP credential data.
+2. The agent checks whether the client is already linked to the application.
+3. If not yet linked, the agent creates the authorization on the gateway.
+4. Deprovisioning checks for an existing authorization reference; if none is found (indicating an external credential with no linked auth), the operation completes successfully without contacting the gateway.
+
+### Unified credential management across environments with a shared identity provider
+
+When multiple dataplane environments are secured by the same OAuth identity provider, agents can share a single `IdentityProvider` resource in Engage rather than creating a duplicate per environment. This prevents consumers from seeing conflicting credential request definitions and ensures that credential lifecycle events (renewal, deletion, expiry) are applied consistently across all environments.
+
+#### How it works
+
+When `AGENTFEATURES_MANAGEIDPRESOURCES=true` is set, the agent automatically manages `IdentityProvider` and `IdentityProviderMetadata` resources in Engage as part of agent startup:
+
+1. **Lookup by IDP Metadata** — the agent resolves the IDP's authorization server metadata (via the configured `AGENTFEATURES_IDP_METADATAURL_{n}`) or, for gateways that expose it directly, via the IDP Metadata endpoint (e.g., token endpoint URL stored in the API's inbound security policy). It then queries Engage for any existing `IdentityProviderMetadata` resource whose metadata (e.g., `spec.tokenEndpoint`) matches.
+
+2. **Reuse if found** — if a matching `IdentityProviderMetadata` already exists (from another environment's agent or a previous startup), its parent `IdentityProvider` resource name is returned and reused. No new resource is created.
+
+3. **Create if not found** — if no match is found, the agent creates a new `IdentityProvider` resource (scoped globally, not to an environment) and a child `IdentityProviderMetadata` sub-resource that captures the authorization server endpoints:
+   * `spec.issuer`
+   * `spec.authorizationEndpoint`
+   * `spec.tokenEndpoint`
+   * `spec.introspectionEndpoint`
+   * `spec.jwksUri`
+
+4. **Link to credential request definition** — the resolved `IdentityProvider` resource name is written into the `spec.identityProvider` field of each Credential Request Definition (CRD) registered by the agent. Engage uses this link to correlate credentials across environments sharing the same IDP.
+
+#### Primary and clone credential provisioning
+
+When multiple environments share the same IDP, only one environment registers the OAuth client — this is the **primary** credential. All other environments that subsequently receive a credential request for the same IDP client receive a **clone** credential that references the primary rather than registering a new client.
+
+##### Primary credential
+
+The first credential request received by any agent for a given IDP client triggers full registration:
+
+1. The agent registers a new OAuth client with the IDP via Dynamic Client Registration.
+2. The resulting `clientId` and `clientSecret` are stored in the credential resource in Engage.
+3. The credential resource is marked as the primary owner of the IDP client.
+4. All lifecycle operations (renewal, suspension, deletion) are handled directly by this agent.
+
+##### Clone credential
+
+Once the primary credential is successfully provisioned, the Marketplace creates cloned credentials for other dataplane environments that have approved application registration for resources secured with the same identity provider. These cloned credentials have `spec.provision.mode` set to `external`, indicating that the OAuth client was already provisioned as part of the primary request and does not need to be created again.
+
+When a second agent — connected to a different environment but sharing the same IDP — receives the cloned credential request:
+
+1. The agent detects the credential is a clone by checking that `spec.provision.mode` is set to `external`.
+2. **No new credential is created** — the agent does not register a new OAuth client with the IDP.
+3. **Existing IDP client is linked** — the agent links the already-provisioned `clientId` to the gateway application (e.g., registering an `OAuthExternal` application authorization entry on Axway API Manager).
+4. Lifecycle events on the primary (renewal, deletion, expiry) propagate to all clone credentials, keeping all environments in sync.
+5. Deprovisioning a clone removes only the gateway application authorization link; the OAuth client in the IDP is not affected.
+
+#### Credential policies inherited from the environment
+
+When the `IdentityProvider` resource is first created, the agent reads the credential policies configured on its own environment (expiry period, action, notification days, visibility period) and applies them to the new resource. If no policies are configured on the environment the resource is created without policies. Subsequent agents that reuse the existing resource do not overwrite those policies.
+
+#### Configuration
+
+Enable agent-managed IDP resources by setting the following flag:
+
+```shell
+AGENTFEATURES_MANAGEIDPRESOURCES=true
+```
+
+This flag is `false` by default and must be explicitly enabled. When disabled, the agent registers IDP-backed CRDs as before but does not create or look up `IdentityProvider` resources in Engage.
 
 #### Show / Hide the values in the credential request OAuth Type dropdown menu
 

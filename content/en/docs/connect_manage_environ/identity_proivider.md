@@ -17,6 +17,43 @@ Multiple identity providers can be assigned to an environment.
 
 {{< alert title="Note" color="primary" >}}Identity provider management is optional.{{< /alert >}}
 
+## Agent-managed IdentityProvider resources
+
+When an agent is configured with `AGENTFEATURES_MANAGEIDPRESOURCES=true`, the agent automatically creates and manages `IdentityProvider` and `IdentityProviderMetadata` resources in Engage on behalf of the agent. This enables multiple environments connected to the same OAuth authorization server to share a single `IdentityProvider` resource rather than duplicating it per environment.
+
+### IdentityProvider resource
+
+The `IdentityProvider` resource is a global resource (not scoped to any environment). It represents an OAuth authorization server and carries:
+
+* The provider type (`generic`, `keycloak`, or `okta`).
+* A `policies` sub-resource that controls credential expiry, action on expiry, expiry notification lead time, and credential visibility period. These policies are populated from the environment's credential policies at creation time.
+
+### IdentityProviderMetadata resource
+
+The `IdentityProviderMetadata` resource is scoped to an `IdentityProvider` and stores the endpoints discovered from the OAuth authorization server's metadata document:
+
+| Field | Description |
+|---|---|
+| `spec.issuer` | The issuer identifier of the authorization server. |
+| `spec.authorizationEndpoint` | The URL used to obtain authorization grants. |
+| `spec.tokenEndpoint` | The URL used to obtain access tokens. |
+| `spec.introspectionEndpoint` | The URL used for token introspection. |
+| `spec.jwksUri` | The URL of the JSON Web Key Set document. |
+
+### Lookup by IDP metadata
+
+When the agent starts or processes an API that uses OAuth inbound security, the agent determines whether an `IdentityProvider` resource already exists for the configured authorization server by matching against the OAuth authorization server metadata endpoints stored in `IdentityProviderMetadata`:
+
+1. The agent queries Engage for an existing `IdentityProviderMetadata` resource whose metadata endpoints match those of the current IDP configuration.
+2. If a match is found (from any environment's agent or a prior startup), the parent `IdentityProvider` resource name is reused. No new resource is created.
+3. If no match is found, the agent creates a new `IdentityProvider` resource and its `IdentityProviderMetadata` resource.
+
+This lookup-by-metadata mechanism ensures that agents managing different environments that share the same OAuth authorization server automatically converge on the same `IdentityProvider` resource without any manual coordination.
+
+### Linking to credential request definitions
+
+Once the `IdentityProvider` resource name is resolved, it is written into the `spec.identityProvider` field of each Credential Request Definition (CRD) that the agent registers for that IDP. Engage uses this link to associate credentials provisioned in different environments with the same underlying authorization server, enabling consistent lifecycle management across dataplanes.
+
 ### Viewing available identity providers
 
 Only the Engage Admin can view identity providers.
@@ -39,30 +76,40 @@ Only the Engage Admin role can create identity providers.
 
     * **Identity Provider Name** - enter a friendly name for the identity provider in the WebUI.
     * **Type** - select which type of identity provider. Choose between Generic (default), Keycloak, or Okta.
-    * **Metadata URL** - provide the URL to connect to the identity provider authorization server to provide metadata information. The OAuth authorization server exposes the URL.
     * **Request Headers** (Optional) - enter name and value pairs to add request headers to the registration calls.
     * **Query Parameters** (Optional) - enter name and value pairs to add query parameters to the registration calls.
     * **Additional Client Properties** (Optional) - enter name and value pairs to add to the client metadata for registering the OAuth client
     * **Client Timeout** - enter the client timeout in seconds until the client registration call remains active (default 60 seconds).
     * **Use Registration Access Token** (Optional) - toggle to allow the agent to save and use the credential-specific registration token when modifying the client in the identity provider.
 
-4. Add the following identity provider authorization information:
+4. Choose to add **Endpoints** and/or **Metadata URL**:
 
-    * **Authorization Type** - Select the type of authentication method.
+      * **Endpoints**:
 
-        * **Client Secret** - (Default):
+           * **Issuer** - the issuer URL for the identity provider.
+           * **Authorization Endpoint** - the authorization endpoint for the identity provider.
+           * **Token Endpoint** - the token endpoint for the identity provider.
+           * **Introspection Endpoint** - the introspection endpoint for the identity provider.
+           * **JWKS URI** - the JWKS URI for the identity provider.
 
-            * **Authorization Method** - select the client secret authentication method. Choose from client_secret_post (default), client_secret_basic, or client_secret_jwt.
-            * **Client ID** - provide the client ID of the OAuth client. The agent uses this to authenticate and register OAuth clients.
-            * **Client Secret** - provide the OAuth client secret. The agent uses this to authenticate and register OAuth clients.
-            * **Client Scopes** (Optional) - enter a list of client scopes to be used for dynamic client registration.
+      * **Metadata**:
+
+          * **Metadata URL** - the URL to connect to the identity provider authorization server to provide metadata information. The OAuth authorization server exposes the URL.
+          * **Authorization Type** - select the type of authentication method.
+
+              * **Client Secret** - (Default):
+
+                  * **Authorization Method** - select the client secret authentication method. Choose from client_secret_post (default), client_secret_basic, or client_secret_jwt.
+                  * **Client ID** - the client ID of the OAuth client. The agent uses this to authenticate and register OAuth clients.
+                  * **Client Secret** - the OAuth client secret. The agent uses this to authenticate and register OAuth clients.
+                  * **Client Scopes** (Optional) - enter a list of client scopes to be used for dynamic client registration.
   
-        * **Access Token**:
+              * **Access Token**:
   
-            * **Access Token** - provide the access token to be used for authenticating.
+                  * **Access Token** - the access token to be used for authenticating.
 
-    * **Request Headers** (Optional) - enter name and value pairs to add request headers to the token request calls.
-    * **Query Parameters** (Optional) - enter name and value pairs to add query parameters to the token request calls.
+          * **Request Headers** (Optional) - the name and value pairs to add request headers to the token request calls.
+          * **Query Parameters** (Optional) - the name and value pairs to add query parameters to the token request calls.
 
 5. Click **Save** to create the identity provider and return to the list of identity providers.
 

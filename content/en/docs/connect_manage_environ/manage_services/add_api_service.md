@@ -10,7 +10,7 @@ Create an API service asset on your environment.
 
 Follow these steps to create an API service in your environment:
 
-1. From the details page of your environment, click the plus (+) button located at the top right of the **Activity Dashboard** section.
+1. From the details page of your environment or from the Service Registry, click **Add Service** (located at the top right of the page). Then select **Add API Service**.
 2. Click **Upload a file** or **Fetch from URL** to define the API specification.
 3. Confirm the information about your API service:
     * **Title**: Enter a descriptive name. The title is searchable, but it does not need to be unique.

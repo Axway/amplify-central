@@ -30,8 +30,11 @@ This step ensures that usage is governed by provider-defined policies and access
 
 ## Request credentials
 
-To authenticate and consume the product resources, consumers can generate or request **credentials** (such as API keys or OAuth tokens).  
+To authenticate and consume the product resources, consumers can generate or request **credentials** (such as API keys, OAuth tokens, or certificates).  
+
 Amplify Engage automates credential issuance and ties them to the consumer’s subscription.
+
+When requesting access to an API service that shares an Identity Provider with another API service you already have a credential for, Engage notifies you that the existing credential can be reused — no new secrets are generated. The result is a single credential that works across all API services sharing the same OAuth server.
 
 ## Gain insights into consumption
 

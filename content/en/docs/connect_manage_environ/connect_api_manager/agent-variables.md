@@ -112,6 +112,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | APIMANAGER_DISCOVERYIGNORETAGS        | Comma-separated blacklist of tags that should not be on a proxy before sending to Amplify Engage. Takes precedence over APIMANAGER_FILTER.                           |
 | APIMANAGER_FILTER                     | Expression to filter the API you want the agent to discover. See [Discover APIs](/docs/connect_manage_environ/connect_api_manager/filtering-apis-to-be-discovered/). |
 | APIMANAGER_APPLICATIONDEFINITIONTITLE | When this variable is set the agent will discover Custom Application Properties from API Manager and create an Application Profile Definition on Amplify Engage.      |
+| APIMANAGER_OAUTHIDPREF                   | Specifies which OAuth Credential Request Definition type to link to an `IdentityProvider` resource when `AGENTFEATURES_MANAGEIDPRESOURCES=true`. Allowed values: `secret` (OAuth Client ID & Secret CRD) or `publicKey` (OAuth Client ID & Public Key CRD). Default value: `secret`. |
 
 #### Invoke policy handling
 
@@ -252,6 +253,17 @@ APIMANAGER_CUSTOM_OAUTHEXT_TITLE="Azure AD"
 APIMANAGER_CUSTOM_OAUTHEXT_DESCRIPTION="Contact your Azure AD administrator to get the credentials"
 APIMANAGER_CUSTOM_OAUTHEXT_CLIENTID_LABEL="Azure AD Client Id"
 ```
+
+#### Unified credential handling
+
+As part of unified credential provisioning, when a consumer requests a credential, the primary credential request is sent to the dataplane agent associated with the resource. Once that credential is successfully provisioned, the Marketplace creates cloned credentials for other dataplane environments that have approved application registration for resources that are secured with same identity provider. These cloned credentials have `spec.provision.mode` set to `external`, indicating that the OAuth client was already provisioned as part of the primary request and does not need to be created again.
+
+For the API Manager Discovery Agent, a cloned credential is processed differently from a standard credential provisioning request:
+
+* **No new credential is created** — the agent does not create a new authentication on API Manager.
+* **Existing IDP client is linked** — the agent links the already-provisioned OAuth client ID to the API Manager application by registering an `OAuthExternal` application authorization entry for that client ID.
+
+Deprovisioning a cloned credential removes only the application authorization link; the OAuth client is not affected.
 
 ### Specific variables for Traceability Agent
 
