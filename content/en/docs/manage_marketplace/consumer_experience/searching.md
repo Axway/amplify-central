@@ -65,6 +65,14 @@ The filter displays a counter indicating the number of selected values out of th
 
 The filter's **Reset** button removes any selection and sets the filter to its original state.
 
+A plan type filter is available to refine product results:
+
+* **Free** — shows products with at least one Free plan available.
+* **Paid** — shows products with at least one Paid plan available.
+* **Custom** — shows products with at least one Custom plan available.
+
+A product may appear under multiple filter options if it offers plans of different types.
+
 ### Filter with Search capabilities
 
 By default, filter values are paginated, which means that potentially the user is not viewing all the available values. The number of total values is indicated on the right of the filter name. More values can be added by scrolling up to three times, after which a **Load more** button is displayed if there are more values to be loaded. The Load more button is no longer displayed once all values have been loaded.
