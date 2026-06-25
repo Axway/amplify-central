@@ -22,7 +22,7 @@ As a consumer, learn how to create a free or paid subscription and manage existi
 
 Anyone who is authenticated in the Marketplace can subscribe to a product with the following role restrictions:
 
-| Persona               | Subscribe to a paid plan | subscribe to a free plan |
+| Persona               | Subscribe to a paid or custom plan | Subscribe to a free plan |
 |-----------------------|--------------------------|--------------------------|
 | Subscription Manager  | Authorized               | Authorized               |
 | Engage Administrator  | Authorized               | Authorized               |
@@ -59,6 +59,22 @@ Once submitted, a subscription request goes through an approval process:
 | **Approved**  | The subscription has been approved and products can now be consumed with an application |
 | **Declined**  | The subscription request has been declined by the provider for several reasons (compliance, payment issues, etc.). Applications cannot use the product |
 | **Error**     | There is an error in processing the subscription request. Typically, a system error |
+
+### Custom plan subscriptions
+
+Custom plans follow the same permission model as Paid plans:
+
+* Public users cannot subscribe to Custom plans.
+* Users with Paid plan permission can subscribe to Custom plans.
+
+If a consumer lacks Paid plan permission, the Subscribe button is hidden and the plan card indicates elevated access is required.
+
+The subscription flow for Custom plans differs from Paid plans:
+
+* Plan type displays as **Custom** throughout the flow.
+* No pricing or payment step is presented.
+* Engage Billing is not invoked — no invoices or payment records are created.
+* Approval flows and provisioning work the same as any other plan type.
 
 ### Subscription status
 
@@ -98,6 +114,12 @@ The *subscription details* page provides:
 * Links to the product, the plan, and the application(s) associated with the subscription. Each application link redirects you to the *application details* page.
 * Subscription usage breakdown per subscription plan quota. This breakdown allows to see how much has been consumed for the current billing period.
 * Subscription history (requested time / last approval / rejection time).
+
+For Custom plan subscriptions, the *subscription details* page differs:
+
+* Plan type displays as **Custom** on all subscription-related screens.
+* No pricing, billing, or invoice information is shown.
+* Quota usage and limits display normally based on Standard Quota configuration.
 
 ### Terminate a subscription
 
