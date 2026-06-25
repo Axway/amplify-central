@@ -52,41 +52,30 @@ For environment types that support hosted agents — including **AWS Bedrock Age
 
 When you select **AWS Bedrock AgentCore** as the environment type, configure the following.
 
-**Agent type**
+**Agent type** - Choose how the agent is hosted:
 
-Choose how the agent is hosted:
+* **Remotely Hosted** - You deploy and manage the agent on your own infrastructure.
+* **Embedded (SaaS)** - Axway hosts and manages the agent for you. If you choose Embedded, configure the following sections:
 
-- **Remotely Hosted** - You deploy and manage the agent on your own infrastructure.
-- **Embedded (SaaS)** - Axway hosts and manages the agent for you.
+    * **AWS credentials**:
+        * **AWS Region** - The AWS region where your Amazon Bedrock AgentCore resources are deployed (for example, `us-east-1`).
+        * **Authentication type** - Choose how the agent authenticates to AWS:
+            * **Assume Role**
+            * **Access Key ID & Secret Access Key**
 
-For **Embedded (SaaS)** agents, configure the remaining sections.
+    * **AgentCore Gateway settings**:
+        * **Log Group Prefix** - Optional Log group prefix for vendored logs.
+        * **Enable IAM Authentication** - If true, IAM authentication is enabled for requests.
 
-**AWS credentials**
-
-- **AWS Region** - The AWS region where your Amazon Bedrock AgentCore resources are deployed (for example, `us-east-1`).
-- **Authentication type** - Choose how the agent authenticates to AWS:
-  - **Assume Role**
-  - **Access Key ID & Secret Access Key**
-
-**AgentCore Gateway settings**
-
-- **Log Group Prefix** - Optional Log group prefix for vendored logs.
-- **Enable IAM Authentication** - If true, IAM authentication is enabled for requests.
-
-**Cognito User Pools**
-
-Configure one or more Amazon Cognito user pools that the agent uses for authentication:
-
-- **User Pool ID** - The Cognito user pool ID (for example, `us-east-1_aBcDeFgHi`).
-- **Region** - The AWS region where the user pool is hosted.
+    **Cognito User Pools** - Configure one or more Amazon Cognito user pools that the agent uses for authentication:
+        * **User Pool ID** - The Cognito user pool ID (for example, `us-east-1_aBcDeFgHi`).
+        * **Region** - The AWS region where the user pool is hosted.
 
 Click **+ Add User Pool** to add additional pools, or click the remove icon to delete a pool.
 
-**Traceability agent (optional)**
+**Traceability agent (optional)** - Toggle on **Enable Traceability Agent** to collect API traffic and usage data from CloudWatch. When enabled, provide:
 
-Toggle on **Enable Traceability Agent** to collect API traffic and usage data from CloudWatch. When enabled, provide:
-
-- **Access Log ARN** - The ARN of the CloudWatch log group that receives API Gateway access logs.
+* **Access Log ARN** - The ARN of the CloudWatch log group that receives API Gateway access logs.
 
 Click **Next** to continue.
 
