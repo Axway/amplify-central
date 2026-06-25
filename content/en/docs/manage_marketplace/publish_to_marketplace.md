@@ -54,6 +54,8 @@ Visibility also depends on the Marketplace type (private vs. public). A public M
 6. Select the plan(s) you want activated at the same time as the publication.
 7. Click **Publish** to publish the product to the Marketplace and make it available to the consumers.
 
+When a product with Custom plans is published, plan cards display **Custom** as the pricing model. No pricing information is surfaced. Providers may create multiple Custom plans with different visibility settings for different partners or Marketplaces.
+
 ## View/Update the product visibility
 
 You can view the product visibility across all available Marketplaces.
