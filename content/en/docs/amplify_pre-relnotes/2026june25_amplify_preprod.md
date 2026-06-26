@@ -50,12 +50,12 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 * **Cache handling improvement**
 
   (DISCOVERY AGENT, AGENT SDK, ENHANCEMENT)</br>
-  Improved cache handling to better manage Discovery Agent connection issues with Amplify Engage.
+  Optimized cache handling to improve all Discovery Agent connectivity with Amplify Engage.
 
 * **Business Insights  - additional fields in the metric events**
 
   (TRACEABILITY AGENT, ENHANCEMENT)</br>
-  Additional fields have been included in the events sent to Business Insights to improve the performance of queries.
+  Additional fields have been included in all Traceability Agent events sent to Business Insights to improve query performance.
 
 ## Marketplace updates
 
