@@ -80,18 +80,30 @@ The Discovery Agent provides the capability to provision credentials to an OAuth
 To provision an Okta Single Page Application that supports Authorization Code + PKCE, include `AGENTFEATURES_IDP_EXTRAPROPERTIES_{n}` with `application_type` set to `browser` and `pkce_required` set to `true`. If omitted, an Okta Service application (no enforced PKCE) is provisioned by default.
 You must assign the application to a group or specific users and define required Access Policies to the Authorization server in order to match the application scope.{{< /alert >}}
 
-{{< alert title="Note" color="primary" >}}**Okta group and policy assignment**</br>
-When using `AGENTFEATURES_IDP_TYPE_{n}=okta`, you can optionally configure the agent to automatically assign registered OAuth clients to an Okta group and/or to an authorization server policy using `AGENTFEATURES_IDP_OKTA_GROUP_{n}` and `AGENTFEATURES_IDP_OKTA_POLICY_{n}`. The group and policy must already exist in Okta before the agent starts. If either is configured but cannot be found in Okta, the agent will fail to start.{{< /alert >}}
+{{< alert title="Note" color="primary" >}}**Okta per-scope provisioning**</br>
+When using `AGENTFEATURES_IDP_TYPE_{n}=okta`, the agent automatically creates and manages one Okta authorization server policy per OAuth scope per credential. The policy name is derived from `AGENTFEATURES_IDP_OKTA_POLICYNAME_TEMPLATE_{n}`. Policy priority is fixed at `1` and access token lifetime is fixed at `60 minutes`.
+
+Policies are global on the Authorization Server — if two Marketplace credentials request the same scope with the same grant type, they share a single policy. Both appear as clients in that policy's include list. Operators auditing their Authorization Server will see one policy per scope/grant-type combination, not one per credential.
+
+When a credential is deleted, the agent removes it from each of its per-scope policies. If removal leaves a policy's client list empty, the agent automatically deactivates and deletes that policy. Do not manually manage these policies — the agent owns their lifecycle.
+
+Okta enforces a hard 100-character maximum on policy names. The `%OAUTH_FLOW%` suffix alone consumes up to 20 characters (`-authorizationcode`), leaving at most 80 characters for the scope name. If the combined name would exceed 100 characters, the agent will fail at credential provision time.
+
+Use `AGENTFEATURES_IDP_OKTA_GROUP_{n}` to assign registered OAuth clients to an existing Okta group. The group must already exist in Okta — if it cannot be found at agent startup, the agent will fail to start.
+
+Use `AGENTFEATURES_IDP_OKTA_SCOPE_SOURCES_{n}` to control which scope sources contribute to the Marketplace credential request UI, and `AGENTFEATURES_IDP_OKTA_SCOPE_EXCLUDE_{n}` to exclude system scopes from appearing as selectable options.{{< /alert >}}
 
 {{< alert title="Note" color="primary" >}}**Okta API token requirements**</br>
 When `AGENTFEATURES_IDP_AUTH_TYPE_{n}` is set to `accessToken` and `AGENTFEATURES_IDP_TYPE_{n}` is `okta`, the agent authenticates to the Okta Management API using the [SSWS authentication scheme](https://developer.okta.com/docs/reference/core-okta-api/#authentication). The token supplied in `AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_{n}` must be an [Okta Admin API token](https://developer.okta.com/docs/guides/create-an-api-token/main/) created by a user with sufficient administrative privileges. The required permissions depend on which features are enabled (see the table below).</br></br>
 The **Super Admin** or **Organization Admin** [role](https://help.okta.com/en-us/content/topics/security/administrators-admin-comparison.htm) covers all operations. For least privilege, create a [custom admin role](https://developer.okta.com/docs/concepts/role-assignment/) scoped to application and authorization server management.{{< /alert >}}
 
-| Feature                                | Okta API operations                                                                                            | Required permissions                                                                                                                                                                                                                              |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dynamic Client Registration (always)   | `POST /api/v1/apps`                                                                                            | Application management                                                                                                                                                                                                                            |
-| `AGENTFEATURES_IDP_OKTA_GROUP_{n}`     | `GET /api/v1/groups`, `PUT /api/v1/apps/{appId}/groups/{groupId}`                                              | [Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Group/) read access, [Application Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/) management   |
-| `AGENTFEATURES_IDP_OKTA_POLICY_{n}`    | `GET /api/v1/authorizationServers/{id}/policies`, `PUT /api/v1/authorizationServers/{id}/policies/{policyId}`  | [Authorization Server Policies API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServerPolicies/) management                                                                                           |
+{{< alert title="Prerequisite" color="warning" >}}All Authorization Server policy and rule operations (used by `AGENTFEATURES_IDP_OKTA_POLICYNAME_TEMPLATE_{n}`) require the Okta **API Access Management** SKU. Confirm this SKU is included in your Okta subscription before enabling per-scope provisioning.{{< /alert >}}
+
+| Feature                                          | Okta API operations                                                                                                                                                                                                                                                                                                                                                                                        | Required permissions                                                                                                                                                                                                                              |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dynamic Client Registration (always)             | `POST /api/v1/apps`                                                                                                                                                                                                                                                                                                                                                                                        | Application management                                                                                                                                                                                                                            |
+| `AGENTFEATURES_IDP_OKTA_GROUP_{n}`               | `GET /api/v1/groups`, `PUT /api/v1/apps/{appId}/groups/{groupId}`                                                                                                                                                                                                                                                                                                                                          | [Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Group/) read access, [Application Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/) management   |
+| `AGENTFEATURES_IDP_OKTA_POLICYNAME_TEMPLATE_{n}` | `GET /api/v1/authorizationServers/{id}/policies`<br>`POST /api/v1/authorizationServers/{id}/policies`<br>`PUT /api/v1/authorizationServers/{id}/policies/{policyId}`<br>`POST /api/v1/authorizationServers/{id}/policies/{policyId}/rules`<br>`POST /api/v1/authorizationServers/{id}/policies/{policyId}/lifecycle/deactivate`<br>`DELETE /api/v1/authorizationServers/{id}/policies/{policyId}`          | [Authorization Server Policies API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServerPolicies/) management                                                                                           |
 
 The Discovery Agent provides support for implicitly registering multiple identity providers based on environment variable configuration. The environment variable based config must be suffixed with the index number. The following is an example of registering the provider using environment variable based configuration.
 
@@ -118,14 +130,17 @@ AGENTFEATURES_IDP_EXTRAPROPERTIES_1="{\"application_type\":\"browser\", \"pkce_r
 ```
 
 ```shell
-# Okta group and policy assignment (optional enrichment)
+# Okta per-scope provisioning (optional enrichment)
 AGENTFEATURES_IDP_NAME_1="idp-name"
 AGENTFEATURES_IDP_TYPE_1="okta"
 AGENTFEATURES_IDP_METADATAURL_1="https://dev-xxxxxxxxx.okta.com/oauth2/default/.well-known/oauth-authorization-server"
 AGENTFEATURES_IDP_AUTH_TYPE_1="accessToken"
 AGENTFEATURES_IDP_AUTH_ACCESSTOKEN_1="okta-admin-api-access-token-xxxxxxxxx"
 AGENTFEATURES_IDP_OKTA_GROUP_1="Marketplace"
-AGENTFEATURES_IDP_OKTA_POLICY_1="MarketplacePolicy"
+AGENTFEATURES_IDP_OKTA_APPNAME_TEMPLATE_1="%MP_APPLICATION_NAME%-%OWNING_TEAM%-%CREDENTIAL_NAME%"
+AGENTFEATURES_IDP_OKTA_POLICYNAME_TEMPLATE_1="%SCOPE%-%OAUTH_FLOW%"
+AGENTFEATURES_IDP_OKTA_SCOPE_SOURCES_1="swagger,gateway,okta"
+AGENTFEATURES_IDP_OKTA_SCOPE_EXCLUDE_1="openid,profile,email,address,phone,offline_access"
 ```
 
 ```shell
