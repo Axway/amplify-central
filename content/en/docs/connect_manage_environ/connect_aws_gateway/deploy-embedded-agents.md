@@ -6,6 +6,8 @@ weight: 22
 ---
 Deploy your Embedded agents using Axway CLI so you can manage your AWS API Gateway environment within Amplify.
 
+Update page to include Bedrock AgentCore Discovery Agent information.
+
 ## Before you start
 
 * Read [Embedded AWS API Gateway agents setup](/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/)
