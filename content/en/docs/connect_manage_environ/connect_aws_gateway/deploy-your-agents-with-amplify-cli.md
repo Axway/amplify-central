@@ -289,7 +289,6 @@ Once the Cloud formation template creation is completed, the agents should be ru
 
 See [Administer AWS Gateway cloud](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/) for additional information about agent features.
 
-
 ## Configure the agent in AgentCore Gateway mode
 
 Run the AWS agent in AgentCore Gateway mode to discover Model Context Protocol (MCP) services from an Amazon Bedrock AgentCore Gateway.
@@ -316,7 +315,7 @@ The above command will create a service account with public/private key-pair. Sa
 axway central create -f <filepath>
 ```
 
-2. Note the environment name (used as `CENTRAL_ENVIRONMENT` in the env file).
+Note the environment name (used as `CENTRAL_ENVIRONMENT` in the env file).
 
 The following example show how to use the `create` command to create environment resource:
 
@@ -340,7 +339,7 @@ The following example show how to use the `create` command to create environment
 axway central create -f <filepath>
 ```
 
-2. Note the agent name (used as `CENTRAL_AGENTNAME` in `da_env_vars.env`).
+Note the agent name (used as `CENTRAL_AGENTNAME` in `da_env_vars.env`).
 
 The following example show how to use the `create` command to create Discovery Agent resource:
 
