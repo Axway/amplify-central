@@ -326,7 +326,7 @@ The following example show how to use the `create` command to create environment
   "kind": "Environment",
   "name": "demo-env",
   "spec": {
-    "description": "Group of APIs to get promoted to Unified Catalog"
+    "description": "Group of APIs to get promoted"
   }
 }
 ```
