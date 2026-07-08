@@ -60,10 +60,10 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace updates
 
-* **Title**
+* **Application API Field Selection**
 
-  (PROVIDER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Description
+  (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
+  The Marketplace API now supports a `fields` query parameter on the `/api/v1/applications/{id}/accessRequests` and `/api/v1/applications/{id}/assetResources` endpoints. Consumers and integrations can specify which properties to include in API responses, reducing payload sizes and improving performance for clients that only need a subset of application data.
 
 ## Marketplace bug fixes
 
