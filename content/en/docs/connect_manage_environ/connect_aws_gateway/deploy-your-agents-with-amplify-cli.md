@@ -289,6 +289,120 @@ Once the Cloud formation template creation is completed, the agents should be ru
 
 See [Administer AWS Gateway cloud](/docs/connect_manage_environ/connect_aws_gateway/cloud-administration-operation/) for additional information about agent features.
 
+## Configure the agent in AgentCore Gateway mode
+
+Run the AWS agent in AgentCore Gateway mode to discover Model Context Protocol (MCP) services from an Amazon Bedrock AgentCore Gateway.
+
+Support for configuring the AgentCore Gateway agent through the Axway Central CLI (`axway central install agents`) will be released soon in v5.0. In the meantime, use the following instructions to manually create the required resources and set up the agent.
+
+### Step 1: Create a new Service Account or use existing one
+
+The agents use a service account to authenticate to the Amplify Platform. A existing service account can be used or else a new one can be created.
+
+```bash
+axway service-account generate-keypair --public-key <file> --private-key <file> --yes
+```
+
+The above command will create a service account with public/private key-pair. Save both .pem files into your working directory
+
+### Step 2: Create the Amplify Engage resources
+
+#### 2.1 Create an Amplify Engage environment
+
+1. Create an environment by providing the path to a valid .yaml, .yml, or .json file that defines the environment resource:
+
+```bash
+axway central create -f <filepath>
+```
+
+Note the environment name (used as `CENTRAL_ENVIRONMENT` in the env file).
+
+The following example show how to use the `create` command to create environment resource:
+
+```json
+{
+  "group": "management",
+  "apiVersion": "v1alpha1",
+  "kind": "Environment",
+  "name": "demo-env",
+  "spec": {
+    "description": "Group of APIs to get promoted"
+  }
+}
+```
+
+#### 2.2 Create the Discovery Agent resource
+
+1. Create the Discovery Agent by providing the path to a valid .yaml, .yml, or .json file that defines the Environment resource:
+
+```bash
+axway central create -f <filepath>
+```
+
+Note the agent name (used as `CENTRAL_AGENTNAME` in `da_env_vars.env`).
+
+The following example show how to use the `create` command to create Discovery Agent resource:
+
+```json
+{
+  "group": "management",
+  "apiVersion": "v1alpha1",
+  "kind": "DiscoveryAgent",
+  "name": "aws-test-discoveryagent",
+  "title": "aws-test-DiscoveryAgent",
+  "metadata": {
+    "scope": {
+      "kind": "Environment",
+      "name": "demo-env"
+    }
+  },
+  "spec": {
+    "config": {},
+    "dataplaneType": "AWS"
+  }
+}
+```
+
+### Step 3: AWS Configuration options
+
+Create the agent variable files (`da_env_vars.env` for the Discovery Agent) in your working directory. These files hold the AWS and platform connectivity values the agent uses at runtime.
+
+Refer to the [AWS Configuration Setup options](#step-4-run-the-agents-configure-procedure) described earlier in this guide to help fill out these files — for example, the AWS **Region**, **S3 Bucket Name**, the CloudWatch log groups, and the SSM parameter names for the Amplify key pair. Set `CENTRAL_ENVIRONMENT` to the environment name from [Step 2.1](#21-create-an-amplify-engage-environment) and `CENTRAL_AGENTNAME` to the Discovery Agent name from [Step 2.2](#22-create-the-discovery-agent-resource).
+
+To run the Discovery Agent in AgentCore Gateway mode, set `AWS_GATEWAYMODE=agentcore-gateway` and the related AgentCore variables in `da_env_vars.env`. The following is a complete example:
+
+```shell
+# AWS configs
+AWS_REGION=<your-aws-region>
+AWS_AUTH_ACCESSKEY=<your-iam-access-key-id>
+AWS_AUTH_SECRETKEY=<your-iam-secret-access-key>
+AWS_LOGGROUP=<api-gateway-traffic-log-group-name>
+AWS_STAGETAGNAME=<tag-key-on-your-api-gateway-stages>
+AWS_GATEWAYMODE=agentcore-gateway
+AWS_AGENTCORE_LOGGROUPPREFIX=<cloudwatch-log-prefix-for-agent-core-vendored-logs>
+AWS_AGENTCORE_IAMAUTHENABLED=<true-or-false>
+AWS_COGNITO_USERPOOLID_1=<cognito-user-pool-id>
+# Add more pools if needed:
+# AWS_COGNITO_USERPOOLID_2=<second-cognito-user-pool-id>
+
+# Amplify Central configs
+CENTRAL_AGENTNAME=<discovery-agent-name-from-step-2.2>
+CENTRAL_AUTH_CLIENTID=<service-account-client-id-from-step-1>
+CENTRAL_AUTH_PRIVATEKEY=/keys/private_key.pem
+CENTRAL_AUTH_PUBLICKEY=/keys/public_key.pem
+CENTRAL_ENVIRONMENT=<environment-name-from-step-2.1>
+CENTRAL_ORGANIZATIONID=<your-amplify-org-id>
+CENTRAL_TEAM=<your-amplify-team-name>
+CENTRAL_REGION=<US-or-EU>
+
+# Logging configs
+LOG_LEVEL=info
+LOG_OUTPUT=stdout
+LOG_FILE_PATH=logs
+```
+
+Once the `da_env_vars.env` file is complete, install and run the agent using the deployment steps described earlier in this guide: [Step 5a](#step-5a-deploy-the-agent-in-ec2-or-ecs-fargate-infrastructure) for an EC2 or ECS Fargate infrastructure, or [Step 5b](#step-5b-deploy-the-agent-in-docker-container-only-infrastructure) for a Docker Container Only infrastructure.
+
 ## Check that agents are running with Axway Central CLI
 
 After being authenticated to the platform with the `axway auth login` command, run the following:
