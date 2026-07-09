@@ -148,7 +148,7 @@ Three filters are available:
 * Stages filter: view products that have specific resources and match a specific stage. The visible stages have been deployed to the Marketplace and the user belongs to teams that have visibility.
 * Specification type filter (Resources tab): narrow results on the Resources tab by selecting one or more specification types
 
-**Specification type filter**
+####Specification type filter
 
 When viewing results on the Resources tab, a Specification Type filter is available to narrow results by the underlying specification format of asset resources.
 
@@ -174,7 +174,7 @@ Filter behavior:
 
 The specification type list is extensible. New types can appear in the system without requiring a service update.
 
-**Product type filter**
+####Product type filter
 
 When viewing results on the Products tab, a Type filter is available to narrow results by product type. This filter is consistent with the existing product type filter on the basic search Products page.
 
