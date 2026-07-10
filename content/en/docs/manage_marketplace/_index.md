@@ -23,6 +23,8 @@ Consumers can explore the Marketplace to find products that address their needs,
 
 **Extended product documentation** - Providers can create comprehensive product documentation via markdown format, providing a uniform experience for all Marketplace content.
 
+**AI agent discovery** - Marketplace serves as a curated AI registry enabling AI agents, LLMs, and developer tools to programmatically discover Marketplace content via a Model Context Protocol (MCP) Server endpoint. This aligns with the A2A protocol's curated discovery pattern for enterprise agent-to-agent communication.
+
 ## Related topics
 
 See the following topics for related information.
