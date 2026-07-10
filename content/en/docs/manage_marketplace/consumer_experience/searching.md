@@ -142,7 +142,7 @@ The breadcrumb at the top of the page enables to navigate from where you came (H
 
 #### Refine your findings with filters
 
-Three filters are available:
+The following filters are available:
 
 * Category filter: view products that match one or more categories. If a category contains children categories, expand the category to view the children.
 * Stages filter: view products that have specific resources and match a specific stage. The visible stages have been deployed to the Marketplace and the user belongs to teams that have visibility.
