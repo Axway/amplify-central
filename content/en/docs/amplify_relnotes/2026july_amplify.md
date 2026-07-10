@@ -65,9 +65,10 @@ New enhancements and bug fixes for the July 9 update.
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| 01838430 | APIGOV-32719 | **Issue**: Blank page in Marketplace for some resources. <br/>**Resolution**: When a specification is not available on the resource, a message that no spec is available for this service is displayed in the resource documentation tab in Marketplace. A similar message is displayed on the Service details page.|
-| 01847761 | APIGOV-32950 | **Issue**: Custom subscriptionrequestdef.date field causing UI issues. <br/>**Resolution**: Date validation has been corrected across subscription, application registration, and credential definition flows. |
+| 01857228 | APIGOV-33185 | **Issue**: Marketplace Backend: Custom credential public key values lost the embedded filename from the data URI. The `publicKey` field changed, breaking downstream integrations that rely on the filename component. <br/>**Resolution**: Custom credential public key values now preserve the original data URI format including the embedded filename, maintaining backward compatibility with consumer integrations. |
 |          | APIGOV-32972 | **Issue**: Plan tile subscribe button state does not update correctly. <br/>**Resolution**: When a user cancels their subscription, the Plan tile 'Subscribe' button updates to represent the new subscription state. |
 |          | APIGOV-32959| **Issue**: Plan limit type label not displayed <br/>**Resolution**: Limit Type on the Plan details page displays the proper types without blanks. |
+| 01847761 | APIGOV-32950 | **Issue**: Custom subscriptionrequestdef.date field causing UI issues. <br/>**Resolution**: Date validation has been corrected across subscription, application registration, and credential definition flows. |
 |          | APIGOV-32866| **Issue**: Primary credentials should not display expiry tooltip. <br/>**Resolution**: Primary credential details side panel no longer displays expiration tooltips for the expiry. |
 |          | APIGOV-32772 | **Issue**: Marketplace Renew not renewing credentials. <br/>**Resolution**: Marketplace DB/backend fixed to propagate new client secret but keep the client id the same on renewal. |
+| 01838430 | APIGOV-32719 | **Issue**: Blank page in Marketplace for some resources. <br/>**Resolution**: When a specification is not available on the resource, a message that no spec is available for this service is displayed in the resource documentation tab in Marketplace. A similar message is displayed on the Service details page.|
