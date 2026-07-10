@@ -134,16 +134,61 @@ To help you understand where your advanced search results were found, the result
 
 By default, the *All* tab displays the advanced search results. If no match is found in an area of search (product/product resources/product documentation), then the corresponding results section will not expand to display the results. If results are found, the view will be limited to the first 25. Click **View all** or navigate the tab menu (All > Products/Resources/Documents) to view all results.
 
+The Resources tab results now display State and Stage columns alongside the resource name, providing visibility into the lifecycle phase of each resource directly in the search results.
+
 Each result, the name is a link that redirect you to the appropriate page in the *product details* page.
 
 The breadcrumb at the top of the page enables to navigate from where you came (Home page / Browse product page).
 
 #### Refine your findings with filters
 
-Two filters are available:
+The following filters are available:
 
 * Category filter: view products that match one or more categories. If a category contains children categories, expand the category to view the children.
 * Stages filter: view products that have specific resources and match a specific stage. The visible stages have been deployed to the Marketplace and the user belongs to teams that have visibility.
+* Specification type filter (Resources tab): narrow results on the Resources tab by selecting one or more specification types
+
+#### Specification type filter
+
+When viewing results on the Resources tab, a Specification Type filter is available to narrow results by the underlying specification format of asset resources.
+
+Available specification types:
+
+* oas3 (OpenAPI 3.0)
+* oas2 (OpenAPI 2.0 / Swagger)
+* wsdl (SOAP)
+* protobuf (gRPC)
+* asyncapi (AsyncAPI)
+* graphql (GraphQL)
+* raml (RAML)
+* mcp (Model Context Protocol)
+* a2a (Agent-to-Agent protocol)
+
+Filter behavior:
+
+* Multi-select with OR semantics — selecting multiple types shows resources matching any of the selected types
+* The filter is only visible when on the Resources tab; it is hidden on other tabs
+* Selecting a specification type resets pagination to the first page
+* The filter selection is reflected in the URL query parameters, supporting deep linking
+* Loading a deep link with specification type parameters restores the filter and displays corresponding results
+
+The specification type list is extensible. New types can appear in the system without requiring a service update.
+
+#### Product type filter
+
+When viewing results on the Products tab, a Type filter is available to narrow results by product type. This filter is consistent with the existing product type filter on the basic search Products page.
+
+Available product types:
+
+* API
+* MCP
+* A2A
+
+Filter behavior:
+
+* Multi-select with OR semantics
+* Only visible on the Products tab
+* Selecting a type resets pagination to the first page
 
 #### Product resources filter
 
