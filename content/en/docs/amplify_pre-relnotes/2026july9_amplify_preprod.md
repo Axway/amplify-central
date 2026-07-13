@@ -47,16 +47,26 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **Title**
+* **APIM enhancement: OKTA IDP support**
 
-  (DISCOVERY AGENT, AGENT SDK, ENHANCEMENT)</br>
-  Description.
+  (EDGEGATEWAYDISCOVERYAGENT, ENHANCEMENT)</br>
+  The APIM Discovery agent can set the scopes, application name and tags within the associated OKTA Identify Provided when provisioning.
+  
+* **MCP provisioning for AWS Bedrock AgentCore**
+
+  (AWS DISCOVERY AGENT, AGENT SDK, ENHANCEMENT)</br>
+  The AWS SaaS and on-premise agents can provision the Amazon Bedrock AgentCore Gateway dataplane with Model Context Protocol (MCP) service access when requested from the Engage Marketplace for consumption.
+
+* **New Agent GRPC event logs**
+
+  (AGENT SDK, ENHANCEMENT)</br>
+  All discovery agents are logging when a GRPC event has been received from Amplify Engege and when the event has been handled.
 
 ## Agent bug fixes
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+| 01850119 | APIGOV-33103 | **Issue**: The Mulesoft traceability agent was not reporting usage for Business Insights. <br/>**Resolution**: A fix was made to the Mulesoft traceability agent to send the usage reports. |
 
 ## Marketplace updates
 
@@ -64,6 +74,15 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   The Marketplace API now supports a `fields` query parameter on the `/api/v1/applications/{id}/accessRequests` and `/api/v1/applications/{id}/assetResources` endpoints. Consumers and integrations can specify which properties to include in API responses, reducing payload sizes and improving performance for clients that only need a subset of application data.
+
+* **Long name display handling**
+
+  (PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG, SERVICE REGISTRY)</br>
+  The Asset catalog and Service registry UI tables have been improved for the handling of long names. Here is alist of the improvements:
+
+  - A hover tooltip is visible to display the full long name.
+  - Long names are truncated in the middle of the name with a 3 dot ellipsis.
+  - A copy to clipboard icon is available for logical names/IDs or URLs.
 
 ## Marketplace bug fixes
 
@@ -77,3 +96,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 | | APIGOV-31207 | **Issue**: Marketplace Backend: Intermittent LazyInitializationException on plan localizations during event processing. <br/>**Resolution**: Plan and quota localization collections are now initialized during event handling, preventing session detachment errors under concurrent domain event processing. |
 | | APIGOV-33062 | **Issue**: Marketplace Backend: Consumer organization service accounts received forbidden errors when calling Marketplace APIs via the proxy Keycloak token endpoint. Permissions were resolved based on admin roles instead of consumer org roles. <br/>**Resolution**: The authentication layer now correctly resolves consumer organization roles for service accounts, enabling proper API access scoped to the consumer org's marketplace. |
 | | APIGOV-33105 | **Issue**: Marketplace UI: A2A resource details did not display the endpoint URL in the Marketplace. <br/>**Resolution**: A2A resource endpoint URLs now display correctly in the Marketplace resource details view. |
+| | APIGOV-33111 | **Issue**: Service Registry UI: Display text of the "schema" was shown. <br/>**Resolution**: The display text is no longer displayed in the Service Registry details view. |
+| | APIGOV-32926 | **Issue**: Service Registry UI: Display of the API specification for an MCP service was shown in the tabs for Server Overview, Tools, Resources, Prompts, MCP Clients. <br/>**Resolution**: The display of the API specification is no longer displayed in the Service Registry details view for an MCP service. |
+| 01837418 | APIGOV-32922 | **Issue**: MCP UI Import: When importing the MCP service using Endpoint URL, the latest protocol version was not being requested. <br/>**Resolution**: The MCP wizard will import action negotiates and fetches the latest MCP protocol version supported. |
+| 01849791 | APIGOV-33025 | **Issue**: Service Registry UI: The manual upload of an API specification which was selected as 'unstructured' was set to 'OAS'. <br/>**Resolution**: The manual import action of an API specification will honor the selected 'unstrutured' type. |
