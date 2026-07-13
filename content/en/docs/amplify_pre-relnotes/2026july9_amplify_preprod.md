@@ -84,6 +84,11 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
   - Long names are truncated in the middle of the name with a 3 dot ellipsis.
   - A copy to clipboard icon is available for logical names/IDs or URLs.
 
+  * **Amplify Engage V1 API support**
+
+  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, ENHANCEMENT, API SERVER API)</br>
+  The Amplify Engage APIs have added support for v1 APIs in addition to v1alpha1. The v1 APIs are funcationally equivalent to the v1alpha APIs. In some cases, efficiency improvements have been made to reduce the amount of data returned by default (e.g. metadata ACLs in Authorization profiles) 
+
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description |
