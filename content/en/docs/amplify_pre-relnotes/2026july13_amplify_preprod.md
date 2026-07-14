@@ -55,7 +55,7 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 * **MCP provisioning for AWS Bedrock AgentCore**
 
   (AWS DISCOVERY AGENT, AGENT SDK, ENHANCEMENT)</br>
-  The AWS SaaS and on-premise agents can provision the Amazon Bedrock AgentCore Gateway data plane with Model Context Protocol (MCP) service access when requested from the Engage Marketplace for consumption.
+  The AWS SaaS and on-premise agents can provision the Amazon Bedrock AgentCore Gateway data plane with Model Context Protocol (MCP) service access when requested from the Engage Marketplace for consumption. The provisioning is limited to one MCP target.
 
 * **New Agent GRPC event logs**
 
