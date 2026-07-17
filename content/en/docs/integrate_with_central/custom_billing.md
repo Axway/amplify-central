@@ -82,7 +82,7 @@ If an invoice object is changed (for any reason) on Amplify Engage, an event is 
         "kind": "Subscription",
         "name": "demo-custom-flow",
         "title": "demo custom flow",
-        "selfLink": "/catalog/v1alpha1/subscriptions/demo-custom-flow"
+        "selfLink": "/catalog/v1/subscriptions/demo-custom-flow"
       },
       "acl": [],
       "resourceVersion": "0",
@@ -92,7 +92,7 @@ If an invoice object is changed (for any reason) on Amplify Engage, an event is 
           "kind": "ProductPlan",
           "name": "with-setup-cost",
           "type": "hard",
-          "selfLink": "/catalog/v1alpha1/productplans/with-setup-cost",
+          "selfLink": "/catalog/v1/productplans/with-setup-cost",
           "group": "catalog"
         },
         {
@@ -104,7 +104,7 @@ If an invoice object is changed (for any reason) on Amplify Engage, an event is 
           "group": "catalog"
         }
       ],
-      "selfLink": "/catalog/v1alpha1/subscriptions/demo-custom-flow/subscriptioninvoices/8ac98ee28ea29652018eaee223810197"
+      "selfLink": "/catalog/v1/subscriptions/demo-custom-flow/subscriptioninvoices/8ac98ee28ea29652018eaee223810197"
     },
     "marketplace": {
       "name": "8275212a-fb48-4b55-9305-473fbd507817",
@@ -138,7 +138,7 @@ If an invoice object is changed (for any reason) on Amplify Engage, an event is 
         "type": "custom"
       }
     },
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "name": "8ac98ee28ea29652018eaee223810197",
     "attributes": {},
     "state": {
@@ -197,10 +197,10 @@ See [Webhooks](/docs/integrate_with_central/webhook) for more information regard
 Create the integration using API:
 
 ```json
-curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrations' \
+curl --location 'https://apicentral.axway.com/apis/management/v1/integrations' \
 --data '{
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Integration",
     "name": "monitor-subscription-invoices",
     "title": "Monitor Subscription Invoices",
@@ -214,7 +214,7 @@ Or create the integration using the Axway CLI: add the following in a file and a
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Integration
 name: monitor-subscription-invoices
 title: Monitor Subscription Invoices
@@ -229,7 +229,7 @@ spec:
 Create the webhook using API:
 
 ```json
-curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrations/monitor-subscription-invoices/webhooks' \
+curl --location 'https://apicentral.axway.com/apis/management/v1/integrations/monitor-subscription-invoices/webhooks' \
 --data '{
     "name": "webhook-site",
     "spec": {
@@ -246,7 +246,7 @@ Or create the webhook using Axway CLI: add the following in a file and apply the
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Webhook
 name: webhook-monitor-subscription-invoices
 title: Webhook to monitor Subscription invoices
@@ -272,10 +272,10 @@ You can attach a secret to the webhook specification to indicate that the incomi
 Create the resource hook definition using API:
 
 ```json
-curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/integrations/monitor-subscription-invoices/resourcehooks' \
+curl --location 'https://apicentral.axway.com/apis/management/v1/integrations/monitor-subscription-invoices/resourcehooks' \
 --data '{
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "ResourceHook",
     "name": "monitor-subscription-invoices",
     "title": "Resource Hook to monitor SubscriptionInvoices",
@@ -305,7 +305,7 @@ Or create the resource hook definition using Axway CLI: add the following in a f
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: ResourceHook
 name: monitor-subscription-invoices
 title: Resource Hook to monitor SubscriptionInvoices
@@ -339,10 +339,10 @@ In order to receive the event via a gRPC connection, you must create a **WatchTo
 Create a watchtopic using API:
 
 ```json
-curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopics' \
+curl --location 'https://apicentral.axway.com/apis/management/v1/watchtopics' \
 --data '{
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "WatchTopic",
     "name": "track-subscriptions-invoices",
     "title": "Monitor subscription invoices",
@@ -372,7 +372,7 @@ Or create a watchtopic using the Axway CLI: Add the following in a file and appl
 Create the integration using the Axway CLI:
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: WatchTopic
 name: track-subscriptions-invoices
 title: Monitor subscription invoices
@@ -397,7 +397,7 @@ Events in the WatchTopic are sequential. They remain in the WatchTopic for seven
 1. You can ask for all the events (no filter in the query), or events after a specific sequence number (`?query=sequence>=xxx`):
 
     ```json
-    curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/track-subscriptions-invoices?sort=sequenceID%2CDESC' \
+    curl --location 'https://apicentral.axway.com/events/management/v1/watchtopics/track-subscriptions-invoices?sort=sequenceID%2CDESC' \
     --data ''
     ```
 
@@ -407,7 +407,7 @@ Events in the WatchTopic are sequential. They remain in the WatchTopic for seven
 5. Start the gRPC client:
 
     ```cmd
-    ./watchclient --auth.client_id=<sa_client_id> --tenant_id=<organization_id> --host=apicentral.axway.com --port=443 --topic_self_link=/management/v1alpha1/watchtopics/track-subscriptions-invoices --log_level=debug --auth.url="
+    ./watchclient --auth.client_id=<sa_client_id> --tenant_id=<organization_id> --host=apicentral.axway.com --port=443 --topic_self_link=/management/v1/watchtopics/track-subscriptions-invoices --log_level=debug --auth.url="
     https://login.axway.com/auth"
     ```
 
@@ -426,7 +426,7 @@ When receiving new invoices via webhook or watchTopic, it is the responsibility 
 Add the invoice link payment so that the consumer can navigate from the Marketplace to the billing Gateway payment screen:
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/billing' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/billing' \
 --data '{
     "billing": {
         "payment": {
@@ -457,7 +457,7 @@ The **due** property is the total amount plus any extra amount (taxes / past due
 Update the invoice state:
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
 --data '{   
     "state": {
         "name": "open",
@@ -473,7 +473,7 @@ Once the payment is received on the billing Gateway, the corresponding invoice s
 To update the invoice:
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/state' \
 --data '{   
     "state": {
         "name": "paid",
@@ -491,7 +491,7 @@ To check for event characteristics: `type=SubResourceUpdated` and `metadata.subs
 If the payment has been settled outside of the billing system, it is recommended that you change the status of the invoice to Success.
 
 ```json
-curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
 --data '{   
      "status": {
         "level": "Success",
@@ -517,7 +517,7 @@ If the initial subscription invoice was never paid and the consumer terminated h
 3. Once done on the Billing Gateway, the corresponding invoice in Amplify Engage must be updated to whichever status make sense (`Success` or `Error`):
 
     ```json
-    curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1alpha1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
+    curl --location --request PUT 'https://apicentral.axway.com/apis/catalog/v1/subscriptions/{SUBSCRIPTION_NAME}/subscriptioninvoices/{SUBSCRIPTION_INVOICE_NAME}/status' \
     --data '{   
          "status": {
             "level": "Success",
@@ -536,6 +536,6 @@ If the initial subscription invoice was never paid and the consumer terminated h
 
 If the invoice status is set to `Error` and you want to process it again, simply change the status back to `Pending` so that an event will be triggered again and caught by the webhook/WatchTopic.
 
-* Use the subscriptioninvoices API to detect invoices that are pending actions or in specific state: `AMPLIFY_CENTRAL_URL/apis/catalog/v1alpha1/subscriptioninvoices?query=billing.payment.type==custom;state.name==draft;status.level==Pending`
+* Use the subscriptioninvoices API to detect invoices that are pending actions or in specific state: `AMPLIFY_CENTRAL_URL/apis/catalog/v1/subscriptioninvoices?query=billing.payment.type==custom;state.name==draft;status.level==Pending`
 
-See the API Specifications reference [SubscriptionInvoice](https://generator.swagger.io/?url=https://apicentral.axway.com/apis/docs#/catalog/list_catalog_v1alpha1_Subscription_SubscriptionInvoice).
+See the API Specifications reference [SubscriptionInvoice](https://generator.swagger.io/?url=https://apicentral.axway.com/apis/docs#/catalog/list_catalog_v1_Subscription_SubscriptionInvoice).

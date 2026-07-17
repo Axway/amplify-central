@@ -322,7 +322,7 @@ The following example show how to use the `create` command to create environment
 ```json
 {
   "group": "management",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Environment",
   "name": "demo-env",
   "spec": {
@@ -346,7 +346,7 @@ The following example show how to use the `create` command to create Discovery A
 ```json
 {
   "group": "management",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "DiscoveryAgent",
   "name": "aws-test-discoveryagent",
   "title": "aws-test-DiscoveryAgent",

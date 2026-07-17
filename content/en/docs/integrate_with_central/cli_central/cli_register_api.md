@@ -54,7 +54,7 @@ Where `api-service.jq` contains the following content:
 ```json
 # Creates the API Server object using parts of OAS and env file
 {
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "APIService",
     title: .[0].info.title,
     metadata: {
@@ -83,7 +83,7 @@ Where `api-service-revision.jq` has the following content:
 ```json
 # Creates the API service Revision from OAS and from the created API service
 {
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "APIServiceRevision",
     title: .[0].info.title,
     metadata: {
@@ -122,7 +122,7 @@ Where `api-service-instance.jq` has the following content:
 ```json
 # Creates the API service Instance from OAS and the created service revision
 {
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "APIServiceInstance",
     title: .[0].info.title,
     metadata: {

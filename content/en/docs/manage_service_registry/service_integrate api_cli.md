@@ -60,7 +60,7 @@ Where `api-service.jq` contains the following content:
 ```json
 # Creates the API Server object using parts of OAS and env file
 {
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "APIService",
     title: .[0].info.title,
     metadata: {
@@ -89,7 +89,7 @@ Where `api-service-revision.jq` has the following content:
 ```json
 # Creates the API Service Revision from OAS and from the created API Service
 {
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "APIServiceRevision",
     title: .[0].info.title,
     metadata: {
@@ -128,7 +128,7 @@ Where `api-service-instance.jq` has the following content:
 ```json
 # Creates the API Service Instance from OAS and the created service revision
 {
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "APIServiceInstance",
     title: .[0].info.title,
     metadata: {
@@ -205,7 +205,7 @@ Where `asset.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Asset",
   "name": "asset-example",
   "title": "asset-example",
@@ -252,7 +252,7 @@ Where `asset-resource.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "AssetResource",
   "name": "$ENV.assetName-version",
   "title": "$ENV.assetName-version",
@@ -260,7 +260,7 @@ Where `asset-resource.json` has the following content:
     "scope": {
       "kind": "Asset",
       "name": "$ENV.assetName",
-      "selfLink": "/catalog/v1alpha1/assets/$ENV.assetName"
+      "selfLink": "/catalog/v1/assets/$ENV.assetName"
     }
   },
   "attributes": {},
@@ -296,7 +296,7 @@ Where `asset-mappings.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "AssetMapping",
   "name": "foo-asset-mapping-1",
   "title": "foo-asset-mapping-1",
@@ -344,7 +344,7 @@ Where `asset-release-tag.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "ReleaseTag",
   "name": "$ENV.assetName",
   "title": "$ENV.assetName",
@@ -352,10 +352,10 @@ Where `asset-release-tag.json` has the following content:
     "scope": {
       "kind": "Asset",
       "name": "$ENV.assetName",
-      "selfLink": "/catalog/v1alpha1/assets/$ENV.assetName"
+      "selfLink": "/catalog/v1/assets/$ENV.assetName"
     },
     "resourceVersion": "0",
-    "selfLink": "/catalog/v1alpha1/assets/$ENV.assetName/releasetags/$ENV.assetName"
+    "selfLink": "/catalog/v1/assets/$ENV.assetName/releasetags/$ENV.assetName"
   },
   "attributes": {},
   "finalizers": [],
@@ -378,7 +378,7 @@ Where `product.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Product",
   "name": "product-example",
   "title": "product-example",
@@ -425,7 +425,7 @@ Where `product-release-tag.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "ReleaseTag",
   "name": "$ENV.productName",
   "title": "$ENV.productName",
@@ -433,10 +433,10 @@ Where `product-release-tag.json` has the following content:
     "scope": {
       "kind": "Product",
       "name": "$ENV.productName",
-      "selfLink": "/catalog/v1alpha1/products/$ENV.productName"
+      "selfLink": "/catalog/v1/products/$ENV.productName"
     },
     "resourceVersion": "0",
-    "selfLink": "/catalog/v1alpha1/products/$ENV.productName/releasetags/$ENV.productName"
+    "selfLink": "/catalog/v1/products/$ENV.productName/releasetags/$ENV.productName"
   },
   "attributes": {},
   "finalizers": [],
@@ -461,7 +461,7 @@ Where `product-plan.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "ProductPlan",
   "name": "product-plan",
   "title": "product-plan",
@@ -503,7 +503,7 @@ Where `product-quota.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Quota",
   "name": "product-quota",
   "title": "product-quota",
@@ -539,7 +539,7 @@ Where `product-visibility.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "ProductVisibility",
   "metadata": {
     "scope": {
@@ -567,7 +567,7 @@ Where `consumer-product-visibility.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "ConsumerProductVisibility",
   "metadata": {
     "scope": {
@@ -610,7 +610,7 @@ Where `published-product.json` has the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "PublishedProduct",
   "metadata": {
     "scope": {

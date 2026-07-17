@@ -69,7 +69,7 @@ Where `stage.json` contains the following content:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Stage",
     "title": "production",
     "spec": {
@@ -93,7 +93,7 @@ Where `asset.json` contains the following content:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Asset",
     "title": "Asset from tutorial",
     "spec": {
@@ -122,7 +122,7 @@ the API you want to monitor under environment.
 
 ```yaml
 group: catalog
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AssetMapping
 metadata:
   scope:
@@ -165,7 +165,7 @@ If the outputs section is missing, then the mapping did not generate an AssetRes
 
 ```yaml
 group: catalog
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AssetMapping
 name: my-mapping
 spec:
@@ -220,7 +220,7 @@ Where `asset-release-tag.jq` has the following content:
 ```json
 {
     group: catalog,
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "ReleaseTag",
     metadata: {
         scope: {
@@ -281,7 +281,7 @@ Where `category.json` contains the following content:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Category",
     "title": "Finance",
     "spec": {
@@ -359,7 +359,7 @@ Where `asset.json` contains the following content:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Asset",
     "title": "SDK",
     "spec": {
@@ -394,7 +394,7 @@ Where `AssetResource.json` contains the following content:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "AssetResource",
     "title": "SDK",
     "metadata": {

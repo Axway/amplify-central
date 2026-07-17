@@ -87,7 +87,7 @@ The following is an example of .yaml file that shows the fields for defining a w
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Webhook
 name: invoke-jira-webhook
 title: JIRA approval webhook
@@ -102,7 +102,7 @@ spec:
 * **group**: resources are defined under a group, which is part of the API's endpoints path.
 * **apiVersion**: the version of the API Server API you're using to create this object.
 * **kind**: the type of object this represents. Kinds are Camel case, for example: Environment, APIService, APIServiceRevision, Webhook.
-* **name**: uniquely identifies this resource. Only one resource of a given kind in a given scope can have a given name at a time. A name is either client-provided or an auto-generate string that refers to an object in a resource URL. Example: /management/v1alpha1/environments/mesh where 'mesh' is the name of an environment resource.
+* **name**: uniquely identifies this resource. Only one resource of a given kind in a given scope can have a given name at a time. A name is either client-provided or an auto-generate string that refers to an object in a resource URL. Example: /management/v1/environments/mesh where 'mesh' is the name of an environment resource.
 * **title**: a display name for the resource when it is shown in the UI.
 * **metadata**: resource information.
 * **spec**: the state you desire for the object.
@@ -127,7 +127,7 @@ Results in the following output:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Environment
 name: apigtw-v77
 title: Axway API Gateway v7.7
@@ -140,7 +140,7 @@ metadata:
     modifyUserId: 6563ef56-bbab-48a9-bc4a-e564cb3fa148
   resourceVersion: '4824'
   references: []
-  selfLink: /management/v1alpha1/environments/apigtw-v77
+  selfLink: /management/v1/environments/apigtw-v77
 attributes:
   x-axway-agent: 'true'
 finalizers: []
@@ -191,10 +191,10 @@ metadata:
     id: e4e0892e71a3f7b00171a4779f3501f0
     kind: Environment
     name: apigtw-v77
-    selfLink: /management/v1alpha1/environments/apigtw-v77
+    selfLink: /management/v1/environments/apigtw-v77
   resourceVersion: '12'
   references: []
-  selfLink: /management/v1alpha1/environments/apigtw-v77/apiservices/ny-times-articles
+  selfLink: /management/v1/environments/apigtw-v77/apiservices/ny-times-articles
 attributes:
   createdBy: EnterpriseEdgeGatewayAgent
   externalAPIID: ace84b76-2207-4bd8-a78e-44d170302a77
@@ -224,7 +224,7 @@ Sample of environment owned by the *API Development* team:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Environment
 name: doc-tutorial
 title: Doc tutorial
@@ -247,7 +247,7 @@ Anatomy of an ACL object:
 
 ```yaml
 group: catalog
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AccessControlList
 name: acl-tutorial-doc
 metadata:
@@ -309,7 +309,7 @@ Sample for sharing only environment with team1 and team2:
 ```yaml
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AccessControlList
 name: doc-sharing-env
 title: Doc sharing doc-env only with team1 and team2
@@ -342,7 +342,7 @@ Sample for sharing environment and depending API Service with team1 and team2:
 ```yaml
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AccessControlList
 name: doc-sharing-apiservice
 title: Doc sharing API Service from doc-env with team1 and team2
@@ -376,7 +376,7 @@ Sample for sharing environment and specific depending API Service with team1 and
 ```yaml
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AccessControlList
 name: doc-sharing-apiservice-instance
 title: Doc sharing API Service service1 from doc-env with team1 and team2
@@ -424,7 +424,7 @@ Then add the aclId in the acl definition
 ```yaml
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Environment
 name: doc-env
 title: Environment for documentation tutorial
@@ -531,7 +531,7 @@ Using the above definitions, the following code internationalizes a product with
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Product",
     "title": "Product in English",
     "spec": {

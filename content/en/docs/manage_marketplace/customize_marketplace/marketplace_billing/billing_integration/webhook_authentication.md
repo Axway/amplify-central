@@ -31,7 +31,7 @@ Define a secret with a Basic Auth header example:
 ```yaml
 name: secret-monitor-updated-deleted-plans-integration
 kind: Secret
-apiVersion: v1alpha1
+apiVersion: v1
 title: Secret for Webhook reference
 metadata:
   scope:
@@ -46,7 +46,7 @@ Webhook YAML example:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Webhook
 title: Webhook for updated and deleted product plans
 name: wh-monitor-updated-deleted-plans-integration

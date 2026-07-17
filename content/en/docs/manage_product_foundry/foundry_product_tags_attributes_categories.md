@@ -132,7 +132,7 @@ Adding visibility/feature for a specific Marketplace with the following object:
 # this object helps to make the category visible and/or featured for specific marketplace.
 # If you need the same category to be visible/featured in multiple marketplaces, you need to create as many objects as there are marketplaces where the category is exposed.
 group: catalog
-apiVersion: v1alpha1
+apiVersion: v1
 kind: CategoryVisibility
 name: {a-unique-name}
 title: category X visible in Marketplace Y

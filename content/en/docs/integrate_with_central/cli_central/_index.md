@@ -81,7 +81,7 @@ To see the details of an environment named 'Azure' in yaml format, run the follo
 ```bash
 > axway central get environments azure -o yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Environment
 name: azure
 title: Azure Environment
@@ -95,7 +95,7 @@ metadata:
   acl: []
   resourceVersion: '14742'
   references: []
-  selfLink: /management/v1alpha1/environments/azure
+  selfLink: /management/v1/environments/azure
 attributes:
   dept: Innovation Lab
 finalizers: []
@@ -127,7 +127,7 @@ Where, the `environment.yaml` file contains the definition of the environment to
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Environment
 name: helloworld
 title: Hello World

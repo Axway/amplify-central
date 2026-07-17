@@ -158,7 +158,7 @@ This section connects the agent to Amplify Engage and determines how to publishe
 
 `CENTRAL_ENVIRONMENT`: The environment name you created when [preparing Amplify](/docs/integrate_with_central/cli_central/cli_install/).
 
-`CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1alpha1**.ß
+`CENTRAL_APISERVERVERSION`: The version of Amplify Central API the agent is using. Default value is **v1**.ß
 
 `CENTRAL_AUTH_REALM`: The Realm used to authenticate for Amplify Engage. Default value is **Broker**.
 
@@ -179,7 +179,7 @@ CENTRAL_REGION=US
 CENTRAL_TEAM=Dev
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
-#CENTRAL_APISERVERVERSION=v1alpha1
+#CENTRAL_APISERVERVERSION=v1
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=service_account...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem
@@ -272,7 +272,7 @@ APIMANAGER_FILTER=tag.APITAG==value
 CENTRAL_REGION=US
 CENTRAL_ORGANIZATIONID=68794y2
 CENTRAL_ENVIRONMENT=my-v7-env
-#CENTRAL_APISERVERVERSION=v1alpha1
+#CENTRAL_APISERVERVERSION=v1
 #CENTRAL_AUTH_REALM=Broker
 CENTRAL_AUTH_CLIENTID=DOSA_66743...
 CENTRAL_AUTH_PRIVATEKEY=/home/APIC-agents/private_key.pem

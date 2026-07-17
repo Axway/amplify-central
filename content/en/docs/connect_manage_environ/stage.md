@@ -36,7 +36,7 @@ API service endpoint sample for attaching a specific stage:
 ``` yaml
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: APIServiceInstance
 name: customer-data-instance-prod-v2
 title: Customer Data Service Instance PROD V2

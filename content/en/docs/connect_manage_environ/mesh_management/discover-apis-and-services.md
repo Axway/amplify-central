@@ -286,7 +286,7 @@ The steps are as follows:
     local-keycloak-oauth-idp  22 minutes ago  OAuthlocal-keycloak  CredentialRequestDefinition  Environment  istio       management
 
     group: management
-    apiVersion: v1alpha1
+    apiVersion: v1
     kind: APIServiceInstance
     name: mylist
     title: mylist (istio)

@@ -44,7 +44,7 @@ dataplane:
 ##### Discovery Agent API Dataplane example
 
 ```shell
-curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1/environments/<environment-name>/discoveryagents/<agent-name>/dataplane' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" \
 -d '{"dataplane": {"name": "<dataplane-name>","queueDiscovery": true}}'
@@ -53,7 +53,7 @@ curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1al
 ##### Traceability Agent API Dataplane example
 
 ```shell
-curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment-name>/traceabilityagents/<agent-name>/dataplane' \
+curl --location --request PUT 'https://apicentral.axway.com/apis/management/v1/environments/<environment-name>/traceabilityagents/<agent-name>/dataplane' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" \
 -d '{"dataplane": {"name": "<dataplane-name>","queueTrafficCollection": true}}'

@@ -130,7 +130,7 @@ Here is an example of using these settings in the Dataplane resource file.
 ```yaml
 ...
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Dataplane
 ...
 spec:

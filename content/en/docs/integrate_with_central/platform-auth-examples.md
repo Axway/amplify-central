@@ -144,7 +144,7 @@ Now that you have a valid bearer token you can make platform calls as outlined i
 #### Call Central  
 
 ```shell
-curl --location --request GET 'https://apicentral.axway.com/apis/management/v1alpha1/environments' \
+curl --location --request GET 'https://apicentral.axway.com/apis/management/v1/environments' \
 --header "Authorization: Bearer ${token}" \
 --header "Content-Type: application/json" 
 ```

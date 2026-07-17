@@ -154,7 +154,7 @@ This is an AccessRequestDefinition and CredentialRequestDefinition example:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AccessRequestDefinition
 name: idp-ard
 title: idp-ard
@@ -176,7 +176,7 @@ spec:
       description: ''
 
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: CredentialRequestDefinition
 name: idp-crd
 title: idp-crd
@@ -271,7 +271,7 @@ This allows the Marketplace to request access and credentials based on the schem
 
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: ManagedApplication
 name: mylist-app
 title: mylist-app
@@ -310,7 +310,7 @@ status:
 
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AccessRequest
 name: 8ac9859c821691f20182170f23c60000
 title: 8ac9859c821691f20182170f23c60000
@@ -333,7 +333,7 @@ status:
 ---
 
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Credential
 name: 8ac9859c821691f20182170f42fb0001
 title: 8ac9859c821691f20182170f42fb0001

@@ -110,7 +110,7 @@ This will help you store your password or any sensitive information inside Ampli
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Secret
 name: example-azure-secret
 title: Example secret for Azure

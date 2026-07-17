@@ -85,7 +85,7 @@ Here is an example of a Managed Application with public key information.
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "ManagedApplication",
     "name": "my-app",
     "title": "My Application",
@@ -132,7 +132,7 @@ The last API call made must *always* be the status sub-resource
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Credential",
     "name": "consumer-cred",
     "title": "Consumer Credential",

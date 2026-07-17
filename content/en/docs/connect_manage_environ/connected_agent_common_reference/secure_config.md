@@ -32,7 +32,7 @@ This will help you to store your password or any sensitive information inside Am
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Secret
 name: example-azure-secret
 title: Example secret for Azure
