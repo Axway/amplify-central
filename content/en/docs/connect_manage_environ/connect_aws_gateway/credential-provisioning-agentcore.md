@@ -8,7 +8,7 @@ When a consumer subscribes to an API service discovered from an AgentCore gatewa
 
 ## Before you start
 
-* AgentCore mode must be configured. See [AgentCore Gateway mode configuration](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#agentcore-gateway-mode-configuration).
+* AgentCore mode must be configured. See [AgentCore mode configuration](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#agentcore-mode-configuration).
 * For gateways using CUSTOM_JWT authorization, at least one Cognito User Pool must be configured via `AWS_COGNITO_USERPOOLID_N` and `AWS_COGNITO_REGION_N`.
 * The agent's IAM policy must include the [Provisioning permissions](/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/#provisioning-policy).
 
@@ -45,4 +45,4 @@ No external credential resources are created in either case. Consumers authentic
 ## Related topics
 
 * [AWS IAM policy for AgentCore mode](/docs/connect_manage_environ/connect_aws_gateway/embedded-aws-agent-setup/#aws-iam-policy-for-agentcore-mode)
-* [AgentCore Gateway mode configuration](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#agentcore-gateway-mode-configuration)
+* [AgentCore mode configuration](/docs/connect_manage_environ/connect_aws_gateway/deploy-your-agents-1/#agentcore-mode-configuration)
