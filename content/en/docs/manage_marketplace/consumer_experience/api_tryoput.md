@@ -96,3 +96,24 @@ If a Traceability Agent is monitoring the corresponding Gateway, it will allow y
 ## Mutual Authentification (mTLS)
 
 If the API uses mutual authentication (mTLS), a warning appears on the product resource details screen with instructions. To try out the API from the Marketplace, you’ll need to store your client certificate in your browser’s certificate storage to complete the mTLS handshake.
+
+## Known limitations
+
+### Google Chrome extension compatibility
+
+Users may encounter errors when using the Try out APIs feature in Google Chrome if the **React Developer Tools** extension is installed and enabled. This extension can interfere with the Swagger UI and may prevent credentials from being created or authorized correctly. Disabling the extension may resolve the issue.
+
+**Symptoms:**
+
+* Console errors appear in the browser developer tools when attempting to authorize or execute API calls.
+* The credential creation flow does not complete as expected.
+* The Authorize dialog may fail to respond or display unexpected behavior.
+
+**Resolution:**
+
+If you encounter these issues while using Google Chrome, disabling the React Developer Tools extension may resolve them:
+
+1. In Google Chrome, navigate to `chrome://extensions`.
+2. Locate **React Developer Tools** in the extensions list.
+3. Toggle the extension to **disabled**.
+4. Reload the Marketplace page and retry the Try out APIs workflow.

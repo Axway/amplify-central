@@ -48,6 +48,8 @@ If monetization is enabled, products can also be tied to subscription plans that
 
 Amplify Engage automates the provisioning and de-provisioning of consumer credentials when users subscribe to or unsubscribe from products. This includes handling API Keys, OAuth credentials, and certificates, ensuring secure access and simplified administration.
 
+Automated provisioning and deprovisioning of API Keys, OAuth credentials, and certificates is handled by Discovery Agents. When environments share the same Identity Provider, Engage supports unified credential provisioning — a single OAuth credential can be provisioned once and automatically shared across multiple data planes. This reduces friction for consumers who need access to API services spanning multiple gateways (e.g., an MCP service on Fusion + a backing API on the Axway API Gateway).
+
 ## Related topics
 
 See the following topics for related information.

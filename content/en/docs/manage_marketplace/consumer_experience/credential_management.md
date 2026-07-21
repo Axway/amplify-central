@@ -43,6 +43,7 @@ To request access to an API from the product:
     * Click **Register Application**.
 
 If the access is automatically approved, you will be prompted with the option to Request Credential.
+
 If the access is manually approved, you will see the pending status panel from where you can navigate to the Application Registration details.
 
 To request access to an API from the product resource:
@@ -80,6 +81,27 @@ View and track the status of the Application Registrations:
 | **Inactive**   | The credential is provisioned on the data plane but cannot be used to consume APIs. This can be the result of a [Suspend action](/docs/manage_marketplace/consumer_experience/credential_management#suspend--enable-credential). |
 | **Deleting**   | The credential deletion has been initiated and is waiting for the credentials to be deprovisioned in the data plane.                        |
 
+### mTLS credential expiration
+
+For mTLS credentials, the Marketplace automatically extracts the expiration date from the uploaded certificate and sets it on the credential resource. You do not need to manually enter an expiration date. The existing credential notification framework sends expiration alerts as the certificate approaches its expiry date.
+
+### Unified credential lifecycle
+
+When a credential is shared across multiple environments via unified provisioning, lifecycle actions on the primary credential cascade to all linked cloned credentials:
+
+| Action on primary credential | Effect on cloned credentials |
+|------------------------------|------------------------------|
+| **Delete** | All clones are automatically deprovisioned and removed. The `client_id` is unregistered from all linked gateway applications. The OAuth client is deprovisioned from the IdP. |
+| **Suspend (Inactive)** | All clones are set to Inactive. The credential cannot be used in any environment. |
+| **Expire** | All clones expire simultaneously. |
+| **Renew** | The renewed credential's new expiry propagates to all clones. |
+
+**Key behavior notes:**
+
+* If a clone fails to deprovision in a specific environment (e.g., the agent is offline), the primary credential is still revoked. The failure is reported in the Provider Credentials list for that specific environment.
+* Credential expiry times on clones always match the primary, regardless of the clone's own Environment expiry settings.
+* Consumers are not notified separately for cloned credential expirations — only the primary credential triggers lifecycle notifications.
+
 ## Create credentials
 
 The credential request can be done from several places in the Marketplace:
@@ -89,19 +111,70 @@ The credential request can be done from several places in the Marketplace:
 * From the product: *Marketplace > Product* > click **Request Credential**
 * While requesting access to the product resource: if access is auto approved, then the *Request Credential* screen is displayed
 
-To create a credential, enter a **Name**, select the resource to acccess, choose an owning Team (optional), select which application to add the credential to, speicify the credential type and required details. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title appears.
+To create a credential, enter a **Name**, select the resource to access, choose an owning Team (optional), select which application to add the credential to, specify the credential type and required details. The **Type** field contains the **credential type** associated to this credential and the Credential Request Definition title. If credential type is not set, only the Credential Request Definition title appears.
+
+### Create an mTLS credential
+
+When the credential type is **MutualTLS**, you are required to upload a public key certificate during credential creation. Only the public certificate is stored by the Marketplace — private key material is never accepted.
+
+To create an mTLS credential:
+
+1. From the credential request form, select **MutualTLS** as the credential type.
+2. Upload a valid public certificate file. Supported formats: `.pem`, `.crt`, `.cer`.
+3. Once uploaded, the system validates the certificate and displays the following metadata:
+   * **Subject DN** — the distinguished name of the certificate subject
+   * **Expiry Date** — when the certificate expires
+   * **Fingerprint (SHA-256)** — the unique hash of the certificate
+4. Review the parsed certificate details and click **Submit**.
+
+If the same credential can be reused with other APIs under the application, a notification is displayed indicating the credential is compatible with additional resources.
+
+#### Validation errors
+
+The following errors may be displayed during certificate upload:
+
+| Error condition | Message |
+|-----------------|---------|
+| Invalid certificate | The uploaded file is not a valid X.509 public certificate. Supported formats: .pem, .crt, .cer. |
+| Expired certificate | This certificate expired on *[date]*. |
+| Private key detected | This certificate contains private key material. Only public certificates can be uploaded. |
+| Corrupt or unreadable | The certificate could not be parsed. Please verify the file is valid. |
 
 When you choose a resource and application, you'll receive a notification stating "Existing credentials found" if there are credentials that can be reused for that application. This message provides a "View existing credentials" link, which opens a dialog displaying details about the available credentials. Selecting any Credential Name takes you to its details page. If you find a reusable credential, simply cancel the Request credential process. However, if no credentials are available or none are reusable, you can create a new credential.  
 
-Once you click **Submit**, you will be redirected to the **Credential Requst Submitted** page, which will list resources within the application that are compatible with the new credential. You can choose **View Crendential** to go to the **Credenaial Details** page, or select **Close** to exit the page.
+Once you click **Submit**, you will be redirected to the **Credential Request Submitted** page, which will list resources within the application that are compatible with the new credential. You can choose **View Credential** to go to the **Credential Details** page, or select **Close** to exit the page.
 
 Once the credential is generated, make sure to copy and paste it in a secure location, as you will not be able to see it again from the Marketplace. If you lose the credential secret, click **Create Credential** to create a new one.
 
 To delete the existing credential, click the trash bin icon.
 
+### Credential reuse across API services
+
+When creating a credential, if the requested API service shares an Identity Provider with another API service for which you already have a credential, the Marketplace displays a notification indicating that the existing credential can be reused. In this case:
+
+* No new `client_id / client_secret` is generated.
+* The existing credential is extended to cover the additional API service.
+* The credential details page shows all resources accessible with this credential.
+
+You can still choose to create a new credential instead of reusing the existing one if needed.
+
+#### Resource availability during cross-environment provisioning
+
+When a credential is reused across environments, provisioning in additional environments may take time (for example, if a Discovery Agent is temporarily unavailable). During this period:
+
+* The primary credential remains fully functional for its original API service.
+* There will show an indicator on the primary credential **Status** to inform there are resource provisioning processing.  Also a hover-over will show the availability of resources during this time.
+* The credential details page indicates which resources are pending provisioning.
+* A status indicator shows when a resource is:
+    * **Pending** — Provisioning is in progress in the additional environment.
+    * **Error** — Provisioning failed in the additional environment. Contact the provider.
+* Once provisioning is complete, the resource status updates to Active and becomes available.
+
 ## List the credentials
 
 The *Marketplace > Credentials* view displays all the credentials your team has access to. This list can be filtered by State, Expiration date and Application. For each credential, the credential type **APIKey**, **OAuth**, **HTTPBasic** or **MutualTLS** is displayed. If the credential type is not visible, ask the owner of the product.
+
+For MutualTLS credentials, the expiration date shown in the list is automatically derived from the uploaded certificate. This date is used by the credential notification framework to alert you before the certificate expires.
 
 Note that the Engage Admin user can see all Credentials regardless of the team they belongs to.
 
@@ -116,6 +189,16 @@ To view the clear value of the credential:
 * From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application > click **View Credential**
 
 The remaining time to view the decrypted credential value is displayed. To view the value, click the eye icon and confirm your need to view the clear value of the credential. The credential is decrypted and displayed on the screen. Make sure to copy and paste the credential value in a secure location. The secret can be viewed as often as you wish during its remaining period. If you do not save your credential value during the available period, you must renew or request a new credential.
+
+### View mTLS credential details
+
+When viewing an mTLS credential, the credential details page displays the certificate metadata instead of a secret value:
+
+* **Subject DN** — the distinguished name of the certificate subject
+* **Expiry Date** — when the certificate expires
+* **Fingerprint (SHA-256)** — the unique hash of the certificate
+
+Unlike API Key or OAuth credentials, mTLS credentials do not have a secret to copy. The public certificate is retained by the Marketplace so it can be passed downstream to provisioning flows and rendered in the UI.
 
 ## Suspend / Enable credential
 
@@ -137,6 +220,17 @@ This action is not supported by all data planes and may not be available for the
 
 When viewing the credential list from the application or from the product resources details, a **Renew credential** menu can be used if enabled by the underlying data plane.
 
+### Renew an mTLS credential
+
+When renewing an mTLS credential, you upload a new valid public certificate. The renewal process has the following behavior:
+
+* Renewal does **not** overwrite the existing certificate.
+* The old and new certificates coexist until the old certificate expires or is explicitly invalidated.
+* The new certificate is validated using the same rules as initial creation (format, expiration, no private key material).
+* Once the new certificate is uploaded and submitted, the credential expiration date is updated to reflect the new certificate's expiry.
+
+This allows a seamless transition period where both certificates remain valid, avoiding service disruption during certificate rotation.
+
 ## Delete credential
 
 A credential can be deleted:
@@ -145,3 +239,9 @@ A credential can be deleted:
 * From the resource: *Marketplace > Product > Resource > Credentials* > navigate to the appropriate application
 
 Click on the credential name to display the credential information. Click **Delete credential** to delete the credential. This action must be confirmed by the user, as it is irreversible.
+
+### Notifications for unified credentials
+
+Credential expiration and lifecycle email notifications are sent only for the **primary** credential. Cloned credentials do not trigger separate notifications to consumers. From the consumer's perspective, there is only a single credential — the primary — that covers access to all API services sharing the same IdP.
+
+Providers can observe the status of all clones (including pending or errored states) in the Provider Credentials list page.
