@@ -60,13 +60,16 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace updates
 
-* **Feature**
+* **Transfer ownership of subscriptions and applications on x-private team user removal**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Description.
+  Team Managers and Organization Administrators can now transfer ownership of a removed user's subscriptions and linked applications to another member of the same x-private team. This preserves existing API credentials (API keys and OAuth client ID/secret) without requiring recreation, ensuring downstream consumer integrations remain functional. Transfer is optional and triggered during the user removal or organization deletion flow when a destination user is selected in the platform confirmation dialog.
 
 ## Marketplace bug fixes
 
 | Case ID  | Internal ID  | Description   |
 | -------- | ------------ | ------------- |
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
+|             | APIGOV-32811 | **Issue**: Filtering products by the default stage in Marketplace returned products containing services with non-default (assigned) stages. <br/>**Resolution**: Product versions are now kept in sync with asset resource stage changes. The stage filter works as expected for newly assigned stages. |
+|             | APIGOV-33254 | **Issue**: Users with the Auditor role were unable to view the Subscriptions page in Business Insights. <br/>**Resolution**: Permission checks for the Business Insights Subscriptions view have been corrected to properly grant read access to users with the Auditor role. |
+|             | APIGOV-33153 | **Issue**: Marketplace pages (Subscriptions, Application Registrations, Credentials) were requesting the full platform user payload, causing slow page loads for organizations with many users. <br/>**Resolution**: User data requests now fetch only the specific users needed by GUID, reducing response size and improving page load performance. |
+|             | APIGOV-31827 | **Issue**: A duplicate SideBlade component in the Marketplace UI was always rendered, causing unnecessary API requests on pages where the side panel was not opened. <br/>**Resolution**: The duplicate component has been replaced with a lazy-loaded implementation that only makes API requests when the panel is opened. |
