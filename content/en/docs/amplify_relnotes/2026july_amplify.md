@@ -54,9 +54,10 @@ New enhancements and bug fixes for the July 23 update.
     * A "copy to clipboard" icon is available for logical names/IDs or URLs.
 
 * **Amplify Engage V1 API support**
-
-  (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, ENHANCEMENT, API SERVER API)</br>
-  Amplify Engage APIs now support for v1 APIs in addition to v1alpha1. The v1 APIs are functionally equivalent to the v1alpha APIs, so v1alpha APIs are deprecated but are remain available. Efficiency improvements reduce the amount of data returned by default (e.g., metadata ACLs are longer returned in ALL v1 responses for ALL resource kinds).
+ 
+  (PROVIDER EXPERIENCE, APIS, INTEGRATION)</br>
+  [Version v1 APIs](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=APIServer&productversion=1.0.0&filename=swagger.json) are now available for Amplify Enagage API Server and are recommended for all new integrations and development efforts. The v1 APIs provide a stable, supported interface and establish the foundation for future enhancements. The existing v1alpha1 APIs remain available for backward compatibility but are now **deprecated**. Efficiency improvements reduce the amount of data returned by default (e.g., metadata ACLs are longer returned in ALL v1 responses for ALL resource kinds).
+While existing integrations will continue to function, customers are encouraged to migrate to the v1 APIs to take advantage of ongoing improvements and ensure long-term compatibility.
 
 ### Marketplace bug fixes for July 23, 2026
 
