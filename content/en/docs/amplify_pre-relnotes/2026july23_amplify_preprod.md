@@ -47,24 +47,29 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **MCP Traceability for AWS Bedrock AgentCore**
+* **AWS Bedrock AgentCore - MCP Traceability**
 
   (AWS TRACEABILITY AGENT, AGENT SDK, ENHANCEMENT)</br>
-The AWS SaaS and on-premise agents for the Amazon Bedrock AgentCore Gateway data plane can obtain Model Context Protocol (MCP) service trasaction counts with CloudWatch or CloudTrail integration. The MCP service transactions are represented on Biz Insights -> API Health screen.
+AWS AgentCore Traceability Agent support is now available, enabling the collection and visualization of MCP server transaction counts in Business Insights -> API Health.
 
 * **Amplify Engage V1 API support**
 
   (ALL AGENTS, AGENT SDK, ENHANCEMENT)</br>
-All agents have been updated to use v1 Amplify Engage APIs instead of v1alpha1 APIs to access API Server resources. The v1 APIs are functionally equivalent to the deprecated v1alpha APIs.
+All agents have been updated to use v1 Amplify Engage APIs instead of v1alpha1 APIs to access API Server resources.
   
 ## Marketplace updates
+
+* **Amplify Engage v1 APIs**
+
+  (PROVIDER EXPERIENCE, APIS, INTEGRATION)</br>
+  [Version v1 APIs](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=APIServer&productversion=1.0.0&filename=swagger.json) are now available for Amplify Enagage API Server and are recommended for all new integrations and development efforts. The v1 APIs provide a stable, supported interface and establish the foundation for future enhancements. The existing v1alpha1 APIs remain available for backward compatibility but are now **deprecated**. While existing integrations will continue to function, customers are encouraged to migrate to the v1 APIs to take advantage of ongoing improvements and ensure long-term compatibility.
 
 * **Transfer ownership of subscriptions and applications on x-private team user removal**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
-  Team Managers and Organization Administrators can now transfer ownership of a removed user's subscriptions and linked applications to another member of the same x-private team. This preserves existing API credentials (API keys and OAuth client ID/secret) without requiring recreation, ensuring downstream consumer integrations remain functional. Transfer is optional and triggered during the user removal or organization deletion flow when a destination user is selected in the platform confirmation dialog.
+  Team Managers and Organization Administrators can now transfer ownership of a removed user's subscriptions and applications to another member of the same x-private team. This preserves existing API credentials (API keys and OAuth client ID/secret) without requiring recreation, ensuring downstream consumer integrations remain functional. Transfer is optional and triggered during the user deletion or removal from a team.
 
-**Long name display handling**
+* **Long name display handling**
 
 (PROVIDER EXPERIENCE, ENHANCEMENT, ENVIRONMENTS, COMPLIANCE PROFILES)</br>
 The Toplogy -> Environments and Topology -> Compliance Profiles UI tables have been improved for the handling of long names. Here is a list of the improvements:
@@ -73,10 +78,10 @@ The Toplogy -> Environments and Topology -> Compliance Profiles UI tables have b
     * Long names are truncated in the middle of the name with a three dot ellipsis.
     * A "copy to clipboard" icon is available for logical names/IDs or URLs.
 
-**Asset Asset Details display**
+**Asset details display**
 
 (PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG, ASSET DETAILS)</br>
-The resoruce table of Asset Details page Catalog has an additional **type** column to visualize the API service type more easily. The reource table three dot ellipsis option for **View Specification** supports the display of more API specification types (e.g. A2A).  
+The **Resources table** on the Asset Details page now includes a **Type** column, making it easier to identify the API service type at a glance. Additionally, the **View Specification** option in the resource actions menu (⋮) now supports additional API specification formats, including A2A.  
 
 ## Marketplace bug fixes
 
