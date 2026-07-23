@@ -91,8 +91,8 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Marketplace bug fixes
 
-| Case ID    | Internal ID   | Description   |
-| ---------- | ------------- | ------------- |
+| Case ID | Internal ID | Description |
+| ------- | ----------- | ----------- |
 | 01848405 | APIGOV-32961 | **Issue**: Engage UI: The Expiry filter on the Credentials page did not filter results. Radio button filters in Marketplace lost their visual selection state when interacting with other filter groups. <br/>**Resolution**: The Expiry filter now correctly filters credentials by expiration status in both Engage and Marketplace. Radio button filters include a reset option and maintain consistent visual state across filter groups. |
 | 01842124 | APIGOV-32811 | **Issue**: Marketplace Backend: Filtering products by a default stage in the Marketplace returned products containing services assigned to a different stage. The stage filter produced incorrect results when the environment had both default and assigned stages configured. <br/>**Resolution**: Product version stages now stay synchronized with asset resource stage changes. The stage filter correctly returns only products whose services match the selected stage. |
 | 01854853 | APIGOV-33166 | **Issue**: Marketplace UI: The Suspend action button was unavailable for credentials without an expiration date, even when the credential request definition had `suspendable: true` configured. As a result, consumers could not temporarily disable non-expiring credentials. <br/>**Resolution**: Credentials without an expiration date can now be suspended and re-enabled as expected when the provisioning policy allows suspension. |
