@@ -17,7 +17,7 @@ To view the *Administration Release Notes* [click here](https://docs.axway.com/b
 
 To view the *Support Policy for Amplify Agents and Amplify Agent SDK* [click here](/docs/amplify_relnotes/agent_agentsdk_support_policy/).
 
-## [Amplify Engage July 23 2026](/docs/amplify_relnotes/2026july_amplify/#july-23-2026)
+## [Amplify Engage July 27 2026](/docs/amplify_relnotes/2026july_amplify/#july-23-2026)
 
 | Environment type                           | Latest on-premise agent version <br />(based on Amplify Agents SDK 1.1.146 <br />unless otherwise noted) |
 |--------------------------------------------|--------------------------|
