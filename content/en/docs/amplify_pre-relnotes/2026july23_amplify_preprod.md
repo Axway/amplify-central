@@ -57,12 +57,6 @@ The AWS SaaS and on-premise agents for the Amazon Bedrock AgentCore Gateway data
   (ALL AGENTS, AGENT SDK, ENHANCEMENT)</br>
 All agents have been updated to use v1 Amplify Engage APIs instead of v1alpha1 APIs to access API Server resources. The v1 APIs are functionally equivalent to the deprecated v1alpha APIs.
   
-## Agent bug fixes
-
-| Case ID  | Internal ID  | Description |
-|--------- |------------- |-------------|
-| xxxxxxxx | APIGOV-xxxxx | **Issue**: Description. <br/>**Resolution**: Description. |
-
 ## Marketplace updates
 
 * **Transfer ownership of subscriptions and applications on x-private team user removal**
@@ -92,3 +86,5 @@ The resoruce table of Asset Details page Catalog has an additional **type** colu
 |             | APIGOV-33254 | **Issue**: Users with the Auditor role were unable to view the Subscriptions page in Business Insights. <br/>**Resolution**: Permission checks for the Business Insights Subscriptions view have been corrected to properly grant read access to users with the Auditor role. |
 |             | APIGOV-33153 | **Issue**: Marketplace pages (Subscriptions, Application Registrations, Credentials) were requesting the full platform user payload, causing slow page loads for organizations with many users. <br/>**Resolution**: User data requests now fetch only the specific users needed by GUID, reducing response size and improving page load performance. |
 |             | APIGOV-31827 | **Issue**: A duplicate SideBlade component in the Marketplace UI was always rendered, causing unnecessary API requests on pages where the side panel was not opened. <br/>**Resolution**: The duplicate component has been replaced with a lazy-loaded implementation that only makes API requests when the panel is opened. |
+|             | APIGOV-33186 | **Issue**: The create document wizard was not assigning the Access Control List (ACL) values. <br/>**Resolution**: The create wizard fixed to assign the ACLs. |
+|             | APIGOV-33260 | **Issue**: The display of a **draft** asset was not showing **Out of Sync** APIs on the Linked Resources tab. <br/>**Resolution**: The Linked Resrouces tab shows the **Out of Sync** APIs so they can be removed from the draft asset. |
