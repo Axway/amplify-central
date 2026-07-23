@@ -47,10 +47,10 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
 ## Agent updates
 
-* **Featur**
+* **MCP Traceability for AWS Bedrock AgentCore**
 
-  (EDGEGATEWAYDISCOVERYAGENT, ENHANCEMENT)</br>
-  Description.
+  (AWS TRACEABILITY AGENT, AGENT SDK, ENHANCEMENT)</br>
+The AWS SaaS and on-premise agents for the Amazon Bedrock AgentCore Gateway data plane can obtain Model Context Protocol (MCP) service trasaction counts with CloudWatch or CloudTrail integration. The MCP service transactions are represented on Biz Insights -> API Health screen.
   
 ## Agent bug fixes
 
@@ -64,6 +64,15 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
   Team Managers and Organization Administrators can now transfer ownership of a removed user's subscriptions and linked applications to another member of the same x-private team. This preserves existing API credentials (API keys and OAuth client ID/secret) without requiring recreation, ensuring downstream consumer integrations remain functional. Transfer is optional and triggered during the user removal or organization deletion flow when a destination user is selected in the platform confirmation dialog.
+
+**Long name display handling**
+
+(PROVIDER EXPERIENCE, ENHANCEMENT, ENVIRONMENTS, COMPLIANCE PROFILES)</br>
+The Toplogy -> Environments and Topology -> Compliance Profiles UI tables have been improved for the handling of long names. Here is a list of the improvements:
+
+    * A hover tooltip is visible to display the full long name.
+    * Long names are truncated in the middle of the name with a three dot ellipsis.
+    * A "copy to clipboard" icon is available for logical names/IDs or URLs.
 
 ## Marketplace bug fixes
 
