@@ -19,7 +19,7 @@ New enhancements and bug fixes for the July 23 update.
 * **APIM enhancement: OKTA IDP support**
 
   (EDGEGATEWAYDISCOVERYAGENT, ENHANCEMENT)</br>
-  The APIM Discovery Agent can set the scopes, application name, and tags within the associated OKTA identity provider when provisioning. The agent creates the policy and rule to restrict the client to that scope, but it does **not** create scopes itself. IF a scope is missing, this must be added by your OKTA adminstrator.
+  The APIM Discovery Agent can now provision Okta OAuth credentials, setting the application name and Okta group assignment and restricting each client to specific scopes via an Okta access policy and rule. The agent does **not** create the scopes themselves. If a requested scope doesn't already exist on the Okta Authorization Server, it must be added by your Okta administrator before the credential can be provisioned successfully.
   
 * **MCP provisioning for AWS Bedrock AgentCore**
 
