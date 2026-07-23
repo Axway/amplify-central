@@ -10,17 +10,17 @@ Axway works hard to improve the Amplify Engage experience by releasing new featu
 
 ---
 
-## July 23, 2026
+## July 27, 2026
 
-New enhancements and bug fixes for the July 23 update.
+New enhancements and bug fixes for the July 27 update.
 
-### Agent updates for July 23, 2026
+### Agent updates for July 27, 2026
 
 * **APIM enhancement: OKTA IDP support**
 
   (EDGEGATEWAYDISCOVERYAGENT, ENHANCEMENT)</br>
   The APIM Discovery Agent can now provision Okta OAuth credentials, setting the application name and Okta group assignment and restricting each client to specific scopes via an Okta access policy and rule. The agent does **not** create the scopes themselves. If a requested scope doesn't already exist on the Okta Authorization Server, it must be added by your Okta administrator before the credential can be provisioned successfully.
-  
+
 * **MCP provisioning for AWS Bedrock AgentCore**
 
   (AWS DISCOVERY AGENT, AGENT SDK, ENHANCEMENT)</br>
@@ -31,13 +31,13 @@ New enhancements and bug fixes for the July 23 update.
   (AGENT SDK, ENHANCEMENT)</br>
   All Discovery Agents log when GRPC events are received from Amplify Engage and when the events have been handled.
 
-### Agent bug fixes for July 23, 2026
+### Agent bug fixes for July 27, 2026
 
 | Case ID  | Internal ID  | Description |
 |--------- |------------- |-------------|
 | 01850119 | APIGOV-33103 | **Issue**: The Mulesoft Traceability Agent was not reporting usage for Business Insights. <br/>**Resolution**: The Mulesoft Traceability Agent now sends the usage reports. |
 
-### Marketplace updates for July 23, 2026
+### Marketplace updates for July 27, 2026
 
 * **Application API field selection**
 
@@ -56,11 +56,10 @@ New enhancements and bug fixes for the July 23 update.
 * **Amplify Engage V1 API support**
 
   (PROVIDER EXPERIENCE, APIS, INTEGRATION)</br>
-  [Version v1 APIs](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=APIServer&productversion=1.0.0&filename=swagger.json) are now available for Amplify Enagage API Server and are recommended for all new integrations and development efforts. The v1 APIs provide a stable, supported interface and establish the foundation for future enhancements. The existing v1alpha1 APIs remain available for backward compatibility but are now **deprecated**. Efficiency improvements reduce the amount of data returned by default (e.g., metadata ACLs are longer returned in ALL v1 responses for ALL resource kinds).
-
+  [Version v1 APIs](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=APIServer&productversion=1.0.0&filename=swagger.json) are now available for Amplify Enagage API Server and are recommended for all new integrations and development efforts. The v1 APIs provide a stable, supported interface and establish the foundation for future enhancements. The existing v1alpha1 APIs remain available for backward compatibility but are now **deprecated**. The new v1 APIs introduce a breaking change compared to v1alpha1, primarily to improve performance and reduce payload sizes. As part of these changes, **metadata ACLs are no longer included by default in responses for any resource type**. Applications that currently rely on metadata ACLs being returned in v1alpha1 responses must be updated when migrating to v1.
   While existing integrations will continue to function, customers are encouraged to migrate to the v1 APIs to take advantage of ongoing improvements and ensure long-term compatibility.
 
-### Marketplace bug fixes for July 23, 2026
+### Marketplace bug fixes for July 27, 2026
 
 | Case ID | Internal ID | Description |
 | ------- | ----------- | ----------- |
