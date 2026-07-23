@@ -24,7 +24,7 @@ New enhancements and bug fixes for the July 27 update.
 * **MCP provisioning for AWS Bedrock AgentCore**
 
   (AWS DISCOVERY AGENT, AGENT SDK, ENHANCEMENT)</br>
-  The AWS SaaS and on-premise agents can provision the Amazon Bedrock AgentCore Gateway data plane with Model Context Protocol (MCP) service access when requested from the Engage Marketplace for consumption. The provisioning is limited to one MCP target.
+  The AWS SaaS and on-premise agents can provision the Amazon Bedrock AgentCore Gateway data plane with Model Context Protocol (MCP) service access when requested from the Engage Marketplace for consumption. At this time, provisioning supports only one MCP target. This is a temporary limitation and is planned to be removed in the next release.
 
 * **New Agent GRPC event logs**
 
