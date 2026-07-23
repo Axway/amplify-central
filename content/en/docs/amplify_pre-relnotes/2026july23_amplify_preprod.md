@@ -59,11 +59,6 @@ All agents have been updated to use v1 Amplify Engage APIs instead of v1alpha1 A
   
 ## Marketplace updates
 
-* **Amplify Engage v1 APIs**
-
-  (PROVIDER EXPERIENCE, APIS, INTEGRATION)</br>
-  [Version v1 APIs](https://apidocs.axway.com/swagger-ui-NEW/index.html?productname=APIServer&productversion=1.0.0&filename=swagger.json) are now available for Amplify Enagage API Server and are recommended for all new integrations and development efforts. The v1 APIs provide a stable, supported interface and establish the foundation for future enhancements. The existing v1alpha1 APIs remain available for backward compatibility but are now **deprecated**. While existing integrations will continue to function, customers are encouraged to migrate to the v1 APIs to take advantage of ongoing improvements and ensure long-term compatibility.
-
 * **Transfer ownership of subscriptions and applications on x-private team user removal**
 
   (CONSUMER EXPERIENCE, ENHANCEMENT, MARKETPLACE)</br>
