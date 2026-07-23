@@ -242,14 +242,15 @@ Create an IAM user and generate an Access Key ID and Secret Access Key ID that t
 
 ## AWS IAM policy for AgentCore mode
 
-Create an IAM policy that allows the agent to discover and provision access to your AWS Bedrock AgentCore gateway resources. This policy is required when running in `agentcore-gateway` mode. Attach it to the same IAM role or user used by the agents.
+Create an IAM policy that allows the agent to discover, provision access to, and collect traceability for your AWS Bedrock AgentCore gateway resources. This policy is required when running in `agentcore-gateway` mode. Attach it to the same IAM role or user used by the agents.
 
 1. Within the AWS IAM Console, start the *Create policy* wizard.
-2. Select the *JSON editor* tab and paste the [Discovery policy JSON](#discovery-policy) below. If provisioning is also enabled, the provisioning permissions can be added to the same policy — a separate policy is not required.
+2. Select the *JSON editor* tab and paste the [Discovery policy JSON](#discovery-policy) below. If provisioning and/or traceability are also enabled, add those permissions to the same policy — a separate policy is not required.
 3. Update the placeholder values:
    * `<aws-region>` becomes your AWS region, such as `eu-west-1`
    * `<aws-account-id>` becomes your AWS account ID
    * `<user-pool-id>` becomes your Cognito User Pool ID (Provisioning permissions only)
+   * `<cloudtrail-bucket>` becomes the S3 bucket holding the CloudTrail data-event logs (Traceability with CloudTrail attribution only)
 4. Click **Next: Tags** and add any tags you may want.
 5. Click **Next: Review**.
 6. Give the policy a name, such as `AmplifyAgentCorePolicy`.
@@ -318,3 +319,45 @@ Required for the Provisioning Agent to manage Cognito app clients and update the
 | `iam:PassRole` | Required so Bedrock AgentCore can assume the execution role associated with the gateway when processing provisioning updates |
 
 {{< alert title="Note" color="primary" >}}The `iam:PassRole` resource can be scoped to a specific role ARN instead of a wildcard for least-privilege configurations.{{< /alert >}}
+
+### Traceability policy
+
+Required for the Traceability Agent to collect metrics from AgentCore gateways. The CloudWatch statement is always required in `agentcore-gateway` mode. The S3 statement is required only when CloudTrail-based consumer attribution is enabled (`AWS_AGENTCORE_CLOUDTRAILENABLED=true`). These statements can be added to the existing AgentCore policy — no separate policy file is needed:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:FilterLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:/aws/vendedlogs/bedrock-agentcore/gateway/APPLICATION_LOGS/*",
+                "arn:aws:logs:<aws-region>:<aws-account-id>:log-group:/aws/vendedlogs/bedrock-agentcore/gateway/APPLICATION_LOGS/*:log-stream:*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::<cloudtrail-bucket>",
+                "arn:aws:s3:::<cloudtrail-bucket>/*"
+            ]
+        }
+    ]
+}
+```
+
+| Permission | Purpose |
+| --- | --- |
+| `logs:FilterLogEvents` | Traceability Agent reads each gateway's CloudWatch application logs to build usage metrics. Scope the resource to the log-group prefix set by `AWS_AGENTCORE_LOGGROUPPREFIX` (default shown). |
+| `s3:ListBucket`, `s3:GetObject` | Traceability Agent reads CloudTrail `InvokeGateway` data events from the trail's S3 bucket for consumer attribution. Required only when `AWS_AGENTCORE_CLOUDTRAILENABLED=true` |
+
+{{< alert title="Note" color="primary" >}}Omit the `s3` statement when running in CloudWatch-only mode. The agent also calls `sts:GetCallerIdentity` (to derive the CloudTrail object prefix), which AWS allows by default and does not require an explicit policy statement.{{< /alert >}}
+
+For an overview of the traceability modes and the CloudTrail/S3 setup, see [Traceability for AgentCore gateways](/docs/connect_manage_environ/connect_aws_gateway/traceability-agentcore/).

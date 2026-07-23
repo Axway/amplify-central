@@ -41,7 +41,7 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | AWS_PUSHTAGS                         | Determines whether the AWS Stage tags should be pushed to Amplify along with the API definition. Value must be true or false. Default is false.                                                                                                                                                                                                                                                                                                                                    |
 | AWS_REGION                           | The region where AWS APIs are stored.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-### AgentCore Gateway mode configuration
+### AgentCore mode configuration
 
 The following variables are specific to `agentcore-gateway` mode. Set `AWS_GATEWAYMODE` to enable AgentCore mode; the remaining variables are only relevant when AgentCore mode is active.
 
@@ -49,7 +49,6 @@ The following variables are specific to `agentcore-gateway` mode. Set `AWS_GATEW
 | --- | --- |
 | AWS_GATEWAYMODE | The AWS backend the agent connects to. Set to `agentcore-gateway` to enable Bedrock AgentCore mode. Default is `api-gateway`. |
 | AWS_AGENTCORE_PAGESIZE | Page size for `ListGateways` and `ListGatewayTargets` API requests (on-premises Discovery Agent only). Default is `25`. |
-| AWS_AGENTCORE_LOGGROUPPREFIX | CloudWatch log group prefix for AgentCore gateway application logs. Default is `/aws/vendedlogs/bedrock-agentcore/gateway/APPLICATION_LOGS`. |
 | AWS_AGENTCORE_IAMAUTHENABLED | When set to `true`, gateways using `AWS_IAM` authorization are discovered and associated with the `aws-iam` credential request definition. The gateway is still discovered and published without a credential request definition when this flag is `false`. Default is `false`. |
 | AWS_COGNITO_USERPOOLID_N | Cognito User Pool ID for the Nth pool, where N starts at 1 (for example, `AWS_COGNITO_USERPOOLID_1=eu-west-1_abc123`). Used to match CUSTOM_JWT gateway issuers to a specific Cognito pool for credential provisioning. |
 | AWS_COGNITO_REGION_N | AWS region for the Nth Cognito pool (for example, `AWS_COGNITO_REGION_1=eu-west-1`). Optional; falls back to `AWS_REGION` if not set. |
@@ -89,7 +88,7 @@ LOG_OUTPUT=stdout
 LOG_PATH=logs
 ```
 
-For AgentCore Gateway mode:
+For AgentCore mode:
 
 ```yaml
 # AWS connectivity - AgentCore mode
@@ -163,6 +162,16 @@ All common agent variables can be found [here](/docs/connect_manage_environ/conn
 | AWS_AUTH_SECRETKEY                             | If not deploying in an EC2 instance, the secret access key of the AWS account where APIs are stored.                                                                                                                                                                                                                                          |
 | AWS_CLIENTTIMEOUT                              | The amount of time a single AWS transaction may wait to process (default value: `30s`).                                                                                                                                                                                                                                                       |
 | AWS_REGION                                     | The region where AWS APIs are stored.                                                                                                                                                                                                                                                                                                         |
+
+### AgentCore mode configuration for Traceability
+
+The following variables apply to the Traceability Agent in `agentcore-gateway` mode. Set `AWS_GATEWAYMODE=agentcore-gateway` to enable AgentCore mode (see [AgentCore mode configuration](#agentcore-mode-configuration)). For an overview of the traceability modes and the CloudTrail/S3 setup, see [Traceability for AgentCore gateways](/docs/connect_manage_environ/connect_aws_gateway/traceability-agentcore/).
+
+| Variable name | Description |
+| --- | --- |
+| AWS_AGENTCORE_LOGGROUPPREFIX | CloudWatch log group prefix for AgentCore application logs. Default is `/aws/vendedlogs/bedrock-agentcore/gateway/APPLICATION_LOGS`. |
+| AWS_AGENTCORE_CLOUDTRAILENABLED | When set to `true`, the agent uses CloudTrail data events to attribute Cognito gateway usage to the consuming application. Default is `false`. |
+| AWS_AGENTCORE_CLOUDTRAILBUCKET | Name of the S3 bucket holding the CloudTrail data-event logs. Required when `AWS_AGENTCORE_CLOUDTRAILENABLED=true`. |
 
 ### Create your Traceability Agent environment file
 
