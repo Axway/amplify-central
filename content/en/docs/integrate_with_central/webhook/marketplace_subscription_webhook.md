@@ -36,7 +36,7 @@ Where `integration.json` contains the following content:
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Integration",
     "title": "Integrations for Subscription Approvals",
     "spec": {
@@ -66,7 +66,7 @@ Where `webhook.json` contains the following content:
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Webhook",
     "title": "Webhook.site listener",
     "metadata": {
@@ -107,7 +107,7 @@ Where `trigger.json` contains the following content:
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "ResourceHook",
     "title": "Resource Hook to monitor subscriptions in marketplace for approval",
     "metadata": {
@@ -154,7 +154,7 @@ The subscription webhook listener will receive the following JSON payload:
       ........
       ........
       ........
-      "selfLink": "/catalog/v1alpha1/subscriptions/subscription-name-goes-here"
+      "selfLink": "/catalog/v1/subscriptions/subscription-name-goes-here"
     },
     "marketplace": {
       "resource": {
@@ -178,7 +178,7 @@ The subscription webhook listener will receive the following JSON payload:
       },
       "product": "*** PRODUCT NAME ***"
     },
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "name": "*** SUBSCRIPTION NAME ***",
     "group": "catalog",
     "status": {

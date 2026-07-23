@@ -35,7 +35,7 @@ Sample of an environment that has an owning team:
 
 ```json
 {
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "group": "management",
   "title": "Json env title one",
   "name": "env1",
@@ -90,7 +90,7 @@ In the following sample, `env1`, which was defined previously, is shared with tw
 ```yaml
 {
   "group": "management",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "AccessControlList",
   "scope": "env1",
   "name": "acl1",

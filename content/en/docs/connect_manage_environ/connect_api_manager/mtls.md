@@ -55,7 +55,7 @@ In summary, mTLS adds an extra layer of security by making sure both the client 
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "CredentialRequestDefinition",
     "name": "api-key-mtls",
     "title": "API Key and mTLS",
@@ -130,7 +130,7 @@ YAML equivalent
 ```yaml
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: CredentialRequestDefinition
 name: api-key-mtls
 title: API Key and mTLS

@@ -152,7 +152,7 @@ Link the ApplicationProfileDefinition to an AccessRequestDefinition - see `appli
 ```yaml
 ---
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: AccessRequestDefinition
 name: ard-purpose
 title: API Access
@@ -211,7 +211,7 @@ Add the accessRequestDefinition to a service instance:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: APIServiceInstance
 name: customer-data-instance-dev
 title: Cutomer Data Service Instance DEV

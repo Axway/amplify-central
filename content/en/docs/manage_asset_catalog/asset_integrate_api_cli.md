@@ -79,7 +79,7 @@ Where `stage.json` contains the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Stage",
   "title": "production",
   "spec": {
@@ -103,7 +103,7 @@ Where `asset.json` contains the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Asset",
   "title": "Asset from tutorial",
   "spec": {
@@ -135,7 +135,7 @@ Where `asset-mapping.jq` has the following content:
 # Creates AssetMapping linking existing APIService, APIServiceRevision and APIServiceInstance
 # note that APIServiceInstance ("apiServiceInstance") is an optional field.
 {
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "AssetMapping",
     metadata: {
         scope: {
@@ -189,7 +189,7 @@ Where `asset-release-tag.jq` has the following content:
 ```json
 {
     group: "catalog",
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "ReleaseTag",
     metadata: {
         scope: {
@@ -237,7 +237,7 @@ Where `category.json` contains the following content:
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Category",
   "title": "Finance",
   "spec": {

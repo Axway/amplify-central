@@ -253,7 +253,7 @@ Object skeleton (json format):
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "SubscriptionRequestDefinition",
     "name": "name-for-subscription-request-definition",
     "title": "title-for-subscription-request-definition",
@@ -285,7 +285,7 @@ Sample of the consumer giving a required email contact and billing address:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "SubscriptionRequestDefinition",
     "name": "srd-1",
     "title": "Subscription definition email consumer",
@@ -325,7 +325,7 @@ Sample of plan and subscription definition request association:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "ProductPlan",
     "name": "plan-name",
     "title": "Plan title",
@@ -375,7 +375,7 @@ Object skeleton (json format):
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "AccessRequestDefinition",
     "name": "name-for-access-request-definition",
     "title": "title-for-access-request-definition",
@@ -415,7 +415,7 @@ For each Application Registration in the Marketplace, there will be one Managed 
 To get the Managed Application name, use the following API call replacing `<environment name>` with he logical name of the environment and `<app name>` with the logical name of the Marketplace application. The API call will return an array containing one unique Managed Application which is the Engage representation of the application on the API Gateway/dataplane.
 
 ```
-https://apicentral.axway.com/apis/management/v1alpha1/environments/<environment name>/managedapplications?pageSize=1&query=metadata.references=with='kind===Application;name===<app name>'
+https://apicentral.axway.com/apis/management/v1/environments/<environment name>/managedapplications?pageSize=1&query=metadata.references=with='kind===Application;name===<app name>'
 ```
 
 ### AccessRequestDefinition sample
@@ -425,7 +425,7 @@ Sample of an AccessRequestDefinition (json format) asking consumer to select a p
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "AccessRequestDefinition",
     "name": "api-scopes",
     "title": "API Scopes",
@@ -481,7 +481,7 @@ Sample of an APIServiceInstance (json format) using the previous accessRequestDe
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "APIServiceInstance",
     "name": "api-service-instance",
     "title": "api-service-instance-title",
@@ -528,7 +528,7 @@ Sample of an AccessRequestDefinition (json format) exemplifying `x-custom-field`
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "AccessRequestDefinition",
     "name": "api-scopes",
     "title": "API Scopes",
@@ -572,7 +572,7 @@ Object skeleton (json format):
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "CredentialRequestDefinition",
     "name": "name-for-credential-request-definition",
     "title": "title-for-credential-request-definition",
@@ -613,7 +613,7 @@ Sample of the consumer giving the Javascript origin values and the provider retu
 ```json
 {
         "group": "management",
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "CredentialRequestDefinition",
         "name": "api-key",
         "title": "API Key",
@@ -679,7 +679,7 @@ Sample of no information supplied by the consumer but information provisioned (O
 ```json
 {
         "group": "management",
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "CredentialRequestDefinition",
         "name": "oauth-client-credential",
         "title": "OAuth Client credential",
@@ -733,7 +733,7 @@ Sample asking the consumer for a PEM public key file and returning oauth clientI
 ```json
 {
         "group": "management",
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "CredentialRequestDefinition",
         "name": "oauth-client-certificate",
         "title": "OAuth Client Certificate",
@@ -794,7 +794,7 @@ Sample of an APIServiceInstance (json format) using the previous AccessRequestDe
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "APIServiceInstance",
     "name": "api-service-instance",
     "title": "api-service-instance-title",
@@ -847,7 +847,7 @@ Sample of an CredentialRequestDefinition (json format) exemplifying `x-custom-fi
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "CredentialRequestDefinition",
     "name": "api-key",
     "title": "API Key",
@@ -925,7 +925,7 @@ Step 2: Retrieve current custom schema from previous example related to subscrip
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "SubscriptionRequestDefinition",
     "name": "srd-1",
     "title": "Subscription definition email consumer",
@@ -1001,7 +1001,7 @@ Step 4: Put it all together:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "SubscriptionRequestDefinition",
     "name": "srd-1",
     "title": "Subscription definition email consumer",

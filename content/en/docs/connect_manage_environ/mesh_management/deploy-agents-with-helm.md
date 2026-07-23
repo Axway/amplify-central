@@ -85,14 +85,14 @@ There are two agents that can be deployed, a Discovery Agent (DA) and a Traceabi
 The following resources are used run the agents. Copy the yaml below into a file and use the Amplify Central CLI to create the resources. The names of the resources can be modified.
 
 ```yaml
-apiVersion: v1alpha1
+apiVersion: v1
 title: istio
 name: istio
 kind: Environment
 spec:
   description: istio environment
 ---
-apiVersion: v1alpha1
+apiVersion: v1
 group: management
 kind: Mesh
 name: istio-mesh
@@ -109,7 +109,7 @@ For the Discovery Agent, create the DiscoveryAgent resource:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: DiscoveryAgent
 name: istio-da
 title: istio-da
@@ -131,7 +131,7 @@ For the Traceability Agent, create the TraceabilityAgent resource:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: TraceabilityAgent
 name: istio-ta
 title: istio-ta
@@ -187,7 +187,7 @@ Run the following command to retrieve the ID of the Environment resource created
 axway central get environments $YOUR_ENVIRONMENT_NAME -o yaml
 
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Environment
 name: istio
 title: istio
@@ -201,7 +201,7 @@ metadata:
   acl: []
   resourceVersion: '0'
   references: []
-  selfLink: /management/v1alpha1/environments/istio
+  selfLink: /management/v1/environments/istio
 attributes: {}
 finalizers: []
 tags: []

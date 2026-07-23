@@ -119,7 +119,7 @@ will produce (some part are voluntary removed for clarity):
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Product",
     "name": "customer-data",
     "title": "Customner Data",

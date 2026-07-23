@@ -1,6 +1,6 @@
 [
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "Environment",
         "name": "env1",
         "title": "env1 title",
@@ -17,7 +17,7 @@
         }
     },
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "APIService",
         "name": "apisvc1",
         "title": "apisvc1 title",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "Secret",
         "name": "secret1",
         "title": "secret1 title",
@@ -64,7 +64,7 @@
         }
     },
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "Webhook",
         "name": "webhook1",
         "title": "webhook1 title",
@@ -97,7 +97,7 @@
         }
     },
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "ConsumerSubscriptionDefinition",
         "name": "consumersubdef1",
         "title": "consumersubdef1 title",
@@ -129,7 +129,7 @@
         }
     },
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "APIServiceRevision",
         "name": "apisvcrev1",
         "title": "apisvcrev1 title",
@@ -155,7 +155,7 @@
         }
     },
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "APIServiceInstance",
         "name": "apisvcinst1",
         "title": "apisvcinst1 title",
@@ -184,7 +184,7 @@
         }
     },
     {
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "ConsumerInstance",
         "name": "consumerinst1",
         "title": "Catalog Item title",

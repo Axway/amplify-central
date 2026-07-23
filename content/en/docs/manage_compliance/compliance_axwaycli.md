@@ -25,7 +25,7 @@ An environment can be configured to automatically lint all its pre-existing API 
 
    ```yaml
     group: management
-    apiVersion: v1alpha1
+    apiVersion: v1
     kind: Environment
     name: <my-env>
     spec:
@@ -60,7 +60,7 @@ Once compliance validation is enabled for an environment, each `APIService` will
 
     ```yaml
     group: management
-    apiVersion: v1alpha1
+    apiVersion: v1
     kind: APIService
     name: <my-service>
     metadata:

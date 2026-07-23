@@ -26,7 +26,7 @@ Where `integration.json` contains the following content:
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Integration",
     "title": "Integrations for discovered API Services",
     "spec": {
@@ -56,7 +56,7 @@ Where `webhook.json` contains the following content:
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Webhook",
     "title": "Webhook.site listener",
     "metadata": {
@@ -97,7 +97,7 @@ Where `trigger.json` contains the following content, note that the field `webhoo
 ```json
 {
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "ResourceHook",
     "title": "Resource Hook to monitor API Service changes in Azure environment",
     "metadata": {
@@ -150,9 +150,9 @@ The webhook listener will receive the following JSON payload:
       ........
       ........
       ........
-      "selfLink": "/management/v1alpha1/environments/*** ENVIRONMENT NAME ***/apiservicerevisions/*** API Service revision name ***"
+      "selfLink": "/management/v1/environments/*** ENVIRONMENT NAME ***/apiservicerevisions/*** API Service revision name ***"
    },
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "APIServiceRevision",
   "name": "*** API Service revision name ***",
   "title": "*** API Service revision title ***",

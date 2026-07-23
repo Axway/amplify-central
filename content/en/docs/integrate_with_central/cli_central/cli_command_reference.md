@@ -109,7 +109,7 @@ The sample output for the `get` command with the `--language="*"` argument is as
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Product",
     "name": "test-product",
     "title": "test-product",
@@ -138,12 +138,12 @@ The sample output for the `get` command with the `--language="*"` argument is as
                 "name": "test-product",
                 "scopeKind": "Product",
                 "scopeName": "test-product",
-                "selfLink": "/catalog/v1alpha1/products/test-product/releasetags/test-product",
+                "selfLink": "/catalog/v1/products/test-product/releasetags/test-product",
                 "type": "soft",
                 "group": "catalog"
             }
         ],
-        "selfLink": "/catalog/v1alpha1/products/test-product"
+        "selfLink": "/catalog/v1/products/test-product"
     },
     "attributes": {},
     "finalizers": [],
@@ -235,13 +235,13 @@ The sample output for the `get` command with `--languageDefinition="fr-fr"` argu
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Stage",
     "name": "demo-test",
     "metadata": {
         "id": "8a2e834391fb249101920c6a860d07e1",
         "resourceVersion": "1",
-        "selfLink": "/catalog/v1alpha1/stages/demo-test"
+        "selfLink": "/catalog/v1/stages/demo-test"
     },
     "languages": {
         "resource": {
@@ -502,13 +502,13 @@ The `lang-resources.json` file contents are as follows:
 ```json
 {
     "group": "catalog",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "Stage",
     "name": "demo-stage",
     "metadata": {
         "id": "8a2e834391fb249101920c6a860d07e1",
         "resourceVersion": "1",
-        "selfLink": "/catalog/v1alpha1/stages/demo-test"
+        "selfLink": "/catalog/v1/stages/demo-test"
     },
     "languages": {
         "resource": {

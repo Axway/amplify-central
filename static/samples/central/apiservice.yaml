@@ -1,4 +1,4 @@
-apiVersion: v1alpha1
+apiVersion: v1
 title: apisvc1 title
 kind: APIService
 name: apisvc1

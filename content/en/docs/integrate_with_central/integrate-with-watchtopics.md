@@ -28,10 +28,10 @@ A watch topic is an API resource that is defined in such a way that a single top
 Create a watch topic using API:
 
 ```bash
-curl --location 'https://apicentral.axway.com/apis/management/v1alpha1/watchtopics' \
+curl --location 'https://apicentral.axway.com/apis/management/v1/watchtopics' \
 --data '{
     "group": "management",
-    "apiVersion": "v1alpha1",
+    "apiVersion": "v1",
     "kind": "WatchTopic",
     "name": "custom-credentials-in-my-env",
     "title": "Custom Credential in My Environment",
@@ -60,7 +60,7 @@ Or create a watch topic using the Axway CLI. Add the following in a file and app
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: WatchTopic
 name: custom-credentials-in-my-env
 title: Custom Credential in My Environment
@@ -87,13 +87,13 @@ Events in the watch topic are sequential and will be available for seven days.
 To request all events in the watch topic, query the API as shown below. It will return all events from oldest to newest.
 
 ```bash
-curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
+curl --location 'https://apicentral.axway.com/events/management/v1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
 ```
 
 After handling the events, follow up calls to the API should include a query using the sequenceID parameter, as well as sequenceID for the last handled event `query=sequenceID>[id]`. Including the parameter argument will give only events that have been created after that sequenceID.
 
 ```bash
-curl --location 'https://apicentral.axway.com/events/management/v1alpha1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
+curl --location 'https://apicentral.axway.com/events/management/v1/watchtopics/custom-credentials-in-my-env?sort=sequenceID
 ```
 
 Each of the above calls will return an array of events that have occurred for a given watch topic.
@@ -119,7 +119,7 @@ Each of the above calls will return an array of events that have occurred for a 
             "tags": [],
             "metadata": {
                 "id": "8ac98c5a92d38a930192d3cb81720189",
-                "selfLink": "/management/v1alpha1/environments/my-env/credential/my-new-credential",
+                "selfLink": "/management/v1/environments/my-env/credential/my-new-credential",
                 "references": [
                     {
                         "id": "8ac98c5a92d38a930192d3cb6fb00174",
@@ -129,7 +129,7 @@ Each of the above calls will return an array of events that have occurred for a 
                         "title": null,
                         "scopeName": null,
                         "scopeKind": null,
-                        "selfLink": "/management/v1alpha1/environments/my-env/managedapplications/my-app",
+                        "selfLink": "/management/v1/environments/my-env/managedapplications/my-app",
                         "type": "HARD"
                     }
                 ],
@@ -137,12 +137,12 @@ Each of the above calls will return an array of events that have occurred for a 
                     "id": "8ac9887192467328019249e58c01014f",
                     "kind": "Environment",
                     "name": "my-env",
-                    "selfLink": "/management/v1alpha1/environments/my-envedge"
+                    "selfLink": "/management/v1/environments/my-envedge"
                 }
             }
         },
         "metadata": {
-            "watchTopicSelfLink": "/management/v1alpha1/watchtopics/custom-credentials-in-my-env",
+            "watchTopicSelfLink": "/management/v1/watchtopics/custom-credentials-in-my-env",
             "watchTopicID": "8ac9858191a360160191a3a32365001d",
             "sequenceID": 284734,
             "subresource": null
@@ -167,7 +167,7 @@ Each of the above calls will return an array of events that have occurred for a 
             "tags": [],
             "metadata": {
                 "id": "8ac98c5a92d38a930192d3cb81720189",
-                "selfLink": "/management/v1alpha1/environments/my-env/credential/my-new-credential",
+                "selfLink": "/management/v1/environments/my-env/credential/my-new-credential",
                 "references": [
                     {
                         "id": "8ac98c5a92d38a930192d3cb6fb00174",
@@ -177,7 +177,7 @@ Each of the above calls will return an array of events that have occurred for a 
                         "title": null,
                         "scopeName": null,
                         "scopeKind": null,
-                        "selfLink": "/management/v1alpha1/environments/my-env/managedapplications/my-app",
+                        "selfLink": "/management/v1/environments/my-env/managedapplications/my-app",
                         "type": "HARD"
                     }
                 ],
@@ -185,12 +185,12 @@ Each of the above calls will return an array of events that have occurred for a 
                     "id": "8ac9887192467328019249e58c01014f",
                     "kind": "Environment",
                     "name": "my-env",
-                    "selfLink": "/management/v1alpha1/environments/my-envedge"
+                    "selfLink": "/management/v1/environments/my-envedge"
                 }
             }
         },
         "metadata": {
-            "watchTopicSelfLink": "/management/v1alpha1/watchtopics/custom-credentials-in-my-env",
+            "watchTopicSelfLink": "/management/v1/watchtopics/custom-credentials-in-my-env",
             "watchTopicID": "8ac9858191a360160191a3a32365001d",
             "sequenceID": 284747,
             "subresource": null
@@ -211,7 +211,7 @@ The Agent SDK can be referenced on how to build a watch client using Go. To impl
 4. Start the gRPC client:
 
     ```cmd
-    ./watchclient --auth.client_id=<sa_client_id> --tenant_id=<organization_id> --host=apicentral.axway.com --port=443 --topic_self_link=/management/v1alpha1/watchtopics/track-subscriptions-invoices --log_level=debug --auth.url="
+    ./watchclient --auth.client_id=<sa_client_id> --tenant_id=<organization_id> --host=apicentral.axway.com --port=443 --topic_self_link=/management/v1/watchtopics/track-subscriptions-invoices --log_level=debug --auth.url="
     https://login.axway.com/auth"
     ```
 

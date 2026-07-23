@@ -60,13 +60,13 @@ Each event payload that your webhook server receives is structured similar to th
                 "id": "e4f37c79728174c9017294b9848e0677",
                 "kind": "Environment",
                 "name": "axway",
-                "selfLink": "/management/v1alpha1/environments/axway"
+                "selfLink": "/management/v1/environments/axway"
             },
             "resourceVersion": "21852",
             "references": [],
-            "selfLink": "/management/v1alpha1/environments/axway/apiservices/test"
+            "selfLink": "/management/v1/environments/axway/apiservices/test"
         },
-        "apiVersion": "v1alpha1",
+        "apiVersion": "v1",
         "kind": "APIService",
         "name": "test",
         "attributes": {
@@ -118,7 +118,7 @@ The integration is a simple name to group webhooks together. For instance, you c
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Integration
 name: monitor-resources
 title: Monitor any resources
@@ -144,7 +144,7 @@ To receive notifications of events, you must create a webhook that details the s
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Webhook
 name: invoke-jira-webhook
 title: JIRA approval webhook
@@ -189,7 +189,7 @@ Monitor all API service revisions from *invoke-jira-webhook*:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: ResourceHook
 name: apiservicerevisions-hook
 title: Monitor API Service Revision changes from 'azure-apiman-service' Environment
@@ -220,7 +220,7 @@ Monitor changes on all environment resources:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: ResourceHook
 name: environments-hook
 title: Monitor all Environment resources
@@ -251,7 +251,7 @@ Monitor changes in a specific environment "azure-apiman-service" and on all its 
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: ResourceHook
 name: environments-hook
 title: Monitor Environment azure-apiman-service and all its resources
@@ -344,7 +344,7 @@ Example of a webhook payload referencing a secret:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Webhook
 name: webhook
 title: Webhook to invoke requestbin.com
@@ -380,7 +380,7 @@ Example of a webhook payload referencing a secret and its destination header `x-
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Webhook
 name: webhook
 title: Webhook to invoke requestbin.com
@@ -414,7 +414,7 @@ Example of webhook with an `x-origin` and `x-random-value` headers:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Webhook
 name: webhook
 title: Webhook to invoke requestbin.com

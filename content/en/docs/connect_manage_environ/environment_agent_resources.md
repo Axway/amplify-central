@@ -39,7 +39,7 @@ Environment sample:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: Environment
 name: my-engage-environment
 title: My beautiful environment title
@@ -62,7 +62,7 @@ Discovery Agent sample:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: DiscoveryAgent
 name: my-discovery-agent-name
 title: My beautiful DiscoveryAgent title
@@ -87,7 +87,7 @@ Traceability Agent sample:
 
 ```yaml
 group: management
-apiVersion: v1alpha1
+apiVersion: v1
 kind: TraceabilityAgent
 name: my-traceability-agent-name
 title: My beautiful TraceabilityAgent title

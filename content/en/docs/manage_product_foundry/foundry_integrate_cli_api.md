@@ -49,7 +49,7 @@ A `.yaml`, `.yml`, or `.json` file can be used to define a specific resource, bu
 ```json
 {
   "group": "catalog",
-  "apiVersion": "v1alpha1",
+  "apiVersion": "v1",
   "kind": "Product",
   "title": "Petstore",
   "spec": {
@@ -281,7 +281,7 @@ Where `product-plan.jq` has the following content:
 ```json
 {
   group: "catalog",
-  apiVersion: "v1alpha1",
+  apiVersion: "v1",
   kind: "ProductPlan",
   title: "Basic Free Project Plan",
   spec: {
@@ -390,7 +390,7 @@ Where `publish-product.jq` has the following content:
 ```json
 {
     group: "catalog",
-    apiVersion: "v1alpha1",
+    apiVersion: "v1",
     kind: "PublishedProduct",
     metadata: {
         scope: {
