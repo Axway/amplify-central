@@ -56,7 +56,7 @@ New enhancements and bug fixes for the July 23 update.
 * **Amplify Engage V1 API support**
 
   (PROVIDER EXPERIENCE, CONSUMER EXPERIENCE, ENHANCEMENT, API SERVER API)</br>
-  The Amplify Engage APIs now support for v1 APIs in addition to v1alpha1. The v1 APIs are functionally equivalent to the v1alpha APIs, so v1alpha APIs are deprecated but are remain available. Efficiency improvements reduce the amount of data returned by default (e.g., metadata ACLs are longer returned in ALL v1 responses for ALL resource kinds).
+  Amplify Engage APIs now support for v1 APIs in addition to v1alpha1. The v1 APIs are functionally equivalent to the v1alpha APIs, so v1alpha APIs are deprecated but are remain available. Efficiency improvements reduce the amount of data returned by default (e.g., metadata ACLs are longer returned in ALL v1 responses for ALL resource kinds).
 
 ### Marketplace bug fixes for July 23, 2026
 
