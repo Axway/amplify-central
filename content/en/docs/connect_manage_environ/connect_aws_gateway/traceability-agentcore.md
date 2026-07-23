@@ -29,6 +29,8 @@ The Traceability Agent supports two modes for AgentCore gateways, selected by th
 
 Attribution reuses the credential the Provisioning Agent creates for each subscription: the CloudTrail caller id (the Cognito app client id) is matched to that credential, which links to the consuming managed application. Gateways that are not Cognito-secured (for example `AWS_IAM` or `NONE`) are always metered through the CloudWatch-only path, even when CloudTrail is enabled.
 
+{{< alert title="What is counted" color="primary" >}}Usage is measured from the gateway's MCP application logs. **Currently every MCP method is counted** — the `initialize` handshake and the `tools/list` discovery call as well as the `tools/call` tool invocations that represent actual usage. Restricting the count to `tools/call` only is planned; until then, expect the reported counts to include this protocol overhead.{{< /alert >}}
+
 ## Enable gateway logging
 
 Metrics are produced only for gateways that emit application logs to CloudWatch. AgentCore delivers these to log groups under the prefix set by `AWS_AGENTCORE_LOGGROUPPREFIX` (default `/aws/vendedlogs/bedrock-agentcore/gateway/APPLICATION_LOGS`), one log group per gateway:
@@ -38,6 +40,20 @@ Metrics are produced only for gateways that emit application logs to CloudWatch.
 ```
 
 Enable logging on each Bedrock AgentCore gateway you want to govern, using the AgentCore console or API when you create or update the gateway. A gateway with logging disabled is still discovered, but produces no traceability metrics.
+
+A gateway can deliver its application logs to more than one log group. The Traceability Agent reads **only** the log group under the configured prefix — `AWS_AGENTCORE_LOGGROUPPREFIX`, default `/aws/vendedlogs/bedrock-agentcore/gateway/APPLICATION_LOGS/<gateway-id>`. Any other log groups you add for your own purposes are ignored by the agent, so make sure this default one exists and is receiving logs.
+
+### Required log fields
+
+The agent parses each log record for a fixed set of fields, so the delivery configured for the default log group must include at least the following. If any of these is omitted, metrics for that gateway are incomplete or absent:
+
+| Field | Why it is required |
+| --- | --- |
+| `request_id` | Groups the log records that belong to a single invocation, and is the join key to the CloudTrail event used for consumer attribution. |
+| `event_timestamp` | Provides the invocation time and the response time (derived from the earliest and latest records of the invocation). |
+| `body` | Carries `isError` (mapped to success `200` / exception `500`) and `requestBody` — from which the **target name** (`{target}___{tool}`) and the MCP method are read. |
+
+Other fields (for example `gateway_id`, `trace_id`, `span_id`, or severity) are not required — the gateway is already identified by the log-group name.
 
 {{< alert title="Note" color="primary" >}}Configuring vended-log delivery is an administrative action that requires log-delivery permissions (`logs:CreateLogDelivery`, `logs:PutResourcePolicy`, and related). These are separate from the agent's runtime permissions.{{< /alert >}}
 
