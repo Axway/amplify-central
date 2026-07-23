@@ -51,6 +51,11 @@ Search for the latest preproduction agent builds at <https://repository.axway.co
 
   (AWS TRACEABILITY AGENT, AGENT SDK, ENHANCEMENT)</br>
 The AWS SaaS and on-premise agents for the Amazon Bedrock AgentCore Gateway data plane can obtain Model Context Protocol (MCP) service trasaction counts with CloudWatch or CloudTrail integration. The MCP service transactions are represented on Biz Insights -> API Health screen.
+
+* **Amplify Engage V1 API support**
+
+  (ALL AGENTS, AGENT SDK, ENHANCEMENT)</br>
+All agents have been updated to use v1 Amplify Engage APIs instead of v1alpha1 APIs to access API Server resources. The v1 APIs are functionally equivalent to the deprecated v1alpha APIs.
   
 ## Agent bug fixes
 
@@ -73,6 +78,11 @@ The Toplogy -> Environments and Topology -> Compliance Profiles UI tables have b
     * A hover tooltip is visible to display the full long name.
     * Long names are truncated in the middle of the name with a three dot ellipsis.
     * A "copy to clipboard" icon is available for logical names/IDs or URLs.
+
+**Asset Asset Details display**
+
+(PROVIDER EXPERIENCE, ENHANCEMENT, ASSET CATALOG, ASSET DETAILS)</br>
+The resoruce table of Asset Details page Catalog has an additional **type** column to visualize the API service type more easily. The reource table three dot ellipsis option for **View Specification** supports the display of more API specification types (e.g. A2A).  
 
 ## Marketplace bug fixes
 
